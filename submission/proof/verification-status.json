@@ -11,9 +11,13 @@
   "compiler_source": "tmp/verification/whole_candidate_second_attempt_BundleAudit.lean",
   "compiler_source_relation": "Exact candidate source with only four #print axioms commands appended for audit",
   "modular_nanoda_check": "verification/three-website-declarations-modular-nanoda.json",
-  "single_file_nanoda_check": "pending",
+  "single_file_nanoda_check": "verification/whole-candidate-independent-nanoda.json",
   "official_comparator_passed": false,
   "official_resource_limits_met": false,
   "submitted": false,
-  "website_accepted": false
+  "website_accepted": false,
+  "single_file_nanoda_passed": true,
+  "single_file_nanoda_scope": "All three theorem dependency graphs from the actual compiled single-file audit artifact; four threads. Official builtin comparison and serial resource fit remain separate.",
+  "single_file_nanoda_checked_declarations": 79750,
+  "single_file_nanoda_elapsed_seconds": 702.437
 }

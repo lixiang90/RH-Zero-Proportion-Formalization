@@ -131,3 +131,20 @@ The actual four-thread AM compilation diagnostic also exceeded the site's
 8,192 MB memory allowance. Proof-evaluation cost and full-process memory must
 be reduced or checked under the actual official configuration before upload.
 All mathematical inputs and the ratio remain fixed during that engineering.
+
+
+The actual compiled whole-file artifact also passed fresh independent replay
+of all three theorem dependency graphs: 79,750 declarations, exit 0, unchanged
+source and compiled artifact, and only the three permitted axioms.
+The record is verification/whole-candidate-independent-nanoda.json. This export
+has the three theorem roots; the official builtin/primitive comparison is a
+separate Comparator obligation. The four-thread replay took 702.437 seconds,
+with 2,740.30 user CPU seconds and 6,466,568 KiB maximum RSS.
+
+The unmodified synchronous ImportedAM source was also compiled in isolation
+with one worker and freshly audited: exit 0, 781.406 seconds, 7,620,345,856
+bytes maximum Windows RSS. It fits an 8 GiB comparison in this local module
+test; it does not establish whole-process Linux resource compliance. Queueing
+small Data proof batches gave at most about 2.5% wall-time improvement and
+does not address the official serial independent-kernel cost. The numeric
+data, theorem statements, ratio and published candidate source remain unchanged.

@@ -1,0 +1,183 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "compiler_binary": "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+  "compiler_sha256": "bc137e6662c48eedf2cdf167fb176080e18a15f57e248d214df0cb3939248683",
+  "threads": 1,
+  "thread_stack_kb": 32768,
+  "elab_async": false,
+  "environment_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "--no-cache",
+    "env",
+    "python",
+    "-c",
+    "import os,json;print(json.dumps(dict(os.environ)))"
+  ],
+  "environment_exit_code": 0,
+  "lean_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am_serial_one_thread\\lib;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\Zeta23\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\build\\lib\\lean;c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization",
+  "source": "RecordProportion/ImportedAM.lean",
+  "source_sha256": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+  "source_bytes": 1515412,
+  "formal_source_used_byte_identically": true,
+  "no_information_tree_wrapper": true,
+  "compile": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "-o",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am_serial_one_thread\\lib\\RecordProportion\\ImportedAM.olean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\RecordProportion\\ImportedAM.lean"
+    ],
+    "pid": 51204,
+    "exit_code": 0,
+    "start_utc": "2026-10-08T20:38:06.720834+00:00",
+    "finish_utc": "2026-10-08T20:51:08.147914+00:00",
+    "elapsed_seconds": 781.406,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 1518,
+    "sampled_peak_tree_rss_bytes": 7620345856,
+    "sampled_peak_tree_private_bytes": 12666298368,
+    "observed_windows_single_process_peak_working_set_bytes": 7620345856,
+    "max_sampled_live_tree_cpu_seconds": 774.625,
+    "log": "tmp/am_serial_one_thread/compile.log",
+    "log_sha256": "705b3c3aac71da99e0abb41cd9f31b4b94b58677bca933a2874ad649aa842ff9"
+  },
+  "dependency_resolution": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "--deps",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am_serial_one_thread\\Audit.lean"
+    ],
+    "exit_code": 0,
+    "fresh_serial_artifact_resolved": true,
+    "log": "tmp/am_serial_one_thread/dependencies.log",
+    "log_sha256": "ef7575881c525e98654cc9b77d01a8d1a793ea0999e657fb8a5b27c9c12fcfab"
+  },
+  "audit": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am_serial_one_thread\\Audit.lean"
+    ],
+    "pid": 45980,
+    "exit_code": 0,
+    "start_utc": "2026-10-08T20:51:08.216201+00:00",
+    "finish_utc": "2026-10-08T20:51:27.353030+00:00",
+    "elapsed_seconds": 19.141,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 37,
+    "sampled_peak_tree_rss_bytes": 3365040128,
+    "sampled_peak_tree_private_bytes": 8500441088,
+    "observed_windows_single_process_peak_working_set_bytes": 3365236736,
+    "max_sampled_live_tree_cpu_seconds": 18.375,
+    "log": "tmp/am_serial_one_thread/audit.log",
+    "log_sha256": "cf5252e0cbd2f90a80c9e7879ca2f56b8f2f023a33223cf0e5f50141bd58d145"
+  },
+  "declarations": {
+    "AMW.wfunAM_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.mcheckP_ok": [
+      "propext",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.sp_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.gsplit0_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.ssplit57_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.splitAx_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.tm_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL_cert_full": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL_G_rev": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.HW_ge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.tracesBoundsAM_concrete": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Zeta23Ext.Bridge.tail_passage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_passed": true,
+  "artifact": "tmp/am_serial_one_thread/lib/RecordProportion/ImportedAM.olean",
+  "artifact_sha256": "9e29ef4ddd76550bfeb616d865c46837b28640dfc9569f045cd2f0f1a6c020d5",
+  "inputs_before": {
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    ".lake/build/lib/lean/RecordProportion/ImportedAM.olean": "9b30204d514c3a81baf1bd47c6578cc6f534229c11ad808b1a891bbcb6afc0e6",
+    "tmp/am_serial_one_thread/Audit.lean": "35ab83ab756799d7ca3f18b63ad5ddc87ac042e2ff0f504a37f1670936a958ea",
+    "tmp/am_async_four_thread/run.py": "0c3cca23142d7eb468e1dce0dfcd8dc68f1e10868d0945652a1b490dbcf8b904",
+    "tmp/am_serial_one_thread/run.py": "d35f8dc35031c68ad7372005bc76272acafc4b4b36e2909d88d5659a3d5703cd",
+    "lean-toolchain": "0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6",
+    "lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1"
+  },
+  "inputs_after": {
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    ".lake/build/lib/lean/RecordProportion/ImportedAM.olean": "9b30204d514c3a81baf1bd47c6578cc6f534229c11ad808b1a891bbcb6afc0e6",
+    "tmp/am_serial_one_thread/Audit.lean": "35ab83ab756799d7ca3f18b63ad5ddc87ac042e2ff0f504a37f1670936a958ea",
+    "tmp/am_async_four_thread/run.py": "0c3cca23142d7eb468e1dce0dfcd8dc68f1e10868d0945652a1b490dbcf8b904",
+    "tmp/am_serial_one_thread/run.py": "d35f8dc35031c68ad7372005bc76272acafc4b4b36e2909d88d5659a3d5703cd",
+    "lean-toolchain": "0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6",
+    "lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1"
+  },
+  "inputs_and_compiler_unchanged_during_check": true,
+  "kernel_diagnostic_passed": true,
+  "official_capacity_comparison_bytes": 8589934592,
+  "observed_compile_rss_and_windows_peak_within_8gib": true,
+  "scope": "Isolated serial baseline of the byte-identical frozen formal ImportedAM source with Elab.async false, one Lean thread, 32768 KB stacks and no command wrappers. Separate output/import overlay is checked before twelve original PC8/global AM axiom audits. Windows sampled resources are observations, not an official Linux container or complete submission guarantee.",
+  "formal_source_modified": false,
+  "formal_artifact_modified": false,
+  "whole_submission_compiled": false,
+  "official_comparator_verified": false,
+  "submitted": false
+}

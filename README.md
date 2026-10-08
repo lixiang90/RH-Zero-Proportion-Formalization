@@ -16,8 +16,9 @@ The continuous certificate and named dyadic and cumulative simple-zero theorems
 compile in the pinned environment. The three website declarations, concerning
 distinct critical-line zeros, also compile and pass independent nanoda replay of
 79,699 declarations. Fresh transitive audits contain only the three permitted axioms.
-The 1,996,187-byte single file also passed Lean compilation and transitive
-axiom audits. Resource compliance, the official Comparator run and website
+The 1,996,187-byte single file also passed Lean compilation, transitive axiom
+audits and independent replay of all three theorem dependency graphs (79,750
+declarations). Resource compliance, the official Comparator run and website
 acceptance remain separate requirements. No website record has been submitted.
 
 | Component | Verification status |
@@ -33,7 +34,7 @@ acceptance remain separate requirements. No website record has been submitted.
 | Continuous nine-point certificate | Full unconditional module and five fresh axiom audits passed |
 | Named simple-zero dyadic and cumulative corollaries | Actual Zeta23.N0simple/Ncount; full module and fresh axiom audits passed |
 | Three final website declarations and independent nanoda replay | Complete modular declarations passed; independent replay checked 79,699 declarations |
-| Complete single-file candidate | Lean compilation and four axiom audits passed; official runtime/memory compliance pending |
+| Complete single-file candidate | Lean compilation, four axiom audits and independent replay passed; official runtime/memory compliance pending |
 
 Snapshot results and their scope are recorded in `verification/` and `docs/`.
 The original Lean numeric transcription had two incorrect column entries; that
