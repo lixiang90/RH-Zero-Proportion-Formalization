@@ -1,0 +1,57 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "modules": [
+    "RecordProportion.GetterSoundness"
+  ],
+  "source_sha256": {
+    "RecordProportion.GetterSoundness": "c9a81670701c1d3f5c1a95a351e567685f886d3ca4f10b1bf5a3b1e22c3473ba"
+  },
+  "source_unchanged_during_check": true,
+  "build_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "--no-cache",
+    "build",
+    "+RecordProportion.GetterSoundness:olean"
+  ],
+  "build_exit_code": 0,
+  "audit_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "env",
+    "lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\verification\\getter-soundness-kernel-axioms.lean"
+  ],
+  "audit_exit_code": 0,
+  "observed_axioms": {
+    "RHWeilRecord.GetterSoundness.size_fromGetter": [
+      "propext",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.GetterSoundness.getD_fromGetter": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.GetterSoundness.getD_fromGetter_of_lt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.GetterSoundness.getD_fromGetter_eq_get": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_passed": true,
+  "module_check_passed": true,
+  "elapsed_seconds": 4.52,
+  "scope": "Generic bounded getter and Array.range.map lookup compatibility only. No numerical certificate or full submission claim.",
+  "log": "tmp/verification/getter-soundness-kernel.log",
+  "whole_submission_compiled": false,
+  "submitted": false
+}

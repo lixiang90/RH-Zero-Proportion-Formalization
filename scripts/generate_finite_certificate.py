@@ -4,6 +4,8 @@ This generator never optimizes a multiplier, changes the target, or establishes
 the continuous theorem. The Lean checker must prove properties of decoded data.
 """
 import argparse
+import ast
+import re
 from collections import Counter
 from fractions import Fraction
 import hashlib
@@ -103,10 +105,7 @@ def cellSpans : List (Nat × Nat) :=
   (List.range 7).map (fun i => (i,i+1)) ++ longSpans
 
 def squareSpans : List (Nat × Nat) :=
-  [(0,1),(0,3),(0,4),(0,5),(0,6),(0,7),(1,2),(1,3),(1,4),(1,5),
-   (1,6),(1,7),(2,3),(2,4),(2,5),(2,6),(2,7),(3,4),(3,5),(3,6),
-   (3,7),(4,5),(4,6),(4,7),(5,6),(6,7),(1,8),(2,8),(3,8),(4,8),
-   (5,8),(6,8),(7,8),(0,8)]
+  __GENERATED_COLUMN_SPANS__
 
 def squareColumn (i j : Nat) : Nat :=
   8 + squareSpans.findIdx (fun p => p == (i,j))
@@ -254,9 +253,10 @@ def integerCertificateCheck (index : Nat) : Bool :=
 
 /- The command emits ordinary theorem declarations. Every emitted proof
 is checked by the kernel; the command contributes no mathematical premise. -/
-elab "prove_integer_representatives" : command => do
+elab "prove_integer_batch " first:num " " last:num : command => do
   Lean.Elab.withEnableInfoTree false do
-    for index in List.range 1224 do
+    for offset in List.range (last.getNat-first.getNat) do
+      let index := first.getNat+offset
       let command := "theorem integer_representative_" ++ toString index ++
         " : integerCertificateCheck " ++ toString index ++
         " = true := by decide +kernel"
@@ -276,6 +276,9 @@ elab "prove_integer_representatives" : command => do
         | _ => Lean.throwError "Generated integer theorem was not installed"
       if index % 64 = 0 then
         Lean.Elab.Command.liftIO <| IO.eprintln s!"Kernel-checked integer representative {index}/1224"
+
+elab "combine_integer_representatives" : command => do
+  Lean.Elab.withEnableInfoTree false do
     let cases := (List.range 1224).map fun index =>
       "  | " ++ toString index ++ " => exact integer_representative_" ++ toString index
     let command := "theorem all_integer_representatives (index : Nat) (hi : index < 1224) :\n" ++
@@ -296,8 +299,117 @@ elab "prove_integer_representatives" : command => do
       | _ => Lean.throwError "Combined integer theorem was not installed"
     Lean.Elab.Command.liftIO <| IO.eprintln "Kernel-checked all 1224 integer representatives"
 
-prove_integer_representatives
+__GENERATED_BATCH_CALLS__
+combine_integer_representatives
 '''
+
+
+
+ORIGINAL_TERMS = ast.literal_eval(re.search(r"def terms.*?:=\s*(\[.*?\])", NUMERIC_CODE, re.S).group(1))
+COLUMN_SPANS = list(dict.fromkeys((i+offset,j+offset)
+    for offset in (0,1) for i,j,_ in ORIGINAL_TERMS)) + [(0,8)]
+assert len(COLUMN_SPANS) == 34 and len(set(COLUMN_SPANS)) == 34
+assert COLUMN_SPANS[26:] == [(1,8),(2,8),(3,8),(4,8),(5,7),(5,8),(7,8),(0,8)]
+assert set(COLUMN_SPANS) == ({(i,j) for i,j,_ in ORIGINAL_TERMS} |
+    {(i+1,j+1) for i,j,_ in ORIGINAL_TERMS} | {(0,8)})
+NUMERIC_CODE = NUMERIC_CODE.replace("__GENERATED_COLUMN_SPANS__",
+    "[" + ",".join(f"({i},{j})" for i,j in COLUMN_SPANS) + "]")
+NUMERIC_CODE = NUMERIC_CODE.replace("__GENERATED_BATCH_CALLS__", "\n".join(
+    f"prove_integer_batch {first} {min(first+16,1224)}" for first in range(0,1224,16)))
+
+
+
+def verify_integer_reconstruction(representatives, records, cells, point_words, catalogs, top, dictionary):
+    """Check every reconstructed integer row/column against the frozen lower.
+
+    This is a finite diagnostic, not a replacement for kernel soundness.
+    It independently evaluates the exact transparent Lean arithmetic shapes.
+    """
+    spans = [(i,i+1) for i in range(7)] + ast.literal_eval(
+        re.search(r"def longSpans.*?:=\s*(\[.*?\])", NUMERIC_CODE, re.S).group(1))
+    index = {span:8+i for i,span in enumerate(COLUMN_SPANS)}
+    terms_index = {(i,j):n for n,(i,j,_) in enumerate(ORIGINAL_TERMS)}
+    scale = 5*10**10*32768
+    def bits(x,p,w): return (x>>p)&((1<<w)-1)
+    def bound(label,i,j,side):
+        if label>=241:i,j=7-j,7-i
+        slot=2*i if j==i+1 else 14+2*(i*(13-i)//2+j-i-2)
+        return bits(cells[label%241][0],22*(slot+side),22)
+    def atom(label,i,j):
+        if label>=241:i,j=7-j,7-i
+        return bits(cells[label%241][1],67*terms_index[i,j],67)
+    def tight(label,i,j):
+        return (max(bound(label,i,j,0),sum(bound(label,t,t+1,0) for t in range(i,j))),
+                min(bound(label,i,j,1),sum(bound(label,t,t+1,1) for t in range(i,j))))
+    def anchor(offset,i,j,p,value,L,U):
+        V=bits(value,0,32);dm=bits(value,32,32)-2*10**9;dp=2*10**9-bits(value,64,32)
+        return [(i+offset,j+offset,10*dm,index[i+offset,j+offset],-1,
+                 -5*V*32768+50*dp*p-50*(dp-dm)*L,False),
+                (i+offset,j+offset,10*dp,index[i+offset,j+offset],-1,
+                 -5*V*32768+50*dm*p-50*(dm-dp)*U,False)]
+    def frame(label,offset):
+        rows=[]
+        for i,j in spans:
+            rows.extend([(i+offset,j+offset,1,0,0,5*bound(label,i,j,1),True),
+                         (i+offset,j+offset,-1,0,0,-5*bound(label,i,j,0),True)])
+        for i,j,_ in ORIGINAL_TERMS:
+            a=atom(label,i,j);kind=bits(a,0,2);mix=bits(a,2,11)
+            p,r=bits(a,13,11),bits(a,24,11)
+            pts=([p] if kind==1 else [p] if kind==2 and mix>0 else
+                 ([p] if mix<1024 else [])+([r] if mix>0 else []) if kind==3 else [])
+            rows.append((i+offset,j+offset,0,index[i+offset,j+offset],-1,
+                         -5*bits(a,35,32)*32768,False))
+            L,U=tight(label,i,j)
+            for point in pts:
+                packet=point_words[point]
+                rows.extend(anchor(offset,i,j,bits(packet,0,20),bits(packet,20,96),L,U))
+        return rows
+    frames={(label,offset):frame(label,offset) for label in range(482) for offset in (0,1)}
+    weights={span:0 for span in COLUMN_SPANS}
+    for off in (0,1):
+        for i,j,a in ORIGINAL_TERMS:weights[i+off,j+off]+=a
+    weights[0,8]=4*10**8
+    objective=[10**10*x for x in [28898,86170,132798,156484,156484,132798,86170,28898]]
+    objective += [weights[span] for span in COLUMN_SPANS]
+    assert len(objective)==42 and all(x>0 for x in objective)
+    for item,rec in zip(representatives,records):
+        left,right,count,word,extra_count,extra_word=rec
+        rows=frames[left,0]+frames[right,1]
+        for k in range(extra_count):
+            a=bits(extra_word,15*k,15);off=bits(a,0,1);i,j=bits(a,1,3),bits(a,4,3)
+            packet=catalogs[bits(a,7,8)];point,value=bits(packet,0,20),bits(packet,20,96)
+            L,U=tight(left if off==0 else right,i,j)
+            rows += anchor(off,i,j,point,value,min(L,point),max(U,point))
+        for i,j,slope,col,z,b,geom in rows:
+            assert 0<=i<j<=8 and (z==0 or 8<=col<42)
+        inf=10**30
+        d=[[0 if i==j else min(
+            (5*bound(left,i,j,1) if i<j else -5*bound(left,j,i,0)) if i<=7 and j<=7 else inf,
+            (5*bound(right,i-1,j-1,1) if i<j else -5*bound(right,j-1,i-1,0)) if i>=1 and j>=1 else inf)
+            for j in range(9)] for i in range(9)]
+        for i in range(1,9):d[i][i-1]=min(d[i][i-1],-4*32768)
+        for k in range(9):d=[[min(d[i][j],d[i][k]+d[k][j]) for j in range(9)] for i in range(9)]
+        lo=[max(4*32768,-d[i+1][i]) for i in range(8)]+[0]*34
+        hi=[d[i][i+1] for i in range(8)]+[scale]*34
+        assert all(a<=b for a,b in zip(lo,hi))
+        res=[10**9*x for x in objective];value=0
+        for _ in range(count):
+            code=word&63;word>>=6
+            if code<63:lam=top[code]
+            else:lam=dictionary[word&16383];word>>=14
+            row=word&511;word>>=9
+            assert row<len(rows)
+            i,j,slope,col,z,b,geom=rows[row]
+            lam*=10**10 if geom else 1
+            value-=lam*b
+            for c in range(i,j):res[c]+=lam*slope
+            if z:res[col]+=lam*z
+        assert word==0
+        value+=sum(r*(a if r>=0 else b) for r,a,b in zip(res,lo,hi))
+        lower=Fraction(value,2*10**8*scale*10**9)
+        assert lower==Fraction(item['lower'])>=Fraction(805260,10**8), (left,right,lower,item['lower'])
+    return {'integer_representatives_exactly_match_frozen_lower':len(records),
+            'all_rows_have_valid_columns':True,'column_spans':COLUMN_SPANS}
 
 
 def generate():
@@ -407,13 +519,15 @@ def generate():
         assert unpack(extra_word, len(extras), 15) == extras
         records.append((item["left"], item["right"], len(decoded), stream,
                         len(extras), extra_word))
+    numeric_contract = verify_integer_reconstruction(
+        representatives,records,cells,point_words,catalogs,top,dictionary)
     lines = [
         "import Lean", "", "/- Generated losslessly from the fixed c260 JSON.",
         f"Input canonical LF SHA256: {INPUT_SHA}",
         "No computational fact or continuous assertion is imported as an axiom. -/",
         "", "namespace RHWeil.RecordSubmission.FiniteCertificateData", "",
         "set_option maxRecDepth 100000",
-        "set_option maxHeartbeats 0", "",
+        "set_option maxHeartbeats 0", "set_option stderrAsMessages false", "set_option Elab.async false", "",
         "def digit64 (c : Char) : Nat :=",
         "  let n := c.toNat",
         "  if 65 ≤ n ∧ n ≤ 90 then n - 65",
@@ -522,15 +636,47 @@ def generate():
         "theorem catalog_size : catalog.size = 237 := by decide +kernel",
         "theorem representative_size : pairPacks.size = 1224 := by decide +kernel",
         ""]
+    lines += [
+        "noncomputable def representativePacketCheck (index : Nat) : Bool :=",
+        "  let packet := (pairPacks[index]?).getD (0,0,0,0,0,0)",
+        "  decide (packet.1 < 482 ∧ packet.2.1 < 482 ∧",
+        "    representativeLabel index = pairLabel packet.1 packet.2.1)", "",
+        "noncomputable def representativePacketBlock (block : Nat) : Bool :=",
+        "  (List.range 32).all fun offset =>",
+        "    let index := 32*block+offset",
+        "    if index < 1224 then representativePacketCheck index else true", ""]
+    for block in range(39):
+        lines += [f"theorem representative_packet_block_{block} :",
+                  f"    representativePacketBlock {block} = true := by decide +kernel", ""]
+    lines += ["theorem representative_packet_block_checked (block : Nat) (hb : block < 39) :",
+        "    representativePacketBlock block = true := by", "  match block with"]
+    lines += [f"  | {b} => exact representative_packet_block_{b}" for b in range(39)]
+    lines += ["  | n + 39 => omega", "",
+        "theorem representative_packet_checked (index : Nat) (hi : index < 1224) :",
+        "    representativePacketCheck index = true := by",
+        "  have hp := representative_packet_block_checked (index/32) (by omega)",
+        "  have hm : index%32 ∈ List.range 32 := List.mem_range.mpr (Nat.mod_lt _ (by decide))",
+        "  have ht := (List.all_eq_true.mp hp) (index%32) hm",
+        "  have he : 32*(index/32)+index%32=index := by omega",
+        "  simpa only [he,if_pos hi] using ht", "",
+        "theorem representative_packet_shape (index : Nat) (hi : index < 1224) :",
+        "    let packet := (pairPacks[index]?).getD (0,0,0,0,0,0)",
+        "    packet.1 < 482 ∧ packet.2.1 < 482 ∧",
+        "      representativeLabel index = pairLabel packet.1 packet.2.1 := by",
+        "  exact of_decide_eq_true (representative_packet_checked index hi)", ""]
     lines += NUMERIC_CODE.strip().splitlines()
     lines += ["", "end RHWeil.RecordSubmission.FiniteCertificateData", ""]
+    # Kernel reduction still uses transparent bodies. Pure data/checker code
+    # has no runtime role; avoid retaining unnecessary compiled table artifacts.
+    lines = [re.sub(r"^def (?!digit64\b|decode64\b)", "noncomputable def ", line)
+             for line in lines]
     result = "\n".join(lines).encode("utf-8")
     return result, {"bytes": len(result), "lines": len(lines)-1,
         "sha256": hashlib.sha256(result).hexdigest(),
         "multipliers": len(numerators), "dictionary": len(dictionary),
         "catalog": len(catalog), "cells": len(cells),
         "representatives": len(records), "all_pairs": len(labels),
-        "fixed_orbits": fixed}
+        "fixed_orbits": fixed, "numeric_contract":numeric_contract}
 
 
 def main():

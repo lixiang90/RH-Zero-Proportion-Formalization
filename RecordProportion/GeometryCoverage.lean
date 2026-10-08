@@ -331,6 +331,51 @@ theorem physical_pair_covered {p : Nat → ℝ} {left right : Nat}
   · exact ⟨candidateIndex left right,h.1,h.2⟩
   · simp [geometryCheck,hs,h,hn] at hc
 
+theorem bits_nine_eq (word offset : Nat) :
+    bits word offset 9 = (word / 2^offset) % 512 := by
+  simp only [bits, Nat.shiftLeft_eq, Nat.one_mul, Nat.shiftRight_eq_div_pow]
+  rw [Nat.and_two_pow_sub_one_eq_mod]
+
+theorem pairLabel_lower {left right : Nat} (hl : left < 482) :
+    bits (pairLabel left right) 0 9 = left := by
+  rw [bits_nine_eq]
+  simp only [pairLabel, Nat.shiftLeft_eq]
+  norm_num
+  omega
+
+theorem pairLabel_upper {left right : Nat} (hl : left < 482) (hr : right < 482) :
+    bits (pairLabel left right) 9 9 = right := by
+  rw [bits_nine_eq]
+  simp only [pairLabel, Nat.shiftLeft_eq]
+  norm_num
+  omega
+
+theorem pairLabel_injective {left right left' right' : Nat}
+    (hl : left < 482) (hr : right < 482)
+    (hl' : left' < 482) (hr' : right' < 482)
+    (h : pairLabel left right = pairLabel left' right') :
+    left = left' ∧ right = right' := by
+  constructor
+  · have he := congrArg (fun x => bits x 0 9) h
+    simpa only [pairLabel_lower hl, pairLabel_lower hl'] using he
+  · have he := congrArg (fun x => bits x 9 9) h
+    simpa only [pairLabel_upper hl hr, pairLabel_upper hl' hr'] using he
+
+theorem reflectedPair_pairLabel {left right : Nat}
+    (hl : left < 482) (hr : right < 482) :
+    reflectedPair (pairLabel left right) =
+      pairLabel (reflectionLabel right) (reflectionLabel left) := by
+  simp only [reflectedPair, pairLabel_lower hl, pairLabel_upper hl hr]
+
+
 end RHWeilRecord.GeometryCoverage
 
 #print axioms RHWeilRecord.GeometryCoverage.physical_pair_covered
+
+#print axioms RHWeilRecord.GeometryCoverage.pairLabel_lower
+
+#print axioms RHWeilRecord.GeometryCoverage.pairLabel_upper
+
+#print axioms RHWeilRecord.GeometryCoverage.pairLabel_injective
+
+#print axioms RHWeilRecord.GeometryCoverage.reflectedPair_pairLabel

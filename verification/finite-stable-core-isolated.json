@@ -1,0 +1,39 @@
+{
+  "status": "actual isolated kernel compilation exit0 for stable-core and tight-bound; row-anchor source separately exit0 without olean, current -o replay pending",
+  "input_data_sha256": "c72e827109f275cb28d2027896b57f3cd18dfe8f912ba6005bfe6dd10cd87dac",
+  "pins": {
+    "tmp/finite-stable-core.lean": {
+      "sha256": "ba927d754d7651c97164bfd54f1806e9c349722bf95183a89116b30eba19655c",
+      "bytes": 57497
+    },
+    "tmp/finite-stable-core.olean": {
+      "sha256": "4beeffd42c74d75586331ba7471eaed808ecb143b4cfdad911a97ea9dce8169d",
+      "bytes": 18896960
+    },
+    "tmp/tight-bound-probe.lean": {
+      "sha256": "2383106b77fb4642baae629dd1fb1759dd984bc6c5f7304c532baf1f242e220b",
+      "bytes": 2631
+    },
+    "tmp/tight-bound-probe.olean": {
+      "sha256": "cda7291a601c2ade0171d4ca5246c0b42801de275bf96c524a46ddbb09892633",
+      "bytes": 188088
+    },
+    "tmp/row-soundness-probe.lean": {
+      "sha256": "90f1a413273891ea1723132f7f1c48a77bdad65eefe316f98b63249bd56eb59a",
+      "bytes": 4237
+    }
+  },
+  "proven_scope": [
+    "W9 admissibility, pressure, pair-mass upper bound",
+    "complete 42-column objective identity",
+    "primitive continuous bounds through Floyd closure to actual 42-column box",
+    "generic strong-or-low leaf/node/walk and positive-pressure clear transport",
+    "actual tightened span bounds"
+  ],
+  "excluded_scope": [
+    "32 root instantiations and complete captured-cell cover",
+    "full 1224 numeric family",
+    "unconditional W9 local certificate",
+    "site admission"
+  ]
+}

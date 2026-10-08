@@ -1,0 +1,110 @@
+{
+  "public_source": "RecordProportion/PointSoundness.lean",
+  "source_sha256": "573cf209490eb307a92cf657eb09c2cf7c184a7f38c10227018daadedc84b613",
+  "source_lines": 379,
+  "source_lf_bytes": 22454,
+  "compiled_input": "tmp/point-soundness-corrected-full.lean",
+  "compiled_input_sha256": "f6d415cb4d7215f6447474c0a05816610c4a90228c10a61acc20469e15cc0682",
+  "compile_exit_code": 0,
+  "actual_exec_session_id": 95808,
+  "compile_command": [
+    "lake",
+    "--no-cache",
+    "env",
+    "python",
+    "tmp/lean_with_repo_path.py",
+    "-DstderrAsMessages=false",
+    "-o",
+    "tmp/point-soundness-corrected-full.olean",
+    "tmp/point-soundness-corrected-full.lean"
+  ],
+  "compiled_input_changes": [
+    "imports the already kernel-compiled corrected transparent Data snapshot instead of the pending formal Data module",
+    "IO progress markers and #print axioms commands only; mathematical body exactly identical"
+  ],
+  "corrected_data_snapshot_source_sha256": "c72e827109f275cb28d2027896b57f3cd18dfe8f912ba6005bfe6dd10cd87dac",
+  "corrected_data_snapshot_artifact_sha256": "7f8fdf58f94c7b41674deb160d3d9af334c7fd3772e829aab37c5d114a0affa8",
+  "compiled_artifact_sha256": "68b299d357fcebd683eca69d0c40e78fea5749dd13a147cdd78ee47c4b9b356b",
+  "compile_and_axiom_log_sha256": "034c61ae13f8c8b5f41f867c7111200242004a09516323db42fb578f88a926d4",
+  "frame_labels_kernel_checked": 482,
+  "extra_representatives_kernel_checked": 1224,
+  "top_level_closed_blocks": 70,
+  "ordinary_kernel_checks": true,
+  "axiom_audit": [
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.constantCheck_sound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.tangentCheck_pack_eq",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.tangentCheck_sound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.frameChecks",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.extraChecks",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.old_constant_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.old_tangent_value",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.old_point_value_eq",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.extra_tangent_value",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.extra_point_value_eq",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "scope": "Full Point guard and full-interval soundness layer against identical corrected transparent data definitions; formal Data module and whole Challenge candidate are not yet claimed verified."
+}

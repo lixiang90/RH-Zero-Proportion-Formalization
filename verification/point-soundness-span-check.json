@@ -1,0 +1,45 @@
+{
+  "public_source": "RecordProportion/PointSoundness.lean",
+  "source_lines": 499,
+  "source_lf_bytes": 29007,
+  "source_sha256": "e0feca589d54ae049e8ff721dfd1bbe7ea9804f0fac0c42ba96ef0d5bd153764",
+  "previous_full_layer_ledger": "verification/point-soundness-isolated-check.json",
+  "previous_full_layer_ledger_sha256": "fac068ced928df2e00767c8b7d673abdf5aa4d03d09a6c025191849b1c3cbfba",
+  "body_preservation": "removing exactly the new 120-line metadata addition recovers the prior full exit-0 mathematical body, after removing diagnostic stage/audit commands and trailing blank lines and restoring the public Data import",
+  "increment_input": "tmp/point-span-addition.lean",
+  "increment_input_sha256": "f77d997f20628cfcf3a8b9a0305df51297b4760a461f2f55f30a6559b786e8ba",
+  "increment_command": [
+    "lake",
+    "--no-cache",
+    "env",
+    "python",
+    "tmp/lean_with_repo_path.py",
+    "-DstderrAsMessages=false",
+    "-o",
+    "tmp/point-span-addition.olean",
+    "tmp/point-span-addition.lean"
+  ],
+  "actual_exec_session_id": 57446,
+  "increment_compile_exit_code": 0,
+  "closed_top_level_metadata_blocks": 39,
+  "representatives_checked": 1224,
+  "increment_artifact_sha256": "9f465692bbedb189571c885357d1340d792a14c8b950018c7aa10e490a2f8317",
+  "increment_log_sha256": "680e593cf9ca13b89fe54065ff639e90273f2955e20e08a46b62e354766abac3",
+  "axiom_audit": [
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.extraSpanChecks",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeil.RecordSubmission.PointSoundness.extra_span_valid",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "scope": "Complete point/tangent layer and added span membership are kernel verified against corrected transparent Data definitions, in a full layer plus separately compiled metadata addition. Formal final Data dependency and the public module target remain pending; not a whole Challenge verification."
+}

@@ -1,0 +1,193 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "bundle": "tmp/bundles/Analytics.lean",
+  "bundle_bytes": 1466729,
+  "compiled_input": "tmp/verification/analytic_single_file_BundleAudit.lean",
+  "compiled_input_sha256": "9527809234683fb6ce6210f833eac838f89f46f20d92ad1582aa7f583e27b9f1",
+  "source_sha256": {
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "RecordProportion/Majorant.lean": "161f95eae8798b7ceb1658ccf1f04469573af0475930a24ff664a4035a3f770d",
+    "RecordProportion/AnalyticBridge.lean": "850a1479aa4e6851fa5c19f30d6b0de26a73b7a5e05cd282f0289f54159ffcae",
+    "RecordProportion/TrustedCounts.lean": "229ac74a5241fc64aaa4bbb165620731c811fb355130fcb3c8355975044e1b7b",
+    "scripts/verify_bundle.py": "217ba3f745d120c63d4eee72fae590f5f6c9986f4e06db66c6f228a15ce6cf96",
+    "tmp/bundles/Analytics.lean": "49b2e99e9e134373f9fb356fdc6faf7917382f3a652432485d278948ce7e1d00",
+    "tmp/bundles/Analytics.manifest.json": "93791a92630e3065262d33b03c2c7b61484b53d164368f719dddd89b526156b2",
+    "tmp/contract/ChallengeDeps/CandidateSpec.lean": "85e7bfbb71e1b896f82e61a0184d8f596b6e859b206dd5d84c3d69214811829b",
+    "tmp/contract/ChallengeDeps.olean": "62c976db2888e0ff53e4c55a78543a2194d8737ef4a42d27dd5307f8a3899003"
+  },
+  "source_unchanged_during_check": true,
+  "spec_command": [
+    "C:\\Users\\A\\.elan\\bin\\lean.EXE",
+    "+leanprover/lean4:v4.33.0-rc2",
+    "--root=E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\contract",
+    "-o",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\contract\\ChallengeDeps\\CandidateSpec.olean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\contract\\ChallengeDeps\\CandidateSpec.lean"
+  ],
+  "spec_exit_code": 0,
+  "command": [
+    "C:\\Users\\A\\.elan\\bin\\lean.EXE",
+    "+leanprover/lean4:v4.33.0-rc2",
+    "--tstack=32768",
+    "-j1",
+    "-DstderrAsMessages=false",
+    "-o",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\verification\\analytic_single_file_BundleAudit.olean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\verification\\analytic_single_file_BundleAudit.lean"
+  ],
+  "exit_code": 0,
+  "observed_axioms": {
+    "RHWeilRecord.eventually_am_all_entries_close": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.sparse_fintype_energy_lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.eventually_am_retained_lossless_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_lossless_defect_of_nine_point_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_distinct_dyadic_of_nine_point_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_distinct_cumulative_of_nine_point_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.sinc_pi_near": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_near_weight_ge_reward": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.eventually_am_separated_offdiag_le_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.finite_count_transport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.c260_finite_count_transport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.error_div_small": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.asymptotic_count_transport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.asymptotic_mono_counts": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.eigenvalues_le_of_real_form": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.offdiag_le_defect_of_real_form": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.near_pair_defect_gain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.defect_gain_of_partition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_distinct_dyadic_of_lossless_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_distinct_cumulative_of_lossless_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.Matching.exists_maximal_matching": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.pair_defect_from_am_kernel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.defect_gain_from_separated_subsets": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.window_pair_weights_le_energy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.sparse_window_lossless_reward": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.sparse_frame_kernel_transfer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.TrustedCounts.count_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.TrustedCounts.distinct_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.TrustedCounts.simple_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "single_file_lean_check_passed": true,
+  "elapsed_seconds": 826.73,
+  "scope": "Complete packed single-file ImportedAM, Majorant, qualified AnalyticBridge and exact trusted-count identities. Uniform W9, final unconditional website statements and Comparator/nanoda remain separate.",
+  "official_comparator_passed": false,
+  "independent_nanoda_passed": false,
+  "whole_submission_verified": false,
+  "submitted": false
+}

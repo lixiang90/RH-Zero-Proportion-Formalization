@@ -1,0 +1,134 @@
+{
+  "schema": "certified-cbv-single-index-diagnostic-v1",
+  "scope": "Fixed Lean source mechanism audit and two failed attempts at the same index16. No certified theorem or speedup is admitted.",
+  "lean_version": "4.33.0-rc2 d8b1897",
+  "source_references": {
+    "Init/Tactics.lean": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+    "Lean/Elab/Tactic/Decide.lean": "99e84ce67778157e77d7261aa25b64ed72da16e9d1f60031cf2aa26f5ea6ee68",
+    "Lean/Elab/Tactic/Cbv.lean": "e96080d3ab7c590204c62aa421f1dd96808a1880db8fc455a717f3cc113c3836",
+    "Lean/Meta/Tactic/Cbv/Main.lean": "e0b04fb88ff3228ce55cac597f089a4038bdbe3afdaaf2d1a7fcc4e6965a68d8",
+    "Lean/Meta/Tactic/Cbv/BuiltinCbvSimprocs/Array.lean": "02168dff2c38a6b3bf53374eaa9608b82f445e7d7add67ddcd0be723dbd64bce",
+    "Lean/Meta/Sym/Simp/EvalGround.lean": "89153dc54e3ef315d975355e8a5d8b632d13d56c7ce78650dcd6d441f6bff7fe"
+  },
+  "mechanism": "decide_cbv (not decide +cbv) applies of_decide_eq_true and constructs Sym equality proof; ground and array simprocs emit Eq.refl and ordinary congruence/theorem proofs, checked by the kernel. No nativeEqTrue/ofReduceBool/skipKernelTC route.",
+  "attempts": [
+    {
+      "first": 16,
+      "last_exclusive": 17,
+      "exit_code": 4294967295,
+      "wall_seconds": 4.165,
+      "artifact_source_sha256": "c72e827109f275cb28d2027896b57f3cd18dfe8f912ba6005bfe6dd10cd87dac",
+      "artifact_olean_raw_sha256": "7f8fdf58f94c7b41674deb160d3d9af334c7fd3772e829aab37c5d114a0affa8",
+      "batch_source_sha256": "553df10aa7a202248b9bc8a169a119b301d70818651cc68535407753a89f3246",
+      "log_raw_sha256": "1d585ca2457f796085080a27322dcd6d72331a0c7c93241d4a9ac6067ede21bd",
+      "observed_process_peak_memory_bytes": {
+        "41540": {
+          "exe": "lake.exe",
+          "observed_peak_working_set": 12632064,
+          "observed_peak_private_commit": 1941504
+        },
+        "38488": {
+          "exe": "lake.exe",
+          "observed_peak_working_set": 471461888,
+          "observed_peak_private_commit": 1076932608
+        },
+        "26336": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 7716864,
+          "observed_peak_private_commit": 1716224
+        },
+        "2288": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 10473472,
+          "observed_peak_private_commit": 35880960
+        },
+        "49384": {
+          "exe": "lean.exe",
+          "observed_peak_working_set": 1044033536,
+          "observed_peak_private_commit": 2413326336
+        },
+        "38920": {
+          "exe": "python.exe",
+          "observed_peak_working_set": 14778368,
+          "observed_peak_private_commit": 8507392
+        },
+        "51796": {
+          "exe": "lean.exe",
+          "observed_peak_working_set": 12668928,
+          "observed_peak_private_commit": 1990656
+        }
+      },
+      "sampled_aggregate_working_set_peak_bytes": 1548763136,
+      "certified_cbv_top_level_theorems": 1,
+      "full1224_run": false
+    },
+    {
+      "first": 16,
+      "last_exclusive": 17,
+      "exit_code": 1,
+      "wall_seconds": 4.436,
+      "artifact_source_sha256": "c72e827109f275cb28d2027896b57f3cd18dfe8f912ba6005bfe6dd10cd87dac",
+      "artifact_olean_raw_sha256": "7f8fdf58f94c7b41674deb160d3d9af334c7fd3772e829aab37c5d114a0affa8",
+      "batch_source_sha256": "553df10aa7a202248b9bc8a169a119b301d70818651cc68535407753a89f3246",
+      "log_raw_sha256": "e774942389108e8ba70de897b73069dcf389d069d5adbe8f13298875ee032e44",
+      "observed_process_peak_memory_bytes": {
+        "17016": {
+          "exe": "lake.exe",
+          "observed_peak_working_set": 12623872,
+          "observed_peak_private_commit": 1921024
+        },
+        "32276": {
+          "exe": "lake.exe",
+          "observed_peak_working_set": 471437312,
+          "observed_peak_private_commit": 1076944896
+        },
+        "10064": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 19316736,
+          "observed_peak_private_commit": 35885056
+        },
+        "29508": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 7720960,
+          "observed_peak_private_commit": 1716224
+        },
+        "50672": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 3903488,
+          "observed_peak_private_commit": 1273856
+        },
+        "33780": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 7720960,
+          "observed_peak_private_commit": 1724416
+        },
+        "52740": {
+          "exe": "python.exe",
+          "observed_peak_working_set": 14581760,
+          "observed_peak_private_commit": 8282112
+        },
+        "53040": {
+          "exe": "lean.exe",
+          "observed_peak_working_set": 1065971712,
+          "observed_peak_private_commit": 2429734912
+        },
+        "9564": {
+          "exe": "lean.exe",
+          "observed_peak_working_set": 12689408,
+          "observed_peak_private_commit": 2035712
+        }
+      },
+      "sampled_aggregate_working_set_peak_bytes": 1570516992,
+      "certified_cbv_top_level_theorems": 1,
+      "full1224_run": false
+    }
+  ],
+  "failure1": "Stack overflow with tstack65536. No olean or proof axiom output.",
+  "failure2": "With tstack262144, maximum recursion depth 100000 reached. Error recovery printed sorryAx; failed declaration is explicitly rejected.",
+  "success": false,
+  "valid_axiom_audit": false,
+  "speedup_established": false,
+  "full_run_performed": false,
+  "formal_Data_modified": false,
+  "stop_after_second_failure": true
+}

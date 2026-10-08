@@ -1,0 +1,168 @@
+{
+  "schema": "independent-corrected-map-and-small-kernel-batches-v1",
+  "scope": "Finite column mapping and 32 ordinary top-level closed kernel proofs only. No full 1224 theorem or full submission compilation claim.",
+  "lean_version": "4.33.0-rc2 d8b1897",
+  "data_canonical_lf_sha256": "4fd9850f570d3617d37d94cdbdef459e81e1c47059b0e45499fc1c8c12ec8c7d",
+  "generator_canonical_lf_sha256": "f47d60b5889da3bbde724a154ae0c661d03e9a6b39d340342972c78370b4272a",
+  "frozen_json_canonical_lf_sha256": "3a3c8b24015162a4835f5c1d8633a4f9f8bdace26d711631dd6374c689bce04f",
+  "original_epigraph_script_canonical_lf_sha256": "af5f2e1974bed92ad515f06ff6047f3e5595ac60c6dc721abd7bfb5cfd930c32",
+  "expanded_script_canonical_lf_sha256": "05b7500d77bdb41cb5419137a1eee354250d7569572cd5c37d44a19a66b4eb4f",
+  "corrected_artifact_source_sha256": "c72e827109f275cb28d2027896b57f3cd18dfe8f912ba6005bfe6dd10cd87dac",
+  "corrected_artifact_olean_raw_sha256": "7f8fdf58f94c7b41674deb160d3d9af334c7fd3772e829aab37c5d114a0affa8",
+  "artifact_computational_definitions_exact_to_current_data": 51,
+  "independent_mapping": {
+    "all42_objective_coefficients_match": true,
+    "column38": {
+      "span": [
+        5,
+        7
+      ],
+      "coefficient": 30621878
+    },
+    "column39": {
+      "span": [
+        5,
+        8
+      ],
+      "coefficient": 19565904
+    },
+    "base_label_offset_term_templates": 25064,
+    "representative_extra_anchors": 494,
+    "all2399_extra_anchors": 924,
+    "all_row_evaluation_membership_premises_verified_finitely": true,
+    "catalog_records": 237,
+    "captured_cell_records": 241,
+    "point_records": 1089,
+    "pair_record_representatives": 1224,
+    "lower_values_independently_recomputed": false
+  },
+  "memory_measurement": "Windows PSAPI GetProcessMemoryInfo sampled every 0.25s for lake process descendants. Per-process reported peak counters are observed values; subtree working-set total is a sampled maximum. Concurrent independent Lean jobs were present. These are not a full-run peak guarantee.",
+  "batch_mode": "Literal independent top-level theorem declarations using by decide +kernel. Not the generated inner elabCommand loop of 16.",
+  "proof_axioms": [
+    "propext"
+  ],
+  "batches": [
+    {
+      "first": 16,
+      "last_exclusive": 32,
+      "exit_code": 0,
+      "wall_seconds": 94.713,
+      "artifact_source_sha256": "c72e827109f275cb28d2027896b57f3cd18dfe8f912ba6005bfe6dd10cd87dac",
+      "artifact_olean_raw_sha256": "7f8fdf58f94c7b41674deb160d3d9af334c7fd3772e829aab37c5d114a0affa8",
+      "batch_source_sha256": "deb4c0590258d3835a4d12286efde9daaa2219c6df33c3f0ce8f5c1e51158afb",
+      "log_raw_sha256": "de6babbf41345af0b6049933a22185f89e7026055280c4450871a5884fa63080",
+      "observed_process_peak_memory_bytes": {
+        "22428": {
+          "exe": "lake.exe",
+          "observed_peak_working_set": 12656640,
+          "observed_peak_private_commit": 1957888
+        },
+        "26336": {
+          "exe": "lake.exe",
+          "observed_peak_working_set": 471957504,
+          "observed_peak_private_commit": 1076944896
+        },
+        "55360": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 10657792,
+          "observed_peak_private_commit": 35864576
+        },
+        "35924": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 7720960,
+          "observed_peak_private_commit": 1724416
+        },
+        "22664": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 5214208,
+          "observed_peak_private_commit": 1855488
+        },
+        "39468": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 7720960,
+          "observed_peak_private_commit": 1724416
+        },
+        "55040": {
+          "exe": "python.exe",
+          "observed_peak_working_set": 14647296,
+          "observed_peak_private_commit": 8359936
+        },
+        "53400": {
+          "exe": "lean.exe",
+          "observed_peak_working_set": 2072870912,
+          "observed_peak_private_commit": 3454525440
+        },
+        "33212": {
+          "exe": "lean.exe",
+          "observed_peak_working_set": 12673024,
+          "observed_peak_private_commit": 1998848
+        }
+      },
+      "sampled_aggregate_working_set_peak_bytes": 2575204352,
+      "ordinary_top_level_theorems": 16,
+      "full1224_run": false,
+      "batch_olean_raw_sha256": "35d5feb3da5b01b648738e8efdd053792c3da5a797cf0884a740cfda0d5dc8c4"
+    },
+    {
+      "first": 32,
+      "last_exclusive": 48,
+      "exit_code": 0,
+      "wall_seconds": 89.242,
+      "artifact_source_sha256": "c72e827109f275cb28d2027896b57f3cd18dfe8f912ba6005bfe6dd10cd87dac",
+      "artifact_olean_raw_sha256": "7f8fdf58f94c7b41674deb160d3d9af334c7fd3772e829aab37c5d114a0affa8",
+      "batch_source_sha256": "3e8a32b1e327c00eb5891a7fccf236453a37fad96dd0cbfc008478618446fd75",
+      "log_raw_sha256": "e1f2f870b6a03d659cd8024c2462683c46aa62ce13b52d2aca505165e24b38de",
+      "observed_process_peak_memory_bytes": {
+        "28508": {
+          "exe": "lake.exe",
+          "observed_peak_working_set": 12619776,
+          "observed_peak_private_commit": 1921024
+        },
+        "54196": {
+          "exe": "lake.exe",
+          "observed_peak_working_set": 471523328,
+          "observed_peak_private_commit": 1076948992
+        },
+        "33760": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 7725056,
+          "observed_peak_private_commit": 1728512
+        },
+        "8744": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 13139968,
+          "observed_peak_private_commit": 35872768
+        },
+        "32276": {
+          "exe": "git.exe",
+          "observed_peak_working_set": 5390336,
+          "observed_peak_private_commit": 1368064
+        },
+        "54092": {
+          "exe": "lean.exe",
+          "observed_peak_working_set": 12660736,
+          "observed_peak_private_commit": 1998848
+        },
+        "56304": {
+          "exe": "python.exe",
+          "observed_peak_working_set": 14581760,
+          "observed_peak_private_commit": 8290304
+        },
+        "40916": {
+          "exe": "lean.exe",
+          "observed_peak_working_set": 1998270464,
+          "observed_peak_private_commit": 3381071872
+        }
+      },
+      "sampled_aggregate_working_set_peak_bytes": 2501140480,
+      "ordinary_top_level_theorems": 16,
+      "full1224_run": false,
+      "batch_olean_raw_sha256": "bf95d8b9e4ebbefc6ac287602cfbb01255fd03a3ae07d1b7071de7b62e8fcde6"
+    }
+  ],
+  "full1224_compiled": false,
+  "formal_Data_module_compiled": false,
+  "whole_submission_compiled": false,
+  "website_8GB_53min_verified": false,
+  "submitted": false
+}

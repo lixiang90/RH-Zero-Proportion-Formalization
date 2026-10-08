@@ -8,6 +8,8 @@ namespace RHWeil.RecordSubmission.FiniteCertificateData
 
 set_option maxRecDepth 100000
 set_option maxHeartbeats 0
+set_option stderrAsMessages false
+set_option Elab.async false
 
 def digit64 (c : Char) : Nat :=
   let n := c.toNat
@@ -25,12 +27,12 @@ macro "n64% " s:str : term => do
   let n := decode64 s.getString
   return Lean.Syntax.mkNumLit (toString n)
 
-def geometryWidth : Nat := 22
+noncomputable def geometryWidth : Nat := 22
 
-def bits (word offset width : Nat) : Nat :=
+noncomputable def bits (word offset width : Nat) : Nat :=
   (word >>> offset) &&& ((1 <<< width) - 1)
 
-def lambdaChunks : Array Nat := #[
+noncomputable def lambdaChunks : Array Nat := #[
   (n64% "F8WiXQAAAAXZEHt3DAABa6POSFRAAFklgpAkyAAV9dLScuYABXVJSKYywAFULts6wAAAVGdalBrgABJ3/Wf2lgAEnd03K7DAAScdtKffIABITeGTwZgAEV7LuVaRAARUBS+xb8ABDMESSBEAAEELBom3KAAQLXEeZ98ABAT0S/lAAAEBL8qZGCAAPB9Q9rwAAA53ih/cQgADa2H9P4gAANjM5W9KMAAymcQESAAADHvmoKFoAALSUPgxvYAAruKXE9iQACo7y3AJKAAKLYSJnpgAAngdVUpxgACdnvaPd2AAJ1oM3yakAAkYF2Nk8QACMOH2zp+AAITXTmU78AAg88h80pAAB4lLa3E6AAHdIo/2IAAAcNcWwUkQABwn4MBIAAAGfI/AhB8AAZppjGGigABkLmN2wAAAGNKgd4V0AASgA7uWUwABE5+f6seAABkY+lxjAAACKbMUoMQAAEjtPeyTAAAAAAABF4AAAAAAABZgAAAAAAABuAAAAAAAAFkAAAAAAAAPgAAAAAAAA5AAAAAAAAB4AAAAAAAAGwAAAAAAAAWAAAAAAAABEAAAAAAAADwAAAAAAAALAAAAAAAAAcAAAAAAAABAAAAAAAAAB"),
   (n64% "NkyOdUcEAA2DmWyHJYADRmBMWzygANGDkH++DAA0Fq03MAAADPwTmXj2AAM164qRufAAy2kZi/+oADIa5s3wxAAMZP4jkfUAAwCu9RBxIAC8RQ+SIAAALsLeND+LAAuwtjWBW0AC4yCPcUdgALVBIli4GAAsS6ybZh4ACvRKRgQaAAKvPLDYIdAAq0Cpq2TQACpB6ixpvgAKiVdt9FYAAp+2PqAr4ACnqZLH3PAAKR1GUzoWAApGtEqnPEACfg/LPE6gAJ7BlImlcAAncMQXxYQACdNB3yQ/QAJzcLiAbYAAmyk/EE0MACbEPab1aAAJrab+nR8AAlYdkzBcMACSZx68S/wAIkGhrem4AAiLywTtGAACICn56HBgAIa5Zsf3gAAhi9hoMRIACFwKxjZvwAIH1MBYqPAAfx/Uo0Q8AB/D/389ewAH4svFxpQAAfMZx21Z8AB5uv6N3PAAHiwUT9VaAAd+W8Q3gYAB1XC15qIgAHNF6MDQXAAcmaWWj5kABpIVwZUAAAGgIeQ4wAAAZ96aswRAABntiquu8wAGc5WMNwAAAZt3Hvdf4ABmCmWbNPAAGSqSu5qRAAY61+lXSQABjnvfk4FwAGLXmWZin"),
   (n64% "Uz1xVYq7ABSTGp20/wAFHbA53ElAAUNgVRPoAABQ0bT9ZAEAFBAZ36GIwAUA6EBKmBABOvEmG5NYAE6it+RokwATl8EPYQAABN4Zr6U8AAE23Bh4KVQATZCX56d0ABNa8lDFpEAE1rxtMeRwATWJcDGhKABMfERfEA8AEx8KilLgAAS9xPlJvUABLymnFC/AAEtznklPaQASvZ5PJ3IABKynk3qZ8AEq8Rf5N3gASroKChwHABKqhzNMcoAEmRcCugHAASN33L1UAABIea+Uc1EAEh475GRoAAR+dFFGDwABHu2nprg0AEQuOSP8EgAQ5/cuWoOABDiCeVO0EAEL5cBOtrwAQVbTLAhwABBLU8HvbEAED6W4pHcwAQO1+7HH+ABAYi+EhcQAEANxIIaRwAP+yeuRH9AA/qjVsy/cAD+qM5mLQQAP6ouZhkNAA+uxsYWoUAD6sIODbmwAPmJ+D5LTAA95IABv3sAD23d+f2AAAO8YE32eyAA7RMuxw7AADrSoeGMkQAOgxWhZF7AA5vF+3QtgADjBWnB0CwAOL5frt/lAA4kfC7h9IADh0a1YpWgAOA2oXKGyAA3xvmcUT4ADbqMks83wANuH8nOOZ"),
@@ -181,7 +183,7 @@ def lambdaChunks : Array Nat := #[
   (n64% "LGivC7FAIgsaK8LsUAACxorwuxP/4K+0V8r1cmAret/2ZGTeCrvwfANyrYKu6ecX97xAq6VOLPnOeCrm3coJk6AKsU9kDqXPgqdIhGiVFMCpeAaujwCwKhctOqid9gp4Eb7neDeCnY96Oza/gKUrGY/g+tgokrdwkXfgCiJWBsDWHgKFJ0gyBkAgoLhpJsQgiCf6F7fFS4QJ89HRMTNegnpwiI3uZqCdvc+H+6joJ1OhILypUAnBa7irnN0CbJWMcVy4wJsIHByxxbAmeMsqy7D0CY+SNb03+gJjz5hfxGlAmJYznURPOCYeXDa2VRwJdXpGgiawAlv1aZJzdGCWSPW2dNuIJScozbqYdglBP+I1UdWCSMH0p9UKwJIna5sKzogj7kNgGvlOCPuQ2Aa+UYI91kOiWUugjgYWwm2gGCNi26iMTYAI2LbqIxNfAjUHD94u1KCNQXmtoBNoI1Bea2gEqAjBJIcfasuCJo/IJuqWAIl3Oj9jPbgiT1z2OeaECJBzaEyec4Iip0vb4EZgiIkZDlCYOCIh/K4maSYIgwb3E2cKgiALud2wooCHsRKiLLdAIcZx98T6kAhsqMrlRLMCGwG+TG23QIbAb5Mbbcg"),
 ]
 
-def pointChunks : Array Nat := #[
+noncomputable def pointChunks : Array Nat := #[
   (n64% "B4DIppdl6dkgAJrLkIcgeCRjFXZGxOYAC+PoCHAHg8YTl2LsbCAA5W4whuB4PqL4diyFAwAOlL8IbdeEetP3YjerwAD5F6CG0XhUhNN2FqMoABEGCQhsB4bM3mdf5aFQAT8bcIageIU8cXXl64oAFxpKCGgHiUlI911pNsABkyvAhmx4ndB0dc1XhwAagCAIZgeLaJ73W0ngsAHiOXCGQHjPaON1m78YACIFDQhiB46G1NdYK6rgAmJN8IYAeQGXLnVpkM0AKoNrCF4Hka5oR1UEF2AC8hDghcB5KssfdUBc2wAyI8gIWseTRbT3U2zKwAM/4nCFoHlMWtB1Hs0rADjHYwhYJ5TfWMdR0ybgA5GxIIWAeVRh9XUWxgUAOmxRCFeHlbnrh1D4lDADvshQhW95Z7U7dQNywAA+eC4IVgeX5bqXTszFIAQ16XCFRHmBmll06Y2iAEQV1whUB5jPpbdN4toABGnzYIUyeZuk5HTPgxcASfRtCFIHmouDF0wm/JAEz8LQhRB5tdTadLVTIQBQFEsIUAedAqOHSa/cMAVnXQCE4HnqpPx0gIL/AF0ZWQhMB6BUUidGXi2ABj/0QISgeiAKqHRLHVMAayfuCEgHo15qd0NUFTAHEqXghGZ6OvWKdDAycQByk7UIRgelYFxHQVIjcAekL1CEQHpxO1Jz+eyoAII2DQhCB6jJYxc96RyQCKbVkIQAesO7z3OnbCsAm6oECDwHrfhoRzi6F2AKSwHQg6B6+3Z3c2+xgwCt+98IOAexeLo3NTnFcAt42oCDYHtQJY5zGwJsAMuEwQgyB7bKpCcv59uADV6ssIMAe8MXDnKoEOwA9ss6CCoHvgMCFyivfZAQJRWQgoB8VgZochUhkgEzRrUIIAfJHPHXHZWNwBTX4pCBwHzOKzJxnPzHAWjh+ggYB9SJxhcSKLmQGjOi4IEAfaXx/HDFNf0B0iYgCAoH3k4atwhkZOAfL1EQgGB+BJArcGaXzgID0uUIBAfkRaRHAmzbYCJn0PCAAH9JKntvIf1+Ar3FpAfwB/amaUbwDBZQLSICAH7ggFbzu24UND0DachlB+AIEnHMltRAsvA/jQAgfUCCRFHIbCbWLwTKxEUHxAgtYqvWuU/ToFPC8hB7wIO08NdqtjcfBfEYywewCEmHUvadKyxwazM7oHpAhQv5AWlfLvQHGUnHB54Juuc0VSvLSeJai+YwagAAAAAAAAAAAAAAAAAAAA"),
   (n64% "B4aXEtdgG20QBXHVoP8geG7wPnX8N8AAWiXiD/AHh0cPx19rcCAF08KQ/uB4efNbdfE0owBgYDQP7AeH4WLHXtEdIAYsRHD+qHh/d05167CvAGOSBw/qB4hPzLdeYrMwBm0aYP6AeIqDxXXgpDkAah8UD+YHiQDDB12xvOAG16Vg/kB4lZYAddWR/gBw424P4geJshKHXQBtUAdFphD+AHigrZ51ynpgAHffMQ/eB4pjtUdcTsqgB7ceIP3AeKo57nXA7g8AfgvlD9qXiryj91v12/AH8Sdw/aB4sNTDdbpTOgCCZ/8P2DeLFaUXW5zawAgsDyD9gHiyOO51uO8PAINVdw/Xt4tHvadbasJACE2TUP1ueLbrgHW0PH4Ahn1XD9YHi8fb51rqpAAIpHqQ/UB4whD/dakW/gCOH+kP0geMelOHWjgsYAkgYbD9AHjNOlp1ne2kAJX6QA/OB40tBadZhXowCZ/FsPzAeNhnLHWSwNIAngxuD8oHjd/sN1jSk7AKIqfA/IB445cSdYeQ7ACmVoUPxgeOZjenWExIMAqHHID8UHjpMAx1gffxAKqQiw/EB47smmdXxeWACu2JEPwgePRj0nV2xCwAsy6YD8AHj5/oN1cSl6ALeSoQ++B4/5mudWuOTwC8BK0PvAeQU1RXVl8rgAwIS+D7oHkK0Tt1YFbCAMUS1A+4B5EG2EdVq6eQDJrvAPtgeRYKE3VVHesAzlkUD7QHkbptp1T4EjANMRPw+yB5IUPNdUnkMADX13IPsAeTe4TnUzb7AA63yWD6gHlC8kN1KDW6APWjXQ+kB5Tit7dRz8ggEAAkQPoAeW/OlXT7WWgBIG9/D5QHl1Z/l09cAEASYIEg+SB5p6jtdMN/EAFa2hQPgAc8yudHqeeYYAzeydCOAHTcM415jvRtAFpF5gjAB07BpAeX8NugBVM8IIvkdSXKGnlFXeAARDYoCLgHVxrcB4+Xo6ADERzAiwB15LNTeIZ0pwAaigQIpFdhBj+HhaxAMAE+d9CKAHa4Y3Z3ssSFAAOANAiQB2zgsWd50c5QACYkUIjgduPYCHeHT/MAAXqnCIwHb5ylF3cV2rAADJuAiKB3D+Hzd1tGCAAAT9YIiAdzyBU3cupqgAAAKsCIQHdptkJ3AXG5AACWFAiAB3gIjWduqfJQABNOkIfgd8XhIXalRtoABGpOCHgHfdSXB2jd6LAAXwSgh2B39NcydnZQyQAHsPkIdA"),
   (n64% "B2fL6jd+5pWwAmxQoQvAdoz//nfeKAAAH920ELQHaVQGt31eeTABynaBCwB2nZW8d82SQgAZmpMQrAdqHIKXfJX9UAGCPVEKoHal/7p3xShDABa3nBCoB2ssUDd7hi+wASsosQogdrcQ4He0Fx4AEXDkEKAHa7Yb13r8ZAABA6ABCeB2yHIUd6K16gAM1mkQmAdsyQPneel8AAC9t0EJYnbM1q13nlFRAAvLEBCWB20UAhd5nn3QAKyroQlAdtWuaneVeZQACdVxEJIHbaIYF3kQZ9AAjrQhCQB23plcd4yOogAIDDkQjgduMV9XeIEgkABzhhEIwHbnl0N3g5C7AAZvxhCKB27B0/d38KvwAFsnUQiAdvCn4Xd6gB0ABQB5EIYHb1NyF3dfDdAARZ3BCEB2+cr3d3FdBwADvqwQggdv5jW3dsxKMAAy7zEIAHcDAER3aCe6AAKqvRB+B3DEeGd17geAABxQUQegdyPGhndHYXgAAFMxEHAHctSpF3Pd1tAAAR8RBsB3SjopdyDt1QAAbfEQYAd08a5nccDRgAAKeoEF4Hdd1KR3DVNaAAGePxBYB3cayBdvl7fQADk8oQUAd3uuuXbveUUABNlEEEwHeAtUZ26nK4AAWOzhBKB3hb9mduVomAAGUO4QSAd4/eO3bbScMAB/sOEEQHeU8tt21jUjAAjjIBBCB3mgrodtEdFgAJ1+sQQAd58mWHbMAaYACtl2ED4HekRR92xuLfAAvnyRA8B3w0HadqfmJAATTAIQMAd8h28HaisQ4AFLS3EC4HfNrw52nXjwABYqdBAsB30uondpg91wAXrUAQKgd9goMnaS/8wAGT0lECgHfdaSV2jb7ZABraKBAmB34qz0doh7CgAchFEQJAd+08/HZ96wIAIAAxECAHfyiSB2eJ7eACHR9hAeB3/Slzdm3+iwAlnUwQGgeAJ9jHZoqnIAJ5bqEBgHgH1DV2Y1PJACmd3hAWB4EokPdlie7wAt098QEgeBfnKnZTQNQAMAL5EBAHgdR6l2TeBVADI/gRAOB4IqqBdkh9fQA0iX0QDAeC13EnY9sOwAOUXpEAgHgy4LR2OEdKADu4ZRAGB4OEyDdjLbewA+OGsQBAeD26cnYtbYwAQMYBEAIHhDKnd2J/2HAENhLRAAB4U4aVdhehaQBLhGQP+geFj+fXYSKYEATlYYD/gHheeEF2DK+9AFE1eg/2B4Y/PVdgc0KQBUIo4P9A"),
@@ -202,18 +204,18 @@ def pointChunks : Array Nat := #[
   (n64% "B3N3dEdzOwuwAAL3N34A"),
 ]
 
-def pointPacket (index : Nat) : Nat :=
+noncomputable def pointPacket (index : Nat) : Nat :=
   bits ((pointChunks[index / 64]?).getD 0) ((index % 64) * 116) 116
 
-def pointPosition (index : Nat) : Nat := bits (pointPacket index) 0 20
-def pointValue (index : Nat) : Nat := bits (pointPacket index) 20 96
+noncomputable def pointPosition (index : Nat) : Nat := bits (pointPacket index) 0 20
+noncomputable def pointValue (index : Nat) : Nat := bits (pointPacket index) 20 96
 
-def topMultipliers : Nat := (n64% "NrYf0/iAEIAicmNt1Db9plVpU0QBlvNNLQdXoQblVymvbDBeQdJSh/r0AOyzVVfuwgQdBIsEFk+A9Ff9XPLAGA0cjd1UDhwI1CdDtC95ACGUDx5FuOAQ+++CeXFgAFDYFUT6AAFdaQtZOzaAMF8gl7+O0AJ4G6njG/gAFRnWpQa4B7nVnwi/P4AHUHIAYihgCQqVzH5mqAKNFwDZk6lrastpfkfQAAjaxZX1t4IxfNIrENMgWZoINZ9iAAVMZD2haqdBs7mfWfIWMAMH3HewJagGj1XG9pReADd9vuQSHcAXOl1Y7KbSuAuQFlY4AhiIDLV+cgAEVPXtIRT1QCBo35hSCwAOaQIi3m8gZaOSclvblAeDIGP0rRwAAPB9Q9rwAAQHl9psuVgBI4xocelIKQYXmPIwYgAnJgonBrKwAKvPLDYIdDuNhqXMrZAABpIVwZUAAwbSrsJMwAez2ESLHNAAmwAvo7KEABFgxYFoSAAO9KOtZu8AASC6a3YzKAI2LbqIxNgAQvTWqH9YgAn/soHPPWAFjRXhdigAAGzKb5CLnACxorwuxQAADvNnRmpFoAiaPyCbqlgBkdFlYGNeAFjRXgh7zYA")
+noncomputable def topMultipliers : Nat := (n64% "NrYf0/iAEIAicmNt1Db9plVpU0QBlvNNLQdXoQblVymvbDBeQdJSh/r0AOyzVVfuwgQdBIsEFk+A9Ff9XPLAGA0cjd1UDhwI1CdDtC95ACGUDx5FuOAQ+++CeXFgAFDYFUT6AAFdaQtZOzaAMF8gl7+O0AJ4G6njG/gAFRnWpQa4B7nVnwi/P4AHUHIAYihgCQqVzH5mqAKNFwDZk6lrastpfkfQAAjaxZX1t4IxfNIrENMgWZoINZ9iAAVMZD2haqdBs7mfWfIWMAMH3HewJagGj1XG9pReADd9vuQSHcAXOl1Y7KbSuAuQFlY4AhiIDLV+cgAEVPXtIRT1QCBo35hSCwAOaQIi3m8gZaOSclvblAeDIGP0rRwAAPB9Q9rwAAQHl9psuVgBI4xocelIKQYXmPIwYgAnJgonBrKwAKvPLDYIdDuNhqXMrZAABpIVwZUAAwbSrsJMwAez2ESLHNAAmwAvo7KEABFgxYFoSAAO9KOtZu8AASC6a3YzKAI2LbqIxNgAQvTWqH9YgAn/soHPPWAFjRXhdigAAGzKb5CLnACxorwuxQAADvNnRmpFoAiaPyCbqlgBkdFlYGNeAFjRXgh7zYA")
 
-def multiplier (index : Nat) : Nat :=
+noncomputable def multiplier (index : Nat) : Nat :=
   bits ((lambdaChunks[index / 64]?).getD 0) ((index % 64) * 58) 58
 
-def catalog : Array Nat := #[
+noncomputable def catalog : Array Nat := #[
   (n64% "CF6cTtSc/nsqACCNg0IQg"),
   (n64% "CF6VgXEdBUiNwB6QvUIRA"),
   (n64% "CF6NeandDVBUwBxKl4IRm"),
@@ -453,7 +455,7 @@ def catalog : Array Nat := #[
   (n64% "WJ3KaIRd0GF7gAD+lVYig"),
 ]
 
-def cells : Array (Nat × Nat) := #[
+noncomputable def cells : Array (Nat × Nat) := #[
   ((n64% "MkcAimgDmHAKhoAvGACN6AQMcA0mgDZYALfoAVAAA6AASAcA/GgEDYAOHoAcgABXAAFQAAOgAFLnARjoBLeAD+aAI6AAc4ABxgAFaAAVIAA5gAdI4BVxwGofARjoBCRwCOAAOwcAcQADPHAFQAAshwA3AAD40AGoACfYAG/oAKgAAdAACoAAHQAAqAAB0AAK4AAcgAJWcAGoA"), (n64% "KgUiAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQJCwYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFaABAAAAAANgdO5gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAl4AEAAAAAAAKkACAAAAAAdA2ZTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtAAIAAAAAAAmYAEAAAAAAAL0ACAAAAAAzBEGDAAAAAAAP2JJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
   ((n64% "QaqArhwEjqgMwcAvGABQgAUCqA9hwDZYAG2AAVAAA6AAWqqBIBwEDYAIqAAcgABXAAFQAAOgAGVKgTycBLeACnAAI6AAc4ABxgAFaAAVIAA5gAdI4Bh6oGofAP8OBCRwDLjgOwcAro4DPHAJGOAshwBnjgNMqAHLwCfYADOAAKgAAdAACoAAHQAAqAAB0AAK4AAcgAJWcAPQ4"), (n64% "E0IyAAAAAAAKyAAgAAAAAAAAAAAAAAAAGQJCwYAAAAAABigAEAAAAAAAAAAAAAAAAAAFaABAAAAAANgdO5gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAl4AEAAAAAAAKkACAAAAAAbA6bTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtAAIAAAAAAAmYAEAAAAAAAL0ACAAAAAAzBEGDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcNdEAAAAAAAAAAA")),
   ((n64% "IQlAOBBC7ocHyewY26BajoOLhwmZ7CFjoHeOgYY6BTjoP/hwuU6CnroJ7OgiM6B6zoERAAO2AEgIcNmOgx+6C/DoKkOgmw6BkgAFugAR4AA5gAVX0BJQFEL0QPTgw7PEDRzwKhigmlJCLYoHMSQa7LBWEkGETQGoAAkAAByAARI6A2joCdAAHQAAnQAB0AAIEAAcgAEtywNdJ"), (n64% "zBeezAAAAAAAAAAAAAAAAAACAgAQAAAAANIWxQYAAAAAAAAAAAAAAAAAAY4ACAAAAAAAHsABAAAAAANghOhgAAAAAAAAAAAAAAAAACFAAIAAAAAAAwgAEAAAAAAALEACAAAAAAhA2fDAAAAAAAAAAAAAAAAAAFIAAQAAAAAACAwAIAAAAAAAlgAEAAAAAAAKIACA0ZzzgAAeVyAAAAAAAO+SxAAAAAAAGogAQAAAAAAC2AAIAAAAAABBQAEAAAAAAAXgACAAAAAB+DUbT")),
@@ -697,7 +699,7 @@ def cells : Array (Nat × Nat) := #[
   ((n64% "R+kATgAFVJAIOAAnWkBpAAYqkAuQADS6QJ6AAn2kBrAAcAkA7oAEIaQNQAA1OkCggAIU0gawAHzpASIABcFIEHgAQhpA1AADS6QJ6AAnWkBpAAt/IBPIAJfCgSIAB9yEDugAcGhAuQAGMIQIOABVqEBOAAOwkAGoABn6QDOAAaekA1gAE+0gNYABPtIDWAAZ+kAzgAO64AGoA"), (n64% "BwFEAAAAAAAEmtCAAAAAAAAAAAAAAAAAAAAAAAAAAAANYmAMYAAAAAAAAAAAAAAAAAAl0ACAAAAAAAAAAAAAAAABMCICRgAAAAAAAAAAAAAAAAADSQAIAAAAAAAAAAAAAAAAAAXwACAAAAACYEQSzAAAAAAAAAAAAAAAAAAAAAAAAAAAAADSQAIAAAAAABLoAEAAAAAAAAAAAAAAAAAAEmtCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABACy")),
 ]
 
-def pairPacks : Array (Nat × Nat × Nat × Nat × Nat × Nat) := #[
+noncomputable def pairPacks : Array (Nat × Nat × Nat × Nat × Nat × Nat) := #[
   (0, 293, 21, (n64% "7zXKU3wG0O0wWOMwwmCSuwEkDn/osHt/QIs3+byzQQYCCyCTQCSGRxR87p/h4PL/"), 0, (n64% "A")),
   (0, 295, 28, (n64% "B7nvQdx/eS+p+7jHKWU/uMNtENUdpAMyRF/YgzCCX5K7BWa+r+byzGcFfmBN6/LzZD+VgCmm8fk0AkhkYUhn0n5BRhPx87p/ikMM/"), 0, (n64% "A")),
   (0, 448, 18, (n64% "G0YyCjb9eRoH62AU4A1+b0h/81KAn5oawfzHI4fl4gsn9X5TLJoBJDIwpDPpPyCjCfj53T/"), 0, (n64% "A")),
@@ -1924,26 +1926,26 @@ def pairPacks : Array (Nat × Nat × Nat × Nat × Nat × Nat) := #[
   (481, 240, 18, (n64% "bwVh+204P9qDqP7RDY4C2BWL9d+a3638yEGEEuw/v5YIKpJNHUPySARgyCnB/jkKw/"), 0, (n64% "A")),
 ]
 
-def representativeLabelChunks (index : Nat) : Nat :=
+noncomputable def representativeLabelChunks (index : Nat) : Nat :=
   (if index < 19 then (if index < 9 then (if index < 4 then (if index < 2 then (if index < 1 then (n64% "DQFDIFDAFxgED4EDoEDgEDYEC4ECoECgECAEB4EBoEBYExgDDgDDYDC4DCoDCgDBoDC4CCoCCgCBoCBYCBIBA4B4AAk4AkoA") else (n64% "t4NG4Nt4LG4LuIKt4KHIKG4K6YJ6QJq4JqoJF4JFwJFoJE4JEwJ6QI6II6AIqoIEwI6QH6IH6AHq4HFoHE4HEwHFYGFIGxYF")) else (if index < 3 then (n64% "5YYLwYLoY4gWLgWLQWLAW4gVLgVLQVLAVmYUIgUIYUIQUvITH4TvYSvISvASHwSHoSvIRvARHoRvYQH4QHwQuAOt4OHAOG4O") else (n64% "JwhJohpAgn4gnwgpAfowfnwfKofJwfpAenweJwe5QdpAdoQdnwdKgdKYdKQdJwdJod5QcMAc5IbMAb5YaLwaLoa5YZLwZLoZ"))) else (if index < 6 then (if index < 5 then (n64% "sQrsArOorOYrOArN4r7wqOgqOYq7wpOgpOYpOYojAnMwnMgni4mMwmMgm2Yl2QlNolNQl2QkNokNQkpAiowiKoipAhowhnwh") else (n64% "Pg1PQ1to0tg0tI0Pg0PQ0Ow0twzPIzPAztwyPAytQxtQw8Av8AusYuOYu8AtsYtOYtOAt8As74ssYssQsOosOYs8Ar74rsYr")) else (if index < 7 then (n64% "Pw54Y44Q4lQ4lI4SA4R44Rw4Ro4Rg4Qg4QY4QQ4QI4QA4P44Pw4lQ3lI3lA3R43Rw3Ro3Rg3Qg3QA3P43Pw3tI2Pg2Ow2tI1") else (if index < 8 then (n64% "mI/mA/SI/RY/RQ/Qw/mA+l4+RQ+Qw9SI8mA7lw7SI7RI7Q474Q6SA64Y54Q5lQ5SA5R45Rw5Ro5Rg5Qg5QY5QQ5QI5QA5P45") else (n64% "UpEUhEUZEUREUBET5ETxEzBDyJDyBDx5DUpDUhDUZDURDUBDT5DTxDSxCShCSZCmRBSRBRZB4ZA4RAmJASJA4Y/4Q/4I/mQ/"))))) else (if index < 14 then (if index < 11 then (if index < 10 then (n64% "zZJVBJzZIVBIzZHVBHzBGyJGyBGx5GUpGUhGUZGURGUBGT5GTxGzBFyJFyBFx5FUpFUhFUZFURFUBFT5FTxFzBEyJEyBEx5E") else (n64% "0BQz5QzxQWBQV5QVxQVpQTJQTBQzZPzRPyRPVhPVZPVBPUJP0xO0pOWpOWhOTpO0xN0pN0RN0JNWpNWhNWZNWRNzZLzZKVBK")) else (if index < 12 then (n64% "VhWVZWVBWU5WUxWUJWTJWTBWSxWTpVWhUTpU0xT0pTWpTWhT0pS0RS0JS0BSWZSWRSVxSVpSzpRzZRyRRVBRUJRThRTZR0JQ") else (if index < 13 then (n64% "0RX0JX0BXzpXWpXWhXWZXWRXVxXVpXTpX0xW0pW0hW0ZW0RW0JW0BWz5WzxWzZWzRWzBWyRWWpWWhWWRWWJWWBWV5WVxWVpW") else (n64% "Yhc6xb6hbrRbrBbYxbYhbXxbXhbXZbXRbXJbXBbW5bWxb6xaYxa6xZ6hZrBZYxZYhZrRYrBYXxYXRYXJYXBYW5YWxY0xX0pX")))) else (if index < 16 then (if index < 15 then (n64% "bxpbZpa5paxpaZp55o5hobxobpobZobRoaZnwZlwBiaBivphr5grxfrpfrhfrJfYJfX5frxeYJerxdrpdrhdX5d6xc6hcYxc") else (n64% "2pxcxxcpxchxcZx3pw3Zw3BwdZwdRwcxw3Bv25vcxvcpv5xubxubJubBu55t5ptbptbRtbJt55sbpsbRs55rbprbRrbJq5hp")) else (if index < 17 then (n64% "eB1d51dx1dp18J0sx0sp0eB0dx0dp03pz3hz3ZzdZzdRz3py3Jy3By25y2xy2pyc5ycxycpychycZycJycByb5y3Bx25x2xx") else (if index < 18 then (n64% "C6BCiBByABqABiABaABx/Bp/Bx+Bp+Bh+BZ+Ah9AZ94B84B7BB7AZ5AR54B4BJ4BB4Ap4tB3AJ3AB3tB2s52AJ2AB28J1sx1") else (n64% "xKJxCJCaICKICKHBqGBaGxqFwyFwqFwiFDiFDaFC6FCyFCiFxqEDiEDaEwyDwqDwiDC6DCiDwyCwqCwiCC6CCiCwyBwqBwiB")))))) else (if index < 29 then (if index < 24 then (if index < 21 then (if index < 20 then (n64% "GabGSbH6aH6ZH6YHiWHSVHSUHST6aSF6SFKSEqSFyRFqRE6RE6QFiPFSPFKPFCPFSOFKOFCOFaNFKNFCNDqLCaLCSKxaJxSJ") else (n64% "LKl5Ck46k4yk4qkLikLSkLKk5Cj46j4yj4qjLijLSjLKj5Ci46i4yi4qiLiiLSiLKiJihIygIqgIyfIqfIyeIqeGydGqdHSc")) else (if index < 22 then (n64% "KqsKisKas5SrLipLapLSpLioLaoLSo5Cn46n4yn4qnLinLSnLKnIynIqn5Cm46m4ym4qmLimLSmLKm5Cl46l4yl4qlLilLSl") else (if index < 23 then (n64% "5a0L60Ka0KS05azL6zKKzJ6z5ayL6y5axL6xKqxKaxKSxKKx5awL6wKawKSwKKwJ6wJqw5avL6vKavKSvKKvJ6vJqvJiuJit") else (n64% "1a51S5NK5M651y41a41S41K4NK4M641631y31a31S31K31C3NK3M631621y21i21a21S21K21C2062NK2M625a1L61Ka1KS1")))) else (if index < 26 then (if index < 25 then (n64% "NK/NC/M6/2S+2C+16+Ni+NK+M6+MK+2C91691y9Nq9Ni9NK9M692S82K82C8Nq82C71y7Nq7Ni71661y61a6NK6M661651y5") else (n64% "77H7zHOrHOjHObHOTHOLHODH8DGObGODG7zFOjFObFODFObEODE2jD2jCNzCMjC2TBNzBNDBM7BMrB2TA2LANLANDAM7A2C/")) else (if index < 27 then (n64% "SrTSTSSLSQDSP7S4bR4TRSLRQrRQDRP7RPrPPjPPbPPTPPLPOzPPLO8DNOTN8DMObMOTM8DLObLOTL8DKObKOTK8DJ8DI8DH") else (if index < 28 then (n64% "abjaLh67e6reY7eYreYLeYDeXjeXbeYbdXzbXjbXbbWraWjaWTaVzaVraVLaTTaVLZTbZTbYU7XUzXU7WUzWU7VUzVU7UUzU") else (n64% "PT2PL1PD1ALyALxADx8LweDwdzwdrwdjvdbvdTvdLvdDvc7vczvcrvcTvcLvcDvczucztcjtbzmbrmbjmbDlbzkbjkbzjbDj"))))) else (if index < 34 then (if index < 31 then (if index < 30 then (n64% "IMEH8EH0DHsCGcBGcAHL/HD/G7/Hb+HL+HD+G7+Gb+GL+GD+HL9G79Hj8Hb8HL8G78Gb8GL8GD8Pr6O76PT5Pr4Pb4O74PL3") else (n64% "aMeZ8eZ0cZ0aaMYaEYH8SH8RGsQGsPIMOGsOGcOHUNGcNHUMGcMGEMHkIHUIGcIGUIGEIHkHHUHGcGGUGGEGHUFGcFGUFGEF")) else (if index < 32 then (n64% "S86TM5TE5S85TM4TE4S84Us3Uk3Uc3UU3UE3T83T03Us2Uk2Uc2UU2UE2T82T02S01Sk1Sc1S00Sk0Sc0S0zSkzSczaMfZ8f") else (if index < 33 then (n64% "WtEWlEWdEWVEV1EWtDWlDWdDWVDV1DWlCWNCWFCV1CWlAWNAWFAWc+WU+UM+V89V09Vs9UM9TM8TE8S88TM7TE7S87TM6TE6") else (n64% "NNaNtZNlZNtYNlYNNYM9YM1XN1WNtWNVWMtWM1VMtVMlVMVTM9STdRWlQVdNU9NU1NStNVdMU9LU1LStLU9KU1KStJWdGTtG")))) else (if index < 36 then (if index < 35 then (n64% "c1lcllddkdVkdFkc1kctkclkcdkcNkcFkb9kdljddjdVjc1jddic1ic1hcthclhcdhcNhcFhb9hcNgcFgb9gN1eN1bNtaNla") else (n64% "QVyQNySFxR9xR1xRtxRlxQlxQdxQVxQNxQFxSFwR9wR1wRtwRlwQlwQdwQVwQNwQFwP9wR9vR1vRtvRlvQlvQFvP9vP1vc1m")) else (if index < 37 then (n64% "a+pa2paupampaepa+oa2oauoamoaeoa+na2naunamnaenSWDSOCSV8Rd8RV7SN3RN3Q93SF2Ql1Ql0Qd0QlzQdzQVzQlyQdy") else (if index < 38 then (n64% "b24bu4bm4bG3b22bm2b21bG1ae1b20buybWybuxbWwbmva+va2vaevb2ubuubmubetbesa+ra2rauramraera+qa2qauqaeq") else (n64% "eHhd/geHfd/fd3feHed3edve")))))))
 
-def representativeLabel (index : Nat) : Nat :=
+noncomputable def representativeLabel (index : Nat) : Nat :=
   bits (representativeLabelChunks (index / 32)) ((index % 32) * 18) 18
 
-def pairLabelAtChunks (index : Nat) : Nat :=
+noncomputable def pairLabelAtChunks (index : Nat) : Nat :=
   (if index < 37 then (if index < 18 then (if index < 9 then (if index < 4 then (if index < 2 then (if index < 1 then (n64% "DQFDIFDAFxgED4EDoEDgEDYEC4ECoECgECAEB4EBoEBYExgDDgDDYDC4DCoDCgDBoDC4CCoCCgCBoCBYCBIBA4B4AAk4AkoA") else (n64% "t4NG4Nt4LG4LuIKt4KHIKG4K6YJ6QJq4JqoJF4JFwJFoJE4JEwJ6QI6II6AIqoIEwI6QH6IH6AHq4HFoHE4HEwHFYGFIGxYF")) else (if index < 3 then (n64% "5YYLwYLoY4gWLgWLQWLAW4gVLgVLQVLAVmYUIgUIYUIQUvITH4TvYSvISvASHwSHoSvIRvARHoRvYQH4QHwQuAOt4OHAOG4O") else (n64% "JwhJohpAgn4gnwgpAfowfnwfKofJwfpAenweJwe5QdpAdoQdnwdKgdKYdKQdJwdJod5QcMAc5IbMAb5YaLwaLoa5YZLwZLoZ"))) else (if index < 6 then (if index < 5 then (n64% "sQrsArOorOYrOArN4r7wqOgqOYq7wpOgpOYpOYojAnMwnMgni4mMwmMgm2Yl2QlNolNQl2QkNokNQkpAiowiKoipAhowhnwh") else (n64% "PQ1to0tg0tI0eI0Pg0PQ0Ow0twzPIzPAztwyPAytQxtQw8Av8AusYuOYu8AtsYtOYtOAt8As74ssYssQsOosOYs8Ar74rsYr")) else (if index < 7 then (n64% "lQ4lI4lA4SA4R44Rw4Ro4Rg4Qg4QY4QQ4QI4QA4P44Pw4lQ3lI3lA3R43Rw3Ro3Rg3Qg3QA3P43Pw3tI2eI2Pg2Ow2tI1Pg1") else (if index < 8 then (n64% "mA+l4+RQ+lg9Qw9SI8mA7lw7SI7RI7Q474Q6SA64Y54Q5lQ5lI5lA5SA5R45Rw5Ro5Rg5Qg5QY5QQ5QI5QA5P45Pw54Y44Q4") else (n64% "UpDUhDUZDURDUBDT5DTxDgpCSxCShCSZCmRBmBBSRBRZB4ZA4RAmJAmBASJA4Y/4Q/4I/mQ/mI/mA/l4/lg/SI/RY/RQ/Qw/"))))) else (if index < 13 then (if index < 11 then (if index < 10 then (n64% "UhGUZGURGUBGT5GTxGzBFyJFyBFx5FUpFUhFUZFURFUBFT5FTxFzBEyJEyBEx5EUpEUhEUZEUREUBET5ETxEzBDyJDyBDx5D") else (n64% "0pOiJOWpOWhOTpO0xN0pN0RN0JNiRNiJNiBNh5NhxNWpNWhNWZNWRNzZLzZKVBKzZJVBJzZIVBIzZHVBHzBGyJGyBGx5GUpG")) else (if index < 12 then (n64% "0JS0BSWZSWRSVxSVpSzpRzZRyRRhxRVBRUJRThRTZR0JQ0BQz5QzxQWBQV5QVxQVpQTJQTBQzZPzRPyRPVhPVZPVBPUJP0xO") else (n64% "zRWzBWyRWWpWWhWWRWWJWWBWV5WVxWVpWVhWVZWVBWU5WUxWUJWTJWTBWSxWiZViRViBVTpVWhUTpU0xT0pTWpTWhT0pS0RS"))) else (if index < 15 then (if index < 14 then (n64% "XBYW5YWxY0xX0pX0RX0JX0BXzpXiZXiRXiJXiBXh5XhxXWpXWhXWZXWRXVxXVpXTpX0xW0pW0hW0ZW0RW0JW0BWz5WzxWzZW") else (n64% "rhdX5d6xc6hcYxcYhc6xb6hbrRbrBbYxbYhbXxbXhbXZbXRbXJbXBbW5bWxb6xaYxa6xZ6hZrBZYxZYhZrRYrBYXxYXRYXJY")) else (if index < 16 then (n64% "axpaZp55o5hoqBobxobpobZobRophnpRnpJnaZnfRmfBmwZlfRkfJkwBiaBivphr5grxfrpfrhfrJfYJfX5frxeYJerxdrpd") else (if index < 17 then (n64% "cxvcpv5xuqJubxubJubBu55t5ptqBtp5tpxtbptbRtbJt55sqBspxsbpsbRs55rqBrpxrbprbRrbJq5hpphppJpbxpbZpa5p") else (n64% "2pyj5yjxyjpyjhyc5ycxycpychycZycJycByb5y3Bx25x2xx2pxjpxjhxcxxcpxchxcZx3pw3Zw3BwdZwdRwcxw3Bv25vjhv")))))) else (if index < 27 then (if index < 22 then (if index < 20 then (if index < 19 then (n64% "p4tB3s53AJ3AB3tB2s52AJ2AB28J1sx1sp1eB1d51dx1dp18J0sx0sp0eB0dx0dp03pz3hz3ZzdZzdRz3py3Jy3By25y2xy") else (n64% "BiABaAf5/Bx/Bp/f5+fx+fh+fZ+Bx+Bp+Bh+BZ+kh9kZ9Ah9AZ94B8kp84B7kp7BB7kR5kJ5AZ5AR54B4k54kx4kp4BJ4BB4")) else (if index < 21 then (n64% "BqGBaGxqFwyFwqFwiFDiFDaFC6FCyFCiFxqEDiEDaEwyDwqDwiDC6DCiDwyCwqCwiCC6CCiCwyBwqBwiBC6BCiBfaAByABqA") else (n64% "FqRE6RE6QqaPFiPFSPFKPFCPFSOFKOFCOFaNFKNFCNqSMDqLCaLgaKgKKCSKxaJxSJxKJxCJgiIgaIgSICaICKIgaHgSHCKH"))) else (if index < 24 then (if index < 23 then (n64% "GabGSbvSaeyaH6avSZH6ZvSYH6YvSXHiWuyVuiVuaVuSVHSVuyUuiUuaUuSUHSUuyTuiTuaTuSTHST6aSqySF6SFKSEqSFyR") else (n64% "LiiLSiLKio6hoShoChJihm6gmygmqgmigIygIqgm6fmyfmqfmifIyfIqfm6emyemqemieIyeIqeGydGqduycuqcHSceqbeib")) else (if index < 25 then (n64% "5Cm46m4ym4qmLimLSmLKm5Cl46l4yl4qlLilLSlLKl5Ck46k4yk4qkLikLSkLKk5Cj46j4yj4qjLijLSjLKj5Ci46i4yi4qi") else (if index < 26 then (n64% "Kas5Sro6qoSqoCqniqnaqnSqnKqnCqo6poCpLipLapLSpLioLaoLSo5Cn46n4yn4qno6nm6nmynmqnminLinLSnLKnIynIqn") else (n64% "pCwo6woawoKwnywL6wKawKSwKKwJ6wJqw5avpCvo6voavoKvL6vKavKSvKKvJ6vJqvo6uoKuJiuo6toKtJitpCsoSsKqsKis"))))) else (if index < 32 then (if index < 29 then (if index < 28 then (n64% "L61Ka1KS15a0pC0o60oi0oa0n60ny0L60Ka0KS05azo6zL6zKKzJ6z5ayo6yL6y5axpCxo6xoaxnyxL6xKqxKaxKSxKKx5aw") else (n64% "1a41S41K41C4064NK4M641631y31a31S31K31C3063NK3M631621y21i21a21S21K21C2062NK2M625a1pC1o61oi1n61ny1")) else (if index < 30 then (n64% "Nq9Ni9NK9M692S82K82C8Nq82C71y7067Nq7Ni71661y61a61S61K61C6066NK6M661651y51a51S51K51C5065NK5M651y4") else (if index < 31 then (n64% "NLANDAM7A2C/16/1y/1q/1i/NK/NC/M6/2S+2C+16+1y+1a+1S+1C+06+Ni+NK+M6+MK+2C91691y91i91a91S91K91C9069") else (n64% "sDGObGODG7zFsbFsTFOjFObFODFsbEsTEObEODE2jD2bD2jCizCNzCMjC2TB2LB17B1rBizBirBNzBNDBM7BMrB2TA2LA1rA")))) else (if index < 34 then (if index < 33 then (n64% "sbMsLMObMOTM8DLsjLObLOTL8DKsjKsLKObKOTK8DJ8DIsbI8DH77H7zHsbHsTHsLHsDHOrHOjHObHOTHOLHODH8DGsbGsTG") else (n64% "lLSSTSSLSQDSP7S4bR4TRmLRmDRlbRlTRlLRSLRQrRQDRP7RmDQtrPtjPtLPeLPPrPPjPPbPPTPPLPOzPPLO8DNOTN8DMsjM")) else (if index < 35 then (n64% "UzXzDWy7WyzWyrWyjWybWU7WUzWzDVy7VyzVyrVyjVybVU7VUzVzDUy7UyzUyrUyjUybUU7UUzUg7TgzTSrT4TSmLSmDSlTS") else (if index < 36 then (n64% "Xbb0za0ra0ja0ba0Ta0La0DahbahTahLaWraWjaWTaVzaVraVLaTTazjZhzZhrZVLZTbZhjYTbYzDXy7XyzXyrXyjXybXU7X") else (n64% "bzjbDjabjwbifTifThfLhfDhaLhfLgfDgfLffDf67e6rerzerrerjerLeY7eYreYLeYDeXjeXber7dYbdrzcrTbrLbXzbXjb"))))))) else (if index < 56 then (if index < 46 then (if index < 41 then (if index < 39 then (if index < 38 then (n64% "dDvc7vczvcrvcTvcLvcDv3Dujrujjuczu3Dt2ztjbtjTtcztcjt57mbzmbrmbjmprlpjlpblpTlbDl57kbzkbjkprjpjjpTj") else (n64% "tTztDys7yALyADytDxs7xALxADx8LwszwsrweDwdzwdrw3zv3rv3jv3bv3Tv3Lv3Dv27vkDvj7vjzvjrvjjvdjvdbvdTvdLv")) else (if index < 40 then (n64% "G79u78uL8t78er8eb8Hj8Hb8HL8G78Gb8GL8GD8tL6eT6Pr6O76tj5tL5PT5eT4Pr4Pb4O74PL3tL2PT2tz1PL1PD1tz0tT0") else (n64% "vcDH0DvMCvECHsCesBGcBesAGcAuL/uD/t7/HL/HD/G7/u7+uL+uD+t7+er+ej+eb+Hb+HL+HD+G7+Gb+GL+GD+uL9t79HL9"))) else (if index < 43 then (if index < 42 then (n64% "esIekIecIHkIHUIGcIGUIGEIu0HHkHHUHesGekGecGGcGGUGGEGu0FukFucFuUFesFekFecFHUFGcFGUFGEFvkEvMEIMEH8E") else (n64% "fEXwcWH8SH8ResQGsQGsPvkOesOIMOGsOGcOu0NusNesNekNHUNGcNu0MusMesMekMHUMGcMGEMe0Le0Ke0Ju0IukIucIuUI")) else (if index < 44 then (n64% "wUffUfaMfZ8fwUefUefEeaMeZ8ewEdv0ce8cZ0cwEbv8bwcawEav8av0ae8aZ0awEZv8Zv0ZwUYwMYfUYfEYaMYaEYfUXfMX") else (if index < 45 then (n64% "BkoBcox0nx0mD8mD0mDsmxkkDskDkkDckC8kCskCkkCEkB8kBskBckxkjC8jCsjCkjBsiBciDchC8hCshCkhBshBchwcgfUg") else (n64% "gcugUuCMuw8tC8tC0tBctBssBcsxsrw0rwsrwkrDkrDcrC8rC0rCkrfcqB0qBsqBkqBcqf8pB0pBspf8of0ofkofcoB0oBso"))))) else (if index < 51 then (if index < 48 then (if index < 47 then (n64% "Us2Uk2Uc2UU2UE2T82T02gs1S01Sk1Sc1gs0S00Sk0Sc0gszS0zSkzSczDsyCcyxcwxUwxMwgkwgMwEMwEEwCcwgcvgMvCUv") else (n64% "Vs9UM9TM8TE8S88TM7TE7S87TM6TE6S86TM5TE5S85TM4TE4S84zE3yM3yE3x83Us3Uk3Uc3UU3UE3T83T03zE2yM2yE2x82")) else (if index < 49 then (n64% "WVDV1D0lC0VC0NC0FCWlCWNCWFCV1C0lA0NA0FAWlAWNAWFAiU/iE/h8/h0/0M+0E+iU+h0+Wc+WU+UM+z89z09yU9V89V09") else (if index < 50 then (n64% "g9Jg1JStJ0VGztGidGiFGWdGTtGztFh1F01E0tE0VE0NE0FEztEh1EWtEWlEWdEWVEV1E01D0tD0VD0ND0FDh1DWtDWlDWdD") else (n64% "ylNydNg9Ng1NVdNU9NU1NStNzVMzNMVdMzVLzNLzFLy9Ly1LytLylLydLg9Lg1LU9LU1LStLzFKy9Ky1KytKylKydKU9KU1K")))) else (if index < 53 then (if index < 52 then (n64% "2dVjFVi9VM1VMtVMlVMVT19SM9ShtRhlRTdR01Q0tQ0lQ0dQ0VQ0NQ0FQWlQhdPhVPhNPhdOhVOhNOzVNzNNzFNy9Ny1NytN") else (n64% "NNaM9a2VZ2NZ2FZNtZNlZ2VY2NY2FY19Y11Y1dY1VY1NY1FY09YNtYNlYNNYM9YMNYjFXi9XM1XMlX2VWN1WNtWNVWMtWMlW")) else (if index < 54 then (n64% "Mtf11e1te1lei1eiteN1eNNeNFeM9eMte19d11d1ldNNdNFdM9di1bitbN1bMtb2Na2Fa19a11a1da1Va1Na1Fa09aNtaNla") else (if index < 55 then (n64% "3tj3lj3dj3FjdljddjdVjc1j3Fiddic1i3Fh29h21h2thj1hjlhc1hcthclhcdhcNhcFhb9hjlgcNgcFgb9g2df2VfNtfNVf") else (n64% "c1m3Fl21ljdljVlc1lcll3tk3lk3dk3Fk29k21k2tkj9kj1kjtkjlkjdkjVkjNkddkdVkdFkc1kctkclkcdkcNkcFkb9k31j")))))) else (if index < 65 then (if index < 60 then (if index < 58 then (if index < 57 then (n64% "P9vP1v4FuBNuA9u4Ftk9tk1tktt4FsA9s4Frk1rktrBFrAtr4Fq39qklqA1qAlqklpkdpAlpBNoA9o4Fnk9nktn3Fmjtmjlm") else (n64% "QdxQVxQNxQFxP9xP1x4dw4VwlVwlNwlFwSFwR9wR1wRtwRlwQlwQdwQVwQNwQFwP9wP1wlVvlNvlFvR9vR1vRtvRlvQlvQFv")) else (if index < 59 then (n64% "Qd0QV0QN0QF0P90lVzlNzQlzQdzQVzQNzQFzP9zlVylNyQlyQdyQVyQNyQFyP9y4dx4VxlVxlNxlFxSFxR9xR1xRtxRlxQlx") else (n64% "P19mV8mF8SV8Rd8mF7l97RV7ll6Q16ll4Q14mF3l13SN3RN3Q934V2SF2lV1lN1lF1Ql1Qd1QV1QN1QF1P91P11lV0lN0Ql0"))) else (if index < 62 then (if index < 61 then (n64% "lmCSOCQ2CleBlWBlOBQuBQGBP+BlWAlOAlGAQGAP+AP2AlV/lN/lF/QF/P9/P1/lV+lN+lF+QF+P9+P1+lV9lN9lF9QF9P99") else (n64% "I+JJeIJWIJOIJGII+Io+HmeHImHIeHIWH4mGLmGLWGLGGmeFImFIeFIWFmeEImEIeEIWE4eDmWDSWDReD4eC4WCmOCmGCluC")) else (if index < 63 then (n64% "I2QIuQm+Pm2PmuPmmPI2PIuPpGOo2OouOn+OKuOoWN5WM5OMoWMMGM5eLo+KoOKJeKJWKJOKJGKI+Ko+JoOJJeJJWJJOJJGJ") else (if index < 64 then (n64% "m2VmuVmmVI2VIuVm+Um2UmuUmmUI2UIuUm+Tm2TmuTmmTI2TIuTo+SoWSoGSJuSJmSm+Rm2RmuRmmRI2RIuRm+Qm2QmuQmmQ") else (n64% "5ea5Wao+ZoWZoGZneZnWZnOZnGZ5GY4+Y42Y4uYo+YLmYLWYLOY5GX4+X42X4uXo+XLmXLWXLOXm+Wm2WmuWmmWI2WIuWm+V"))))) else (if index < 70 then (if index < 67 then (if index < 66 then (n64% "Jujo+iKOiJ+io+hoOhKOhJ+ho+goOgJmg5efpGfo+foefoOfKefKWfKOfJmf5eepGeo+eoeeoOeJmeo+doGdo+coGcLmcLec") else (n64% "o+mommn+mn2mKemKWm5elpGlo+loulomln+ln2lL+lKelKWlKOlJ+lpGkoekn2kKukKekKWkJuk5ejpGjo+joejn2jKejKWj")) else (if index < 68 then (n64% "auramraerpmqpOqa+qa2qauqaeqpmppOpa+pa2paupampaeppmopOoa+oa2oauoamoaeopmnpOna+na2naunamnaen5empGm") else (if index < 69 then (n64% "5+yqGyp+ybuybWy5+xbuxqGwp2wbWw5mvpmvpOvbmva+va2vaevb2ubuubmu5+t5mtpmtbet5+s5mspmsbespmrpOra+ra2r") else (n64% "W/EW3E6XCF3CFvCE/CqfBE/BF3AFvAFe/FO/5+4b24bu4bm4pu3pm3pe3pW3bG35+2b22bm2pu1pm1pW1b21bG1ae1520b20")))) else (if index < 72 then (if index < 71 then (n64% "YnJrXIX3IXXIXPIXHIW/IW3IrXHX3HXXHXPHXHHW/HW3HXXGXPGXHGW/GW3GXXFXHFW/FW3F6nErXErHEYnEX3EXXEXPEXHE") else (n64% "6/Or3OrvOrnOrPOY/OYPOYHOXvO6/N6vNY/NYvNX3NXvNrXMrPMXnMXfMr3LrvLrnLrPLYPLX/Lr/Kr3KrfK63J6nJr/JY3J")) else (if index < 73 then (n64% "OfVOHVsfUsXUOfUOHU8HT8HSsfSOfSOHSN/S8HRsfROfROHRN/RsfQOfQOHQN/Q6/P6vP6nPr/PrXPrPPY/PYvPYnPYfPXvP") else (if index < 74 then (n64% "snbsPbOfbOXb8Ha8HZOfZ8HYsfY8HX7/X73XsfXsXXsPXsHXOvXOnXOfXOXXOPXOHX8HWsfWsXWsHWOfWOHW73VsfVsXVOnV") else (n64% "8Phs3hsvheHhd3hdvhs3gd/gd3g8Pfs3fsvfeHfd/fd3fdvf8Pes3esveeHed3edve8HdOXd8HcsncsPcOfcOXcOPc8Hb"))))))))
 
-def pairLabelAt (index : Nat) : Nat :=
+noncomputable def pairLabelAt (index : Nat) : Nat :=
   bits (pairLabelAtChunks (index / 32)) ((index % 32) * 18) 18
 
-def orbitIndexAtChunks (index : Nat) : Nat :=
+noncomputable def orbitIndexAtChunks (index : Nat) : Nat :=
   (if index < 37 then (if index < 18 then (if index < 9 then (if index < 4 then (if index < 2 then (if index < 1 then (n64% "+A8A6A4A2A0AyAwAuAsAqAoAmAkAiAgAeAcAaAYAWAUASAQAOAMAKAIAGAEACAA") else (n64% "B+B8B6B4B2B0ByBwBuBsBqBoBmBkBiBgBeBcBaBYBWBUBSBQBOBMBKBIBGBEBCBA")) else (if index < 3 then (n64% "C+C8C6C4C2C0CyCwCuCsCqCoCmCkCiCgCeCcCaCYCWCUCSCQCOCMCKCICGCECCCA") else (n64% "D+D8D6D4D2D0DyDwDuDsDqDoDmDkDiDgDeDcDaDYDWDUDSDQDODMDKDIDGDEDCDA"))) else (if index < 6 then (if index < 5 then (n64% "E+E8E6E4E2E0EyEwEuEsEqEoEmEkEiEgEeEcEaEYEWEUESEQEOEMEKEIEGEEECEA") else (n64% "F8F6F4F2ABF0FyFwFuFsFqFoFmFkFiFgFeFcFaFYFWFUFSFQFOFMFKFIFGFEFCFA")) else (if index < 7 then (n64% "G4G2GbG0GyGwGuGsGqGoGmGkGiGgGeGcGaGYGWGUGSGQGOGMGKGIGGADGEGCGAF+") else (if index < 8 then (n64% "HyHwHuHnHsHqHoHmHkHiHgHeHcHaHYHWG5GdHUHSHQHOHMHKHIHGHEHCHAG+G8G6") else (n64% "IoImIkIiIgIeIcCpIaIYIWIUIBISIQIOIMIKH/IIIGIEICIAH+H8HzHpH6H4H2H0"))))) else (if index < 13 then (if index < 11 then (if index < 10 then (n64% "JoJmJkJiJgJeJcJaJYJWJUJSJQJOJMJKJIJGJEJCJAI+I8I6I4I2I0IyIwIuIsIq") else (n64% "KcD5KaKYKWKUKSKQKOEBD3DxDpDfKMKKKIKGKEKCKAJ+J8J6J4J2J0JyJwJuJsJq")) else (if index < 12 then (n64% "LaLYLWLULSLQLOLMLKDhLILGLELCLAK+K8K6K4K2K0KyKwKuKsKqKoKmKkKiKgKe") else (n64% "MUMSMQMOMMMKMIMGMEMCMAL+L8L6L4L2L0LyLwLuEJEDDzLsLqLoLmLkLiLgLeLc"))) else (if index < 15 then (if index < 14 then (n64% "NINGNENCNAM+M8M6M4ELEFD7D1DrDjM2M0MyMwMuMsMqMoMmMkMiMgMeMcMaMYMW") else (n64% "OIOGOEOCOAN+N8N6N4N2N0NyNwNuNsNqNoNmNkNiNgNeNcNaNYNWNUNSNQNONMNK")) else (if index < 16 then (n64% "O4O2O0OyOXOwOuOsOqN3NZNROoBrBNOmBpBXOkOiOgOeOcOaOYOWOUOSOQOOOMOK") else (if index < 17 then (n64% "PkPiPgOfPePcPaPYPWOdORONPUPSPQPOObOLPMPKPIOZOJPGPEPCPAN5NTO+O8O6") else (n64% "QWFdFXFNFBQUQSQQQOQMQKQIQGQEQCQAP+FLE/P8P6P4P2P0PyPwPuPsPqPoPmE9")))))) else (if index < 27 then (if index < 22 then (if index < 20 then (if index < 19 then (n64% "RSRQRLRORMRKRIRGRERCRAQ1Q+Q8Q6Q4Q2Q0QyQwQuQsQqQoQmQkQiQgQeQcQaQY") else (n64% "R2R0CHRyRwCFB/B7B1RuRsRqRoFvFpRmRkRiF7RgF5ReFlFjRcRaRYGHGBF3RWRU")) else (if index < 21 then (n64% "S0SySwSuSsSqSoSmSkSiSgSeScSaSYSWSUSSSQSOSMSKSISGSESCSAR+R8B3R6R4") else (n64% "TiTgTeOlTcTaTYTWTUTSTQTOTMTKOhTITGCdCNTETCTAS+S8ChCbCTS6S4CZCRS2"))) else (if index < 24 then (if index < 23 then (n64% "T+T8TDBBT6TBT4S/T2S9T0SvSZSPSFTyStSXSNSDTwSrSVSLSBTuTsOnTqToTmTk") else (n64% "UYUWUUMRLLKpUSJxJbJFIvUQUOJvJZJDItUMUKJtJXJBIrUIUGUEUCSxSfUAA5Ah")) else (if index < 25 then (n64% "VYVWVUVSVQVOVMVKVIVGVEVCVAU+U8U6U4U2U0UyUwUuUsUqUoUmUkUiUgUeUcUa") else (if index < 26 then (n64% "V6V4MXLNKtKFKDJ/J7J3MVKrV2V0VyVwVuVsVqVoVmVkMTJzJdJHIxViVgVeVcVa") else (n64% "M9MfLbLBKPWcWaWYWWWUWSWQM7MdLZK/WOWMWKWIWGWEMbK9WCMZK7WAM5LPV+V8"))))) else (if index < 32 then (if index < 29 then (if index < 28 then (n64% "XEXCXAW+NBMnLlLfKdKTW8W6W4W2MlW0WyWwWuMjWsWqM/MhLdKRWoWmWkWiWgWe") else (n64% "X0XyXwXjXRXuXsXqXoXmXkXiXgXPXeXcXaXYXWXUXSXQXOXMXKXIXGNDMpLnKfKV")) else (if index < 30 then (n64% "YkYiYgYeYcYaYYYWYUYSXXYQYOYMYKYIX/X1XnXVYGYEYCYAX+X8XzXlXTX6X4X2") else (if index < 31 then (n64% "ZGZEZCZAY3YrYZYVY+Y8Y6Y4Y2Y0YpYNYDXrXbYyYwYuYsYqYoYmYTYLYBX3XpXZ") else (n64% "PnZsZqZoQZQBZmZkZiQXP/ZgZeZcZbZaEZZYZWZUZLY5YdEXERZSZQZOZMZKZIYb")))) else (if index < 34 then (if index < 33 then (n64% "QhP1aUaSaQQpaOaMaKQnPzaIaGaEaCQfaAZ+Z8QdQFPxPpZ6Z4Z2Z0ZyZwZuQbQD") else (n64% "G9a8a6a4a2a0ayINIFHfHZG7awauasaqIDRjRhRZAFaoamakaiagaeacaaaYaWQr")) else (if index < 35 then (n64% "bMVpVXVJU7UtUfbKbIVnVVVHU5UrUdbGbEVlVTVFU3UpUbbCbAC5Cxa+a1IPIHHb") else (if index < 36 then (n64% "bkXHW/W3WvWrWfWRDLDFC/bibgbebcbabYbWV5DlDTbUbSDPbQVrVZVLU9UvUhbO") else (n64% "cCcAb+TtBvBtBdBTb8BbBRBZBPb6b4PZPPPJO1b2b0bybwbubsPhbqPXPBOzbobm"))))))) else (if index < 56 then (if index < 46 then (if index < 41 then (if index < 39 then (if index < 38 then (n64% "cicgcecccacYcWZ/FPFDcUZ9ZpEzEtcScQb7cOcMcKOFN9NhNdcIb5cGcEODN7Nb") else (n64% "RbRPRHc4c3RNRFc2c0cyRDQ3cwcucsabaXaRaLaFaDaBZvFhFfFZFRFFcqcocmck")) else (if index < 40 then (n64% "dcSzR1RpAjALdadYdWdUdSdQdORXAJdMdKRfRVdIAHdGdEdCdARTc+Rnc8c6RlRd") else (n64% "TFd6S5S3d4Apd2And0R7RzRvdydwduS1R5RxRtAlAVANdsdqdodmdkdidgR3Rrde"))) else (if index < 43 then (if index < 42 then (n64% "vAbATeaeYeWeUeSSjeQeOAtAZAReMeKeIShSRSHR9ArAXAPeGeEeCeATHS7d+d8") else (n64% "BHTneyewA3euesTJA1eqeoemSpSdAzAfekeiSnSbAxAdegeeecA/A9A7SlSTSJR/")) else (if index < 44 then (n64% "TlBlfCfATjBjBLe+e8TdTPBFe6TbTVTpTZTTTNBDe4TXTRTLThTfBhBJe2e0BfBV") else (if index < 45 then (n64% "dddVUFUDevetepT/enejefeXeNeFd3d1dldTT9eVeLeDdjdRedeTeJeBdhdPTrBn") else (n64% "CVCPd5T1ebeRdbdtdZUBTzTxTveleheZePeHBzdzdrdfdXCDdxdpCBB9B5Bxdvdn"))))) else (if index < 51 then (if index < 48 then (if index < 47 then (n64% "fifgfefcfafYfWCnfUfSfQClfOfMfKCjfIfGfEerd/T7T5T3CfCLezexd9CXCJd7") else (n64% "gSgQgOgMgKgIgGgEgCgAf+f8f6f4f2f0fyVdURUNUJfwfufsfqfofmfkVbUPULUH")) else (if index < 49 then (n64% "gugsWzWhWXWJgqgogmgkWxWVWHgigggeD/DtDnDXWTWFD9DVgcgagYWDWBUTgWgU") else (if index < 50 then (n64% "CzCrhEWnV/EHDvhChAV9DdXDW7WlWbWNV7Dbg+g8g6g4g2XBW5WjWZWLDZg0gygw") else (n64% "UnUZC3CvhYhWhUhSV1VvhQVzVtVhVPVBUzUlUXC1CthOhMhKVfVNU/UxUjUVhIhG")))) else (if index < 53 then (if index < 52 then (n64% "ZXEhEbhmhkhihgYtheDRDNhcXFW9W1WtWpWdWPhaDJDDC9DHDBC7V3VxVjVRVDU1") else (n64% "h+h1ZRZFY9h8h6ZPZDY7YvYfYFX5XtXdXJh4h2h0hyhfEjEdhwhnZNhuhshqhohl")) else (if index < 54 then (n64% "hvYlYXYREVEPiGiDh9h5htYzYjYPiBh7h3ETENiEhrZHY/YxYhYHX7XvXfXLiCiA") else (if index < 55 then (n64% "aTaNaHZ1imikiiigZzieicZxZrZjZfFTE3iaiYiWiUiSiQiOE1iMiKiIZZZTiHiF") else (n64% "jAZ5ZnExEri+i8aVaPaJZ3ZtZlZhFbFVFHE5EvEpEni6i4i2i0iyiwiuisiqioaZ")))))) else (if index < 65 then (if index < 60 then (if index < 58 then (if index < 57 then (n64% "jEjCapdNdHanGFF/F1aldFajF9FzdJc/ahadFtdBc9FrFnc7dLdDafGDFxZ7FJE7") else (n64% "jujsjqjojVjHa3arHBGhGLjmjkjijgjejcjajYjWjUjSjFG/GfGJjQjOjMjKjIjG")) else (if index < 59 then (n64% "kKkHkBjvjbHHGnkIkGkEj/jtjZHFGlkCkAj+j8jrjXa5atHDGjGNj6j4j2j0jyjw") else (n64% "jLIRH5kckaH3HvkYHjkVHhkTH1HtkWkUkSavkQHLGrGPkOkNkJkDjxjdjJHJGpkM"))) else (if index < 62 then (if index < 61 then (n64% "HlkekXHdHVG1kRj7jnHTGzGXj5jljRHRGxGVj3jjjPHPGvGTj1jhjNHNGtGRjzjf") else (n64% "f1gLgFf/f5fzLvIbfVfPfJa/hThLhFIZfTfNfHIXfRfLfFa9ITkgkda7axIJH7Hr")) else (if index < 63 then (n64% "fnfZJfJJIzIdflfXMrLtLpKXhBLFbTbRLDhdbXLzKxgPgJgDf9f3LxKvgNgHgBf7") else (if index < 64 then (n64% "JTI9InfvfhJnJRI7IlftffJlJPI5IjfrfdL1LHKhgZgRJjJNI3IhfpfbJhJLI1If") else (n64% "bZbVL7LJKjKBJ9J5J1bPbLbHbDL5hXhPhJbNbJbFbBL3hVhNhHJrJVI/IpfxfjJp"))))) else (if index < 70 then (if index < 67 then (if index < 66 then (n64% "gbMJgpghMHK5gngfMFK3gXbdMvMDLTK1g3gtglgVbbMtMBLRKzgTL/KnL9KlhZhR") else (n64% "MPLjKbKNg/g1bhM1MNLrLhKZKLhbg9gzgrgjMzLXKJhDg7gxgdbfMxMLLVKHg5gv")) else (if index < 68 then (n64% "lMlKlINpNLlGlElClANnNJk+k8k6k4k2NlNHk0kykwkuksNjNFkqkokmkkkibjM3") else (if index < 69 then (n64% "bzOVOPlqlobxlmOTOHlkbpNxNPlilglelclalYlWbvbnNvlUbtblNtlSNrNNlQlO") else (n64% "ktkjb9fDe/e3Oje1fBe9e7e5b3l+l8l6OBN1NfNXl4b1l2l0N/NzNVlylwlubrls")))) else (if index < 72 then (if index < 71 then (n64% "lxO7lhlRlHk/k1krO5lflPlFk9kzkplNlDk7kxknlLk5kvklb/O3OplvldlJlBk3") else (n64% "cNPVPNPHOvl9lrlnlZcLcFl7l1ljlXO9OtlVlTPTPLPFOrlpllPdPRPDcJcBPbl5")) else (if index < 73 then (n64% "ixiXQNP3iviVcbcZQLitiTiNcXQJiriRiLQHipiPiJcPcHcDPfO/Oxl/l3lzltlb") else (if index < 74 then (n64% "QjPti5ijclcji3chQVcfcVcTQTP9PrPljBi/i1ihidibcdQRP7PjiziZcRQPP5i9") else (n64% "cxQ/QxmOmLmFQ9mMmJcvQ7QvmKmImGmDctQ5QtmEmCmAcrincpQlPvi7ilifcn"))))))))
 
-def orbitIndexAt (index : Nat) : Nat :=
+noncomputable def orbitIndexAt (index : Nat) : Nat :=
   bits (orbitIndexAtChunks (index / 32)) ((index % 32) * 12) 12
 
 
-def reflectionLabel (i : Nat) : Nat :=
+noncomputable def reflectionLabel (i : Nat) : Nat :=
   if i < 241 then i + 241 else i - 241
 
 theorem reflectionLabel_involution {i : Nat} (hi : i < 482) :
@@ -1951,23 +1953,23 @@ theorem reflectionLabel_involution {i : Nat} (hi : i < 482) :
   unfold reflectionLabel
   split <;> split <;> omega
 
-def pairLabel (left right : Nat) : Nat := left + (right <<< 9)
+noncomputable def pairLabel (left right : Nat) : Nat := left + (right <<< 9)
 
-def reflectedPair (label : Nat) : Nat :=
+noncomputable def reflectedPair (label : Nat) : Nat :=
   pairLabel (reflectionLabel (bits label 9 9))
     (reflectionLabel (bits label 0 9))
 
-def orbitCheck (index : Nat) : Bool :=
+noncomputable def orbitCheck (index : Nat) : Bool :=
   let code := orbitIndexAt index
   let base := representativeLabel (code / 2)
   let actual := pairLabelAt index
   decide (code / 2 < 1224) &&
     (actual == if code % 2 = 0 then base else reflectedPair base)
 
-def fixedRepresentativeCheck (index : Nat) : Bool :=
+noncomputable def fixedRepresentativeCheck (index : Nat) : Bool :=
   representativeLabel index == reflectedPair (representativeLabel index)
 
-def orbitBlockCheck (block : Nat) : Bool :=
+noncomputable def orbitBlockCheck (block : Nat) : Bool :=
   (List.range 32).all fun offset =>
     let index := 32 * block + offset
     if index < 2399 then orbitCheck index else true
@@ -2287,7 +2289,7 @@ theorem orbit_coverage (index : Nat) (hi : index < 2399) :
   have he : 32 * (index / 32) + index % 32 = index := by omega
   simpa only [he, if_pos hi] using ht
 
-def fixedBlockCount (block : Nat) : Nat :=
+noncomputable def fixedBlockCount (block : Nat) : Nat :=
   ((List.range 32).filter fun offset =>
     let index := 32 * block + offset
     index < 1224 && fixedRepresentativeCheck index).length
@@ -2409,14 +2411,14 @@ theorem fixed_block_37 : fixedBlockCount 37 = 0 := by
 theorem fixed_block_38 : fixedBlockCount 38 = 4 := by
   decide +kernel
 
-def fixedRepresentativesCount : Nat :=
+noncomputable def fixedRepresentativesCount : Nat :=
   fixedBlockCount 0 + fixedBlockCount 1 + fixedBlockCount 2 + fixedBlockCount 3 + fixedBlockCount 4 + fixedBlockCount 5 + fixedBlockCount 6 + fixedBlockCount 7 + fixedBlockCount 8 + fixedBlockCount 9 + fixedBlockCount 10 + fixedBlockCount 11 + fixedBlockCount 12 + fixedBlockCount 13 + fixedBlockCount 14 + fixedBlockCount 15 + fixedBlockCount 16 + fixedBlockCount 17 + fixedBlockCount 18 + fixedBlockCount 19 + fixedBlockCount 20 + fixedBlockCount 21 + fixedBlockCount 22 + fixedBlockCount 23 + fixedBlockCount 24 + fixedBlockCount 25 + fixedBlockCount 26 + fixedBlockCount 27 + fixedBlockCount 28 + fixedBlockCount 29 + fixedBlockCount 30 + fixedBlockCount 31 + fixedBlockCount 32 + fixedBlockCount 33 + fixedBlockCount 34 + fixedBlockCount 35 + fixedBlockCount 36 + fixedBlockCount 37 + fixedBlockCount 38
 
 theorem fixed_representatives_count : fixedRepresentativesCount = 49 := by
   unfold fixedRepresentativesCount
   rw [fixed_block_0, fixed_block_1, fixed_block_2, fixed_block_3, fixed_block_4, fixed_block_5, fixed_block_6, fixed_block_7, fixed_block_8, fixed_block_9, fixed_block_10, fixed_block_11, fixed_block_12, fixed_block_13, fixed_block_14, fixed_block_15, fixed_block_16, fixed_block_17, fixed_block_18, fixed_block_19, fixed_block_20, fixed_block_21, fixed_block_22, fixed_block_23, fixed_block_24, fixed_block_25, fixed_block_26, fixed_block_27, fixed_block_28, fixed_block_29, fixed_block_30, fixed_block_31, fixed_block_32, fixed_block_33, fixed_block_34, fixed_block_35, fixed_block_36, fixed_block_37, fixed_block_38]
 
-def decodeMultipliers : Nat → Nat → List (Nat × Nat)
+noncomputable def decodeMultipliers : Nat → Nat → List (Nat × Nat)
   | 0, _ => []
   | n + 1, word =>
       let code := bits word 0 6
@@ -2430,6 +2432,191 @@ theorem cells_size : cells.size = 241 := by decide +kernel
 theorem catalog_size : catalog.size = 237 := by decide +kernel
 theorem representative_size : pairPacks.size = 1224 := by decide +kernel
 
+noncomputable def representativePacketCheck (index : Nat) : Bool :=
+  let packet := (pairPacks[index]?).getD (0,0,0,0,0,0)
+  decide (packet.1 < 482 ∧ packet.2.1 < 482 ∧
+    representativeLabel index = pairLabel packet.1 packet.2.1)
+
+noncomputable def representativePacketBlock (block : Nat) : Bool :=
+  (List.range 32).all fun offset =>
+    let index := 32*block+offset
+    if index < 1224 then representativePacketCheck index else true
+
+theorem representative_packet_block_0 :
+    representativePacketBlock 0 = true := by decide +kernel
+
+theorem representative_packet_block_1 :
+    representativePacketBlock 1 = true := by decide +kernel
+
+theorem representative_packet_block_2 :
+    representativePacketBlock 2 = true := by decide +kernel
+
+theorem representative_packet_block_3 :
+    representativePacketBlock 3 = true := by decide +kernel
+
+theorem representative_packet_block_4 :
+    representativePacketBlock 4 = true := by decide +kernel
+
+theorem representative_packet_block_5 :
+    representativePacketBlock 5 = true := by decide +kernel
+
+theorem representative_packet_block_6 :
+    representativePacketBlock 6 = true := by decide +kernel
+
+theorem representative_packet_block_7 :
+    representativePacketBlock 7 = true := by decide +kernel
+
+theorem representative_packet_block_8 :
+    representativePacketBlock 8 = true := by decide +kernel
+
+theorem representative_packet_block_9 :
+    representativePacketBlock 9 = true := by decide +kernel
+
+theorem representative_packet_block_10 :
+    representativePacketBlock 10 = true := by decide +kernel
+
+theorem representative_packet_block_11 :
+    representativePacketBlock 11 = true := by decide +kernel
+
+theorem representative_packet_block_12 :
+    representativePacketBlock 12 = true := by decide +kernel
+
+theorem representative_packet_block_13 :
+    representativePacketBlock 13 = true := by decide +kernel
+
+theorem representative_packet_block_14 :
+    representativePacketBlock 14 = true := by decide +kernel
+
+theorem representative_packet_block_15 :
+    representativePacketBlock 15 = true := by decide +kernel
+
+theorem representative_packet_block_16 :
+    representativePacketBlock 16 = true := by decide +kernel
+
+theorem representative_packet_block_17 :
+    representativePacketBlock 17 = true := by decide +kernel
+
+theorem representative_packet_block_18 :
+    representativePacketBlock 18 = true := by decide +kernel
+
+theorem representative_packet_block_19 :
+    representativePacketBlock 19 = true := by decide +kernel
+
+theorem representative_packet_block_20 :
+    representativePacketBlock 20 = true := by decide +kernel
+
+theorem representative_packet_block_21 :
+    representativePacketBlock 21 = true := by decide +kernel
+
+theorem representative_packet_block_22 :
+    representativePacketBlock 22 = true := by decide +kernel
+
+theorem representative_packet_block_23 :
+    representativePacketBlock 23 = true := by decide +kernel
+
+theorem representative_packet_block_24 :
+    representativePacketBlock 24 = true := by decide +kernel
+
+theorem representative_packet_block_25 :
+    representativePacketBlock 25 = true := by decide +kernel
+
+theorem representative_packet_block_26 :
+    representativePacketBlock 26 = true := by decide +kernel
+
+theorem representative_packet_block_27 :
+    representativePacketBlock 27 = true := by decide +kernel
+
+theorem representative_packet_block_28 :
+    representativePacketBlock 28 = true := by decide +kernel
+
+theorem representative_packet_block_29 :
+    representativePacketBlock 29 = true := by decide +kernel
+
+theorem representative_packet_block_30 :
+    representativePacketBlock 30 = true := by decide +kernel
+
+theorem representative_packet_block_31 :
+    representativePacketBlock 31 = true := by decide +kernel
+
+theorem representative_packet_block_32 :
+    representativePacketBlock 32 = true := by decide +kernel
+
+theorem representative_packet_block_33 :
+    representativePacketBlock 33 = true := by decide +kernel
+
+theorem representative_packet_block_34 :
+    representativePacketBlock 34 = true := by decide +kernel
+
+theorem representative_packet_block_35 :
+    representativePacketBlock 35 = true := by decide +kernel
+
+theorem representative_packet_block_36 :
+    representativePacketBlock 36 = true := by decide +kernel
+
+theorem representative_packet_block_37 :
+    representativePacketBlock 37 = true := by decide +kernel
+
+theorem representative_packet_block_38 :
+    representativePacketBlock 38 = true := by decide +kernel
+
+theorem representative_packet_block_checked (block : Nat) (hb : block < 39) :
+    representativePacketBlock block = true := by
+  match block with
+  | 0 => exact representative_packet_block_0
+  | 1 => exact representative_packet_block_1
+  | 2 => exact representative_packet_block_2
+  | 3 => exact representative_packet_block_3
+  | 4 => exact representative_packet_block_4
+  | 5 => exact representative_packet_block_5
+  | 6 => exact representative_packet_block_6
+  | 7 => exact representative_packet_block_7
+  | 8 => exact representative_packet_block_8
+  | 9 => exact representative_packet_block_9
+  | 10 => exact representative_packet_block_10
+  | 11 => exact representative_packet_block_11
+  | 12 => exact representative_packet_block_12
+  | 13 => exact representative_packet_block_13
+  | 14 => exact representative_packet_block_14
+  | 15 => exact representative_packet_block_15
+  | 16 => exact representative_packet_block_16
+  | 17 => exact representative_packet_block_17
+  | 18 => exact representative_packet_block_18
+  | 19 => exact representative_packet_block_19
+  | 20 => exact representative_packet_block_20
+  | 21 => exact representative_packet_block_21
+  | 22 => exact representative_packet_block_22
+  | 23 => exact representative_packet_block_23
+  | 24 => exact representative_packet_block_24
+  | 25 => exact representative_packet_block_25
+  | 26 => exact representative_packet_block_26
+  | 27 => exact representative_packet_block_27
+  | 28 => exact representative_packet_block_28
+  | 29 => exact representative_packet_block_29
+  | 30 => exact representative_packet_block_30
+  | 31 => exact representative_packet_block_31
+  | 32 => exact representative_packet_block_32
+  | 33 => exact representative_packet_block_33
+  | 34 => exact representative_packet_block_34
+  | 35 => exact representative_packet_block_35
+  | 36 => exact representative_packet_block_36
+  | 37 => exact representative_packet_block_37
+  | 38 => exact representative_packet_block_38
+  | n + 39 => omega
+
+theorem representative_packet_checked (index : Nat) (hi : index < 1224) :
+    representativePacketCheck index = true := by
+  have hp := representative_packet_block_checked (index/32) (by omega)
+  have hm : index%32 ∈ List.range 32 := List.mem_range.mpr (Nat.mod_lt _ (by decide))
+  have ht := (List.all_eq_true.mp hp) (index%32) hm
+  have he : 32*(index/32)+index%32=index := by omega
+  simpa only [he,if_pos hi] using ht
+
+theorem representative_packet_shape (index : Nat) (hi : index < 1224) :
+    let packet := (pairPacks[index]?).getD (0,0,0,0,0,0)
+    packet.1 < 482 ∧ packet.2.1 < 482 ∧
+      representativeLabel index = pairLabel packet.1 packet.2.1 := by
+  exact of_decide_eq_true (representative_packet_checked index hi)
+
 structure IntegerRow where
   first : Nat
   last : Nat
@@ -2440,12 +2627,12 @@ structure IntegerRow where
   geometric : Bool
 deriving Inhabited
 
-def IntegerRow.coeff (row : IntegerRow) (column : Nat) : Int :=
+noncomputable def IntegerRow.coeff (row : IntegerRow) (column : Nat) : Int :=
   if column < 8 then
     if row.first ≤ column ∧ column < row.last then row.slope else 0
   else if column = row.square then row.zcoef else 0
 
-def terms : List (Nat × Nat × Nat) :=
+noncomputable def terms : List (Nat × Nat × Nat) :=
   [(0,1,13630830),(0,3,19565904),(0,4,20317441),(0,5,45030671),
    (0,6,100000000),(0,7,200000000),(1,2,29997996),(1,3,30621878),
    (1,4,47766489),(1,5,79682558),(1,6,109938656),(1,7,100000000),
@@ -2454,50 +2641,47 @@ def terms : List (Nat × Nat × Nat) :=
    (3,7,20317441),(4,5,37356140),(4,6,30621878),(4,7,19565904),
    (5,6,29997996),(6,7,13630830)]
 
-def longSpans : List (Nat × Nat) :=
+noncomputable def longSpans : List (Nat × Nat) :=
   [(0,2),(0,3),(0,4),(0,5),(0,6),(0,7),(1,3),(1,4),(1,5),(1,6),
    (1,7),(2,4),(2,5),(2,6),(2,7),(3,5),(3,6),(3,7),(4,6),(4,7),(5,7)]
 
-def cellSpans : List (Nat × Nat) :=
+noncomputable def cellSpans : List (Nat × Nat) :=
   (List.range 7).map (fun i => (i,i+1)) ++ longSpans
 
-def squareSpans : List (Nat × Nat) :=
-  [(0,1),(0,3),(0,4),(0,5),(0,6),(0,7),(1,2),(1,3),(1,4),(1,5),
-   (1,6),(1,7),(2,3),(2,4),(2,5),(2,6),(2,7),(3,4),(3,5),(3,6),
-   (3,7),(4,5),(4,6),(4,7),(5,6),(6,7),(1,8),(2,8),(3,8),(4,8),
-   (5,8),(6,8),(7,8),(0,8)]
+noncomputable def squareSpans : List (Nat × Nat) :=
+  [(0,1),(0,3),(0,4),(0,5),(0,6),(0,7),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(2,3),(2,4),(2,5),(2,6),(2,7),(3,4),(3,5),(3,6),(3,7),(4,5),(4,6),(4,7),(5,6),(6,7),(1,8),(2,8),(3,8),(4,8),(5,7),(5,8),(7,8),(0,8)]
 
-def squareColumn (i j : Nat) : Nat :=
+noncomputable def squareColumn (i j : Nat) : Nat :=
   8 + squareSpans.findIdx (fun p => p == (i,j))
 
-def cellPacket (label : Nat) : Nat × Nat :=
+noncomputable def cellPacket (label : Nat) : Nat × Nat :=
   (cells[if label < 241 then label else label - 241]?).getD (0,0)
 
-def geometrySlot (i j : Nat) : Nat :=
+noncomputable def geometrySlot (i j : Nat) : Nat :=
   if j = i + 1 then 2 * i
   else 14 + 2 * (i * (13-i) / 2 + (j-i-2))
 
-def cellBound (label i j side : Nat) : Nat :=
+noncomputable def cellBound (label i j side : Nat) : Nat :=
   let pos := if label < 241 then geometrySlot i j else geometrySlot (7-j) (7-i)
   bits (cellPacket label).1 (22 * (pos + side)) 22
 
-def cellLower (label i j : Nat) : Nat := cellBound label i j 0
-def cellUpper (label i j : Nat) : Nat := cellBound label i j 1
+noncomputable def cellLower (label i j : Nat) : Nat := cellBound label i j 0
+noncomputable def cellUpper (label i j : Nat) : Nat := cellBound label i j 1
 
-def tightLower (label i j : Nat) : Nat :=
+noncomputable def tightLower (label i j : Nat) : Nat :=
   max (cellLower label i j)
     (((List.range (j-i)).map fun k => cellLower label (i+k) (i+k+1)).sum)
 
-def tightUpper (label i j : Nat) : Nat :=
+noncomputable def tightUpper (label i j : Nat) : Nat :=
   min (cellUpper label i j)
     (((List.range (j-i)).map fun k => cellUpper label (i+k) (i+k+1)).sum)
 
-def termAtom (label i j : Nat) : Nat :=
+noncomputable def termAtom (label i j : Nat) : Nat :=
   let span := if label < 241 then (i,j) else (7-j,7-i)
   let index := terms.findIdx (fun t => (t.1,t.2.1) == span)
   bits (cellPacket label).2 (67 * index) 67
 
-def oldPointIndices (atom : Nat) : List Nat :=
+noncomputable def oldPointIndices (atom : Nat) : List Nat :=
   let kind := bits atom 0 2
   let mix := bits atom 2 11
   let p := bits atom 13 11
@@ -2508,7 +2692,7 @@ def oldPointIndices (atom : Nat) : List Nat :=
     (if mix < 1024 then [p] else []) ++ (if 0 < mix then [r] else [])
   else []
 
-def anchorRows (offset i j point value L U : Nat) : List IntegerRow :=
+noncomputable def anchorRows (offset i j point value L U : Nat) : List IntegerRow :=
   let V : Int := bits value 0 32
   let dm : Int := (bits value 32 32 : Int) - 2000000000
   let dp : Int := 2000000000 - (bits value 64 32 : Int)
@@ -2520,7 +2704,7 @@ def anchorRows (offset i j point value L U : Nat) : List IntegerRow :=
    ⟨i+offset,j+offset,10*dp,squareColumn (i+offset) (j+offset),-1,
       -5*V*32768+50*dm*p-50*(dm-dp)*hi,false⟩]
 
-def frameRows (label offset : Nat) : List IntegerRow :=
+noncomputable def frameRows (label offset : Nat) : List IntegerRow :=
   let geometry := cellSpans.flatMap fun p =>
     [⟨p.1+offset,p.2+offset,1,0,0,5*(cellUpper label p.1 p.2 : Int),true⟩,
      ⟨p.1+offset,p.2+offset,-1,0,0,-5*(cellLower label p.1 p.2 : Int),true⟩]
@@ -2536,7 +2720,7 @@ def frameRows (label offset : Nat) : List IntegerRow :=
         (tightLower label i j) (tightUpper label i j)
   geometry ++ forms
 
-def extraRows (left right count word : Nat) : List IntegerRow :=
+noncomputable def extraRows (left right count word : Nat) : List IntegerRow :=
   (List.range count).flatMap fun k =>
     let atom := bits word (15*k) 15
     let offset := bits atom 0 1
@@ -2549,7 +2733,7 @@ def extraRows (left right count word : Nat) : List IntegerRow :=
     anchorRows offset i j p value (min (tightLower label i j) p)
       (max (tightUpper label i j) p)
 
-def objectiveCoeff (column : Nat) : Int :=
+noncomputable def objectiveCoeff (column : Nat) : Int :=
   if column < 8 then
     10000000000 * (([28898,86170,132798,156484,156484,132798,86170,28898]
       : List Nat).getD column 0 : Int)
@@ -2559,7 +2743,7 @@ def objectiveCoeff (column : Nat) : Int :=
     else ((terms.filter fun t => (t.1,t.2.1) = p).map fun t => (t.2.2 : Int)).sum +
       ((terms.filter fun t => (t.1+1,t.2.1+1) = p).map fun t => (t.2.2 : Int)).sum
 
-def primitiveBound (left right i j : Nat) : Int :=
+noncomputable def primitiveBound (left right i j : Nat) : Int :=
   if i = j then 0 else
   let infinity : Int := 1000000000000000000000000000000
   let first := if i ≤ 7 ∧ j ≤ 7 then
@@ -2573,18 +2757,18 @@ def primitiveBound (left right i j : Nat) : Int :=
   let bound := min first second
   if i = j+1 then min bound (-4*32768) else bound
 
-def floydStep (d : Array Int) (k : Nat) : Array Int :=
+noncomputable def floydStep (d : Array Int) (k : Nat) : Array Int :=
   ((List.range 81).map fun slot =>
     let i := slot / 9
     let j := slot % 9
     min ((d[slot]?).getD 0)
       (((d[9*i+k]?).getD 0) + ((d[9*k+j]?).getD 0))).toArray
 
-def pairClosure (left right : Nat) : Array Int :=
+noncomputable def pairClosure (left right : Nat) : Array Int :=
   (List.range 9).foldl floydStep
     (((List.range 81).map fun slot => primitiveBound left right (slot/9) (slot%9)).toArray)
 
-def integerCertificateLower (index : Nat) : Int :=
+noncomputable def integerCertificateLower (index : Nat) : Int :=
   let packet := (pairPacks[index]?).getD (0,0,0,0,0,0)
   let left := packet.1
   let right := packet.2.1
@@ -2608,14 +2792,15 @@ def integerCertificateLower (index : Nat) : Int :=
       else 5*10000000000*32768
     residual * (if 0 ≤ residual then lo else hi)).sum
 
-def integerCertificateCheck (index : Nat) : Bool :=
+noncomputable def integerCertificateCheck (index : Nat) : Bool :=
   decide (2*805260*(5*10000000000*32768)*1000000000 ≤ integerCertificateLower index)
 
 /- The command emits ordinary theorem declarations. Every emitted proof
 is checked by the kernel; the command contributes no mathematical premise. -/
-elab "prove_integer_representatives" : command => do
+elab "prove_integer_batch " first:num " " last:num : command => do
   Lean.Elab.withEnableInfoTree false do
-    for index in List.range 1224 do
+    for offset in List.range (last.getNat-first.getNat) do
+      let index := first.getNat+offset
       let command := "theorem integer_representative_" ++ toString index ++
         " : integerCertificateCheck " ++ toString index ++
         " = true := by decide +kernel"
@@ -2635,6 +2820,9 @@ elab "prove_integer_representatives" : command => do
         | _ => Lean.throwError "Generated integer theorem was not installed"
       if index % 64 = 0 then
         Lean.Elab.Command.liftIO <| IO.eprintln s!"Kernel-checked integer representative {index}/1224"
+
+elab "combine_integer_representatives" : command => do
+  Lean.Elab.withEnableInfoTree false do
     let cases := (List.range 1224).map fun index =>
       "  | " ++ toString index ++ " => exact integer_representative_" ++ toString index
     let command := "theorem all_integer_representatives (index : Nat) (hi : index < 1224) :\n" ++
@@ -2655,6 +2843,83 @@ elab "prove_integer_representatives" : command => do
       | _ => Lean.throwError "Combined integer theorem was not installed"
     Lean.Elab.Command.liftIO <| IO.eprintln "Kernel-checked all 1224 integer representatives"
 
-prove_integer_representatives
+prove_integer_batch 0 16
+prove_integer_batch 16 32
+prove_integer_batch 32 48
+prove_integer_batch 48 64
+prove_integer_batch 64 80
+prove_integer_batch 80 96
+prove_integer_batch 96 112
+prove_integer_batch 112 128
+prove_integer_batch 128 144
+prove_integer_batch 144 160
+prove_integer_batch 160 176
+prove_integer_batch 176 192
+prove_integer_batch 192 208
+prove_integer_batch 208 224
+prove_integer_batch 224 240
+prove_integer_batch 240 256
+prove_integer_batch 256 272
+prove_integer_batch 272 288
+prove_integer_batch 288 304
+prove_integer_batch 304 320
+prove_integer_batch 320 336
+prove_integer_batch 336 352
+prove_integer_batch 352 368
+prove_integer_batch 368 384
+prove_integer_batch 384 400
+prove_integer_batch 400 416
+prove_integer_batch 416 432
+prove_integer_batch 432 448
+prove_integer_batch 448 464
+prove_integer_batch 464 480
+prove_integer_batch 480 496
+prove_integer_batch 496 512
+prove_integer_batch 512 528
+prove_integer_batch 528 544
+prove_integer_batch 544 560
+prove_integer_batch 560 576
+prove_integer_batch 576 592
+prove_integer_batch 592 608
+prove_integer_batch 608 624
+prove_integer_batch 624 640
+prove_integer_batch 640 656
+prove_integer_batch 656 672
+prove_integer_batch 672 688
+prove_integer_batch 688 704
+prove_integer_batch 704 720
+prove_integer_batch 720 736
+prove_integer_batch 736 752
+prove_integer_batch 752 768
+prove_integer_batch 768 784
+prove_integer_batch 784 800
+prove_integer_batch 800 816
+prove_integer_batch 816 832
+prove_integer_batch 832 848
+prove_integer_batch 848 864
+prove_integer_batch 864 880
+prove_integer_batch 880 896
+prove_integer_batch 896 912
+prove_integer_batch 912 928
+prove_integer_batch 928 944
+prove_integer_batch 944 960
+prove_integer_batch 960 976
+prove_integer_batch 976 992
+prove_integer_batch 992 1008
+prove_integer_batch 1008 1024
+prove_integer_batch 1024 1040
+prove_integer_batch 1040 1056
+prove_integer_batch 1056 1072
+prove_integer_batch 1072 1088
+prove_integer_batch 1088 1104
+prove_integer_batch 1104 1120
+prove_integer_batch 1120 1136
+prove_integer_batch 1136 1152
+prove_integer_batch 1152 1168
+prove_integer_batch 1168 1184
+prove_integer_batch 1184 1200
+prove_integer_batch 1200 1216
+prove_integer_batch 1216 1224
+combine_integer_representatives
 
 end RHWeil.RecordSubmission.FiniteCertificateData

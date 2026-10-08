@@ -186,3 +186,35 @@ The repaired complete ImportedAM target subsequently compiled with exit 0 (2026-
 ## Complete analytic target and independent axiom audit
 
 The complete `RecordProportion.AnalyticBridge:olean` target now compiled with actual exit code 0 against the frozen ImportedAM and Majorant modules. Its 26 audited declarations use only `propext`, `Classical.choice`, and `Quot.sound`. The source is frozen at SHA256 `5d2af7529d7c41cad519bf1b815df3ee32bb8069e718767516631233f169d57f` (1365 lines; 61553 canonical LF bytes). The subprocess verification ledger is `verification/analytic-bridge-check.json`, SHA256 `ade7043d141aa5ff5b9946bb30c2a134798a66a29f69090b852b52a4b269d5f6`. This verifies the analytic implication from the genuine nine-point finite certificate; the final finite certificate and challenge assembly are still being completed.
+
+## Complete point guards and span membership
+
+The complete point/tangent layer was actually kernel compiled against the
+corrected transparent Data snapshot: all 482 frames, all 1224 extra
+representatives and 70 ordinary top-level closed blocks passed. Its ten
+axiom audits contain only the allowed three axioms. This run is recorded
+in `verification/point-soundness-isolated-check.json`; its mathematical
+body is the prior 379-line PointSoundness source.
+
+An independently compiled 120-line addition then checks every extra
+occurrence's span belongs to the original 26-term weight list, using
+39 ordinary kernel blocks. Its two audits contain only `propext` and
+`Quot.sound`; `verification/point-soundness-span-check.json` records the
+actual exit code 0 and the exact recovery of the prior mathematical body.
+The combined public PointSoundness source is 499 lines / 29007 canonical
+LF bytes, SHA256 `e0feca589d54ae049e8ff721dfd1bbe7ea9804f0fac0c42ba96ef0d5bd153764`.
+
+These validations use identical corrected transparent Data definitions;
+they do not claim the pending full formal Data certificate or whole
+challenge has passed. The public PointSoundness target will be compiled
+again against the final formal Data module once that dependency is ready.
+
+
+## Packed single-file analytic chain
+
+The complete ImportedAM, Majorant, qualified AnalyticBridge and exact trusted-count
+identities were compiled together in one packed Lean file with actual exit code 0.
+All 29 requested declarations use only the three permitted axioms. The unchanged
+1,466,729-byte input and actual 826.73-second subprocess are recorded in
+`verification/analytic-single-file.json`. This check does not include the uniform
+W9 certificate, final unconditional website statements, Comparator or nanoda.
