@@ -1,0 +1,59 @@
+{
+  "source_template": "josusanmartin/riemann@668e239f30c7c56494611b1825306a3d65f95537/challenge/templates/CandidateSpec.lean.tmpl",
+  "template_sha256": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c",
+  "current_record_when_checked": "6734832/10000000",
+  "current_record_source": "https://www.riemannzeta.fun/",
+  "candidate": "66812491/99194740",
+  "trusted_parent_artifacts_copied_verbatim": [
+    {
+      "trusted_source": ".lake/packages/Zeta23/.lake/build/lib/lean/ChallengeDeps.ilean",
+      "sha256": "7ef7bbe9a7219fadbf7fc6a64ae8d4727c04a104256285f9879ade949cc9903c"
+    },
+    {
+      "trusted_source": ".lake/packages/Zeta23/.lake/build/lib/lean/ChallengeDeps.ilean.hash",
+      "sha256": "f0601a2664d65c396b545ec4d18eef481521b1d34676975e5dd80f281c0e6c48"
+    },
+    {
+      "trusted_source": ".lake/packages/Zeta23/.lake/build/lib/lean/ChallengeDeps.olean",
+      "sha256": "62c976db2888e0ff53e4c55a78543a2194d8737ef4a42d27dd5307f8a3899003"
+    },
+    {
+      "trusted_source": ".lake/packages/Zeta23/.lake/build/lib/lean/ChallengeDeps.olean.hash",
+      "sha256": "4af6df8d7994cf742ef2560e27ed3f96539ee13787ec6c3e23af19c7beb073fa"
+    },
+    {
+      "trusted_source": ".lake/packages/Zeta23/.lake/build/lib/lean/ChallengeDeps.trace",
+      "sha256": "f3166bed3c83f8cc79630ff82b12bb5d55383978f520ba010cc44eee5c321bda"
+    }
+  ],
+  "local_module_resolution": "Prepared contract directory precedes Lake dependency paths for the direct Lean comparison process.",
+  "scope": "Only the generated candidate parameter binding and exact arithmetic improvement, checked against the current public homepage. No asymptotic zero-count theorem. Refresh currentRecordKappa immediately before upload.",
+  "whole_submission_compiled": false,
+  "submitted": false,
+  "source_sha256": {
+    "tmp/contract/ChallengeDeps/CandidateSpec.lean": "85e7bfbb71e1b896f82e61a0184d8f596b6e859b206dd5d84c3d69214811829b",
+    "tmp/contract/Compare.lean": "bb68a4e517a2d8430f99a9f520e228422ecc1458698e6e3560eeb39930673080"
+  },
+  "source_unchanged_during_check": true,
+  "commands": [
+    [
+      "C:\\Users\\A\\.elan\\bin\\lean.exe",
+      "--root=E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\contract",
+      "-o",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\contract\\ChallengeDeps\\CandidateSpec.olean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\contract\\ChallengeDeps\\CandidateSpec.lean"
+    ],
+    [
+      "C:\\Users\\A\\.elan\\bin\\lean.exe",
+      "--root=E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\contract",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\contract\\Compare.lean"
+    ]
+  ],
+  "exit_codes": [
+    0,
+    0
+  ],
+  "comparison_compiled": true,
+  "axiom_output": "\n'prepared_candidate_strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "elapsed_seconds": 36.2
+}

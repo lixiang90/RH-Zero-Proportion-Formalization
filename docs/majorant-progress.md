@@ -1,0 +1,30 @@
+# AM majorant formalization progress
+
+This module formalizes the existing lossless AM majorant; it does not propose a new window or a new mathematical bound. The owned implementation is `RecordProportion/Majorant.lean`.
+
+## Implemented proof chain
+
+1. The parameters are exactly `sep = 4/5`, `gammaM = 61/100`. The two-sinc function is continuous, nonnegative and integrable. Its cosine transform is explicitly computed by elementary antiderivatives and Fourier inversion, vanishes at every frequency of absolute value at least `4/5`, and has mass `LMaj = (2 gammaM / sep)(1 + sincN sep)`.
+2. The original sharp AM density is `vAM/ZAM` on `[-1/2,1/2]`, where `ZAM = MAM*aInf = sinc(sqrt(2)/2)`. Its normalization is at least `11/12`. The existing all-domain Bernstein argument is expressed directly as rational polynomial identities and positivity: `63/10 <= (4 pi/5)^2 <= 633/100`, the existing AM coefficient absolute sum is at most `13/200`, and the sinc lower polynomial gives a cubic `qLower(4u^2)`. The cubic is at least `6/5`; the degree-six difference against the AM upper envelope is at least `1/100`. This proves `fAM_le_gMaj` for every real `u`, including the cutoff exterior. No sample minimum is consumed as a continuous proof.
+3. The Fourier mass satisfies `LMaj <= 61/32`. This uses `sin(4 pi/5) = sin(pi/5) <= pi/5`, not a floating-point integral.
+4. For every finite separated real set, the nonnegative quadratic form can be integrated against any measurable weight below the majorant. Off-diagonal Fourier terms vanish, giving the exact upper envelope `LMaj * sum x_i^2`.
+5. The realized AM weight is `wSep(s) = phiW(rho,L,w)(L*s)^2/aInf`. The imported `phiW_sq_eq`, the actual AM positivity, and `0 <= taper <= 1` prove `wSep <= fAM <= gMaj`. The foreign `2/5` normalization is not used.
+6. The original finite frequency-packet quadratic form is bounded by the whole nonnegative Poisson sum, with coefficient `(aInf/a_T)*LMaj`. The existing `a_T -> aInf > 0` theorem supplies the eventual guard `a_T > (61/64)*aInf`, so that coefficient is strictly less than 2. This yields `Actual.eventually_actual_transform_le_two` for every finite packet size, every finite real set and every real coefficient vector, without a positional restriction on the ordinates beyond separation.
+
+## Source reuse and scope
+
+The Fourier inversion and finite separated-form proofs adapt the parameter-independent arguments in `Simple673/Majorant/Fourier.lean` and `Separated.lean` from the ancillary Lean archive of arXiv:2610.08965v1. The elementary alternating Taylor enclosure adapts `Distinct839/Majorant/Taylor.lean`, and the positive finite-frequency/Poisson steps adapt `Distinct839/ZeroKernel/{Window,Separated}.lean`. Their window constants are replaced by the actual AM parameters; their unrelated record window, energies, numerical local certificate and scale `2/5` are not imported.
+
+The exact pinned Mathlib Pi API (`pi_gt_d6`, `pi_lt_d6`) was also read from the [primary fixed source](https://raw.githubusercontent.com/leanprover-community/mathlib4/51e6992efd06126df61a496bebf8f49482a4e129/Mathlib/Analysis/Real/Pi/Bounds.lean); division monotonicity signatures were checked in the same pinned source revision.
+
+All AM definitions, taper admissibility and convergence are read from `RecordProportion/ImportedAM.lean`; this module does not alter that file. The already fixed independent rational certificate is `scripts/am_lossless_majorant_certificate.py` (canonical SHA-256 `11da56ae04a60fd436d273f39463e6aa85b0f023ebf62a0389c5f9af0b2aabf4`), with fixed JSON SHA-256 `61023fac589f2a8c8b3f67c8c296c38a2a244663129eb8bc90de6396c60fb915`. The Lean continuous proof uses the equivalent existing Bernstein route rather than trusting this Python output.
+
+## Validation status
+
+The rational coefficients were independently extracted from the actual Lean source and recomputed with Python Fraction: the cubic Bernstein minimum is `686238207/560000000 > 6/5`, and the squared-gap minimum is `5368450296951723679/344960000000000000000 > 1/100`. This validates the written coefficient identities only; the Lean proof provides their continuous semantics.
+
+Proof bodies have been written and read back; the implementation declares no additional axiom and contains no placeholder or runtime decision oracle. With the actual pinned Lean 4.33.0-rc2 and official Mathlib cache, the Fourier/Taylor/separated-form prefix was checked through stdin with exit 0. The independently extracted rational Bernstein/sinc-pair segment and the mass-bound segment also checked with exit 0; its only elaboration fix explicitly converts the alternating-sign Taylor expression by a ring identity. These checks produce no shared olean and do not rebuild Zeta23 or ImportedAM. After the public Zeta23 and ImportedAM builds succeeded, `lake --no-cache build +RecordProportion.Majorant:olean` completed with exit 0 (8839 jobs; the owned module took 22 seconds). All four printed transitive axiom reports contain only `propext`, `Classical.choice`, and `Quot.sound`. The compiler repairs use the correct lower-neighborhood lemma, expand the local scale `L`, and explicitly use the existing `P.Valid.one_le_w` guard; the mathematical statements, AM constants and actual Gram interface are unchanged. This validates this module, not the full challenge assembly or submission.
+
+This module does not claim the complete new proportion theorem. The spectral clipping, direct sliding and all-zero counting assembly are separate owned tasks. It supplies the actual majorant and normalization interface that assembly needs.
+
+The owned `CountBridge.lean` target compiled successfully with `lake --no-cache build +RecordProportion.CountBridge:olean`; all six printed axiom reports contain only `propext`, `Classical.choice`, and `Quot.sound`. The separate Mathlib-only `FloydSoundness.lean` target also compiled successfully. Its update is textually identical to the certificate's actual `floydStep`, preserves the integer and continuous real potential bounds under all nine pivots, and proves the entry and 81-slot formulas. It does not import or certify the finite certificate data.

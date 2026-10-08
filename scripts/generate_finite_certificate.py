@@ -508,7 +508,7 @@ def generate():
         "theorem fixed_representatives_count : fixedRepresentativesCount = 49 := by",
         "  unfold fixedRepresentativesCount",
         "  rw [" + ", ".join(f"fixed_block_{block}" for block in range(39)) + "]",
-        "", 
+        "",
         "def decodeMultipliers : Nat → Nat → List (Nat × Nat)",
         "  | 0, _ => []",
         "  | n + 1, word =>",

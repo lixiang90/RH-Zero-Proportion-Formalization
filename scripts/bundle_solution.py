@@ -99,10 +99,58 @@ def compact_hex(source: str) -> tuple[str, int, int]:
     assert depth == 0, 'Unclosed source comment'
     return ''.join(out), replaced, saved
 
+def compact_layout(source: str) -> tuple[str, int]:
+    """Drop explanatory comments, keeping attribution blocks and code layout.
+
+    Newlines inside removed comments remain in place until empty-line removal.
+    Strings and nested block comments are scanned rather than regex-replaced.
+    Compilation of the resulting complete file remains mandatory.
+    """
+    out = []
+    i = removed = 0
+    while i < len(source):
+        if source.startswith('/-', i):
+            j, depth = i + 2, 1
+            while j < len(source) and depth:
+                if source.startswith('/-', j): j += 2; depth += 1
+                elif source.startswith('-/', j): j += 2; depth -= 1
+                else: j += 1
+            assert depth == 0, 'Unclosed source comment'
+            comment = source[i:j]
+            keep = any(word in comment.lower() for word in
+                       ['copyright', 'attribution', 'apache', 'licensed'])
+            if keep:
+                out.append(comment)
+            else:
+                out.append(' ' + '\n' * comment.count('\n')); removed += 1
+            i = j
+        elif source.startswith('--', i):
+            j = source.find('\n', i)
+            if j < 0: j = len(source)
+            comment = source[i:j]
+            if any(word in comment.lower() for word in ['copyright', 'attribution', 'licensed']):
+                out.append(comment)
+            else:
+                out.append(' '); removed += 1
+            i = j
+        elif source[i] == '"':
+            j = i + 1
+            while j < len(source):
+                if source[j] == '\\': j += 2
+                elif source[j] == '"': j += 1; break
+                else: j += 1
+            out.append(source[i:j]); i = j
+        else:
+            out.append(source[i]); i += 1
+    return '\n'.join(line.rstrip() for line in ''.join(out).splitlines()
+                     if line.strip()) + '\n', removed
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=Path('tmp/bundles/Solution.draft.lean'))
     parser.add_argument('--entry', type=Path, help='Optional proved candidate assembly module')
+    parser.add_argument('--compact-layout', action='store_true',
+                        help='Remove non-attribution comments and empty lines; still requires full compilation')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     names = [root/'RecordProportion'/f'{name}.lean' for name in ORDER]
@@ -128,6 +176,14 @@ def main() -> None:
              'Derived-source notices are retained below and in NOTICE.\n' \
              'Generated draft; compilation and official verification are separate. -/\n'
     result = header + ''.join('import '+name+'\n' for name in sorted(imports)) + '\n' + MACRO + '\n'.join(payloads)
+    comments_removed = layout_bytes_saved = 0
+    if args.compact_layout:
+        before = len(result.encode())
+        result, comments_removed = compact_layout(result)
+        notice = (root/'NOTICE').read_text(encoding='utf-8-sig')
+        assert '/-' not in notice and '-/' not in notice
+        result = '/- Retained distribution notices:\n' + notice + '\n-/\n' + result
+        layout_bytes_saved = before - len(result.encode())
     actual_declarations = {name: bool(re.search(r'^theorem\s+'+name+r'\s*:', result, re.M))
         for name in ['candidate_strict_improvement', 'candidate_critical_line_bound',
                      'candidate_critical_line_bound_cumulative']}
@@ -139,6 +195,8 @@ def main() -> None:
         'output': out.relative_to(root).as_posix(), 'bytes': len(result.encode()),
         'sha256': hashlib.sha256(result.encode()).hexdigest(),
         'hex_literals_compacted': replaced, 'source_bytes_saved': saved,
+        'compact_layout': args.compact_layout, 'comments_removed': comments_removed,
+        'layout_bytes_saved': layout_bytes_saved,
         'limit_bytes': 2000000, 'within_source_limit': len(result.encode()) <= 2000000,
         'candidate_declarations_present': actual_declarations,
         'submitted': False}

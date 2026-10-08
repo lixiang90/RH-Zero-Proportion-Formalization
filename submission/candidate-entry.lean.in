@@ -1,0 +1,53 @@
+/- Candidate assembly draft for Li Xiang (lixiang90), Apache-2.0.
+This file requires the actual unconditional W9_local_certificate and the
+complete compiled helper chain. Its existence does not establish a record. -/
+import ChallengeDeps.CandidateSpec
+import RecordProportion.AnalyticBridge
+import RecordProportion.FiniteCertificate
+
+open scoped BigOperators
+
+namespace RHWeilSubmission
+open RHWeil.RecordSubmission.FiniteCertificate
+
+private theorem local_certificate :
+    ∀ g : Fin 8 → ℝ, (∀ r, 4/5 ≤ g r) →
+      RHWeilRecord.localReward ≤ Zeta23Ext.BridgeW.Fw W9 g := by
+  intro g hg
+  simpa only [RHWeilRecord.localReward] using W9_local_certificate g hg
+
+private theorem pressure_identity : W9.B = RHWeilRecord.gapPressure := by
+  simpa only [RHWeilRecord.gapPressure] using W9_pressure
+
+theorem dyadic :
+    ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      (candidateKappa - ε) * (Ncount T (2 * T) : ℝ) ≤ N0star T (2 * T) := by
+  simpa only [candidateKappa, RHWeilRecord.recordRatio] using
+    RHWeilRecord.am_distinct_dyadic_of_nine_point_certificate
+      W9 W9_adm pressure_identity W9_upper_pairmass local_certificate
+
+theorem cumulative :
+    ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      (candidateKappa - ε) * (Ncount 0 T : ℝ) ≤ N0star 0 T := by
+  simpa only [candidateKappa, RHWeilRecord.recordRatio] using
+    RHWeilRecord.am_distinct_cumulative_of_nine_point_certificate
+      W9 W9_adm pressure_identity W9_upper_pairmass local_certificate
+end RHWeilSubmission
+
+theorem candidate_strict_improvement :
+    currentRecordKappa < candidateKappa := by
+  norm_num [currentRecordKappa, candidateKappa]
+
+theorem candidate_critical_line_bound :
+    ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      (candidateKappa - ε) * (Ncount T (2 * T) : ℝ) ≤ N0star T (2 * T) :=
+  RHWeilSubmission.dyadic
+
+theorem candidate_critical_line_bound_cumulative :
+    ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      (candidateKappa - ε) * (Ncount 0 T : ℝ) ≤ N0star 0 T :=
+  RHWeilSubmission.cumulative
+
+#print axioms candidate_strict_improvement
+#print axioms candidate_critical_line_bound
+#print axioms candidate_critical_line_bound_cumulative

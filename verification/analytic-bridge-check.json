@@ -1,0 +1,249 @@
+{
+  "source": "RecordProportion/AnalyticBridge.lean",
+  "source_sha256": "5d2af7529d7c41cad519bf1b815df3ee32bb8069e718767516631233f169d57f",
+  "source_lf_bytes": 61553,
+  "source_lines": 1365,
+  "compile_command": "lake --no-cache build +RecordProportion.AnalyticBridge:olean",
+  "compile_exit_code": 0,
+  "compile_start_utc": "2026-10-08T16:38:24.3799559Z",
+  "compile_finish_utc": "2026-10-08T16:38:52.3613928Z",
+  "compile_log_sha256": "60dec4ab9ce8e9a1ff53646a2f688c4c40829a6401a4ad92dc2f436e91071735",
+  "artifact_sha256": "ca66629427ec64ca072f3357ed943de41bc652eca0ed2ddeacc930be8fcadb39",
+  "axiom_audit_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.exe",
+    "--no-cache",
+    "env",
+    "lean",
+    "tmp\\analytic-bridge-axioms-perron.lean"
+  ],
+  "axiom_audit_exit_code": 0,
+  "axiom_audit_seconds": 19.09,
+  "axiom_audit_log_sha256": "7700a50743f03ef96bac8fab6d32ca7b00d8302fa9b332365589f4fc55f28694",
+  "declarations": [
+    {
+      "declaration": "RHWeilRecord.eventually_am_all_entries_close",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.sparse_fintype_energy_lower",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.eventually_am_retained_lossless_defect",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.am_lossless_defect_of_nine_point_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.am_distinct_dyadic_of_nine_point_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.am_distinct_cumulative_of_nine_point_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.sinc_pi_near",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.am_near_weight_ge_reward",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.eventually_am_separated_offdiag_le_defect",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.finite_count_transport",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.c260_finite_count_transport",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.error_div_small",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.asymptotic_count_transport",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.asymptotic_mono_counts",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.eigenvalues_le_of_real_form",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.offdiag_le_defect_of_real_form",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.near_pair_defect_gain",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.defect_gain_of_partition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.am_distinct_dyadic_of_lossless_defect",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.am_distinct_cumulative_of_lossless_defect",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.Matching.exists_maximal_matching",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.pair_defect_from_am_kernel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.defect_gain_from_separated_subsets",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.window_pair_weights_le_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.sparse_window_lossless_reward",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RHWeilRecord.sparse_frame_kernel_transfer",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_audited_axioms_allowed": true,
+  "dependencies": [
+    {
+      "path": "RecordProportion/ImportedAM.lean",
+      "sha256": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8"
+    },
+    {
+      "path": "RecordProportion/Majorant.lean",
+      "sha256": "161f95eae8798b7ceb1658ccf1f04469573af0475930a24ff664a4035a3f770d"
+    }
+  ],
+  "scope": "Complete actual AM separation, near matching, sparse nine-point sliding and all-zero dyadic/cumulative analytic transport. The final result still requires the genuine finite W9 local reward certificate; no new challenge theorem is asserted by this audit."
+}

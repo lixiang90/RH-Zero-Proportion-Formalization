@@ -22,7 +22,8 @@ zero-proportion theorem is still being assembled and checked.
 | Integer and real Floyd-closure soundness | Full module compiled; only permitted axioms |
 | Packed finite-data snapshot | Orbit, reflection, sizes and 49 fixed points compiled; complete dual and geometric coverage checks pending |
 | Imported AM analytic chain and original PC8 certificate | Full module compiled; only permitted axioms |
-| Separated majorant, continuous nine-point certificate and new spectral transport | Full compilation or assembly pending |
+| Separated AM majorant and spectral/count transport | Full modules compiled; only permitted axioms |
+| Continuous nine-point certificate, complete geometry and point guards | Assembly and full checks pending |
 | Three final website declarations and independent nanoda replay | Pending |
 
 Snapshot results and their scope are recorded in `verification/` and `docs/`.
@@ -50,10 +51,12 @@ pass Lean and independent nanoda verification. See [the submission requirements]
 
 ```powershell
 lake --no-cache exe cache get
-lake build
+lake --no-cache build +RecordProportion.AnalyticBridge:olean +RecordProportion.CountBridge:olean +RecordProportion.FloydSoundness:olean
 python -B -X utf8 scripts/am_expanded_nine_point_certificate.py --check
 ```
 
+The build command above checks the completed analytic and auxiliary modules.
+A complete `lake build` also requires the finite-certificate work still in progress.
 The Python check uses only the standard library and verifies the saved 2,399
 rational dual certificates. It does not constitute a full Lean proof.
 The committed `lean-toolchain`, `lakefile.toml` and `lake-manifest.json` pin the
