@@ -148,3 +148,35 @@ test; it does not establish whole-process Linux resource compliance. Queueing
 small Data proof batches gave at most about 2.5% wall-time improvement and
 does not address the official serial independent-kernel cost. The numeric
 data, theorem statements, ratio and published candidate source remain unchanged.
+
+## Comparator core and finite-route engineering
+
+The complete modular three-target candidate passed the pinned Comparator core:
+exact statements, dependency and primitive comparison, transitive axiom policy,
+and the default Lean kernel replay all passed with unchanged inputs.
+See verification/three-website-declarations-modular-comparator-core.json.
+This local Windows run took 4,222.422 seconds. It excludes Nano and does not
+certify the packaged file, Linux sandbox, official 3,200-second combined budget
+or website acceptance.
+
+The budget is the whole Comparator invocation: challenge/solution compilation
+and export, comparisons, serial Nano, and default Lean replay. Its inner timeout
+is 3,200 seconds and the outer job timeout is 3,240 seconds. The pinned sources
+are run-comparator-e2b.sh line 96 and e2b/run-verification-job.sh line 32 at site
+668e239f30c7c56494611b1825306a3d65f95537.
+
+A two-edge weakening has an ordinary generic kernel proof and two isolated
+unchanged-target probes; see verification/floyd-two-edge-scratch-check.json and
+verification/finite-two-edge-isolated-cost.json. The paid probe reduced its
+proof phase from 6.658 to 1.872 seconds, while a failed route with fallback added
+1.109 seconds. Classification can choose a proof route, but every final theorem
+still requires ordinary checking of the original conclusion. It contributes
+no mathematical assumption or new certificate data.
+
+A separate four-target direct reflexivity experiment passed compilation and
+fresh axiom audits but did not improve proof time (4.633 versus 4.702 seconds).
+It was rejected; see verification/direct-reflexivity-isolated-cost.json.
+Whole-family route optimization remains under measurement. The published
+Solution.lean and all numeric inputs remain unchanged until its replacement
+receives complete checks.
+

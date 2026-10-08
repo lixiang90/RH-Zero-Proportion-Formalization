@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-09",
+  "status": "Limited four-target kernel experiment PASS, optimization rejected",
+  "adopted": false,
+  "indices": [
+    0,
+    1,
+    64,
+    65
+  ],
+  "original_data_sha256": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59",
+  "frozen_pre_emitter_prefix": {
+    "path": "tmp/data-queue-high/frozen-prefix.lean.txt",
+    "sha256": "e2a276016590de1c6c9212000616b1ab2b5530baedea862ed57db8adad51bd21",
+    "bytes": 468049
+  },
+  "original_1224_integer_auxiliary_cache_imported": false,
+  "formal_sources_changed": false,
+  "records": [
+    {
+      "mode": "baseline",
+      "compile_exit_code": 0,
+      "fresh_audit_exit_code": 0,
+      "proof_seconds": {
+        "rfl_0": 1.007,
+        "rfl_1": 1.161,
+        "rfl_64": 1.415,
+        "rfl_65": 1.05
+      },
+      "compile_and_initial_audit_wall_seconds": 99.438,
+      "source": {
+        "path": "tmp/direct-rfl-root/baseline.lean",
+        "sha256": "f265b69ed2ab149b2c859384b21da2fa68a7e49e5570b87f92031c12b602b0d8",
+        "bytes": 469388
+      },
+      "olean": {
+        "path": "tmp/direct-rfl-root/baseline.olean",
+        "sha256": "3c71d9b10354297b6dc083547b240eb76c96598f7b7388c06f200ebdfd5ed2de",
+        "bytes": 2021144
+      },
+      "compile_log": {
+        "path": "tmp/direct-rfl-root/baseline.log",
+        "sha256": "803822fc19f07d7b8742fc8134f8a6fe447106b321143c12be5f055c594a8ba0",
+        "bytes": 228
+      },
+      "fresh_audit": {
+        "path": "tmp/direct-rfl-root/baselineAudit.lean",
+        "sha256": "092fe1736209377542c2c732c3705c54c4e7f555ed13c9658113b9ae80e67e23",
+        "bytes": 338
+      },
+      "fresh_audit_log": {
+        "path": "tmp/direct-rfl-root/baselineAudit.fresh.log",
+        "sha256": "b87831ea4bc429eb3a24dad89c6766ced9f3dd0a3c67f42a4e9b5a98da30a254",
+        "bytes": 482
+      },
+      "observed_axioms": {
+        "RHWeil.RecordSubmission.FiniteCertificateData.direct_rfl_0": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.direct_rfl_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.direct_rfl_64": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.direct_rfl_65": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "mode": "direct2",
+      "compile_exit_code": 0,
+      "fresh_audit_exit_code": 0,
+      "proof_seconds": {
+        "rfl_0": 1.026,
+        "rfl_1": 1.198,
+        "rfl_64": 1.412,
+        "rfl_65": 1.066
+      },
+      "compile_and_initial_audit_wall_seconds": 99.797,
+      "source": {
+        "path": "tmp/direct-rfl-root/direct2.lean",
+        "sha256": "0260947f619ff7cb971ec98b4dd4503c0f3f85bf938f2a63e07ed8e2f4ebbde2",
+        "bytes": 469930
+      },
+      "olean": {
+        "path": "tmp/direct-rfl-root/direct2.olean",
+        "sha256": "5aad39a3c5c717d62e6062974df794c3b30807b277eece1cf08381836f2859d7",
+        "bytes": 2116928
+      },
+      "compile_log": {
+        "path": "tmp/direct-rfl-root/direct2.log",
+        "sha256": "3bdc2328ebf294011006edaee72744bd164466779de0cf49bd4b73b1404de3b1",
+        "bytes": 228
+      },
+      "fresh_audit": {
+        "path": "tmp/direct-rfl-root/direct2Audit.lean",
+        "sha256": "f8ea94f206a16567ec6c42966773f27bcd6530aff043132e9282715ee60754bc",
+        "bytes": 337
+      },
+      "fresh_audit_log": {
+        "path": "tmp/direct-rfl-root/direct2Audit.fresh.log",
+        "sha256": "b87831ea4bc429eb3a24dad89c6766ced9f3dd0a3c67f42a4e9b5a98da30a254",
+        "bytes": 482
+      },
+      "observed_axioms": {
+        "RHWeil.RecordSubmission.FiniteCertificateData.direct_rfl_0": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.direct_rfl_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.direct_rfl_64": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.direct_rfl_65": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ],
+  "comparison": {
+    "baseline_proof_seconds": 4.633,
+    "direct_proof_seconds": 4.702
+  },
+  "method": "Baseline: exact integerCheck_of_basic (by decide +kernel). Direct: an ordinary kernel-checked theorem with value integerCheck_of_basic i (Eq.refl Bool.true), constructed using Lean.addDecl without changing kernel-check options. Both prove the unchanged integerCertificateCheck i=true.",
+  "scope": [
+    "Four basic-route representatives only; not full-family, independent Nano or final source optimization.",
+    "Different fresh compiler processes, shared host with the bounded two-edge trial. Wall times are not extrapolated to official execution.",
+    "First direct attempt used the wrong Eq universe and actually exited1; never admitted as proof. Corrected attempt is direct2 and compiled0.",
+    "Initial fresh audit path ordering caused import lookup errors. Append repo root after Lake LEAN_PATH repaired this; actual fresh processes exited0 with unchanged compiled inputs. Logs and failing attempts retained in tmp."
+  ],
+  "official_resource_limits_met": false,
+  "submitted": false
+}

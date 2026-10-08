@@ -1,0 +1,114 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "compiler_binary": "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+  "compiler_sha256": "bc137e6662c48eedf2cdf167fb176080e18a15f57e248d214df0cb3939248683",
+  "source": "tmp/floyd_two_edge/FloydTwoEdge.lean",
+  "source_sha256": "e381f27356dca8ea3d876981c544f4d12298a4246eafaef94ec620b58b8701a3",
+  "source_lines": 71,
+  "source_lf_bytes": 3066,
+  "compile": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "-o",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\floyd_two_edge\\FloydTwoEdge.olean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\floyd_two_edge\\FloydTwoEdge.lean"
+    ],
+    "pid": 8032,
+    "exit_code": 0,
+    "start_utc": "2026-10-08T21:04:13.554260+00:00",
+    "finish_utc": "2026-10-08T21:04:32.623794+00:00",
+    "elapsed_seconds": 19.063,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 37,
+    "sampled_peak_tree_rss_bytes": 3463950336,
+    "sampled_peak_tree_private_bytes": 8318038016,
+    "observed_windows_single_process_peak_working_set_bytes": 3586269184,
+    "max_sampled_live_tree_cpu_seconds": 18.312,
+    "log": "tmp/floyd_two_edge/compile.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "audit": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\floyd_two_edge\\Audit.lean"
+    ],
+    "pid": 43520,
+    "exit_code": 0,
+    "start_utc": "2026-10-08T21:04:32.625305+00:00",
+    "finish_utc": "2026-10-08T21:04:50.676113+00:00",
+    "elapsed_seconds": 18.047,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 35,
+    "sampled_peak_tree_rss_bytes": 3338211328,
+    "sampled_peak_tree_private_bytes": 8316571648,
+    "observed_windows_single_process_peak_working_set_bytes": 3343781888,
+    "max_sampled_live_tree_cpu_seconds": 17.484,
+    "log": "tmp/floyd_two_edge/audit.log",
+    "log_sha256": "792c47088be66d04913f72faaf516b05442e517ad4385c5d7602fb3fd2d399f8"
+  },
+  "declarations": {
+    "RHWeilRecord.FloydTwoEdge.closure_le_prefix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.FloydTwoEdge.prefix_succ": [
+      "propext",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.FloydTwoEdge.closure_le_two_edge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.FloydTwoEdge.lower_le_foldl_min": [
+      "propext"
+    ],
+    "RHWeilRecord.FloydTwoEdge.closure_le_twoEdgeEntry": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_audited_axioms_allowed": true,
+  "inputs_before": {
+    "tmp/floyd_two_edge/FloydTwoEdge.lean": "e381f27356dca8ea3d876981c544f4d12298a4246eafaef94ec620b58b8701a3",
+    "tmp/floyd_two_edge/Audit.lean": "75559e9589ef8f0cc53ede578a5318de658eb8aa0cf800e80d743037c8dc1f78",
+    "RecordProportion/FloydSoundness.lean": "2c743f6c6b94fa31e97162cd7d6ec9afdf7f096fbdfb169876ac5c0f1c6efdbb",
+    "RecordProportion/FloydWeakening.lean": "146adbcf22bd73003c4913979a39d2de3df7ef181e6fa52a683919f76b46b879",
+    "tmp/floyd_two_edge/run.py": "8d46320d09ae8fc838f8aeaf7e2e68b9ae1ca7812c15e65b7524372366b1842b",
+    "tmp/am_async_four_thread/run.py": "0c3cca23142d7eb468e1dce0dfcd8dc68f1e10868d0945652a1b490dbcf8b904",
+    "lean-toolchain": "0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6",
+    "lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1"
+  },
+  "inputs_after": {
+    "tmp/floyd_two_edge/FloydTwoEdge.lean": "e381f27356dca8ea3d876981c544f4d12298a4246eafaef94ec620b58b8701a3",
+    "tmp/floyd_two_edge/Audit.lean": "75559e9589ef8f0cc53ede578a5318de658eb8aa0cf800e80d743037c8dc1f78",
+    "RecordProportion/FloydSoundness.lean": "2c743f6c6b94fa31e97162cd7d6ec9afdf7f096fbdfb169876ac5c0f1c6efdbb",
+    "RecordProportion/FloydWeakening.lean": "146adbcf22bd73003c4913979a39d2de3df7ef181e6fa52a683919f76b46b879",
+    "tmp/floyd_two_edge/run.py": "8d46320d09ae8fc838f8aeaf7e2e68b9ae1ca7812c15e65b7524372366b1842b",
+    "tmp/am_async_four_thread/run.py": "0c3cca23142d7eb468e1dce0dfcd8dc68f1e10868d0945652a1b490dbcf8b904",
+    "lean-toolchain": "0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6",
+    "lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1"
+  },
+  "inputs_and_compiler_unchanged_during_check": true,
+  "artifact_sha256": "9c6ab0bd1d80fcea9f5c943a4fc049f36b2d24829e36c36e29c8d080ffe4acf7",
+  "scratch_module_check_passed": true,
+  "scope": "Generic exact simultaneous Int Floyd weakening only: full nine-pivot closure is below every original two-edge candidate and the seeded minimum over the original entry and all nine candidates. Any Array Int with getD 0 semantics; i,j,k<9. No array-size, diagonal, potential or no-negative-cycle assumption. Ordinary Lean proof and fresh axiom audit; no native_decide, axiom or placeholder. No finite family, data modification, timing improvement, new mathematical boundary or complete submission verification is certified.",
+  "frozen_formal_sources_modified": false,
+  "whole_submission_compiled": false,
+  "submitted": false
+}

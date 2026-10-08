@@ -1,0 +1,223 @@
+{
+  "status": "PASS for only two isolated ordinary Lean-kernel probes and thirteen fresh axiom audits; no official deadline pass",
+  "created_date": "2026-10-09",
+  "formal_sources_changed": false,
+  "fixed_inputs": [
+    {
+      "path": "RecordProportion/FiniteCertificateData.lean",
+      "sha256": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59",
+      "lf_bytes": 473129,
+      "lines": 3002
+    },
+    {
+      "path": "scripts/generate_finite_certificate.py",
+      "sha256": "0c9f6ca0fd53f624d65529fa7beb2378f6a5d6b927b709a6e7575c751680b2d6",
+      "lf_bytes": 36441,
+      "lines": 771
+    }
+  ],
+  "common_pre_emitter_prefix": {
+    "path": "tmp/data-queue-high/frozen-prefix.lean.txt",
+    "sha256": "e2a276016590de1c6c9212000616b1ab2b5530baedea862ed57db8adad51bd21",
+    "lf_bytes": 468049,
+    "lines": 2874
+  },
+  "prefix_includes_original_1224_integer_proofs": false,
+  "probes_import_formal_Data_or_original_integer_proof_cache": false,
+  "generic_two_edge_source": {
+    "path": "tmp/floyd_two_edge/FloydTwoEdge.lean",
+    "sha256": "e381f27356dca8ea3d876981c544f4d12298a4246eafaef94ec620b58b8701a3",
+    "lf_bytes": 3066,
+    "lines": 71
+  },
+  "executed_runner": {
+    "path": "tmp/two-edge-high/run_probe.py",
+    "sha256": "41e3a0d22c64cff1f28f737ad66202d34d2cf44a66a70f0c8ad1ca17c6144d24",
+    "lf_bytes": 6650,
+    "lines": 84
+  },
+  "probe_generator": {
+    "path": "tmp/two-edge-high/create_probe.py",
+    "sha256": "e144ebc5371fd1ec40a35c4ba7e95c58ab5d5ff497cad4a69eae743bf8afe844",
+    "lf_bytes": 4096,
+    "lines": 70
+  },
+  "additional_scalar_helper_bytes": 3411,
+  "additional_generic_module_bytes": 3066,
+  "source_size_scope": "The 3411-byte local extension and 3066-byte generic module total 6477 uncompressed source bytes. No per-representative literal lists were added. They were not integrated into the locked formal source or final bundle.",
+  "execution": [
+    {
+      "route": "baseline",
+      "indices": [
+        3,
+        16
+      ],
+      "proof_seconds": {
+        "probe_original_3": 6.658,
+        "probe_original_16": 7.263
+      },
+      "compile_exit_code": 0,
+      "fresh_axiom_audit_exit_code": 0,
+      "compile_wall_seconds": 87.537,
+      "sampled_lean_cpu_seconds_including_prefix": 85.375,
+      "lean_peak_rss_bytes": 5083189248,
+      "sampled_process_tree_peak_rss_bytes": 5496344576,
+      "windows_peak_private_commit_bytes": 10263306240,
+      "axioms": {
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_original_3": [
+          "propext"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_original_16": [
+          "propext"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_basic_value_3": [
+          "propext"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_basic_value_16": [
+          "propext"
+        ]
+      },
+      "source": {
+        "path": "tmp/two-edge-high/baseline.lean",
+        "sha256": "8345891a0c53b78703b233e837ab41da55b9c2eae26218486f3e0e67d4fc66ce",
+        "lf_bytes": 469083,
+        "lines": 2906
+      },
+      "log": {
+        "path": "tmp/two-edge-high/baseline.log",
+        "sha256": "6e3c737a4c450b31dff98d743e1f99dd4a10c2974184565c47ac9f862b28e324",
+        "lf_bytes": 158,
+        "lines": 4
+      },
+      "olean": {
+        "path": "tmp/two-edge-high/baseline.olean",
+        "sha256": "f15560908440c62ca94fd3e94b75e7e7c23f5b3edcdf236103f5954f559c5f92",
+        "bytes": 2020568
+      },
+      "fresh_audit_source": {
+        "path": "tmp/two-edge-high/baseline-audit.lean",
+        "sha256": "496b6b10d49d415339f8308660ec5c6c53e5d88a81e81274b3bf710d860990e2",
+        "lf_bytes": 362,
+        "lines": 5
+      },
+      "fresh_audit_log": {
+        "path": "tmp/two-edge-high/baseline-audit.log",
+        "sha256": "04e6def197001260f7fbba59ff013163401f9d49a26aca3b9b8a7ebae2c97862",
+        "lf_bytes": 384,
+        "lines": 4
+      }
+    },
+    {
+      "route": "twoedge",
+      "indices": [
+        3,
+        16
+      ],
+      "proof_seconds": {
+        "probe_original_3": 1.872,
+        "probe_original_16": 8.372,
+        "probe_twoedge_value_3": 0.015,
+        "probe_twoedge_value_16": 1.135
+      },
+      "compile_exit_code": 0,
+      "fresh_axiom_audit_exit_code": 0,
+      "compile_wall_seconds": 104.157,
+      "sampled_lean_cpu_seconds_including_prefix": 101.75,
+      "lean_peak_rss_bytes": 5088985088,
+      "sampled_process_tree_peak_rss_bytes": 5499686912,
+      "windows_peak_private_commit_bytes": 10263519232,
+      "axioms": {
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_original_3": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_original_16": [
+          "propext"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_basic_value_3": [
+          "propext"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_basic_value_16": [
+          "propext"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.pairClosure_le_twoEdge": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.twoEdgeIntegerCertificateLower_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.integerCheck_of_twoEdge": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_twoedge_value_3": [
+          "propext"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.probe_twoedge_value_16": [
+          "propext"
+        ]
+      },
+      "source": {
+        "path": "tmp/two-edge-high/twoedge.lean",
+        "sha256": "95019fa42068a43eb1e6867da3c06e40f30c1b5021e20573d5c2d2dfc6794db8",
+        "lf_bytes": 473336,
+        "lines": 3007
+      },
+      "log": {
+        "path": "tmp/two-edge-high/twoedge.log",
+        "sha256": "4746b6bf077f8552e28dedab9c72eacf98a9224858209785453baedeea0a756a",
+        "lf_bytes": 336,
+        "lines": 8
+      },
+      "olean": {
+        "path": "tmp/two-edge-high/twoedge.olean",
+        "sha256": "18db9f08da3ec7363901639e973e3b3b3a66342ab2341938fc4d651773cc2be8",
+        "bytes": 2043240
+      },
+      "fresh_audit_source": {
+        "path": "tmp/two-edge-high/twoedge-audit.lean",
+        "sha256": "58b1ca213dd4cca36a7b8edb381fe58ab2349012a18b5cc06fa8b2694d076ca9",
+        "lf_bytes": 787,
+        "lines": 10
+      },
+      "fresh_audit_log": {
+        "path": "tmp/two-edge-high/twoedge-audit.log",
+        "sha256": "9d14334f00522042e539a8b984dae7eb7021b6b355976cdf83f9192647592a93",
+        "lf_bytes": 1023,
+        "lines": 17
+      }
+    }
+  ],
+  "comparison": {
+    "paid_index3_baseline_seconds": 6.658,
+    "paid_index3_twoedge_seconds": 1.872,
+    "paid_index3_seconds_saved": 4.786,
+    "failed_index16_baseline_seconds": 7.263,
+    "failed_index16_fallback_seconds": 8.372,
+    "failed_index16_extra_seconds": 1.109,
+    "two_indices_baseline_seconds": 13.921,
+    "two_indices_twoedge_route_seconds": 10.244,
+    "two_indices_seconds_saved": 3.677
+  },
+  "mathematical_scope": [
+    "The original integerCertificateLower and integerCertificateCheck definitions, target805260, frozen coefficients, multipliers, labels and input data are unchanged.",
+    "A scalar seeded minimum of the primitive edge and nine primitive two-edge paths bounds the full simultaneous Floyd9 entry. Generic monotonicity transports its box lower to the original check.",
+    "Index3: primitive check=false, two-edge check=true, unchanged original check=true via ordinary transport.",
+    "Index16: primitive check=false, two-edge check=false, unchanged original check=true via the original full-Floyd fallback.",
+    "All thirteen fresh audits depend only on subsets of propext, Classical.choice and Quot.sound; no native decision or recovery placeholder was admitted."
+  ],
+  "measurement_scope": [
+    "Single fresh -j1 processes, Elab.async=false, no original1224 proof auxiliary cache imported; ordinary top-level theorem declarations and decide+kernel proofs.",
+    "PROBE markers enclose actual theorem elaboration. Raw intermediate summaries had an empty timing map due to the runner suffix-extraction typo; this record reconstructs timings from preserved BEGIN/END log markers, without rerunning Lean or altering them.",
+    "Compile wall and sampled cumulative CPU include the common prefix and generic helpers. The route proofs were measured separately. Baseline ran after twoedge, not simultaneously.",
+    "Private commit is a Windows measurement, distinct from resident memory and a Linux sandbox limit. Peak RSS under8GiB in these samples does not certify the final website memory budget.",
+    "No full1224 route, independent Nano recheck, complete single-file Comparator run or accepted website submission was run by this diagnostic."
+  ],
+  "engineering_conclusion": "The paid sample demonstrates lower Lean proof cost for the unchanged original goal; the failed sample demonstrates extra fallback cost. It supports further bounded engineering testing, not an extrapolated official serial Nano or3200-second result."
+}
