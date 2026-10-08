@@ -3,6 +3,8 @@ import RecordProportion.FloydSoundness
 
 /- Complete physical-pair coverage of the fixed captured cells.
 All finite checks use kernel reduction; continuous exclusion uses real potentials. -/
+noncomputable section
+
 namespace RHWeilRecord.GeometryCoverage
 open RHWeil.RecordSubmission.FiniteCertificateData
 set_option maxRecDepth 100000

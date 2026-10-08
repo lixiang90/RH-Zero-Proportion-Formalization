@@ -35,6 +35,7 @@ def main() -> None:
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--scope', required=True)
     parser.add_argument('--contract-root', type=Path, default=Path('tmp/contract'))
+    parser.add_argument('--threads', type=int, choices=[1, 2, 4], default=1, help='Lean worker threads; kernel checks remain enabled')
     args = parser.parse_args()
     source = (ROOT/args.bundle).resolve()
     output = (ROOT/args.output).resolve()
@@ -86,7 +87,7 @@ def main() -> None:
     audit_hash = sha(audit)
     spec_command = [lean, '+leanprover/lean4:v4.33.0-rc2', '--root='+str(contract_root),
                     '-o', str(spec.with_suffix('.olean')), str(spec)]
-    command = [lean, '+leanprover/lean4:v4.33.0-rc2', '--tstack=32768', '-j1',
+    command = [lean, '+leanprover/lean4:v4.33.0-rc2', '--tstack=32768', '-j'+str(args.threads),
                '-DstderrAsMessages=false', '-o', str(audit.with_suffix('.olean')), str(audit)]
     print('Compiling prepared specification and single file:', source.name, flush=True)
     start = time.monotonic()
@@ -119,6 +120,7 @@ def main() -> None:
               'spec_exit_code': spec_run.returncode, 'command': command,
               'exit_code': actual.returncode if actual else None, 'observed_axioms': observed,
               'single_file_lean_check_passed': passed,
+              'lean_worker_threads': args.threads,
               'elapsed_seconds': round(time.monotonic()-start, 2), 'scope': args.scope,
               'official_comparator_passed': False, 'independent_nanoda_passed': False,
               'whole_submission_verified': False, 'submitted': False}

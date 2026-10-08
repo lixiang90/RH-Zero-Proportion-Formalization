@@ -1,0 +1,48 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "modules": [
+    "RecordProportion.SimpleCorollary"
+  ],
+  "source_sha256": {
+    "RecordProportion.SimpleCorollary": "961f534029170d132bf636b1f23ba4946422fe8cc750035831783347bcb6c8ff",
+    "RecordProportion.AnalyticBridge": "850a1479aa4e6851fa5c19f30d6b0de26a73b7a5e05cd282f0289f54159ffcae",
+    "RecordProportion.ImportedAM": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "RecordProportion.Majorant": "161f95eae8798b7ceb1658ccf1f04469573af0475930a24ff664a4035a3f770d",
+    "RecordProportion.FiniteCertificate": "6c6cb5dc10588e430c28118107ad66e1da93dcd0b0e62bd579fcc92a3f078cb5",
+    "RecordProportion.FiniteCertificateData": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59",
+    "RecordProportion.FloydWeakening": "146adbcf22bd73003c4913979a39d2de3df7ef181e6fa52a683919f76b46b879",
+    "RecordProportion.FloydSoundness": "2c743f6c6b94fa31e97162cd7d6ec9afdf7f096fbdfb169876ac5c0f1c6efdbb",
+    "RecordProportion.RowEvaluation": "4b85194185223041984ea7bd870eb742ee5a678065c09fa8a45a0a3e2ee60454",
+    "RecordProportion.SparseDualSoundness": "05e1f9ccb64c99ac1d5fb66b67147a902569c17e6d8598dd7ee2295bf7aa23e5",
+    "RecordProportion.PointSoundness": "e0feca589d54ae049e8ff721dfd1bbe7ea9804f0fac0c42ba96ef0d5bd153764",
+    "RecordProportion.GeometryCoverage": "f3ccb337e398efddfb9b8e6a0a007235ecb4d5889fcad504b9d4ffc7b0f3f7a1"
+  },
+  "source_unchanged_during_check": true,
+  "build_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "--no-cache",
+    "build",
+    "+RecordProportion.SimpleCorollary:olean"
+  ],
+  "build_exit_code": 1,
+  "audit_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "env",
+    "lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\verification\\simple-corollary-formal-kernel-axioms.lean"
+  ],
+  "audit_exit_code": null,
+  "observed_axioms": {},
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_passed": false,
+  "module_check_passed": false,
+  "elapsed_seconds": 90.28,
+  "scope": "Complete named c260 simple critical-line dyadic and cumulative corollaries using actual Zeta23 N0simple/Ncount and the already closed W9 certificate; no new ratio or assumptions; no bundled or website acceptance claim",
+  "log": "tmp/verification/simple-corollary-formal-kernel.log",
+  "whole_submission_compiled": false,
+  "submitted": false
+}

@@ -1,0 +1,185 @@
+{
+  "schema": "balanced-getter-single-index-diagnostic-v1",
+  "scope": "Independent payload/branch audit, generic getter compatibility, and one valid ordinary-kernel index16 proof. Certified cbv failed on the same representation and is not admitted. No full1224 or website budget claim.",
+  "frozen_json_sha256": "3a3c8b24015162a4835f5c1d8633a4f9f8bdace26d711631dd6374c689bce04f",
+  "formal_Data_unchanged_sha256": "4fd9850f570d3617d37d94cdbdef459e81e1c47059b0e45499fc1c8c12ec8c7d",
+  "baseline_artifact_sha256": "c72e827109f275cb28d2027896b57f3cd18dfe8f912ba6005bfe6dd10cd87dac",
+  "balanced_artifact_sha256": "1e895dc2c3704dd234760d7362ed1f894e248db02eaefcb2db3ae75dc54dc634",
+  "balanced_artifact_olean_raw_sha256": "e281a2a2cdad21a7caa6ae6d502cc3900e4dcb11ad4133d7ae6913f78a7f0e8c",
+  "getter_module_sha256": "c9a81670701c1d3f5c1a95a351e567685f886d3ca4f10b1bf5a3b1e22c3473ba",
+  "getter_module_full_build_audit": "verification/getter-soundness-kernel.json",
+  "independent_payload_audit": {
+    "cells_entries_equal": 241,
+    "pair_entries_equal": 1224,
+    "getter_tree_max_if_depths": [
+      9,
+      12
+    ],
+    "outer_outside_default_guard": true,
+    "unchanged_common_computational_defs": 47,
+    "only_changed_old_defs": [
+      "cells",
+      "pairPacks",
+      "cellPacket",
+      "integerCertificateLower"
+    ],
+    "new_defs": [
+      "originalCellPacket",
+      "pairPacket"
+    ],
+    "full1224_integer_lower_values_recomputed": false,
+    "finite_lower_equivalence_basis": "Every actual cell/pair payload agrees with baseline; all other computational definitions match; integerCertificateLower only replaces array optional/default lookup by equal bounded getter. GetterSoundness supplies range/map lookup identity; no additional numeric input is assumed."
+  },
+  "source_size": {
+    "old_bytes": 444591,
+    "balanced_bytes": 480159,
+    "increase_bytes": 35568,
+    "whole_single_file_under_2MB_checked": false
+  },
+  "ordinary_kernel_control": {
+    "proof_seconds_from_Lean_monotime": 5.029,
+    "first": 16,
+    "last_exclusive": 17,
+    "exit_code": 0,
+    "wall_seconds": 8.186,
+    "artifact_source_sha256": "1e895dc2c3704dd234760d7362ed1f894e248db02eaefcb2db3ae75dc54dc634",
+    "artifact_olean_raw_sha256": "e281a2a2cdad21a7caa6ae6d502cc3900e4dcb11ad4133d7ae6913f78a7f0e8c",
+    "batch_source_sha256": "542e2a5aa3069e5c4fa949910686d800603190e8e3932c892dc9bec45776e880",
+    "log_raw_sha256": "494f53256e598af404e98b2f92763804c6c004ffd0061976f2d645f0693657b5",
+    "observed_process_peak_memory_bytes": {
+      "25496": {
+        "exe": "lake.exe",
+        "observed_peak_working_set": 12619776,
+        "observed_peak_private_commit": 1921024
+      },
+      "53512": {
+        "exe": "lake.exe",
+        "observed_peak_working_set": 471896064,
+        "observed_peak_private_commit": 1076953088
+      },
+      "55780": {
+        "exe": "git.exe",
+        "observed_peak_working_set": 4321280,
+        "observed_peak_private_commit": 1273856
+      },
+      "29376": {
+        "exe": "git.exe",
+        "observed_peak_working_set": 7720960,
+        "observed_peak_private_commit": 1720320
+      },
+      "27148": {
+        "exe": "git.exe",
+        "observed_peak_working_set": 3035136,
+        "observed_peak_private_commit": 1024000
+      },
+      "41576": {
+        "exe": "lean.exe",
+        "observed_peak_working_set": 12681216,
+        "observed_peak_private_commit": 2007040
+      },
+      "30476": {
+        "exe": "python.exe",
+        "observed_peak_working_set": 14581760,
+        "observed_peak_private_commit": 8294400
+      },
+      "44472": {
+        "exe": "lean.exe",
+        "observed_peak_working_set": 2063036416,
+        "observed_peak_private_commit": 3427225600
+      }
+    },
+    "sampled_aggregate_working_set_peak_bytes": 2565844992,
+    "ordinary_top_level_theorems": 1,
+    "tactic_mode": "kernel",
+    "full1224_run": false,
+    "artifact_source_unchanged": true,
+    "batch_olean_raw_sha256": "de3761d21bc5f5bb0a0ca25bbc4093fa4df9ad4a6e84a3b69f124dc64c892153"
+  },
+  "ordinary_kernel_axioms": [
+    "propext"
+  ],
+  "certified_cbv_attempt": {
+    "proof_seconds_from_Lean_monotime": null,
+    "first": 16,
+    "last_exclusive": 17,
+    "exit_code": 4294967295,
+    "wall_seconds": 4.183,
+    "artifact_source_sha256": "1e895dc2c3704dd234760d7362ed1f894e248db02eaefcb2db3ae75dc54dc634",
+    "artifact_olean_raw_sha256": "e281a2a2cdad21a7caa6ae6d502cc3900e4dcb11ad4133d7ae6913f78a7f0e8c",
+    "batch_source_sha256": "98c521285e41fc5e845fb6bfec02266901dc0c78bdd4fcdc1fb2df5ebd0cad38",
+    "log_raw_sha256": "e89d7ae9177215e007efc82ec6d9b496895ca7e568d3163c9b17bf5f7be9c852",
+    "observed_process_peak_memory_bytes": {
+      "46632": {
+        "exe": "lake.exe",
+        "observed_peak_working_set": 12623872,
+        "observed_peak_private_commit": 1925120
+      },
+      "45208": {
+        "exe": "lake.exe",
+        "observed_peak_working_set": 471449600,
+        "observed_peak_private_commit": 1076932608
+      },
+      "15736": {
+        "exe": "git.exe",
+        "observed_peak_working_set": 7716864,
+        "observed_peak_private_commit": 1716224
+      },
+      "20136": {
+        "exe": "git.exe",
+        "observed_peak_working_set": 25604096,
+        "observed_peak_private_commit": 35876864
+      },
+      "4960": {
+        "exe": "git.exe",
+        "observed_peak_working_set": 8822784,
+        "observed_peak_private_commit": 35856384
+      },
+      "56516": {
+        "exe": "git.exe",
+        "observed_peak_working_set": 7716864,
+        "observed_peak_private_commit": 1716224
+      },
+      "23232": {
+        "exe": "python.exe",
+        "observed_peak_working_set": 14594048,
+        "observed_peak_private_commit": 8298496
+      },
+      "52116": {
+        "exe": "lean.exe",
+        "observed_peak_working_set": 1060335616,
+        "observed_peak_private_commit": 2418552832
+      },
+      "45948": {
+        "exe": "lean.exe",
+        "observed_peak_working_set": 12660736,
+        "observed_peak_private_commit": 1994752
+      },
+      "43836": {
+        "exe": "WerFault.exe",
+        "observed_peak_working_set": 11177984,
+        "observed_peak_private_commit": 2031616
+      }
+    },
+    "sampled_aggregate_working_set_peak_bytes": 1576050688,
+    "ordinary_top_level_theorems": 1,
+    "tactic_mode": "cbv",
+    "full1224_run": false,
+    "artifact_source_unchanged": true
+  },
+  "certified_cbv_valid_proof": false,
+  "certified_cbv_failure": "Stack overflow; no end marker, olean, or proof axiom audit. No resource increase or second identical run performed.",
+  "harness_errors_preserved": [
+    "tmp/checkpoint-balanced-kernel/first-marker-error.json",
+    "tmp/checkpoint-balanced-kernel/second-marker-error.json"
+  ],
+  "harness_error_scope": "Two ordinary control runs had IO logging-only errors. Their theorem printed propext, but overall exit1 is not counted as a module PASS. Final corrected timer was separately compiled before the valid control.",
+  "memory_measurement": "Windows PSAPI per-process peak counters observed via 0.25s sampling; aggregate RSS is sampled. Concurrent independent Lean jobs may affect timing.",
+  "timing_scope": "Only this new representation index16 has proof start/end timestamps. Previous literal-array baseline consisted of two 16-item batches; no same-item exact baseline timing claim.",
+  "speedup_established": false,
+  "formal_Data_modified": false,
+  "formal_generator_modified": false,
+  "full1224_run": false,
+  "whole_submission_compiled": false,
+  "website_8GB_53min_verified": false,
+  "submitted": false
+}

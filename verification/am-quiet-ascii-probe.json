@@ -1,0 +1,97 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "compiler_binary": "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+  "compiler_sha256": "bc137e6662c48eedf2cdf167fb176080e18a15f57e248d214df0cb3939248683",
+  "compile": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j4",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "-o",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am_quiet_ascii_probe\\AsciiProbe.olean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am_quiet_ascii_probe\\AsciiProbe.lean"
+    ],
+    "pid": 51044,
+    "exit_code": 1,
+    "start_utc": "2026-10-08T20:17:20.925289+00:00",
+    "finish_utc": "2026-10-08T20:17:39.519807+00:00",
+    "elapsed_seconds": 18.594,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 36,
+    "sampled_peak_tree_rss_bytes": 3358785536,
+    "sampled_peak_tree_private_bytes": 8318976000,
+    "observed_windows_single_process_peak_working_set_bytes": 3358785536,
+    "max_sampled_live_tree_cpu_seconds": 17.922,
+    "log": "tmp/am_quiet_ascii_probe/ascii-probe.log",
+    "log_sha256": "7d02901d17eb691510320dab280eae7049d4e49c6243f7ef4b27812d20e01224"
+  },
+  "probe_source": "tmp/am_quiet_ascii_probe/AsciiProbe.lean",
+  "probe_sha256": "a5c3b0ef0afc816438857c5e79ba0a58570a3c9ba92d769e0b389a7730f09e45",
+  "probe_bytes": 1337,
+  "probe_lines": 44,
+  "command_header": "elab \"^\" ppLine c:command : command =>\n  Lean.Elab.withEnableInfoTree false (Lean.Elab.Command.elabCommand c)",
+  "marker_bytes_per_declaration": 2,
+  "header_lf_bytes": 110,
+  "equivalent_1298_marker_total_lf_bytes": 2706,
+  "declarations": {
+    "QuietProbe.plain": [
+      "propext"
+    ],
+    "QuietProbe.protectedResult": [
+      "sorryAx"
+    ],
+    "QuietProbe.useHidden": [
+      "propext",
+      "Quot.sound"
+    ],
+    "QuietProbe.untouchedAttribute": [
+      "propext"
+    ],
+    "QuietProbe.Inner.indented": [
+      "propext"
+    ],
+    "QuietProbe.Inner.usesPrivateIndented": [
+      "propext"
+    ],
+    "QuietProbe.documented": [
+      "propext"
+    ],
+    "QuietProbe.localOption": [
+      "propext"
+    ],
+    "QuietProbe.powSyntaxPreserved": [
+      "propext"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "inputs_before": {
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "tmp/am_quiet_four_thread/ImportedAMQuiet.lean": "e8fcab81fec83cda6c138bd56dabaf01873f2494de2fe32bf4bfa2aef9da10be",
+    "tmp/am_quiet_four_thread/Probe.lean": "15ab656cbb758389b5a81cc09196b0b40e431920bde8e233113145087d88bdba",
+    "tmp/am_quiet_ascii_probe/AsciiProbe.lean": "a5c3b0ef0afc816438857c5e79ba0a58570a3c9ba92d769e0b389a7730f09e45",
+    "tmp/am_quiet_ascii_probe/run.py": "e5a60b2bf6a3abde05e177a8a9e16a7877205e8d80fc2837ce1b8492de87bb28",
+    "lean-toolchain": "0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6",
+    "lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1"
+  },
+  "inputs_after": {
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "tmp/am_quiet_four_thread/ImportedAMQuiet.lean": "e8fcab81fec83cda6c138bd56dabaf01873f2494de2fe32bf4bfa2aef9da10be",
+    "tmp/am_quiet_four_thread/Probe.lean": "15ab656cbb758389b5a81cc09196b0b40e431920bde8e233113145087d88bdba",
+    "tmp/am_quiet_ascii_probe/AsciiProbe.lean": "a5c3b0ef0afc816438857c5e79ba0a58570a3c9ba92d769e0b389a7730f09e45",
+    "tmp/am_quiet_ascii_probe/run.py": "e5a60b2bf6a3abde05e177a8a9e16a7877205e8d80fc2837ce1b8492de87bb28",
+    "lean-toolchain": "0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6",
+    "lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1"
+  },
+  "artifact_sha256": null,
+  "probe_passed": false,
+  "scope": "Scratch-only command-category ASCII alias probe. Ordinary/protected/private declarations, namespaces/indentation, untouched attributes, attached documentation and local set_option-in elaborated normally; a separate n ^ 1 = n proof confirms term power syntax remains intact. No complete AM rerun with this alias, resource improvement, final bundle or website verification is claimed.",
+  "formal_source_modified": false,
+  "whole_submission_compiled": false,
+  "submitted": false
+}

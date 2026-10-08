@@ -41,3 +41,14 @@ Lean and nanoda must both accept. Every admitted source is retained in an
 encrypted maintainer archive; accepted proofs are public under Apache-2.0.
 
 No upload, job ID, kernel acceptance or formal record currently exists for this target.
+
+The public display name is **Li Xiang**. The GitHub login is bound by the server
+after OAuth; `lixiang90` is the intended account. The direct submission schema
+has no `paperUrl` field: paper and repository links belong in the summary or
+source attribution. The local draft JSON is a prepared submission manifest,
+not a direct API payload. No browser upload has been performed.
+
+The fixed E2B template has four CPUs and 8,192 MB of memory. Its Comparator
+process has a 3,200-second timeout (with a separate 3,240-second outer wrapper).
+The complete verification must fit these constraints; a passed module does
+not demonstrate that it does.

@@ -1,0 +1,39 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "modules": [
+    "RecordProportion.FiniteCertificateData"
+  ],
+  "source_sha256": {
+    "RecordProportion.FiniteCertificateData": "2f4a139a4f4633ea97ee1b2a4188ef7c967be4fbd4db546144a2ed8607616bff",
+    "RecordProportion.FloydWeakening": "146adbcf22bd73003c4913979a39d2de3df7ef181e6fa52a683919f76b46b879",
+    "RecordProportion.FloydSoundness": "2c743f6c6b94fa31e97162cd7d6ec9afdf7f096fbdfb169876ac5c0f1c6efdbb"
+  },
+  "source_unchanged_during_check": true,
+  "build_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "--no-cache",
+    "build",
+    "+RecordProportion.FiniteCertificateData:olean"
+  ],
+  "build_exit_code": 1,
+  "audit_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "env",
+    "lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\verification\\finite-data-fast-kernel-axioms.lean"
+  ],
+  "audit_exit_code": null,
+  "observed_axioms": {},
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_passed": false,
+  "module_check_passed": false,
+  "elapsed_seconds": 129.88,
+  "scope": "Complete unchanged 1224 original integer conclusions, orbit coverage and representative shape, using primitive-first ordinary kernel proofs with original Floyd fallback",
+  "log": "tmp/verification/finite-data-fast-kernel.log",
+  "whole_submission_compiled": false,
+  "submitted": false
+}

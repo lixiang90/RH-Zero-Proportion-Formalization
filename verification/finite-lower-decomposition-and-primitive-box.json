@@ -1,0 +1,221 @@
+{
+  "scope": "Only corrected isolated computational definitions, index16 decomposition, and primitive-only checks for representatives0,1,2,16. Not a formal Data target or full1224 PASS.",
+  "date": "2026-10-09",
+  "formal_data_unchanged": true,
+  "full1224_run": false,
+  "submission_claim": false,
+  "inputs": [
+    {
+      "path": "RecordProportion/FiniteCertificateData.lean",
+      "canonical_lf_sha256": "4fd9850f570d3617d37d94cdbdef459e81e1c47059b0e45499fc1c8c12ec8c7d",
+      "canonical_lf_bytes": 469622,
+      "lines": 2925
+    },
+    {
+      "path": "scripts/generate_finite_certificate.py",
+      "canonical_lf_sha256": "f47d60b5889da3bbde724a154ae0c661d03e9a6b39d340342972c78370b4272a",
+      "canonical_lf_bytes": 32925,
+      "lines": 697
+    },
+    {
+      "path": "output/am-expanded-nine-point-certificate.json",
+      "canonical_lf_sha256": "3a3c8b24015162a4835f5c1d8633a4f9f8bdace26d711631dd6374c689bce04f",
+      "canonical_lf_bytes": 6252220,
+      "lines": 380105
+    },
+    {
+      "path": "tmp/finite-corrected-definitions.lean",
+      "canonical_lf_sha256": "c72e827109f275cb28d2027896b57f3cd18dfe8f912ba6005bfe6dd10cd87dac",
+      "canonical_lf_bytes": 444591,
+      "lines": 2172
+    }
+  ],
+  "artifact_olean_raw_sha256": "7f8fdf58f94c7b41674deb160d3d9af334c7fd3772e829aab37c5d114a0affa8",
+  "toolchain": "Lean4.33.0-rc2 d8b18978322de05a8f3dba51ef03cf5461676c17; standard decide +kernel; no native/cbv/admitted reduction",
+  "evidence": [
+    {
+      "source": {
+        "path": "tmp/checkpoint-decomposition/profile.lean",
+        "canonical_lf_sha256": "3811625865631a7334b94fcf0257bef59133a1929ba05fada3d0e73990ee1dad",
+        "canonical_lf_bytes": 20380,
+        "lines": 91
+      },
+      "log": {
+        "path": "tmp/checkpoint-decomposition/profile.log",
+        "canonical_lf_sha256": "1d88ff766cea6cf39e9712459128f8d7bffe952b47d24f5804a83f99d39963cf",
+        "canonical_lf_bytes": 1572,
+        "lines": 36
+      },
+      "olean_raw_sha256": "f08a80bf90e2d357c8a82837548f4c926d2b14026f772c407142650e0a3a2278",
+      "actual_exit_code": 0,
+      "theorem_axioms": {
+        "CheckpointDecomposition16.check_decoded": [
+          "propext"
+        ],
+        "CheckpointDecomposition16.check_rows": [
+          "propext"
+        ],
+        "CheckpointDecomposition16.check_selected": [
+          "propext"
+        ],
+        "CheckpointDecomposition16.check_primitive": [
+          "propext",
+          "Quot.sound"
+        ],
+        "CheckpointDecomposition16.check_closure": [
+          "propext",
+          "Quot.sound"
+        ],
+        "CheckpointDecomposition16.check_base": [
+          "propext"
+        ],
+        "CheckpointDecomposition16.check_residuals": [
+          "propext"
+        ],
+        "CheckpointDecomposition16.check_lower_literal_closure": [
+          "propext"
+        ],
+        "CheckpointDecomposition16.check_lower_literal_selected": [
+          "propext"
+        ],
+        "CheckpointDecomposition16.check_whole_lower": [
+          "propext"
+        ],
+        "CheckpointDecomposition16.check_basic_lower": [
+          "propext"
+        ],
+        "CheckpointDecomposition16.check_basic_check": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": {
+        "path": "tmp/checkpoint-basic-true/profile.lean",
+        "canonical_lf_sha256": "64b384db7d8cad5cf6f71fc53e5de5848663a565a2e55384321ecfa44e08d1c9",
+        "canonical_lf_bytes": 2265,
+        "lines": 35
+      },
+      "log": {
+        "path": "tmp/checkpoint-basic-true/profile.log",
+        "canonical_lf_sha256": "a88f84dc9926dd2bdfe2ce95723c02f2cb5e33d7d5232de62dfcb62560f35adf",
+        "canonical_lf_bytes": 330,
+        "lines": 9
+      },
+      "olean_raw_sha256": "83c9804c43c2fd3cebbb33fed71b6eec45be71228aa7eb42b1f381812ccc94fc",
+      "actual_exit_code": 0,
+      "theorem_axioms": {
+        "CheckpointBasicTrue.check_basic0": [
+          "propext"
+        ],
+        "CheckpointBasicTrue.check_basic1": [
+          "propext"
+        ],
+        "CheckpointBasicTrue.check_basic2": [
+          "propext"
+        ]
+      }
+    }
+  ],
+  "profile": {
+    "index": 16,
+    "left": 3,
+    "right": 396,
+    "rows": 266,
+    "selected_rows": 25,
+    "extra_anchors": 0,
+    "expected_lower": "3289601678540613198352109747200",
+    "expected_basic_lower": "2160187233297724670902109747200",
+    "basic_check": false,
+    "wall_seconds": 52.604,
+    "proof_seconds": {
+      "decoded": 0.063,
+      "rows": 22.046,
+      "selected": 1.036,
+      "primitive": 0.708,
+      "closure": 9.064,
+      "base": 0.484,
+      "residuals": 0.979,
+      "lower_literal_closure": 1.012,
+      "lower_literal_selected": 5.508,
+      "whole_lower": 5.961,
+      "basic_lower": 1.058,
+      "basic_check": 1.044
+    },
+    "lean_observed_peak_rss_bytes": 2603008000,
+    "lean_observed_peak_private_commit_bytes": 3975856128,
+    "sampled_aggregate_rss_bytes": 3105759232
+  },
+  "basic_true": {
+    "representatives": [
+      0,
+      1,
+      2
+    ],
+    "actual_values": [
+      true,
+      true,
+      true
+    ],
+    "independently_reconstructed_basic_lowers": [
+      "3227520789838918277956994995200",
+      "2735280341783807343900899351320",
+      "2865104624974938569977419691520"
+    ],
+    "wall_seconds": 5.271,
+    "proof_seconds": {
+      "basic0": 0.561,
+      "basic1": 0.648,
+      "basic2": 0.706
+    },
+    "lean_observed_peak_rss_bytes": 1097248768,
+    "sampled_aggregate_rss_bytes": 1601622016
+  },
+  "independent_expectation_method": "Own Python reconstructs original JSON cell/reflection/rows/lam/42residuals/Floyd9 stages at index16, then checks exact Fraction against frozen JSON lower; no author algorithm imported. indices0..2 primitive-only expectations likewise reconstruct from original inputs.",
+  "conclusion": "At index16, whole lower5.961s versus literal verified closure+actual selected1.012s; literal selected+actual Floyd5.508s. Floyd is the dominant measured cost here. Primitive-only false16=1.044s and true0..2=.561/.648/.706s support a basic-first/full-Floyd-fallback design; they do not prove whole-run budget.",
+  "limitations": [
+    "Phase times are separate closed equality proofs, not additive profiling of one run; full81 closure equality normalizes more entries than the ordinary lower consumes.",
+    "Array equality probes use Quot.sound as well as propext; remaining successful probes use propext only.",
+    "Memory is Windows PSAPI observed process PeakWorkingSet/PeakPagefile sampled every .25s; aggregate RSS is sampled. Neither is a whole-run8GB guarantee.",
+    "Primitive-only check16=false is weaker-box budget failure; the original whole lower16 is true and its exact value kernel-checked.",
+    "Root reported2289/2399 basic-true and110 basic-false; those global counts are not independently recomputed by this diagnostic.",
+    "Main Data/generator and frozen certificate parameters unchanged; actual primitive real-bound consumer/fallback adoption remains High responsibility."
+  ],
+  "rejected_first_harness": {
+    "exit_code": 1,
+    "counted_as_pass": false,
+    "reason": "Own placeholder replacement corrupted getD; product tuple Decidable synthesis failed. Recovery sorryAx declarations rejected.",
+    "source": {
+      "path": "tmp/checkpoint-decomposition/first-harness-error-profile.lean",
+      "canonical_lf_sha256": "076978cfafc5c519978534be21240d4b120645d9f9a3107558d3a002c9e3b7ed",
+      "canonical_lf_bytes": 21563,
+      "lines": 91
+    },
+    "log": {
+      "path": "tmp/checkpoint-decomposition/first-harness-error-profile.log",
+      "canonical_lf_sha256": "0bc5266ed23ed2cc931a49cb8aaf1a13b971e40805d39f5234597eb0b320332f",
+      "canonical_lf_bytes": 23408,
+      "lines": 403
+    }
+  },
+  "supporting_sources": [
+    {
+      "path": "tmp/checkpoint-decomposition-generator.py",
+      "canonical_lf_sha256": "09488e46956ee65992cbe19f3e8080bbfb7eb876c9a8f598de726567ce87cebe",
+      "canonical_lf_bytes": 8706,
+      "lines": 81
+    },
+    {
+      "path": "tmp/checkpoint-decomposition-runner.py",
+      "canonical_lf_sha256": "a3056f73432b76a0fb20a862788142b9c795b072235becd4eccb09a9c4e1125b",
+      "canonical_lf_bytes": 4452,
+      "lines": 56
+    },
+    {
+      "path": "tmp/checkpoint-basic-true-runner.py",
+      "canonical_lf_sha256": "4245726995ad828b39cf570efb4d920614f7f72320e05c35bc1c837d0af7e22d",
+      "canonical_lf_bytes": 4456,
+      "lines": 56
+    }
+  ]
+}

@@ -40,7 +40,7 @@ def decode(s: str) -> int:
     return n
 
 def compact_hex(source: str) -> tuple[str, int, int]:
-    """Only rewrite long hex literals outside strings and nested comments."""
+    """Rewrite hex/B64 numerals only outside strings and nested comments."""
     out = []
     i = replaced = saved = depth = 0
     while i < len(source):
@@ -66,6 +66,10 @@ def compact_hex(source: str) -> tuple[str, int, int]:
             encoded = encode(value)
             assert decode(encoded) == value
             replacement = 'n% "' + encoded + '"'
+            if value.bit_length() <= 64:
+                decimal = str(value)
+                assert int(decimal) == value
+                if len(decimal) < len(replacement): replacement = decimal
             out.append(replacement); replaced += 1
             saved += len(match.group(0)) - len(replacement)
             i += len(match.group(0))
@@ -81,17 +85,18 @@ def compact_hex(source: str) -> tuple[str, int, int]:
             if match is None:
                 out.append(source[i]); i += 1; continue
             literal = match.group(0)
-            if len(literal) < 60:
-                out.append(literal)
-            else:
-                value = int(literal, 16)
-                encoded = encode(value)
-                assert decode(encoded) == value
-                replacement = '(n% "' + encoded + '")'
-                if len(replacement) < len(literal):
-                    out.append(replacement); replaced += 1
-                    saved += len(literal) - len(replacement)
-                else: out.append(literal)
+            value = int(literal, 16)
+            encoded = encode(value)
+            assert decode(encoded) == value
+            replacement = '(n% "' + encoded + '")'
+            if value.bit_length() <= 64:
+                decimal = str(value)
+                assert int(decimal) == value
+                if len(decimal) < len(replacement): replacement = decimal
+            if len(replacement) < len(literal):
+                out.append(replacement); replaced += 1
+                saved += len(literal) - len(replacement)
+            else: out.append(literal)
             i += len(literal)
         else:
             out.append(source[i]); i += 1
@@ -246,6 +251,87 @@ def remaining_sections(source: str) -> int:
         raise ValueError('Unclosed named source scope: ' + str(scopes))
     return len(scopes)
 
+def compact_numeral_dictionary(source: str) -> tuple[str, str, int, int, int]:
+    """Share repeated numeral source strings; expand each use to ordinary Nat AST."""
+    from collections import Counter
+    mask = code_mask(source)
+    occurrences = []
+    for start in re.finditer(r'(?<![A-Za-z_0-9])n%\s+', mask):
+        match = re.match(r'n%\s*"([' + re.escape(ALPHABET) + r']+)"', source[start.start():])
+        if match:
+            occurrences.append((start.start(), start.start() + len(match.group(0)), match.group(1)))
+    counts = Counter(value for _, _, value in occurrences)
+    values = []
+    for value, count in sorted(counts.items(), key=lambda item: (-len(item[0]) * item[1], item[0])):
+        index = len(values)
+        use = '(nd% ' + str(index) + ')'
+        old = count * (len(value) + 5)
+        new = count * len(use) + len(value) + 4
+        if count > 1 and old > new:
+            values.append(value)
+    if not values:
+        return source, '', 0, 0, 0
+    if re.search(r'(?<![A-Za-z_0-9])nd%(?![A-Za-z_0-9])', mask):
+        raise ValueError('Reserved numeral dictionary macro already occurs')
+    indices = {value: index for index, value in enumerate(values)}
+    declarations = 'private def dictionary92 : Array String := #[\n' + ',\n'.join('"' + value + '"' for value in values) + '\n]\n'
+    declarations += 'macro "nd% " i:num : term => do\n'
+    declarations += '  let index := i.getNat\n'
+    declarations += '  let encoded \u2190 match dictionary92[index]? with\n'
+    declarations += '    | some value => pure value\n'
+    declarations += '    | none => Lean.Macro.throwError "Numeral dictionary index out of range"\n'
+    declarations += '  return Lean.Syntax.mkNumLit (toString (decode92 encoded))\n'
+    out = []
+    pos = uses = 0
+    for start, end, value in occurrences:
+        if value not in indices: continue
+        index = indices[value]
+        assert decode(values[index]) == decode(value)
+        out.extend((source[pos:start], '(nd% ' + str(index) + ')')); pos = end; uses += 1
+    out.append(source[pos:])
+    result = ''.join(out)
+    saved = len(source.encode()) - len(result.encode()) - len(declarations.encode())
+    if saved <= 0:
+        return source, '', 0, 0, 0
+    return result, declarations, len(values), uses, saved
+
+
+NAT_CALL_ALIASES = {
+    'Nat.add': 'qA', 'Nat.sub': 'qS', 'Nat.mul': 'qM',
+    'Nat.beq': 'qE', 'Nat.ble': 'qL',
+    'Nat.shiftLeft': 'qH', 'Nat.shiftRight': 'qV',
+}
+
+
+def compact_nat_calls(source: str) -> tuple[str, str, int, int]:
+    """Shorten only parenthesized calls to fixed standard constants.
+
+    Each zero-argument term macro expands to the original fully qualified
+    constant. Strings, comments, declaration names and tactic identifiers
+    are excluded. This changes source representation, not proof terms.
+    """
+    mask = code_mask(source)
+    used = []
+    changes = []
+    for name, alias in NAT_CALL_ALIASES.items():
+        if re.search(r'(?<![A-Za-z_0-9])' + alias + r'(?![A-Za-z_0-9])', mask):
+            raise ValueError('Reserved call macro already occurs: ' + alias)
+        pattern = r'(?<=\()' + re.escape(name) + r'(?=\s)'
+        positions = list(re.finditer(pattern, mask))
+        if positions:
+            used.append((name, alias))
+            changes.extend((m.start(), m.end(), alias) for m in positions)
+    out = []
+    pos = 0
+    for start, end, alias in sorted(changes):
+        out.extend((source[pos:start], alias)); pos = end
+    out.append(source[pos:])
+    declarations = ''.join('macro "' + alias + '" : term => `(_root_.' + name + ')\n'
+                           for name, alias in used)
+    result = ''.join(out)
+    return result, declarations, len(changes), len(source.encode()) - len(result.encode()) - len(declarations.encode())
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=Path('tmp/bundles/Solution.draft.lean'))
@@ -253,6 +339,12 @@ def main() -> None:
     parser.add_argument('--module', action='append', help='Local root module; defaults to the analytic and finite chains')
     parser.add_argument('--compact-layout', action='store_true',
                         help='Remove non-attribution comments and empty lines; still requires full compilation')
+    parser.add_argument('--compact-nat-calls', action='store_true',
+                        help='Shorten fixed parenthesized Nat/Bool calls through ordinary term macros')
+    parser.add_argument('--compact-numeral-dictionary', action='store_true',
+                        help='Share repeated encoded constants through ordinary Nat AST macro expansion')
+    parser.add_argument('--async-imported-am', action='store_true',
+                        help='Use standard asynchronous proof scheduling only in the imported AM module; full checks remain required')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     modules = args.module or DEFAULT_MODULES
@@ -267,9 +359,17 @@ def main() -> None:
     payloads = []; sources = []; replaced = saved = 0
     for module_index, path in enumerate(names):
         source = path.read_text(encoding='utf-8-sig')
+        scheduling_changes = 0
+        if args.async_imported_am and path.relative_to(root).as_posix() == 'RecordProportion/ImportedAM.lean':
+            pattern = r'^set_option Elab\.async false$'
+            source, scheduling_changes = re.subn(pattern, 'set_option Elab.async true', source, flags=re.M)
+            if scheduling_changes != 1:
+                raise ValueError('Expected exactly one AM scheduling option')
+            assert source.replace('set_option Elab.async true', 'set_option Elab.async false', 1) == path.read_text(encoding='utf-8-sig')
         open_sections = remaining_sections(source)
         sources.append({'path': path.relative_to(root).as_posix(),
-                        'sha256': hashlib.sha256(source.encode()).hexdigest(),
+                        'sha256': hashlib.sha256(path.read_text(encoding='utf-8-sig').encode()).hexdigest(),
+                        'async_option_changes': scheduling_changes,
                         'anonymous_sections_closed': open_sections})
         lines = []
         for line in source.splitlines():
@@ -289,6 +389,17 @@ def main() -> None:
              'Derived-source notices are retained below and in NOTICE.\n' \
              'Generated draft; compilation and official verification are separate. -/\n'
     result = header + ''.join('import '+name+'\n' for name in sorted(imports)) + '\n' + MACRO + '\n'.join(payloads)
+    nat_calls_compacted = nat_call_bytes_saved = 0
+    if args.compact_nat_calls:
+        result, aliases, nat_calls_compacted, nat_call_bytes_saved = compact_nat_calls(result)
+        insertion = result.index(MACRO)
+        result = result[:insertion] + aliases + result[insertion:]
+    dictionary_terms = dictionary_uses = dictionary_bytes_saved = 0
+    if args.compact_numeral_dictionary:
+        result, dictionary, dictionary_terms, dictionary_uses, dictionary_bytes_saved = compact_numeral_dictionary(result)
+        if dictionary:
+            closure = 'end RHWeilSubmissionEncoding\n'
+            result = result.replace(closure, dictionary + closure, 1)
     comments_removed = layout_bytes_saved = 0
     if args.compact_layout:
         before = len(result.encode())
@@ -309,6 +420,12 @@ def main() -> None:
         'output': out.relative_to(root).as_posix(), 'bytes': len(result.encode()),
         'sha256': hashlib.sha256(result.encode()).hexdigest(),
         'hex_literals_compacted': replaced, 'source_bytes_saved': saved,
+        'async_imported_am': args.async_imported_am,
+        'compact_nat_calls': args.compact_nat_calls, 'nat_calls_compacted': nat_calls_compacted,
+        'nat_call_bytes_saved': nat_call_bytes_saved,
+        'compact_numeral_dictionary': args.compact_numeral_dictionary,
+        'dictionary_terms': dictionary_terms, 'dictionary_uses': dictionary_uses,
+        'dictionary_bytes_saved': dictionary_bytes_saved,
         'compact_layout': args.compact_layout, 'comments_removed': comments_removed,
         'layout_bytes_saved': layout_bytes_saved,
         'limit_bytes': 2000000, 'within_source_limit': len(result.encode()) <= 2000000,

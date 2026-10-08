@@ -1,0 +1,15 @@
+{
+  "scope": "Stop only the known-invalid scratch compile started by this root assistant in exec session12165, after verifying its exact parent chain. Retain source and logs; no accepted or final output is deleted.",
+  "pid": 51864,
+  "parent_pid": 53268,
+  "root_verifier_pid": 49820,
+  "verified_audit_source": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\verification\\whole_candidate_first_attempt_BundleAudit.lean",
+  "source_sha256": "2ed30e3a88cd4b8f28c727b1ee8ba7ddf2858edaf66e4fc480afcad6d7298113",
+  "cpu_seconds": 1733.140625,
+  "working_set_bytes": 7500038144,
+  "private_bytes": 12887748608,
+  "reason": "The actual Geometry formal build found missing noncomputable qualification. Its unchanged definitions in this same draft will fail code generation. Correct that marker and rerun; completed whole verification is not claimed.",
+  "whole_submission_verified": false,
+  "submitted": false,
+  "process_terminated": true
+}

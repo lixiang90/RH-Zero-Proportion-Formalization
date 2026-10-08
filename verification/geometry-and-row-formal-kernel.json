@@ -1,0 +1,43 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "modules": [
+    "RecordProportion.GeometryCoverage",
+    "RecordProportion.RowEvaluation"
+  ],
+  "source_sha256": {
+    "RecordProportion.GeometryCoverage": "f7b4d77068198c2665751615635128265a148b1caad4196f32b305544b9d61f0",
+    "RecordProportion.FiniteCertificateData": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59",
+    "RecordProportion.FloydWeakening": "146adbcf22bd73003c4913979a39d2de3df7ef181e6fa52a683919f76b46b879",
+    "RecordProportion.FloydSoundness": "2c743f6c6b94fa31e97162cd7d6ec9afdf7f096fbdfb169876ac5c0f1c6efdbb",
+    "RecordProportion.RowEvaluation": "4b85194185223041984ea7bd870eb742ee5a678065c09fa8a45a0a3e2ee60454"
+  },
+  "source_unchanged_during_check": true,
+  "build_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "--no-cache",
+    "build",
+    "+RecordProportion.GeometryCoverage:olean",
+    "+RecordProportion.RowEvaluation:olean"
+  ],
+  "build_exit_code": 1,
+  "audit_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "env",
+    "lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\verification\\geometry-and-row-formal-kernel-axioms.lean"
+  ],
+  "audit_exit_code": null,
+  "observed_axioms": {},
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_passed": false,
+  "module_check_passed": false,
+  "elapsed_seconds": 363.24,
+  "scope": "Formal GeometryCoverage and RowEvaluation targets against full kernel-passed Data0b12cba7. Complete physical482x482 cover and generic row/column evaluation; no whole submission or website acceptance claim.",
+  "log": "tmp/verification/geometry-and-row-formal-kernel.log",
+  "whole_submission_compiled": false,
+  "submitted": false
+}

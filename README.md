@@ -11,23 +11,29 @@ The target is **66812491/99194740 = 67.3548728491047…%** of simple critical-li
 zeros, relative to all nontrivial zeros counted with multiplicity. This implies
 the same lower bound for distinct critical-line zeros, the website's scoring object.
 
-**Status: formalization in progress; no website record has been submitted or accepted.**
-The paper and Python certificate retain their documented PC8 admission scope.
-The pinned environment and its common dependencies have been built. The complete
-zero-proportion theorem is still being assembled and checked.
+**Status: the complete modular Lean proof has passed; website submission is pending.**
+The continuous certificate and named dyadic and cumulative simple-zero theorems
+compile in the pinned environment. The three website declarations, concerning
+distinct critical-line zeros, also compile and pass independent nanoda replay of
+79,699 declarations. Fresh transitive audits contain only the three permitted axioms.
+The 1,996,187-byte single file also passed Lean compilation and transitive
+axiom audits. Resource compliance, the official Comparator run and website
+acceptance remain separate requirements. No website record has been submitted.
 
 | Component | Verification status |
 |---|---|
 | Actual simple-to-distinct counting bridge and exact trusted website count identities | Full modules compiled; only permitted axioms |
 | Integer and real Floyd-closure soundness | Full module compiled; only permitted axioms |
 | Sparse integer dual and real box correction | Full module compiled; only permitted axioms |
-| Packed finite-data snapshot | Orbit, reflection, sizes and 49 fixed points compiled; complete dual and geometric coverage checks pending |
+| Complete finite-data certificate | All 1,224 original integer conclusions, orbit/shape and primitive-bound transport compiled; only permitted axioms |
 | Imported AM analytic chain and original PC8 certificate | Full module compiled; only permitted axioms |
 | Separated AM majorant and spectral/count transport | Full modules and packed single-file analytic chain compiled; only permitted axioms |
-| Complete 482 × 482 physical-pair coverage and 42-column row evaluation | Exact-data isolation checks passed; full Data imports pending |
-| Complete point/tangent guards and extra-span membership | Exact-data isolation checks passed; full Data import pending |
-| Continuous nine-point certificate | Final assembly and full checks pending |
-| Three final website declarations and independent nanoda replay | Pending |
+| Complete 482 × 482 physical-pair coverage and 42-column row evaluation | Full modules and fresh axiom audits passed |
+| Complete point/tangent guards and extra-span membership | Full module and 12 fresh axiom audits passed |
+| Continuous nine-point certificate | Full unconditional module and five fresh axiom audits passed |
+| Named simple-zero dyadic and cumulative corollaries | Actual Zeta23.N0simple/Ncount; full module and fresh axiom audits passed |
+| Three final website declarations and independent nanoda replay | Complete modular declarations passed; independent replay checked 79,699 declarations |
+| Complete single-file candidate | Lean compilation and four axiom audits passed; official runtime/memory compliance pending |
 
 Snapshot results and their scope are recorded in `verification/` and `docs/`.
 The original Lean numeric transcription had two incorrect column entries; that
@@ -57,21 +63,24 @@ pass Lean and independent nanoda verification. See [the submission requirements]
 
 ```powershell
 lake --no-cache exe cache get
-lake --no-cache build +RecordProportion.AnalyticBridge:olean +RecordProportion.CountBridge:olean +RecordProportion.FloydSoundness:olean +RecordProportion.SparseDualSoundness:olean +RecordProportion.TrustedCounts:olean
+lake --no-cache build +RecordProportion.SimpleCorollary:olean +RecordProportion.TrustedCounts:olean
 python -B -X utf8 scripts/am_expanded_nine_point_certificate.py --check
 ```
 
-The build command above checks the completed analytic and auxiliary modules.
-A complete `lake build` also requires the finite-certificate work still in progress.
+The build command checks the complete simple-zero theorem and its finite and analytic
+dependencies. The website entry is in `submission/candidate-entry.lean.in`; its three
+declarations require the exact website-generated `ChallengeDeps.CandidateSpec`.
 The Python check uses only the standard library and verifies the saved 2,399
 rational dual certificates. It does not constitute a full Lean proof.
 The committed `lean-toolchain`, `lakefile.toml` and `lake-manifest.json` pin the
 environment. The draft bundler retains proof terms and compacts integer literals
-without changing their values; its output is not a verified submission.
+without changing their values. The checked candidate is in submission/proof/;
+its local Lean pass does not establish official submission acceptance.
+The complete draft is within the 2 MB source limit; see [single-file packaging](docs/single-file-packaging.md) for the exact scope of its checks.
 The bundler follows local import dependencies and places each module in an ordinary
-section to preserve its local options and scopes. Full compilation of the resulting
-single file remains mandatory. Development helpers are in `RecordProportion/`; immutable inputs are in
+section to preserve its local options and scopes. The saved complete candidate passed compilation; every subsequent source
+revision requires a new complete check. Development helpers are in `RecordProportion/`; immutable inputs are in
 `output/`, `formal/certificates/`, and `reviews/`. The original research papers
 and history remain in RH-Weil; this repository owns all new proportion formalization.
 
-No further mathematical research is being pursued while this formalization is incomplete.
+Mathematical research remains paused until formalization and website submission are complete.

@@ -1,113 +1,134 @@
 # Fixed expanded certificate: finite Lean formalization
 
-New mathematical research is paused. The target remains
-`805260/100000000`, yielding `66812491/99194740`.
-The submission contract permits only `propext`, `Quot.sound`, and
-`Classical.choice`; no native decision procedure, custom mathematical
-axiom, or placeholder is used in these new modules.
+The complete unconditional nine-point local certificate has now compiled
+with the website-pinned Lean 4.33.0-rc2. The fixed target is
+`805260/100000000`; its associated proportion is `66812491/99194740`.
+New mathematical research remains paused. All numerical parameters,
+sparse multipliers and the original full JSON remain unchanged.
 
-The fixed full input is `output/am-expanded-nine-point-certificate.json`,
-canonical LF SHA256
-`3a3c8b24015162a4835f5c1d8633a4f9f8bdace26d711631dd6374c689bce04f`.
-Its 2399 labelled domains have 1224 reflection orbits, including 49 fixed
-ones. The generator checks every domain's reflected partner and both
-original lower bounds. It preserves the input and all original parameters.
-Only representative duals are stored in the new Lean data: 32054 positive
-integer numerators over `10^9`, using a 9472-value dictionary.
+The five terminal declarations, including `W9_local_certificate`, passed a
+fresh axiom audit using only `propext`, `Classical.choice`, and `Quot.sound`.
+There is no native decision procedure, custom mathematical axiom, numerical
+hypothesis, or placeholder in this finite proof chain.
 
-`FiniteCertificateData.lean` has actual kernel proofs of every one of the
-2399 orbit mappings, label reflection involution, and the count of 49
-fixed representatives. Checks are split into blocks of 32 and assembled
-through proved generic coverage. The version before numeric reconstruction,
-2432 lines / 449615 LF bytes / SHA256
-`796b0f119d324f853b7a91961ebdf8dbe6ff5711ae3bb13704812cc133801310`,
-actually compiled with Lean v4.33.0-rc2, `--tstack=32768 -j1`, exit 0.
-The generator `--check` actually returned exit 0 for that version.
+Whole single-file compilation, independent rechecking, the website
+Comparator and submission acceptance are separate remaining obligations.
+A module pass does not claim that the website has accepted the result.
 
-Packing uses 22-bit geometry words, shared certified-point packets, a
-frequency dictionary, and ASCII64 literals. The `n64%` term macro only
-creates an ordinary numeral syntax node. All mathematical checks concern
-the resulting numeral; no proof assumes correct macro decoding. The
-transparent `decode64` definition and Python roundtrip are retained.
-This representation avoids repeatedly reducing long string folds in kernel
-arithmetic while keeping the submission source compact.
+## Actual formal module checks
 
-The data module now also contains the actual integer reconstruction:
-ordered gap/span rows, all enabled old anchor rows, extra-point rows,
-the complete two-frame objective, integer Floyd closure, and the full
-box-residual lower bound. Its normalization is
-`Y = 5*32768*g`, `Z = 5*10^10*32768*w`. Geometric-row multiplier
-numerators are scaled by `10^10`; all multipliers have denominator `10^9`.
-The exact target is `2*805260*(5*10^10*32768)*10^9`.
-Numeric reconstruction is being compiled and checked; this is not yet a
-proof of the physical row premises or the complete continuous theorem.
+| Module or family | Actual result | Record |
+| --- | --- | --- |
+| Complete 1224 original integer conclusions, 2399 orbit entries, 1224 packet shapes, primitive-to-Floyd transport | Build and four fresh audits passed; 1672.84 seconds | [finite-data-fast-kernel-v2.json](../verification/finite-data-fast-kernel-v2.json) |
+| Actual old and extra point packets, all interval guards and extra-span metadata | Build and twelve fresh audits passed; 281.98 seconds | [point-soundness-formal-check.json](../verification/point-soundness-formal-check.json) |
+| Complete physical 482-by-482 pair coverage and real row evaluation | Corrected formal build and five fresh audits passed; 250.05 seconds, reusing the already-built row module | [geometry-and-row-formal-kernel-v2.json](../verification/geometry-and-row-formal-kernel-v2.json) |
+| Complete unconditional fixed W9 certificate | Build and five fresh audits passed; 330.72 seconds | [finite-certificate-formal-kernel-v1.json](../verification/finite-certificate-formal-kernel-v1.json) |
+| Closed dyadic and cumulative simple critical-line count corollaries | Build and four fresh audits passed; 40.72 seconds | [simple-corollary-formal-kernel.json](../verification/simple-corollary-formal-kernel.json) |
 
-`FiniteCertificate.lean` contains real box-dual soundness, integer casting,
-safe anchor-cut soundness, the exterior stronger-frame bound, rational
-target arithmetic, actual F9/InCell reflection transport, and definitions
-of W9 with its pressure, minimum pressure, pair mass and span budgets.
-The fixed Lean and Mathlib environment is now installed. The generic
-real core was independently compiled; the full layer is waiting on the
-imported AM module and is not yet an admitted full certificate.
+Each record includes real process exits, recursive source hashes, an
+unchanged-source check, named axiom output, and the actual compiler log.
+Formal oleans were saved. The isolated earlier proofs are historical
+milestones, rather than substitutes for these complete module checks.
 
-The remaining proof obligations are actual table/point guards for every
-used row, closure and sparse-check transport to the real objective, all
-representative dual checks, and the complete stronger-or-low-cell cover.
-The old `PC8CL.walk_ok` proves the old reward predicate. It cannot directly
-prove the stronger-or-low cover: that traversal must be generalized using
-the original split, cursor, empty-cell and leaf guard soundness lemmas.
-The captured 241 cells alone do not establish their completeness.
+## Exported mathematical interface
 
-No uniform W9 theorem or accepted site submission is claimed here yet.
+[FiniteCertificate.lean](../RecordProportion/FiniteCertificate.lean) exports
+`RHWeil.RecordSubmission.FiniteCertificate.W9`, its admissibility,
+`W9_pressure`, `W9_upper_pairmass`, and the unconditional theorem:
 
-The production integer-check command now emits ordinary declarations and
-saves an olean. It disables only editor information trees through Lean's
-standard `withEnableInfoTree` wrapper. Error messages are preserved; each
-installed individual theorem and the aggregate theorem are checked for
-existence and absence of recovery placeholders. The earlier no-output run
-was deliberately stopped after its PID and command line were verified;
-it is not recorded as a complete certificate pass. Two short emitter API
-errors were corrected before the current formal run.
+```lean
+W9_local_certificate (g : Fin 8 → Real)
+    (hg : ∀ r, (4 : Real) / 5 ≤ g r) :
+  (805260 : Real) / 100000000 ≤ Zeta23Ext.BridgeW.Fw W9 g
+```
 
-`FiniteCertificate.lean` now contains the actual stronger-or-low leaf,
-node and walk soundness. The original clear guards are retained: on the
-actual separated domain, a single certified old kernel term is combined
-with the full positive pressure lower bound 323480, which exceeds the
-800 integer-unit increase in the stronger frame target. Thus two failed
-stronger *single-term* clear guards are not silently treated as true.
-The complete root transport explicitly consumes this pressure premise.
-This written cover layer still awaits full compilation and instantiation.
+It requires no unresolved integer-check, coverage, point-table, or solver
+premise. The pair-mass interface is the proved upper bound `≤ 16`; the
+actual mass is `15.99999987`, so no equality with 16 is assumed.
 
-## Correction of the numeric column transcription
+The proof covers all 32 original roots, both orientations, all physical
+pairs of the 482 labelled cells, all 2399 retained labelled pairs, and all
+1224 reflection representatives. The 49 fixed reflection orbits are
+included. Every selected old or additional tangent row is certified on its
+whole actual interval, and the sparse dual is transported to the full
+continuous 42-column objective. No sampling or LP optimality is used.
 
-The full run for Data SHA `917c0f7375dde03024957ea9b987030efbe5a2021f9c084a97c7559bd3ed7f2e`
-was terminated after verifying PID 17668 and its exact `-o` command.
-At termination it had used 4761.921875 CPU seconds and 11918147584 bytes
-of working set. It did **not** complete or establish all 1224 checks.
-A real objective-identity proof identified a manual transcription
-error in the Lean generator: zero-based full columns 38/39 were `(5,8)/(6,8)` whereas the frozen
-original problem insertion order requires `(5,7)/(5,8)`. All other columns
-match. No claim from this numeric snapshot can be used to prove F9.
-The earlier orbit/reflection/encoding facts concern their separate tables
-and remain distinct from this failed numeric instantiation.
+[SimpleCorollary.lean](../RecordProportion/SimpleCorollary.lean) exports
+`RHWeilRecord.SimpleCorollary.simple_dyadic` and `simple_cumulative`. Both
+use the actual `Zeta23.N0simple` and `Ncount` definitions and the unchanged
+ratio `66812491/99194740`. Their local certificate and analytic premises
+are discharged by the compiled proof chain. The website entry declarations
+use the weaker distinct count, and no website acceptance is claimed.
 
-The generator now derives all 34 square-column positions from the original
-ordered TERMS union, including both shifted frames, with explicit order and
-set assertions. The frozen JSON hash, target, domains, sparse multipliers,
-and point catalog remain unchanged. The next numeric source also splits
-ordinary kernel declarations into real top-level batches of 16 and marks
-pure data definitions explicitly noncomputable to avoid unnecessary runtime
-code generation. This changes representation and compiler workload only;
-the new continuous and numerical instantiation must still actually pass.
+The stronger-or-low traversal is proved from the original split, cursor,
+empty-cell and leaf soundness. The captured 241 original cells alone are
+not treated as a completeness certificate. Original clear guards are
+combined with the positive pressure lower bound 323480, exceeding the 800
+integer-unit stronger-target increase. The two failed stronger single-term
+clear guards are not silently assumed true.
 
-## Corrected real-layer milestones
+## Fixed data and checking strategy
 
-The corrected-data isolated module `tmp/finite-stable-core.lean` has actually
-compiled with `-o` and exit code 0. It proves W9 admissibility and pressure,
-the genuine pair-mass upper bound, the complete 42-column objective identity,
-continuous primitive bounds through Floyd closure, and generic strong-or-low
-transport including the positive-pressure clear branches. The tightened
-span-bound proof also compiled with `-o` and exit code 0. Exact snapshot pins
-and excluded scope are recorded in `verification/finite-stable-core-isolated.json`.
-These diagnostic modules do not establish the complete numeric family or
-the final unconditional W9 certificate.
+The full input is [am-expanded-nine-point-certificate.json](../output/am-expanded-nine-point-certificate.json),
+canonical LF SHA256:
+
+```text
+3a3c8b24015162a4835f5c1d8633a4f9f8bdace26d711631dd6374c689bce04f
+```
+
+Only representative duals are packed into the new Lean data: 32054 positive
+integer numerators over `10^9`, with a 9472-value dictionary. Packing uses
+22-bit geometry words, shared point packets and ASCII64 numeral literals.
+The `n64%` macro produces ordinary numeral syntax; the mathematical proof
+checks the resulting numbers and does not assume the macro is correct.
+The transparent decoder and generator roundtrip are retained for reproduction.
+
+The complete reconstruction preserves ordered gap/span rows, enabled old
+anchor rows, additional-point rows, the two-frame objective and the original
+integer Floyd box. Its normalization is `Y = 5*32768*g` and
+`Z = 5*10^10*32768*w`. Geometric multiplier numerators are scaled by
+`10^10`, all multipliers have denominator `10^9`, and the exact integer
+target is `2*805260*(5*10^10*32768)*10^9`.
+
+The production proof first tries the same dual on primitive adjacent box
+bounds. Proved integer monotonicity carries a successful result to the
+unchanged original Floyd-box checker; otherwise the original full checker
+is used. All 1224 final declarations retain that original conclusion.
+They use ordinary kernel decisions, real top-level batches, preserved error
+messages, and checks that emitted proofs contain no recovery placeholders.
+Only editor information trees are disabled. No compiler or kernel check
+is bypassed.
+
+Current source pins:
+
+```text
+FiniteCertificate.lean
+6c6cb5dc10588e430c28118107ad66e1da93dcd0b0e62bd579fcc92a3f078cb5
+FiniteCertificateData.lean
+0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59
+```
+
+## Superseded transcription and failed engineering attempts
+
+An earlier Lean-generator snapshot manually transcribed zero-based full
+square columns 38/39 as `(5,8)/(6,8)`. The original frozen insertion order
+requires `(5,7)/(5,8)`. All other columns matched. The objective-identity
+proof exposed this error in the Lean generator; the original JSON,
+multipliers, target and mathematical certificate were not changed.
+The generator now derives all 34 square columns from the ordered term
+union, with explicit order and set assertions.
+
+The old Data SHA
+`917c0f7375dde03024957ea9b987030efbe5a2021f9c084a97c7559bd3ed7f2e`
+run was terminated after verifying its process and command. It used
+4761.921875 CPU seconds and 11918147584 bytes of working set and never
+completed all 1224 checks. It is not a proof of F9. Earlier orbit and
+encoding facts remain separate facts about their own tables.
+
+The first fast emitter attempt failed on command syntax and was retained
+as a failed attempt. The first formal geometry attempt needed a
+`noncomputable` section after the transparent data were made explicitly
+noncomputable; that annotation was repaired without changing any
+mathematical body. The successful complete module records above bind the
+corrected sources. Failed CBV and alternative getter diagnostics are not
+part of the admitted production certificate.

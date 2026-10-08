@@ -1,4 +1,5 @@
 import Lean
+import RecordProportion.FloydWeakening
 
 /- Generated losslessly from the fixed c260 JSON.
 Input canonical LF SHA256: 3a3c8b24015162a4835f5c1d8633a4f9f8bdace26d711631dd6374c689bce04f
@@ -10,6 +11,8 @@ set_option maxRecDepth 100000
 set_option maxHeartbeats 0
 set_option stderrAsMessages false
 set_option Elab.async false
+set_option linter.unreachableTactic false
+set_option linter.unusedTactic false
 
 def digit64 (c : Char) : Nat :=
   let n := c.toNat
@@ -2795,15 +2798,89 @@ noncomputable def integerCertificateLower (index : Nat) : Int :=
 noncomputable def integerCertificateCheck (index : Nat) : Bool :=
   decide (2*805260*(5*10000000000*32768)*1000000000 ≤ integerCertificateLower index)
 
+noncomputable def basicIntegerCertificateLower (index : Nat) : Int :=
+  let packet := (pairPacks[index]?).getD (0,0,0,0,0,0)
+  let left := packet.1
+  let right := packet.2.1
+  let count := packet.2.2.1
+  let word := packet.2.2.2.1
+  let extraCount := packet.2.2.2.2.1
+  let extraWord := packet.2.2.2.2.2
+  let rows := frameRows left 0 ++ frameRows right 1 ++ extraRows left right extraCount extraWord
+  let multipliers := (decodeMultipliers count word).map fun p =>
+    let row := rows.getD p.1 default
+    let lambda : Int := p.2 * (if row.geometric then 10000000000 else 1)
+    (row,lambda)
+  let value := multipliers.foldl (fun total p =>
+    total - p.2 * p.1.bound) 0
+  value + ((List.range 42).map fun column =>
+    let residual := multipliers.foldl (fun total p =>
+      total + p.2 * p.1.coeff column) (1000000000*objectiveCoeff column)
+    let lo := if column < 8 then max (4*32768) (-(primitiveBound left right (column+1) column)) else 0
+    let hi := if column < 8 then primitiveBound left right column (column+1)
+      else 5*10000000000*32768
+    residual * (if 0 ≤ residual then lo else hi)).sum
+
+
+noncomputable def basicIntegerCertificateCheck (index : Nat) : Bool :=
+  decide (2*805260*(5*10000000000*32768)*1000000000 ≤ basicIntegerCertificateLower index)
+
+noncomputable def primitiveBounds (left right : Nat) : Array Int :=
+  (((List.range 81).map fun slot => primitiveBound left right (slot/9) (slot%9)).toArray)
+
+theorem primitiveBounds_entry (left right i j : Nat) (hi : i < 9) (hj : j < 9) :
+    ((primitiveBounds left right)[9*i+j]?).getD 0 = primitiveBound left right i j := by
+  have hs : 9*i+j < 81 := by omega
+  have hd : (9*i+j)/9=i := by omega
+  have hm : (9*i+j)%9=j := by omega
+  simp [primitiveBounds,hs,hd,hm]
+
+theorem pairClosure_le_primitive (left right i j : Nat) (hi : i < 9) (hj : j < 9) :
+    ((pairClosure left right)[9*i+j]?).getD 0 ≤ primitiveBound left right i j := by
+  have h := RHWeilRecord.FloydWeakening.closure_entry_le (primitiveBounds left right) i j hi hj
+  change ((pairClosure left right)[9*i+j]?).getD 0 ≤
+    ((primitiveBounds left right)[9*i+j]?).getD 0 at h
+  rw [primitiveBounds_entry left right i j hi hj] at h
+  exact h
+
+theorem basicIntegerCertificateLower_le (index : Nat) :
+    basicIntegerCertificateLower index ≤ integerCertificateLower index := by
+  let packet := (pairPacks[index]?).getD (0,0,0,0,0,0)
+  have hentry := pairClosure_le_primitive packet.1 packet.2.1
+  unfold basicIntegerCertificateLower integerCertificateLower
+  dsimp only
+  apply add_le_add le_rfl
+  apply List.sum_le_sum
+  intro column hcolumn
+  have hc : column < 42 := List.mem_range.mp hcolumn
+  apply RHWeilRecord.FloydWeakening.residual_lower_mono
+  · by_cases hs : column < 8
+    · simp only [if_pos hs]
+      apply RHWeilRecord.FloydWeakening.max_neg_mono
+      exact hentry (column+1) column (by omega) (by omega)
+    · simp only [if_neg hs]
+      exact le_rfl
+  · by_cases hs : column < 8
+    · simp only [if_pos hs]
+      exact hentry column (column+1) (by omega) (by omega)
+    · simp only [if_neg hs]
+      exact le_rfl
+
+theorem integerCheck_of_basic {index : Nat} (h : basicIntegerCertificateCheck index = true) :
+    integerCertificateCheck index = true := by
+  apply decide_eq_true
+  exact (of_decide_eq_true h).trans (basicIntegerCertificateLower_le index)
+
+
 /- The command emits ordinary theorem declarations. Every emitted proof
 is checked by the kernel; the command contributes no mathematical premise. -/
-elab "prove_integer_batch " first:num " " last:num : command => do
+elab "prove_integer_batch" first:num last:num : command => do
   Lean.Elab.withEnableInfoTree false do
     for offset in List.range (last.getNat-first.getNat) do
       let index := first.getNat+offset
       let command := "theorem integer_representative_" ++ toString index ++
         " : integerCertificateCheck " ++ toString index ++
-        " = true := by decide +kernel"
+        " = true := by\n  first\n  | exact integerCheck_of_basic (by decide +kernel)\n  | decide +kernel"
       let stx ← match Lean.Parser.runParserCategory (← Lean.getEnv)
           (Lean.Name.mkSimple "command") command with
         | .ok stx => pure stx

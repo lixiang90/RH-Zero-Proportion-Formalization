@@ -1,0 +1,574 @@
+{
+  "status": "read_only_diagnostic_complete",
+  "input_sha256": {
+    "output/am-expanded-nine-point-certificate.json": "3a3c8b24015162a4835f5c1d8633a4f9f8bdace26d711631dd6374c689bce04f",
+    "scripts/check_primitive_gap_box.py": "3bcbe9457caa1f218b2d65ac3050615478250011e9d7834f891944dc82377bf3",
+    "scripts/am_expanded_nine_point_certificate.py": "05b7500d77bdb41cb5419137a1eee354250d7569572cd5c37d44a19a66b4eb4f",
+    "scripts/am_nine_point_epigraph_certificate.py": "af5f2e1974bed92ad515f06ff6047f3e5595ac60c6dc721abd7bfb5cfd930c32",
+    "scripts/am_nine_point_low_slack_cover.py": "0c203ae8d05796f73e5ca5018935067342a65f6a9eac3a800b5d36893cfde629"
+  },
+  "inputs_unchanged": true,
+  "pairs_compared": 2399,
+  "primitive_box_at_target": 2289,
+  "original_floyd_box_still_needed": 110,
+  "failed_pairs": [
+    {
+      "pair_index": 3,
+      "left": 1,
+      "right": 7
+    },
+    {
+      "pair_index": 4,
+      "left": 1,
+      "right": 9
+    },
+    {
+      "pair_index": 14,
+      "left": 3,
+      "right": 27
+    },
+    {
+      "pair_index": 15,
+      "left": 3,
+      "right": 28
+    },
+    {
+      "pair_index": 16,
+      "left": 3,
+      "right": 396
+    },
+    {
+      "pair_index": 35,
+      "left": 7,
+      "right": 38
+    },
+    {
+      "pair_index": 54,
+      "left": 9,
+      "right": 466
+    },
+    {
+      "pair_index": 57,
+      "left": 10,
+      "right": 57
+    },
+    {
+      "pair_index": 59,
+      "left": 10,
+      "right": 369
+    },
+    {
+      "pair_index": 86,
+      "left": 21,
+      "right": 90
+    },
+    {
+      "pair_index": 90,
+      "left": 22,
+      "right": 90
+    },
+    {
+      "pair_index": 134,
+      "left": 36,
+      "right": 106
+    },
+    {
+      "pair_index": 157,
+      "left": 43,
+      "right": 117
+    },
+    {
+      "pair_index": 161,
+      "left": 43,
+      "right": 479
+    },
+    {
+      "pair_index": 164,
+      "left": 44,
+      "right": 117
+    },
+    {
+      "pair_index": 167,
+      "left": 44,
+      "right": 479
+    },
+    {
+      "pair_index": 182,
+      "left": 51,
+      "right": 121
+    },
+    {
+      "pair_index": 192,
+      "left": 53,
+      "right": 124
+    },
+    {
+      "pair_index": 282,
+      "left": 67,
+      "right": 159
+    },
+    {
+      "pair_index": 349,
+      "left": 78,
+      "right": 181
+    },
+    {
+      "pair_index": 372,
+      "left": 81,
+      "right": 161
+    },
+    {
+      "pair_index": 388,
+      "left": 83,
+      "right": 421
+    },
+    {
+      "pair_index": 446,
+      "left": 88,
+      "right": 183
+    },
+    {
+      "pair_index": 447,
+      "left": 88,
+      "right": 184
+    },
+    {
+      "pair_index": 513,
+      "left": 105,
+      "right": 219
+    },
+    {
+      "pair_index": 517,
+      "left": 105,
+      "right": 460
+    },
+    {
+      "pair_index": 623,
+      "left": 125,
+      "right": 3
+    },
+    {
+      "pair_index": 638,
+      "left": 128,
+      "right": 11
+    },
+    {
+      "pair_index": 639,
+      "left": 128,
+      "right": 12
+    },
+    {
+      "pair_index": 642,
+      "left": 128,
+      "right": 251
+    },
+    {
+      "pair_index": 670,
+      "left": 134,
+      "right": 11
+    },
+    {
+      "pair_index": 736,
+      "left": 155,
+      "right": 244
+    },
+    {
+      "pair_index": 831,
+      "left": 172,
+      "right": 83
+    },
+    {
+      "pair_index": 889,
+      "left": 180,
+      "right": 324
+    },
+    {
+      "pair_index": 953,
+      "left": 188,
+      "right": 432
+    },
+    {
+      "pair_index": 985,
+      "left": 191,
+      "right": 429
+    },
+    {
+      "pair_index": 995,
+      "left": 193,
+      "right": 101
+    },
+    {
+      "pair_index": 997,
+      "left": 193,
+      "right": 104
+    },
+    {
+      "pair_index": 1029,
+      "left": 199,
+      "right": 114
+    },
+    {
+      "pair_index": 1136,
+      "left": 218,
+      "right": 173
+    },
+    {
+      "pair_index": 1155,
+      "left": 219,
+      "right": 346
+    },
+    {
+      "pair_index": 1163,
+      "left": 222,
+      "right": 197
+    },
+    {
+      "pair_index": 1169,
+      "left": 222,
+      "right": 469
+    },
+    {
+      "pair_index": 1175,
+      "left": 225,
+      "right": 209
+    },
+    {
+      "pair_index": 1178,
+      "left": 225,
+      "right": 250
+    },
+    {
+      "pair_index": 1189,
+      "left": 228,
+      "right": 463
+    },
+    {
+      "pair_index": 1195,
+      "left": 230,
+      "right": 220
+    },
+    {
+      "pair_index": 1206,
+      "left": 238,
+      "right": 284
+    },
+    {
+      "pair_index": 1207,
+      "left": 238,
+      "right": 285
+    },
+    {
+      "pair_index": 1249,
+      "left": 244,
+      "right": 366
+    },
+    {
+      "pair_index": 1251,
+      "left": 245,
+      "right": 121
+    },
+    {
+      "pair_index": 1256,
+      "left": 248,
+      "right": 119
+    },
+    {
+      "pair_index": 1259,
+      "left": 248,
+      "right": 242
+    },
+    {
+      "pair_index": 1263,
+      "left": 250,
+      "right": 119
+    },
+    {
+      "pair_index": 1264,
+      "left": 250,
+      "right": 125
+    },
+    {
+      "pair_index": 1265,
+      "left": 250,
+      "right": 242
+    },
+    {
+      "pair_index": 1271,
+      "left": 252,
+      "right": 57
+    },
+    {
+      "pair_index": 1272,
+      "left": 252,
+      "right": 59
+    },
+    {
+      "pair_index": 1277,
+      "left": 252,
+      "right": 369
+    },
+    {
+      "pair_index": 1278,
+      "left": 252,
+      "right": 375
+    },
+    {
+      "pair_index": 1354,
+      "left": 268,
+      "right": 244
+    },
+    {
+      "pair_index": 1360,
+      "left": 269,
+      "right": 244
+    },
+    {
+      "pair_index": 1375,
+      "left": 279,
+      "right": 248
+    },
+    {
+      "pair_index": 1449,
+      "left": 298,
+      "right": 11
+    },
+    {
+      "pair_index": 1450,
+      "left": 298,
+      "right": 12
+    },
+    {
+      "pair_index": 1453,
+      "left": 298,
+      "right": 251
+    },
+    {
+      "pair_index": 1463,
+      "left": 300,
+      "right": 11
+    },
+    {
+      "pair_index": 1508,
+      "left": 311,
+      "right": 158
+    },
+    {
+      "pair_index": 1511,
+      "left": 311,
+      "right": 162
+    },
+    {
+      "pair_index": 1583,
+      "left": 324,
+      "right": 413
+    },
+    {
+      "pair_index": 1611,
+      "left": 331,
+      "right": 262
+    },
+    {
+      "pair_index": 1612,
+      "left": 331,
+      "right": 263
+    },
+    {
+      "pair_index": 1667,
+      "left": 342,
+      "right": 109
+    },
+    {
+      "pair_index": 1669,
+      "left": 342,
+      "right": 434
+    },
+    {
+      "pair_index": 1693,
+      "left": 345,
+      "right": 434
+    },
+    {
+      "pair_index": 1709,
+      "left": 347,
+      "right": 277
+    },
+    {
+      "pair_index": 1717,
+      "left": 350,
+      "right": 101
+    },
+    {
+      "pair_index": 1738,
+      "left": 353,
+      "right": 225
+    },
+    {
+      "pair_index": 1752,
+      "left": 355,
+      "right": 230
+    },
+    {
+      "pair_index": 1756,
+      "left": 355,
+      "right": 440
+    },
+    {
+      "pair_index": 1792,
+      "left": 358,
+      "right": 284
+    },
+    {
+      "pair_index": 1793,
+      "left": 358,
+      "right": 285
+    },
+    {
+      "pair_index": 1798,
+      "left": 360,
+      "right": 7
+    },
+    {
+      "pair_index": 1799,
+      "left": 360,
+      "right": 9
+    },
+    {
+      "pair_index": 1803,
+      "left": 362,
+      "right": 4
+    },
+    {
+      "pair_index": 1805,
+      "left": 362,
+      "right": 292
+    },
+    {
+      "pair_index": 1816,
+      "left": 365,
+      "right": 294
+    },
+    {
+      "pair_index": 1820,
+      "left": 366,
+      "right": 9
+    },
+    {
+      "pair_index": 2009,
+      "left": 399,
+      "right": 70
+    },
+    {
+      "pair_index": 2016,
+      "left": 400,
+      "right": 308
+    },
+    {
+      "pair_index": 2029,
+      "left": 402,
+      "right": 322
+    },
+    {
+      "pair_index": 2032,
+      "left": 403,
+      "right": 70
+    },
+    {
+      "pair_index": 2091,
+      "left": 414,
+      "right": 459
+    },
+    {
+      "pair_index": 2141,
+      "left": 422,
+      "right": 319
+    },
+    {
+      "pair_index": 2158,
+      "left": 424,
+      "right": 329
+    },
+    {
+      "pair_index": 2165,
+      "left": 425,
+      "right": 329
+    },
+    {
+      "pair_index": 2192,
+      "left": 431,
+      "right": 214
+    },
+    {
+      "pair_index": 2193,
+      "left": 431,
+      "right": 215
+    },
+    {
+      "pair_index": 2201,
+      "left": 433,
+      "right": 221
+    },
+    {
+      "pair_index": 2218,
+      "left": 438,
+      "right": 463
+    },
+    {
+      "pair_index": 2224,
+      "left": 440,
+      "right": 220
+    },
+    {
+      "pair_index": 2237,
+      "left": 450,
+      "right": 466
+    },
+    {
+      "pair_index": 2262,
+      "left": 455,
+      "right": 190
+    },
+    {
+      "pair_index": 2269,
+      "left": 456,
+      "right": 190
+    },
+    {
+      "pair_index": 2288,
+      "left": 460,
+      "right": 346
+    },
+    {
+      "pair_index": 2292,
+      "left": 461,
+      "right": 199
+    },
+    {
+      "pair_index": 2294,
+      "left": 461,
+      "right": 471
+    },
+    {
+      "pair_index": 2296,
+      "left": 462,
+      "right": 192
+    },
+    {
+      "pair_index": 2325,
+      "left": 466,
+      "right": 112
+    },
+    {
+      "pair_index": 2348,
+      "left": 471,
+      "right": 114
+    }
+  ],
+  "primitive_minimum": "-26733045818209009336765143179/4096000000000000000000000000000",
+  "maximum_loss_against_original_box": "1845901683974928685827205043/102400000000000000000000000000",
+  "target": "40263/5000000",
+  "elapsed_seconds": 3.75,
+  "scope": "Exact Python comparison of the same frozen duals with a weaker primitive adjacent-gap box. This only identifies a potential faster proof strategy; it does not modify the original certificate, lower values, theorem or target. Failed cases still need the original full box.",
+  "kernel_verified": false,
+  "whole_submission_verified": false,
+  "submitted": false
+}

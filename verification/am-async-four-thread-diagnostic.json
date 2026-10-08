@@ -1,0 +1,169 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "compiler_binary": "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+  "compiler_sha256": "bc137e6662c48eedf2cdf167fb176080e18a15f57e248d214df0cb3939248683",
+  "threads": 4,
+  "thread_stack_kb": 32768,
+  "environment_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "--no-cache",
+    "env",
+    "python",
+    "-c",
+    "import os,json;print(json.dumps(dict(os.environ)))"
+  ],
+  "environment_exit_code": 0,
+  "lean_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\packages\\Zeta23\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\.lake\\build\\lib\\lean;c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization",
+  "source_transform": {
+    "source": "RecordProportion/ImportedAM.lean",
+    "source_sha256": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "copy": "tmp/am_async_four_thread/ImportedAMAsync.lean",
+    "copy_sha256": "fc4d406d7ff651ef447b0e564d6fd4b6a98d68e0b7011e388d23d216bb4e1795",
+    "copy_lines": 16140,
+    "copy_bytes": 1515411,
+    "replacement_count": 1,
+    "old": "set_option Elab.async false",
+    "new": "set_option Elab.async true",
+    "all_other_bytes_identical": true
+  },
+  "compile": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j4",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "-o",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am_async_four_thread\\ImportedAMAsync.olean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am_async_four_thread\\ImportedAMAsync.lean"
+    ],
+    "pid": 11020,
+    "exit_code": 0,
+    "start_utc": "2026-10-08T19:47:18.191307+00:00",
+    "finish_utc": "2026-10-08T19:54:07.987032+00:00",
+    "elapsed_seconds": 409.797,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 803,
+    "sampled_peak_tree_rss_bytes": 13137797120,
+    "sampled_peak_tree_private_bytes": 18354536448,
+    "observed_windows_single_process_peak_working_set_bytes": 13139398656,
+    "max_sampled_live_tree_cpu_seconds": 597.453,
+    "log": "tmp/am_async_four_thread/compile.log",
+    "log_sha256": "412f1153869e52b9d9eb83f6d27dd023ca02c8ef2d33f51512c96f0618b94c45"
+  },
+  "audit": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j4",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am_async_four_thread\\Audit.lean"
+    ],
+    "pid": 16996,
+    "exit_code": 0,
+    "start_utc": "2026-10-08T19:54:08.007545+00:00",
+    "finish_utc": "2026-10-08T19:54:20.234228+00:00",
+    "elapsed_seconds": 12.219,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 24,
+    "sampled_peak_tree_rss_bytes": 3361918976,
+    "sampled_peak_tree_private_bytes": 8500609024,
+    "observed_windows_single_process_peak_working_set_bytes": 3368738816,
+    "max_sampled_live_tree_cpu_seconds": 11.703,
+    "log": "tmp/am_async_four_thread/audit.log",
+    "log_sha256": "cf5252e0cbd2f90a80c9e7879ca2f56b8f2f023a33223cf0e5f50141bd58d145"
+  },
+  "declarations": {
+    "AMW.wfunAM_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.mcheckP_ok": [
+      "propext",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.sp_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.gsplit0_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.ssplit57_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.splitAx_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL.tm_ok": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL_cert_full": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.Cert.PC8CL_G_rev": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.HW_ge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AMW.tracesBoundsAM_concrete": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Zeta23Ext.Bridge.tail_passage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_passed": true,
+  "artifact": "tmp/am_async_four_thread/ImportedAMAsync.olean",
+  "artifact_sha256": "ee5bdc4eb3e263db1fb17e28fa63958652d968b25f4a831a0ac9895cba050ac7",
+  "inputs_before": {
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "tmp/am_async_four_thread/ImportedAMAsync.lean": "fc4d406d7ff651ef447b0e564d6fd4b6a98d68e0b7011e388d23d216bb4e1795",
+    "tmp/am_async_four_thread/Audit.lean": "9431d8f446df704671a8e4c8d791551e5e1215c97540c2374efcc8a9cb0cb9f0",
+    "lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1",
+    "lean-toolchain": "0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6",
+    "tmp/am_async_four_thread/run.py": "0c3cca23142d7eb468e1dce0dfcd8dc68f1e10868d0945652a1b490dbcf8b904"
+  },
+  "inputs_after": {
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "tmp/am_async_four_thread/ImportedAMAsync.lean": "fc4d406d7ff651ef447b0e564d6fd4b6a98d68e0b7011e388d23d216bb4e1795",
+    "tmp/am_async_four_thread/Audit.lean": "9431d8f446df704671a8e4c8d791551e5e1215c97540c2374efcc8a9cb0cb9f0",
+    "lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1",
+    "lean-toolchain": "0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6",
+    "tmp/am_async_four_thread/run.py": "0c3cca23142d7eb468e1dce0dfcd8dc68f1e10868d0945652a1b490dbcf8b904"
+  },
+  "source_and_binary_unchanged_during_check": true,
+  "diagnostic_passed": true,
+  "scope": "Isolated engineering scheduling diagnostic of the same frozen ImportedAM mathematical source. Only the global Elab.async false setting was changed to true, with four Lean threads and 32768 KB thread stacks. Fresh scratch olean and twelve principal original PC8/global AM declaration axiom audits. This does not certify the complete submission, final nine-point certificate, timing on the official website, or any new mathematical result.",
+  "formal_source_modified": false,
+  "whole_submission_compiled": false,
+  "official_comparator_verified": false,
+  "submitted": false
+}

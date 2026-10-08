@@ -1,0 +1,80 @@
+{
+  "scope": "Independent pinned Nano check of four exported analytic implication/count identity roots, conditional on the genuine uniform finite certificate. No final finite certificate, Challenge type matching, full Comparator sandbox, website admission, or submitted record is claimed.",
+  "roots": [
+    "RHWeilRecord.am_distinct_dyadic_of_nine_point_certificate",
+    "RHWeilRecord.am_distinct_cumulative_of_nine_point_certificate",
+    "RHWeilRecord.TrustedCounts.count_eq",
+    "RHWeilRecord.TrustedCounts.distinct_eq"
+  ],
+  "pins": {
+    "comparatorCommit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+    "landrunCommit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+    "lean4exportCommit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+    "nanodaCommit": "418320295890faed83a96fd97907b12a3b6728c2"
+  },
+  "configuration": {
+    "use_stdin": true,
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "unpermitted_axiom_hard_error": true,
+    "nat_extension": true,
+    "string_extension": true,
+    "num_threads": 4,
+    "unsafe_permit_all_axioms": false,
+    "print_success_message": true,
+    "print_axioms": true,
+    "pp_to_stdout": true
+  },
+  "configuration_semantics": "Official Comparator Main.lean runNanoda semantics; 4 threads and success logging added without widening the axiom policy.",
+  "source_urls": [
+    "https://github.com/leanprover/comparator/blob/273294467ce06429e6667ece7f5699f8678c9f4e/Main.lean",
+    "https://github.com/ammkrn/nanoda_lib/tree/418320295890faed83a96fd97907b12a3b6728c2"
+  ],
+  "input_sha256": {
+    "analytic_export": "b5415145d4ce8b5caf302f478e777bdafff2dd42b503762ac06aa44fc5a57903",
+    "nano_binary": "b19804767cb72bf5a317fcfc20e8af7eafdfba789dd6b24bddee2574379ff35a",
+    "export_source_olean": "2b64b536c15c539c33ed2a800408758d13d44513822a827e1194878b323a9a80",
+    "official_comparator_main": "d6474f7ac49cf7a1c2f24aff6ac2bcc97a4a00aa37b969f225c6e688c434d0b4",
+    "official_contract": "284c794c4dbf8edb435007aa369757f22c2e2ecf9c1ce56704f301210a5f234e",
+    "config": "a832483f991ca9891042bebb8f7419955f90729896a683f4c1ac60f1c3539cf7"
+  },
+  "export_bytes": 612439989,
+  "actual_command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nano-config-audit-perron/analytic-nanoda-time.txt",
+    "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin",
+    "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nano-config-audit-perron/analytic-nanoda-config.json"
+  ],
+  "stdin": "tmp/kernel-tools/analytic.ndjson",
+  "actual_exit_code": 0,
+  "elapsed_seconds": 21.672,
+  "inputs_unchanged": true,
+  "checked_declarations": 71610,
+  "nano_check_passed": true,
+  "log": "tmp/kernel-tools/nano-config-audit-perron/analytic-nanoda.log",
+  "log_sha256": "3d2afbefc3dc0e2323724cea44f8d685da67a45e1f83c7e8782e1bb8c0669fc6",
+  "resource_log": "tmp/kernel-tools/nano-config-audit-perron/analytic-nanoda-time.txt",
+  "resources": "\tCommand being timed: \"/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin /mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nano-config-audit-perron/analytic-nanoda-config.json\"\n\tUser time (seconds): 58.97\n\tSystem time (seconds): 0.73\n\tPercent of CPU this job got: 300%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:19.89\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 1229344\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 22\n\tMinor (reclaiming a frame) page faults: 48608\n\tVoluntary context switches: 318\n\tInvoluntary context switches: 63\n\tSwaps: 0\n\tFile system inputs: 2832\n\tFile system outputs: 0\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n",
+  "whole_submission_compiled": false,
+  "final_certificate_independently_checked": false,
+  "submitted": false,
+  "axioms_observed_in_output": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "logging_retry": {
+    "previous_record": "tmp/kernel-tools/nano-config-audit-perron/analytic-independent-nanoda-first.json",
+    "previous_kernel_exit_code": 0,
+    "previous_issue": "The kernel checked all declarations; the optional axiom printer had no destination. Only pp_to_stdout was enabled before repeating the same kernel/axiom policy."
+  }
+}
