@@ -24,7 +24,8 @@ zero-proportion theorem is still being assembled and checked.
 | Packed finite-data snapshot | Orbit, reflection, sizes and 49 fixed points compiled; complete dual and geometric coverage checks pending |
 | Imported AM analytic chain and original PC8 certificate | Full module compiled; only permitted axioms |
 | Separated AM majorant and spectral/count transport | Full modules compiled; only permitted axioms |
-| Continuous nine-point certificate, complete geometry and point guards | Assembly and full checks pending |
+| Complete 482 × 482 physical-pair coverage and 42-column row evaluation | Exact-data isolation checks passed; full Data imports pending |
+| Continuous nine-point certificate and point guards | Assembly and full checks pending |
 | Three final website declarations and independent nanoda replay | Pending |
 
 Snapshot results and their scope are recorded in `verification/` and `docs/`.

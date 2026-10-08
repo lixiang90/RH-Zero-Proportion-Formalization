@@ -1,0 +1,106 @@
+{
+  "kind": "ordinary_lean_kernel_isolated_development_check",
+  "scope": "Complete 482-by-482 physical-pair coverage, 61 ordinary kernel blocks, shared-overlap rejection and real Floyd negative-diagonal exclusion; final imported Data module is pending.",
+  "module_source": {
+    "path": "RecordProportion/GeometryCoverage.lean",
+    "canonical_lf_sha256": "5d93850ab4af0c51ae45f15f33bf26bb8becb3d603cb3cbacfa0a5b891c55046",
+    "lf_bytes": 24927,
+    "lines": 336
+  },
+  "data_source": {
+    "path": "RecordProportion/FiniteCertificateData.lean",
+    "canonical_lf_sha256": "917c0f7375dde03024957ea9b987030efbe5a2021f9c084a97c7559bd3ed7f2e",
+    "lf_bytes": 459358,
+    "lines": 2660
+  },
+  "exact_data_slices": [
+    {
+      "start": "def digit64",
+      "end_exclusive": "def geometryWidth",
+      "canonical_lf_sha256": "6015703dddbf7dd0b9eb59514a57fb62edf64e71ecaa5b7a87233e7a47cab4bd",
+      "lf_bytes": 567
+    },
+    {
+      "start": "def bits",
+      "end_exclusive": "def lambdaChunks",
+      "canonical_lf_sha256": "2eb0a79981ac51d53af611229d332ddaa03d09341bd9f123330ccb92ca7bdc9e",
+      "lf_bytes": 89
+    },
+    {
+      "start": "def cells",
+      "end_exclusive": "def pairPacks",
+      "canonical_lf_sha256": "6662036db706950da002ab6c591cbdb1edf641992f3bfe4e65472c454a727d96",
+      "lf_bytes": 123457
+    },
+    {
+      "start": "def pairLabelAtChunks",
+      "end_exclusive": "def orbitIndexAtChunks",
+      "canonical_lf_sha256": "04657c89d8fee888a333f99ab48377a9a202a82b3bc4c912a1747535897f10f1",
+      "lf_bytes": 10012
+    },
+    {
+      "start": "def pairLabel (",
+      "end_exclusive": "def reflectedPair",
+      "canonical_lf_sha256": "3c30b1e3087f97feb35fc50276bae3d7138414ec9aae274a558864197d22505b",
+      "lf_bytes": 64
+    },
+    {
+      "start": "def cellPacket",
+      "end_exclusive": "def tightLower",
+      "canonical_lf_sha256": "b47aec01a738deb3f9a931941897f5537f0281ed49a5e86b79e957037d6b5a8a",
+      "lf_bytes": 525
+    },
+    {
+      "start": "def primitiveBound",
+      "end_exclusive": "def integerCertificateLower",
+      "canonical_lf_sha256": "47a5c3be22a51a7d8d695ed99449cd46b9b37c9691f62728c492ed1d005c033f",
+      "lf_bytes": 934
+    }
+  ],
+  "all_data_slices_byte_exact": true,
+  "final_namespace_body_exact_after_output_only_removal": true,
+  "isolated_source": {
+    "path": "tmp/geometry/compact-complete.lean",
+    "canonical_lf_sha256": "3b403ec317b88fcc5d68f1827d12b0fe86b10c8c62b37c9a2c1361a0a9727496",
+    "lf_bytes": 163787,
+    "lines": 716
+  },
+  "command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.exe",
+    "env",
+    "lean",
+    "-j1",
+    "tmp\\geometry\\compact-complete.lean"
+  ],
+  "execution": {
+    "exit_code": 0,
+    "codex_exec_session_id": "63068",
+    "evidence": "Actual completed exec result observed in this agent session; this ledger records that result and does not represent a new execution."
+  },
+  "axiom_audit": {
+    "theorems": [
+      "RHWeilRecord.GeometryCoverage.physical_pair_covered"
+    ],
+    "observed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "audit_exit_code": 0
+  },
+  "formal_imported_module_checked": false,
+  "pending_dependency": "RecordProportion.FiniteCertificateData",
+  "native_decide_used": false,
+  "whole_submission_compiled": false,
+  "submitted": false,
+  "kernel_blocks": 61,
+  "left_labels": 482,
+  "right_labels": 482,
+  "physical_pairs": 232324,
+  "data_prefix": {
+    "path": "tmp/geometry/data-prefix.lean",
+    "canonical_lf_sha256": "65685bd033dd4f09469167ad0487fd25eddd4091499cd28c174ff0a6cf6b78a1",
+    "lf_bytes": 135872,
+    "lines": 323
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "kind": "ordinary_lean_kernel_isolated_development_check",
+  "scope": "Generic real row-dot evaluation and actual 34-square-column lookup identities against exact Data definition slices; final imported Data module is pending.",
+  "module_source": {
+    "path": "RecordProportion/RowEvaluation.lean",
+    "canonical_lf_sha256": "4b85194185223041984ea7bd870eb742ee5a678065c09fa8a45a0a3e2ee60454",
+    "lf_bytes": 4294,
+    "lines": 92
+  },
+  "data_source": {
+    "path": "RecordProportion/FiniteCertificateData.lean",
+    "canonical_lf_sha256": "917c0f7375dde03024957ea9b987030efbe5a2021f9c084a97c7559bd3ed7f2e",
+    "lf_bytes": 459358,
+    "lines": 2660
+  },
+  "exact_data_slices": [
+    {
+      "start": "structure IntegerRow",
+      "end_exclusive": "def terms",
+      "canonical_lf_sha256": "48e1fa1a1ac47d530403ccca20e1476bb10d910fed165fb2abaee884469f6e67",
+      "lf_bytes": 360
+    },
+    {
+      "start": "def squareSpans",
+      "end_exclusive": "def cellPacket",
+      "canonical_lf_sha256": "958c9cf42e700cae96634c3b69464b915b92ba8945ecca4eece076f6939932d9",
+      "lf_bytes": 347
+    }
+  ],
+  "all_data_slices_byte_exact": true,
+  "final_namespace_body_exact_after_output_only_removal": true,
+  "isolated_source": {
+    "path": "tmp/row-evaluation/complete-final-clean.lean",
+    "canonical_lf_sha256": "406d1ca2fc0b1c2829cc899923c5919ac332266e821b50324d461228e3f7e216",
+    "lf_bytes": 4898,
+    "lines": 116
+  },
+  "command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.exe",
+    "env",
+    "lean",
+    "-j1",
+    "tmp\\row-evaluation\\complete-final-clean.lean"
+  ],
+  "execution": {
+    "exit_code": 0,
+    "codex_exec_session_id": "92781",
+    "evidence": "Actual completed exec result observed in this agent session; this ledger records that result and does not represent a new execution."
+  },
+  "axiom_audit": {
+    "theorems": [
+      "RHWeilRecord.RowEvaluation.rowDot_eval",
+      "RHWeilRecord.RowEvaluation.squareColumn_eval"
+    ],
+    "observed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "audit_exit_code": 0
+  },
+  "formal_imported_module_checked": false,
+  "pending_dependency": "RecordProportion.FiniteCertificateData",
+  "native_decide_used": false,
+  "whole_submission_compiled": false,
+  "submitted": false
+}
