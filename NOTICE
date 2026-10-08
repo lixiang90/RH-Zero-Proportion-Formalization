@@ -1,0 +1,73 @@
+RH Zero Proportion Formalization
+Copyright 2026 Li Xiang
+
+This repository is licensed under Apache-2.0.
+Derived AM/PC8 proof material originates from josusanmartin/riemann; its author notices remain in the corresponding source.
+Derived separation/Fourier proof material originates from the development accompanying arXiv:2610.08965v1. Its notice follows verbatim. References to directory lean/ and original files below describe that upstream distribution.
+
+NOTICE for the directory lean/
+
+Lean 4 proofs for the paper "More than 83.9% of the zeros of the Riemann zeta function are
+distinct and more than 67.34% are simple and on the critical line"
+Copyright 2026 Kristian Muri Knausgård
+
+The files in this directory are licensed under the Apache License, Version 2.0 (see LICENSE).
+They were drafted with AI assistance, as stated in README.md.
+
+This directory builds on, and contains material derived from, the Lean library
+
+    Zeta23, https://github.com/anthropics/formal-math (directory zeta23),
+    commit fbdc36bbf17d20af3fd0447c6d1a8a02773c9844,
+    Copyright 2026 Anthropic, PBC, licensed under the Apache License, Version 2.0.
+
+The library itself is not included. Derived from it are:
+
+1. upstream_relax.patch. A patch to fourteen files of the library: lines of the library and
+   changes to them. The changes are described at the top of the patch and in README.md.
+
+2. Definitions in the statement files. Challenge839.lean, Challenge673.lean,
+   ChallengeFurther.lean and Challenge889.lean repeat, character for character, definitions of
+   the library's Challenge.lean and Zeta23/Statement.lean (IsNontrivialZero, zeroMult, zerosIn,
+   Ncount, Ndist, N0simple, Nsimple, and N0mult, which is the library's N0), so that the theorems
+   here are about the same objects as the library's theorems.
+
+3. Proof text. Some proofs here follow proofs of the library and reuse lines of them; the files
+   say so in their comments. A comparison of the 212 files of the five developments with the
+   library found lines identical to lines of the library in 35 of them, 149 lines of 11132
+   (lines of 60 characters or more). The files with more than three such lines, and the library
+   files they follow:
+     Distinct839/Window/TVWindow.lean          Zeta23/XiPrime/QuarticWindow/ModWindow.lean
+     Distinct839/WindowMoments/Ramp.lean       Zeta23/XiPrime/QuarticWindow/Moments.lean
+     Distinct839/Gram/Threshold.lean           Zeta23/ZeroSide/RankTraceMult.lean
+     Distinct839/Assembly/Threshold.lean       Zeta23/ZeroSide/RankTraceMult.lean
+     Further/Threshold.lean                    Zeta23/ZeroSide/RankTraceMult.lean
+     Distinct839/Assembly/Instance.lean        Zeta23/Assembly/SeamMult.lean
+     Simple673/Assembly/Instance.lean          Zeta23/Assembly/SeamMult.lean
+     Further/Line/Instance.lean                Zeta23/Assembly/SeamMult.lean
+     Further/Dist/Instance.lean                Zeta23/Assembly/SeamMult.lean
+     Line889/Assembly/Instance.lean            Zeta23/Assembly/SeamMult.lean
+     Distinct839/Assembly/Final.lean           Zeta23/XiPrime/Assembly.lean
+     Simple673/Assembly/Final.lean             Zeta23/XiPrime/Assembly.lean
+
+The NOTICE file of the library is reproduced below, as its licence requires.
+
+--------------------------------------------------------------------------------
+Zeta23 — a Lean 4 formalization of critical-line zero-proportion theorems
+Copyright 2026 Anthropic, PBC
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes software derived from PrimeNumberTheoremAnd
+(https://github.com/AlexKontorovich/PrimeNumberTheoremAnd),
+Copyright the PrimeNumberTheoremAnd contributors, licensed under the Apache License, Version 2.0.
+The derived files are the ones under Zeta23/FromPNTPlus/; each carries its upstream notice
+(source file, upstream commit, original copyright line) and a description of the local modifications.
+Some of those files in turn derive from mathlib (https://github.com/leanprover-community/mathlib4),
+Copyright the mathlib contributors, Apache License, Version 2.0; their original headers are preserved.
+
+This product depends on, but does not include, Lean 4 (https://github.com/leanprover/lean4) and
+mathlib4 with its standard dependency set — fetched by the build tool from their public repositories at the
+revisions pinned in lake-manifest.json: batteries, aesop, Qq, ProofWidgets4, import-graph, LeanSearchClient and
+plausible are released under the Apache License, Version 2.0; Cli (leanprover/lean4-cli) is released under the
+MIT License (Copyright (c) 2021 Marc Huisinga). None of these dependencies is included in this repository.
+--------------------------------------------------------------------------------

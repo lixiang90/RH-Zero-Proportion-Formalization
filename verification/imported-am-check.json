@@ -1,0 +1,103 @@
+{
+  "source": "RecordProportion/ImportedAM.lean",
+  "source_sha256": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+  "source_lf_bytes": 1515412,
+  "source_lines": 16140,
+  "compile_command": "lake --no-cache build +RecordProportion.ImportedAM:olean",
+  "compile_exit_code": 0,
+  "compile_start_utc": "2026-10-08T16:03:45.1060357Z",
+  "compile_finish_utc": "2026-10-08T16:17:00.1411503Z",
+  "compile_log_sha256": "47f3454a2eeb2e7bdc3da0c2979b68a8b2c9b4e8f05bd9b73d5b153e7f5fc985",
+  "artifact_sha256": "9b30204d514c3a81baf1bd47c6578cc6f534229c11ad808b1a891bbcb6afc0e6",
+  "axiom_audit_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.exe",
+    "--no-cache",
+    "env",
+    "lean",
+    "tmp/imported-am-axioms-perron.lean"
+  ],
+  "axiom_audit_exit_code": 0,
+  "axiom_audit_seconds": 18.94,
+  "axiom_audit_log_sha256": "4d318fb90bd4f28c86d76f724f4d69ba1a268fd75221cb5e3f79712082c98b11",
+  "declarations": [
+    {
+      "declaration": "AMW.wfunAM_le_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AMW.Cert.PC8CL.mcheckP_ok",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AMW.Cert.PC8CL.sp_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AMW.Cert.PC8CL.gsplit0_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AMW.Cert.PC8CL.ssplit57_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AMW.Cert.PC8CL.splitAx_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AMW.Cert.PC8CL.tm_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AMW.Cert.PC8CL_cert_full",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AMW.Cert.PC8CL_G_rev",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_audited_axioms_allowed": true,
+  "scope": "Complete original AM/PC8 imported module plus generic target and coverage interfaces. This does not verify the new nine-point certificate or final challenge theorem.",
+  "initial_failed_attempt_preserved": "tmp/formalization-logs/imported-am-build-first-attempt.txt"
+}

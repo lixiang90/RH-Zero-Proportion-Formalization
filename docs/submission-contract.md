@@ -1,6 +1,6 @@
 # Submission contract and current status
 
-Checked 2026-10-08 against the website's live homepage and public source at
+Checked again 2026-10-09 against the website's live homepage and public source at
 `josusanmartin/riemann@668e239f30c7c56494611b1825306a3d65f95537`.
 Authoritative contract:
 https://github.com/josusanmartin/riemann/blob/668e239f30c7c56494611b1825306a3d65f95537/CONTRIBUTING.md
