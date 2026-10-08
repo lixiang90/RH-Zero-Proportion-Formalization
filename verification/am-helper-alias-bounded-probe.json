@@ -1,0 +1,220 @@
+{
+  "status": "PASS: bounded eight-helper alias admission only",
+  "date": "2026-10-09",
+  "method": "Lean 4.33.0-rc2, ordinary kernel; eight exact upstream helper aliases retaining original AMW interfaces, plus eight rfl interface equality facts.",
+  "execution": {
+    "cpu_threads": 1,
+    "global_deadline_seconds": 90,
+    "total_wall_seconds": 76.797,
+    "stages": [
+      {
+        "name": "pinned-modwindow",
+        "exit_code": 0,
+        "timeout": false,
+        "wall_seconds": 38.281,
+        "owned_pid": 12660
+      },
+      {
+        "name": "alias-probe",
+        "exit_code": 0,
+        "timeout": false,
+        "wall_seconds": 19.609,
+        "owned_pid": 46712
+      },
+      {
+        "name": "fresh-axioms",
+        "exit_code": 0,
+        "timeout": false,
+        "wall_seconds": 18.907,
+        "owned_pid": 22840
+      }
+    ],
+    "original_ImportedAM_rebuilt": false,
+    "existing_ImportedAM_and_ModWindow_dependencies_reused": true,
+    "formal_source_modified": false,
+    "before_after_unchanged": true
+  },
+  "helpers": [
+    "phi_antitoneOn",
+    "deriv2_mul_eq",
+    "deriv_mul_eq",
+    "deriv2_eq_zero_of_eqOn",
+    "integrable_abs_of_cs",
+    "integral_abs_deriv2_mul_le",
+    "integral_abs_phi_le",
+    "integral_abs_phi_sq_le"
+  ],
+  "fresh_axiom_audit": {
+    "exit_code": 0,
+    "declarations": [
+      "RHWeilRecord.HelperAliasProbe.phi_antitoneOn",
+      "RHWeilRecord.HelperAliasProbe.deriv2_mul_eq",
+      "RHWeilRecord.HelperAliasProbe.deriv_mul_eq",
+      "RHWeilRecord.HelperAliasProbe.deriv2_eq_zero_of_eqOn",
+      "RHWeilRecord.HelperAliasProbe.integrable_abs_of_cs",
+      "RHWeilRecord.HelperAliasProbe.integral_abs_deriv2_mul_le",
+      "RHWeilRecord.HelperAliasProbe.integral_abs_phi_le",
+      "RHWeilRecord.HelperAliasProbe.integral_abs_phi_sq_le",
+      "RHWeilRecord.HelperAliasProbe.interface_phi_antitoneOn",
+      "RHWeilRecord.HelperAliasProbe.interface_deriv2_mul_eq",
+      "RHWeilRecord.HelperAliasProbe.interface_deriv_mul_eq",
+      "RHWeilRecord.HelperAliasProbe.interface_deriv2_eq_zero_of_eqOn",
+      "RHWeilRecord.HelperAliasProbe.interface_integrable_abs_of_cs",
+      "RHWeilRecord.HelperAliasProbe.interface_integral_abs_deriv2_mul_le",
+      "RHWeilRecord.HelperAliasProbe.interface_integral_abs_phi_le",
+      "RHWeilRecord.HelperAliasProbe.interface_integral_abs_phi_sq_le"
+    ],
+    "declaration_count": 16,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "all_declarations_only_allowed_axioms": true
+  },
+  "inputs_and_artifacts": {
+    "formal_ImportedAM": {
+      "path": "RecordProportion/ImportedAM.lean",
+      "bytes": 1515412,
+      "sha256": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8"
+    },
+    "pinned_ModWindow_source": {
+      "path": ".lake/packages/Zeta23/Zeta23/XiPrime/QuarticWindow/ModWindow.lean",
+      "bytes": 27977,
+      "sha256": "8f07d8204db1ded16e668d1c7bbc9c037c00101cc9f0c702f7a614479b1bb5cc"
+    },
+    "compiled_ModWindow": {
+      "path": ".lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/XiPrime/QuarticWindow/ModWindow.olean",
+      "bytes": 1277896,
+      "sha256": "b3623f7092cf7b47e21619b55b1a70accb2c1f3253789a5f13560796b9459f4b"
+    },
+    "probe": {
+      "path": "tmp/helper-alias-high/AliasProbe.lean",
+      "bytes": 3454,
+      "sha256": "51644a3355716f924dcfe36ec02294e9f6787b2be22fa899b7808f1622fcf527"
+    },
+    "probe_olean": {
+      "path": "tmp/helper-alias-high/AliasProbe.olean",
+      "bytes": 55192,
+      "sha256": "d5a35ccb4fd190081c55a7017253e19f95c3267f7dd6e9d0df40976a7fe9ef67"
+    },
+    "runner": {
+      "path": "tmp/helper-alias-high/run_probe.py",
+      "bytes": 3845,
+      "sha256": "436cc84aaeb9dc02c8f0efa9a042e7bfa2ead6346befc4f574b7c14cf652fbb7"
+    },
+    "audit_source": {
+      "path": "tmp/helper-alias-high/Audit.lean",
+      "bytes": 1144,
+      "sha256": "df28822d0db5856141893b29590911c5c8b668365b63d64d2b64f38a9edeb256"
+    },
+    "ModWindow_log": {
+      "path": "tmp/helper-alias-high/pinned-modwindow.log",
+      "bytes": 202,
+      "sha256": "1fbc4ce7d50cdf7232e14d59594cc416faadcae540b3e6d81456ca2f4056c7d2"
+    },
+    "probe_log": {
+      "path": "tmp/helper-alias-high/alias-probe.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "fresh_axiom_log": {
+      "path": "tmp/helper-alias-high/fresh-axioms.log",
+      "bytes": 1856,
+      "sha256": "fc1d1112ba1d35ceb3a9e82655c697a30a779d827c14784bab945677e554d52d"
+    },
+    "raw_run_record": {
+      "path": "tmp/helper-alias-high/result.json",
+      "bytes": 5151,
+      "sha256": "28c975e54138d8e039bceedd90776c6eaf2abba374f34450de17e06503e43a8e"
+    },
+    "proposed_diff_not_applied": {
+      "path": "tmp/helper-alias-high/proposed-helper-alias.diff",
+      "bytes": 10083,
+      "sha256": "d8695cdd70056512fdcef579954d5042ab1df251934c309e1a6a6053fe6d2bd4"
+    },
+    "source_review": {
+      "path": "tmp/helper-alias-high/source-review.json",
+      "bytes": 440,
+      "sha256": "ec431cdea1ac79646d97758ccf6cd2ac4809abec962d58d29cf9fde7b8295c7e"
+    }
+  },
+  "capacity_review": {
+    "removed_21_manifest": {
+      "path": "tmp/perron_bundle_optimization/imported-delete-21-ranges.json",
+      "bytes": 5729,
+      "sha256": "e2c3abd974870232dc3d6b8b8e7120bbff947303790c89c7b90203277c5b7364"
+    },
+    "current_pruned_overlay": {
+      "path": "tmp/optimized-overlay/RecordProportion/ImportedAM.lean",
+      "bytes": 1507765,
+      "sha256": "3bd7fc52f1beb41d2dab81da2da62acbffc24c74308f8f7d63c5d62e467ed283"
+    },
+    "intersection_with_removed_21": [],
+    "all_eight_declarations_still_present_byteexact_vs_original": true,
+    "additional_net_bytes_saved_including_new_import": 6125,
+    "current_pruned_overlay_LF_bytes": 1507765,
+    "proposed_combined_overlay_LF_bytes": 1501640,
+    "meaning": "6125 is the net proposed source reduction including the new import. The original eight proof/declaration body span is not a net saving. No running or formal source was patched."
+  },
+  "official_ModWindow_availability": {
+    "classification": "Inference from pinned official preparation/runtime scripts; not an actual online sandbox observation.",
+    "preparation": {
+      "source": {
+        "path": "tmp/riemann-site/scripts/prepare-e2b-template.sh",
+        "bytes": 5703,
+        "sha256": "858fd416f9151d32723db63c85a15bf2c281a4d080ac5b60a57bc31e153c467a"
+      },
+      "line": 129,
+      "command": "build +Zeta23:olean"
+    },
+    "pinned_root_import_chain": [
+      "Zeta23",
+      "Zeta23.XiPrime.Final",
+      "Zeta23.XiPrime.FamilyHypsV",
+      "Zeta23.XiPrime.QuarticWindow.ModWindow"
+    ],
+    "root_and_chain_sources": [
+      {
+        "path": ".lake/packages/Zeta23/Zeta23.lean",
+        "bytes": 600,
+        "sha256": "97c71a405f261c55d0a1fa5477082b102627f327ede0f3459383fbc3b6c53568"
+      },
+      {
+        "path": ".lake/packages/Zeta23/Zeta23/XiPrime/Final.lean",
+        "bytes": 37324,
+        "sha256": "12e6aa7b1036b1080c64872e1565e9699e1262883a7b0950cf029b38ef82e7b9"
+      },
+      {
+        "path": ".lake/packages/Zeta23/Zeta23/XiPrime/FamilyHypsV.lean",
+        "bytes": 18121,
+        "sha256": "50241f49b8d507934f3cb6c1a57f7f0da25ee2ed55c4672baaa85d47044ee6a7"
+      }
+    ],
+    "runtime_pruning": {
+      "source": {
+        "path": "tmp/riemann-site/scripts/prune-lake-build-runtime.sh",
+        "bytes": 2710,
+        "sha256": "8ac8833289c7895f3f0bce9eaad6c488dc6331e94d00ce15132456abb171e661"
+      },
+      "effect": "Retains oleans and interpreter IR; truncates editor .ilean/native .c and removes setup.json."
+    },
+    "verification_setup": {
+      "source": {
+        "path": "tmp/riemann-site/scripts/verify-submission.ts",
+        "bytes": 12377,
+        "sha256": "7be0e1b79461461036e96c7b0d23073f321965cdaa72580cfcc5c2b52c14f564"
+      },
+      "effect": "Links the prebuilt trusted Zeta23 build tree into the submission workspace."
+    },
+    "conclusion": "A runtime produced by these fixed template scripts includes ModWindow. Its initial absence in the local selectively built cache does not imply absence in the official template. Added imports still require independent exported dependency replay."
+  },
+  "limitations": [
+    "No new mathematical target, reward, original finite data or admitted axiom was introduced.",
+    "This test imported the already compiled ImportedAM. It is not a fresh full AM, complete candidate or website compilation.",
+    "No Nano, trusted-core replay, full candidate CPU saving, 3200-second Comparator pass or accepted website record is established by this probe.",
+    "The 6125-byte source capacity result is separate from runtime performance; imported helpers are not exempt from independent replay.",
+    "No formal proof source, running bundle, Git index or commit was changed. Only this public record was added."
+  ],
+  "hash_convention": "Artifact pins are SHA256 of actual file bytes. This JSON is canonical LF."
+}

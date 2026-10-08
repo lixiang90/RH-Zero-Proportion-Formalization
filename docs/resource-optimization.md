@@ -50,6 +50,17 @@ these are different shared-host runs with different audit workloads, so the
 113.920-second difference is an observation rather than a controlled full-stage
 speedup estimate. See [the full-family record](../verification/finite-two-edge-full-candidate.json).
 
+Both complete Data dependency graphs then passed actual serial independent
+nanoda replay with the same 33 roots and the same configuration. The original
+graph checked 6,908 declarations in 1077.766 seconds; the
+two-edge graph checked 7,016 in 934.157 seconds, saving
+143.609 seconds (13.3%). Both exited 0, retained their input hashes and used
+only the three permitted axioms. This is a full-family replay comparison,
+rather than an extrapolation from the 64-goal sample; it still covers only the
+Data graph, on a shared host. The baseline reused a validated byte-for-byte
+export, but actually replayed its proofs again. Export wall time is not being
+compared. See [the complete replay comparison](../verification/finite-two-edge-1224-serial-comparison.json).
+
 The public [reproduction generator](../scripts/generate_two_edge_candidate.py)
 reads the committed, hash-pinned Data and generic helper. It writes only under
 the ignored tmp directory and retains every original integer-check target.
@@ -58,6 +69,74 @@ has not been separately compiled by the isolated record. The historical header
 can reproduce the exact compiled candidate, but its scratch helper import needs
 the corresponding ordinary helper artifact. Generating source alone proves
 nothing; every generated original goal still needs kernel verification.
+
+## Complete point-reflection comparison
+
+A generic theorem proves frameCheck(label+241)=frameCheck(label) for label<241.
+The candidate numerically checks the 241 original cells and transports their
+results to the full original 482-label statement. Every original computational
+definition and the complete extra-point and semantic suffix remain byte-for-byte
+unchanged. The new Point source does not import the old Point numeric proofs.
+
+[FrameReflection](../RecordProportion/FrameReflection.lean) passed an ordinary
+formal-module build and four fresh transitive axiom audits. The complete Point
+candidate compiled in 212.323 seconds; a fresh audit of the exact original
+12 interfaces passed in 19.945 seconds, using only the permitted three axioms.
+See [the complete candidate record](../verification/point-reflected-full-candidate.json)
+and [the public helper check](../verification/frame-reflection-formal-kernel.json).
+The old archived module time is not an exclusive-host controlled comparison.
+
+Actual serial independent replay of the same 12 interfaces then gave:
+
+| Complete Point dependency graphs | Original | Reflection |
+|---|---:|---:|
+| nanoda wall time | 228.141 s | 184.250 s |
+| User CPU time | 223.45 s | 180.28 s |
+| Declarations checked | 46,464 | 46,470 |
+| Exit status / unchanged snapshots | 0 / yes | 0 / yes |
+
+The observed wall reduction is 19.2%. The original run initially overlapped the
+Data tests and whole compile; the reflected run overlapped only the whole
+compile. Both used the same fixed executable, configuration and interface roots.
+This is a shared-host component measurement, not a whole-submission saving.
+See [the comparison](../verification/point-reflection-serial-comparison.json).
+The [Point generator](../scripts/generate_reflected_point_candidate.py) now
+reproduces the checked f7d766f8 source from public inputs, including actual
+rejection of an isolated redirected tmp-root test.
+
+## Reproduce the optimized source
+
+The [guarded bundler](../scripts/bundle_optimized_candidate.py) reads only
+committed, hash-pinned inputs. It composes two-edge proof routing, synchronous
+AM elaboration, the checked 21-declaration source pruning and existing exact
+numeric compression. Its optional reflection mode inlines the checked Point
+helper body. It writes into a fresh ignored tree and rejects nonempty output,
+active-overlay paths, formal-source paths and disabled assertions.
+
+```powershell
+python -B -X utf8 scripts/bundle_optimized_candidate.py --reflection --output-dir tmp/optimized-repro/combined
+```
+
+The combined source has 1,998,462 bytes, leaving 1,538 bytes under the site's
+2,000,000-byte source limit. Its SHA256 is
+642f68af1c2f4a44db4ca7ef8955a8a5b2bbbefa81c47e69cce4d4438c69d2f0.
+Generation and guarded reproduction passed; this combined single file has
+not received a fresh full compilation, independent replay or Comparator pass.
+The manifest states that scope explicitly.
+See [the generator record](../verification/optimized-candidate-generator-perron.json).
+
+Without reflection, the generator exactly reproduces the separately tested
+1,994,836-byte source, SHA256
+583c5becafd39bc083240afa64d4468be15df67a86d819ac4544b18e2bfd98c7.
+That local one-thread Windows compile/audit attempt was deliberately stopped
+at 3,200.500 seconds by its experimental wall guard, before a complete result
+or the final four axiom audits. It reached all 1,224 integer representatives
+and their aggregate, but that partial progress is not a full proof pass.
+The sampled owned-process tree peaked at 8,372,035,584 bytes; the observed Lean
+working-set peak was 8,343,334,912 bytes. These local observations do not establish
+Linux resource compliance or an official timeout failure.
+See [the cutoff summary](../verification/whole-optimized-sync-cutoff-summary.json)
+and [resource trace](../verification/whole-optimized-sync-resources.json).
 
 ## Rejected and unconfirmed alternatives
 
@@ -87,15 +166,27 @@ but gives no general impossibility result for sparse methods.
 
 ## Review and next step
 
-The working result, rational certificate and exact theorem types remain fixed.
-The controlled two-edge sample supports using a simpler sufficient check for
-49 expensive representatives; the complete family confirms correctness.
-Direct reflexivity and the current sparse accumulator did not reduce cost.
-The next candidate removes duplicated point checks by proving reflection
-invariance, while preserving the original all-482-label conclusion. Its source
-and runtime must pass actual checks before it can replace the published proof.
-Whole-file synchronous compilation and full-family serial replay are being
-measured independently. They do not establish the official total deadline.
+The exact rational result and numeric inputs remain fixed. Both complete
+component families have ordinary Lean proofs, fresh audits and serial independent
+replays. Two-edge routing reduces Data replay by 13.3%; reflection reduces Point
+replay by 19.2%. Their percentages cannot be added or applied to a whole pipeline.
+Direct reflexivity and the current Array sparse accumulator did not reduce cost.
+
+A bounded secondary probe found eight AM helpers whose original interfaces
+can be proved by exact references to the pinned Zeta23 ModWindow helpers.
+The eight aliases and eight interface identities passed in 76.797 seconds,
+using only allowed axioms. They do not overlap the existing 21 deletions and
+would save a further 6,125 source bytes including the new import. This is source
+capacity evidence, not a measured runtime gain, and is not included in either
+generated candidate. Fixed template scripts imply the upstream module is
+prebuilt at the site, but no live sandbox observation or independent replay was
+performed. See [the bounded probe](../verification/am-helper-alias-bounded-probe.json).
+
+The next decision needs a complete combined-candidate measurement in the pinned
+Linux 4CPU/8GiB environment, accounting for every Comparator stage. The Windows
+one-thread cutoff leaves the total deadline unresolved. Further work should
+target measured dominant kernel computations rather than source cleanup alone.
+Mathematical research remains paused and no site acceptance is asserted.
 
 ## Published candidate
 

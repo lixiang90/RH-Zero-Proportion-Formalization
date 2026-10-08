@@ -1,0 +1,94 @@
+{
+  "status": "PASS: both actual full-family serial independent replays; unchanged mathematical inputs and original goals",
+  "date": "2026-10-09",
+  "scope": "Complete 1224 original integer conclusions through all_integer_representatives plus the same orbit/shape/primitive transport, builtin, axiom and primitive roots; not a complete analytical single-file Comparator or website run",
+  "baseline_record": {
+    "path": "verification/finite-original-1224-serial-nanoda.json",
+    "sha256": "e15ae82b164eb3392ed0ed5e73b41fc46a5b0d0285283ceea7f8be441f7da07f",
+    "bytes": 9135
+  },
+  "two_edge_record": {
+    "path": "verification/finite-two-edge-1224-serial-nanoda.json",
+    "sha256": "ab2fb378ad11c20726456dcf03601ce59c3b08f77af94f4c3e221aaa46f300cb",
+    "bytes": 9536
+  },
+  "same_33_export_roots": true,
+  "roots": [
+    "Nat",
+    "String",
+    "String.mk",
+    "Char",
+    "Quot",
+    "Quot.mk",
+    "Quot.lift",
+    "Quot.ind",
+    "RHWeil.RecordSubmission.FiniteCertificateData.all_integer_representatives",
+    "RHWeil.RecordSubmission.FiniteCertificateData.orbit_coverage",
+    "RHWeil.RecordSubmission.FiniteCertificateData.representative_packet_shape",
+    "RHWeil.RecordSubmission.FiniteCertificateData.integerCheck_of_basic",
+    "propext",
+    "Quot.sound",
+    "Classical.choice",
+    "Nat.add",
+    "Nat.sub",
+    "Nat.mul",
+    "Nat.pow",
+    "Nat.gcd",
+    "Nat.div",
+    "Nat.mod",
+    "Nat.beq",
+    "Nat.ble",
+    "Nat.land",
+    "Nat.lor",
+    "Nat.xor",
+    "Nat.shiftLeft",
+    "Nat.shiftRight",
+    "String.ofList",
+    "Char.ofNat",
+    "List",
+    "eagerReduce"
+  ],
+  "same_configuration": true,
+  "configuration": {
+    "use_stdin": true,
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "unpermitted_axiom_hard_error": true,
+    "nat_extension": true,
+    "string_extension": true,
+    "num_threads": 1,
+    "unsafe_permit_all_axioms": false,
+    "print_success_message": true,
+    "print_axioms": true,
+    "pp_to_stdout": true
+  },
+  "baseline": {
+    "source_sha256": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59",
+    "nano_wall_seconds": 1077.766,
+    "checked_declarations": 6908,
+    "reused_validated_export": true,
+    "actual_nano_exit_code": 0
+  },
+  "two_edge": {
+    "source_sha256": "6b58615dc531711b1a716242a225d0c39c70c0a843f81e39b1901efdb47e00f1",
+    "nano_wall_seconds": 934.157,
+    "checked_declarations": 7016,
+    "reused_validated_export": false,
+    "actual_nano_exit_code": 0
+  },
+  "observed_wall_seconds_saved": 143.609,
+  "observed_wall_reduction_percent": 13.324692,
+  "both_input_snapshots_unchanged": true,
+  "only_permitted_axioms": true,
+  "fresh_lean_full_family_record": "verification/finite-two-edge-full-candidate.json",
+  "limitations": [
+    "The shared host also ran the root synchronous whole-candidate compile and bounded sibling proofs; these are actual replay wall measurements, not exclusive-host benchmark samples.",
+    "Only Nano replay time is compared. The baseline reused an immutable, hash-validated full dependency export; Nano itself actually checked the complete export again. Export time is not presented as a controlled comparison.",
+    "One explicit checker thread is used in each local run. The official Comparator pipeline, its default scheduling and its total 3200-second Linux 4CPU/8GiB budget have not been passed here.",
+    "The full-family wall reduction is 13.324692 percent; the 64-goal sample reduction 22.5 percent must not be extrapolated to the full family or complete submission.",
+    "Public formal Data, original generator and the checked published Solution remain unchanged; optimized proof routing is an independently checked candidate, not a promoted website submission."
+  ]
+}

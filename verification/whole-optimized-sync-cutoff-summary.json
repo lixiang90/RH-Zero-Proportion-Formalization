@@ -1,0 +1,56 @@
+{
+  "status": "INCOMPLETE: local synchronous whole-candidate compile/audit attempt stopped by its3200-second experimental wall guard",
+  "date": "2026-10-09",
+  "candidate": {
+    "path": "tmp/optimized-overlay/Solution.optimized.draft.lean",
+    "bytes": 1994836,
+    "sha256": "583c5becafd39bc083240afa64d4468be15df67a86d819ac4544b18e2bfd98c7"
+  },
+  "variant": "Two-edge finite proofs plus synchronous AM plus21 source-only AM deletions. This tested file does NOT include the later reflected Point variant.",
+  "resource_record": {
+    "path": "verification/whole-optimized-sync-resources.json",
+    "bytes": 23854,
+    "sha256": "b39a02fe451419c0539264b855d8cdd9a07c52eb8502f3b3e542ff0dbfb55b30"
+  },
+  "compiler_log": {
+    "path": "tmp/verification/whole_optimized_sync_lean.log",
+    "bytes": 5101,
+    "sha256": "26a730cd2d07b2f246ff16674f4455f8b10c5de476589dfe5bb042fb6bc6f6a3"
+  },
+  "driver_log": {
+    "path": "tmp/verification/whole-optimized-sync/driver.log",
+    "bytes": 81,
+    "sha256": "0b2aede5e925bc870a7194991829982ef8032cb8c140a1f5b6acec60696e68a5"
+  },
+  "resource_wrapper": {
+    "path": "tmp/run-whole-optimized-sync.py",
+    "bytes": 3973,
+    "sha256": "fdc58a873e15d0302917832e003031d95bed63bb20982336f1b98c3dd0d324ed"
+  },
+  "actual_driver_exit_code": 15,
+  "elapsed_seconds": 3200.5,
+  "stop_reason": "compile-only experimental3200-second wall cutoff",
+  "scope_of_wall_guard": "Timer covers the local verify_bundle driver invocation including preflight and compile/audit attempt. It is not a per-compiler CPU timer and does not run the complete official Comparator pipeline.",
+  "source_unchanged": true,
+  "sampled_process_tree_peak_rss_bytes": 8372035584,
+  "observed_lean_peak_working_set_bytes": 8343334912,
+  "compiler_progress": {
+    "all1224_integer_representatives_and_aggregate_reached": true,
+    "complete_single_file_pass": false,
+    "final_four_axiom_audits_completed": false
+  },
+  "full_verifier_result_file_produced": false,
+  "official_linux_resource_compliance_demonstrated": false,
+  "official_timeout_failure_demonstrated": false,
+  "independent_whole_optimized_replay_run": false,
+  "official_comparator_run": false,
+  "submitted": false,
+  "limitations": [
+    "This is an intentional local cutoff with owned-process termination, not a detected false theorem, an emitted recovery hole or a completed Lean rejection.",
+    "No complete kernel or final-axiom success is inferred from partial compiler progress.",
+    "The local one-thread Windows working-set observation does not prove Linux4CPU/8GiB compliance or a lower bound on official runtime.",
+    "The official3200-second budget also includes export, statement/primitive comparison, independent serial Nano and core replay. Successful separate Data/Point checks do not establish total deadline compliance.",
+    "The later combined reflected source642f68af is source-generated only and is not the file measured by this cutoff record.",
+    "The published checked Solution remains d52f013f; no optimized candidate has been promoted or submitted."
+  ]
+}
