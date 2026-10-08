@@ -1,0 +1,293 @@
+{
+  "scope": "Only four fresh original integerCertificateCheck goals 0,1,64,65 using unchanged baseline compiled definitions. Generic mapped equality covers both basic and two-edge lower. Both timed samples use basic bounds. Shared host with separate full Data/whole j1 runs; no full-family performance or website resource claim.",
+  "indices": [
+    0,
+    1,
+    64,
+    65
+  ],
+  "mapped_fresh_audit": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j1",
+      "--tstack=32768",
+      "-DstderrAsMessages=false",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\MappedAudit.lean"
+    ],
+    "pid": 48920,
+    "exit_code": 0,
+    "start_utc": "2026-10-08T22:09:07.890753+00:00",
+    "finish_utc": "2026-10-08T22:09:31.050441+00:00",
+    "elapsed_seconds": 23.172,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 45,
+    "sampled_peak_tree_rss_bytes": 3498594304,
+    "sampled_peak_tree_private_bytes": 8848580608,
+    "observed_windows_single_process_peak_working_set_bytes": 3499896832,
+    "max_sampled_live_tree_cpu_seconds": 18.5,
+    "log": "tmp/perron_bundle_optimization/mapped-fresh-audit.log",
+    "log_sha256": "25c102be2d44f30288826109592c61582a0f82b215e7175a783fda090cf5e165"
+  },
+  "mapped_axioms": {
+    "PerronSparseProbe.weighted_coeff": [
+      "propext"
+    ],
+    "PerronSparseProbe.rowLower_eq_legacy": [
+      "propext",
+      "Quot.sound"
+    ],
+    "PerronSparseProbe.rowLower_eq_sparse": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PerronSparseProbe.sparseBasicLower_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PerronSparseProbe.original_of_sparseBasic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PerronSparseProbe.pairClosure_le_twoEdge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PerronSparseProbe.sparseTwoLower_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PerronSparseProbe.twoLower_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PerronSparseProbe.original_of_sparseTwo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "records": {
+    "basic": {
+      "compile": {
+        "command": [
+          "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+          "-j1",
+          "--tstack=32768",
+          "-DstderrAsMessages=false",
+          "-R",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+          "-o",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\basic_four.olean",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\basic_four.lean"
+        ],
+        "pid": 30328,
+        "exit_code": 0,
+        "start_utc": "2026-10-08T22:09:31.051859+00:00",
+        "finish_utc": "2026-10-08T22:09:54.735625+00:00",
+        "elapsed_seconds": 23.672,
+        "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+        "resource_samples": 46,
+        "sampled_peak_tree_rss_bytes": 3790303232,
+        "sampled_peak_tree_private_bytes": 9096470528,
+        "observed_windows_single_process_peak_working_set_bytes": 3976056832,
+        "max_sampled_live_tree_cpu_seconds": 22.969,
+        "log": "tmp/perron_bundle_optimization/basic_four.log",
+        "log_sha256": "84e2baa70c28cf645ddd4030f995297894cf31be2ef45c833446f5b330d28386"
+      },
+      "fresh_audit": {
+        "command": [
+          "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+          "-j1",
+          "--tstack=32768",
+          "-DstderrAsMessages=false",
+          "-R",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\basic_four_audit.lean"
+        ],
+        "pid": 38224,
+        "exit_code": 0,
+        "start_utc": "2026-10-08T22:09:54.743136+00:00",
+        "finish_utc": "2026-10-08T22:10:13.277559+00:00",
+        "elapsed_seconds": 18.531,
+        "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+        "resource_samples": 36,
+        "sampled_peak_tree_rss_bytes": 3497689088,
+        "sampled_peak_tree_private_bytes": 8848510976,
+        "observed_windows_single_process_peak_working_set_bytes": 3497689088,
+        "max_sampled_live_tree_cpu_seconds": 17.875,
+        "log": "tmp/perron_bundle_optimization/basic_four_audit.log",
+        "log_sha256": "e7443207a2d7eac90a06b2549e994b9784591a48d83b127b7d1e04d11b52e989"
+      },
+      "axioms": {
+        "PerronSparseBaseline.sample_0": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "PerronSparseBaseline.sample_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "PerronSparseBaseline.sample_64": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "PerronSparseBaseline.sample_65": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "phase_seconds": {
+        "0": 1.006,
+        "1": 1.135,
+        "64": 1.374,
+        "65": 1.019
+      },
+      "proof_total_seconds": 4.534,
+      "passed": true,
+      "source_sha256": "18ef7501a401746dd42c4d92f0cd1e20bd729a2809860414d0f75bf33894233d",
+      "artifact_sha256": "4242657c65a0f41c9cfb112d50b4e4a0ea729304d1843614e16e558ed2125887",
+      "compile_log_sha256": "84e2baa70c28cf645ddd4030f995297894cf31be2ef45c833446f5b330d28386"
+    },
+    "sparse": {
+      "compile": {
+        "command": [
+          "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+          "-j1",
+          "--tstack=32768",
+          "-DstderrAsMessages=false",
+          "-R",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+          "-o",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\sparse_four.olean",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\sparse_four.lean"
+        ],
+        "pid": 30656,
+        "exit_code": 0,
+        "start_utc": "2026-10-08T22:10:13.286575+00:00",
+        "finish_utc": "2026-10-08T22:10:38.011804+00:00",
+        "elapsed_seconds": 24.719,
+        "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+        "resource_samples": 48,
+        "sampled_peak_tree_rss_bytes": 3986784256,
+        "sampled_peak_tree_private_bytes": 9186512896,
+        "observed_windows_single_process_peak_working_set_bytes": 3986784256,
+        "max_sampled_live_tree_cpu_seconds": 24.078,
+        "log": "tmp/perron_bundle_optimization/sparse_four.log",
+        "log_sha256": "b15ee4a0d3b33c27eee16891171c120c1edbbf3fd275f21ccfd296ce1d60e35f"
+      },
+      "fresh_audit": {
+        "command": [
+          "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+          "-j1",
+          "--tstack=32768",
+          "-DstderrAsMessages=false",
+          "-R",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\sparse_four_audit.lean"
+        ],
+        "pid": 55744,
+        "exit_code": 0,
+        "start_utc": "2026-10-08T22:10:38.019395+00:00",
+        "finish_utc": "2026-10-08T22:10:56.572884+00:00",
+        "elapsed_seconds": 18.563,
+        "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+        "resource_samples": 36,
+        "sampled_peak_tree_rss_bytes": 3497336832,
+        "sampled_peak_tree_private_bytes": 8848461824,
+        "observed_windows_single_process_peak_working_set_bytes": 3497336832,
+        "max_sampled_live_tree_cpu_seconds": 17.938,
+        "log": "tmp/perron_bundle_optimization/sparse_four_audit.log",
+        "log_sha256": "340bb760936e9abe9f5b7ec8977017f7801c67735ac66183fcd3a0aeb321ee3c"
+      },
+      "axioms": {
+        "PerronSparseCandidate.sample_0": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "PerronSparseCandidate.sample_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "PerronSparseCandidate.sample_64": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "PerronSparseCandidate.sample_65": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "phase_seconds": {
+        "0": 1.276,
+        "1": 1.519,
+        "64": 1.79,
+        "65": 1.275
+      },
+      "proof_total_seconds": 5.859999999999999,
+      "passed": true,
+      "source_sha256": "7352f02e792ee43774f87861278cc2c7667221eb4d583745dafa85fb7efd5527",
+      "artifact_sha256": "d8caf9f7a6af85e0db7a26e5ce9edcf31f3cb0e1fbed8581d51f93ba59ab0ebb",
+      "compile_log_sha256": "b15ee4a0d3b33c27eee16891171c120c1edbbf3fd275f21ccfd296ce1d60e35f"
+    }
+  },
+  "proof_time_ratio_sparse_to_basic": 1.2924569916188795,
+  "proof_time_saving_fraction": -0.2924569916188795,
+  "baseline_contains_original_proofs_only_at_indices": [
+    3,
+    16
+  ],
+  "target_proof_cache_imported": false,
+  "ordinary_kernel": true,
+  "submitted": false,
+  "formal_sources_modified": false,
+  "before": {
+    "tmp/perron_bundle_optimization/run_sparse_perf.py": "b4668ed20e4d04bf0aec34fa4ca6c9a382f785badaf6b9b82b6b2e67cc0c256c",
+    "tmp/perron_bundle_optimization/SparseDifference.lean": "df2d07105ffcef16e4703f15a1e38e97bf070927c86eb826967a6eedf638966a",
+    "tmp/perron_bundle_optimization/SparseDifferenceTransport.lean": "e89264d4b7dfd37dd684fd84406f2eb3ec9ad604f45ae1dac26caf7a78be83ff",
+    "tmp/perron_bundle_optimization/SparseMapped.lean": "677409384425411c9a1c873f8a23db36b8891463ce40cb11243c5a8ad0324d14",
+    "tmp/perron_bundle_optimization/SparseMapped.olean": "1f8732edb805fb968e2992bbeabd76e710dfabc1f32ef9802a0328d2c1b7c20e",
+    "tmp/two-edge-high/baseline.lean": "8345891a0c53b78703b233e837ab41da55b9c2eae26218486f3e0e67d4fc66ce",
+    "tmp/two-edge-high/baseline.olean": "f15560908440c62ca94fd3e94b75e7e7c23f5b3edcdf236103f5954f559c5f92",
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "RecordProportion/FiniteCertificateData.lean": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59",
+    "tmp/perron_bundle_optimization/basic_four.lean": "18ef7501a401746dd42c4d92f0cd1e20bd729a2809860414d0f75bf33894233d",
+    "tmp/perron_bundle_optimization/basic_four_audit.lean": "0fd116f3651f04694597394ceddb10d09a9f7fa8d77442022e643081de2da9d3",
+    "tmp/perron_bundle_optimization/sparse_four.lean": "7352f02e792ee43774f87861278cc2c7667221eb4d583745dafa85fb7efd5527",
+    "tmp/perron_bundle_optimization/sparse_four_audit.lean": "2b15db6d74703209194b11bee0d37ad2e84e91a07fb3d33abe87e846af119e51",
+    "tmp/perron_bundle_optimization/MappedAudit.lean": "c4358994d2d28f4d22c5b978b1877978419e3bd0c86bd2cdb461c47c105b1dac"
+  },
+  "after": {
+    "tmp/perron_bundle_optimization/run_sparse_perf.py": "b4668ed20e4d04bf0aec34fa4ca6c9a382f785badaf6b9b82b6b2e67cc0c256c",
+    "tmp/perron_bundle_optimization/SparseDifference.lean": "df2d07105ffcef16e4703f15a1e38e97bf070927c86eb826967a6eedf638966a",
+    "tmp/perron_bundle_optimization/SparseDifferenceTransport.lean": "e89264d4b7dfd37dd684fd84406f2eb3ec9ad604f45ae1dac26caf7a78be83ff",
+    "tmp/perron_bundle_optimization/SparseMapped.lean": "677409384425411c9a1c873f8a23db36b8891463ce40cb11243c5a8ad0324d14",
+    "tmp/perron_bundle_optimization/SparseMapped.olean": "1f8732edb805fb968e2992bbeabd76e710dfabc1f32ef9802a0328d2c1b7c20e",
+    "tmp/two-edge-high/baseline.lean": "8345891a0c53b78703b233e837ab41da55b9c2eae26218486f3e0e67d4fc66ce",
+    "tmp/two-edge-high/baseline.olean": "f15560908440c62ca94fd3e94b75e7e7c23f5b3edcdf236103f5954f559c5f92",
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "RecordProportion/FiniteCertificateData.lean": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59",
+    "tmp/perron_bundle_optimization/basic_four.lean": "18ef7501a401746dd42c4d92f0cd1e20bd729a2809860414d0f75bf33894233d",
+    "tmp/perron_bundle_optimization/basic_four_audit.lean": "0fd116f3651f04694597394ceddb10d09a9f7fa8d77442022e643081de2da9d3",
+    "tmp/perron_bundle_optimization/sparse_four.lean": "7352f02e792ee43774f87861278cc2c7667221eb4d583745dafa85fb7efd5527",
+    "tmp/perron_bundle_optimization/sparse_four_audit.lean": "2b15db6d74703209194b11bee0d37ad2e84e91a07fb3d33abe87e846af119e51",
+    "tmp/perron_bundle_optimization/MappedAudit.lean": "c4358994d2d28f4d22c5b978b1877978419e3bd0c86bd2cdb461c47c105b1dac"
+  },
+  "inputs_unchanged": true,
+  "passed": true
+}

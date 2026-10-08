@@ -1,0 +1,117 @@
+{
+  "scope": "Scratch generic sparse-difference arithmetic only. Ordinary Lean kernel compile and fresh nine-root axiom audit. Does not prove full Data lower transport, actual finite family, numerical performance, final submission or official resource budget.",
+  "source": "tmp/perron_bundle_optimization/SparseDifference.lean",
+  "source_sha256": "df2d07105ffcef16e4703f15a1e38e97bf070927c86eb826967a6eedf638966a",
+  "source_lines": 125,
+  "source_lf_bytes": 4738,
+  "compile": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "-o",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\SparseDifference.olean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\SparseDifference.lean"
+    ],
+    "pid": 53408,
+    "exit_code": 0,
+    "start_utc": "2026-10-08T21:48:29.460272+00:00",
+    "finish_utc": "2026-10-08T21:48:49.505098+00:00",
+    "elapsed_seconds": 20.046,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 39,
+    "sampled_peak_tree_rss_bytes": 3378208768,
+    "sampled_peak_tree_private_bytes": 8352579584,
+    "observed_windows_single_process_peak_working_set_bytes": 3607396352,
+    "max_sampled_live_tree_cpu_seconds": 19.5,
+    "log": "tmp/perron_bundle_optimization/sparse-compile.log",
+    "log_sha256": "a4042fb517a61cc0e314f1ec7fdc795d41b27dae006c97c746b174e9a0150ac3"
+  },
+  "audit": {
+    "command": [
+      "c:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.EXE",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\perron_bundle_optimization\\SparseAudit.lean"
+    ],
+    "pid": 12812,
+    "exit_code": 0,
+    "start_utc": "2026-10-08T21:48:49.514529+00:00",
+    "finish_utc": "2026-10-08T21:49:07.523174+00:00",
+    "elapsed_seconds": 18.016,
+    "resource_measurement": "psutil process-tree samples every 0.5 seconds; sampled maxima are not an exact process-tree high-water mark",
+    "resource_samples": 35,
+    "sampled_peak_tree_rss_bytes": 3339710464,
+    "sampled_peak_tree_private_bytes": 8317124608,
+    "observed_windows_single_process_peak_working_set_bytes": 3343515648,
+    "max_sampled_live_tree_cpu_seconds": 17.391,
+    "log": "tmp/perron_bundle_optimization/sparse-audit.log",
+    "log_sha256": "5d03659bd5de49603b70b70a7c8a541a03674c82e8f1c049b147de95137695a1"
+  },
+  "axioms": {
+    "SparseDifference.addAt_size": [
+      "propext",
+      "Quot.sound"
+    ],
+    "SparseDifference.addAt_getD": [
+      "propext",
+      "Quot.sound"
+    ],
+    "SparseDifference.addAt_getElem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "SparseDifference.interval_difference": [
+      "propext",
+      "Quot.sound"
+    ],
+    "SparseDifference.update_size": [
+      "propext",
+      "Quot.sound"
+    ],
+    "SparseDifference.update_getD": [
+      "propext",
+      "Quot.sound"
+    ],
+    "SparseDifference.fold_getD": [
+      "propext",
+      "Quot.sound"
+    ],
+    "SparseDifference.point_prefix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "SparseDifference.gap_prefix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "passed": true,
+  "before": {
+    "tmp/perron_bundle_optimization/SparseDifference.lean": "df2d07105ffcef16e4703f15a1e38e97bf070927c86eb826967a6eedf638966a",
+    "tmp/perron_bundle_optimization/SparseAudit.lean": "5ce4ababcf63c797fd344c3614fe150cc2755ce5919a866fb6c338da183feac6",
+    "tmp/perron_bundle_optimization/run_sparse.py": "516583076c97b0372cd276d84c6c805bbed7847172ed852729d812d6cce07d26",
+    "tmp/am_async_four_thread/run.py": "0c3cca23142d7eb468e1dce0dfcd8dc68f1e10868d0945652a1b490dbcf8b904",
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "RecordProportion/FiniteCertificateData.lean": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59"
+  },
+  "after": {
+    "tmp/perron_bundle_optimization/SparseDifference.lean": "df2d07105ffcef16e4703f15a1e38e97bf070927c86eb826967a6eedf638966a",
+    "tmp/perron_bundle_optimization/SparseAudit.lean": "5ce4ababcf63c797fd344c3614fe150cc2755ce5919a866fb6c338da183feac6",
+    "tmp/perron_bundle_optimization/run_sparse.py": "516583076c97b0372cd276d84c6c805bbed7847172ed852729d812d6cce07d26",
+    "tmp/am_async_four_thread/run.py": "0c3cca23142d7eb468e1dce0dfcd8dc68f1e10868d0945652a1b490dbcf8b904",
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "RecordProportion/FiniteCertificateData.lean": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59"
+  },
+  "inputs_unchanged": true,
+  "artifact": "tmp/perron_bundle_optimization/SparseDifference.olean",
+  "artifact_sha256": "1ea9e73ab4186b3afa1612f20ed77443ae0188ad6ae074ca82c2649c1aa945c3",
+  "formal_sources_modified": false,
+  "submitted": false
+}

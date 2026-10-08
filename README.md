@@ -39,6 +39,7 @@ acceptance remain separate requirements. No website record has been submitted.
 | Complete single-file candidate | Lean compilation, four axiom audits and independent replay passed; official runtime/memory compliance pending |
 
 Snapshot results and their scope are recorded in `verification/` and `docs/`.
+See [resource optimization](docs/resource-optimization.md) for measured proof-checking improvements and their limits.
 The original Lean numeric transcription had two incorrect column entries; that
 uncompleted run was terminated, and the generator now derives and checks the
 original column order. The saved JSON certificate is unchanged. A passed data

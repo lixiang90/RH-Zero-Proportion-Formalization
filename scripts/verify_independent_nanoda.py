@@ -27,7 +27,7 @@ BUILTINS = ["Nat", "String", "String.mk", "Char", "Quot", "Quot.mk", "Quot.lift"
 PRIMITIVES = ["Nat.add", "Nat.sub", "Nat.mul", "Nat.pow", "Nat.gcd", "Nat.div",
               "Nat.mod", "Nat.beq", "Nat.ble", "Nat.land", "Nat.lor", "Nat.xor",
               "Nat.shiftLeft", "Nat.shiftRight", "String.ofList", "Char.ofNat", "List", "eagerReduce"]
-IDENTIFIER = re.compile(r"[A-Za-z_][A-Za-z_0-9]*(?:\.[A-Za-z_][A-Za-z_0-9]*)*")
+IDENTIFIER = re.compile(r"[A-Za-z_][A-Za-z_0-9-]*(?:\.[A-Za-z_][A-Za-z_0-9-]*)*")
 
 
 def digest(path: Path) -> str:
@@ -54,6 +54,14 @@ def git_pin(path: Path, expected: str) -> str:
 
 def snapshot(paths: dict[str, Path]) -> dict[str, str]:
     return {name: digest(path) for name, path in paths.items()}
+
+
+def lean_name_literal(name: str) -> str:
+    """Quote validated module segments for the fixed exporter's name parser."""
+    if not IDENTIFIER.fullmatch(name):
+        raise ValueError("Expected validated Lean name")
+    return ".".join("«" + part + "»" if "-" in part else part
+                    for part in name.split("."))
 
 
 def main() -> None:
@@ -113,7 +121,7 @@ def main() -> None:
     if args.reuse_export:
         files.update({"export": export, "reuse_metadata": metadata_path})
     before = snapshot(files)
-    export_command = [str(exporter), args.module, "--"] + roots
+    export_command = [str(exporter), lean_name_literal(args.module), "--"] + [lean_name_literal(name) for name in roots]
     export_log = scratch / "export.log"
     export_exit = None
     prior_export_exit = None
