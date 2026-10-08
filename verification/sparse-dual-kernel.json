@@ -1,0 +1,48 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "modules": [
+    "RecordProportion.SparseDualSoundness"
+  ],
+  "source_sha256": {
+    "RecordProportion.SparseDualSoundness": "05e1f9ccb64c99ac1d5fb66b67147a902569c17e6d8598dd7ee2295bf7aa23e5"
+  },
+  "source_unchanged_during_check": true,
+  "build_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "--no-cache",
+    "build",
+    "+RecordProportion.SparseDualSoundness:olean"
+  ],
+  "build_exit_code": 0,
+  "audit_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "env",
+    "lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\verification\\sparse-dual-kernel-axioms.lean"
+  ],
+  "audit_exit_code": 0,
+  "observed_axioms": {
+    "RHWeilRecord.SparseDualSoundness.checkerL_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.SparseDualSoundness.threshold_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_passed": true,
+  "module_check_passed": true,
+  "elapsed_seconds": 22.38,
+  "scope": "Generic actual Int sparse List.foldl, signed box correction and Real objective soundness; actual row/box assumptions and complete nine-point theorem are separate.",
+  "log": "tmp/verification/sparse-dual-kernel.log",
+  "whole_submission_compiled": false,
+  "submitted": false
+}

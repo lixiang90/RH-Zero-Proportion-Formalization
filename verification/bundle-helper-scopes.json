@@ -1,0 +1,49 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "input": "tmp/bundles/ScopeHelpersAudited.lean",
+  "input_sha256": "28bb5804ec119caa10d2664c1d17d064c0b6b3ef38002567ed48726377aa2e76",
+  "source_sha256": {
+    "RecordProportion/FloydSoundness.lean": "2c743f6c6b94fa31e97162cd7d6ec9afdf7f096fbdfb169876ac5c0f1c6efdbb",
+    "RecordProportion/SparseDualSoundness.lean": "05e1f9ccb64c99ac1d5fb66b67147a902569c17e6d8598dd7ee2295bf7aa23e5",
+    "scripts/bundle_solution.py": "6e4b08a031ccb4d7c27745e00024df1cc331d70f033dc5fb600c989c9ba24428",
+    "RecordProportion/ImportedAM.lean": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8"
+  },
+  "source_unchanged_during_check": true,
+  "command": [
+    "C:\\Users\\A\\.elan\\bin\\lean.EXE",
+    "+leanprover/lean4:v4.33.0-rc2",
+    "--tstack=32768",
+    "-j1",
+    "-o",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\bundles\\ScopeHelpersAudited.olean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\bundles\\ScopeHelpersAudited.lean"
+  ],
+  "exit_code": 0,
+  "observed_axioms": {
+    "RHWeilRecord.FloydSoundness.closure_preserves": [
+      "propext",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.FloydSoundness.closure_real_preserves": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.SparseDualSoundness.checkerL_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.SparseDualSoundness.threshold_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilSubmissionEncoding.compact_integer_example": []
+  },
+  "bundle_helper_check_passed": true,
+  "elapsed_seconds": 20.64,
+  "scope": "Dependency ordering and ordinary section isolation for Floyd and sparse-dual helpers; one actual AM packed integer unfolds by rfl with no axioms. No complete finite or website theorem is checked.",
+  "whole_submission_compiled": false,
+  "submitted": false
+}

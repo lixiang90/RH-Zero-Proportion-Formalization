@@ -20,6 +20,7 @@ zero-proportion theorem is still being assembled and checked.
 |---|---|
 | Actual simple-to-distinct counting bridge | Full module compiled; only permitted axioms |
 | Integer and real Floyd-closure soundness | Full module compiled; only permitted axioms |
+| Sparse integer dual and real box correction | Full module compiled; only permitted axioms |
 | Packed finite-data snapshot | Orbit, reflection, sizes and 49 fixed points compiled; complete dual and geometric coverage checks pending |
 | Imported AM analytic chain and original PC8 certificate | Full module compiled; only permitted axioms |
 | Separated AM majorant and spectral/count transport | Full modules compiled; only permitted axioms |
@@ -51,7 +52,7 @@ pass Lean and independent nanoda verification. See [the submission requirements]
 
 ```powershell
 lake --no-cache exe cache get
-lake --no-cache build +RecordProportion.AnalyticBridge:olean +RecordProportion.CountBridge:olean +RecordProportion.FloydSoundness:olean
+lake --no-cache build +RecordProportion.AnalyticBridge:olean +RecordProportion.CountBridge:olean +RecordProportion.FloydSoundness:olean +RecordProportion.SparseDualSoundness:olean
 python -B -X utf8 scripts/am_expanded_nine_point_certificate.py --check
 ```
 
@@ -62,7 +63,9 @@ rational dual certificates. It does not constitute a full Lean proof.
 The committed `lean-toolchain`, `lakefile.toml` and `lake-manifest.json` pin the
 environment. The draft bundler retains proof terms and compacts integer literals
 without changing their values; its output is not a verified submission.
-Development helpers are in `RecordProportion/`; immutable inputs are in
+The bundler follows local import dependencies and places each module in an ordinary
+section to preserve its local options and scopes. Full compilation of the resulting
+single file remains mandatory. Development helpers are in `RecordProportion/`; immutable inputs are in
 `output/`, `formal/certificates/`, and `reviews/`. The original research papers
 and history remain in RH-Weil; this repository owns all new proportion formalization.
 
