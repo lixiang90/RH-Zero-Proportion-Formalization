@@ -1,5 +1,7 @@
 # RH Zero Proportion Formalization
 
+Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
+
 Lean formalization of the critical-line zero-proportion result developed in
 [RH-Weil](https://github.com/lixiang90/RH-Weil), with reproducible exact certificates
 and the corresponding [paper](papers/expanded-nine-point-tangent-simple-critical-paper.tex)

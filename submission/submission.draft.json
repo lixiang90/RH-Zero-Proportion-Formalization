@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "li-xiang-expanded-nine-point",
+  "track": "critical-line",
+  "author": {
+    "github": "lixiang90",
+    "displayName": "Li Xiang"
+  },
+  "score": {
+    "numerator": "66812491",
+    "denominator": "99194740"
+  },
+  "proof": {
+    "solution": "proof/Solution.lean",
+    "theorem": "candidate_critical_line_bound",
+    "cumulativeTheorem": "candidate_critical_line_bound_cumulative",
+    "improvementTheorem": "candidate_strict_improvement"
+  },
+  "summary": "Expanded joint nine-point certificate with original AM tangents, lossless separated Gram assembly, and full multiplicity-aware zero counting.",
+  "method": "AM13 window; exact integer box-dual certificate; complete reflected low-set cover; lossless spectral defect transport.",
+  "model": null,
+  "harness": null,
+  "license": "Apache-2.0"
+}
