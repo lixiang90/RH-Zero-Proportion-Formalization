@@ -1,0 +1,14 @@
+name = "rhZeroProportion"
+version = "0.1.0"
+defaultTargets = ["RecordProportion"]
+
+[leanOptions]
+relaxedAutoImplicit = false
+
+[[require]]
+name = "Zeta23"
+git = "https://github.com/anthropics/zeta-23-lean.git"
+rev = "3635e74826a4c1fcece7d1cd2b6fa75e43a00510"
+
+[[lean_lib]]
+name = "RecordProportion"
