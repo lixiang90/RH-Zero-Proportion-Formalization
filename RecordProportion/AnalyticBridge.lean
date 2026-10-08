@@ -367,12 +367,12 @@ theorem am_simple_dyadic_of_lossless_defect
 
 theorem am_distinct_dyadic_of_lossless_defect
     (hgain : ∀ d > 0, ∀ᶠ T in atTop,
-      localReward * (N0simple T (2 * T) : ℝ) -
-        gapPressure * (Ncount T (2 * T) : ℝ) -
-        d * (Ncount T (2 * T) : ℝ) ≤
+      localReward * (Zeta23.N0simple T (2 * T) : ℝ) -
+        gapPressure * (Zeta23.Ncount T (2 * T) : ℝ) -
+        d * (Zeta23.Ncount T (2 * T) : ℝ) ≤
           Dcirc zetaZeroConfig (mtParams T) T) :
     ∀ e > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
-      (recordRatio - e) * (Ncount T (2 * T) : ℝ) ≤ N0star T (2 * T) := by
+      (recordRatio - e) * (Zeta23.Ncount T (2 * T) : ℝ) ≤ Zeta23.N0star T (2 * T) := by
   have hs := am_simple_dyadic_of_lossless_defect zetaZeroConfig paperInputs_zeta
     (by simpa only [zetaZeroConfig_N, zetaZeroConfig_N0s] using hgain)
   intro e he
@@ -384,12 +384,12 @@ theorem am_distinct_dyadic_of_lossless_defect
 
 theorem am_distinct_cumulative_of_lossless_defect
     (hgain : ∀ d > 0, ∀ᶠ T in atTop,
-      localReward * (N0simple T (2 * T) : ℝ) -
-        gapPressure * (Ncount T (2 * T) : ℝ) -
-        d * (Ncount T (2 * T) : ℝ) ≤
+      localReward * (Zeta23.N0simple T (2 * T) : ℝ) -
+        gapPressure * (Zeta23.Ncount T (2 * T) : ℝ) -
+        d * (Zeta23.Ncount T (2 * T) : ℝ) ≤
           Dcirc zetaZeroConfig (mtParams T) T) :
     ∀ e > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
-      (recordRatio - e) * (Ncount 0 T : ℝ) ≤ N0star 0 T :=
+      (recordRatio - e) * (Zeta23.Ncount 0 T : ℝ) ≤ Zeta23.N0star 0 T :=
   Zeta23.cumulative_of_dyadic zetaSeam paperInputs_zeta.RvM
     (fun _ _ _ => N0star_add' zetaSeam)
     (am_distinct_dyadic_of_lossless_defect hgain)
@@ -1319,7 +1319,7 @@ theorem am_distinct_dyadic_of_nine_point_certificate
       if (a:ℕ)<(b:ℕ) then W.a a b else 0)≤16)
     (hcert : ∀ g : Fin 8→ℝ,(∀ r,4/5≤ g r)→ localReward≤ Fw W g) :
     ∀ e>0,∃ T₀ : ℝ,∀ T≥ T₀,
-      (recordRatio-e)*(Ncount T (2*T):ℝ)≤ N0star T (2*T) := by
+      (recordRatio-e)*(Zeta23.Ncount T (2*T):ℝ)≤ Zeta23.N0star T (2*T) := by
   apply am_distinct_dyadic_of_lossless_defect
   simpa only [zetaZeroConfig_N,zetaZeroConfig_N0s] using
     am_lossless_defect_of_nine_point_certificate zetaZeroConfig paperInputs_zeta
@@ -1331,7 +1331,7 @@ theorem am_distinct_cumulative_of_nine_point_certificate
       if (a:ℕ)<(b:ℕ) then W.a a b else 0)≤16)
     (hcert : ∀ g : Fin 8→ℝ,(∀ r,4/5≤ g r)→ localReward≤ Fw W g) :
     ∀ e>0,∃ T₀ : ℝ,∀ T≥ T₀,
-      (recordRatio-e)*(Ncount 0 T:ℝ)≤ N0star 0 T := by
+      (recordRatio-e)*(Zeta23.Ncount 0 T:ℝ)≤ Zeta23.N0star 0 T := by
   apply am_distinct_cumulative_of_lossless_defect
   simpa only [zetaZeroConfig_N,zetaZeroConfig_N0s] using
     am_lossless_defect_of_nine_point_certificate zetaZeroConfig paperInputs_zeta

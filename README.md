@@ -18,7 +18,7 @@ zero-proportion theorem is still being assembled and checked.
 
 | Component | Verification status |
 |---|---|
-| Actual simple-to-distinct counting bridge | Full module compiled; only permitted axioms |
+| Actual simple-to-distinct counting bridge and exact trusted website count identities | Full modules compiled; only permitted axioms |
 | Integer and real Floyd-closure soundness | Full module compiled; only permitted axioms |
 | Sparse integer dual and real box correction | Full module compiled; only permitted axioms |
 | Packed finite-data snapshot | Orbit, reflection, sizes and 49 fixed points compiled; complete dual and geometric coverage checks pending |
@@ -29,7 +29,10 @@ zero-proportion theorem is still being assembled and checked.
 | Three final website declarations and independent nanoda replay | Pending |
 
 Snapshot results and their scope are recorded in `verification/` and `docs/`.
-A passed data or helper check does not establish the complete headline theorem.
+The original Lean numeric transcription had two incorrect column entries; that
+uncompleted run was terminated, and the generator now derives and checks the
+original column order. The saved JSON certificate is unchanged. A passed data
+or helper check does not establish the complete headline theorem.
 
 ## Fixed verification environment
 
@@ -53,7 +56,7 @@ pass Lean and independent nanoda verification. See [the submission requirements]
 
 ```powershell
 lake --no-cache exe cache get
-lake --no-cache build +RecordProportion.AnalyticBridge:olean +RecordProportion.CountBridge:olean +RecordProportion.FloydSoundness:olean +RecordProportion.SparseDualSoundness:olean
+lake --no-cache build +RecordProportion.AnalyticBridge:olean +RecordProportion.CountBridge:olean +RecordProportion.FloydSoundness:olean +RecordProportion.SparseDualSoundness:olean +RecordProportion.TrustedCounts:olean
 python -B -X utf8 scripts/am_expanded_nine_point_certificate.py --check
 ```
 

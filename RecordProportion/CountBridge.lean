@@ -23,22 +23,22 @@ theorem trusted_zerosIn_finite (T₁ T₂ : ℝ) :
 
 /-- Every simple critical-line zero is a distinct critical-line zero. -/
 theorem n0simple_le_n0star (T₁ T₂ : ℝ) :
-    N0simple T₁ T₂ ≤ N0star T₁ T₂ := by
-  unfold N0simple N0star
+    Zeta23.N0simple T₁ T₂ ≤ Zeta23.N0star T₁ T₂ := by
+  unfold Zeta23.N0simple Zeta23.N0star
   exact Set.ncard_le_ncard Set.inter_subset_left
     ((trusted_zerosIn_finite T₁ T₂).subset Set.inter_subset_left)
 
 /-- The same actual count inclusion after the cast used by the challenge. -/
 theorem n0simple_le_n0star_real (T₁ T₂ : ℝ) :
-    (N0simple T₁ T₂ : ℝ) ≤ (N0star T₁ T₂ : ℝ) := by
+    (Zeta23.N0simple T₁ T₂ : ℝ) ≤ (Zeta23.N0star T₁ T₂ : ℝ) := by
   exact_mod_cast n0simple_le_n0star T₁ T₂
 
 /-- Preserve epsilon and threshold quantifiers on any fixed window functions. -/
 theorem asymptotic_simple_to_distinct {κ : ℝ} (a b : ℝ → ℝ)
     (h : ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
-      (κ - ε) * (Ncount (a T) (b T) : ℝ) ≤ (N0simple (a T) (b T) : ℝ)) :
+      (κ - ε) * (Zeta23.Ncount (a T) (b T) : ℝ) ≤ (Zeta23.N0simple (a T) (b T) : ℝ)) :
     ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
-      (κ - ε) * (Ncount (a T) (b T) : ℝ) ≤ (N0star (a T) (b T) : ℝ) := by
+      (κ - ε) * (Zeta23.Ncount (a T) (b T) : ℝ) ≤ (Zeta23.N0star (a T) (b T) : ℝ) := by
   intro ε hε
   obtain ⟨T₀, hT₀⟩ := h ε hε
   refine ⟨T₀, ?_⟩
@@ -48,17 +48,17 @@ theorem asymptotic_simple_to_distinct {κ : ℝ} (a b : ℝ → ℝ)
 /-- A proved simple bound yields exactly the site's dyadic counting statement. -/
 theorem dyadic_simple_to_distinct {κ : ℝ}
     (h : ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
-      (κ - ε) * (Ncount T (2 * T) : ℝ) ≤ (N0simple T (2 * T) : ℝ)) :
+      (κ - ε) * (Zeta23.Ncount T (2 * T) : ℝ) ≤ (Zeta23.N0simple T (2 * T) : ℝ)) :
     ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
-      (κ - ε) * (Ncount T (2 * T) : ℝ) ≤ (N0star T (2 * T) : ℝ) := by
+      (κ - ε) * (Zeta23.Ncount T (2 * T) : ℝ) ≤ (Zeta23.N0star T (2 * T) : ℝ) := by
   exact asymptotic_simple_to_distinct (fun T => T) (fun T => 2 * T) h
 
 /-- A proved simple bound yields exactly the site's cumulative statement. -/
 theorem cumulative_simple_to_distinct {κ : ℝ}
     (h : ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
-      (κ - ε) * (Ncount 0 T : ℝ) ≤ (N0simple 0 T : ℝ)) :
+      (κ - ε) * (Zeta23.Ncount 0 T : ℝ) ≤ (Zeta23.N0simple 0 T : ℝ)) :
     ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
-      (κ - ε) * (Ncount 0 T : ℝ) ≤ (N0star 0 T : ℝ) := by
+      (κ - ε) * (Zeta23.Ncount 0 T : ℝ) ≤ (Zeta23.N0star 0 T : ℝ) := by
   exact asymptotic_simple_to_distinct (fun _ => 0) (fun T => T) h
 
 end RHWeilRecord

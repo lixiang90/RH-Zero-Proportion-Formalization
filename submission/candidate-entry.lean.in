@@ -4,6 +4,7 @@ complete compiled helper chain. Its existence does not establish a record. -/
 import ChallengeDeps.CandidateSpec
 import RecordProportion.AnalyticBridge
 import RecordProportion.FiniteCertificate
+import RecordProportion.TrustedCounts
 
 open scoped BigOperators
 
@@ -22,14 +23,16 @@ private theorem pressure_identity : W9.B = RHWeilRecord.gapPressure := by
 theorem dyadic :
     ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
       (candidateKappa - ε) * (Ncount T (2 * T) : ℝ) ≤ N0star T (2 * T) := by
-  simpa only [candidateKappa, RHWeilRecord.recordRatio] using
+  simpa only [candidateKappa, RHWeilRecord.recordRatio,
+    RHWeilRecord.TrustedCounts.count_eq, RHWeilRecord.TrustedCounts.distinct_eq] using
     RHWeilRecord.am_distinct_dyadic_of_nine_point_certificate
       W9 W9_adm pressure_identity W9_upper_pairmass local_certificate
 
 theorem cumulative :
     ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
       (candidateKappa - ε) * (Ncount 0 T : ℝ) ≤ N0star 0 T := by
-  simpa only [candidateKappa, RHWeilRecord.recordRatio] using
+  simpa only [candidateKappa, RHWeilRecord.recordRatio,
+    RHWeilRecord.TrustedCounts.count_eq, RHWeilRecord.TrustedCounts.distinct_eq] using
     RHWeilRecord.am_distinct_cumulative_of_nine_point_certificate
       W9 W9_adm pressure_identity W9_upper_pairmass local_certificate
 end RHWeilSubmission

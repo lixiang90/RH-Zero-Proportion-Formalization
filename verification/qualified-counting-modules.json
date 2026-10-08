@@ -1,0 +1,173 @@
+{
+  "compiler": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "modules": [
+    "RecordProportion.AnalyticBridge",
+    "RecordProportion.CountBridge"
+  ],
+  "source_sha256": {
+    "RecordProportion.AnalyticBridge": "850a1479aa4e6851fa5c19f30d6b0de26a73b7a5e05cd282f0289f54159ffcae",
+    "RecordProportion.ImportedAM": "7a2fb08c598a32b05f041b51a762c3dc789ce36e0a3ff871e9f3776a69cd64f8",
+    "RecordProportion.Majorant": "161f95eae8798b7ceb1658ccf1f04469573af0475930a24ff664a4035a3f770d",
+    "RecordProportion.CountBridge": "64bdb29fa6ac6bd9651e1814564a0fc5e8ea81f53294b8ec0278595c3a5539d6"
+  },
+  "source_unchanged_during_check": true,
+  "build_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "--no-cache",
+    "build",
+    "+RecordProportion.AnalyticBridge:olean",
+    "+RecordProportion.CountBridge:olean"
+  ],
+  "build_exit_code": 0,
+  "audit_command": [
+    "C:\\Users\\A\\.elan\\bin\\lake.EXE",
+    "env",
+    "lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\verification\\qualified-counting-modules-axioms.lean"
+  ],
+  "audit_exit_code": 0,
+  "observed_axioms": {
+    "RHWeilRecord.eventually_am_all_entries_close": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.sparse_fintype_energy_lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.eventually_am_retained_lossless_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_lossless_defect_of_nine_point_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_distinct_dyadic_of_nine_point_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_distinct_cumulative_of_nine_point_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.sinc_pi_near": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_near_weight_ge_reward": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.eventually_am_separated_offdiag_le_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.finite_count_transport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.c260_finite_count_transport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.error_div_small": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.asymptotic_count_transport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.asymptotic_mono_counts": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.eigenvalues_le_of_real_form": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.offdiag_le_defect_of_real_form": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.near_pair_defect_gain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.defect_gain_of_partition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_distinct_dyadic_of_lossless_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.am_distinct_cumulative_of_lossless_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.Matching.exists_maximal_matching": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.pair_defect_from_am_kernel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.defect_gain_from_separated_subsets": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.window_pair_weights_le_energy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.sparse_window_lossless_reward": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RHWeilRecord.sparse_frame_kernel_transfer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_passed": true,
+  "module_check_passed": true,
+  "elapsed_seconds": 63.64,
+  "scope": "Complete analytic and simple-to-distinct counting modules with names explicitly qualified for the trusted website counting definitions; the numerical W9 premise remains separate.",
+  "log": "tmp/verification/qualified-counting-modules.log",
+  "whole_submission_compiled": false,
+  "submitted": false
+}

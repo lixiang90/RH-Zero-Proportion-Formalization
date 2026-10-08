@@ -1,0 +1,197 @@
+Captured compiler diagnostics; trailing whitespace removed for version control.
+Raw captured SHA256: 5d8b37bf50c94b0766e656d50c86946645bd127a159e9629f235cb5e07de64d2
+
+
+BUNDLE COMPILE
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:2085:30: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:2169:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:2948:55: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:6422:19: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:6871:15: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:7975:5: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:8456:5: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:9413:1: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:9430:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17544:21: error: Ambiguous term
+  N0simple
+Possible interpretations:
+  ↑(_root_.N0simple T (2 * T)) : ℝ
+
+  ↑(Zeta23.N0simple T (2 * T)) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17545:23: error: Ambiguous term
+  Ncount
+Possible interpretations:
+  ↑(_root_.Ncount T (2 * T)) : ℝ
+
+  ↑(Zeta23.Ncount T (2 * T)) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17546:13: error: Ambiguous term
+  Ncount
+Possible interpretations:
+  ↑(_root_.Ncount T (2 * T)) : ℝ
+
+  ↑(Zeta23.Ncount T (2 * T)) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17549:27: error: Ambiguous term
+  Ncount
+Possible interpretations:
+  ↑(_root_.Ncount T (2 * T)) : ℝ
+
+  ↑(Zeta23.Ncount T (2 * T)) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17549:51: error: Ambiguous term
+  N0star
+Possible interpretations:
+  _root_.N0star T (2 * T) : ℕ
+
+  Zeta23.N0star T (2 * T) : ℕ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17557:26: error: mod_cast has type
+  Zeta23.N0simple T (2 * T) ≤ Zeta23.N0star T (2 * T)
+but is expected to have type
+  ↑(Zeta23.N0simple T (2 * T)) ≤ ?m.130
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17560:21: error: Ambiguous term
+  N0simple
+Possible interpretations:
+  ↑(_root_.N0simple T (2 * T)) : ℝ
+
+  ↑(Zeta23.N0simple T (2 * T)) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17561:23: error: Ambiguous term
+  Ncount
+Possible interpretations:
+  ↑(_root_.Ncount T (2 * T)) : ℝ
+
+  ↑(Zeta23.Ncount T (2 * T)) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17562:13: error: Ambiguous term
+  Ncount
+Possible interpretations:
+  ↑(_root_.Ncount T (2 * T)) : ℝ
+
+  ↑(Zeta23.Ncount T (2 * T)) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17565:27: error: Ambiguous term
+  Ncount
+Possible interpretations:
+  ↑(_root_.Ncount 0 T) : ℝ
+
+  ↑(Zeta23.Ncount 0 T) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:17565:45: error: Ambiguous term
+  N0star
+Possible interpretations:
+  _root_.N0star 0 T : ℕ
+
+  Zeta23.N0star 0 T : ℕ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:18180:58: warning: Variable name `H` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _H
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:18372:23: error: Ambiguous term
+  Ncount
+Possible interpretations:
+  ↑(_root_.Ncount T (2 * T)) : ℝ
+
+  ↑(Zeta23.Ncount T (2 * T)) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:18372:42: error: Ambiguous term
+  N0star
+Possible interpretations:
+  _root_.N0star T (2 * T) : ℕ
+
+  Zeta23.N0star T (2 * T) : ℕ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:18383:23: error: Ambiguous term
+  Ncount
+Possible interpretations:
+  ↑(_root_.Ncount 0 T) : ℝ
+
+  ↑(Zeta23.Ncount 0 T) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\verification\analytic_single_file_BundleAudit.lean:18383:38: error: Ambiguous term
+  N0star
+Possible interpretations:
+  _root_.N0star 0 T : ℕ
+
+  Zeta23.N0star 0 T : ℕ
+'RHWeilRecord.eventually_am_all_entries_close' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.sparse_fintype_energy_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.eventually_am_retained_lossless_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.am_lossless_defect_of_nine_point_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.am_distinct_dyadic_of_nine_point_certificate' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RHWeilRecord.am_distinct_cumulative_of_nine_point_certificate' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RHWeilRecord.sinc_pi_near' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.am_near_weight_ge_reward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.eventually_am_separated_offdiag_le_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.finite_count_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.c260_finite_count_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.error_div_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.asymptotic_count_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.asymptotic_mono_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.eigenvalues_le_of_real_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.offdiag_le_defect_of_real_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.near_pair_defect_gain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.defect_gain_of_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.am_distinct_dyadic_of_lossless_defect' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHWeilRecord.am_distinct_cumulative_of_lossless_defect' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RHWeilRecord.Matching.exists_maximal_matching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.pair_defect_from_am_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.defect_gain_from_separated_subsets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.window_pair_weights_le_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.sparse_window_lossless_reward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeilRecord.sparse_frame_kernel_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
