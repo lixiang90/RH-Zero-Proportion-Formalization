@@ -1,0 +1,787 @@
+{
+  "status": "PREPARED SOURCE ONLY; NOT COMPILED; no memory/time/axiom claim",
+  "input_public_wrapper_output": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\publication-relocated-bounded8-20261010\\Solution.memory-prepared.lean",
+  "input_bytes": 1993809,
+  "input_sha256": "f40d0cb3566d4e71a6bb624a4d4375ca3ade977d3850e14e134a8a850f4abd50",
+  "output_name": "Solution.global-sync-except-am8.lean",
+  "output_bytes": 1993837,
+  "output_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+  "size_limit_bytes": 2000000,
+  "remaining_bytes": 6163,
+  "delta_bytes": 28,
+  "change": {
+    "kind": "one insertion; no replacements",
+    "byte_offset_zero_based": 15412,
+    "line_original": 233,
+    "inserted_ascii": "set_option Elab.async false\n"
+  },
+  "guards": {
+    "no_global_async_directive_exists_in_original": true,
+    "removing_insertion_restores_all_f40_bytes": true,
+    "all_original_sections_options_numeric_inputs_and_proof_text_unchanged": true,
+    "AM_true_and_all_162_waits_preserved": true,
+    "all_Data_Point_Geometry_false_options_preserved": true,
+    "fresh_output": true,
+    "no_Lean_Linux_runtime_or_cache_operations": true,
+    "no_public_edits": true,
+    "recipe_transform_independently_reproduces_exact_bytes": true
+  },
+  "scope_conclusion": "Without a CLI override, original suffix module11 inherits command-line default true after module10 closes. Original AM false is scoped. Insertion forces base false while AM module0 locally re-enables true and retains bounded8 waits.",
+  "original_scope_ledger": {
+    "method": "Conservative Windows source-only lexical scope ledger: nested comments/strings masked, qualified components checked. Not a Lean parser or compile result.",
+    "initial_cli_async_assumption": true,
+    "option_directives": [
+      {
+        "line": 293,
+        "byte": 20915,
+        "text": "set_option Elab.async true",
+        "scope": [
+          "RHWeilBundleModule_0"
+        ],
+        "base_scope": false,
+        "previous_async": true,
+        "new_async": true
+      },
+      {
+        "line": 16249,
+        "byte": 1306082,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_0"
+        ],
+        "base_scope": false,
+        "previous_async": true,
+        "new_async": false
+      },
+      {
+        "line": 18625,
+        "byte": 1419917,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_6",
+          "RHWeil",
+          "RecordSubmission",
+          "FiniteCertificateData"
+        ],
+        "base_scope": false,
+        "previous_async": true,
+        "new_async": false
+      },
+      {
+        "line": 21692,
+        "byte": 1848681,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_9",
+          "RHWeil",
+          "RecordSubmission",
+          "PointSoundness"
+        ],
+        "base_scope": false,
+        "previous_async": true,
+        "new_async": false
+      },
+      {
+        "line": 21802,
+        "byte": 1854366,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_9",
+          "<anonymous>",
+          "CheckpointFrameReflection"
+        ],
+        "base_scope": false,
+        "previous_async": true,
+        "new_async": false
+      },
+      {
+        "line": 21905,
+        "byte": 1859098,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_9",
+          "<anonymous>",
+          "RHWeil",
+          "RecordSubmission",
+          "PointSoundness"
+        ],
+        "base_scope": false,
+        "previous_async": true,
+        "new_async": false
+      },
+      {
+        "line": 22252,
+        "byte": 1880883,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_10",
+          "<anonymous>",
+          "RHWeilRecord",
+          "GeometryCoverage"
+        ],
+        "base_scope": false,
+        "previous_async": true,
+        "new_async": false
+      }
+    ],
+    "module_boundaries": [
+      {
+        "line": 233,
+        "byte": 15412,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_0",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 16250,
+        "byte": 1306110,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_0",
+        "effective_async_before_exit": false,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 16251,
+        "byte": 1306135,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_1",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 17270,
+        "byte": 1356813,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_1",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 17271,
+        "byte": 1356838,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_2",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 18419,
+        "byte": 1410770,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_2",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 18420,
+        "byte": 1410795,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_3",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 18518,
+        "byte": 1414994,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_3",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 18519,
+        "byte": 1415019,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_4",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 18565,
+        "byte": 1417323,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_4",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 18566,
+        "byte": 1417348,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_5",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 18619,
+        "byte": 1419716,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_5",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 18620,
+        "byte": 1419741,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_6",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 21455,
+        "byte": 1837134,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_6",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 21456,
+        "byte": 1837159,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_7",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 21534,
+        "byte": 1841048,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_7",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 21535,
+        "byte": 1841073,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_8",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 21685,
+        "byte": 1848462,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_8",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 21686,
+        "byte": 1848487,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_9",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 22245,
+        "byte": 1880658,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_9",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 22246,
+        "byte": 1880683,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_10",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 22572,
+        "byte": 1906212,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_10",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 22573,
+        "byte": 1906238,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_11",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 24152,
+        "byte": 1991221,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_11",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 24153,
+        "byte": 1991247,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_12",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 24162,
+        "byte": 1991656,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_12",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      },
+      {
+        "line": 24163,
+        "byte": 1991682,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_13",
+        "effective_async": true,
+        "depth": 1
+      },
+      {
+        "line": 24203,
+        "byte": 1993783,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_13",
+        "effective_async_before_exit": true,
+        "restored_async": true,
+        "depth": 0
+      }
+    ],
+    "final_base_async": true
+  },
+  "candidate_scope_ledger": {
+    "method": "Conservative Windows source-only lexical scope ledger: nested comments/strings masked, qualified components checked. Not a Lean parser or compile result.",
+    "initial_cli_async_assumption": true,
+    "option_directives": [
+      {
+        "line": 233,
+        "byte": 15412,
+        "text": "set_option Elab.async false",
+        "scope": [],
+        "base_scope": true,
+        "previous_async": true,
+        "new_async": false
+      },
+      {
+        "line": 294,
+        "byte": 20943,
+        "text": "set_option Elab.async true",
+        "scope": [
+          "RHWeilBundleModule_0"
+        ],
+        "base_scope": false,
+        "previous_async": false,
+        "new_async": true
+      },
+      {
+        "line": 16250,
+        "byte": 1306110,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_0"
+        ],
+        "base_scope": false,
+        "previous_async": true,
+        "new_async": false
+      },
+      {
+        "line": 18626,
+        "byte": 1419945,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_6",
+          "RHWeil",
+          "RecordSubmission",
+          "FiniteCertificateData"
+        ],
+        "base_scope": false,
+        "previous_async": false,
+        "new_async": false
+      },
+      {
+        "line": 21693,
+        "byte": 1848709,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_9",
+          "RHWeil",
+          "RecordSubmission",
+          "PointSoundness"
+        ],
+        "base_scope": false,
+        "previous_async": false,
+        "new_async": false
+      },
+      {
+        "line": 21803,
+        "byte": 1854394,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_9",
+          "<anonymous>",
+          "CheckpointFrameReflection"
+        ],
+        "base_scope": false,
+        "previous_async": false,
+        "new_async": false
+      },
+      {
+        "line": 21906,
+        "byte": 1859126,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_9",
+          "<anonymous>",
+          "RHWeil",
+          "RecordSubmission",
+          "PointSoundness"
+        ],
+        "base_scope": false,
+        "previous_async": false,
+        "new_async": false
+      },
+      {
+        "line": 22253,
+        "byte": 1880911,
+        "text": "set_option Elab.async false",
+        "scope": [
+          "RHWeilBundleModule_10",
+          "<anonymous>",
+          "RHWeilRecord",
+          "GeometryCoverage"
+        ],
+        "base_scope": false,
+        "previous_async": false,
+        "new_async": false
+      }
+    ],
+    "module_boundaries": [
+      {
+        "line": 234,
+        "byte": 15440,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_0",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 16251,
+        "byte": 1306138,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_0",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 16252,
+        "byte": 1306163,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_1",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 17271,
+        "byte": 1356841,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_1",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 17272,
+        "byte": 1356866,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_2",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 18420,
+        "byte": 1410798,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_2",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 18421,
+        "byte": 1410823,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_3",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 18519,
+        "byte": 1415022,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_3",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 18520,
+        "byte": 1415047,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_4",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 18566,
+        "byte": 1417351,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_4",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 18567,
+        "byte": 1417376,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_5",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 18620,
+        "byte": 1419744,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_5",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 18621,
+        "byte": 1419769,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_6",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 21456,
+        "byte": 1837162,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_6",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 21457,
+        "byte": 1837187,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_7",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 21535,
+        "byte": 1841076,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_7",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 21536,
+        "byte": 1841101,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_8",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 21686,
+        "byte": 1848490,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_8",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 21687,
+        "byte": 1848515,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_9",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 22246,
+        "byte": 1880686,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_9",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 22247,
+        "byte": 1880711,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_10",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 22573,
+        "byte": 1906240,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_10",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 22574,
+        "byte": 1906266,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_11",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 24153,
+        "byte": 1991249,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_11",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 24154,
+        "byte": 1991275,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_12",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 24163,
+        "byte": 1991684,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_12",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      },
+      {
+        "line": 24164,
+        "byte": 1991710,
+        "kind": "enter",
+        "module": "RHWeilBundleModule_13",
+        "effective_async": false,
+        "depth": 1
+      },
+      {
+        "line": 24204,
+        "byte": 1993811,
+        "kind": "exit",
+        "module": "RHWeilBundleModule_13",
+        "effective_async_before_exit": false,
+        "restored_async": false,
+        "depth": 0
+      }
+    ],
+    "final_base_async": false
+  },
+  "pinned_Lean_Windows_source_evidence": [
+    {
+      "Windows_source": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\CoreM.lean",
+      "sha256": "0e94919972c60e8f2bdc73ecc9845a745c9a3373fce4069b9e27ae52560c0a7a",
+      "lines": [
+        35,
+        46
+      ],
+      "excerpt": "register_builtin_option Elab.async : Bool := {\n  defValue := false\n  descr := \"perform elaboration using multiple threads where possible\\\n    \\n\\\n    \\nThis option defaults to `false` but (when not explicitly set) is overridden to `true` in \\\n      the Lean language server and cmdline. \\\n      Metaprogramming users driving elaboration directly via e.g. \\\n      `Lean.Elab.Command.elabCommandTopLevel` can opt into asynchronous elaboration by setting \\\n      this option but then are responsible for processing messages and other data not only in the \\\n      resulting command state but also from async tasks in `Lean.Command.Context.snap?` and \\\n      `Lean.Command.State.snapshotTasks`.\"\n}"
+    },
+    {
+      "Windows_source": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\Frontend.lean",
+      "sha256": "e3e9037222c00308edc4fed589da83a80620bf5b35108779564fc485d8c17774",
+      "lines": [
+        287,
+        292
+      ],
+      "excerpt": "  let inputCtx := Parser.mkInputContext input fileName\n  -- default `cmdlineSnapshots` to true (not done as default value for API back-compat reasons)\n  -- except when full-snapshotting so that enough information for resumption is available\n  let opts := Lean.internal.cmdlineSnapshots.setIfNotSet opts incrSaveFileName?.isNone\n  -- default to async elaboration; see also `Elab.async` docs\n  let opts := Elab.async.setIfNotSet opts true"
+    },
+    {
+      "Windows_source": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\Command\\Scope.lean",
+      "sha256": "1e3801241c52ab88e29492c639e04ce4e178b5d3131b89b230021dd51191cf61",
+      "lines": [
+        14,
+        36
+      ],
+      "excerpt": "/--\nA `Scope` records the part of the `CommandElabM` state that respects scoping,\nsuch as the data for `universe`, `open`, and `variable` declarations, the current namespace,\nand currently enabled options.\nThe `CommandElabM` state contains a stack of scopes, and only the top `Scope`\non the stack is read from or modified. There is always at least one `Scope` on the stack,\neven outside any `section` or `namespace`, and each new pushed `Scope`\nstarts as a modified copy of the previous top scope.\n-/\nstructure Scope where\n  /--\n  The component of the `namespace` or `section` that this scope is associated to.\n  For example, `section a.b.c` and `namespace a.b.c` each create three scopes with headers\n  named `a`, `b`, and `c`.\n  This is used for checking the `end` command. The \"base scope\" has `\"\"` as its header.\n  -/\n  header        : String\n  /--\n  The current state of all set options at this point in the scope. Note that this is the\n  full current set of options and does *not* simply contain the options set\n  while this scope has been active.\n  -/\n  opts          : Options := {}"
+    },
+    {
+      "Windows_source": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\BuiltinCommand.lean",
+      "sha256": "8e609af80c82dda4e676a07563096a8787f2f37e02fd834bad2394eef1399829",
+      "lines": [
+        45,
+        57
+      ],
+      "excerpt": "private def addScope (isNewNamespace : Bool) (header : String) (newNamespace : Name)\n    (isNoncomputable isPublic isMeta : Bool := false) (attrs : List (TSyntax ``Parser.Term.attrInstance) := []) :\n    CommandElabM Unit := do\n  modify fun s => { s with\n    env    := s.env.registerNamespace newNamespace,\n    scopes := { s.scopes.head! with\n      header := header, currNamespace := newNamespace\n      isNoncomputable := s.scopes.head!.isNoncomputable || isNoncomputable\n      isPublic := s.scopes.head!.isPublic || isPublic\n      isMeta := s.scopes.head!.isMeta || isMeta\n      attrs := s.scopes.head!.attrs ++ attrs\n    } :: s.scopes\n  }"
+    },
+    {
+      "Windows_source": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\BuiltinCommand.lean",
+      "sha256": "8e609af80c82dda4e676a07563096a8787f2f37e02fd834bad2394eef1399829",
+      "lines": [
+        241,
+        270
+      ],
+      "excerpt": "@[builtin_command_elab \u00abend\u00bb] def elabEnd : CommandElab := fun stx => do\n  let `(end $[$header? $[.%$trailingDotTk?$_]?]?) := stx\n    | throwUnsupportedSyntax\n  let header? := header?.map (\u00b7.getId)\n  let danglingDot := trailingDotTk?.join.isSome\n  let endSize : Nat := match header? with\n    | none   => 1\n    | some n => n.getNumParts\n  let scopes \u2190 getScopes\n  let numScopes := scopes.length\n  if numScopes == 1 then\n    throwNoScope\n  match header? with\n  | none        =>\n    addCompletionInfo <| .endSection stx none false <| scopes.map (\u00b7.header)\n    if let some name := innermostScopeName? scopes then\n      throwMissingName name\n  | some header =>\n    if endSize >= numScopes then\n      throwTooManyScopeComponents header scopes\n    else\n      addCompletionInfo <| .endSection stx header danglingDot <| scopes.map (\u00b7.header)\n      let scopesName := nameOfScopes scopes endSize\n      if scopesName != header then\n        if scopesName == .anonymous then\n          throwUnnecessaryScopeName header\n        else\n          throwScopeNameMismatch header scopes endSize\n  modify fun s => {s with scopes := s.scopes.drop endSize }\n  popScopes endSize"
+    },
+    {
+      "Windows_source": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\BuiltinCommand.lean",
+      "sha256": "8e609af80c82dda4e676a07563096a8787f2f37e02fd834bad2394eef1399829",
+      "lines": [
+        516,
+        520
+      ],
+      "excerpt": "@[builtin_command_elab \u00abset_option\u00bb] def elabSetOption : CommandElab := fun stx => do\n  let (options, decl) \u2190 Elab.elabSetOption stx[1] stx[3]\n  withRef stx[1] <| Elab.checkDeprecatedOption (stx[1].getId.eraseMacroScopes) decl\n  modify fun s => { s with maxRecDepth := maxRecDepth.get options }\n  modifyScope fun scope => { scope with opts := options }"
+    }
+  ],
+  "preparation_failures_preserved": [
+    {
+      "step": "Initial read-only stdout",
+      "error": "UnicodeEncodeError gbk while printing copyright name",
+      "repair": "ensure_ascii=True; no source changes"
+    },
+    {
+      "step": "First source-generation attempt before output creation",
+      "error": "AssertionError from incorrect 27-byte estimate",
+      "actual_ascii_insertion_bytes": 28,
+      "repair": "Exact length verified 28 and candidate total1993837; no output existed or was overwritten"
+    }
+  ],
+  "reproduction_script_sha256": "fe54ab22ff8a43da2e0d5fbac2646b50039edba6abe6d8dd13359598669f45e0"
+}

@@ -1,10 +1,12 @@
 # Linux memory and time evidence
 
-These records concern proof-checking resources for the fixed result
-`66812491/99194740`. They do not change the numeric certificate or mathematical
-hypotheses. The checked original public submission remains `d52f013f...`;
-the selected replacement source `f40d0cb3...` has no complete whole-file result
-yet and has not obtained website acceptance.
+These records concern resources for the fixed result `66812491/99194740`.
+The f40 full-file trial was intentionally cut off after the local memory gate
+failed; no complete proof or downstream check was obtained. Its
+[completed archive](whole/r5-completed/README.md) retains the measurements.
+The [global-synchronous follow-up](whole/r6-source-only/README.md) is under
+fresh full-file verification. The original checked d52 public Solution remains
+unchanged, and no website acceptance is claimed.
 
 | Checked component | Observed result | Limit |
 |---|---|---|

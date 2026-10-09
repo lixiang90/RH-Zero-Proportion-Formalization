@@ -1,0 +1,59 @@
+{
+  "status": "PURE_PYTHON_GUARD_FIXTURES_PASS",
+  "fixture_root": "/tmp/rh-proportion-memory-20261010/whole-guard-fixture-20261010-r1",
+  "driver_sha256": "db28df608ce9dac67b5f94798beaa1ca9c35f28e92f49e1068cd6f30796bfd79",
+  "tests": [
+    {
+      "case": "candidate-source-byte-mismatch",
+      "rejected_before_proof_start": true,
+      "reason": "/tmp/rh-proportion-memory-20261010/whole-guard-fixture-20261010-r1/source/Solution/Candidate.lean"
+    },
+    {
+      "case": "pinned-tool-source-byte-mismatch",
+      "rejected_before_proof_start": true,
+      "reason": "('Pinned tool source changed', 'tool-source/Export.lean')"
+    },
+    {
+      "case": "nano-config-byte-mismatch",
+      "rejected_before_proof_start": true,
+      "reason": "('Pinned tool config bytes changed', '/tmp/rh-proportion-memory-20261010/whole-guard-fixture-20261010-r1/tools/nanoda-official-default-config.json')"
+    },
+    {
+      "case": "nano-config-semantic-mismatch-even-after-new-byte-binding",
+      "rejected_before_proof_start": true,
+      "reason": "Official Nano configuration changed"
+    },
+    {
+      "case": "current-contract-artifact-family-mismatch-before-compile",
+      "rejected_before_proof_start": true,
+      "reason": "Current contract artifact family changed after compile"
+    },
+    {
+      "case": "fresh-solution-artifact-family-mismatch-before-deps",
+      "rejected_before_proof_start": true,
+      "reason": "Fresh Solution/contract artifact family changed after compile"
+    },
+    {
+      "case": "tool-artifact-family-mismatch-before-export",
+      "rejected_before_proof_start": true,
+      "reason": "Pinned tool artifact family changed after compile"
+    },
+    {
+      "case": "export-attribution-mismatch-before-core",
+      "rejected_before_proof_start": true,
+      "reason": "Export changed after generation"
+    },
+    {
+      "case": "previous-boot-clock-reuse",
+      "rejected_before_proof_start": true,
+      "reason": "Different Linux boot: refuse monotonic-clock reuse"
+    },
+    {
+      "case": "future-monotonic-clock-reuse",
+      "rejected_before_proof_start": true,
+      "reason": "Monotonic-clock reuse invalid"
+    }
+  ],
+  "lean_nano_or_cache_evictions_executed": false,
+  "synthetic_files_are_proofs": false
+}

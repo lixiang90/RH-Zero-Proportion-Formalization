@@ -1,0 +1,409 @@
+{
+  "observed_unix": 1791587444.1796548,
+  "run_id": "whole-f40-compile-r5",
+  "processes": [
+    {
+      "pid": 15,
+      "ownership_verified": true,
+      "exe": "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "command": "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean -j4 --tstack=32768 -R /tmp/rh-proportion-memory-20261010/whole-native-20261010-r5/source -o /tmp/rh-proportion-memory-20261010/whole-native-20261010-r5/lib/Solution/Candidate.olean /tmp/rh-proportion-memory-20261010/whole-native-20261010-r5/source/Solution/Candidate.lean ",
+      "state": "S",
+      "main_wchan": "futex_wait_queue_me",
+      "major_faults": 1218411,
+      "minor_faults": 14328901,
+      "user_ticks": 246230,
+      "system_ticks": 8524,
+      "status": {
+        "State": "S (sleeping)",
+        "VmRSS": "8109336 kB",
+        "VmHWM": "8109528 kB",
+        "Threads": "42"
+      },
+      "io": "rchar: 6859277\nwchar: 13278\nsyscr: 55192\nsyscw: 25\nread_bytes: 143847239680\nwrite_bytes: 110592\ncancelled_write_bytes: 0\n",
+      "tasks": [
+        {
+          "tid": "142",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 11,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "143",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 6,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "144",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 6,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "145",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 7,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "146",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 16,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "147",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 8,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "148",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 9,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "149",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 7,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "15",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 920,
+          "minor_faults": 1778,
+          "user_ticks": 3,
+          "system_ticks": 0
+        },
+        {
+          "tid": "150",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 9,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "151",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 13,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "152",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 6,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "153",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 10,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "154",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 10,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "155",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 12,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "156",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 9,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "157",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 12,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "158",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 6,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "159",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 15,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "16",
+          "state": "S",
+          "wchan": "io_sq_thread",
+          "major_faults": 0,
+          "minor_faults": 0,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "160",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 8,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "161",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 9,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "162",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 10,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "163",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 6,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "164",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 8,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "165",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 0,
+          "minor_faults": 8,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "166",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 208,
+          "minor_faults": 44231,
+          "user_ticks": 4277,
+          "system_ticks": 58
+        },
+        {
+          "tid": "167",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 87,
+          "minor_faults": 16437,
+          "user_ticks": 562,
+          "system_ticks": 20
+        },
+        {
+          "tid": "17",
+          "state": "S",
+          "wchan": "0",
+          "major_faults": 0,
+          "minor_faults": 5,
+          "user_ticks": 0,
+          "system_ticks": 0
+        },
+        {
+          "tid": "18",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 19,
+          "minor_faults": 241,
+          "user_ticks": 14,
+          "system_ticks": 30
+        },
+        {
+          "tid": "19",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 115934,
+          "minor_faults": 11204107,
+          "user_ticks": 172866,
+          "system_ticks": 1697
+        },
+        {
+          "tid": "23",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 529,
+          "minor_faults": 229415,
+          "user_ticks": 6686,
+          "system_ticks": 83
+        },
+        {
+          "tid": "24",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 1100,
+          "minor_faults": 197181,
+          "user_ticks": 6681,
+          "system_ticks": 136
+        },
+        {
+          "tid": "25",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 401,
+          "minor_faults": 189000,
+          "user_ticks": 6526,
+          "system_ticks": 127
+        },
+        {
+          "tid": "26",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 1274,
+          "minor_faults": 408096,
+          "user_ticks": 13473,
+          "system_ticks": 128
+        },
+        {
+          "tid": "27",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 519,
+          "minor_faults": 223368,
+          "user_ticks": 6073,
+          "system_ticks": 91
+        },
+        {
+          "tid": "31",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 244,
+          "minor_faults": 108906,
+          "user_ticks": 2663,
+          "system_ticks": 62
+        },
+        {
+          "tid": "32",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 805,
+          "minor_faults": 586890,
+          "user_ticks": 8917,
+          "system_ticks": 139
+        },
+        {
+          "tid": "36",
+          "state": "D",
+          "wchan": "wait_on_page_bit_common",
+          "major_faults": 1052681,
+          "minor_faults": 241902,
+          "user_ticks": 3193,
+          "system_ticks": 5621
+        },
+        {
+          "tid": "37",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 42961,
+          "minor_faults": 399605,
+          "user_ticks": 4901,
+          "system_ticks": 288
+        },
+        {
+          "tid": "38",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 497,
+          "minor_faults": 176692,
+          "user_ticks": 5234,
+          "system_ticks": 38
+        },
+        {
+          "tid": "39",
+          "state": "S",
+          "wchan": "futex_wait_queue_me",
+          "major_faults": 245,
+          "minor_faults": 300826,
+          "user_ticks": 4088,
+          "system_ticks": 48
+        }
+      ]
+    }
+  ],
+  "owned_solution_output_file_metadata": [],
+  "artifact_contents_read": false,
+  "dependency_cache_read": false,
+  "tracing_or_signals_used": false
+}

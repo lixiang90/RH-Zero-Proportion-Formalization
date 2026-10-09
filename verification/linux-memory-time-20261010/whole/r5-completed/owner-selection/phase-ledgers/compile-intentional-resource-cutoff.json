@@ -1,0 +1,26 @@
+{
+  "classification": "INTENTIONAL_RESOURCE_CUTOFF_BY_ROOT_ALLOCATION",
+  "observed_unix": 1791587658.426049,
+  "run_id": "whole-f40-compile-r5",
+  "resource_counters_before": {
+    "memory.failcnt": "242",
+    "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+    "memory.usage_in_bytes": "8589877248",
+    "memory.max_usage_in_bytes": "8589938688"
+  },
+  "targets": [
+    {
+      "pid": 15,
+      "exe": "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "command": "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean -j4 --tstack=32768 -R /tmp/rh-proportion-memory-20261010/whole-native-20261010-r5/source -o /tmp/rh-proportion-memory-20261010/whole-native-20261010-r5/lib/Solution/Candidate.olean /tmp/rh-proportion-memory-20261010/whole-native-20261010-r5/source/Solution/Candidate.lean ",
+      "ownership_verified": true
+    }
+  ],
+  "signal": "SIGTERM only to verified owned Lean; worker and harness remain alive",
+  "reason": "Root revised allocation after resource gate failure and persistent read-page pressure. Not a Lean mathematical rejection, an observed OOM, or the external timeout guard.",
+  "source_sha256": "f40d0cb3566d4e71a6bb624a4d4375ca3ade977d3850e14e134a8a850f4abd50",
+  "root_authorization": "ROOT_GO_20261010_INTENTIONAL_RESOURCE_CUTOFF_THEN_R6",
+  "signals_sent": [
+    15
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "scope": "Independent Windows file-only byte checks; no Lean parser/kernel/axiom result",
+  "status": "PASS",
+  "all_original_bytes_reconstructed": true,
+  "recipe_transform_exact": true,
+  "numeric_token_sequence_identical": true,
+  "all14_modules_byte_identical": [
+    {
+      "module": 0,
+      "original_bytes": [
+        15412,
+        1306135
+      ],
+      "candidate_bytes": [
+        15440,
+        1306163
+      ],
+      "exact_same_bytes": 1290723,
+      "sha256": "b6cba93e9817ff99dc6e75c6cb0132326b77eb03ed5b7fd77f047393a4e1dca1"
+    },
+    {
+      "module": 1,
+      "original_bytes": [
+        1306135,
+        1356838
+      ],
+      "candidate_bytes": [
+        1306163,
+        1356866
+      ],
+      "exact_same_bytes": 50703,
+      "sha256": "e73aaaf3b1b0872b4788543c1f899ffd56469a74f7858eee07d821ba69183e62"
+    },
+    {
+      "module": 2,
+      "original_bytes": [
+        1356838,
+        1410795
+      ],
+      "candidate_bytes": [
+        1356866,
+        1410823
+      ],
+      "exact_same_bytes": 53957,
+      "sha256": "ec2edf72136d22acbdd7f5f3ad7edfe7ab4e937f5e2be4040f22c474113920c8"
+    },
+    {
+      "module": 3,
+      "original_bytes": [
+        1410795,
+        1415019
+      ],
+      "candidate_bytes": [
+        1410823,
+        1415047
+      ],
+      "exact_same_bytes": 4224,
+      "sha256": "c41b2564decf3c4e4ef0357cb9793d3c1ee84811f894da131fb61f6273a07133"
+    },
+    {
+      "module": 4,
+      "original_bytes": [
+        1415019,
+        1417348
+      ],
+      "candidate_bytes": [
+        1415047,
+        1417376
+      ],
+      "exact_same_bytes": 2329,
+      "sha256": "47d759915af274c9d186d4c9fcfa5652457f11f110d7a2d182eae3664446b63a"
+    },
+    {
+      "module": 5,
+      "original_bytes": [
+        1417348,
+        1419741
+      ],
+      "candidate_bytes": [
+        1417376,
+        1419769
+      ],
+      "exact_same_bytes": 2393,
+      "sha256": "25bc3c57366c4d24e21dc4b838d8077c160710734be07aa4eebef6d4da70b8d9"
+    },
+    {
+      "module": 6,
+      "original_bytes": [
+        1419741,
+        1837159
+      ],
+      "candidate_bytes": [
+        1419769,
+        1837187
+      ],
+      "exact_same_bytes": 417418,
+      "sha256": "3e4f2556e0658e09fda5d28bc4139b41aa8b1acc38bbc1aa0e13992200cfa11f"
+    },
+    {
+      "module": 7,
+      "original_bytes": [
+        1837159,
+        1841073
+      ],
+      "candidate_bytes": [
+        1837187,
+        1841101
+      ],
+      "exact_same_bytes": 3914,
+      "sha256": "ae0d466feb75b95085269b5f20bd81945ba33881fbcfb25b0c4a26c49134f5ba"
+    },
+    {
+      "module": 8,
+      "original_bytes": [
+        1841073,
+        1848487
+      ],
+      "candidate_bytes": [
+        1841101,
+        1848515
+      ],
+      "exact_same_bytes": 7414,
+      "sha256": "81399bd9ac9dbc8dfbcb9c943d5276a5c5bfde04e2cc706c5c388936d646351c"
+    },
+    {
+      "module": 9,
+      "original_bytes": [
+        1848487,
+        1880683
+      ],
+      "candidate_bytes": [
+        1848515,
+        1880711
+      ],
+      "exact_same_bytes": 32196,
+      "sha256": "6fe5296e2c569fcfb53e206e7865d095bbf8f850b525b3cc90f1ae03cb95e853"
+    },
+    {
+      "module": 10,
+      "original_bytes": [
+        1880683,
+        1906238
+      ],
+      "candidate_bytes": [
+        1880711,
+        1906266
+      ],
+      "exact_same_bytes": 25555,
+      "sha256": "8c012e30003a7c72d12cb4af95636edf3d9f3011871ac7142aa127bf3edd89c7"
+    },
+    {
+      "module": 11,
+      "original_bytes": [
+        1906238,
+        1991247
+      ],
+      "candidate_bytes": [
+        1906266,
+        1991275
+      ],
+      "exact_same_bytes": 85009,
+      "sha256": "3544bc0ad27f30f527b8ec6ce0207736bdc9645739646c561c48828249e6df1e"
+    },
+    {
+      "module": 12,
+      "original_bytes": [
+        1991247,
+        1991682
+      ],
+      "candidate_bytes": [
+        1991275,
+        1991710
+      ],
+      "exact_same_bytes": 435,
+      "sha256": "fcc480876aa2262d4016ba6bc80d50af11ea04a0378cda0dba0f0efa6e78a50b"
+    },
+    {
+      "module": 13,
+      "original_bytes": [
+        1991682,
+        1993809
+      ],
+      "candidate_bytes": [
+        1991710,
+        1993837
+      ],
+      "exact_same_bytes": 2127,
+      "sha256": "5d13cde0b571fba0d6bad1ac96102c9fcadb78668bd99267e6364a00baf7f71f"
+    }
+  ],
+  "actual_git_check_ignore": {
+    "exit_code": 0,
+    "all4_files_ignored": true,
+    "explicit_per_command_safe_directory": true,
+    "Git_config_index_changes": false
+  },
+  "prior_git_probe_preserved": {
+    "exit_code": 1,
+    "error": "fatal: this operation must be run in a work tree",
+    "cause_scope": "restricted tool access to sibling repository metadata",
+    "repair": "read-only check repeated with existing task authorization require_escalated; actual0; no Git mutation"
+  },
+  "input_sha256": "f40d0cb3566d4e71a6bb624a4d4375ca3ade977d3850e14e134a8a850f4abd50",
+  "output_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+  "output_bytes": 1993837,
+  "byte_increase": 28,
+  "byte_limit_headroom": 6163
+}

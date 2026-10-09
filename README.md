@@ -27,9 +27,10 @@ is the leading diagnosis, not an established OOM event; see the [failed-attempt 
 No website record has been obtained, and resource optimization remains in progress.
 
 A same-Linux AM component pair reduced compilation from 553.329 to 448.761
-seconds (18.9%); its small PSS change does not establish a memory gain. The
-reproducible replacement is undergoing complete verification. See the
-[resource evidence](verification/linux-memory-time-20261010/README.md) for its checked scope.
+seconds (18.9%); its small PSS change does not establish a memory gain.
+The first replacement trial was cut off after memory-resource checks failed.
+A further scheduling version is undergoing full verification. See the
+[resource evidence](verification/linux-memory-time-20261010/README.md).
 
 | Component | Verification status |
 |---|---|

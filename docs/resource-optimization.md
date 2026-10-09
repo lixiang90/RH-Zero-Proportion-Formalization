@@ -211,11 +211,36 @@ The selected single-file source combines bounded AM elaboration with the
 previously checked two-edge and point-reflection routes. It has 1,993,809 bytes,
 leaving 6,191 bytes under the source limit, and SHA256
 `f40d0cb3566d4e71a6bb624a4d4375ca3ade977d3850e14e134a8a850f4abd50`.
-Its reproduction from frozen public inputs has passed. Full-file compilation
-is in progress; no complete result is yet available. Whole-file compilation,
-fresh final-root audits, independent replay and comparison against the current
-website contract are separate checks; the component result does not establish
-any of them. The published original `Solution.lean` is unchanged.
+Its reproduction from frozen public inputs has passed. The r5 native-Linux
+full-file attempt was deliberately stopped with SIGTERM after failed memory
+charges and persistent sampled page pressure. Its raw proof-stage elapsed was
+2,733.628 seconds, and its enclosing compile phase took 2,770.896 seconds.
+The actual shared clock, starting before the current-contract build, reached
+2,854.274 seconds. The observed proof-stage sum excluding prebuilt tools was
+2,765.057 seconds; scoped cold preparation contributed 64.608 seconds. These
+partial measurements establish no whole-pipeline runtime or official deadline
+compliance. See the [completed r5 records](../verification/linux-memory-time-20261010/whole/r5-completed/README.md).
+
+The compile's sampled process-tree peak PSS was 8,317,437,952 bytes; the
+8 GiB cgroup recorded 242 failed memory charges and zero OOM kills. The
+separately sampled caller/supervisor peak outside that group was 173,293,568
+bytes; peaks from different times are not added. The owned Lean exited -15,
+the worker/harness 241 and the outer driver 1, with timeout false. This is an
+intentional local resource cutoff, not an established mathematical rejection,
+kernel OOM kill or website timeout. A single proc page-wait snapshot and
+cumulative read-byte/fault counters do not identify a proof culprit or prove
+deadlock. The experimental `-j4 --tstack=32768` invocation and separate phases
+inside a 32 GiB WSL VM are not the official retained-strings sandbox pipeline.
+
+No complete f40 compilation, fresh three-root axiom audit, independent replay,
+export or current-contract Comparator pass was obtained. The allowed axiom set
+remains `propext`, `Quot.sound` and `Classical.choice`; a missing audit is not a
+pass. The original public `Solution.lean` with SHA256 `d52f013f...` is unchanged.
+A follow-up r6 source, 1,993,837 bytes with SHA256 prefix `5227a25`, disables
+asynchronous elaboration globally outside the bounded-eight AM region. At the
+recorded handoff, its tools and current-contract stages had passed and its
+full compile had begun. Full proof, downstream checks and website acceptance
+remain pending; no running r6 record is included in this archive.
 
 ## Further finite probes
 
@@ -266,7 +291,7 @@ gain. The selected-pivot finite component also passed all 49 original goals
 and fresh audits, but its whole-file helper cost and independent replay remain
 unresolved. The bounded AM source without that extension remains the default.
 
-The next decision requires the selected 1,993,809-byte single file to pass fresh
+The next decision requires the global-synchronous 1,993,837-byte follow-up to pass fresh
 compilation, audits of its three final website declarations, serial independent
 replay, and pinned Comparator statement, axiom and default-kernel checks against
 the current generated contract. Every stage must be accounted for within the
