@@ -1,0 +1,28 @@
+{
+  "phase": "compile",
+  "variant": "syncalias8",
+  "root_authorized": true,
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "-u",
+    "root",
+    "--",
+    "python3",
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/run_am_native_v3_trial.py",
+    "--variant",
+    "syncalias8",
+    "--phase",
+    "compile",
+    "--execute",
+    "--authorization-note",
+    "root-go-sole-syncalias8-sameos-control-20261010"
+  ],
+  "start_time_unix": 1791568365.8889449,
+  "compiler_competition_authorized": false,
+  "exit_code": 0,
+  "finish_time_unix": 1791568951.090255,
+  "stdout_sha256": "b997433ce68d0e74fff925aecfb691108d012c0a783a27b1e10b064a5d348a16",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

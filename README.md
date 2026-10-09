@@ -11,7 +11,7 @@ The target is **66812491/99194740 = 67.3548728491047…%** of simple critical-li
 zeros, relative to all nontrivial zeros counted with multiplicity. This implies
 the same lower bound for distinct critical-line zeros, the website's scoring object.
 
-**Status: the complete modular Lean proof has passed; website submission is pending.**
+**Status: the complete local proofs passed; the first reported website attempt failed during Lean compilation.**
 The continuous certificate and named dyadic and cumulative simple-zero theorems
 compile in the pinned environment. The three website declarations, concerning
 distinct critical-line zeros, also compile and pass independent nanoda replay of
@@ -21,7 +21,15 @@ Fresh transitive audits contain only the three permitted axioms.
 The 1,996,187-byte single file also passed Lean compilation, transitive axiom
 audits and independent replay of all three theorem dependency graphs (79,750
 declarations). Resource compliance, the official Comparator run and website
-acceptance remain separate requirements. No website record has been submitted.
+acceptance remain separate requirements. The user-provided website log reports
+Solution.Candidate exiting with code 137 after 683 seconds. Memory exhaustion
+is the leading diagnosis, not an established OOM event; see the [failed-attempt record](verification/site-compilation-exit137/diagnosis.json).
+No website record has been obtained, and resource optimization remains in progress.
+
+A same-Linux AM component pair reduced compilation from 553.329 to 448.761
+seconds (18.9%); its small PSS change does not establish a memory gain. The
+reproducible replacement is undergoing complete verification. See the
+[resource evidence](verification/linux-memory-time-20261010/README.md) for its checked scope.
 
 | Component | Verification status |
 |---|---|
@@ -47,7 +55,7 @@ or helper check does not establish the complete headline theorem.
 
 ## Fixed verification environment
 
-The [website contract](https://github.com/josusanmartin/riemann/blob/668e239f30c7c56494611b1825306a3d65f95537/challenge/contract.json)
+The [website contract](https://github.com/josusanmartin/riemann/blob/6664d243005e12e155c19775b83f53721757414b/challenge/contract.json)
 fixes these versions:
 
 | Component | Version |

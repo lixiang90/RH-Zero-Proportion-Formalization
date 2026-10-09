@@ -1,0 +1,165 @@
+--- ImportedAM.lean (frozen)
++++ ImportedAM.lean (proposed only)
+@@ -61,6 +61,7 @@
+ Modules: Window, Kernel, Moments, Swap, Constant, Floor, Params, Trig, Adm, Profile, PV, ZeroSide, Concrete, BHalf, BrA, BrB, BrC, AMTail, BrTau, BrProf, GIv, GCell, GSinc, GMT, GTaylor, GBase, GConst, GFar, GNear, GAsm1, GAsm2, GCellSound, CFacade, CEngine, CMin, CMinX, CWindow, PCellCore, PCellGen, PCellLeaf, PCellRoot, PCellTZ, PCellZ, PCellLeafZ, PCellT1, PCellClose, PC8CLInst, PC8CLData.
+ -/
+ import Zeta23.FinalMult
++import Zeta23.XiPrime.QuarticWindow.ModWindow
+ import Zeta23.ThmD.Window
+ import Zeta23.ThmD.WindowCore
+ import Zeta23.ThmD.Limit
+@@ -2147,12 +2148,7 @@
+    exact phiM_eq_zero hϱ hw hv.le
+ theorem phi_antitoneOn (hϱ : TaperProfile ϱ) (hw : 0 < w) :
+    AntitoneOn (Taper.phi ϱ L w) (Ici 0) := by
+- intro x hx y hy hxy
+- simp only [mem_Ici] at hx hy
+- unfold Taper.phi
+- apply hϱ.monotone
+- rw [abs_of_nonneg hx, abs_of_nonneg hy]
+- gcongr
++ exact Zeta23.XiPrime.phi_antitoneOn hϱ hw
+ theorem deriv_phi_nonpos (hϱ : TaperProfile ϱ) (hw : 0 < w) {u : ℝ} (hu : 0 < u) :
+    deriv (Taper.phi ϱ L w) u ≤ 0 := by
+  rw [← derivWithin_of_mem_nhds (Ici_mem_nhds hu)]
+@@ -2306,47 +2302,17 @@
+    (hG : ContDiffOn ℝ 2 G U) {u : ℝ} (hu : u ∈ U) :
+    deriv (deriv (fun v => F v * G v)) u
+      = deriv (deriv F) u * G u + 2 * (deriv F u * deriv G u) + F u * deriv (deriv G) u := by
+- have hFd : ∀ v ∈ U, DifferentiableAt ℝ F v := fun v hv =>
+-   (hF.differentiableOn (by norm_num)).differentiableAt (hU.mem_nhds hv)
+- have hGd : ∀ v ∈ U, DifferentiableAt ℝ G v := fun v hv =>
+-   (hG.differentiableOn (by norm_num)).differentiableAt (hU.mem_nhds hv)
+- have hF' : ContDiffOn ℝ 1 (deriv F) U := hF.deriv_of_isOpen hU (by norm_num)
+- have hG' : ContDiffOn ℝ 1 (deriv G) U := hG.deriv_of_isOpen hU (by norm_num)
+- have hF'd : DifferentiableAt ℝ (deriv F) u :=
+-   (hF'.differentiableOn (by norm_num)).differentiableAt (hU.mem_nhds hu)
+- have hG'd : DifferentiableAt ℝ (deriv G) u :=
+-   (hG'.differentiableOn (by norm_num)).differentiableAt (hU.mem_nhds hu)
+- have h1 : deriv (fun v => F v * G v) =ᶠ[nhds u] fun v => deriv F v * G v + F v * deriv G v := by
+-   filter_upwards [hU.mem_nhds hu] with v hv
+-   exact deriv_mul (hFd v hv) (hGd v hv)
+- rw [h1.deriv_eq]
+- have hA : HasDerivAt (fun v => deriv F v * G v) (deriv (deriv F) u * G u + deriv F u * deriv G u) u :=
+-   hF'd.hasDerivAt.mul (hGd u hu).hasDerivAt
+- have hB : HasDerivAt (fun v => F v * deriv G v) (deriv F u * deriv G u + F u * deriv (deriv G) u) u :=
+-   (hFd u hu).hasDerivAt.mul hG'd.hasDerivAt
+- have hAB : HasDerivAt (fun v => deriv F v * G v + F v * deriv G v)
+-     ((deriv (deriv F) u * G u + deriv F u * deriv G u)
+-       + (deriv F u * deriv G u + F u * deriv (deriv G) u)) u := hA.add hB
+- rw [hAB.deriv]; ring
++ exact Zeta23.XiPrime.deriv2_mul_eq hU hF hG hu
+ theorem deriv_mul_eq {F G : ℝ → ℝ} {U : Set ℝ} (hU : IsOpen U) (hF : ContDiffOn ℝ 2 F U)
+    (hG : ContDiffOn ℝ 2 G U) {u : ℝ} (hu : u ∈ U) :
+-   deriv (fun v => F v * G v) u = deriv F u * G u + F u * deriv G u :=
+- deriv_mul ((hF.differentiableOn (by norm_num)).differentiableAt (hU.mem_nhds hu))
+-   ((hG.differentiableOn (by norm_num)).differentiableAt (hU.mem_nhds hu))
++   deriv (fun v => F v * G v) u = deriv F u * G u + F u * deriv G u := by
++ exact Zeta23.XiPrime.deriv_mul_eq hU hF hG hu
+ theorem deriv2_eq_zero_of_eqOn {H : ℝ → ℝ} {V : Set ℝ} (hV : IsOpen V) (hz : ∀ v ∈ V, H v = 0)
+    {u : ℝ} (hu : u ∈ V) : deriv H u = 0 ∧ deriv (deriv H) u = 0 := by
+- have hd : ∀ v ∈ V, deriv H v = 0 := by
+-   intro v hv
+-   have : H =ᶠ[nhds v] fun _ => (0:ℝ) := by
+-     filter_upwards [hV.mem_nhds hv] with x hx using hz x hx
+-   rw [this.deriv_eq, deriv_const]
+- refine ⟨hd u hu, ?_⟩
+- have : deriv H =ᶠ[nhds u] fun _ => (0:ℝ) := by
+-   filter_upwards [hV.mem_nhds hu] with x hx using hd x hx
+- rw [this.deriv_eq, deriv_const]
++ exact Zeta23.XiPrime.deriv2_eq_zero_of_eqOn hV hz hu
+ theorem integrable_abs_of_cs {h : ℝ → ℝ} (hc : Continuous h) (hcs : HasCompactSupport h) :
+-   Integrable (fun u => |h u|) :=
+- (hc.abs).integrable_of_hasCompactSupport (hcs.comp_left (g := fun t => |t|) abs_zero)
++   Integrable (fun u => |h u|) := by
++ exact Zeta23.XiPrime.integrable_abs_of_cs hc hcs
+ theorem integral_abs_deriv2_mul_le {F G : ℝ → ℝ} {L δ A' B' : ℝ} (hδ : 0 < δ)
+    (hA' : 0 ≤ A') (hB' : 0 ≤ B')
+    (hF : ContDiffOn ℝ 2 F (Ioo (-(L / 2 + δ)) (L / 2 + δ)))
+@@ -2356,83 +2322,13 @@
+    (hH : ContDiff ℝ 2 (fun u => F u * G u)) (hHcs : HasCompactSupport (fun u => F u * G u)) :
+    ∫ u, |deriv (deriv (fun u => F u * G u)) u|
+      ≤ B' * (∫ u, |G u|) + 2 * A' * (∫ u, |deriv G u|) + ∫ u, |deriv (deriv G) u| := by
+- set U : Set ℝ := Ioo (-(L / 2 + δ)) (L / 2 + δ) with hUdef
+- have hU : IsOpen U := isOpen_Ioo
+- set H : ℝ → ℝ := fun u => F u * G u with hHdef
+- have hpt : ∀ u, |deriv (deriv H) u| ≤ B' * |G u| + 2 * A' * |deriv G u| + |deriv (deriv G) u| := by
+-   intro u
+-   rcases le_or_gt |u| (L / 2) with hu | hu
+-   · have huU : u ∈ U := by
+-       simp only [hUdef, mem_Ioo]; constructor <;> linarith [neg_abs_le u, le_abs_self u]
+-     rw [deriv2_mul_eq hU hF hG.contDiffOn huU]
+-     have h0 := hF0 u hu; have h1 := hF1 u hu; have h2 := hF2 u hu
+-     calc |deriv (deriv F) u * G u + 2 * (deriv F u * deriv G u) + F u * deriv (deriv G) u|
+-         ≤ |deriv (deriv F) u * G u| + |2 * (deriv F u * deriv G u)| + |F u * deriv (deriv G) u| :=
+-           abs_add_three _ _ _
+-       _ ≤ B' * |G u| + 2 * A' * |deriv G u| + |deriv (deriv G) u| := by
+-           rw [abs_mul, abs_mul, abs_mul, abs_mul, abs_two]
+-           have hg0 := abs_nonneg (G u); have hg1 := abs_nonneg (deriv G u)
+-           have hg2 := abs_nonneg (deriv (deriv G) u)
+-           have e1 : |deriv (deriv F) u| * |G u| ≤ B' * |G u| := mul_le_mul_of_nonneg_right h2 hg0
+-           have e2 : 2 * (|deriv F u| * |deriv G u|) ≤ 2 * A' * |deriv G u| := by
+-             nlinarith [mul_le_mul_of_nonneg_right h1 hg1]
+-           have e3 : |F u| * |deriv (deriv G) u| ≤ |deriv (deriv G) u| := by
+-             nlinarith [mul_le_mul_of_nonneg_right h0 hg2]
+-           linarith
+-   · have hV : IsOpen {v : ℝ | L / 2 < |v|} := continuous_abs.isOpen_preimage _ isOpen_Ioi
+-     have hz : ∀ v ∈ {v : ℝ | L / 2 < |v|}, H v = 0 := fun v hv => by
+-       simp only [hHdef, hGzero v hv, mul_zero]
+-     rw [(deriv2_eq_zero_of_eqOn hV hz hu).2, abs_zero]
+-     positivity
+- have hH2c : Continuous (deriv (deriv H)) := (hH.deriv' (n := 1)).continuous_deriv le_rfl
+- have hG1c : Continuous (deriv G) := (hG.deriv' (n := 1)).continuous
+- have hG2c : Continuous (deriv (deriv G)) := (hG.deriv' (n := 1)).continuous_deriv le_rfl
+- have iH : Integrable (fun u => |deriv (deriv H) u|) := integrable_abs_of_cs hH2c hHcs.deriv.deriv
+- have iG : Integrable (fun u => |G u|) := integrable_abs_of_cs hG.continuous hGcs
+- have iG1 : Integrable (fun u => |deriv G u|) := integrable_abs_of_cs hG1c hGcs.deriv
+- have iG2 : Integrable (fun u => |deriv (deriv G) u|) := integrable_abs_of_cs hG2c hGcs.deriv.deriv
+- have iR : Integrable (fun u => B' * |G u| + 2 * A' * |deriv G u| + |deriv (deriv G) u|) :=
+-   ((iG.const_mul B').add (iG1.const_mul (2 * A'))).add iG2
+- calc ∫ u, |deriv (deriv H) u|
+-     ≤ ∫ u, (B' * |G u| + 2 * A' * |deriv G u| + |deriv (deriv G) u|) := integral_mono iH iR hpt
+-   _ = B' * (∫ u, |G u|) + 2 * A' * (∫ u, |deriv G u|) + ∫ u, |deriv (deriv G) u| := by
+-       have s1 : ∫ u, (B' * |G u| + 2 * A' * |deriv G u| + |deriv (deriv G) u|)
+-           = (∫ u, (B' * |G u| + 2 * A' * |deriv G u|)) + ∫ u, |deriv (deriv G) u| :=
+-         integral_add ((iG.const_mul B').add (iG1.const_mul (2 * A'))) iG2
+-       have s2 : ∫ u, (B' * |G u| + 2 * A' * |deriv G u|)
+-           = (∫ u, B' * |G u|) + ∫ u, 2 * A' * |deriv G u| :=
+-         integral_add (iG.const_mul B') (iG1.const_mul (2 * A'))
+-       rw [s1, s2, integral_const_mul, integral_const_mul]
++ exact Zeta23.XiPrime.integral_abs_deriv2_mul_le hδ hA' hB' hF hF0 hF1 hF2 hG hGcs hGzero hH hHcs
+ theorem integral_abs_phi_le (hϱ : TaperProfile ϱ) (hw : 0 < w) (hwL : 2 * w ≤ L) :
+    ∫ u, |Taper.phi ϱ L w u| ≤ L := by
+- have hL : 0 < L := by linarith
+- have heq : ∫ u, |Taper.phi ϱ L w u| = ∫ u in Icc (-(L / 2)) (L / 2), |Taper.phi ϱ L w u| := by
+-   refine (setIntegral_eq_integral_of_forall_compl_eq_zero fun u hu => ?_).symm
+-   rw [mem_Icc, not_and_or, not_le, not_le] at hu
+-   have habs : L / 2 ≤ |u| := by
+-     rcases hu with h | h
+-     · linarith [neg_le_abs u]
+-     · linarith [le_abs_self u]
+-   rw [Taper.phi_eq_zero hϱ hw habs, abs_zero]
+- rw [heq]
+- calc ∫ u in Icc (-(L / 2)) (L / 2), |Taper.phi ϱ L w u|
+-     ≤ ∫ u in Icc (-(L / 2)) (L / 2), (1:ℝ) := by
+-       refine setIntegral_mono_on ?_ (by simp) measurableSet_Icc fun u _ => ?_
+-       · exact ((Taper.phi_continuous hϱ hw hwL).abs.integrableOn_Icc)
+-       · rw [abs_of_nonneg (Taper.phi_nonneg hϱ u)]; exact Taper.phi_le_one hϱ u
+-   _ = L := by
+-       rw [setIntegral_const, smul_eq_mul, mul_one, Measure.real, Real.volume_Icc,
+-         ENNReal.toReal_ofReal (by linarith)]
+-       ring
++ exact Zeta23.XiPrime.integral_abs_phi_le hϱ hw hwL
+ theorem integral_abs_phi_sq_le (hϱ : TaperProfile ϱ) (hw : 0 < w) (hwL : 2 * w ≤ L) :
+    ∫ u, |Taper.phi ϱ L w u ^ 2| ≤ L := by
+- have hL : 0 < L := by linarith
+- have ha := Taper.aConst_le_one hϱ hw hwL
+- unfold Taper.aConst at ha
+- have habs : (fun u => |Taper.phi ϱ L w u ^ 2|) = fun u => Taper.phi ϱ L w u ^ 2 :=
+-   funext fun u => abs_of_nonneg (sq_nonneg _)
+- rw [habs]
+- rwa [inv_mul_le_iff₀ hL, mul_one] at ha
++ exact Zeta23.XiPrime.integral_abs_phi_sq_le hϱ hw hwL
+ theorem l1Deriv2_nonneg' (ϱ : ℝ → ℝ) : 0 ≤ Taper.l1Deriv2 ϱ := integral_nonneg fun _ => abs_nonneg _
+ theorem phiM_hasCompactSupport (hϱ : TaperProfile ϱ) (hw : 0 < w) : HasCompactSupport (phiM f ϱ L w) :=
+  (Taper.phi_hasCompactSupport hϱ (L := L) hw).mul_left

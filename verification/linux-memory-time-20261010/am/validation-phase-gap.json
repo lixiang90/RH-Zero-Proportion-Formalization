@@ -1,0 +1,67 @@
+{
+  "status": "DISCLOSED_PHASE_GAP",
+  "timeline": {
+    "bounded8": {
+      "compile": {
+        "start_unix": 1791567284.5680947,
+        "finish_unix": 1791567764.963824,
+        "start_China": "2026-10-10T01:34:44.568095+08:00",
+        "finish_China": "2026-10-10T01:42:44.963824+08:00",
+        "supervisor_wall_seconds": 480.39572930336
+      },
+      "deps": {
+        "start_unix": 1791567875.46377,
+        "finish_unix": 1791567906.1958022,
+        "start_China": "2026-10-10T01:44:35.463770+08:00",
+        "finish_China": "2026-10-10T01:45:06.195802+08:00",
+        "supervisor_wall_seconds": 30.732032299041748
+      },
+      "audit": {
+        "start_unix": 1791567906.202142,
+        "finish_unix": 1791567959.6461365,
+        "start_China": "2026-10-10T01:45:06.202142+08:00",
+        "finish_China": "2026-10-10T01:45:59.646137+08:00",
+        "supervisor_wall_seconds": 53.44399452209473
+      }
+    },
+    "syncalias8": {
+      "compile": {
+        "start_unix": 1791568365.8889449,
+        "finish_unix": 1791568951.090255,
+        "start_China": "2026-10-10T01:52:45.888945+08:00",
+        "finish_China": "2026-10-10T02:02:31.090255+08:00",
+        "supervisor_wall_seconds": 585.2013101577759
+      },
+      "deps": {
+        "start_unix": 1791584166.3415284,
+        "finish_unix": 1791584197.6741827,
+        "start_China": "2026-10-10T06:16:06.341528+08:00",
+        "finish_China": "2026-10-10T06:16:37.674183+08:00",
+        "supervisor_wall_seconds": 31.332654237747192
+      },
+      "audit": {
+        "start_unix": 1791584197.6856632,
+        "finish_unix": 1791584256.4928534,
+        "start_China": "2026-10-10T06:16:37.685663+08:00",
+        "finish_China": "2026-10-10T06:17:36.492853+08:00",
+        "supervisor_wall_seconds": 58.80719017982483
+      }
+    }
+  },
+  "session_resumed_China_approximate": "2026-10-10T06:12:00+08:00",
+  "approximate_resume_time_provenance": "Trusted coordinating root task message, not a measured compiler timestamp",
+  "both_compiles_completed_before_reported_host_runtime_restart": true,
+  "control_compilation_finished_China": "2026-10-10T02:02:31.090255+08:00",
+  "control_deps_started_China": "2026-10-10T06:16:06.341528+08:00",
+  "control_audit_finished_China": "2026-10-10T06:17:36.492853+08:00",
+  "control_was_not_recompiled": true,
+  "source_and_fresh_olean_bytes_unchanged_across_gap": true,
+  "source_sha256": "40f0fb440a3673aa36ba81361e1db7ef31471851bae63b82d77f434605a769f5",
+  "artifact_inventory": {
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/lib/RecordProportion/ImportedAM.olean": {
+      "bytes": 61796264,
+      "sha256": "177b71743952323f790dcb32d8ef71df2bda9d453aed49dd21bdccdbba7f34a7"
+    }
+  },
+  "interpretation": "The gap separates control compilation from subsequent fresh import/axiom checks. It does not alter recorded completed paired compile timing, CPU or memory, but must be disclosed. After restart, exact artifacts were bound and cold fresh deps/20-root audit passed."
+}

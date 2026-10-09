@@ -1,0 +1,31 @@
+{
+  "status": "PREPARED_NOT_CHECKED",
+  "prepared_source_hashes_exact": true,
+  "source_module_name": "RecordProportion.ImportedAM",
+  "compile_workers": 4,
+  "compile_tstack": 32768,
+  "compile_timeout": 1200,
+  "native_source_tree_isolated": true,
+  "fresh_lib_before_audit": true,
+  "deps_requires_exact_fresh_olean": true,
+  "audit_requires_20_exact_roots": true,
+  "audit_allowed_axioms_only": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "all_overlay_roots_evicted": [
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/lib",
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/audit-lib",
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/lib",
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/audit-lib"
+  ],
+  "actual_proof_check_pending": true,
+  "resource_comparison_pending": true,
+  "no_lean_invoked": true,
+  "no_eviction_invoked": true,
+  "no_runtime_artifact_probe": true,
+  "preserved_prepare_failure": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared\\prepare-failure.json",
+  "barrier_profile_plan": "After actual compile, parse process.log AM_BARRIER monotonic milliseconds. Report count, relative first barrier offsets and consecutive wait gaps. No added marker or modification of exact bounded8 source.",
+  "ir_output_family_requirement": "Bind every newly generated ImportedAM.* file; exact fresh .olean required. Actual import gate independently detects missing IR/signatures; no old output accepted."
+}

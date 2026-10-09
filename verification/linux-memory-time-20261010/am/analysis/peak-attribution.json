@@ -1,0 +1,75 @@
+{
+  "status": "FILE_ONLY_PEAK_ATTRIBUTION_INFERENCE",
+  "clock_ticks_per_second": 100,
+  "clock_ticks_provenance": "Root provided frozen Linux SC_CLK_TCK=100; no live runtime read performed.",
+  "precision_milliseconds": 1000,
+  "bounded8": {
+    "peak_sample_elapsed_seconds": 77.511,
+    "peak_pss_bytes": 7998533632,
+    "lean_pid": 18,
+    "process_starttime_ticks": 3123,
+    "approximate_peak_monotonic_ms": 108741.0,
+    "possible_monotonic_interval_ms": [
+      107741.0,
+      109741.0
+    ],
+    "overlapping_eight_proof_groups": [
+      {
+        "previous_completed_barrier": 55,
+        "next_completed_barrier": 56,
+        "previous_monotonic_ms": 106643,
+        "next_monotonic_ms": 111206,
+        "completed_barrier": 56,
+        "milliseconds_since_previous_barrier": 4563,
+        "base_source_byte_start": 315258,
+        "base_source_byte_stop": 319525,
+        "proof_names": [
+          "sin_le_sin01",
+          "abs_le_one_of",
+          "cos_sin_half",
+          "beq_val",
+          "CX_val",
+          "SX_val",
+          "cx_sx_enc",
+          "natsub_ge"
+        ]
+      }
+    ],
+    "peak_memory_stat": {
+      "cache": 6191497216,
+      "rss": 1808056320,
+      "rss_huge": 1008730112,
+      "mapped_file": 6189645824,
+      "swap": 0
+    },
+    "first_barrier_monotonic_ms": 54637
+  },
+  "syncalias8": {
+    "peak_sample_elapsed_seconds": 113.46,
+    "peak_pss_bytes": 8061101056,
+    "lean_pid": 14,
+    "process_starttime_ticks": 3143,
+    "approximate_peak_monotonic_ms": 144890.0,
+    "possible_monotonic_interval_ms": [
+      143890.0,
+      145890.0
+    ],
+    "source_attribution": null,
+    "source_attribution_reason": "No recorded barriers or timestamped proof checkpoints in exact synchronous control.",
+    "peak_memory_stat": {
+      "cache": 6196207616,
+      "rss": 1865981952,
+      "rss_huge": 1054867456,
+      "mapped_file": 6194356224,
+      "swap": 0
+    }
+  },
+  "limits": [
+    "This maps archived kernel/task samples to completed wait timestamps, not stdout arrival; buffered marker arrival was only a lower bound.",
+    "Sample start uses process boot ticks plus harness elapsed; spawn and clock bookkeeping are approximated within a conservative plus-or-minus1s interval.",
+    "Async batches contain up to8 proofs, and the checked wait includes kernel/codegen; no individual proof is identified as a memory culprit.",
+    "Sync source contains no barrier timestamps; do not borrow the bounded8 source progress mapping.",
+    "memory.stat cache/RSS are cgroup counters; they are not an exact decomposition of per-process PSS."
+  ],
+  "no_new_compile_import_cache_or_binary_read": true
+}

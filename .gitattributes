@@ -5,3 +5,7 @@
 *.md text eol=lf
 lean-toolchain text eol=lf
 *.pdf binary
+
+# Preserve exact hash-bound verification evidence bytes.
+verification/linux-memory-time-20261010/** -text
+verification/site-compilation-exit137/user-provided-verifier.log -text

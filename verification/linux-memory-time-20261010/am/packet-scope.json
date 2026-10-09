@@ -1,0 +1,31 @@
+{
+  "status": "PROSPECTIVE_PUBLICATION_ONLY",
+  "scope": "Two matched ordinary-Lean AM component compile runs, exact fresh deps and20-root axiom audits. Not a complete submission/theorem advancement or website acceptance.",
+  "compiler": "Lean4.33.0-rc2 Linux, commitd8b18978322de05a8f3dba51ef03cf5461676c17",
+  "lean_binary_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+  "workers": 4,
+  "compiler_stack_setting": "--tstack=32768",
+  "compile_timeout_seconds": 1200,
+  "deps_audit_timeout_seconds": 180,
+  "cgroup_memory_and_memsw_bytes": 8589934592,
+  "swap": 0,
+  "cgroup_cpu_quota": "4 CPUs, quota400000/period100000",
+  "surrounding_WSL_VM_GiB": 32,
+  "both_cgroup_peaks_reached_8GiB": true,
+  "whole_8GiB_VM_headroom_established": false,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "same_Linux_pairs": 1,
+  "wall_time_reduction_percent": 18.897979321524794,
+  "peak_PSS_difference_percent": 0.7761647393494719,
+  "significant_memory_gain_established": false,
+  "repeatability_established": false,
+  "live_stdout_barrier_count_only_lower_bound": true,
+  "whole_source_verification_pending_at_packaging": true,
+  "no_compiler_cache_runtime_binary_or_Linux_call_during_packaging": true,
+  "input_selection": "Only required archived Windows text records; no full scratch tree copied."
+}

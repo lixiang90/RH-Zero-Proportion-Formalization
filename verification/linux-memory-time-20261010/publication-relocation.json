@@ -1,0 +1,36 @@
+{
+  "finite_producer_manifest": "provenance/finite-producer/sha256-manifest.json",
+  "finite_path_overrides": {
+    "README.md": "provenance/finite-producer/README.md",
+    "proposal-status.json": "provenance/finite-producer/proposal-status.json"
+  },
+  "am_manifest": "am/archive-manifest.json",
+  "am_external_references": [
+    {
+      "producer_path": "review-components/de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e.gz",
+      "published_path": "review-components/de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e.gz",
+      "relative_to_am": "../review-components/de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e.gz"
+    },
+    {
+      "producer_path": "recipe/candidate-batch8.json",
+      "published_path": "recipe/candidate-batch8.json",
+      "relative_to_am": "../recipe/candidate-batch8.json"
+    },
+    {
+      "producer_path": "recipe/command-boundaries-check.json",
+      "published_path": "recipe/command-boundaries-check.json",
+      "relative_to_am": "../recipe/command-boundaries-check.json"
+    },
+    {
+      "producer_path": "recipe/command-boundaries.tsv",
+      "published_path": "recipe/command-boundaries.tsv",
+      "relative_to_am": "../recipe/command-boundaries.tsv"
+    },
+    {
+      "producer_path": "recipe/ParseBoundariesLinux.lean",
+      "published_path": "recipe/ParseBoundariesLinux.lean",
+      "relative_to_am": "../recipe/ParseBoundariesLinux.lean"
+    }
+  ],
+  "producer_records_are_immutable_historical_snapshots": true
+}

@@ -1,0 +1,254 @@
+{
+  "status": "CHECKED_SYNC_CONTROL_AM_COMPONENT_ONLY",
+  "source": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\AMSyncAlias8.lean",
+  "source_bytes": 1501640,
+  "source_sha256": "40f0fb440a3673aa36ba81361e1db7ef31471851bae63b82d77f434605a769f5",
+  "module_name": "RecordProportion.ImportedAM",
+  "source_root": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/source",
+  "new_artifact_inventory": {
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/lib/RecordProportion/ImportedAM.olean": {
+      "bytes": 61796264,
+      "sha256": "177b71743952323f790dcb32d8ef71df2bda9d453aed49dd21bdccdbba7f34a7"
+    }
+  },
+  "workers": 4,
+  "tstack": 32768,
+  "timeout_seconds": 1200,
+  "harness_version": 3,
+  "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+  "phase_summaries": {
+    "compile": {
+      "actual_exit_code": 0,
+      "elapsed_seconds": 553.329,
+      "timeout": false,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "sampled_tree_peak_rss_bytes": 8061054976,
+      "sampled_tree_peak_pss_bytes": 8061101056,
+      "sampled_tree_peak_swap_bytes": 0,
+      "proof_succeeded": true,
+      "resource_fit": true,
+      "inputs_unchanged": true,
+      "cgroup_cpuacct_seconds": 533.2747335,
+      "group_peak_bytes": 8589934592,
+      "memory_failcnt": 0,
+      "all_selected_imported_artifact_pages_nonresident_before_start": true,
+      "before_after_binding_record": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\compile-result.json",
+      "before_after_binding_record_sha256": "a6aa7519ad95b73ecb36d0efcbc159f2d284f62abe070b106f724973fa897461"
+    },
+    "deps": {
+      "actual_exit_code": 0,
+      "elapsed_seconds": 0.606,
+      "timeout": false,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "sampled_tree_peak_rss_bytes": 4096,
+      "sampled_tree_peak_pss_bytes": 118784,
+      "sampled_tree_peak_swap_bytes": 0,
+      "proof_succeeded": true,
+      "resource_fit": true,
+      "inputs_unchanged": true,
+      "cgroup_cpuacct_seconds": 0.0359734,
+      "group_peak_bytes": 111288320,
+      "memory_failcnt": 0,
+      "all_selected_imported_artifact_pages_nonresident_before_start": true,
+      "before_after_binding_record": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\deps-result.json",
+      "before_after_binding_record_sha256": "ba2dd85873162bb1455ab4a5f6ef8d29c7ada9d0dcd56f5da4f8ed95f840440f"
+    },
+    "audit": {
+      "actual_exit_code": 0,
+      "elapsed_seconds": 24.939,
+      "timeout": false,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "sampled_tree_peak_rss_bytes": 6648766464,
+      "sampled_tree_peak_pss_bytes": 6652695552,
+      "sampled_tree_peak_swap_bytes": 0,
+      "proof_succeeded": true,
+      "resource_fit": true,
+      "inputs_unchanged": true,
+      "cgroup_cpuacct_seconds": 5.83168,
+      "group_peak_bytes": 7842668544,
+      "memory_failcnt": 0,
+      "all_selected_imported_artifact_pages_nonresident_before_start": true,
+      "before_after_binding_record": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\audit-result.json",
+      "before_after_binding_record_sha256": "7a8e9406fe594045c806c06b3328ef99fb091025408f1955d2f466227d8c43ff"
+    }
+  },
+  "fresh_deps_exact": true,
+  "all_twenty_axiom_roots_checked": [
+    {
+      "root": "AMW.wfunAM_le_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.mcheckP_ok",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.sp_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.gsplit0_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.ssplit57_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.splitAx_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.tm_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL_cert_full",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL_G_rev",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.HW_ge",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.tracesBoundsAM_concrete",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "Zeta23Ext.Bridge.tail_passage",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.phi_antitoneOn",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.deriv2_mul_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.deriv_mul_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.deriv2_eq_zero_of_eqOn",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.integrable_abs_of_cs",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.integral_abs_deriv2_mul_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.integral_abs_phi_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.integral_abs_phi_sq_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "audits_resumed_after_host_runtime_restart": true,
+  "compile_not_repeated": true,
+  "whole_solution_compiled": false,
+  "official_vm_reproduced": false,
+  "website_acceptance_established": false,
+  "new_mathematical_result": false,
+  "proofowner_released": true,
+  "failures_preserved": true,
+  "scope": "Isolated Linux cgroup component trial, not a whole official VM or website acceptance."
+}

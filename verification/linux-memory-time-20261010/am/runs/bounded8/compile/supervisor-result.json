@@ -1,0 +1,28 @@
+{
+  "phase": "compile",
+  "variant": "bounded8",
+  "root_authorized": true,
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "-u",
+    "root",
+    "--",
+    "python3",
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/run_am_native_v3_trial.py",
+    "--variant",
+    "bounded8",
+    "--phase",
+    "compile",
+    "--execute",
+    "--authorization-note",
+    "root-go-sole-bounded8-20261010"
+  ],
+  "start_time_unix": 1791567284.5680947,
+  "compiler_competition_authorized": false,
+  "exit_code": 0,
+  "finish_time_unix": 1791567764.963824,
+  "stdout_sha256": "ddc7c4470010a67ee513a81c08e77102043dedf674303a56eba5c0a333bf6d52",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

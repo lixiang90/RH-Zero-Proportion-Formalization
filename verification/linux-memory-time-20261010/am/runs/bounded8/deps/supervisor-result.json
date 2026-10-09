@@ -1,0 +1,26 @@
+{
+  "phase": "deps",
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "-u",
+    "root",
+    "--",
+    "python3",
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/run_am_native_v3_trial.py",
+    "--variant",
+    "bounded8",
+    "--phase",
+    "deps",
+    "--execute",
+    "--authorization-note",
+    "root-go-sequential-fresh-bounded8-after-actual0-20261010"
+  ],
+  "start_time_unix": 1791567875.46377,
+  "conditional_root_authorization": true,
+  "exit_code": 0,
+  "finish_time_unix": 1791567906.1958022,
+  "stdout_sha256": "e9e54d8efe19cac51296cc07e7b4ae826a2868050f4158ca493464d02c393194",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,73 @@
+{
+  "classification": "User-provided website verifier log; failed Lean compilation, no acceptance",
+  "recorded_client_date": "2026-10-10",
+  "prepared_submission_id": "lixiang90-20261009-6735476624",
+  "website_job_uuid_supplied": false,
+  "log": {
+    "path": "user-provided-verifier.log",
+    "bytes": 19250,
+    "sha256": "79255b173413dea71e8f4738795bf3a4418d9799f95486ebb9c990360de778f1"
+  },
+  "candidate_score": {
+    "numerator": "66812491",
+    "denominator": "99194740"
+  },
+  "observed_stage": "Solution.Candidate compilation",
+  "observed_stage_seconds": 683,
+  "observed_lean_exit_code": 137,
+  "complete_solution_compilation_passed": false,
+  "solution_statement_or_axiom_comparison_reached": false,
+  "independent_solution_nanoda_reached": false,
+  "official_website_record_obtained": false,
+  "published_original_source": {
+    "path": "submission/proof/Solution.lean",
+    "bytes": 1996187,
+    "sha256": "d52f013f7edcc8536a28ef3908e64a967e5b9184d6546952cb5a541dc6d65e8a"
+  },
+  "warning_line_fingerprint": [
+    2209,
+    2293,
+    3072,
+    6546,
+    6995,
+    8099,
+    8580
+  ],
+  "warning_line_fingerprint_matches_published_source": true,
+  "exact_uploaded_source_hash_not_available": true,
+  "likely_cause": "SIGKILL caused by memory exhaustion; hypothesis supported by matching source scheduling and local AM memory diagnostics",
+  "official_oom_telemetry_supplied": false,
+  "oom_conclusively_established": false,
+  "last_warning_line_is_not_fault_location": true,
+  "public_site_commit_checked": "6664d243005e12e155c19775b83f53721757414b",
+  "public_site_resources": {
+    "cpu_count": 4,
+    "memory_MB": 8192,
+    "inner_timeout_seconds": 3200,
+    "outer_timeout_seconds": 3240
+  },
+  "public_configuration_bindings": [
+    {
+      "path": "e2b/build-template.ts",
+      "sha256": "439eeec3a8cb58f98083d635c8d62c6e79cc14b6c820c898183c9c0c3913cb0e",
+      "url": "https://github.com/josusanmartin/riemann/blob/6664d243005e12e155c19775b83f53721757414b/e2b/build-template.ts"
+    },
+    {
+      "path": "scripts/run-comparator-e2b.sh",
+      "sha256": "86308ed0ed625524e8ed26f08dd8087d3046f5729da0d7e4d1cd5199a41dbde0",
+      "url": "https://github.com/josusanmartin/riemann/blob/6664d243005e12e155c19775b83f53721757414b/scripts/run-comparator-e2b.sh"
+    },
+    {
+      "path": "e2b/run-verification-job.sh",
+      "sha256": "4a072eebbbb1bf0e230f38755ea2f11b38a5e650e0986179dac17c973dd47aaa",
+      "url": "https://github.com/josusanmartin/riemann/blob/6664d243005e12e155c19775b83f53721757414b/e2b/run-verification-job.sh"
+    }
+  ],
+  "local_measurement_records": [
+    "verification/am-async-four-thread-diagnostic.json",
+    "verification/am-async-two-thread-diagnostic.json",
+    "verification/am-serial-one-thread-diagnostic.json"
+  ],
+  "local_windows_metrics_do_not_certify_linux_limits": true,
+  "new_mathematical_results_or_verified_roots": 0
+}

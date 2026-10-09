@@ -1,0 +1,340 @@
+{
+  "status": "CHECKED_AM_COMPONENT_ONLY",
+  "source": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\AMBoundedAsync8.lean",
+  "source_bytes": 1503275,
+  "source_sha256": "de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e",
+  "module_name": "RecordProportion.ImportedAM",
+  "source_root": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/source",
+  "new_artifact_inventory": {
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/lib/RecordProportion/ImportedAM.olean": {
+      "bytes": 62218856,
+      "sha256": "6aa4881331115a354eccdb8e8367cae28abf532d028d5ab481665847d45de9fd"
+    }
+  },
+  "workers": 4,
+  "tstack": 32768,
+  "timeout_seconds": 1200,
+  "harness_version": 3,
+  "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+  "phase_summaries": {
+    "compile": {
+      "actual_exit_code": 0,
+      "elapsed_seconds": 448.761,
+      "timeout": false,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "sampled_tree_peak_rss_bytes": 7997689856,
+      "sampled_tree_peak_pss_bytes": 7998533632,
+      "sampled_tree_peak_swap_bytes": 0,
+      "proof_succeeded": true,
+      "resource_fit": true,
+      "inputs_unchanged": true,
+      "group_peak_bytes": 8589934592,
+      "memory_failcnt": 0,
+      "all_selected_imported_artifact_pages_nonresident_before_start": true,
+      "before_after_binding_record": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\compile-result.json",
+      "before_after_binding_record_sha256": "af9e69edda45abfc8840e8f71fefc099a692e371f973b15d347b66231a976df3"
+    },
+    "deps": {
+      "actual_exit_code": 0,
+      "elapsed_seconds": 0.575,
+      "timeout": false,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "sampled_tree_peak_rss_bytes": 4096,
+      "sampled_tree_peak_pss_bytes": 118784,
+      "sampled_tree_peak_swap_bytes": 0,
+      "proof_succeeded": true,
+      "resource_fit": true,
+      "inputs_unchanged": true,
+      "group_peak_bytes": 109035520,
+      "memory_failcnt": 0,
+      "all_selected_imported_artifact_pages_nonresident_before_start": true,
+      "before_after_binding_record": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\deps-result.json",
+      "before_after_binding_record_sha256": "6269e62b6b0ad3e052d31bea8f1ba068f22043f683796c17010d38868b8ce178"
+    },
+    "audit": {
+      "actual_exit_code": 0,
+      "elapsed_seconds": 23.375,
+      "timeout": false,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "sampled_tree_peak_rss_bytes": 6572572672,
+      "sampled_tree_peak_pss_bytes": 6573906944,
+      "sampled_tree_peak_swap_bytes": 0,
+      "proof_succeeded": true,
+      "resource_fit": true,
+      "inputs_unchanged": true,
+      "group_peak_bytes": 7843868672,
+      "memory_failcnt": 0,
+      "all_selected_imported_artifact_pages_nonresident_before_start": true,
+      "before_after_binding_record": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\audit-result.json",
+      "before_after_binding_record_sha256": "03e95697abebc8717f63aaf20d2aa53f8b8d9d765f424bdcc289c4757423f142"
+    }
+  },
+  "fresh_deps_exact": true,
+  "all_twenty_axiom_roots_checked": [
+    {
+      "root": "AMW.wfunAM_le_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.mcheckP_ok",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.sp_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.gsplit0_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.ssplit57_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.splitAx_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL.tm_ok",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL_cert_full",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.Cert.PC8CL_G_rev",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.HW_ge",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.tracesBoundsAM_concrete",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "Zeta23Ext.Bridge.tail_passage",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.phi_antitoneOn",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.deriv2_mul_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.deriv_mul_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.deriv2_eq_zero_of_eqOn",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.integrable_abs_of_cs",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.integral_abs_deriv2_mul_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.integral_abs_phi_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "AMW.integral_abs_phi_sq_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "whole_solution_compiled": false,
+  "same_os_sync_control_executed": false,
+  "optimization_gain_established": false,
+  "official_vm_reproduced": false,
+  "website_acceptance_established": false,
+  "new_mathematical_result": false,
+  "proofowner_released": true,
+  "failures_preserved": true,
+  "scope": "Isolated Linux cgroup component trial, not a whole official VM or website acceptance.",
+  "barrier_profile": {
+    "barrier_count": 162,
+    "largest_gaps": [
+      {
+        "completed_barrier": 153,
+        "milliseconds_since_previous_barrier": 34713,
+        "base_source_byte_start": 1227669,
+        "base_source_byte_stop": 1274764,
+        "proof_names": [
+          "rc9",
+          "wcc10_10",
+          "cc10_10",
+          "rc10",
+          "wcc11_11",
+          "cc11_11",
+          "rc11",
+          "wcc12_12"
+        ]
+      },
+      {
+        "completed_barrier": 156,
+        "milliseconds_since_previous_barrier": 30908,
+        "base_source_byte_start": 1328822,
+        "base_source_byte_stop": 1374821,
+        "proof_names": [
+          "rc17",
+          "wcc18_18",
+          "cc18_18",
+          "rc18",
+          "wcc19_19",
+          "cc19_19",
+          "rc19",
+          "wcc20_20"
+        ]
+      },
+      {
+        "completed_barrier": 151,
+        "milliseconds_since_previous_barrier": 25220,
+        "base_source_byte_start": 1148588,
+        "base_source_byte_stop": 1191707,
+        "proof_names": [
+          "cc4_4",
+          "rc4",
+          "wcc5_5",
+          "cc5_5",
+          "rc5",
+          "wcc6_6",
+          "cc6_6",
+          "rc6"
+        ]
+      },
+      {
+        "completed_barrier": 150,
+        "milliseconds_since_previous_barrier": 24076,
+        "base_source_byte_start": 1104602,
+        "base_source_byte_stop": 1148588,
+        "proof_names": [
+          "rc1",
+          "wcc2_2",
+          "cc2_2",
+          "rc2",
+          "wcc3_3",
+          "cc3_3",
+          "rc3",
+          "wcc4_4"
+        ]
+      },
+      {
+        "completed_barrier": 152,
+        "milliseconds_since_previous_barrier": 22558,
+        "base_source_byte_start": 1191707,
+        "base_source_byte_stop": 1227669,
+        "proof_names": [
+          "wcc7_7",
+          "cc7_7",
+          "rc7",
+          "wcc8_8",
+          "cc8_8",
+          "rc8",
+          "wcc9_9",
+          "cc9_9"
+        ]
+      }
+    ],
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\barrier-profile.json",
+    "sha256": "a7179b0a1e7ce6104a4c58336d8549ad7a3a05611c4739da36f1c2228a86a3ac",
+    "live_counts_lower_bound_only": true,
+    "correction_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\barrier-profile-stdio-correction.json"
+  }
+}

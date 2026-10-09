@@ -1,0 +1,21 @@
+import RecordProportion.ImportedAM
+#print axioms AMW.wfunAM_le_one
+#print axioms AMW.Cert.PC8CL.mcheckP_ok
+#print axioms AMW.Cert.PC8CL.sp_ok
+#print axioms AMW.Cert.PC8CL.gsplit0_ok
+#print axioms AMW.Cert.PC8CL.ssplit57_ok
+#print axioms AMW.Cert.PC8CL.splitAx_ok
+#print axioms AMW.Cert.PC8CL.tm_ok
+#print axioms AMW.Cert.PC8CL_cert_full
+#print axioms AMW.Cert.PC8CL_G_rev
+#print axioms AMW.HW_ge
+#print axioms AMW.tracesBoundsAM_concrete
+#print axioms Zeta23Ext.Bridge.tail_passage
+#print axioms AMW.phi_antitoneOn
+#print axioms AMW.deriv2_mul_eq
+#print axioms AMW.deriv_mul_eq
+#print axioms AMW.deriv2_eq_zero_of_eqOn
+#print axioms AMW.integrable_abs_of_cs
+#print axioms AMW.integral_abs_deriv2_mul_le
+#print axioms AMW.integral_abs_phi_le
+#print axioms AMW.integral_abs_phi_sq_le

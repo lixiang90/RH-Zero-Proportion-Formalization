@@ -1,0 +1,153 @@
+{
+  "status": "PREPARED_NOT_CHECKED",
+  "prepare_only": true,
+  "native_root": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2",
+  "handoff": "/mnt/e/codex-build/RH-Weil/tmp/linux-memory-runtime-20261010/evidence-v3/handoff-v3.json",
+  "handoff_sha256": "d69baed4ab2ea4d8715deafe9f4d17d4d1be7e961b5da9a377ddd0c4ba3bd6a1",
+  "harness": "/mnt/e/codex-build/RH-Weil/tmp/linux_cgroup_resource_harness_v3_20261010.py",
+  "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+  "lean": "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+  "lean_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "lean_path_baseline": "/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+  "native_verification": "/tmp/rh-proportion-memory-20261010/native-cache-verification.json",
+  "ir_signature_verification": "/tmp/rh-proportion-memory-20261010/native-ir-signature-verification.json",
+  "runner": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/run_am_native_v3_trial.py",
+  "runner_sha256": "1698452f0513b1e937013c76afdc464287b1437222134e059c165c0494a91a31",
+  "runner_windows": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/memory-optimization-20261010/am/run_am_native_v3_trial.py",
+  "prepare_driver": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/memory-optimization-20261010/am/prepare_am_native_v3.py",
+  "prepare_driver_sha256": "9b37a02627e1f642d5c01f695306056c6e4cc53c930f9b6af4ef54458ee181ac",
+  "roots": [
+    "AMW.wfunAM_le_one",
+    "AMW.Cert.PC8CL.mcheckP_ok",
+    "AMW.Cert.PC8CL.sp_ok",
+    "AMW.Cert.PC8CL.gsplit0_ok",
+    "AMW.Cert.PC8CL.ssplit57_ok",
+    "AMW.Cert.PC8CL.splitAx_ok",
+    "AMW.Cert.PC8CL.tm_ok",
+    "AMW.Cert.PC8CL_cert_full",
+    "AMW.Cert.PC8CL_G_rev",
+    "AMW.HW_ge",
+    "AMW.tracesBoundsAM_concrete",
+    "Zeta23Ext.Bridge.tail_passage",
+    "AMW.phi_antitoneOn",
+    "AMW.deriv2_mul_eq",
+    "AMW.deriv_mul_eq",
+    "AMW.deriv2_eq_zero_of_eqOn",
+    "AMW.integrable_abs_of_cs",
+    "AMW.integral_abs_deriv2_mul_le",
+    "AMW.integral_abs_phi_le",
+    "AMW.integral_abs_phi_sq_le"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "workers": 4,
+  "tstack": 32768,
+  "compile_timeout_seconds": 1200,
+  "deps_timeout_seconds": 180,
+  "audit_timeout_seconds": 180,
+  "resource_memory_bytes": 8589934592,
+  "scope": "Isolated Linux cgroup component trial, not a whole official VM or website acceptance.",
+  "evidence_bindings": [
+    {
+      "path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/memory-optimization-20261010/am/candidate-batch8.json",
+      "sha256": "6faa74044e866aa24bcfdb20ba4084dd1bd0f3b5975f333b7aea49093233978c"
+    },
+    {
+      "path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/memory-optimization-20261010/am/command-boundaries-check.json",
+      "sha256": "7aba2add7c86d7642d6c607fa45e4eab0993b616d27720310915cb430c1f3d7e"
+    },
+    {
+      "path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/memory-optimization-20261010/am/command-boundaries.tsv",
+      "sha256": "3d80a7926bdb8956c75ceae2ba10242ccb62ae28f123ed4970a4ecdba763682a"
+    },
+    {
+      "path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/memory-optimization-20261010/am/ParseBoundariesLinux.lean",
+      "sha256": "9d6ce0956492169578165c869b949d83f2e22717ad00fe3a0b5f4683ba457853"
+    },
+    {
+      "path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/memory-optimization-20261010/am/generate_bounded_am.py",
+      "sha256": "13dad03fce0acbda3b4127ee20c3d75967c5247d477ad08ba1596884b8843188"
+    }
+  ],
+  "variants": {
+    "bounded8": {
+      "source_root": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/source",
+      "lib_root": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/lib",
+      "audit_lib_root": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/audit-lib",
+      "source": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/source/RecordProportion/ImportedAM.lean",
+      "source_bytes": 1503275,
+      "source_sha256": "de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e",
+      "audit_source": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/source/FreshAllRoots.lean",
+      "audit_sha256": "c002f648af3ba0e51a86de634a5e8bef5ce36fcbffe8ce95ca95a2cc88ad8d0c",
+      "artifact": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/lib/RecordProportion/ImportedAM.olean",
+      "imports": [
+        "Zeta23.FinalMult",
+        "Zeta23.XiPrime.QuarticWindow.ModWindow",
+        "Zeta23.ThmD.Window",
+        "Zeta23.ThmD.WindowCore",
+        "Zeta23.ThmD.Limit",
+        "Zeta23.ThmD.ZeroSideD",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+        "Mathlib.Analysis.Real.Pi.Bounds",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Zeta23.Taper.Norms",
+        "Zeta23.ThmD.Concrete",
+        "Zeta23.ZeroSide.RankTraceMult",
+        "Zeta23.ThmD.Mult",
+        "Zeta23.PrimeSideA.EndsE1",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+        "Mathlib"
+      ],
+      "compile_run_id": "am-bounded8-v3-compile-20261010",
+      "deps_run_id": "am-bounded8-v3-deps-20261010",
+      "audit_run_id": "am-bounded8-v3-audit-20261010",
+      "compiled": false,
+      "fresh_audit_checked": false
+    },
+    "syncalias8": {
+      "source_root": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/source",
+      "lib_root": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/lib",
+      "audit_lib_root": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/audit-lib",
+      "source": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/source/RecordProportion/ImportedAM.lean",
+      "source_bytes": 1501640,
+      "source_sha256": "40f0fb440a3673aa36ba81361e1db7ef31471851bae63b82d77f434605a769f5",
+      "audit_source": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/source/FreshAllRoots.lean",
+      "audit_sha256": "c002f648af3ba0e51a86de634a5e8bef5ce36fcbffe8ce95ca95a2cc88ad8d0c",
+      "artifact": "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/lib/RecordProportion/ImportedAM.olean",
+      "imports": [
+        "Zeta23.FinalMult",
+        "Zeta23.XiPrime.QuarticWindow.ModWindow",
+        "Zeta23.ThmD.Window",
+        "Zeta23.ThmD.WindowCore",
+        "Zeta23.ThmD.Limit",
+        "Zeta23.ThmD.ZeroSideD",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+        "Mathlib.Analysis.Real.Pi.Bounds",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Zeta23.Taper.Norms",
+        "Zeta23.ThmD.Concrete",
+        "Zeta23.ZeroSide.RankTraceMult",
+        "Zeta23.ThmD.Mult",
+        "Zeta23.PrimeSideA.EndsE1",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+        "Mathlib"
+      ],
+      "compile_run_id": "am-syncalias8-v3-compile-20261010",
+      "deps_run_id": "am-syncalias8-v3-deps-20261010",
+      "audit_run_id": "am-syncalias8-v3-audit-20261010",
+      "compiled": false,
+      "fresh_audit_checked": false
+    }
+  },
+  "all_overlay_roots": [
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/lib",
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/audit-lib",
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/lib",
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/audit-lib"
+  ]
+}

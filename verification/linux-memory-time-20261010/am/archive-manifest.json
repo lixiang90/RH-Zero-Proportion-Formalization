@@ -1,0 +1,723 @@
+{
+  "status": "PROSPECTIVE_AM_PUBLICATION_EVIDENCE_ONLY",
+  "packet_id": "am-publication-evidence-20261010",
+  "gzip_policy": {
+    "mtime": 0,
+    "filename_header": "",
+    "compression_level": 6,
+    "decompressed_bytes_and_sha256_verified": true
+  },
+  "files": [
+    {
+      "path": "comparison.json",
+      "role": "compact same-Linux paired component comparison",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\same-linux-am-controlled-comparison.json",
+      "archive_bytes": 3615,
+      "archive_sha256": "1d3ad7182dd3cafcf8c15cea718bf83ce8878c1fa3c44371f7c090396e68ef8d",
+      "decompressed_bytes": 3615,
+      "decompressed_sha256": "1d3ad7182dd3cafcf8c15cea718bf83ce8878c1fa3c44371f7c090396e68ef8d",
+      "encoding": "identity"
+    },
+    {
+      "path": "summaries/bounded8.json",
+      "role": "compact completed component validation",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\checked-summary.json",
+      "archive_bytes": 9734,
+      "archive_sha256": "c6e4ccd1aae0242c1a1ca04e380923a89899d160948cd33f6ec3a30908a6d9ff",
+      "decompressed_bytes": 9734,
+      "decompressed_sha256": "c6e4ccd1aae0242c1a1ca04e380923a89899d160948cd33f6ec3a30908a6d9ff",
+      "encoding": "identity"
+    },
+    {
+      "path": "runs/bounded8/compile/process.log.gz",
+      "role": "exact raw compile process.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\compile-process.log",
+      "archive_bytes": 1066,
+      "archive_sha256": "e7d639f8aee3974bc5dcaf80c8da2392c3610962b5561f3104c0dc8ee0e79bc9",
+      "decompressed_bytes": 6702,
+      "decompressed_sha256": "a06a46f1d3cf1e8075b1b6514b110a912230f632e643ed30d11a6e6149b0de19",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/compile/result.json.gz",
+      "role": "exact raw compile result.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\compile-result.json",
+      "archive_bytes": 119680,
+      "archive_sha256": "6ba61f877118238f29ddd9ed6b90112b5bc6a9420d1e53d70d2f4632d18f4c5e",
+      "decompressed_bytes": 1425723,
+      "decompressed_sha256": "af9e69edda45abfc8840e8f71fefc099a692e371f973b15d347b66231a976df3",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/compile/scoped-cache-eviction.json.gz",
+      "role": "exact raw compile scoped-cache-eviction.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\compile-scoped-cache-eviction.json",
+      "archive_bytes": 858982,
+      "archive_sha256": "13a37a1df4f6ef54e9695abcb808ae93b5674e37f8aaf7268469614c15187c35",
+      "decompressed_bytes": 27820554,
+      "decompressed_sha256": "5ba5f88646119fef6a9c2f3a2ba644b0956d307ded152f032f19f39766529bf1",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/compile/harness.stdout.log.gz",
+      "role": "exact raw compile harness.stdout.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\compile-harness.stdout.log",
+      "archive_bytes": 2372,
+      "archive_sha256": "e0d67255e5eecf5d1ffe4bc4fa5390ab6a11150a30c4c138d5250691405539a3",
+      "decompressed_bytes": 10287,
+      "decompressed_sha256": "446d597962b2300f6c4735ac242475fc5bc010a3e82890d5c803b07ecf40ccb7",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/compile/harness.stderr.log.gz",
+      "role": "exact raw compile harness.stderr.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\compile-harness.stderr.log",
+      "archive_bytes": 20,
+      "archive_sha256": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83",
+      "decompressed_bytes": 0,
+      "decompressed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/compile/supervisor-result.json",
+      "role": "wall-clock launch/finish and driver output hashes",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-compile-supervisor-result.json",
+      "archive_bytes": 765,
+      "archive_sha256": "e74e744837a0d7a2f32fc5f4fff25247ba31d64d8e61ee96f037cc38da325ab4",
+      "decompressed_bytes": 765,
+      "decompressed_sha256": "e74e744837a0d7a2f32fc5f4fff25247ba31d64d8e61ee96f037cc38da325ab4",
+      "encoding": "identity"
+    },
+    {
+      "path": "runs/bounded8/deps/process.log.gz",
+      "role": "exact raw deps process.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\deps-process.log",
+      "archive_bytes": 138,
+      "archive_sha256": "6350f8bae06ba58d5af528070871faeea74ba31bafa84284936bdbf1df5c2bd0",
+      "decompressed_bytes": 263,
+      "decompressed_sha256": "7b048174d574d0ed17847d38504948bc6b2f4aa7d14bd42b1f0d679278286e88",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/deps/result.json.gz",
+      "role": "exact raw deps result.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\deps-result.json",
+      "archive_bytes": 3147,
+      "archive_sha256": "341a5ff467cd548e32896711d6527d115eeb6b8a78bd156f98f635b47a5d398e",
+      "decompressed_bytes": 12668,
+      "decompressed_sha256": "6269e62b6b0ad3e052d31bea8f1ba068f22043f683796c17010d38868b8ce178",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/deps/scoped-cache-eviction.json.gz",
+      "role": "exact raw deps scoped-cache-eviction.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\deps-scoped-cache-eviction.json",
+      "archive_bytes": 859072,
+      "archive_sha256": "1b39be777620ea20228022015b2c339a856f78093cbe38090946f8fc7750f09f",
+      "decompressed_bytes": 27821052,
+      "decompressed_sha256": "a74e9e63ea9f0d107056bdbe32b1beecba7fe681e717bddd09690b22f8612c5b",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/deps/harness.stdout.log.gz",
+      "role": "exact raw deps harness.stdout.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\deps-harness.stdout.log",
+      "archive_bytes": 1695,
+      "archive_sha256": "32e2f9a41bfdbdcff39d3fa5146e6f389414b6e9cd5d302e35557aee25e94112",
+      "decompressed_bytes": 5336,
+      "decompressed_sha256": "d9c27c419d28c1dcc5011fa0203e706920430ca570b717f0d7b7d16d5f4b1341",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/deps/harness.stderr.log.gz",
+      "role": "exact raw deps harness.stderr.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\deps-harness.stderr.log",
+      "archive_bytes": 20,
+      "archive_sha256": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83",
+      "decompressed_bytes": 0,
+      "decompressed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/deps/supervisor-result.json",
+      "role": "wall-clock launch/finish and driver output hashes",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-deps-supervisor-result.json",
+      "archive_bytes": 728,
+      "archive_sha256": "aefa15f60d36f62e1137d620c065a09f5c319ab4dc3841db9fd97bbf6c7188b7",
+      "decompressed_bytes": 728,
+      "decompressed_sha256": "aefa15f60d36f62e1137d620c065a09f5c319ab4dc3841db9fd97bbf6c7188b7",
+      "encoding": "identity"
+    },
+    {
+      "path": "runs/bounded8/audit/process.log.gz",
+      "role": "exact raw audit process.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\audit-process.log",
+      "archive_bytes": 293,
+      "archive_sha256": "e8bae5414e7fdaee073a469f763772c330ff15ffbb23b2157475ca5a4940c843",
+      "decompressed_bytes": 1669,
+      "decompressed_sha256": "913b7c677195c42631bb0de7bc9066286f9bec8d17e3c2c10c7eaf65deb192ee",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/audit/result.json.gz",
+      "role": "exact raw audit result.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\audit-result.json",
+      "archive_bytes": 10965,
+      "archive_sha256": "d1f522ab846c108fb799cf448c740969f9ed22198b6cfbf35b40472653ac13f8",
+      "decompressed_bytes": 85360,
+      "decompressed_sha256": "03e95697abebc8717f63aaf20d2aa53f8b8d9d765f424bdcc289c4757423f142",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/audit/scoped-cache-eviction.json.gz",
+      "role": "exact raw audit scoped-cache-eviction.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\audit-scoped-cache-eviction.json",
+      "archive_bytes": 859105,
+      "archive_sha256": "1772c5d9c81340675249768e3ec2f8ab40a8006c15293572794d9e04b8ff00c9",
+      "decompressed_bytes": 27821073,
+      "decompressed_sha256": "29722de90463f4af970866ab13944848de309b8c50b19362d2927d9fb7b575b2",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/audit/harness.stdout.log.gz",
+      "role": "exact raw audit harness.stdout.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\audit-harness.stdout.log",
+      "archive_bytes": 1780,
+      "archive_sha256": "a3e539757329b676db35189acc01e983c73d35966c3a468c5ca186ae5bc73dbf",
+      "decompressed_bytes": 5654,
+      "decompressed_sha256": "1419d7ae0c0062038839ca3a07e135cad31aaa774ed5e8afae7a00eab4d0647a",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/audit/harness.stderr.log.gz",
+      "role": "exact raw audit harness.stderr.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\audit-harness.stderr.log",
+      "archive_bytes": 20,
+      "archive_sha256": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83",
+      "decompressed_bytes": 0,
+      "decompressed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/bounded8/audit/supervisor-result.json",
+      "role": "wall-clock launch/finish and driver output hashes",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-audit-supervisor-result.json",
+      "archive_bytes": 731,
+      "archive_sha256": "1842c63a087b09348d1e1ffd82fb3ed6b98fbdca4294eb4abe3bbe2171c90f8a",
+      "decompressed_bytes": 731,
+      "decompressed_sha256": "1842c63a087b09348d1e1ffd82fb3ed6b98fbdca4294eb4abe3bbe2171c90f8a",
+      "encoding": "identity"
+    },
+    {
+      "path": "summaries/syncalias8.json",
+      "role": "compact completed component validation",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\checked-summary.json",
+      "archive_bytes": 7316,
+      "archive_sha256": "402cb624141084073d6e6d93caf98abd07c049130b72f86837354f28e4e5751a",
+      "decompressed_bytes": 7316,
+      "decompressed_sha256": "402cb624141084073d6e6d93caf98abd07c049130b72f86837354f28e4e5751a",
+      "encoding": "identity"
+    },
+    {
+      "path": "runs/syncalias8/compile/process.log.gz",
+      "role": "exact raw compile process.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\compile-process.log",
+      "archive_bytes": 392,
+      "archive_sha256": "74a5c5899277c2a14933c20ea5441eab85fb5e14ca390e5e5a0d14aefef29b41",
+      "decompressed_bytes": 3847,
+      "decompressed_sha256": "f2e964fb63fb713c302addf136663c808dad65de9d2acc3aaaec80dfdd1995de",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/compile/result.json.gz",
+      "role": "exact raw compile result.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\compile-result.json",
+      "archive_bytes": 133584,
+      "archive_sha256": "e95658b1b2e2cff6a109631bcfa123507edee694cdf9283ec2d220a1db7664a8",
+      "decompressed_bytes": 1754486,
+      "decompressed_sha256": "a6aa7519ad95b73ecb36d0efcbc159f2d284f62abe070b106f724973fa897461",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/compile/scoped-cache-eviction.json.gz",
+      "role": "exact raw compile scoped-cache-eviction.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\compile-scoped-cache-eviction.json",
+      "archive_bytes": 859092,
+      "archive_sha256": "d3886505cfe9e0684c47ebd5515ce30b46371d53cddbc926cf13483c373f67ff",
+      "decompressed_bytes": 27821502,
+      "decompressed_sha256": "556264b87800c1cdb0dff62a09ad20b4f7f78f934dc0fe3a8cf421ce247dcdd2",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/compile/harness.stdout.log.gz",
+      "role": "exact raw compile harness.stdout.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\compile-harness.stdout.log",
+      "archive_bytes": 2519,
+      "archive_sha256": "b0a6dcde65ea8e35768ae916b15cb3530e5570f8979fb2828c21fdd5ce6248fb",
+      "decompressed_bytes": 11512,
+      "decompressed_sha256": "c3570789b500b044b75db91ff8e74e520adc4a72b882b7cc5a8c089d601dc6c3",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/compile/harness.stderr.log.gz",
+      "role": "exact raw compile harness.stderr.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\compile-harness.stderr.log",
+      "archive_bytes": 20,
+      "archive_sha256": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83",
+      "decompressed_bytes": 0,
+      "decompressed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/compile/supervisor-result.json",
+      "role": "wall-clock launch/finish and driver output hashes",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-compile-supervisor-result.json",
+      "archive_bytes": 786,
+      "archive_sha256": "e96ac67b43b053eeee83b65ba0897c973572edbce221d38f698c3ffac7f12eb8",
+      "decompressed_bytes": 786,
+      "decompressed_sha256": "e96ac67b43b053eeee83b65ba0897c973572edbce221d38f698c3ffac7f12eb8",
+      "encoding": "identity"
+    },
+    {
+      "path": "runs/syncalias8/deps/process.log.gz",
+      "role": "exact raw deps process.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\deps-process.log",
+      "archive_bytes": 140,
+      "archive_sha256": "300bbf94cab01d1cbc36f858f82c43f9f9ec776f6e6fd6facaa001abea264a71",
+      "decompressed_bytes": 265,
+      "decompressed_sha256": "84b937dcc3acd90f93f31d2a276c98945ee63afd11c51a49c802fdd92a7ecef4",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/deps/result.json.gz",
+      "role": "exact raw deps result.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\deps-result.json",
+      "archive_bytes": 3148,
+      "archive_sha256": "8bf32f06c339f4ff6148038b1bc4e780dc4fc99e6d0bcb02605632d73a63e7e9",
+      "decompressed_bytes": 12678,
+      "decompressed_sha256": "ba2dd85873162bb1455ab4a5f6ef8d29c7ada9d0dcd56f5da4f8ed95f840440f",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/deps/scoped-cache-eviction.json.gz",
+      "role": "exact raw deps scoped-cache-eviction.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\deps-scoped-cache-eviction.json",
+      "archive_bytes": 859140,
+      "archive_sha256": "2f7392541f35d890775da9c83c9f7d4dda5e5cf3bc477cebea3cfb382606ae82",
+      "decompressed_bytes": 27822002,
+      "decompressed_sha256": "386f16c9bafde1787edfc13fe20f59019e0051434dee3716a512bd9851e9b597",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/deps/harness.stdout.log.gz",
+      "role": "exact raw deps harness.stdout.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\deps-harness.stdout.log",
+      "archive_bytes": 1693,
+      "archive_sha256": "f9ea8c51d8313d49a00c542519e81a63e0eb55dd3bd21ecbe611136d28627271",
+      "decompressed_bytes": 5346,
+      "decompressed_sha256": "a7209b99175ace4f880108a33f03ece3914b5cf33aa1dcc3130b93d1250ff5b8",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/deps/harness.stderr.log.gz",
+      "role": "exact raw deps harness.stderr.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\deps-harness.stderr.log",
+      "archive_bytes": 20,
+      "archive_sha256": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83",
+      "decompressed_bytes": 0,
+      "decompressed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/deps/supervisor-result.json",
+      "role": "wall-clock launch/finish and driver output hashes",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-deps-supervisor-result.json",
+      "archive_bytes": 760,
+      "archive_sha256": "ea68467081634af625553a2bfe85c6de58cd720386cf43bfbdd78145e9f45924",
+      "decompressed_bytes": 760,
+      "decompressed_sha256": "ea68467081634af625553a2bfe85c6de58cd720386cf43bfbdd78145e9f45924",
+      "encoding": "identity"
+    },
+    {
+      "path": "runs/syncalias8/audit/process.log.gz",
+      "role": "exact raw audit process.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\audit-process.log",
+      "archive_bytes": 293,
+      "archive_sha256": "e8bae5414e7fdaee073a469f763772c330ff15ffbb23b2157475ca5a4940c843",
+      "decompressed_bytes": 1669,
+      "decompressed_sha256": "913b7c677195c42631bb0de7bc9066286f9bec8d17e3c2c10c7eaf65deb192ee",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/audit/result.json.gz",
+      "role": "exact raw audit result.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\audit-result.json",
+      "archive_bytes": 11474,
+      "archive_sha256": "d4fd6a4290978e1d338491dcc5566bb8e153cb9461801570a3098fece6dd21f0",
+      "decompressed_bytes": 90300,
+      "decompressed_sha256": "7a8e9406fe594045c806c06b3328ef99fb091025408f1955d2f466227d8c43ff",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/audit/scoped-cache-eviction.json.gz",
+      "role": "exact raw audit scoped-cache-eviction.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\audit-scoped-cache-eviction.json",
+      "archive_bytes": 859172,
+      "archive_sha256": "2bfe30b13e69d69f440c7134a456f8ca5b13a1614a728d71975e23c1089ff683",
+      "decompressed_bytes": 27822023,
+      "decompressed_sha256": "c3255c0954d6ffde6fa122a8be0f8d9abc4e1b78dc48af99a40c4addc96bcf0a",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/audit/harness.stdout.log.gz",
+      "role": "exact raw audit harness.stdout.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\audit-harness.stdout.log",
+      "archive_bytes": 1780,
+      "archive_sha256": "a092f5da0eee6c498a8228c82ed3b734c96034eb68e8d5748953f814fe02ee8f",
+      "decompressed_bytes": 5668,
+      "decompressed_sha256": "9724ef375077511ac20883cccb2ddc4b9f13cbcf3c1cd3b0bcecd5af429ebafb",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/audit/harness.stderr.log.gz",
+      "role": "exact raw audit harness.stderr.log",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-v3-native-actual\\audit-harness.stderr.log",
+      "archive_bytes": 20,
+      "archive_sha256": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83",
+      "decompressed_bytes": 0,
+      "decompressed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "gzip"
+    },
+    {
+      "path": "runs/syncalias8/audit/supervisor-result.json",
+      "role": "wall-clock launch/finish and driver output hashes",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\syncalias8-audit-supervisor-result.json",
+      "archive_bytes": 762,
+      "archive_sha256": "ae7b2fd20b439a1e71f383d44a162cb645288c764af728d3db7eb4fe6272c9a0",
+      "decompressed_bytes": 762,
+      "decompressed_sha256": "ae7b2fd20b439a1e71f383d44a162cb645288c764af728d3db7eb4fe6272c9a0",
+      "encoding": "identity"
+    },
+    {
+      "path": "analysis/barrier-profile.json",
+      "role": "final monotonic proof-group timing; live stdout is lower bound",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\barrier-profile.json",
+      "archive_bytes": 72939,
+      "archive_sha256": "a7179b0a1e7ce6104a4c58336d8549ad7a3a05611c4739da36f1c2228a86a3ac",
+      "decompressed_bytes": 72939,
+      "decompressed_sha256": "a7179b0a1e7ce6104a4c58336d8549ad7a3a05611c4739da36f1c2228a86a3ac",
+      "encoding": "identity"
+    },
+    {
+      "path": "analysis/barrier-profile-stdio-correction.json",
+      "role": "final monotonic proof-group timing; live stdout is lower bound",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\bounded8-v3-native-actual\\barrier-profile-stdio-correction.json",
+      "archive_bytes": 669,
+      "archive_sha256": "1bae10ba1d207bd8005bae0d5a9ad7ba3583a2fcab10adb8338bcb7e34213ca1",
+      "decompressed_bytes": 669,
+      "decompressed_sha256": "1bae10ba1d207bd8005bae0d5a9ad7ba3583a2fcab10adb8338bcb7e34213ca1",
+      "encoding": "identity"
+    },
+    {
+      "path": "analysis/peak-attribution.json",
+      "role": "coarse archived-sample inference, plus-or-minus1second and async8 caveats",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\am-peak-attribution-file-only.json",
+      "archive_bytes": 2723,
+      "archive_sha256": "b0806f6d985f9f900aca85d644078d1fae97c057672ccc3d0f11a9da04b93520",
+      "decompressed_bytes": 2723,
+      "decompressed_sha256": "b0806f6d985f9f900aca85d644078d1fae97c057672ccc3d0f11a9da04b93520",
+      "encoding": "identity"
+    },
+    {
+      "path": "provenance/config.json",
+      "role": "exact prepared provenance, prior pending labels are historical",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\config.json",
+      "archive_bytes": 8856,
+      "archive_sha256": "f4ad6866c06ea98cd4a99d154cc2221271af3cb5d96faabc136417e749671ee8",
+      "decompressed_bytes": 8856,
+      "decompressed_sha256": "f4ad6866c06ea98cd4a99d154cc2221271af3cb5d96faabc136417e749671ee8",
+      "encoding": "identity"
+    },
+    {
+      "path": "provenance/prepared-native-trees.json",
+      "role": "exact prepared provenance, prior pending labels are historical",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\prepared-native-trees.json",
+      "archive_bytes": 2186,
+      "archive_sha256": "55f950b39e09302f4f25d21989617c5e7510cf87cd3e31c14a1a2ec3bbf29c1c",
+      "decompressed_bytes": 2186,
+      "decompressed_sha256": "55f950b39e09302f4f25d21989617c5e7510cf87cd3e31c14a1a2ec3bbf29c1c",
+      "encoding": "identity"
+    },
+    {
+      "path": "provenance/static-driver-review.json",
+      "role": "exact prepared provenance, prior pending labels are historical",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\static-driver-review.json",
+      "archive_bytes": 1649,
+      "archive_sha256": "18ba20c947b55abf9e70f93d1e50b7997cc560d6d4d620fec1cac2cfbbfae52b",
+      "decompressed_bytes": 1649,
+      "decompressed_sha256": "18ba20c947b55abf9e70f93d1e50b7997cc560d6d4d620fec1cac2cfbbfae52b",
+      "encoding": "identity"
+    },
+    {
+      "path": "provenance/FreshAllRoots.lean",
+      "role": "exact prepared provenance, prior pending labels are historical",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\native-am-v3-prepared-r2\\FreshAllRoots.lean",
+      "archive_bytes": 782,
+      "archive_sha256": "c002f648af3ba0e51a86de634a5e8bef5ce36fcbffe8ce95ca95a2cc88ad8d0c",
+      "decompressed_bytes": 782,
+      "decompressed_sha256": "c002f648af3ba0e51a86de634a5e8bef5ce36fcbffe8ce95ca95a2cc88ad8d0c",
+      "encoding": "identity"
+    },
+    {
+      "path": "provenance/run_am_native_v3_trial.py",
+      "role": "source-only archived driver/generator, not executed during packaging",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\run_am_native_v3_trial.py",
+      "archive_bytes": 9465,
+      "archive_sha256": "1698452f0513b1e937013c76afdc464287b1437222134e059c165c0494a91a31",
+      "decompressed_bytes": 9465,
+      "decompressed_sha256": "1698452f0513b1e937013c76afdc464287b1437222134e059c165c0494a91a31",
+      "encoding": "identity"
+    },
+    {
+      "path": "provenance/prepare_am_native_v3.py",
+      "role": "source-only archived driver/generator, not executed during packaging",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\prepare_am_native_v3.py",
+      "archive_bytes": 6827,
+      "archive_sha256": "9b37a02627e1f642d5c01f695306056c6e4cc53c930f9b6af4ef54458ee181ac",
+      "decompressed_bytes": 6827,
+      "decompressed_sha256": "9b37a02627e1f642d5c01f695306056c6e4cc53c930f9b6af4ef54458ee181ac",
+      "encoding": "identity"
+    },
+    {
+      "path": "provenance/generate_bounded_am.py",
+      "role": "source-only archived driver/generator, not executed during packaging",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\generate_bounded_am.py",
+      "archive_bytes": 3162,
+      "archive_sha256": "13dad03fce0acbda3b4127ee20c3d75967c5247d477ad08ba1596884b8843188",
+      "decompressed_bytes": 3162,
+      "decompressed_sha256": "13dad03fce0acbda3b4127ee20c3d75967c5247d477ad08ba1596884b8843188",
+      "encoding": "identity"
+    },
+    {
+      "path": "provenance/review_bounded_am_static.py",
+      "role": "source-only archived driver/generator, not executed during packaging",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\review_bounded_am_static.py",
+      "archive_bytes": 4074,
+      "archive_sha256": "a1f78ce4bd1af5f4ad02f114395ff2dde1b76ea9dd29dfc719ed10f929f5b3fc",
+      "decompressed_bytes": 4074,
+      "decompressed_sha256": "a1f78ce4bd1af5f4ad02f114395ff2dde1b76ea9dd29dfc719ed10f929f5b3fc",
+      "encoding": "identity"
+    },
+    {
+      "path": "source-review/bounded-am-static-integration-review.json.gz",
+      "role": "historical source-only review, superseded by actual component checks",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\bounded-am-static-integration-review.json",
+      "archive_bytes": 1681,
+      "archive_sha256": "ea25a4c662171fa85a2a2bfa6609d3ea04af5c0dbe6498ec3f5fccf6ee67496c",
+      "decompressed_bytes": 3824,
+      "decompressed_sha256": "cbab40a4c4d058e335d6fc7f47e14a08ee79947b3f18159d607288f55c4f203c",
+      "encoding": "gzip"
+    },
+    {
+      "path": "source-review/AMSyncAlias8.lean.gz",
+      "role": "exact synchronous control review source",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\AMSyncAlias8.lean",
+      "archive_bytes": 422829,
+      "archive_sha256": "19544ccdbdef4063eaad08a4b407a406097da3fa8c6f3893f077751663507efa",
+      "decompressed_bytes": 1501640,
+      "decompressed_sha256": "40f0fb440a3673aa36ba81361e1db7ef31471851bae63b82d77f434605a769f5",
+      "encoding": "gzip"
+    },
+    {
+      "path": "environment/handoff-v3.json",
+      "role": "exact archived environment text metadata/source, no runtime/cache bytes read",
+      "source_origin": "E:\\codex-build\\RH-Weil\\tmp\\linux-memory-runtime-20261010\\evidence-v3\\handoff-v3.json",
+      "archive_bytes": 6552,
+      "archive_sha256": "d69baed4ab2ea4d8715deafe9f4d17d4d1be7e961b5da9a377ddd0c4ba3bd6a1",
+      "decompressed_bytes": 6552,
+      "decompressed_sha256": "d69baed4ab2ea4d8715deafe9f4d17d4d1be7e961b5da9a377ddd0c4ba3bd6a1",
+      "encoding": "identity"
+    },
+    {
+      "path": "environment/linux_cgroup_resource_harness_v3_20261010.py",
+      "role": "exact archived environment text metadata/source, no runtime/cache bytes read",
+      "source_origin": "E:\\codex-build\\RH-Weil\\tmp\\linux-memory-runtime-20261010\\evidence-v3\\drivers\\linux_cgroup_resource_harness_v3_20261010.py",
+      "archive_bytes": 17179,
+      "archive_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "decompressed_bytes": 17179,
+      "decompressed_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "encoding": "identity"
+    },
+    {
+      "path": "environment/setup_linux_memory_runtime_20261010.py",
+      "role": "exact archived environment text metadata/source, no runtime/cache bytes read",
+      "source_origin": "E:\\codex-build\\RH-Weil\\tmp\\linux-memory-runtime-20261010\\evidence\\drivers\\setup_linux_memory_runtime_20261010.py",
+      "archive_bytes": 1772,
+      "archive_sha256": "2cb4ecf609e1491830c8b69f5e15a8fab21bb8a2b0ef14da6ed4a6d98542471b",
+      "decompressed_bytes": 1772,
+      "decompressed_sha256": "2cb4ecf609e1491830c8b69f5e15a8fab21bb8a2b0ef14da6ed4a6d98542471b",
+      "encoding": "identity"
+    },
+    {
+      "path": "environment/native-cache-verification.json",
+      "role": "exact archived environment text metadata/source, no runtime/cache bytes read",
+      "source_origin": "E:\\codex-build\\RH-Weil\\tmp\\linux-memory-runtime-20261010\\evidence\\metadata\\native-cache-verification.json",
+      "archive_bytes": 1484,
+      "archive_sha256": "245622f63ba92499f414ac82f92521191bae7c550e4c093bc840c816ce8f0188",
+      "decompressed_bytes": 1484,
+      "decompressed_sha256": "245622f63ba92499f414ac82f92521191bae7c550e4c093bc840c816ce8f0188",
+      "encoding": "identity"
+    },
+    {
+      "path": "environment/native-ir-signature-verification.json",
+      "role": "exact archived environment text metadata/source, no runtime/cache bytes read",
+      "source_origin": "E:\\codex-build\\RH-Weil\\tmp\\linux-memory-runtime-20261010\\evidence\\metadata\\native-ir-signature-verification.json",
+      "archive_bytes": 452,
+      "archive_sha256": "6c10415d16130e499cd98e21b9247a25112379f1567382fb86277642afe51185",
+      "decompressed_bytes": 452,
+      "decompressed_sha256": "6c10415d16130e499cd98e21b9247a25112379f1567382fb86277642afe51185",
+      "encoding": "identity"
+    },
+    {
+      "path": "environment/pinned-windows-dependency-artifacts.json.gz",
+      "role": "exact archived environment text metadata/source, no runtime/cache bytes read",
+      "source_origin": "E:\\codex-build\\RH-Weil\\tmp\\linux-memory-runtime-20261010\\evidence\\metadata\\pinned-windows-dependency-artifacts.json",
+      "archive_bytes": 1772005,
+      "archive_sha256": "98440311c0d18a8defdc82d57f532273f717aca0c50dfaf0f1369321c0fb3cea",
+      "decompressed_bytes": 8125007,
+      "decompressed_sha256": "195212e9f7266264bd19646d99140c63a8f0a8cd999e909ece7c865e075db945",
+      "encoding": "gzip"
+    },
+    {
+      "path": "environment/pinned-ir-signature-delta.json.gz",
+      "role": "exact archived environment text metadata/source, no runtime/cache bytes read",
+      "source_origin": "E:\\codex-build\\RH-Weil\\tmp\\linux-memory-runtime-20261010\\evidence\\metadata\\pinned-ir-signature-delta.json",
+      "archive_bytes": 430156,
+      "archive_sha256": "21a691ae0de4b79ec4c7584926a092415faf7e2064035cbd0207de9a942f31ba",
+      "decompressed_bytes": 1987510,
+      "decompressed_sha256": "f537c3e881db6c413fa6e0a669d145049e733850800302f4f5228511a7ed8587",
+      "encoding": "gzip"
+    },
+    {
+      "path": "environment/download-ranges-result.json",
+      "role": "exact archived environment text metadata/source, no runtime/cache bytes read",
+      "source_origin": "E:\\codex-build\\RH-Weil\\tmp\\linux-memory-runtime-20261010\\evidence\\metadata\\download-ranges-result.json",
+      "archive_bytes": 7585,
+      "archive_sha256": "1fa39ff8f33659825718caee80ba293bf2fdb9e9995b8474d4f1dc1426b8b998",
+      "decompressed_bytes": 7585,
+      "decompressed_sha256": "1fa39ff8f33659825718caee80ba293bf2fdb9e9995b8474d4f1dc1426b8b998",
+      "encoding": "identity"
+    },
+    {
+      "path": "environment/cold-v3-import-summary.json",
+      "role": "exact archived environment text metadata/source, no runtime/cache bytes read",
+      "source_origin": "E:\\codex-build\\RH-Weil\\tmp\\linux-memory-runtime-20261010\\evidence-v3\\cold-v3-summary.json",
+      "archive_bytes": 4555,
+      "archive_sha256": "0f1a985fa315fc05dcb8c2435ba41f4ca2fbf8ad82e6a38c4014082f25b51c47",
+      "decompressed_bytes": 4555,
+      "decompressed_sha256": "0f1a985fa315fc05dcb8c2435ba41f4ca2fbf8ad82e6a38c4014082f25b51c47",
+      "encoding": "identity"
+    },
+    {
+      "path": "validation-phase-gap.json",
+      "role": "metadata",
+      "archive_bytes": 3011,
+      "archive_sha256": "06bf9d4ba17358f9162a7677aeccb61140dbfd2cd7bf6e19f13d7bae79d8397e",
+      "decompressed_bytes": 3011,
+      "decompressed_sha256": "06bf9d4ba17358f9162a7677aeccb61140dbfd2cd7bf6e19f13d7bae79d8397e",
+      "encoding": "identity",
+      "source_origin": "Generated solely from hash-bound archived Windows text records"
+    },
+    {
+      "path": "packet-scope.json",
+      "role": "metadata",
+      "archive_bytes": 1449,
+      "archive_sha256": "3d32f03324fcb322a5f537182baf86ec21937d217b36f22097f2e9cfb8426afe",
+      "decompressed_bytes": 1449,
+      "decompressed_sha256": "3d32f03324fcb322a5f537182baf86ec21937d217b36f22097f2e9cfb8426afe",
+      "encoding": "identity",
+      "source_origin": "Generated solely from hash-bound archived Windows text records"
+    },
+    {
+      "path": "provenance/source-line-spans.json",
+      "role": "metadata",
+      "archive_bytes": 3369,
+      "archive_sha256": "a033c548120a525048e9e6b38111a2e6ea1a5aaf96cd15bf68b08bdfc5ae616d",
+      "decompressed_bytes": 3369,
+      "decompressed_sha256": "a033c548120a525048e9e6b38111a2e6ea1a5aaf96cd15bf68b08bdfc5ae616d",
+      "encoding": "identity",
+      "source_origin": "Generated solely from hash-bound archived Windows text records"
+    },
+    {
+      "path": "provenance/prepare_publication_evidence.py",
+      "role": "file-only deterministic archive builder source",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\am\\prepare_publication_evidence.py",
+      "archive_bytes": 18909,
+      "archive_sha256": "e4e456a54fa4bf4bcbfdf372db8492ad0d2af2940ee77469158095e77a98bfdb",
+      "decompressed_bytes": 18909,
+      "decompressed_sha256": "e4e456a54fa4bf4bcbfdf372db8492ad0d2af2940ee77469158095e77a98bfdb",
+      "encoding": "identity"
+    },
+    {
+      "path": "README.md",
+      "role": "publication-scope reading guide",
+      "archive_bytes": 3239,
+      "archive_sha256": "d3db4a55cec5ebe56bac8fb7e973daf0bb3efc0266d2cb531db8669da2775f89",
+      "decompressed_bytes": 3239,
+      "decompressed_sha256": "d3db4a55cec5ebe56bac8fb7e973daf0bb3efc0266d2cb531db8669da2775f89",
+      "encoding": "identity",
+      "source_origin": "Generated solely from checked component records and trusted root phase-gap disclosure"
+    }
+  ],
+  "external_deduplicated_references": [
+    {
+      "packet_id": "finite-publication-proposal-20261010",
+      "logical_source": "RecordProportion/ImportedAM.lean",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\finite\\publication-proposal-20261010\\review-components\\de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e.gz",
+      "archive_relative_path_in_external_packet": "review-components/de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e.gz",
+      "gzip_sha256": "e5d7ec10e5d8f4f87dfbd472590330d3e0f27d5c2fb576568383c090735feb63",
+      "gzip_bytes": 420544,
+      "decompressed_sha256": "de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e",
+      "decompressed_bytes": 1503275,
+      "reason": "Exact bounded8 source already present; do not publish a second identical gzip."
+    },
+    {
+      "packet_id": "finite-publication-proposal-20261010",
+      "archive_relative_path_in_external_packet": "recipe/candidate-batch8.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\finite\\publication-proposal-20261010\\recipe\\candidate-batch8.json",
+      "decompressed_sha256": "6faa74044e866aa24bcfdb20ba4084dd1bd0f3b5975f333b7aea49093233978c",
+      "decompressed_bytes": 3145,
+      "reason": "Exact parser/insertion provenance already present."
+    },
+    {
+      "packet_id": "finite-publication-proposal-20261010",
+      "archive_relative_path_in_external_packet": "recipe/command-boundaries-check.json",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\finite\\publication-proposal-20261010\\recipe\\command-boundaries-check.json",
+      "decompressed_sha256": "7aba2add7c86d7642d6c607fa45e4eab0993b616d27720310915cb430c1f3d7e",
+      "decompressed_bytes": 1178,
+      "reason": "Exact parser/insertion provenance already present."
+    },
+    {
+      "packet_id": "finite-publication-proposal-20261010",
+      "archive_relative_path_in_external_packet": "recipe/command-boundaries.tsv",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\finite\\publication-proposal-20261010\\recipe\\command-boundaries.tsv",
+      "decompressed_sha256": "3d80a7926bdb8956c75ceae2ba10242ccb62ae28f123ed4970a4ecdba763682a",
+      "decompressed_bytes": 242839,
+      "reason": "Exact parser/insertion provenance already present."
+    },
+    {
+      "packet_id": "finite-publication-proposal-20261010",
+      "archive_relative_path_in_external_packet": "recipe/ParseBoundariesLinux.lean",
+      "source_origin": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\memory-optimization-20261010\\finite\\publication-proposal-20261010\\recipe\\ParseBoundariesLinux.lean",
+      "decompressed_sha256": "9d6ce0956492169578165c869b949d83f2e22717ad00fe3a0b5f4683ba457853",
+      "decompressed_bytes": 929,
+      "reason": "Exact parser/insertion provenance already present."
+    }
+  ],
+  "no_compiler_or_cache_or_linux_invoked": true,
+  "no_runtime_or_compiled_binaries_included": true,
+  "public_repository_files_edited": false,
+  "local_file_count": 66,
+  "local_archive_bytes": 8285598,
+  "local_decompressed_bytes": 182193705
+}

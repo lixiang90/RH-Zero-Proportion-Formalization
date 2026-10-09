@@ -1,0 +1,488 @@
+{
+  "status": "Actual bounded native Linux finite microtests complete; 49-family and whole source PREPARED only",
+  "scope": "Lean4.33rc2 ordinary kernel processes under exact v3 cold-cache cgroup:8GiB,swap0,4CPU quota,-j1,stack32768. Component evidence only, not the official full VM or website acceptance. No independent Nano yet.",
+  "fixed_original_data_sha256": "0b12cba764e62ac55f1d7acdebc6c86cf1a26253ccb31939519b983f01b1bc59",
+  "chosen": {
+    "first": {
+      "baseline_seconds": 3.005,
+      "chosen_seconds": 2.197,
+      "improvement_percent": 26.88851913477537
+    },
+    "reverse": {
+      "baseline_seconds": 2.4610000000000003,
+      "chosen_seconds": 2.2479999999999998,
+      "improvement_percent": 8.655018285249916
+    },
+    "aggregate_seconds": {
+      "baseline": 5.466,
+      "chosen": 4.445
+    },
+    "aggregate_improvement_percent": 18.679107208196122,
+    "baseline_between_run_change_percent": 18.10316139767053,
+    "conclusion": "Positive paired proof-body signal; magnitude not stable between orders. No demonstrated memory gain and no 49-family/whole/Nano conclusion."
+  },
+  "packet": {
+    "baseline_seconds": 2.7800000000000002,
+    "equality_preparation_seconds": 0.218,
+    "finishing_seconds": 2.399,
+    "total_seconds": 2.617,
+    "net_improvement_percent": 5.863309352517998,
+    "sampled_pss_difference_bytes": 1873920,
+    "conclusion": "Do not adopt: 5.86% net result is within observed timing variation; memory change is 1.9MB. Literal whole-family expansion is not source-budget viable. Do not report finishing-only 14% as net improvement."
+  },
+  "runs": {
+    "PivotGeneric": {
+      "step": "PivotGeneric",
+      "fresh_audit": false,
+      "run_id": "finite-pivotgeneric-compile-20261009-170849-9a0388",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 69.025,
+      "proof_seconds": 35.244,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": null,
+      "axioms": {},
+      "phases_seconds": {},
+      "source_sha256": "1ddf1aba3d57989dcd82d57ea0865ce77d2554d0c8cf76e7f86775917f3d4eee",
+      "artifact_sha256": "75166bda917f69769d49bfcf143984e243b258cf5390ab6ba448d7690de20bfd",
+      "cold_preparation_seconds": 32.617,
+      "cgroup_peak_bytes": 8150454272,
+      "sampled_peak_pss_bytes": 6926388224,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "baseline": {
+      "step": "baseline",
+      "fresh_audit": false,
+      "run_id": "finite-baseline-compile-20261009-171302-f22406",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 69.438,
+      "proof_seconds": 35.716,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": null,
+      "axioms": {},
+      "phases_seconds": {
+        "35": 0.945,
+        "54": 0.896,
+        "1199": 1.164
+      },
+      "source_sha256": "9d06c915618fcd22dcbda319c10570f0bf33a2084e293be3d3ace86fdf06934e",
+      "artifact_sha256": "d33b233af227317964a41f4e4a56d7d3ac05587a2ef163f1169dabb107405c6d",
+      "cold_preparation_seconds": 32.654,
+      "cgroup_peak_bytes": 8371216384,
+      "sampled_peak_pss_bytes": 7149144064,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "chosen": {
+      "step": "chosen",
+      "fresh_audit": false,
+      "run_id": "finite-chosen-compile-20261009-171631-d6946f",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 57.368,
+      "proof_seconds": 28.128,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": null,
+      "axioms": {},
+      "phases_seconds": {
+        "35": 0.723,
+        "54": 0.661,
+        "1199": 0.813
+      },
+      "source_sha256": "11b22a98a9d362dfba22e5d55830c789308efcbd1fd6d5f24ce336c7abb504c6",
+      "artifact_sha256": "c1821aa1a12f1d25dd1b3191d9c2a3e82a6b65902ff6b2b44d9fa46365c8d115",
+      "cold_preparation_seconds": 28.37,
+      "cgroup_peak_bytes": 8361078784,
+      "sampled_peak_pss_bytes": 7120906240,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "chosenRepeat": {
+      "step": "chosenRepeat",
+      "fresh_audit": false,
+      "run_id": "finite-chosenrepeat-compile-20261009-172148-8e6f52",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 58.381,
+      "proof_seconds": 28.594,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": null,
+      "axioms": {},
+      "phases_seconds": {
+        "35": 0.704,
+        "54": 0.704,
+        "1199": 0.84
+      },
+      "source_sha256": "11b22a98a9d362dfba22e5d55830c789308efcbd1fd6d5f24ce336c7abb504c6",
+      "artifact_sha256": "83ef448dfc6b2b8ae1e410e3d47dce0bff1f95a8cdc44b3ad576dd11e26c8ce7",
+      "cold_preparation_seconds": 28.963,
+      "cgroup_peak_bytes": 8355799040,
+      "sampled_peak_pss_bytes": 7082071040,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "baselineRepeat": {
+      "step": "baselineRepeat",
+      "fresh_audit": false,
+      "run_id": "finite-baselinerepeat-compile-20261009-172301-e3ca97",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 70.811,
+      "proof_seconds": 27.776,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": null,
+      "axioms": {},
+      "phases_seconds": {
+        "35": 0.779,
+        "54": 0.757,
+        "1199": 0.925
+      },
+      "source_sha256": "9d06c915618fcd22dcbda319c10570f0bf33a2084e293be3d3ace86fdf06934e",
+      "artifact_sha256": "c3b446ff50714f8e6409ec4fb91acfa00c57ee1e8bafe4a104c94d6438c1b092",
+      "cold_preparation_seconds": 42.229,
+      "cgroup_peak_bytes": 8364789760,
+      "sampled_peak_pss_bytes": 7117772800,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "PacketGeneric": {
+      "step": "PacketGeneric",
+      "fresh_audit": false,
+      "run_id": "finite-packetgeneric-compile-20261009-172837-a8ddd7",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 56.446,
+      "proof_seconds": 26.003,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": null,
+      "axioms": {},
+      "phases_seconds": {},
+      "source_sha256": "2a3f14f54b893d7d8274bf1db5e09f2c98bd590ff73fb24b57c090074c9660f9",
+      "artifact_sha256": "bfc26be0f1170bfa51be326a4c1258f5287d3d14bbf19f1a878c39380b802da9",
+      "cold_preparation_seconds": 29.62,
+      "cgroup_peak_bytes": 8120360960,
+      "sampled_peak_pss_bytes": 6891518976,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "packetBaseline": {
+      "step": "packetBaseline",
+      "fresh_audit": false,
+      "run_id": "finite-packetbaseline-compile-20261009-173004-135bb1",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 60.692,
+      "proof_seconds": 28.645,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": null,
+      "axioms": {},
+      "phases_seconds": {
+        "64": 1.04,
+        "65": 0.749,
+        "1198": 0.991
+      },
+      "source_sha256": "c506452936e638a9c0f51b6d2343c68b7ec3115d0ebdab1467bf39c062735905",
+      "artifact_sha256": "b1a904d08c83bb3bcd9f9e375df2c319e1a3da63b474375b1186954d04cfe0c9",
+      "cold_preparation_seconds": 31.182,
+      "cgroup_peak_bytes": 8397492224,
+      "sampled_peak_pss_bytes": 7138897920,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "packetCached": {
+      "step": "packetCached",
+      "fresh_audit": false,
+      "run_id": "finite-packetcached-compile-20261009-173105-1b3a65",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 68.189,
+      "proof_seconds": 27.22,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": null,
+      "axioms": {},
+      "phases_seconds": {
+        "packetEq_64": 0.067,
+        "64": 0.924,
+        "packetEq_65": 0.053,
+        "65": 0.683,
+        "packetEq_1198": 0.098,
+        "1198": 0.792
+      },
+      "source_sha256": "2fb23af85fd7d84233de4353d1316b7ef634d31d7c613d393e03dce684398303",
+      "artifact_sha256": "f937ad8adf628bd126a30e73a3a7a645918fa9843530aea6b09259329d2d3ab2",
+      "cold_preparation_seconds": 40.163,
+      "cgroup_peak_bytes": 8369901568,
+      "sampled_peak_pss_bytes": 7137024000,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    }
+  },
+  "fresh_audits": {
+    "PivotGeneric": {
+      "step": "PivotGeneric",
+      "fresh_audit": true,
+      "run_id": "finite-pivotgeneric-audit-20261009-171039-112797",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 69.132,
+      "proof_seconds": 34.155,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": true,
+      "axioms": {
+        "RHWeil.RecordSubmission.FiniteCertificateData.chosen_bound_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.chosen_lower_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.integerCheck_of_chosen": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "phases_seconds": {},
+      "source_sha256": "dc1d884d1c1545101559b449b87fc543c380d87b59c39e627f01b77fca861321",
+      "artifact_sha256": null,
+      "cold_preparation_seconds": 33.844,
+      "cgroup_peak_bytes": 8107241472,
+      "sampled_peak_pss_bytes": 6872793088,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet.",
+      "axioms_raw": {
+        "RHWeil.RecordSubmission.FiniteCertificateData.chosen_bound_le": [
+          "propext",
+          "Classical.choice.{u}",
+          "Quot.sound.{u}"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.chosen_lower_le": [
+          "propext",
+          "Classical.choice.{u}",
+          "Quot.sound.{u}"
+        ],
+        "RHWeil.RecordSubmission.FiniteCertificateData.integerCheck_of_chosen": [
+          "propext",
+          "Classical.choice.{u}",
+          "Quot.sound.{u}"
+        ]
+      },
+      "parser_only_correction": "Printed universe suffixes normalized; original actual0 full-type/axiom log and source/artifact bindings unchanged. No additional Lean process.",
+      "corrected_parser_sha256": "44eb75b870ed315e92739199472e2ad0efeca0c975f8f5974e4b37d6929fa552"
+    },
+    "baseline": {
+      "step": "baseline",
+      "fresh_audit": true,
+      "run_id": "finite-baseline-audit-20261009-171508-d5fd27",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 57.961,
+      "proof_seconds": 25.443,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": true,
+      "axioms": {
+        "FinitePivotProbe.sample_35": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "FinitePivotProbe.sample_54": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "FinitePivotProbe.sample_1199": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "phases_seconds": {},
+      "source_sha256": "d5c204db106637c2e3a4872961637c6816ff117945ef7210fb5076e40aee6612",
+      "artifact_sha256": null,
+      "cold_preparation_seconds": 31.625,
+      "cgroup_peak_bytes": 8103821312,
+      "sampled_peak_pss_bytes": 6819987456,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "chosen": {
+      "step": "chosen",
+      "fresh_audit": true,
+      "run_id": "finite-chosen-audit-20261009-171900-7b5e32",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 54.941,
+      "proof_seconds": 25.453,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": true,
+      "axioms": {
+        "FinitePivotProbe.sample_35": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "FinitePivotProbe.sample_54": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "FinitePivotProbe.sample_1199": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "phases_seconds": {},
+      "source_sha256": "274753f0abb95bf78ee383dc01ee462afc579da10176e5b00f2db3cb1c5a011a",
+      "artifact_sha256": null,
+      "cold_preparation_seconds": 28.676,
+      "cgroup_peak_bytes": 8102223872,
+      "sampled_peak_pss_bytes": 6872756224,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "chosenRepeat": {
+      "step": "chosenRepeat",
+      "fresh_audit": true,
+      "run_id": "finite-chosenrepeat-audit-20261009-172554-2b95c0",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 57.197,
+      "proof_seconds": 25.971,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": true,
+      "axioms": {
+        "FinitePivotProbe.sample_35": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "FinitePivotProbe.sample_54": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "FinitePivotProbe.sample_1199": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "phases_seconds": {},
+      "source_sha256": "d3fa8c5d60697dacb2bc7620382520daf5d80c38488e65c02c4e5b6d395dd0d8",
+      "artifact_sha256": null,
+      "cold_preparation_seconds": 30.423,
+      "cgroup_peak_bytes": 8108007424,
+      "sampled_peak_pss_bytes": 6740552704,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "baselineRepeat": {
+      "step": "baselineRepeat",
+      "fresh_audit": true,
+      "run_id": "finite-baselinerepeat-audit-20261009-172651-caf017",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 56.658,
+      "proof_seconds": 25.11,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": true,
+      "axioms": {
+        "FinitePivotProbe.sample_35": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "FinitePivotProbe.sample_54": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "FinitePivotProbe.sample_1199": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "phases_seconds": {},
+      "source_sha256": "50bfedb8f652f2f0af033f5bd56e9cfa93aca182b48678c7816292598f298b40",
+      "artifact_sha256": null,
+      "cold_preparation_seconds": 30.729,
+      "cgroup_peak_bytes": 8098127872,
+      "sampled_peak_pss_bytes": 6854808576,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    },
+    "packetCached": {
+      "step": "packetCached",
+      "fresh_audit": true,
+      "run_id": "finite-packetcached-audit-20261009-173213-b68463",
+      "harness_exit": 0,
+      "launcher_wall_seconds": 56.163,
+      "proof_seconds": 24.057,
+      "resource_fit": true,
+      "kernel_process_succeeded": true,
+      "strict_selected_axioms_passed": true,
+      "axioms": {
+        "PacketCacheProbe.packetEq_64": [],
+        "PacketCacheProbe.packetEq_65": [],
+        "PacketCacheProbe.packetEq_1198": [],
+        "PacketCacheProbe.sample_64": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "PacketCacheProbe.sample_65": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "PacketCacheProbe.sample_1198": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "phases_seconds": {},
+      "source_sha256": "50f424a6fb20dc10f301e950ba2c9eaf4788bf452d1ccbcf7d4e69b2f0f1ca4c",
+      "artifact_sha256": null,
+      "cold_preparation_seconds": 31.314,
+      "cgroup_peak_bytes": 8100605952,
+      "sampled_peak_pss_bytes": 6854985728,
+      "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+      "inputs_unchanged": true,
+      "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+    }
+  },
+  "all_raw_evidence_retained": true,
+  "raw_filename_pattern": "RUN_ID-{result.json,process.log,scoped-cache-eviction.json,harness.stdout.log,review.json}",
+  "full49_prepared_record": "family-prepared.json",
+  "whole_prepared_bytes": 1998362,
+  "whole_prepared_headroom": 1638,
+  "whole_compiled": false,
+  "nano_pass": false,
+  "comparator_pass": false,
+  "official_acceptance": false,
+  "public_sources_mutated": false,
+  "git_committed": false,
+  "submitted": false
+}

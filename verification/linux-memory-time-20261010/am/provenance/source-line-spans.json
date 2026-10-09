@@ -1,0 +1,108 @@
+{
+  "status": "TEXT_LINE_PROVENANCE_ONLY",
+  "paths_relative_to_packet": true,
+  "driver_execution_boundary": [
+    {
+      "line": 7,
+      "text": "def write_json(path,data):"
+    },
+    {
+      "line": 9,
+      "text": "def inventory(variant):"
+    },
+    {
+      "line": 16,
+      "text": "def common_bindings(config,variant):"
+    },
+    {
+      "line": 21,
+      "text": "def command(config,variant,phase,artifacts=None):"
+    },
+    {
+      "line": 28,
+      "text": " cmd+=['--',config['lean'],'-j4','--tstack=32768','-R',variant['source_root']]"
+    },
+    {
+      "line": 31,
+      "text": " else:cmd+=['-o',variant['audit_lib_root']+'/FreshAllRoots.olean',variant['audit_source']]"
+    },
+    {
+      "line": 34,
+      "text": "def audit_output(text,config):"
+    },
+    {
+      "line": 46,
+      "text": "def main():"
+    },
+    {
+      "line": 50,
+      "text": " parser.add_argument('--execute',action='store_true')"
+    },
+    {
+      "line": 79,
+      "text": " resource=BASE/'resource-runs'/variant[args.phase+'_run_id'];assert not resource.exists(),'Fresh run-id required'"
+    },
+    {
+      "line": 82,
+      "text": "  assert not inventory(variant),'No prior AM artifacts admitted to a fresh compile'"
+    },
+    {
+      "line": 85,
+      "text": "  assert compiled['actual_proof_succeeded'] and compiled['artifact_inventory'],'Fresh compile proof must have succeeded'"
+    },
+    {
+      "line": 86,
+      "text": "  before=inventory(variant);assert before==compiled['artifact_inventory'],'Fresh AM artifacts changed'"
+    },
+    {
+      "line": 87,
+      "text": "  assert variant['artifact'] in before,'Missing exact fresh .olean'"
+    },
+    {
+      "line": 90,
+      "text": "   assert deps['deps_gate']['pass'],'Actual --deps must resolve exact fresh AM before axioms audit'"
+    },
+    {
+      "line": 117,
+      "text": "  assert variant['artifact'] in produced,'Lean success without expected fresh artifact'"
+    },
+    {
+      "line": 120,
+      "text": "   assert produced==before,'AM artifact changed during fresh import/audit'"
+    },
+    {
+      "line": 125,
+      "text": "    stage['deps_gate']={'fresh_artifact':variant['artifact'],'exact_fresh_artifact_resolved':found,"
+    },
+    {
+      "line": 134,
+      "text": " stage['fresh_artifact_family_bound_on_import']=args.phase!='compile' and bool(before)"
+    },
+    {
+      "line": 140,
+      "text": "def shutil_copy_bytes(src,dst):Path(dst).write_bytes(Path(src).read_bytes())"
+    }
+  ],
+  "bounded_source_external_reference": "de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e",
+  "bounded_scheduler_and_restore_lines": [
+    {
+      "line": 81,
+      "text": "elab \"am_wait\" : command => do"
+    },
+    {
+      "line": 83,
+      "text": "  discard <| IO.wait env.checked"
+    },
+    {
+      "line": 86,
+      "text": "set_option Elab.async true"
+    },
+    {
+      "line": 16208,
+      "text": "set_option Elab.async false"
+    }
+  ],
+  "source_control_hash": "40f0fb440a3673aa36ba81361e1db7ef31471851bae63b82d77f434605a769f5",
+  "source_fresh_root_audit": "FreshAllRoots.lean has20 exact main12+alias8 roots; actual logs are gzipped under runs/.",
+  "prepared_status_note": "Original prepared config/static reviews deliberately retain historical PREPARED/PENDING fields. Completed summaries and raw exit-zero records establish only the component scope."
+}

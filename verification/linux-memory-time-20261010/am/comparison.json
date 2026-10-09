@@ -1,0 +1,80 @@
+{
+  "status": "CHECKED_PAIRED_SAME_LINUX_AM_COMPONENT_TRIAL",
+  "pairs": 1,
+  "metrics": {
+    "bounded8": {
+      "wall_seconds": 448.761,
+      "cgroup_cpuacct_seconds": 526.1086613,
+      "sampled_peak_pss_bytes": 7998533632,
+      "sampled_peak_rss_bytes": 7997689856,
+      "group_peak_bytes": 8589934592,
+      "failcnt": 0,
+      "oom_kill_count": 0,
+      "sampled_peak_swap_bytes": 0,
+      "proof_succeeded": true,
+      "component_resource_fit": true,
+      "cold_cache_gate": true
+    },
+    "syncalias8": {
+      "wall_seconds": 553.329,
+      "cgroup_cpuacct_seconds": 533.2747335,
+      "sampled_peak_pss_bytes": 8061101056,
+      "sampled_peak_rss_bytes": 8061054976,
+      "group_peak_bytes": 8589934592,
+      "failcnt": 0,
+      "oom_kill_count": 0,
+      "sampled_peak_swap_bytes": 0,
+      "proof_succeeded": true,
+      "component_resource_fit": true,
+      "cold_cache_gate": true
+    }
+  },
+  "controlled_settings": {
+    "memory.limit_in_bytes": "8589934592",
+    "memory.memsw.limit_in_bytes": "8589934592",
+    "memory.swappiness": "0",
+    "cpu.cfs_period_us": "100000",
+    "cpu.cfs_quota_us": "400000",
+    "cpuset.mems": "0",
+    "cpuset.cpus": "0-3"
+  },
+  "workers": 4,
+  "tstack": 32768,
+  "compile_timeout_seconds": 1200,
+  "harness_version": 3,
+  "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+  "same_pinned_compiler_and_native_dependency_cache": true,
+  "different_windows_ratio_used": false,
+  "bounded_source_sha256": "de9440bc49f7d7780ad7a6210d51f8cd0813948315d41b1b49aa8e3a48f3d18e",
+  "sync_source_sha256": "40f0fb440a3673aa36ba81361e1db7ef31471851bae63b82d77f434605a769f5",
+  "bounded_artifact_inventory": {
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/lib/RecordProportion/ImportedAM.olean": {
+      "bytes": 62218856,
+      "sha256": "6aa4881331115a354eccdb8e8367cae28abf532d028d5ab481665847d45de9fd"
+    }
+  },
+  "sync_artifact_inventory": {
+    "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/syncalias8/lib/RecordProportion/ImportedAM.olean": {
+      "bytes": 61796264,
+      "sha256": "177b71743952323f790dcb32d8ef71df2bda9d453aed49dd21bdccdbba7f34a7"
+    }
+  },
+  "bounded_compile_binding_record_sha256": "af9e69edda45abfc8840e8f71fefc099a692e371f973b15d347b66231a976df3",
+  "sync_compile_binding_record_sha256": "a6aa7519ad95b73ecb36d0efcbc159f2d284f62abe070b106f724973fa897461",
+  "both_fresh_deps_gates_passed": true,
+  "both_20roots_standard_axioms_only": true,
+  "identical_twenty_root_axiom_lists": true,
+  "wall_time_reduction_percent": 18.897979321524794,
+  "sampled_peak_pss_reduction_percent": 0.7761647393494719,
+  "sampled_peak_pss_reduction_bytes": 62567424,
+  "cgroup_cpu_time_reduction_percent": 1.3437861855872146,
+  "significant_memory_gain_established": false,
+  "observed_am_component_time_gain": true,
+  "repeatability_established": false,
+  "whole_solution_compiled": false,
+  "official_vm_reproduced": false,
+  "website_acceptance_established": false,
+  "proofowner_released": true,
+  "interpretation": "One cold paired AM component run observed an approximately18.9% wall-time reduction. PSS changed approximately0.8% (about59.7MiB), insufficient to claim a significant memory gain. Both reached the cgroup8GiB peak without failcnt/OOM/swap. Full bundled Solution and official website acceptance remain unchecked.",
+  "stdio_note": "bounded8 live stdout barrier counts were lower bounds because buffering; finalized monotonic barrier profile determines proof-group timing."
+}

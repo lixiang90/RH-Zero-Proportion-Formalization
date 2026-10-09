@@ -1,0 +1,2813 @@
+{
+  "status": "ACTUAL_COMPILE_PROFILE",
+  "barrier_count": 162,
+  "first_barrier_monotonic_ms": 54637,
+  "last_barrier_monotonic_ms": 470432,
+  "intervals": [
+    {
+      "completed_barrier": 2,
+      "milliseconds_since_previous_barrier": 410,
+      "base_source_byte_start": 8264,
+      "base_source_byte_stop": 9745,
+      "proof_names": [
+        "vAM_even",
+        "vAM_le",
+        "cos_sqrt2_ge",
+        "vAM_ge_core",
+        "vAM_pos_wide",
+        "vAM_zero",
+        "vAM_continuous",
+        "vAM_contDiff"
+      ]
+    },
+    {
+      "completed_barrier": 3,
+      "milliseconds_since_previous_barrier": 774,
+      "base_source_byte_start": 9745,
+      "base_source_byte_stop": 13971,
+      "proof_names": [
+        "hasDerivAt_vAM",
+        "hasDerivAt_vAMd",
+        "\u03c9AM_nonneg",
+        "\u03c9AM_le",
+        "abs_vAMd_le",
+        "\u03c9AM_sq_le",
+        "abs_vAMdd_le",
+        "fW_eq_sqrt"
+      ]
+    },
+    {
+      "completed_barrier": 4,
+      "milliseconds_since_previous_barrier": 134,
+      "base_source_byte_start": 13971,
+      "base_source_byte_stop": 15129,
+      "proof_names": [
+        "fW_even",
+        "fW_nonneg",
+        "hW_le_one",
+        "fW_le_one",
+        "abs_div_le_half",
+        "hW_core_ge",
+        "hW_pos_of_mem",
+        "hW_contDiff"
+      ]
+    },
+    {
+      "completed_barrier": 5,
+      "milliseconds_since_previous_barrier": 230,
+      "base_source_byte_start": 15129,
+      "base_source_byte_stop": 17627,
+      "proof_names": [
+        "fW_contDiffOn",
+        "phiW_even",
+        "phiW_nonneg",
+        "phiW_le_one",
+        "phiW_eq_zero",
+        "phiW_contDiff",
+        "phiW_continuous",
+        "phiW_sq_eq"
+      ]
+    },
+    {
+      "completed_barrier": 6,
+      "milliseconds_since_previous_barrier": 145,
+      "base_source_byte_start": 17627,
+      "base_source_byte_stop": 21538,
+      "proof_names": [
+        "KfunAM_neg",
+        "wfunAM_nonneg",
+        "vAM_pos_on",
+        "KfunAM_zero",
+        "KfunAM_zero_pos",
+        "abs_KfunAM_le",
+        "integral_cos_mul_sinc",
+        "KfunAM_eq_sinc"
+      ]
+    },
+    {
+      "completed_barrier": 7,
+      "milliseconds_since_previous_barrier": 1270,
+      "base_source_byte_start": 21538,
+      "base_source_byte_stop": 32304,
+      "proof_names": [
+        "term_sinc",
+        "term_closed",
+        "KfunAM_closed",
+        "KfunAM_zero_closed",
+        "KMT_eq_gamma",
+        "edge_est",
+        "integral_scale",
+        "abs_vAM_le"
+      ]
+    },
+    {
+      "completed_barrier": 8,
+      "milliseconds_since_previous_barrier": 321,
+      "base_source_byte_start": 32304,
+      "base_source_byte_stop": 36899,
+      "proof_names": [
+        "abs_hW_le",
+        "hW_continuous",
+        "integral_hW",
+        "integral_hW_sq",
+        "aW_close",
+        "bW_close",
+        "sW_nonneg",
+        "abs_sW_le"
+      ]
+    },
+    {
+      "completed_barrier": 9,
+      "milliseconds_since_previous_barrier": 1133,
+      "base_source_byte_start": 36899,
+      "base_source_byte_stop": 52082,
+      "proof_names": [
+        "sW_measurable",
+        "sW_integrable",
+        "integral_abs_phiWsq_sub_sharp",
+        "phiW_sq_hasCompactSupport",
+        "autocorr_phiWsq_close",
+        "sharp_overlap",
+        "continuous_vConvAM",
+        "JW_close"
+      ]
+    },
+    {
+      "completed_barrier": 10,
+      "milliseconds_since_previous_barrier": 149,
+      "base_source_byte_start": 52082,
+      "base_source_byte_stop": 54280,
+      "proof_names": [
+        "vAM_pos_core",
+        "vConvAM_nonneg",
+        "JInf_nonneg",
+        "bInf_pos",
+        "aInf_pos",
+        "tendsto_aW",
+        "tendsto_bW",
+        "tendsto_JW"
+      ]
+    },
+    {
+      "completed_barrier": 11,
+      "milliseconds_since_previous_barrier": 301,
+      "base_source_byte_start": 54280,
+      "base_source_byte_stop": 58093,
+      "proof_names": [
+        "tendsto_cRatio_W",
+        "cRatio_W_pos",
+        "ext0_measurable",
+        "abs_ext0_le",
+        "intervalIntegral_eq_indicator",
+        "acor_neg",
+        "acor_eq_zero",
+        "acor_eq_overlap"
+      ]
+    },
+    {
+      "completed_barrier": 12,
+      "milliseconds_since_previous_barrier": 565,
+      "base_source_byte_start": 58093,
+      "base_source_byte_stop": 64509,
+      "proof_names": [
+        "integrable_swap",
+        "swap_identity",
+        "JInf_eq_energy",
+        "integral_cos_half",
+        "cos_mul_cos_eq",
+        "cos_lin_intervalIntegrable",
+        "integral_cos_cos",
+        "two_pi_k_pos"
+      ]
+    },
+    {
+      "completed_barrier": 13,
+      "milliseconds_since_previous_barrier": 475,
+      "base_source_byte_start": 64509,
+      "base_source_byte_stop": 72535,
+      "proof_names": [
+        "integral_cos_k",
+        "integral_cos_sqrt2",
+        "integral_cos_k_cos_k",
+        "two_sub_ne",
+        "integral_cos_sqrt2_cos_k",
+        "hasDerivAt_left'",
+        "hasDerivAt_right'",
+        "kernel_cos"
+      ]
+    },
+    {
+      "completed_barrier": 14,
+      "milliseconds_since_previous_barrier": 414,
+      "base_source_byte_start": 72535,
+      "base_source_byte_stop": 79211,
+      "proof_names": [
+        "ek_continuous",
+        "vAM_eq'",
+        "kernel_vAM",
+        "rV_continuous",
+        "vAM_add_kernel",
+        "integral_vAM",
+        "integral_vAM_ek",
+        "euler_lagrange"
+      ]
+    },
+    {
+      "completed_barrier": 15,
+      "milliseconds_since_previous_barrier": 2021,
+      "base_source_byte_start": 79211,
+      "base_source_byte_stop": 89868,
+      "proof_names": [
+        "energy_total",
+        "sin_theta0_pos",
+        "HW_eq",
+        "taylor12_F",
+        "sqrt2_half_bounds",
+        "cos_theta0_le",
+        "sin_theta0_ge",
+        "PAM_le"
+      ]
+    },
+    {
+      "completed_barrier": 16,
+      "milliseconds_since_previous_barrier": 734,
+      "base_source_byte_start": 89868,
+      "base_source_byte_stop": 94221,
+      "proof_names": [
+        "PAMhi_nonneg",
+        "floor_numeric",
+        "HW_ge",
+        "aInf_eq",
+        "aInf_gt_half",
+        "aInf_sq_le_bInf",
+        "bInf_gt_half",
+        "eventually_bW_ge_half"
+      ]
+    },
+    {
+      "completed_barrier": 17,
+      "milliseconds_since_previous_barrier": 60,
+      "base_source_byte_start": 94221,
+      "base_source_byte_stop": 95925,
+      "proof_names": [
+        "atW_tau_eq",
+        "atW_phi",
+        "atW_phi_valid",
+        "atW_localFun",
+        "atW_a",
+        "atW_phiHat",
+        "atW_phiHatR"
+      ]
+    },
+    {
+      "completed_barrier": 18,
+      "milliseconds_since_previous_barrier": 1889,
+      "base_source_byte_start": 95925,
+      "base_source_byte_stop": 99687,
+      "proof_names": [
+        "atW_trGtilde",
+        "atW_trGtildeSq",
+        "cos_sin_taylor12",
+        "fl_le",
+        "le_cl",
+        "tCosQ_cast",
+        "tSinQ_cast",
+        "errQ_cast"
+      ]
+    },
+    {
+      "completed_barrier": 19,
+      "milliseconds_since_previous_barrier": 462,
+      "base_source_byte_start": 99687,
+      "base_source_byte_stop": 102497,
+      "proof_names": [
+        "err_scale",
+        "one_le_pi",
+        "cos_ge_of",
+        "cos_le_of",
+        "sin_ge_of",
+        "sin_le_of",
+        "piLoQ_le",
+        "piHiQ_ge"
+      ]
+    },
+    {
+      "completed_barrier": 20,
+      "milliseconds_since_previous_barrier": 173,
+      "base_source_byte_start": 102497,
+      "base_source_byte_stop": 106097,
+      "proof_names": [
+        "s2LoQ_le",
+        "s2HiQ_ge",
+        "imulZ_sound",
+        "iadd_sound",
+        "isub_sound",
+        "piMul_sound",
+        "TLo_le",
+        "le_THi"
+      ]
+    },
+    {
+      "completed_barrier": 21,
+      "milliseconds_since_previous_barrier": 205,
+      "base_source_byte_start": 106097,
+      "base_source_byte_stop": 111053,
+      "proof_names": [
+        "cosI_sound",
+        "sinI_sound",
+        "cos_sin_half",
+        "sinPiI_sound",
+        "phiM_even",
+        "phiM_nonneg",
+        "phiM_eq_zero",
+        "phiM_le_one"
+      ]
+    },
+    {
+      "completed_barrier": 22,
+      "milliseconds_since_previous_barrier": 362,
+      "base_source_byte_start": 111053,
+      "base_source_byte_stop": 118335,
+      "proof_names": [
+        "phiM_zero_le",
+        "phiM_contDiff",
+        "phi_antitoneOn",
+        "deriv_phi_nonpos",
+        "integral_abs_deriv_le_two_of_posVar",
+        "max_deriv_mul_le",
+        "posVar_phiM_le",
+        "integral_abs_deriv_phiM_le"
+      ]
+    },
+    {
+      "completed_barrier": 23,
+      "milliseconds_since_previous_barrier": 358,
+      "base_source_byte_start": 118335,
+      "base_source_byte_stop": 122886,
+      "proof_names": [
+        "integral_abs_deriv_phiM_sq_le",
+        "deriv2_mul_eq",
+        "deriv_mul_eq",
+        "deriv2_eq_zero_of_eqOn",
+        "integrable_abs_of_cs",
+        "integral_abs_deriv2_mul_le",
+        "integral_abs_phi_le",
+        "integral_abs_phi_sq_le"
+      ]
+    },
+    {
+      "completed_barrier": 24,
+      "milliseconds_since_previous_barrier": 1993,
+      "base_source_byte_start": 122886,
+      "base_source_byte_stop": 130654,
+      "proof_names": [
+        "l1Deriv2_nonneg'",
+        "phiM_hasCompactSupport",
+        "PVFactor.abs_le_one",
+        "integral_abs_deriv2_phiM_le",
+        "phiM_sq_eq",
+        "integral_abs_deriv2_phiM_sq_le",
+        "four_le_cMod",
+        "admWindow_phiM"
+      ]
+    },
+    {
+      "completed_barrier": 25,
+      "milliseconds_since_previous_barrier": 277,
+      "base_source_byte_start": 130654,
+      "base_source_byte_stop": 133739,
+      "proof_names": [
+        "pos_of_mem",
+        "fP_eq_sqrt_of_mem",
+        "hasDerivAt_comp_div",
+        "deriv_comp_div",
+        "deriv2_comp_div",
+        "fP_contDiffOn",
+        "fP_mul_self_of_mem",
+        "core_abs"
+      ]
+    },
+    {
+      "completed_barrier": 26,
+      "milliseconds_since_previous_barrier": 833,
+      "base_source_byte_start": 133739,
+      "base_source_byte_stop": 140414,
+      "proof_names": [
+        "core_mem",
+        "fP_core_ge",
+        "fP_le_one",
+        "deriv_fP_eq",
+        "abs_deriv_fP_le",
+        "abs_deriv2_fP_le",
+        "posVar_fP_le",
+        "pvFactor_fP"
+      ]
+    },
+    {
+      "completed_barrier": 27,
+      "milliseconds_since_previous_barrier": 698,
+      "base_source_byte_start": 140414,
+      "base_source_byte_stop": 149429,
+      "proof_names": [
+        "admWindow_fP",
+        "sumQ_eq",
+        "allQ_iff",
+        "tabI_sound",
+        "ineg_sound",
+        "sinLook_sound",
+        "termU_sound",
+        "vAMd_mid_le"
+      ]
+    },
+    {
+      "completed_barrier": 28,
+      "milliseconds_since_previous_barrier": 3881,
+      "base_source_byte_start": 149429,
+      "base_source_byte_stop": 154547,
+      "proof_names": [
+        "vAMd_lipschitz",
+        "deriv_vAM_div",
+        "posVar_of_check",
+        "pvCheck_AM",
+        "deriv2_vAM_div",
+        "vAM_zero_div_le",
+        "profile_AM",
+        "admWindow_phiW"
+      ]
+    },
+    {
+      "completed_barrier": 29,
+      "milliseconds_since_previous_barrier": 248,
+      "base_source_byte_start": 154547,
+      "base_source_byte_stop": 158031,
+      "proof_names": [
+        "poissonSqW",
+        "GzGpW",
+        "C1W_nonneg",
+        "C1W_le",
+        "hdecayW",
+        "eventually_tailPackageW",
+        "eventually_GzGpW",
+        "WAM_even"
+      ]
+    },
+    {
+      "completed_barrier": 30,
+      "milliseconds_since_previous_barrier": 394,
+      "base_source_byte_start": 158031,
+      "base_source_byte_stop": 161295,
+      "proof_names": [
+        "admWindow_WAM",
+        "atAM_a",
+        "phiW_sq_ge",
+        "aAM_range_of",
+        "eventually_w32",
+        "eventually_aAM_range",
+        "eventually_GzGpAM",
+        "eventually_tailPackageAM"
+      ]
+    },
+    {
+      "completed_barrier": 31,
+      "milliseconds_since_previous_barrier": 685,
+      "base_source_byte_start": 161295,
+      "base_source_byte_stop": 173373,
+      "proof_names": [
+        "localHypsCoreW_eventually",
+        "evBound_of_eventuallyAtCoreW",
+        "gW_deriv_facts",
+        "concreteFactsW",
+        "tracesBoundsW_concrete",
+        "atW_ident",
+        "eventually_bAM_ge_half",
+        "localHypsCoreAM_eventually"
+      ]
+    },
+    {
+      "completed_barrier": 32,
+      "milliseconds_since_previous_barrier": 1053,
+      "base_source_byte_start": 173373,
+      "base_source_byte_stop": 177093,
+      "proof_names": [
+        "tracesBoundsAM_concrete",
+        "Psi_eq_gc_two_add_one",
+        "Psi_nonneg",
+        "wmat_eigCols",
+        "pmat_eigCols",
+        "xsq_eigCols",
+        "rtrace_self_mul_conjTranspose",
+        "rtrace_specMap_Psi"
+      ]
+    },
+    {
+      "completed_barrier": 33,
+      "milliseconds_since_previous_barrier": 532,
+      "base_source_byte_start": 177093,
+      "base_source_byte_stop": 181173,
+      "proof_names": [
+        "stable_rank_trace_sharp",
+        "stable_rank_trace",
+        "abs_sub_le_spanOf",
+        "spanOf_nonneg",
+        "defect_nonneg",
+        "blockDefect_nonneg",
+        "P\u2081_posSemidef",
+        "gramS\u2081_isHermitian"
+      ]
+    },
+    {
+      "completed_barrier": 34,
+      "milliseconds_since_previous_barrier": 142,
+      "base_source_byte_start": 181173,
+      "base_source_byte_stop": 183289,
+      "proof_names": [
+        "blockP_isHermitian",
+        "Q'_isHermitian",
+        "P\u2081_add_Q'",
+        "mem_S\u2081_of_mem_retained",
+        "toS\u2081_injective",
+        "gram_isHermitian",
+        "re_eq_half_of_mem_S\u2081",
+        "Kfun_neg"
+      ]
+    },
+    {
+      "completed_barrier": 35,
+      "milliseconds_since_previous_barrier": 174,
+      "base_source_byte_start": 183289,
+      "base_source_byte_stop": 185294,
+      "proof_names": [
+        "kfun_neg",
+        "wfun_neg",
+        "abs_Kfun_le_Kfun_zero",
+        "abs_kfun_le_one",
+        "sortedExt_of_lt",
+        "range_filter_lt",
+        "ptsN_windowGaps",
+        "affine_le_Psi"
+      ]
+    },
+    {
+      "completed_barrier": 36,
+      "milliseconds_since_previous_barrier": 713,
+      "base_source_byte_start": 185294,
+      "base_source_byte_stop": 189852,
+      "proof_names": [
+        "affine_eq_Psi",
+        "Psi_convexOn",
+        "re_mul_conjTranspose_apply_self",
+        "re_conjTranspose_mul_apply_self",
+        "re_mul_diagonal_mul_conjTranspose_apply",
+        "sum_normSq_col_eigenvectorUnitary",
+        "compressWeight_le_one",
+        "sum_compressWeight_fiberwise"
+      ]
+    },
+    {
+      "completed_barrier": 37,
+      "milliseconds_since_previous_barrier": 3538,
+      "base_source_byte_start": 189852,
+      "base_source_byte_stop": 206700,
+      "proof_names": [
+        "eigenvalues_submatrix_eq_mix",
+        "sum_eigenvalues_submatrix_le",
+        "sum_eigenvalues_pinching_le",
+        "sum_eigenvalues_submatrix_le_of_nonneg",
+        "rtrace_specMap_pinching_le",
+        "rtrace_specMap_submatrix_le",
+        "seamA_mult2_defect",
+        "endgame_defect"
+      ]
+    },
+    {
+      "completed_barrier": 38,
+      "milliseconds_since_previous_barrier": 1283,
+      "base_source_byte_start": 206700,
+      "base_source_byte_stop": 214759,
+      "proof_names": [
+        "bdata_v_eq",
+        "gram_apply",
+        "atAM_phiHatR_eq",
+        "phiHatReal_atAM",
+        "Wfun_le_of_L_le",
+        "rho_le_of_far",
+        "abs_Kinf_sub_Kfun_le_of_far"
+      ]
+    },
+    {
+      "completed_barrier": 39,
+      "milliseconds_since_previous_barrier": 1122,
+      "base_source_byte_start": 214759,
+      "base_source_byte_stop": 220487,
+      "proof_names": [
+        "Kfun_zero_pos",
+        "abs_Kfun_le",
+        "re_paperFT_ofReal",
+        "integral_sW_mul_cos",
+        "abs_integral_mul_cos_sub_le",
+        "abs_VPhiR_sub_L_mul_Kfun_le",
+        "abs_aL_sub_L_mul_Kfun_zero_le",
+        "abs_VPhiR_div_sub_kfun_le"
+      ]
+    },
+    {
+      "completed_barrier": 40,
+      "milliseconds_since_previous_barrier": 1744,
+      "base_source_byte_start": 220487,
+      "base_source_byte_stop": 227980,
+      "proof_names": [
+        "retained_far",
+        "Kfun_eq_sum",
+        "Kinf_eq",
+        "gram_close_of",
+        "window_union",
+        "N_add",
+        "N_mono",
+        "ncard_window_le_N"
+      ]
+    },
+    {
+      "completed_barrier": 41,
+      "milliseconds_since_previous_barrier": 4169,
+      "base_source_byte_start": 227980,
+      "base_source_byte_stop": 238772,
+      "proof_names": [
+        "N_le_of_local_count",
+        "N_le_of_local_count_real",
+        "N0s_le_card_retained_add",
+        "strips_le",
+        "mem_S\u2082_\u03c3",
+        "mem_S\u2081_\u03c3",
+        "mem_S\u2081_m",
+        "multPart_posSemidef"
+      ]
+    },
+    {
+      "completed_barrier": 42,
+      "milliseconds_since_previous_barrier": 7366,
+      "base_source_byte_start": 238772,
+      "base_source_byte_stop": 249323,
+      "proof_names": [
+        "rank_multPart_le",
+        "P\u2081_eq_simplePart",
+        "Q'_eq_multPart_add_blockQ",
+        "regroup_posIndex",
+        "Vsimple_col_le_one",
+        "count_defect",
+        "tail_passage",
+        "deleted_strips"
+      ]
+    },
+    {
+      "completed_barrier": 43,
+      "milliseconds_since_previous_barrier": 293,
+      "base_source_byte_start": 249323,
+      "base_source_byte_stop": 253183,
+      "proof_names": [
+        "specMap_const_one",
+        "specMap_sub_one",
+        "offDiagSqOn_le_frobSq_sub_one",
+        "block_defect_of_isHermitian",
+        "sq_sub_two_mul_le_sq",
+        "wfun_sub_le_norm_sq",
+        "offDiagSqOn_submatrix",
+        "pinching_partition"
+      ]
+    },
+    {
+      "completed_barrier": 44,
+      "milliseconds_since_previous_barrier": 1809,
+      "base_source_byte_start": 253183,
+      "base_source_byte_stop": 262184,
+      "proof_names": [
+        "pinching_submatrix",
+        "spanOf_xret_le_d",
+        "span_retained_le",
+        "P\u2080_valid",
+        "eventually_h7",
+        "WCert.B_nonneg",
+        "Fw_windowGaps",
+        "wfunAM_le_one"
+      ]
+    },
+    {
+      "completed_barrier": 45,
+      "milliseconds_since_previous_barrier": 367,
+      "base_source_byte_start": 262184,
+      "base_source_byte_stop": 264956,
+      "proof_names": [
+        "N0simple_le_N0star'",
+        "DZ_pos",
+        "ndiv_le",
+        "le_ndivc"
+      ]
+    },
+    {
+      "completed_barrier": 46,
+      "milliseconds_since_previous_barrier": 90,
+      "base_source_byte_start": 264956,
+      "base_source_byte_stop": 266375,
+      "proof_names": [
+        "le_iff",
+        "nonneg_iff",
+        "v_min_le_left",
+        "v_min_le_right",
+        "le_v_max_left",
+        "le_v_max_right"
+      ]
+    },
+    {
+      "completed_barrier": 47,
+      "milliseconds_since_previous_barrier": 323,
+      "base_source_byte_start": 266375,
+      "base_source_byte_stop": 270708,
+      "proof_names": [
+        "v_fl_le",
+        "le_v_ce",
+        "enc_zero",
+        "enc_add",
+        "enc_sub",
+        "enc_neg",
+        "enc_muln",
+        "enc_scl"
+      ]
+    },
+    {
+      "completed_barrier": 48,
+      "milliseconds_since_previous_barrier": 1905,
+      "base_source_byte_start": 270708,
+      "base_source_byte_stop": 290589,
+      "proof_names": [
+        "mul_mem_corners",
+        "enc_mul",
+        "enc_mulc",
+        "enc_divn",
+        "enc_divp",
+        "hasDerivAt_sinc_of_ne",
+        "abs_sin_sub_self_le",
+        "abs_sinc_sub_one_le"
+      ]
+    },
+    {
+      "completed_barrier": 49,
+      "milliseconds_since_previous_barrier": 585,
+      "base_source_byte_start": 290589,
+      "base_source_byte_stop": 295103,
+      "proof_names": [
+        "hasDerivAt_sinc_zero",
+        "hasDerivAt_sinc",
+        "hasDerivAt_sc1_of_ne",
+        "abs_sc1_num_le",
+        "hasDerivAt_sc1_zero",
+        "hasDerivAt_sc1",
+        "hasDerivAt_lin_m",
+        "hasDerivAt_lin_p"
+      ]
+    },
+    {
+      "completed_barrier": 50,
+      "milliseconds_since_previous_barrier": 242,
+      "base_source_byte_start": 295103,
+      "base_source_byte_stop": 297930,
+      "proof_names": [
+        "hasDerivAt_KfunAM",
+        "hasDerivAt_K1AM",
+        "hasDerivAt_kfunAM",
+        "hasDerivAt_k1AM",
+        "hasDerivAt_wfunAM",
+        "hasDerivAt_w1AM",
+        "K0AM_eq",
+        "K0AM_pos"
+      ]
+    },
+    {
+      "completed_barrier": 51,
+      "milliseconds_since_previous_barrier": 171,
+      "base_source_byte_start": 297930,
+      "base_source_byte_stop": 300142,
+      "proof_names": [
+        "hasDerivAt_pix",
+        "hasDerivAt_mN",
+        "hasDerivAt_mD",
+        "hasDerivAt_mNb",
+        "hasDerivAt_mM",
+        "continuous_mD",
+        "hasDerivAt_mND",
+        "hasDerivAt_mMD"
+      ]
+    },
+    {
+      "completed_barrier": 52,
+      "milliseconds_since_previous_barrier": 261,
+      "base_source_byte_start": 300142,
+      "base_source_byte_stop": 302719,
+      "proof_names": [
+        "hasDerivAt_KMT",
+        "hasDerivAt_KMT1",
+        "KMT_eq_ND",
+        "isOpen_mD_ne",
+        "KMT1_eq_ND",
+        "KMT2_eq_ND",
+        "sc1_neg",
+        "sc2_neg"
+      ]
+    },
+    {
+      "completed_barrier": 53,
+      "milliseconds_since_previous_barrier": 1747,
+      "base_source_byte_start": 302719,
+      "base_source_byte_stop": 311006,
+      "proof_names": [
+        "kfunAM_eq",
+        "k1AM_eq",
+        "k2AM_eq",
+        "cos_sin_taylor12'",
+        "terr_pos",
+        "abs_sinc_sub_tsinc_le",
+        "abs_sc1_sub_tsc1_le",
+        "abs_sc2_sub_tsc2_le"
+      ]
+    },
+    {
+      "completed_barrier": 54,
+      "milliseconds_since_previous_barrier": 121,
+      "base_source_byte_start": 311006,
+      "base_source_byte_stop": 312289,
+      "proof_names": [
+        "DZ_eq",
+        "pi_lo20",
+        "pi_hi20",
+        "ERRD_ge",
+        "div_cancel_aux",
+        "divc_cancel_aux",
+        "LLO_eq",
+        "UHI_eq"
+      ]
+    },
+    {
+      "completed_barrier": 55,
+      "milliseconds_since_previous_barrier": 662,
+      "base_source_byte_start": 312289,
+      "base_source_byte_stop": 315258,
+      "proof_names": [
+        "LLO_div",
+        "UHI_div",
+        "AD_div",
+        "cosP_sub_cosN",
+        "sinP_sub_sinN",
+        "tcos_eq",
+        "tsin_eq",
+        "cos_le_cos01"
+      ]
+    },
+    {
+      "completed_barrier": 56,
+      "milliseconds_since_previous_barrier": 4563,
+      "base_source_byte_start": 315258,
+      "base_source_byte_stop": 319525,
+      "proof_names": [
+        "sin_le_sin01",
+        "abs_le_one_of",
+        "cos_sin_half",
+        "beq_val",
+        "CX_val",
+        "SX_val",
+        "cx_sx_enc",
+        "natsub_ge"
+      ]
+    },
+    {
+      "completed_barrier": 57,
+      "milliseconds_since_previous_barrier": 7112,
+      "base_source_byte_start": 319525,
+      "base_source_byte_stop": 333571,
+      "proof_names": [
+        "nd_nonneg",
+        "err12",
+        "base_sound",
+        "sqrt2_half_bounds'",
+        "cos_sqrt2_half_bounds'",
+        "sin_sqrt2_half_bounds'",
+        "gamAM_bounds",
+        "rhoAM_eq"
+      ]
+    },
+    {
+      "completed_barrier": 58,
+      "milliseconds_since_previous_barrier": 489,
+      "base_source_byte_start": 333571,
+      "base_source_byte_stop": 335258,
+      "proof_names": [
+        "rhoAM_bounds",
+        "pi_bounds15",
+        "enc_ofN",
+        "PIC_enc",
+        "PI2C_enc",
+        "G1C_enc",
+        "G2C_enc",
+        "GAM_bounds"
+      ]
+    },
+    {
+      "completed_barrier": 59,
+      "milliseconds_since_previous_barrier": 745,
+      "base_source_byte_start": 335258,
+      "base_source_byte_stop": 338963,
+      "proof_names": [
+        "RHOC_enc",
+        "rhoAM_pos",
+        "SIGC_enc",
+        "TAUC_enc",
+        "mf_above",
+        "mf_below",
+        "hf_eq",
+        "mmag_above_anti"
+      ]
+    },
+    {
+      "completed_barrier": 60,
+      "milliseconds_since_previous_barrier": 814,
+      "base_source_byte_start": 338963,
+      "base_source_byte_stop": 341606,
+      "proof_names": [
+        "mmag_below_mono",
+        "hmag_anti",
+        "put_enc",
+        "mnum_eq0",
+        "mnum_eq1",
+        "mnum_eq2",
+        "hden_eq0",
+        "hden_eq1"
+      ]
+    },
+    {
+      "completed_barrier": 61,
+      "milliseconds_since_previous_barrier": 775,
+      "base_source_byte_start": 341606,
+      "base_source_byte_stop": 343737,
+      "proof_names": [
+        "hden_eq2",
+        "DZr_ne",
+        "mnum_div",
+        "hden_div",
+        "sgn_xor",
+        "hneg_eq",
+        "mneg_true",
+        "mneg_false"
+      ]
+    },
+    {
+      "completed_barrier": 62,
+      "milliseconds_since_previous_barrier": 7517,
+      "base_source_byte_start": 343737,
+      "base_source_byte_stop": 358948,
+      "proof_names": [
+        "hden_pos",
+        "farJ_enc",
+        "farAcc_enc",
+        "CE_pos",
+        "RHI_small",
+        "sep",
+        "FA_enc",
+        "near_enc"
+      ]
+    },
+    {
+      "completed_barrier": 63,
+      "milliseconds_since_previous_barrier": 270,
+      "base_source_byte_start": 358948,
+      "base_source_byte_stop": 360656,
+      "proof_names": [
+        "DZr",
+        "scP_eq",
+        "scN_eq",
+        "s1P_eq",
+        "s1N_eq",
+        "s2P_eq",
+        "s2N_eq",
+        "tsinc_split"
+      ]
+    },
+    {
+      "completed_barrier": 64,
+      "milliseconds_since_previous_barrier": 236,
+      "base_source_byte_start": 360656,
+      "base_source_byte_stop": 363545,
+      "proof_names": [
+        "tsc1_split",
+        "tsc2_split",
+        "near_t",
+        "S0_enc",
+        "G1_enc",
+        "G2_enc",
+        "sin_pi_shift",
+        "cos_pi_shift"
+      ]
+    },
+    {
+      "completed_barrier": 65,
+      "milliseconds_since_previous_barrier": 285,
+      "base_source_byte_start": 363545,
+      "base_source_byte_stop": 366496,
+      "proof_names": [
+        "sinc_q",
+        "sc1_q",
+        "sc2_q",
+        "T0_far",
+        "T1_far",
+        "T2_far",
+        "T0_near",
+        "T1_near"
+      ]
+    },
+    {
+      "completed_barrier": 66,
+      "milliseconds_since_previous_barrier": 664,
+      "base_source_byte_start": 366496,
+      "base_source_byte_stop": 370176,
+      "proof_names": [
+        "T2_near",
+        "fsum_CE",
+        "CJ_val",
+        "nsel_eq",
+        "per_j_sep",
+        "per_j_pos",
+        "sum_T0",
+        "sum_T1"
+      ]
+    },
+    {
+      "completed_barrier": 67,
+      "milliseconds_since_previous_barrier": 270,
+      "base_source_byte_start": 370176,
+      "base_source_byte_stop": 374620,
+      "proof_names": [
+        "sum_T2",
+        "x_pos",
+        "sepx",
+        "PG_enc",
+        "NI_enc",
+        "EI_enc",
+        "BI_enc",
+        "mD_neg"
+      ]
+    },
+    {
+      "completed_barrier": 68,
+      "milliseconds_since_previous_barrier": 6216,
+      "base_source_byte_start": 374620,
+      "base_source_byte_stop": 380590,
+      "proof_names": [
+        "nearOn_iff",
+        "roff_near",
+        "B0_enc",
+        "B1_enc",
+        "B2_enc",
+        "K0_enc",
+        "prod_lo_nat",
+        "prod_hi_nat"
+      ]
+    },
+    {
+      "completed_barrier": 69,
+      "milliseconds_since_previous_barrier": 426,
+      "base_source_byte_start": 380590,
+      "base_source_byte_stop": 386211,
+      "proof_names": [
+        "E_bounds",
+        "MI_enc",
+        "K1_enc",
+        "N2_enc",
+        "K2_enc",
+        "SZ.max_le",
+        "mabs_nonneg",
+        "mabs_le"
+      ]
+    },
+    {
+      "completed_barrier": 70,
+      "milliseconds_since_previous_barrier": 213,
+      "base_source_byte_start": 386211,
+      "base_source_byte_stop": 389221,
+      "proof_names": [
+        "KA_eq",
+        "KAn_eq",
+        "w_lower",
+        "w1_enc",
+        "W2L_eq",
+        "w2_nonneg",
+        "kD_neg",
+        "wfun_nonneg"
+      ]
+    },
+    {
+      "completed_barrier": 71,
+      "milliseconds_since_previous_barrier": 590,
+      "base_source_byte_start": 389221,
+      "base_source_byte_stop": 398917,
+      "proof_names": [
+        "hasDerivAt_wfun",
+        "hasDerivAt_w1",
+        "cellN_soundZ'",
+        "cellN_soundWZ",
+        "cellD_sound",
+        "cellConv_sound",
+        "forceR_eq",
+        "nmin_eq"
+      ]
+    },
+    {
+      "completed_barrier": 72,
+      "milliseconds_since_previous_barrier": 39,
+      "base_source_byte_start": 398917,
+      "base_source_byte_stop": 401542,
+      "proof_names": [
+        "allBelow_spec",
+        "allFrom_spec",
+        "allFrom_add",
+        "blocks_of",
+        "CS_zero",
+        "CS_mono",
+        "SC_posR",
+        "castdiv_le"
+      ]
+    },
+    {
+      "completed_barrier": 73,
+      "milliseconds_since_previous_barrier": 379,
+      "base_source_byte_start": 401542,
+      "base_source_byte_stop": 407695,
+      "proof_names": [
+        "CS_min",
+        "CS_anc",
+        "cellOk_sound",
+        "fld_zero",
+        "blockOkX_sound",
+        "blockOk_sound",
+        "topv_ten",
+        "topv_top"
+      ]
+    },
+    {
+      "completed_barrier": 74,
+      "milliseconds_since_previous_barrier": 1051,
+      "base_source_byte_start": 407695,
+      "base_source_byte_stop": 423839,
+      "proof_names": [
+        "top_sound",
+        "entry_sound",
+        "dcov_sound",
+        "lb_sound",
+        "forceB_eq",
+        "CSD_zero",
+        "U1_posR",
+        "cellOkD_sound"
+      ]
+    },
+    {
+      "completed_barrier": 75,
+      "milliseconds_since_previous_barrier": 117,
+      "base_source_byte_start": 423839,
+      "base_source_byte_stop": 427697,
+      "proof_names": [
+        "ptOk_sound",
+        "lo32_eq",
+        "hi32_eq",
+        "pmin_lo",
+        "pmin_hi",
+        "PS_zero",
+        "PS_mono",
+        "PS_pmin_left"
+      ]
+    },
+    {
+      "completed_barrier": 76,
+      "milliseconds_since_previous_barrier": 358,
+      "base_source_byte_start": 427697,
+      "base_source_byte_stop": 432337,
+      "proof_names": [
+        "PS_pmin_right",
+        "CS2_zero",
+        "CS2_mono",
+        "CS2_min",
+        "CS2_anc",
+        "cellOk2_sound",
+        "fld2_zero",
+        "blockOk2X_sound"
+      ]
+    },
+    {
+      "completed_barrier": 77,
+      "milliseconds_since_previous_barrier": 911,
+      "base_source_byte_start": 432337,
+      "base_source_byte_stop": 441048,
+      "proof_names": [
+        "blockOk2_sound",
+        "topv2_ten",
+        "topv2_top",
+        "top2_sound",
+        "entry2_sound",
+        "dcov2_sound",
+        "blocks2_of",
+        "natsub_ge"
+      ]
+    },
+    {
+      "completed_barrier": 78,
+      "milliseconds_since_previous_barrier": 563,
+      "base_source_byte_start": 441048,
+      "base_source_byte_stop": 448454,
+      "proof_names": [
+        "natsub_nonneg",
+        "lbDr_sound",
+        "ptdOk_sound",
+        "PS_of_ptdOk",
+        "lo32_zero",
+        "hi32_zero",
+        "ccell_LN",
+        "ccell_UN"
+      ]
+    },
+    {
+      "completed_barrier": 79,
+      "milliseconds_since_previous_barrier": 732,
+      "base_source_byte_start": 448454,
+      "base_source_byte_stop": 457662,
+      "proof_names": [
+        "chainOk_sound",
+        "ptl_sound",
+        "w1_mono_of_conv",
+        "ext_tangent",
+        "rg_conv",
+        "beq_false",
+        "mw_sum",
+        "natsub_pair"
+      ]
+    },
+    {
+      "completed_barrier": 80,
+      "milliseconds_since_previous_barrier": 790,
+      "base_source_byte_start": 457662,
+      "base_source_byte_stop": 462470,
+      "proof_names": [
+        "gap_lo",
+        "brec_ne",
+        "kfunAM_ge_cos",
+        "wfun_quarter_low",
+        "winOk_all",
+        "wfun_quarter_high",
+        "wfun_window",
+        "nmax_eq"
+      ]
+    },
+    {
+      "completed_barrier": 81,
+      "milliseconds_since_previous_barrier": 103,
+      "base_source_byte_start": 462470,
+      "base_source_byte_stop": 465897,
+      "proof_names": [
+        "le_nmax_right",
+        "le_nmax_left",
+        "natsub_diff",
+        "SC_pos",
+        "lo_nmax",
+        "hi_nmin",
+        "getD_set",
+        "cov_gsplit"
+      ]
+    },
+    {
+      "completed_barrier": 82,
+      "milliseconds_since_previous_barrier": 2153,
+      "base_source_byte_start": 465897,
+      "base_source_byte_stop": 473578,
+      "proof_names": [
+        "cov_ssplit",
+        "sumR_eq",
+        "imap_length",
+        "imap_getD",
+        "sum_lo",
+        "sum_hi",
+        "ind_inr",
+        "mul_step"
+      ]
+    },
+    {
+      "completed_barrier": 83,
+      "milliseconds_since_previous_barrier": 1009,
+      "base_source_byte_start": 473578,
+      "base_source_byte_stop": 478030,
+      "proof_names": [
+        "cov_gmid",
+        "neg_natsub_le",
+        "fsum_ge",
+        "farkas_cov",
+        "incell_root",
+        "list_of_getD",
+        "brec_dep",
+        "forceT_eq"
+      ]
+    },
+    {
+      "completed_barrier": 84,
+      "milliseconds_since_previous_barrier": 301,
+      "base_source_byte_start": 478030,
+      "base_source_byte_stop": 483713,
+      "proof_names": [
+        "le_uc",
+        "beq_dec",
+        "mvK_eq",
+        "mcpK_eq",
+        "mcnK_eq",
+        "mslK_eq",
+        "isum_cast",
+        "iall_true"
+      ]
+    },
+    {
+      "completed_barrier": 85,
+      "milliseconds_since_previous_barrier": 343,
+      "base_source_byte_start": 483713,
+      "base_source_byte_stop": 491790,
+      "proof_names": [
+        "brec_and",
+        "brec0_cast",
+        "inr_true",
+        "term_range",
+        "span_eq",
+        "coverChk_sound",
+        "badOf_mem",
+        "getD_map_range"
+      ]
+    },
+    {
+      "completed_barrier": 86,
+      "milliseconds_since_previous_barrier": 715,
+      "base_source_byte_start": 491790,
+      "base_source_byte_stop": 498720,
+      "proof_names": [
+        "Fg_ge_lin",
+        "Fg_ge_term",
+        "root_cover",
+        "gsum_single",
+        "gsum_add",
+        "gsum_nonneg",
+        "slot_ok",
+        "natsub_lo"
+      ]
+    },
+    {
+      "completed_barrier": 87,
+      "milliseconds_since_previous_barrier": 1152,
+      "base_source_byte_start": 498720,
+      "base_source_byte_stop": 507527,
+      "proof_names": [
+        "natsub_hi",
+        "mat_gen",
+        "line_le_ends",
+        "pieces_cover",
+        "zpt_sound",
+        "zpiece_right",
+        "zpiece_left",
+        "zpe_eq"
+      ]
+    },
+    {
+      "completed_barrier": 88,
+      "milliseconds_since_previous_barrier": 98,
+      "base_source_byte_start": 507527,
+      "base_source_byte_stop": 512149,
+      "proof_names": [
+        "zpe_zero",
+        "zpe_n",
+        "zpe_ge",
+        "zpe_le",
+        "zside_right",
+        "zside_left",
+        "zsideF_right",
+        "zsideF_left"
+      ]
+    },
+    {
+      "completed_barrier": 89,
+      "milliseconds_since_previous_barrier": 5404,
+      "base_source_byte_start": 512149,
+      "base_source_byte_stop": 537014,
+      "proof_names": [
+        "tangent_valZ",
+        "mterm_minV",
+        "mterm_okZ",
+        "mtermTZ",
+        "mcheckGZ_sound",
+        "cov_rmid",
+        "rootCl_congr",
+        "gsum_range"
+      ]
+    },
+    {
+      "completed_barrier": 90,
+      "milliseconds_since_previous_barrier": 202,
+      "base_source_byte_start": 537014,
+      "base_source_byte_stop": 542392,
+      "proof_names": [
+        "pv_zero",
+        "pv_dsel",
+        "pv_dpk",
+        "ov_oadd",
+        "gsum_sub",
+        "cast_ov_oadd",
+        "leg_ok",
+        "path_ok"
+      ]
+    },
+    {
+      "completed_barrier": 91,
+      "milliseconds_since_previous_barrier": 199,
+      "base_source_byte_start": 542392,
+      "base_source_byte_stop": 547629,
+      "proof_names": [
+        "cHi_ok",
+        "cLo_ok",
+        "slot_gaps",
+        "nLo_ok",
+        "nHi_ok",
+        "cupd_ok",
+        "cov_cupd",
+        "cov_gmidC"
+      ]
+    },
+    {
+      "completed_barrier": 92,
+      "milliseconds_since_previous_barrier": 2928,
+      "base_source_byte_start": 547629,
+      "base_source_byte_stop": 554897,
+      "proof_names": [
+        "cov_rmidC",
+        "hPR",
+        "hTS",
+        "hSL",
+        "Fg_G",
+        "toCl_ofCl",
+        "zK_ok",
+        "ofCl_ok"
+      ]
+    },
+    {
+      "completed_barrier": 93,
+      "milliseconds_since_previous_barrier": 3721,
+      "base_source_byte_start": 554897,
+      "base_source_byte_stop": 684272,
+      "proof_names": [
+        "sp_ok",
+        "gsplit0_ok",
+        "gsplit1_ok",
+        "gsplit2_ok",
+        "gsplit3_ok",
+        "gsplit4_ok",
+        "gsplit5_ok",
+        "gsplit6_ok"
+      ]
+    },
+    {
+      "completed_barrier": 94,
+      "milliseconds_since_previous_barrier": 3376,
+      "base_source_byte_start": 684272,
+      "base_source_byte_stop": 685136,
+      "proof_names": [
+        "ssplit02_ok",
+        "ssplit03_ok",
+        "ssplit04_ok",
+        "ssplit05_ok",
+        "ssplit06_ok",
+        "ssplit07_ok",
+        "ssplit13_ok",
+        "ssplit14_ok"
+      ]
+    },
+    {
+      "completed_barrier": 95,
+      "milliseconds_since_previous_barrier": 3635,
+      "base_source_byte_start": 685136,
+      "base_source_byte_stop": 686006,
+      "proof_names": [
+        "ssplit15_ok",
+        "ssplit16_ok",
+        "ssplit17_ok",
+        "ssplit24_ok",
+        "ssplit25_ok",
+        "ssplit26_ok",
+        "ssplit27_ok",
+        "ssplit35_ok"
+      ]
+    },
+    {
+      "completed_barrier": 96,
+      "milliseconds_since_previous_barrier": 3075,
+      "base_source_byte_start": 686006,
+      "base_source_byte_stop": 696457,
+      "proof_names": [
+        "ssplit36_ok",
+        "ssplit37_ok",
+        "ssplit46_ok",
+        "ssplit47_ok",
+        "ssplit57_ok",
+        "splitAx_ok",
+        "tm_ok",
+        "MulOK_zero"
+      ]
+    },
+    {
+      "completed_barrier": 97,
+      "milliseconds_since_previous_barrier": 7396,
+      "base_source_byte_start": 696457,
+      "base_source_byte_stop": 735045,
+      "proof_names": [
+        "ystep_ok",
+        "ydec_ok",
+        "mcheckP_ok",
+        "mleafP_ok",
+        "fleaf_ok",
+        "leafStep_ok",
+        "walkC_ok",
+        "walk_ok"
+      ]
+    },
+    {
+      "completed_barrier": 98,
+      "milliseconds_since_previous_barrier": 6416,
+      "base_source_byte_start": 735045,
+      "base_source_byte_stop": 818075,
+      "proof_names": [
+        "covered_of_walkP",
+        "hADJ",
+        "cert_of",
+        "top_ok",
+        "blk_0",
+        "blk_1",
+        "blk_2",
+        "blk_3"
+      ]
+    },
+    {
+      "completed_barrier": 99,
+      "milliseconds_since_previous_barrier": 5609,
+      "base_source_byte_start": 818075,
+      "base_source_byte_stop": 943120,
+      "proof_names": [
+        "blk_4",
+        "blk_all",
+        "lbS",
+        "topD_ok",
+        "dblk_0",
+        "dblk_1",
+        "dblk_2",
+        "dblk_3"
+      ]
+    },
+    {
+      "completed_barrier": 100,
+      "milliseconds_since_previous_barrier": 8928,
+      "base_source_byte_start": 943120,
+      "base_source_byte_stop": 943874,
+      "proof_names": [
+        "dblk_4",
+        "dblk_5",
+        "dblk_6",
+        "dblk_7",
+        "dblk_8",
+        "dblk_9",
+        "dblk_10",
+        "dblk_11"
+      ]
+    },
+    {
+      "completed_barrier": 101,
+      "milliseconds_since_previous_barrier": 851,
+      "base_source_byte_start": 943874,
+      "base_source_byte_stop": 948726,
+      "proof_names": [
+        "dblk_all",
+        "lbD",
+        "PTL_26_ok",
+        "PTL_29_ok",
+        "PTL_30_ok",
+        "PTL_31_ok",
+        "PTL_32_ok",
+        "PTL_33_ok"
+      ]
+    },
+    {
+      "completed_barrier": 102,
+      "milliseconds_since_previous_barrier": 561,
+      "base_source_byte_start": 948726,
+      "base_source_byte_stop": 952214,
+      "proof_names": [
+        "PTL_34_ok",
+        "PTL_35_ok",
+        "PTL_36_ok",
+        "PTL_37_ok",
+        "PTL_38_ok",
+        "PTL_57_ok",
+        "PTL_58_ok",
+        "PTL_59_ok"
+      ]
+    },
+    {
+      "completed_barrier": 103,
+      "milliseconds_since_previous_barrier": 1771,
+      "base_source_byte_start": 952214,
+      "base_source_byte_stop": 960771,
+      "proof_names": [
+        "PTL_60_ok",
+        "PTL_61_ok",
+        "PTL_62_ok",
+        "PTL_63_ok",
+        "PTL_64_ok",
+        "PTL_65_ok",
+        "PTL_66_ok",
+        "PTL_67_ok"
+      ]
+    },
+    {
+      "completed_barrier": 104,
+      "milliseconds_since_previous_barrier": 346,
+      "base_source_byte_start": 960771,
+      "base_source_byte_stop": 963297,
+      "proof_names": [
+        "PTL_68_ok",
+        "PTL_69_ok",
+        "PTL_70_ok",
+        "PTL_89_ok",
+        "PTL_90_ok",
+        "PTL_91_ok",
+        "PTL_92_ok",
+        "PTL_93_ok"
+      ]
+    },
+    {
+      "completed_barrier": 105,
+      "milliseconds_since_previous_barrier": 1566,
+      "base_source_byte_start": 963297,
+      "base_source_byte_stop": 971382,
+      "proof_names": [
+        "PTL_94_ok",
+        "PTL_95_ok",
+        "PTL_96_ok",
+        "PTL_97_ok",
+        "PTL_98_ok",
+        "PTL_99_ok",
+        "PTL_100_ok",
+        "PTL_101_ok"
+      ]
+    },
+    {
+      "completed_barrier": 106,
+      "milliseconds_since_previous_barrier": 1045,
+      "base_source_byte_start": 971382,
+      "base_source_byte_stop": 976980,
+      "proof_names": [
+        "PTL_102_ok",
+        "PTL_122_ok",
+        "PTL_123_ok",
+        "PTL_124_ok",
+        "PTL_125_ok",
+        "PTL_126_ok",
+        "PTL_127_ok",
+        "PTL_128_ok"
+      ]
+    },
+    {
+      "completed_barrier": 107,
+      "milliseconds_since_previous_barrier": 873,
+      "base_source_byte_start": 976980,
+      "base_source_byte_stop": 981666,
+      "proof_names": [
+        "PTL_129_ok",
+        "PTL_130_ok",
+        "PTL_131_ok",
+        "PTL_132_ok",
+        "PTL_133_ok",
+        "PTL_134_ok",
+        "PTL_153_ok",
+        "PTL_154_ok"
+      ]
+    },
+    {
+      "completed_barrier": 108,
+      "milliseconds_since_previous_barrier": 1645,
+      "base_source_byte_start": 981666,
+      "base_source_byte_stop": 989316,
+      "proof_names": [
+        "PTL_155_ok",
+        "PTL_156_ok",
+        "PTL_157_ok",
+        "PTL_158_ok",
+        "PTL_159_ok",
+        "PTL_160_ok",
+        "PTL_161_ok",
+        "PTL_162_ok"
+      ]
+    },
+    {
+      "completed_barrier": 109,
+      "milliseconds_since_previous_barrier": 494,
+      "base_source_byte_start": 989316,
+      "base_source_byte_stop": 992292,
+      "proof_names": [
+        "PTL_163_ok",
+        "PTL_164_ok",
+        "PTL_165_ok",
+        "PTL_166_ok",
+        "PTL_186_ok",
+        "PTL_187_ok",
+        "PTL_188_ok",
+        "PTL_189_ok"
+      ]
+    },
+    {
+      "completed_barrier": 110,
+      "milliseconds_since_previous_barrier": 1302,
+      "base_source_byte_start": 992292,
+      "base_source_byte_stop": 999182,
+      "proof_names": [
+        "PTL_190_ok",
+        "PTL_191_ok",
+        "PTL_192_ok",
+        "PTL_193_ok",
+        "PTL_194_ok",
+        "PTL_195_ok",
+        "PTL_196_ok",
+        "PTL_197_ok"
+      ]
+    },
+    {
+      "completed_barrier": 111,
+      "milliseconds_since_previous_barrier": 474,
+      "base_source_byte_start": 999182,
+      "base_source_byte_stop": 1002272,
+      "proof_names": [
+        "PTL_198_ok",
+        "PTL_215_ok",
+        "PTL_217_ok",
+        "PTL_218_ok",
+        "PTL_219_ok",
+        "PTL_220_ok",
+        "PTL_221_ok",
+        "PTL_222_ok"
+      ]
+    },
+    {
+      "completed_barrier": 112,
+      "milliseconds_since_previous_barrier": 1144,
+      "base_source_byte_start": 1002272,
+      "base_source_byte_stop": 1008212,
+      "proof_names": [
+        "PTL_223_ok",
+        "PTL_224_ok",
+        "PTL_225_ok",
+        "PTL_226_ok",
+        "PTL_227_ok",
+        "PTL_228_ok",
+        "PTL_229_ok",
+        "PTL_230_ok"
+      ]
+    },
+    {
+      "completed_barrier": 113,
+      "milliseconds_since_previous_barrier": 551,
+      "base_source_byte_start": 1008212,
+      "base_source_byte_stop": 1011720,
+      "proof_names": [
+        "PTL_247_ok",
+        "PTL_249_ok",
+        "PTL_250_ok",
+        "PTL_251_ok",
+        "PTL_252_ok",
+        "PTL_253_ok",
+        "PTL_254_ok",
+        "PTL_255_ok"
+      ]
+    },
+    {
+      "completed_barrier": 114,
+      "milliseconds_since_previous_barrier": 1017,
+      "base_source_byte_start": 1011720,
+      "base_source_byte_stop": 1017204,
+      "proof_names": [
+        "PTL_256_ok",
+        "PTL_257_ok",
+        "PTL_258_ok",
+        "PTL_259_ok",
+        "PTL_260_ok",
+        "PTL_261_ok",
+        "PTL_262_ok",
+        "PTL_280_ok"
+      ]
+    },
+    {
+      "completed_barrier": 115,
+      "milliseconds_since_previous_barrier": 969,
+      "base_source_byte_start": 1017204,
+      "base_source_byte_stop": 1022574,
+      "proof_names": [
+        "PTL_282_ok",
+        "PTL_283_ok",
+        "PTL_284_ok",
+        "PTL_285_ok",
+        "PTL_286_ok",
+        "PTL_287_ok",
+        "PTL_288_ok",
+        "PTL_289_ok"
+      ]
+    },
+    {
+      "completed_barrier": 116,
+      "milliseconds_since_previous_barrier": 439,
+      "base_source_byte_start": 1022574,
+      "base_source_byte_stop": 1025436,
+      "proof_names": [
+        "PTL_290_ok",
+        "PTL_291_ok",
+        "PTL_292_ok",
+        "PTL_293_ok",
+        "PTL_294_ok",
+        "PTL_313_ok",
+        "PTL_314_ok",
+        "PTL_315_ok"
+      ]
+    },
+    {
+      "completed_barrier": 117,
+      "milliseconds_since_previous_barrier": 892,
+      "base_source_byte_start": 1025436,
+      "base_source_byte_stop": 1030616,
+      "proof_names": [
+        "PTL_316_ok",
+        "PTL_317_ok",
+        "PTL_318_ok",
+        "PTL_319_ok",
+        "PTL_320_ok",
+        "PTL_321_ok",
+        "PTL_322_ok",
+        "PTL_323_ok"
+      ]
+    },
+    {
+      "completed_barrier": 118,
+      "milliseconds_since_previous_barrier": 348,
+      "base_source_byte_start": 1030616,
+      "base_source_byte_stop": 1033174,
+      "proof_names": [
+        "PTL_324_ok",
+        "PTL_325_ok",
+        "PTL_345_ok",
+        "PTL_347_ok",
+        "PTL_348_ok",
+        "PTL_349_ok",
+        "PTL_350_ok",
+        "PTL_351_ok"
+      ]
+    },
+    {
+      "completed_barrier": 119,
+      "milliseconds_since_previous_barrier": 529,
+      "base_source_byte_start": 1033174,
+      "base_source_byte_stop": 1036492,
+      "proof_names": [
+        "PTL_352_ok",
+        "PTL_353_ok",
+        "PTL_354_ok",
+        "PTL_355_ok",
+        "PTL_356_ok",
+        "PTL_357_ok",
+        "PTL_358_ok",
+        "PTL_376_ok"
+      ]
+    },
+    {
+      "completed_barrier": 120,
+      "milliseconds_since_previous_barrier": 414,
+      "base_source_byte_start": 1036492,
+      "base_source_byte_stop": 1039392,
+      "proof_names": [
+        "PTL_378_ok",
+        "PTL_379_ok",
+        "PTL_380_ok",
+        "PTL_381_ok",
+        "PTL_382_ok",
+        "PTL_383_ok",
+        "PTL_384_ok",
+        "PTL_385_ok"
+      ]
+    },
+    {
+      "completed_barrier": 121,
+      "milliseconds_since_previous_barrier": 223,
+      "base_source_byte_start": 1039392,
+      "base_source_byte_stop": 1041304,
+      "proof_names": [
+        "PTL_386_ok",
+        "PTL_387_ok",
+        "PTL_388_ok",
+        "PTL_389_ok",
+        "PTL_390_ok",
+        "PTL_408_ok",
+        "PTL_409_ok",
+        "PTL_411_ok"
+      ]
+    },
+    {
+      "completed_barrier": 122,
+      "milliseconds_since_previous_barrier": 290,
+      "base_source_byte_start": 1041304,
+      "base_source_byte_stop": 1043786,
+      "proof_names": [
+        "PTL_412_ok",
+        "PTL_413_ok",
+        "PTL_414_ok",
+        "PTL_415_ok",
+        "PTL_416_ok",
+        "PTL_417_ok",
+        "PTL_418_ok",
+        "PTL_419_ok"
+      ]
+    },
+    {
+      "completed_barrier": 123,
+      "milliseconds_since_previous_barrier": 150,
+      "base_source_byte_start": 1043786,
+      "base_source_byte_stop": 1045432,
+      "proof_names": [
+        "PTL_420_ok",
+        "PTL_422_ok",
+        "PTL_441_ok",
+        "PTL_443_ok",
+        "PTL_444_ok",
+        "PTL_445_ok",
+        "PTL_446_ok",
+        "PTL_447_ok"
+      ]
+    },
+    {
+      "completed_barrier": 124,
+      "milliseconds_since_previous_barrier": 156,
+      "base_source_byte_start": 1045432,
+      "base_source_byte_stop": 1047116,
+      "proof_names": [
+        "PTL_448_ok",
+        "PTL_449_ok",
+        "PTL_472_ok",
+        "PTL_475_ok",
+        "PTL_476_ok",
+        "PTL_477_ok",
+        "PTL_478_ok",
+        "PTL_479_ok"
+      ]
+    },
+    {
+      "completed_barrier": 125,
+      "milliseconds_since_previous_barrier": 42,
+      "base_source_byte_start": 1047116,
+      "base_source_byte_stop": 1048802,
+      "proof_names": [
+        "PTL_480_ok",
+        "PTL_483_ok",
+        "PTs1_3_ok",
+        "PTs0_3_ok",
+        "PTs4_6_ok",
+        "PTs3_6_ok",
+        "PTs0_6_ok",
+        "PTs7_9_ok"
+      ]
+    },
+    {
+      "completed_barrier": 126,
+      "milliseconds_since_previous_barrier": 20,
+      "base_source_byte_start": 1048802,
+      "base_source_byte_stop": 1050543,
+      "proof_names": [
+        "PTs6_9_ok",
+        "PTs10_12_ok",
+        "PTs9_12_ok",
+        "PTs6_12_ok",
+        "PTs0_12_ok",
+        "PTs13_15_ok",
+        "PTs12_15_ok",
+        "PTs16_18_ok"
+      ]
+    },
+    {
+      "completed_barrier": 127,
+      "milliseconds_since_previous_barrier": 18,
+      "base_source_byte_start": 1050543,
+      "base_source_byte_stop": 1052243,
+      "proof_names": [
+        "PTs15_18_ok",
+        "PTs12_18_ok",
+        "PTs19_21_ok",
+        "PTs18_21_ok",
+        "PTs22_24_ok",
+        "PTs21_24_ok",
+        "PTs18_24_ok",
+        "PTs12_24_ok"
+      ]
+    },
+    {
+      "completed_barrier": 128,
+      "milliseconds_since_previous_barrier": 18,
+      "base_source_byte_start": 1052243,
+      "base_source_byte_stop": 1054010,
+      "proof_names": [
+        "PTs0_24_ok",
+        "PTs25_27_ok",
+        "PTs24_27_ok",
+        "PTs28_30_ok",
+        "PTs27_30_ok",
+        "PTs24_30_ok",
+        "PTs31_33_ok",
+        "PTs30_33_ok"
+      ]
+    },
+    {
+      "completed_barrier": 129,
+      "milliseconds_since_previous_barrier": 18,
+      "base_source_byte_start": 1054010,
+      "base_source_byte_stop": 1055804,
+      "proof_names": [
+        "PTs34_36_ok",
+        "PTs33_36_ok",
+        "PTs30_36_ok",
+        "PTs24_36_ok",
+        "PTs37_39_ok",
+        "PTs36_39_ok",
+        "PTs40_42_ok",
+        "PTs39_42_ok"
+      ]
+    },
+    {
+      "completed_barrier": 130,
+      "milliseconds_since_previous_barrier": 17,
+      "base_source_byte_start": 1055804,
+      "base_source_byte_stop": 1057494,
+      "proof_names": [
+        "PTs36_42_ok",
+        "PTs43_45_ok",
+        "PTs42_45_ok",
+        "PTs46_48_ok",
+        "PTs45_48_ok",
+        "PTs42_48_ok",
+        "PTs36_48_ok",
+        "PTs24_48_ok"
+      ]
+    },
+    {
+      "completed_barrier": 131,
+      "milliseconds_since_previous_barrier": 19,
+      "base_source_byte_start": 1057494,
+      "base_source_byte_stop": 1059295,
+      "proof_names": [
+        "PTs0_48_ok",
+        "PTs49_51_ok",
+        "PTs48_51_ok",
+        "PTs52_54_ok",
+        "PTs51_54_ok",
+        "PTs48_54_ok",
+        "PTs55_57_ok",
+        "PTs54_57_ok"
+      ]
+    },
+    {
+      "completed_barrier": 132,
+      "milliseconds_since_previous_barrier": 18,
+      "base_source_byte_start": 1059295,
+      "base_source_byte_stop": 1061102,
+      "proof_names": [
+        "PTs58_60_ok",
+        "PTs57_60_ok",
+        "PTs54_60_ok",
+        "PTs48_60_ok",
+        "PTs61_63_ok",
+        "PTs60_63_ok",
+        "PTs64_66_ok",
+        "PTs63_66_ok"
+      ]
+    },
+    {
+      "completed_barrier": 133,
+      "milliseconds_since_previous_barrier": 19,
+      "base_source_byte_start": 1061102,
+      "base_source_byte_stop": 1062792,
+      "proof_names": [
+        "PTs60_66_ok",
+        "PTs67_69_ok",
+        "PTs66_69_ok",
+        "PTs70_72_ok",
+        "PTs69_72_ok",
+        "PTs66_72_ok",
+        "PTs60_72_ok",
+        "PTs48_72_ok"
+      ]
+    },
+    {
+      "completed_barrier": 134,
+      "milliseconds_since_previous_barrier": 19,
+      "base_source_byte_start": 1062792,
+      "base_source_byte_stop": 1064677,
+      "proof_names": [
+        "PTs73_75_ok",
+        "PTs72_75_ok",
+        "PTs76_78_ok",
+        "PTs75_78_ok",
+        "PTs72_78_ok",
+        "PTs79_81_ok",
+        "PTs78_81_ok",
+        "PTs82_84_ok"
+      ]
+    },
+    {
+      "completed_barrier": 135,
+      "milliseconds_since_previous_barrier": 18,
+      "base_source_byte_start": 1064677,
+      "base_source_byte_stop": 1066406,
+      "proof_names": [
+        "PTs81_84_ok",
+        "PTs78_84_ok",
+        "PTs72_84_ok",
+        "PTs85_87_ok",
+        "PTs84_87_ok",
+        "PTs88_90_ok",
+        "PTs87_90_ok",
+        "PTs84_90_ok"
+      ]
+    },
+    {
+      "completed_barrier": 136,
+      "milliseconds_since_previous_barrier": 17,
+      "base_source_byte_start": 1066406,
+      "base_source_byte_stop": 1068096,
+      "proof_names": [
+        "PTs91_93_ok",
+        "PTs90_93_ok",
+        "PTs94_96_ok",
+        "PTs93_96_ok",
+        "PTs90_96_ok",
+        "PTs84_96_ok",
+        "PTs72_96_ok",
+        "PTs48_96_ok"
+      ]
+    },
+    {
+      "completed_barrier": 137,
+      "milliseconds_since_previous_barrier": 18,
+      "base_source_byte_start": 1068096,
+      "base_source_byte_stop": 1069932,
+      "proof_names": [
+        "PTs0_96_ok",
+        "PTs97_99_ok",
+        "PTs96_99_ok",
+        "PTs100_102_ok",
+        "PTs99_102_ok",
+        "PTs96_102_ok",
+        "PTs103_105_ok",
+        "PTs102_105_ok"
+      ]
+    },
+    {
+      "completed_barrier": 138,
+      "milliseconds_since_previous_barrier": 19,
+      "base_source_byte_start": 1069932,
+      "base_source_byte_stop": 1071810,
+      "proof_names": [
+        "PTs106_108_ok",
+        "PTs105_108_ok",
+        "PTs102_108_ok",
+        "PTs96_108_ok",
+        "PTs109_111_ok",
+        "PTs108_111_ok",
+        "PTs112_114_ok",
+        "PTs111_114_ok"
+      ]
+    },
+    {
+      "completed_barrier": 139,
+      "milliseconds_since_previous_barrier": 17,
+      "base_source_byte_start": 1071810,
+      "base_source_byte_stop": 1073583,
+      "proof_names": [
+        "PTs108_114_ok",
+        "PTs115_117_ok",
+        "PTs114_117_ok",
+        "PTs118_120_ok",
+        "PTs117_120_ok",
+        "PTs114_120_ok",
+        "PTs108_120_ok",
+        "PTs96_120_ok"
+      ]
+    },
+    {
+      "completed_barrier": 140,
+      "milliseconds_since_previous_barrier": 22,
+      "base_source_byte_start": 1073583,
+      "base_source_byte_stop": 1075536,
+      "proof_names": [
+        "PTs121_123_ok",
+        "PTs120_123_ok",
+        "PTs124_126_ok",
+        "PTs123_126_ok",
+        "PTs120_126_ok",
+        "PTs127_129_ok",
+        "PTs126_129_ok",
+        "PTs130_132_ok"
+      ]
+    },
+    {
+      "completed_barrier": 141,
+      "milliseconds_since_previous_barrier": 20,
+      "base_source_byte_start": 1075536,
+      "base_source_byte_stop": 1077349,
+      "proof_names": [
+        "PTs129_132_ok",
+        "PTs126_132_ok",
+        "PTs120_132_ok",
+        "PTs133_135_ok",
+        "PTs132_135_ok",
+        "PTs136_138_ok",
+        "PTs135_138_ok",
+        "PTs132_138_ok"
+      ]
+    },
+    {
+      "completed_barrier": 142,
+      "milliseconds_since_previous_barrier": 17,
+      "base_source_byte_start": 1077349,
+      "base_source_byte_stop": 1079122,
+      "proof_names": [
+        "PTs139_141_ok",
+        "PTs138_141_ok",
+        "PTs142_144_ok",
+        "PTs141_144_ok",
+        "PTs138_144_ok",
+        "PTs132_144_ok",
+        "PTs120_144_ok",
+        "PTs96_144_ok"
+      ]
+    },
+    {
+      "completed_barrier": 143,
+      "milliseconds_since_previous_barrier": 19,
+      "base_source_byte_start": 1079122,
+      "base_source_byte_stop": 1081075,
+      "proof_names": [
+        "PTs145_147_ok",
+        "PTs144_147_ok",
+        "PTs148_150_ok",
+        "PTs147_150_ok",
+        "PTs144_150_ok",
+        "PTs151_153_ok",
+        "PTs150_153_ok",
+        "PTs154_156_ok"
+      ]
+    },
+    {
+      "completed_barrier": 144,
+      "milliseconds_since_previous_barrier": 18,
+      "base_source_byte_start": 1081075,
+      "base_source_byte_stop": 1082888,
+      "proof_names": [
+        "PTs153_156_ok",
+        "PTs150_156_ok",
+        "PTs144_156_ok",
+        "PTs157_159_ok",
+        "PTs156_159_ok",
+        "PTs160_162_ok",
+        "PTs159_162_ok",
+        "PTs156_162_ok"
+      ]
+    },
+    {
+      "completed_barrier": 145,
+      "milliseconds_since_previous_barrier": 18,
+      "base_source_byte_start": 1082888,
+      "base_source_byte_stop": 1084736,
+      "proof_names": [
+        "PTs163_165_ok",
+        "PTs162_165_ok",
+        "PTs166_168_ok",
+        "PTs165_168_ok",
+        "PTs162_168_ok",
+        "PTs156_168_ok",
+        "PTs144_168_ok",
+        "PTs169_171_ok"
+      ]
+    },
+    {
+      "completed_barrier": 146,
+      "milliseconds_since_previous_barrier": 19,
+      "base_source_byte_start": 1084736,
+      "base_source_byte_stop": 1086654,
+      "proof_names": [
+        "PTs168_171_ok",
+        "PTs172_174_ok",
+        "PTs171_174_ok",
+        "PTs168_174_ok",
+        "PTs175_177_ok",
+        "PTs174_177_ok",
+        "PTs178_180_ok",
+        "PTs177_180_ok"
+      ]
+    },
+    {
+      "completed_barrier": 147,
+      "milliseconds_since_previous_barrier": 18,
+      "base_source_byte_start": 1086654,
+      "base_source_byte_stop": 1088502,
+      "proof_names": [
+        "PTs174_180_ok",
+        "PTs168_180_ok",
+        "PTs181_183_ok",
+        "PTs180_183_ok",
+        "PTs184_186_ok",
+        "PTs183_186_ok",
+        "PTs180_186_ok",
+        "PTs187_189_ok"
+      ]
+    },
+    {
+      "completed_barrier": 148,
+      "milliseconds_since_previous_barrier": 17,
+      "base_source_byte_start": 1088502,
+      "base_source_byte_stop": 1090205,
+      "proof_names": [
+        "PTs186_189_ok",
+        "PTs190_192_ok",
+        "PTs189_192_ok",
+        "PTs186_192_ok",
+        "PTs180_192_ok",
+        "PTs168_192_ok",
+        "PTs144_192_ok",
+        "PTs96_192_ok"
+      ]
+    },
+    {
+      "completed_barrier": 149,
+      "milliseconds_since_previous_barrier": 7015,
+      "base_source_byte_start": 1090205,
+      "base_source_byte_stop": 1104602,
+      "proof_names": [
+        "PTs0_192_ok",
+        "ptS",
+        "hR",
+        "wcc0_0",
+        "cc0_0",
+        "rc0",
+        "wcc1_1",
+        "cc1_1"
+      ]
+    },
+    {
+      "completed_barrier": 150,
+      "milliseconds_since_previous_barrier": 24076,
+      "base_source_byte_start": 1104602,
+      "base_source_byte_stop": 1148588,
+      "proof_names": [
+        "rc1",
+        "wcc2_2",
+        "cc2_2",
+        "rc2",
+        "wcc3_3",
+        "cc3_3",
+        "rc3",
+        "wcc4_4"
+      ]
+    },
+    {
+      "completed_barrier": 151,
+      "milliseconds_since_previous_barrier": 25220,
+      "base_source_byte_start": 1148588,
+      "base_source_byte_stop": 1191707,
+      "proof_names": [
+        "cc4_4",
+        "rc4",
+        "wcc5_5",
+        "cc5_5",
+        "rc5",
+        "wcc6_6",
+        "cc6_6",
+        "rc6"
+      ]
+    },
+    {
+      "completed_barrier": 152,
+      "milliseconds_since_previous_barrier": 22558,
+      "base_source_byte_start": 1191707,
+      "base_source_byte_stop": 1227669,
+      "proof_names": [
+        "wcc7_7",
+        "cc7_7",
+        "rc7",
+        "wcc8_8",
+        "cc8_8",
+        "rc8",
+        "wcc9_9",
+        "cc9_9"
+      ]
+    },
+    {
+      "completed_barrier": 153,
+      "milliseconds_since_previous_barrier": 34713,
+      "base_source_byte_start": 1227669,
+      "base_source_byte_stop": 1274764,
+      "proof_names": [
+        "rc9",
+        "wcc10_10",
+        "cc10_10",
+        "rc10",
+        "wcc11_11",
+        "cc11_11",
+        "rc11",
+        "wcc12_12"
+      ]
+    },
+    {
+      "completed_barrier": 154,
+      "milliseconds_since_previous_barrier": 19788,
+      "base_source_byte_start": 1274764,
+      "base_source_byte_stop": 1305018,
+      "proof_names": [
+        "cc12_12",
+        "rc12",
+        "wcc13_13",
+        "cc13_13",
+        "rc13",
+        "wcc14_14",
+        "cc14_14",
+        "rc14"
+      ]
+    },
+    {
+      "completed_barrier": 155,
+      "milliseconds_since_previous_barrier": 14014,
+      "base_source_byte_start": 1305018,
+      "base_source_byte_stop": 1328822,
+      "proof_names": [
+        "wcc15_15",
+        "cc15_15",
+        "rc15",
+        "wcc16_16",
+        "cc16_16",
+        "rc16",
+        "wcc17_17",
+        "cc17_17"
+      ]
+    },
+    {
+      "completed_barrier": 156,
+      "milliseconds_since_previous_barrier": 30908,
+      "base_source_byte_start": 1328822,
+      "base_source_byte_stop": 1374821,
+      "proof_names": [
+        "rc17",
+        "wcc18_18",
+        "cc18_18",
+        "rc18",
+        "wcc19_19",
+        "cc19_19",
+        "rc19",
+        "wcc20_20"
+      ]
+    },
+    {
+      "completed_barrier": 157,
+      "milliseconds_since_previous_barrier": 20667,
+      "base_source_byte_start": 1374821,
+      "base_source_byte_stop": 1406566,
+      "proof_names": [
+        "cc20_20",
+        "rc20",
+        "wcc21_21",
+        "cc21_21",
+        "rc21",
+        "wcc22_22",
+        "cc22_22",
+        "rc22"
+      ]
+    },
+    {
+      "completed_barrier": 158,
+      "milliseconds_since_previous_barrier": 22379,
+      "base_source_byte_start": 1406566,
+      "base_source_byte_stop": 1441547,
+      "proof_names": [
+        "wcc23_23",
+        "cc23_23",
+        "rc23",
+        "wcc24_24",
+        "cc24_24",
+        "rc24",
+        "wcc25_25",
+        "cc25_25"
+      ]
+    },
+    {
+      "completed_barrier": 159,
+      "milliseconds_since_previous_barrier": 16168,
+      "base_source_byte_start": 1441547,
+      "base_source_byte_stop": 1469044,
+      "proof_names": [
+        "rc25",
+        "wcc26_26",
+        "cc26_26",
+        "rc26",
+        "wcc27_27",
+        "cc27_27",
+        "rc27",
+        "wcc28_28"
+      ]
+    },
+    {
+      "completed_barrier": 160,
+      "milliseconds_since_previous_barrier": 14112,
+      "base_source_byte_start": 1469044,
+      "base_source_byte_stop": 1493564,
+      "proof_names": [
+        "cc28_28",
+        "rc28",
+        "wcc29_29",
+        "cc29_29",
+        "rc29",
+        "wcc30_30",
+        "cc30_30",
+        "rc30"
+      ]
+    },
+    {
+      "completed_barrier": 161,
+      "milliseconds_since_previous_barrier": 748,
+      "base_source_byte_start": 1493564,
+      "base_source_byte_stop": 1500910,
+      "proof_names": [
+        "wcc31_31",
+        "cc31_31",
+        "rc31",
+        "run7",
+        "run",
+        "cert",
+        "PC8CL_G_rev",
+        "PC8CL_half"
+      ]
+    },
+    {
+      "completed_barrier": 162,
+      "milliseconds_since_previous_barrier": 20,
+      "base_source_byte_start": 1500910,
+      "base_source_byte_stop": 1501495,
+      "proof_names": [
+        "PC8CL_cert_full"
+      ]
+    }
+  ],
+  "largest_gaps": [
+    {
+      "completed_barrier": 153,
+      "milliseconds_since_previous_barrier": 34713,
+      "base_source_byte_start": 1227669,
+      "base_source_byte_stop": 1274764,
+      "proof_names": [
+        "rc9",
+        "wcc10_10",
+        "cc10_10",
+        "rc10",
+        "wcc11_11",
+        "cc11_11",
+        "rc11",
+        "wcc12_12"
+      ]
+    },
+    {
+      "completed_barrier": 156,
+      "milliseconds_since_previous_barrier": 30908,
+      "base_source_byte_start": 1328822,
+      "base_source_byte_stop": 1374821,
+      "proof_names": [
+        "rc17",
+        "wcc18_18",
+        "cc18_18",
+        "rc18",
+        "wcc19_19",
+        "cc19_19",
+        "rc19",
+        "wcc20_20"
+      ]
+    },
+    {
+      "completed_barrier": 151,
+      "milliseconds_since_previous_barrier": 25220,
+      "base_source_byte_start": 1148588,
+      "base_source_byte_stop": 1191707,
+      "proof_names": [
+        "cc4_4",
+        "rc4",
+        "wcc5_5",
+        "cc5_5",
+        "rc5",
+        "wcc6_6",
+        "cc6_6",
+        "rc6"
+      ]
+    },
+    {
+      "completed_barrier": 150,
+      "milliseconds_since_previous_barrier": 24076,
+      "base_source_byte_start": 1104602,
+      "base_source_byte_stop": 1148588,
+      "proof_names": [
+        "rc1",
+        "wcc2_2",
+        "cc2_2",
+        "rc2",
+        "wcc3_3",
+        "cc3_3",
+        "rc3",
+        "wcc4_4"
+      ]
+    },
+    {
+      "completed_barrier": 152,
+      "milliseconds_since_previous_barrier": 22558,
+      "base_source_byte_start": 1191707,
+      "base_source_byte_stop": 1227669,
+      "proof_names": [
+        "wcc7_7",
+        "cc7_7",
+        "rc7",
+        "wcc8_8",
+        "cc8_8",
+        "rc8",
+        "wcc9_9",
+        "cc9_9"
+      ]
+    }
+  ],
+  "stagnation_probe": {
+    "wall_seconds": 29.79999613761902,
+    "cpuacct_seconds_delta": 4.5798252,
+    "same_pid_20second_delta_unavailable_reason": "Compiler completed after first thread sample and before second; do not infer per-thread exit deltas.",
+    "first_snapshot": {
+      "run_id": "am-bounded8-v3-compile-20261010",
+      "observed_unix": 1791567755.7531078,
+      "phase": "compile",
+      "compiler_elapsed_seconds": 439.74,
+      "memory.usage_in_bytes": "8476962816",
+      "memory.max_usage_in_bytes": "8589934592",
+      "memory.failcnt": "0",
+      "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+      "memory.stat": "cache 1690681344\nrss 5480509440\nrss_huge 778043392\nshmem 0\nmapped_file 1640996864\ndirty 0\nwriteback 0\nswap 0\npgpgin 3909252\npgpgout 2638345\npgfault 2477945\npgmajfault 63569\ninactive_anon 6528950272\nactive_anon 4096\ninactive_file 1092800512\nactive_file 597770240\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1690681344\ntotal_rss 5480509440\ntotal_rss_huge 778043392\ntotal_shmem 0\ntotal_mapped_file 1640996864\ntotal_dirty 0\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 3909252\ntotal_pgpgout 2638345\ntotal_pgfault 2477945\ntotal_pgmajfault 63569\ntotal_inactive_anon 6528950272\ntotal_active_anon 4096\ntotal_inactive_file 1092800512\ntotal_active_file 597770240\ntotal_unevictable 0",
+      "current_tree_pss_bytes": 7123270656,
+      "current_tree_rss_bytes": 7124873216,
+      "processes": [
+        {
+          "pid": 18,
+          "age_seconds": 439.74,
+          "state": "S",
+          "cpu_ticks": 52148,
+          "minflt": 2255348,
+          "majflt": 111452
+        }
+      ],
+      "cpuacct_usage_ns": "521528836100",
+      "thread_activity": [
+        {
+          "tid": 18,
+          "state": "S",
+          "cpu_ticks": 3,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 19,
+          "state": "S",
+          "cpu_ticks": 0,
+          "wait_channel": "io_sq_thread"
+        },
+        {
+          "tid": 20,
+          "state": "S",
+          "cpu_ticks": 0,
+          "wait_channel": "0"
+        },
+        {
+          "tid": 21,
+          "state": "R",
+          "cpu_ticks": 75,
+          "wait_channel": "0"
+        },
+        {
+          "tid": 22,
+          "state": "S",
+          "cpu_ticks": 1886,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 23,
+          "state": "S",
+          "cpu_ticks": 5370,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 24,
+          "state": "S",
+          "cpu_ticks": 6189,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 25,
+          "state": "S",
+          "cpu_ticks": 6085,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 26,
+          "state": "S",
+          "cpu_ticks": 8820,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 27,
+          "state": "S",
+          "cpu_ticks": 7807,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 28,
+          "state": "S",
+          "cpu_ticks": 7128,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 38,
+          "state": "S",
+          "cpu_ticks": 1678,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 39,
+          "state": "S",
+          "cpu_ticks": 1778,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 40,
+          "state": "S",
+          "cpu_ticks": 3670,
+          "wait_channel": "futex_wait_queue_me"
+        },
+        {
+          "tid": 41,
+          "state": "S",
+          "cpu_ticks": 1653,
+          "wait_channel": "futex_wait_queue_me"
+        }
+      ],
+      "barriers_observed": 76,
+      "last_barrier": "AM_BARRIER 139772",
+      "recent_output": [
+        "AM_BARRIER 139772",
+        "/tmp/rh-proportion-memory-20261010/am-isolated-v3-20261010-r2/bounded8/source/RecordProportion/ImportedAM.lean:8271:5: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.",
+        "If you'd rather continue"
+      ]
+    },
+    "last_snapshot": {
+      "run_id": "am-bounded8-v3-compile-20261010",
+      "observed_unix": 1791567785.553104,
+      "phase": "finished",
+      "compiler_elapsed_seconds": 0,
+      "memory.usage_in_bytes": "393216",
+      "memory.max_usage_in_bytes": "8589934592",
+      "memory.failcnt": "0",
+      "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+      "memory.stat": "cache 0\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 0\nwriteback 0\nswap 0\npgpgin 4656017\npgpgout 4656017\npgfault 2585497\npgmajfault 87919\ninactive_anon 0\nactive_anon 0\ninactive_file 0\nactive_file 0\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 0\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 0\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 4656017\ntotal_pgpgout 4656017\ntotal_pgfault 2585497\ntotal_pgmajfault 87919\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 0\ntotal_active_file 0\ntotal_unevictable 0",
+      "current_tree_pss_bytes": 0,
+      "current_tree_rss_bytes": 0,
+      "processes": [],
+      "cpuacct_usage_ns": "526108661300",
+      "thread_activity": [],
+      "barriers_observed": 162,
+      "last_barrier": "AM_BARRIER 470432",
+      "recent_output": [
+        "AM_BARRIER 469664",
+        "AM_BARRIER 470412",
+        "AM_BARRIER 470432"
+      ],
+      "final": {
+        "actual_exit_code": 0,
+        "timeout": false,
+        "oom_kill_count": 0,
+        "elapsed_seconds": 448.761,
+        "sampled_tree_peak_pss_bytes": 7998533632,
+        "proof_succeeded": true,
+        "resource_fit": true
+      }
+    },
+    "observation": "Thread21 runnable at first sample; all162 barriers completed and actual compiler exit0, so long batch was not a persistent deadlock."
+  },
+  "limitation": "Barrier gaps measure combined elaboration/check/codegen of an eight-proof group. They do not attribute cost to an individual proof or measure import startup time."
+}

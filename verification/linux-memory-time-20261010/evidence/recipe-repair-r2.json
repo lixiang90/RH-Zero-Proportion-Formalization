@@ -1,0 +1,43 @@
+{
+  "status": "SOURCE_ONLY_RECIPE_REPAIR_CHECKED",
+  "previous": {
+    "source-recipe.json": {
+      "sha256": "bba7a8db790bb7b59a10efc097d7dca0701a561f1729f6070c69cf383d55ccde",
+      "bytes": 4295,
+      "archive": "evidence/recipe-repair-archive/source-recipe.json.r1.gz",
+      "gzip_sha256": "01b5306b447a13a68f0c3998c24b771a78c4463e757961fc66d3bb54f2f57b7b"
+    },
+    "reproduce_candidate.py": {
+      "sha256": "d78e0e50bc724107ca277a0415d445c6e2f9b68df33f05a90ae87879e19330bc",
+      "bytes": 15978,
+      "archive": "evidence/recipe-repair-archive/reproduce_candidate.py.r1.gz",
+      "gzip_sha256": "183d8084c856689a8145e31c8bc63aaf8d948ef054f9a090e2d428c3ec4fbcf9"
+    }
+  },
+  "additional_public_pin": {
+    "scripts/bundle_optimized_candidate.py": "cf74ba43cbe5c716316dd33edd4bbe5daf88a583d54e07c839ebd2dbbe7f47a0"
+  },
+  "dynamic_import_bytecode_writes_disabled": true,
+  "recipe_sha256": "e31ba79741921f96465883d8fee02a1c19544cf5b857a837c772257e491e17ef",
+  "wrapper_sha256": "5b4ccbc42fe35c8fb20c807d1b4f684fb14d391b6046f4b2f77c0a5880167cff",
+  "source_only_variants": {
+    "bounded8": {
+      "record": "evidence/source-reproduction/publication-reproduction-default-r2-20261010/source-reproduction.json",
+      "record_sha256": "7bfbdaf9a090f99e3ef22e1bdb8658361c1c16fa6c6d4201f302910afcdea5fa",
+      "output_bytes": 1993809,
+      "output_sha256": "f40d0cb3566d4e71a6bb624a4d4375ca3ade977d3850e14e134a8a850f4abd50",
+      "actual_source_only_generation_pass": true,
+      "whole_proof_pass": false
+    },
+    "bounded8-chosen49": {
+      "record": "evidence/source-reproduction/publication-reproduction-chosen49-r2-20261010/source-reproduction.json",
+      "record_sha256": "1b5edc6c6738ee60e8c5f182f97d4d065781b7fc16a0f7c8a5b63c01e1878d88",
+      "output_bytes": 1998362,
+      "output_sha256": "d9d245aabbae53abf7da5788813ca84dee6c65b2476a330096a33c859c22464b",
+      "actual_source_only_generation_pass": true,
+      "whole_proof_pass": false
+    }
+  },
+  "no_Lean_or_runtime_cache_action": true,
+  "public_sources_unchanged": true
+}

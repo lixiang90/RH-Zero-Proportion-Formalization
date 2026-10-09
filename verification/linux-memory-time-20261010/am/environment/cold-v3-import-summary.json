@@ -1,0 +1,129 @@
+{
+  "status": "COLD_IMPORT_GATE_PASSED",
+  "run_id": "mathlib-zeta-cold-v3",
+  "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+  "same_exact_source_as_prior_mathlib_zeta_gate": true,
+  "eviction": {
+    "status": "PASS",
+    "method": "Per-owned-file readonly-fd fsync then POSIX_FADV_DONTNEED; PROT_NONE mmap/mincore before and after; no global drop_caches",
+    "roots": [
+      "/tmp/rh-proportion-memory-20261010/native-cache",
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/lib"
+    ],
+    "page_size": 4096,
+    "scope": "Only selected artifact/shared-library files and exact Lean/Lake executables. Kernel, unrelated file cache and WSL VM size are unchanged.",
+    "file_count": 56023,
+    "file_bytes": 8694222065,
+    "before_resident_page_bytes": 2871296,
+    "after_resident_page_bytes": 0,
+    "all_selected_pages_nonresident": true,
+    "elapsed_seconds": 33.747
+  },
+  "eviction_categories": {
+    "native-cache:.olean": {
+      "files": 8854,
+      "file_bytes": 2110934160,
+      "before_resident_page_bytes": 2093056,
+      "after_resident_page_bytes": 0
+    },
+    "native-cache:.ir": {
+      "files": 8682,
+      "file_bytes": 275145760,
+      "before_resident_page_bytes": 770048,
+      "after_resident_page_bytes": 0
+    },
+    "native-cache:.ir.sig": {
+      "files": 8682,
+      "file_bytes": 1528032,
+      "before_resident_page_bytes": 0,
+      "after_resident_page_bytes": 0
+    },
+    "native-cache:.olean.private": {
+      "files": 8682,
+      "file_bytes": 3708317424,
+      "before_resident_page_bytes": 4096,
+      "after_resident_page_bytes": 0
+    },
+    "native-cache:.olean.server": {
+      "files": 8682,
+      "file_bytes": 104669736,
+      "before_resident_page_bytes": 4096,
+      "after_resident_page_bytes": 0
+    },
+    "runtime:.so": {
+      "files": 22,
+      "file_bytes": 389892393,
+      "before_resident_page_bytes": 0,
+      "after_resident_page_bytes": 0
+    },
+    "runtime:.ir": {
+      "files": 2483,
+      "file_bytes": 371093536,
+      "before_resident_page_bytes": 0,
+      "after_resident_page_bytes": 0
+    },
+    "runtime:.ir.sig": {
+      "files": 2483,
+      "file_bytes": 437008,
+      "before_resident_page_bytes": 0,
+      "after_resident_page_bytes": 0
+    },
+    "runtime:.olean": {
+      "files": 2485,
+      "file_bytes": 353835848,
+      "before_resident_page_bytes": 0,
+      "after_resident_page_bytes": 0
+    },
+    "runtime:.olean.private": {
+      "files": 2483,
+      "file_bytes": 1346539128,
+      "before_resident_page_bytes": 0,
+      "after_resident_page_bytes": 0
+    },
+    "runtime:.olean.server": {
+      "files": 2483,
+      "file_bytes": 31806176,
+      "before_resident_page_bytes": 0,
+      "after_resident_page_bytes": 0
+    },
+    "runtime:executable": {
+      "files": 2,
+      "file_bytes": 22864,
+      "before_resident_page_bytes": 0,
+      "after_resident_page_bytes": 0
+    }
+  },
+  "actual_residency_phases": [
+    {
+      "phase": "before_fsync_DONTNEED",
+      "resident_pages": 701,
+      "resident_page_bytes": 2871296
+    },
+    {
+      "phase": "after_fsync_DONTNEED",
+      "resident_pages": 0,
+      "resident_page_bytes": 0
+    }
+  ],
+  "proof": {
+    "actual_exit_code": 0,
+    "proof_succeeded": true,
+    "resource_fit": true,
+    "resource_status": "OBSERVED_COMPONENT_FIT",
+    "elapsed_seconds": 32.537,
+    "timeout": false,
+    "oom_kill_count": 0,
+    "memory_limit_hit": false,
+    "inputs_unchanged": true,
+    "cgroup_peak_bytes": 8140759040,
+    "sampled_tree_peak_rss_bytes": 6943346688,
+    "sampled_tree_peak_pss_bytes": 6947745792,
+    "sampled_tree_peak_swap_bytes": 0
+  },
+  "scope": "Private Linux cgroup-v1 component resource experiment: scoped imported-artifact cache pages were evicted and checked nonresident before launch, with no concurrent owned proof processes. Owned group capped at 4 CPUs and 8 GiB with no swap; enclosing WSL VM remains32GiB. Kernel, unrelated file cache, source filesystem and cross-group charge ownership still differ from a whole official8GiBVM. RSS/PSS, cache residency and cgroup counters are all reported. No exact official reproduction or website acceptance claim.",
+  "comparison_claim": "Readiness/audit repair only. No optimization gain or website acceptance established.",
+  "original_v1_v2_sources_unchanged": true,
+  "large_compile_performed": false,
+  "raw_residency_sha256": "72ba1c821fe9ca3c3cf605ab7ab2032c98c7856f9de3d406230fa5ee65029293",
+  "raw_log_sha256": "688bf429779d64cc1dcad3dda8575ba26787bdba1fec7d630b1268c237ac97c1"
+}

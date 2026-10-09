@@ -1,0 +1,40 @@
+{
+  "scope": "Actual source-only reproduction and output-route guards; no Lean/compiler/cache/Nano",
+  "wrapper_sha256": "d78e0e50bc724107ca277a0415d445c6e2f9b68df33f05a90ae87879e19330bc",
+  "recipe_sha256": "bba7a8db790bb7b59a10efc097d7dca0701a561f1729f6070c69cf383d55ccde",
+  "positive": {
+    "bounded8": {
+      "record": "evidence/source-reproduction/publication-reproduction-default-20261010/source-reproduction.json",
+      "record_sha256": "0cc6ba42a92633b399f347d6279d5ffe73dc4394a2722f5d036ee38aa701fbe5",
+      "output_bytes": 1993809,
+      "output_sha256": "f40d0cb3566d4e71a6bb624a4d4375ca3ade977d3850e14e134a8a850f4abd50",
+      "actual_source_only_generation_pass": true,
+      "whole_proof_pass": false
+    },
+    "bounded8-chosen49": {
+      "record": "evidence/source-reproduction/publication-reproduction-chosen49-20261010/source-reproduction.json",
+      "record_sha256": "3ec2d85b15ae780edcde8665b758d357292fd9e44a0e19e5288b7f4bdb6f8f34",
+      "output_bytes": 1998362,
+      "output_sha256": "d9d245aabbae53abf7da5788813ca84dee6c65b2476a330096a33c859c22464b",
+      "actual_source_only_generation_pass": true,
+      "whole_proof_pass": false
+    }
+  },
+  "negative_output_guards": {
+    "existing": {
+      "actual_exit_code": 1,
+      "output": "Refusing any existing output file or directory",
+      "file_writes_before_refusal": false
+    },
+    "tracked_area": {
+      "actual_exit_code": 1,
+      "output": "Output must be strictly below repository tmp",
+      "file_writes_before_refusal": false
+    },
+    "parent_escape": {
+      "actual_exit_code": 1,
+      "output": "Output must be a relative fresh path",
+      "file_writes_before_refusal": false
+    }
+  }
+}

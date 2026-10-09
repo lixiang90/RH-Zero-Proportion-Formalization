@@ -4,9 +4,9 @@ The result and all numeric inputs are fixed. This work changes how ordinary
 proofs are checked so the eventual single-file submission can fit the site's
 time and memory limits. No new zero-proportion estimate is being researched.
 
-The pinned [inner launcher](https://github.com/josusanmartin/riemann/blob/668e239f30c7c56494611b1825306a3d65f95537/scripts/run-comparator-e2b.sh#L96)
+The pinned [inner launcher](https://github.com/josusanmartin/riemann/blob/6664d243005e12e155c19775b83f53721757414b/scripts/run-comparator-e2b.sh#L96)
 allows 3,200 seconds for the whole Comparator invocation; the
-[outer job](https://github.com/josusanmartin/riemann/blob/668e239f30c7c56494611b1825306a3d65f95537/e2b/run-verification-job.sh#L32)
+[outer job](https://github.com/josusanmartin/riemann/blob/6664d243005e12e155c19775b83f53721757414b/e2b/run-verification-job.sh#L32)
 has a 3,240-second timeout. Compilation, export, comparison, serial nanoda,
 and the default Lean replay share that budget. A local proof pass establishes
 neither the official resource limits nor website acceptance.
@@ -104,7 +104,7 @@ The [Point generator](../scripts/generate_reflected_point_candidate.py) now
 reproduces the checked f7d766f8 source from public inputs, including actual
 rejection of an isolated redirected tmp-root test.
 
-## Reproduce the optimized source
+## Earlier optimized-source reproduction
 
 The [guarded bundler](../scripts/bundle_optimized_candidate.py) reads only
 committed, hash-pinned inputs. It composes two-edge proof routing, synchronous
@@ -164,29 +164,120 @@ and [baseline](../verification/sparse-basic-four-serial-nanoda.json) /
 the measurements. The separately checked generic equality is useful evidence,
 but gives no general impossibility result for sparse methods.
 
+## Linux AM memory and time comparison
+
+After the first reported website attempt exited with code 137 during compilation,
+resource work moved to the pinned native Linux compiler. The supplied log reports
+683 seconds in `Solution.Candidate`; it contains no kernel OOM report or sandbox
+memory counters. Memory exhaustion remains the leading diagnosis, rather than a
+confirmed cause. See [the failed-attempt record](../verification/site-compilation-exit137/diagnosis.json).
+
+The new AM variant preserves the numeric inputs and original theorem interfaces.
+It includes the 21 checked source deletions and eight ordinary aliases to the
+pinned Zeta23 helpers, and permits at most eight proof commands between waits for
+the checked environment. Parser-derived command boundaries place 162 waits; the
+last wait finishes the remaining commands, and the module restores synchronous
+elaboration afterward. The scheduling change introduces no mathematical premise.
+
+One controlled pair on the same Linux runtime gave:
+
+| Complete AM module | Synchronous aliases | Bounded asynchronous elaboration |
+|---|---:|---:|
+| Lean compile wall time | 553.329 s | 448.761 s |
+| Cgroup CPU time | 533.275 s | 526.109 s |
+| Sampled peak PSS | 7.51 GiB | 7.45 GiB |
+| Fresh audited interface roots | 20 | 20 |
+| OOM kills / swap / timeout | 0 / 0 / no | 0 / 0 / no |
+
+The observed wall-time reduction was 18.9%. This is one pair, so repeatability
+has not been established. The PSS difference was only 59.7 MiB (0.8%); it does
+not establish a significant memory improvement. Both cgroup peaks reached the
+8 GiB limit without a failed charge or OOM kill, leaving no demonstrated memory
+headroom for an entire 8 GiB VM. Both fresh 20-root audits imported their newly
+compiled artifacts and used only subsets of `propext`, `Classical.choice` and
+`Quot.sound`.
+
+Each compile used `-j4`, the same pinned compiler and native dependency cache,
+a four-CPU quota, an 8 GiB memory-plus-swap limit with swap disabled, and a
+1,200-second guard. Imported-artifact pages were checked cold before each run;
+cache preparation time is recorded separately. The surrounding WSL VM had
+32 GiB. A bounded cgroup inside that host is not an exact reproduction of the
+website's 8 GiB sandbox. The control's dependency and axiom validation resumed
+after a session restart using the same source and compiled-artifact hashes;
+the compile was not repeated. See [the AM evidence packet](../verification/linux-memory-time-20261010/am/README.md)
+for the raw traces, exact hashes and phase-gap disclosure.
+
+The selected single-file source combines bounded AM elaboration with the
+previously checked two-edge and point-reflection routes. It has 1,993,809 bytes,
+leaving 6,191 bytes under the source limit, and SHA256
+`f40d0cb3566d4e71a6bb624a4d4375ca3ade977d3850e14e134a8a850f4abd50`.
+Its reproduction from frozen public inputs has passed. Full-file compilation
+is in progress; no complete result is yet available. Whole-file compilation,
+fresh final-root audits, independent replay and comparison against the current
+website contract are separate checks; the component result does not establish
+any of them. The published original `Solution.lean` is unchanged.
+
+## Further finite probes
+
+A selected two-edge pivot avoids the minimum over all nine two-edge paths for
+49 representatives. The ordinary generic theorem proves the original closure
+bound for every pivot; hints choose proof syntax and do not become hypotheses.
+All 49 original Boolean conclusions and their fresh axiom audits passed. The
+same 58 original computational definitions and three existing two-edge
+definitions retained their exact bytes.
+
+In one ordered full 49-goal pair, numeric proof time was 36.751 versus 33.881
+seconds (7.81% lower), and complete component compilation was 62.098 versus
+59.258 seconds (4.57% lower). No memory gain was established. Both variants
+imported the same freshly checked generic environment, so this comparison does
+not include the additional chosen-helper elaboration and replay cost in the
+whole file. Earlier three-goal comparisons observed gains of 26.89% and 8.65%
+in opposite orders, with substantial baseline variation. Those samples do not
+establish a full-file speedup.
+
+The optional selected-pivot whole source adds 4,553 bytes, leaving only
+1,638 bytes of headroom. Its exact reproduction passed, but whole-file and
+independent replay checks remain pending; it is not selected for adoption.
+A six-field packet equality checkpoint saved only 5.86% after including its
+preparation cost, with negligible PSS change, and was rejected for adoption.
+See [the finite evidence and reproduction recipe](../verification/linux-memory-time-20261010/README.md).
+
+The reproduction script generates source only. It rebuilds the numeral
+dictionary from hash-pinned public inputs and writes into a fresh ignored
+directory. The gzip components are review artifacts, not generator inputs;
+source reproduction does not run Lean, Nano or Comparator and does not submit
+anything.
+
 ## Review and next step
 
-The exact rational result and numeric inputs remain fixed. Both complete
-component families have ordinary Lean proofs, fresh audits and serial independent
-replays. Two-edge routing reduces Data replay by 13.3%; reflection reduces Point
-replay by 19.2%. Their percentages cannot be added or applied to a whole pipeline.
-Direct reflexivity and the current Array sparse accumulator did not reduce cost.
+The exact rational result and numeric inputs remain fixed. The earlier complete
+Data and Point comparisons passed ordinary Lean proofs, fresh axiom audits and
+serial independent replay. Two-edge routing reduced Data replay by 13.3%;
+reflection reduced Point replay by 19.2%. Their percentages cannot be added or
+applied to a whole pipeline. Direct reflexivity and the current Array sparse
+accumulator did not reduce cost.
 
-A bounded secondary probe found eight AM helpers whose original interfaces
-can be proved by exact references to the pinned Zeta23 ModWindow helpers.
-The eight aliases and eight interface identities passed in 76.797 seconds,
-using only allowed axioms. They do not overlap the existing 21 deletions and
-would save a further 6,125 source bytes including the new import. This is source
-capacity evidence, not a measured runtime gain, and is not included in either
-generated candidate. Fixed template scripts imply the upstream module is
-prebuilt at the site, but no live sandbox observation or independent replay was
-performed. See [the bounded probe](../verification/am-helper-alias-bounded-probe.json).
+The eight AM aliases found by the earlier [bounded probe](../verification/am-helper-alias-bounded-probe.json)
+are now included in the complete Linux AM variants. Both full AM compiles and
+fresh 20-root audits passed, using only permitted axioms. A single same-Linux
+pair observed an 18.9% AM wall-time reduction from bounded asynchronous
+elaboration; the small PSS difference does not establish a significant memory
+gain. The selected-pivot finite component also passed all 49 original goals
+and fresh audits, but its whole-file helper cost and independent replay remain
+unresolved. The bounded AM source without that extension remains the default.
 
-The next decision needs a complete combined-candidate measurement in the pinned
-Linux 4CPU/8GiB environment, accounting for every Comparator stage. The Windows
-one-thread cutoff leaves the total deadline unresolved. Further work should
-target measured dominant kernel computations rather than source cleanup alone.
-Mathematical research remains paused and no site acceptance is asserted.
+The next decision requires the selected 1,993,809-byte single file to pass fresh
+compilation, audits of its three final website declarations, serial independent
+replay, and pinned Comparator statement, axiom and default-kernel checks against
+the current generated contract. Every stage must be accounted for within the
+shared 3,200-second website budget, including process-tree memory. An 8 GiB
+cgroup measurement inside a 32 GiB WSL VM supplies useful local evidence, but
+cannot establish official sandbox compliance or website acceptance.
+
+Further changes should follow the complete run's measured failure point or
+dominant kernel cost. The original checked submission remains published until
+a replacement passes its own complete checks. Mathematical research remains
+paused, and no website acceptance is asserted.
 
 ## Published candidate
 

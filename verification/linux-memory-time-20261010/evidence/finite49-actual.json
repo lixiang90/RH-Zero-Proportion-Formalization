@@ -1,0 +1,719 @@
+{
+  "status": "ACTUAL_49_GOAL_COMPILE_AND_FRESH_AUDIT_PASS",
+  "comparison_order": [
+    "baseline49 compile",
+    "chosen49 compile",
+    "baseline49 fresh audit",
+    "chosen49 fresh audit"
+  ],
+  "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+  "family_driver_sha256": "eb6260c532a8691dbdf09bd1fd44ff14904131c8b747a502868eb0e5b4d5d912",
+  "prepared_record_sha256": "65d3be82aa11604bfdd0389a2eafe6d39eee94423ce89263360932a8e51c7ebe",
+  "cases": {
+    "baseline49": {
+      "compile": {
+        "step": "baseline49",
+        "fresh_audit": false,
+        "run_id": "finite-baseline49-compile-20261009-221840-e08a4d",
+        "harness_exit": 0,
+        "launcher_wall_seconds": 91.565,
+        "proof_seconds": 62.098,
+        "resource_fit": true,
+        "kernel_process_succeeded": true,
+        "strict_selected_axioms_passed": null,
+        "axioms": {},
+        "phases_seconds": {
+          "3": 0.685,
+          "4": 0.566,
+          "35": 0.631,
+          "54": 0.661,
+          "57": 0.736,
+          "59": 0.744,
+          "86": 0.676,
+          "90": 0.594,
+          "134": 0.749,
+          "157": 0.63,
+          "161": 0.65,
+          "164": 0.59,
+          "167": 0.621,
+          "182": 0.757,
+          "271": 1.022,
+          "333": 0.651,
+          "355": 0.655,
+          "370": 0.622,
+          "419": 0.989,
+          "420": 0.916,
+          "478": 0.816,
+          "480": 0.793,
+          "562": 0.793,
+          "570": 0.866,
+          "571": 0.782,
+          "601": 0.915,
+          "701": 0.736,
+          "780": 0.879,
+          "806": 0.576,
+          "808": 0.657,
+          "877": 0.72,
+          "890": 0.703,
+          "892": 0.693,
+          "894": 0.643,
+          "901": 0.654,
+          "926": 0.835,
+          "929": 0.711,
+          "933": 0.694,
+          "934": 0.692,
+          "939": 0.827,
+          "940": 0.883,
+          "1010": 1.125,
+          "1013": 1.092,
+          "1078": 0.643,
+          "1097": 0.687,
+          "1199": 0.833,
+          "1200": 0.859,
+          "1203": 0.789,
+          "1213": 0.71
+        },
+        "source_sha256": "8232d749161fd9a7564fda7580a98777b49554c583afc66e14c4937428194b2f",
+        "artifact_sha256": "e5a05bf4171174f19c6de705cbe21663092f63f99d07a4184f98b181fdab1d4b",
+        "cold_preparation_seconds": 28.625,
+        "cgroup_peak_bytes": 8484933632,
+        "sampled_peak_pss_bytes": 7200176128,
+        "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+        "inputs_unchanged": true,
+        "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+      },
+      "audit": {
+        "step": "baseline49",
+        "fresh_audit": true,
+        "run_id": "finite-baseline49-audit-20261009-222214-a37056",
+        "harness_exit": 0,
+        "launcher_wall_seconds": 54.438,
+        "proof_seconds": 24.956,
+        "resource_fit": true,
+        "kernel_process_succeeded": true,
+        "strict_selected_axioms_passed": true,
+        "axioms": {
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_3": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_4": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_35": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_54": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_57": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_59": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_86": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_90": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_134": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_157": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_161": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_164": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_167": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_182": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_271": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_333": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_355": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_370": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_419": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_420": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_478": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_480": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_562": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_570": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_571": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_601": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_701": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_780": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_806": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_808": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_877": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_890": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_892": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_894": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_901": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_926": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_929": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_933": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_934": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_939": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_940": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1010": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1013": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1078": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1097": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1199": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1200": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1203": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1213": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        "phases_seconds": {},
+        "source_sha256": "d8602f1b36600b852d810ca61c29909b888aa3789734ef01595bbf70211afd7b",
+        "artifact_sha256": null,
+        "cold_preparation_seconds": 28.654,
+        "cgroup_peak_bytes": 8098484224,
+        "sampled_peak_pss_bytes": 6861189120,
+        "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+        "inputs_unchanged": true,
+        "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+      },
+      "numeric_proof_seconds": 36.751,
+      "compile_record_sha256": "d76b5e2734e98694f274ca4198ec04d56fcbb84dd790a011fb3e75bb36ec429a",
+      "audit_record_sha256": "fb1934bad9dab86375094dbd6df50b6ac2212024e6e87f4ca2ef7b5cc35b8e7f"
+    },
+    "chosen49": {
+      "compile": {
+        "step": "chosen49",
+        "fresh_audit": false,
+        "run_id": "finite-chosen49-compile-20261009-222021-be224d",
+        "harness_exit": 0,
+        "launcher_wall_seconds": 89.196,
+        "proof_seconds": 59.258,
+        "resource_fit": true,
+        "kernel_process_succeeded": true,
+        "strict_selected_axioms_passed": null,
+        "axioms": {},
+        "phases_seconds": {
+          "3": 0.648,
+          "4": 0.549,
+          "35": 0.597,
+          "54": 0.592,
+          "57": 0.699,
+          "59": 0.718,
+          "86": 0.65,
+          "90": 0.571,
+          "134": 0.715,
+          "157": 0.605,
+          "161": 0.613,
+          "164": 0.575,
+          "167": 0.577,
+          "182": 0.789,
+          "271": 1.213,
+          "333": 0.647,
+          "355": 0.629,
+          "370": 0.587,
+          "419": 0.94,
+          "420": 0.816,
+          "478": 0.676,
+          "480": 0.707,
+          "562": 0.645,
+          "570": 0.745,
+          "571": 0.697,
+          "601": 0.773,
+          "701": 0.682,
+          "780": 0.802,
+          "806": 0.513,
+          "808": 0.597,
+          "877": 0.645,
+          "890": 0.611,
+          "892": 0.623,
+          "894": 0.565,
+          "901": 0.597,
+          "926": 0.747,
+          "929": 0.634,
+          "933": 0.604,
+          "934": 0.654,
+          "939": 0.723,
+          "940": 0.767,
+          "1010": 1.027,
+          "1013": 1.015,
+          "1078": 0.579,
+          "1097": 0.654,
+          "1199": 0.767,
+          "1200": 0.748,
+          "1203": 0.729,
+          "1213": 0.625
+        },
+        "source_sha256": "0d23fbe674b53d53a7614cb61a96142ff2cbf9393baf9323af842741a9bf4be8",
+        "artifact_sha256": "cca1fa83c0663e3358edcbaf842f02cbce19f4571ff54ea19bc0cb22900cf0ff",
+        "cold_preparation_seconds": 29.105,
+        "cgroup_peak_bytes": 8474750976,
+        "sampled_peak_pss_bytes": 7199013888,
+        "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+        "inputs_unchanged": true,
+        "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+      },
+      "audit": {
+        "step": "chosen49",
+        "fresh_audit": true,
+        "run_id": "finite-chosen49-audit-20261009-222319-6445ed",
+        "harness_exit": 0,
+        "launcher_wall_seconds": 54.871,
+        "proof_seconds": 25.014,
+        "resource_fit": true,
+        "kernel_process_succeeded": true,
+        "strict_selected_axioms_passed": true,
+        "axioms": {
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_3": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_4": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_35": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_54": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_57": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_59": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_86": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_90": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_134": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_157": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_161": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_164": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_167": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_182": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_271": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_333": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_355": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_370": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_419": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_420": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_478": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_480": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_562": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_570": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_571": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_601": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_701": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_780": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_806": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_808": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_877": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_890": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_892": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_894": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_901": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_926": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_929": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_933": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_934": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_939": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_940": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1010": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1013": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1078": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1097": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1199": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1200": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1203": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "RHWeil.RecordSubmission.FiniteCertificateData.integer_representative_1213": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        "phases_seconds": {},
+        "source_sha256": "f6bb97bb0a61f3f21f546bb0c056b55a3ebacc424fc9ede430d388004cb1f32e",
+        "artifact_sha256": null,
+        "cold_preparation_seconds": 28.99,
+        "cgroup_peak_bytes": 8104890368,
+        "sampled_peak_pss_bytes": 6873725952,
+        "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+        "inputs_unchanged": true,
+        "scope": "Fresh ordinary kernel process only; scoped cold imported-artifact cgroup component test, no exact official VM/whole-family acceptance. No independent Nano yet."
+      },
+      "numeric_proof_seconds": 33.881,
+      "compile_record_sha256": "cee4c36775abbd7219be264eea3a892d8aff4fa9841e34e6eec105c150f6a4e2",
+      "audit_record_sha256": "6d15a04ccdc8ca59dc1d0c3be88de10e81c0f7b4c08f7bddf5e9a352ab809d7d"
+    }
+  },
+  "numeric_proof_time_reduction_fraction": 0.07809311311256828,
+  "whole_component_wall_reduction_fraction": 0.04573416213082537,
+  "sampled_peak_pss_difference_bytes": 1162240,
+  "memory_gain_established": false,
+  "replicated_full_49_comparison": false,
+  "all_49_original_bool_types_preserved": true,
+  "all_original_58_and_existing_3_computational_definitions_byte_identical": true,
+  "whole_source_bytes": 1998362,
+  "whole_source_sha256": "d9d245aabbae53abf7da5788813ca84dee6c65b2476a330096a33c859c22464b",
+  "whole_source_headroom_bytes": 1638,
+  "whole_compiled": false,
+  "independent_nano_checked": false,
+  "comparator_checked": false,
+  "official_acceptance": false,
+  "submitted": false,
+  "scope": "Fresh ordinary Lean kernel component checks on the pinned Linux runtime; 8 GiB cgroup inside a 32 GiB host VM, scoped imported pages confirmed cold, -j1 with four-CPU quota. This is neither a full certificate check nor an exact website VM reproduction.",
+  "shared_generic_environment": "Both variants import the same freshly checked PivotGeneric; the full-file additional chosen-helper elaboration/replay cost is not isolated by this paired test.",
+  "net_whole_file_speedup_established": false,
+  "recommendation": "Retain bounded8 as the default whole-file candidate. The chosen49 component passes and may be considered later if full-file and independent Nano measurements justify its additional 4,553 source bytes."
+}
