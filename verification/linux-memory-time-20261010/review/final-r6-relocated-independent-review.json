@@ -1,0 +1,63 @@
+{
+  "review_status": "PASS_WITH_ONE_DOCUMENTATION_CLARIFICATION",
+  "file_integrity_status": "PASS",
+  "issues": [
+    {
+      "path": "verification/linux-memory-time-20261010/proposal-status.json",
+      "json_pointer": "/follow_up_experiment/complete_proof_claimed",
+      "reason": "The false complete_proof_claimed label is ambiguous alongside completed Lean compilation and fresh standard-axiom audit.",
+      "suggested_change": "Rename to independent_verification_complete:false, or remove in favor of existing verification_pipeline_complete:false. Do not set true; exports/core/Nano remain unrun.",
+      "owner_has_agreed_to_fix_after_frozen_inventory_review": true
+    }
+  ],
+  "publication_manifest_sha256": "ab43d870d83eff6b735b23dd69fddae002836a438a57e13660ad368e97e9287d",
+  "inventory_entries": 411,
+  "inventory_bytes_excluding_manifest": 50396293,
+  "physical_files": 412,
+  "exact_raw_gzip_bindings": 234,
+  "newly_decompressed_after_schema_resolution": [
+    "evidence/relocated-reproduction/bundler.stderr.log.gz",
+    "evidence/relocated-reproduction/bundler.stdout.log.gz",
+    "evidence/relocated-reproduction/twoedge-source-generation.stderr.log.gz",
+    "evidence/relocated-reproduction/twoedge-source-generation.stdout.log.gz",
+    "evidence/recipe-repair-archive/reproduce_candidate.py.r1.gz",
+    "evidence/recipe-repair-archive/source-recipe.json.r1.gz"
+  ],
+  "unchanged_owner_records_not_reinflated_in_schema_follow_up": true,
+  "corrected_producer_bindings": {
+    "finite": 130,
+    "am": 66,
+    "am_external": 5,
+    "whole": 273
+  },
+  "markdown_local_links_checked": 40,
+  "credential_utf8_binary_scans": "PASS; all 234 gzip/text safety scans in frozen initial review plus 3 live Markdown docs",
+  "r6_subpacket_status": "PASS",
+  "r6_archive_manifest_sha256": "96f7f5d551b145aac2fb6341d8a3433356baf846183948125e08eb2f657f3ffd",
+  "compile_proof_and_fresh_standard_three_axioms_passed": true,
+  "compile_memory_gate_passed": false,
+  "failed_memory_charges": 64,
+  "observed_oom_kills": 0,
+  "exports_comparator_default_replay_nanoda_unrun": true,
+  "historical_vs_observed_live_contract_explicit": true,
+  "3047_stage_sum_not_used_to_claim_3200_fit": true,
+  "original_d52_unchanged": true,
+  "reviewer_only_initial_errors": [
+    "Preflight manifest evidence/ entries require packet-root resolution, not whole/; bound files exist and corrected hashes pass.",
+    "Two immutable recipe-repair gzip snapshots use previous.bytes/sha256 schema; all raw hashes match."
+  ],
+  "preserved_initial_reports": [
+    "final-r6-relocated-package-review.json",
+    "final-r6-relocated-bindings-follow-up.json"
+  ],
+  "doc_sha256_at_review": {
+    "README.md": "9e2cbe3b2a3f04e48e6f7b12365bd4f97125babce7135fed2cb738179aa2518c",
+    "docs/resource-optimization.md": "8c87fcf690206dda3a06335e7a4c6c10d2155f79be04685feaa86144703689e8",
+    "docs/submission-contract.md": "035b461b60da1e94121197e162729ff79ff0a447b03692241236410fa7c1f1e8",
+    "verification/linux-memory-time-20261010/README.md": "55c51329c5e8581bb2e97f34be7ccea9bae38fb4def6211fae8af77876df0321",
+    "verification/linux-memory-time-20261010/whole/README.md": "8264d37b8619373842e39fe1cc0996ccca82ca77fb830bce1ea65a604a80a9f9"
+  },
+  "changed_doc_status_inventory_review_required_after_fix": true,
+  "publisher_post_staging_index_hash_gate_required": true,
+  "no_proof_runtime_cache_running_probe_or_public_mutation": true
+}

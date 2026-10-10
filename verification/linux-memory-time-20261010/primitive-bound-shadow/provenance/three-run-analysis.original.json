@@ -1,0 +1,100 @@
+{
+  "baseline_original_source_r1": {
+    "variant": "original",
+    "actual_exit_code": 0,
+    "proof_succeeded": true,
+    "resource_fit": true,
+    "proof_stage_seconds": 29.763,
+    "cold_preparation_seconds": 28.363,
+    "actual_phase_total_wall_seconds": 59.104,
+    "checked_body_marker_span_seconds": 0.875,
+    "successful_checked_body_timing": true,
+    "fresh_same_type_standard_axioms_no_original_target": true,
+    "compiler_artifact_bindings": {
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/lib/PrimitiveOriginal.olean": {
+        "bytes": 385384,
+        "sha256": "296ace97a0b1cf1ec2e5c915662a5aed7be589b983c14f41c5d44fc6d7cf11a5"
+      }
+    },
+    "audit_artifact_bindings": {
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/audit-lib/FreshProbeAudit.olean": {
+        "bytes": 92200,
+        "sha256": "472822d99f19662245e2afcf113e4bc9d62c3fc21280761c25ffb99a90203d84"
+      }
+    },
+    "failure_note": null
+  },
+  "failed_explicit_source_r1": {
+    "variant": "explicit",
+    "actual_exit_code": 1,
+    "proof_succeeded": false,
+    "resource_fit": false,
+    "proof_stage_seconds": 26.005,
+    "cold_preparation_seconds": 28.907,
+    "actual_phase_total_wall_seconds": 56.096,
+    "checked_body_marker_span_seconds": 0.499,
+    "successful_checked_body_timing": false,
+    "fresh_same_type_standard_axioms_no_original_target": false,
+    "compiler_artifact_bindings": {},
+    "audit_artifact_bindings": {},
+    "failure_note": "Source line43 simpa type mismatch; failed elaboration printed sorryAx; no .olean or fresh audit produced. Not an accepted new axiom or speed result."
+  },
+  "repaired_explicit_source_r2": {
+    "variant": "repaired_explicit_source_r2",
+    "run_id": "primitive-explicit-source-r2-native-r3",
+    "source_sha256": "6eda023d84689f7c5c86fb4a25ab57bacf1b0d6cad24334ccb474d944fe4ff5d",
+    "source_bytes": 4010,
+    "actual_exit_code": 0,
+    "proof_succeeded": true,
+    "resource_fit": true,
+    "proof_stage_seconds": 29.677,
+    "cold_preparation_seconds": 27.717,
+    "actual_phase_total_wall_seconds": 59.098,
+    "checked_body_marker_span_seconds": 0.528,
+    "successful_checked_body_timing": true,
+    "fresh_same_type_standard_axioms_no_original_target": true,
+    "checked_closure_constants": 9509,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "compiler_artifact_bindings": {
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/lib/PrimitiveExplicit.olean": {
+        "bytes": 355592,
+        "sha256": "df09501ab83885e27a06a5d6ee494aae8ba129773a99345395f2713dbcb30a42"
+      }
+    },
+    "audit_artifact_bindings": {
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/audit-lib/FreshProbeAudit.olean": {
+        "bytes": 92200,
+        "sha256": "a0687ccb551b08e085327f8a6ca3bf1f03c2a53dbeb2d27530d6f40d4dbcbf76"
+      }
+    },
+    "peak_pss_bytes": 7151198208,
+    "cgroup_peak_bytes": 8363720704,
+    "outside_cgroup_peak_pss_bytes": 197124096,
+    "timeout": false,
+    "oom_kill_count": 0,
+    "swap_bytes": 0,
+    "inputs_unchanged": true
+  },
+  "old_pair_archive_manifest": {
+    "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r2\\actual-completed\\archive-manifest.json",
+    "bytes": 11913,
+    "sha256": "414eab45fa3a68ed274eced43e77a776e7436823cdeec8ff39d88273e635e426"
+  },
+  "original_body_seconds": 0.875,
+  "repaired_body_seconds": 0.528,
+  "single_pair_body_seconds_saved": 0.347,
+  "single_pair_worker_plus_audit_seconds_saved": 0.08600000000000207,
+  "interpretation": "A single post-module shadow comparison. The original successful body is under one second; this probe does not identify the whole candidate bottleneck, show a stable global improvement, or justify formal adoption. Failed elaboration timing is excluded from speed comparisons.",
+  "scope": "Explicit exact-r6 dependency reuse; frozen old-current website contract, not fresh whole compilation or live-current verification.",
+  "r6_compile_resource_fit_remains": false,
+  "fresh_whole_claimed": false,
+  "official_fit_claimed": false,
+  "website_acceptance_claimed": false,
+  "default_kernel_replay_claimed": false,
+  "export_core_nano_run": false,
+  "artifact_bytes_copied": false
+}

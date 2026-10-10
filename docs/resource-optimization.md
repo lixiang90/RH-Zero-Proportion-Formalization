@@ -183,11 +183,16 @@ One controlled pair on the same Linux runtime gave:
 
 | Complete AM module | Synchronous aliases | Bounded asynchronous elaboration |
 |---|---:|---:|
-| Lean compile wall time | 553.329 s | 448.761 s |
+| Measured direct-Lean compile phase | 553.329 s | 448.761 s |
 | Cgroup CPU time | 533.275 s | 526.109 s |
 | Sampled peak PSS | 7.51 GiB | 7.45 GiB |
 | Fresh audited interface roots | 20 | 20 |
 | OOM kills / swap / timeout | 0 / 0 / no | 0 / 0 / no |
+
+The harness measures the direct Lean compilation phase, including startup,
+sampling, process exit, residual cleanup and binding-file rehashing. It excludes the
+prior cold preparation and the outer Windows/WSL runner. Exact child-process
+start/end times were not recorded separately.
 
 The observed wall-time reduction was 18.9%. This is one pair, so repeatability
 has not been established. The PSS difference was only 59.7 MiB (0.8%); it does
@@ -236,11 +241,37 @@ No complete f40 compilation, fresh three-root axiom audit, independent replay,
 export or current-contract Comparator pass was obtained. The allowed axiom set
 remains `propext`, `Quot.sound` and `Classical.choice`; a missing audit is not a
 pass. The original public `Solution.lean` with SHA256 `d52f013f...` is unchanged.
-A follow-up r6 source, 1,993,837 bytes with SHA256 prefix `5227a25`, disables
-asynchronous elaboration globally outside the bounded-eight AM region. At the
-recorded handoff, its tools and current-contract stages had passed and its
-full compile had begun. Full proof, downstream checks and website acceptance
-remain pending; no running r6 record is included in this archive.
+The completed r6 candidate (`5227a25e…`, 1,993,837 bytes) compiled successfully
+in the local diagnostic: proof-process time 2,993.462 seconds, compiler-worker
+time 2,993.015 seconds, phase time 3,023.454 seconds, and shared elapsed at the
+end of compile 3,104.485 seconds. Its resource gate failed: 64 failed memory
+charges, sampled process-tree peak PSS 7,997,991,936 bytes, and cgroup peak
+8,589,938,688 bytes. No OOM kill, timeout or swap was observed. A successful
+compiler exit does not establish resource fit.
+
+Separately authorized fresh dependency and three-root axiom checks subsequently
+passed, using the unchanged compiled artifact family and only `propext`,
+`Quot.sound`, and `Classical.choice`. The observed shared clock through audit
+was 3,471.979 seconds, while the supplied proof-stage sum excluding tools was
+3,047.051 seconds and cold-preparation sum was 122.568 seconds. Shared elapsed
+also includes wrappers and caller delays. Tools were prebuilt outside that
+clock. Challenge/solution exports, Comparator/default-kernel replay, and Nanoda
+were not run; the complete pipeline remains unverified.
+
+These checks used the frozen historical current record `6735015/10000000`
+at website commit `6664d243…`. The live accepted record observed during the
+comparison was `66812491/99194876`, verified on 2026-10-09 at 17:13:57.608 UTC.
+Our fixed score `66812491/99194740` is slightly larger, but these historical
+dependency/audit checks do not validate the refreshed live contract.
+
+The local environment used a 4 CPU/8 GiB/no-swap cgroup inside a configured
+32 GiB WSL VM and compiler flags `-j4 --tstack=32768`. Cold preparation and
+separately sampled caller/supervisor memory were outside the proof cgroup;
+compile outside-group peak PSS was 145,674,240 bytes. Official stack/worker,
+retained-string, sandbox and VM equivalence remains unestablished. The original
+public d52 submission has not been replaced.
+
+See the [completed r6 records](../verification/linux-memory-time-20261010/whole/r6-completed/README.md).
 
 ## Further finite probes
 
@@ -273,6 +304,32 @@ directory. The gzip components are review artifacts, not generator inputs;
 source reproduction does not run Lean, Nano or Comparator and does not submit
 anything.
 
+## Primitive-bound shadow probe
+
+An explicit linear-combination replacement was tested against the original
+`primitiveBound_sound` proof in a post-module shadow environment. Both
+successful runs passed a fresh exact-type check, a full dependency-closure
+check excluding the original target, and a standard-three-axiom audit.
+They reuse the exact r6 compiled dependency family; these are not fresh
+whole-file or live-contract checks.
+
+| Successful one-off runs | Original | Repaired explicit proof |
+|---|---:|---:|
+| Checked proof-body marker interval | 0.875 s | 0.528 s |
+| Actual Lean compile + audit command sum | 29.110 s | 29.361 s |
+| Complete owned-worker elapsed, including driver/bindings/cleanup | 29.763 s | 29.677 s |
+| Sampled peak PSS | 7,129,774,080 B | 7,151,198,208 B |
+
+The runs crossed a system reboot. The 0.086-second worker difference is
+not a pure Lean speedup; the actual Lean command sum increased by 0.251
+seconds and no memory saving was observed. The sub-second body difference
+does not identify the bottleneck of the 2993-second whole compile. The
+initial explicit version failed a source type mismatch, printed `sorryAx`
+during failed elaboration and produced no `.olean` or fresh audit; its
+timing is excluded from successful comparisons. All three records are
+[preserved](../verification/linux-memory-time-20261010/primitive-bound-shadow/README.md).
+The replacement is not adopted.
+
 ## Review and next step
 
 The exact rational result and numeric inputs remain fixed. The earlier complete
@@ -291,13 +348,12 @@ gain. The selected-pivot finite component also passed all 49 original goals
 and fresh audits, but its whole-file helper cost and independent replay remain
 unresolved. The bounded AM source without that extension remains the default.
 
-The next decision requires the global-synchronous 1,993,837-byte follow-up to pass fresh
-compilation, audits of its three final website declarations, serial independent
-replay, and pinned Comparator statement, axiom and default-kernel checks against
-the current generated contract. Every stage must be accounted for within the
-shared 3,200-second website budget, including process-tree memory. An 8 GiB
-cgroup measurement inside a 32 GiB WSL VM supplies useful local evidence, but
-cannot establish official sandbox compliance or website acceptance.
+The global-synchronous candidate has now passed complete local Lean compilation
+and fresh standard-axiom checks. Its configured memory gate failed, and no
+export, serial independent replay or Comparator/default-kernel result was
+obtained. Before adoption it needs lower resource costs and fresh checks
+against the updated server contract. Independent cold phases in a 32 GiB WSL
+VM cannot establish official 8 GiB sandbox compliance.
 
 Further changes should follow the complete run's measured failure point or
 dominant kernel cost. The original checked submission remains published until
@@ -312,3 +368,14 @@ Its ordinary kernel and independent checks passed. Its resource compliance
 remains unconfirmed. A replacement needs fresh full compilation, transitive
 axiom checks, independent replay and the exact website contract comparison.
 No optimization sample authorizes a website acceptance claim.
+
+## Accepted public proof comparison
+
+The [master-of-puppets proof](https://github.com/josusanmartin/riemann/blob/d95a6d7d11d7836306ec7ec1eb5be3478663718e/submissions/master-of-puppets/proof/Solution.lean)
+uses reward 805124/100000000, versus our fixed 805260/100000000. Its pressure
+and HW floor match ours, giving denominators 99194876 and 99194740 respectively.
+Our nine-point, 1224-representative certificate is used to prove the extra
+136/100000000 reward; its absence from that proof does not make it removable
+here. No safe 135 KB deletion was established. The static review found only
+24 conservative unused-name candidates, at most 7650 raw bytes, which still
+require semantic dependency checks. See the [source comparison](../verification/linux-memory-time-20261010/review/accepted-source-comparison.md).

@@ -1,0 +1,30 @@
+[
+  {
+    "command": [
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j4",
+      "--tstack=32768",
+      "-R",
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/source",
+      "-o",
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/lib/PrimitiveOriginal.olean",
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/source/PrimitiveOriginal.lean"
+    ],
+    "actual_exit_code": 0,
+    "elapsed_seconds": 26.19
+  },
+  {
+    "command": [
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j4",
+      "--tstack=32768",
+      "-R",
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/audit-source",
+      "-o",
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/audit-lib/FreshProbeAudit.olean",
+      "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/audit-source/FreshProbeAudit.lean"
+    ],
+    "actual_exit_code": 0,
+    "elapsed_seconds": 2.92
+  }
+]

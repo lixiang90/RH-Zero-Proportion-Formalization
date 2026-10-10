@@ -1,0 +1,87 @@
+{
+  "status": "THREE_SHADOW_RUNS_COMPLETED_TWO_PROOFS_PASS_ONE_SOURCE_ERROR",
+  "previous_pair_archive_manifest": {
+    "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r2\\actual-completed\\archive-manifest.json",
+    "bytes": 11913,
+    "sha256": "414eab45fa3a68ed274eced43e77a776e7436823cdeec8ff39d88273e635e426"
+  },
+  "repaired_archive_manifest": {
+    "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r3\\actual-completed\\archive-manifest.json",
+    "bytes": 9039,
+    "sha256": "0550b117055a142480230c65b476f6a85e7f4db15ecf75b958a98c244471087d"
+  },
+  "three_run_analysis": {
+    "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r3\\actual-completed\\three-run-analysis.json",
+    "bytes": 4356,
+    "sha256": "00fa0928be663fb8d6d9da20fc5bd4ac8f2c276748918e9485901a789a5f21fd"
+  },
+  "frozen_repaired_inputs": {
+    "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r3\\frozen-input-manifest.json",
+    "bytes": 1675,
+    "sha256": "9d3fc299578035ec1d365a693cdc40a3fc12b9b9071d900451b0fcfbad13aaf0"
+  },
+  "runs": [
+    {
+      "source_version": "original_source_r1",
+      "run_id": "primitive-original-r2",
+      "ledger": {
+        "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r2\\actual-completed\\original\\records\\ledger.json",
+        "bytes": 142736,
+        "sha256": "93d926c9b22b17b1f0ba4cef4922787068b85912aa93652ff7ab1da6e43f8820"
+      },
+      "process_log": {
+        "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r2\\actual-completed\\primitive-original-r2\\process.log",
+        "bytes": 4525,
+        "sha256": "f57daea214bf74f1b1fe0d4d6447bddef48cedc36b31f714a5e65c8482c3faa7"
+      },
+      "result": {
+        "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r2\\actual-completed\\primitive-original-r2\\result.json",
+        "bytes": 125078,
+        "sha256": "eee6d1204900fcac2d8103889b3c3b91ea3d7a0088f09f710bd5088f4105f784"
+      }
+    },
+    {
+      "source_version": "failed_explicit_source_r1",
+      "run_id": "primitive-explicit-r2",
+      "ledger": {
+        "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r2\\actual-completed\\explicit\\records\\ledger.json",
+        "bytes": 127467,
+        "sha256": "376cea51c9b99e0bda50402266e87924ae13a3f8abd8d730290d1026e58cc929"
+      },
+      "process_log": {
+        "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r2\\actual-completed\\primitive-explicit-r2\\process.log",
+        "bytes": 3395,
+        "sha256": "67dd1615bfe56d87bf4e2d783e7b5d74c65ea1419613233535946965cacc4085"
+      },
+      "result": {
+        "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r2\\actual-completed\\primitive-explicit-r2\\result.json",
+        "bytes": 111156,
+        "sha256": "12b07ecd11fffcd5140ba9d9539deb7c9cbee81bf5d67124568d3b2b73af89a0"
+      }
+    },
+    {
+      "source_version": "repaired_explicit_source_r2",
+      "run_id": "primitive-explicit-source-r2-native-r3",
+      "ledger": {
+        "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r3\\actual-completed\\explicit\\records\\ledger.json",
+        "bytes": 143015,
+        "sha256": "273591266948c365d34d6750fda814c0df2659a9fbce4c39c7c8725f60159549"
+      },
+      "process_log": {
+        "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r3\\actual-completed\\primitive-explicit-source-r2-native-r3\\process.log",
+        "bytes": 4525,
+        "sha256": "4f21bd10513b70ed09a2fffb9ad314ae757f43d3bdf350abf3fd0f663889bd12"
+      },
+      "result": {
+        "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-native-prepared-20261010-r3\\actual-completed\\primitive-explicit-source-r2-native-r3\\result.json",
+        "bytes": 125362,
+        "sha256": "1faa1eda8e1764d34d77fd2ff19dbbd78611213a586316f4d3ff9e583dd76352"
+      }
+    }
+  ],
+  "r6_compile_resource_fit_remains": false,
+  "full_pipeline_claimed": false,
+  "formal_adoption_claimed": false,
+  "live_current_contract_claimed": false,
+  "website_acceptance_claimed": false
+}

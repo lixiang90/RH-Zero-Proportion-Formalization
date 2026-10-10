@@ -1,0 +1,39 @@
+{
+  "status": "FILE_ONLY_TIMING_FIELD_CLARIFICATION",
+  "source_harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+  "source_harness_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am-publication-evidence-20261010\\environment\\linux_cgroup_resource_harness_v3_20261010.py",
+  "timer_start_line": 194,
+  "process_launch_line": 197,
+  "child_wait_line": 222,
+  "post_exit_cleanup_lines": [
+    223,
+    232
+  ],
+  "post_exit_binding_rehash_line": 233,
+  "elapsed_record_line": 235,
+  "records": {
+    "syncalias8": {
+      "result_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am-publication-evidence-20261010\\runs\\syncalias8\\compile\\result.json.gz",
+      "result_decompressed_sha256": "a6aa7519ad95b73ecb36d0efcbc159f2d284f62abe070b106f724973fa897461",
+      "raw_harness_elapsed_seconds": 553.329,
+      "raw_command_is_direct_lean": true,
+      "scoped_cold_preparation_seconds": 29.135,
+      "last_still_lean_sample_timer_elapsed_seconds": 552.75,
+      "outside_windows_supervisor_elapsed_seconds": 585.20131,
+      "pure_child_start_end_timestamps_separately_recorded": false
+    },
+    "bounded8": {
+      "result_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\am-publication-evidence-20261010\\runs\\bounded8\\compile\\result.json.gz",
+      "result_decompressed_sha256": "af9e69edda45abfc8840e8f71fefc099a692e371f973b15d347b66231a976df3",
+      "raw_harness_elapsed_seconds": 448.761,
+      "raw_command_is_direct_lean": true,
+      "scoped_cold_preparation_seconds": 28.944,
+      "last_still_lean_sample_timer_elapsed_seconds": 448.178,
+      "outside_windows_supervisor_elapsed_seconds": 480.395729,
+      "pure_child_start_end_timestamps_separately_recorded": false
+    }
+  },
+  "recommended_label": "Harness-measured elapsed for a direct Lean compilation phase",
+  "interpretation": "The two command arrays launch Lean directly. The reported 553.329 and 448.761 seconds start slightly before Popen and end after child exit, residual cleanup and exact input rehash. Cold preparation and outer WSL runner are outside this timer. Precise pure Lean child start/end wall timestamps were not separately captured. Last alive sample timer elapsed is a phase sample observation, not a strict pure-child lower bound because the timer begins before process launch.",
+  "scope": "Read existing completed Windows AM archive result metadata and archived exact harness source only; no proof, runtime/cache access, historical archive revalidation, or public edits."
+}

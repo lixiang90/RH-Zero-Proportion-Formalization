@@ -1,0 +1,19 @@
+{"starting": "fresh-three-roots", "command": ["/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean", "-j4", "--tstack=32768", "-R", "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-source", "-o", "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-lib/FreshCandidateAudit.olean", "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-source/FreshCandidateAudit.lean"]}
+candidate_strict_improvement : LT.lt.{0} currentRecordKappa candidateKappa
+'candidate_strict_improvement' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+candidate_critical_line_bound (ε : ℝ) :
+  GT.gt.{0} ε 0 →
+    ∃ T₀,
+      ∀ (T : ℝ),
+        GE.ge.{0} T T₀ →
+          LE.le.{0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} candidateKappa ε) ↑(Ncount T (HMul.hMul.{0, 0, 0} 2 T)))
+            ↑(N0star T (HMul.hMul.{0, 0, 0} 2 T))
+'candidate_critical_line_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+candidate_critical_line_bound_cumulative (ε : ℝ) :
+  GT.gt.{0} ε 0 →
+    ∃ T₀,
+      ∀ (T : ℝ),
+        GE.ge.{0} T T₀ →
+          LE.le.{0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} candidateKappa ε) ↑(Ncount 0 T)) ↑(N0star 0 T)
+'candidate_critical_line_bound_cumulative' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+{"label": "fresh-three-roots", "exit_code": 0, "seconds": 24.721}

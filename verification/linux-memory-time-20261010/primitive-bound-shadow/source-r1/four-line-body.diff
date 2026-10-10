@@ -1,0 +1,37 @@
+--- frozen-r6-declaration
++++ uncompiled-four-line-proposal
+@@ -21,7 +21,7 @@
+         push_cast
+         norm_num
+         have hrev := (framePotential_upper (i := j) (j := i) hl (by omega) hframe.1).2
+-        linarith
++        simpa only [neg_mul] using hrev
+     · simpa only [if_neg hframe, Int.cast_ofNat] using hinf
+   have hsecond : gapPotential g j - gapPotential g i ≤
+       (if 1 ≤ i ∧ 1 ≤ j then
+@@ -38,7 +38,7 @@
+         rw [show i-1+1=i by omega, show j-1+1=j by omega] at hs
+         have hd := gapPotential_difference g i j (by omega)
+         norm_num [SC] at hs hd
+-        nlinarith
++        linear_combination hd + 163840 * hs
+       · rw [if_neg hij]
+         push_cast
+         norm_num
+@@ -48,7 +48,7 @@
+         rw [show i-1+1=i by omega, show j-1+1=j by omega] at hs
+         have hd := gapPotential_difference g j i (by omega)
+         norm_num [SC] at hs hd
+-        nlinarith
++        linear_combination 163840 * hs - hd
+     · simpa only [if_neg hframe, Int.cast_ofNat] using hinf
+   unfold primitiveBound
+   rw [if_neg heq]
+@@ -63,6 +63,6 @@
+     simp only [gsum_range, Nat.add_sub_cancel, Finset.sum_range_succ,
+       Finset.sum_range_zero, zero_add, Nat.add_zero] at hd
+     norm_num [SC] at hd ⊢
+-    nlinarith
++    linear_combination 163840 * ht - hd
+   · rw [if_neg hadj, Int.cast_min]
+     exact le_min hfirst hsecond

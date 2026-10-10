@@ -1,0 +1,2157 @@
+{
+  "run_id": "whole-globalfalse-audit-r6",
+  "command": [
+    "/usr/bin/python3",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/whole_candidate_native_driver_20261010.py",
+    "--native-root",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6",
+    "--config-sha",
+    "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+    "--phase",
+    "audit",
+    "--worker",
+    "--tasks-file",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/phase-ledgers/audit-tasks.json",
+    "--tasks-sha",
+    "f31a76f4a4ccd2327960663c9116f057b5b7d07dfc7742704600f3585d224251"
+  ],
+  "cwd": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source",
+  "proof_uid": 1000,
+  "configuration": {
+    "memory.limit_in_bytes": "8589934592",
+    "memory.memsw.limit_in_bytes": "8589934592",
+    "memory.swappiness": "0",
+    "cpu.cfs_period_us": "100000",
+    "cpu.cfs_quota_us": "400000",
+    "cpuset.mems": "0",
+    "cpuset.cpus": "0-3"
+  },
+  "actual_exit_code": 0,
+  "timeout": false,
+  "oom_kill_count": 0,
+  "memory_limit_hit": false,
+  "elapsed_seconds": 25.023,
+  "initial_cgroup": {
+    "memory.usage_in_bytes": "0",
+    "memory.max_usage_in_bytes": "0",
+    "memory.memsw.usage_in_bytes": "0",
+    "memory.memsw.max_usage_in_bytes": "0",
+    "memory.failcnt": "0",
+    "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+    "memory.stat": "cache 0\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 0\nwriteback 0\nswap 0\npgpgin 0\npgpgout 0\npgfault 0\npgmajfault 0\ninactive_anon 0\nactive_anon 0\ninactive_file 0\nactive_file 0\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 0\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 0\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 0\ntotal_pgpgout 0\ntotal_pgfault 0\ntotal_pgmajfault 0\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 0\ntotal_active_file 0\ntotal_unevictable 0",
+    "cpu.stat": "nr_periods 0\nnr_throttled 0\nthrottled_time 0",
+    "cpuacct.usage": "0"
+  },
+  "final_cgroup": {
+    "memory.usage_in_bytes": "7504150528",
+    "memory.max_usage_in_bytes": "8265891840",
+    "memory.memsw.usage_in_bytes": "7504150528",
+    "memory.memsw.max_usage_in_bytes": "8265891840",
+    "memory.failcnt": "0",
+    "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+    "memory.stat": "cache 7465910272\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 12288\nwriteback 0\nswap 0\npgpgin 1836550\npgpgout 13809\npgfault 344220\npgmajfault 64508\ninactive_anon 0\nactive_anon 0\ninactive_file 7239675904\nactive_file 226213888\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 7465910272\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 12288\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1836550\ntotal_pgpgout 13809\ntotal_pgfault 344220\ntotal_pgmajfault 64508\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 7239675904\ntotal_active_file 226213888\ntotal_unevictable 0",
+    "cpu.stat": "nr_periods 249\nnr_throttled 0\nthrottled_time 0",
+    "cpuacct.usage": "5393874100"
+  },
+  "sampled_tree_peak_rss_bytes": 6955110400,
+  "sampled_tree_peak_pss_bytes": 6951479296,
+  "sampled_tree_peak_swap_bytes": 0,
+  "per_process": {
+    "14:344827": {
+      "pid": 14,
+      "name": "python3",
+      "uid": 1000,
+      "rss_bytes": 1445888,
+      "pss_bytes": 1059840,
+      "swap_bytes": 0,
+      "threads": 1,
+      "starttime": 344827,
+      "cpu_ticks": 1,
+      "peak_rss_bytes": 17305600,
+      "peak_pss_bytes": 11358208,
+      "peak_swap_bytes": 0
+    },
+    "15:344830": {
+      "pid": 15,
+      "name": "lean",
+      "uid": 1000,
+      "rss_bytes": 117772288,
+      "pss_bytes": 118639616,
+      "swap_bytes": 0,
+      "threads": 5,
+      "starttime": 344830,
+      "cpu_ticks": 496,
+      "peak_rss_bytes": 6937804800,
+      "peak_pss_bytes": 6940126208,
+      "peak_swap_bytes": 0
+    }
+  },
+  "inputs_before": {
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/whole_candidate_native_driver_20261010.py": "db28df608ce9dac67b5f94798beaa1ca9c35f28e92f49e1068cd6f30796bfd79",
+    "/mnt/e/codex-build/RH-Weil/tmp/linux_cgroup_resource_harness_v3_20261010.py": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/config.json": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/phase-ledgers/audit-tasks.json": "f31a76f4a4ccd2327960663c9116f057b5b7d07dfc7742704600f3585d224251",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps.lean": "14d359e1ba8336bc81d4722a7030a073ea78ffad523168b616af6f42840ddc05",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps/CandidateSpec.lean": "0618216894744f91d73330883af75eafe6937a8a871dd4cc385ebdaf32982e24",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Challenge/Candidate.lean": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-source/FreshCandidateAudit.lean": "75449219ea6dd20fabc5f97fb5fb68e579f0f74a30006b90ccc49b0077f83e96",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/nanoda-official-default-config.json": "2987e5c358c760bc0a5cdb964485f370dc99e3da75c53bee8e600a41245c9a50",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/comparator-config-candidate.json": "430b6cdce56f2b7e3ba448a734c905093b28fc65687f382dd546a17e788c6ecf",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export.lean": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export/Parse.lean": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Util.lean": "a3c7f05b027fef1b5a25a9bd26cd31998c2835583e029fc15970dad257d5137b",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Axioms.lean": "09fd2bd68775bc500e55d9ff5ab6dc9c4c57d11ab33d7a87eb76a0d365cd7ac4",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Compare.lean": "e5dfe4f040c21ab5defb4d27b6f229e581c6dabafc30d7adb07c872196914a62",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator.lean": "3becb55ec42f66fd9a57ea6edeb1e3eaaffccc98498d584730c4d632758924cb",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/exporter/Main.lean": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/comparator/Main.lean": "daca4ccb38b2dc7356ee4b47667980b290c3f27f970800723309e4d074f0c5be",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/core/tools/ComparatorCoreAudit.lean": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/optional-exporter-lake/lakefile.toml": "32856b29ddfae3718a6f101907503cbaf80ff61ce01ad11e98c5e449b31cd898",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/exporter.lean-toolchain": "a3997b5ad01979b25dae3b76f397dcb7c2392c3c838eb4bca83d4456a89b38aa",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lean-toolchain": "a3997b5ad01979b25dae3b76f397dcb7c2392c3c838eb4bca83d4456a89b38aa",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lakefile.toml": "83d6b828bbe079b420dcb733139331bef5b71fa16593bdf2c015d0167796647d",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lake-manifest.json": "d66b2b0ba1410ac628736f0a3612dcdd72a700013d0a66cbbf4adaffd0054010",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/licenses/lean4export.LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/licenses/Comparator.LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  },
+  "inputs_after": {
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/whole_candidate_native_driver_20261010.py": "db28df608ce9dac67b5f94798beaa1ca9c35f28e92f49e1068cd6f30796bfd79",
+    "/mnt/e/codex-build/RH-Weil/tmp/linux_cgroup_resource_harness_v3_20261010.py": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/config.json": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/phase-ledgers/audit-tasks.json": "f31a76f4a4ccd2327960663c9116f057b5b7d07dfc7742704600f3585d224251",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps.lean": "14d359e1ba8336bc81d4722a7030a073ea78ffad523168b616af6f42840ddc05",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps/CandidateSpec.lean": "0618216894744f91d73330883af75eafe6937a8a871dd4cc385ebdaf32982e24",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Challenge/Candidate.lean": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-source/FreshCandidateAudit.lean": "75449219ea6dd20fabc5f97fb5fb68e579f0f74a30006b90ccc49b0077f83e96",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/nanoda-official-default-config.json": "2987e5c358c760bc0a5cdb964485f370dc99e3da75c53bee8e600a41245c9a50",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/comparator-config-candidate.json": "430b6cdce56f2b7e3ba448a734c905093b28fc65687f382dd546a17e788c6ecf",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export.lean": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export/Parse.lean": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Util.lean": "a3c7f05b027fef1b5a25a9bd26cd31998c2835583e029fc15970dad257d5137b",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Axioms.lean": "09fd2bd68775bc500e55d9ff5ab6dc9c4c57d11ab33d7a87eb76a0d365cd7ac4",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Compare.lean": "e5dfe4f040c21ab5defb4d27b6f229e581c6dabafc30d7adb07c872196914a62",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator.lean": "3becb55ec42f66fd9a57ea6edeb1e3eaaffccc98498d584730c4d632758924cb",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/exporter/Main.lean": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/comparator/Main.lean": "daca4ccb38b2dc7356ee4b47667980b290c3f27f970800723309e4d074f0c5be",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/core/tools/ComparatorCoreAudit.lean": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/optional-exporter-lake/lakefile.toml": "32856b29ddfae3718a6f101907503cbaf80ff61ce01ad11e98c5e449b31cd898",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/exporter.lean-toolchain": "a3997b5ad01979b25dae3b76f397dcb7c2392c3c838eb4bca83d4456a89b38aa",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lean-toolchain": "a3997b5ad01979b25dae3b76f397dcb7c2392c3c838eb4bca83d4456a89b38aa",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lakefile.toml": "83d6b828bbe079b420dcb733139331bef5b71fa16593bdf2c015d0167796647d",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lake-manifest.json": "d66b2b0ba1410ac628736f0a3612dcdd72a700013d0a66cbbf4adaffd0054010",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/licenses/lean4export.LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/licenses/Comparator.LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  },
+  "inputs_unchanged": true,
+  "log_sha256": "010ef1d984a7fe7a4d64266fea795f25981450dd8ede7683708b4e39f59c74f5",
+  "samples": [
+    {
+      "elapsed_seconds": 0.003,
+      "group": {
+        "memory.usage_in_bytes": "651264",
+        "memory.max_usage_in_bytes": "651264",
+        "memory.memsw.usage_in_bytes": "782336",
+        "memory.memsw.max_usage_in_bytes": "782336",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 0\nrss 561152\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 0\nwriteback 0\nswap 0\npgpgin 206\npgpgout 65\npgfault 278\npgmajfault 0\ninactive_anon 516096\nactive_anon 4096\ninactive_file 0\nactive_file 0\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 0\ntotal_rss 548864\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 0\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 202\ntotal_pgpgout 65\ntotal_pgfault 272\ntotal_pgmajfault 0\ntotal_inactive_anon 516096\ntotal_active_anon 4096\ntotal_inactive_file 0\ntotal_active_file 0\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 0\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "51900"
+      },
+      "tree_rss_bytes": 1445888,
+      "tree_pss_bytes": 1059840,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 1445888,
+          "pss_bytes": 1059840,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 0
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 0.504,
+      "group": {
+        "memory.usage_in_bytes": "173064192",
+        "memory.max_usage_in_bytes": "173064192",
+        "memory.memsw.usage_in_bytes": "173064192",
+        "memory.memsw.max_usage_in_bytes": "173064192",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 135069696\nrss 29401088\nrss_huge 16777216\nshmem 0\nmapped_file 97062912\ndirty 4096\nwriteback 0\nswap 0\npgpgin 36659\npgpgout 590\npgfault 8733\npgmajfault 1152\ninactive_anon 29372416\nactive_anon 8192\ninactive_file 134844416\nactive_file 184320\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 135069696\ntotal_rss 29401088\ntotal_rss_huge 16777216\ntotal_shmem 0\ntotal_mapped_file 97062912\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 36659\ntotal_pgpgout 590\ntotal_pgfault 8733\ntotal_pgmajfault 1152\ntotal_inactive_anon 29372416\ntotal_active_anon 8192\ntotal_inactive_file 134844416\ntotal_active_file 184320\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 5\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "100021200"
+      },
+      "tree_rss_bytes": 135077888,
+      "tree_pss_bytes": 129997824,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 117772288,
+          "pss_bytes": 118639616,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 6
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 1.006,
+      "group": {
+        "memory.usage_in_bytes": "257466368",
+        "memory.max_usage_in_bytes": "257466368",
+        "memory.memsw.usage_in_bytes": "257466368",
+        "memory.memsw.max_usage_in_bytes": "257466368",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 204877824\nrss 29962240\nrss_huge 14680064\nshmem 0\nmapped_file 142135296\ndirty 4096\nwriteback 0\nswap 0\npgpgin 53746\npgpgout 592\npgfault 13139\npgmajfault 1943\ninactive_anon 31637504\nactive_anon 8192\ninactive_file 204627968\nactive_file 208896\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 204877824\ntotal_rss 29962240\ntotal_rss_huge 14680064\ntotal_shmem 0\ntotal_mapped_file 142135296\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 53746\ntotal_pgpgout 592\ntotal_pgfault 13139\ntotal_pgmajfault 1943\ntotal_inactive_anon 31637504\ntotal_active_anon 8192\ntotal_inactive_file 204627968\ntotal_active_file 208896\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 10\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "177828900"
+      },
+      "tree_rss_bytes": 181075968,
+      "tree_pss_bytes": 175623168,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 163770368,
+          "pss_bytes": 164264960,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 15
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 1.509,
+      "group": {
+        "memory.usage_in_bytes": "347635712",
+        "memory.max_usage_in_bytes": "347635712",
+        "memory.memsw.usage_in_bytes": "347635712",
+        "memory.memsw.max_usage_in_bytes": "347635712",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 283209728\nrss 30449664\nrss_huge 14680064\nshmem 0\nmapped_file 190201856\ndirty 4096\nwriteback 0\nswap 0\npgpgin 72991\npgpgout 594\npgfault 17466\npgmajfault 2789\ninactive_anon 32124928\nactive_anon 8192\ninactive_file 282972160\nactive_file 208896\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 283209728\ntotal_rss 30449664\ntotal_rss_huge 14680064\ntotal_shmem 0\ntotal_mapped_file 190201856\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 72991\ntotal_pgpgout 594\ntotal_pgfault 17466\ntotal_pgmajfault 2789\ntotal_inactive_anon 32124928\ntotal_active_anon 8192\ntotal_inactive_file 282972160\ntotal_active_file 208896\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 15\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "256878000"
+      },
+      "tree_rss_bytes": 229261312,
+      "tree_pss_bytes": 224095232,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 211955712,
+          "pss_bytes": 212737024,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 23
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 2.012,
+      "group": {
+        "memory.usage_in_bytes": "442777600",
+        "memory.max_usage_in_bytes": "442777600",
+        "memory.memsw.usage_in_bytes": "442777600",
+        "memory.memsw.max_usage_in_bytes": "442777600",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 363499520\nrss 31797248\nrss_huge 14680064\nshmem 0\nmapped_file 239697920\ndirty 4096\nwriteback 0\nswap 0\npgpgin 92735\npgpgout 598\npgfault 21987\npgmajfault 3654\ninactive_anon 34783232\nactive_anon 8192\ninactive_file 363237376\nactive_file 208896\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 363499520\ntotal_rss 31797248\ntotal_rss_huge 14680064\ntotal_shmem 0\ntotal_mapped_file 239697920\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 92735\ntotal_pgpgout 598\ntotal_pgfault 21987\ntotal_pgmajfault 3654\ntotal_inactive_anon 34783232\ntotal_active_anon 8192\ntotal_inactive_file 363237376\ntotal_active_file 208896\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 20\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "332443600"
+      },
+      "tree_rss_bytes": 279986176,
+      "tree_pss_bytes": 274820096,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 262680576,
+          "pss_bytes": 263461888,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 30
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 2.517,
+      "group": {
+        "memory.usage_in_bytes": "539631616",
+        "memory.max_usage_in_bytes": "539631616",
+        "memory.memsw.usage_in_bytes": "539631616",
+        "memory.memsw.max_usage_in_bytes": "539631616",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 447971328\nrss 32747520\nrss_huge 14680064\nshmem 0\nmapped_file 290250752\ndirty 4096\nwriteback 0\nswap 0\npgpgin 113592\npgpgout 600\npgfault 26482\npgmajfault 4555\ninactive_anon 35733504\nactive_anon 8192\ninactive_file 447705088\nactive_file 208896\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 447971328\ntotal_rss 32747520\ntotal_rss_huge 14680064\ntotal_shmem 0\ntotal_mapped_file 290250752\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 113592\ntotal_pgpgout 600\ntotal_pgfault 26482\ntotal_pgmajfault 4555\ntotal_inactive_anon 35733504\ntotal_active_anon 8192\ntotal_inactive_file 447705088\ntotal_active_file 208896\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 26\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "405522700"
+      },
+      "tree_rss_bytes": 331726848,
+      "tree_pss_bytes": 326454272,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 314421248,
+          "pss_bytes": 315096064,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 38
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 3.022,
+      "group": {
+        "memory.usage_in_bytes": "639631360",
+        "memory.max_usage_in_bytes": "639631360",
+        "memory.memsw.usage_in_bytes": "639631360",
+        "memory.memsw.max_usage_in_bytes": "639631360",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 533663744\nrss 35536896\nrss_huge 16777216\nshmem 0\nmapped_file 342274048\ndirty 4096\nwriteback 0\nswap 0\npgpgin 134685\npgpgout 602\npgfault 31111\npgmajfault 5508\ninactive_anon 38522880\nactive_anon 8192\ninactive_file 533426176\nactive_file 208896\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 533663744\ntotal_rss 35536896\ntotal_rss_huge 16777216\ntotal_shmem 0\ntotal_mapped_file 342274048\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 134685\ntotal_pgpgout 602\ntotal_pgfault 31111\ntotal_pgmajfault 5508\ntotal_inactive_anon 38522880\ntotal_active_anon 8192\ntotal_inactive_file 533426176\ntotal_active_file 208896\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 31\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "482330900"
+      },
+      "tree_rss_bytes": 386555904,
+      "tree_pss_bytes": 381148160,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 369250304,
+          "pss_bytes": 369789952,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 45
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 3.528,
+      "group": {
+        "memory.usage_in_bytes": "739627008",
+        "memory.max_usage_in_bytes": "739627008",
+        "memory.memsw.usage_in_bytes": "739627008",
+        "memory.memsw.max_usage_in_bytes": "739627008",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 621961216\nrss 35549184\nrss_huge 16777216\nshmem 0\nmapped_file 394878976\ndirty 4096\nwriteback 0\nswap 0\npgpgin 157998\npgpgout 2358\npgfault 35656\npgmajfault 6491\ninactive_anon 38555648\nactive_anon 8192\ninactive_file 621637632\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 621961216\ntotal_rss 35549184\ntotal_rss_huge 16777216\ntotal_shmem 0\ntotal_mapped_file 394878976\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 157998\ntotal_pgpgout 2358\ntotal_pgfault 35656\ntotal_pgmajfault 6491\ntotal_inactive_anon 38555648\ntotal_active_anon 8192\ntotal_inactive_file 621637632\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 36\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "558290700"
+      },
+      "tree_rss_bytes": 438603776,
+      "tree_pss_bytes": 433724416,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 421298176,
+          "pss_bytes": 422366208,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 52
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 4.036,
+      "group": {
+        "memory.usage_in_bytes": "837799936",
+        "memory.max_usage_in_bytes": "837799936",
+        "memory.memsw.usage_in_bytes": "837799936",
+        "memory.memsw.max_usage_in_bytes": "837799936",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 706310144\nrss 37732352\nrss_huge 18874368\nshmem 0\nmapped_file 445247488\ndirty 4096\nwriteback 0\nswap 0\npgpgin 178613\npgpgout 2358\npgfault 40080\npgmajfault 7423\ninactive_anon 40738816\nactive_anon 8192\ninactive_file 706076672\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 706310144\ntotal_rss 37732352\ntotal_rss_huge 18874368\ntotal_shmem 0\ntotal_mapped_file 445247488\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 178613\ntotal_pgpgout 2358\ntotal_pgfault 40080\ntotal_pgmajfault 7423\ntotal_inactive_anon 40738816\ntotal_active_anon 8192\ntotal_inactive_file 706076672\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 41\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "634581200"
+      },
+      "tree_rss_bytes": 491122688,
+      "tree_pss_bytes": 486337536,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 473817088,
+          "pss_bytes": 474979328,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 60
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 4.544,
+      "group": {
+        "memory.usage_in_bytes": "938201088",
+        "memory.max_usage_in_bytes": "938201088",
+        "memory.memsw.usage_in_bytes": "938201088",
+        "memory.memsw.max_usage_in_bytes": "938201088",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 794550272\nrss 37298176\nrss_huge 16777216\nshmem 0\nmapped_file 497774592\ndirty 4096\nwriteback 0\nswap 0\npgpgin 200338\npgpgout 2358\npgfault 44645\npgmajfault 8376\ninactive_anon 41484288\nactive_anon 8192\ninactive_file 794329088\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 794550272\ntotal_rss 37298176\ntotal_rss_huge 16777216\ntotal_shmem 0\ntotal_mapped_file 497774592\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 200338\ntotal_pgpgout 2358\ntotal_pgfault 44645\ntotal_pgmajfault 8376\ntotal_inactive_anon 41484288\ntotal_active_anon 8192\ntotal_inactive_file 794329088\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 46\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "709068600"
+      },
+      "tree_rss_bytes": 543166464,
+      "tree_pss_bytes": 538508288,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 525860864,
+          "pss_bytes": 527150080,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 67
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 5.053,
+      "group": {
+        "memory.usage_in_bytes": "1042665472",
+        "memory.max_usage_in_bytes": "1042665472",
+        "memory.memsw.usage_in_bytes": "1042665472",
+        "memory.memsw.max_usage_in_bytes": "1042665472",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 884846592\nrss 39682048\nrss_huge 18874368\nshmem 0\nmapped_file 551297024\ndirty 4096\nwriteback 0\nswap 0\npgpgin 222454\npgpgout 2358\npgfault 49232\npgmajfault 9353\ninactive_anon 43868160\nactive_anon 8192\ninactive_file 884613120\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 884846592\ntotal_rss 39682048\ntotal_rss_huge 18874368\ntotal_shmem 0\ntotal_mapped_file 551297024\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 222454\ntotal_pgpgout 2358\ntotal_pgfault 49232\ntotal_pgmajfault 9353\ntotal_inactive_anon 43868160\ntotal_active_anon 8192\ntotal_inactive_file 884613120\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 51\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "785095000"
+      },
+      "tree_rss_bytes": 599470080,
+      "tree_pss_bytes": 594250752,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 582164480,
+          "pss_bytes": 582892544,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 75
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 5.563,
+      "group": {
+        "memory.usage_in_bytes": "1141362688",
+        "memory.max_usage_in_bytes": "1141362688",
+        "memory.memsw.usage_in_bytes": "1141362688",
+        "memory.memsw.max_usage_in_bytes": "1141362688",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 971636736\nrss 39718912\nrss_huge 18874368\nshmem 0\nmapped_file 603836416\ndirty 4096\nwriteback 0\nswap 0\npgpgin 243652\npgpgout 2358\npgfault 53839\npgmajfault 10326\ninactive_anon 43905024\nactive_anon 8192\ninactive_file 971390976\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 971636736\ntotal_rss 39718912\ntotal_rss_huge 18874368\ntotal_shmem 0\ntotal_mapped_file 603836416\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 243652\ntotal_pgpgout 2358\ntotal_pgfault 53839\ntotal_pgmajfault 10326\ntotal_inactive_anon 43905024\ntotal_active_anon 8192\ntotal_inactive_file 971390976\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 56\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "865889700"
+      },
+      "tree_rss_bytes": 651333632,
+      "tree_pss_bytes": 646831104,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 634028032,
+          "pss_bytes": 635472896,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 83
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 6.073,
+      "group": {
+        "memory.usage_in_bytes": "1243590656",
+        "memory.max_usage_in_bytes": "1243590656",
+        "memory.memsw.usage_in_bytes": "1243590656",
+        "memory.memsw.max_usage_in_bytes": "1243590656",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1060188160\nrss 40718336\nrss_huge 18874368\nshmem 0\nmapped_file 655761408\ndirty 4096\nwriteback 0\nswap 0\npgpgin 265310\npgpgout 2360\npgfault 58326\npgmajfault 11289\ninactive_anon 46149632\nactive_anon 8192\ninactive_file 1059966976\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1060188160\ntotal_rss 40718336\ntotal_rss_huge 18874368\ntotal_shmem 0\ntotal_mapped_file 655761408\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 265310\ntotal_pgpgout 2360\ntotal_pgfault 58326\ntotal_pgmajfault 11289\ntotal_inactive_anon 46149632\ntotal_active_anon 8192\ntotal_inactive_file 1059966976\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 61\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "941691500"
+      },
+      "tree_rss_bytes": 704966656,
+      "tree_pss_bytes": 699423744,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 687661056,
+          "pss_bytes": 688065536,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 90
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 6.585,
+      "group": {
+        "memory.usage_in_bytes": "1344253952",
+        "memory.max_usage_in_bytes": "1344253952",
+        "memory.memsw.usage_in_bytes": "1344253952",
+        "memory.memsw.max_usage_in_bytes": "1344253952",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1146040320\nrss 43839488\nrss_huge 20971520\nshmem 0\nmapped_file 706781184\ndirty 4096\nwriteback 0\nswap 0\npgpgin 286521\npgpgout 2360\npgfault 63070\npgmajfault 12244\ninactive_anon 49270784\nactive_anon 8192\ninactive_file 1145790464\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1146040320\ntotal_rss 43839488\ntotal_rss_huge 20971520\ntotal_shmem 0\ntotal_mapped_file 706781184\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 286521\ntotal_pgpgout 2360\ntotal_pgfault 63070\ntotal_pgmajfault 12244\ntotal_inactive_anon 49270784\ntotal_active_anon 8192\ntotal_inactive_file 1145790464\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 66\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1023543200"
+      },
+      "tree_rss_bytes": 759095296,
+      "tree_pss_bytes": 753851392,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 741789696,
+          "pss_bytes": 742493184,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 99
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 7.098,
+      "group": {
+        "memory.usage_in_bytes": "1443082240",
+        "memory.max_usage_in_bytes": "1443082240",
+        "memory.memsw.usage_in_bytes": "1443082240",
+        "memory.memsw.max_usage_in_bytes": "1443082240",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1233252352\nrss 43900928\nrss_huge 20971520\nshmem 0\nmapped_file 757854208\ndirty 4096\nwriteback 0\nswap 0\npgpgin 307828\npgpgout 2360\npgfault 67564\npgmajfault 13210\ninactive_anon 49332224\nactive_anon 8192\ninactive_file 1233035264\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1233252352\ntotal_rss 43900928\ntotal_rss_huge 20971520\ntotal_shmem 0\ntotal_mapped_file 757854208\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 307828\ntotal_pgpgout 2360\ntotal_pgfault 67564\ntotal_pgmajfault 13210\ntotal_inactive_anon 49332224\ntotal_active_anon 8192\ntotal_inactive_file 1233035264\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 71\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1103987700"
+      },
+      "tree_rss_bytes": 809615360,
+      "tree_pss_bytes": 804912128,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 792309760,
+          "pss_bytes": 793553920,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 107
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 7.612,
+      "group": {
+        "memory.usage_in_bytes": "1547415552",
+        "memory.max_usage_in_bytes": "1547415552",
+        "memory.memsw.usage_in_bytes": "1547415552",
+        "memory.memsw.max_usage_in_bytes": "1547415552",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1323556864\nrss 46022656\nrss_huge 23068672\nshmem 0\nmapped_file 812544000\ndirty 4096\nwriteback 0\nswap 0\npgpgin 329882\npgpgout 2360\npgfault 72295\npgmajfault 14227\ninactive_anon 51453952\nactive_anon 8192\ninactive_file 1323327488\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1323556864\ntotal_rss 46022656\ntotal_rss_huge 23068672\ntotal_shmem 0\ntotal_mapped_file 812544000\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 329882\ntotal_pgpgout 2360\ntotal_pgfault 72295\ntotal_pgmajfault 14227\ntotal_inactive_anon 51453952\ntotal_active_anon 8192\ntotal_inactive_file 1323327488\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 77\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1181689500"
+      },
+      "tree_rss_bytes": 866353152,
+      "tree_pss_bytes": 861289472,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 849047552,
+          "pss_bytes": 849931264,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 115
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 8.125,
+      "group": {
+        "memory.usage_in_bytes": "1644802048",
+        "memory.max_usage_in_bytes": "1644802048",
+        "memory.memsw.usage_in_bytes": "1644802048",
+        "memory.memsw.max_usage_in_bytes": "1644802048",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1408946176\nrss 45662208\nrss_huge 20971520\nshmem 0\nmapped_file 864722944\ndirty 4096\nwriteback 0\nswap 0\npgpgin 350833\npgpgout 2360\npgfault 77103\npgmajfault 15229\ninactive_anon 51879936\nactive_anon 8192\ninactive_file 1408708608\nactive_file 212992\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1408946176\ntotal_rss 45662208\ntotal_rss_huge 20971520\ntotal_shmem 0\ntotal_mapped_file 864718848\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 350833\ntotal_pgpgout 2360\ntotal_pgfault 77102\ntotal_pgmajfault 15229\ntotal_inactive_anon 51879936\ntotal_active_anon 8192\ntotal_inactive_file 1408708608\ntotal_active_file 212992\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 82\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1266243900"
+      },
+      "tree_rss_bytes": 918437888,
+      "tree_pss_bytes": 913378304,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 901132288,
+          "pss_bytes": 902020096,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 123
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 8.641,
+      "group": {
+        "memory.usage_in_bytes": "1749643264",
+        "memory.max_usage_in_bytes": "1749643264",
+        "memory.memsw.usage_in_bytes": "1749643264",
+        "memory.memsw.max_usage_in_bytes": "1749643264",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1499045888\nrss 47071232\nrss_huge 20971520\nshmem 0\nmapped_file 918642688\ndirty 4096\nwriteback 0\nswap 0\npgpgin 373037\npgpgout 2364\npgfault 82002\npgmajfault 16216\ninactive_anon 54796288\nactive_anon 8192\ninactive_file 1498820608\nactive_file 221184\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1499037696\ntotal_rss 47071232\ntotal_rss_huge 20971520\ntotal_shmem 0\ntotal_mapped_file 918642688\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 373033\ntotal_pgpgout 2364\ntotal_pgfault 82002\ntotal_pgmajfault 16216\ntotal_inactive_anon 54796288\ntotal_active_anon 8192\ntotal_inactive_file 1498759168\ntotal_active_file 221184\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 87\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1353115900"
+      },
+      "tree_rss_bytes": 972922880,
+      "tree_pss_bytes": 968866816,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 955617280,
+          "pss_bytes": 957508608,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 132
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 9.157,
+      "group": {
+        "memory.usage_in_bytes": "1850167296",
+        "memory.max_usage_in_bytes": "1850167296",
+        "memory.memsw.usage_in_bytes": "1850167296",
+        "memory.memsw.max_usage_in_bytes": "1850167296",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1584099328\nrss 50225152\nrss_huge 23068672\nshmem 0\nmapped_file 970801152\ndirty 4096\nwriteback 0\nswap 0\npgpgin 394061\npgpgout 2366\npgfault 87094\npgmajfault 17192\ninactive_anon 57950208\nactive_anon 8192\ninactive_file 1583853568\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1584099328\ntotal_rss 50225152\ntotal_rss_huge 23068672\ntotal_shmem 0\ntotal_mapped_file 970801152\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 394061\ntotal_pgpgout 2366\ntotal_pgfault 87094\ntotal_pgmajfault 17192\ntotal_inactive_anon 57950208\ntotal_active_anon 8192\ntotal_inactive_file 1583853568\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 92\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1438745400"
+      },
+      "tree_rss_bytes": 1028833280,
+      "tree_pss_bytes": 1023773696,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 1011527680,
+          "pss_bytes": 1012415488,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 140
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 9.674,
+      "group": {
+        "memory.usage_in_bytes": "1952264192",
+        "memory.max_usage_in_bytes": "1952264192",
+        "memory.memsw.usage_in_bytes": "1952264192",
+        "memory.memsw.max_usage_in_bytes": "1952264192",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1673273344\nrss 49610752\nrss_huge 20971520\nshmem 0\nmapped_file 1024835584\ndirty 4096\nwriteback 0\nswap 0\npgpgin 416084\npgpgout 2368\npgfault 92149\npgmajfault 18216\ninactive_anon 58974208\nactive_anon 8192\ninactive_file 1673003008\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1673273344\ntotal_rss 49610752\ntotal_rss_huge 20971520\ntotal_shmem 0\ntotal_mapped_file 1024835584\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 416084\ntotal_pgpgout 2368\ntotal_pgfault 92149\ntotal_pgmajfault 18216\ntotal_inactive_anon 58974208\ntotal_active_anon 8192\ntotal_inactive_file 1673003008\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 97\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1521865600"
+      },
+      "tree_rss_bytes": 1082064896,
+      "tree_pss_bytes": 1077087232,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 1064759296,
+          "pss_bytes": 1065729024,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 149
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 10.192,
+      "group": {
+        "memory.usage_in_bytes": "2055671808",
+        "memory.max_usage_in_bytes": "2055671808",
+        "memory.memsw.usage_in_bytes": "2055671808",
+        "memory.memsw.max_usage_in_bytes": "2055671808",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1761890304\nrss 50913280\nrss_huge 20971520\nshmem 0\nmapped_file 1078575104\ndirty 4096\nwriteback 0\nswap 0\npgpgin 437944\npgpgout 2370\npgfault 97180\npgmajfault 19235\ninactive_anon 61980672\nactive_anon 8192\ninactive_file 1761624064\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1761890304\ntotal_rss 50913280\ntotal_rss_huge 20971520\ntotal_shmem 0\ntotal_mapped_file 1078575104\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 437944\ntotal_pgpgout 2370\ntotal_pgfault 97180\ntotal_pgmajfault 19235\ntotal_inactive_anon 61980672\ntotal_active_anon 8192\ntotal_inactive_file 1761624064\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 102\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1604880100"
+      },
+      "tree_rss_bytes": 1136803840,
+      "tree_pss_bytes": 1132444672,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 1119498240,
+          "pss_bytes": 1121086464,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 157
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 10.711,
+      "group": {
+        "memory.usage_in_bytes": "2147667968",
+        "memory.max_usage_in_bytes": "2147667968",
+        "memory.memsw.usage_in_bytes": "2147667968",
+        "memory.memsw.max_usage_in_bytes": "2147667968",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1841512448\nrss 51912704\nrss_huge 20971520\nshmem 0\nmapped_file 1127301120\ndirty 4096\nwriteback 0\nswap 0\npgpgin 457631\npgpgout 2374\npgfault 101828\npgmajfault 20110\ninactive_anon 62976000\nactive_anon 8192\ninactive_file 1841192960\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1841512448\ntotal_rss 51912704\ntotal_rss_huge 20971520\ntotal_shmem 0\ntotal_mapped_file 1127301120\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 457631\ntotal_pgpgout 2374\ntotal_pgfault 101828\ntotal_pgmajfault 20110\ntotal_inactive_anon 62976000\ntotal_active_anon 8192\ntotal_inactive_file 1841192960\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 108\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1691865000"
+      },
+      "tree_rss_bytes": 1186979840,
+      "tree_pss_bytes": 1181998080,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 1169674240,
+          "pss_bytes": 1170639872,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 165
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 11.23,
+      "group": {
+        "memory.usage_in_bytes": "2267205632",
+        "memory.max_usage_in_bytes": "2267205632",
+        "memory.memsw.usage_in_bytes": "2267205632",
+        "memory.memsw.max_usage_in_bytes": "2267205632",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1949196288\nrss 56463360\nrss_huge 25165824\nshmem 0\nmapped_file 1186254848\ndirty 4096\nwriteback 0\nswap 0\npgpgin 484010\npgpgout 2374\npgfault 106725\npgmajfault 21884\ninactive_anon 67530752\nactive_anon 8192\ninactive_file 1948897280\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1949196288\ntotal_rss 56463360\ntotal_rss_huge 25165824\ntotal_shmem 0\ntotal_mapped_file 1186254848\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 484010\ntotal_pgpgout 2374\ntotal_pgfault 106725\ntotal_pgmajfault 21884\ntotal_inactive_anon 67530752\ntotal_active_anon 8192\ntotal_inactive_file 1948897280\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 113\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1776082400"
+      },
+      "tree_rss_bytes": 1248686080,
+      "tree_pss_bytes": 1244769280,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 1231380480,
+          "pss_bytes": 1233411072,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 174
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 11.75,
+      "group": {
+        "memory.usage_in_bytes": "2394345472",
+        "memory.max_usage_in_bytes": "2394345472",
+        "memory.memsw.usage_in_bytes": "2394345472",
+        "memory.memsw.max_usage_in_bytes": "2394345472",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 2075443200\nrss 56463360\nrss_huge 25165824\nshmem 0\nmapped_file 1265881088\ndirty 4096\nwriteback 0\nswap 0\npgpgin 514832\npgpgout 2374\npgfault 112966\npgmajfault 24876\ninactive_anon 67530752\nactive_anon 8192\ninactive_file 2075156480\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 2075443200\ntotal_rss 56463360\ntotal_rss_huge 25165824\ntotal_shmem 0\ntotal_mapped_file 1265881088\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 514832\ntotal_pgpgout 2374\ntotal_pgfault 112966\ntotal_pgmajfault 24876\ntotal_inactive_anon 67530752\ntotal_active_anon 8192\ntotal_inactive_file 2075156480\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 118\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1838139200"
+      },
+      "tree_rss_bytes": 1324535808,
+      "tree_pss_bytes": 1322519552,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 1307230208,
+          "pss_bytes": 1311161344,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 180
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 12.269,
+      "group": {
+        "memory.usage_in_bytes": "2632503296",
+        "memory.max_usage_in_bytes": "2632503296",
+        "memory.memsw.usage_in_bytes": "2632503296",
+        "memory.memsw.max_usage_in_bytes": "2632503296",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 2313138176\nrss 56463360\nrss_huge 25165824\nshmem 0\nmapped_file 1462972416\ndirty 4096\nwriteback 0\nswap 0\npgpgin 572863\npgpgout 2374\npgfault 119044\npgmajfault 26976\ninactive_anon 67530752\nactive_anon 8192\ninactive_file 2312806400\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 2313138176\ntotal_rss 56463360\ntotal_rss_huge 25165824\ntotal_shmem 0\ntotal_mapped_file 1462972416\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 572863\ntotal_pgpgout 2374\ntotal_pgfault 119044\ntotal_pgmajfault 26976\ntotal_inactive_anon 67530752\ntotal_active_anon 8192\ntotal_inactive_file 2312806400\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 123\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1902904300"
+      },
+      "tree_rss_bytes": 1522872320,
+      "tree_pss_bytes": 1520638976,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11358208,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 1505566720,
+          "pss_bytes": 1509280768,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 186
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 12.79,
+      "group": {
+        "memory.usage_in_bytes": "2902380544",
+        "memory.max_usage_in_bytes": "2902380544",
+        "memory.memsw.usage_in_bytes": "2902380544",
+        "memory.memsw.max_usage_in_bytes": "2902380544",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 2544836608\nrss 94269440\nrss_huge 62914560\nshmem 0\nmapped_file 1635672064\ndirty 4096\nwriteback 0\nswap 0\npgpgin 629462\npgpgout 2374\npgfault 128479\npgmajfault 28833\ninactive_anon 105336832\nactive_anon 8192\ninactive_file 2544508928\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 2544836608\ntotal_rss 94269440\ntotal_rss_huge 62914560\ntotal_shmem 0\ntotal_mapped_file 1635672064\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 629462\ntotal_pgpgout 2374\ntotal_pgfault 128479\ntotal_pgmajfault 28833\ntotal_inactive_anon 105336832\ntotal_active_anon 8192\ntotal_inactive_file 2544508928\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 128\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "1987640400"
+      },
+      "tree_rss_bytes": 1730158592,
+      "tree_pss_bytes": 1730959360,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 1712852992,
+          "pss_bytes": 1719606272,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 195
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 13.31,
+      "group": {
+        "memory.usage_in_bytes": "3160723456",
+        "memory.max_usage_in_bytes": "3160723456",
+        "memory.memsw.usage_in_bytes": "3160723456",
+        "memory.memsw.max_usage_in_bytes": "3160723456",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 2798501888\nrss 98463744\nrss_huge 67108864\nshmem 0\nmapped_file 1871794176\ndirty 4096\nwriteback 0\nswap 0\npgpgin 691394\npgpgout 2374\npgfault 138270\npgmajfault 30438\ninactive_anon 109531136\nactive_anon 8192\ninactive_file 2798198784\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 2798501888\ntotal_rss 98463744\ntotal_rss_huge 67108864\ntotal_shmem 0\ntotal_mapped_file 1871794176\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 691394\ntotal_pgpgout 2374\ntotal_pgfault 138270\ntotal_pgmajfault 30438\ntotal_inactive_anon 109531136\ntotal_active_anon 8192\ntotal_inactive_file 2798198784\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 134\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "2083542700"
+      },
+      "tree_rss_bytes": 1970040832,
+      "tree_pss_bytes": 1966827520,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 1952735232,
+          "pss_bytes": 1955474432,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 205
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 13.831,
+      "group": {
+        "memory.usage_in_bytes": "3442790400",
+        "memory.max_usage_in_bytes": "3442790400",
+        "memory.memsw.usage_in_bytes": "3442790400",
+        "memory.memsw.max_usage_in_bytes": "3442790400",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 3067666432\nrss 111046656\nrss_huge 75497472\nshmem 0\nmapped_file 2102607872\ndirty 4096\nwriteback 0\nswap 0\npgpgin 757146\npgpgout 2374\npgfault 149703\npgmajfault 31828\ninactive_anon 122245120\nactive_anon 8192\ninactive_file 3067346944\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 3067666432\ntotal_rss 111046656\ntotal_rss_huge 75497472\ntotal_shmem 0\ntotal_mapped_file 2102607872\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 757146\ntotal_pgpgout 2374\ntotal_pgfault 149703\ntotal_pgmajfault 31828\ntotal_inactive_anon 122245120\ntotal_active_anon 8192\ntotal_inactive_file 3067346944\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 139\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "2212329700"
+      },
+      "tree_rss_bytes": 2210324480,
+      "tree_pss_bytes": 2210531328,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 2193018880,
+          "pss_bytes": 2199178240,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 218
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 14.353,
+      "group": {
+        "memory.usage_in_bytes": "3718959104",
+        "memory.max_usage_in_bytes": "3718959104",
+        "memory.memsw.usage_in_bytes": "3718959104",
+        "memory.memsw.max_usage_in_bytes": "3718959104",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 3335229440\nrss 119435264\nrss_huge 81788928\nshmem 0\nmapped_file 2342899712\ndirty 4096\nwriteback 0\nswap 0\npgpgin 822489\npgpgout 2374\npgfault 161267\npgmajfault 33147\ninactive_anon 130699264\nactive_anon 8192\ninactive_file 3334946816\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 3335229440\ntotal_rss 119435264\ntotal_rss_huge 81788928\ntotal_shmem 0\ntotal_mapped_file 2342899712\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 822489\ntotal_pgpgout 2374\ntotal_pgfault 161267\ntotal_pgmajfault 33147\ntotal_inactive_anon 130699264\ntotal_active_anon 8192\ntotal_inactive_file 3334946816\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 144\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "2340740400"
+      },
+      "tree_rss_bytes": 2459611136,
+      "tree_pss_bytes": 2461652992,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 2442305536,
+          "pss_bytes": 2450299904,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 231
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 14.875,
+      "group": {
+        "memory.usage_in_bytes": "3986477056",
+        "memory.max_usage_in_bytes": "3986477056",
+        "memory.memsw.usage_in_bytes": "3986477056",
+        "memory.memsw.max_usage_in_bytes": "3986477056",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 3597365248\nrss 122630144\nrss_huge 81788928\nshmem 0\nmapped_file 2601947136\ndirty 4096\nwriteback 0\nswap 0\npgpgin 886725\npgpgout 2374\npgfault 171993\npgmajfault 34706\ninactive_anon 135860224\nactive_anon 8192\ninactive_file 3597111296\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 3597365248\ntotal_rss 122630144\ntotal_rss_huge 81788928\ntotal_shmem 0\ntotal_mapped_file 2601947136\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 886725\ntotal_pgpgout 2374\ntotal_pgfault 171993\ntotal_pgmajfault 34706\ntotal_inactive_anon 135860224\ntotal_active_anon 8192\ntotal_inactive_file 3597111296\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 149\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "2446091600"
+      },
+      "tree_rss_bytes": 2724048896,
+      "tree_pss_bytes": 2723440640,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 2706743296,
+          "pss_bytes": 2712087552,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 241
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 15.398,
+      "group": {
+        "memory.usage_in_bytes": "4245475328",
+        "memory.max_usage_in_bytes": "4245475328",
+        "memory.memsw.usage_in_bytes": "4245475328",
+        "memory.memsw.max_usage_in_bytes": "4245475328",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 3850928128\nrss 127717376\nrss_huge 85983232\nshmem 0\nmapped_file 2844233728\ndirty 4096\nwriteback 0\nswap 0\npgpgin 948850\npgpgout 2374\npgfault 181891\npgmajfault 36365\ninactive_anon 140947456\nactive_anon 8192\ninactive_file 3850678272\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 3850928128\ntotal_rss 127717376\ntotal_rss_huge 85983232\ntotal_shmem 0\ntotal_mapped_file 2844233728\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 948850\ntotal_pgpgout 2374\ntotal_pgfault 181891\ntotal_pgmajfault 36365\ntotal_inactive_anon 140947456\ntotal_active_anon 8192\ntotal_inactive_file 3850678272\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 154\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "2550329600"
+      },
+      "tree_rss_bytes": 2971262976,
+      "tree_pss_bytes": 2970888192,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 2953957376,
+          "pss_bytes": 2959535104,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 251
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 15.921,
+      "group": {
+        "memory.usage_in_bytes": "4504989696",
+        "memory.max_usage_in_bytes": "4504989696",
+        "memory.memsw.usage_in_bytes": "4504989696",
+        "memory.memsw.max_usage_in_bytes": "4504989696",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 4104503296\nrss 131964928\nrss_huge 85983232\nshmem 0\nmapped_file 3087523840\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1011127\npgpgout 2376\npgfault 191843\npgmajfault 38053\ninactive_anon 146636800\nactive_anon 8192\ninactive_file 4104257536\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 4104503296\ntotal_rss 131964928\ntotal_rss_huge 85983232\ntotal_shmem 0\ntotal_mapped_file 3087523840\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1011127\ntotal_pgpgout 2376\ntotal_pgfault 191843\ntotal_pgmajfault 38053\ntotal_inactive_anon 146636800\ntotal_active_anon 8192\ntotal_inactive_file 4104257536\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 160\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "2651189700"
+      },
+      "tree_rss_bytes": 3218227200,
+      "tree_pss_bytes": 3218200576,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 3200921600,
+          "pss_bytes": 3206847488,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 261
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 16.445,
+      "group": {
+        "memory.usage_in_bytes": "4754812928",
+        "memory.max_usage_in_bytes": "4754944000",
+        "memory.memsw.usage_in_bytes": "4754944000",
+        "memory.memsw.max_usage_in_bytes": "4754944000",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 4351410176\nrss 134062080\nrss_huge 85983232\nshmem 0\nmapped_file 3320590336\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1071584\npgpgout 2376\npgfault 201058\npgmajfault 39851\ninactive_anon 149454848\nactive_anon 8192\ninactive_file 4351164416\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 4351410176\ntotal_rss 134062080\ntotal_rss_huge 85983232\ntotal_shmem 0\ntotal_mapped_file 3320590336\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1071584\ntotal_pgpgout 2376\ntotal_pgfault 201058\ntotal_pgmajfault 39851\ntotal_inactive_anon 149454848\ntotal_active_anon 8192\ntotal_inactive_file 4351164416\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 165\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "2743520900"
+      },
+      "tree_rss_bytes": 3453620224,
+      "tree_pss_bytes": 3452393472,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 3436314624,
+          "pss_bytes": 3441040384,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 271
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 16.969,
+      "group": {
+        "memory.usage_in_bytes": "5002670080",
+        "memory.max_usage_in_bytes": "5002801152",
+        "memory.memsw.usage_in_bytes": "5002801152",
+        "memory.memsw.max_usage_in_bytes": "5002801152",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 4595851264\nrss 135520256\nrss_huge 85983232\nshmem 0\nmapped_file 3550388224\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1131507\npgpgout 2376\npgfault 210402\npgmajfault 41657\ninactive_anon 152551424\nactive_anon 8192\ninactive_file 4595576832\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 4595851264\ntotal_rss 135520256\ntotal_rss_huge 85983232\ntotal_shmem 0\ntotal_mapped_file 3550388224\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1131507\ntotal_pgpgout 2376\ntotal_pgfault 210402\ntotal_pgmajfault 41657\ntotal_inactive_anon 152551424\ntotal_active_anon 8192\ntotal_inactive_file 4595576832\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 170\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "2838379500"
+      },
+      "tree_rss_bytes": 3684777984,
+      "tree_pss_bytes": 3686844416,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 3667472384,
+          "pss_bytes": 3675491328,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 280
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 17.493,
+      "group": {
+        "memory.usage_in_bytes": "5255376896",
+        "memory.max_usage_in_bytes": "5255376896",
+        "memory.memsw.usage_in_bytes": "5255376896",
+        "memory.memsw.max_usage_in_bytes": "5255376896",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 4843364352\nrss 140353536\nrss_huge 90177536\nshmem 0\nmapped_file 3785101312\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1192109\npgpgout 2376\npgfault 219956\npgmajfault 43292\ninactive_anon 157450240\nactive_anon 8192\ninactive_file 4843102208\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 4843364352\ntotal_rss 140353536\ntotal_rss_huge 90177536\ntotal_shmem 0\ntotal_mapped_file 3785101312\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1192109\ntotal_pgpgout 2376\ntotal_pgfault 219956\ntotal_pgmajfault 43292\ntotal_inactive_anon 157450240\ntotal_active_anon 8192\ntotal_inactive_file 4843102208\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 175\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "2940331300"
+      },
+      "tree_rss_bytes": 3922259968,
+      "tree_pss_bytes": 3924801536,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 3904954368,
+          "pss_bytes": 3913448448,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 290
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 18.018,
+      "group": {
+        "memory.usage_in_bytes": "5508870144",
+        "memory.max_usage_in_bytes": "5508870144",
+        "memory.memsw.usage_in_bytes": "5508870144",
+        "memory.memsw.max_usage_in_bytes": "5508870144",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 5094494208\nrss 142450688\nrss_huge 92274688\nshmem 0\nmapped_file 4019367936\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1253421\npgpgout 2376\npgfault 229199\npgmajfault 45058\ninactive_anon 159547392\nactive_anon 8192\ninactive_file 5094264832\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 5094494208\ntotal_rss 142450688\ntotal_rss_huge 92274688\ntotal_shmem 0\ntotal_mapped_file 4019367936\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1253421\ntotal_pgpgout 2376\ntotal_pgfault 229199\ntotal_pgmajfault 45058\ntotal_inactive_anon 159547392\ntotal_active_anon 8192\ntotal_inactive_file 5094264832\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 181\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3035867100"
+      },
+      "tree_rss_bytes": 4161257472,
+      "tree_pss_bytes": 4162455552,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 4143951872,
+          "pss_bytes": 4151102464,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 300
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 18.543,
+      "group": {
+        "memory.usage_in_bytes": "5765640192",
+        "memory.max_usage_in_bytes": "5765640192",
+        "memory.memsw.usage_in_bytes": "5765640192",
+        "memory.memsw.max_usage_in_bytes": "5765640192",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 5348638720\nrss 144547840\nrss_huge 94371840\nshmem 0\nmapped_file 4236697600\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1315469\npgpgout 2376\npgfault 237587\npgmajfault 46878\ninactive_anon 161644544\nactive_anon 8192\ninactive_file 5348360192\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 5348638720\ntotal_rss 144547840\ntotal_rss_huge 94371840\ntotal_shmem 0\ntotal_mapped_file 4236632064\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1315469\ntotal_pgpgout 2376\ntotal_pgfault 237587\ntotal_pgmajfault 46878\ntotal_inactive_anon 161644544\ntotal_active_anon 8192\ntotal_inactive_file 5348360192\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 186\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3125222400"
+      },
+      "tree_rss_bytes": 4378087424,
+      "tree_pss_bytes": 4379658240,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 4360781824,
+          "pss_bytes": 4368305152,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 309
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 19.068,
+      "group": {
+        "memory.usage_in_bytes": "6016512000",
+        "memory.max_usage_in_bytes": "6016512000",
+        "memory.memsw.usage_in_bytes": "6016512000",
+        "memory.memsw.max_usage_in_bytes": "6016512000",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 5596848128\nrss 146526208\nrss_huge 94371840\nshmem 0\nmapped_file 4465856512\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1376167\npgpgout 2376\npgfault 247000\npgmajfault 48596\ninactive_anon 164147200\nactive_anon 8192\ninactive_file 5596577792\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 5596848128\ntotal_rss 146526208\ntotal_rss_huge 94371840\ntotal_shmem 0\ntotal_mapped_file 4465856512\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1376167\ntotal_pgpgout 2376\ntotal_pgfault 247000\ntotal_pgmajfault 48596\ntotal_inactive_anon 164147200\ntotal_active_anon 8192\ntotal_inactive_file 5596577792\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 191\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3219498500"
+      },
+      "tree_rss_bytes": 4609544192,
+      "tree_pss_bytes": 4610770944,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 4592238592,
+          "pss_bytes": 4599417856,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 318
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 19.594,
+      "group": {
+        "memory.usage_in_bytes": "6271840256",
+        "memory.max_usage_in_bytes": "6271840256",
+        "memory.memsw.usage_in_bytes": "6271840256",
+        "memory.memsw.max_usage_in_bytes": "6271840256",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 5846564864\nrss 150892544\nrss_huge 96468992\nshmem 0\nmapped_file 4696379392\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1437433\npgpgout 2376\npgfault 256427\npgmajfault 50442\ninactive_anon 169562112\nactive_anon 8192\ninactive_file 5846294528\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 5846564864\ntotal_rss 150892544\ntotal_rss_huge 96468992\ntotal_shmem 0\ntotal_mapped_file 4696379392\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1437433\ntotal_pgpgout 2376\ntotal_pgfault 256427\ntotal_pgmajfault 50442\ntotal_inactive_anon 169562112\ntotal_active_anon 8192\ntotal_inactive_file 5846294528\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 196\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3313768600"
+      },
+      "tree_rss_bytes": 4844687360,
+      "tree_pss_bytes": 4847532032,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 4827381760,
+          "pss_bytes": 4836178944,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 327
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 20.121,
+      "group": {
+        "memory.usage_in_bytes": "6521401344",
+        "memory.max_usage_in_bytes": "6521401344",
+        "memory.memsw.usage_in_bytes": "6521401344",
+        "memory.memsw.max_usage_in_bytes": "6521401344",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 6093623296\nrss 152989696\nrss_huge 96468992\nshmem 0\nmapped_file 4932132864\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1497783\npgpgout 2376\npgfault 266393\npgmajfault 52191\ninactive_anon 171790336\nactive_anon 8192\ninactive_file 6093365248\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 6093623296\ntotal_rss 152989696\ntotal_rss_huge 96468992\ntotal_shmem 0\ntotal_mapped_file 4932132864\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1497783\ntotal_pgpgout 2376\ntotal_pgfault 266393\ntotal_pgmajfault 52191\ntotal_inactive_anon 171790336\ntotal_active_anon 8192\ntotal_inactive_file 6093365248\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 202\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3415443300"
+      },
+      "tree_rss_bytes": 5083811840,
+      "tree_pss_bytes": 5083125760,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 5066506240,
+          "pss_bytes": 5071772672,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 338
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 20.648,
+      "group": {
+        "memory.usage_in_bytes": "6777384960",
+        "memory.max_usage_in_bytes": "6777384960",
+        "memory.memsw.usage_in_bytes": "6777384960",
+        "memory.memsw.max_usage_in_bytes": "6777384960",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 6346149888\nrss 154730496\nrss_huge 94371840\nshmem 0\nmapped_file 5159772160\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1559701\npgpgout 2376\npgfault 275678\npgmajfault 54028\ninactive_anon 174972928\nactive_anon 8192\ninactive_file 6345895936\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 6346149888\ntotal_rss 154730496\ntotal_rss_huge 94371840\ntotal_shmem 0\ntotal_mapped_file 5159772160\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1559701\ntotal_pgpgout 2376\ntotal_pgfault 275678\ntotal_pgmajfault 54028\ntotal_inactive_anon 174972928\ntotal_active_anon 8192\ntotal_inactive_file 6345895936\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 207\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3506692100"
+      },
+      "tree_rss_bytes": 5312770048,
+      "tree_pss_bytes": 5313296384,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 5295464448,
+          "pss_bytes": 5301943296,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 347
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 21.175,
+      "group": {
+        "memory.usage_in_bytes": "7026282496",
+        "memory.max_usage_in_bytes": "7026282496",
+        "memory.memsw.usage_in_bytes": "7026282496",
+        "memory.memsw.max_usage_in_bytes": "7026282496",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 6590238720\nrss 159281152\nrss_huge 98566144\nshmem 0\nmapped_file 5388070912\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1619384\npgpgout 2378\npgfault 285271\npgmajfault 55790\ninactive_anon 179523584\nactive_anon 8192\ninactive_file 6589968384\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 6590238720\ntotal_rss 159281152\ntotal_rss_huge 98566144\ntotal_shmem 0\ntotal_mapped_file 5388070912\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1619384\ntotal_pgpgout 2378\ntotal_pgfault 285271\ntotal_pgmajfault 55790\ntotal_inactive_anon 179523584\ntotal_active_anon 8192\ntotal_inactive_file 6589968384\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 212\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3605599300"
+      },
+      "tree_rss_bytes": 5545050112,
+      "tree_pss_bytes": 5547902976,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 5527744512,
+          "pss_bytes": 5536549888,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 356
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 21.703,
+      "group": {
+        "memory.usage_in_bytes": "7295766528",
+        "memory.max_usage_in_bytes": "7295766528",
+        "memory.memsw.usage_in_bytes": "7295766528",
+        "memory.memsw.max_usage_in_bytes": "7295766528",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 6823620608\nrss 194842624\nrss_huge 130023424\nshmem 0\nmapped_file 5595004928\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1676389\npgpgout 2378\npgfault 295031\npgmajfault 57377\ninactive_anon 215216128\nactive_anon 8192\ninactive_file 6823342080\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 6823620608\ntotal_rss 194842624\ntotal_rss_huge 130023424\ntotal_shmem 0\ntotal_mapped_file 5595004928\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1676389\ntotal_pgpgout 2378\ntotal_pgfault 295031\ntotal_pgmajfault 57377\ntotal_inactive_anon 215216128\ntotal_active_anon 8192\ntotal_inactive_file 6823342080\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 218\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3736697200"
+      },
+      "tree_rss_bytes": 5782171648,
+      "tree_pss_bytes": 5785786368,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 5764866048,
+          "pss_bytes": 5774433280,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 370
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 22.23,
+      "group": {
+        "memory.usage_in_bytes": "7499452416",
+        "memory.max_usage_in_bytes": "7499452416",
+        "memory.memsw.usage_in_bytes": "7499452416",
+        "memory.memsw.max_usage_in_bytes": "7499452416",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 7026610176\nrss 194842624\nrss_huge 130023424\nshmem 0\nmapped_file 5837127680\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1725947\npgpgout 2378\npgfault 305121\npgmajfault 59634\ninactive_anon 215216128\nactive_anon 8192\ninactive_file 7026339840\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 7026610176\ntotal_rss 194842624\ntotal_rss_huge 130023424\ntotal_shmem 0\ntotal_mapped_file 5837127680\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1725947\ntotal_pgpgout 2378\ntotal_pgfault 305121\ntotal_pgmajfault 59634\ntotal_inactive_anon 215216128\ntotal_active_anon 8192\ntotal_inactive_file 7026339840\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 223\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3824967600"
+      },
+      "tree_rss_bytes": 6026305536,
+      "tree_pss_bytes": 6029240320,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 6008999936,
+          "pss_bytes": 6017887232,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 378
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 22.759,
+      "group": {
+        "memory.usage_in_bytes": "7690027008",
+        "memory.max_usage_in_bytes": "7690027008",
+        "memory.memsw.usage_in_bytes": "7690027008",
+        "memory.memsw.max_usage_in_bytes": "7690027008",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 7168462848\nrss 243044352\nrss_huge 176160768\nshmem 0\nmapped_file 6061162496\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1760643\npgpgout 2379\npgfault 317063\npgmajfault 61842\ninactive_anon 263606272\nactive_anon 8192\ninactive_file 7168237568\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 7168462848\ntotal_rss 243044352\ntotal_rss_huge 176160768\ntotal_shmem 0\ntotal_mapped_file 6061162496\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1760643\ntotal_pgpgout 2379\ntotal_pgfault 317063\ntotal_pgmajfault 61842\ntotal_inactive_anon 263606272\ntotal_active_anon 8192\ntotal_inactive_file 7168237568\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 228\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "3966024900"
+      },
+      "tree_rss_bytes": 6288420864,
+      "tree_pss_bytes": 6282549248,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 6271115264,
+          "pss_bytes": 6271196160,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 391
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 23.289,
+      "group": {
+        "memory.usage_in_bytes": "7800061952",
+        "memory.max_usage_in_bytes": "7800061952",
+        "memory.memsw.usage_in_bytes": "7800061952",
+        "memory.memsw.max_usage_in_bytes": "7800061952",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 7223873536\nrss 297209856\nrss_huge 228589568\nshmem 0\nmapped_file 6143279104\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1777225\npgpgout 4936\npgfault 324631\npgmajfault 62390\ninactive_anon 317976576\nactive_anon 8192\ninactive_file 7223627776\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 7223873536\ntotal_rss 297209856\ntotal_rss_huge 228589568\ntotal_shmem 0\ntotal_mapped_file 6143275008\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1777225\ntotal_pgpgout 4936\ntotal_pgfault 324630\ntotal_pgmajfault 62390\ntotal_inactive_anon 317976576\ntotal_active_anon 8192\ntotal_inactive_file 7223627776\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 233\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "4391556200"
+      },
+      "tree_rss_bytes": 6431420416,
+      "tree_pss_bytes": 6429358080,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 6414114816,
+          "pss_bytes": 6418004992,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 434
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 23.818,
+      "group": {
+        "memory.usage_in_bytes": "7992213504",
+        "memory.max_usage_in_bytes": "7992213504",
+        "memory.memsw.usage_in_bytes": "7992213504",
+        "memory.memsw.max_usage_in_bytes": "7992213504",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 7407341568\nrss 305598464\nrss_huge 236978176\nshmem 0\nmapped_file 6369255424\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1822021\npgpgout 4936\npgfault 335561\npgmajfault 63918\ninactive_anon 326365184\nactive_anon 8192\ninactive_file 7407116288\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 7407341568\ntotal_rss 305598464\ntotal_rss_huge 236978176\ntotal_shmem 0\ntotal_mapped_file 6369255424\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1822021\ntotal_pgpgout 4936\ntotal_pgfault 335561\ntotal_pgmajfault 63918\ntotal_inactive_anon 326365184\ntotal_active_anon 8192\ntotal_inactive_file 7407116288\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 239\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "4595648200"
+      },
+      "tree_rss_bytes": 6673616896,
+      "tree_pss_bytes": 6670948352,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 6656311296,
+          "pss_bytes": 6659595264,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 455
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 24.348,
+      "group": {
+        "memory.usage_in_bytes": "8226963456",
+        "memory.max_usage_in_bytes": "8226963456",
+        "memory.memsw.usage_in_bytes": "8226963456",
+        "memory.memsw.max_usage_in_bytes": "8226963456",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 7456960512\nrss 488050688\nrss_huge 415236096\nshmem 0\nmapped_file 6469029888\ndirty 4096\nwriteback 0\nswap 0\npgpgin 1834271\npgpgout 4936\npgfault 343336\npgmajfault 64409\ninactive_anon 509014016\nactive_anon 8192\ninactive_file 7456731136\nactive_file 225280\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 7456960512\ntotal_rss 488050688\ntotal_rss_huge 415236096\ntotal_shmem 0\ntotal_mapped_file 6469029888\ntotal_dirty 4096\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1834271\ntotal_pgpgout 4936\ntotal_pgfault 343336\ntotal_pgmajfault 64409\ntotal_inactive_anon 509014016\ntotal_active_anon 8192\ntotal_inactive_file 7456731136\ntotal_active_file 225280\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 244\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "5023967500"
+      },
+      "tree_rss_bytes": 6955110400,
+      "tree_pss_bytes": 6951479296,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 17305600,
+          "pss_bytes": 11353088,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 344827,
+          "cpu_ticks": 1
+        },
+        {
+          "pid": 15,
+          "name": "lean",
+          "uid": 1000,
+          "rss_bytes": 6937804800,
+          "pss_bytes": 6940126208,
+          "swap_bytes": 0,
+          "threads": 5,
+          "starttime": 344830,
+          "cpu_ticks": 496
+        }
+      ]
+    }
+  ],
+  "scope": "Private Linux cgroup-v1 component resource experiment: scoped imported-artifact cache pages were evicted and checked nonresident before launch, with no concurrent owned proof processes. Owned group capped at 4 CPUs and 8 GiB with no swap; enclosing WSL VM remains32GiB. Kernel, unrelated file cache, source filesystem and cross-group charge ownership still differ from a whole official8GiBVM. RSS/PSS, cache residency and cgroup counters are all reported. No exact official reproduction or website acceptance claim.",
+  "harness_version": 3,
+  "scoped_eviction": {
+    "status": "PASS",
+    "method": "Per-owned-file readonly-fd fsync then POSIX_FADV_DONTNEED; PROT_NONE mmap/mincore before and after; no global drop_caches",
+    "roots": [
+      "/tmp/rh-proportion-memory-20261010/native-cache",
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/lib",
+      "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib",
+      "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-lib",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+    ],
+    "page_size": 4096,
+    "scope": "Only selected artifact/shared-library files and exact Lean/Lake executables. Kernel, unrelated file cache and WSL VM size are unchanged.",
+    "file_count": 56033,
+    "file_bytes": 8791850265,
+    "before_resident_page_bytes": 97656832,
+    "after_resident_page_bytes": 0,
+    "all_selected_pages_nonresident": true,
+    "elapsed_seconds": 36.177
+  },
+  "scoped_eviction_sha256": "8ab98ba555e18dd5140ceaece65b7fbe5c0905905d4c08f1ad9802f93585302b",
+  "sampled_pss_exceeds_memory_limit": false,
+  "cgroup_peak_bytes": 8265891840,
+  "cgroup_pss_peak_gap_bytes": -1314412544,
+  "proof_succeeded": true,
+  "resource_fit": true,
+  "resource_fit_scope": "Observed component resource fit under this scoped-cache experiment, not full official VM fit; sampled PSS may miss between-sample peaks.",
+  "resource_status": "OBSERVED_COMPONENT_FIT"
+}

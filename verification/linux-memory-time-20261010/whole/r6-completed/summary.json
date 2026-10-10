@@ -1,0 +1,1039 @@
+{
+  "status": "LOCAL_CHECKS_INCOMPLETE_FAILED_OR_REVIEW_REQUIRED",
+  "review_status": "PASS",
+  "phases": [
+    {
+      "id": "tools-r6",
+      "phase": "tools",
+      "selected_for_final_check": true,
+      "completed_handoff": true,
+      "archive_paths": {
+        "ledger": "runs/tools-r6/ledger.json.gz",
+        "worker": "runs/tools-r6/worker.json.gz",
+        "tasks": "runs/tools-r6/tasks.json.gz",
+        "supervisor": "runs/tools-r6/supervisor.log.gz",
+        "result": "runs/tools-r6/result.json.gz",
+        "process": "runs/tools-r6/process.log.gz",
+        "eviction": "runs/tools-r6/eviction.json.gz"
+      },
+      "proof_gate_passed": true,
+      "independent_after_resource_gate_false": false,
+      "run_id": "whole-globalfalse-tools-r6",
+      "actual_exit_code": 0,
+      "supervisor_exit_code": 0,
+      "timeout": false,
+      "postcondition_error": null,
+      "elapsed_seconds": 9.103,
+      "actual_phase_total_wall_seconds": 39.082,
+      "actual_shared_elapsed_seconds": null,
+      "actual_shared_wall_clock_elapsed_seconds": null,
+      "enforce_shared_budget": false,
+      "resource_fit": true,
+      "cgroup_peak_bytes": 2012475392,
+      "sampled_tree_peak_pss_bytes": 1614010368,
+      "sampled_tree_peak_rss_bytes": 1617821696,
+      "sampled_tree_peak_swap_bytes": 0,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "outside_cgroup_peak_pss_bytes": 138060800,
+      "source_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+      "source_bytes": 1993837,
+      "config_sha256": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+      "artifact_family_after": {},
+      "tool_family_after": {
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": {
+          "bytes": 310664,
+          "sha256": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": {
+          "bytes": 489488,
+          "sha256": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": {
+          "bytes": 109624,
+          "sha256": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": {
+          "bytes": 1576,
+          "sha256": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": {
+          "bytes": 2041184,
+          "sha256": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": {
+          "bytes": 2050704,
+          "sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+        }
+      },
+      "export_file_after": null,
+      "shared_clock": null,
+      "final_cgroup": {
+        "memory.usage_in_bytes": "1784393728",
+        "memory.max_usage_in_bytes": "2012475392",
+        "memory.memsw.usage_in_bytes": "1784393728",
+        "memory.memsw.max_usage_in_bytes": "2012475392",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 1775165440\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 5021696\nwriteback 0\nswap 0\npgpgin 455973\npgpgout 22580\npgfault 157956\npgmajfault 14681\ninactive_anon 0\nactive_anon 0\ninactive_file 1143246848\nactive_file 631918592\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 1775165440\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 5021696\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 455973\ntotal_pgpgout 22580\ntotal_pgfault 157956\ntotal_pgmajfault 14681\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 1143246848\ntotal_active_file 631918592\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 90\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "4321627600"
+      },
+      "final_failed_memory_charges": "0",
+      "proof_process_result_present": true,
+      "phase_ledger_present": true,
+      "ledger_proof_succeeded": true,
+      "raw_proof_succeeded": true,
+      "inputs_unchanged": true,
+      "scoped_eviction_summary": {
+        "status": "PASS",
+        "method": "Per-owned-file readonly-fd fsync then POSIX_FADV_DONTNEED; PROT_NONE mmap/mincore before and after; no global drop_caches",
+        "roots": [
+          "/tmp/rh-proportion-memory-20261010/native-cache",
+          "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-lib",
+          "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        ],
+        "page_size": 4096,
+        "scope": "Only selected artifact/shared-library files and exact Lean/Lake executables. Kernel, unrelated file cache and WSL VM size are unchanged.",
+        "file_count": 56023,
+        "file_bytes": 8694222065,
+        "before_resident_page_bytes": 12288,
+        "after_resident_page_bytes": 0,
+        "all_selected_pages_nonresident": true,
+        "elapsed_seconds": 29.107
+      },
+      "proof_stage_seconds": 9.103,
+      "cold_preparation_seconds": 29.107,
+      "configuration": {
+        "memory.limit_in_bytes": "8589934592",
+        "memory.memsw.limit_in_bytes": "8589934592",
+        "memory.swappiness": "0",
+        "cpu.cfs_period_us": "100000",
+        "cpu.cfs_quota_us": "400000",
+        "cpuset.mems": "0",
+        "cpuset.cpus": "0-3"
+      },
+      "compiler_tasks": [
+        {
+          "label": "Export",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j1",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        },
+        {
+          "label": "Export.Parse",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j1",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export/Parse.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        },
+        {
+          "label": "Comparator.Util",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j1",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Util.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        },
+        {
+          "label": "Comparator.Axioms",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j1",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Axioms.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        },
+        {
+          "label": "Comparator.Compare",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j1",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Compare.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        },
+        {
+          "label": "Comparator",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j1",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean",
+            "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        }
+      ],
+      "worker_record": {
+        "tasks": [
+          {
+            "label": "Export",
+            "exit_code": 0,
+            "seconds": 6.537
+          },
+          {
+            "label": "Export.Parse",
+            "exit_code": 0,
+            "seconds": 1.292
+          },
+          {
+            "label": "Comparator.Util",
+            "exit_code": 0,
+            "seconds": 0.146
+          },
+          {
+            "label": "Comparator.Axioms",
+            "exit_code": 0,
+            "seconds": 0.292
+          },
+          {
+            "label": "Comparator.Compare",
+            "exit_code": 0,
+            "seconds": 0.348
+          },
+          {
+            "label": "Comparator",
+            "exit_code": 0,
+            "seconds": 0.145
+          }
+        ],
+        "success": true
+      },
+      "status": "COMPLETED_PROOF_PASS",
+      "source_inputs_bound_to_config": true
+    },
+    {
+      "id": "contract-r6",
+      "phase": "contract",
+      "selected_for_final_check": true,
+      "completed_handoff": true,
+      "archive_paths": {
+        "ledger": "runs/contract-r6/ledger.json.gz",
+        "worker": "runs/contract-r6/worker.json.gz",
+        "tasks": "runs/contract-r6/tasks.json.gz",
+        "supervisor": "runs/contract-r6/supervisor.log.gz",
+        "result": "runs/contract-r6/result.json.gz",
+        "process": "runs/contract-r6/process.log.gz",
+        "eviction": "runs/contract-r6/eviction.json.gz"
+      },
+      "proof_gate_passed": true,
+      "independent_after_resource_gate_false": false,
+      "run_id": "whole-globalfalse-contract-r6",
+      "actual_exit_code": 0,
+      "supervisor_exit_code": 0,
+      "timeout": false,
+      "postcondition_error": null,
+      "elapsed_seconds": 27.968,
+      "actual_phase_total_wall_seconds": 58.097,
+      "actual_shared_elapsed_seconds": 58.12,
+      "actual_shared_wall_clock_elapsed_seconds": 58.12,
+      "enforce_shared_budget": false,
+      "resource_fit": true,
+      "cgroup_peak_bytes": 7734902784,
+      "sampled_tree_peak_pss_bytes": 6681508864,
+      "sampled_tree_peak_rss_bytes": 6679171072,
+      "sampled_tree_peak_swap_bytes": 0,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "outside_cgroup_peak_pss_bytes": 150110208,
+      "source_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+      "source_bytes": 1993837,
+      "config_sha256": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+      "artifact_family_after": {
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": {
+          "bytes": 20368,
+          "sha256": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": {
+          "bytes": 11384,
+          "sha256": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": {
+          "bytes": 43896,
+          "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+        }
+      },
+      "tool_family_after": {
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": {
+          "bytes": 310664,
+          "sha256": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": {
+          "bytes": 489488,
+          "sha256": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": {
+          "bytes": 109624,
+          "sha256": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": {
+          "bytes": 1576,
+          "sha256": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": {
+          "bytes": 2041184,
+          "sha256": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": {
+          "bytes": 2050704,
+          "sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+        }
+      },
+      "export_file_after": null,
+      "shared_clock": {
+        "start_unix": 1791587911.395401,
+        "start_monotonic": 1.548903586,
+        "boot_id": "75f9dc6f-223f-44fd-baa3-4b49ae3cd704",
+        "official_inner_seconds": 3200,
+        "scope": "Actual local elapsed starts before current contract build, includes every later local cold preparation and caller delay. Tools prebuild excluded. Separate phases/reordered checks differ from official retained-strings pipeline."
+      },
+      "final_cgroup": {
+        "memory.usage_in_bytes": "7078158336",
+        "memory.max_usage_in_bytes": "7734902784",
+        "memory.memsw.usage_in_bytes": "7077154816",
+        "memory.memsw.max_usage_in_bytes": "7734902784",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 6981390336\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 40960\nwriteback 0\nswap 0\npgpgin 1725526\npgpgout 21067\npgfault 613583\npgmajfault 60567\ninactive_anon 0\nactive_anon 0\ninactive_file 769650688\nactive_file 6211710976\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 6981390336\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 40960\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1725526\ntotal_pgpgout 21067\ntotal_pgfault 613583\ntotal_pgmajfault 60567\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 769650688\ntotal_active_file 6211710976\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 280\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "9820367600"
+      },
+      "final_failed_memory_charges": "0",
+      "proof_process_result_present": true,
+      "phase_ledger_present": true,
+      "ledger_proof_succeeded": true,
+      "raw_proof_succeeded": true,
+      "inputs_unchanged": true,
+      "scoped_eviction_summary": {
+        "status": "PASS",
+        "method": "Per-owned-file readonly-fd fsync then POSIX_FADV_DONTNEED; PROT_NONE mmap/mincore before and after; no global drop_caches",
+        "roots": [
+          "/tmp/rh-proportion-memory-20261010/native-cache",
+          "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-lib",
+          "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        ],
+        "page_size": 4096,
+        "scope": "Only selected artifact/shared-library files and exact Lean/Lake executables. Kernel, unrelated file cache and WSL VM size are unchanged.",
+        "file_count": 56029,
+        "file_bytes": 8699225305,
+        "before_resident_page_bytes": 5025792,
+        "after_resident_page_bytes": 0,
+        "all_selected_pages_nonresident": true,
+        "elapsed_seconds": 28.919
+      },
+      "proof_stage_seconds": 27.968,
+      "cold_preparation_seconds": 28.919,
+      "configuration": {
+        "memory.limit_in_bytes": "8589934592",
+        "memory.memsw.limit_in_bytes": "8589934592",
+        "memory.swappiness": "0",
+        "cpu.cfs_period_us": "100000",
+        "cpu.cfs_quota_us": "400000",
+        "cpuset.mems": "0",
+        "cpuset.cpus": "0-3"
+      },
+      "compiler_tasks": [
+        {
+          "label": "ChallengeDeps.lean",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib:/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean"
+        },
+        {
+          "label": "ChallengeDeps/CandidateSpec.lean",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps/CandidateSpec.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib:/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean"
+        },
+        {
+          "label": "Challenge/Candidate.lean",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Challenge/Candidate.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib:/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean"
+        }
+      ],
+      "worker_record": {
+        "tasks": [
+          {
+            "label": "ChallengeDeps.lean",
+            "exit_code": 0,
+            "seconds": 23.173
+          },
+          {
+            "label": "ChallengeDeps/CandidateSpec.lean",
+            "exit_code": 0,
+            "seconds": 2.261
+          },
+          {
+            "label": "Challenge/Candidate.lean",
+            "exit_code": 0,
+            "seconds": 2.444
+          }
+        ],
+        "success": true
+      },
+      "status": "COMPLETED_PROOF_PASS",
+      "source_inputs_bound_to_config": true
+    },
+    {
+      "id": "compile-r6",
+      "phase": "compile",
+      "selected_for_final_check": true,
+      "completed_handoff": true,
+      "archive_paths": {
+        "ledger": "runs/compile-r6/ledger.json.gz",
+        "worker": "runs/compile-r6/worker.json.gz",
+        "tasks": "runs/compile-r6/tasks.json.gz",
+        "supervisor": "runs/compile-r6/supervisor.log.gz",
+        "result": "runs/compile-r6/result.json.gz",
+        "process": "runs/compile-r6/process.log.gz",
+        "eviction": "runs/compile-r6/eviction.json.gz"
+      },
+      "proof_gate_passed": true,
+      "independent_after_resource_gate_false": false,
+      "run_id": "whole-globalfalse-compile-r6",
+      "actual_exit_code": 0,
+      "supervisor_exit_code": 1,
+      "timeout": false,
+      "postcondition_error": null,
+      "elapsed_seconds": 2993.462,
+      "actual_phase_total_wall_seconds": 3023.454,
+      "actual_shared_elapsed_seconds": 3104.485,
+      "actual_shared_wall_clock_elapsed_seconds": 3104.485,
+      "enforce_shared_budget": false,
+      "resource_fit": false,
+      "cgroup_peak_bytes": 8589938688,
+      "sampled_tree_peak_pss_bytes": 7997991936,
+      "sampled_tree_peak_rss_bytes": 8001908736,
+      "sampled_tree_peak_swap_bytes": 0,
+      "oom_kill_count": 0,
+      "memory_limit_hit": true,
+      "outside_cgroup_peak_pss_bytes": 145674240,
+      "source_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+      "source_bytes": 1993837,
+      "config_sha256": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+      "artifact_family_after": {
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": {
+          "bytes": 20368,
+          "sha256": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": {
+          "bytes": 11384,
+          "sha256": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": {
+          "bytes": 43896,
+          "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": {
+          "bytes": 92549312,
+          "sha256": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637"
+        }
+      },
+      "tool_family_after": {
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": {
+          "bytes": 310664,
+          "sha256": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": {
+          "bytes": 489488,
+          "sha256": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": {
+          "bytes": 109624,
+          "sha256": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": {
+          "bytes": 1576,
+          "sha256": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": {
+          "bytes": 2041184,
+          "sha256": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": {
+          "bytes": 2050704,
+          "sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+        }
+      },
+      "export_file_after": null,
+      "shared_clock": {
+        "start_unix": 1791587911.395401,
+        "start_monotonic": 1.548903586,
+        "boot_id": "75f9dc6f-223f-44fd-baa3-4b49ae3cd704",
+        "official_inner_seconds": 3200,
+        "scope": "Actual local elapsed starts before current contract build, includes every later local cold preparation and caller delay. Tools prebuild excluded. Separate phases/reordered checks differ from official retained-strings pipeline."
+      },
+      "final_cgroup": {
+        "memory.usage_in_bytes": "360493056",
+        "memory.max_usage_in_bytes": "8589938688",
+        "memory.memsw.usage_in_bytes": "360493056",
+        "memory.memsw.max_usage_in_bytes": "8590069760",
+        "memory.failcnt": "64",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 319528960\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 92557312\nwriteback 0\nswap 0\npgpgin 22692584\npgpgout 22679982\npgfault 19271294\npgmajfault 136426\ninactive_anon 0\nactive_anon 0\ninactive_file 159817728\nactive_file 159711232\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 319528960\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 92557312\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 22692584\ntotal_pgpgout 22679982\ntotal_pgfault 19271294\ntotal_pgmajfault 136426\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 159817728\ntotal_active_file 159711232\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 29932\nnr_throttled 15\nthrottled_time 335200",
+        "cpuacct.usage": "3055643793200"
+      },
+      "final_failed_memory_charges": "64",
+      "proof_process_result_present": true,
+      "phase_ledger_present": true,
+      "ledger_proof_succeeded": true,
+      "raw_proof_succeeded": true,
+      "inputs_unchanged": true,
+      "scoped_eviction_summary": {
+        "status": "PASS",
+        "method": "Per-owned-file readonly-fd fsync then POSIX_FADV_DONTNEED; PROT_NONE mmap/mincore before and after; no global drop_caches",
+        "roots": [
+          "/tmp/rh-proportion-memory-20261010/native-cache",
+          "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-lib",
+          "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        ],
+        "page_size": 4096,
+        "scope": "Only selected artifact/shared-library files and exact Lean/Lake executables. Kernel, unrelated file cache and WSL VM size are unchanged.",
+        "file_count": 56032,
+        "file_bytes": 8699300953,
+        "before_resident_page_bytes": 5103616,
+        "after_resident_page_bytes": 0,
+        "all_selected_pages_nonresident": true,
+        "elapsed_seconds": 28.961
+      },
+      "proof_stage_seconds": 2993.462,
+      "cold_preparation_seconds": 28.961,
+      "configuration": {
+        "memory.limit_in_bytes": "8589934592",
+        "memory.memsw.limit_in_bytes": "8589934592",
+        "memory.swappiness": "0",
+        "cpu.cfs_period_us": "100000",
+        "cpu.cfs_quota_us": "400000",
+        "cpuset.mems": "0",
+        "cpuset.cpus": "0-3"
+      },
+      "compiler_tasks": [
+        {
+          "label": "Solution.Candidate",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib:/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean"
+        }
+      ],
+      "worker_record": {
+        "tasks": [
+          {
+            "label": "Solution.Candidate",
+            "exit_code": 0,
+            "seconds": 2993.015
+          }
+        ],
+        "success": true
+      },
+      "status": "COMPLETED_PROOF_PASS_RESOURCE_GATE_FAILED",
+      "source_inputs_bound_to_config": true
+    },
+    {
+      "id": "deps-r6",
+      "phase": "deps",
+      "selected_for_final_check": true,
+      "completed_handoff": true,
+      "archive_paths": {
+        "ledger": "runs/deps-r6/ledger.json.gz",
+        "worker": "runs/deps-r6/worker.json.gz",
+        "tasks": "runs/deps-r6/tasks.json.gz",
+        "supervisor": "runs/deps-r6/supervisor.log.gz",
+        "result": "runs/deps-r6/result.json.gz",
+        "process": "runs/deps-r6/process.log.gz",
+        "eviction": "runs/deps-r6/eviction.json.gz"
+      },
+      "proof_gate_passed": true,
+      "independent_after_resource_gate_false": true,
+      "run_id": "whole-globalfalse-deps-r6",
+      "actual_exit_code": 0,
+      "supervisor_exit_code": 0,
+      "timeout": false,
+      "postcondition_error": null,
+      "elapsed_seconds": 0.598,
+      "actual_phase_total_wall_seconds": 30.057,
+      "actual_shared_elapsed_seconds": 3378.517,
+      "actual_shared_wall_clock_elapsed_seconds": 3378.517,
+      "enforce_shared_budget": false,
+      "resource_fit": true,
+      "cgroup_peak_bytes": 124174336,
+      "sampled_tree_peak_pss_bytes": 846848,
+      "sampled_tree_peak_rss_bytes": 581632,
+      "sampled_tree_peak_swap_bytes": 0,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "outside_cgroup_peak_pss_bytes": 265887744,
+      "source_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+      "source_bytes": 1993837,
+      "config_sha256": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+      "artifact_family_after": {
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": {
+          "bytes": 20368,
+          "sha256": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": {
+          "bytes": 11384,
+          "sha256": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": {
+          "bytes": 43896,
+          "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": {
+          "bytes": 92549312,
+          "sha256": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637"
+        }
+      },
+      "tool_family_after": {
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": {
+          "bytes": 310664,
+          "sha256": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": {
+          "bytes": 489488,
+          "sha256": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": {
+          "bytes": 109624,
+          "sha256": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": {
+          "bytes": 1576,
+          "sha256": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": {
+          "bytes": 2041184,
+          "sha256": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": {
+          "bytes": 2050704,
+          "sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+        }
+      },
+      "export_file_after": null,
+      "shared_clock": {
+        "start_unix": 1791587911.395401,
+        "start_monotonic": 1.548903586,
+        "boot_id": "75f9dc6f-223f-44fd-baa3-4b49ae3cd704",
+        "official_inner_seconds": 3200,
+        "scope": "Actual local elapsed starts before current contract build, includes every later local cold preparation and caller delay. Tools prebuild excluded. Separate phases/reordered checks differ from official retained-strings pipeline."
+      },
+      "final_cgroup": {
+        "memory.usage_in_bytes": "94187520",
+        "memory.max_usage_in_bytes": "124174336",
+        "memory.memsw.usage_in_bytes": "94187520",
+        "memory.memsw.max_usage_in_bytes": "124174336",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 93659136\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 8192\nwriteback 0\nswap 0\npgpgin 26550\npgpgout 3678\npgfault 6453\npgmajfault 690\ninactive_anon 0\nactive_anon 0\ninactive_file 93470720\nactive_file 188416\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 93659136\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 8192\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 26550\ntotal_pgpgout 3678\ntotal_pgfault 6453\ntotal_pgmajfault 690\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 93470720\ntotal_active_file 188416\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 4\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "77089900"
+      },
+      "final_failed_memory_charges": "0",
+      "proof_process_result_present": true,
+      "phase_ledger_present": true,
+      "ledger_proof_succeeded": true,
+      "raw_proof_succeeded": true,
+      "inputs_unchanged": true,
+      "scoped_eviction_summary": {
+        "status": "PASS",
+        "method": "Per-owned-file readonly-fd fsync then POSIX_FADV_DONTNEED; PROT_NONE mmap/mincore before and after; no global drop_caches",
+        "roots": [
+          "/tmp/rh-proportion-memory-20261010/native-cache",
+          "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-lib",
+          "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        ],
+        "page_size": 4096,
+        "scope": "Only selected artifact/shared-library files and exact Lean/Lake executables. Kernel, unrelated file cache and WSL VM size are unchanged.",
+        "file_count": 56033,
+        "file_bytes": 8791850265,
+        "before_resident_page_bytes": 97656832,
+        "after_resident_page_bytes": 0,
+        "all_selected_pages_nonresident": true,
+        "elapsed_seconds": 28.511
+      },
+      "proof_stage_seconds": 0.598,
+      "cold_preparation_seconds": 28.511,
+      "configuration": {
+        "memory.limit_in_bytes": "8589934592",
+        "memory.memsw.limit_in_bytes": "8589934592",
+        "memory.swappiness": "0",
+        "cpu.cfs_period_us": "100000",
+        "cpu.cfs_quota_us": "400000",
+        "cpuset.mems": "0",
+        "cpuset.cpus": "0-3"
+      },
+      "compiler_tasks": [
+        {
+          "label": "fresh-deps",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "--deps",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib:/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean"
+        }
+      ],
+      "worker_record": {
+        "tasks": [
+          {
+            "label": "fresh-deps",
+            "exit_code": 0,
+            "seconds": 0.2
+          }
+        ],
+        "success": true
+      },
+      "status": "COMPLETED_PROOF_PASS",
+      "source_inputs_bound_to_config": true,
+      "fresh_current_contract_dependencies_checked": true
+    },
+    {
+      "id": "audit-r6",
+      "phase": "audit",
+      "selected_for_final_check": true,
+      "completed_handoff": true,
+      "archive_paths": {
+        "ledger": "runs/audit-r6/ledger.json.gz",
+        "worker": "runs/audit-r6/worker.json.gz",
+        "tasks": "runs/audit-r6/tasks.json.gz",
+        "supervisor": "runs/audit-r6/supervisor.log.gz",
+        "result": "runs/audit-r6/result.json.gz",
+        "process": "runs/audit-r6/process.log.gz",
+        "eviction": "runs/audit-r6/eviction.json.gz"
+      },
+      "proof_gate_passed": true,
+      "independent_after_resource_gate_false": true,
+      "run_id": "whole-globalfalse-audit-r6",
+      "actual_exit_code": 0,
+      "supervisor_exit_code": 0,
+      "timeout": false,
+      "postcondition_error": null,
+      "elapsed_seconds": 25.023,
+      "actual_phase_total_wall_seconds": 62.119,
+      "actual_shared_elapsed_seconds": 3471.979,
+      "actual_shared_wall_clock_elapsed_seconds": 3471.979,
+      "enforce_shared_budget": false,
+      "resource_fit": true,
+      "cgroup_peak_bytes": 8265891840,
+      "sampled_tree_peak_pss_bytes": 6951479296,
+      "sampled_tree_peak_rss_bytes": 6955110400,
+      "sampled_tree_peak_swap_bytes": 0,
+      "oom_kill_count": 0,
+      "memory_limit_hit": false,
+      "outside_cgroup_peak_pss_bytes": 150482944,
+      "source_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+      "source_bytes": 1993837,
+      "config_sha256": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+      "artifact_family_after": {
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": {
+          "bytes": 20368,
+          "sha256": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": {
+          "bytes": 11384,
+          "sha256": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": {
+          "bytes": 43896,
+          "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": {
+          "bytes": 92549312,
+          "sha256": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637"
+        }
+      },
+      "tool_family_after": {
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": {
+          "bytes": 310664,
+          "sha256": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": {
+          "bytes": 489488,
+          "sha256": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": {
+          "bytes": 109624,
+          "sha256": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": {
+          "bytes": 1576,
+          "sha256": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": {
+          "bytes": 2041184,
+          "sha256": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9"
+        },
+        "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": {
+          "bytes": 2050704,
+          "sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+        }
+      },
+      "export_file_after": null,
+      "shared_clock": {
+        "start_unix": 1791587911.395401,
+        "start_monotonic": 1.548903586,
+        "boot_id": "75f9dc6f-223f-44fd-baa3-4b49ae3cd704",
+        "official_inner_seconds": 3200,
+        "scope": "Actual local elapsed starts before current contract build, includes every later local cold preparation and caller delay. Tools prebuild excluded. Separate phases/reordered checks differ from official retained-strings pipeline."
+      },
+      "final_cgroup": {
+        "memory.usage_in_bytes": "7504150528",
+        "memory.max_usage_in_bytes": "8265891840",
+        "memory.memsw.usage_in_bytes": "7504150528",
+        "memory.memsw.max_usage_in_bytes": "8265891840",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 7465910272\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 12288\nwriteback 0\nswap 0\npgpgin 1836550\npgpgout 13809\npgfault 344220\npgmajfault 64508\ninactive_anon 0\nactive_anon 0\ninactive_file 7239675904\nactive_file 226213888\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 7465910272\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 12288\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 1836550\ntotal_pgpgout 13809\ntotal_pgfault 344220\ntotal_pgmajfault 64508\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 7239675904\ntotal_active_file 226213888\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 249\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "5393874100"
+      },
+      "final_failed_memory_charges": "0",
+      "proof_process_result_present": true,
+      "phase_ledger_present": true,
+      "ledger_proof_succeeded": true,
+      "raw_proof_succeeded": true,
+      "inputs_unchanged": true,
+      "scoped_eviction_summary": {
+        "status": "PASS",
+        "method": "Per-owned-file readonly-fd fsync then POSIX_FADV_DONTNEED; PROT_NONE mmap/mincore before and after; no global drop_caches",
+        "roots": [
+          "/tmp/rh-proportion-memory-20261010/native-cache",
+          "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib",
+          "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-lib",
+          "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+        ],
+        "page_size": 4096,
+        "scope": "Only selected artifact/shared-library files and exact Lean/Lake executables. Kernel, unrelated file cache and WSL VM size are unchanged.",
+        "file_count": 56033,
+        "file_bytes": 8791850265,
+        "before_resident_page_bytes": 97656832,
+        "after_resident_page_bytes": 0,
+        "all_selected_pages_nonresident": true,
+        "elapsed_seconds": 36.177
+      },
+      "proof_stage_seconds": 25.023,
+      "cold_preparation_seconds": 36.177,
+      "configuration": {
+        "memory.limit_in_bytes": "8589934592",
+        "memory.memsw.limit_in_bytes": "8589934592",
+        "memory.swappiness": "0",
+        "cpu.cfs_period_us": "100000",
+        "cpu.cfs_quota_us": "400000",
+        "cpuset.mems": "0",
+        "cpuset.cpus": "0-3"
+      },
+      "compiler_tasks": [
+        {
+          "label": "fresh-three-roots",
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-lib/FreshCandidateAudit.olean",
+            "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-source/FreshCandidateAudit.lean"
+          ],
+          "lean_path": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib:/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean"
+        }
+      ],
+      "worker_record": {
+        "tasks": [
+          {
+            "label": "fresh-three-roots",
+            "exit_code": 0,
+            "seconds": 24.721
+          }
+        ],
+        "success": true
+      },
+      "status": "COMPLETED_PROOF_PASS",
+      "source_inputs_bound_to_config": true,
+      "actual_axiom_roots": [
+        {
+          "root": "candidate_strict_improvement",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "root": "candidate_critical_line_bound",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "root": "candidate_critical_line_bound_cumulative",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "fresh_three_roots_standard_axioms_checked": true
+    }
+  ],
+  "missing_selected_whole_phases": [
+    "challenge-export",
+    "solution-export",
+    "core",
+    "nano"
+  ],
+  "complete_local_proof_gates_passed": false,
+  "all_selected_local_component_resource_fit": false,
+  "actual_shared_elapsed_seconds": 3471.979,
+  "actual_shared_clock_count": 1,
+  "actual_shared_elapsed_scope": "Latest observed shared-clock elapsed among supplied selected completed phases; absent phases/timestamps remain unknown and are not extrapolated.",
+  "all_supplied_selected_shared_timestamps_present": true,
+  "sum_observed_proof_stage_seconds_excluding_tools": 3047.051,
+  "sum_observed_phase_total_seconds_excluding_tools": 3173.727,
+  "sum_observed_cold_preparation_seconds_excluding_tools": 122.568,
+  "actual_minus_sum_proof_stage_seconds": 424.928,
+  "elapsed_interpretation": "Actual shared elapsed includes preparation, bindings, wrappers and caller delays; summed proof-stage time is not an official end-to-end runtime. Tools prebuild is outside the shared clock. Separate phases/order/retained-string lifetimes differ from Comparator.",
+  "proof_stage_field_definition": "Raw v3 result.elapsed_seconds starts at owned-process launch and includes its cleanup/postcondition timing; cold preparation is recorded separately. It is not a per-theorem CPU total.",
+  "memory_interpretation": "Per-phase cgroup and PSS peaks remain separate from caller/supervisor PSS outside the group. Noncontemporaneous maxima are not summed. Kernel, unrelated file-cache ownership and host processes are not fully covered. An enclosing VM size is only recorded when explicitly supplied by the trusted handoff; the cgroup is not an official sandbox.",
+  "handoff_environment_diagnostics": {
+    "source": "exact completed config.scope",
+    "local_vm_memory_gib": 32,
+    "proof_cgroup_memory_gib": 8,
+    "cpus": 4,
+    "swap": false,
+    "official_vm_equivalence_established": false
+  },
+  "explicit_experimental_compiler_flags": [
+    "-j4",
+    "--tstack=32768"
+  ],
+  "official_stack_flag_established": false,
+  "official_stack_or_worker_equivalence_claimed": false,
+  "official_inner_budget_seconds": 3200,
+  "local_shared_clock_exceeds_3200": true,
+  "official_resource_fit_established": false,
+  "website_acceptance_established": false,
+  "source_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+  "source_bytes": 1993837,
+  "diagnostic_id": "r6-completed-old-current-diagnostic",
+  "config_sha256": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+  "original_completed_handoff_sha256": "4601fb02ccddece906cba9a01b04c7495af9e29dd30bb7af1b28d79ec1bb2769",
+  "frozen_old_current_record": "6735015/10000000",
+  "live_contract_comparison": {
+    "frozen_current_record": "6735015/10000000",
+    "frozen_website_commit": "6664d243005e12e155c19775b83f53721757414b",
+    "observed_live_record": "66812491/99194876",
+    "our_fixed_record": "66812491/99194740",
+    "live_verification_timestamp": "2026-10-09T17:13:57.608Z",
+    "public_source_commit": "d95a6d7d11d7836306ec7ec1eb5be3478663718e",
+    "public_source_sha256": "f7ef331e72e8c34804e196a4cc0c6fdd69bb1c6947a51dfbf60b88a6343aad9d",
+    "observed_site": "https://www.riemannzeta.fun/submissions/master-of-puppets",
+    "fresh_live_contract_validation_performed": false
+  },
+  "live_current_contract_claimed": false,
+  "caller_expected_source_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+  "caller_expected_config_sha256": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+  "caller_expected_config_sha256_prefix": null,
+  "config_pin_scope": "Complete caller SHA256 pins bind this source, config and original completed handoff; all phase input bindings are retained.",
+  "original_public_solution_sha256": "d52f013f7edcc8536a28ef3908e64a967e5b9184d6546952cb5a541dc6d65e8a",
+  "original_public_solution_unchanged": true,
+  "candidate_or_preflight_replaced": false,
+  "completion_classification": "R6_COMPILE_PROOF_PASS_RESOURCE_GATE_FALSE_INDEPENDENT_DEPS_AUDIT_PASS",
+  "root_diagnostic_note": "No intentional cutoff: completed compile pass with configured resource gate false (64 failed memory charges). Independent deps and audit passed; exports/core/Nano unrun. Original d52 public proof unchanged.",
+  "intentional_local_cutoff_record": null,
+  "follow_up_experiment": null,
+  "follow_up_running_records_read_or_archived": false,
+  "read_page_snapshot_interpretation": "A proc snapshot supplies sampled process/thread states and cumulative faults/read_bytes at that instant. Cumulative read_bytes is not resident memory; wait_on_page_bit_common and high major faults are consistent with page pressure, but a single snapshot does not establish deadlock or identify one theorem as the cause. It does not replace a complete proof check.",
+  "only_permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_scope": "Only an actual completed fresh audit of all three printed final roots establishes their transitive axiom lists. Missing audit is not a pass.",
+  "scope": "File-only archive/review of explicitly completed local whole-file diagnostics; no new proof, official E2B/Landlock run, submission or acceptance.",
+  "helper_sha256": "dc01417d95482495d490ba92455bc45dc276278f06ca72f800b09b62f724f695",
+  "issues": []
+}

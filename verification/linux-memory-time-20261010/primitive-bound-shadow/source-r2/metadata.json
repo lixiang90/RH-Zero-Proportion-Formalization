@@ -1,0 +1,202 @@
+{
+  "status": "PREPARED_R2_SOURCE_ONLY_NOT_LEAN_CHECKED",
+  "lean_run": false,
+  "runtime_started": false,
+  "cache_accessed": false,
+  "public_candidate_modified": false,
+  "frozen_source": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\global-sync-except-am8-source-only-20261010\\Solution.global-sync-except-am8.lean",
+    "sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+    "bytes": 1993837
+  },
+  "original_declaration": {
+    "name": "RHWeil.RecordSubmission.FiniteCertificate.primitiveBound_sound",
+    "first_line": 23115,
+    "last_line": 23182,
+    "byte_start_zero": 1933916,
+    "byte_end_exclusive": 1936778,
+    "bytes": 2862,
+    "sha256": "d91fbe36009a8fd4746da2bac8c5c766731cd025433e7dda8c7bca94e76276ea"
+  },
+  "signature": {
+    "bytes": 330,
+    "sha256": "2971717f50d27d9e9fbc57aeebcb6e1b91b82b48e103a2ad59454034e97c0215",
+    "explicit_identical_before_name_change": true
+  },
+  "original_body": {
+    "bytes": 2525,
+    "sha256": "3b3826fed5c2b8f76ccfec4015b7323bda71e7f7ce652789e0a627361b8016c4"
+  },
+  "explicit_body": {
+    "bytes": 2618,
+    "sha256": "67cf5f17c9392e6856e0dff6a160e7ae636ccf31aa6a99d8592898ba35de3570"
+  },
+  "context": {
+    "sha256": "3927b47f73d64da4f6d6387f90bef01a2bf2bdf15cad832a46f4b8483cab9ac7",
+    "original_source_lines": [
+      233,
+      22574,
+      22575,
+      22576,
+      22577,
+      22578,
+      22579,
+      22580,
+      22936,
+      22937
+    ],
+    "copied_exact": true
+  },
+  "roots": {
+    "original": "RHWeil.RecordSubmission.FiniteCertificate.primitiveBound_sound_probe_original",
+    "explicit": "RHWeil.RecordSubmission.FiniteCertificate.primitiveBound_sound_probe_explicit"
+  },
+  "four_line_changes": [
+    {
+      "original_source_line": 23138,
+      "before": "        linarith",
+      "after": "        linear_combination hrev",
+      "delta_bytes": 15
+    },
+    {
+      "original_source_line": 23155,
+      "before": "        nlinarith",
+      "after": "        linear_combination hd + 163840 * hs",
+      "delta_bytes": 26
+    },
+    {
+      "original_source_line": 23165,
+      "before": "        nlinarith",
+      "after": "        linear_combination 163840 * hs - hd",
+      "delta_bytes": 26
+    },
+    {
+      "original_source_line": 23180,
+      "before": "    nlinarith",
+      "after": "    linear_combination 163840 * ht - hd",
+      "delta_bytes": 26
+    }
+  ],
+  "whole_probe_delta_bytes": 93,
+  "whole_probe_changed_lines_after_normalizing_equal_length_names": [
+    43,
+    60,
+    70,
+    85
+  ],
+  "guard_exact_type_text_unchanged": true,
+  "guard_original_target_not_referenced_in_bodies": true,
+  "guard_restore_four_lines_recovers_exact_original_chunk": true,
+  "guard_no_sorry_axiom_native_decide_tokens_in_body": true,
+  "original_candidate_headroom_bytes": 6163,
+  "raw_proposed_candidate_headroom_bytes": 6070,
+  "candidate_rebundled": false,
+  "later_environment_static_audit": {
+    "source_first_line": 23183,
+    "source_last_line": 24204,
+    "suffix_bytes": 57059,
+    "suffix_sha256": "c5502ce0b6be9c5571d52deed9a4675e261ec2a49e7ddd4ac468d056d0f33b83",
+    "explicit_attribute_or_annotation_count": 0,
+    "explicit_instance_count": 0,
+    "explicit_syntax_or_initialize_count": 0,
+    "explicit_set_option_count": 0,
+    "later_open_commands": [
+      "23584: open AMW.Cert.PC8CLData",
+      "24168: open scoped BigOperators",
+      "24170: open RHWeil.RecordSubmission.FiniteCertificate"
+    ],
+    "interpretation": "No explicit later simp/reducibility attributes, instances, syntax extensions, or options were found. Later opens are scoped to source sections and are not reproduced as proof context. Both probes import the same complete module. Static search is not a semantic environment snapshot."
+  },
+  "imported_artifact_reported_by_owner_not_read_here": {
+    "module": "Solution.Candidate",
+    "olean_sha256": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637",
+    "olean_bytes": 92549312,
+    "compile_pass_reported": true,
+    "compile_seconds_reported": 2993.462,
+    "resource_fit_reported": false,
+    "memory_failcnt_reported": 64,
+    "fresh_three_root_audit_pass_reported": true,
+    "fresh_three_root_audit_seconds_reported": 25.023
+  },
+  "comparison_limits": [
+    "The imported module contains later unannotated declarations and the original target. Source guards prevent a direct shortcut; actual used-constant checks must exclude the original target.",
+    "Both sources reconstruct the explicit pre-target namespace/open/options, but an imported post-module environment is not the original in-situ command-prefix environment.",
+    "No parsed attribute-table snapshot or actual theorem-type equality check has been executed. Those remain runtime gates.",
+    "BEGIN/END commands are identical instrumentation, awaiting checked environment. Import time precedes BEGIN. END follows actual checked environment, but source has not been tested.",
+    "Any profiler/trace CLI options must be identical for the pair and recorded. Trace timings are diagnostic, not controlled speed measurements.",
+    "Two tiny probe compiles do not establish full-candidate timing, kernel-replay gain, serial Nano gain, official resource fit, or website acceptance.",
+    "Candidate raw +93 bytes is not a fresh numeral-dictionary rebundling result.",
+    "The failed r1 explicit run is retained as a failure; neither its 0.499 seconds nor absence of errors at the other three lines establishes a successful r2 proof or any timing improvement."
+  ],
+  "outputs": {
+    "original": {
+      "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-probe-20261010-r2\\PrimitiveOriginal.lean",
+      "bytes": 3917,
+      "sha256": "092c03d88e8c0ef8661209e85da9b9f9ac538c126f8e191948a101bc45cf8e63"
+    },
+    "explicit": {
+      "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-probe-20261010-r2\\PrimitiveExplicit.lean",
+      "bytes": 4010,
+      "sha256": "6eda023d84689f7c5c86fb4a25ab57bacf1b0d6cad24334ccb474d944fe4ff5d"
+    },
+    "failed_r1_explicit_preserved": {
+      "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-probe-20261010-r2\\r1-failed-PrimitiveExplicit.lean",
+      "bytes": 4018,
+      "sha256": "367cf64d36d1883a583672b8a61a6192246e8a23f98712fb2cf9df2efcfe9fa9"
+    },
+    "r1_metadata_preserved": {
+      "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-probe-20261010-r2\\r1-metadata.json",
+      "bytes": 6610,
+      "sha256": "571f6174f4ea596bf8640751cd349d2a3eddbcd901191a5b9670a8cd2758790e"
+    },
+    "original_extracted_declaration": {
+      "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-probe-20261010-r2\\original-extracted-declaration.txt",
+      "bytes": 2862,
+      "sha256": "d91fbe36009a8fd4746da2bac8c5c766731cd025433e7dda8c7bca94e76276ea"
+    },
+    "one_line_repair_diff": {
+      "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-probe-20261010-r2\\r1-to-r2.diff",
+      "bytes": 440,
+      "sha256": "de08fa38c527304f989cf8c38480f13bb26ad1e39315f966c65176151fcaf083"
+    },
+    "four_line_body_diff": {
+      "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-probe-20261010-r2\\four-line-body.diff",
+      "bytes": 1385,
+      "sha256": "997b1c10888b1c02be79cd4805cc41fdc7c3a2649a2c14f3484a5c327f7607d6"
+    }
+  },
+  "preparation_script": {
+    "path": "E:\\codex-build\\RH-Weil\\tmp\\primitive-bound-shadow-probe-20261010-r2\\prepare.py",
+    "bytes": 9451,
+    "sha256": "7b04b039c02fbb7e9994df6f7a63eb4cfee3281cbceef0c94d41eec2d201c363"
+  },
+  "prior_r1_files_modified": false,
+  "repair_from_failed_r1": {
+    "source_sha256": "367cf64d36d1883a583672b8a61a6192246e8a23f98712fb2cf9df2efcfe9fa9",
+    "source_bytes": 4018,
+    "changed_probe_line": 43,
+    "original_frozen_source_line": 23138,
+    "before": "        simpa only [neg_mul] using hrev",
+    "after": "        linear_combination hrev",
+    "delta_bytes": -8,
+    "exact_old_bytes_recovered_by_inverse_replacement": true,
+    "only_one_line_changed_vs_failed_r1": true,
+    "other_three_explicit_tactics_preserved_exactly": true
+  },
+  "prior_actual_results_reported_by_parent_not_read_here": {
+    "original_body_checked_seconds": 0.875,
+    "original_body_checked_pass": true,
+    "original_fresh_type_same_and_std3_and_no_shortcut_pass": true,
+    "original_dependency_closure_count": 9492,
+    "failed_explicit_lean_exit_code": 1,
+    "failed_explicit_hrev_type": "gapPotential g j - gapPotential g i <= -(5 * (cellLower left j i : Real))",
+    "failed_explicit_norm_num_goal": "5 * (cellLower left j i : Real) + gapPotential g j <= gapPotential g i",
+    "failed_explicit_body_seconds": 0.499,
+    "failed_explicit_seconds_are_speed_evidence": false,
+    "failed_explicit_env_has_sorryAx": true,
+    "failed_explicit_fresh_audit_run": false,
+    "failed_explicit_fresh_olean_present": false,
+    "r2_actual_validation": "NOT_RUN_PREPARED_ONLY"
+  },
+  "static_linear_combination_reason": "The supplied hrev difference inequality and the normalized goal are equivalent after moving the same linear Real terms. linear_combination hrev uses coefficient +1. This is static algebraic justification only; Lean elaboration, exact type, standard axioms and no-shortcut dependency audit remain unrun for r2."
+}

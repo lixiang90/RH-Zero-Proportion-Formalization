@@ -1,15 +1,17 @@
 # Submission contract and current status
 
-Checked again 2026-10-10 against the public website source at
-`josusanmartin/riemann@6664d243005e12e155c19775b83f53721757414b`.
-Authoritative contract:
-https://github.com/josusanmartin/riemann/blob/6664d243005e12e155c19775b83f53721757414b/challenge/contract.json
+The r5/r6 resource trials freeze the public website source at
+josusanmartin/riemann@6664d243005e12e155c19775b83f53721757414b and its
+historical current record 6735015/10000000 (attempt-016). Their contract is
+[archived here](https://github.com/josusanmartin/riemann/blob/6664d243005e12e155c19775b83f53721757414b/challenge/contract.json).
 
-The current accepted score when checked was `6735015/10000000`
-(`attempt-016`). The target is `66812491/99194740`; the server's freshly
-generated current score must be rechecked immediately before submission.
-Historical whole-proof checks used `6734832/10000000`; preparing the new
-CandidateSpec is not a fresh whole-proof pass.
+The [live record](https://www.riemannzeta.fun/submissions/master-of-puppets)
+observed on 2026-10-10 is 66812491/99194876, published 2026-10-09 at 17:13 UTC.
+Our fixed target 66812491/99194740 remains strictly larger. The r6 local
+compilation and three-root audit passed against the historical contract;
+they do not validate a regenerated live contract. The current trusted
+templates and score must be rechecked immediately before submission.
+Earlier complete whole-proof checks used 6734832/10000000.
 
 Three exact declarations are required:
 

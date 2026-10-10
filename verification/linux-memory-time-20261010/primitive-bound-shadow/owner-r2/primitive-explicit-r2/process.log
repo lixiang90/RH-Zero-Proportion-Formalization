@@ -1,0 +1,52 @@
+{"starting": ["/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean", "-j4", "--tstack=32768", "-R", "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source", "-o", "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/lib/PrimitiveExplicit.olean", "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source/PrimitiveExplicit.lean"]}
+PRIMITIVE_PROBE_BEGIN 272602
+/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source/PrimitiveExplicit.lean:43:8: error: Type mismatch: After simplification, term
+  hrev
+ has type
+  gapPotential g j - gapPotential g i ≤ -(5 * ↑(cellLower left j i))
+but is expected to have type
+  5 * ↑(cellLower left j i) + gapPotential g j ≤ gapPotential g i
+/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source/PrimitiveExplicit.lean:82:27: warning: This simp argument is unused:
+  Nat.add_sub_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [gsum_range, Finset.sum_range_succ, Finset.sum_range_zero, zero_add, Nat.add_zero] at hd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source/PrimitiveExplicit.lean:82:47: warning: This simp argument is unused:
+  Finset.sum_range_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [gsum_range, Nat.add_sub_cancel, Finset.sum_range_zero, zero_add, Nat.add_zero] at hd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source/PrimitiveExplicit.lean:83:6: warning: This simp argument is unused:
+  Finset.sum_range_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [gsum_range, Nat.add_sub_cancel, Finset.sum_range_succ, zero_add, Nat.add_zero] at hd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source/PrimitiveExplicit.lean:83:29: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [gsum_range, Nat.add_sub_cancel, Finset.sum_range_succ, Finset.sum_range_zero, Nat.add_zero] at hd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source/PrimitiveExplicit.lean:83:39: warning: This simp argument is unused:
+  Nat.add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [gsum_range, Nat.add_sub_cancel, Finset.sum_range_succ, Finset.sum_range_zero, zero_add] at hd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PRIMITIVE_PROBE_END 273101
+RHWeil.RecordSubmission.FiniteCertificate.primitiveBound_sound_probe_explicit {g : ℕ → ℝ} {left right i j : ℕ}
+  (htheta : ∀ r < 8, 4 / 5 ≤ g r) (hl : InCell 7 PR (lowCell left) g)
+  (hr : InCell 7 PR (lowCell right) fun r => g (r + 1)) (hi : i < 9) (hj : j < 9) :
+  gapPotential g j - gapPotential g i ≤ ↑(primitiveBound left right i j)
+'RHWeil.RecordSubmission.FiniteCertificate.primitiveBound_sound_probe_explicit' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

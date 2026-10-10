@@ -1,0 +1,281 @@
+{
+  "status": "COMPLETED_SHADOW_PROOFS_TWO_PASS_ONE_SOURCE_ERROR_NOT_ADOPTED",
+  "completed_handoff_sha256": "8b6ef65927ad12d015ec6ff63b4600c0e3f98fccb728a4e4a8b39ec5afaba351",
+  "runs": [
+    {
+      "actual_exit_code": 0,
+      "resource_fit": true,
+      "sampled_tree_peak_pss_bytes": 7129774080,
+      "cgroup_peak_bytes": 8389660672,
+      "outside_cgroup_peak_pss_bytes": 295116800,
+      "timeout": false,
+      "oom_kill_count": 0,
+      "sampled_tree_peak_swap_bytes": 0,
+      "boot_id": "6caf73ed-1ebc-467a-ba2a-dd9aa31b1417",
+      "compiler_artifacts_after": {
+        "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/lib/PrimitiveOriginal.olean": {
+          "bytes": 385384,
+          "sha256": "296ace97a0b1cf1ec2e5c915662a5aed7be589b983c14f41c5d44fc6d7cf11a5"
+        }
+      },
+      "audit_artifacts_after": {
+        "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/audit-lib/FreshProbeAudit.olean": {
+          "bytes": 92200,
+          "sha256": "472822d99f19662245e2afcf113e4bc9d62c3fc21280761c25ffb99a90203d84"
+        }
+      },
+      "dependency_family": {
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": {
+          "bytes": 20368,
+          "sha256": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": {
+          "bytes": 11384,
+          "sha256": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": {
+          "bytes": 43896,
+          "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": {
+          "bytes": 92549312,
+          "sha256": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637"
+        }
+      },
+      "run_id": "primitive-original-r2",
+      "source_version": "original_source_r1",
+      "proof_succeeded": true,
+      "owned_worker_elapsed_seconds": 29.763,
+      "cold_preparation_seconds": 28.363,
+      "phase_total_seconds": 59.104,
+      "recorded_body_marker_span_seconds": 0.875,
+      "successful_body_marker_seconds": 0.875,
+      "body_failure_time_excluded_from_speed_comparison": false,
+      "lean_tasks": [
+        {
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/lib/PrimitiveOriginal.olean",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/source/PrimitiveOriginal.lean"
+          ],
+          "actual_exit_code": 0,
+          "elapsed_seconds": 26.19
+        },
+        {
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/audit-source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/audit-lib/FreshProbeAudit.olean",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/original/audit-source/FreshProbeAudit.lean"
+          ],
+          "actual_exit_code": 0,
+          "elapsed_seconds": 2.92
+        }
+      ],
+      "actual_lean_command_sum_seconds": 29.11,
+      "fresh_same_type_standard_axioms_and_no_original_target": true,
+      "checked_closure_constants": 9492,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "raw_log_archive": "runs/primitive-original-r2/process.log.gz",
+      "compiler_artifact_bytes_in_packet": false
+    },
+    {
+      "actual_exit_code": 1,
+      "resource_fit": false,
+      "sampled_tree_peak_pss_bytes": 7019896832,
+      "cgroup_peak_bytes": 8330629120,
+      "outside_cgroup_peak_pss_bytes": 150360064,
+      "timeout": false,
+      "oom_kill_count": 0,
+      "sampled_tree_peak_swap_bytes": 0,
+      "boot_id": "6caf73ed-1ebc-467a-ba2a-dd9aa31b1417",
+      "compiler_artifacts_after": {},
+      "audit_artifacts_after": {},
+      "dependency_family": {
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": {
+          "bytes": 20368,
+          "sha256": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": {
+          "bytes": 11384,
+          "sha256": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": {
+          "bytes": 43896,
+          "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": {
+          "bytes": 92549312,
+          "sha256": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637"
+        }
+      },
+      "run_id": "primitive-explicit-r2",
+      "source_version": "failed_explicit_source_r1",
+      "proof_succeeded": false,
+      "owned_worker_elapsed_seconds": 26.005,
+      "cold_preparation_seconds": 28.907,
+      "phase_total_seconds": 56.096,
+      "recorded_body_marker_span_seconds": 0.499,
+      "successful_body_marker_seconds": null,
+      "body_failure_time_excluded_from_speed_comparison": true,
+      "lean_tasks": [
+        {
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/lib/PrimitiveExplicit.olean",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r2/explicit/source/PrimitiveExplicit.lean"
+          ],
+          "actual_exit_code": 1,
+          "elapsed_seconds": 25.623
+        }
+      ],
+      "actual_lean_command_sum_seconds": 25.623,
+      "fresh_same_type_standard_axioms_and_no_original_target": false,
+      "checked_closure_constants": null,
+      "axioms": [
+        "sorryAx observed during failed elaboration; no accepted proof"
+      ],
+      "raw_log_archive": "runs/primitive-explicit-r2/process.log.gz",
+      "compiler_artifact_bytes_in_packet": false
+    },
+    {
+      "actual_exit_code": 0,
+      "resource_fit": true,
+      "sampled_tree_peak_pss_bytes": 7151198208,
+      "cgroup_peak_bytes": 8363720704,
+      "outside_cgroup_peak_pss_bytes": 197124096,
+      "timeout": false,
+      "oom_kill_count": 0,
+      "sampled_tree_peak_swap_bytes": 0,
+      "boot_id": "5122a683-459b-4584-8073-e57b69843ef0",
+      "compiler_artifacts_after": {
+        "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/lib/PrimitiveExplicit.olean": {
+          "bytes": 355592,
+          "sha256": "df09501ab83885e27a06a5d6ee494aae8ba129773a99345395f2713dbcb30a42"
+        }
+      },
+      "audit_artifacts_after": {
+        "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/audit-lib/FreshProbeAudit.olean": {
+          "bytes": 92200,
+          "sha256": "a0687ccb551b08e085327f8a6ca3bf1f03c2a53dbeb2d27530d6f40d4dbcbf76"
+        }
+      },
+      "dependency_family": {
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": {
+          "bytes": 20368,
+          "sha256": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": {
+          "bytes": 11384,
+          "sha256": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": {
+          "bytes": 43896,
+          "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+        },
+        "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": {
+          "bytes": 92549312,
+          "sha256": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637"
+        }
+      },
+      "run_id": "primitive-explicit-source-r2-native-r3",
+      "source_version": "repaired_explicit_source_r2",
+      "proof_succeeded": true,
+      "owned_worker_elapsed_seconds": 29.677,
+      "cold_preparation_seconds": 27.717,
+      "phase_total_seconds": 59.098,
+      "recorded_body_marker_span_seconds": 0.528,
+      "successful_body_marker_seconds": 0.528,
+      "body_failure_time_excluded_from_speed_comparison": false,
+      "lean_tasks": [
+        {
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/lib/PrimitiveExplicit.olean",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/source/PrimitiveExplicit.lean"
+          ],
+          "actual_exit_code": 0,
+          "elapsed_seconds": 26.403
+        },
+        {
+          "command": [
+            "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+            "-j4",
+            "--tstack=32768",
+            "-R",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/audit-source",
+            "-o",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/audit-lib/FreshProbeAudit.olean",
+            "/tmp/rh-proportion-memory-20261010/primitive-bound-shadow-20261010-r3/explicit/audit-source/FreshProbeAudit.lean"
+          ],
+          "actual_exit_code": 0,
+          "elapsed_seconds": 2.958
+        }
+      ],
+      "actual_lean_command_sum_seconds": 29.361,
+      "fresh_same_type_standard_axioms_and_no_original_target": true,
+      "checked_closure_constants": 9509,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "raw_log_archive": "runs/primitive-explicit-source-r2-native-r3/process.log.gz",
+      "compiler_artifact_bytes_in_packet": false
+    }
+  ],
+  "successful_pair_observations": {
+    "owned_worker_elapsed_seconds_saved": 0.086,
+    "actual_lean_command_sum_seconds_increase": 0.251,
+    "body_marker_seconds_saved": 0.347,
+    "pss_bytes_increase": 21424128,
+    "cross_boot_single_pair": true,
+    "uninterrupted_same_boot_controlled_pair": false
+  },
+  "timing_field_scope": {
+    "owned_worker_elapsed": "V3 owned process elapsed includes driver/bindings/cleanup and compilation plus audit, rather than pure Lean task sums.",
+    "actual_lean_command_sum": "Recorded task elapsed fields summed; imports included. Original 26.190+2.920; repaired 26.403+2.958.",
+    "body_marker_span": "Per-process BEGIN/END monotonic marker span after the imported module; only a successful proof span enters comparison.",
+    "phase_total": "Outer completed phase includes cold preparation and supervision."
+  },
+  "owner_terminology_correction": "Immutable owner analysis calls 0.086 worker_plus_audit savings; interpret as owned-worker elapsed. Pure Lean task sum increased by 0.251 seconds.",
+  "dependency_scope": "Exact completed r6 source 5227a25e and artifact 10b3102a were reused; no runtime artifact was read or copied by this file-only archiver.",
+  "scope_limits": [
+    "One successful comparison across different boots; fixed artifacts/cold preparation do not establish uninterrupted identical-host state.",
+    "Both probes import the full post-module environment. Actual used-constant checks exclude the original target, but this is not in-situ prefix timing.",
+    "Failure span 0.499 seconds is not successful proof timing; sorryAx is failed elaboration recovery, not an admitted new axiom.",
+    "PSS increased slightly; no RAM improvement or stable overall gain is established.",
+    "No whole candidate replacement, fresh whole compile, live-contract check, export/core/default-kernel/Nanoda replay or official acceptance is claimed."
+  ],
+  "formal_adoption": false,
+  "candidate_modified": false,
+  "r6_compile_resource_fit_remains": false,
+  "live_contract_validated": false,
+  "website_acceptance": false,
+  "original_d52_unchanged": true,
+  "independent_file_review_pending": true,
+  "proof_execution_by_archiver": false
+}

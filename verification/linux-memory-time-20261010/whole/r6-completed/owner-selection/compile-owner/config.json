@@ -1,0 +1,146 @@
+{
+  "status": "STAGED_NO_PROOF_EXECUTION",
+  "root": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6",
+  "toolroot": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6",
+  "sources": {
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps.lean": "14d359e1ba8336bc81d4722a7030a073ea78ffad523168b616af6f42840ddc05",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps/CandidateSpec.lean": "0618216894744f91d73330883af75eafe6937a8a871dd4cc385ebdaf32982e24",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Challenge/Candidate.lean": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-source/FreshCandidateAudit.lean": "75449219ea6dd20fabc5f97fb5fb68e579f0f74a30006b90ccc49b0077f83e96"
+  },
+  "tool_config_bindings": {
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/nanoda-official-default-config.json": "2987e5c358c760bc0a5cdb964485f370dc99e3da75c53bee8e600a41245c9a50",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/comparator-config-candidate.json": "430b6cdce56f2b7e3ba448a734c905093b28fc65687f382dd546a17e788c6ecf"
+  },
+  "source_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+  "source_bytes": 1993837,
+  "upstream_prepared_plan_sha256": "251161300ee0fc882656e6f7efaa8a7f74697165e049acdd4aa27f0526474fbc",
+  "native_plan_sha256": "23bcde328a996d41b384782d8011ecfc5c7888428067340e03e687128d5c268c",
+  "driver_sha256": "db28df608ce9dac67b5f94798beaa1ca9c35f28e92f49e1068cd6f30796bfd79",
+  "harness_sha256": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+  "lean_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "nano_sha256": "b19804767cb72bf5a317fcfc20e8af7eafdfba789dd6b24bddee2574379ff35a",
+  "contract": {
+    "website": {
+      "repository": "josusanmartin/riemann",
+      "commit": "6664d243005e12e155c19775b83f53721757414b",
+      "files": [
+        {
+          "path": "data/records.json",
+          "sha256": "39b617077b62070be22279957ff912aca467995fcac47901512ef6cd4660ac43",
+          "bytes": 38350
+        },
+        {
+          "path": "challenge/templates/CandidateSpec.lean.tmpl",
+          "sha256": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c",
+          "bytes": 343
+        },
+        {
+          "path": "challenge/templates/Challenge.Candidate.lean",
+          "sha256": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378",
+          "bytes": 812
+        },
+        {
+          "path": "challenge/contract.json",
+          "sha256": "39e1b5a99889cf2c50865883d2007df949bcfced107c92917fe9cd3ab6441020",
+          "bytes": 2523
+        },
+        {
+          "path": "scripts/prepare-candidate.ts",
+          "sha256": "78c2e712b83e793ae86704c652e995f3c6e319dc42da68b7978a73999309149a",
+          "bytes": 6078
+        }
+      ]
+    },
+    "current_record_id": "attempt-016",
+    "current_record_expression": "(6735015 : ℝ) / 10000000",
+    "candidate_score": {
+      "numerator": "66812491",
+      "denominator": "99194740"
+    },
+    "generation_matches_prepare_candidate_lines_26_29_and_90_93": true,
+    "trusted_parent_source": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\zeta23\\comparator\\ChallengeDeps.lean",
+    "generated": [
+      {
+        "path": "ChallengeDeps.lean",
+        "bytes": 6984,
+        "sha256": "14d359e1ba8336bc81d4722a7030a073ea78ffad523168b616af6f42840ddc05"
+      },
+      {
+        "path": "ChallengeDeps/CandidateSpec.lean",
+        "bytes": 335,
+        "sha256": "0618216894744f91d73330883af75eafe6937a8a871dd4cc385ebdaf32982e24"
+      },
+      {
+        "path": "Challenge/Candidate.lean",
+        "bytes": 812,
+        "sha256": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378"
+      }
+    ],
+    "compiled": false,
+    "whole_submission_verified": false,
+    "submitted": false
+  },
+  "packages": [
+    "/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean"
+  ],
+  "targets": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "export_targets": [
+    "Nat",
+    "String",
+    "String.mk",
+    "Char",
+    "Quot",
+    "Quot.mk",
+    "Quot.lift",
+    "Quot.ind",
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative",
+    "propext",
+    "Quot.sound",
+    "Classical.choice",
+    "Nat.add",
+    "Nat.sub",
+    "Nat.mul",
+    "Nat.pow",
+    "Nat.gcd",
+    "Nat.div",
+    "Nat.mod",
+    "Nat.beq",
+    "Nat.ble",
+    "Nat.land",
+    "Nat.lor",
+    "Nat.xor",
+    "Nat.shiftLeft",
+    "Nat.shiftRight",
+    "String.ofList",
+    "Char.ofNat",
+    "List",
+    "eagerReduce"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "explicit_experimental_compiler_flags": [
+    "-j4",
+    "--tstack=32768"
+  ],
+  "official_stack_flag_established": false,
+  "scope": "Independent local phases, 4 CPU/8 GiB/no-swap cgroup inside 32 GiB WSL; not E2B/Landlock or website acceptance."
+}

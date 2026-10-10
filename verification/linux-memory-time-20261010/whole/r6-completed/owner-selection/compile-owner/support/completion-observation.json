@@ -1,0 +1,17 @@
+{
+  "observed_unix": 1791591045.4162939,
+  "run_id": "whole-globalfalse-compile-r6",
+  "cgroup_exists": true,
+  "memory.usage_in_bytes": "548864",
+  "memory.max_usage_in_bytes": "8589938688",
+  "memory.failcnt": "64",
+  "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+  "processes": [],
+  "current_sampled_tree_pss_bytes": 0,
+  "current_sampled_tree_rss_bytes": 0,
+  "cgroup_cpuacct_usage_nanoseconds": 3055643793200,
+  "latest_harness_proof_elapsed_seconds": 2989.7,
+  "observed_barriers_lower_bound": 162,
+  "barrier_scope": "Buffered stdout count is only a lower bound, not evidence of a stalled proof.",
+  "log_tail": "e.lean:23369:86: warning: Variable name `U57` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _U57\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean:23528:1: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\n/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean:23545:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\n{\"label\": \"Solution.Candidate\", \"exit_code\": 0, \"seconds\": 2993.015}\n"
+}

@@ -1,0 +1,8 @@
+import Solution.Candidate
+set_option pp.universes true
+#check candidate_strict_improvement
+#print axioms candidate_strict_improvement
+#check candidate_critical_line_bound
+#print axioms candidate_critical_line_bound
+#check candidate_critical_line_bound_cumulative
+#print axioms candidate_critical_line_bound_cumulative

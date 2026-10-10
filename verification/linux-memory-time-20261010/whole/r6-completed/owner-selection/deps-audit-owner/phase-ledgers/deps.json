@@ -1,0 +1,674 @@
+{
+  "run_id": "whole-globalfalse-deps-r6",
+  "command": [
+    "/usr/bin/python3",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/whole_candidate_native_driver_20261010.py",
+    "--native-root",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6",
+    "--config-sha",
+    "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+    "--phase",
+    "deps",
+    "--worker",
+    "--tasks-file",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/phase-ledgers/deps-tasks.json",
+    "--tasks-sha",
+    "abcec1d6495533167b41ec34b63a8bb38a286cd1d3d3596db6d1fad3d997791e"
+  ],
+  "cwd": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source",
+  "proof_uid": 1000,
+  "configuration": {
+    "memory.limit_in_bytes": "8589934592",
+    "memory.memsw.limit_in_bytes": "8589934592",
+    "memory.swappiness": "0",
+    "cpu.cfs_period_us": "100000",
+    "cpu.cfs_quota_us": "400000",
+    "cpuset.mems": "0",
+    "cpuset.cpus": "0-3"
+  },
+  "actual_exit_code": 0,
+  "timeout": false,
+  "oom_kill_count": 0,
+  "memory_limit_hit": false,
+  "elapsed_seconds": 0.598,
+  "initial_cgroup": {
+    "memory.usage_in_bytes": "0",
+    "memory.max_usage_in_bytes": "0",
+    "memory.memsw.usage_in_bytes": "0",
+    "memory.memsw.max_usage_in_bytes": "0",
+    "memory.failcnt": "0",
+    "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+    "memory.stat": "cache 0\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 0\nwriteback 0\nswap 0\npgpgin 0\npgpgout 0\npgfault 0\npgmajfault 0\ninactive_anon 0\nactive_anon 0\ninactive_file 0\nactive_file 0\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 0\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 0\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 0\ntotal_pgpgout 0\ntotal_pgfault 0\ntotal_pgmajfault 0\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 0\ntotal_active_file 0\ntotal_unevictable 0",
+    "cpu.stat": "nr_periods 0\nnr_throttled 0\nthrottled_time 0",
+    "cpuacct.usage": "0"
+  },
+  "final_cgroup": {
+    "memory.usage_in_bytes": "94187520",
+    "memory.max_usage_in_bytes": "124174336",
+    "memory.memsw.usage_in_bytes": "94187520",
+    "memory.memsw.max_usage_in_bytes": "124174336",
+    "memory.failcnt": "0",
+    "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+    "memory.stat": "cache 93659136\nrss 0\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 8192\nwriteback 0\nswap 0\npgpgin 26550\npgpgout 3678\npgfault 6453\npgmajfault 690\ninactive_anon 0\nactive_anon 0\ninactive_file 93470720\nactive_file 188416\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 93659136\ntotal_rss 0\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 8192\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 26550\ntotal_pgpgout 3678\ntotal_pgfault 6453\ntotal_pgmajfault 690\ntotal_inactive_anon 0\ntotal_active_anon 0\ntotal_inactive_file 93470720\ntotal_active_file 188416\ntotal_unevictable 0",
+    "cpu.stat": "nr_periods 4\nnr_throttled 0\nthrottled_time 0",
+    "cpuacct.usage": "77089900"
+  },
+  "sampled_tree_peak_rss_bytes": 581632,
+  "sampled_tree_peak_pss_bytes": 846848,
+  "sampled_tree_peak_swap_bytes": 0,
+  "per_process": {
+    "14:337921": {
+      "pid": 14,
+      "name": "python3",
+      "uid": 1000,
+      "rss_bytes": 581632,
+      "pss_bytes": 846848,
+      "swap_bytes": 0,
+      "threads": 1,
+      "starttime": 337921,
+      "cpu_ticks": 0,
+      "peak_rss_bytes": 581632,
+      "peak_pss_bytes": 846848,
+      "peak_swap_bytes": 0
+    }
+  },
+  "inputs_before": {
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/whole_candidate_native_driver_20261010.py": "db28df608ce9dac67b5f94798beaa1ca9c35f28e92f49e1068cd6f30796bfd79",
+    "/mnt/e/codex-build/RH-Weil/tmp/linux_cgroup_resource_harness_v3_20261010.py": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/config.json": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/phase-ledgers/deps-tasks.json": "abcec1d6495533167b41ec34b63a8bb38a286cd1d3d3596db6d1fad3d997791e",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps.lean": "14d359e1ba8336bc81d4722a7030a073ea78ffad523168b616af6f42840ddc05",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps/CandidateSpec.lean": "0618216894744f91d73330883af75eafe6937a8a871dd4cc385ebdaf32982e24",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Challenge/Candidate.lean": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-source/FreshCandidateAudit.lean": "75449219ea6dd20fabc5f97fb5fb68e579f0f74a30006b90ccc49b0077f83e96",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/nanoda-official-default-config.json": "2987e5c358c760bc0a5cdb964485f370dc99e3da75c53bee8e600a41245c9a50",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/comparator-config-candidate.json": "430b6cdce56f2b7e3ba448a734c905093b28fc65687f382dd546a17e788c6ecf",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export.lean": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export/Parse.lean": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Util.lean": "a3c7f05b027fef1b5a25a9bd26cd31998c2835583e029fc15970dad257d5137b",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Axioms.lean": "09fd2bd68775bc500e55d9ff5ab6dc9c4c57d11ab33d7a87eb76a0d365cd7ac4",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Compare.lean": "e5dfe4f040c21ab5defb4d27b6f229e581c6dabafc30d7adb07c872196914a62",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator.lean": "3becb55ec42f66fd9a57ea6edeb1e3eaaffccc98498d584730c4d632758924cb",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/exporter/Main.lean": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/comparator/Main.lean": "daca4ccb38b2dc7356ee4b47667980b290c3f27f970800723309e4d074f0c5be",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/core/tools/ComparatorCoreAudit.lean": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/optional-exporter-lake/lakefile.toml": "32856b29ddfae3718a6f101907503cbaf80ff61ce01ad11e98c5e449b31cd898",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/exporter.lean-toolchain": "a3997b5ad01979b25dae3b76f397dcb7c2392c3c838eb4bca83d4456a89b38aa",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lean-toolchain": "a3997b5ad01979b25dae3b76f397dcb7c2392c3c838eb4bca83d4456a89b38aa",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lakefile.toml": "83d6b828bbe079b420dcb733139331bef5b71fa16593bdf2c015d0167796647d",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lake-manifest.json": "d66b2b0ba1410ac628736f0a3612dcdd72a700013d0a66cbbf4adaffd0054010",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/licenses/lean4export.LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/licenses/Comparator.LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  },
+  "inputs_after": {
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/whole_candidate_native_driver_20261010.py": "db28df608ce9dac67b5f94798beaa1ca9c35f28e92f49e1068cd6f30796bfd79",
+    "/mnt/e/codex-build/RH-Weil/tmp/linux_cgroup_resource_harness_v3_20261010.py": "e192787f00ea5ceb0c77a06969bb832136b751337a475dd0e63619743f4d24ec",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/config.json": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/phase-ledgers/deps-tasks.json": "abcec1d6495533167b41ec34b63a8bb38a286cd1d3d3596db6d1fad3d997791e",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps.lean": "14d359e1ba8336bc81d4722a7030a073ea78ffad523168b616af6f42840ddc05",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/ChallengeDeps/CandidateSpec.lean": "0618216894744f91d73330883af75eafe6937a8a871dd4cc385ebdaf32982e24",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Challenge/Candidate.lean": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-source/FreshCandidateAudit.lean": "75449219ea6dd20fabc5f97fb5fb68e579f0f74a30006b90ccc49b0077f83e96",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/nanoda-official-default-config.json": "2987e5c358c760bc0a5cdb964485f370dc99e3da75c53bee8e600a41245c9a50",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/comparator-config-candidate.json": "430b6cdce56f2b7e3ba448a734c905093b28fc65687f382dd546a17e788c6ecf",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542",
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export.lean": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export/Parse.lean": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Util.lean": "a3c7f05b027fef1b5a25a9bd26cd31998c2835583e029fc15970dad257d5137b",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Axioms.lean": "09fd2bd68775bc500e55d9ff5ab6dc9c4c57d11ab33d7a87eb76a0d365cd7ac4",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Compare.lean": "e5dfe4f040c21ab5defb4d27b6f229e581c6dabafc30d7adb07c872196914a62",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator.lean": "3becb55ec42f66fd9a57ea6edeb1e3eaaffccc98498d584730c4d632758924cb",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/exporter/Main.lean": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/comparator/Main.lean": "daca4ccb38b2dc7356ee4b47667980b290c3f27f970800723309e4d074f0c5be",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/entry/core/tools/ComparatorCoreAudit.lean": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/optional-exporter-lake/lakefile.toml": "32856b29ddfae3718a6f101907503cbaf80ff61ce01ad11e98c5e449b31cd898",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/exporter.lean-toolchain": "a3997b5ad01979b25dae3b76f397dcb7c2392c3c838eb4bca83d4456a89b38aa",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lean-toolchain": "a3997b5ad01979b25dae3b76f397dcb7c2392c3c838eb4bca83d4456a89b38aa",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lakefile.toml": "83d6b828bbe079b420dcb733139331bef5b71fa16593bdf2c015d0167796647d",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/upstream-metadata/comparator.lake-manifest.json": "d66b2b0ba1410ac628736f0a3612dcdd72a700013d0a66cbbf4adaffd0054010",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/licenses/lean4export.LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/licenses/Comparator.LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  },
+  "inputs_unchanged": true,
+  "log_sha256": "4572366e6f80d9f31f4bb8b2ef23afd151a6973ce8721387658e70407f734cfd",
+  "samples": [
+    {
+      "elapsed_seconds": 0.003,
+      "group": {
+        "memory.usage_in_bytes": "651264",
+        "memory.max_usage_in_bytes": "651264",
+        "memory.memsw.usage_in_bytes": "651264",
+        "memory.memsw.max_usage_in_bytes": "651264",
+        "memory.failcnt": "0",
+        "memory.oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0",
+        "memory.stat": "cache 0\nrss 409600\nrss_huge 0\nshmem 0\nmapped_file 0\ndirty 0\nwriteback 0\nswap 0\npgpgin 171\npgpgout 65\npgfault 231\npgmajfault 0\ninactive_anon 397312\nactive_anon 4096\ninactive_file 0\nactive_file 0\nunevictable 0\nhierarchical_memory_limit 8589934592\nhierarchical_memsw_limit 8589934592\ntotal_cache 0\ntotal_rss 409600\ntotal_rss_huge 0\ntotal_shmem 0\ntotal_mapped_file 0\ntotal_dirty 0\ntotal_writeback 0\ntotal_swap 0\ntotal_pgpgin 171\ntotal_pgpgout 65\ntotal_pgfault 229\ntotal_pgmajfault 0\ntotal_inactive_anon 397312\ntotal_active_anon 4096\ntotal_inactive_file 0\ntotal_active_file 0\ntotal_unevictable 0",
+        "cpu.stat": "nr_periods 0\nnr_throttled 0\nthrottled_time 0",
+        "cpuacct.usage": "52800"
+      },
+      "tree_rss_bytes": 581632,
+      "tree_pss_bytes": 846848,
+      "tree_swap_bytes": 0,
+      "processes": [
+        {
+          "pid": 14,
+          "name": "python3",
+          "uid": 1000,
+          "rss_bytes": 581632,
+          "pss_bytes": 846848,
+          "swap_bytes": 0,
+          "threads": 1,
+          "starttime": 337921,
+          "cpu_ticks": 0
+        }
+      ]
+    }
+  ],
+  "scope": "Private Linux cgroup-v1 component resource experiment: scoped imported-artifact cache pages were evicted and checked nonresident before launch, with no concurrent owned proof processes. Owned group capped at 4 CPUs and 8 GiB with no swap; enclosing WSL VM remains32GiB. Kernel, unrelated file cache, source filesystem and cross-group charge ownership still differ from a whole official8GiBVM. RSS/PSS, cache residency and cgroup counters are all reported. No exact official reproduction or website acceptance claim.",
+  "harness_version": 3,
+  "scoped_eviction": {
+    "status": "PASS",
+    "method": "Per-owned-file readonly-fd fsync then POSIX_FADV_DONTNEED; PROT_NONE mmap/mincore before and after; no global drop_caches",
+    "roots": [
+      "/tmp/rh-proportion-memory-20261010/native-cache",
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/lib",
+      "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib",
+      "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/audit-lib",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+    ],
+    "page_size": 4096,
+    "scope": "Only selected artifact/shared-library files and exact Lean/Lake executables. Kernel, unrelated file cache and WSL VM size are unchanged.",
+    "file_count": 56033,
+    "file_bytes": 8791850265,
+    "before_resident_page_bytes": 97656832,
+    "after_resident_page_bytes": 0,
+    "all_selected_pages_nonresident": true,
+    "elapsed_seconds": 28.511
+  },
+  "scoped_eviction_sha256": "d6fecbc32f698adaeb8de99541af1909ea8e3f69b60c3a801aa19b487fccd307",
+  "sampled_pss_exceeds_memory_limit": false,
+  "cgroup_peak_bytes": 124174336,
+  "cgroup_pss_peak_gap_bytes": -123327488,
+  "proof_succeeded": true,
+  "resource_fit": true,
+  "resource_fit_scope": "Observed component resource fit under this scoped-cache experiment, not full official VM fit; sampled PSS may miss between-sample peaks.",
+  "resource_status": "OBSERVED_COMPONENT_FIT",
+  "phase": "deps",
+  "supervisor_exit_code": 0,
+  "authorization_note": "ROOT_GO_20261010_INDEPENDENT_DEPS_AUDIT_AFTER_COMPILE_PASS_RESOURCE_GATE_FALSE",
+  "actual_phase_total_wall_seconds": 30.057,
+  "source_sha256": "5227a25ea2c5f18c83e0a85c756e34ec9a0176a1ba9d1cd5f5556aab836ba7a2",
+  "source_bytes": 1993837,
+  "config_sha256": "ec3cc48754945e0fb7361bd88edced444bd8a491fce20bc6452b4a465c61afbf",
+  "resource_record_directory": "/tmp/rh-proportion-memory-20261010/resource-runs/whole-globalfalse-deps-r6",
+  "artifact_family_after": {
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Challenge/Candidate.olean": {
+      "bytes": 20368,
+      "sha256": "60ace078a6a388ceea6aa589daaec4a343989789f44afa7a892e082abcd561ba"
+    },
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps/CandidateSpec.olean": {
+      "bytes": 11384,
+      "sha256": "2dc37e3b310dc91678b029695784a58b60216334fdeead36ee40b43d7543a071"
+    },
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/ChallengeDeps.olean": {
+      "bytes": 43896,
+      "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+    },
+    "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean": {
+      "bytes": 92549312,
+      "sha256": "10b3102a06d9dca49000fc6741b3c164a37903db56af80f7131ea0c5b4b8a637"
+    }
+  },
+  "tool_family_after": {
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean": {
+      "bytes": 310664,
+      "sha256": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac"
+    },
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean": {
+      "bytes": 489488,
+      "sha256": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df"
+    },
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean": {
+      "bytes": 109624,
+      "sha256": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839"
+    },
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean": {
+      "bytes": 1576,
+      "sha256": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315"
+    },
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean": {
+      "bytes": 2041184,
+      "sha256": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9"
+    },
+    "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean": {
+      "bytes": 2050704,
+      "sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+    }
+  },
+  "outside_cgroup_memory_samples": [
+    {
+      "seconds": 0.0,
+      "caller": {
+        "rss_bytes": 27758592,
+        "pss_bytes": 27428864,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 1429504,
+        "pss_bytes": 899072,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 1.002,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23502848,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 50311168,
+        "pss_bytes": 45981696,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 2.003,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23502848,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 74027008,
+        "pss_bytes": 69697536,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 3.005,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23451648,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 76247040,
+        "pss_bytes": 71866368,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 4.007,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23451648,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 76587008,
+        "pss_bytes": 72206336,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 5.008,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23451648,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 76587008,
+        "pss_bytes": 72206336,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 6.01,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23451648,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 77082624,
+        "pss_bytes": 72701952,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 7.012,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 79261696,
+        "pss_bytes": 74850304,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 8.014,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 81362944,
+        "pss_bytes": 76951552,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 9.016,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 83476480,
+        "pss_bytes": 79065088,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 10.017,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 85643264,
+        "pss_bytes": 81231872,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 11.019,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 87683072,
+        "pss_bytes": 83271680,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 12.021,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 89718784,
+        "pss_bytes": 85307392,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 13.022,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 91840512,
+        "pss_bytes": 87429120,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 14.024,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 93941760,
+        "pss_bytes": 89530368,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 15.026,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 96047104,
+        "pss_bytes": 91635712,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 16.028,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 97976320,
+        "pss_bytes": 93564928,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 17.03,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 100061184,
+        "pss_bytes": 95649792,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 18.032,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 102068224,
+        "pss_bytes": 97656832,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 19.034,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 104058880,
+        "pss_bytes": 99647488,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 20.036,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 106135552,
+        "pss_bytes": 101724160,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 21.038,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 108122112,
+        "pss_bytes": 103710720,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 22.04,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 110112768,
+        "pss_bytes": 105701376,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 23.043,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 112209920,
+        "pss_bytes": 107798528,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 24.045,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 114343936,
+        "pss_bytes": 109932544,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 25.047,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 116363264,
+        "pss_bytes": 111951872,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 26.049,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 118366208,
+        "pss_bytes": 113954816,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 27.051,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 120438784,
+        "pss_bytes": 116027392,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 28.053,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 122540032,
+        "pss_bytes": 118128640,
+        "swap_bytes": 0
+      }
+    },
+    {
+      "seconds": 29.055,
+      "caller": {
+        "rss_bytes": 27832320,
+        "pss_bytes": 23420928,
+        "swap_bytes": 0
+      },
+      "harness_supervisor": {
+        "rss_bytes": 246878208,
+        "pss_bytes": 242466816,
+        "swap_bytes": 0
+      }
+    }
+  ],
+  "outside_cgroup_peak_pss_bytes": 265887744,
+  "shared_clock": {
+    "start_unix": 1791587911.395401,
+    "start_monotonic": 1.548903586,
+    "boot_id": "75f9dc6f-223f-44fd-baa3-4b49ae3cd704",
+    "official_inner_seconds": 3200,
+    "scope": "Actual local elapsed starts before current contract build, includes every later local cold preparation and caller delay. Tools prebuild excluded. Separate phases/reordered checks differ from official retained-strings pipeline."
+  },
+  "actual_shared_elapsed_seconds": 3378.517,
+  "actual_shared_wall_clock_elapsed_seconds": 3378.517,
+  "enforce_shared_budget": false,
+  "official_fit_claimed": false,
+  "website_accepted": false,
+  "deps_fresh_current_contract_only": true
+}

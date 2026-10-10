@@ -1,0 +1,86 @@
+[
+  {
+    "label": "Export",
+    "command": [
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+      "-o",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export.olean",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export.lean"
+    ],
+    "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+  },
+  {
+    "label": "Export.Parse",
+    "command": [
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+      "-o",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Export/Parse.olean",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Export/Parse.lean"
+    ],
+    "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+  },
+  {
+    "label": "Comparator.Util",
+    "command": [
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+      "-o",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Util.olean",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Util.lean"
+    ],
+    "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+  },
+  {
+    "label": "Comparator.Axioms",
+    "command": [
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+      "-o",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Axioms.olean",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Axioms.lean"
+    ],
+    "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+  },
+  {
+    "label": "Comparator.Compare",
+    "command": [
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+      "-o",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator/Compare.olean",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator/Compare.lean"
+    ],
+    "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+  },
+  {
+    "label": "Comparator",
+    "command": [
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "--tstack=32768",
+      "-R",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source",
+      "-o",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib/Comparator.olean",
+      "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-source/Comparator.lean"
+    ],
+    "lean_path": "/tmp/rh-proportion-memory-20261010/verifier-native-20261010-r6/tool-lib"
+  }
+]

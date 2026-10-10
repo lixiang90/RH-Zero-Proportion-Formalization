@@ -1,0 +1,11 @@
+--- r1-failed-PrimitiveExplicit.lean
++++ r2-PrimitiveExplicit.lean
+@@ -40,7 +40,7 @@
+         push_cast
+         norm_num
+         have hrev := (framePotential_upper (i := j) (j := i) hl (by omega) hframe.1).2
+-        simpa only [neg_mul] using hrev
++        linear_combination hrev
+     · simpa only [if_neg hframe, Int.cast_ofNat] using hinf
+   have hsecond : gapPotential g j - gapPotential g i ≤
+       (if 1 ≤ i ∧ 1 ≤ j then

@@ -28,8 +28,9 @@ No website record has been obtained, and resource optimization remains in progre
 
 A same-Linux AM component pair reduced compilation from 553.329 to 448.761
 seconds (18.9%); its small PSS change does not establish a memory gain.
-The first replacement trial was cut off after memory-resource checks failed.
-A further scheduling version is undergoing full verification. See the
+The r6 whole-file compile and three-root standard-axiom audit passed locally,
+but its memory gate failed. Full replay and fresh live-contract checks remain
+pending; the published submission is unchanged. See the
 [resource evidence](verification/linux-memory-time-20261010/README.md).
 
 | Component | Verification status |

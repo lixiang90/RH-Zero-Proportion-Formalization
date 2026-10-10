@@ -1,0 +1,43 @@
+{
+  "first_sample_with_failcnt": {
+    "elapsed_seconds": 2979.365,
+    "failcnt": 6,
+    "memory_current_bytes": 8589918208,
+    "memory_peak_bytes": 8589938688,
+    "pss_bytes": 7154494464,
+    "cpuacct_nanoseconds": 3046480162100
+  },
+  "preceding_sample": {
+    "elapsed_seconds": 2978.821,
+    "failcnt": 0,
+    "memory_current_bytes": 8589852672,
+    "memory_peak_bytes": 8589934592,
+    "pss_bytes": 7131745280,
+    "cpuacct_nanoseconds": 3046347459000
+  },
+  "last_sample": {
+    "elapsed_seconds": 2992.948,
+    "failcnt": 64,
+    "memory_current_bytes": 2384224256,
+    "memory_peak_bytes": 8589938688,
+    "pss_bytes": 11547648,
+    "cpuacct_nanoseconds": 3055535207400
+  },
+  "final_failcnt": 64,
+  "oom_kill_count": 0,
+  "actual_exit_code": 0,
+  "timeout": false,
+  "proof_succeeded": true,
+  "resource_fit": false,
+  "sample_time_scope": "Seconds since owned proof worker start, sampled timing is an interval bound, not exact failure instant.",
+  "artifact_write_causation_claimed": false,
+  "owned_solution_artifact_stat": {
+    "path": "/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/lib/Solution/Candidate.olean",
+    "bytes": 92549312,
+    "mtime_unix_ns": 1791591013576249806,
+    "ctime_unix_ns": 1791591013576249806,
+    "scope": "Filesystem metadata only; not an observed write-start/end interval."
+  },
+  "explicit_write_phase_marker_present": false,
+  "process_log_tail": "silence this warning:\n  [apply] _U57\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean:23528:1: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\n/tmp/rh-proportion-memory-20261010/whole-native-20261010-r6/source/Solution/Candidate.lean:23545:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\n{\"label\": \"Solution.Candidate\", \"exit_code\": 0, \"seconds\": 2993.015}\n"
+}

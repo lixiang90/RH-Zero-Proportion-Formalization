@@ -4,9 +4,12 @@ These records concern resources for the fixed result `66812491/99194740`.
 The f40 full-file trial was intentionally cut off after the local memory gate
 failed; no complete proof or downstream check was obtained. Its
 [completed archive](whole/r5-completed/README.md) retains the measurements.
-The [global-synchronous follow-up](whole/r6-source-only/README.md) is under
-fresh full-file verification. The original checked d52 public Solution remains
-unchanged, and no website acceptance is claimed.
+The global-synchronous follow-up passed complete local compilation and a
+fresh three-root standard-axiom audit, but failed its memory resource gate
+(64 failed charges, no OOM kill). Its [completed records](whole/r6-completed/README.md)
+preserve that distinction and the historical contract. Exports, independent
+replay, Comparator and live-contract validation remain unrun. The original
+checked d52 public Solution remains unchanged; no website acceptance is claimed.
 
 | Checked component | Observed result | Limit |
 |---|---|---|
@@ -14,6 +17,11 @@ unchanged, and no website acceptance is claimed.
 | AM sampled peak PSS | 7.51 → 7.45 GiB | No significant memory gain; both cgroup peaks reached 8 GiB |
 | All 49 selected-pivot goals | 36.751 → 33.881 s numeric proof time; both compiles and fresh audits passed | One ordered pair; extra whole-helper elaboration/replay cost excluded |
 | Packet equality checkpoint | 2.780 → 2.617 s including preparation | Rejected for adoption; negligible memory change |
+
+The [primitive-bound shadow test](primitive-bound-shadow/README.md) preserved
+an original pass, a source-error failure, and a repaired pass. Actual Lean
+compile/audit commands took 29.110 versus 29.361 seconds across a reboot;
+there is no stable overall speed or memory improvement, and no adoption.
 
 All audited roots use only subsets of `propext`, `Classical.choice` and
 `Quot.sound`. Native Linux component runs used the pinned compiler, an 8 GiB
