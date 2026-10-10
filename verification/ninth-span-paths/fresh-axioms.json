@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "wall_seconds": 18.25,
+  "pins": {
+    "source": "f31dae379c2200807ec392dfd7bf91d6375bd09a269cee78a676a54ac107bf8d",
+    "olean": "0160bcebcd3266eeb34d8ef7aa07d3a2098079bcd464112bb244c248b5f59744",
+    "audit": "05ae6417dfe29ba813e0f3ea49aaedb08f05d052fb5580e9ca42417ad7f5da6d"
+  },
+  "axioms": {
+    "cost_real_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "check_real_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "log_sha256": "a38ed5e72d408f27bb7edac3152a106f1e2c6d74a5babe8ee78238ae0d4b7405",
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "--exec",
+    "env",
+    "LEAN_PATH=/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "/mnt/e/codex-build/RH-Weil/tmp/ninth-span-path-fresh-audit.lean"
+  ]
+}

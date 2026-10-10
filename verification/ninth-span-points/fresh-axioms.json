@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "elapsed_seconds": 9.375,
+  "pins": {
+    "source": "084d4518eb4a8b7039903f5616d92c378a4c739c79e97ff9eb94aa89d4406256",
+    "olean": "fbbf2b31fadd8814a5a73d0500df2106389b0adfeeeddaf618b3bce35d875977",
+    "audit": "a917df0e1dc20e22b4a7248a575261ab913814bc3bf4e79eeeab0079046da88f"
+  },
+  "axioms": {
+    "catalogValue_lt": [
+      "propext",
+      "Quot.sound"
+    ],
+    "catalogPack_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "catalogTVal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "oldTVal_reanchor_scaled": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_reanchor_scaled": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "log_sha256": "7337c9ee3a1d1a396b7100045778210f36f5d6fd2a13f7fc379486e2ccabaae6",
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "--exec",
+    "env",
+    "LEAN_PATH=/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "/mnt/e/codex-build/RH-Weil/tmp/ninth-span-points-fresh-audit.lean"
+  ]
+}

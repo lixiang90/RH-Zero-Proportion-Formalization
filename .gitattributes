@@ -9,3 +9,13 @@ lean-toolchain text eol=lf
 # Preserve exact hash-bound verification evidence bytes.
 verification/linux-memory-time-20261010/** -text
 verification/site-compilation-exit137/user-provided-verifier.log -text
+# Preserve the immutable ninth-span mathematical certificate identities.
+output/am-ninth-span-certificate.json -text
+output/am-ninth-span-point-catalog.json -text
+scripts/am_ninth_span_certificate.py -text
+papers/ninth-span-simple-critical-paper.tex text eol=lf
+verification/ninth-span-old-record-baseline.json -text
+
+# Verification receipts and logs are bound by their exact raw-byte hashes.
+verification/ninth-span-* -text whitespace=cr-at-eol,-blank-at-eof
+verification/ninth-span-*/** -text whitespace=cr-at-eol,-blank-at-eof

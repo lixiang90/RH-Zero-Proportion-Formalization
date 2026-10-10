@@ -2,99 +2,108 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
-Lean formalization of the critical-line zero-proportion result developed in
-[RH-Weil](https://github.com/lixiang90/RH-Weil), with reproducible exact certificates
-and the corresponding [paper](papers/expanded-nine-point-tangent-simple-critical-paper.tex)
-([PDF](output/pdf/expanded-nine-point-tangent-simple-critical-paper.pdf)).
+Lean proofs and exact rational certificates for lower bounds on the proportion
+of Riemann zeta zeros on the critical line. The research project and papers are
+maintained in [RH-Weil](https://github.com/lixiang90/RH-Weil); this repository
+contains the proportion formalization and its reproducibility records.
 
-The target is **66812491/99194740 = 67.3548728491047…%** of simple critical-line
-zeros, relative to all nontrivial zeros counted with multiplicity. This implies
-the same lower bound for distinct critical-line zeros, the website's scoring object.
+The latest bound is
 
-**Status: the complete local proofs passed; the first reported website attempt failed during Lean compilation.**
-The continuous certificate and named dyadic and cumulative simple-zero theorems
-compile in the pinned environment. The three website declarations, concerning
-distinct critical-line zeros, also compile and pass independent nanoda replay of
-79,699 declarations. The modular declarations also pass the pinned Comparator core
-(statement and primitive matching, axiom checks and default Lean kernel replay).
-Fresh transitive audits contain only the three permitted axioms.
-The 1,996,187-byte single file also passed Lean compilation, transitive axiom
-audits and independent replay of all three theorem dependency graphs (79,750
-declarations). Resource compliance, the official Comparator run and website
-acceptance remain separate requirements. The user-provided website log reports
-Solution.Candidate exiting with code 137 after 683 seconds. Memory exhaustion
-is the leading diagnosis, not an established OOM event; see the [failed-attempt record](verification/site-compilation-exit137/diagnosis.json).
-No website record has been obtained, and resource optimization remains in progress.
+\[
+\frac{941021}{1397107}=\frac{66812491}{99194597}
+=0.673549699486152456\ldots,
+\]
 
-A same-Linux AM component pair reduced compilation from 553.329 to 448.761
-seconds (18.9%); its small PSS change does not establish a memory gain.
-The r6 whole-file compile and three-root standard-axiom audit passed locally,
-but its memory gate failed. Full replay and fresh live-contract checks remain
-pending; the published submission is unchanged. See the
-[resource evidence](verification/linux-memory-time-20261010/README.md).
+or **67.3549699486152…%**, for **simple** critical-line zeros relative to all
+nontrivial zeros counted with multiplicity. It also implies the same bound for
+distinct critical-line zeros. The statements are asymptotic: every smaller
+proportion holds for all sufficiently large heights, both on \([T,2T]\) and
+on \([0,T]\).
 
-| Component | Verification status |
+The complete new theorem is in
+[RecordProportion/NinthSpan.lean](RecordProportion/NinthSpan.lean). All four
+actual counting theorems and the strict improvement over the previous bound
+pass ordinary Lean compilation and a fresh transitive axiom audit. The full
+dependency graphs also pass independent nanoda replay: the recorded run checked
+82,804 declarations in 702.610 seconds with four threads. Their only permitted
+axioms are `propext`, `Quot.sound`, and `Classical.choice`; the proof does not use
+`sorry`, `native_decide`, or new analytic axioms. The source and artifact hashes,
+commands, and results are recorded in the
+[complete Lean report](verification/ninth-span-complete-formal-kernel.json) and
+[independent replay report](verification/ninth-span-complete-independent-nanoda.json).
+
+The previous bound **66812491/99194740 = 67.3548728491047…%**, its Lean proofs,
+papers, certificates, verification records, and single-file submission remain
+available without replacement. The previous README is archived
+[verbatim](docs/c260-repository-status-20261010.md). A
+[preservation manifest](verification/ninth-span-old-record-baseline.json) and
+[publication check](scripts/verify_ninth_span_publication.py) verify this.
+
+## Proof and certificates
+
+The improvement strengthens a nine-point local inequality while retaining the
+existing analytic majorant and counting bridge. It divides 47 previous domains
+into 84 closed branches according to the total span, checks exact tangent and
+dual certificates, and transports the bound to the actual zeta-zero counts.
+The coverage concerns real gaps, including branch endpoints.
+
+| Entry | Purpose |
 |---|---|
-| Actual simple-to-distinct counting bridge and exact trusted website count identities | Full modules compiled; only permitted axioms |
-| Integer and real Floyd-closure soundness | Full module compiled; only permitted axioms |
-| Sparse integer dual and real box correction | Full module compiled; only permitted axioms |
-| Complete finite-data certificate | All 1,224 original integer conclusions, orbit/shape and primitive-bound transport compiled; only permitted axioms |
-| Imported AM analytic chain and original PC8 certificate | Full module compiled; only permitted axioms |
-| Separated AM majorant and spectral/count transport | Full modules and packed single-file analytic chain compiled; only permitted axioms |
-| Complete 482 × 482 physical-pair coverage and 42-column row evaluation | Full modules and fresh axiom audits passed |
-| Complete point/tangent guards and extra-span membership | Full module and 12 fresh axiom audits passed |
-| Continuous nine-point certificate | Full unconditional module and five fresh axiom audits passed |
-| Named simple-zero dyadic and cumulative corollaries | Actual Zeta23.N0simple/Ncount; full module and fresh axiom audits passed |
-| Three final website declarations and independent replay | Modular Lean, pinned Comparator core and independent nanoda passed; nanoda checked 79,699 declarations |
-| Complete single-file candidate | Lean compilation, four axiom audits and independent replay passed; official runtime/memory compliance pending |
+| [NinthSpan.lean](RecordProportion/NinthSpan.lean) | Unconditional local inequality and simple/distinct dyadic and cumulative theorems |
+| [NinthSpanFinite.lean](RecordProportion/NinthSpanFinite.lean) | Real-domain soundness, closed coverage, and complete orbit/reflection transport |
+| [NinthSpanFiniteData.lean](RecordProportion/NinthSpanFiniteData.lean) | Literal data and closed integer certificate checks |
+| [NinthSpanPathSoundness.lean](RecordProportion/NinthSpanPathSoundness.lean) | Integer path witnesses and real potential bounds |
+| [NinthSpanPoints.lean](RecordProportion/NinthSpanPoints.lean) | 541 original tangent values and exact safe reanchoring |
+| [NinthSpanLocal.lean](RecordProportion/NinthSpanLocal.lean) | Low-domain and outside-domain combination |
+| [NinthSpanAnalytic.lean](RecordProportion/NinthSpanAnalytic.lean) | Improved reward and actual asymptotic counting transport |
 
-Snapshot results and their scope are recorded in `verification/` and `docs/`.
-See [resource optimization](docs/resource-optimization.md) for measured proof-checking improvements and their limits.
-The original Lean numeric transcription had two incorrect column entries; that
-uncompleted run was terminated, and the generator now derives and checks the
-original column order. The saved JSON certificate is unchanged. A passed data
-or helper check does not establish the complete headline theorem.
+See the [formalization guide](docs/ninth-span-formalization.md) for the exact
+statement, proof structure, and reproduction steps. The new mathematical
+[paper source](papers/ninth-span-simple-critical-paper.tex) and
+[PDF](output/pdf/ninth-span-simple-critical-paper.pdf) are preserved as the
+research snapshot; a [verification addendum](papers/ninth-span-lean-verification-addendum.md)
+records the subsequent completed formalization.
 
-## Fixed verification environment
+## Fixed environment and reproduction
 
-The [website contract](https://github.com/josusanmartin/riemann/blob/6664d243005e12e155c19775b83f53721757414b/challenge/contract.json)
-fixes these versions:
-
-| Component | Version |
+| Component | Pinned version |
 |---|---|
 | Lean | `leanprover/lean4:v4.33.0-rc2` |
 | Mathlib | `51e6992efd06126df61a496bebf8f49482a4e129` |
 | Zeta23 | `3635e74826a4c1fcece7d1cd2b6fa75e43a00510` |
-| Comparator | `273294467ce06429e6667ece7f5699f8678c9f4e` |
+| lean4export | `b18d673bd29b476466a51a3be1012df2ed322b10` |
 | nanoda | `418320295890faed83a96fd97907b12a3b6728c2` |
-
-Only `propext`, `Quot.sound`, and `Classical.choice` are permitted transitively.
-The submission must be one UTF-8 `Solution.lean` of at most 2,000,000 bytes,
-prove the exact dyadic and cumulative statements and strict improvement, and
-pass Lean and independent nanoda verification. See [the submission requirements](docs/submission-contract.md).
-
-## Build and reproduce
 
 ```powershell
 lake --no-cache exe cache get
-lake --no-cache build +RecordProportion.SimpleCorollary:olean +RecordProportion.TrustedCounts:olean
-python -B -X utf8 scripts/am_expanded_nine_point_certificate.py --check
+lake --no-cache build +RecordProportion.NinthSpan:olean
+python -B -X utf8 scripts/am_ninth_span_certificate.py --check
+python -B -X utf8 scripts/generate_ninth_span_certificate.py --check
+python -B -X utf8 scripts/review_ninth_span_data.py
 ```
 
-The build command checks the complete simple-zero theorem and its finite and analytic
-dependencies. The website entry is in `submission/candidate-entry.lean.in`; its three
-declarations require the exact website-generated `ChallengeDeps.CandidateSpec`.
-The Python check uses only the standard library and verifies the saved 2,399
-rational dual certificates. It does not constitute a full Lean proof.
-The committed `lean-toolchain`, `lakefile.toml` and `lake-manifest.json` pin the
-environment. The draft bundler retains proof terms and compacts integer literals
-without changing their values. The checked candidate is in submission/proof/;
-its local Lean pass does not establish official submission acceptance.
-The complete draft is within the 2 MB source limit; see [single-file packaging](docs/single-file-packaging.md) for the exact scope of its checks.
-The bundler follows local import dependencies and places each module in an ordinary
-section to preserve its local options and scopes. The saved complete candidate passed compilation; every subsequent source
-revision requires a new complete check. Development helpers are in `RecordProportion/`; immutable inputs are in
-`output/`, `formal/certificates/`, and `reviews/`. The original research papers
-and history remain in RH-Weil; this repository owns all new proportion formalization.
+Lake checks the complete new Lean theorem and its dependencies. The Python
+checks use exact integers and rationals; they also verify the correspondence
+between the frozen JSON and the Lean literals. They supplement the Lean and
+independent kernel checks.
 
-Mathematical research remains paused until formalization and website submission are complete.
+The committed toolchain and Lake manifest pin the dependencies. Recorded local
+verification scripts additionally bind the compiler, source closure, compiled
+artifacts, exporter, and independent kernel. Their Linux-cache mode describes
+the measured local environment; a fresh checkout builds its own dependencies.
+
+## Website submission and history
+
+This update publishes the new modular formalization. It does not submit a new
+candidate to the website or establish official resource compliance. The old
+[single-file candidate](submission/proof/Solution.lean) is preserved exactly.
+Its local Lean and independent replay checks passed, but the reported website
+attempt exited with code 137 during compilation; no accepted website record
+has been obtained. See the [submission requirements](docs/submission-contract.md),
+[failed-attempt diagnosis](verification/site-compilation-exit137/diagnosis.json),
+and [resource work](docs/resource-optimization.md).
+
+Historical component checks, measured optimization experiments, and their
+scope remain in `verification/` and `docs/`. Research papers remain available
+here and in the main project; old results are retained under their original
+namespaces and filenames.

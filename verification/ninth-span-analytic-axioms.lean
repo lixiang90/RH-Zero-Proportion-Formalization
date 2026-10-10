@@ -1,0 +1,12 @@
+import RecordProportion.NinthSpanAnalytic
+#print axioms RHWeilRecord.NinthSpan.localReward_pos
+#print axioms RHWeilRecord.NinthSpan.recordRatio_identity
+#print axioms RHWeilRecord.NinthSpan.previous_recordRatio_lt
+#print axioms RHWeilRecord.NinthSpan.am_near_weight_ge_reward
+#print axioms RHWeilRecord.NinthSpan.eventually_am_retained_lossless_defect
+#print axioms RHWeilRecord.NinthSpan.am_lossless_defect_of_nine_point_certificate
+#print axioms RHWeilRecord.NinthSpan.am_simple_dyadic_of_lossless_defect
+#print axioms RHWeilRecord.NinthSpan.simple_dyadic_of_nine_point_certificate
+#print axioms RHWeilRecord.NinthSpan.simple_cumulative_of_nine_point_certificate
+#print axioms RHWeilRecord.NinthSpan.distinct_dyadic_of_nine_point_certificate
+#print axioms RHWeilRecord.NinthSpan.distinct_cumulative_of_nine_point_certificate

@@ -1,0 +1,67 @@
+{
+  "schema": "rh-ninth-span-finite-component-v1",
+  "created_at_utc": "2026-10-10T04:48:39.747512+00:00",
+  "status": "PASS_COMPONENT_COMPILE_AND_FRESH_AXIOM_AUDIT",
+  "scope": "All five closed finite families: 84 path/point guards, 84 exact dual bounds, 47 closed covers, 1224 routing cases and 1224 old-or-patch cases.",
+  "module_compile_passed": true,
+  "fresh_axiom_audit_passed": true,
+  "source": {
+    "path": "RecordProportion/NinthSpanFiniteData.lean",
+    "sha256": "6dc433120474fd991cb6721cad05e69d45401a25002f8e3d021a7d04249d97ed"
+  },
+  "olean": {
+    "path": ".lake/build/lib/lean/RecordProportion/NinthSpanFiniteData.olean",
+    "sha256": "6a9d8a2612a9906025cfbbe5d4349b2d4e3a1a8410809d251c5fad14f43b9cb6",
+    "tracked": false
+  },
+  "compiler": {
+    "version": "Lean 4.33.0-rc2 x86_64-unknown-linux-gnu commit d8b18978322de05a8f3dba51ef03cf5461676c17",
+    "sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "compile_exit_code": 0,
+  "compile_seconds": 1718.3910000000615,
+  "fresh_audit_exit_code": 0,
+  "fresh_audit_seconds": 9.671999999787658,
+  "axioms": {
+    "allBranchGuards": [
+      "Quot.sound",
+      "propext"
+    ],
+    "allBranchNumeric": [
+      "Quot.sound",
+      "propext"
+    ],
+    "allPatchShapes": [
+      "Quot.sound",
+      "propext"
+    ],
+    "allRepRoutes": [
+      "Quot.sound",
+      "propext"
+    ],
+    "allOldOrPatch": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "artifacts": {
+    "verification/ninth-span-finite-data/compile.json": "3855eee427615d019aa734f022a51ec22f159db6f899c6f4c6aebf037762ff01",
+    "verification/ninth-span-finite-data/compile.py": "4b1fda626bdbf351525bcfc314969f3764fc24112b6cc956a47a3affc5c4dfa4",
+    "verification/ninth-span-finite-data/compile.txt": "e5efe32e381d01f32199f6ba09efabeb84d3c8a5d5693e71a846bc415293b5eb",
+    "verification/ninth-span-finite-data/fresh-axioms.json": "d12fb24ca030da9b0f98a31a7623122d234dc5debdbd019a7b798f5fe2743030",
+    "verification/ninth-span-finite-data/fresh-axioms.lean": "03e53620bb798f4c159755aaf6ca68171d382c88c0b9d711f5ed64fedbfe0435",
+    "verification/ninth-span-finite-data/fresh-axioms.txt": "b98b2e7e5536fc2839c601ad18731931b3a8e47bcd9f185284df180a2fc49f7c",
+    "verification/ninth-span-finite-data/nested-floyd-terminated.json": "b03f0933ca097d4dfa15d4ab96de9289fc1b18caeb2abecd285feefa58835218",
+    "verification/ninth-span-finite-data/path-before-async-disabled-terminated.json": "b37bb2eb4c24311dea2155a8c19a7253e7dac43be7e5d539d150283f36c80955",
+    "verification/ninth-span-finite-data/terminated-runs.json": "cd2e03e6c8352dcac758ded10fe741240aa84df078827fea1956faf29868712c"
+  },
+  "preservation": "Additive modules and evidence only; old formal code, finite data, website submission and records remain unchanged.",
+  "witness_counts": {
+    "branch_paths": 6804,
+    "outer_coverage_paths": 94,
+    "old_box_paths": 880,
+    "old_boxes": 55,
+    "basic_strong_representatives": 1144,
+    "patched_weak_representatives": 25
+  }
+}

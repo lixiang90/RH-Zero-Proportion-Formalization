@@ -1,0 +1,148 @@
+{
+  "schema": "ninth-span-points-evidence-v1",
+  "created_at_utc": "2026-10-10T03:31:56.887622+00:00",
+  "status": "FINAL_LEAN_KERNEL_AND_FRESH_AXIOM_AUDIT_PASS",
+  "scope": "541 original-table point identities and exact denominator-5SC safe tangent reanchoring; headline finite/global/count proof is audited separately",
+  "module": {
+    "path": "RecordProportion/NinthSpanPoints.lean",
+    "sha256": "084d4518eb4a8b7039903f5616d92c378a4c739c79e97ff9eb94aa89d4406256"
+  },
+  "compiled_olean": {
+    "path": ".lake/build/lib/lean/RecordProportion/NinthSpanPoints.olean",
+    "sha256": "fbbf2b31fadd8814a5a73d0500df2106389b0adfeeeddaf618b3bce35d875977",
+    "tracked": false
+  },
+  "compiler": {
+    "version": "Lean (version 4.33.0-rc2, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "successful_compile": {
+    "receipt": "verification/ninth-span-points/compile.json",
+    "log": "verification/ninth-span-points/compile.txt",
+    "elapsed_seconds": 45.312999999849126
+  },
+  "fresh_axiom_audit": {
+    "receipt": "verification/ninth-span-points/fresh-axioms.json",
+    "log": "verification/ninth-span-points/fresh-axioms.txt",
+    "elapsed_seconds": 9.375,
+    "axioms": {
+      "catalogValue_lt": [
+        "propext",
+        "Quot.sound"
+      ],
+      "catalogPack_eq": [
+        "propext",
+        "Quot.sound"
+      ],
+      "catalogTVal": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "oldTVal_reanchor_scaled": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "direct_reanchor_scaled": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "source_catalog_audit": {
+    "receipt": "verification/ninth-span-points/source-audit.json",
+    "all_541_imported_pack_identities": true,
+    "exact_final_lean_catalog_json_order": true,
+    "final_source_sha256": "084d4518eb4a8b7039903f5616d92c378a4c739c79e97ff9eb94aa89d4406256",
+    "catalog_sha256": "cda8ce5fce3d0a639975f54e57b1991c7d5a2a2cb112df4e3dd13237a954fb27"
+  },
+  "superseded_attempts": [
+    {
+      "receipt": "verification/ninth-span-points/attempt1.json",
+      "log": "verification/ninth-span-points/attempt1.txt",
+      "status": "FAILED_CAST_REANCHOR_PROOF",
+      "accepted_as_proof": false
+    },
+    {
+      "receipt": "verification/ninth-span-points/attempt2.json",
+      "log": "verification/ninth-span-points/attempt2.txt",
+      "status": "FAILED_MIN_MAX_HYPOTHESIS_NORMALIZATION",
+      "accepted_as_proof": false
+    }
+  ],
+  "earlier_source_stage": {
+    "sha256": "dc957554d1350e325b0984521fcaa71c0ab4b71b1ea9753427c27a8ce5052d7a",
+    "stage": "pre-cast-proof first source; the early source/catalog audit referred to this stage, not to the final module",
+    "final_audit": "The 541 original packs, 96-bit bounds, and exact ordered Lean catalog were recalculated against the final source listed above."
+  },
+  "preservation": "Evidence is copied; all original temporary evidence, historical modules, old submission files, and prior verification records remain intact.",
+  "artifacts": [
+    {
+      "path": "verification/ninth-span-points/attempt1.json",
+      "sha256": "e397089c58cd341aab78a73de5bc155085c1f8a17526b6f166e1532bb2dad09b",
+      "bytes": 1999
+    },
+    {
+      "path": "verification/ninth-span-points/attempt1.txt",
+      "sha256": "1a5b600d3cbc1afb1c580de2020dcba4c400cd707c0e5e29607e550d2f405531",
+      "bytes": 4686
+    },
+    {
+      "path": "verification/ninth-span-points/attempt2.json",
+      "sha256": "5433628abd0e7b7634c35b22d3f09a47169953dc213e00fa09df0ae51cf97621",
+      "bytes": 1999
+    },
+    {
+      "path": "verification/ninth-span-points/attempt2.txt",
+      "sha256": "13cb37e1c0927280e309440f45a7e59b1bbd7283a0cd61eeb9325ef7a7430151",
+      "bytes": 4568
+    },
+    {
+      "path": "verification/ninth-span-points/compile.json",
+      "sha256": "01207091b0003d34ab532a92ac2b0eddf23f6dd6118abfe5cb6e1edab33d478f",
+      "bytes": 1999
+    },
+    {
+      "path": "verification/ninth-span-points/compile.txt",
+      "sha256": "7337c9ee3a1d1a396b7100045778210f36f5d6fd2a13f7fc379486e2ccabaae6",
+      "bytes": 563
+    },
+    {
+      "path": "verification/ninth-span-points/fresh-axioms.json",
+      "sha256": "689807fa75756df7b4c98d35e2f0ab89d8cd0f0b700666caefbdb4bdcf40b642",
+      "bytes": 2177
+    },
+    {
+      "path": "verification/ninth-span-points/fresh-axioms.txt",
+      "sha256": "7337c9ee3a1d1a396b7100045778210f36f5d6fd2a13f7fc379486e2ccabaae6",
+      "bytes": 563
+    },
+    {
+      "path": "verification/ninth-span-points/fresh-axioms.lean",
+      "sha256": "a917df0e1dc20e22b4a7248a575261ab913814bc3bf4e79eeeab0079046da88f",
+      "bytes": 400
+    },
+    {
+      "path": "verification/ninth-span-points/source-audit.json",
+      "sha256": "0317c38763ec2e642c8ecb86d9a672b11e75b61c11382a0543b651267bbb6a36",
+      "bytes": 476
+    },
+    {
+      "path": "verification/ninth-span-points/source-audit.py",
+      "sha256": "2876affbf183228ab2733b0bfdc26ef5b2bef2abdf717f2451de96284bf80c7c",
+      "bytes": 1800
+    },
+    {
+      "path": "verification/ninth-span-points/linux-check.py",
+      "sha256": "b325b9b3f6aff61ffb1a50bd278e96f13125d90730b14277e71f9ab9c5ef77a0",
+      "bytes": 1936
+    },
+    {
+      "path": "verification/ninth-span-points/fresh-axioms.py",
+      "sha256": "85dc5a46a4791e63214b3922e3bbfde7ec2c1cae76a9fbb7fb4448914b8412aa",
+      "bytes": 2114
+    }
+  ]
+}

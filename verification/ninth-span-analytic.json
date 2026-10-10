@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "scope": "Additive ninth-span analytic/count transport. The finite local certificate remains an explicit hypothesis in these roots.",
+  "started_utc": "2026-10-10T03:22:56.894145+00:00",
+  "compiler_expected_version": "Lean 4.33.0-rc2 x86_64-unknown-linux-gnu commit d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "compiler_expected_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "handoff_sha256": "d69baed4ab2ea4d8715deafe9f4d17d4d1be7e961b5da9a377ddd0c4ba3bd6a1",
+  "lean_path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+  "source": {
+    "path": "RecordProportion/NinthSpanAnalytic.lean",
+    "sha256": "9809646e5d52c103c92e0edec7d8bc514049565497fce61eb8e690c1218f138e",
+    "bytes": 12618
+  },
+  "audit_source": {
+    "path": "verification/ninth-span-analytic-axioms.lean",
+    "sha256": "239d869a2656611f07d4ea1ec8db94f07768f80d50ca805d3b4c756a371bece4",
+    "bytes": 827
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "resource_compliance_claim": false,
+  "website_acceptance_claim": false,
+  "version": {
+    "command": [
+      "wsl",
+      "-d",
+      "Ubuntu",
+      "--exec",
+      "env",
+      "LEAN_PATH=/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "--version"
+    ],
+    "exit_code": 0,
+    "seconds": 0.11000000010244548,
+    "stdout_sha256": "d2b0b0a275a0c043b1650ebc4faf0b9c9c686656f0b0f066fc6f77df4f135d3a",
+    "stdout_path": "verification/ninth-span-analytic-version.log"
+  },
+  "compiler_hash_check": {
+    "command": [
+      "wsl",
+      "-d",
+      "Ubuntu",
+      "--exec",
+      "sha256sum",
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean"
+    ],
+    "exit_code": 0,
+    "seconds": 0.09300000010989606,
+    "stdout_sha256": "e09336be33b036e839329fe73d5529fc7a2f3fe8eb8b61af163e079fa18a8167",
+    "stdout_path": "verification/ninth-span-analytic-compiler-hash.log"
+  },
+  "compiler_identity_verified": true,
+  "compile": {
+    "command": [
+      "wsl",
+      "-d",
+      "Ubuntu",
+      "--exec",
+      "env",
+      "LEAN_PATH=/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "--tstack=32768",
+      "-DrelaxedAutoImplicit=false",
+      "-R",
+      "/mnt/e/codex-build/RH-Zero-Proportion-Formalization",
+      "-o",
+      "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean/RecordProportion/NinthSpanAnalytic.olean",
+      "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/RecordProportion/NinthSpanAnalytic.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 9.812999999849126,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_path": "verification/ninth-span-analytic-compile.log"
+  },
+  "olean": {
+    "sha256": "41dd48b0d7013cbc962bb672e75c3a203055296266cbd3a010a374cbeaedd417",
+    "bytes": 866720
+  },
+  "fresh_axiom_audit": {
+    "command": [
+      "wsl",
+      "-d",
+      "Ubuntu",
+      "--exec",
+      "env",
+      "LEAN_PATH=/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "--tstack=32768",
+      "-DrelaxedAutoImplicit=false",
+      "-R",
+      "/mnt/e/codex-build/RH-Zero-Proportion-Formalization",
+      "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/verification/ninth-span-analytic-axioms.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 6.875,
+    "stdout_sha256": "3eb64f9b92400320d2f8e453edc0bcb394aa3db404c6035fc993bc4e94a33095",
+    "stdout_path": "verification/ninth-span-analytic-axioms.log"
+  },
+  "audit_roots": [
+    {
+      "name": "RHWeilRecord.NinthSpan.localReward_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.recordRatio_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.previous_recordRatio_lt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.am_near_weight_ge_reward",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.eventually_am_retained_lossless_defect",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.am_lossless_defect_of_nine_point_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.am_simple_dyadic_of_lossless_defect",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.simple_dyadic_of_nine_point_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.simple_cumulative_of_nine_point_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.distinct_dyadic_of_nine_point_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "RHWeilRecord.NinthSpan.distinct_cumulative_of_nine_point_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "fresh_axiom_audit_passed": true,
+  "source_prohibition_scan_passed": true,
+  "complete": true,
+  "finished_utc": "2026-10-10T03:23:13.802463+00:00",
+  "compiler_identity_method": "Exact executable SHA256 plus version, platform, and commit tokens in the recorded CLI output; CLI punctuation differs from normalized handoff text.",
+  "identity_normalized_utc": "2026-10-10T03:24:35.349524+00:00",
+  "published_logs": [
+    {
+      "receipt_field": "version",
+      "original_stdout_path": "verification/ninth-span-analytic-version.log",
+      "path": "verification/ninth-span-analytic/version.txt",
+      "sha256": "d2b0b0a275a0c043b1650ebc4faf0b9c9c686656f0b0f066fc6f77df4f135d3a",
+      "bytes": 110
+    },
+    {
+      "receipt_field": "compiler_hash_check",
+      "original_stdout_path": "verification/ninth-span-analytic-compiler-hash.log",
+      "path": "verification/ninth-span-analytic/compiler-hash.txt",
+      "sha256": "e09336be33b036e839329fe73d5529fc7a2f3fe8eb8b61af163e079fa18a8167",
+      "bytes": 132
+    },
+    {
+      "receipt_field": "compile",
+      "original_stdout_path": "verification/ninth-span-analytic-compile.log",
+      "path": "verification/ninth-span-analytic/compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "receipt_field": "fresh_axiom_audit",
+      "original_stdout_path": "verification/ninth-span-analytic-axioms.log",
+      "path": "verification/ninth-span-analytic/axioms.txt",
+      "sha256": "3eb64f9b92400320d2f8e453edc0bcb394aa3db404c6035fc993bc4e94a33095",
+      "bytes": 1314
+    }
+  ],
+  "published_logs_added_utc": "2026-10-10T04:31:32.718684+00:00"
+}

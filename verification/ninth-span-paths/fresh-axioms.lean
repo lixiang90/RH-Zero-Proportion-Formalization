@@ -1,0 +1,3 @@
+import RecordProportion.NinthSpanPathSoundness
+#print axioms RHWeil.RecordSubmission.NinthSpanPaths.cost_real_bound
+#print axioms RHWeil.RecordSubmission.NinthSpanPaths.check_real_bound

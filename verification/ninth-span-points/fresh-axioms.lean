@@ -1,0 +1,6 @@
+import RecordProportion.NinthSpanPoints
+#print axioms RHWeil.RecordSubmission.NinthSpanPoints.catalogValue_lt
+#print axioms RHWeil.RecordSubmission.NinthSpanPoints.catalogPack_eq
+#print axioms RHWeil.RecordSubmission.NinthSpanPoints.catalogTVal
+#print axioms RHWeil.RecordSubmission.NinthSpanPoints.oldTVal_reanchor_scaled
+#print axioms RHWeil.RecordSubmission.NinthSpanPoints.direct_reanchor_scaled

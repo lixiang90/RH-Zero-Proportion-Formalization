@@ -1,0 +1,56 @@
+{
+  "schema": "rh-ninth-span-generic-paths-component-v1",
+  "status": "PASS_COMPONENT_COMPILE_AND_FRESH_AXIOM_AUDIT",
+  "scope": "Generic Mathlib-only integer path check and real potential soundness, independent of all certificate datasets.",
+  "source": {
+    "path": "RecordProportion/NinthSpanPathSoundness.lean",
+    "sha256": "f31dae379c2200807ec392dfd7bf91d6375bd09a269cee78a676a54ac107bf8d"
+  },
+  "olean": {
+    "path": ".lake/build/lib/lean/RecordProportion/NinthSpanPathSoundness.olean",
+    "sha256": "0160bcebcd3266eeb34d8ef7aa07d3a2098079bcd464112bb244c248b5f59744"
+  },
+  "compiler": {
+    "version": "Lean 4.33.0-rc2 x86_64-unknown-linux-gnu commit d8b18978322de05a8f3dba51ef03cf5461676c17",
+    "sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "compile_seconds": 33.04699999978766,
+  "fresh_audit_seconds": 18.25,
+  "axioms": {
+    "cost_real_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "check_real_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "artifacts": {
+    "verification/ninth-span-paths/compile.json": "bf93c89ae45b500ba1fe7e6b346397dfc87d383ed2b6541f85443933bee70f58",
+    "verification/ninth-span-paths/compile.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification/ninth-span-paths/compile.py": "003694b31093b4cdbfd7c49325fe843c3596cb813c7ed2da4ff8a55705da73b5",
+    "verification/ninth-span-paths/fresh-axioms.json": "42cf249b0857e2724e28f13fe0892dacc6aeb75bcb3ca91ec4be8f0cfa81c561",
+    "verification/ninth-span-paths/fresh-axioms.txt": "a38ed5e72d408f27bb7edac3152a106f1e2c6d74a5babe8ee78238ae0d4b7405",
+    "verification/ninth-span-paths/fresh-axioms.lean": "05ae6417dfe29ba813e0f3ea49aaedb08f05d052fb5580e9ca42417ad7f5da6d",
+    "verification/ninth-span-paths/fresh-axioms.py": "2127eb6f4acaafe425cc5b9b07b901efcdc69336e54462f755d55934e1473056"
+  },
+  "protocol": {
+    "namespace": "RHWeil.RecordSubmission.NinthSpanPaths",
+    "definitions": [
+      "vertices",
+      "cost",
+      "check"
+    ],
+    "soundness_root": "check_real_bound",
+    "vertex_count": "1..9",
+    "vertex_labels": "0..8",
+    "word_encoding": "low nibble length; subsequent nibbles adjacent vertex labels",
+    "edge_direction": "p j - p i <= cast (e i j)",
+    "certified_bound": "p last - p first <= cast bound"
+  },
+  "preservation": "Adds one generic proof module and new evidence; prior code, data, submission and records remain intact.",
+  "environment_note": "An initial sandboxed WSL audit invocation was rejected by the process environment before producing Lean audit output; the recorded successful fresh audit uses the authorized escalation."
+}

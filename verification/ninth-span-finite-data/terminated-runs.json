@@ -1,0 +1,40 @@
+{
+  "purpose": "Preserve incomplete resource trials separately from completed kernel verification",
+  "log_caveat": "The trial sources omitted set_option stderrAsMessages false. Lean captures IO.eprintln as messages, so an empty live log does not locate the first guard or any other precise proof obligation.",
+  "inference_correction": "Earlier live guesses that an empty log meant the first guard was stalled are unsupported and are not retained as verification conclusions.",
+  "claims": "Neither terminated run is a PASS, a mathematical counterexample, or an observed OOM. The completed production source must have its own exit-zero compilation and fresh axiom audit.",
+  "runs": [
+    {
+      "description": "Initial nested-Floyd certificate organisation",
+      "status": "incomplete_voluntarily_terminated",
+      "termination": "SIGTERM sent only to the owned PID 15 after checking /proc/15/cmdline against the exact compiler and target source",
+      "elapsed_seconds": 684.8129999998491,
+      "exit_code": 15,
+      "source_sha256": "46f374699f47b4ec454fee3a98d093a96d9e1374565a819fd6c836afa0a3a022",
+      "source_unchanged": true,
+      "raw_receipt": "nested-floyd-audit.json",
+      "raw_receipt_sha256": "b03f0933ca097d4dfa15d4ab96de9289fc1b18caeb2abecd285feefa58835218",
+      "raw_log": null,
+      "raw_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "math_failure_observed": false,
+      "out_of_memory_observed": false,
+      "exact_proof_position_known": false
+    },
+    {
+      "description": "Explicit path certificate before restoring synchronous elaboration",
+      "status": "incomplete_voluntarily_terminated",
+      "termination": "SIGTERM sent only to the owned PID 15 after checking /proc/15/cmdline against the exact compiler and target source",
+      "elapsed_seconds": 1044.3909999998286,
+      "exit_code": 15,
+      "source_sha256": "108db102d897bf21e80d05b2ffe3bde3cd2560337f404ecc80078fe96f42bff9",
+      "source_unchanged": true,
+      "raw_receipt": "path-before-async-disabled-audit.json",
+      "raw_receipt_sha256": "b37bb2eb4c24311dea2155a8c19a7253e7dac43be7e5d539d150283f36c80955",
+      "raw_log": "path-before-async-disabled.log",
+      "raw_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "math_failure_observed": false,
+      "out_of_memory_observed": false,
+      "exact_proof_position_known": false
+    }
+  ]
+}

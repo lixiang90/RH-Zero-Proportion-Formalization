@@ -1,0 +1,11 @@
+import RecordProportion.NinthSpanFinite
+#print axioms RHWeil.RecordSubmission.NinthSpanFiniteData.allBranchGuards
+#print axioms RHWeil.RecordSubmission.NinthSpanFiniteData.allBranchNumeric
+#print axioms RHWeil.RecordSubmission.NinthSpanFiniteData.allPatchShapes
+#print axioms RHWeil.RecordSubmission.NinthSpanFiniteData.allRepRoutes
+#print axioms RHWeil.RecordSubmission.NinthSpanFiniteData.allOldOrPatch
+#print axioms RHWeil.RecordSubmission.NinthSpanFinite.branchClosure_real
+#print axioms RHWeil.RecordSubmission.NinthSpanFinite.patch_real_bound
+#print axioms RHWeil.RecordSubmission.NinthSpanFinite.oldPath_box
+#print axioms RHWeil.RecordSubmission.NinthSpanFinite.path_representative_bound
+#print axioms RHWeil.RecordSubmission.NinthSpanFinite.low_pair_bound

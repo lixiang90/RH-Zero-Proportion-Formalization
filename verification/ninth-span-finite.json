@@ -1,0 +1,61 @@
+{
+  "schema": "rh-ninth-span-finite-component-v1",
+  "created_at_utc": "2026-10-10T04:48:39.826437+00:00",
+  "status": "PASS_COMPONENT_COMPILE_AND_FRESH_AXIOM_AUDIT",
+  "scope": "Continuous real-gap branch, tangent, path-box and sparse-dual semantics, followed by all 2399 compatible low-pair cases through the established reflection orbit.",
+  "module_compile_passed": true,
+  "fresh_axiom_audit_passed": true,
+  "source": {
+    "path": "RecordProportion/NinthSpanFinite.lean",
+    "sha256": "267080c98e4d5f35cf989f163cc2a672fbcaf352fc9ce4458dcb2be94602df73"
+  },
+  "olean": {
+    "path": ".lake/build/lib/lean/RecordProportion/NinthSpanFinite.olean",
+    "sha256": "4ee29dc83fc0a12b32b75114444db6f174f58ec24b42afd57ab946405cd97cda",
+    "tracked": false
+  },
+  "compiler": {
+    "version": "Lean 4.33.0-rc2 x86_64-unknown-linux-gnu commit d8b18978322de05a8f3dba51ef03cf5461676c17",
+    "sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "compile_exit_code": 0,
+  "compile_seconds": 40.484999999869615,
+  "fresh_audit_exit_code": 0,
+  "fresh_audit_seconds": 9.671999999787658,
+  "axioms": {
+    "branchClosure_real": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "patch_real_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "oldPath_box": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "path_representative_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "low_pair_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "artifacts": {
+    "verification/ninth-span-finite/compile-and-fresh-audit.py": "ea869344c02c1b65343b48d18f43178508a67d7c9ea54ac32ae343360cfb112d",
+    "verification/ninth-span-finite/compile.json": "fc0a3682ae3fc79f68515e80be9d400688a4fe3ee572a0ae75f6c4c74952def8",
+    "verification/ninth-span-finite/compile.txt": "c972a9c6b2b9a62133510047405f4d6f30905aaced8a91a97fc255d4032020b8",
+    "verification/ninth-span-finite/fresh-axioms.json": "d12fb24ca030da9b0f98a31a7623122d234dc5debdbd019a7b798f5fe2743030",
+    "verification/ninth-span-finite/fresh-axioms.lean": "03e53620bb798f4c159755aaf6ca68171d382c88c0b9d711f5ed64fedbfe0435",
+    "verification/ninth-span-finite/fresh-axioms.txt": "b98b2e7e5536fc2839c601ad18731931b3a8e47bcd9f185284df180a2fc49f7c"
+  },
+  "preservation": "Additive modules and evidence only; old formal code, finite data, website submission and records remain unchanged."
+}

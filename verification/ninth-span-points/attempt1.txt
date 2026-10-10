@@ -1,0 +1,105 @@
+/mnt/e/codex-build/RH-Zero-Proportion-Formalization/RecordProportion/NinthSpanPoints.lean:714:4: error: linarith failed to find a contradiction
+f : ℕ → ℕ
+L U p : ℕ
+L5 U5 : ℤ
+hL : 5 * ↑L ≤ L5
+hU : U5 ≤ 5 * ↑U
+s : ℝ
+hlo : ↑L5 / (5 * ↑SC) ≤ s
+hhi : s ≤ ↑U5 / (5 * ↑SC)
+hLp : L ≤ p
+hpU : p ≤ U
+hdm : ↑(lo32 (hi32 (f p))) - 2000000000 ≤ 1000000000 * w1 (↑p / ↑SC)
+hdp : 1000000000 * w1 (↑p / ↑SC) ≤ 2000000000 - ↑(hi32 (hi32 (f p)))
+hval : ∀ (s : ℝ), ↑L / ↑SC ≤ s → s ≤ ↑U / ↑SC → ↑(lo32 (f p)) / 10000000000 + w1 (↑p / ↑SC) * (s - ↑p / ↑SC) ≤ wfun s
+hsL : ↑L / ↑SC ≤ s
+hsU : s ≤ ↑U / ↑SC
+h1 : (↑(lo32 (hi32 (f p))) - 2000000000) / 1000000000 ≤ w1 (↑p / ↑SC)
+h2 : w1 (↑p / ↑SC) ≤ (2000000000 - ↑(hi32 (hi32 (f p)))) / 1000000000
+hc : ↑(min L5 (5 * ↑p)) ≤ 5 * ↑p
+a✝ : ↑p / 32768 < min (↑L5) (5 * ↑p) / 163840
+⊢ False
+failed
+/mnt/e/codex-build/RH-Zero-Proportion-Formalization/RecordProportion/NinthSpanPoints.lean:719:4: error: linarith failed to find a contradiction
+f : ℕ → ℕ
+L U p : ℕ
+L5 U5 : ℤ
+hL : 5 * ↑L ≤ L5
+hU : U5 ≤ 5 * ↑U
+s : ℝ
+hlo : ↑L5 / (5 * ↑SC) ≤ s
+hhi : s ≤ ↑U5 / (5 * ↑SC)
+hLp : L ≤ p
+hpU : p ≤ U
+hdm : ↑(lo32 (hi32 (f p))) - 2000000000 ≤ 1000000000 * w1 (↑p / ↑SC)
+hdp : 1000000000 * w1 (↑p / ↑SC) ≤ 2000000000 - ↑(hi32 (hi32 (f p)))
+hval : ∀ (s : ℝ), ↑L / ↑SC ≤ s → s ≤ ↑U / ↑SC → ↑(lo32 (f p)) / 10000000000 + w1 (↑p / ↑SC) * (s - ↑p / ↑SC) ≤ wfun s
+hsL : ↑L / ↑SC ≤ s
+hsU : s ≤ ↑U / ↑SC
+h1 : (↑(lo32 (hi32 (f p))) - 2000000000) / 1000000000 ≤ w1 (↑p / ↑SC)
+h2 : w1 (↑p / ↑SC) ≤ (2000000000 - ↑(hi32 (hi32 (f p)))) / 1000000000
+hpl : ↑(min L5 (5 * ↑p)) / (5 * ↑SC) ≤ ↑p / ↑SC
+hc : 5 * ↑p ≤ ↑(max U5 (5 * ↑p))
+a✝ : max (↑U5) (5 * ↑p) / 163840 < ↑p / 32768
+⊢ False
+failed
+/mnt/e/codex-build/RH-Zero-Proportion-Formalization/RecordProportion/NinthSpanPoints.lean:724:4: error: linarith failed to find a contradiction
+f : ℕ → ℕ
+L U p : ℕ
+L5 U5 : ℤ
+hL : 5 * ↑L ≤ L5
+hU : U5 ≤ 5 * ↑U
+s : ℝ
+hhi : s ≤ ↑U5 / (5 * ↑SC)
+hLp : L ≤ p
+hpU : p ≤ U
+hdm : ↑(lo32 (hi32 (f p))) - 2000000000 ≤ 1000000000 * w1 (↑p / ↑SC)
+hdp : 1000000000 * w1 (↑p / ↑SC) ≤ 2000000000 - ↑(hi32 (hi32 (f p)))
+hval : ∀ (s : ℝ), ↑L / ↑SC ≤ s → s ≤ ↑U / ↑SC → ↑(lo32 (f p)) / 10000000000 + w1 (↑p / ↑SC) * (s - ↑p / ↑SC) ≤ wfun s
+hsL : ↑L / ↑SC ≤ s
+hsU : s ≤ ↑U / ↑SC
+h1 : (↑(lo32 (hi32 (f p))) - 2000000000) / 1000000000 ≤ w1 (↑p / ↑SC)
+h2 : w1 (↑p / ↑SC) ≤ (2000000000 - ↑(hi32 (hi32 (f p)))) / 1000000000
+hpl : ↑(min L5 (5 * ↑p)) / (5 * ↑SC) ≤ ↑p / ↑SC
+hpu : ↑p / ↑SC ≤ ↑(max U5 (5 * ↑p)) / (5 * ↑SC)
+hc : ↑(min L5 (5 * ↑p)) ≤ ↑L5
+hlo : ↑L5 / 163840 ≤ s
+a✝ : s < min (↑L5) (5 * ↑p) / 163840
+⊢ False
+failed
+/mnt/e/codex-build/RH-Zero-Proportion-Formalization/RecordProportion/NinthSpanPoints.lean:729:4: error: linarith failed to find a contradiction
+f : ℕ → ℕ
+L U p : ℕ
+L5 U5 : ℤ
+hL : 5 * ↑L ≤ L5
+hU : U5 ≤ 5 * ↑U
+s : ℝ
+hlo : ↑L5 / (5 * ↑SC) ≤ s
+hLp : L ≤ p
+hpU : p ≤ U
+hdm : ↑(lo32 (hi32 (f p))) - 2000000000 ≤ 1000000000 * w1 (↑p / ↑SC)
+hdp : 1000000000 * w1 (↑p / ↑SC) ≤ 2000000000 - ↑(hi32 (hi32 (f p)))
+hval : ∀ (s : ℝ), ↑L / ↑SC ≤ s → s ≤ ↑U / ↑SC → ↑(lo32 (f p)) / 10000000000 + w1 (↑p / ↑SC) * (s - ↑p / ↑SC) ≤ wfun s
+hsL : ↑L / ↑SC ≤ s
+hsU : s ≤ ↑U / ↑SC
+h1 : (↑(lo32 (hi32 (f p))) - 2000000000) / 1000000000 ≤ w1 (↑p / ↑SC)
+h2 : w1 (↑p / ↑SC) ≤ (2000000000 - ↑(hi32 (hi32 (f p)))) / 1000000000
+hpl : ↑(min L5 (5 * ↑p)) / (5 * ↑SC) ≤ ↑p / ↑SC
+hpu : ↑p / ↑SC ≤ ↑(max U5 (5 * ↑p)) / (5 * ↑SC)
+hxl : ↑(min L5 (5 * ↑p)) / (5 * ↑SC) ≤ s
+hc : ↑U5 ≤ ↑(max U5 (5 * ↑p))
+hhi : s ≤ ↑U5 / 163840
+a✝ : max (↑U5) (5 * ↑p) / 163840 < s
+⊢ False
+failed
+'RHWeil.RecordSubmission.NinthSpanPoints.catalogValue_lt' depends on axioms: [propext, Quot.sound]
+'RHWeil.RecordSubmission.NinthSpanPoints.catalogPack_eq' depends on axioms: [propext, Quot.sound]
+'RHWeil.RecordSubmission.NinthSpanPoints.catalogTVal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHWeil.RecordSubmission.NinthSpanPoints.oldTVal_reanchor_scaled' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RHWeil.RecordSubmission.NinthSpanPoints.direct_reanchor_scaled' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
