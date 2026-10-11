@@ -1,0 +1,101 @@
+{
+  "schema": "rh-joint-frame-pair-generator-check-v1",
+  "created_at_utc": "2026-10-11T02:37:45.639143+00:00",
+  "passed": true,
+  "source_before_sha256": {
+    "RecordProportion/JointFramePairFiniteData.lean": "780deceff361ca5298a66e1bc31247aa4c9f636597dd2642ae8dd2702b427b44",
+    "RecordProportion/JointFramePairPoints.lean": "59dd0f22bf3bbd778bf99ccdbefa82fef4a7c101ef8eb27feaf1adf81720a30d"
+  },
+  "source_after_sha256": {
+    "RecordProportion/JointFramePairFiniteData.lean": "780deceff361ca5298a66e1bc31247aa4c9f636597dd2642ae8dd2702b427b44",
+    "RecordProportion/JointFramePairPoints.lean": "59dd0f22bf3bbd778bf99ccdbefa82fef4a7c101ef8eb27feaf1adf81720a30d"
+  },
+  "sources_unchanged": true,
+  "runs": [
+    {
+      "script": {
+        "path": "scripts/generate_joint_frame_pair_certificate.py",
+        "sha256": "22a95251a26cf7e3e8ef4eae4093252e15fc3f4be98e5d8d0d8a87df062c935b"
+      },
+      "optimized": false,
+      "command": [
+        "C:\\Python312\\python.exe",
+        "E:\\codex-build\\RH-Zero-Proportion-Formalization\\scripts\\generate_joint_frame_pair_certificate.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.25,
+      "expected_behavior_passed": true,
+      "log": {
+        "path": "verification/generate_joint_frame_pair_certificate-check.txt",
+        "sha256": "6123a833fd939f30b56ea7091b7dd57d66d75ba67d049203d86899878591bedf"
+      }
+    },
+    {
+      "script": {
+        "path": "scripts/generate_joint_frame_pair_certificate.py",
+        "sha256": "22a95251a26cf7e3e8ef4eae4093252e15fc3f4be98e5d8d0d8a87df062c935b"
+      },
+      "optimized": true,
+      "command": [
+        "C:\\Python312\\python.exe",
+        "-O",
+        "E:\\codex-build\\RH-Zero-Proportion-Formalization\\scripts\\generate_joint_frame_pair_certificate.py",
+        "--check"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 0.125,
+      "expected_behavior_passed": true,
+      "log": {
+        "path": "verification/generate_joint_frame_pair_certificate-optimized-refusal.txt",
+        "sha256": "cc9560daf865701d5a3ecd5015fc261ceb02d0d419cb109b645190da77ee0576"
+      }
+    },
+    {
+      "script": {
+        "path": "scripts/generate_joint_frame_pair_points.py",
+        "sha256": "ebe7d58580c03f5dfbedc06bda5bcf77a1e5266e7c44a129d91d33a2068d0e01"
+      },
+      "optimized": false,
+      "command": [
+        "C:\\Python312\\python.exe",
+        "E:\\codex-build\\RH-Zero-Proportion-Formalization\\scripts\\generate_joint_frame_pair_points.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.0940000000409782,
+      "expected_behavior_passed": true,
+      "log": {
+        "path": "verification/generate_joint_frame_pair_points-check.txt",
+        "sha256": "57c6c8f97d4bd1d3effd57050e0b264d2b67818684f0a98131130f3cba6ec3ee"
+      }
+    },
+    {
+      "script": {
+        "path": "scripts/generate_joint_frame_pair_points.py",
+        "sha256": "ebe7d58580c03f5dfbedc06bda5bcf77a1e5266e7c44a129d91d33a2068d0e01"
+      },
+      "optimized": true,
+      "command": [
+        "C:\\Python312\\python.exe",
+        "-O",
+        "E:\\codex-build\\RH-Zero-Proportion-Formalization\\scripts\\generate_joint_frame_pair_points.py",
+        "--check"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 0.125,
+      "expected_behavior_passed": true,
+      "log": {
+        "path": "verification/generate_joint_frame_pair_points-optimized-refusal.txt",
+        "sha256": "cc9560daf865701d5a3ecd5015fc261ceb02d0d419cb109b645190da77ee0576"
+      }
+    }
+  ],
+  "artifacts": {
+    "verification/generate_joint_frame_pair_certificate-check.txt": "6123a833fd939f30b56ea7091b7dd57d66d75ba67d049203d86899878591bedf",
+    "verification/generate_joint_frame_pair_certificate-optimized-refusal.txt": "cc9560daf865701d5a3ecd5015fc261ceb02d0d419cb109b645190da77ee0576",
+    "verification/generate_joint_frame_pair_points-check.txt": "57c6c8f97d4bd1d3effd57050e0b264d2b67818684f0a98131130f3cba6ec3ee",
+    "verification/generate_joint_frame_pair_points-optimized-refusal.txt": "cc9560daf865701d5a3ecd5015fc261ceb02d0d419cb109b645190da77ee0576"
+  },
+  "scope": "Deterministic source reproduction and optimized-Python refusal; no Lean invocation."
+}

@@ -1,0 +1,6 @@
+import RecordProportion.JointFramePairPoints
+#print axioms RHWeil.RecordSubmission.JointFramePairPoints.catalogValue_lt
+#print axioms RHWeil.RecordSubmission.JointFramePairPoints.catalogPack_eq
+#print axioms RHWeil.RecordSubmission.JointFramePairPoints.catalogTVal
+#print axioms RHWeil.RecordSubmission.JointFramePairPoints.oldTVal_reanchor_scaled
+#print axioms RHWeil.RecordSubmission.JointFramePairPoints.direct_reanchor_scaled

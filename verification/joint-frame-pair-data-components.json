@@ -1,0 +1,196 @@
+{
+  "schema": "rh-joint-frame-pair-data-components-v1",
+  "created_at_utc": "2026-10-11T03:08:56.989033+00:00",
+  "modules": [
+    {
+      "module": "RecordProportion.JointFramePairPoints",
+      "source": {
+        "path": "RecordProportion/JointFramePairPoints.lean",
+        "sha256": "59dd0f22bf3bbd778bf99ccdbefa82fef4a7c101ef8eb27feaf1adf81720a30d"
+      },
+      "olean": {
+        "path": ".lake/build/lib/lean/RecordProportion/JointFramePairPoints.olean",
+        "sha256": "2d52331f3fd94139e227c20b14ee6319f0afb7102b246203b6a1eb233ae3f3fe"
+      },
+      "source_sha256_before": "59dd0f22bf3bbd778bf99ccdbefa82fef4a7c101ef8eb27feaf1adf81720a30d",
+      "source_sha256_after": "59dd0f22bf3bbd778bf99ccdbefa82fef4a7c101ef8eb27feaf1adf81720a30d",
+      "source_unchanged": true,
+      "command": [
+        "wsl",
+        "-d",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+        "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-R",
+        "/mnt/e/codex-build/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean/RecordProportion/JointFramePairPoints.olean",
+        "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/RecordProportion/JointFramePairPoints.lean"
+      ],
+      "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+      "exit_code": 0,
+      "elapsed_seconds": 55.67100000008941,
+      "log": {
+        "path": "verification/joint-frame-pair-points-compile.txt",
+        "sha256": "b8e6cd63d9ffb558711267a6a960e669a7a1cfcc872cc1f6cb51e46be15a16ef"
+      },
+      "component_receipt": {
+        "path": "verification/joint-frame-pair-points.json",
+        "sha256": "c4050cadc8fb7aff975f0aa3eb78c37f6338b2da125589e1ba344dc044c7a46b"
+      },
+      "original_receipt_log_aliases": {
+        "verification/joint-frame-pair-points-compile.log": "verification/joint-frame-pair-points-compile.txt",
+        "verification/joint-frame-pair-points-fresh.log": "verification/joint-frame-pair-points-fresh.txt"
+      },
+      "fresh_axiom_audit": {
+        "exit_code": 0,
+        "elapsed_seconds": 7.297000000020489,
+        "command": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--exec",
+          "env",
+          "LEAN_PATH=/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+          "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+          "-j1",
+          "--tstack=32768",
+          "-R",
+          "/mnt/e/codex-build/RH-Zero-Proportion-Formalization",
+          "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/verification/joint-frame-pair-points-fresh.lean"
+        ],
+        "source": {
+          "path": "verification/joint-frame-pair-points-fresh.lean",
+          "sha256": "eae69c962bfa69b4417dba013fa56d97dd3f5b44f57fa55fcdb441abbc01f0e4"
+        },
+        "log": {
+          "path": "verification/joint-frame-pair-points-fresh.txt",
+          "sha256": "b8e6cd63d9ffb558711267a6a960e669a7a1cfcc872cc1f6cb51e46be15a16ef"
+        },
+        "roots": [
+          "RHWeil.RecordSubmission.JointFramePairPoints.catalogValue_lt",
+          "RHWeil.RecordSubmission.JointFramePairPoints.catalogPack_eq",
+          "RHWeil.RecordSubmission.JointFramePairPoints.catalogTVal",
+          "RHWeil.RecordSubmission.JointFramePairPoints.oldTVal_reanchor_scaled",
+          "RHWeil.RecordSubmission.JointFramePairPoints.direct_reanchor_scaled"
+        ],
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "module": "RecordProportion.JointFramePairFiniteData",
+      "source": {
+        "path": "RecordProportion/JointFramePairFiniteData.lean",
+        "sha256": "780deceff361ca5298a66e1bc31247aa4c9f636597dd2642ae8dd2702b427b44"
+      },
+      "olean": {
+        "path": ".lake/build/lib/lean/RecordProportion/JointFramePairFiniteData.olean",
+        "sha256": "8f01f20dcef0c0f48e1d161d05f9a5bd1b27fb0413f22b7ecc27f19c2a3b7f51"
+      },
+      "source_sha256_before": "780deceff361ca5298a66e1bc31247aa4c9f636597dd2642ae8dd2702b427b44",
+      "source_sha256_after": "780deceff361ca5298a66e1bc31247aa4c9f636597dd2642ae8dd2702b427b44",
+      "source_unchanged": true,
+      "command": [
+        "wsl",
+        "-d",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+        "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-R",
+        "/mnt/e/codex-build/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean/RecordProportion/JointFramePairFiniteData.olean",
+        "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/RecordProportion/JointFramePairFiniteData.lean"
+      ],
+      "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+      "exit_code": 0,
+      "elapsed_seconds": 2684.2970000000205,
+      "log": {
+        "path": "verification/joint-frame-pair-finite-data-compile.txt",
+        "sha256": "38710378ff9954c7d654938d65527d7023aa5efc2c8848a007b9b899554bf6b8"
+      },
+      "component_receipt": {
+        "path": "verification/joint-frame-pair-finite-data.json",
+        "sha256": "2fce8d2a566f303f05dd625e6a2518fe0af123f790564cd6b93dac3d13fb7a67"
+      },
+      "original_receipt_log_aliases": {
+        "verification/joint-frame-pair-finite-data-compile.txt": "verification/joint-frame-pair-finite-data-compile.txt",
+        "verification/joint-frame-pair-finite-data-fresh.txt": "verification/joint-frame-pair-finite-data-fresh.txt"
+      },
+      "fresh_axiom_audit": {
+        "exit_code": 0,
+        "elapsed_seconds": 21.359999999869615,
+        "command": [
+          "wsl",
+          "-d",
+          "Ubuntu",
+          "--exec",
+          "env",
+          "LEAN_PATH=/mnt/e/codex-build/RH-Zero-Proportion-Formalization/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+          "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+          "-j1",
+          "--tstack=32768",
+          "-R",
+          "/mnt/e/codex-build/RH-Zero-Proportion-Formalization",
+          "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/verification/joint-frame-pair-finite-data-fresh.lean"
+        ],
+        "source": {
+          "path": "verification/joint-frame-pair-finite-data-fresh.lean",
+          "sha256": "304c47993d7557adf728925ab11f132bfbc392830ad42841a2bec750d1b616e5"
+        },
+        "log": {
+          "path": "verification/joint-frame-pair-finite-data-fresh.txt",
+          "sha256": "bf8a5f6725ec996ec68e54e0f731bd6dfea29e27f0683e4b89c9b4c2641df507"
+        },
+        "roots": [
+          "RHWeil.RecordSubmission.JointFramePairData.allBranchGuards",
+          "RHWeil.RecordSubmission.JointFramePairData.allBranchNumeric",
+          "RHWeil.RecordSubmission.JointFramePairData.allPatchShapes",
+          "RHWeil.RecordSubmission.JointFramePairData.allRepRoutes",
+          "RHWeil.RecordSubmission.JointFramePairData.allOldOrPatch",
+          "RHWeil.RecordSubmission.JointFramePairData.allFrameGuards",
+          "RHWeil.RecordSubmission.JointFramePairData.allFrameNumeric",
+          "RHWeil.RecordSubmission.JointFramePairData.allFramePatchShapes"
+        ],
+        "axioms": [
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "artifacts": {
+    "verification/joint-frame-pair-points-compile.log": "b8e6cd63d9ffb558711267a6a960e669a7a1cfcc872cc1f6cb51e46be15a16ef",
+    "verification/joint-frame-pair-points-compile.txt": "b8e6cd63d9ffb558711267a6a960e669a7a1cfcc872cc1f6cb51e46be15a16ef",
+    "verification/joint-frame-pair-points-fresh.log": "b8e6cd63d9ffb558711267a6a960e669a7a1cfcc872cc1f6cb51e46be15a16ef",
+    "verification/joint-frame-pair-points-fresh.txt": "b8e6cd63d9ffb558711267a6a960e669a7a1cfcc872cc1f6cb51e46be15a16ef",
+    "verification/joint-frame-pair-points.json": "c4050cadc8fb7aff975f0aa3eb78c37f6338b2da125589e1ba344dc044c7a46b",
+    "verification/joint-frame-pair-finite-data-compile.txt": "38710378ff9954c7d654938d65527d7023aa5efc2c8848a007b9b899554bf6b8",
+    "verification/joint-frame-pair-finite-data-fresh.txt": "bf8a5f6725ec996ec68e54e0f731bd6dfea29e27f0683e4b89c9b4c2641df507",
+    "verification/joint-frame-pair-finite-data.json": "2fce8d2a566f303f05dd625e6a2518fe0af123f790564cd6b93dac3d13fb7a67",
+    "verification/generate_joint_frame_pair_certificate-check.txt": "6123a833fd939f30b56ea7091b7dd57d66d75ba67d049203d86899878591bedf",
+    "verification/generate_joint_frame_pair_certificate-optimized-refusal.txt": "cc9560daf865701d5a3ecd5015fc261ceb02d0d419cb109b645190da77ee0576",
+    "verification/generate_joint_frame_pair_points-check.txt": "57c6c8f97d4bd1d3effd57050e0b264d2b67818684f0a98131130f3cba6ec3ee",
+    "verification/generate_joint_frame_pair_points-optimized-refusal.txt": "cc9560daf865701d5a3ecd5015fc261ceb02d0d419cb109b645190da77ee0576"
+  },
+  "ordinary_lean": true,
+  "passed": true,
+  "fresh_axiom_audits_passed": true,
+  "generator_checks": {
+    "path": "verification/joint-frame-pair-generator-check.json",
+    "sha256": "5e51bd8c4fe9cd2d5b02714c246e7c2347e50b64a3ae19c4189dd914fa436b99"
+  },
+  "scope": "Two newly compiled finite-data components; the complete real analytic assembly and independent NaNoDa replay are separate verification steps."
+}

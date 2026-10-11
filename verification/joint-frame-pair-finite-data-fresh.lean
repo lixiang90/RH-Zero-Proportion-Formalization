@@ -1,0 +1,9 @@
+import RecordProportion.JointFramePairFiniteData
+#print axioms RHWeil.RecordSubmission.JointFramePairData.allBranchGuards
+#print axioms RHWeil.RecordSubmission.JointFramePairData.allBranchNumeric
+#print axioms RHWeil.RecordSubmission.JointFramePairData.allPatchShapes
+#print axioms RHWeil.RecordSubmission.JointFramePairData.allRepRoutes
+#print axioms RHWeil.RecordSubmission.JointFramePairData.allOldOrPatch
+#print axioms RHWeil.RecordSubmission.JointFramePairData.allFrameGuards
+#print axioms RHWeil.RecordSubmission.JointFramePairData.allFrameNumeric
+#print axioms RHWeil.RecordSubmission.JointFramePairData.allFramePatchShapes

@@ -4,65 +4,70 @@ Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
 Lean proofs and exact rational certificates for lower bounds on the proportion
 of Riemann zeta zeros on the critical line. The research project and papers are
-maintained in [RH-Weil](https://github.com/lixiang90/RH-Weil); this repository
-contains the proportion formalization and its reproducibility records.
+maintained in [RH-Weil](https://github.com/lixiang90/RH-Weil).
+This repository preserves each proportion proof and its verification history.
 
-The latest bound is
+The latest formalized bound is
 
 \[
-\frac{941021}{1397107}=\frac{66812491}{99194597}
-=0.673549699486152456\ldots,
+ p=\frac{66812491}{99194552}=0.6735500050446319\ldots>0.67355,
 \]
 
-or **67.3549699486152…%**, for **simple** critical-line zeros relative to all
-nontrivial zeros counted with multiplicity. It also implies the same bound for
-distinct critical-line zeros. The statements are asymptotic: every smaller
-proportion holds for all sufficiently large heights, both on \([T,2T]\) and
-on \([0,T]\).
+or **67.35500050446319…%**. It concerns **simple** critical-line zeros
+relative to all nontrivial zeros counted with multiplicity. It also gives
+the same lower bound for distinct critical-line zeros. Every proportion below
+p holds for all sufficiently large heights, both on \( (T,2T] \) and
+on \( (0,T] \). In particular 67.355% holds eventually.
 
-The complete new theorem is in
-[RecordProportion/NinthSpan.lean](RecordProportion/NinthSpan.lean). All four
-actual counting theorems and the strict improvement over the previous bound
-pass ordinary Lean compilation and a fresh transitive axiom audit. The full
-dependency graphs also pass independent nanoda replay: the recorded run checked
-82,804 declarations in 702.610 seconds with four threads. Their only permitted
-axioms are `propext`, `Quot.sound`, and `Classical.choice`; the proof does not use
-`sorry`, `native_decide`, or new analytic axioms. The source and artifact hashes,
-commands, and results are recorded in the
-[complete Lean report](verification/ninth-span-complete-formal-kernel.json) and
-[independent replay report](verification/ninth-span-complete-independent-nanoda.json).
+The additive development uses the namespace `RHWeilRecord.JointFramePair`.
+The complete proof passed ordinary Lean compilation and a fresh transitive
+audit of eight roots. Independent nanoda replay checked **84,362 declarations
+with no errors**. Both checks admit only `propext`, `Classical.choice`, and
+`Quot.sound`. See the [Lean report](verification/joint-frame-pair-complete-formal-kernel.json),
+[independent replay](verification/joint-frame-pair-complete-independent-nanoda.json),
+and [verification addendum](papers/joint-frame-pair-lean-verification-addendum.md).
+The new [paper source](papers/joint-frame-pair-simple-critical-paper.tex)
+and [PDF](output/pdf/joint-frame-pair-simple-critical-paper.pdf) document the
+mathematical certificate; the [proof guide](docs/joint-frame-pair-formalization.md)
+explains its separate Lean adapter and reproduction.
 
-The previous bound **66812491/99194740 = 67.3548728491047…%**, its Lean proofs,
-papers, certificates, verification records, and single-file submission remain
-available without replacement. The previous README is archived
-[verbatim](docs/c260-repository-status-20261010.md). A
-[preservation manifest](verification/ninth-span-old-record-baseline.json) and
-[publication check](scripts/verify_ninth_span_publication.py) verify this.
+## Proof structure
 
-## Proof and certificates
+The improvement pays both the eight-point frames and their nine-point
+compatible pairs. Forty of the 241 original cells receive new duals, including
+four closed branches of cell 17; the other 201 keep their original witnesses.
+Ten compatible-pair domains receive twenty closed branches. The complete
+2,399-domain cover retains all 47 previous replacements with their 84 branches
+and all 2,342 other original duals. The 425 used tangent points belong to the
+original certified kernel table. Real gaps, shared span squares, finite box
+residuals and branch endpoints are all retained.
 
-The improvement strengthens a nine-point local inequality while retaining the
-existing analytic majorant and counting bridge. It divides 47 previous domains
-into 84 closed branches according to the total span, checks exact tangent and
-dual certificates, and transports the bound to the actual zeta-zero counts.
-The coverage concerns real gaps, including branch endpoints.
+The global eight-point floor is 805094/10^8. The resulting outer-case bound is
+1610897/200000000; the complete low--low bound is larger. Both pay the new
+uniform nine-point reward 805448/10^8. The unchanged lossless counting bridge
+retains every off-line reflected pair and all zero multiplicities.
 
-| Entry | Purpose |
-|---|---|
-| [NinthSpan.lean](RecordProportion/NinthSpan.lean) | Unconditional local inequality and simple/distinct dyadic and cumulative theorems |
-| [NinthSpanFinite.lean](RecordProportion/NinthSpanFinite.lean) | Real-domain soundness, closed coverage, and complete orbit/reflection transport |
-| [NinthSpanFiniteData.lean](RecordProportion/NinthSpanFiniteData.lean) | Literal data and closed integer certificate checks |
-| [NinthSpanPathSoundness.lean](RecordProportion/NinthSpanPathSoundness.lean) | Integer path witnesses and real potential bounds |
-| [NinthSpanPoints.lean](RecordProportion/NinthSpanPoints.lean) | 541 original tangent values and exact safe reanchoring |
-| [NinthSpanLocal.lean](RecordProportion/NinthSpanLocal.lean) | Low-domain and outside-domain combination |
-| [NinthSpanAnalytic.lean](RecordProportion/NinthSpanAnalytic.lean) | Improved reward and actual asymptotic counting transport |
+For Lean, the 201 retained YA payments use a separately archived base-only
+33-variable dual adapter, proving the same floor with no additional tangent
+or analytic input. It produces 244 numeric frame checks; the mathematical
+witnesses and this formal adapter are both preserved.
 
-See the [formalization guide](docs/ninth-span-formalization.md) for the exact
-statement, proof structure, and reproduction steps. The new mathematical
-[paper source](papers/ninth-span-simple-critical-paper.tex) and
-[PDF](output/pdf/ninth-span-simple-critical-paper.pdf) are preserved as the
-research snapshot; a [verification addendum](papers/ninth-span-lean-verification-addendum.md)
-records the subsequent completed formalization.
+## Preserved results
+
+The previous **941021/1397107 = 67.3549699486152…%** result remains in
+[NinthSpan.lean](RecordProportion/NinthSpan.lean). All four actual counting
+theorems passed ordinary Lean compilation, a fresh transitive axiom audit,
+and independent nanoda replay of 82,804 declarations. Only `propext`,
+`Quot.sound`, and `Classical.choice` were permitted. See its preserved
+[Lean report](verification/ninth-span-complete-formal-kernel.json),
+[independent replay](verification/ninth-span-complete-independent-nanoda.json),
+and [guide](docs/ninth-span-formalization.md).
+
+The older **66812491/99194740 = 67.3548728491047…%** proofs and single-file
+submission also remain unchanged. All preceding tracked paths and mathematical
+records are preserved. The preceding repository introductions are archived
+[at c260](docs/c260-repository-status-20261010.md) and
+[at c403](docs/c403-repository-status-20261011.md).
 
 ## Fixed environment and reproduction
 
@@ -76,34 +81,21 @@ records the subsequent completed formalization.
 
 ```powershell
 lake --no-cache exe cache get
-lake --no-cache build +RecordProportion.NinthSpan:olean
-python -B -X utf8 scripts/am_ninth_span_certificate.py --check
-python -B -X utf8 scripts/generate_ninth_span_certificate.py --check
-python -B -X utf8 scripts/review_ninth_span_data.py
+lake --no-cache build +RecordProportion.JointFramePair:olean
+python -B -X utf8 scripts/am_joint_frame_pair_certificate.py --check
 ```
 
-Lake checks the complete new Lean theorem and its dependencies. The Python
-checks use exact integers and rationals; they also verify the correspondence
-between the frozen JSON and the Lean literals. They supplement the Lean and
-independent kernel checks.
+The pinned compiler, dependency commits and source closure are bound by
+the new verification drivers. Recorded Linux-cache commands refer to the
+measured local environment; fresh checkouts build their own dependencies.
 
-The committed toolchain and Lake manifest pin the dependencies. Recorded local
-verification scripts additionally bind the compiler, source closure, compiled
-artifacts, exporter, and independent kernel. Their Linux-cache mode describes
-the measured local environment; a fresh checkout builds its own dependencies.
+## Website submission
 
-## Website submission and history
-
-This update publishes the new modular formalization. It does not submit a new
-candidate to the website or establish official resource compliance. The old
-[single-file candidate](submission/proof/Solution.lean) is preserved exactly.
-Its local Lean and independent replay checks passed, but the reported website
-attempt exited with code 137 during compilation; no accepted website record
-has been obtained. See the [submission requirements](docs/submission-contract.md),
-[failed-attempt diagnosis](verification/site-compilation-exit137/diagnosis.json),
-and [resource work](docs/resource-optimization.md).
-
-Historical component checks, measured optimization experiments, and their
-scope remain in `verification/` and `docs/`. Research papers remain available
-here and in the main project; old results are retained under their original
-namespaces and filenames.
+The website's previous compilation attempt exited with code 137. The old
+[single-file submission](submission/proof/Solution.lean) is preserved exactly;
+no accepted website record has been obtained. Publishing a modular Lean
+proof, independently replaying its kernel graph, and passing the site's
+whole-file resource limits are separate steps. See the preserved
+[submission requirements](docs/submission-contract.md),
+[failure diagnosis](verification/site-compilation-exit137/diagnosis.json),
+and [resource optimization](docs/resource-optimization.md).
