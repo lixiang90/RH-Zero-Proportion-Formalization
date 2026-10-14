@@ -1,0 +1,85 @@
+{
+  "artifact": "proof/Solution.lean",
+  "format": "UTF-8, LF",
+  "bytes": 1939197,
+  "strict_limit_bytes": 2000000,
+  "remaining_bytes": 60803,
+  "sha256": "11520f8af2d31186fc1b2b0304f2e72de29ec90e397b4f36d5792c4ec5190b48",
+  "numerator": "39282451209654051457408555553",
+  "denominator": "58319774788300000000000000000",
+  "fixed_declarations": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "generator": "scripts/bundle_gram_defect_solution.py",
+  "regenerate_command": "python -B -X utf8 scripts/bundle_gram_defect_solution.py",
+  "verify_command": "python -B -X utf8 scripts/verify_single_solution.py",
+  "sources": {
+    "GramDefectRecord/Core.lean": "a14f790c2549ecb1aa91a16fe1157a9d81d23bb1c23e5671a4841f50db16d52b",
+    "GramDefectRecord/ScaledCertificate.lean": "11b92b5645bd0f1fc460cb726f6a81811ff2286229e16de9df42d28a5d99bc60",
+    "GramDefectRecord/SharpWindow.lean": "c206fc0ea4da57b2e92c6004f33208a38e3a3dc6dcab7a64be005bea37d2d209",
+    "GramDefectRecord/RefinedCounting.lean": "e267c8abaf81c9315e06786833219075db662010300d1988d93c3d220922221a",
+    "GramDefectRecord/Final.lean": "374a0260cc465808624fab897c699d7d532927254de96505626d2b5d5efde152"
+  },
+  "source_audit": {
+    "strict_source_limit": "passed",
+    "scopes": "passed",
+    "fixed_root_declarations": "passed",
+    "no_repository_proof_imports": "passed",
+    "upstream_license_trailer": "preserved exactly",
+    "generic_PCell_helper": "preserved exactly"
+  },
+  "standalone_verification": {
+    "status": "passed",
+    "receipts_directory": "verification/gram-defect-single-20261014",
+    "compile": "passed",
+    "statement_kernel": "passed",
+    "independent_kernel": "passed",
+    "contract_snapshot": "recorded",
+    "receipt_files": [
+      "compile.json",
+      "statement-kernel.json",
+      "independent-kernel.json",
+      "contract-snapshot.json",
+      "full-local-verification.json"
+    ],
+    "log_files": [
+      "compile.log",
+      "comparator.log",
+      "nanoda.log"
+    ],
+    "exact_statement_equality": "passed",
+    "transitive_axiom_audit": "passed",
+    "default_lean_kernel_replay": "passed",
+    "checked_declarations": 74955,
+    "allowed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "observed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "bound_source_unchanged": true,
+    "full_receipt": "verification/gram-defect-single-20261014/full-local-verification.json",
+    "full_receipt_sha256": "9d20147b50f4320e4a5a7b97b69a9b3b28f18ae1dc2b441958317f8a1e3adda6"
+  },
+  "website": {
+    "submitted": false,
+    "accepted": false,
+    "local_validation_does_not_imply_website_acceptance": true,
+    "resource_checks_certified": false
+  },
+  "counting_definition_bridges": {
+    "namespace": "GramDefectSubmissionCounts",
+    "theorems": [
+      "count_eq",
+      "distinct_eq"
+    ],
+    "proofs": "by rfl",
+    "preserves": "trusted zero sets and multiplicities"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "module": "Solution.Candidate",
+  "command": [
+    "wsl",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "env",
+    "LEAN_PATH=/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build",
+    "-o",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/lib/Solution/Candidate.olean",
+    "-i",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/lib/Solution/Candidate.ilean",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean"
+  ],
+  "source": "Solution\\Candidate.lean",
+  "source_sha256": "87d1beb3103b7ab7a45ad9883bd71d6353325476914eb249d5df33fbfb2a10aa",
+  "source_unchanged": true,
+  "output_sha256": null,
+  "exit_code": 1,
+  "elapsed_seconds": 493.766,
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "lean_path": "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean",
+  "log": "logs\\Solution.Candidate.log",
+  "ordinary_lean_passed": false,
+  "official_website_verification": false
+}

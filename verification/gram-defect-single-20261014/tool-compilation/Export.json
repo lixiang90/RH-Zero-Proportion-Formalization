@@ -1,0 +1,31 @@
+{
+  "module": "Export",
+  "source": "E:\\codex-build\\Analytic_Number_Theory_new_breakthrough\\research\\proportion_single_build_v2\\tools\\source\\Export.lean",
+  "source_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998",
+  "source_unchanged": true,
+  "command": [
+    "wsl",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "env",
+    "PATH=/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+    "LEAN_PATH=/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/tools/lib:/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/tools/source",
+    "-o",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/tools/lib/Export.olean",
+    "-i",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/tools/lib/Export.ilean",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/tools/source/Export.lean"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 9.329,
+  "log": "E:\\codex-build\\Analytic_Number_Theory_new_breakthrough\\research\\proportion_single_build_v2\\tools\\logs\\Export.log",
+  "olean": "E:\\codex-build\\Analytic_Number_Theory_new_breakthrough\\research\\proportion_single_build_v2\\tools\\lib\\Export.olean",
+  "olean_sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+}

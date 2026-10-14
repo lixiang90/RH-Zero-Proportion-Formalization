@@ -23,3 +23,7 @@ verification/ninth-span-*/** -text whitespace=cr-at-eol,-blank-at-eof
 # Preserve the exact freshly checked source and evidence bytes.
 /GramDefectRecord/*.lean -text whitespace=cr-at-eol,-blank-at-eof
 /verification/gram-defect-20261014/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
+
+# Preserve exactly the upload file and its fresh single-file verification evidence.
+/submission/gram-defect-20261014/proof/Solution.lean -text
+/verification/gram-defect-single-20261014/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol

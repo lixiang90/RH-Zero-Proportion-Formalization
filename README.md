@@ -114,10 +114,63 @@ latest result; do not import it together with `RecordProportion` in one module.
 
 ## Website submission
 
-The new result has passed local Lean and independent nanoda verification;
-it has **not been submitted to or accepted by the website**. The displayed
-leaderboard therefore still has its preceding record. Modular verification
-does not by itself establish the website's whole-file resource checks.
+The latest upload artifact is
+[submission/gram-defect-20261014/proof/Solution.lean](submission/gram-defect-20261014/proof/Solution.lean).
+It is **1,939,197 UTF-8 bytes**, leaving **60,803 bytes** below the website's
+2,000,000-byte limit. It replaces the old literal certificate with the refined
+certificate, retains its shared proof helpers and source/license notices,
+and imports only the pinned trusted challenge, Mathlib and Zeta23 modules.
+No repository proof modules are needed by the upload file.
+
+The three fixed declarations appear at root scope:
+
+- `candidate_strict_improvement`
+- `candidate_critical_line_bound`
+- `candidate_critical_line_bound_cumulative`
+
+The website supplies `candidateKappa` from the exact numerator and denominator
+entered in the form and `currentRecordKappa` from its trusted current record.
+The file does not define or override either constant. Two `by rfl` identities
+map the website's trusted `Ncount` and `N0star` definition copies to their
+`Zeta23` counterparts, preserving exactly the zero sets and multiplicities.
+See the
+[submission instructions and exact fields](submission/gram-defect-20261014/README.md)
+and [artifact manifest](submission/gram-defect-20261014/manifest.json).
+
+**Fresh single-file verification passed**: ordinary Lean compilation, exact
+statement equality for all three fixed declarations, their transitive axiom
+audit, and Lean's default kernel replay. Independent nanoda replay checked
+**74,955 declarations with no errors**. Only `propext`, `Quot.sound` and
+`Classical.choice` were permitted. The single-file evidence is recorded in the
+[compilation receipt](verification/gram-defect-single-20261014/compile.json),
+[statement and axiom receipt](verification/gram-defect-single-20261014/statement-kernel.json),
+[independent replay receipt](verification/gram-defect-single-20261014/independent-kernel.json),
+and [complete local receipt](verification/gram-defect-single-20261014/full-local-verification.json).
+The [contract snapshot](verification/gram-defect-single-20261014/contract-snapshot.json)
+binds the trusted challenge environment and score inputs.
+The source-size and scope checks have passed. Local validation does not
+establish the website's current resource checks or acceptance; the new result
+has **not been submitted to or accepted by the website**.
+
+The [first whole-file compilation log](verification/gram-defect-single-20261014/first-attempt/compile.log)
+and [repair note](verification/gram-defect-single-20261014/first-attempt/README.md)
+are preserved. The two explicit `by rfl` counting mappings resolve its wrapper
+definition mismatch; the repaired source is the one bound by the passing
+receipts above.
+
+The upload artifact can be regenerated from the modular proof:
+
+```powershell
+python -B -X utf8 scripts/bundle_gram_defect_solution.py
+python -B -X utf8 scripts/verify_single_solution.py
+```
+
+The validator runs fresh single-file compilation, statement comparison,
+axiom checks and independent replay. Its defaults describe the recorded
+local WSL dependency cache. Other environments can configure
+`--runtime-manifest`, `--package-manifest`, `--zeta-repo`, `--exporter-repo`,
+`--comparator-repo` and `--nanoda-bin`; use an empty `--work-dir` for a fresh
+run. See the package instructions for the pinned environment and options.
 
 The repository's earlier website compilation attempt exited with code 137. The old
 [single-file submission](submission/proof/Solution.lean) is preserved exactly;

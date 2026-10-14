@@ -1,0 +1,223 @@
+{
+  "scope": "Static website contract, exact rational and pinned tool source provenance audit",
+  "observed_live_homepage": "https://www.riemannzeta.fun/",
+  "live_current_record_observed_date": "2026-10-14",
+  "website_source_commit": "4319d683f62e06f33e4d44ac07db38eb92a700ac",
+  "current_record": {
+    "id": "master-of-puppets4",
+    "track": "critical-line",
+    "date": "2026-10-12",
+    "author": "R. Arun Chandru",
+    "github": "arun-chandru",
+    "title": "Certified critical-line bound 0.673570008600517227066544444712",
+    "method": "Gram-defect refinement",
+    "model": "GPT-6 Astra",
+    "harness": "Codex",
+    "scoreDecimal": "0.673570008600517227066544444712",
+    "scorePercent": "67.3570008600517227066544444712",
+    "exactRational": {
+      "numerator": "667801670564118872522651",
+      "denominator": "991436171500000000000000"
+    },
+    "exactExpression": "(667801670564118872522651 : ℝ) / 991436171500000000000000",
+    "status": "kernel-verified",
+    "formalVerification": true,
+    "independentReview": null,
+    "sourceUrl": "https://github.com/josusanmartin/riemann/blob/65c71d512f51df92bec4a3d1edb6a795fc1cac63/submissions/master-of-puppets4/submission.json",
+    "proofUrl": "https://github.com/josusanmartin/riemann/blob/65c71d512f51df92bec4a3d1edb6a795fc1cac63/submissions/master-of-puppets4/proof/Solution.lean",
+    "pullRequestUrl": null,
+    "summary": "Refines exact rational bounds in the nine-point Gram-defect proof"
+  },
+  "candidate_score": {
+    "numerator": "39282451209654051457408555553",
+    "denominator": "58319774788300000000000000000"
+  },
+  "strict_gain": "337829091830122627681008873/5027855151204728260300000000000000000",
+  "size_policy": {
+    "max_utf8_solution_bytes": 2000000,
+    "server_enforcement": "Buffer.byteLength(input.solution, utf8)",
+    "prepare_policy": "per-file stat size <= 2,000,000; regular .lean only; no symlinks"
+  },
+  "contract": {
+    "schemaVersion": 1,
+    "name": "Riemann.fail critical-line bound",
+    "track": "critical-line",
+    "direction": "higher",
+    "trustedUpstream": {
+      "repository": "anthropics/zeta-23-lean",
+      "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+      "leanToolchain": "leanprover/lean4:v4.33.0-rc2",
+      "mathlibCommit": "51e6992efd06126df61a496bebf8f49482a4e129"
+    },
+    "verifier": {
+      "comparatorCommit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "landrunCommit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+      "lean4exportCommit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "nanodaCommit": "418320295890faed83a96fd97907b12a3b6728c2"
+    },
+    "baseline": {
+      "recordId": "anthropic-2026-montgomery-taylor",
+      "leanExpression": "2 - 1 / cMT",
+      "decimal": "0.672500703679411645734379790803",
+      "percent": "67.2500703679411645734379790803"
+    },
+    "theorems": {
+      "strictImprovement": "candidate_strict_improvement",
+      "dyadicBound": "candidate_critical_line_bound",
+      "cumulativeBound": "candidate_critical_line_bound_cumulative"
+    },
+    "permittedAxioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "trustedPaths": [
+      ".github/workflows/build-e2b-template.yml",
+      ".github/workflows/verifier-smoke.yml",
+      "challenge/contract.json",
+      "challenge/smoke",
+      "challenge/submission.schema.json",
+      "challenge/templates",
+      "data/records.json",
+      "e2b/build-template.ts",
+      "e2b/mathlib-cache-bounded-disk.patch",
+      "e2b/run-verification-job.sh",
+      "e2b/runtime",
+      "e2b/template.ts",
+      "package.json",
+      "package-lock.json",
+      "scripts/install-lean-toolchain.sh",
+      "scripts/install-native-build-toolchains.sh",
+      "scripts/install-verifier-tools.sh",
+      "scripts/lake-runtime-wrapper.sh",
+      "scripts/prune-lake-build-runtime.sh",
+      "scripts/prune-lean-runtime.sh",
+      "scripts/run-lake-build-bounded-disk.sh",
+      "scripts/finalize-e2b-job.ts",
+      "scripts/prepare-e2b-template.sh",
+      "scripts/prepare-candidate.ts",
+      "scripts/promote-record.ts",
+      "scripts/run-comparator-sandbox.sh",
+      "scripts/run-comparator-e2b.sh",
+      "scripts/smoke-verifier.sh",
+      "scripts/trusted-material.ts",
+      "scripts/verify-submission.ts",
+      "src/lib/attestation.ts",
+      "src/lib/challenge.ts",
+      "src/lib/direct-submission.ts",
+      "src/lib/e2b-config.ts",
+      "src/lib/e2b-verifier.ts",
+      "src/lib/e2b-webhooks.ts",
+      "src/lib/github-promotion.ts",
+      "src/lib/submission-finalization.ts",
+      "src/lib/submission-jobs.ts"
+    ]
+  },
+  "trusted_site_source_sha256": {
+    "challenge/contract.json": {
+      "working_utf8_bytes": 2598,
+      "working_sha256": "284c794c4dbf8edb435007aa369757f22c2e2ecf9c1ce56704f301210a5f234e",
+      "git_blob_content_sha256": "39e1b5a99889cf2c50865883d2007df949bcfced107c92917fe9cd3ab6441020",
+      "same_as_git_after_crlf_normalization": true
+    },
+    "data/records.json": {
+      "working_utf8_bytes": 51387,
+      "working_sha256": "0faca756465f6f29f2ffd0bf07195aba429f6b3b2f2ee4cf0a04dd273ee91314",
+      "git_blob_content_sha256": "52f9932f2ad7526688ba6ec46a50670de20e65b6deab1ce50603479c6c932eb2",
+      "same_as_git_after_crlf_normalization": true
+    },
+    "scripts/prepare-candidate.ts": {
+      "working_utf8_bytes": 6243,
+      "working_sha256": "7a8e102f3d61e99f6d7053425e81dd902fcea3888f78713478a5044af91dfbcf",
+      "git_blob_content_sha256": "78c2e712b83e793ae86704c652e995f3c6e319dc42da68b7978a73999309149a",
+      "same_as_git_after_crlf_normalization": true
+    },
+    "src/lib/direct-submission.ts": {
+      "working_utf8_bytes": 2759,
+      "working_sha256": "4ff7ccfd68424b26d98566e94ef24d3b15456d35e17c64a4df63344b050d50a2",
+      "git_blob_content_sha256": "f2f213cfaff53b59e9327477b58038449048ffc493aaad723dbaad462728ec60",
+      "same_as_git_after_crlf_normalization": true
+    },
+    "challenge/templates/CandidateSpec.lean.tmpl": {
+      "working_utf8_bytes": 355,
+      "working_sha256": "2f4455854144a815016ca959c44d58cccc92305defe2cd7c4725032465cf1350",
+      "git_blob_content_sha256": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c",
+      "same_as_git_after_crlf_normalization": true
+    },
+    "challenge/templates/Challenge.Candidate.lean": {
+      "working_utf8_bytes": 835,
+      "working_sha256": "9687c09150e685a3d365c51b3adcb012ab44d99c3508c2c75314afa3c45327a5",
+      "git_blob_content_sha256": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378",
+      "same_as_git_after_crlf_normalization": true
+    },
+    "challenge/templates/PrintAxioms.Candidate.lean": {
+      "working_utf8_bytes": 174,
+      "working_sha256": "5e445e930c634b18761a1700a34f931c1147caae0ae52d3c63193c18a286496a",
+      "git_blob_content_sha256": "950b890f6c0148a93f031142e0abb04bda243bd5a806b046a0327ba6ba7da560",
+      "same_as_git_after_crlf_normalization": true
+    }
+  },
+  "generated_sources": {
+    "generated\\Challenge\\Candidate.lean": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378",
+    "generated\\ChallengeDeps\\CandidateSpec.lean": "6e2ab68d54f06ee5008263ec8f575564a49477a49ea40ad3c84b0f9c9aa45cb5"
+  },
+  "trusted_definition_source": {
+    "pin": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "path": "comparator/ChallengeDeps.lean",
+    "git_blob_content_sha256": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd"
+  },
+  "tool_source_audit": {
+    "Comparator": {
+      "pin": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "audited_sources": {
+        "Main.lean": {
+          "working_sha256": "daca4ccb38b2dc7356ee4b47667980b290c3f27f970800723309e4d074f0c5be",
+          "git_blob_content_sha256": "d6474f7ac49cf7a1c2f24aff6ac2bcc97a4a00aa37b969f225c6e688c434d0b4",
+          "same_as_git_after_crlf_normalization": true
+        },
+        "Comparator.lean": {
+          "working_sha256": "3becb55ec42f66fd9a57ea6edeb1e3eaaffccc98498d584730c4d632758924cb",
+          "git_blob_content_sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23",
+          "same_as_git_after_crlf_normalization": true
+        },
+        "lake-manifest.json": {
+          "working_sha256": "d66b2b0ba1410ac628736f0a3612dcdd72a700013d0a66cbbf4adaffd0054010",
+          "git_blob_content_sha256": "bbfb90d0bf6d86e8d909e48e5e13a178edbfc8f204fcb231b4b08531e48aaf27",
+          "same_as_git_after_crlf_normalization": true
+        }
+      }
+    },
+    "lean4export": {
+      "pin": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "audited_sources": {
+        "Main.lean": {
+          "working_sha256": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5",
+          "git_blob_content_sha256": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a",
+          "same_as_git_after_crlf_normalization": true
+        },
+        "Export.lean": {
+          "working_sha256": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f",
+          "git_blob_content_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998",
+          "same_as_git_after_crlf_normalization": true
+        },
+        "Export/Parse.lean": {
+          "working_sha256": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9",
+          "git_blob_content_sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286",
+          "same_as_git_after_crlf_normalization": true
+        }
+      }
+    },
+    "nanoda": {
+      "pin": "418320295890faed83a96fd97907b12a3b6728c2",
+      "cargo_git_blob_content_sha256": "716d6dde2ac8a5563f0e9a363bee85ce18d0819a34f7b5d865c1e03d3c6d638f",
+      "existing_binary_sha256": "b19804767cb72bf5a317fcfc20e8af7eafdfba789dd6b24bddee2574379ff35a"
+    }
+  },
+  "static_audit_passed": true,
+  "ordinary_lean_passed": false,
+  "statement_equality_proved": false,
+  "default_kernel_replay_passed": false,
+  "independent_nanoda_passed": false,
+  "official_website_acceptance": false,
+  "submitted": false
+}

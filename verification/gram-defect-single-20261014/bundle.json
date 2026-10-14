@@ -1,0 +1,69 @@
+{
+  "path": "submission/gram-defect-20261014/proof/Solution.lean",
+  "bytes": 1939197,
+  "strict_limit_bytes": 2000000,
+  "sha256": "11520f8af2d31186fc1b2b0304f2e72de29ec90e397b4f36d5792c4ec5190b48",
+  "numerator": "39282451209654051457408555553",
+  "denominator": "58319774788300000000000000000",
+  "imports": [
+    "ChallengeDeps.CandidateSpec",
+    "Mathlib",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Intervals",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Analysis.Real.Pi.Bounds",
+    "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring",
+    "Zeta23.FinalMult",
+    "Zeta23.PrimeSideA.EndsE1",
+    "Zeta23.Taper.Norms",
+    "Zeta23.ThmD.Concrete",
+    "Zeta23.ThmD.Limit",
+    "Zeta23.ThmD.Mult",
+    "Zeta23.ThmD.Window",
+    "Zeta23.ThmD.WindowCore",
+    "Zeta23.ThmD.ZeroSideD",
+    "Zeta23.ZeroSide.RankTraceMult"
+  ],
+  "modules": [
+    {
+      "path": "GramDefectRecord/Core.lean",
+      "implicit_sections_closed": 17
+    },
+    {
+      "path": "GramDefectRecord/SharpWindow.lean",
+      "implicit_sections_closed": 0
+    },
+    {
+      "path": "GramDefectRecord/RefinedCounting.lean",
+      "implicit_sections_closed": 1
+    },
+    {
+      "path": "GramDefectRecord/Final.lean",
+      "implicit_sections_closed": 1
+    }
+  ],
+  "scaled_module_implicit_sections_closed": 0,
+  "sources_lf_sha256": {
+    "Core": "34eb3954e28b89fd5925235935c35ee7577778c3d75369673b7435845d950cbe",
+    "ScaledCertificate": "ee7aedd913d0ad41ee3ba42b8333a0ed62037003a4b95727450e09e78351090b",
+    "SharpWindow": "c206fc0ea4da57b2e92c6004f33208a38e3a3dc6dcab7a64be005bea37d2d209",
+    "RefinedCounting": "e267c8abaf81c9315e06786833219075db662010300d1988d93c3d220922221a",
+    "Final": "374a0260cc465808624fab897c699d7d532927254de96505626d2b5d5efde152"
+  },
+  "sources_raw_sha256": {
+    "Core": "a14f790c2549ecb1aa91a16fe1157a9d81d23bb1c23e5671a4841f50db16d52b",
+    "ScaledCertificate": "11b92b5645bd0f1fc460cb726f6a81811ff2286229e16de9df42d28a5d99bc60",
+    "SharpWindow": "c206fc0ea4da57b2e92c6004f33208a38e3a3dc6dcab7a64be005bea37d2d209",
+    "RefinedCounting": "e267c8abaf81c9315e06786833219075db662010300d1988d93c3d220922221a",
+    "Final": "374a0260cc465808624fab897c699d7d532927254de96505626d2b5d5efde152"
+  },
+  "upstream_trailer_preserved": true,
+  "proof_verification": "separate"
+}

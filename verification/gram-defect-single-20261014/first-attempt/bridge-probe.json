@@ -1,0 +1,38 @@
+{
+  "module": "WebsiteBridge",
+  "source": "WebsiteBridge.lean",
+  "source_sha256": "79d88f28f9548d5f7847b57e424fb87a1cefa114ad51976f160fd0a59359d74b",
+  "source_unchanged": true,
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "linux_native_cache": true,
+  "pins": {
+    "mathlib": "51e6992efd06126df61a496bebf8f49482a4e129",
+    "Zeta23": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510"
+  },
+  "command": [
+    "wsl",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "env",
+    "LEAN_PATH=/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/lib:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+    "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build",
+    "-o",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/lib/WebsiteBridge.olean",
+    "-i",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/lib/WebsiteBridge.ilean",
+    "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/WebsiteBridge.lean"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "elapsed_seconds": 8.297,
+  "log": "logs\\WebsiteBridge.log",
+  "output_sha256": "b611fcf2c149f21668c8e377da7afd2c14288b6068f222a45e79d29d7941ceb5",
+  "ordinary_lean_passed": true,
+  "official_website_verification": false
+}

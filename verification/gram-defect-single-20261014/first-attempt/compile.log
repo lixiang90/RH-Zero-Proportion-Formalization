@@ -1,0 +1,93 @@
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:1989:30: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:2073:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:2852:55: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:6453:19: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:6912:15: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:8029:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:8533:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:9425:1: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:9442:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:16309:2: error: Type mismatch: After simplification, term
+  GramDefectRecord.distinct_dyadic
+ has type
+  ∀ ε > 0,
+    ∃ T₀,
+      ∀ T ≥ T₀,
+        (39282451209654051457408555553 / 58319774788300000000000000000 - ε) * ↑(Zeta23.Ncount T (2 * T)) ≤
+          ↑(Zeta23.N0star T (2 * T))
+but is expected to have type
+  ∀ ε > 0,
+    ∃ T₀,
+      ∀ T ≥ T₀,
+        (39282451209654051457408555553 / 58319774788300000000000000000 - ε) * ↑(Ncount T (2 * T)) ≤ ↑(N0star T (2 * T))
+/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build/Solution/Candidate.lean:16316:2: error: Type mismatch: After simplification, term
+  GramDefectRecord.distinct_cumulative
+ has type
+  ∀ ε > 0,
+    ∃ T₀,
+      ∀ T ≥ T₀,
+        (39282451209654051457408555553 / 58319774788300000000000000000 - ε) * ↑(Zeta23.Ncount 0 T) ≤
+          ↑(Zeta23.N0star 0 T)
+but is expected to have type
+  ∀ ε > 0,
+    ∃ T₀, ∀ T ≥ T₀, (39282451209654051457408555553 / 58319774788300000000000000000 - ε) * ↑(Ncount 0 T) ≤ ↑(N0star 0 T)

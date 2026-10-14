@@ -1,0 +1,193 @@
+{
+  "scope": "Local verification of the final single upload source and the three fixed website roots",
+  "solution": "submission/gram-defect-20261014/proof/Solution.lean",
+  "solution_sha256": "11520f8af2d31186fc1b2b0304f2e72de29ec90e397b4f36d5792c4ec5190b48",
+  "solution_bytes": 1939197,
+  "score": {
+    "numerator": "39282451209654051457408555553",
+    "denominator": "58319774788300000000000000000"
+  },
+  "roots": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "pins": {
+    "Zeta23": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "mathlib": "51e6992efd06126df61a496bebf8f49482a4e129",
+    "Comparator": "273294467ce06429e6667ece7f5699f8678c9f4e",
+    "lean4export": "b18d673bd29b476466a51a3be1012df2ed322b10",
+    "nanoda": "418320295890faed83a96fd97907b12a3b6728c2"
+  },
+  "runtime": {
+    "compiler": "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+    "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "compiler_version": "Lean (version 4.33.0-rc2, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "runtime_manifest_sha256": "d69baed4ab2ea4d8715deafe9f4d17d4d1be7e961b5da9a377ddd0c4ba3bd6a1",
+    "package_manifest_sha256": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1",
+    "trusted_package_cache_basis": "Existing native package cache named by the archived runtime manifest"
+  },
+  "full_receipt": "full-local-verification.json",
+  "full_receipt_sha256": "9d20147b50f4320e4a5a7b97b69a9b3b28f18ae1dc2b441958317f8a1e3adda6",
+  "inputs_unchanged": true,
+  "official_website_acceptance": false,
+  "submitted": false,
+  "independent_kernel_passed": true,
+  "checked_declarations": 74955,
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "observed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "export": {
+    "command": [
+      "wsl",
+      "--distribution",
+      "Ubuntu",
+      "--exec",
+      "env",
+      "PATH=/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+      "LEAN_PATH=/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/tools/lib:/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/lib:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean",
+      "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "--tstack=32768",
+      "-DrelaxedAutoImplicit=false",
+      "--run",
+      "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/tools/source/ExporterMain.lean",
+      "Solution.Candidate",
+      "--",
+      "candidate_strict_improvement",
+      "candidate_critical_line_bound",
+      "candidate_critical_line_bound_cumulative",
+      "Nat",
+      "String",
+      "String.mk",
+      "Char",
+      "Quot",
+      "Quot.mk",
+      "Quot.lift",
+      "Quot.ind",
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "Nat.add",
+      "Nat.sub",
+      "Nat.mul",
+      "Nat.pow",
+      "Nat.gcd",
+      "Nat.div",
+      "Nat.mod",
+      "Nat.beq",
+      "Nat.ble",
+      "Nat.land",
+      "Nat.lor",
+      "Nat.xor",
+      "Nat.shiftLeft",
+      "Nat.shiftRight",
+      "String.ofList",
+      "Char.ofNat",
+      "List",
+      "eagerReduce"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 100.422,
+    "log": "E:\\codex-build\\Analytic_Number_Theory_new_breakthrough\\research\\proportion_single_build_v2\\logs\\solution-export.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "export": "E:\\codex-build\\Analytic_Number_Theory_new_breakthrough\\research\\proportion_single_build_v2\\solution.ndjson",
+    "export_sha256": "d719d49789fa369b0afc975573145801b32637d3c09e166583e5aaf87731b518",
+    "export_bytes": 674681105
+  },
+  "nanoda": {
+    "command": [
+      "wsl",
+      "--distribution",
+      "Ubuntu",
+      "--exec",
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/nanoda-resources.txt",
+      "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin",
+      "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_single_build_v2/nanoda-config.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 114.375,
+    "log": "E:\\codex-build\\Analytic_Number_Theory_new_breakthrough\\research\\proportion_single_build_v2\\logs\\nanoda.log",
+    "log_sha256": "13419ac43e60d2f7c260ec167cda609f448410f334a7db66b2baeb2ab7c11f71"
+  },
+  "tool_provenance": {
+    "tools\\source\\Export.lean": {
+      "git_commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "git_path": "Export.lean",
+      "sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998"
+    },
+    "tools\\source\\Export\\Parse.lean": {
+      "git_commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "git_path": "Export/Parse.lean",
+      "sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286"
+    },
+    "tools\\source\\ExporterMain.lean": {
+      "git_commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "git_path": "Main.lean",
+      "sha256": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a"
+    },
+    "tools\\source\\Comparator.lean": {
+      "git_commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "git_path": "Comparator.lean",
+      "sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23"
+    },
+    "tools\\source\\Comparator\\Axioms.lean": {
+      "git_commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "git_path": "Comparator/Axioms.lean",
+      "sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125"
+    },
+    "tools\\source\\Comparator\\Compare.lean": {
+      "git_commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "git_path": "Comparator/Compare.lean",
+      "sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd"
+    },
+    "tools\\source\\Comparator\\Util.lean": {
+      "git_commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "git_path": "Comparator/Util.lean",
+      "sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88"
+    },
+    "tools\\source\\ComparatorMain.lean": {
+      "git_commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "git_path": "Main.lean",
+      "sha256": "d6474f7ac49cf7a1c2f24aff6ac2bcc97a4a00aa37b969f225c6e688c434d0b4"
+    },
+    "nanoda_binary": {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\kernel-tools\\nanoda-target\\release\\nanoda_bin",
+      "sha256": "b19804767cb72bf5a317fcfc20e8af7eafdfba789dd6b24bddee2574379ff35a",
+      "pin": "418320295890faed83a96fd97907b12a3b6728c2",
+      "cargo_git_blob_content_sha256": "716d6dde2ac8a5563f0e9a363bee85ce18d0819a34f7b5d865c1e03d3c6d638f",
+      "provenance_receipt": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\verification\\three-website-declarations-modular-nanoda.json"
+    },
+    "core_driver": {
+      "path": "E:\\codex-build\\Analytic_Number_Theory_new_breakthrough\\proportion_sync\\tools\\ComparatorCoreAudit.lean",
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+      "copied_sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    }
+  },
+  "configuration": {
+    "use_stdin": true,
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "unpermitted_axiom_hard_error": true,
+    "nat_extension": true,
+    "string_extension": true,
+    "num_threads": 4,
+    "unsafe_permit_all_axioms": false,
+    "print_success_message": true,
+    "print_axioms": true,
+    "pp_to_stdout": true
+  }
+}
