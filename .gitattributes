@@ -19,3 +19,7 @@ verification/ninth-span-old-record-baseline.json -text
 # Verification receipts and logs are bound by their exact raw-byte hashes.
 verification/ninth-span-* -text whitespace=cr-at-eol,-blank-at-eof
 verification/ninth-span-*/** -text whitespace=cr-at-eol,-blank-at-eof
+
+# Preserve the exact freshly checked source and evidence bytes.
+/GramDefectRecord/*.lean -text whitespace=cr-at-eol,-blank-at-eof
+/verification/gram-defect-20261014/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol

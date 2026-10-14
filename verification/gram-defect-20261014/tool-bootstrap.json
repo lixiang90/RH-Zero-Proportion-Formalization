@@ -1,0 +1,82 @@
+{
+  "export_pin": "b18d673bd29b476466a51a3be1012df2ed322b10",
+  "nanoda_pin": "418320295890faed83a96fd97907b12a3b6728c2",
+  "fresh_modules": [
+    {
+      "module": "Export",
+      "source": "tool_sources\\Export.lean",
+      "source_sha256": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f",
+      "source_unchanged": true,
+      "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+      "linux_native_cache": true,
+      "pins": {
+        "mathlib": "51e6992efd06126df61a496bebf8f49482a4e129",
+        "Zeta23": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510"
+      },
+      "command": [
+        "wsl",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/lib:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+        "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build",
+        "-o",
+        "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/lib/Export.olean",
+        "-i",
+        "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/lib/Export.ilean",
+        "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/tool_sources/Export.lean"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 6.547,
+      "log": "logs\\Export.log",
+      "output_sha256": "9f68cb9723608430a7afd3cbce40f39182fece3c13de6fd763c8ca23770298c4",
+      "ordinary_lean_passed": true,
+      "official_website_verification": false
+    },
+    {
+      "module": "Export.Parse",
+      "source": "tool_sources\\Export\\Parse.lean",
+      "source_sha256": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9",
+      "source_unchanged": true,
+      "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+      "linux_native_cache": true,
+      "pins": {
+        "mathlib": "51e6992efd06126df61a496bebf8f49482a4e129",
+        "Zeta23": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510"
+      },
+      "command": [
+        "wsl",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/lib:/tmp/rh-proportion-memory-20261010/native-cache/tmp/contract:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/aesop/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/batteries/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/plausible/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Qq/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/packages/Zeta23/.lake/build/lib/lean:/tmp/rh-proportion-memory-20261010/native-cache/.lake/build/lib/lean",
+        "/tmp/rh-proportion-memory-20261010/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build",
+        "-o",
+        "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/lib/Export/Parse.olean",
+        "-i",
+        "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/lib/Export/Parse.ilean",
+        "/mnt/e/codex-build/Analytic_Number_Theory_new_breakthrough/research/proportion_build/tool_sources/Export/Parse.lean"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 2.641,
+      "log": "logs\\Export.Parse.log",
+      "output_sha256": "257266179a5652a17ed0cc3a6039a19a2738e767d16fd4c740bb413783b163c7",
+      "ordinary_lean_passed": true,
+      "official_website_verification": false
+    }
+  ]
+}

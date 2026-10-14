@@ -3,35 +3,54 @@
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
 Lean proofs and exact rational certificates for lower bounds on the proportion
-of Riemann zeta zeros on the critical line. The research project and papers are
-maintained in [RH-Weil](https://github.com/lixiang90/RH-Weil).
-This repository preserves each proportion proof and its verification history.
+of Riemann zeta zeros on the critical line. This repository contains the current
+refinement and preserves the previous proofs and verification history.
+Historical research papers are maintained in [RH-Weil](https://github.com/lixiang90/RH-Weil).
 
 The latest formalized bound is
 
 \[
- p=\frac{66812491}{99194552}=0.6735500050446319\ldots>0.67355,
+ \kappa=\frac{39282451209654051457408555553}{58319774788300000000000000000}
+ =0.673570008667708719595754467355\ldots,
 \]
 
-or **67.35500050446319…%**. It concerns **simple** critical-line zeros
+or **67.357000866770871959575446…%**. It concerns **simple** critical-line zeros
 relative to all nontrivial zeros counted with multiplicity. It also gives
 the same lower bound for distinct critical-line zeros. Every proportion below
-p holds for all sufficiently large heights, both on \( (T,2T] \) and
-on \( (0,T] \). In particular 67.355% holds eventually.
+\(\kappa\) holds for all sufficiently large heights, both on \( (T,2T] \) and
+on \( (0,T] \). In particular **67.3570008667%** holds eventually.
 
-The additive development uses the namespace `RHWeilRecord.JointFramePair`.
-The complete proof passed ordinary Lean compilation and a fresh transitive
-audit of eight roots. Independent nanoda replay checked **84,362 declarations
-with no errors**. Both checks admit only `propext`, `Classical.choice`, and
-`Quot.sound`. See the [Lean report](verification/joint-frame-pair-complete-formal-kernel.json),
-[independent replay](verification/joint-frame-pair-complete-independent-nanoda.json),
-and [verification addendum](papers/joint-frame-pair-lean-verification-addendum.md).
-The new [paper source](papers/joint-frame-pair-simple-critical-paper.tex)
-and [PDF](output/pdf/joint-frame-pair-simple-critical-paper.pdf) document the
-mathematical certificate; the [proof guide](docs/joint-frame-pair-formalization.md)
-explains its separate Lean adapter and reproduction.
+This strictly exceeds the [website record checked on October 14, 2026](https://www.riemannzeta.fun/submissions/master-of-puppets4),
+\(667801670564118872522651/991436171500000000000000\), by approximately
+\(6.7191492529210\times10^{-9}\) percentage points. The improvement refines
+the rational precision of the same nine-point Gram-defect certificate and
+window bounds. It introduces no new window or analytic assumption.
 
-## Proof structure
+The [final Lean module](GramDefectRecord/Final.lean) proves the exact comparison
+and all four actual simple/distinct counting conclusions. Ordinary Lean
+compilation and a fresh six-root axiom audit passed. Independent nanoda
+checked **74,963 declarations with no errors**. Only `propext`,
+`Classical.choice`, and `Quot.sound` were permitted. See the
+[formal report](verification/gram-defect-20261014/formal-kernel.json),
+[independent report](verification/gram-defect-20261014/independent-kernel.json),
+[kernel transcript](verification/gram-defect-20261014/nanoda.log), and
+[mathematical explanation](docs/gram-defect-refinement-20261014.md).
+
+The finite objective and its denominator are both scaled by 1000, preserving
+the real weights, pressure and span capacities. The new certified floor is
+\(85638285989/10^{13}\); the sharpened window floor is
+\(672168410564118874775945444401/10^{30}\). The unchanged counting formula
+\((H_W^- - B)/(1-c)\), with \(B=436674/10^8\), gives the exact result above.
+
+## Previous joint frame pair proof
+
+The previous **66812491/99194552 = 67.35500050446319…%** result remains in
+`RHWeilRecord.JointFramePair`. Its complete proof passed ordinary Lean and
+independent nanoda replay of 84,362 declarations. Its
+[formal report](verification/joint-frame-pair-complete-formal-kernel.json),
+[independent report](verification/joint-frame-pair-complete-independent-nanoda.json),
+[paper](papers/joint-frame-pair-simple-critical-paper.tex) and
+[proof guide](docs/joint-frame-pair-formalization.md) are preserved.
 
 The improvement pays both the eight-point frames and their nine-point
 compatible pairs. Forty of the 241 original cells receive new duals, including
@@ -81,17 +100,26 @@ records are preserved. The preceding repository introductions are archived
 
 ```powershell
 lake --no-cache exe cache get
-lake --no-cache build +RecordProportion.JointFramePair:olean
-python -B -X utf8 scripts/am_joint_frame_pair_certificate.py --check
+lake --no-cache build +GramDefectRecord:olean
+python -B -X utf8 scripts/gram_defect_exact_inputs.py
+python -B -X utf8 scripts/verify_gram_defect_record.py
 ```
 
-The pinned compiler, dependency commits and source closure are bound by
-the new verification drivers. Recorded Linux-cache commands refer to the
-measured local environment; fresh checkouts build their own dependencies.
+The pinned compiler, dependency commits, source hashes and exported proof
+graph are bound by the verification receipts. Recorded WSL-cache commands
+describe the measured local environment; fresh checkouts build their own
+dependencies. The two libraries are separate because the inherited source
+chains share declaration names. Build or import `GramDefectRecord` for the
+latest result; do not import it together with `RecordProportion` in one module.
 
 ## Website submission
 
-The website's previous compilation attempt exited with code 137. The old
+The new result has passed local Lean and independent nanoda verification;
+it has **not been submitted to or accepted by the website**. The displayed
+leaderboard therefore still has its preceding record. Modular verification
+does not by itself establish the website's whole-file resource checks.
+
+The repository's earlier website compilation attempt exited with code 137. The old
 [single-file submission](submission/proof/Solution.lean) is preserved exactly;
 no accepted website record has been obtained. Publishing a modular Lean
 proof, independently replaying its kernel graph, and passing the site's
@@ -99,3 +127,5 @@ whole-file resource limits are separate steps. See the preserved
 [submission requirements](docs/submission-contract.md),
 [failure diagnosis](verification/site-compilation-exit137/diagnosis.json),
 and [resource optimization](docs/resource-optimization.md).
+
+The preceding README is archived [here](docs/gram-defect-previous-readme-20261014.md).
