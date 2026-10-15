@@ -1,0 +1,27 @@
+{
+  "module": "Export",
+  "source": "/var/tmp/rh-zero-20261015/record-verification/single/tools/source/Export.lean",
+  "source_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998",
+  "source_unchanged": true,
+  "command": [
+    "env",
+    "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+    "LEAN_PATH=/var/tmp/rh-zero-20261015/record-verification/single/tools/lib:/var/tmp/rh-zero-20261015/record-verification/single/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/record-verification/single/tools/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/record-verification/single/tools/lib/Export.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/record-verification/single/tools/lib/Export.ilean",
+    "/var/tmp/rh-zero-20261015/record-verification/single/tools/source/Export.lean"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 3.325,
+  "log": "/var/tmp/rh-zero-20261015/record-verification/single/tools/logs/Export.log",
+  "olean": "/var/tmp/rh-zero-20261015/record-verification/single/tools/lib/Export.olean",
+  "olean_sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "Independent finite replay reachability and all active mokI interval premises",
+  "arithmetic": "Exact Python integers; assertions enabled",
+  "files": {
+    "accepted_source": "formal/upstream/ajp88-reweighted-nine-point.lean",
+    "candidate_core": "GramDefect20261015/Core.lean",
+    "replay_script": "scripts/finite_margin_20261015.py",
+    "review_script": "scripts/review_finite_margin_20261015.py"
+  },
+  "source_sha256": {
+    "accepted_source": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "candidate_core": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+    "replay_script": "369877fc98fe3c4bce0ab33e366b0b453dc50c8dc4390be4ecf05da7d2cb5f91",
+    "review_script": "b77e98e5f61dbddee6a8963878799eb239b96f7c8a1854a24f2841bd24c17dbb"
+  },
+  "source_unchanged_during_review": true,
+  "candidate_finite_block_only_two_cN_substitutions": true,
+  "accepted_finite_block_sha256": "55436ea4c8fd14fa5ac6a7c6b46ef19f50ab49f0a470f404ae35fed559cea002",
+  "candidate_finite_block_sha256": "3e98f872e646acc28464bc175fea7b50619a966990509b28c7dec4b6ca4e08a3",
+  "root_count": 48,
+  "walk_counts": {
+    "nodes": 22664,
+    "leaves": 11356,
+    "reverse": 419,
+    "farkas": 0,
+    "tightened": 0
+  },
+  "additional_check_counts": {
+    "active_tangent_mokI_checks": 173527,
+    "numeric_leaves": 10937,
+    "pair_bound_invariant_checks": 306236,
+    "split_nat_sub_precondition_checks": 22616,
+    "term_decode_checks": 371858,
+    "valid_ydec_entry_checks": 10448
+  },
+  "point_keys": 2993,
+  "duplicate_point_keys": 0,
+  "interval_errors": 0,
+  "all_original_walk_end_pointers_match": true,
+  "minimum_root": 34,
+  "minimum_leaf_position": 43828,
+  "minimum_original_integer_margin": 23301675193062482720000000000,
+  "cN_integer_slope": 335544320000000000,
+  "old_cN": 859538456469471854,
+  "new_cN": 859538525913875481,
+  "cN_increment": 69444403627,
+  "minimum_new_integer_margin": 235234080000000000,
+  "one_further_integer_increment_deficit": 100310240000000000,
+  "all_independent_checks_passed": true,
+  "lean_kernel_verified": false,
+  "official_website_acceptance": false,
+  "elapsed_seconds": 4.093
+}

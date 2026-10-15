@@ -1,0 +1,991 @@
+{
+  "Zeta23.Defs": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Defs.lean",
+    "dependencies": []
+  },
+  "Zeta23.Hypotheses": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Hypotheses.lean",
+    "dependencies": [
+      "Zeta23.Defs"
+    ]
+  },
+  "Zeta23.Defs.Counting": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Defs/Counting.lean",
+    "dependencies": [
+      "Zeta23.Defs"
+    ]
+  },
+  "Zeta23.Statement": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Statement.lean",
+    "dependencies": [
+      "Zeta23.Hypotheses",
+      "Zeta23.Defs.Counting"
+    ]
+  },
+  "Zeta23.Statement.Seam": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Statement/Seam.lean",
+    "dependencies": [
+      "Zeta23.Statement"
+    ]
+  },
+  "Zeta23.LinAlg.PosIndex": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/PosIndex.lean",
+    "dependencies": []
+  },
+  "Zeta23.LinAlg.HermitianPosPart": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/HermitianPosPart.lean",
+    "dependencies": [
+      "Zeta23.LinAlg.PosIndex"
+    ]
+  },
+  "Zeta23.LinAlg.Sylvester": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/Sylvester.lean",
+    "dependencies": [
+      "Zeta23.LinAlg.HermitianPosPart"
+    ]
+  },
+  "Zeta23.LinAlg.Inertia": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/Inertia.lean",
+    "dependencies": [
+      "Zeta23.LinAlg.Sylvester"
+    ]
+  },
+  "Zeta23.LinAlg.VonNeumann": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/VonNeumann.lean",
+    "dependencies": [
+      "Zeta23.LinAlg.PosIndex"
+    ]
+  },
+  "Zeta23.LinAlg.RankTrace": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/RankTrace.lean",
+    "dependencies": [
+      "Zeta23.LinAlg.PosIndex",
+      "Zeta23.LinAlg.VonNeumann",
+      "Zeta23.LinAlg.HermitianPosPart"
+    ]
+  },
+  "Zeta23.LinAlg.Weyl": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/Weyl.lean",
+    "dependencies": [
+      "Zeta23.LinAlg.PosIndex",
+      "Zeta23.LinAlg.Sylvester"
+    ]
+  },
+  "Zeta23.LinAlg": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg.lean",
+    "dependencies": [
+      "Zeta23.LinAlg.HermitianPosPart",
+      "Zeta23.LinAlg.Inertia",
+      "Zeta23.LinAlg.PosIndex",
+      "Zeta23.LinAlg.RankTrace",
+      "Zeta23.LinAlg.Sylvester",
+      "Zeta23.LinAlg.VonNeumann",
+      "Zeta23.LinAlg.Weyl"
+    ]
+  },
+  "Zeta23.Assembly.Inputs": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly/Inputs.lean",
+    "dependencies": [
+      "Zeta23.LinAlg",
+      "Zeta23.Defs"
+    ]
+  },
+  "Zeta23.PrimeSideTemp": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideTemp.lean",
+    "dependencies": [
+      "Zeta23.Defs"
+    ]
+  },
+  "Zeta23.TracesBoundsE": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/TracesBoundsE.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideTemp"
+    ]
+  },
+  "Zeta23.Assembly": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly.lean",
+    "dependencies": [
+      "Zeta23.LinAlg",
+      "Zeta23.Defs",
+      "Zeta23.Defs.Counting",
+      "Zeta23.Assembly.Inputs",
+      "Zeta23.Hypotheses",
+      "Zeta23.PrimeSideTemp",
+      "Zeta23.TracesBoundsE"
+    ]
+  },
+  "Zeta23.Hypotheses.GzGp": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Hypotheses/GzGp.lean",
+    "dependencies": [
+      "Zeta23.Hypotheses"
+    ]
+  },
+  "Zeta23.ZetaReflect": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZetaReflect.lean",
+    "dependencies": [
+      "Zeta23.Statement"
+    ]
+  },
+  "Zeta23.Statement.SeamClosed": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Statement/SeamClosed.lean",
+    "dependencies": [
+      "Zeta23.Statement.Seam",
+      "Zeta23.ZetaReflect"
+    ]
+  },
+  "Zeta23.Defs.Profile": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Defs/Profile.lean",
+    "dependencies": [
+      "Zeta23.Defs"
+    ]
+  },
+  "Zeta23.Poisson.PaperFT": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Poisson/PaperFT.lean",
+    "dependencies": [
+      "Zeta23.Defs"
+    ]
+  },
+  "Zeta23.Taper.Basic": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Basic.lean",
+    "dependencies": [
+      "Zeta23.Defs",
+      "Zeta23.Poisson.PaperFT"
+    ]
+  },
+  "Zeta23.Taper.Norms": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Norms.lean",
+    "dependencies": [
+      "Zeta23.Taper.Basic"
+    ]
+  },
+  "Zeta23.Taper.Strip": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Strip.lean",
+    "dependencies": [
+      "Zeta23.Taper.Basic"
+    ]
+  },
+  "Zeta23.Taper.Params": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Params.lean",
+    "dependencies": [
+      "Zeta23.Taper.Basic",
+      "Zeta23.Taper.Norms",
+      "Zeta23.Taper.Strip"
+    ]
+  },
+  "Zeta23.Tail.Basic": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/Basic.lean",
+    "dependencies": []
+  },
+  "Zeta23.Tail.Grid": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/Grid.lean",
+    "dependencies": [
+      "Zeta23.Tail.Basic"
+    ]
+  },
+  "Zeta23.Tail.Count": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/Count.lean",
+    "dependencies": [
+      "Zeta23.Tail.Basic"
+    ]
+  },
+  "Zeta23.Tail.RankOne": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/RankOne.lean",
+    "dependencies": [
+      "Zeta23.LinAlg.Sylvester"
+    ]
+  },
+  "Zeta23.Tail": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail.lean",
+    "dependencies": [
+      "Zeta23.Defs",
+      "Zeta23.Assembly.Inputs",
+      "Zeta23.Tail.Basic",
+      "Zeta23.Tail.Grid",
+      "Zeta23.Tail.Count",
+      "Zeta23.Tail.RankOne"
+    ]
+  },
+  "Zeta23.Taper.Decay": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Decay.lean",
+    "dependencies": [
+      "Zeta23.Taper.Norms",
+      "Zeta23.Taper.Strip"
+    ]
+  },
+  "Zeta23.Taper.Fourier": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Fourier.lean",
+    "dependencies": [
+      "Zeta23.Taper.Strip"
+    ]
+  },
+  "Zeta23.Taper": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper.lean",
+    "dependencies": [
+      "Zeta23.Taper.Params",
+      "Zeta23.Taper.Decay",
+      "Zeta23.Taper.Fourier"
+    ]
+  },
+  "Zeta23.Tail.Package": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/Package.lean",
+    "dependencies": [
+      "Zeta23.Tail",
+      "Zeta23.Taper",
+      "Zeta23.Hypotheses.GzGp"
+    ]
+  },
+  "Zeta23.ZeroSide": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZeroSide.lean",
+    "dependencies": [
+      "Zeta23.LinAlg",
+      "Zeta23.Defs",
+      "Zeta23.Assembly.Inputs",
+      "Zeta23.Hypotheses.GzGp"
+    ]
+  },
+  "Zeta23.Poisson": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Poisson.lean",
+    "dependencies": [
+      "Zeta23.Defs",
+      "Zeta23.Poisson.PaperFT",
+      "Zeta23.Taper.Strip",
+      "Zeta23.Taper.Fourier"
+    ]
+  },
+  "Zeta23.ExplicitFormula": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ExplicitFormula.lean",
+    "dependencies": [
+      "Zeta23.Defs"
+    ]
+  },
+  "Zeta23.ExplicitFormula.Bridge": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ExplicitFormula/Bridge.lean",
+    "dependencies": [
+      "Zeta23.ExplicitFormula",
+      "Zeta23.Hypotheses",
+      "Zeta23.Poisson.PaperFT"
+    ]
+  },
+  "Zeta23.FromPNTPlus.EulerMaclaurin": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/EulerMaclaurin.lean",
+    "dependencies": []
+  },
+  "Zeta23.FromPNTPlus.Mertens": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Mertens.lean",
+    "dependencies": [
+      "Zeta23.FromPNTPlus.EulerMaclaurin"
+    ]
+  },
+  "Zeta23.Chebyshev": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Chebyshev.lean",
+    "dependencies": [
+      "Zeta23.FromPNTPlus.Mertens",
+      "Zeta23.Hypotheses"
+    ]
+  },
+  "Zeta23.Main": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Main.lean",
+    "dependencies": [
+      "Zeta23.Statement.Seam",
+      "Zeta23.Assembly",
+      "Zeta23.Hypotheses.GzGp",
+      "Zeta23.Statement.SeamClosed",
+      "Zeta23.Defs.Profile",
+      "Zeta23.Taper.Params",
+      "Zeta23.Tail",
+      "Zeta23.Tail.Package",
+      "Zeta23.ZeroSide",
+      "Zeta23.Poisson",
+      "Zeta23.PrimeSideTemp",
+      "Zeta23.ExplicitFormula.Bridge",
+      "Zeta23.Chebyshev"
+    ]
+  },
+  "Zeta23.PrimeSideB": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideTemp"
+    ]
+  },
+  "Zeta23.PrimeSideA.Defs": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/Defs.lean",
+    "dependencies": [
+      "Zeta23.Hypotheses"
+    ]
+  },
+  "Zeta23.PrimeSideA.Basic": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/Basic.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.Defs"
+    ]
+  },
+  "Zeta23.PrimeSideB.Concrete": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/Concrete.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.Basic",
+      "Zeta23.PrimeSideTemp"
+    ]
+  },
+  "Zeta23.PrimeSideB.PPKernel": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/PPKernel.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.Defs"
+    ]
+  },
+  "Zeta23.PrimeSideA.MuMu": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/MuMu.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.Basic",
+      "Zeta23.PrimeSideB.PPKernel"
+    ]
+  },
+  "Zeta23.PrimeSideA.CrossMuPCore": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/CrossMuPCore.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.Defs"
+    ]
+  },
+  "Zeta23.PrimeSideA.CrossMuP": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/CrossMuP.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.Basic",
+      "Zeta23.PrimeSideA.CrossMuPCore"
+    ]
+  },
+  "Zeta23.PiFacts": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PiFacts.lean",
+    "dependencies": [
+      "Zeta23.Defs",
+      "Zeta23.Hypotheses",
+      "Zeta23.Chebyshev"
+    ]
+  },
+  "Zeta23.PrimeSideA.EndsCore": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsCore.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.Basic",
+      "Zeta23.PiFacts"
+    ]
+  },
+  "Zeta23.Defs.LeafIntegrals": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Defs/LeafIntegrals.lean",
+    "dependencies": []
+  },
+  "Zeta23.PrimeSideA.EndsE1": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsE1.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.EndsCore",
+      "Zeta23.Defs.LeafIntegrals"
+    ]
+  },
+  "Zeta23.PrimeSideA.EndsWeighted": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsWeighted.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.EndsCore"
+    ]
+  },
+  "Zeta23.PrimeSideA.EndsNu": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsNu.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.EndsWeighted"
+    ]
+  },
+  "Zeta23.PrimeSideA.EndsE2": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsE2.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.EndsNu"
+    ]
+  },
+  "Zeta23.PrimeSideA.Ends": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/Ends.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.EndsE1",
+      "Zeta23.PrimeSideA.EndsE2"
+    ]
+  },
+  "Zeta23.PrimeSideA": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.Basic",
+      "Zeta23.PrimeSideA.MuMu",
+      "Zeta23.PrimeSideA.CrossMuP",
+      "Zeta23.PrimeSideA.Ends"
+    ]
+  },
+  "Zeta23.PrimeSideB.PPOffDiag": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/PPOffDiag.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideB.PPKernel"
+    ]
+  },
+  "Zeta23.PrimeSideB.PP": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/PP.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA.Basic",
+      "Zeta23.PrimeSideB.PPKernel",
+      "Zeta23.PrimeSideB.PPOffDiag"
+    ]
+  },
+  "Zeta23.PrimeSideB.Traces": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/Traces.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideB",
+      "Zeta23.PrimeSideB.Concrete",
+      "Zeta23.PrimeSideA",
+      "Zeta23.PrimeSideB.PP",
+      "Zeta23.Hypotheses"
+    ]
+  },
+  "Zeta23.PrimeSideA.Bridge": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/Bridge.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideB.Concrete",
+      "Zeta23.Taper",
+      "Zeta23.Taper.Norms",
+      "Zeta23.Poisson",
+      "Zeta23.PiFacts"
+    ]
+  },
+  "Zeta23.PrimeSideB.Final": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/Final.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideB.Traces",
+      "Zeta23.PrimeSideA.Bridge"
+    ]
+  },
+  "Zeta23.MV": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV.lean",
+    "dependencies": [
+      "Zeta23.Hypotheses"
+    ]
+  },
+  "Zeta23.MV.Spacing": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Spacing.lean",
+    "dependencies": []
+  },
+  "Zeta23.MV.Quadratic": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Quadratic.lean",
+    "dependencies": [
+      "Zeta23.MV.Spacing"
+    ]
+  },
+  "Zeta23.MV.EigenIdentity": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/EigenIdentity.lean",
+    "dependencies": []
+  },
+  "Zeta23.MV.Eigen": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Eigen.lean",
+    "dependencies": [
+      "Zeta23.MV.Quadratic",
+      "Zeta23.MV.EigenIdentity"
+    ]
+  },
+  "Zeta23.MV.Duality": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Duality.lean",
+    "dependencies": [
+      "Zeta23.MV.Spacing",
+      "Zeta23.MV",
+      "Zeta23.LinAlg.HermitianPosPart"
+    ]
+  },
+  "Zeta23.MV.Final": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Final.lean",
+    "dependencies": [
+      "Zeta23.MV.Eigen",
+      "Zeta23.MV.Duality"
+    ]
+  },
+  "Zeta23.GammaFacts": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts.lean",
+    "dependencies": [
+      "Zeta23.Defs"
+    ]
+  },
+  "Zeta23.GammaFacts.Series": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/Series.lean",
+    "dependencies": [
+      "Zeta23.GammaFacts"
+    ]
+  },
+  "Zeta23.Analytic.Stirling": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Analytic/Stirling.lean",
+    "dependencies": [
+      "Zeta23.GammaFacts.Series"
+    ]
+  },
+  "Zeta23.GammaFacts.Mu": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/Mu.lean",
+    "dependencies": [
+      "Zeta23.Analytic.Stirling"
+    ]
+  },
+  "Zeta23.GammaFacts.IntMu": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/IntMu.lean",
+    "dependencies": [
+      "Zeta23.GammaFacts.Mu"
+    ]
+  },
+  "Zeta23.GammaFacts.StirlingVert": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/StirlingVert.lean",
+    "dependencies": [
+      "Zeta23.GammaFacts.Mu"
+    ]
+  },
+  "Zeta23.GammaFacts.Complete": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/Complete.lean",
+    "dependencies": [
+      "Zeta23.Hypotheses",
+      "Zeta23.GammaFacts",
+      "Zeta23.GammaFacts.Mu",
+      "Zeta23.GammaFacts.IntMu",
+      "Zeta23.GammaFacts.StirlingVert"
+    ]
+  },
+  "Zeta23.RvM.Defs": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Defs.lean",
+    "dependencies": [
+      "Zeta23.Statement.SeamClosed"
+    ]
+  },
+  "Zeta23.Prelude.InstancePriorities": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Prelude/InstancePriorities.lean",
+    "dependencies": []
+  },
+  "Zeta23.FromPNTPlus.StrongPNTPrefix": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/StrongPNTPrefix.lean",
+    "dependencies": [
+      "Zeta23.Prelude.InstancePriorities"
+    ]
+  },
+  "Zeta23.FromPNTPlus.Auxiliary": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Auxiliary.lean",
+    "dependencies": []
+  },
+  "Zeta23.FromPNTPlus.Sobolev": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Sobolev.lean",
+    "dependencies": []
+  },
+  "Zeta23.FromPNTPlus.Fourier": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Fourier.lean",
+    "dependencies": [
+      "Zeta23.FromPNTPlus.Sobolev"
+    ]
+  },
+  "Zeta23.FromPNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Basic": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+    "dependencies": []
+  },
+  "Zeta23.FromPNTPlus.Rectangle": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Rectangle.lean",
+    "dependencies": []
+  },
+  "Zeta23.FromPNTPlus.Tactic.AdditiveCombination": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Tactic/AdditiveCombination.lean",
+    "dependencies": []
+  },
+  "Zeta23.FromPNTPlus.ResidueCalcOnRectangles": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/ResidueCalcOnRectangles.lean",
+    "dependencies": [
+      "Zeta23.FromPNTPlus.Rectangle",
+      "Zeta23.FromPNTPlus.Tactic.AdditiveCombination"
+    ]
+  },
+  "Zeta23.FromPNTPlus.ZetaBounds": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/ZetaBounds.lean",
+    "dependencies": [
+      "Zeta23.FromPNTPlus.Auxiliary",
+      "Zeta23.FromPNTPlus.Fourier",
+      "Zeta23.FromPNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "Zeta23.FromPNTPlus.ResidueCalcOnRectangles",
+      "Zeta23.FromPNTPlus.EulerMaclaurin"
+    ]
+  },
+  "Zeta23.RvM.ZetaGrowth": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/ZetaGrowth.lean",
+    "dependencies": [
+      "Zeta23.FromPNTPlus.ZetaBounds"
+    ]
+  },
+  "Zeta23.RvM.Halving": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Halving.lean",
+    "dependencies": [
+      "Zeta23.Defs.Counting"
+    ]
+  },
+  "Zeta23.RvM.LocalCount": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/LocalCount.lean",
+    "dependencies": [
+      "Zeta23.Prelude.InstancePriorities",
+      "Zeta23.Statement.SeamClosed",
+      "Zeta23.Defs.Counting",
+      "Zeta23.FromPNTPlus.StrongPNTPrefix",
+      "Zeta23.RvM.ZetaGrowth",
+      "Zeta23.RvM.Halving"
+    ]
+  },
+  "Zeta23.WeilEF.XiLogDeriv": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/XiLogDeriv.lean",
+    "dependencies": [
+      "Zeta23.Statement"
+    ]
+  },
+  "Zeta23.Analytic.RectangleLogDeriv": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Analytic/RectangleLogDeriv.lean",
+    "dependencies": [
+      "Zeta23.FromPNTPlus.ResidueCalcOnRectangles"
+    ]
+  },
+  "Zeta23.RvM.GammaSide": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/GammaSide.lean",
+    "dependencies": [
+      "Zeta23.RvM.Defs"
+    ]
+  },
+  "Zeta23.RvM.BacklundDefs": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/BacklundDefs.lean",
+    "dependencies": [
+      "Zeta23.Prelude.InstancePriorities"
+    ]
+  },
+  "Zeta23.RvM.ReZeroCount": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/ReZeroCount.lean",
+    "dependencies": [
+      "Zeta23.RvM.BacklundDefs",
+      "Zeta23.RvM.ZetaGrowth",
+      "Zeta23.RvM.LocalCount",
+      "Zeta23.ZetaReflect"
+    ]
+  },
+  "Zeta23.RvM.Backlund": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Backlund.lean",
+    "dependencies": [
+      "Zeta23.RvM.ZetaGrowth",
+      "Zeta23.RvM.BacklundDefs",
+      "Zeta23.RvM.ReZeroCount",
+      "Zeta23.Statement",
+      "Zeta23.FromPNTPlus.StrongPNTPrefix"
+    ]
+  },
+  "Zeta23.RvM.CountByIntegral": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/CountByIntegral.lean",
+    "dependencies": [
+      "Zeta23.Analytic.RectangleLogDeriv",
+      "Zeta23.Statement.SeamClosed"
+    ]
+  },
+  "Zeta23.FromPNTPlus.ZetaConj": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/ZetaConj.lean",
+    "dependencies": []
+  },
+  "Zeta23.RvM.Fold": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Fold.lean",
+    "dependencies": [
+      "Zeta23.RvM.Defs",
+      "Zeta23.RvM.CountByIntegral",
+      "Zeta23.WeilEF.XiLogDeriv",
+      "Zeta23.FromPNTPlus.ZetaConj"
+    ]
+  },
+  "Zeta23.RvM.NcountWindow": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/NcountWindow.lean",
+    "dependencies": [
+      "Zeta23.Statement.SeamClosed"
+    ]
+  },
+  "Zeta23.RvM.MainTerm": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/MainTerm.lean",
+    "dependencies": [
+      "Zeta23.RvM.Defs",
+      "Zeta23.RvM.LocalCount",
+      "Zeta23.Hypotheses",
+      "Zeta23.WeilEF.XiLogDeriv",
+      "Zeta23.Analytic.RectangleLogDeriv",
+      "Zeta23.RvM.GammaSide",
+      "Zeta23.RvM.Backlund",
+      "Zeta23.RvM.Fold",
+      "Zeta23.RvM.NcountWindow"
+    ]
+  },
+  "Zeta23.RvM.Statement": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Statement.lean",
+    "dependencies": [
+      "Zeta23.RvM.MainTerm"
+    ]
+  },
+  "Zeta23.WeilEF.ZeroSummability": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/ZeroSummability.lean",
+    "dependencies": [
+      "Zeta23.Tail",
+      "Zeta23.RvM.LocalCount",
+      "Zeta23.ExplicitFormula",
+      "Zeta23.Poisson.PaperFT"
+    ]
+  },
+  "Zeta23.WeilEF.GammaRBracket": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/GammaRBracket.lean",
+    "dependencies": [
+      "Zeta23.GammaFacts.Series"
+    ]
+  },
+  "Zeta23.WeilEF.VerticalLine": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/VerticalLine.lean",
+    "dependencies": [
+      "Zeta23.WeilEF.XiLogDeriv",
+      "Zeta23.GammaFacts.StirlingVert",
+      "Zeta23.ExplicitFormula",
+      "Zeta23.ExplicitFormula.Bridge",
+      "Zeta23.WeilEF.GammaRBracket",
+      "Zeta23.Poisson.PaperFT"
+    ]
+  },
+  "Zeta23.WeilEF.Landau": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/Landau.lean",
+    "dependencies": [
+      "Zeta23.RvM.ZetaGrowth",
+      "Zeta23.FromPNTPlus.StrongPNTPrefix",
+      "Zeta23.Statement"
+    ]
+  },
+  "Zeta23.WeilEF.GoodHeights": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/GoodHeights.lean",
+    "dependencies": [
+      "Zeta23.WeilEF.Landau",
+      "Zeta23.RvM.LocalCount",
+      "Zeta23.Tail"
+    ]
+  },
+  "Zeta23.WeilEF.Contour": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/Contour.lean",
+    "dependencies": [
+      "Zeta23.WeilEF.VerticalLine",
+      "Zeta23.WeilEF.GoodHeights",
+      "Zeta23.Analytic.RectangleLogDeriv",
+      "Zeta23.RvM.CountByIntegral",
+      "Zeta23.Statement.SeamClosed"
+    ]
+  },
+  "Zeta23.WeilEF.FullLine": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/FullLine.lean",
+    "dependencies": [
+      "Zeta23.WeilEF.Contour"
+    ]
+  },
+  "Zeta23.WeilEF.Horizontal": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/Horizontal.lean",
+    "dependencies": [
+      "Zeta23.WeilEF.FullLine"
+    ]
+  },
+  "Zeta23.WeilEF.ZeroSumLimit": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/ZeroSumLimit.lean",
+    "dependencies": [
+      "Zeta23.WeilEF.Contour",
+      "Zeta23.WeilEF.ZeroSummability"
+    ]
+  },
+  "Zeta23.WeilEF.FullLineAssembly": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/FullLineAssembly.lean",
+    "dependencies": [
+      "Zeta23.WeilEF.FullLine",
+      "Zeta23.WeilEF.Horizontal",
+      "Zeta23.WeilEF.ZeroSumLimit"
+    ]
+  },
+  "Zeta23.WeilEF.Main": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/Main.lean",
+    "dependencies": [
+      "Zeta23.WeilEF.ZeroSummability",
+      "Zeta23.WeilEF.FullLineAssembly"
+    ]
+  },
+  "Zeta23.Final": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Final.lean",
+    "dependencies": [
+      "Zeta23.Main",
+      "Zeta23.Defs.Profile",
+      "Zeta23.PrimeSideB.Final",
+      "Zeta23.MV",
+      "Zeta23.MV.Final",
+      "Zeta23.GammaFacts.Complete",
+      "Zeta23.RvM.Statement",
+      "Zeta23.WeilEF.Main"
+    ]
+  },
+  "Zeta23.ZeroSide.RankTraceMult": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZeroSide/RankTraceMult.lean",
+    "dependencies": [
+      "Zeta23.LinAlg"
+    ]
+  },
+  "Zeta23.ZeroSide.Mult": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZeroSide/Mult.lean",
+    "dependencies": [
+      "Zeta23.ZeroSide",
+      "Zeta23.ZeroSide.RankTraceMult"
+    ]
+  },
+  "Zeta23.Assembly.SeamMult": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly/SeamMult.lean",
+    "dependencies": [
+      "Zeta23.Assembly",
+      "Zeta23.ZeroSide.Mult"
+    ]
+  },
+  "Zeta23.Assembly.Certificate": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly/Certificate.lean",
+    "dependencies": [
+      "Zeta23.Assembly"
+    ]
+  },
+  "Zeta23.Assembly.CertificateC3": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly/CertificateC3.lean",
+    "dependencies": [
+      "Zeta23.Assembly.Certificate"
+    ]
+  },
+  "Zeta23.ZeroSide.Final": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZeroSide/Final.lean",
+    "dependencies": [
+      "Zeta23.ZeroSide",
+      "Zeta23.Hypotheses.GzGp",
+      "Zeta23.Taper",
+      "Zeta23.Poisson"
+    ]
+  },
+  "Zeta23.ThmD.Functional": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Functional.lean",
+    "dependencies": []
+  },
+  "Zeta23.ThmD.AssemblyD": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/AssemblyD.lean",
+    "dependencies": [
+      "Zeta23.Assembly",
+      "Zeta23.ThmD.Functional"
+    ]
+  },
+  "Zeta23.ThmD.Window": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Window.lean",
+    "dependencies": [
+      "Zeta23.Taper.Basic",
+      "Zeta23.Taper.Norms",
+      "Zeta23.Taper.Decay",
+      "Zeta23.ThmD.Functional"
+    ]
+  },
+  "Zeta23.ThmD.PP": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/PP.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideB.PP",
+      "Zeta23.ThmD.Window"
+    ]
+  },
+  "Zeta23.ThmD.Traces": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Traces.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideB",
+      "Zeta23.ThmD.AssemblyD",
+      "Zeta23.ThmD.PP"
+    ]
+  },
+  "Zeta23.ThmD.WindowCore": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/WindowCore.lean",
+    "dependencies": [
+      "Zeta23.Taper",
+      "Zeta23.Poisson",
+      "Zeta23.PrimeSideA.Basic",
+      "Zeta23.PiFacts"
+    ]
+  },
+  "Zeta23.ThmD.PsiC": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/PsiC.lean",
+    "dependencies": [
+      "Zeta23.Taper",
+      "Zeta23.PrimeSideA.Basic"
+    ]
+  },
+  "Zeta23.ThmD.WindowLocalHyps": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/WindowLocalHyps.lean",
+    "dependencies": [
+      "Zeta23.ThmD.WindowCore",
+      "Zeta23.ThmD.PsiC"
+    ]
+  },
+  "Zeta23.ThmD.BridgeD": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/BridgeD.lean",
+    "dependencies": [
+      "Zeta23.ThmD.WindowLocalHyps",
+      "Zeta23.ThmD.Window",
+      "Zeta23.PrimeSideB.Concrete"
+    ]
+  },
+  "Zeta23.ThmD.Concrete": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Concrete.lean",
+    "dependencies": [
+      "Zeta23.PrimeSideA",
+      "Zeta23.PrimeSideB.Concrete",
+      "Zeta23.PrimeSideB.Traces",
+      "Zeta23.ThmD.Traces",
+      "Zeta23.ThmD.BridgeD",
+      "Zeta23.ThmD.PP"
+    ]
+  },
+  "Zeta23.ThmD.Limit": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Limit.lean",
+    "dependencies": [
+      "Zeta23.ThmD.Concrete",
+      "Zeta23.Assembly"
+    ]
+  },
+  "Zeta23.FinalMult": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FinalMult.lean",
+    "dependencies": [
+      "Zeta23.Final",
+      "Zeta23.Assembly.SeamMult",
+      "Zeta23.Assembly.Certificate",
+      "Zeta23.Assembly.CertificateC3",
+      "Zeta23.ZeroSide.Final",
+      "Zeta23.ThmD.Limit"
+    ]
+  },
+  "Zeta23.ThmD.ParamsD": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/ParamsD.lean",
+    "dependencies": [
+      "Zeta23.ThmD.BridgeD"
+    ]
+  },
+  "Zeta23.ThmD.Endgame": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Endgame.lean",
+    "dependencies": [
+      "Zeta23.Assembly",
+      "Zeta23.ThmD.AssemblyD",
+      "Zeta23.ThmD.ParamsD"
+    ]
+  },
+  "Zeta23.ThmD.ZeroSideD": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/ZeroSideD.lean",
+    "dependencies": [
+      "Zeta23.ThmD.ParamsD",
+      "Zeta23.ZeroSide",
+      "Zeta23.Tail",
+      "Zeta23.Hypotheses.GzGp"
+    ]
+  },
+  "Zeta23.ThmD.Final": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Final.lean",
+    "dependencies": [
+      "Zeta23.Final",
+      "Zeta23.ThmD.Endgame",
+      "Zeta23.ThmD.Concrete",
+      "Zeta23.ThmD.ZeroSideD",
+      "Zeta23.ThmD.Limit"
+    ]
+  },
+  "Zeta23.ThmD.Mult": {
+    "source": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Mult.lean",
+    "dependencies": [
+      "Zeta23.ThmD.Final",
+      "Zeta23.Assembly.SeamMult",
+      "Zeta23.FinalMult"
+    ]
+  }
+}

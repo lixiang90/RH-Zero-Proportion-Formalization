@@ -1,0 +1,73 @@
+{
+  "review_kind": "independent_static_verification_driver_review_and_preflight_receipt_checks",
+  "review_passed": true,
+  "input_sha256": {
+    "scripts/verify_record_20261015.py": "f6e57b4f0e6829a83199e384272b24e192a43a9c8860b114e2a5a66cc3500f40",
+    "scripts/verify_single_solution.py": "c880e18a1754465e46c8c125cc18eae61faa9fb0f6e37562349c9d23175e0ea9",
+    "tools/ComparatorCoreAudit.lean": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+    "lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1",
+    "GramDefect20261015/Core.lean": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+    "GramDefect20261015/SharpWindow.lean": "830514965ca5cb26a19be2b216fbedd37744b7c66e862c46bf697b9e29d7c49f",
+    "GramDefect20261015/RefinedCounting.lean": "e756b01819f5063e1c9dba906b75e12c036e384156ff5734f566c2ea7c5d70cf",
+    "GramDefect20261015/Final.lean": "029f2a0e8d8c5f18908a265bb9e21a5e543d57dafd7f71fe4e14187ff85b4561",
+    "submission/gram-defect-20261015/proof/Solution.lean": "0883ee87e8f6b0284715d4e5d8b1e295801dfeeb8d7970a2554500fb49ed9f0b"
+  },
+  "requested_score": {
+    "numerator": "3338957652820594373879991756052499665323",
+    "denominator": "4957023073704306225950000000000000000000"
+  },
+  "reference_ratio": "834739413205148593469931805501689594457/1239255769294131601825000000000000000000",
+  "modular_target_roots": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative",
+    "candidate_simple_bound",
+    "candidate_simple_bound_cumulative"
+  ],
+  "single_target_roots": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "generated_modular_solution_forbidden_token_free": true,
+  "simple_statement_counting_functions_match": true,
+  "prepare_only_false_pass_flags_absent": true,
+  "reviewed_guards": [
+    "Fresh work directory required unless explicit hash-checked resume",
+    "Exact local and tool source inventories and overlay module whitelists prevent stale shadow modules",
+    "Resume requires exact source/output paths, own source and olean hashes, prior local dependency hashes, and compiler/package/runtime basis",
+    "Pinned compiler, package revisions, source archives, website contract/templates/live record, and nanoda binary are checked",
+    "Compilation requires completed fresh Zeta23 build receipt covering every explicit Core import, with all compiled source/archive and artifact hashes matching",
+    "Repository proof modules, upload, driver, manifests and dependency sources/artifacts remain bound from preparation through replay",
+    "Comparator checks the actual trusted statements, dependencies, primitives and transitive allowed axioms",
+    "Default Lean kernel replay and pinned independent nanoda no-errors completion are required",
+    "Only propext, Quot.sound and Classical.choice are permitted",
+    "Modular success never claims whole single-file success; prepare-only and compile-only never claim full verification",
+    "Running summary is written false before validation; failed mode verification receipts explicitly clear local success flags"
+  ],
+  "remaining_blocking_static_findings": [],
+  "claim_scope": "Static source review refreshed for explicit Core-import coverage and failed/running flag handling. Earlier prepare-only smoke evidence concerns the prior driver hash recorded separately; the new driver has not yet repeated that smoke while the expanded dependency closure is building. This is not successful Lean, Comparator, nanoda, resource-limit or website verification.",
+  "previous_prepare_only_driver_sha256": "597e5e2ce67ab4cea824483a25980006f38010954edb35f083c8c0f955677d23",
+  "previous_prepare_only_summary_sha256": "85a7e458246bb01a557fdeb8f8659adff466f0a52a13dc98b7b9d2bbc9be4e74",
+  "current_driver_prepare_only_reexecuted": false,
+  "previous_prepare_only_both_modes_receipts_checked": true,
+  "current_driver_delta_rechecked_statically": true,
+  "dependency_coverage_delta": {
+    "minimum_unique_compiled_modules": 135,
+    "required_explicit_Core_imports": [
+      "Zeta23.FinalMult",
+      "Zeta23.PrimeSideA.EndsE1",
+      "Zeta23.Taper.Norms",
+      "Zeta23.ThmD.Concrete",
+      "Zeta23.ThmD.Limit",
+      "Zeta23.ThmD.Mult",
+      "Zeta23.ThmD.Window",
+      "Zeta23.ThmD.WindowCore",
+      "Zeta23.ThmD.ZeroSideD",
+      "Zeta23.ZeroSide.RankTraceMult"
+    ],
+    "raw_and_comment_masked_import_sets_agree": true,
+    "all_existing_archive_source_and_artifact_checks_retained": true,
+    "reason": "FinalMult alone omitted explicit Core imports such as Zeta23.ThmD.Mult; the receipt must cover every explicit Core Zeta23 root."
+  }
+}

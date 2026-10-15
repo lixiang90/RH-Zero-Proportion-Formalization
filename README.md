@@ -2,183 +2,113 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
-Lean proofs and exact rational certificates for lower bounds on the proportion
-of Riemann zeta zeros on the critical line. This repository contains the current
-refinement and preserves the previous proofs and verification history.
-Historical research papers are maintained in [RH-Weil](https://github.com/lixiang90/RH-Weil).
-
-The latest formalized bound is
+The new exact bound for critical-line zeros is
 
 \[
- \kappa=\frac{39282451209654051457408555553}{58319774788300000000000000000}
- =0.673570008667708719595754467355\ldots,
+\kappa=\frac{3338957652820594373879991756052499665323}
+{4957023073704306225950000000000000000000}
+=0.6735812206590039663684362480701863790258\ldots,
 \]
 
-or **67.357000866770871959575446…%**. It concerns **simple** critical-line zeros
-relative to all nontrivial zeros counted with multiplicity. It also gives
-the same lower bound for distinct critical-line zeros. Every proportion below
-\(\kappa\) holds for all sufficiently large heights, both on \( (T,2T] \) and
-on \( (0,T] \). In particular **67.3570008667%** holds eventually.
+or **67.3581220659003966368436248070186379025859…%**. It improves the
+[accepted ajp88 reweighted nine-point record](https://www.riemannzeta.fun/submissions/ajp88-reweighted-nine-point)
+by approximately **4.71819935420 × 10⁻⁸ percentage points**.
 
-This strictly exceeds the [website record checked on October 14, 2026](https://www.riemannzeta.fun/submissions/master-of-puppets4),
-\(667801670564118872522651/991436171500000000000000\), by approximately
-\(6.7191492529210\times10^{-9}\) percentage points. The improvement refines
-the rational precision of the same nine-point Gram-defect certificate and
-window bounds. It introduces no new window or analytic assumption.
+The bound concerns **simple** critical-line zeros relative to all nontrivial
+zeros counted with multiplicity. It also applies to distinct critical-line
+zeros. For every \(\varepsilon>0\), the proportion \(\kappa-\varepsilon\)
+holds at all sufficiently large heights, both on \((T,2T]\) and \((0,T]\).
+The [final module](GramDefect20261015/Final.lean) states all four actual
+counting conclusions.
 
-The [final Lean module](GramDefectRecord/Final.lean) proves the exact comparison
-and all four actual simple/distinct counting conclusions. Ordinary Lean
-compilation and a fresh six-root axiom audit passed. Independent nanoda
-checked **74,963 declarations with no errors**. Only `propext`,
-`Classical.choice`, and `Quot.sound` were permitted. See the
-[formal report](verification/gram-defect-20261014/formal-kernel.json),
-[independent report](verification/gram-defect-20261014/independent-kernel.json),
-[kernel transcript](verification/gram-defect-20261014/nanoda.log), and
-[mathematical explanation](docs/gram-defect-refinement-20261014.md).
+## Two refinements of the existing method
 
-The finite objective and its denominator are both scaled by 1000, preserving
-the real weights, pressure and span capacities. The new certified floor is
-\(85638285989/10^{13}\); the sharpened window floor is
-\(672168410564118874775945444401/10^{30}\). The unchanged counting formula
-\((H_W^- - B)/(1-c)\), with \(B=436674/10^8\), gives the exact result above.
+- **Higher local floor:** the same 48-root certificate permits
+  \(c=859538525913875481/10^{20}\), raising its numerator by `69444403627`.
+  Exact replay checks 10,937 numerical leaves, 419 reflection leaves and
+  108 root conditions. The limiting leaf retains positive integer margin
+  `235234080000000000`; one further numerator unit fails that fixed witness.
+- **Sharper window enclosure:** inherited alternating cosine and sinc
+  inequalities are evaluated exactly at \(\theta^2=1/2\), where
+  \(\theta=\sqrt2/2\). They give
+  \(h=6721684105641188747759983512104999330646/10^{40}\).
 
-## Previous joint frame pair proof
+The window coefficients, tree, tangent data, weights and pressure
+\(B=437688000000/10^{14}\) are retained. The existing counting formula
+\(\kappa=(h-B)/(1-c)\) gives the result. This is a small improvement within
+the established method. The [mathematical explanation](docs/alternating-window-refinement-20261015.md)
+details the certificate and analytic comparisons. A separate
+[bottleneck analysis](docs/certificate-bottlenecks-20261015.md) identifies
+conditional research ceilings and explains why further Taylor terms alone
+cannot raise the present window numerator; it proves no stronger
+zero-proportion bound.
 
-The previous **66812491/99194552 = 67.35500050446319…%** result remains in
-`RHWeilRecord.JointFramePair`. Its complete proof passed ordinary Lean and
-independent nanoda replay of 84,362 declarations. Its
-[formal report](verification/joint-frame-pair-complete-formal-kernel.json),
-[independent report](verification/joint-frame-pair-complete-independent-nanoda.json),
-[paper](papers/joint-frame-pair-simple-critical-paper.tex) and
-[proof guide](docs/joint-frame-pair-formalization.md) are preserved.
+## Verification and submission
 
-The improvement pays both the eight-point frames and their nine-point
-compatible pairs. Forty of the 241 original cells receive new duals, including
-four closed branches of cell 17; the other 201 keep their original witnesses.
-Ten compatible-pair domains receive twenty closed branches. The complete
-2,399-domain cover retains all 47 previous replacements with their 84 branches
-and all 2,342 other original duals. The 425 used tangent points belong to the
-original certified kernel table. Real gaps, shared span squares, finite box
-residuals and branch endpoints are all retained.
+**Verification status: passed.** Both proof forms passed ordinary Lean
+compilation, trusted-statement comparison, transitive axiom checks,
+default-kernel replay and independent nanoda replay with unchanged input hashes.
 
-The global eight-point floor is 805094/10^8. The resulting outer-case bound is
-1610897/200000000; the complete low--low bound is larger. Both pay the new
-uniform nine-point reward 805448/10^8. The unchanged lossless counting bridge
-retains every off-line reflected pair and all zero multiplicities.
+| Proof form | Status | Nanoda declarations |
+|---|---|---|
+| [Modular proof, five roots](verification/gram-defect-20261015/lean/modular/verification.json) | Passed | 74945 |
+| [Upload file, three website roots](verification/gram-defect-20261015/lean/single/verification.json) | Passed | 74925 |
 
-For Lean, the 201 retained YA payments use a separately archived base-only
-33-variable dual adapter, proving the same floor with no additional tangent
-or analytic input. It produces 244 numeric frame checks; the mathematical
-witnesses and this formal adapter are both preserved.
+Only `propext`, `Quot.sound` and `Classical.choice` are permitted. Supporting
+audits include the [finite replay](verification/gram-defect-20261015/finite-margin.json),
+[independent structural review](verification/gram-defect-20261015/independent-finite-review.json),
+[exact score](verification/gram-defect-20261015/exact-score.json) and
+[packaging review](verification/gram-defect-20261015/packaging-review.json).
+These supporting calculations are separate from the kernel checks.
 
-## Preserved results
+The website upload is [Solution.lean](submission/gram-defect-20261015/proof/Solution.lean).
+[Submission instructions](submission/gram-defect-20261015/README.md),
+[form fields](submission/gram-defect-20261015/submission-fields.json) and the
+[manifest](submission/gram-defect-20261015/manifest.json) provide the exact
+integers, summary, byte count and source hashes. The file remains below the
+2,000,000-byte limit. The candidate has **not been submitted to or accepted
+by the website**; local verification does not establish its sandbox limits
+or acceptance against a future live record.
 
-The previous **941021/1397107 = 67.3549699486152…%** result remains in
-[NinthSpan.lean](RecordProportion/NinthSpan.lean). All four actual counting
-theorems passed ordinary Lean compilation, a fresh transitive axiom audit,
-and independent nanoda replay of 82,804 declarations. Only `propext`,
-`Quot.sound`, and `Classical.choice` were permitted. See its preserved
-[Lean report](verification/ninth-span-complete-formal-kernel.json),
-[independent replay](verification/ninth-span-complete-independent-nanoda.json),
-and [guide](docs/ninth-span-formalization.md).
+## Source and reproduction
 
-The older **66812491/99194740 = 67.3548728491047…%** proofs and single-file
-submission also remain unchanged. All preceding tracked paths and mathematical
-records are preserved. The preceding repository introductions are archived
-[at c260](docs/c260-repository-status-20261010.md) and
-[at c403](docs/c403-repository-status-20261011.md).
+The accepted [upstream source](formal/upstream/ajp88-reweighted-nine-point.lean)
+is preserved at site commit `e08fce410ba008ff5c5a03215d9b6bfb3ab91200`,
+including inherited attribution and licenses. The new refinements are by
+Li Xiang. The independent library is `GramDefect20261015`; import it
+separately from `GramDefectRecord` and `RecordProportion`, whose inherited
+global declaration names overlap.
 
-## Fixed environment and reproduction
+Follow the [runtime setup guide](scripts/setup_record_20261015/README.md)
+for pinned dependencies, Linux/WSL setup and verification prerequisites.
+From the repository root, regenerate and check the artifacts with:
+
+```powershell
+python -B -X utf8 scripts/extract_record_20261015.py
+python -B -X utf8 scripts/finite_margin_20261015.py
+python -B -X utf8 scripts/window_refinement_20261015.py
+python -B -X utf8 scripts/final_record_20261015.py
+python -B -X utf8 scripts/bundle_record_20261015.py
+python -B -X utf8 scripts/review_packaging_20261015.py
+python -B -X utf8 scripts/analyze_certificate_potential_20261015.py
+```
+
+Then run the verification driver under the prepared Linux runtime, using
+an empty work directory; `--resume` permits only hash-checked reuse:
+
+```bash
+python3 scripts/verify_record_20261015.py --mode all --work-dir /var/tmp/rh-zero-20261015/recheck
+```
 
 | Component | Pinned version |
 |---|---|
 | Lean | `leanprover/lean4:v4.33.0-rc2` |
 | Mathlib | `51e6992efd06126df61a496bebf8f49482a4e129` |
 | Zeta23 | `3635e74826a4c1fcece7d1cd2b6fa75e43a00510` |
+| Comparator | `273294467ce06429e6667ece7f5699f8678c9f4e` |
 | lean4export | `b18d673bd29b476466a51a3be1012df2ed322b10` |
 | nanoda | `418320295890faed83a96fd97907b12a3b6728c2` |
 
-```powershell
-lake --no-cache exe cache get
-lake --no-cache build +GramDefectRecord:olean
-python -B -X utf8 scripts/gram_defect_exact_inputs.py
-python -B -X utf8 scripts/verify_gram_defect_record.py
-```
-
-The pinned compiler, dependency commits, source hashes and exported proof
-graph are bound by the verification receipts. Recorded WSL-cache commands
-describe the measured local environment; fresh checkouts build their own
-dependencies. The two libraries are separate because the inherited source
-chains share declaration names. Build or import `GramDefectRecord` for the
-latest result; do not import it together with `RecordProportion` in one module.
-
-## Website submission
-
-The latest upload artifact is
-[submission/gram-defect-20261014/proof/Solution.lean](submission/gram-defect-20261014/proof/Solution.lean).
-It is **1,939,197 UTF-8 bytes**, leaving **60,803 bytes** below the website's
-2,000,000-byte limit. It replaces the old literal certificate with the refined
-certificate, retains its shared proof helpers and source/license notices,
-and imports only the pinned trusted challenge, Mathlib and Zeta23 modules.
-No repository proof modules are needed by the upload file.
-
-The three fixed declarations appear at root scope:
-
-- `candidate_strict_improvement`
-- `candidate_critical_line_bound`
-- `candidate_critical_line_bound_cumulative`
-
-The website supplies `candidateKappa` from the exact numerator and denominator
-entered in the form and `currentRecordKappa` from its trusted current record.
-The file does not define or override either constant. Two `by rfl` identities
-map the website's trusted `Ncount` and `N0star` definition copies to their
-`Zeta23` counterparts, preserving exactly the zero sets and multiplicities.
-See the
-[submission instructions and exact fields](submission/gram-defect-20261014/README.md)
-and [artifact manifest](submission/gram-defect-20261014/manifest.json).
-
-**Fresh single-file verification passed**: ordinary Lean compilation, exact
-statement equality for all three fixed declarations, their transitive axiom
-audit, and Lean's default kernel replay. Independent nanoda replay checked
-**74,955 declarations with no errors**. Only `propext`, `Quot.sound` and
-`Classical.choice` were permitted. The single-file evidence is recorded in the
-[compilation receipt](verification/gram-defect-single-20261014/compile.json),
-[statement and axiom receipt](verification/gram-defect-single-20261014/statement-kernel.json),
-[independent replay receipt](verification/gram-defect-single-20261014/independent-kernel.json),
-and [complete local receipt](verification/gram-defect-single-20261014/full-local-verification.json).
-The [contract snapshot](verification/gram-defect-single-20261014/contract-snapshot.json)
-binds the trusted challenge environment and score inputs.
-The source-size and scope checks have passed. Local validation does not
-establish the website's current resource checks or acceptance; the new result
-has **not been submitted to or accepted by the website**.
-
-The [first whole-file compilation log](verification/gram-defect-single-20261014/first-attempt/compile.log)
-and [repair note](verification/gram-defect-single-20261014/first-attempt/README.md)
-are preserved. The two explicit `by rfl` counting mappings resolve its wrapper
-definition mismatch; the repaired source is the one bound by the passing
-receipts above.
-
-The upload artifact can be regenerated from the modular proof:
-
-```powershell
-python -B -X utf8 scripts/bundle_gram_defect_solution.py
-python -B -X utf8 scripts/verify_single_solution.py
-```
-
-The validator runs fresh single-file compilation, statement comparison,
-axiom checks and independent replay. Its defaults describe the recorded
-local WSL dependency cache. Other environments can configure
-`--runtime-manifest`, `--package-manifest`, `--zeta-repo`, `--exporter-repo`,
-`--comparator-repo` and `--nanoda-bin`; use an empty `--work-dir` for a fresh
-run. See the package instructions for the pinned environment and options.
-
-The repository's earlier website compilation attempt exited with code 137. The old
-[single-file submission](submission/proof/Solution.lean) is preserved exactly;
-no accepted website record has been obtained. Publishing a modular Lean
-proof, independently replaying its kernel graph, and passing the site's
-whole-file resource limits are separate steps. See the preserved
-[submission requirements](docs/submission-contract.md),
-[failure diagnosis](verification/site-compilation-exit137/diagnosis.json),
-and [resource optimization](docs/resource-optimization.md).
-
-The preceding README is archived [here](docs/gram-defect-previous-readme-20261014.md).
+Historical proofs and receipts remain available. The preceding repository
+overview is [archived here](docs/gram-defect-previous-readme-20261015.md).
+Historical research papers are maintained in [RH-Weil](https://github.com/lixiang90/RH-Weil).

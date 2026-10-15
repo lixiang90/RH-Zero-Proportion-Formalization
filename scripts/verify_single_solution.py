@@ -37,7 +37,10 @@ PRIMITIVES = ["Nat", "String", "String.mk", "Char", "Quot", "Quot.mk", "Quot.lif
 
 def sha(path: Path) -> str:
     with path.open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
+        digest = hashlib.sha256()
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+        return digest.hexdigest()
 
 
 def write_json(path: Path, data: dict) -> None:
@@ -96,6 +99,12 @@ def compile_one(args, lean: str, paths: list[str], work: Path, module: str) -> d
     output = work / "lib" / Path(*module.split(".")).with_suffix(".olean")
     output.parent.mkdir(parents=True, exist_ok=True)
     log = work / "logs" / (module + ".log")
+    for prior in [log, log.with_suffix(".json")]:
+        if prior.exists():
+            attempt = 1
+            while prior.with_name(prior.name + f".attempt{attempt}").exists():
+                attempt += 1
+            prior.rename(prior.with_name(prior.name + f".attempt{attempt}"))
     before = sha(source)
     command = lean_command(args, lean, paths, "-R", linux_path(work / "source"),
                            "-o", linux_path(output), "-i", linux_path(output.with_suffix(".ilean")), linux_path(source))
@@ -312,6 +321,9 @@ def audit_replay(args, work: Path, lean: str, package_paths: list[str], receipt:
                                         for module in topological_modules(tools)]
     tracked = {str(args.solution): sha(args.solution), str(Path(__file__).resolve()): sha(Path(__file__).resolve()),
                str(args.nanoda_bin): sha(args.nanoda_bin)}
+    for name, expected in receipt.get("additional_bound_source_sha256", {}).items():
+        assert sha(Path(name)) == expected, "A prepare-bound input changed before replay"
+        tracked[name] = expected
     for folder in [work / "source", work / "trusted-reconstruction/source", work / "tools/source"]:
         for path in folder.rglob("*"):
             if path.is_file() and path.suffix == ".lean":
@@ -368,11 +380,15 @@ def audit_replay(args, work: Path, lean: str, package_paths: list[str], receipt:
     after = {name: sha(Path(name)) for name in tracked}
     assert tracked == after, "A bound source, artifact, tool or export changed during replay"
     assert capture(args, ["sha256sum", lean]).split()[0] == receipt["runtime"]["compiler_sha256"]
+    modular = receipt.get("verification_kind") == "modular"
     receipt.update({"stage": "complete", "independent_nanoda_passed": True,
                     "checked_declarations": int(count[1]), "observed_axioms": observed,
-                    "sha256_after_replay": after, "inputs_unchanged": True, "local_single_file_verified": True})
+                    "sha256_after_replay": after, "inputs_unchanged": True,
+                    "local_single_file_verified": not modular,
+                    **({"local_modular_verified": True} if modular else {})})
     write_json(work / "verification.json", receipt)
-    print(json.dumps({"local_single_file_verified": True, "checked_declarations": int(count[1]),
+    print(json.dumps({("local_modular_verified" if modular else "local_single_file_verified"): True,
+                      "checked_declarations": int(count[1]),
                       "receipt": str(work / "verification.json"), "official_website_acceptance": False}), flush=True)
 
 

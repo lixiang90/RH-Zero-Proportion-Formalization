@@ -1,0 +1,76 @@
+{
+  "review_kind": "independent_exact_arithmetic_provenance_and_in_memory_packaging",
+  "passed": true,
+  "input_sha256": {
+    "GramDefect20261015/Core.lean": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+    "GramDefect20261015/SharpWindow.lean": "830514965ca5cb26a19be2b216fbedd37744b7c66e862c46bf697b9e29d7c49f",
+    "GramDefect20261015/RefinedCounting.lean": "e756b01819f5063e1c9dba906b75e12c036e384156ff5734f566c2ea7c5d70cf",
+    "GramDefect20261015/Final.lean": "029f2a0e8d8c5f18908a265bb9e21a5e543d57dafd7f71fe4e14187ff85b4561",
+    "GramDefect20261015.lean": "2a7ad24edbcd940d92e868eb81a2f678a55fe4556b3e801b1c0472596f9e635f",
+    "formal/upstream/ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "docs/alternating-window-refinement-20261015.md": "be94e694fd2a705f2ae2c4395ffa69f943b9b4f8e00267efa05d0f102676b0d6",
+    "scripts/extract_record_20261015.py": "09875dbdbe0cf60ef41ad37aab8d8acaa6dfb15fb33c64ab1d81d532b7667e81",
+    "scripts/final_record_20261015.py": "22bce54e4e85d7b42e250c11e10bc125b65dd7542d00ec37b84828b0085515f8",
+    "scripts/bundle_record_20261015.py": "fb562ca420a83ed69c9835597816d7baa18b753b452797d9a26bd811bf3815b7",
+    "scripts/bundle_gram_defect_solution.py": "3446daac21d6f0a9c0eff8fac362b24d7627d6b94608015ec16c186100d1eb7a",
+    "submission/gram-defect-20261015/README.md": "0f4fe088e732f539cedc1b451d831e1a522c67332ebd1b0b0fe2077e4361f689",
+    "submission/gram-defect-20261015/submission-fields.json": "0c18268dd292f9e4ba73345cad572a28a97eae3f73af0aa44cfc75407eb8cdfe",
+    "submission/gram-defect-20261015/proof/Solution.lean": "0883ee87e8f6b0284715d4e5d8b1e295801dfeeb8d7970a2554500fb49ed9f0b",
+    "submission/gram-defect-20261015/manifest.json": "366cce62b14a43b264f40c49cf1bdb0e88fda0ca7fc2855a1d8b02ff366beed0"
+  },
+  "review_script_sha256": "aa466a34519d9df1391a1527cd88c931b5dac90236e9bf29e17d9c077fd7f708",
+  "generator_outputs": [
+    {
+      "path": "GramDefect20261015/Core.lean",
+      "bytes": 1912350,
+      "sha256": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+      "generator_reproduces_disk_bytes": true
+    },
+    {
+      "path": "GramDefect20261015/RefinedCounting.lean",
+      "bytes": 6818,
+      "sha256": "e756b01819f5063e1c9dba906b75e12c036e384156ff5734f566c2ea7c5d70cf",
+      "generator_reproduces_disk_bytes": true
+    },
+    {
+      "path": "verification/gram-defect-20261015/upstream-extraction.json",
+      "bytes": 698,
+      "sha256": "fb20c7cfbebc27f80184bfa0c95076ee5ab9704aee476555f48ef004990003a4",
+      "generator_reproduces_disk_bytes": true
+    },
+    {
+      "path": "GramDefect20261015/Final.lean",
+      "bytes": 3575,
+      "sha256": "029f2a0e8d8c5f18908a265bb9e21a5e543d57dafd7f71fe4e14187ff85b4561",
+      "generator_reproduces_disk_bytes": true
+    },
+    {
+      "path": "verification/gram-defect-20261015/exact-score.json",
+      "bytes": 1133,
+      "sha256": "e6fcd9e4ef1fe5b62659734c7526daf9c18ae58a5789086e7e998ccdf0a8026a",
+      "generator_reproduces_disk_bytes": true
+    },
+    {
+      "path": "submission/gram-defect-20261015/proof/Solution.lean",
+      "bytes": 1929060,
+      "sha256": "0883ee87e8f6b0284715d4e5d8b1e295801dfeeb8d7970a2554500fb49ed9f0b",
+      "generator_reproduces_disk_bytes": true
+    },
+    {
+      "path": "submission/gram-defect-20261015/manifest.json",
+      "bytes": 1719,
+      "sha256": "366cce62b14a43b264f40c49cf1bdb0e88fda0ca7fc2855a1d8b02ff366beed0",
+      "generator_reproduces_disk_bytes": true
+    }
+  ],
+  "frozen_inputs_unchanged": true,
+  "exact_ratio": "3338957652820594373879991756052499665323/4957023073704306225950000000000000000000",
+  "reference_ratio": "834739413205148593469931805501689594457/1239255769294131601825000000000000000000",
+  "exact_gain": "115935961467980058372568945908139480510493387458213/245720777704487633104131505287559755294350000000000000000000",
+  "submission_bytes": 1929060,
+  "submission_sha256": "0883ee87e8f6b0284715d4e5d8b1e295801dfeeb8d7970a2554500fb49ed9f0b",
+  "three_required_roots_unique": true,
+  "trusted_score_constants_not_redefined": true,
+  "numerical_docs_and_fields_consistent": true,
+  "claim_scope": "Static provenance, exact arithmetic and byte assembly only; this receipt does not establish Lean, independent-kernel, Comparator, resource-limit or website acceptance."
+}

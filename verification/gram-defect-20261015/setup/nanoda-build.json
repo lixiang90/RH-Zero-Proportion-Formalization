@@ -1,0 +1,50 @@
+{
+  "command": [
+    "/var/tmp/rh-zero-20261015/rust/bin/cargo",
+    "build",
+    "--locked",
+    "--release",
+    "--bin",
+    "nanoda_bin"
+  ],
+  "working_directory": "/var/tmp/rh-zero-20261015/.lake/packages/nanoda",
+  "exit_code": 0,
+  "elapsed_seconds": 53.32683805400001,
+  "source_commit": "418320295890faed83a96fd97907b12a3b6728c2",
+  "rust_components": [
+    {
+      "component": "cargo",
+      "version": "1.85.1",
+      "url": "https://static.rust-lang.org/dist/cargo-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+      "sha256": "7373132c13e394755d15f01bda4374af59b4daef01b12a83cb3df3f3be38e289"
+    },
+    {
+      "component": "rustc",
+      "version": "1.85.1",
+      "url": "https://static.rust-lang.org/dist/rustc-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+      "sha256": "92a5c532b9e87912190128704e0d65825912e3b08a6ee9203c4068d6d1df62c4"
+    },
+    {
+      "component": "rust-std",
+      "version": "1.85.1",
+      "url": "https://static.rust-lang.org/dist/rust-std-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+      "sha256": "0aaeffba85359503f874315cd08e0ae8490275d14b41470d36d4fa57fd085916"
+    }
+  ],
+  "rustc_version": "rustc 1.85.1 (4eb161250 2025-03-15)",
+  "cargo_lock_sha256": "ba57464cc37afd903a12432b18db0d576afff60e04686322bfcebf8a4bc2848d",
+  "binary": "/var/tmp/rh-zero-20261015/nanoda-target/release/nanoda_bin",
+  "binary_sha256": "0c8332aae13164943ebfed4f8f4ed969494d8e85edff9d774a70fd92ea9318c2",
+  "log_sha256": "7466f3c2cc1b576773909d471e4e8af5db7298664015a4ece96608bfd8e7f7a9",
+  "log": "/var/tmp/rh-zero-20261015/nanoda-build.log",
+  "source_archive_sha256": "f84eb185d4a5594aad18e4b8adbac636e3ace08b671d705dbd6acdbfb834eae6",
+  "source_archive_url": "https://codeload.github.com/ammkrn/nanoda_lib/tar.gz/418320295890faed83a96fd97907b12a3b6728c2",
+  "build_command": [
+    "/var/tmp/rh-zero-20261015/rust/bin/cargo",
+    "build",
+    "--locked",
+    "--release",
+    "--bin",
+    "nanoda_bin"
+  ]
+}

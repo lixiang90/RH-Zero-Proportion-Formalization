@@ -1,0 +1,38 @@
+{
+  "module": "Challenge.Candidate",
+  "source": "/var/tmp/rh-zero-20261015/record-verification/modular/source/Challenge/Candidate.lean",
+  "source_sha256": "269c295cee68857fcbdb9a748e5f4bead90d18c03c6c817d9f5ad90af55334b4",
+  "source_unchanged": true,
+  "command": [
+    "env",
+    "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+    "LEAN_PATH=/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/lib/Challenge/Candidate.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/lib/Challenge/Candidate.ilean",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/source/Challenge/Candidate.lean"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 6.134,
+  "log": "/var/tmp/rh-zero-20261015/record-verification/modular/logs/Challenge.Candidate.log",
+  "olean": "/var/tmp/rh-zero-20261015/record-verification/modular/lib/Challenge/Candidate.olean",
+  "olean_sha256": "463d3c6cafa74ee33bb7636bb9c7485f71be401d238cde71d1cb1bf1ef92da1f",
+  "local_dependency_olean_sha256": {
+    "ChallengeDeps": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542",
+    "ChallengeDeps.CandidateSpec": "670b554a94297575edfeb26036162247539f2168c5f5c1ee657c65d305f3866b"
+  },
+  "compile_runtime_basis": {
+    "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "runtime_manifest_sha256": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574",
+    "sources_manifest_sha256": "afb55e306f672306e3c507476b1b0899a0f9c6b4880ff7228cef4af1ac4ca84a",
+    "package_manifest_sha256": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1",
+    "dependency_build_receipt_sha256": "650a4ada83d1cc34fa681d2d3278b25e1ccbf929fde6fab9e08a625477ae0d7f"
+  }
+}

@@ -27,3 +27,15 @@ verification/ninth-span-*/** -text whitespace=cr-at-eol,-blank-at-eof
 # Preserve exactly the upload file and its fresh single-file verification evidence.
 /submission/gram-defect-20261014/proof/Solution.lean -text
 /verification/gram-defect-single-20261014/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
+
+# Exact-byte source and verification evidence for the next nine-point refinement.
+/GramDefect20261015/*.lean -text whitespace=cr-at-eol,-blank-at-eof
+/GramDefect20261015.lean -text
+/formal/upstream/ajp88-reweighted-nine-point.lean -text
+/submission/gram-defect-20261015/** -text
+/verification/gram-defect-20261015/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
+/scripts/*20261015*.py -text whitespace=cr-at-eol,-blank-at-eof
+/scripts/setup_record_20261015/** -text whitespace=cr-at-eol,-blank-at-eof
+/scripts/verify_single_solution.py -text
+/docs/alternating-window-refinement-20261015.md -text
+/output/window-refinement-20261015.json -text

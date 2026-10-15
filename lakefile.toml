@@ -1,6 +1,6 @@
 name = "rhZeroProportion"
 version = "0.1.0"
-defaultTargets = ["RecordProportion", "GramDefectRecord"]
+defaultTargets = ["RecordProportion", "GramDefectRecord", "GramDefect20261015"]
 
 [leanOptions]
 relaxedAutoImplicit = false
@@ -20,3 +20,6 @@ name = "RecordProportion"
 
 [[lean_lib]]
 name = "GramDefectRecord"
+
+[[lean_lib]]
+name = "GramDefect20261015"
