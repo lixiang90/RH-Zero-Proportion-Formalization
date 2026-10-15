@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "seconds": 30.17278003692627,
+  "source_path": "StructuralResearch20261016/PotentialRange.lean",
+  "source_sha256": "109e8d57bd5cb459d34cbed028dc770b9960cbfcc8f9f0bcbc8d32ef1d226716",
+  "stdout": "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralResearch20261016/PotentialRange.lean:224:14: warning: Variable name `g` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _g\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralResearch20261016/PotentialRange.lean:389:14: warning: Variable name `g` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _g\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'OverlapPotential20261016.V_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OverlapPotential20261016.V_oscillation' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "w\u0000s\u0000l\u0000:\u0000 \u0000\ufffdhKm0R \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000\ufffdN\u0006tM\ufffdn\u007f\f\ufffdFO*g\\\ufffd\ufffdP0R \u0000W\u0000S\u0000L\u0000\u00020N\u0000A\u0000T\u0000 \u0000!j\u000f_\u000bN\ufffdv \u0000W\u0000S\u0000L\u0000 \u0000\rN/e\u0001c \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000\ufffdN\u0006t\u00020\r\u0000\n\u0000",
+  "command": [
+    "wsl",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "env",
+    "LEAN_PATH=/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+    "-o",
+    "/var/tmp/rh-zero-20261015/research-20261016/lib/StructuralResearch20261016/PotentialRange.olean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralResearch20261016/PotentialRange.lean"
+  ],
+  "olean_sha256": "fa25fb2eb0be1d92ff4356a69c6d1df1dbc3bed1c444da8f9f0e4a8bf2cee64c"
+}

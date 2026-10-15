@@ -1,0 +1,116 @@
+{
+  "scope": "Floating-point research only; no rigorous global or Lean certificate",
+  "model": "Equal-integral v0+epsilon*g and v0-epsilon*g, same pair weights",
+  "quadratic_identity": "h_eff=h0-epsilon^2*Q(g)/Z^2; c_eff=c0+epsilon^2*E(g)/Z^2",
+  "basis": "g=sum a_j*cos(2*pi*j*s); Q(g)=sum (1/2-1/(4*pi^2*j^2))*a_j^2",
+  "directional_test": "Positive improvement requires E(g)/Q(g)>1/kappa",
+  "published_kappa": 0.6735812206590039,
+  "necessary_eigenvalue_threshold": 1.4846019593919817,
+  "seed_from_certificate_leaf": [
+    1.036224365234375,
+    1.96002197265625,
+    1.03631591796875,
+    1.030609130859375,
+    1.963348388671875,
+    1.0419921875,
+    1.968994140625,
+    1.03759765625
+  ],
+  "seed_objective": 0.008609480291638005,
+  "configuration": [
+    1.0362910541445216,
+    1.959741291072268,
+    1.0346610365655309,
+    1.0358219376501276,
+    1.9633453681709039,
+    1.0425450903280291,
+    1.9679826454150715,
+    1.0363373720217577
+  ],
+  "configuration_objective": 0.008595669749493084,
+  "configuration_gradient_max": 4.035855205803199e-09,
+  "baseline_upper_score_at_this_configuration": 0.6735814139478109,
+  "spectra": [
+    {
+      "basis_terms": 8,
+      "lambda_max": 1.0163741550698338,
+      "kappa_lambda_minus_one": -0.3153894559817976,
+      "coarse_infinite_tail_trace_bound": null
+    },
+    {
+      "basis_terms": 12,
+      "lambda_max": 1.0548444879808974,
+      "kappa_lambda_minus_one": -0.2894765621804052,
+      "coarse_infinite_tail_trace_bound": 0.4192693467798078
+    },
+    {
+      "basis_terms": 16,
+      "lambda_max": 1.0570147981591849,
+      "kappa_lambda_minus_one": -0.28801468200130553,
+      "coarse_infinite_tail_trace_bound": 0.04009643664769555
+    },
+    {
+      "basis_terms": 24,
+      "lambda_max": 1.0574135039778345,
+      "kappa_lambda_minus_one": -0.28774612124929566,
+      "coarse_infinite_tail_trace_bound": 0.006090248749191386
+    },
+    {
+      "basis_terms": 32,
+      "lambda_max": 1.0574796245066633,
+      "kappa_lambda_minus_one": -0.28770158370277654,
+      "coarse_infinite_tail_trace_bound": 0.0021076915112384974
+    },
+    {
+      "basis_terms": 48,
+      "lambda_max": 1.0575094420695077,
+      "kappa_lambda_minus_one": -0.2876814991523988,
+      "coarse_infinite_tail_trace_bound": 0.0005460797969471472
+    },
+    {
+      "basis_terms": 64,
+      "lambda_max": 1.0575162310134871,
+      "kappa_lambda_minus_one": -0.2876769262472262,
+      "coarse_infinite_tail_trace_bound": 0.00022002553111990643
+    },
+    {
+      "basis_terms": 96,
+      "lambda_max": 1.0575196327103018,
+      "kappa_lambda_minus_one": -0.2876746349281334,
+      "coarse_infinite_tail_trace_bound": 6.309574653326063e-05
+    },
+    {
+      "basis_terms": 128,
+      "lambda_max": 1.0575204510079717,
+      "kappa_lambda_minus_one": -0.28767408373819003,
+      "coarse_infinite_tail_trace_bound": 2.6315385328836772e-05
+    },
+    {
+      "basis_terms": 192,
+      "lambda_max": 1.0575208697561178,
+      "kappa_lambda_minus_one": -0.2876738016773026,
+      "coarse_infinite_tail_trace_bound": 7.733447803022892e-06
+    },
+    {
+      "basis_terms": 256,
+      "lambda_max": 1.0575209715988423,
+      "kappa_lambda_minus_one": -0.28767373307795596,
+      "coarse_infinite_tail_trace_bound": 3.2531639116010496e-06
+    },
+    {
+      "basis_terms": 512,
+      "lambda_max": 1.0575210366636663,
+      "kappa_lambda_minus_one": -0.2876736892515124,
+      "coarse_infinite_tail_trace_bound": 4.05513901719798e-07
+    },
+    {
+      "basis_terms": 1024,
+      "lambda_max": 1.057521044809242,
+      "kappa_lambda_minus_one": -0.2876736837648055,
+      "coarse_infinite_tail_trace_bound": 5.0653807252501474e-08
+    }
+  ],
+  "conclusion": "No tested same-support fixed-weight variance direction improves the score; PSD mixtures cannot exceed the largest Rayleigh quotient at this configuration.",
+  "finite_source_sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+  "seconds": 0.010983705520629883
+}

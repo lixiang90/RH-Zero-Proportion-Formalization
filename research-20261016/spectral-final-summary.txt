@@ -1,0 +1,21 @@
+本子任务最终结论：得到一个新的十点有限框架候选及已核验的参数可容许性；尚未证明新的ζ零点比例。
+
+最终参数是 spectral-w10-refined-rational.json：B=10999681/2500000000，候选c=433/50000=.00866。若证明全域floor，条件比例为67.3601930886%，比当前记录增加0.0020710227个百分点。此条件尚未满足。
+结构变化是加入秩距离9的远程对支付（系数2），并重优化全部反射对称权重。39个a正项，各秩距离容量精确<=2。原九点框架已饱和秩距离1..8，不能在这些预算内免费增加奖励。
+
+W10RefinedCandidate.lean的Adm/pressure_eq已在固定Lean4.33.0-rc2通过，axioms仅propext、Classical.choice、Quot.sound；模块没有c、H或比例定理。原W10Candidate与其旧审计保持独立。
+最终新权重已逐个优化全部19683个三相离散起点，最低F=0.00866724368922；另1007个四/五相DP、随机和大gap起点最低F=0.00866724368922，候选floor留约7.24e-6数值裕量。这不是全域下界证明，也不表示列尽所有连续极小点。
+
+原始十点权重的c=.00866已被中心3gap对称配置推翻；独立精确有理区间给出F<.0086495。旧文件显式REFUTED，新旧权重不可混用。旧权重若下调至c=.00864，未证条件比例仅67.3587030911%。
+W11/W12粗研究的条件数值见spectral-comparison；它们没有经过同等级完整起点追击，不能当作新纪录。统一24/32点谱候选的当前压力参数也被强反例压低；这只淘汰所测参数，不排除整个模型。
+
+全域证书的紧域：对实际sep=17/20，任何Fw<c反例必满足b·g<c，单gap最大<25.948073969，总span<32.748073969（精确界见JSON）。
+建议下一步复用单变量TVal切向包络，以39个pair epigraph变量、9个gap变量及部分span超平面分支导出有理混合/整数flow。没有实际生成完整9维证书，不能预报节点数或声称可在给定时间闭合。
+
+复核命令（仓库根目录；数值结果写独立recheck前缀）：
+python -B -X utf8 research-20261016/spectral_w10_full_ternary.py --candidate research-20261016/spectral-w10-refined-rational.json --output-prefix spectral-w10-refined-recheck
+python -B -X utf8 research-20261016/spectral_w10_challenge.py --candidate research-20261016/spectral-w10-refined-rational.json --output-prefix spectral-w10-refined-recheck-challenge
+python -B -X utf8 research-20261016/spectral_w10_counterexample_interval.py
+python -B -X utf8 research-20261016/spectral_verify_w10.py --module W10RefinedCandidate --receipt spectral-w10-refined-recheck-compile.json
+
+文件SHA256、精确有理紧域及证明边界见spectral-final-summary.json。

@@ -1,0 +1,64 @@
+{
+  "status": "independent exact arithmetic audit passed; NOT a completed Lean zero-proportion proof",
+  "all_exported_certificates_passed": true,
+  "initial_cells": 667410,
+  "initial_empty_cells": 268864,
+  "exported_checked": 8004,
+  "part_counts": [
+    4002,
+    4002
+  ],
+  "input_hashes": {
+    "binary_sha256": "b16a65d8f7a3fb44b75491ac55f31c6bb5a43949f2cdc978dd1e548ca517b5e3",
+    "ternary_sha256": "e802f8db793fb107e8ae04bec402093ea54098f7bdf55ccaecd766818c8c64c6"
+  },
+  "initial_sha256": "ae00a3344b72d9627ae751c043f0dc6f595ebc8d957ed01f4ebdb523fbbfcf39",
+  "bound_input_sha256": {
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\formal\\upstream\\ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016\\affine_leaf_replay.py": "e71dcf39a0477cdc678b26264fe1e5c011ffa07b0d855f6f4b8d7a6763d6e5cb",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016\\verify_exported_certificates.py": "7372fd4cc67c6d91d9a8472720d830995f7bf3bc232a7a19188ae954442ff4fc",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016\\affine-leaf-replay.json": "ae00a3344b72d9627ae751c043f0dc6f595ebc8d957ed01f4ebdb523fbbfcf39",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016\\validate_affine_potential.json": "b16a65d8f7a3fb44b75491ac55f31c6bb5a43949f2cdc978dd1e548ca517b5e3",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016\\ternary_potential_oracle.json": "e802f8db793fb107e8ae04bec402093ea54098f7bdf55ccaecd766818c8c64c6"
+  },
+  "files": [
+    {
+      "path": "tangent-certificates-part0.json.gz",
+      "sha256": "eff9e5ba6e41b263744d911b0043585a957a19f5b77251a10ffc1b6e22590bb7",
+      "bytes": 3217541
+    },
+    {
+      "path": "tangent-certificates-part1.json.gz",
+      "sha256": "23af458707cf9b8451ff7105a8b62c4e3045e820e7f3fd69c3cb74a1f6696b5b",
+      "bytes": 3210403
+    }
+  ],
+  "minimum_floor": {
+    "numerator": "288571713843014896882860032000000000",
+    "denominator": "33554432000000000000000000000000000000",
+    "decimal_for_display": 0.008600107247919288,
+    "leaf": 17853,
+    "word": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  "target": "4299/500000",
+  "good_gap_complement_arithmetic": {
+    "numerator": "445423728234735927",
+    "denominator": "50000000000000000000"
+  },
+  "remaining_Lean_obligations": [
+    "instantiate TVal, mixture and flow data for each exceptional leaf",
+    "prove all classified subcells and the initial geometric branches are covered",
+    "connect the good-gap complement and the fixed potential to the summed counting interface",
+    "run full statement/dependency comparison and both kernel replays on a final unconditional theorem"
+  ],
+  "seconds": 7.5014636516571045
+}

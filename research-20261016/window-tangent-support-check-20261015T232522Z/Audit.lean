@@ -1,0 +1,4 @@
+import StructuralResearch20261016.TangentSupport
+
+#print axioms StructuralResearch20261016.TangentSupport.affine_of_enclosed_tangent
+#print axioms StructuralResearch20261016.TangentSupport.affine_of_TVal

@@ -1,0 +1,80 @@
+{
+  "scope": "Finite affine-flow arithmetic only; ordinary Lean and axiom inspection with the pinned Mathlib package runtime. No improved kappa or website acceptance claim.",
+  "passed": true,
+  "utc": "20261015T232456Z",
+  "compiler": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "bound_inputs_sha256": {
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\StructuralResearch20261016\\AffineFlow.lean": "3543fe176b6c3f4737058b11f8320a8299ad112c729e08d6f2451bd3aaa70a8a",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\verification\\gram-defect-20261015\\setup\\runtime.json": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016\\window-verify-affine-flow.py": "62007867e316ffe7a0e9cf9aa5dc0420a4b01d358a1d98660eae456fdf44ea7c"
+  },
+  "compiled_modules": [
+    {
+      "module": "StructuralResearch20261016.AffineFlow",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016/affine-flow-check-20261015T232456Z/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/research-20261016/affine-flow-check-20261015T232456Z/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016/affine-flow-check-20261015T232456Z/lib/StructuralResearch20261016/AffineFlow.olean",
+        "/var/tmp/rh-zero-20261015/research-20261016/affine-flow-check-20261015T232456Z/source/StructuralResearch20261016/AffineFlow.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 9.25730399999884,
+      "source_sha256": "3543fe176b6c3f4737058b11f8320a8299ad112c729e08d6f2451bd3aaa70a8a",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016/affine-flow-check-20261015T232456Z/lib/StructuralResearch20261016/AffineFlow.olean",
+      "olean_sha256": "0eede5355253e9d38766ccbb0ca11077b6d44c370d95a1ad922e103b9d0c82bd",
+      "log": "research-20261016\\window-affine-flow-check-20261015T232456Z\\StructuralResearch20261016.AffineFlow.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca"
+    }
+  ],
+  "axioms": {
+    "StructuralResearch20261016.AffineFlow.divergence_pairing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.AffineFlow.lower_of_flow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.AffineFlow.lower_of_balanced_flow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.AffineFlow.target_le_of_flow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.AffineFlow.weighted_minorants": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_seconds": 1.3562827999994624,
+  "axiom_log": "research-20261016\\window-affine-flow-check-20261015T232456Z\\axioms.log",
+  "axiom_log_sha256": "cb78e089bed450e4f1c15218629513686e4db522c1b46c9a47a4c961c4cb6eb2",
+  "generated_audit_source_sha256": "67ff67b3ebba10d4717e4199122a8457bab8863c4ad261b60a7e7e92bd3be2fc",
+  "inputs_unchanged": true,
+  "independent_nanoda_run": false,
+  "full_environment_kernel_replay_run": false
+}

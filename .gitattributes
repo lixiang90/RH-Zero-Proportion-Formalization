@@ -39,3 +39,8 @@ verification/ninth-span-*/** -text whitespace=cr-at-eol,-blank-at-eof
 /scripts/verify_single_solution.py -text
 /docs/alternating-window-refinement-20261015.md -text
 /output/window-refinement-20261015.json -text
+
+# Preserve raw-byte identities of structural research and its checked receipts.
+/StructuralResearch20261016/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
+/research-20261016/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
+/submission/structural-20261016/** -text

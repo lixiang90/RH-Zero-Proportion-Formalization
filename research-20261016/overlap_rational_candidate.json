@@ -1,0 +1,176 @@
+{
+  "status": "rational DISCOVERY candidate; central all-gap inequality UNPROVED; no improved kappa claimed",
+  "core_sha256": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+  "base_input_sha256": "b16a65d8f7a3fb44b75491ac55f31c6bb5a43949f2cdc978dd1e548ca517b5e3",
+  "delta_input_sha256": "e802f8db793fb107e8ae04bec402093ea54098f7bdf55ccaecd766818c8c64c6",
+  "state_convention": "little endian: state=sum(class(g[i])*base**i), i=0..6",
+  "class_convention": "0 if g<=3/2; 1 if 3/2<g<=5/2; 2 if 5/2<g; all g>=17/20",
+  "potential_formula": "delta(ternary_state) + (u(binary_state)+sum(v[i]*(g[i]-mu[class(g[i])])) if no class2, else delta(ternary_state)",
+  "common_denominator": "1000000000000",
+  "mu": [
+    {
+      "numerator": "26",
+      "denominator": "25"
+    },
+    {
+      "numerator": "197",
+      "denominator": "100"
+    }
+  ],
+  "binary_affine_numerators": {
+    "21": [
+      -2182970,
+      612766184,
+      0,
+      0,
+      0,
+      0,
+      0,
+      346100111
+    ],
+    "37": [
+      946634,
+      350082874,
+      0,
+      0,
+      0,
+      0,
+      440102973,
+      956226546
+    ],
+    "41": [
+      6960433,
+      240857535,
+      0,
+      0,
+      545099343,
+      0,
+      0,
+      762290651
+    ],
+    "42": [
+      -1042797,
+      -819136184,
+      631209351,
+      -178763854,
+      0,
+      410194052,
+      -569497694,
+      977393305
+    ],
+    "45": [
+      -2213453,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "74": [
+      -9874862,
+      -1033135558,
+      0,
+      0,
+      -455659793,
+      0,
+      0,
+      -421752578
+    ],
+    "82": [
+      -4279936,
+      -926632438,
+      -624626025,
+      0,
+      0,
+      0,
+      0,
+      -447280097
+    ],
+    "84": [
+      11431,
+      -306767379,
+      0,
+      0,
+      0,
+      -184983609,
+      0,
+      -698322057
+    ],
+    "85": [
+      -77792,
+      419109690,
+      -663616995,
+      245321503,
+      0,
+      -293327685,
+      867402733,
+      -514373417
+    ],
+    "90": [
+      2698829,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "ternary_constant_numerators": {
+    "91": 122089,
+    "99": -3878991,
+    "165": 4745194,
+    "171": 3878991,
+    "253": -122659,
+    "261": -4745194,
+    "271": -34532,
+    "273": 85939,
+    "276": -4714932,
+    "298": 860009,
+    "496": 4417188,
+    "516": 4714932,
+    "759": -68242,
+    "786": -860009,
+    "813": -52819,
+    "816": -4417188,
+    "820": 75530
+  },
+  "potential_lower": {
+    "numerator": "-13221346461",
+    "denominator": "10000000000000"
+  },
+  "potential_upper": {
+    "numerator": "28582784113",
+    "denominator": "20000000000000"
+  },
+  "potential_oscillation": {
+    "numerator": "11005095407",
+    "denominator": "4000000000000"
+  },
+  "B": {
+    "numerator": "54711",
+    "denominator": "12500000"
+  },
+  "target_c": {
+    "numerator": "4299",
+    "denominator": "500000"
+  },
+  "outer_gap_cutoff": 40,
+  "outer_pressure_lower": {
+    "numerator": "7175961",
+    "denominator": "500000000"
+  },
+  "outer_corrected_energy_lower": {
+    "numerator": "46402592593",
+    "denominator": "4000000000000"
+  },
+  "conditional_counting_parameter_n": 10,
+  "conditional_kappa_if_all_central_boxes_certified": {
+    "numerator": "3338957652820594373879991756052499665323",
+    "denominator": "4957010000000000000000000000000000000000"
+  },
+  "numerical_graph_floor": 0.008600389757957407
+}

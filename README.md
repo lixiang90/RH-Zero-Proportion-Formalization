@@ -43,9 +43,27 @@ conditional research ceilings and explains why further Taylor terms alone
 cannot raise the present window numerator; it proves no stronger
 zero-proportion bound.
 
+## Structural research, 16 October 2026
+
+New research replaces isolated window minima with bounded state potentials
+that cancel between overlapping windows, and adds longer-range pairs in
+reoptimized ten-point certificates. The conditional counting transfer for
+`17/20`-separated gaps, the potential range on that domain, fractional pinching,
+the matrix Fenchel bound, affine supports and finite-flow payment have been
+formalized separately. Exact arithmetic
+replay supports a stronger overlap candidate, but its complete finite-data
+instantiation in Lean remains open. An early ten-point candidate was refuted;
+its replacement parameters remain a numerical research candidate.
+
+**These are research results, not a newly proved zero-proportion record.**
+See the [structural research report](docs/structural-research-20261016.md),
+[certificate compression analysis](research-20261016/certificate-compression-summary.md)
+and [submission status](submission/structural-20261016/status.json).
+The proved proportion and upload below are unchanged.
+
 ## Verification and submission
 
-**Verification status: passed.** Both proof forms passed ordinary Lean
+**Verification of the exact bound at the top: passed.** Both proof forms passed ordinary Lean
 compilation, trusted-statement comparison, transitive axiom checks,
 default-kernel replay and independent nanoda replay with unchanged input hashes.
 

@@ -1,0 +1,13 @@
+import StructuralResearch20261016.Fenchel
+import StructuralResearch20261016.FractionalPinching
+
+#print axioms StructuralResearch20261016.Fenchel.scalar_lower
+#print axioms StructuralResearch20261016.Fenchel.eigenvalues_le_two
+#print axioms StructuralResearch20261016.Fenchel.eigenvalues_le_two_of_row_sum
+#print axioms StructuralResearch20261016.Fenchel.trace_lower
+#print axioms StructuralResearch20261016.Fenchel.trace_lower_of_posSemidef
+#print axioms StructuralResearch20261016.Fenchel.trace_lower_of_row_sum
+#print axioms StructuralResearch20261016.Fenchel.defect_lower
+#print axioms StructuralResearch20261016.Fenchel.defect_lower_of_posSemidef
+#print axioms StructuralResearch20261016.compression_weighted_cover
+#print axioms StructuralResearch20261016.fractional_pinching

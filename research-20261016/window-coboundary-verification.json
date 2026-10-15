@@ -1,0 +1,157 @@
+{
+  "scope": "Independent finite coboundary and summed-certificate payment lemmas only; ordinary Lean and axiom inspection using previously verified cached Core. No improved kappa or website acceptance claim.",
+  "passed": true,
+  "utc": "20261015T230756Z",
+  "compiler": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "bound_inputs_sha256": {
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\StructuralResearch20261016\\Coboundary.lean": "730fdccd5d8faba2765f5b1d77b5e7ff897328b92ac6bcb4f3d1fe876702041a",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\verification\\gram-defect-20261015\\setup\\runtime.json": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\verification\\gram-defect-20261015\\lean\\modular\\verification.json": "9b9218eb91ba77a98a631d650b4a3ba12f403dead871aa57d0e17f1a3f5d1237",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016\\window-verify-coboundary.py": "0633e859a891e18230da2c0f0da50a6f91910f1eafb9335a9d361cb11372e631"
+  },
+  "cached_Core_olean_sha256": "fdfc53ee9707c3a876ef24bb8c36d218cbc01784ee14bf24f42c2ecb90865d56",
+  "compiled_modules": [
+    {
+      "module": "StructuralResearch20261016.Coboundary",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016/coboundary-check-20261015T230756Z/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/research-20261016/coboundary-check-20261015T230756Z/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016/coboundary-check-20261015T230756Z/lib/StructuralResearch20261016/Coboundary.olean",
+        "/var/tmp/rh-zero-20261015/research-20261016/coboundary-check-20261015T230756Z/source/StructuralResearch20261016/Coboundary.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 43.41789479999716,
+      "source_sha256": "730fdccd5d8faba2765f5b1d77b5e7ff897328b92ac6bcb4f3d1fe876702041a",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016/coboundary-check-20261015T230756Z/lib/StructuralResearch20261016/Coboundary.olean",
+      "olean_sha256": "e753809ef76d6266f663a6c0365aeba96172ffaa531ca3b2bba339fbc178a820",
+      "log": "research-20261016\\window-coboundary-check-20261015T230756Z\\StructuralResearch20261016.Coboundary.log",
+      "log_sha256": "99d117426f0e7d2cc5eab2089fe55c04f0e9fd1001958ba95d908ac629ee093d"
+    }
+  ],
+  "axioms": {
+    "StructuralResearch20261016.Coboundary.sum_lower_of_local": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.sum_lower_of_bounded_local": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.sum_lower_of_periodic_local": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.absorb_boundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.boundary_budget_of_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.absorb_boundary_of_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.head_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.tail_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.summed_of_coboundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.summed_of_separated_coboundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.summed_of_pointwise": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.block_energy_band_of_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.block_energy_band_summed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.sorted_separated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.block_energy_band_separated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.remainder_bound_summed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.remainder_bound_coboundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.remainder_bound_separated_summed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.remainder_bound_separated_coboundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Coboundary.block_remainder_bound_summed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_seconds": 5.897164699999848,
+  "axiom_log": "research-20261016\\window-coboundary-check-20261015T230756Z\\axioms.log",
+  "axiom_log_sha256": "96e524fa1e0ff6bf40b3887cc5024f753d08d7351f0d63e01c458cbdc3b65558",
+  "generated_audit_source_sha256": "d8146708b490de3db4bf5829acdff71f18128533eae4470a71ecfc93e4c3511f",
+  "inputs_unchanged": true,
+  "independent_nanoda_run": false,
+  "full_environment_kernel_replay_run": false
+}

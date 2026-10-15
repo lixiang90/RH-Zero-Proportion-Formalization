@@ -1,0 +1,14 @@
+import StructuralResearch20261016.Coboundary
+
+#print axioms StructuralResearch20261016.Coboundary.sum_lower_of_local
+#print axioms StructuralResearch20261016.Coboundary.sum_lower_of_bounded_local
+#print axioms StructuralResearch20261016.Coboundary.sum_lower_of_periodic_local
+#print axioms StructuralResearch20261016.Coboundary.absorb_boundary
+#print axioms StructuralResearch20261016.Coboundary.head_window
+#print axioms StructuralResearch20261016.Coboundary.tail_window
+#print axioms StructuralResearch20261016.Coboundary.summed_of_coboundary
+#print axioms StructuralResearch20261016.Coboundary.summed_of_pointwise
+#print axioms StructuralResearch20261016.Coboundary.block_energy_band_summed
+#print axioms StructuralResearch20261016.Coboundary.remainder_bound_summed
+#print axioms StructuralResearch20261016.Coboundary.remainder_bound_coboundary
+#print axioms StructuralResearch20261016.Coboundary.block_remainder_bound_summed

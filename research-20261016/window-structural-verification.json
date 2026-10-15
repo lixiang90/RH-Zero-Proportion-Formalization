@@ -1,0 +1,135 @@
+{
+  "scope": "Independent structural lemmas only; ordinary Lean and axiom inspection using previously verified cached Core. No improved kappa or website acceptance claim.",
+  "passed": true,
+  "utc": "20261015T225652Z",
+  "compiler": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "bound_inputs_sha256": {
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\StructuralResearch20261016\\Fenchel.lean": "0e7a1e9c965031c6512dd73b18a7c1278bec8dff63d271a508382bb34aa01314",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\StructuralResearch20261016\\FractionalPinching.lean": "becafea37631763604145f879810164ad0492f0d6ed1abe8cd5bf1bdc2b45319",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\verification\\gram-defect-20261015\\setup\\runtime.json": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\verification\\gram-defect-20261015\\lean\\modular\\verification.json": "9b9218eb91ba77a98a631d650b4a3ba12f403dead871aa57d0e17f1a3f5d1237",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016\\window-verify-structural.py": "fcf4a0827dd56376e1b8d2e73da868465e2fb06872851b280b023412a3c9b6b8"
+  },
+  "cached_Core_olean_sha256": "fdfc53ee9707c3a876ef24bb8c36d218cbc01784ee14bf24f42c2ecb90865d56",
+  "compiled_modules": [
+    {
+      "module": "StructuralResearch20261016.Fenchel",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/lib/StructuralResearch20261016/Fenchel.olean",
+        "/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/source/StructuralResearch20261016/Fenchel.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 39.86056230000395,
+      "source_sha256": "0e7a1e9c965031c6512dd73b18a7c1278bec8dff63d271a508382bb34aa01314",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/lib/StructuralResearch20261016/Fenchel.olean",
+      "olean_sha256": "ef0d220ee7c75e5d0534aca4f6488a2507eb8aed208dbd0b69dc6903e680e806",
+      "log": "research-20261016\\window-structural-check-20261015T225652Z\\StructuralResearch20261016.Fenchel.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca"
+    },
+    {
+      "module": "StructuralResearch20261016.FractionalPinching",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/lib/StructuralResearch20261016/FractionalPinching.olean",
+        "/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/source/StructuralResearch20261016/FractionalPinching.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.240803900000174,
+      "source_sha256": "becafea37631763604145f879810164ad0492f0d6ed1abe8cd5bf1bdc2b45319",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016/check-20261015T225652Z/lib/StructuralResearch20261016/FractionalPinching.olean",
+      "olean_sha256": "c2f675ff2ba98a27e6466ba0c21c8c2a4ec0e254b9bf2921e8b607620e1c60db",
+      "log": "research-20261016\\window-structural-check-20261015T225652Z\\StructuralResearch20261016.FractionalPinching.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca"
+    }
+  ],
+  "axioms": {
+    "StructuralResearch20261016.Fenchel.scalar_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Fenchel.eigenvalues_le_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Fenchel.eigenvalues_le_two_of_row_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Fenchel.trace_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Fenchel.trace_lower_of_posSemidef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Fenchel.trace_lower_of_row_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Fenchel.defect_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.Fenchel.defect_lower_of_posSemidef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.compression_weighted_cover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.fractional_pinching": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_seconds": 5.1320111000022735,
+  "axiom_log": "research-20261016\\window-structural-check-20261015T225652Z\\axioms.log",
+  "axiom_log_sha256": "7870b5fa28320ecd844917b2281fd5acf1fe01ca2ad1999b321d3256b0f70594",
+  "generated_audit_source_sha256": "40081942470f4d1c56d97ff6e148cd89876ca51799da6820bc42bfe527a29400",
+  "inputs_unchanged": true,
+  "independent_nanoda_run": false,
+  "full_environment_kernel_replay_run": false
+}

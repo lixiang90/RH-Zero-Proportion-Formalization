@@ -1,0 +1,67 @@
+{
+  "scope": "Affine extraction from the inherited exact TVal tangent interface only; ordinary Lean and axiom inspection using previously verified cached Core. No improved kappa or website acceptance claim.",
+  "passed": true,
+  "utc": "20261015T232522Z",
+  "compiler": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "bound_inputs_sha256": {
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\StructuralResearch20261016\\TangentSupport.lean": "21b318b3ccf3f5f16b5abe35f08356df2d4914f43c323c5f75021031c68520f5",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\verification\\gram-defect-20261015\\setup\\runtime.json": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\verification\\gram-defect-20261015\\lean\\modular\\verification.json": "9b9218eb91ba77a98a631d650b4a3ba12f403dead871aa57d0e17f1a3f5d1237",
+    "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016\\window-verify-tangent-support.py": "72c5aabd31dc6667903b49d5eafed8297d5b1bbaa20a98a622437e214a449d95"
+  },
+  "cached_Core_olean_sha256": "fdfc53ee9707c3a876ef24bb8c36d218cbc01784ee14bf24f42c2ecb90865d56",
+  "compiled_modules": [
+    {
+      "module": "StructuralResearch20261016.TangentSupport",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016/tangent-support-check-20261015T232522Z/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/research-20261016/tangent-support-check-20261015T232522Z/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016/tangent-support-check-20261015T232522Z/lib/StructuralResearch20261016/TangentSupport.olean",
+        "/var/tmp/rh-zero-20261015/research-20261016/tangent-support-check-20261015T232522Z/source/StructuralResearch20261016/TangentSupport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 27.94183350000094,
+      "source_sha256": "21b318b3ccf3f5f16b5abe35f08356df2d4914f43c323c5f75021031c68520f5",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016/tangent-support-check-20261015T232522Z/lib/StructuralResearch20261016/TangentSupport.olean",
+      "olean_sha256": "6c4b3c028cfc306b18db79be0d8f6b30d1aeeecfa41664da7eee6458da179ecc",
+      "log": "research-20261016\\window-tangent-support-check-20261015T232522Z\\StructuralResearch20261016.TangentSupport.log",
+      "log_sha256": "d5b5347a17a4a33d565f5083a948d1e28bbc5af81cc16c0c7bd26f8de9274928"
+    }
+  ],
+  "axioms": {
+    "StructuralResearch20261016.TangentSupport.affine_of_enclosed_tangent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralResearch20261016.TangentSupport.affine_of_TVal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "permitted_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_audit_seconds": 5.258158300006471,
+  "axiom_log": "research-20261016\\window-tangent-support-check-20261015T232522Z\\axioms.log",
+  "axiom_log_sha256": "e8146e7337eca9f012e22945c81e64cfc40f6c5e34b978fa2b74c19ce7a3200e",
+  "generated_audit_source_sha256": "3060d6dc8a26af996453a6361ea322503ae4b479578fb13a94c690bdfc8348d8",
+  "inputs_unchanged": true,
+  "independent_nanoda_run": false,
+  "full_environment_kernel_replay_run": false
+}

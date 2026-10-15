@@ -1,0 +1,40 @@
+{
+  "scope": "Independent mathematical and verification-status review of exposition; not a finite certificate or a new zeta theorem",
+  "utc": "2026-10-15T23:38:10.618306+00:00",
+  "reviewed_sha256": {
+    "README.md": "dc033785cd840310782adbaf62ca1fdb0a7512bf4bd200346480c6be457daf79",
+    "docs/structural-research-20261016.md": "e60d379ec26341fce27d45c7b81cec80bd5cb89e191491525be6721509562b89",
+    "StructuralResearch20261016/FractionalPinching.lean": "becafea37631763604145f879810164ad0492f0d6ed1abe8cd5bf1bdc2b45319",
+    "StructuralResearch20261016/Fenchel.lean": "0e7a1e9c965031c6512dd73b18a7c1278bec8dff63d271a508382bb34aa01314",
+    "StructuralResearch20261016/Coboundary.lean": "730fdccd5d8faba2765f5b1d77b5e7ff897328b92ac6bcb4f3d1fe876702041a",
+    "StructuralResearch20261016/CoboundaryCounting.lean": "8933b6ae6bd5cb0b567a8e0e81b93235a1bb4ba863b2793dcd8177bb31a55a96",
+    "StructuralResearch20261016/PotentialRange.lean": "109e8d57bd5cb459d34cbed028dc770b9960cbfcc8f9f0bcbc8d32ef1d226716",
+    "StructuralResearch20261016/GenericCover.lean": "50cea1df4eacda7dd0a56f5bba925c4fde0deaca4fa31290583c3153d6b19e16",
+    "StructuralResearch20261016/AffineFlow.lean": "3543fe176b6c3f4737058b11f8320a8299ad112c729e08d6f2451bd3aaa70a8a",
+    "StructuralResearch20261016/TangentSupport.lean": "21b318b3ccf3f5f16b5abe35f08356df2d4914f43c323c5f75021031c68520f5"
+  },
+  "formal_assumptions_matched": [
+    "Potential bounds apply on all seven-gap vectors with each gap >=17/20, including unbounded upper gaps",
+    "SeparatedSummedCertificate remains explicit and uninstantiated for the new floor",
+    "For an admissible WCert, 0<c<=1/64 and 0<=C<=c give the inherited counting interface with effective n+1; geometric n is unchanged",
+    "Fractional pinching assumes a Hermitian matrix, nonnegative block weights, and coordinate coverage <=1",
+    "Matrix Fenchel assumes Hermitian A and S with positive semidefinite slack 2I-S; no commutation or PSD assumption on A/S",
+    "Generic reflection requires both energy orientations rather than symmetry of the potential",
+    "Ordinary Lean/axiom checks for structural lemmas do not establish a concrete higher proportion or website acceptance"
+  ],
+  "conditional_kappa_exact": "3338957652820594373879991756052499665323/4957010000000000000000000000000000000000",
+  "good_gap_arithmetic_lower_bound": "890847525913875481/100000000000000000000",
+  "good_gap_arithmetic_exceeds_target": true,
+  "corrections": [
+    "Made separated range domain and n_eff meaning explicit",
+    "Added exact matrix hypotheses and conclusions",
+    "Clarified pending good-gap complement and reflected local instances",
+    "Weakened numerical doublet obstruction wording to evidence, not an impossibility theorem",
+    "Scoped README verification-passed label to the existing proved bound"
+  ],
+  "remaining_material_risks": [
+    "Concrete classified leaves, tangent instances, mixtures, flows and walker endpoints remain to be instantiated in Lean",
+    "Separated root coverage, reflection orientations and good-gap/large-gap complement must all be closed",
+    "A final concrete higher-kappa theorem still needs full statement/axiom and independent-checker validation; neither new candidate is a verified record"
+  ]
+}

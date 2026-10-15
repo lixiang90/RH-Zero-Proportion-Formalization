@@ -1,0 +1,42 @@
+{
+  "status": "Cross-review, exact algebra tests, and all 8004 fixed exported certificates passed; arithmetic only",
+  "verifier_sha256": "7372fd4cc67c6d91d9a8472720d830995f7bf3bc232a7a19188ae954442ff4fc",
+  "source_sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+  "packed_tangent_keys": 2993,
+  "exact_table_scale_cases": 1000,
+  "exact_derivative_support_cases": 1000,
+  "exact_closure_reflection_flow_sign_cases": 100,
+  "guards_added": [
+    "python -O rejected",
+    "archived source SHA pin",
+    "unique full PT keys and low96 binding",
+    "nonnegative leaf index and root/pos/reflected metadata",
+    "strict integer mixture/flow fields",
+    "exact divisibility",
+    "input hashes unchanged during verification",
+    "nonnegative closed pair-distance bounds",
+    "compressed bytes parsed and hashed from one immutable snapshot"
+  ],
+  "full_exported_8004_audit_ran": true,
+  "review_conclusion": "No arithmetic scale/sign/closure error found. Independent new Lean instance and baseline coverage remain separate obligations.",
+  "independent_rechecked_records": 8004,
+  "network_simplex_disabled_during_review": true,
+  "exported_files": [
+    {
+      "path": "tangent-certificates-part0.json.gz",
+      "sha256": "eff9e5ba6e41b263744d911b0043585a957a19f5b77251a10ffc1b6e22590bb7",
+      "bytes": 3217541
+    },
+    {
+      "path": "tangent-certificates-part1.json.gz",
+      "sha256": "23af458707cf9b8451ff7105a8b62c4e3045e820e7f3fd69c3cb74a1f6696b5b",
+      "bytes": 3210403
+    }
+  ],
+  "full_audit_receipt_sha256": "f75466c24a61d0795d24e3e0d671c671464f1ab4736eaee7d6ea3ef2ee3fdefb",
+  "exact_minimum_floor": {
+    "numerator": "288571713843014896882860032000000000",
+    "denominator": "33554432000000000000000000000000000000"
+  },
+  "independent_recheck_seconds": 7.093368768692017
+}

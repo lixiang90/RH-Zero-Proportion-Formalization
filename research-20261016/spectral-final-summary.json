@@ -1,0 +1,117 @@
+{
+  "scope": "Frozen research handoff. NO new zeta proportion theorem or accepted record is asserted.",
+  "selected_candidate": "spectral-w10-refined-rational.json",
+  "model": "Fw(g)=sum_i b_i*g_i +sum_i<j a_ij*K(sum_r=i..j-1 g_r)^2",
+  "new_structure": "10-point frame with rank-distance9 pair paid at coefficient2; 39positive pair coefficients; exact lag capacities<=2",
+  "B_exact": "10999681/2500000000",
+  "candidate_floor_exact": "433/50000",
+  "floor_status": "UNPROVED",
+  "conditional_percent_only": 67.3601930885588,
+  "conditional_gain_percentage_points_only": 0.002071022658410107,
+  "proved_result": "W10RefinedCandidate.adm and pressure_eq; ordinary pinned Lean and3standard axioms only",
+  "numerical_evidence": {
+    "all_ternary_starting_patterns": 19683,
+    "meaning": "Each discrete starting pattern was polished once by continuous local optimization; this does not enumerate all continuous minima.",
+    "ternary_minimum_upper_bound": 0.008667243689216446,
+    "additional_starts": 1007,
+    "additional_minimum_upper_bound": 0.008667243689216583,
+    "observed_margin": 7.243689216446594e-06,
+    "search_gap_lower_exact": "4/5; contains the required17/20 domain"
+  },
+  "old_candidate": "Original W10 c=.00866 REFUTED; exact rational interval counterexample has F<.0086495 with all gaps>17/20",
+  "finite_certificate_domain": {
+    "assume_for_pruning": "g_i>=17/20 and Fw<c",
+    "linear_constraint": "sum b_i*g_i<c because all pair terms are nonnegative",
+    "pressure_slack_exact": "246005423/50000000000",
+    "bmin_exact": "1960353/10000000000",
+    "coordinate_upper_exact": [
+      "1017347693/39207060",
+      "1050136783/77782460",
+      "538156819/54289380",
+      "110241231/13928308",
+      "69484543/9391985",
+      "110241231/13928308",
+      "538156819/54289380",
+      "1050136783/77782460",
+      "1017347693/39207060"
+    ],
+    "max_coordinate_upper": 25.948073969331034,
+    "total_span_upper_exact": "1283955701/39207060",
+    "total_span_upper": 32.74807396933103
+  },
+  "proof_route": "Adapt the inherited one-variable tangent library to39positive pairs and9gap variables, branch on gap/partial-span hyperplanes, export rational LP mixtures and nonnegative integer flows. Generic WCert and separated counting bridges already exist.",
+  "size_limit": "No full9dimensional analytic certificate was generated or node-count estimate certified. A full Cartesian grid loses rank9information until total span is constrained; use polyhedral span branches.",
+  "spectral_limit": "With normalized separated Gram spectrum<=2, Psi is quadratic and its trace is exactly the offdiagonal squared energy. The two tested uniform24/32pressure vectors fail stronger adversaries; this does not rule out every pressure choice in those families.",
+  "artifacts": [
+    {
+      "path": "StructuralResearch20261016/W10RefinedCandidate.lean",
+      "sha256": "0bd02171737c392c4e316df107c3744bf4ccee486875e3061dcee0a475afb8da",
+      "bytes": 3256
+    },
+    {
+      "path": "research-20261016/spectral-w10-refined-rational.json",
+      "sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+      "bytes": 3886
+    },
+    {
+      "path": "research-20261016/spectral-w10-refined-full-ternary.json",
+      "sha256": "15f990f07b151f4ed250d6a7f3539bf53812201d33b5ffafdf89a8a093679a94",
+      "bytes": 985
+    },
+    {
+      "path": "research-20261016/spectral-w10-refined-full-ternary.npz",
+      "sha256": "0595cfa08fa41df4a29404b341118284e3d88ad356b884860291c71d9d6f2b53",
+      "bytes": 1536164
+    },
+    {
+      "path": "research-20261016/spectral-w10-refined-challenge.json",
+      "sha256": "8788e5bdb689cb5c835018e0dc9608f65a3a5c344cc1cdf752f5fc267057ea98",
+      "bytes": 10945
+    },
+    {
+      "path": "research-20261016/spectral-w10-refined-compile.json",
+      "sha256": "1a8329c14f5a7e6c93d0e9eff880b4c15ac55e6f1f08b35583cbe50d1424b253",
+      "bytes": 2618
+    },
+    {
+      "path": "research-20261016/spectral-w10-counterexample-interval.json",
+      "sha256": "c4ab9f321e67f517bea170b4431b8fdd86dca07de1434aa6faa2ed5e8b7dd621",
+      "bytes": 1180
+    },
+    {
+      "path": "research-20261016/spectral-w10-rational.json",
+      "sha256": "5b20f5900f2f90ddff3d9d565e39636154b59802d022e31da7f3ac710ef00645",
+      "bytes": 13813
+    },
+    {
+      "path": "research-20261016/spectral-comparison.json",
+      "sha256": "5ad66f45bd2eb287bc27209d191d5305add761e694129ce651fb60b2a7ca1180",
+      "bytes": 34321
+    },
+    {
+      "path": "research-20261016/spectral_wcert_reopt.py",
+      "sha256": "d15c5ca2e84da3b4f66786a50ad1bcb5e90e0d44d14c292d61a379b7c4012d1f",
+      "bytes": 9312
+    },
+    {
+      "path": "research-20261016/spectral_w10_full_ternary.py",
+      "sha256": "419baee4df444d06761823f0e9d590bd192329c89770ac5c99b800060d04847d",
+      "bytes": 2758
+    },
+    {
+      "path": "research-20261016/spectral_w10_challenge.py",
+      "sha256": "532d2fe2e9f10b392b74e6c28700c6eaa2167fff19927f4849884851e9730922",
+      "bytes": 2838
+    },
+    {
+      "path": "research-20261016/spectral_w10_counterexample_interval.py",
+      "sha256": "ea2b89ce37cf17195b5cc9a9b5dfe8ab66e03e0d57a21a3a58012c6658784b17",
+      "bytes": 3553
+    },
+    {
+      "path": "research-20261016/spectral_verify_w10.py",
+      "sha256": "7480ea7fb9334f746299dcac36f66d153cfdc83cf483b67aaadaa06586096524",
+      "bytes": 2138
+    }
+  ]
+}
