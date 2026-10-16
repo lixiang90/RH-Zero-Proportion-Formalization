@@ -1,0 +1,209 @@
+Shared degree-four gap moments: exact model and strict feasible obstruction
+2026-10-17
+
+The only cell in this package is r001000001000100110011001.  The target is
+c=11/1250=.0088.  No Lean invocation, new actual-kernel sampling position,
+additional cell, parameter scan, or repeated numerical solve was used.
+Previous full-U, face, dynamic-sector and scalar-transfer packages remain
+unchanged.  This is a genuinely different shared polynomial representation:
+there are nine underlying normalized gap variables, and no independent u.
+
+1. Actual-function hypotheses and the exact frozen data
+------------------------------------------------------
+Write F(g)=P(g)+sum_e a_e w(s_e(g)), where P(g)=sum_r b_r g_r,
+s_(i,j)(g)=g_i+...+g_(j-1), and all 41 retained a_e are nonnegative.
+All data and the first remaining cell are inherited from the frozen files
+listed in quartic-build.json.  The common anchor p_g is the old midpoint
+energy anchor, not a new chosen scalar position.  Its nine coordinates are
+
+73739/65536,74249/65536,67907/65536,67499/65536,32465/32768,
+1045/1024,137005/65536,31059/16384,58403/32768.
+
+Every anchor span belongs to its whole parent span interval.  Every cell
+gap lower endpoint is strictly greater than SEP=123/128, so a putative
+interior minimizer in this cell has all nine free KKT equations.  This
+package still requires the actual minimizer/KKT reduction from the larger
+proof; it does not supply a whole-domain minimizer or covering theorem.
+
+The actual-function inputs used here are explicit:
+
+(i) the frozen common-anchor F0 interval contains actual F(p_g);
+(ii) the old integer Taylor coefficient intervals enclose the Taylor
+     coefficients of the actual new-window w' at integers 0,...,32;
+(iii) w is C^24 and |w^(24)| <= (44/7)^24 on the required spans;
+(iv) the old midpoint polynomial L2 is <= actual F on the whole parent cell.
+
+These analytic inputs are not newly proved in Lean by this package.  The
+static replay checks that the exact old inputs are reused consistently.
+The derivative bound (iii) has the following analytic justification for
+the actual normalized window definition: its nonnegative Fourier profile
+on [-1/2,1/2] defines a probability measure, its real characteristic
+function is k, and w=k^2 is the characteristic function of the convolution
+measure supported on [-1,1].  Differentiating under that compact integral
+gives |w^(24)| <= (2*pi)^24 < (44/7)^24.  The frozen cosine coefficient sum
+is checked to be <2/25; even with a factor 2 in the cosine convention the
+profile is bounded below by 1-4/25>0.  Connecting the actual definitions,
+coefficient enclosures and differentiability to the Lean kernel remains
+an explicit analytic obligation, not a consequence of Python arithmetic.
+
+The old w' table has 23 terms, degree 22.  It is not degree 23.  The anchor
+w^(j) enclosure for j=1,...,4 differentiates this polynomial j-1 times and
+pays M24*|delta|^(24-j)/(24-j)!.  For w^(5), differentiation is four times,
+so the missing-tail bound is M24*|delta|^19/19!.  Across each old grid cell
+we use |delta|<=1/2, interval Horner, and an outward rational ceiling with
+denominator 10^15.  There are 658 distinct existing grid cells, no new
+actual evaluation positions.  Every whole span lies within [0,32].
+
+2. Dynamic Taylor polynomials and exact error payments
+------------------------------------------------------
+For each edge let p=s_e(p_g), d=s_e(g)-p, |d|<=R on the whole parent span,
+and let |w^(j)(p)-mu_j|<=eps_j for j=1,...,4.  Let M5 bound |w^(5)| on the
+whole parent span, as derived from the old table above.  Taylor's theorem
+then gives
+
+ U3(d) = mu_1 + mu_2*d + mu_3*d^2/2 + mu_4*d^3/6,
+ |w'(p+d)-U3(d)| <= E(d),
+ E(d) = eps_1+eps_2*R
+        +(eps_3/2+eps_4*R/6)*d^2 + M5*d^4/24.
+
+Indeed |d|<=R and |d|^3<=R*d^2 pay the odd anchor errors.  The remainder
+retains the actual nonnegative quartic d^4, not the constant R^4.  For the
+energy increment the valid lower polynomial is
+
+ J4(d) = sum_(j=1..4) mu_j*d^j/j!
+         -eps_1*R -(eps_2/2+eps_3*R/6)*d^2
+         -(eps_4/24+M5*R/120)*d^4.
+
+Here the fifth-order energy remainder is <=M5*|d|^5/120
+<=M5*R*d^4/120.  All anchor derivative errors, including first-order
+constant payments, are retained.  With the same common aggregate F0lower,
+
+ L4(g)=F0lower+P(g)-P(p_g)+sum_e a_e J4_e(d_e) <= F(g).
+
+For a free coordinate define
+ H_r=b_r+sum_(e contains r) a_e U3_e,
+ Err_r=sum_(e contains r) a_e E_e.
+At actual KKT, |H_r|<=Err_r.  Since |y_s|<=1, also |y_s H_r|<=Err_r.
+Thus Err_r +/- H_r and Err_r +/- y_s H_r are nonnegative polynomials.
+There are 9*(1+9)*2=180 scalar rows.  The right side remains Err_r;
+there is no invalid degree-five multiplication of the error polynomial.
+
+3. Shared moments, geometry and sublevel localizers
+---------------------------------------------------
+Let g_r=center_r+radius_r*y_r.  All monomials in the same nine y variables
+through degree four are shared: choose(13,4)=715, including the fixed
+constant moment 1.  There are 714 nonconstant moment unknowns.  M2 has the
+55 monomials of degree <=2 as its basis, so it is a 55x55 PSD block.
+
+For every one of the 45 parent span intervals [l,u], define
+ A=(s-l)/(u-l), B=(u-s)/(u-l)=1-A.
+Both A and B are nonnegative on the actual cell.  Retain all 90 mean
+inequalities and all 4095 products of two of the 90 affine slacks, including
+diagonals.  In addition, each 4*A*B times the outer square of the ten
+degree<=1 monomials gives a 10x10 PSD localizer.  All these are necessary
+at every actual cell point because z^T M z=g(y)*(z.basis(y))^2>=0.
+
+At a putative actual F<c point, L2<=F<c.  Therefore ((c-L2)/c)*M1 is also
+a necessary 10x10 PSD localizer.  It remains UNSOFTENED.  An arbitrary
+factorized point outside the sublevel is not required to satisfy it.
+There are 47 PSD blocks total: 55, followed by 46 blocks of size 10.
+
+The redundant bounds -1<=moment<=1 (lower 0 for an all-even monomial)
+add 1428 rows.  They follow from these PSD constraints: each adjacent span
+localizer equals a positive multiple of (1-y_r^2)*M1, which bounds every
+M2 diagonal by 1; PSD Cauchy-Schwarz bounds all its entries by 1.  All-even
+degree<=4 monomials are diagonal entries and hence nonnegative.
+
+Only L4<=c+(.001)*t is softened, with t>=0.  Geometry, KKT and all
+localizers retain their full necessary force.  There are 5795 scalar rows
+and 4070 stored lower-triangle affine PSD entries.  All coefficients and
+normalizing scales are exact rationals in deterministic gzip JSON.
+
+quartic_replay.py is an independent stdlib audit, importing only the old
+independent interval-Horner checker, not the new model generator.  It
+rebuilds all jets, 658 w5 grid bounds, edge error/energy polynomials,
+5795 rows and 4070 PSD entries.  It passed in about 4.783 seconds.
+
+4. The single bounded numerical experiment
+------------------------------------------
+quartic_cone.py uses one SCS 3.3.1 call, <=45 seconds/10000 iterations,
+715 scalar unknowns including t, 5795 linear cone rows and the 47 PSD
+blocks.  Row scales are positive rationals.  A PSD block is divided by
+the recorded positive rational maximum coefficient/constant magnitude
+(at least 1), an equivalent uniform positive scaling.  SCS off-diagonal
+sqrt(2) packing is checked at one exact factorized polynomial test point;
+this packing test makes no claim that the test point has F<c.
+
+The solve used 125 iterations and approximately 0.483 seconds:
+
+ status                           solved
+ energySlack=.001*t               1.1698793566748283e-14
+ minimum normalized linear slack  1.1698793566748283e-11
+ minimum normalized PSD eigenvalue .00018695601323260927
+
+There was neither a positive energy exclusion hint nor an infeasible
+dual ray hint, hence no dual extraction, LP polish or second solver call.
+All raw SCS vectors are discovery data.  Nonfinite unused diagnostics
+are string-encoded so the result is strict JSON.  The numerical field
+dual_stationarity_norm_hint used a minus-sign convention; it is not a
+checked standard SCS dual residual and is unused by any claim here.
+
+5. Exact obstruction and the failed factorized-mean diagnosis
+-------------------------------------------------------------
+Without a solver or search, take y equal to the nine saved first moments,
+converted once by Fraction(str(saved_float)), and set every other moment
+to its actual monomial.  At t=0 all 47 localizer multipliers are
+nonnegative, but five unmultiplied KKT rows and the L4 energy row fail.
+There are six exact negative rows; the worst normalized slack is about
+-.4495509893.  Thus no rank-one relaxed feasible point was obtained.
+This does NOT show that higher moment levels cannot help.
+
+Separately, convert ALL 714 saved lifted moments once by
+Fraction(str(saved_float)), set t=0, and make no projection or adjustment.
+This exact point satisfies ALL 5795 scalar rows.  The minimum normalized
+slacks by family are approximately
+
+ DBM means          .1898464691
+ slack-pair RLT     .0730896316
+ KKT/error          .1250612690
+ moment boxes       .0325612322
+ quartic energy     .0823940424
+ t>=0               0
+
+Each of all 47 exact matrices is strictly positive definite.  The
+producer uses integer fraction-free Bareiss elimination and stores the
+positive leading principal minors together with a common-denominator
+matrix hash.  There is no floating eigenvalue premise in this result.
+quartic_result_replay.py independently reconstructs all rational rows
+and matrices and uses Fraction Schur/LDL elimination, comparing each
+product of positive LDL pivots to the stored integer leading minors.
+It also replays all six rank-one failures and all rank-one localizer
+factorizations.  This independent stdlib replay passed in about 5.513
+seconds.  It pins the already independent static Taylor-model replay.
+No numpy, scipy, SCS, or producer source is imported in either replay.
+
+All nine position variances are strictly positive.  The exact certificate
+is therefore a strict feasible point of THIS OUTER RELAXATION, not actual
+F<c, not actual stationarity, and not a counterexample to a lower bound.
+It proves that no sound combination of just the currently retained
+degree-four constraints can exclude this cell.  Adding genuinely new
+constraints, a higher hierarchy, or a finite disjunction can still help.
+
+6. Reproduction and limits
+--------------------------
+The two independent replay entry points (stdlib only) are
+
+ python -S -B -X utf8 research-goal-20261017-quartic/quartic_replay.py
+ python -S -B -X utf8 research-goal-20261017-quartic/quartic_result_replay.py
+
+They refuse to overwrite their frozen output receipts.  To replay without
+altering this package, use a fresh exact copy and omit only those generated
+receipt files there.  The compressed model is a single 9.52 MB lossless
+artifact; its decompressed SHA is also recorded.  No solver package is
+needed for these replays.  Every source and output is sealed by the
+separate quartic-files.json manifest, including source dependency hashes.
+
+No cell exclusion, complete global cover, unconditional zero-proportion
+improvement, website submission claim, or new Lean theorem follows from
+this package.  Its result is an exact audited obstruction for the fixed
+quartic model, with useful shared-moment formulas and dynamic remainders.

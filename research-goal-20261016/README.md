@@ -707,3 +707,34 @@ negative. Thus nonnegative combinations of either old nine-point floor in
 arbitrarily large ordered blocks cannot meet the requested target under
 this fixed H and rank-capacity rule. This does not exclude a new kernel or
 new local analytic input. See `window-large-embedding-files.json`.
+The separate read-only `window_large_embedding_verify.py` normalizes the
+original discovery receipt's Windows separators without changing any frozen
+bytes; it has passed on Windows Python and Linux WSL Python. Its two-file
+package is pinned by `window-large-embedding-portable-files.json`.
+
+## Shared fourth moments: exact obstruction and next disjunction
+
+The next model in `research-goal-20261017-quartic/` uses only nine underlying
+gap variables and all 715 shared monomials through degree four. It combines
+one 55-by-55 moment matrix with forty-six 10-by-10 localizers, including the
+sublevel quadratic-energy constraint and all span-bound products. The actual
+derivative's cubic Taylor error is paid by `M5*d^4/24`; the quartic energy
+lower bound pays `M5*R*d^4/120`. Both retain the dynamic fourth moment.
+The old common anchor and 658 old grid cells suffice; no new scalar sampling
+position is introduced. An independent replay checks all 5,795 rational rows
+and 4,070 matrix entries, explicitly retaining the analytic/table premises.
+
+One SCS run converged in 125 iterations with no positive exclusion margin.
+More decisively, the unadjusted rationalized 714 lifted coordinates at zero
+energy slack satisfy every row and all forty-seven matrices are strictly
+positive definite. Integer Bareiss minors and an independent Fraction LDL
+replay both verify this. Setting the moments instead to the monomials of
+the same first moments fails six rows. Thus the witness is a nonfactorized
+moment vector, not an actual kernel or KKT counterexample. More cuts from
+the same retained degree-four model cannot close the first remaining cell.
+See `research-goal-20261017-quartic/quartic-files.json` and `quartic_note.txt`.
+
+The following research step uses one covariance-selected rational halfspace
+split and localizes each side separately. Its two sides together cover the
+parent, but strict certificates for both would be required to exclude that
+parent. This is ongoing research, not an asserted exclusion or new record.

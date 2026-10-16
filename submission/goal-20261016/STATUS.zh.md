@@ -244,5 +244,20 @@ Newton 步骤。1,287,896 字节归档及来源收据见
 `cover-common-anchor-curvature-six-files.json` 与
 `window-large-embedding-files.json`。
 
+随后已完成共享四阶矩模型：九个实际间隔共同生成 715 个矩，导数与
+能量的 Taylor 余项保留动态第四矩，加入 55×55 主矩阵和 46 个
+10×10 局部化矩阵。全部 5795 条有理行和 4070 个矩阵条目经独立
+复算。一次数值求解虽收敛，却没有排除裕量；其原样有理化的 714 个
+提升坐标、零能量松弛量精确满足全部行和 47 个严格正定矩阵。
+整数 Bareiss 与独立 Fraction LDL 两种检查均通过。
+这是所测四阶松弛模型的严格可行见证，不能视为真实函数取值或
+实际驻点反例；继续加入同一模型的切平面不能闭合首个区域。
+材料位于 `research-goal-20261017-quartic/`。下一步正研究一次依据
+协方差选择的有理半空间分解，两侧均有严格证书才可闭合父区域。
+
+旧定理嵌入限制另有只读跨平台重放入口
+`window_large_embedding_verify.py`，已在 Windows 和 Linux 运行通过。
+原发表源码与证据哈希保持不变。
+
 目前 `submission_ready = false`。不能将任何候选比例填写为已证明纪录。
 详细代码、核验收据与运行说明见 `research-goal-20261016/README.md`。

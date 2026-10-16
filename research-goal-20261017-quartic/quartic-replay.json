@@ -1,0 +1,37 @@
+{
+  "scope": "Independent stdlib audit of shared quartic moments and dynamic remainders.\n\nRebuild jets/w5 from the older independent interval-Horner checker.  Check\nall edge Taylor/error polynomials, 5795 scalar rows and 4070 PSD entries.\nActual frozen Taylor/F0 enclosures remain explicit analytic inputs; no\noptimizer or new actual-kernel sampling position is used in this replay.\n",
+  "status": "shared_quartic_coefficients_rows_and_localizers_independently_verified",
+  "path": "r001000001000100110011001",
+  "source_sha256_start": {
+    "research-goal-20261017-quartic/quartic_replay.py": "2968cc46f767913c1751f968d5a3dee51e51b550866e645161b2957463a58755",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-quartic/quartic-build.json": "12f3be0796d8ca3a27b4d4ed77105932d61fae2cf5704f1fe7224efcc7b369fc",
+    "research-goal-20261016/cover-residual-psd-rational-inputs.json": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622",
+    "research-goal-20261016/cover_newjet.json": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-quartic/quartic_replay.py": "2968cc46f767913c1751f968d5a3dee51e51b550866e645161b2957463a58755",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-quartic/quartic-build.json": "12f3be0796d8ca3a27b4d4ed77105932d61fae2cf5704f1fe7224efcc7b369fc",
+    "research-goal-20261016/cover-residual-psd-rational-inputs.json": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622",
+    "research-goal-20261016/cover_newjet.json": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273"
+  },
+  "all_sources_unchanged": true,
+  "Taylor_table_terms": 23,
+  "Taylor_table_degree": 22,
+  "whole_w5_remainder_exponent": 19,
+  "edge_packets_checked": 41,
+  "linear_rows_checked": 5795,
+  "PSD_entries_checked": 4070,
+  "moments_including_constant": 715,
+  "whole_w5_grid_cells": 658,
+  "new_scalar_positions": 0,
+  "actual_analytic_input_proved_here": false,
+  "solver_calls": 0,
+  "Lean_invocations": 0,
+  "elapsed_milliseconds": 4783
+}

@@ -185,8 +185,10 @@ def main():
       ('cover-full-u-files.json','fef4caa3f4566b398d66a3d9e8b12e846e128fb5bf8188bca1e0284267db1e46'),
       ('cover-common-anchor-curvature-six-files.json','994e848cba046e35248ce4229ca6860cc75ad20d219dc935657e26014d4d26de'),
       ('window-large-embedding-files.json','0c9805d8f2a134b9c8df61d2c4cacffc03799e99d3a3f02f78e618d97e50ebc2'),
-      ('cover-full-u-face-files.json','a5304f7603f971eee6bf1571411ae4da20765aa43470d314ef6bc93c67ce1dcf')]:
-        manifest=HERE/name
+      ('cover-full-u-face-files.json','a5304f7603f971eee6bf1571411ae4da20765aa43470d314ef6bc93c67ce1dcf'),
+      ('window-large-embedding-portable-files.json','bbb158e76d5817ccc5c0bce56a5048e55ff620a308e0b4400b36a569104c80bf'),
+      ('research-goal-20261017-quartic/quartic-files.json','4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1')]:
+        manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
         rows=pinned.get('files',pinned.get('package_files'))
@@ -213,7 +215,7 @@ def main():
             p=ROOT/row['path'];raw=p.read_bytes()
             assert len(raw)==row['bytes'] and hashlib.sha256(raw).hexdigest()==row['sha256']
             files.append(row['path'])
-        files.append('research-goal-20261016/'+name)
+        files.append(str(manifest.relative_to(ROOT)).replace('\\','/'))
     pilot_manifest=HERE/'window_lifted_pilot_formal_manifest.json'
     assert hashlib.sha256(pilot_manifest.read_bytes()).hexdigest()=='e596fdc941371d673dce842ca7592ca808a8d42fa79f32485e6001fd7708980f'
     pilot=json.loads(pilot_manifest.read_bytes())
