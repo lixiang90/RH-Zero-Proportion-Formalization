@@ -31,6 +31,30 @@ covering 396 original branch nodes. All 1,612 certificates passed a separate
 standard-library replay of scalar Taylor errors, feasible directions and
 flow balance/cost. This is finite numerical evidence, not a global theorem.
 
+The next structural improvement uses the sublevel condition `F < c`. For
+each span separately, an epigraph LP selects a capacity-valid affine energy
+minorant `A <= F`. A nonnegative rational multiplier and integer flow bound
+`z + lambda*A` or `-z + lambda*A`; hence `F < c` gives a new lower or upper
+bound on that span. Distinct spans can use distinct mixtures. The contracted
+cell only needs to preserve potential counterexample minimizers. It is not
+presented as a pointwise cover of the original cell.
+
+In a fixed 1,000-parent sample, 191 cells were already excluded by the first
+direction test. Of the remaining 809, the epigraph method contracted 806,
+and then closed 506 (472 new directions and 34 value bounds). Independent
+replay checked all 12,180 span bounds, including mixtures, capacities,
+multipliers, flow and outward rounding. These are sample results; they do
+not prove a full cover. A new full search starts from the root, rather than
+retaining the large prefix of the older search.
+
+A separate nine-point alternative jointly redesigns the same 24-mode
+profile and its ledger, reducing the number of gap variables to eight. Its
+frozen rational parameters in `window-nine-point-rational.json` would give
+67.35935579342542% if the floor 433/50000 were proved. The exact capacity,
+profile-budget and conditional comparison checks passed. The tested point
+energy is an upper bound on the infimum, not a proof of that floor. This
+alternative does not replace the primary ten-point parameters.
+
 ## Reproducible entry points
 
 - `window_interval_kernel.py`: rational enclosures for the actual new kernel
@@ -48,6 +72,14 @@ flow balance/cost. This is finite numerical evidence, not a global theorem.
   reproducibly by `window_make_correlated_variant.py`.
 - `window_cover_replay.py`: exact geometry, capacity, value-flow and directional
   replay for mixed covers; it does not trust the LP status or floating objective.
+- `cover_sublevel_obbt_api.py`, `cover_sublevel_obbt_verify_api.py`: explicit
+  target discovery and independent replay for the per-span sublevel contraction.
+- `window_normalized_interval.py`: the factorial-normalized sinc recurrence
+  on a fixed rational grid. Its numerical audit preserves all 16 original
+  curvature constants and 2,829 scalar minorants. The separate grid audit
+  distinguishes the separated domain from unused near-zero grid cells.
+- `window_nine_point_rationalize.py`: exact rational audit of the smaller
+  alternative, explicitly retaining its unproved global floor.
 - `lean_generate.py`, `lean_verify.py`: resumable ordinary-kernel verification
   of the complete old-window fallback. A list of generated parts is not evidence
   that those parts passed.
@@ -61,14 +93,20 @@ limit. Generated or failed sources must not be described as verified.
 ## Lean status
 
 The sealed receipt `ordinary-verified-current.json` records the modules with
-current ordinary-kernel passes. These include `LeanCoverBase`, `WindowEnergy`,
-`WindowKernel`, `WindowEnergyBound`, `WindowProfile`, `WindowRealization`,
-and `CoverCoerciveKKT`. Their printed
+current ordinary-kernel passes. They now include the actual kernel and
+energy identities, the actual high derivative and Taylor chain, the
+separated spectral/counting connection, ordered minimum existence, the
+counterexample-minimizer cover bridge, and sublevel/Newton contraction
+lemmas. `WindowGramBasins` proves 69 rational quadratic bounds; its scalar
+connection and global coverage remain distinct obligations. Their printed
 axioms are limited to `propext`, `Classical.choice`, and `Quot.sound`. These
-include the actual new integral energy identity and rational energy bound,
-the actual kernel formula, and genuine existence of a global minimum with
-the boundary/interior KKT conditions. The actual derivative, Taylor and
-counting connections are still being checked. Consult hash-bound receipts;
+are checked with source/log hashes; a frozen full-name audit disambiguates
+scope-dependent printed names. The first actual finite table pilot proves
+all 24 E coefficients and the first full base recurrence using kernel
+evaluation and the soundness theorem. Compiled table definitions alone are
+recorded separately and are not counted as interval-enclosure proofs.
+The full finite tables, actual scalar bounds and complete global cover
+remain unfinished. Consult hash-bound receipts;
 source existence alone does not establish a theorem. No new independent
 nanoda replay has yet been run for these modules.
 

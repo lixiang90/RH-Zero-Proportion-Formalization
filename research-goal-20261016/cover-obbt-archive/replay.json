@@ -1,0 +1,17 @@
+{
+  "scope": "Replay all OBBT witnesses from the compact projection and gzip shards.\n\nThe full 41k-node source snapshot and raw 44.7 MB OBBT witness are unnecessary.\nRoot cells and all ancestor edges are reconstructed independently. All 806\ncell geometries and 12,180 separate scalar-mixture/Lagrange-flow bounds are\nthen checked without an LP or flow optimizer. Global completion is false.\n",
+  "manifest_sha256": "b60bf6d06b58dc8a49196bbc4a6ca9ea3dbf04ed850920f56b82b8ee64079cde",
+  "script_sha256": "7d0a3deae758b8e4f373b40fa75b0bd7baf7358789d3e20babb21cfd8210d4a4",
+  "all_passed": true,
+  "verified_witness_paths": 806,
+  "verified_bounds": 12180,
+  "closed_parent_cells": 506,
+  "reconstructed_ancestor_branches": 4459,
+  "source_proof_reconstructed_byte_exactly": true,
+  "source_proof_sha256": "869122355b263bba85408cf3269ad3172d9f42914bec5077a7e44f28abe01197",
+  "full_source_snapshot_required": false,
+  "complete_global_cover": false,
+  "actual_analytic_Lean_bridges_complete": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 100.07946240000092
+}

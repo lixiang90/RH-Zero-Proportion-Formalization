@@ -22,6 +22,7 @@ def main():
     ap.add_argument('modules',nargs='*')
     ap.add_argument('--complete',action='store_true')
     ap.add_argument('--bundled',action='store_true')
+    ap.add_argument('--keep-going',action='store_true',help='Keep serving independent requested modules after an error; failed modules remain failed.')
     ap.add_argument('--receipt',default='lean_verification.json')
     args=ap.parse_args()
     runtime=json.loads((ROOT/'tmp/setup-20261015/runtime.json').read_text())
@@ -54,14 +55,17 @@ def main():
     known={r['module']:r for r in record['modules']}
     statuspath=HERE/'lean_live_status.json'
     index=0
-    while index<len(targets):
+    while True:
         urgent_path=HERE/'lean_priority_queue.json'
         if urgent_path.exists():
             urgent=json.loads(urgent_path.read_text(encoding='utf8'))
             assert isinstance(urgent,list) and all(isinstance(m,str) for m in urgent)
             if urgent:
                 save(urgent_path,[])
-                targets[index:index]=[m for m in urgent if m not in targets[index:]]
+                urgent=list(dict.fromkeys(urgent))
+                targets[index:]=urgent+[m for m in targets[index:] if m not in urgent]
+        if index>=len(targets):
+            break
         module=targets[index]
         index+=1
         assert re.fullmatch(r'[A-Za-z0-9_]+(\.[A-Za-z0-9_]+)+',module)
@@ -100,11 +104,24 @@ def main():
         save(statuspath,status)
         print(json.dumps({k:v for k,v in result.items() if k!='command'}),flush=True)
         if not result['passed']:
-            print(raw.decode('utf8',errors='replace'),flush=True)
-            if args.complete and module not in complete:
+            # Full diagnostics stay in the hash-bound log. Repeated finite
+            # expansions can otherwise flood a persistent job with megabytes.
+            diagnostic=raw.decode('utf8',errors='replace')
+            errors=[line for line in diagnostic.splitlines() if ': error' in line]
+            if errors:
+                print('\n'.join(errors[:30]),flush=True)
+                if len(errors)>30:
+                    print(json.dumps({'additional_errors_in_log':len(errors)-30}),flush=True)
+            else:
+                print(diagnostic[-12000:],flush=True)
+            if (args.complete and module not in complete) or args.keep_going:
                 print(json.dumps({'priority_failed_global_queue_continues':module}),flush=True)
                 continue
             raise SystemExit(1)
+    record['passed']=all(known.get(m,{}).get('passed',False) for m in targets)
+    save(receipt,record)
     print(json.dumps({'finished':True,'complete_lean_proven':record['complete_lean_proven'],'passed':record['passed']}),flush=True)
+    if not record['passed']:
+        raise SystemExit(1)
 
 if __name__=='__main__':main()

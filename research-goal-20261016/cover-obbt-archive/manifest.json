@@ -1,0 +1,408 @@
+{
+  "format": "OBBT-finite-witness-projection-v1",
+  "scope": "Package all 806 independently replayed OBBT witnesses in <=4 MiB gzip shards.\n\nIncludes only the required ancestor branches, the original receipt and its\nsource/parameter/target hashes. This is a finite witness projection, not a\ncomplete global cover and not an unconditional zero-proportion theorem.\n",
+  "source_proof_sha256": "869122355b263bba85408cf3269ad3172d9f42914bec5077a7e44f28abe01197",
+  "source_proof_final_newline": "\r\n",
+  "source_input_sha256": "08451ca79ecc2b39e0d7a50d71daa58f36d5340e7919b07678e7cf13e0ced6f6",
+  "source_receipt": {
+    "scope": "Full epigraph OBBT with support mixtures selected for each span bound.\n\nThe energy-minimizing affine minorant need not be best for each coordinate.\nFor every selected span and sign, a separate LP with the full scalar\nepigraph plus energy<c selects a new capacity-valid minorant and a Lagrange\nmultiplier. The accepted coordinate bounds still use exact integer flows.\nThis is only discovery; analytic and complete-cover Lean obligations remain.\n",
+    "input_sha256": "08451ca79ecc2b39e0d7a50d71daa58f36d5340e7919b07678e7cf13e0ced6f6",
+    "script_sha256": "1fbd3639e4d673628dc64487f527672a71ed6bf02b13246dbdbe8dba5d8209a5",
+    "api_sources": {
+      "api_sha256": "259a84e209ba2ab4185e14e958ac8972e3beabe265f8a9e56a683f0ae8eb7d8e",
+      "engine_sha256": "493fc65fee7b905b83e42f54c1dc4c3923a1a9f4ffac89b7ce15d65a360141cb",
+      "parameter_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+      "derivative_table_sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+      "profile_coefficient_numerators_1e9": [
+        1000000000,
+        14152994,
+        -16636494,
+        5847970,
+        5916828,
+        -410410,
+        4365961,
+        -6299724,
+        2688735,
+        -4861059,
+        5064801,
+        -3022207,
+        4508542,
+        -1810144,
+        1344824,
+        405092,
+        -288857,
+        227779,
+        -187754,
+        158988,
+        -137179,
+        120042,
+        -106220,
+        94848,
+        -85339
+      ],
+      "pressure_numerators": [
+        2050531,
+        4047384,
+        5655513,
+        6706494,
+        7302840,
+        6706494,
+        5655513,
+        4047384,
+        2050531
+      ],
+      "pair_numerators": [
+        [
+          0,
+          1,
+          975978555
+        ],
+        [
+          0,
+          3,
+          1008375533
+        ],
+        [
+          0,
+          5,
+          3759835382
+        ],
+        [
+          0,
+          6,
+          2851965903
+        ],
+        [
+          0,
+          7,
+          6554559405
+        ],
+        [
+          0,
+          8,
+          10000000000
+        ],
+        [
+          0,
+          9,
+          20000000000
+        ],
+        [
+          1,
+          2,
+          1940903748
+        ],
+        [
+          1,
+          3,
+          1568887398
+        ],
+        [
+          1,
+          4,
+          3243044065
+        ],
+        [
+          1,
+          5,
+          4055278472
+        ],
+        [
+          1,
+          6,
+          4454867458
+        ],
+        [
+          1,
+          7,
+          7148034096
+        ],
+        [
+          1,
+          8,
+          6890881189
+        ],
+        [
+          1,
+          9,
+          10000000000
+        ],
+        [
+          2,
+          3,
+          2565879585
+        ],
+        [
+          2,
+          4,
+          4121909221
+        ],
+        [
+          2,
+          5,
+          3824161541
+        ],
+        [
+          2,
+          6,
+          5944721527
+        ],
+        [
+          2,
+          7,
+          3570594318
+        ],
+        [
+          2,
+          8,
+          7148034096
+        ],
+        [
+          2,
+          9,
+          6554559405
+        ],
+        [
+          3,
+          4,
+          2928557891
+        ],
+        [
+          3,
+          5,
+          4309203380
+        ],
+        [
+          3,
+          6,
+          3848837718
+        ],
+        [
+          3,
+          7,
+          5944721527
+        ],
+        [
+          3,
+          8,
+          4454867458
+        ],
+        [
+          3,
+          9,
+          2851965903
+        ],
+        [
+          4,
+          5,
+          3177360440
+        ],
+        [
+          4,
+          6,
+          4309203380
+        ],
+        [
+          4,
+          7,
+          3824161541
+        ],
+        [
+          4,
+          8,
+          4055278472
+        ],
+        [
+          4,
+          9,
+          3759835382
+        ],
+        [
+          5,
+          6,
+          2928557891
+        ],
+        [
+          5,
+          7,
+          4121909221
+        ],
+        [
+          5,
+          8,
+          3243044065
+        ],
+        [
+          6,
+          7,
+          2565879585
+        ],
+        [
+          6,
+          8,
+          1568887398
+        ],
+        [
+          6,
+          9,
+          1008375533
+        ],
+        [
+          7,
+          8,
+          1940903748
+        ],
+        [
+          8,
+          9,
+          975978555
+        ]
+      ],
+      "weight_denominator": 10000000000,
+      "coordinate_scale": 32768,
+      "separation": "123/128",
+      "taylor_order": 24,
+      "scalar_recipe": "correlated-v1"
+    },
+    "target_numerator": "2896691200000000000000000",
+    "counts": {
+      "sample": 1000,
+      "already_direction": 191,
+      "already_value": 0,
+      "contracted": 806,
+      "newly_value": 34,
+      "newly_direction": 472,
+      "empty": 0,
+      "coordinate_bounds": 12180
+    },
+    "minimum_box_ratio_hint": 9.257501710859265e-21,
+    "median_box_ratio_hint": 0.003540252359521107,
+    "ratios_below_half": 782,
+    "ratios_below_tenth": 658,
+    "actual_kernel_Lean_bridges_complete": false,
+    "pointwise_cover": false,
+    "seconds": 312.03681829999914
+  },
+  "independent_receipt": {
+    "scope": "Independent finite replay of per-span epigraph sublevel contractions.\n\nNo producer, LP or min-cost optimizer is called. Each separately selected\nenergy minorant is rebuilt from its scalar supports/capacities. Integer flow\nbalances, Lagrange multipliers, outward bounds and combined closure are then\nchecked. Actual scalar analytic and global-cover Lean obligations remain.\n",
+    "input_sha256": "869122355b263bba85408cf3269ad3172d9f42914bec5077a7e44f28abe01197",
+    "script_sha256": "4545b22a8bb0f19e4f8642d8018f437e8ab46ed4bb6580066b244f6285f9671c",
+    "minorant_checker_sha256": "ddf7997d466b647de17f6e92c334b948b5ae7eb2daf334e807158b39714e88a4",
+    "counts": {
+      "paths": 806,
+      "bounds": 12180,
+      "closed": 506
+    },
+    "all_passed": true,
+    "actual_kernel_Lean_bridges_complete": false,
+    "complete_global_minimizer_cover": false,
+    "seconds": 92.84219209999901
+  },
+  "independent_receipt_sha256": "ca4b17890e4cdf408500986b0b41bc4e2ba1a930811468827dc1f5513534093c",
+  "sources": {
+    "research-goal-20261016/cover_sublevel_obbt.py": "1fbd3639e4d673628dc64487f527672a71ed6bf02b13246dbdbe8dba5d8209a5",
+    "research-goal-20261016/cover_sublevel_obbt_api.py": "eb587170eaa714450651cfdc81228fe001b28fe7876e2e148c7df3c2a8b73fee",
+    "research-goal-20261016/cover_sublevel_obbt_verify.py": "4545b22a8bb0f19e4f8642d8018f437e8ab46ed4bb6580066b244f6285f9671c",
+    "research-goal-20261016/cover_sublevel_obbt_verify_api.py": "792ab05762fe83146236aad8695055219e036176db82c602be25d0a3a4d1852f",
+    "research-goal-20261016/cover_sublevel_contractor.py": "42abbdc144c7ea955da569b5eef9daebbf1798ecb057d44770944cdfba7e13b8",
+    "research-goal-20261016/cover_sublevel_verify.py": "ddf7997d466b647de17f6e92c334b948b5ae7eb2daf334e807158b39714e88a4",
+    "research-goal-20261016/cover_correlated_api.py": "259a84e209ba2ab4185e14e958ac8972e3beabe265f8a9e56a683f0ae8eb7d8e",
+    "research-goal-20261016/cover_correlated_direction.py": "493fc65fee7b905b83e42f54c1dc4c3923a1a9f4ffac89b7ce15d65a360141cb",
+    "research-goal-20261016/cover_correlated_verify.py": "b8a1090e02b73d14305c0d800ec15c7d94d4323a1b55557dc0893adccfc778aa",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "research-goal-20261016/cover_contractor_verify.py": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389",
+    "research-goal-20261016/cover_obbt_archive.py": "e3351618efe7150e48d525123178bd51cd15cfc02a2c3b67e1569cfe7500174b",
+    "research-goal-20261016/cover_obbt_archive_replay.py": "7d0a3deae758b8e4f373b40fa75b0bd7baf7358789d3e20babb21cfd8210d4a4",
+    "research-goal-20261016/window_global_cover.py": "f773d800df06e9e12e21665ec770d32829f9d998bd3662a87fbafa54f267a004",
+    "research-goal-20261016/window_interval_kernel.py": "159a8f270531e16887e89583b6e0ddc84f98d4ee7a2497585572192ec9efa1ca",
+    "research-goal-20261016/cover_newjet.json": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+    "research-goal-20261016/window_interval_kernel.json": "651da343f61082261664e2ec682268337d5865f97d90d3dd5bf4ef7ac370d4f7",
+    "research-20261016-w10-cert/independent_integer_audit.py": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a",
+    "research-20261016-followup/global_periodic_upper_bound.py": "95fa8520e5fe5505763fe748b866755143c15176ecf1ebf607a0d23ce25cecfd",
+    "research-20261016-w10-cert/generate.py": "b481790fc0f5e34ff27690314f8dd1365abed4ab39f788482517c1318c5e5783",
+    "scripts/finite_margin_20261015.py": "369877fc98fe3c4bce0ab33e366b0b453dc50c8dc4390be4ecf05da7d2cb5f91",
+    "research-20261016/spectral-w10-refined-rational.json": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+    "formal/upstream/ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+  },
+  "projection": {
+    "file": "projection.json.gz",
+    "bytes": 30375,
+    "sha256": "b5e74922eae7a48e172e7f4b8412468f4511b671588fcf046b4fc26c0b8014e5",
+    "uncompressed_sha256": "47e37882301666db2eb4dd62fd2304f5a6bd22877c8d1c388981020287ab1eab",
+    "ancestor_branches": 4459
+  },
+  "witness_shards": [
+    {
+      "file": "witness-000.json.gz",
+      "first": 0,
+      "rows": 128,
+      "bounds": 2147,
+      "bytes": 1496351,
+      "sha256": "4875f120d2f3bb6876653e38dc5d3b3a8e30c9a386862d034d01834244b95510",
+      "uncompressed_sha256": "679b75874c15150781619e5bb9d6e21618a1b991258fa50c7fc22e0ca0c63916"
+    },
+    {
+      "file": "witness-001.json.gz",
+      "first": 128,
+      "rows": 128,
+      "bounds": 1906,
+      "bytes": 1280443,
+      "sha256": "9944d8f65651c702552195fb5282ea96eb6b931b7283c001fd4b9f1cd35ad70f",
+      "uncompressed_sha256": "096a41b3a3d85f538f6169a6bb86a36a041767e7c8eab4c2f172ea60c8863e3f"
+    },
+    {
+      "file": "witness-002.json.gz",
+      "first": 256,
+      "rows": 128,
+      "bounds": 1746,
+      "bytes": 1294708,
+      "sha256": "8bbdcf831531c8978d210027eac71fe104e9d8fa0850c3f82ec65dc15c5abb7f",
+      "uncompressed_sha256": "80db29af39633f74e087bbd674747edb142ab586f532707aa918a499a7cb6b96"
+    },
+    {
+      "file": "witness-003.json.gz",
+      "first": 384,
+      "rows": 128,
+      "bounds": 1817,
+      "bytes": 1217920,
+      "sha256": "fd597111eddc2dbf6ace05246b1c1d43be29e78b3eb0be14d5ae4dfd3238b1c0",
+      "uncompressed_sha256": "e83bcff021ee6156da41c26ac93c396e8757a5bed1f2e00330d390578f1b4aaa"
+    },
+    {
+      "file": "witness-004.json.gz",
+      "first": 512,
+      "rows": 128,
+      "bounds": 2056,
+      "bytes": 1483973,
+      "sha256": "10db4961c64f4b8652668b43ecfa57fd22698dc38b2073df97a7db76cd8ea4b8",
+      "uncompressed_sha256": "e301c56196b3cf80ef20784fd5d2e1ba5fe0dd7e5c4218fbb7f80dea18ca5fd6"
+    },
+    {
+      "file": "witness-005.json.gz",
+      "first": 640,
+      "rows": 128,
+      "bounds": 1965,
+      "bytes": 1443104,
+      "sha256": "cee2d0958f097d07ac51e02a83bd131a46407031e3abc7c66980118a18be1028",
+      "uncompressed_sha256": "dd34f7b68a7f8996b713a39a2ff45c891bfbc4b7ed01dd66157d4ce554835549"
+    },
+    {
+      "file": "witness-006.json.gz",
+      "first": 768,
+      "rows": 38,
+      "bounds": 543,
+      "bytes": 385015,
+      "sha256": "5efd15df69e997c9f945b482f2d6b1f5b028a96d773fed942b10be64722e399e",
+      "uncompressed_sha256": "7954098350aff94a81bda7e1f4236b953b894a79e8fb514ba5c60679982210d9"
+    }
+  ],
+  "total_witness_paths": 806,
+  "total_bounds": 12180,
+  "maximum_gzip_shard_bytes": 4194304,
+  "total_archive_gzip_bytes": 8631889,
+  "complete_global_cover": false,
+  "actual_analytic_Lean_bridges_complete": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 8.796771699999226
+}

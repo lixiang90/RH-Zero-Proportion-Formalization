@@ -14,13 +14,33 @@ def main():
       'cover_newjet.py','cover_newjet.json','cover_correlated_api.py','cover_correlated_direction.py',
       'cover_correlated_verify.py','cover_correlated_replay.py','cover_contractor_api.py','cover_contractor_verify.py',
       'cover_newton_contractor.py','cover_projection_archive.py','cover_archive_replay.py',
-      'lean_generate.py','lean_verify.py']
+      'lean_generate.py','lean_verify.py',
+      'ordinary-axiom-audit-dependencies.json',
+      'window_normalized_interval.py','window_normalized_interval.json',
+      'window_normalized_grid_audit.py','window_normalized_grid_audit.json',
+      'window_lean_precision_probe.py','window_lean_precision_probe.json',
+      'window_lean_precision_bridge_audit.py','window_lean_precision_bridge_audit.json',
+      'cover_sublevel_contractor.py','cover_sublevel_verify.py','cover_sublevel_api.py','cover_sublevel_verify_api.py',
+      'cover_sublevel_obbt.py','cover_sublevel_obbt_verify.py','cover_sublevel_obbt_api.py','cover_sublevel_obbt_verify_api.py',
+      'cover-sublevel-obbt-replay.json','cover_obbt_archive.py','cover_obbt_archive_replay.py',
+      'cover_newwindow_gram.py','cover_newwindow_gram_replay.py','cover-newwindow-gram.json','cover-newwindow-gram-replay.json',
+      'cover_emit_window_gram.py','cover_emit_window_transfer.py','cover_gram_basin_api.py',
+      'window_newton_gram_cover.py','window_newton_gram_cover_cached.py','window_newton_gram_replay.py',
+      'cover_make_obbt_variant.py','window_obbt_newton_cover.py','window_obbt_newton_replay.py',
+      'window_nine_point_search.py','window-nine-point-search.json','window-nine-point-search.npz',
+      'window_nine_point_joint_search.py','window-nine-point-joint-search.json','window-nine-point-joint-search.npz',
+      'window_nine_point_rationalize.py','window-nine-point-rational.json',
+      'window_nine_point_cover.py','window-nine-point-convex.json','window_nine_point_replay.py','window_nine_point_snapshot.py',
+      'window_generate_asymptotic.py','window_generate_counting_base.py','window_generate_discrete.py',
+      'window_generate_matching.py','window_generate_separated.py','window_generate_uniform.py',
+      'window_generate_jet_tables.py','window_generate_convexity_checks.py']
     files+=['research-goal-20261016/'+s for s in names]
-    for row in receipt['modules']:
+    compiled=receipt['modules']+receipt.get('compiled_without_printed_axiom_audit',[])
+    for row in compiled:
         for key,sha_key in [('source','source_sha256'),('log','log_sha256')]:
             p=ROOT/row[key];assert hashlib.sha256(p.read_bytes()).hexdigest()==row[sha_key]
             files.append(row[key])
-    files += [str(p.relative_to(ROOT)).replace('\\','/') for folder in ['cover-compact-archive','snapshots']
+    files += [str(p.relative_to(ROOT)).replace('\\','/') for folder in ['cover-compact-archive','cover-obbt-archive','nine-point-pilot','snapshots']
               for p in sorted((HERE/folder).glob('*')) if p.is_file()]
     # Keep the generation programs that reproduce the verified actual profile.
     files += ['research-goal-20261016/'+s for s in ['window_generate_energy.py','window_generate_energy_bound.py','window_generate_profile.py']]
