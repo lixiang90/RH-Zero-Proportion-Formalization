@@ -52,6 +52,10 @@ New multi-facet derivative-graph constraints retain the shared gap variables
 and exclude 13 of 64 fixed difficult cells by independently replayed integer
 certificates, where the earlier single-slab test closes none. This is local
 progress toward the missing complete cover, not an unconditional record.
+Four selected mixed-cover roots, including the concrete graph/KKT pilot
+and a complete local curvature subtree, now pass both Lean's default kernel
+and independent nanoda replay (47,721 declarations). The global-floor root
+still assumes the complete pressure-root tree check.
 The [submission status](submission/goal-20261016/STATUS.zh.md) distinguishes
 the conditional candidate scores from proved global conclusions.
 

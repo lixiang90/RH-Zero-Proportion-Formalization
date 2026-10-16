@@ -1,0 +1,416 @@
+{
+  "pins": {
+    "Zeta23": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "mathlib": "51e6992efd06126df61a496bebf8f49482a4e129",
+    "Comparator": "273294467ce06429e6667ece7f5699f8678c9f4e",
+    "lean4export": "b18d673bd29b476466a51a3be1012df2ed322b10",
+    "nanoda": "418320295890faed83a96fd97907b12a3b6728c2"
+  },
+  "runtime": {
+    "compiler": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "compiler_version": "Lean (version 4.33.0-rc2, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "runtime_manifest_sha256": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574",
+    "sources_manifest_sha256": "afb55e306f672306e3c507476b1b0899a0f9c6b4880ff7228cef4af1ac4ca84a",
+    "package_manifest_sha256": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1",
+    "dependency_basis": "Pinned HTTPS source archives, official Mathlib cache; completed fresh Zeta23 receipt required for compilation",
+    "dependency_build_receipt_sha256": "650a4ada83d1cc34fa681d2d3278b25e1ccbf929fde6fab9e08a625477ae0d7f",
+    "git_checkout_claimed": false,
+    "source_archives": [
+      {
+        "name": "LeanSearchClient",
+        "repository": "leanprover-community/LeanSearchClient",
+        "commit": "f5c090429dff3cf66cb65562526c9ea6e8edfbcb",
+        "url": "https://codeload.github.com/leanprover-community/LeanSearchClient/tar.gz/f5c090429dff3cf66cb65562526c9ea6e8edfbcb",
+        "archive_sha256": "8878f65cbda00577651e673252f5387490b004d585b3fba6188601a3a9e44ea0",
+        "archive_bytes": 13138,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\LeanSearchClient"
+      },
+      {
+        "name": "Qq",
+        "repository": "leanprover-community/quote4",
+        "commit": "ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33",
+        "url": "https://codeload.github.com/leanprover-community/quote4/tar.gz/ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33",
+        "archive_sha256": "3988cd58caae5ce985a4def8bbbd068944af4fb623907ba8d71ece18409d88ad",
+        "archive_bytes": 33017,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Qq"
+      },
+      {
+        "name": "plausible",
+        "repository": "leanprover-community/plausible",
+        "commit": "123d15766ba49356c02ebad2a4462dfe12d79899",
+        "url": "https://codeload.github.com/leanprover-community/plausible/tar.gz/123d15766ba49356c02ebad2a4462dfe12d79899",
+        "archive_sha256": "9243f1ae0774d4d26e8d9d6e598e9652c4ddbb1bfe4852b6fb44a48c7127121d",
+        "archive_bytes": 42962,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\plausible"
+      },
+      {
+        "name": "Cli",
+        "repository": "leanprover/lean4-cli",
+        "commit": "1319485273bf87833fa472afbcefdedecb16b45f",
+        "url": "https://codeload.github.com/leanprover/lean4-cli/tar.gz/1319485273bf87833fa472afbcefdedecb16b45f",
+        "archive_sha256": "797dac801f503dd31432f3d10916d2a3d8c3375157538c4c848d4e1f03fbab0c",
+        "archive_bytes": 23873,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Cli"
+      },
+      {
+        "name": "importGraph",
+        "repository": "leanprover-community/import-graph",
+        "commit": "bb3469a87774349fe01898d8bf2fc6a1ce6411ca",
+        "url": "https://codeload.github.com/leanprover-community/import-graph/tar.gz/bb3469a87774349fe01898d8bf2fc6a1ce6411ca",
+        "archive_sha256": "aee158b758ba8662562d274816fa2d26497f0d080b600d45ae6cfaae9b511bac",
+        "archive_bytes": 106355,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\importGraph"
+      },
+      {
+        "name": "lean4export",
+        "repository": "leanprover/lean4export",
+        "commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+        "url": "https://codeload.github.com/leanprover/lean4export/tar.gz/b18d673bd29b476466a51a3be1012df2ed322b10",
+        "archive_sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003",
+        "archive_bytes": 24998,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\lean4export"
+      },
+      {
+        "name": "proofwidgets",
+        "repository": "leanprover-community/ProofWidgets4",
+        "commit": "222c58dad7706a6e7cae46c0edd65ea881d3ee27",
+        "url": "https://codeload.github.com/leanprover-community/ProofWidgets4/tar.gz/222c58dad7706a6e7cae46c0edd65ea881d3ee27",
+        "archive_sha256": "0feca2665dd7cb2b17e4a8f1aa5c0ece735ddcc163d900f897552eb110f9cff0",
+        "archive_bytes": 3895001,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\proofwidgets"
+      },
+      {
+        "name": "nanoda",
+        "repository": "ammkrn/nanoda_lib",
+        "commit": "418320295890faed83a96fd97907b12a3b6728c2",
+        "url": "https://codeload.github.com/ammkrn/nanoda_lib/tar.gz/418320295890faed83a96fd97907b12a3b6728c2",
+        "archive_sha256": "f84eb185d4a5594aad18e4b8adbac636e3ace08b671d705dbd6acdbfb834eae6",
+        "archive_bytes": 87061,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\nanoda"
+      },
+      {
+        "name": "aesop",
+        "repository": "leanprover-community/aesop",
+        "commit": "7db8190085343afde2f5d2cdcc9bac719b6ec02c",
+        "url": "https://codeload.github.com/leanprover-community/aesop/tar.gz/7db8190085343afde2f5d2cdcc9bac719b6ec02c",
+        "archive_sha256": "e2a4aaf6a7fb25b838cc1eb816567af3f22568e68659b394aff8c24e0576e2a2",
+        "archive_bytes": 208025,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\aesop"
+      },
+      {
+        "name": "batteries",
+        "repository": "leanprover-community/batteries",
+        "commit": "76e1c118b0700b4ceafe99532e887d6431625e1a",
+        "url": "https://codeload.github.com/leanprover-community/batteries/tar.gz/76e1c118b0700b4ceafe99532e887d6431625e1a",
+        "archive_sha256": "2c75b373ffa5c849fa040c356cc4b31ea292bcb349d267c34132f29acae0f8d5",
+        "archive_bytes": 364490,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\batteries"
+      },
+      {
+        "name": "Zeta23",
+        "repository": "anthropics/zeta-23-lean",
+        "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+        "url": "https://codeload.github.com/anthropics/zeta-23-lean/tar.gz/3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+        "archive_sha256": "6d49328a1b822637c1b035d30fd4c801b29c28bfcbd6cfcd772863bcbcb318a3",
+        "archive_bytes": 1283758,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Zeta23"
+      },
+      {
+        "name": "Comparator",
+        "repository": "leanprover/comparator",
+        "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+        "url": "https://codeload.github.com/leanprover/comparator/tar.gz/273294467ce06429e6667ece7f5699f8678c9f4e",
+        "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+        "archive_bytes": 19617,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Comparator"
+      },
+      {
+        "name": "mathlib",
+        "repository": "leanprover-community/mathlib4",
+        "commit": "51e6992efd06126df61a496bebf8f49482a4e129",
+        "url": "https://codeload.github.com/leanprover-community/mathlib4/tar.gz/51e6992efd06126df61a496bebf8f49482a4e129",
+        "archive_sha256": "0d44640e4a47b76187c0d6d31800a2e8c05001629c75010cff4c21031f5fa8b3",
+        "archive_bytes": 23384070,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\mathlib"
+      }
+    ]
+  },
+  "tool_provenance": {
+    "tools/source/Export.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "archive_sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003",
+      "archive_path": "Export.lean",
+      "source_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998"
+    },
+    "tools/source/Export/Parse.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "archive_sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003",
+      "archive_path": "Export/Parse.lean",
+      "source_sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286"
+    },
+    "tools/source/ExporterMain.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "archive_sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003",
+      "archive_path": "Main.lean",
+      "source_sha256": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a"
+    },
+    "tools/source/Comparator.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Comparator.lean",
+      "source_sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23"
+    },
+    "tools/source/Comparator/Axioms.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Comparator/Axioms.lean",
+      "source_sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125"
+    },
+    "tools/source/Comparator/Compare.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Comparator/Compare.lean",
+      "source_sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd"
+    },
+    "tools/source/Comparator/Util.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Comparator/Util.lean",
+      "source_sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88"
+    },
+    "tools/source/ComparatorMain.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Main.lean",
+      "source_sha256": "d6474f7ac49cf7a1c2f24aff6ac2bcc97a4a00aa37b969f225c6e688c434d0b4"
+    },
+    "nanoda_binary": {
+      "command": [
+        "/var/tmp/rh-zero-20261015/rust/bin/cargo",
+        "build",
+        "--locked",
+        "--release",
+        "--bin",
+        "nanoda_bin"
+      ],
+      "working_directory": "/var/tmp/rh-zero-20261015/.lake/packages/nanoda",
+      "exit_code": 0,
+      "elapsed_seconds": 53.32683805400001,
+      "source_commit": "418320295890faed83a96fd97907b12a3b6728c2",
+      "rust_components": [
+        {
+          "component": "cargo",
+          "version": "1.85.1",
+          "url": "https://static.rust-lang.org/dist/cargo-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+          "sha256": "7373132c13e394755d15f01bda4374af59b4daef01b12a83cb3df3f3be38e289"
+        },
+        {
+          "component": "rustc",
+          "version": "1.85.1",
+          "url": "https://static.rust-lang.org/dist/rustc-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+          "sha256": "92a5c532b9e87912190128704e0d65825912e3b08a6ee9203c4068d6d1df62c4"
+        },
+        {
+          "component": "rust-std",
+          "version": "1.85.1",
+          "url": "https://static.rust-lang.org/dist/rust-std-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+          "sha256": "0aaeffba85359503f874315cd08e0ae8490275d14b41470d36d4fa57fd085916"
+        }
+      ],
+      "rustc_version": "rustc 1.85.1 (4eb161250 2025-03-15)",
+      "cargo_lock_sha256": "ba57464cc37afd903a12432b18db0d576afff60e04686322bfcebf8a4bc2848d",
+      "binary": "/var/tmp/rh-zero-20261015/nanoda-target/release/nanoda_bin",
+      "binary_sha256": "0c8332aae13164943ebfed4f8f4ed969494d8e85edff9d774a70fd92ea9318c2",
+      "log_sha256": "7466f3c2cc1b576773909d471e4e8af5db7298664015a4ece96608bfd8e7f7a9",
+      "log": "/var/tmp/rh-zero-20261015/nanoda-build.log",
+      "source_archive_sha256": "f84eb185d4a5594aad18e4b8adbac636e3ace08b671d705dbd6acdbfb834eae6",
+      "source_archive_url": "https://codeload.github.com/ammkrn/nanoda_lib/tar.gz/418320295890faed83a96fd97907b12a3b6728c2",
+      "build_command": [
+        "/var/tmp/rh-zero-20261015/rust/bin/cargo",
+        "build",
+        "--locked",
+        "--release",
+        "--bin",
+        "nanoda_bin"
+      ],
+      "build_receipt_sha256": "dd77c9251eb767785e2d2ae28a67320348aae7bb77aae6af9bc834b87c49dac1"
+    },
+    "core_driver": {
+      "path": "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tools/ComparatorCoreAudit.lean",
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    }
+  },
+  "tool_compilation": [
+    {
+      "module": "Comparator.Util",
+      "source": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Comparator/Util.lean",
+      "source_sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator/Util.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator/Util.ilean",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Comparator/Util.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.37,
+      "log": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/logs/Comparator.Util.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator/Util.olean",
+      "olean_sha256": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839"
+    },
+    {
+      "module": "Export",
+      "source": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Export.lean",
+      "source_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Export.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Export.ilean",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Export.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.037,
+      "log": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/logs/Export.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Export.olean",
+      "olean_sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+    },
+    {
+      "module": "Export.Parse",
+      "source": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Export/Parse.lean",
+      "source_sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Export/Parse.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Export/Parse.ilean",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Export/Parse.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.07,
+      "log": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/logs/Export.Parse.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Export/Parse.olean",
+      "olean_sha256": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9"
+    },
+    {
+      "module": "Comparator.Axioms",
+      "source": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Comparator/Axioms.lean",
+      "source_sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator/Axioms.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator/Axioms.ilean",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Comparator/Axioms.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.566,
+      "log": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/logs/Comparator.Axioms.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator/Axioms.olean",
+      "olean_sha256": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac"
+    },
+    {
+      "module": "Comparator.Compare",
+      "source": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Comparator/Compare.lean",
+      "source_sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator/Compare.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator/Compare.ilean",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Comparator/Compare.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.666,
+      "log": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/logs/Comparator.Compare.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator/Compare.olean",
+      "olean_sha256": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df"
+    },
+    {
+      "module": "Comparator",
+      "source": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Comparator.lean",
+      "source_sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator.ilean",
+        "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/source/Comparator.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.365,
+      "log": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/logs/Comparator.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-mixed-replay-20261017/tools/lib/Comparator.olean",
+      "olean_sha256": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315"
+    }
+  ]
+}

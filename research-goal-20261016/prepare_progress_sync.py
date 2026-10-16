@@ -145,7 +145,9 @@ def main():
       ('cover-lifted-graph-replacement-files.json','b491d496783ffd205aa1498bc137519e5e91121c3690d1a92f07513f1c32f9fa'),
       ('cover-lifted-radial8-files.json','d00d183c4e9497589cea3d396490e58e5f2643469163f6e84726c70a594ae724'),
       ('cover-lifted-disjunction-files.json','0c6de43b1cb1e71c9cfce72a52e7c77f0d9c2d3590b7302fbb472c4e274e52a3'),
-      ('cover-phase-psd-files.json','7e46cef3d672741ea1f83f976f2b469f2d38aa1d6ac627224f346243315b1a7f')]:
+      ('cover-phase-psd-files.json','7e46cef3d672741ea1f83f976f2b469f2d38aa1d6ac627224f346243315b1a7f'),
+      ('window-mixed-independent-progress-files.json','2ff3acfa47fe9c840d1ab94f6699f8ca4c0e007929a3de40cf7dd4ec016b798a'),
+      ('window-phase-uniform-progress-files.json','f782555de142f67db56606f68fa43cb41c10a344266fbb98f056d9385dd78727')]:
         manifest=HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())

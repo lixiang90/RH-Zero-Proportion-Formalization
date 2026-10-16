@@ -1,0 +1,81 @@
+{
+  "status": "PASS_EXACT_REPLAY_AND_PAPER_MATHEMATICAL_AUDIT",
+  "scope": "Independent exact replay of the two frozen uniform phase packets.\n\nNo import of window_phase_coefficients; no Lean, optimizer, or certificate\ngeneration. This checks arithmetic and coverage only. The analytic bridge\nfor the new amplitudes and harmonics remains a paper-level obligation.\n",
+  "script_sha256": "0d1e3f94740a58998bd04bc3c542ee6b266a16b73733d9b05f10fdf0c0ed4fef",
+  "cases": [
+    {
+      "case_index": 0,
+      "path": "r001000001000001101011101",
+      "packet_sha256": "53697d030400b923f51e9a8b049ebde908cd46a6edc7ee691fa1458d3c725dd3",
+      "terms": 41,
+      "pieces": 622,
+      "centers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "case_index": 1,
+      "path": "r001000001000001110011100",
+      "packet_sha256": "7d82d6b2c1f6ebb07d537ef0d0efbaaae3970601421dc26e6cf0323360d3248d",
+      "terms": 41,
+      "pieces": 585,
+      "centers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  ],
+  "total_pieces": 1207,
+  "checks": [
+    "producer not imported",
+    "all source hashes",
+    "actual nums24 vector",
+    "all Q30 coefficient and amplitude endpoints",
+    "all 1207 exact contiguous 1/32 clipped pieces and centers",
+    "all derivation digests",
+    "all DS lower/upper/reference/error endpoints",
+    "complete remainder catalogs including reference radii"
+  ],
+  "paper_audit": {
+    "normalized_jets": "kc=jet/r!, b=pi^r*sincMoment/r!; Base index=2*n+bool; table K is normalized actual k",
+    "normalization": "Z=K(0)=K0AM=sin(theta)/theta; C=k-KMT/Z; C_r=K_r-(Base_minus+Base_plus)/(2*Z)",
+    "C24_bound": "|C^(24)| <= D*(2*pi)^24/Z * integral_-1/2^1/2 |t|^24 = D*pi^24/(25*Z)",
+    "Cprime_remainder": "Taylor of Cprime has degree22, next derivative C^(24), error M24*rho^23/23!",
+    "harmonics": "Expansion of 2*k*kprime with k=C+A*sin(pi*x)+B*cos(pi*x) agrees in all five coefficients",
+    "elementary_bounds": "Input rationals exactly match WindowIntegerJetRecipe; corresponding ordinary Lean enclosure theorems inspected; no compilation performed",
+    "remaining_Lean_obligations": [
+      "C_all decomposition and normalized Taylor subtraction bridge",
+      "new perturbation-specific global C24 bound",
+      "uniform amplitude/harmonic packet consumer",
+      "phase graph and strict exclusion bridge"
+    ]
+  },
+  "lean_verified": false,
+  "strict_phase_exclusion_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 0.7518017000038526
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "Rational graph facets for actual sin/cos phases of the shared gap spans.\n\nEach rectangle is enclosed at its two rational endpoints and all interior\nsine extrema, after exact period reduction. Integer slopes are selected\nfrom the hull; every intercept is then recomputed over every rectangle.\nThis new analytic interface has not been proved in Lean. It supplies\nresearch LP rows, not an accepted exclusion or zero-proportion bound.\n",
+  "source_sha256": "41c491e384eb7db33028f2556deca67a01a7928c0d821d36664ea58ca9d00e6b",
+  "input_sha256": "f5df55809ffc099520a6cb95f92064436c956faed79a85f6818b9fa1f57e8d77",
+  "selection_sha256": "1a17680f6b45a5c6c5975dbbae280ded931f57d5ae48c85ec3f6d1254d9758bc",
+  "SC": 32768,
+  "DS": 1000000000000000,
+  "grid_step": 64,
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "queries": 180,
+      "rectangles": 5432,
+      "facets": 8210,
+      "maximum_facets_per_query": 108
+    },
+    {
+      "path": "r001000001000001110011100",
+      "queries": 180,
+      "rectangles": 5096,
+      "facets": 8362,
+      "maximum_facets_per_query": 94
+    }
+  ],
+  "all_integer_intercepts_checked": true,
+  "analytic_trig_interface_Lean_proven": false,
+  "strict_phase_exclusion_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 4.029347100004088
+}

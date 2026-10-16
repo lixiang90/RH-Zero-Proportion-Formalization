@@ -156,6 +156,19 @@ of those selected roots, not a website-statement comparison or a global
 floor proof. Per-module receipts do not assert independent replay of every
 declaration in every ordinary-passed module.
 
+A later independent replay covers four selected mixed-cover roots:
+`WindowCurvatureLeavesAll.exclude`, `WindowCurvatureSubtree.exclude`,
+`WindowLiftedPilot.exclude`, and `WindowGraphCover.global_floor880`.
+Both the default kernel audit and nanoda passed, checking 47,721 declarations
+with only the three allowed axioms. All 992 bound inputs, including 320
+local modules, were rehashed unchanged. The frozen evidence is in
+`window-mixed-independent-20261017/`; its 342,062,394-byte export is retained
+locally and identified by SHA, rather than included in Git. The complete
+pressure-root tree check remains an explicit premise of the global-floor
+root. This selected-root self-replay does not assert a global floor, a
+website statement comparison, or independent replay of all ordinary-passed
+modules. The earlier 22-root archive remains unchanged.
+
 The full 22,500-node OBBT prefix was recovered into the compact representation
 and independently replayed: 164,093 contraction bounds, 17,785 Newton steps,
 and all accepted leaves passed. The recovered checkpoint shrank from
@@ -374,11 +387,24 @@ consistent. This is an identity audit, not a uniform bound or Lean proof.
 `cover-phase-psd-files.json` freezes an independent challenge: two independent
 phase layers can lose square positivity, and the weak frozen-amplitude value
 proxy does not improve the earlier bound on seven of eight tested cells.
-The linked model retaining the old gap/derivative graph, actual phase arcs,
-KKT and cross-layer moment constraints remains untested. The note specifies
-a concrete next test using rational rank-one PSD cuts in the existing LP
-solver. No strict phase certificate, global floor or new proportion is
-asserted by these research notes.
+The stronger linked model has now been tested on two fixed residual cells.
+It retains the old gap/derivative graph, KKT, actual phase arcs, two ten-node
+Gram matrices and forty-five cross-layer Toeplitz matrices. Twenty rounds
+of integer rank-one PSD cuts produced no strict certificate. Adding actual
+position/phase graph facets also produced no strict certificate; the final
+outer-LP points still violate PSD constraints. These finite trials establish
+neither feasibility nor infeasibility of the full semidefinite model.
+
+The uniform coefficient provider `window_phase_coefficients.py` partitions
+all forty-one spans in each cell and bounds the five harmonics of the actual
+derivative. Its 1,207 pieces were independently recomputed with exact Q30
+interval arithmetic. The actual phase graph provider uses clipped 1/64
+rectangles; an independent Q90 Machin/Taylor implementation checked all
+10,528 rectangles and 2,329,680 integer facet corners. The corresponding
+receipts are `phase-coefficient-independent-replay.json` and
+`phase-graph-independent-replay.json`. The new analytic decomposition,
+perturbation derivative bound and consumers remain to be formalized in Lean.
+No strict phase certificate, global floor or new proportion is asserted.
 
 Independent three-floor probes on the same 300 original parents found
 80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.

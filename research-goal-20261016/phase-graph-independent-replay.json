@@ -1,0 +1,39 @@
+{
+  "status": "PASS_INDEPENDENT_Q90_TRIG_AND_INTEGER_CORNER_REPLAY",
+  "scope": "Independent trig/corner replay of the two research phase graph cases.\n\nThe graph producer is imported only to obtain its rectangles and facets.\nEnclosures are independently checked using Q90 Machin/Taylor arithmetic,\nthen all facet corners are checked with integer arithmetic. No Lean run.\n",
+  "script_sha256": "11761a26268d13b2d4fa773ac86a9e4646b5170e483667f0b158a621501a8e60",
+  "receipt_sha256": "64e7f523cac840dfd7ce7ff13a4f1f7619991f63c282251e66641831c8203b7a",
+  "dependency_sha256": {
+    "window_phase_graph_oracle.py": "41c491e384eb7db33028f2556deca67a01a7928c0d821d36664ea58ca9d00e6b",
+    "window_interval_kernel.py": "159a8f270531e16887e89583b6e0ddc84f98d4ee7a2497585572192ec9efa1ca"
+  },
+  "sine_dependency_sha256": "95fa8520e5fe5505763fe748b866755143c15176ecf1ebf607a0d23ce25cecfd",
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "queries": 180,
+      "rectangles": 5432,
+      "facets": 8210,
+      "maximum_facets_per_query": 108
+    },
+    {
+      "path": "r001000001000001110011100",
+      "queries": 180,
+      "rectangles": 5096,
+      "facets": 8362,
+      "maximum_facets_per_query": 94
+    }
+  ],
+  "total_queries": 360,
+  "total_rectangles": 10528,
+  "total_facets": 16572,
+  "integer_corner_checks": 2329680,
+  "independent_sine_points": 1734,
+  "paper_audit": "Exact period-two reduction, all critical half-integers, clipped 1/64 cover, and SC*DS*f(x)-SC*slope*x intercept scaling are correct; arbitrary integer slopes are safe because every rectangle corner is checked.",
+  "lean_verified": false,
+  "analytic_trig_interface_Lean_proven": false,
+  "strict_phase_exclusion_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 5.104783000002499
+}
