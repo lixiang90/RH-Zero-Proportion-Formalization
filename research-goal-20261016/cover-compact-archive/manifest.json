@@ -1,0 +1,22 @@
+{
+  "scope": "Make a small replay archive containing only needed ancestor branches.\n\nThe projection is a subset-of-witness replay artifact, not a full cover.\nThe original complete discovery snapshot remains hash-identified but is not\nneeded to rebuild the cells or check the projected witnesses.\n",
+  "original_input_sha256": "08451ca79ecc2b39e0d7a50d71daa58f36d5340e7919b07678e7cf13e0ced6f6",
+  "projection_uncompressed_sha256": "ed0408f99ffc8486dbe3b830b456d3de036266e5fdca332f199a24a9dacf9473",
+  "files": {
+    "projection.json.gz": {
+      "sha256": "7e8b8194604cbf4cf22808bd2e862b3ee6ba7a86cd4163010ff3f9633e461de3",
+      "bytes": 25809
+    },
+    "correlated-witness.json.gz": {
+      "sha256": "89183088fa931bae4a86654ce917868e3874c1a8690c8c5772ce13634068839e",
+      "bytes": 1414021
+    },
+    "contraction-witness.json.gz": {
+      "sha256": "e549128fa50b157d42a79993099eeb9540739949021985aa51510a4609d88f9f",
+      "bytes": 563139
+    }
+  },
+  "total_archive_bytes": 2002969,
+  "original_snapshot_bytes": 18385186,
+  "complete_global_cover_asserted": false
+}

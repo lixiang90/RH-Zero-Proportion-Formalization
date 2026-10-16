@@ -173,3 +173,15 @@ python3 scripts/verify_record_20261015.py --mode all --work-dir /var/tmp/rh-zero
 Historical proofs and receipts remain available. The preceding repository
 overview is [archived here](docs/gram-defect-previous-readme-20261015.md).
 Historical research papers are maintained in [RH-Weil](https://github.com/lixiang90/RH-Weil).
+
+## Continuing research: new window and minimizer coverage
+
+The [current research continuation](research-goal-20261016/README.md) replaces
+the Fourier window and pair ledger and studies a minimizer cover using
+correlated directional derivatives and interval Newton contraction.
+Additional modules have current ordinary-kernel receipts, including the
+actual new kernel and energy bound and genuine coercive minimum/KKT results.
+The new global floor, remaining analytic/counting connections and final
+independent submission checks are still incomplete. The
+[submission status](submission/goal-20261016/STATUS.zh.md) lists the candidates
+and remaining obligations; it does not claim a new unconditional record.

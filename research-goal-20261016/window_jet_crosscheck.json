@@ -1,0 +1,282 @@
+{
+  "scope": "High-precision diagnostic cross-check, explicitly not interval verification.\n\nCompares the new rational jet oracle against independent mpmath analytic\ndifferentiation of shifted sinc functions, including removable poles.\nThe rigorous numerical evidence remains the Fraction interval certificates.\n",
+  "parameter_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "oracle_sha256": "159a8f270531e16887e89583b6e0ddc84f98d4ee7a2497585572192ec9efa1ca",
+  "crosscheck_sha256": "2b1f55d1b3993e3c21dd927307abbb3e62b1b1c330347ff50c021140bde75599",
+  "precision_decimal_digits": 100,
+  "rows": [
+    {
+      "point": "0",
+      "derivatives": [
+        {
+          "order": 0,
+          "mpmath_value": "1.0",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 1,
+          "mpmath_value": "0.0",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 2,
+          "mpmath_value": "-3.0201358492015524120967633399410447451488313583553659447499568259802536560935572",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 3,
+          "mpmath_value": "0.0",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 4,
+          "mpmath_value": "17.159601215666460950561819718184633963693702394998676919391385480676915682606629",
+          "inside_Fraction_enclosure": true
+        }
+      ]
+    },
+    {
+      "point": "123/128",
+      "derivatives": [
+        {
+          "order": 0,
+          "mpmath_value": "0.10085656987978405019761707184086901074289988362701987899008531949607184726464434",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 1,
+          "mpmath_value": "-1.0501638093798773472261767224512811063151784616827389078670851866555788161663973",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 2,
+          "mpmath_value": "1.5624118530185281417521361409116999810740580458562958883711033018556181451693999",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 3,
+          "mpmath_value": "4.1490046399392585294189107274742919415272864303878253556700472192991309531708567",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 4,
+          "mpmath_value": "-12.472234536234544251128338903934264781876189692030625781799792497752062545992632",
+          "inside_Fraction_enclosure": true
+        }
+      ]
+    },
+    {
+      "point": "1",
+      "derivatives": [
+        {
+          "order": 0,
+          "mpmath_value": "0.06106656212338838625164356036648237867742389299693003197871911820960895466971547",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 1,
+          "mpmath_value": "-0.98609263011037338056185733216941340851834572265242573669840032752927069577298869",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 2,
+          "mpmath_value": "1.7147564759961895274845110138662156174483002702700250872594648593230530488646625",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 3,
+          "mpmath_value": "3.6459024524776092928390172351936630258320800623237506229496890760193938000486814",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 4,
+          "mpmath_value": "-13.261248347216181271477444565357268892366433959557638361649426921825564362603164",
+          "inside_Fraction_enclosure": true
+        }
+      ]
+    },
+    {
+      "point": "32767/32768",
+      "derivatives": [
+        {
+          "order": 0,
+          "mpmath_value": "0.061096656080744703387714779455441849601264420443195920741359869262580554315372501",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 1,
+          "mpmath_value": "-0.98614495862727649731169415458811413195424237844740388129361429689944572795946531",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 2,
+          "mpmath_value": "1.7146452057080963263275685849421757390340717199922277089553558615104755321050443",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 3,
+          "mpmath_value": "3.6463071451674716089240035647901534373731288815397389242803476314897332975009459",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 4,
+          "mpmath_value": "-13.260691759775114621535369314699691163773393112963170368425293213036802253280804",
+          "inside_Fraction_enclosure": true
+        }
+      ]
+    },
+    {
+      "point": "32769/32768",
+      "derivatives": [
+        {
+          "order": 0,
+          "mpmath_value": "0.061036469763023484220383605744736391157817514526491556977945505236102114203452844",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 1,
+          "mpmath_value": "-0.9860402981979590062918375456618733655936688365181772323769509738787537656386175",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 2,
+          "mpmath_value": "1.7148677339337827826662385284151458719757401164664720882423492964079150423239578",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 3,
+          "mpmath_value": "3.6454977428034951394310599222839957858471031038270000773182885730697355492797026",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 4,
+          "mpmath_value": "-13.261804839703017350404469315923049126374074485882253188310478532160858901353336",
+          "inside_Fraction_enclosure": true
+        }
+      ]
+    },
+    {
+      "point": "5",
+      "derivatives": [
+        {
+          "order": 0,
+          "mpmath_value": "0.0018071800351244375055251289961494649651260856369579017355060593490063170999697281",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 1,
+          "mpmath_value": "-0.15548269468791215868079409583178850179711719977312292714007166420082433054047117",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 2,
+          "mpmath_value": "0.056610812657523203654945143124261864899485496722176194238470661747800437549835407",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 3,
+          "mpmath_value": "1.5137939718611703237670949451113677803317845987250117358291146242849745654569763",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 4,
+          "mpmath_value": "-1.1597061089911804487811446555023803656419949501383234064851344019797378731702734",
+          "inside_Fraction_enclosure": true
+        }
+      ]
+    },
+    {
+      "point": "24",
+      "derivatives": [
+        {
+          "order": 0,
+          "mpmath_value": "-0.00013440439095296326995180343832765888634541234208792406826891004341285683244877012",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 1,
+          "mpmath_value": "0.03472202643048430183063888365765740869416007160078466822251412653788948112334305",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 2,
+          "mpmath_value": "-0.0017735825556410020112954037225478181166571318954518326651707528451977165196226048",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 3,
+          "mpmath_value": "-0.34283534840321230132336537366473530508957325233656648705985538833151407344709286",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 4,
+          "mpmath_value": "0.04701423895977807282043299429189832940082527158217767810956559322425042092872736",
+          "inside_Fraction_enclosure": true
+        }
+      ]
+    },
+    {
+      "point": "107/16",
+      "derivatives": [
+        {
+          "order": 0,
+          "mpmath_value": "0.029355268606459646969490477041706438064800115896505736321760676862598467903849716",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 1,
+          "mpmath_value": "-0.073394649301784061345370107602723402659379499705700987004476462219253487196369456",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 2,
+          "mpmath_value": "-0.27943218179477463218424262448504321712737053922960150403390039852554283731266103",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 3,
+          "mpmath_value": "0.79713273737128135494089698712497513250421937510096432720222551780390483648264241",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 4,
+          "mpmath_value": "2.5477922764026685600706951730518788685305246358040850360372301354609237633401561",
+          "inside_Fraction_enclosure": true
+        }
+      ]
+    },
+    {
+      "point": "1621/100",
+      "derivatives": [
+        {
+          "order": 0,
+          "mpmath_value": "0.010035559781628483372435349234312971795282429402442071469170852398214219057776353",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 1,
+          "mpmath_value": "0.041703939371051530746895610438184833926029032211086999679758266984467106397037201",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 2,
+          "mpmath_value": "-0.10514960343700198938065652378423288969293012776089162334492310052556929986240681",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 3,
+          "mpmath_value": "-0.39597606107008693736910693633813894601274972632680270403635193594527911242595679",
+          "inside_Fraction_enclosure": true
+        },
+        {
+          "order": 4,
+          "mpmath_value": "1.0909708659529128709681825335792995495724514726757225344416397431790720062141994",
+          "inside_Fraction_enclosure": true
+        }
+      ]
+    }
+  ],
+  "all_diagnostics_passed": true,
+  "Lean_proven": false,
+  "seconds": 1.5535180999995646
+}

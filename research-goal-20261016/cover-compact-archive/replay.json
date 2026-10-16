@@ -1,0 +1,28 @@
+{
+  "scope": "Independent replay using only the compact ancestor projection archive.\n\nVerifies correlated descent witnesses and KKT-only Newton contraction chains.\nNo original 41k-node discovery snapshot, optimizer, or producer is imported.\nThe projection is deliberately not presented as a complete global cover.\n",
+  "passed": true,
+  "archive_manifest_sha256": "d8ca226cafe4f6255551419999b9cbb48ba62152efe6af338979d262d9f1818f",
+  "script_sha256": "fbcadd9a55523311d25d1b36df4550514bed1ce835ee2f974ef72e6b220a9aee",
+  "verifier_sources": {
+    "contractor_verifier_sha256": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389",
+    "verifier_api_sha256": "b8a1090e02b73d14305c0d800ec15c7d94d4323a1b55557dc0893adccfc778aa",
+    "verifier_helper_sha256": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "geometry_helper_sha256": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a"
+  },
+  "oracle_sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+  "original_input_sha256": "08451ca79ecc2b39e0d7a50d71daa58f36d5340e7919b07678e7cf13e0ced6f6",
+  "projection_ancestor_branches_rebuilt": 4194,
+  "counts": {
+    "correlated_descent": 1612,
+    "contraction_chains": 111,
+    "contraction_steps": 378,
+    "newly_excluded_after_contraction": 17,
+    "empty_after_contraction": 0
+  },
+  "minimum_descent_integer_margin": "870864421065011920423715",
+  "original_discovery_snapshot_required": false,
+  "all_geometry_scalar_bounds_and_integer_flows_replayed": true,
+  "complete_global_cover_asserted": false,
+  "actual_kernel_and_KKT_Lean_connections_complete": false,
+  "seconds": 52.61036690000037
+}

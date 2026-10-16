@@ -1,0 +1,17 @@
+{
+  "scope": "Freeze the full correlated minimizer runner without editing a live source.",
+  "source_sha256": "8121496f487a5b647b92a15ffe6062b2208c086780ba0d2455c3a035b654730f",
+  "generator_sha256": "d3c8424ea4a1b1c3855bbd77c187d3a0ce831a01cafd2590aed09a9abd690c94",
+  "generated_sha256": "09cbc3c28e9402b397b8ee9998d2f9083d7d3ac1da946ff12f4b3d6514fb02b4",
+  "substitutions": {
+    "import window_direction_probe as direction": "import window_direction_probe as direction\nimport cover_correlated_api as correlated",
+    "oracle_sha=direction.install_grid(args.oracle)": "oracle_sha=direction.install_grid(args.oracle)\n    correlated_oracle=correlated.make_correlated_oracle(args.oracle)\n    correlated_inputs=correlated.api_sources(correlated_oracle)",
+    "default=HERE/'window-minimizer-cover.json'": "default=HERE/'window-correlated-minimizer-cover.json'",
+    "args.oracle,HERE/'window_interval_kernel.json',ROOT/'research-20261016-w10-cert/generate.py',": "args.oracle,HERE/'window_interval_kernel.json',HERE/'cover_correlated_api.py',HERE/'cover_correlated_direction.py',ROOT/'research-20261016-w10-cert/generate.py',",
+    "'seconds':time.monotonic()-start,'derivative_grid_sha256':oracle_sha,": "'seconds':time.monotonic()-start,'derivative_grid_sha256':oracle_sha,'correlated_api_inputs':correlated_inputs,",
+    "state,depth,path=todo.pop();checked+=1;depthmax=max(depthmax,depth)": "state,depth,path=todo.pop();state=(state[0],state[1]);checked+=1;depthmax=max(depthmax,depth)",
+    "ex=direction.exclusion(state,True)": "ex=direction.exclusion(state,True)\n            if ex is None:ex=correlated.correlated_exclusion(state,correlated_oracle)"
+  },
+  "global_floor_Lean_proven": false,
+  "new_zero_proportion_proven": false
+}
