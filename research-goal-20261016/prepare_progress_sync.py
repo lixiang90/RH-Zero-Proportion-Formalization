@@ -67,6 +67,36 @@ def main():
         assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
         files.append(str(p.relative_to(ROOT)).replace('\\','/'))
     files.append('research-goal-20261016/cover-global-move-progress-files.json')
+    followup_manifest=HERE/'cover-global-move-epigraph-followup-files.json'
+    assert hashlib.sha256(followup_manifest.read_bytes()).hexdigest()=='1b7793e17f5570219f9dcbc6218ae092933ed0ec9b8afed104e22dadb18d595a'
+    followup=json.loads(followup_manifest.read_bytes())
+    for path,row in followup['files'].items():
+        p=HERE/path
+        assert p.is_file() and len(p.read_bytes())==row['bytes']
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
+        files.append(str(p.relative_to(ROOT)).replace('\\','/'))
+    files.append('research-goal-20261016/cover-global-move-epigraph-followup-files.json')
+    independent_folder=HERE/'window-independent-20261017'
+    independent_manifest=independent_folder/'archive-manifest.json'
+    assert hashlib.sha256(independent_manifest.read_bytes()).hexdigest()=='684b02c2bd1355cd89f1941f88b1d3c0c0494714df0ab1480b0b027deab87154'
+    independent=json.loads(independent_manifest.read_bytes())
+    assert independent['passed'] and independent['independent_nanoda_passed'] and independent['partial_roots_only']
+    assert not independent['global_energy_floor_proven'] and not independent['website_statement_verified']
+    for path,row in independent['files'].items():
+        p=independent_folder/path
+        assert p.is_file() and len(p.read_bytes())==row['bytes']
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
+        files.append(str(p.relative_to(ROOT)).replace('\\','/'))
+    files.append(str(independent_manifest.relative_to(ROOT)).replace('\\','/'))
+    cut_manifest=HERE/'cover-global-cut-progress-files.json'
+    assert hashlib.sha256(cut_manifest.read_bytes()).hexdigest()=='3e5215245a34103c570cf8b4513873bc59bbcd0df120ed9b2e17ee20ba36e01a'
+    cuts=json.loads(cut_manifest.read_bytes())
+    for path,row in cuts['files'].items():
+        p=HERE/path
+        assert p.is_file() and len(p.read_bytes())==row['bytes']
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
+        files.append(str(p.relative_to(ROOT)).replace('\\','/'))
+    files.append('research-goal-20261016/cover-global-cut-progress-files.json')
     compiled=receipt['modules']+receipt.get('compiled_without_printed_axiom_audit',[])
     for row in compiled:
         for key,sha_key in [('source','source_sha256'),('log','log_sha256')]:

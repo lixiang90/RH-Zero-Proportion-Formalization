@@ -141,8 +141,17 @@ coordinate bounds. `DifferenceCell` proves single-edge closure and split
 soundness for actual real positions. These are interfaces for an eventual
 complete checked cover, not substitutes for that cover.
 Consult hash-bound receipts; source existence alone does not establish a
-theorem. The selected independent nanoda replay is being prepared; its
-receipt must be consulted before claiming an independent-kernel pass.
+theorem. A selected independent replay has now passed both Lean's default
+kernel and nanoda: 22 partial roots, 73,398 declarations, and exactly the
+three allowed axioms. All 472 bound inputs were rehashed after verification.
+The frozen evidence is in `window-independent-20261017/`; the large export
+is represented by its SHA and byte count rather than copied into Git.
+The selected roots cover all actual centre tables and anchors, one actual
+convex interval, the short-pair bound, pressure/KKT/flow tools, and counting
+implications with their explicit energy-floor input. This is a self-replay
+of those selected roots, not a website-statement comparison or a global
+floor proof. Per-module receipts do not assert independent replay of every
+declaration in every ordinary-passed module.
 
 The full 22,500-node OBBT prefix was recovered into the compact representation
 and independently replayed: 164,093 contraction bounds, 17,785 Newton steps,
@@ -174,10 +183,41 @@ All preceding 193 OBBT bounds and 53 Newton steps, scalar difference bounds,
 and final flow certificates were independently replayed. The standalone
 72,868-byte gzip archive reconstructs the ancestor geometry and covers 141
 old descendant branches; it does not cover the full domain.
-An additional sublevel-conditioned pilot checks
+A further sublevel-conditioned test checks
 `DeltaF + lambda*(c-A) < 0`, with `A <= F < c` and `lambda >= 0`, and finds
-one further replayed exclusion. Formal actual finite-move consumers are
-being checked separately; these numerical receipts are not Lean passes.
+nine additional replayed exclusions after skipping all 15 known moves.
+Six of these certificates have positive energy multipliers. Replay checks
+their preceding 102 OBBT bounds and 30 Newton steps, and the separate
+48,466-byte gzip archive reconstructs their geometry without the large
+source checkpoint. The two batches are topmost disjoint regions, together
+covering 251 old descendant branches; both are distinct from the previous
+seven joint gradient sample leaves. Formal actual finite-move consumers are
+written separately and await their ordinary Lean verification; these
+numerical receipts are not Lean passes.
+
+A direct positive combination of multiple moves found no new separation in
+the fixed 100-cell portfolio pilot. This negative evidence motivates using
+the valid inequalities `U_v >= DeltaF_v >= 0` as cuts in contraction, rather
+than blindly increasing the size of the direct separation trial.
+
+Using those global-competitor inequalities as contraction cuts does yield
+new exact certificates. In the first 50 genuinely residual parents, 17 paths
+contracted through 24 rounds and 149 new coordinate bounds; eight resulting
+directional exclusions passed independent replay, including their prior
+262 OBBT bounds and 65 Newton steps. These eight regions have no ancestor or
+descendant overlap with the earlier 24 and cover another 55 old branches.
+The cuts preserve original global minima below the target, not all KKT
+points. The small frozen package remains dependent on the previously
+published OBBT archive and is not described as standalone geometry.
+
+A paired discovery control reapplied energy-only OBBT for the same two
+rounds at the same 17 starting cells. It classified three terminal leaves,
+with only one shared success, suggesting seven exclusions attributable to
+the global cuts in this sample. Those control terminal classifications are
+diagnostic; the independently verified claim is the eight cut certificates.
+Energy-only contraction had a smaller median box-volume ratio, so global
+cuts are not claimed to dominate it on every metric. A separate variant
+will retain both kinds of bounds instead of dropping energy-only bounds.
 
 Independent three-floor probes on the same 300 original parents found
 80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.

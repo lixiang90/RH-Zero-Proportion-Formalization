@@ -1,0 +1,1670 @@
+{
+  "scope": "PARTIAL: all actual integer jet centres and 1567 anchor certificates; one actual convexity subinterval; actual short-pair floor; coercivity/KKT/coupled-pressure and affine-flow soundness; conditional counting with its energy-Floor premise still present. Self replay, not a website statement comparison.",
+  "module": "StructuralGoal20261016.WindowIndependentRoots",
+  "roots": [
+    "StructuralGoal20261016.WindowFixedTablesAll.k_sound",
+    "StructuralGoal20261016.WindowFixedTablesAll.w_sound",
+    "StructuralGoal20261016.WindowAnchorAll.valid",
+    "StructuralGoal20261016.WindowLinearConvexityPilot.cell",
+    "StructuralGoal20261016.WindowPairCertificate.short_pair_floor",
+    "StructuralGoal20261016.WindowGapEnergy.exists_ordered_global_min",
+    "StructuralGoal20261016.WindowPressureRoot.selected_span_upper",
+    "StructuralGoal20261016.WindowPressureRoot.global_floor_of_checked",
+    "StructuralGoal20261016.WindowKKTInstance.of_relevantBelow",
+    "StructuralGoal20261016.WindowSecondVariation.curvature_nonneg_of_relevant",
+    "StructuralGoal20261016.WindowQuantizedSupport.zero_extension",
+    "StructuralGoal20261016.DifferenceCell.split_sound",
+    "StructuralGoal20261016.DifferenceCell.affine_flow_bound",
+    "StructuralGoal20261016.FlowBasisPilot.bound0",
+    "StructuralGoal20261016.FlowBasisPilot.bound1",
+    "StructuralGoal20261016.FlowBasisPilot.bound2",
+    "StructuralGoal20261016.FlowBasisPilot.bound3",
+    "StructuralGoal20261016.WindowRecordFromFloor.improvement",
+    "StructuralGoal20261016.WindowRecordFromFloor.simple_cumulative",
+    "StructuralGoal20261016.WindowRecordFromFloor.distinct_cumulative",
+    "StructuralGoal20261016.WindowRecordDyadic.simple_dyadic",
+    "StructuralGoal20261016.WindowRecordDyadic.distinct_dyadic"
+  ],
+  "passed": true,
+  "stage": "complete",
+  "partial_roots_only": true,
+  "website_statement_verified": false,
+  "unconditional_counting_proven": false,
+  "all_partition_checked": false,
+  "submission_ready": false,
+  "submitted": false,
+  "official_website_acceptance": false,
+  "single_heavy_process_required": true,
+  "root_manifest_sha256": "a783917413bc41f1445a70cb5b5f9bfc8dec81c283fec4c42d36e8a8f4121dd4",
+  "runtime": {
+    "compiler": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "compiler_version": "Lean (version 4.33.0-rc2, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "runtime_manifest_sha256": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574",
+    "sources_manifest_sha256": "afb55e306f672306e3c507476b1b0899a0f9c6b4880ff7228cef4af1ac4ca84a",
+    "package_manifest_sha256": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1",
+    "dependency_basis": "Pinned HTTPS source archives, official Mathlib cache; completed fresh Zeta23 receipt required for compilation",
+    "dependency_build_receipt_sha256": "650a4ada83d1cc34fa681d2d3278b25e1ccbf929fde6fab9e08a625477ae0d7f",
+    "git_checkout_claimed": false,
+    "source_archives": [
+      {
+        "name": "LeanSearchClient",
+        "repository": "leanprover-community/LeanSearchClient",
+        "commit": "f5c090429dff3cf66cb65562526c9ea6e8edfbcb",
+        "url": "https://codeload.github.com/leanprover-community/LeanSearchClient/tar.gz/f5c090429dff3cf66cb65562526c9ea6e8edfbcb",
+        "archive_sha256": "8878f65cbda00577651e673252f5387490b004d585b3fba6188601a3a9e44ea0",
+        "archive_bytes": 13138,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\LeanSearchClient"
+      },
+      {
+        "name": "Qq",
+        "repository": "leanprover-community/quote4",
+        "commit": "ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33",
+        "url": "https://codeload.github.com/leanprover-community/quote4/tar.gz/ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33",
+        "archive_sha256": "3988cd58caae5ce985a4def8bbbd068944af4fb623907ba8d71ece18409d88ad",
+        "archive_bytes": 33017,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Qq"
+      },
+      {
+        "name": "plausible",
+        "repository": "leanprover-community/plausible",
+        "commit": "123d15766ba49356c02ebad2a4462dfe12d79899",
+        "url": "https://codeload.github.com/leanprover-community/plausible/tar.gz/123d15766ba49356c02ebad2a4462dfe12d79899",
+        "archive_sha256": "9243f1ae0774d4d26e8d9d6e598e9652c4ddbb1bfe4852b6fb44a48c7127121d",
+        "archive_bytes": 42962,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\plausible"
+      },
+      {
+        "name": "Cli",
+        "repository": "leanprover/lean4-cli",
+        "commit": "1319485273bf87833fa472afbcefdedecb16b45f",
+        "url": "https://codeload.github.com/leanprover/lean4-cli/tar.gz/1319485273bf87833fa472afbcefdedecb16b45f",
+        "archive_sha256": "797dac801f503dd31432f3d10916d2a3d8c3375157538c4c848d4e1f03fbab0c",
+        "archive_bytes": 23873,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Cli"
+      },
+      {
+        "name": "importGraph",
+        "repository": "leanprover-community/import-graph",
+        "commit": "bb3469a87774349fe01898d8bf2fc6a1ce6411ca",
+        "url": "https://codeload.github.com/leanprover-community/import-graph/tar.gz/bb3469a87774349fe01898d8bf2fc6a1ce6411ca",
+        "archive_sha256": "aee158b758ba8662562d274816fa2d26497f0d080b600d45ae6cfaae9b511bac",
+        "archive_bytes": 106355,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\importGraph"
+      },
+      {
+        "name": "lean4export",
+        "repository": "leanprover/lean4export",
+        "commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+        "url": "https://codeload.github.com/leanprover/lean4export/tar.gz/b18d673bd29b476466a51a3be1012df2ed322b10",
+        "archive_sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003",
+        "archive_bytes": 24998,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\lean4export"
+      },
+      {
+        "name": "proofwidgets",
+        "repository": "leanprover-community/ProofWidgets4",
+        "commit": "222c58dad7706a6e7cae46c0edd65ea881d3ee27",
+        "url": "https://codeload.github.com/leanprover-community/ProofWidgets4/tar.gz/222c58dad7706a6e7cae46c0edd65ea881d3ee27",
+        "archive_sha256": "0feca2665dd7cb2b17e4a8f1aa5c0ece735ddcc163d900f897552eb110f9cff0",
+        "archive_bytes": 3895001,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\proofwidgets"
+      },
+      {
+        "name": "nanoda",
+        "repository": "ammkrn/nanoda_lib",
+        "commit": "418320295890faed83a96fd97907b12a3b6728c2",
+        "url": "https://codeload.github.com/ammkrn/nanoda_lib/tar.gz/418320295890faed83a96fd97907b12a3b6728c2",
+        "archive_sha256": "f84eb185d4a5594aad18e4b8adbac636e3ace08b671d705dbd6acdbfb834eae6",
+        "archive_bytes": 87061,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\nanoda"
+      },
+      {
+        "name": "aesop",
+        "repository": "leanprover-community/aesop",
+        "commit": "7db8190085343afde2f5d2cdcc9bac719b6ec02c",
+        "url": "https://codeload.github.com/leanprover-community/aesop/tar.gz/7db8190085343afde2f5d2cdcc9bac719b6ec02c",
+        "archive_sha256": "e2a4aaf6a7fb25b838cc1eb816567af3f22568e68659b394aff8c24e0576e2a2",
+        "archive_bytes": 208025,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\aesop"
+      },
+      {
+        "name": "batteries",
+        "repository": "leanprover-community/batteries",
+        "commit": "76e1c118b0700b4ceafe99532e887d6431625e1a",
+        "url": "https://codeload.github.com/leanprover-community/batteries/tar.gz/76e1c118b0700b4ceafe99532e887d6431625e1a",
+        "archive_sha256": "2c75b373ffa5c849fa040c356cc4b31ea292bcb349d267c34132f29acae0f8d5",
+        "archive_bytes": 364490,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\batteries"
+      },
+      {
+        "name": "Zeta23",
+        "repository": "anthropics/zeta-23-lean",
+        "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+        "url": "https://codeload.github.com/anthropics/zeta-23-lean/tar.gz/3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+        "archive_sha256": "6d49328a1b822637c1b035d30fd4c801b29c28bfcbd6cfcd772863bcbcb318a3",
+        "archive_bytes": 1283758,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Zeta23"
+      },
+      {
+        "name": "Comparator",
+        "repository": "leanprover/comparator",
+        "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+        "url": "https://codeload.github.com/leanprover/comparator/tar.gz/273294467ce06429e6667ece7f5699f8678c9f4e",
+        "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+        "archive_bytes": 19617,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Comparator"
+      },
+      {
+        "name": "mathlib",
+        "repository": "leanprover-community/mathlib4",
+        "commit": "51e6992efd06126df61a496bebf8f49482a4e129",
+        "url": "https://codeload.github.com/leanprover-community/mathlib4/tar.gz/51e6992efd06126df61a496bebf8f49482a4e129",
+        "archive_sha256": "0d44640e4a47b76187c0d6d31800a2e8c05001629c75010cff4c21031f5fa8b3",
+        "archive_bytes": 23384070,
+        "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\mathlib"
+      }
+    ]
+  },
+  "pins": {
+    "Zeta23": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "mathlib": "51e6992efd06126df61a496bebf8f49482a4e129",
+    "Comparator": "273294467ce06429e6667ece7f5699f8678c9f4e",
+    "lean4export": "b18d673bd29b476466a51a3be1012df2ed322b10",
+    "nanoda": "418320295890faed83a96fd97907b12a3b6728c2"
+  },
+  "bound_local_modules": {
+    "StructuralGoal20261016.WindowIndependentRoots": {
+      "source_sha256": "493ce6f84e8f5298ec7d796f62c4f2e4cb81d64987f1cde7ea83045e1e8ef1fb",
+      "olean_sha256": "f1471dccf7644b688548d942763b473aa2293a5595982e0076426eddb7dc916e"
+    },
+    "StructuralGoal20261016.FlowBasisPilot": {
+      "source_sha256": "e482fbd6cdbc5fea21ca034ee9f6a0f4dd9c51bd6451cf5ad8ad69a729a7043d",
+      "olean_sha256": "a6a32f991dba3c9885ea131f623da5405c28d505e15d8ed0855ae92a0b995c26"
+    },
+    "StructuralGoal20261016.FlowBasisCodec": {
+      "source_sha256": "927f3f8fca7e049fcf20a176b0d8d9b46393f5455d0138b7e6da3c694ea7baad",
+      "olean_sha256": "f7d2834b48f69a1e87c315d9d52728275c20f5e977a818e2074772bb0ae7fb6a"
+    },
+    "StructuralGoal20261016.AffineFlowCertificate": {
+      "source_sha256": "94b8aa67e553fe5f026e40ee78669309fac09090223e01c03de02aeb93ffbfc1",
+      "olean_sha256": "a4305a48161e35ac91a707832c0ebaa2dea5ddbd4f318d6cdb59176b4ede63d6"
+    },
+    "StructuralGoal20261016.DifferenceCell": {
+      "source_sha256": "39e1638dc2768dc6ff0fc34409feb73eb25710c5b5cc234bdfc911e9a22820ad",
+      "olean_sha256": "03ae99c3015022994d80c2e1d0ababaec4da5be5c129cd26cdd8282b198c18da"
+    },
+    "StructuralGoal20261016.WindowQuantizedSupport": {
+      "source_sha256": "232fc73fc419d7c177e0ab3e7124aaa63a56b9fa8ca876e8132e91596915a12a",
+      "olean_sha256": "9492afb01b7d72845b71de29aad51116207a37b61dcaa78f97878b14a5780043"
+    },
+    "StructuralGoal20261016.WindowScalarMinorant": {
+      "source_sha256": "7cea224a250677b941d110c698e4b2dacdcee93829ee88a69cccf9e46b3228e1",
+      "olean_sha256": "c73eaaca8f2a4c7ad8507e7bad9ea07e85142aff6685f0f04182dd2c2ea15560"
+    },
+    "StructuralGoal20261016.WindowConvexityCertificate": {
+      "source_sha256": "cc5bdfba83cdf45fd2f81ea9741899b9b263e55af54a43226f74c299979526e9",
+      "olean_sha256": "31452796efcce1d5ea7cde6858ff002863ed3ed905944dc449b0280c6b1778ff"
+    },
+    "StructuralGoal20261016.WindowTaylorBridge": {
+      "source_sha256": "b3db359086705edb1b5552106248bdd2e5aac6dae6333b4e4cc72f48855bda24",
+      "olean_sha256": "44f4deb70a178bb6fb4f7ae5db6e24d8faef485671fffd1afa51658040ffb9e1"
+    },
+    "StructuralGoal20261016.WindowDerivative": {
+      "source_sha256": "c5c2cb3032d24f6a3e0523bfe8af96b470d3ee42a95a726087f20109633c15b2",
+      "olean_sha256": "62297b6bfc33872ed9e4c0db81c2a900b07e72ea55901ac27e5bcc37dce2f3fb"
+    },
+    "StructuralGoal20261016.WindowKernel": {
+      "source_sha256": "4c01794657e775391ba57642e7d753be961ac4e89e87c3f29109be8f5f05547e",
+      "olean_sha256": "9049d1b68c08eef4ed2505f21ab64a122f2110a4925d0e12a5b59bd3031c9108"
+    },
+    "StructuralGoal20261016.WindowEnergy": {
+      "source_sha256": "ffb24882e2f7e588a5787c00dd4ba0a6139d7d99c788701890d3febb74b428d8",
+      "olean_sha256": "b83afe0fec479088d67979c05db55c96878a02a359c3368c9414d0aaa41bfe9d"
+    },
+    "StructuralW10Followup20261016.NewWindows": {
+      "source_sha256": "d9ea408b5ae22c079a3090bb8dea36b1d7e8b7dab7778506f59daffa9c388a70",
+      "olean_sha256": "3ad168ad14779f455c3975454fca201d78f1a2dea5ef53059d2c8a392faefa78"
+    },
+    "StructuralW10Followup20261016.WindowMajorantGeneral": {
+      "source_sha256": "95a35950b6b5de2a9fa395452c0e30eeaa3e0c6a3b41b5391855459bf51a7b84",
+      "olean_sha256": "1a5d49e5c269d31e4b1a51a40a4e44262508131a1616c008dbc8c880463354ed"
+    },
+    "StructuralW10Followup20261016.WindowProfileGeneral": {
+      "source_sha256": "50b5818f60a96075bfe78f81fc8af96a4d484600cccc2e9ec9d4e9f8191de8c9",
+      "olean_sha256": "e9011795f46f913f19700030c79ce6b8d2ff3a17b9ba23f241e79116665a6f15"
+    },
+    "GramDefect20261015.Core": {
+      "source_sha256": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+      "olean_sha256": "fdfc53ee9707c3a876ef24bb8c36d218cbc01784ee14bf24f42c2ecb90865d56"
+    },
+    "StructuralGoal20261016.WindowSecondVariation": {
+      "source_sha256": "1156fe965a5747e167937d1f6bc14a347b6c90355b07436b184032eb18957d88",
+      "olean_sha256": "bb6838688de29ead134caafd38824c805e0034b9b164c9d438cda128cd5755cf"
+    },
+    "StructuralGoal20261016.WindowKKTInstance": {
+      "source_sha256": "25f6722fe1e937db7c774b01a52fd1a1594226d21898891fc10885c9c1633fa2",
+      "olean_sha256": "065969c4d75dfc0649fe115b2a4b18717ff5e6d2cfad4732ccf44af30ac4344f"
+    },
+    "StructuralGoal20261016.CoverKKTContraction": {
+      "source_sha256": "77432f404d98267047907a05f093b14c474d22755fbe8053a44a1a294a0fff6b",
+      "olean_sha256": "b3def1acc2c0823835790551e0e720f792b2755e77a0ad4d54c5b9dc8a7fc845"
+    },
+    "StructuralGoal20261016.CoverCoerciveKKT": {
+      "source_sha256": "6ba6b27c6d783438beab2303e7d29eab96fd0d6265040b7184b8cd9c21f025e3",
+      "olean_sha256": "1a08c3ce96692cda4a5d418e1b185359cadbb50d030cbc79491d4e95716b801f"
+    },
+    "StructuralGoal20261016.WindowMinimizerCover": {
+      "source_sha256": "ffbeccae4857ff0fb57f3b58c0bfa8f0a78f5d213d37782f0e948da1da455292",
+      "olean_sha256": "60d7a994d58a5bfb9f2d1445aed9a09476e5e5abd656aaa1a5d70032ac01f020"
+    },
+    "StructuralGoal20261016.MinimizerCover": {
+      "source_sha256": "7d3bbe16ecb0ea002554f29f261db259f7ce32d24482357fb903bc6e22ab6de1",
+      "olean_sha256": "5881e7d9082b730774c339440597bec8e61c39739a2d0b6b690714567e727891"
+    },
+    "StructuralGoal20261016.WindowGapEnergy": {
+      "source_sha256": "3f570bc83263355a239c086922e9bc138319fd2abd77668b594b5f94a5fd6564",
+      "olean_sha256": "4cd90ffb78842f4b4db9e1acb9c73d91d7d9896f8e00147ffa034fb38b962aee"
+    },
+    "StructuralW10Followup20261016.NewLedger": {
+      "source_sha256": "9db3e7633a3117f4fded88998da4ab3ebc4e24631ac50816f23931bdb8225d1a",
+      "olean_sha256": "24cec859cd26f69db56472847dcc49ba515b64a97dd858b2edd929986381421c"
+    },
+    "StructuralGoal20261016.WindowPressureRoot": {
+      "source_sha256": "6ee2ad48f9f34e0da75ece45cb7e11ddad5aadd23602602a2feb80345c934891",
+      "olean_sha256": "5265530b739766a4aa827594991cc097c148237df084bff2fd14088f8319241d"
+    },
+    "StructuralGoal20261016.WindowRecordDyadic": {
+      "source_sha256": "3a2bf541e019af56e3c94101f26dfe4c386879b85273c937fc9dc105d889162d",
+      "olean_sha256": "71185db309d0a23111402a07fd45438d331b16fc7c7a9f50b7c15608c886908c"
+    },
+    "StructuralGoal20261016.WindowRecordFromFloor": {
+      "source_sha256": "76660f180603444e25e9f07da514d502ecf11ef749e4f62417568c8b370807ef",
+      "olean_sha256": "69f4a90ab5fbe63f01ea974a6cca47a1cc0d0307806b09bb50d4f54176f52e0c"
+    },
+    "StructuralGoal20261016.WindowEnergyBound": {
+      "source_sha256": "29bb4a9ab7c8cbdd0c067993241d093999fdc63a983102968a74c23850dd8e14",
+      "olean_sha256": "c00bb4977580851bc1221ea28ddb3973ea3f1b715eb0f91434d5f03086329a92"
+    },
+    "StructuralGoal20261016.WindowPairCertificate": {
+      "source_sha256": "305dc7433f27d4d5f2f4df5d3d8e295545966070fa01f4a3804de805e2d4bb54",
+      "olean_sha256": "26eb63502bb09106387939e8c466e732362a0934b58282230d83fbca013535e5"
+    },
+    "StructuralGoal20261016.WindowClosePair": {
+      "source_sha256": "3f2a475936a469f926882c5b321add38ed4ed4f6ffa4fdc6345d9d887afaa650",
+      "olean_sha256": "6d7cb0466c0c9ee9f005bd804c5524deef631df09e5e0ef5100787be1cded235"
+    },
+    "StructuralGoal20261016.WindowFixedPoint": {
+      "source_sha256": "901d7b87e6aba6da6e9f61858701719aef5c7da7fdcc3a5f83a97a6645418d60",
+      "olean_sha256": "d3ad1e98a3d5c56687ae0a727ccf81258a1a060ae3b607f034e53cc10ad34bdd"
+    },
+    "StructuralGoal20261016.WindowJetTableData": {
+      "source_sha256": "f6afdae121fb933db7b468b861de75e2e38afe2068323837b7a18095306c2ec8",
+      "olean_sha256": "33b78a781bed78a8462c9da98f007116c35b68f643d61f92d2b9b986097ebff9"
+    },
+    "StructuralGoal20261016.WindowJetTableConsumer": {
+      "source_sha256": "db87baf4ab54eb51fe592d26345c328fd6f25db32b40702a25f98fb38372707f",
+      "olean_sha256": "eb9da637ff2d8eb2e6832cd6ea2a24ef8c81fcbf9efb8cc067f79415c87cfb15"
+    },
+    "StructuralGoal20261016.WindowIntegerKernelRecipe": {
+      "source_sha256": "d8449325165296ea6c2db318c87f8aaf9fc7e14b4f241efa42e1acc2dce6e112",
+      "olean_sha256": "f4b9723c305b973901377fc8ec390a8d77ef43d94dbe2a115f970e320eb3c3d2"
+    },
+    "StructuralGoal20261016.WindowIntegerJetRecipe": {
+      "source_sha256": "80306036c62fe9b5f2d06e8c1ddeafd2e0df6c97ae89f5dd3c23edce6ccfea56",
+      "olean_sha256": "f667eb1663abe2369cadeaa45120c7b0415b12645b500f6df2c3818ce9ee8758"
+    },
+    "StructuralGoal20261016.WindowBasicEnclosures": {
+      "source_sha256": "e4988ebf261e40ee20b1b836fd5cf2572e41570ca33d9b4f6a242c767861f31b",
+      "olean_sha256": "f38514670b47ffb21ea9a7d2ae7317f6c6b65ef340a684688507b7e37e8b88e6"
+    },
+    "StructuralGoal20261016.WindowNormalizedJets": {
+      "source_sha256": "8b47725eb97a47e0a86294a771cfb06a9fc299e4a0a7e7edf4410885cb01b6cc",
+      "olean_sha256": "d1a6a76f282b9c67709b4f506c6fc16d510d081d8829d00e7a72862d4182ab8a"
+    },
+    "StructuralGoal20261016.WindowSincJet": {
+      "source_sha256": "3fd7aaa1b09db4339e305612462423ef39e1aa8cfd30becb97716e1c5ce638a2",
+      "olean_sha256": "efd7ccb39b1b67f5cffee172ba9c15bb0f2a03cf55b8051e7435128893f1c104"
+    },
+    "StructuralGoal20261016.WindowRationalInterval": {
+      "source_sha256": "d0eae7ba9caed1d44c9d8e2b3884cca64edc79d0925897190c15f5591f890c88",
+      "olean_sha256": "3e08c7213d9df20b2a4730a321ef1d73698e434993a440bd268959e40c71a048"
+    },
+    "StructuralGoal20261016.WindowFixedPolynomial": {
+      "source_sha256": "ed57641b5bd8df365331eb9a141e8fa2ffa91fd3c65ec8c67a619a67b1e04df9",
+      "olean_sha256": "15b8e734cfc9ede7f05732f67f80676e438a4135c6466e71cd977675c89133f8"
+    },
+    "StructuralGoal20261016.WindowPointTableArithmetic": {
+      "source_sha256": "c05d5f34dafc329e0ad997341e48ad76ddd5b8471fed5d3875cd39785db2c8b7",
+      "olean_sha256": "bf5d4351a73218828d8d6d1de6f535debcffa17640962089a548b4e1be9b6f73"
+    },
+    "StructuralGoal20261016.WindowConvexityArithmetic": {
+      "source_sha256": "9f838bcb46fdf45b5c648f95f9e91beeafb85e4959b53a2519a18c0af1514cf9",
+      "olean_sha256": "e8ab2d110ddd0252cf6856555f5a9d782ac58180492bec0ce4ff0cf6ecc92e63"
+    },
+    "StructuralGoal20261016.WindowBernsteinTransform": {
+      "source_sha256": "c9f020a9beab8bdb00e79deb3520cea8a53ab5b993fe12ed4c8c4f19b8fc71c4",
+      "olean_sha256": "90ff249421dd466f534120c07925ebdcf9943ffcc4bcb1c9e9bc4b203d93833e"
+    },
+    "StructuralGoal20261016.WindowFixedRational": {
+      "source_sha256": "b536c095fbf38559b6d85ad3ed68399a5c09c0faef9e18439b13863847a4ae59",
+      "olean_sha256": "5d66bbbb75d2179256df038967ebf61a4f699e76676ea92e59a58877022645b6"
+    },
+    "StructuralGoal20261016.WindowFixedInterval": {
+      "source_sha256": "daa3759d76278c07cc862b4325d88f0542ce7acba7e245ca629c8e26f768e742",
+      "olean_sha256": "c5531856b2e106ce16cc48c5322804f0b4cf3ae92d7346ee822f352ce2b33b15"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter01": {
+      "source_sha256": "0e1af22cfcb96ebed36dbae0c30d4f31a7f942d273fe3a35fc87b8c1ce8ca40c",
+      "olean_sha256": "c1cb55cda2e32ebf0f10581ec70b715874093b7465351e5baa1a14b8722249b6"
+    },
+    "StructuralGoal20261016.WindowFixedKernelPilot": {
+      "source_sha256": "1f0f1b79e58f49031b5cb8b7d8d8967e8a4937ed376217edb1ec01b724952b6e",
+      "olean_sha256": "1236f74ee35368aa07bd2de19e84cf21bdc8df9a1e1196a894ceb52762ca1acc"
+    },
+    "StructuralGoal20261016.WindowFixedKernel": {
+      "source_sha256": "604c8eec05a2823f165f2455343afac3f43b415a9aee6e9b5b55a4f5a40fe381",
+      "olean_sha256": "bf3f57cee83934a9fbfb4dea6ed49129c177d789e0fad79dabd6dd563071980c"
+    },
+    "StructuralGoal20261016.WindowJetTablesAll": {
+      "source_sha256": "e83fc7283a7bffbc53ad2e2e3f64234bf56862a45651cf8161e860b37244fec8",
+      "olean_sha256": "94ca8ae8daa0919396cb9c54a36a9209e394e5ef1c800c9d326181c337654ba3"
+    },
+    "StructuralGoal20261016.WindowJetTableCos10": {
+      "source_sha256": "273a2ec8ccd0f702ce471fbcfc64bcfa485b189e53a68109e17185cbc953591d",
+      "olean_sha256": "0ce3a86345b41d97e751a8aaae49c1fee3e5649875e1d9ea2bbacdcfc3f310a6"
+    },
+    "StructuralGoal20261016.WindowJetTablePilot": {
+      "source_sha256": "3b22e3daecefee90b0c5bd937df6ff729146d0b9a2e901f3546a515a0ea68223",
+      "olean_sha256": "fdcf019b5b3f18c2fcbd09aad28d90730fd6d3e48a3e6c65b21429f1ff1431f3"
+    },
+    "StructuralGoal20261016.WindowJetTableCos09": {
+      "source_sha256": "cb2c0a5c6d3a612830542357c3cdd56ab3eb286c546038ce6568029fca870583",
+      "olean_sha256": "84e3eb927fbc5d56e6764436dfcc113a9bbc1ed0b15eb9c089e01b185908c3b0"
+    },
+    "StructuralGoal20261016.WindowJetTableCos08": {
+      "source_sha256": "74ad3171d775becdcbdb4c898b751a110f342198552576622fa0be7349cd84bb",
+      "olean_sha256": "4b93ada5cd8d16ccc0b02def207b002e6004cde584f76bb443d576046f411546"
+    },
+    "StructuralGoal20261016.WindowJetTableCos07": {
+      "source_sha256": "fcdf325bf53a80e61f25e6171383458a4e9fbfb8fe0ca0582922f0ea70034bdd",
+      "olean_sha256": "16303db4618b154d1771efc95acc6fe8a4ff50b68d7b5176bd27b4f5e9ae20d4"
+    },
+    "StructuralGoal20261016.WindowJetTableCos06": {
+      "source_sha256": "b4a8fc916eb284ffe886f52b8c96f71778ef8671af0c88fb47a1a215e10d807b",
+      "olean_sha256": "10d1d1e69ea47c4583f1fad141d415e39ff95bfd6712f5ea221a0e7f6681066c"
+    },
+    "StructuralGoal20261016.WindowJetTableCos05": {
+      "source_sha256": "9b631b452d9c98428d09bd9be3d53087460e759aa68a182d92e1dda5c664c619",
+      "olean_sha256": "67e17fcea4f1eea7ab21fec1f259cc5e0b8f0110c8a9438ebe400faa61a14fb1"
+    },
+    "StructuralGoal20261016.WindowJetTableCos04": {
+      "source_sha256": "2c72dac38b37365974fa1c9bd6b615141ad9c2e7d6162e69284f083beb92ced1",
+      "olean_sha256": "59380ea9f5e02d70f2493fed1273c03be4361ecbfacad9d327983d34d6a308f3"
+    },
+    "StructuralGoal20261016.WindowJetTableCos03": {
+      "source_sha256": "efdd01bc70ee6e9db639fbdc999cd7f996c5d730a8375a14a3770a694e0e5b71",
+      "olean_sha256": "d19aed4e5859f2891126e6fbdb94fcfe980dbfc7637f00a74516c4a9843a18e6"
+    },
+    "StructuralGoal20261016.WindowJetTableCos02": {
+      "source_sha256": "91a8b1634263c27f0a3ee8fc1e78e55d8852cb8f6e7c2215ee302791828afafb",
+      "olean_sha256": "1afb5171fa4227897d2937ffd9a91cd9c38030377b129e8d2855ac258f7ee627"
+    },
+    "StructuralGoal20261016.WindowJetTableCos01": {
+      "source_sha256": "0939f96d2a9ec7b4254c6f2d10c3939251fef834a3782a2185f76a63029779ea",
+      "olean_sha256": "12d205194420efccb100113194500e3645ef4d4950904023a1546fa7ccf43208"
+    },
+    "StructuralGoal20261016.WindowJetTableCos00": {
+      "source_sha256": "9997e5777e88cdbe91eea070f8228cb02d5779e8b7fabd4dfcc41e25fcf19f2b",
+      "olean_sha256": "746e5743b28ecd30c99d99baeb9cb4cb4522f53bf52a9d167569bfb20468f131"
+    },
+    "StructuralGoal20261016.WindowJetTableBase07": {
+      "source_sha256": "293ea12d517ad6806ac34011aaa99403c96f696ace7bf6c68c344060b116bc98",
+      "olean_sha256": "0780e17ee8253a06e6a2cf92fe4e2afa965b2ca055ab0d10d8301a3db78a3e85"
+    },
+    "StructuralGoal20261016.WindowJetTableBase06": {
+      "source_sha256": "9876aa348bea63f16d5981b400a2105fc839a75d791b389f60a6249fcd6e2270",
+      "olean_sha256": "2404c60a309161344135e7c027177940bef0279b8890f19dcee06ab59e3b67ff"
+    },
+    "StructuralGoal20261016.WindowJetTableBase05": {
+      "source_sha256": "c381bf818dc436b0e190feb45e175cd395702c674c6c384da361212f0837c3d3",
+      "olean_sha256": "b796647fc1d3aa68a7a6825f94eda58aecc5e229c0ea64fc14fbe59618966d0f"
+    },
+    "StructuralGoal20261016.WindowJetTableBase04": {
+      "source_sha256": "f4f4e2464c44444cc10ae331308ad3231bb5a02d2baafa86dbc596b2384f52b1",
+      "olean_sha256": "673910430f3b4baa19e89d85ed4f4e99a996d2be52cfd2490250673347b4c438"
+    },
+    "StructuralGoal20261016.WindowJetTableBase03": {
+      "source_sha256": "84418e69e7eb5813895478f3fee98a2ea6ad27c8d2f89279f3eaa700c70b5902",
+      "olean_sha256": "21467a17ffcae276a57db2fe77bd6917b30b01176e4f3fb6eb6626428abc575b"
+    },
+    "StructuralGoal20261016.WindowJetTableBase02": {
+      "source_sha256": "91f27f9d6755525070f0220ab83609219bfe73ad85f4502e34d18848e1060912",
+      "olean_sha256": "e64b61ce6d068e5fda4b40c27ab1c5b48eae7397ca87ae8e4facb6bd2172e1f4"
+    },
+    "StructuralGoal20261016.WindowJetTableBase01": {
+      "source_sha256": "acb5ee6b064474da551817c96c9b2dceff92e99747ec79fec637cd2fcfa9e897",
+      "olean_sha256": "075fd42e444aa90d11ae87a7e2e89f7627746e893583225e56ade7eabe613695"
+    },
+    "StructuralGoal20261016.WindowJetTableBase00": {
+      "source_sha256": "ad18c9bb9a768398b8144db3dcb09b74e741df9fcdc7e0d3355d149a7bcceb61",
+      "olean_sha256": "d7a46e36fa168ae06c6e971dda5260ab8d66eab5fe2ceb60d9db3717d5bf60a7"
+    },
+    "StructuralGoal20261016.WindowCounting": {
+      "source_sha256": "e93af3777cff158bd0d889fc569811230ac6248f4a5bf49792e183f11558c42f",
+      "olean_sha256": "32ad748592e9d7affff9a6cc9c69b9defb463b9fe023ddc5211653d805b08df5"
+    },
+    "StructuralGoal20261016.WindowCountingGeometry": {
+      "source_sha256": "f3f144e20f504b1c9d6cac14909e55589ed193a202292424f1e2f14e7f619818",
+      "olean_sha256": "d5102ec34a1cb81c0c88992c397d1130033b3753d135517a615324e00521ad8c"
+    },
+    "StructuralGoal20261016.WindowCountingBase": {
+      "source_sha256": "9f9e552e84630ae280e4e4a84ad3390d617318918798faf2786e66bc880bbe2b",
+      "olean_sha256": "ec35ccde163e56beba10d1ac574c994fab26ae7bd409e4de84ca623daf8ed775"
+    },
+    "StructuralGoal20261016.WindowAsymptotic": {
+      "source_sha256": "f06ef7f38aab6c795025ad255e77babcddd9b7dda1156486c08a7b4fd883a9c9",
+      "olean_sha256": "53b5265e6e8e780b5897af5bd4d9022e06830598d68c36433c6b485f82af8e0a"
+    },
+    "StructuralGoal20261016.WindowRealization": {
+      "source_sha256": "34c14e68afa798a76513d1d85a9be6c6af0665c9cec28540f00902ceeabba8c5",
+      "olean_sha256": "60e30ad4df343ac705c2d54ad04bb5c970601a4be2edc01986142f6e11df7e6a"
+    },
+    "StructuralGoal20261016.WindowProfile": {
+      "source_sha256": "81bde0ab94551f86be63b7a21d447ffc5c4b30603317c5df4bb74cb8865ae050",
+      "olean_sha256": "e487c916dd936acf85514e841378e893b79b3efa28bf40c6cd46b863180bc10f"
+    },
+    "StructuralGoal20261016.WindowCountingDefect": {
+      "source_sha256": "6a5951e13f196e6c68f92d7e451d99db63008bc5a7c32a49fdca4fba68e109e1",
+      "olean_sha256": "d469ea3898457baf5ba21bbc3edfccca6f84d9d729424098d9a60bf87ab154d4"
+    },
+    "StructuralGoal20261016.WindowSeparated": {
+      "source_sha256": "5a7d4c6420c70c2f16468a2615d1d9906b664567ee5528c1e0dd12519adf1fb4",
+      "olean_sha256": "5afa69d881bf39fdf6e0d7b818b89a9e0329a152ca66083e0827fccc393ed6e5"
+    },
+    "StructuralGoal20261016.WindowUniformKernel": {
+      "source_sha256": "11afe5f95efdd6628775cd1da7b103aac19d694eedfc6131b871c65b9d3403b7",
+      "olean_sha256": "4c8e8ebfd416a6a3a9299beeb563819bfe34fe5ae31bf6f7c8d9ba1aa09ebe45"
+    },
+    "StructuralGoal20261016.WindowMatching": {
+      "source_sha256": "9bea1dffb2854e1b7a96d4f0f34ee5d31ce70f70946ad74971cee78ba9aaa1bd",
+      "olean_sha256": "32a48cdb91244caa23e162855c65333614b81bef39693e24b7006c065ea7b04f"
+    },
+    "StructuralGoal20261016.WindowDiscreteEnergy": {
+      "source_sha256": "487eb81b913bbae024a36e4d4b2bfd86501d66e265463fb44fe0b2d50ec7117c",
+      "olean_sha256": "2a97a10ebb5ccf6c48a58399f4a4ae9667bb525cc6ed4320162122a1347d6ac1"
+    },
+    "StructuralResearch20261016.Coboundary": {
+      "source_sha256": "730fdccd5d8faba2765f5b1d77b5e7ff897328b92ac6bcb4f3d1fe876702041a",
+      "olean_sha256": "5457de00afe8bf9099fa882586a6cb031d7b5b4c2635026b3013deaa9c23e1bd"
+    },
+    "StructuralGoal20261016.WindowLinearConvexityPilot": {
+      "source_sha256": "8fbe1476febb1ed3dfb23f4632c04d18c596658862fef8cf13ad2618f90a050b",
+      "olean_sha256": "5031f56cc07174c186dac38e4518d3f6df96a78ab3001135377ac2abba9e7618"
+    },
+    "StructuralGoal20261016.WindowFixedTablesAll": {
+      "source_sha256": "7511ac0f532150ad4f9fa4ae63b67c5a11fe3caf248ae84cdda1581dffd4c6f0",
+      "olean_sha256": "c7d490a018967cfcb493fd890953c75fd8e1cdc6ed169393c80649777a5cb58b"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter32": {
+      "source_sha256": "95030522aca35631accee1abb4eb988cd4cecc8a52b594da76db08675ecd21ae",
+      "olean_sha256": "52378eb5ed8c864f39ebd5df1fd5a3c622180ae69bec2c5d6fd75796f1e31b33"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter31": {
+      "source_sha256": "865b4c3c19bd7c2b7a38816ec0869f5d95100b6a3af68b55f9db078926b1cd31",
+      "olean_sha256": "9815e1cfd0e33f4559001b1ca03d92417db8bf0ee521902d8c2d4feff1dc8a4f"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter30": {
+      "source_sha256": "d10a14ad657ca4aa369e9f678a16daf3feca41c42a1052468efa2593d400b09c",
+      "olean_sha256": "3219efadb03308ab2ca15d223131a849aa78d5f38b5a76d0b2fa6829a0bf291e"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter29": {
+      "source_sha256": "afcad564f24c52598da828aa96bdd737a755e45fd665dcb41e9de5793c117011",
+      "olean_sha256": "c4a723843c2a0ff130ee23c76db56c85a0404ac4126596aa9aeac4f0b0f2a3ec"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter28": {
+      "source_sha256": "5cfc95b2d8846e48fe8a3ec1cd2097c7e667051f16f54ddb6995a9cb9320b7c1",
+      "olean_sha256": "0e6c1f3a9fc26b89ca0e1764bf25e33a37e642668cd3b64d42d99c8999dc8730"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter27": {
+      "source_sha256": "dc6861046a6f46bce4a597e8a831f31533b455a7f3bc10cd82eac621466c2f8d",
+      "olean_sha256": "0d6b66bb1099858f9b2e6e1d5d5c167ed7da66c6022bb73549f1805b3bf5e63a"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter26": {
+      "source_sha256": "0670fe80689c2adc99e13a55d6679a4a93403a678f50721063ac2e9b3037c6be",
+      "olean_sha256": "30443b7a6f5651c170f2c40767995e66c5a64291a9f8a126f49148e7375599d8"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter25": {
+      "source_sha256": "38516e1f82ee920b390f3cdeb1117ed78652ddd6fa9dff0a5e86900aa18b25f2",
+      "olean_sha256": "bad97bf8d09704019b335339d2365084c57f291c9507ceff0f80d9017a93170f"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter24": {
+      "source_sha256": "ce0cdbf36360fb9565e953f356ecafb774905b976d86b4fd21be8213e976efe9",
+      "olean_sha256": "9143aaa73d3f900342831a4f84d884de7bdcbf87b719db2568603fbeb410f15d"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter23": {
+      "source_sha256": "148bd9c3d032c93b895fa172ddb6995f38fa905d4b8030fd0027827200a87a75",
+      "olean_sha256": "ea4bdd3f5280ec5ae09f5bd2cc1e866b9ad9d443936766272ee0cf936824f7dd"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter22": {
+      "source_sha256": "8a48a42a8046629b88308ea19266f456d92b6ba9a261a869dd6adcea8d462f8d",
+      "olean_sha256": "e3fb1dc0ea181c6e19d18c010b3983d5975d2009d4136d2f4ba6690b6bbb52eb"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter21": {
+      "source_sha256": "3107de23b2d41873134b05fc0fcc4e3cc6953f87557b677978f5a31623dd367f",
+      "olean_sha256": "f5bd428f558b98a4f492c5a29ca1ed97b7f1fe9890698b2d8da97f8e187053f9"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter20": {
+      "source_sha256": "bc3145952e0022b4ec66324e5a7283c1e2da90d8b19f9991e66e64e3731e8d6f",
+      "olean_sha256": "0805f7fd3019a3cc0d11499a60d6657c587b84f77fa67fae33e6c1dda4025d16"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter19": {
+      "source_sha256": "3e5a298b803776dd30560af0261870fe88e46d62a6d7ef18ce0368e3d2934e63",
+      "olean_sha256": "e116055567104d4f2d0680d8fd53b66041c05741205300eadf59b104b4d84112"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter18": {
+      "source_sha256": "f74ae7c4367680ce58ee163df301088035361618920dedba04a6e9b4ec553328",
+      "olean_sha256": "81af418336174c6029dbf848bf2cf520036f094e0cc043c1e327e666ab9e1c2c"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter17": {
+      "source_sha256": "feb3ad4966f4f6eba4930dc04c2f981eef2c7b76ee73334ab32149a9e8bef0d3",
+      "olean_sha256": "de1d5b43c4014e3d2ed9c25b09b4ee41169c844e13698d7f641803d02276015d"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter16": {
+      "source_sha256": "b04a7420cf4e80b339504dc10d73225be9a2ccd683925f095693ebe396c76aed",
+      "olean_sha256": "710c4db4876aa1c9361fd8170905d9b3508e5c38a195bb42fbd70d34084931e5"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter15": {
+      "source_sha256": "c88ff5d7f6d6b99eb16487c7b2d6bbf6ce233ab7acb43228210d0bc0f1a7aa47",
+      "olean_sha256": "ff68f84e98ecf31ffd3b8c87a3dc0b9706d5eb4badacdba976449e80d9affc85"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter14": {
+      "source_sha256": "4ca6e1d417a31ab8d0826d54b328da7b2e552ff5eb3a2d8ab8d970669a8c1dde",
+      "olean_sha256": "b65e4b73732bc449ccc9e472b1e28e25c8d1e0b438477b7f4a10b394cff9658d"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter13": {
+      "source_sha256": "76f6419fb600f93000211f76bc8981b9814b4b76b6cabbb85f2066e5456bb3ed",
+      "olean_sha256": "1c0f2d5bcec38dbd566b29f5249a7933b90efee2538f5f4c89725a10d80cc7cf"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter12": {
+      "source_sha256": "fc19439715c875d9cf924b57b5853abd0565f04df34d245779cda41a8600b7ec",
+      "olean_sha256": "c89097f015151ca8787b332ed29ffd63e0017289e503c2f73c98fe058f7dd9df"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter11": {
+      "source_sha256": "e6c07aa604130d457f29ca380d72a68efe94dafe84c1ebe31e5914213d1a07b1",
+      "olean_sha256": "3ae5197763a53a3e6fbce4e5e4a1648a085ba27a6658f4fed7ecbda735b40abe"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter10": {
+      "source_sha256": "91875aada8bb87b16c4d5ac31ea95a2fc43885a780406a1e718302792708f265",
+      "olean_sha256": "3ce806076fc413b85e1382879b6dc1298be99089951ee97bad6fc91f949abc04"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter09": {
+      "source_sha256": "0334b355d6a178b4b422287c2a18624103a63db713d807e940a3a5f592bb2e36",
+      "olean_sha256": "2772a5c93dcf74fe4bcf565612e3dd3b276ac8774ee1ae3ec0253653f20c1496"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter08": {
+      "source_sha256": "0ad7ea15584a9fc1e7a3b19631950b6b04709bcfb6c25f5904f19063c7a816af",
+      "olean_sha256": "666b35fcac13f2faa4b2041329e0b04a9df3d8a7ef1580ef09d0275f37c65c1e"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter07": {
+      "source_sha256": "fe323bd0e19c53dc8b12e6007ddd9ae6335c420054f27133416fcebdc730555e",
+      "olean_sha256": "5fe3641f380ffacc24fb1232e878a02e3e945930eba4f9e7c3eaf94bc8e0fc9c"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter06": {
+      "source_sha256": "a16e0e99c45139a101703515da4d42719577996fc631fd4cc6c97c21858480de",
+      "olean_sha256": "a173300db50b618a976704c18c2028c9458f9de6ca5f8fdd098f1622f63a2cbf"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter05": {
+      "source_sha256": "26f883150f511fa0f66e7e9f2bcc1a266cd3a01ebbfb4c93ab5a78c7c6c64df5",
+      "olean_sha256": "a3420374efd4a45a12e78df430c17a85023fe00b86127388d96e49ce15686281"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter04": {
+      "source_sha256": "2e97e81bb42d0ffccc979c78e27360fd48391ad5e6ca6e5a86ba80905d8e71d7",
+      "olean_sha256": "108e816b71eed76bf1a64d70a99e712a16df9df360f25d2f904dd17105acb893"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter03": {
+      "source_sha256": "3c8e353768828fe8a40aa98e8cae0b2ff4ec95622d07a9dc4c03bbf6fda07fb9",
+      "olean_sha256": "7fa57588596b0ed7a1521b04f6732da04d3bec71d846e6e75299f14710a496a0"
+    },
+    "StructuralGoal20261016.WindowFixedKernelCenter02": {
+      "source_sha256": "0d24db91fd54c8aaca33262ac9caf0952c1ac34c71a125f9f7e8e500325004ec",
+      "olean_sha256": "9f3a9264250274497eb07f802850eec4a1085afdd3c53ad37a4c6b297f6d4519"
+    },
+    "StructuralGoal20261016.WindowBernsteinFastWeights": {
+      "source_sha256": "3c0478ee2e95828317bf50a1685d07f4243d8eb49323f6729a8136c5719de453",
+      "olean_sha256": "b59bf0f24c41ae43eebe523965b012fc006a97dd400b2f3a16424faa723482b4"
+    },
+    "StructuralGoal20261016.WindowBernsteinIntegerWeights": {
+      "source_sha256": "a4c52600fe67d048615a966ba9e6ef1eb0f6258c1b02927bbcde32270aaccee0",
+      "olean_sha256": "005b8b8832c8808ac6f19e44615b35e2418fe4cb7675e5efae529c0efe11c1b6"
+    },
+    "StructuralGoal20261016.WindowBernsteinLinear": {
+      "source_sha256": "d8d64f599fc8261baa7b83b680cc2036219926342cb8b5eb0ecce6902f9e8c0b",
+      "olean_sha256": "b8b65c825091a35273c9acb9e22de9690a65204cc5ffe5fa06e4f3db42718dc6"
+    },
+    "StructuralGoal20261016.WindowFixedConvexity": {
+      "source_sha256": "b6384df3c59a37767ed73b4e3fdb621d41b17208eb46376a4a60e9036b75e51e",
+      "olean_sha256": "9974db52a9f2dab010cd83b4fb65e2f16c854c5fb2e42cb0e8689cdf86b7b1f0"
+    },
+    "StructuralGoal20261016.WindowAnchorAll": {
+      "source_sha256": "c28f3f7b90bba33c6d3ef8459af8318bc1a113232fd5ffeaea170244964256d0",
+      "olean_sha256": "cbdb37e279f3951de9f6ef7a35f865740cc7785f6f76f742fd8d0cc1728071d9"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks24": {
+      "source_sha256": "9ddcad062043e13ece2043192c6e93a1713f89bf4e62e96f79773d4899714329",
+      "olean_sha256": "cedeb2273517356125ac15c4af80877976ec1fde710bc8d2df4656b4388f97e2"
+    },
+    "StructuralGoal20261016.WindowAnchorCertificateData": {
+      "source_sha256": "53e36d2803a1a507f45e9ee87c245a6c5ceca85a6e4476ca96373285f568c349",
+      "olean_sha256": "d0f31e856c93d8a8ea6d16d9329463bc3bb334099d105399516e01c40c452937"
+    },
+    "StructuralGoal20261016.WindowAnchorCertificate": {
+      "source_sha256": "92287565df6212c7af06edd17b1224361466222c1acc66a9ac6a39595a3886e4",
+      "olean_sha256": "912e2aa69e1e0a4eb7166065cf446fdf673146601583c994a776c8809100ba0b"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks23": {
+      "source_sha256": "5b6681ad269e3dc2dc8cbaa90bd05dffbfe80633e00d55ff90da9d6e761f89b8",
+      "olean_sha256": "49292070cf7450e1e263612d9a81f3edac7f2098dc4edc9895e8898709503346"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks22": {
+      "source_sha256": "af4ef49777925653844cd0f622a21adee9e7975a033c319bd3a91a6d629d906e",
+      "olean_sha256": "b9f1980821cc924029bf04daacbb13156743648760f13d7943defcc2b8bdc63f"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks21": {
+      "source_sha256": "f5111f44242c0c9e6ccb0762482ad50dafa967d865690b1a9569285366b82c8e",
+      "olean_sha256": "5d9b528d713c1c03e41b3edac13d7f68cdf920ec7703801be66b7e80180bb7e2"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks20": {
+      "source_sha256": "21a69f738292266e2ecf3f159513d26da59e3e66caa4f21116d0c2806575c6da",
+      "olean_sha256": "99088dfd59e8a38cdd0588e15f61f386b73a75c0f36514f097d79d4132ac4b30"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks19": {
+      "source_sha256": "72c7a0aab96f6c46e106dcd89a7a6a1bddfd49a62a8fa3d920c2e065ef711d1c",
+      "olean_sha256": "e9f1dea5a01b8e59391421047e34b1387812c23ae0a09fa4d4de0ffa16e6e929"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks18": {
+      "source_sha256": "b51aacadd759f8c63565ddabb4fc2624016761564f4be4ac9c00e3f1af00cd17",
+      "olean_sha256": "f13703c430db276436d99d376183e34550c62515000499c3377da58aef773813"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks17": {
+      "source_sha256": "c201a9e57440c9ac21db6cdc050572026fb72aaded8570f65a2c4b9f47054442",
+      "olean_sha256": "c3ad00f43ba2af48626dadb44dc6b1184374a0833394d6210870eccd5f5c9cd5"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks16": {
+      "source_sha256": "a9a743f56c8186adaa83f017e0eb871f0f670cb4534a7d5c6161d9d23d34c675",
+      "olean_sha256": "4f9654e867615817e75176b0ea33a42f494df577f75ed6013f15a93e1ae57806"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks15": {
+      "source_sha256": "ba3e917d60cdbe772a557b1e9880aec055b0ca60f0b095a51344cf9bc9ad6f2e",
+      "olean_sha256": "7530c35a4906cb11d1d4fbe4a85dcf653d9891ad20e66ce59855fa5a6eb19be8"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks14": {
+      "source_sha256": "a8819209f2898d986be78fb0eefe98d29dd35b4845e2552c802f1534bf5faad6",
+      "olean_sha256": "83fdddd801f5006c36c2fa7ae41c0e219230e235b066e8bd7b46bbebe3446ab4"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks13": {
+      "source_sha256": "a4b47fa216172060b9e72abe327eb2be3ea074aed15c0f0655378a75dee64772",
+      "olean_sha256": "c5200b6777984e2060ccac6ac43c8a49cd0a1f5b55a9e89904498e2d839b787a"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks12": {
+      "source_sha256": "1d2379c87bdf85e0c4288eea4c3d9255792f2083f4f60483c4be2c194f2b786d",
+      "olean_sha256": "f74a3b5538e8b3d79ae9376e20e760bad1f2c27150fff3a23fe363a846e6b4e9"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks11": {
+      "source_sha256": "3e574151cf1250215229875add79c1e92c148e678ec6f4628a64fb2504b28b83",
+      "olean_sha256": "dbe872594bed1006683562ddfb9af73ee5e1dc55bedcb3ff5f1eb8e0777ce08e"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks10": {
+      "source_sha256": "80af06422b23db2a76104e3da895f35a144820ea6c36e01848773a4c0ed6d2b9",
+      "olean_sha256": "465c6805870fc3309d127e46771ccc87d6d74b670d017c901a844d0071fc7668"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks09": {
+      "source_sha256": "0c6d25492bb4607427ee5b53d99b9b373d22a15c36a1dbb5c94f5220c5c901c7",
+      "olean_sha256": "bf98af6ded4a9698ff779fe9e2cdba68c9a55d938e84de50e318ecdd431598fe"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks08": {
+      "source_sha256": "b18bfdd7d4b880bcd644362ff2a05c9a63d65b8e5cd45565cd7d1aac7ddf2148",
+      "olean_sha256": "9d8b2a8cb4f1cff57a4f7cb87675ef30f4af371a47de78317dbd3f64ba488008"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks07": {
+      "source_sha256": "964719e68a09a977b94f87e9150503b5f171988a4dc355384853e17c05a2207f",
+      "olean_sha256": "8f25e2ebb7253915723e78ed5afddc2353e8da7f4da3015618e2ea3585662f8c"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks06": {
+      "source_sha256": "632e4d7136b351fb5023017c03488ddac2bfc62fcd4ed53714f1c025dc9cbf4f",
+      "olean_sha256": "00215d324c57d85ab6fc8b6fcf205dafd8c2edfd1a6be0d8777c4ed11fb1f2fb"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks05": {
+      "source_sha256": "556dde5d9d16e64b1784643293d89e9f5d4d1e02935525797fa7d352bab5ea8d",
+      "olean_sha256": "aafae66801e413e3c617f486ceecd4fe2a24df0ff8e2ac6e4e41497532babbab"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks04": {
+      "source_sha256": "59fbbe7f7ecd51eda88bc6125204c996c264f63eb722309e905a366b2f8b4cd1",
+      "olean_sha256": "69d41d57839256ab7a69baa02415fb0ed8b8173bf8a9e52f2241b28801611ae1"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks03": {
+      "source_sha256": "db6c0de4e8db18abc357b3a49c5e878b3f64d41de757e501ae458233dfc7a1f2",
+      "olean_sha256": "83bc36718d7f7cfc060d6c227a89c378601d5e5cf6d2eff27a1ae9c42b304a1d"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks02": {
+      "source_sha256": "b9c30e1b65ba95c2900ae65bb0569ab6682898ae16984e5f683579d9406f7d6a",
+      "olean_sha256": "8e8bf965a275c333b7c3754ab6b584c87c1936fda30400904fb24756a0233465"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks01": {
+      "source_sha256": "accd28cc77b43f7f406b992488e13ff2f65fee4327b739e53e74056e4a115da8",
+      "olean_sha256": "e35c0ee18cd893310af8733aef125ce029a42669dd06f927969a3576df8f8448"
+    },
+    "StructuralGoal20261016.WindowAnchorChecks00": {
+      "source_sha256": "250271d87d66db79e4e2fcf2b99db1801c5b911db6efd0b5652b0ce27abde790",
+      "olean_sha256": "e6cb3357756ea8ad19e882d74342ca8b854510684acb3c6ad183a3e3b0270cfd"
+    }
+  },
+  "elapsed_seconds": 1537.6114087104797,
+  "bound_input_sha256": {
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/window_independent_replay.py": "7650a26f4a8a5bf65e0632fa204b91898959d1059497b682099042328182395c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/window-independent-roots.json": "a783917413bc41f1445a70cb5b5f9bfc8dec81c283fec4c42d36e8a8f4121dd4",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/scripts/verify_single_solution.py": "c880e18a1754465e46c8c125cc18eae61faa9fb0f6e37562349c9d23175e0ea9",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/scripts/verify_record_20261015.py": "f6e57b4f0e6829a83199e384272b24e192a43a9c8860b114e2a5a66cc3500f40",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tmp/setup-20261015/runtime.json": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tmp/setup-20261015/sources.json": "afb55e306f672306e3c507476b1b0899a0f9c6b4880ff7228cef4af1ac4ca84a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tmp/setup-20261015/dependencies.json": "650a4ada83d1cc34fa681d2d3278b25e1ccbf929fde6fab9e08a625477ae0d7f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/lake-manifest.json": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tmp/setup-20261015/nanoda-build.json": "dd77c9251eb767785e2d2ae28a67320348aae7bb77aae6af9bc834b87c49dac1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tools/ComparatorCoreAudit.lean": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowIndependentRoots.lean": "493ce6f84e8f5298ec7d796f62c4f2e4cb81d64987f1cde7ea83045e1e8ef1fb",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowIndependentRoots.olean": "f1471dccf7644b688548d942763b473aa2293a5595982e0076426eddb7dc916e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowIndependentRoots_493ce6f84e8f.log": "6ab8f4a8d90e2ac69d9fff1072f3cd209721e56aedeaabc321a78d2640c959cb",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/FlowBasisPilot.lean": "e482fbd6cdbc5fea21ca034ee9f6a0f4dd9c51bd6451cf5ad8ad69a729a7043d",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/FlowBasisPilot.olean": "a6a32f991dba3c9885ea131f623da5405c28d505e15d8ed0855ae92a0b995c26",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_FlowBasisPilot_e482fbd6cdbc.log": "f0b4713fe888b1d64804eba26910f1d881d318d13e12e9197b5cff0c271dcefc",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/FlowBasisCodec.lean": "927f3f8fca7e049fcf20a176b0d8d9b46393f5455d0138b7e6da3c694ea7baad",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/FlowBasisCodec.olean": "f7d2834b48f69a1e87c315d9d52728275c20f5e977a818e2074772bb0ae7fb6a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_FlowBasisCodec_927f3f8fca7e.log": "3e1f8203a92f245d51a952ae13ba5e9ace5ec242f80ef2916a47f674527cb522",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/AffineFlowCertificate.lean": "94b8aa67e553fe5f026e40ee78669309fac09090223e01c03de02aeb93ffbfc1",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/AffineFlowCertificate.olean": "a4305a48161e35ac91a707832c0ebaa2dea5ddbd4f318d6cdb59176b4ede63d6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_AffineFlowCertificate_94b8aa67e553.log": "16e8b7832d3a7040e568aba53bdcea34c2434443e9c2c8d844b5a62e6d7e514e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/DifferenceCell.lean": "39e1638dc2768dc6ff0fc34409feb73eb25710c5b5cc234bdfc911e9a22820ad",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/DifferenceCell.olean": "03ae99c3015022994d80c2e1d0ababaec4da5be5c129cd26cdd8282b198c18da",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_DifferenceCell_39e1638dc276.log": "271d108841398e03b023b928cb7a63e8a596f15a7c7d73c26dd6989558d3d69d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowQuantizedSupport.lean": "232fc73fc419d7c177e0ab3e7124aaa63a56b9fa8ca876e8132e91596915a12a",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowQuantizedSupport.olean": "9492afb01b7d72845b71de29aad51116207a37b61dcaa78f97878b14a5780043",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowQuantizedSupport_232fc73fc419.log": "7fe4d6b90cf6627f38d9c5bd0997474bc4075f41ef8533f3559f74929349532f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowScalarMinorant.lean": "7cea224a250677b941d110c698e4b2dacdcee93829ee88a69cccf9e46b3228e1",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowScalarMinorant.olean": "c73eaaca8f2a4c7ad8507e7bad9ea07e85142aff6685f0f04182dd2c2ea15560",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowScalarMinorant_7cea224a2506.log": "3ac2cadb891baaf67a6e6974a9400d31ca96c62b721a7f25125b9945408b0524",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowConvexityCertificate.lean": "cc5bdfba83cdf45fd2f81ea9741899b9b263e55af54a43226f74c299979526e9",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowConvexityCertificate.olean": "31452796efcce1d5ea7cde6858ff002863ed3ed905944dc449b0280c6b1778ff",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowConvexityCertificate_cc5bdfba83cd.log": "edf5a58a92e7430f232e86c3e552163ea86b0d05260185391d1aee6e06b3a82d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowTaylorBridge.lean": "b3db359086705edb1b5552106248bdd2e5aac6dae6333b4e4cc72f48855bda24",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowTaylorBridge.olean": "44f4deb70a178bb6fb4f7ae5db6e24d8faef485671fffd1afa51658040ffb9e1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowTaylorBridge_b3db35908670.log": "a0dd5a684937337d7249e5fd2d24f608837142e25b0d99042380f6e4746c533f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowDerivative.lean": "c5c2cb3032d24f6a3e0523bfe8af96b470d3ee42a95a726087f20109633c15b2",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowDerivative.olean": "62297b6bfc33872ed9e4c0db81c2a900b07e72ea55901ac27e5bcc37dce2f3fb",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowDerivative_c5c2cb3032d2.log": "b201a7119fbd4bad43d1fcdd4314f448ea8220e66ca1b51012b21990d1d8af48",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowKernel.lean": "4c01794657e775391ba57642e7d753be961ac4e89e87c3f29109be8f5f05547e",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowKernel.olean": "9049d1b68c08eef4ed2505f21ab64a122f2110a4925d0e12a5b59bd3031c9108",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowKernel_4c01794657e7.log": "48fc69258db5eec38fd3fab1af522f571092e19ac5effb7d7f833ecf8c67d8ab",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowEnergy.lean": "ffb24882e2f7e588a5787c00dd4ba0a6139d7d99c788701890d3febb74b428d8",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowEnergy.olean": "b83afe0fec479088d67979c05db55c96878a02a359c3368c9414d0aaa41bfe9d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowEnergy_ffb24882e2f7.log": "514e1c0d2f815d9574db6596edf4c3483560859b592303860faf55d9b6d18ec7",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Followup20261016/NewWindows.lean": "d9ea408b5ae22c079a3090bb8dea36b1d7e8b7dab7778506f59daffa9c388a70",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Followup20261016/NewWindows.olean": "3ad168ad14779f455c3975454fca201d78f1a2dea5ef53059d2c8a392faefa78",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Followup20261016/WindowMajorantGeneral.lean": "95a35950b6b5de2a9fa395452c0e30eeaa3e0c6a3b41b5391855459bf51a7b84",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Followup20261016/WindowMajorantGeneral.olean": "1a5d49e5c269d31e4b1a51a40a4e44262508131a1616c008dbc8c880463354ed",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Followup20261016/WindowProfileGeneral.lean": "50b5818f60a96075bfe78f81fc8af96a4d484600cccc2e9ec9d4e9f8191de8c9",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Followup20261016/WindowProfileGeneral.olean": "e9011795f46f913f19700030c79ce6b8d2ff3a17b9ba23f241e79116665a6f15",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/GramDefect20261015/Core.lean": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/lib/GramDefect20261015/Core.olean": "fdfc53ee9707c3a876ef24bb8c36d218cbc01784ee14bf24f42c2ecb90865d56",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowSecondVariation.lean": "1156fe965a5747e167937d1f6bc14a347b6c90355b07436b184032eb18957d88",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowSecondVariation.olean": "bb6838688de29ead134caafd38824c805e0034b9b164c9d438cda128cd5755cf",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowSecondVariation_1156fe965a57.log": "b646064bc71d094a8c5092d379c2b2a3b4d673446852e45d758d64c0b1facb60",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowKKTInstance.lean": "25f6722fe1e937db7c774b01a52fd1a1594226d21898891fc10885c9c1633fa2",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowKKTInstance.olean": "065969c4d75dfc0649fe115b2a4b18717ff5e6d2cfad4732ccf44af30ac4344f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowKKTInstance_25f6722fe1e9.log": "445d0e05c430a5533d61f6b5de5ccf30b578d18b3ced4dee0459637aa1792a62",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/CoverKKTContraction.lean": "77432f404d98267047907a05f093b14c474d22755fbe8053a44a1a294a0fff6b",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/CoverKKTContraction.olean": "b3def1acc2c0823835790551e0e720f792b2755e77a0ad4d54c5b9dc8a7fc845",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_CoverKKTContraction_77432f404d98.log": "3549ff9b25880ff3cd2bff68f2bda0abe1a9c907366b3aa2b2bff9f9cda90cd7",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/CoverCoerciveKKT.lean": "6ba6b27c6d783438beab2303e7d29eab96fd0d6265040b7184b8cd9c21f025e3",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/CoverCoerciveKKT.olean": "1a08c3ce96692cda4a5d418e1b185359cadbb50d030cbc79491d4e95716b801f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_CoverCoerciveKKT_6ba6b27c6d78.log": "e28a4f8ad5829920ac41c88e1e5b0788d1092c049475bfc5eed1cf475a8dc0d3",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowMinimizerCover.lean": "ffbeccae4857ff0fb57f3b58c0bfa8f0a78f5d213d37782f0e948da1da455292",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowMinimizerCover.olean": "60d7a994d58a5bfb9f2d1445aed9a09476e5e5abd656aaa1a5d70032ac01f020",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowMinimizerCover_ffbeccae4857.log": "72f94392dba296a09c05a16e7c0d1a5a6e4dd976c07547c75260655127245d7a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/MinimizerCover.lean": "7d3bbe16ecb0ea002554f29f261db259f7ce32d24482357fb903bc6e22ab6de1",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/MinimizerCover.olean": "5881e7d9082b730774c339440597bec8e61c39739a2d0b6b690714567e727891",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_MinimizerCover_7d3bbe16ecb0.log": "f22b5d76134992158a7677d7ba0774862f11a2e52fc2806f19a5cdc3aa5194f8",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowGapEnergy.lean": "3f570bc83263355a239c086922e9bc138319fd2abd77668b594b5f94a5fd6564",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowGapEnergy.olean": "4cd90ffb78842f4b4db9e1acb9c73d91d7d9896f8e00147ffa034fb38b962aee",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowGapEnergy_3f570bc83263.log": "2328d1343e9dec0abcded6d851a4e3c3ac1193045aa10433f19dbc6fe238d0a9",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Followup20261016/NewLedger.lean": "9db3e7633a3117f4fded88998da4ab3ebc4e24631ac50816f23931bdb8225d1a",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Followup20261016/NewLedger.olean": "24cec859cd26f69db56472847dcc49ba515b64a97dd858b2edd929986381421c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowPressureRoot.lean": "6ee2ad48f9f34e0da75ece45cb7e11ddad5aadd23602602a2feb80345c934891",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowPressureRoot.olean": "5265530b739766a4aa827594991cc097c148237df084bff2fd14088f8319241d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowPressureRoot_6ee2ad48f9f3.log": "885eab752d3fa7ca0b994a6399e024810a2d2460813a0128a844b782b81051e5",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowRecordDyadic.lean": "3a2bf541e019af56e3c94101f26dfe4c386879b85273c937fc9dc105d889162d",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowRecordDyadic.olean": "71185db309d0a23111402a07fd45438d331b16fc7c7a9f50b7c15608c886908c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowRecordDyadic_3a2bf541e019.log": "6e024d7e5bb2c78747e4f9733f9ca12dc9dbb163462b4d23d87cbe3daef3f031",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowRecordFromFloor.lean": "76660f180603444e25e9f07da514d502ecf11ef749e4f62417568c8b370807ef",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowRecordFromFloor.olean": "69f4a90ab5fbe63f01ea974a6cca47a1cc0d0307806b09bb50d4f54176f52e0c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowRecordFromFloor_76660f180603.log": "6e27dea95533d2a5ea8a905771f020a650488ee24e711f2158a4e052d99cafde",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowEnergyBound.lean": "29bb4a9ab7c8cbdd0c067993241d093999fdc63a983102968a74c23850dd8e14",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowEnergyBound.olean": "c00bb4977580851bc1221ea28ddb3973ea3f1b715eb0f91434d5f03086329a92",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowEnergyBound_29bb4a9ab7c8.log": "88615597594b1c1873d2f68bdc58df80d7845a01a062d765de566806e76a50e0",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowPairCertificate.lean": "305dc7433f27d4d5f2f4df5d3d8e295545966070fa01f4a3804de805e2d4bb54",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowPairCertificate.olean": "26eb63502bb09106387939e8c466e732362a0934b58282230d83fbca013535e5",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowPairCertificate_305dc7433f27.log": "b6562e69929e80f54896711a5011937713f5c83b5a3fb973ec8802143395ef92",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowClosePair.lean": "3f2a475936a469f926882c5b321add38ed4ed4f6ffa4fdc6345d9d887afaa650",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowClosePair.olean": "6d7cb0466c0c9ee9f005bd804c5524deef631df09e5e0ef5100787be1cded235",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowClosePair_3f2a475936a4.log": "77d83cde5de4de1edf90bfa2e2222e19c64836d63091f946e2e6a81a4db27165",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedPoint.lean": "901d7b87e6aba6da6e9f61858701719aef5c7da7fdcc3a5f83a97a6645418d60",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedPoint.olean": "d3ad1e98a3d5c56687ae0a727ccf81258a1a060ae3b607f034e53cc10ad34bdd",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedPoint_901d7b87e6ab.log": "dbbd3ae4d9fcb0577673cad963463ce1c3889292508f3f59cad4a771792b78a9",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableData.lean": "f6afdae121fb933db7b468b861de75e2e38afe2068323837b7a18095306c2ec8",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableData.olean": "33b78a781bed78a8462c9da98f007116c35b68f643d61f92d2b9b986097ebff9",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableData_f6afdae121fb.log": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableConsumer.lean": "db87baf4ab54eb51fe592d26345c328fd6f25db32b40702a25f98fb38372707f",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableConsumer.olean": "eb9da637ff2d8eb2e6832cd6ea2a24ef8c81fcbf9efb8cc067f79415c87cfb15",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableConsumer_db87baf4ab54.log": "8d74d79726cd812c3167473675594173e8b3f907f8328c049f45d658bd355972",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowIntegerKernelRecipe.lean": "d8449325165296ea6c2db318c87f8aaf9fc7e14b4f241efa42e1acc2dce6e112",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowIntegerKernelRecipe.olean": "f4b9723c305b973901377fc8ec390a8d77ef43d94dbe2a115f970e320eb3c3d2",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowIntegerKernelRecipe_d84493251652.log": "a26429e1714d51b1ad48f4337c887dd4799b76c2b9543f2d5c98eb089766552b",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowIntegerJetRecipe.lean": "80306036c62fe9b5f2d06e8c1ddeafd2e0df6c97ae89f5dd3c23edce6ccfea56",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowIntegerJetRecipe.olean": "f667eb1663abe2369cadeaa45120c7b0415b12645b500f6df2c3818ce9ee8758",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowIntegerJetRecipe_80306036c62f.log": "5f2a1483d2bf1b963d0496dcbe0698d8c96b0313acc847b53985e11ddfd14667",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowBasicEnclosures.lean": "e4988ebf261e40ee20b1b836fd5cf2572e41570ca33d9b4f6a242c767861f31b",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowBasicEnclosures.olean": "f38514670b47ffb21ea9a7d2ae7317f6c6b65ef340a684688507b7e37e8b88e6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowBasicEnclosures_e4988ebf261e.log": "e4e5e150e2a94873b860e80c26f0297b68034923c3dcc3b9c7ae9f6dc86517e7",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowNormalizedJets.lean": "8b47725eb97a47e0a86294a771cfb06a9fc299e4a0a7e7edf4410885cb01b6cc",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowNormalizedJets.olean": "d1a6a76f282b9c67709b4f506c6fc16d510d081d8829d00e7a72862d4182ab8a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowNormalizedJets_8b47725eb97a.log": "34820dd96c98170c11e16e99728f3469adeb0edb47a93d52a595bcc9885ab444",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowSincJet.lean": "3fd7aaa1b09db4339e305612462423ef39e1aa8cfd30becb97716e1c5ce638a2",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowSincJet.olean": "efd7ccb39b1b67f5cffee172ba9c15bb0f2a03cf55b8051e7435128893f1c104",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowSincJet_3fd7aaa1b09d.log": "744257bfb221c7fb191e366d95fbd0eec8a1908649fc6a0e511a933781c333f1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowRationalInterval.lean": "d0eae7ba9caed1d44c9d8e2b3884cca64edc79d0925897190c15f5591f890c88",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowRationalInterval.olean": "3e08c7213d9df20b2a4730a321ef1d73698e434993a440bd268959e40c71a048",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowRationalInterval_d0eae7ba9cae.log": "45c765ccb4cf4c11a15a17c4609a8496511486ed29cabcd47b933ce1327dccb1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedPolynomial.lean": "ed57641b5bd8df365331eb9a141e8fa2ffa91fd3c65ec8c67a619a67b1e04df9",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedPolynomial.olean": "15b8e734cfc9ede7f05732f67f80676e438a4135c6466e71cd977675c89133f8",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedPolynomial_ed57641b5bd8.log": "fea2cecc22d578eb000f44f029d1b607a05d50dabc93dd812233d6c61e7fc19d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowPointTableArithmetic.lean": "c05d5f34dafc329e0ad997341e48ad76ddd5b8471fed5d3875cd39785db2c8b7",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowPointTableArithmetic.olean": "bf5d4351a73218828d8d6d1de6f535debcffa17640962089a548b4e1be9b6f73",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowPointTableArithmetic_c05d5f34dafc.log": "67115da1623ba6e58077f954bb8fbb15b4d3b772e7bb5a3063b81d2cc458ad54",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowConvexityArithmetic.lean": "9f838bcb46fdf45b5c648f95f9e91beeafb85e4959b53a2519a18c0af1514cf9",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowConvexityArithmetic.olean": "e8ab2d110ddd0252cf6856555f5a9d782ac58180492bec0ce4ff0cf6ecc92e63",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowConvexityArithmetic_9f838bcb46fd.log": "24ff420e3aa4f1cc6204a39db843459f61c5c059244fc177a5881485b95e3a0b",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowBernsteinTransform.lean": "c9f020a9beab8bdb00e79deb3520cea8a53ab5b993fe12ed4c8c4f19b8fc71c4",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowBernsteinTransform.olean": "90ff249421dd466f534120c07925ebdcf9943ffcc4bcb1c9e9bc4b203d93833e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowBernsteinTransform_c9f020a9beab.log": "b7fb90a54bc421e9a4c94aaee8cf2b64622020489ee5167bf97825aa56435d77",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedRational.lean": "b536c095fbf38559b6d85ad3ed68399a5c09c0faef9e18439b13863847a4ae59",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedRational.olean": "5d66bbbb75d2179256df038967ebf61a4f699e76676ea92e59a58877022645b6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedRational_b536c095fbf3.log": "a9475e5fdf6970cb7903838287bba88f51787ab97253e0d3a3d07a006799e0d8",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedInterval.lean": "daa3759d76278c07cc862b4325d88f0542ce7acba7e245ca629c8e26f768e742",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedInterval.olean": "c5531856b2e106ce16cc48c5322804f0b4cf3ae92d7346ee822f352ce2b33b15",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedInterval_daa3759d7627.log": "ed54332dc2c6bfdabbb3cfb6f2d6967131c0eb4bed2dd481db2713eb5f6a2dd6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter01.lean": "0e1af22cfcb96ebed36dbae0c30d4f31a7f942d273fe3a35fc87b8c1ce8ca40c",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter01.olean": "c1cb55cda2e32ebf0f10581ec70b715874093b7465351e5baa1a14b8722249b6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter01_0e1af22cfcb9.log": "a150ead437602c65be1e6d31430536e812d6ae8f73b84a39e4443ebf320ee086",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelPilot.lean": "1f0f1b79e58f49031b5cb8b7d8d8967e8a4937ed376217edb1ec01b724952b6e",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelPilot.olean": "1236f74ee35368aa07bd2de19e84cf21bdc8df9a1e1196a894ceb52762ca1acc",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelPilot_1f0f1b79e58f.log": "005da4de57ee72db6eeb4ba1a011995b22d7a4dadcf6bf8ccb92b7ea0f9ede24",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernel.lean": "604c8eec05a2823f165f2455343afac3f43b415a9aee6e9b5b55a4f5a40fe381",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernel.olean": "bf3f57cee83934a9fbfb4dea6ed49129c177d789e0fad79dabd6dd563071980c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernel_604c8eec05a2.log": "00462a99d9f3812879c41b16dc6e839d5376fc3a87ff2288b93477cc41ccff27",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTablesAll.lean": "e83fc7283a7bffbc53ad2e2e3f64234bf56862a45651cf8161e860b37244fec8",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTablesAll.olean": "94ca8ae8daa0919396cb9c54a36a9209e394e5ef1c800c9d326181c337654ba3",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTablesAll_e83fc7283a7b.log": "a093454a5b9fb10a09fa623987f413a96eb33cfb2cd26edfad6f39e74aa929be",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos10.lean": "273a2ec8ccd0f702ce471fbcfc64bcfa485b189e53a68109e17185cbc953591d",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos10.olean": "0ce3a86345b41d97e751a8aaae49c1fee3e5649875e1d9ea2bbacdcfc3f310a6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos10_273a2ec8ccd0.log": "d9ff1c7df1cc70262e335ead7901546ca66fd6cb4c60d83703e64a78fb96850a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTablePilot.lean": "3b22e3daecefee90b0c5bd937df6ff729146d0b9a2e901f3546a515a0ea68223",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTablePilot.olean": "fdcf019b5b3f18c2fcbd09aad28d90730fd6d3e48a3e6c65b21429f1ff1431f3",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTablePilot_3b22e3daecef.log": "fe3223500c9acbe0d8861f650631224918b69c4273ecdd9a4a9b89ec50aee875",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos09.lean": "cb2c0a5c6d3a612830542357c3cdd56ab3eb286c546038ce6568029fca870583",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos09.olean": "84e3eb927fbc5d56e6764436dfcc113a9bbc1ed0b15eb9c089e01b185908c3b0",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos09_cb2c0a5c6d3a.log": "1685578c939b104adcea3ae35fe23659a74429f0289a29c1ed4883ba0cc16b13",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos08.lean": "74ad3171d775becdcbdb4c898b751a110f342198552576622fa0be7349cd84bb",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos08.olean": "4b93ada5cd8d16ccc0b02def207b002e6004cde584f76bb443d576046f411546",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos08_74ad3171d775.log": "f6847e8a3f1865455c89d55a772f70ed20f96e6c0eb520209eb488122f4866ab",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos07.lean": "fcdf325bf53a80e61f25e6171383458a4e9fbfb8fe0ca0582922f0ea70034bdd",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos07.olean": "16303db4618b154d1771efc95acc6fe8a4ff50b68d7b5176bd27b4f5e9ae20d4",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos07_fcdf325bf53a.log": "8f8dafbce92c0902de63e12e0e08de204c10f6a011fa10ef10d14c58fc4904d6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos06.lean": "b4a8fc916eb284ffe886f52b8c96f71778ef8671af0c88fb47a1a215e10d807b",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos06.olean": "10d1d1e69ea47c4583f1fad141d415e39ff95bfd6712f5ea221a0e7f6681066c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos06_b4a8fc916eb2.log": "c7fd14153b4edec04bfd59af0aa86363c679742f517588f260b7cb49d2ae56cb",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos05.lean": "9b631b452d9c98428d09bd9be3d53087460e759aa68a182d92e1dda5c664c619",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos05.olean": "67e17fcea4f1eea7ab21fec1f259cc5e0b8f0110c8a9438ebe400faa61a14fb1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos05_9b631b452d9c.log": "25e81194c75fa15ae0832add1d810ab5ed983e9b5cc97b79d02ed5b7e2fd4337",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos04.lean": "2c72dac38b37365974fa1c9bd6b615141ad9c2e7d6162e69284f083beb92ced1",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos04.olean": "59380ea9f5e02d70f2493fed1273c03be4361ecbfacad9d327983d34d6a308f3",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos04_2c72dac38b37.log": "9486ce72f35d0402a64c6db572e3b2ec87d544841196d160c8d05382d04fb486",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos03.lean": "efdd01bc70ee6e9db639fbdc999cd7f996c5d730a8375a14a3770a694e0e5b71",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos03.olean": "d19aed4e5859f2891126e6fbdb94fcfe980dbfc7637f00a74516c4a9843a18e6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos03_efdd01bc70ee.log": "d8aca3d289eee35e9709760c70b50e758056a2c2cda5027a77db5ec142b34dcc",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos02.lean": "91a8b1634263c27f0a3ee8fc1e78e55d8852cb8f6e7c2215ee302791828afafb",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos02.olean": "1afb5171fa4227897d2937ffd9a91cd9c38030377b129e8d2855ac258f7ee627",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos02_91a8b1634263.log": "a5090daf23523181eb6af105cba7dc1ee26345f73286cd876bee80920f7f7e8b",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos01.lean": "0939f96d2a9ec7b4254c6f2d10c3939251fef834a3782a2185f76a63029779ea",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos01.olean": "12d205194420efccb100113194500e3645ef4d4950904023a1546fa7ccf43208",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos01_0939f96d2a9e.log": "77510aac2b5f4c91a2d4529cbbaa33a749e58cc7f7fee143f1b73d4a8cf67260",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableCos00.lean": "9997e5777e88cdbe91eea070f8228cb02d5779e8b7fabd4dfcc41e25fcf19f2b",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableCos00.olean": "746e5743b28ecd30c99d99baeb9cb4cb4522f53bf52a9d167569bfb20468f131",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableCos00_9997e5777e88.log": "66045c86660d9b6b70c34381e353a8be3b2b032a648ff25986f7995b5df77408",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableBase07.lean": "293ea12d517ad6806ac34011aaa99403c96f696ace7bf6c68c344060b116bc98",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableBase07.olean": "0780e17ee8253a06e6a2cf92fe4e2afa965b2ca055ab0d10d8301a3db78a3e85",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableBase07_293ea12d517a.log": "2022915d98ec51e605058d6188fa008d46a3c5ef872b053ddb436a1c5406b37b",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableBase06.lean": "9876aa348bea63f16d5981b400a2105fc839a75d791b389f60a6249fcd6e2270",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableBase06.olean": "2404c60a309161344135e7c027177940bef0279b8890f19dcee06ab59e3b67ff",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableBase06_9876aa348bea.log": "b6282545c7e738f985456615f63dabfa79d90c5efadaad5718d32e04d35b55b4",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableBase05.lean": "c381bf818dc436b0e190feb45e175cd395702c674c6c384da361212f0837c3d3",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableBase05.olean": "b796647fc1d3aa68a7a6825f94eda58aecc5e229c0ea64fc14fbe59618966d0f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableBase05_c381bf818dc4.log": "6bdb8ac5928fb19809d1f0034551ffafe4e185a2ac0505b7044f9d613ebdfffe",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableBase04.lean": "f4f4e2464c44444cc10ae331308ad3231bb5a02d2baafa86dbc596b2384f52b1",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableBase04.olean": "673910430f3b4baa19e89d85ed4f4e99a996d2be52cfd2490250673347b4c438",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableBase04_f4f4e2464c44.log": "efb9400b7d0421803bde849f9f78edc560b3e28adc1127d0d96df0cb0b7998a5",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableBase03.lean": "84418e69e7eb5813895478f3fee98a2ea6ad27c8d2f89279f3eaa700c70b5902",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableBase03.olean": "21467a17ffcae276a57db2fe77bd6917b30b01176e4f3fb6eb6626428abc575b",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableBase03_84418e69e7eb.log": "a29d4bde20b2fb2d895c52e30f134ab70bdcff31a8fa18a3bc1ed518e8d30265",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableBase02.lean": "91f27f9d6755525070f0220ab83609219bfe73ad85f4502e34d18848e1060912",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableBase02.olean": "e64b61ce6d068e5fda4b40c27ab1c5b48eae7397ca87ae8e4facb6bd2172e1f4",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableBase02_91f27f9d6755.log": "659e59d761cdb62b0cfd3a7ba525d4c23ecddd9692d0bd0210be41faa6388d22",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableBase01.lean": "acb5ee6b064474da551817c96c9b2dceff92e99747ec79fec637cd2fcfa9e897",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableBase01.olean": "075fd42e444aa90d11ae87a7e2e89f7627746e893583225e56ade7eabe613695",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableBase01_acb5ee6b0644.log": "7a25fcdf39645ecc449dfaa0806dca70bfc9aeaed5e097b4d243143c9b5f4d61",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowJetTableBase00.lean": "ad18c9bb9a768398b8144db3dcb09b74e741df9fcdc7e0d3355d149a7bcceb61",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowJetTableBase00.olean": "d7a46e36fa168ae06c6e971dda5260ab8d66eab5fe2ceb60d9db3717d5bf60a7",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowJetTableBase00_ad18c9bb9a76.log": "03278ae119e61910475de40cee9e07bf0cb7ec3be411a32a7a714a2b3f30add1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowCounting.lean": "e93af3777cff158bd0d889fc569811230ac6248f4a5bf49792e183f11558c42f",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowCounting.olean": "32ad748592e9d7affff9a6cc9c69b9defb463b9fe023ddc5211653d805b08df5",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowCounting_e93af3777cff.log": "5f57300f73a3a3387f464f2f12c4f98477b202efcd66e000b89ed6ce1edabdab",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowCountingGeometry.lean": "f3f144e20f504b1c9d6cac14909e55589ed193a202292424f1e2f14e7f619818",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowCountingGeometry.olean": "d5102ec34a1cb81c0c88992c397d1130033b3753d135517a615324e00521ad8c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowCountingGeometry_f3f144e20f50.log": "3b8fce38817cc70cb2a8a251006bf2e5a06f8156b501922b220413b8a3fba048",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowCountingBase.lean": "9f9e552e84630ae280e4e4a84ad3390d617318918798faf2786e66bc880bbe2b",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowCountingBase.olean": "ec35ccde163e56beba10d1ac574c994fab26ae7bd409e4de84ca623daf8ed775",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowCountingBase_9f9e552e8463.log": "ee7a9a1dd2c7b7a90a65a4f010d513c1c266fb620fd8a4b77980607cbafe89ff",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAsymptotic.lean": "f06ef7f38aab6c795025ad255e77babcddd9b7dda1156486c08a7b4fd883a9c9",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAsymptotic.olean": "53b5265e6e8e780b5897af5bd4d9022e06830598d68c36433c6b485f82af8e0a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAsymptotic_f06ef7f38aab.log": "6e92450e13ebb4e0912bc37e430eb5ef2b4f39dd1ba8d6925f00151cc94485fc",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowRealization.lean": "34c14e68afa798a76513d1d85a9be6c6af0665c9cec28540f00902ceeabba8c5",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowRealization.olean": "60e30ad4df343ac705c2d54ad04bb5c970601a4be2edc01986142f6e11df7e6a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowRealization_34c14e68afa7.log": "4bb6044b81c41af6320fe08804b3e5b48d43d61ef47447200f31581929096cb0",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowProfile.lean": "81bde0ab94551f86be63b7a21d447ffc5c4b30603317c5df4bb74cb8865ae050",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowProfile.olean": "e487c916dd936acf85514e841378e893b79b3efa28bf40c6cd46b863180bc10f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowProfile_81bde0ab9455.log": "f7cee00f6679caf6c3e50dcd2ce9c9716db57eced41e501f81d9bb60aa50b96c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowCountingDefect.lean": "6a5951e13f196e6c68f92d7e451d99db63008bc5a7c32a49fdca4fba68e109e1",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowCountingDefect.olean": "d469ea3898457baf5ba21bbc3edfccca6f84d9d729424098d9a60bf87ab154d4",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowCountingDefect_6a5951e13f19.log": "bd37630ad85398905a19c3493939d4de7f8f8b36fc614d51e2d3a5e026e997a2",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowSeparated.lean": "5a7d4c6420c70c2f16468a2615d1d9906b664567ee5528c1e0dd12519adf1fb4",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowSeparated.olean": "5afa69d881bf39fdf6e0d7b818b89a9e0329a152ca66083e0827fccc393ed6e5",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowSeparated_5a7d4c6420c7.log": "b76c5b3bc5866c6bed3407a61edb39a7f2934822c9cf9888e54745a2b236792e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowUniformKernel.lean": "11afe5f95efdd6628775cd1da7b103aac19d694eedfc6131b871c65b9d3403b7",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowUniformKernel.olean": "4c8e8ebfd416a6a3a9299beeb563819bfe34fe5ae31bf6f7c8d9ba1aa09ebe45",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowUniformKernel_11afe5f95efd.log": "9c84ee1f954c440d08ed61429f72391e29cce365296a76733da29cea033b5ea7",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowMatching.lean": "9bea1dffb2854e1b7a96d4f0f34ee5d31ce70f70946ad74971cee78ba9aaa1bd",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowMatching.olean": "32a48cdb91244caa23e162855c65333614b81bef39693e24b7006c065ea7b04f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowMatching_9bea1dffb285.log": "9272c488619737fddc32dcca7f85241b49ea021a676869a168e220ee3be3e62a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowDiscreteEnergy.lean": "487eb81b913bbae024a36e4d4b2bfd86501d66e265463fb44fe0b2d50ec7117c",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowDiscreteEnergy.olean": "2a97a10ebb5ccf6c48a58399f4a4ae9667bb525cc6ed4320162122a1347d6ac1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowDiscreteEnergy_487eb81b913b.log": "324e3fa2063d386ff5cd3951914c55946072a97432b7c4cdb9504acff3523221",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralResearch20261016/Coboundary.lean": "730fdccd5d8faba2765f5b1d77b5e7ff897328b92ac6bcb4f3d1fe876702041a",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralResearch20261016/Coboundary.olean": "5457de00afe8bf9099fa882586a6cb031d7b5b4c2635026b3013deaa9c23e1bd",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowLinearConvexityPilot.lean": "8fbe1476febb1ed3dfb23f4632c04d18c596658862fef8cf13ad2618f90a050b",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowLinearConvexityPilot.olean": "5031f56cc07174c186dac38e4518d3f6df96a78ab3001135377ac2abba9e7618",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowLinearConvexityPilot_8fbe1476febb.log": "516bcdbf6e206812e0edb818f2d25c8940dd6c1165271c0eda4828b893142d4e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedTablesAll.lean": "7511ac0f532150ad4f9fa4ae63b67c5a11fe3caf248ae84cdda1581dffd4c6f0",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedTablesAll.olean": "c7d490a018967cfcb493fd890953c75fd8e1cdc6ed169393c80649777a5cb58b",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedTablesAll_7511ac0f5321.log": "6246cc88f235de60e78ccd1a4b5050f20955aeb0be9bb8348de9a4db90b492e2",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter32.lean": "95030522aca35631accee1abb4eb988cd4cecc8a52b594da76db08675ecd21ae",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter32.olean": "52378eb5ed8c864f39ebd5df1fd5a3c622180ae69bec2c5d6fd75796f1e31b33",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter32_95030522aca3.log": "ff47602e52636d4c9742c5ac6743345573da654a9615b454f96690397c34754a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter31.lean": "865b4c3c19bd7c2b7a38816ec0869f5d95100b6a3af68b55f9db078926b1cd31",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter31.olean": "9815e1cfd0e33f4559001b1ca03d92417db8bf0ee521902d8c2d4feff1dc8a4f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter31_865b4c3c19bd.log": "6b6ec77ac2cbebf794fcef2f1588d20a75eed071164b578f64c1736eb5f42a2f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter30.lean": "d10a14ad657ca4aa369e9f678a16daf3feca41c42a1052468efa2593d400b09c",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter30.olean": "3219efadb03308ab2ca15d223131a849aa78d5f38b5a76d0b2fa6829a0bf291e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter30_d10a14ad657c.log": "1c4265f803b0ae31faeaf172b10a4bb3d971b2c584209a02c72de4913e381347",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter29.lean": "afcad564f24c52598da828aa96bdd737a755e45fd665dcb41e9de5793c117011",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter29.olean": "c4a723843c2a0ff130ee23c76db56c85a0404ac4126596aa9aeac4f0b0f2a3ec",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter29_afcad564f24c.log": "6158bb87cafacf6cb2d639f13b1884413f9ec6fd5f2b3092fdecfbc802e7216f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter28.lean": "5cfc95b2d8846e48fe8a3ec1cd2097c7e667051f16f54ddb6995a9cb9320b7c1",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter28.olean": "0e6c1f3a9fc26b89ca0e1764bf25e33a37e642668cd3b64d42d99c8999dc8730",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter28_5cfc95b2d884.log": "e9f9d33bf31c7d52f7416a6d51dc6b3f47303617bb48f0c2f0ab7c9ffd00abfe",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter27.lean": "dc6861046a6f46bce4a597e8a831f31533b455a7f3bc10cd82eac621466c2f8d",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter27.olean": "0d6b66bb1099858f9b2e6e1d5d5c167ed7da66c6022bb73549f1805b3bf5e63a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter27_dc6861046a6f.log": "c431248a4a303f5608382790e2413c1cfaee30f420956865f9fb808caa5866f1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter26.lean": "0670fe80689c2adc99e13a55d6679a4a93403a678f50721063ac2e9b3037c6be",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter26.olean": "30443b7a6f5651c170f2c40767995e66c5a64291a9f8a126f49148e7375599d8",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter26_0670fe80689c.log": "6e47e6c5394bc3c5252b98b291c88c684175b0190172bb909de9c15b8af7321f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter25.lean": "38516e1f82ee920b390f3cdeb1117ed78652ddd6fa9dff0a5e86900aa18b25f2",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter25.olean": "bad97bf8d09704019b335339d2365084c57f291c9507ceff0f80d9017a93170f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter25_38516e1f82ee.log": "37ad7873f431ab614a3a4caa20f4fe4e44e9afcdb21b560f41cb00b81c7929f4",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter24.lean": "ce0cdbf36360fb9565e953f356ecafb774905b976d86b4fd21be8213e976efe9",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter24.olean": "9143aaa73d3f900342831a4f84d884de7bdcbf87b719db2568603fbeb410f15d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter24_ce0cdbf36360.log": "c17d61ba77d6e68b6335e9e6e4e4967c98723d36cf248c752279863b64bfb561",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter23.lean": "148bd9c3d032c93b895fa172ddb6995f38fa905d4b8030fd0027827200a87a75",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter23.olean": "ea4bdd3f5280ec5ae09f5bd2cc1e866b9ad9d443936766272ee0cf936824f7dd",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter23_148bd9c3d032.log": "0892ed51d4e89d1c8250edc8836769172dc246e00b8ce63af95d064e71be7488",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter22.lean": "8a48a42a8046629b88308ea19266f456d92b6ba9a261a869dd6adcea8d462f8d",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter22.olean": "e3fb1dc0ea181c6e19d18c010b3983d5975d2009d4136d2f4ba6690b6bbb52eb",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter22_8a48a42a8046.log": "29f4a6e8c8c9a7fe4b50cc5901de1fda2dba821701bc1bcce73ec9032621a26d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter21.lean": "3107de23b2d41873134b05fc0fcc4e3cc6953f87557b677978f5a31623dd367f",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter21.olean": "f5bd428f558b98a4f492c5a29ca1ed97b7f1fe9890698b2d8da97f8e187053f9",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter21_3107de23b2d4.log": "5358e7faae9781b69b799d640b75ec1f9d22013b4d62a3e00d67477405d246c4",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter20.lean": "bc3145952e0022b4ec66324e5a7283c1e2da90d8b19f9991e66e64e3731e8d6f",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter20.olean": "0805f7fd3019a3cc0d11499a60d6657c587b84f77fa67fae33e6c1dda4025d16",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter20_bc3145952e00.log": "b333ef67769bd67f36908273b71df8f31792994efeaf2a3c89ec337f43548599",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter19.lean": "3e5a298b803776dd30560af0261870fe88e46d62a6d7ef18ce0368e3d2934e63",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter19.olean": "e116055567104d4f2d0680d8fd53b66041c05741205300eadf59b104b4d84112",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter19_3e5a298b8037.log": "126591e44819459cbeef6086ab2fb7b4cfa1180dca82a512b75bcbde79af7be8",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter18.lean": "f74ae7c4367680ce58ee163df301088035361618920dedba04a6e9b4ec553328",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter18.olean": "81af418336174c6029dbf848bf2cf520036f094e0cc043c1e327e666ab9e1c2c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter18_f74ae7c43676.log": "151d7bb44dafee9f0931b28829a3be36e46142710af1a1f11f8b91e8d045242f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter17.lean": "feb3ad4966f4f6eba4930dc04c2f981eef2c7b76ee73334ab32149a9e8bef0d3",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter17.olean": "de1d5b43c4014e3d2ed9c25b09b4ee41169c844e13698d7f641803d02276015d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter17_feb3ad4966f4.log": "dfcdbd7a1460b047043063cc1c21bc3edd23314f2f63bf0740d80c24d051bb55",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter16.lean": "b04a7420cf4e80b339504dc10d73225be9a2ccd683925f095693ebe396c76aed",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter16.olean": "710c4db4876aa1c9361fd8170905d9b3508e5c38a195bb42fbd70d34084931e5",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter16_b04a7420cf4e.log": "5aecb62681868369b72b79d8bcb36ab2d284da9039737b3c6382bca28bffe023",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter15.lean": "c88ff5d7f6d6b99eb16487c7b2d6bbf6ce233ab7acb43228210d0bc0f1a7aa47",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter15.olean": "ff68f84e98ecf31ffd3b8c87a3dc0b9706d5eb4badacdba976449e80d9affc85",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter15_c88ff5d7f6d6.log": "29659209868a9139c2d56172c9bce68742f839d9f2af71aab767df9c48bad11e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter14.lean": "4ca6e1d417a31ab8d0826d54b328da7b2e552ff5eb3a2d8ab8d970669a8c1dde",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter14.olean": "b65e4b73732bc449ccc9e472b1e28e25c8d1e0b438477b7f4a10b394cff9658d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter14_4ca6e1d417a3.log": "f401107e9783505bebf39b7c528099968a0e3e02ed0f38487ab1861c4b008bf6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter13.lean": "76f6419fb600f93000211f76bc8981b9814b4b76b6cabbb85f2066e5456bb3ed",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter13.olean": "1c0f2d5bcec38dbd566b29f5249a7933b90efee2538f5f4c89725a10d80cc7cf",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter13_76f6419fb600.log": "8bfcdeed825736867a58d53beb3f71490075efd73653bb803a4a074217862e83",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter12.lean": "fc19439715c875d9cf924b57b5853abd0565f04df34d245779cda41a8600b7ec",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter12.olean": "c89097f015151ca8787b332ed29ffd63e0017289e503c2f73c98fe058f7dd9df",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter12_fc19439715c8.log": "d352cfd0d886e6ac8040a1dc32f59e1e3f32afc288c75bfda5d209a6babfe9bc",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter11.lean": "e6c07aa604130d457f29ca380d72a68efe94dafe84c1ebe31e5914213d1a07b1",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter11.olean": "3ae5197763a53a3e6fbce4e5e4a1648a085ba27a6658f4fed7ecbda735b40abe",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter11_e6c07aa60413.log": "693a770e4af0f125cc2dac03c4ab81836a8e7e6d09e66f8c98f8c93523765acd",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter10.lean": "91875aada8bb87b16c4d5ac31ea95a2fc43885a780406a1e718302792708f265",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter10.olean": "3ce806076fc413b85e1382879b6dc1298be99089951ee97bad6fc91f949abc04",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter10_91875aada8bb.log": "2741a3d254a1647167e03b6b5951248aecfc6480a77b4e4e4c0d19a512810095",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter09.lean": "0334b355d6a178b4b422287c2a18624103a63db713d807e940a3a5f592bb2e36",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter09.olean": "2772a5c93dcf74fe4bcf565612e3dd3b276ac8774ee1ae3ec0253653f20c1496",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter09_0334b355d6a1.log": "fd816540907601716180ab37234ba4d6cfeaec958942586c601973382ae180e1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter08.lean": "0ad7ea15584a9fc1e7a3b19631950b6b04709bcfb6c25f5904f19063c7a816af",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter08.olean": "666b35fcac13f2faa4b2041329e0b04a9df3d8a7ef1580ef09d0275f37c65c1e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter08_0ad7ea15584a.log": "030856ba4bd7fc0e04964c1b1573ad67a7bba50f2a8f31d2566dcbf4639ff83e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter07.lean": "fe323bd0e19c53dc8b12e6007ddd9ae6335c420054f27133416fcebdc730555e",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter07.olean": "5fe3641f380ffacc24fb1232e878a02e3e945930eba4f9e7c3eaf94bc8e0fc9c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter07_fe323bd0e19c.log": "4215dc1c90f78419afabfd15e41cbf4d0178a12e1c6f404bc89edc024ade5733",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter06.lean": "a16e0e99c45139a101703515da4d42719577996fc631fd4cc6c97c21858480de",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter06.olean": "a173300db50b618a976704c18c2028c9458f9de6ca5f8fdd098f1622f63a2cbf",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter06_a16e0e99c451.log": "9edd3766ded3a1d295e55910f51f621e6951fe023002c70d9e8eb53d2bee9c11",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter05.lean": "26f883150f511fa0f66e7e9f2bcc1a266cd3a01ebbfb4c93ab5a78c7c6c64df5",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter05.olean": "a3420374efd4a45a12e78df430c17a85023fe00b86127388d96e49ce15686281",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter05_26f883150f51.log": "3927da2cf00e917ea73e4626c58b0f6cc015553e24117d492a3f88bc6fa56e18",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter04.lean": "2e97e81bb42d0ffccc979c78e27360fd48391ad5e6ca6e5a86ba80905d8e71d7",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter04.olean": "108e816b71eed76bf1a64d70a99e712a16df9df360f25d2f904dd17105acb893",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter04_2e97e81bb42d.log": "bca7e261c60f2b12566f97de078dccdf56bc78e7540f8408bb6c2b7aac58d30c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter03.lean": "3c8e353768828fe8a40aa98e8cae0b2ff4ec95622d07a9dc4c03bbf6fda07fb9",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter03.olean": "7fa57588596b0ed7a1521b04f6732da04d3bec71d846e6e75299f14710a496a0",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter03_3c8e35376882.log": "b97a0724f8d11fc32314a02c052e427700c80a510e5336bf35320c49ade0bfd3",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedKernelCenter02.lean": "0d24db91fd54c8aaca33262ac9caf0952c1ac34c71a125f9f7e8e500325004ec",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedKernelCenter02.olean": "9f3a9264250274497eb07f802850eec4a1085afdd3c53ad37a4c6b297f6d4519",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedKernelCenter02_0d24db91fd54.log": "065d626fddb57e05916f108ffdae35e693872a550cf3d6f97d29aa3d77e49782",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowBernsteinFastWeights.lean": "3c0478ee2e95828317bf50a1685d07f4243d8eb49323f6729a8136c5719de453",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowBernsteinFastWeights.olean": "b59bf0f24c41ae43eebe523965b012fc006a97dd400b2f3a16424faa723482b4",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowBernsteinFastWeights_3c0478ee2e95.log": "2b1a89a0fbdc30894649e9c6bd84f8b487106bc84da814ce47c79c3abe284d37",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowBernsteinIntegerWeights.lean": "a4c52600fe67d048615a966ba9e6ef1eb0f6258c1b02927bbcde32270aaccee0",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowBernsteinIntegerWeights.olean": "005b8b8832c8808ac6f19e44615b35e2418fe4cb7675e5efae529c0efe11c1b6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowBernsteinIntegerWeights_a4c52600fe67.log": "e23c6a379d9ebd3cd2f6f22e124890665c43a39e1b37cb31c8498896036d22ca",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowBernsteinLinear.lean": "d8d64f599fc8261baa7b83b680cc2036219926342cb8b5eb0ecce6902f9e8c0b",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowBernsteinLinear.olean": "b8b65c825091a35273c9acb9e22de9690a65204cc5ffe5fa06e4f3db42718dc6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowBernsteinLinear_d8d64f599fc8.log": "d07d4bc2a319870ec6669316530d54ac2a72d8999526163deade50d6103cb2de",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowFixedConvexity.lean": "b6384df3c59a37767ed73b4e3fdb621d41b17208eb46376a4a60e9036b75e51e",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowFixedConvexity.olean": "9974db52a9f2dab010cd83b4fb65e2f16c854c5fb2e42cb0e8689cdf86b7b1f0",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowFixedConvexity_b6384df3c59a.log": "6c1531abe45d3c0c8c0cfaf757bcf78e8dc60a5510edece83b7583f9b8c26528",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorAll.lean": "c28f3f7b90bba33c6d3ef8459af8318bc1a113232fd5ffeaea170244964256d0",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorAll.olean": "cbdb37e279f3951de9f6ef7a35f865740cc7785f6f76f742fd8d0cc1728071d9",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorAll_c28f3f7b90bb.log": "50c74b3f131d01629571c1b1500e5cb8a0a53c92b215eb33dc90f3383d9bfd3f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks24.lean": "9ddcad062043e13ece2043192c6e93a1713f89bf4e62e96f79773d4899714329",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks24.olean": "cedeb2273517356125ac15c4af80877976ec1fde710bc8d2df4656b4388f97e2",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks24_9ddcad062043.log": "aa9e9165ec7c66d70ad5a33fd20e4607e299c67f24a19292dee4a0d62c355c1d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorCertificateData.lean": "53e36d2803a1a507f45e9ee87c245a6c5ceca85a6e4476ca96373285f568c349",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorCertificateData.olean": "d0f31e856c93d8a8ea6d16d9329463bc3bb334099d105399516e01c40c452937",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorCertificateData_53e36d2803a1.log": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorCertificate.lean": "92287565df6212c7af06edd17b1224361466222c1acc66a9ac6a39595a3886e4",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorCertificate.olean": "912e2aa69e1e0a4eb7166065cf446fdf673146601583c994a776c8809100ba0b",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorCertificate_92287565df62.log": "d8ac5a9e2c2a9ba33c3dc3bd6c1e5ad7f729e35aa02e00a09fa011aedfefeadf",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks23.lean": "5b6681ad269e3dc2dc8cbaa90bd05dffbfe80633e00d55ff90da9d6e761f89b8",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks23.olean": "49292070cf7450e1e263612d9a81f3edac7f2098dc4edc9895e8898709503346",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks23_5b6681ad269e.log": "87c77cb6d1f95c9a8894b5adcaa797417209038569ba0b09fd51b057bf5e50eb",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks22.lean": "af4ef49777925653844cd0f622a21adee9e7975a033c319bd3a91a6d629d906e",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks22.olean": "b9f1980821cc924029bf04daacbb13156743648760f13d7943defcc2b8bdc63f",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks22_af4ef4977792.log": "00befc731f88dd4d5489bfbf07c648bdd432f5d17d5e76d9b29a40d97c1cf092",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks21.lean": "f5111f44242c0c9e6ccb0762482ad50dafa967d865690b1a9569285366b82c8e",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks21.olean": "5d9b528d713c1c03e41b3edac13d7f68cdf920ec7703801be66b7e80180bb7e2",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks21_f5111f44242c.log": "6803580a355648b77e061e43f731eafaa77f345be71be5fd5d2e2e238ea38fc2",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks20.lean": "21a69f738292266e2ecf3f159513d26da59e3e66caa4f21116d0c2806575c6da",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks20.olean": "99088dfd59e8a38cdd0588e15f61f386b73a75c0f36514f097d79d4132ac4b30",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks20_21a69f738292.log": "d83f38422c090fb73dfc971d8c6d035dc719ec912c160bec729aa653be1078a6",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks19.lean": "72c7a0aab96f6c46e106dcd89a7a6a1bddfd49a62a8fa3d920c2e065ef711d1c",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks19.olean": "e9f1dea5a01b8e59391421047e34b1387812c23ae0a09fa4d4de0ffa16e6e929",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks19_72c7a0aab96f.log": "7739248f6b27b74748758188263e165c5464d337aeb698cd2e7e2e7743b9c4c3",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks18.lean": "b51aacadd759f8c63565ddabb4fc2624016761564f4be4ac9c00e3f1af00cd17",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks18.olean": "f13703c430db276436d99d376183e34550c62515000499c3377da58aef773813",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks18_b51aacadd759.log": "c3b31f4b56feff76ab92c03be25fbec2ccaee06fa1d648ccf41a4c71db86e7bc",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks17.lean": "c201a9e57440c9ac21db6cdc050572026fb72aaded8570f65a2c4b9f47054442",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks17.olean": "c3ad00f43ba2af48626dadb44dc6b1184374a0833394d6210870eccd5f5c9cd5",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks17_c201a9e57440.log": "48172c74aadd7c070e4332220a4dfa752069b1db6ddd841a1d9fc946c0ed372a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks16.lean": "a9a743f56c8186adaa83f017e0eb871f0f670cb4534a7d5c6161d9d23d34c675",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks16.olean": "4f9654e867615817e75176b0ea33a42f494df577f75ed6013f15a93e1ae57806",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks16_a9a743f56c81.log": "eb7de040752c5130a9e63d5770ee0989a7b0b6bfcb61dbe5d7edf72ad7c72cc2",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks15.lean": "ba3e917d60cdbe772a557b1e9880aec055b0ca60f0b095a51344cf9bc9ad6f2e",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks15.olean": "7530c35a4906cb11d1d4fbe4a85dcf653d9891ad20e66ce59855fa5a6eb19be8",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks15_ba3e917d60cd.log": "05041b1f9dd96b73e067e646974cd1a38063fdd0133b2bfa616f145a06820219",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks14.lean": "a8819209f2898d986be78fb0eefe98d29dd35b4845e2552c802f1534bf5faad6",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks14.olean": "83fdddd801f5006c36c2fa7ae41c0e219230e235b066e8bd7b46bbebe3446ab4",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks14_a8819209f289.log": "b96b81c2f3fa0d324a84f6450d4ef6481d71929538a3bacdaab78bee2a9f9dec",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks13.lean": "a4b47fa216172060b9e72abe327eb2be3ea074aed15c0f0655378a75dee64772",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks13.olean": "c5200b6777984e2060ccac6ac43c8a49cd0a1f5b55a9e89904498e2d839b787a",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks13_a4b47fa21617.log": "e4b97bda31aeca55f02b727f50ec556a7c11355ff669688903f8d8a23001505d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks12.lean": "1d2379c87bdf85e0c4288eea4c3d9255792f2083f4f60483c4be2c194f2b786d",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks12.olean": "f74a3b5538e8b3d79ae9376e20e760bad1f2c27150fff3a23fe363a846e6b4e9",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks12_1d2379c87bdf.log": "caa480a23acfc3d37d565d409ad596312217803c3ca95ca001858bc6be78d152",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks11.lean": "3e574151cf1250215229875add79c1e92c148e678ec6f4628a64fb2504b28b83",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks11.olean": "dbe872594bed1006683562ddfb9af73ee5e1dc55bedcb3ff5f1eb8e0777ce08e",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks11_3e574151cf12.log": "9eb13b60d8e8f07cb9199616dc12891d3ef4ea11741952680dbb38f8b44416f1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks10.lean": "80af06422b23db2a76104e3da895f35a144820ea6c36e01848773a4c0ed6d2b9",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks10.olean": "465c6805870fc3309d127e46771ccc87d6d74b670d017c901a844d0071fc7668",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks10_80af06422b23.log": "72fb7fac15a32bff49aa95fa4497db8435551fe473aeaef5e996a77305940226",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks09.lean": "0c6d25492bb4607427ee5b53d99b9b373d22a15c36a1dbb5c94f5220c5c901c7",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks09.olean": "bf98af6ded4a9698ff779fe9e2cdba68c9a55d938e84de50e318ecdd431598fe",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks09_0c6d25492bb4.log": "8a9f91f7ca3bdf656153b7eb412ac660de28ce78044dfb6cc325d8ee64b0cdec",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks08.lean": "b18bfdd7d4b880bcd644362ff2a05c9a63d65b8e5cd45565cd7d1aac7ddf2148",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks08.olean": "9d8b2a8cb4f1cff57a4f7cb87675ef30f4af371a47de78317dbd3f64ba488008",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks08_b18bfdd7d4b8.log": "e56edfa7ebb9d855ca40f5ff00a1edcf235a2901647383bf68e3e8f0ae27898d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks07.lean": "964719e68a09a977b94f87e9150503b5f171988a4dc355384853e17c05a2207f",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks07.olean": "8f25e2ebb7253915723e78ed5afddc2353e8da7f4da3015618e2ea3585662f8c",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks07_964719e68a09.log": "93c2f0c56f6df96631674a9638a22c7c1e74836a9ea03a70ba8f4df95446e886",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks06.lean": "632e4d7136b351fb5023017c03488ddac2bfc62fcd4ed53714f1c025dc9cbf4f",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks06.olean": "00215d324c57d85ab6fc8b6fcf205dafd8c2edfd1a6be0d8777c4ed11fb1f2fb",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks06_632e4d7136b3.log": "af6184a7edab8b646b19d0d7fec31a8c6a1593bd162f96ba80d249c84dbd29ef",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks05.lean": "556dde5d9d16e64b1784643293d89e9f5d4d1e02935525797fa7d352bab5ea8d",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks05.olean": "aafae66801e413e3c617f486ceecd4fe2a24df0ff8e2ac6e4e41497532babbab",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks05_556dde5d9d16.log": "e4f078f02218faf6f75ca84589cf05845d8b3d8d0ce1320adc7c2f6d8ec836bb",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks04.lean": "59fbbe7f7ecd51eda88bc6125204c996c264f63eb722309e905a366b2f8b4cd1",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks04.olean": "69d41d57839256ab7a69baa02415fb0ed8b8173bf8a9e52f2241b28801611ae1",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks04_59fbbe7f7ecd.log": "a1dbe7a04465add83b11edcf48386a432a4c14a7bc275d8d8bd8190533af1ebe",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks03.lean": "db6c0de4e8db18abc357b3a49c5e878b3f64d41de757e501ae458233dfc7a1f2",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks03.olean": "83bc36718d7f7cfc060d6c227a89c378601d5e5cf6d2eff27a1ae9c42b304a1d",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks03_db6c0de4e8db.log": "8f29b76db1b8f8365d70b2d343f77237b72a137c77823b26c6bc0833ff1189e9",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks02.lean": "b9c30e1b65ba95c2900ae65bb0569ab6682898ae16984e5f683579d9406f7d6a",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks02.olean": "8e8bf965a275c333b7c3754ab6b584c87c1936fda30400904fb24756a0233465",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks02_b9c30e1b65ba.log": "4748489dc6e41a0cb2b3cd13d6e39cd4b4859b1d440f7a053cf34bf4a203ae99",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks01.lean": "accd28cc77b43f7f406b992488e13ff2f65fee4327b739e53e74056e4a115da8",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks01.olean": "e35c0ee18cd893310af8733aef125ce029a42669dd06f927969a3576df8f8448",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks01_accd28cc77b4.log": "4b5289b56720f56d2140f68ca052a0999fb4f859fd3c5c87a7964ec21947b526",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowAnchorChecks00.lean": "250271d87d66db79e4e2fcf2b99db1801c5b911db6efd0b5652b0ce27abde790",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowAnchorChecks00.olean": "e6cb3357756ea8ad19e882d74342ca8b854510684acb3c6ad183a3e3b0270cfd",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-goal-20261016/lean_WindowAnchorChecks00_250271d87d66.log": "46bf488bdaa52d24cab57d7ef3925b66e4a3f89069f7fe41f74c227abff76a57",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/ExporterMain.lean": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Export.lean": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/ComparatorMain.lean": "d6474f7ac49cf7a1c2f24aff6ac2bcc97a4a00aa37b969f225c6e688c434d0b4",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/CoreAudit.lean": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator.lean": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator/Util.lean": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator/Axioms.lean": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator/Compare.lean": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Export/Parse.lean": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286",
+    "/var/tmp/rh-zero-20261015/nanoda-target/release/nanoda_bin": "0c8332aae13164943ebfed4f8f4ed969494d8e85edff9d774a70fd92ea9318c2",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator.ilean": "1fb9898f34548b25ca1f37f5087d2e06865cff7211dd015535e47e70aefff740",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export.olean": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator.olean": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export.ilean": "c709fc5680fea2e857573839e344e9fafd56962f20cb181edbb058cc0a9b80dd",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Compare.ilean": "88123869874623f7f41801b903aecdd3e8c1489230cc871864d3e045f2626a67",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Axioms.ilean": "7af335418ac2aa17f97f37326fe0463ce7f2cface01f51af42019f7f6b53c5e9",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Axioms.olean": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Util.ilean": "7e05e4c576e95363de45babd248e81f88aa0bf948c8864c3fb90a9e325ec079f",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Compare.olean": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Util.olean": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export/Parse.olean": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export/Parse.ilean": "5e2023060c59685b21879735730d12d16d8110e851d62abd221374b57bf4c4e6",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/export-resources.log": "ce524bff24985e69658ae28514138b300265785fd7c1fb25d39209dc3c52cb7f",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/export.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/export.ndjson": "1e49a286a20cfd4920312327e9c69a2a451e4779652930d7ab1ed973647c04d7",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/default-kernel-resources.log": "0d8939559656a346d8e2efe697f79828775accbb410dda8ed1744e97d196989d",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/default-kernel.log": "81db9ec271ac403039be1756dd00873c9bdb6d67a5a28c834fe69a65aa6b6146",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/nanoda-config.json": "4d5e87843e3ea6e7da6184ca8a5a04eb905987885c5ea5716568c93aecc782ab",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/nanoda-resources.log": "bc0fb7c637b998d6d5814ae60e45b59ef1ef9ac30b562476a6fc9857e9e3251e",
+    "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/nanoda.log": "b701850f22bf0ea4414ab0c24c1fa41fe54cdf07264b8f8ba262f187854e883b"
+  },
+  "tool_provenance": {
+    "tools/source/Export.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "archive_sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003",
+      "archive_path": "Export.lean",
+      "source_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998"
+    },
+    "tools/source/Export/Parse.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "archive_sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003",
+      "archive_path": "Export/Parse.lean",
+      "source_sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286"
+    },
+    "tools/source/ExporterMain.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "archive_sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003",
+      "archive_path": "Main.lean",
+      "source_sha256": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a"
+    },
+    "tools/source/Comparator.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Comparator.lean",
+      "source_sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23"
+    },
+    "tools/source/Comparator/Axioms.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Comparator/Axioms.lean",
+      "source_sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125"
+    },
+    "tools/source/Comparator/Compare.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Comparator/Compare.lean",
+      "source_sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd"
+    },
+    "tools/source/Comparator/Util.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Comparator/Util.lean",
+      "source_sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88"
+    },
+    "tools/source/ComparatorMain.lean": {
+      "source_kind": "Pinned HTTPS archive",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_path": "Main.lean",
+      "source_sha256": "d6474f7ac49cf7a1c2f24aff6ac2bcc97a4a00aa37b969f225c6e688c434d0b4"
+    },
+    "nanoda_binary": {
+      "command": [
+        "/var/tmp/rh-zero-20261015/rust/bin/cargo",
+        "build",
+        "--locked",
+        "--release",
+        "--bin",
+        "nanoda_bin"
+      ],
+      "working_directory": "/var/tmp/rh-zero-20261015/.lake/packages/nanoda",
+      "exit_code": 0,
+      "elapsed_seconds": 53.32683805400001,
+      "source_commit": "418320295890faed83a96fd97907b12a3b6728c2",
+      "rust_components": [
+        {
+          "component": "cargo",
+          "version": "1.85.1",
+          "url": "https://static.rust-lang.org/dist/cargo-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+          "sha256": "7373132c13e394755d15f01bda4374af59b4daef01b12a83cb3df3f3be38e289"
+        },
+        {
+          "component": "rustc",
+          "version": "1.85.1",
+          "url": "https://static.rust-lang.org/dist/rustc-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+          "sha256": "92a5c532b9e87912190128704e0d65825912e3b08a6ee9203c4068d6d1df62c4"
+        },
+        {
+          "component": "rust-std",
+          "version": "1.85.1",
+          "url": "https://static.rust-lang.org/dist/rust-std-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+          "sha256": "0aaeffba85359503f874315cd08e0ae8490275d14b41470d36d4fa57fd085916"
+        }
+      ],
+      "rustc_version": "rustc 1.85.1 (4eb161250 2025-03-15)",
+      "cargo_lock_sha256": "ba57464cc37afd903a12432b18db0d576afff60e04686322bfcebf8a4bc2848d",
+      "binary": "/var/tmp/rh-zero-20261015/nanoda-target/release/nanoda_bin",
+      "binary_sha256": "0c8332aae13164943ebfed4f8f4ed969494d8e85edff9d774a70fd92ea9318c2",
+      "log_sha256": "7466f3c2cc1b576773909d471e4e8af5db7298664015a4ece96608bfd8e7f7a9",
+      "log": "/var/tmp/rh-zero-20261015/nanoda-build.log",
+      "source_archive_sha256": "f84eb185d4a5594aad18e4b8adbac636e3ace08b671d705dbd6acdbfb834eae6",
+      "source_archive_url": "https://codeload.github.com/ammkrn/nanoda_lib/tar.gz/418320295890faed83a96fd97907b12a3b6728c2",
+      "build_command": [
+        "/var/tmp/rh-zero-20261015/rust/bin/cargo",
+        "build",
+        "--locked",
+        "--release",
+        "--bin",
+        "nanoda_bin"
+      ],
+      "build_receipt_sha256": "dd77c9251eb767785e2d2ae28a67320348aae7bb77aae6af9bc834b87c49dac1"
+    },
+    "core_driver": {
+      "path": "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tools/ComparatorCoreAudit.lean",
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    }
+  },
+  "tool_compilation": [
+    {
+      "module": "Comparator.Util",
+      "source": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator/Util.lean",
+      "source_sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Util.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Util.ilean",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator/Util.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.471,
+      "log": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/logs/Comparator.Util.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Util.olean",
+      "olean_sha256": "c59b9be80619012b494676de3c777d7d638de63fe02f86c0a79d9472d06f7839"
+    },
+    {
+      "module": "Export",
+      "source": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Export.lean",
+      "source_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export.ilean",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Export.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.44,
+      "log": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/logs/Export.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export.olean",
+      "olean_sha256": "1071f835fbf4e9d335ab47e872a55695dc686c56e6d00c9aac431b8e7d841301"
+    },
+    {
+      "module": "Export.Parse",
+      "source": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Export/Parse.lean",
+      "source_sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export/Parse.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export/Parse.ilean",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Export/Parse.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.271,
+      "log": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/logs/Export.Parse.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Export/Parse.olean",
+      "olean_sha256": "82f582cfd7c1e61aa3cb49e1c1884e1607f0d87f5906707c2c0af5f84fa3a9d9"
+    },
+    {
+      "module": "Comparator.Axioms",
+      "source": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator/Axioms.lean",
+      "source_sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Axioms.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Axioms.ilean",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator/Axioms.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.616,
+      "log": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/logs/Comparator.Axioms.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Axioms.olean",
+      "olean_sha256": "d800bcc1146b9c68dac0938beffbc84ec7b4f849e88322df5e42a531c977b3ac"
+    },
+    {
+      "module": "Comparator.Compare",
+      "source": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator/Compare.lean",
+      "source_sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Compare.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Compare.ilean",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator/Compare.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.716,
+      "log": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/logs/Comparator.Compare.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator/Compare.olean",
+      "olean_sha256": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df"
+    },
+    {
+      "module": "Comparator",
+      "source": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator.lean",
+      "source_sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23",
+      "source_unchanged": true,
+      "command": [
+        "env",
+        "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source",
+        "-o",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator.olean",
+        "-i",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator.ilean",
+        "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/Comparator.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.415,
+      "log": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/logs/Comparator.log",
+      "olean": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib/Comparator.olean",
+      "olean_sha256": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315"
+    }
+  ],
+  "export": {
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/export-resources.log",
+      "/usr/bin/prlimit",
+      "--stack=268435456:268435456",
+      "--",
+      "env",
+      "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+      "LEAN_PATH=/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib:/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+      "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "-M13500",
+      "--tstack=262144",
+      "-DrelaxedAutoImplicit=false",
+      "--run",
+      "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/ExporterMain.lean",
+      "StructuralGoal20261016.WindowIndependentRoots",
+      "--",
+      "StructuralGoal20261016.WindowFixedTablesAll.k_sound",
+      "StructuralGoal20261016.WindowFixedTablesAll.w_sound",
+      "StructuralGoal20261016.WindowAnchorAll.valid",
+      "StructuralGoal20261016.WindowLinearConvexityPilot.cell",
+      "StructuralGoal20261016.WindowPairCertificate.short_pair_floor",
+      "StructuralGoal20261016.WindowGapEnergy.exists_ordered_global_min",
+      "StructuralGoal20261016.WindowPressureRoot.selected_span_upper",
+      "StructuralGoal20261016.WindowPressureRoot.global_floor_of_checked",
+      "StructuralGoal20261016.WindowKKTInstance.of_relevantBelow",
+      "StructuralGoal20261016.WindowSecondVariation.curvature_nonneg_of_relevant",
+      "StructuralGoal20261016.WindowQuantizedSupport.zero_extension",
+      "StructuralGoal20261016.DifferenceCell.split_sound",
+      "StructuralGoal20261016.DifferenceCell.affine_flow_bound",
+      "StructuralGoal20261016.FlowBasisPilot.bound0",
+      "StructuralGoal20261016.FlowBasisPilot.bound1",
+      "StructuralGoal20261016.FlowBasisPilot.bound2",
+      "StructuralGoal20261016.FlowBasisPilot.bound3",
+      "StructuralGoal20261016.WindowRecordFromFloor.improvement",
+      "StructuralGoal20261016.WindowRecordFromFloor.simple_cumulative",
+      "StructuralGoal20261016.WindowRecordFromFloor.distinct_cumulative",
+      "StructuralGoal20261016.WindowRecordDyadic.simple_dyadic",
+      "StructuralGoal20261016.WindowRecordDyadic.distinct_dyadic",
+      "Nat",
+      "String",
+      "String.mk",
+      "Char",
+      "Quot",
+      "Quot.mk",
+      "Quot.lift",
+      "Quot.ind",
+      "propext",
+      "Quot.sound",
+      "Classical.choice",
+      "Nat.add",
+      "Nat.sub",
+      "Nat.mul",
+      "Nat.pow",
+      "Nat.gcd",
+      "Nat.div",
+      "Nat.mod",
+      "Nat.beq",
+      "Nat.ble",
+      "Nat.land",
+      "Nat.lor",
+      "Nat.xor",
+      "Nat.shiftLeft",
+      "Nat.shiftRight",
+      "String.ofList",
+      "Char.ofNat",
+      "List",
+      "eagerReduce"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 156.062,
+    "log": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/export.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "export": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/export.ndjson",
+    "export_sha256": "1e49a286a20cfd4920312327e9c69a2a451e4779652930d7ab1ed973647c04d7",
+    "export_bytes": 651199633
+  },
+  "export_sha256": "1e49a286a20cfd4920312327e9c69a2a451e4779652930d7ab1ed973647c04d7",
+  "export_bytes": 651199633,
+  "default_kernel": {
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/default-kernel-resources.log",
+      "/usr/bin/prlimit",
+      "--stack=268435456:268435456",
+      "--",
+      "env",
+      "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+      "LEAN_PATH=/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+      "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "-M13500",
+      "--tstack=262144",
+      "-DrelaxedAutoImplicit=false",
+      "--run",
+      "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/tools/source/CoreAudit.lean",
+      "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/export.ndjson",
+      "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/export.ndjson",
+      "StructuralGoal20261016.WindowFixedTablesAll.k_sound",
+      "StructuralGoal20261016.WindowFixedTablesAll.w_sound",
+      "StructuralGoal20261016.WindowAnchorAll.valid",
+      "StructuralGoal20261016.WindowLinearConvexityPilot.cell",
+      "StructuralGoal20261016.WindowPairCertificate.short_pair_floor",
+      "StructuralGoal20261016.WindowGapEnergy.exists_ordered_global_min",
+      "StructuralGoal20261016.WindowPressureRoot.selected_span_upper",
+      "StructuralGoal20261016.WindowPressureRoot.global_floor_of_checked",
+      "StructuralGoal20261016.WindowKKTInstance.of_relevantBelow",
+      "StructuralGoal20261016.WindowSecondVariation.curvature_nonneg_of_relevant",
+      "StructuralGoal20261016.WindowQuantizedSupport.zero_extension",
+      "StructuralGoal20261016.DifferenceCell.split_sound",
+      "StructuralGoal20261016.DifferenceCell.affine_flow_bound",
+      "StructuralGoal20261016.FlowBasisPilot.bound0",
+      "StructuralGoal20261016.FlowBasisPilot.bound1",
+      "StructuralGoal20261016.FlowBasisPilot.bound2",
+      "StructuralGoal20261016.FlowBasisPilot.bound3",
+      "StructuralGoal20261016.WindowRecordFromFloor.improvement",
+      "StructuralGoal20261016.WindowRecordFromFloor.simple_cumulative",
+      "StructuralGoal20261016.WindowRecordFromFloor.distinct_cumulative",
+      "StructuralGoal20261016.WindowRecordDyadic.simple_dyadic",
+      "StructuralGoal20261016.WindowRecordDyadic.distinct_dyadic"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 966.047,
+    "log": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/default-kernel.log",
+    "log_sha256": "81db9ec271ac403039be1756dd00873c9bdb6d67a5a28c834fe69a65aa6b6146"
+  },
+  "default_kernel_passed": true,
+  "comparison_scope": "Self-replay of selected roots; NOT a website statement comparison",
+  "nanoda": {
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/nanoda-resources.log",
+      "/var/tmp/rh-zero-20261015/nanoda-target/release/nanoda_bin",
+      "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/nanoda-config.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 374.705,
+    "log": "/var/tmp/rh-zero-20261015/window-partial-20261017-493ce6f8/logs/nanoda.log",
+    "log_sha256": "b701850f22bf0ea4414ab0c24c1fa41fe54cdf07264b8f8ba262f187854e883b",
+    "checked_declarations": 73398,
+    "observed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ]
+  },
+  "inputs_unchanged": true,
+  "independent_nanoda_passed": true
+}

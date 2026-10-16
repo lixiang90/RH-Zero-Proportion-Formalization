@@ -31,7 +31,8 @@ open WindowRationalInterval (Holds)
 open WindowNormalizedJets WindowConvexityCertificate WindowJetTableData WindowFixedKernelCenters
 open WindowFixedInterval (FI decode)
 open WindowFixedConvexity (secondCoeff secondCoeff_sound)
-open WindowBernsteinLinear WindowBernsteinFastWeights WindowFixedPolynomial (lowerCheck)
+open WindowBernsteinLinear WindowBernsteinFastWeights
+open WindowFixedPolynomial (lowerCheck)
 def coeff{n} (j : ℕ) : FI := secondCoeff {n} j
 
 theorem coeff{n}_sound (j : ℕ) (hj : j < 14) :
