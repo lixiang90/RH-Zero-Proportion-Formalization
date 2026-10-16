@@ -47,6 +47,26 @@ multipliers, flow and outward rounding. These are sample results; they do
 not prove a full cover. A new full search starts from the root, rather than
 retaining the large prefix of the older search.
 
+For the 472 immediately direction-excluded sample cells, independent replay
+also permits removal of unnecessary contraction bounds: 7,903 bounds reduce
+to 2,258 while preserving all 472 exclusions. This simplification cannot be
+applied to a branch or to a later Newton leaf without rechecking the affected
+subtree or contraction chain.
+
+The new edge-forest flow representation stores only directed edges. The
+surrounding checker recomputes the divergence and edge costs; leaf elimination
+reconstructs the integer amounts. All 24,866 flows in the original 806-path
+sample were reconstructed exactly. `AffineFlowCertificate` and
+`FlowBasisCodec` have ordinary-kernel proofs: the decoder is untrusted and
+the final Boolean checker verifies nonnegativity, balance and cost. No
+decoder correctness or optimizer optimality is a premise.
+
+The pruned sample with this representation occupies 1,511,223 gzip bytes.
+This is not a pass of the website's 2,000,000-byte **Lean source** limit and
+does not cover the full domain. The standalone archive replay reconstructs
+the witness cells from the root/ancestor projection, independently checks
+the mathematical certificates, and recovers the original proof SHA.
+
 A separate nine-point alternative jointly redesigns the same 24-mode
 profile and its ledger, reducing the number of gap variables to eight. Its
 frozen rational parameters in `window-nine-point-rational.json` would give
@@ -74,6 +94,8 @@ alternative does not replace the primary ten-point parameters.
   replay for mixed covers; it does not trust the LP status or floating objective.
 - `cover_sublevel_obbt_api.py`, `cover_sublevel_obbt_verify_api.py`: explicit
   target discovery and independent replay for the per-span sublevel contraction.
+- `cover_flow_basis.py`, `cover_flow_basis_archive_replay.py`: edge-only flow
+  decoding, exact arithmetic replay and recovery of the original proof bytes.
 - `window_normalized_interval.py`: the factorial-normalized sinc recurrence
   on a fixed rational grid. Its numerical audit preserves all 16 original
   curvature constants and 2,829 scalar minorants. The separate grid audit

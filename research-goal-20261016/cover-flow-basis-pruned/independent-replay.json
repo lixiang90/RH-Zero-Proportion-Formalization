@@ -1,0 +1,24 @@
+{
+  "scope": "Replay the compact edge-only archive without the original large JSON.\n\nRebuild each witness cell from the pressure root and ancestor projection,\nderive each divergence from the independently verified coefficient vector,\nreconstruct all amounts/costs, and recover the original proof SHA exactly.\nOnly a finite sample is checked; complete global coverage remains false.\n",
+  "script_sha256": "215a6ab77843c84b16b0a741052516b1ab09c179318c3e384bf68f0ae3545d08",
+  "archive_header_sha256": "85540c525336942a4856148edb5cc30e5b96c18397b8704930695bd25f3776c7",
+  "projection_manifest_sha256": "b60bf6d06b58dc8a49196bbc4a6ca9ea3dbf04ed850920f56b82b8ee64079cde",
+  "counts": {
+    "paths": 472,
+    "bounds": 2258,
+    "closed": 472,
+    "expanded_flows": 4988,
+    "edges": 42866
+  },
+  "witness_cells_reconstructed": 472,
+  "ancestor_nodes_reconstructed": 4077,
+  "original_large_proof_required": false,
+  "original_proof_reconstructed_byte_exactly": true,
+  "original_proof_sha256": "a4366aae018cdc7e79d1647c2dbc4aba5793a6be91ebcf128719242faa9e4aab",
+  "all_passed": true,
+  "actual_analytic_Lean_bridges_complete": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "final_submission_size_limit_passed": false,
+  "seconds": 74.10356300000058
+}

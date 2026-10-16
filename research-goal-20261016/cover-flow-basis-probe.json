@@ -1,0 +1,18 @@
+{
+  "scope": "Compress exact flow witnesses to edge forests, independently decoding amounts.\n\nThe divergence is computed by the surrounding mathematical certificate, so\nthe witness need only select edges. Leaf elimination reconstructs every\ninteger amount; positivity and exact balance are checked afterwards. This\nprobe compares every reconstructed witness with the original audited flow.\nIt does not assert a complete cover, a Lean decoder proof, or a size-limit\npass for a website submission.\n",
+  "input_sha256": "869122355b263bba85408cf3269ad3172d9f42914bec5077a7e44f28abe01197",
+  "script_sha256": "7205524aa483b650e218cb842c8ee4c28d2185f70d92d874d74bbb9450f53b56",
+  "decoded_flows": 24866,
+  "directed_edges": 213324,
+  "failures": [],
+  "old_flow_JSON_bytes": 15678885,
+  "edge_basis_bytes_including_lengths": 238190,
+  "old_flow_stream_gzip_bytes": 4377061,
+  "basis_stream_gzip_bytes": 117507,
+  "all_original_amounts_and_costs_reconstructed": true,
+  "divergence_must_be_recomputed_by_surrounding_checker": true,
+  "Lean_decoder_soundness_proven": false,
+  "complete_global_cover": false,
+  "final_submission_size_limit_passed": false,
+  "seconds": 2.693123700000797
+}

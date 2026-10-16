@@ -23,6 +23,9 @@ def main():
       'cover_sublevel_contractor.py','cover_sublevel_verify.py','cover_sublevel_api.py','cover_sublevel_verify_api.py',
       'cover_sublevel_obbt.py','cover_sublevel_obbt_verify.py','cover_sublevel_obbt_api.py','cover_sublevel_obbt_verify_api.py',
       'cover-sublevel-obbt-replay.json','cover_obbt_archive.py','cover_obbt_archive_replay.py',
+      'cover_obbt_prune.py','cover-obbt-pruned-replay.json','cover_obbt_note.md',
+      'cover_flow_basis.py','cover-flow-basis-probe.json','cover_flow_basis_replay.py',
+      'cover_flow_basis_archive_replay.py','cover_flow_basis_lean_pilot.py','cover_flow_basis_lean_pilot.json',
       'cover_newwindow_gram.py','cover_newwindow_gram_replay.py','cover-newwindow-gram.json','cover-newwindow-gram-replay.json',
       'cover_emit_window_gram.py','cover_emit_window_transfer.py','cover_gram_basin_api.py',
       'window_newton_gram_cover.py','window_newton_gram_cover_cached.py','window_newton_gram_replay.py',
@@ -40,7 +43,7 @@ def main():
         for key,sha_key in [('source','source_sha256'),('log','log_sha256')]:
             p=ROOT/row[key];assert hashlib.sha256(p.read_bytes()).hexdigest()==row[sha_key]
             files.append(row[key])
-    files += [str(p.relative_to(ROOT)).replace('\\','/') for folder in ['cover-compact-archive','cover-obbt-archive','nine-point-pilot','snapshots']
+    files += [str(p.relative_to(ROOT)).replace('\\','/') for folder in ['cover-compact-archive','cover-obbt-archive','cover-flow-basis-pruned','nine-point-pilot','snapshots']
               for p in sorted((HERE/folder).glob('*')) if p.is_file()]
     # Keep the generation programs that reproduce the verified actual profile.
     files += ['research-goal-20261016/'+s for s in ['window_generate_energy.py','window_generate_energy_bound.py','window_generate_profile.py']]

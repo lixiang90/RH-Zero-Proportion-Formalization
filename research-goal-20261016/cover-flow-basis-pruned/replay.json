@@ -1,0 +1,39 @@
+{
+  "scope": "End-to-end replay of OBBT data with edge-only flow witnesses.\n\nAll divergences come from independently recomputed mixture/gradient\ncoefficients; edge costs come from the current cell. No recorded amounts,\ndivergences, edge costs or total flow cost are retained. The original scalar,\ncapacity, Lagrange, rounding and direction verifiers still run in full. The\nexpanded proof must reconstruct the original audited SHA byte for byte.\nThis is a finite numerical sample, not a global or Lean floor proof.\n",
+  "original_proof_sha256": "a4366aae018cdc7e79d1647c2dbc4aba5793a6be91ebcf128719242faa9e4aab",
+  "compressed_proof_sha256": "30217e915015b33fc7663f8db615dad5fb020fc7abf31f95ec3678838712bc38",
+  "gzip_sha256": "08c57b938d7a9326d4902b68325a154f5ec5a583c7f2a2f42464a880c9cf2909",
+  "original_bytes": 10445728,
+  "compressed_JSON_bytes": 7487740,
+  "gzip_bytes": 1511223,
+  "parts": [
+    {
+      "file": "proof.json.gz.part00",
+      "bytes": 1511223,
+      "sha256": "08c57b938d7a9326d4902b68325a154f5ec5a583c7f2a2f42464a880c9cf2909"
+    }
+  ],
+  "source_sha256": {
+    "research-goal-20261016/cover_flow_basis_replay.py": "cd822921aa99ce0db4fbb7ed57afb8c18928a3d19ce72f50167c39ebaebafdd2",
+    "research-goal-20261016/cover_flow_basis.py": "7205524aa483b650e218cb842c8ee4c28d2185f70d92d874d74bbb9450f53b56",
+    "research-goal-20261016/cover_sublevel_obbt_verify.py": "4545b22a8bb0f19e4f8642d8018f437e8ab46ed4bb6580066b244f6285f9671c",
+    "research-goal-20261016/cover_sublevel_verify.py": "ddf7997d466b647de17f6e92c334b948b5ae7eb2daf334e807158b39714e88a4",
+    "research-goal-20261016/cover_contractor_verify.py": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389",
+    "research-goal-20261016/cover_correlated_verify.py": "b8a1090e02b73d14305c0d800ec15c7d94d4323a1b55557dc0893adccfc778aa",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273"
+  },
+  "counts": {
+    "paths": 472,
+    "bounds": 2258,
+    "closed": 472,
+    "expanded_flows": 4988,
+    "edges": 42866
+  },
+  "original_proof_reconstructed_byte_exactly": true,
+  "all_passed": true,
+  "actual_analytic_Lean_bridges_complete": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "final_submission_size_limit_passed": false,
+  "seconds": 74.65543739999885
+}
