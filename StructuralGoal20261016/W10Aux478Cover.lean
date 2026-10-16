@@ -1,0 +1,1064 @@
+/- Frozen 478-leaf W10 subtree; complete global coverage is not asserted. -/
+import StructuralGoal20261016.W10Aux478Leaves00
+import StructuralGoal20261016.W10Aux478Leaves01
+import StructuralGoal20261016.W10Aux478Leaves02
+import StructuralGoal20261016.W10Aux478Leaves03
+import StructuralGoal20261016.W10Aux478Leaves04
+import StructuralGoal20261016.W10Aux478Leaves05
+import StructuralGoal20261016.W10Aux478Leaves06
+import StructuralGoal20261016.W10Aux478Leaves07
+import StructuralGoal20261016.W10Aux478Leaves08
+import StructuralGoal20261016.W10Aux478Leaves09
+import StructuralGoal20261016.W10Aux478Leaves10
+import StructuralGoal20261016.W10Aux478Leaves11
+import StructuralGoal20261016.W10Aux478Leaves12
+import StructuralGoal20261016.W10Aux478Leaves13
+import StructuralGoal20261016.W10Aux478Leaves14
+import StructuralGoal20261016.W10Aux478Geometry00
+import StructuralGoal20261016.W10Aux478Geometry01
+import StructuralGoal20261016.W10Aux478Geometry02
+import StructuralGoal20261016.W10Aux478Geometry03
+import StructuralGoal20261016.W10Aux478Geometry04
+import StructuralGoal20261016.W10Aux478Geometry05
+import StructuralGoal20261016.W10Aux478Geometry06
+import StructuralGoal20261016.W10Aux478Geometry07
+import StructuralGoal20261016.W10Aux478Geometry08
+import StructuralGoal20261016.W10Aux478Geometry09
+import StructuralGoal20261016.W10Aux478Geometry10
+import StructuralGoal20261016.W10Aux478Geometry11
+import StructuralGoal20261016.W10Aux478Geometry12
+import StructuralGoal20261016.W10Aux478Geometry13
+import StructuralGoal20261016.W10Aux478Geometry14
+import StructuralGoal20261016.W10Aux478Geometry15
+import StructuralGoal20261016.W10Aux478Geometry16
+import StructuralGoal20261016.W10Aux478Geometry17
+import StructuralGoal20261016.W10Aux478Geometry18
+import StructuralGoal20261016.W10Aux478Geometry19
+import StructuralGoal20261016.W10Aux478Geometry20
+import StructuralGoal20261016.W10Aux478Geometry21
+import StructuralGoal20261016.W10Aux478Geometry22
+import StructuralGoal20261016.W10Aux478Geometry23
+import StructuralGoal20261016.W10Aux478Geometry24
+import StructuralGoal20261016.W10Aux478Geometry25
+import StructuralGoal20261016.W10Aux478Geometry26
+import StructuralGoal20261016.W10Aux478Geometry27
+import StructuralGoal20261016.W10Aux478Geometry28
+import StructuralGoal20261016.W10Aux478Geometry29
+import StructuralGoal20261016.W10Aux478Geometry30
+import StructuralGoal20261016.W10Aux478Geometry31
+import StructuralGoal20261016.W10Aux478Geometry32
+import StructuralGoal20261016.W10Aux478Geometry33
+import StructuralGoal20261016.W10Aux478Geometry34
+import StructuralGoal20261016.W10Aux478Geometry35
+import StructuralGoal20261016.W10Aux478Geometry36
+import StructuralGoal20261016.W10Aux478Geometry37
+import StructuralGoal20261016.W10Aux478Geometry38
+import StructuralGoal20261016.W10Aux478Geometry39
+import StructuralGoal20261016.W10Aux478Geometry40
+import StructuralGoal20261016.W10Aux478Geometry41
+import StructuralGoal20261016.W10Aux478Geometry42
+import StructuralGoal20261016.W10Aux478Geometry43
+import StructuralGoal20261016.W10Aux478Geometry44
+import StructuralGoal20261016.W10Aux478Geometry45
+import StructuralGoal20261016.W10Aux478Geometry46
+import StructuralGoal20261016.W10Aux478Geometry47
+import StructuralGoal20261016.W10Aux478Geometry48
+import StructuralGoal20261016.W10Aux478Geometry49
+import StructuralGoal20261016.W10Aux478Geometry50
+import StructuralGoal20261016.W10Aux478Geometry51
+import StructuralGoal20261016.W10Aux478Geometry52
+import StructuralGoal20261016.W10Aux478Geometry53
+import StructuralGoal20261016.W10Aux478Geometry54
+import StructuralGoal20261016.W10Aux478Geometry55
+import StructuralGoal20261016.W10Aux478Geometry56
+import StructuralGoal20261016.W10Aux478Geometry57
+import StructuralGoal20261016.W10Aux478Geometry58
+import StructuralGoal20261016.W10Aux478Geometry59
+import StructuralGoal20261016.W10Aux478Geometry60
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+noncomputable section
+open AMW.Cert AMW.Cert.Pyr AMW.Cert.PyrD AMW.Cert.PCell
+open StructuralW10Cert20261016.LocalChecker
+open StructuralW10Cert20261016.TreeCoverage
+open StructuralGoal20261016.LeanCoverBase
+open StructuralW10Unconditional20261016
+open StructuralW10Cert20261016
+namespace StructuralGoal20261016.W10Aux478
+theorem coveredNode480 : CovBy 9 PR (Pg cN 9 BS TS) cell960 :=
+  branch 1 8 239664 (by decide) (by decide) normalized480 left480 right480 coveredLeaf476 coveredLeaf477
+theorem coveredNode479 : CovBy 9 PR (Pg cN 9 BS TS) cell954 :=
+  branch 3 7 137280 (by decide) (by decide) normalized479 left479 right479 coveredLeaf475 coveredNode480
+theorem coveredNode478 : CovBy 9 PR (Pg cN 9 BS TS) cell956 :=
+  branch 1 8 248777 (by decide) (by decide) normalized478 left478 right478 coveredLeaf473 coveredLeaf474
+theorem coveredNode477 : CovBy 9 PR (Pg cN 9 BS TS) cell953 :=
+  branch 1 8 237103 (by decide) (by decide) normalized477 left477 right477 coveredLeaf472 coveredNode478
+theorem coveredNode476 : CovBy 9 PR (Pg cN 9 BS TS) cell752 :=
+  branch 2 6 137184 (by decide) (by decide) normalized476 left476 right476 coveredNode477 coveredNode479
+theorem coveredNode475 : CovBy 9 PR (Pg cN 9 BS TS) cell948 :=
+  branch 2 6 137344 (by decide) (by decide) normalized475 left475 right475 coveredLeaf470 coveredLeaf471
+theorem coveredNode474 : CovBy 9 PR (Pg cN 9 BS TS) cell947 :=
+  branch 2 6 135280 (by decide) (by decide) normalized474 left474 right474 coveredLeaf468 coveredLeaf469
+theorem coveredNode473 : CovBy 9 PR (Pg cN 9 BS TS) cell914 :=
+  branch 3 7 137248 (by decide) (by decide) normalized473 left473 right473 coveredNode474 coveredNode475
+theorem coveredNode472 : CovBy 9 PR (Pg cN 9 BS TS) cell942 :=
+  branch 2 6 138064 (by decide) (by decide) normalized472 left472 right472 coveredLeaf466 coveredLeaf467
+theorem coveredNode471 : CovBy 9 PR (Pg cN 9 BS TS) cell941 :=
+  branch 2 6 135760 (by decide) (by decide) normalized471 left471 right471 coveredLeaf464 coveredLeaf465
+theorem coveredNode470 : CovBy 9 PR (Pg cN 9 BS TS) cell916 :=
+  branch 3 7 138176 (by decide) (by decide) normalized470 left470 right470 coveredNode471 coveredNode472
+theorem coveredNode469 : CovBy 9 PR (Pg cN 9 BS TS) cell918 :=
+  branch 3 7 136480 (by decide) (by decide) normalized469 left469 right469 coveredLeaf462 coveredLeaf463
+theorem coveredNode468 : CovBy 9 PR (Pg cN 9 BS TS) cell920 :=
+  branch 2 6 136448 (by decide) (by decide) normalized468 left468 right468 coveredLeaf460 coveredLeaf461
+theorem coveredNode467 : CovBy 9 PR (Pg cN 9 BS TS) cell922 :=
+  branch 3 7 136352 (by decide) (by decide) normalized467 left467 right467 coveredLeaf458 coveredLeaf459
+theorem coveredNode466 : CovBy 9 PR (Pg cN 9 BS TS) cell930 :=
+  branch 3 7 140768 (by decide) (by decide) normalized466 left466 right466 coveredLeaf453 coveredLeaf454
+theorem coveredNode465 : CovBy 9 PR (Pg cN 9 BS TS) cell929 :=
+  branch 0 8 310896 (by decide) (by decide) normalized465 left465 right465 coveredLeaf451 coveredLeaf452
+theorem coveredNode464 : CovBy 9 PR (Pg cN 9 BS TS) cell927 :=
+  branch 2 6 140288 (by decide) (by decide) normalized464 left464 right464 coveredNode465 coveredNode466
+theorem coveredNode463 : CovBy 9 PR (Pg cN 9 BS TS) cell925 :=
+  branch 4 5 47532 (by decide) (by decide) normalized463 left463 right463 coveredNode464 coveredLeaf455
+theorem coveredNode462 : CovBy 9 PR (Pg cN 9 BS TS) cell923 :=
+  branch 5 6 47724 (by decide) (by decide) normalized462 left462 right462 coveredNode463 coveredLeaf456
+theorem coveredNode461 : CovBy 9 PR (Pg cN 9 BS TS) cell921 :=
+  branch 3 4 47724 (by decide) (by decide) normalized461 left461 right461 coveredNode462 coveredLeaf457
+theorem coveredNode460 : CovBy 9 PR (Pg cN 9 BS TS) cell919 :=
+  branch 2 3 48247 (by decide) (by decide) normalized460 left460 right460 coveredNode461 coveredNode467
+theorem coveredNode459 : CovBy 9 PR (Pg cN 9 BS TS) cell917 :=
+  branch 6 7 48247 (by decide) (by decide) normalized459 left459 right459 coveredNode460 coveredNode468
+theorem coveredNode458 : CovBy 9 PR (Pg cN 9 BS TS) cell915 :=
+  branch 1 2 48668 (by decide) (by decide) normalized458 left458 right458 coveredNode459 coveredNode469
+theorem coveredNode457 : CovBy 9 PR (Pg cN 9 BS TS) cell913 :=
+  branch 7 8 81036 (by decide) (by decide) normalized457 left457 right457 coveredNode458 coveredNode470
+theorem coveredNode456 : CovBy 9 PR (Pg cN 9 BS TS) cell754 :=
+  branch 8 9 49127 (by decide) (by decide) normalized456 left456 right456 coveredNode457 coveredNode473
+theorem coveredNode455 : CovBy 9 PR (Pg cN 9 BS TS) cell910 :=
+  branch 3 7 137152 (by decide) (by decide) normalized455 left455 right455 coveredLeaf449 coveredLeaf450
+theorem coveredNode454 : CovBy 9 PR (Pg cN 9 BS TS) cell880 :=
+  branch 2 6 137120 (by decide) (by decide) normalized454 left454 right454 coveredLeaf448 coveredNode455
+theorem coveredNode453 : CovBy 9 PR (Pg cN 9 BS TS) cell904 :=
+  branch 3 7 138064 (by decide) (by decide) normalized453 left453 right453 coveredLeaf446 coveredLeaf447
+theorem coveredNode452 : CovBy 9 PR (Pg cN 9 BS TS) cell903 :=
+  branch 3 7 135760 (by decide) (by decide) normalized452 left452 right452 coveredLeaf444 coveredLeaf445
+theorem coveredNode451 : CovBy 9 PR (Pg cN 9 BS TS) cell882 :=
+  branch 2 6 138176 (by decide) (by decide) normalized451 left451 right451 coveredNode452 coveredNode453
+theorem coveredNode450 : CovBy 9 PR (Pg cN 9 BS TS) cell884 :=
+  branch 2 6 136352 (by decide) (by decide) normalized450 left450 right450 coveredLeaf442 coveredLeaf443
+theorem coveredNode449 : CovBy 9 PR (Pg cN 9 BS TS) cell886 :=
+  branch 3 7 136448 (by decide) (by decide) normalized449 left449 right449 coveredLeaf440 coveredLeaf441
+theorem coveredNode448 : CovBy 9 PR (Pg cN 9 BS TS) cell894 :=
+  branch 3 7 140768 (by decide) (by decide) normalized448 left448 right448 coveredLeaf435 coveredLeaf436
+theorem coveredNode447 : CovBy 9 PR (Pg cN 9 BS TS) cell893 :=
+  branch 0 8 310639 (by decide) (by decide) normalized447 left447 right447 coveredLeaf433 coveredLeaf434
+theorem coveredNode446 : CovBy 9 PR (Pg cN 9 BS TS) cell891 :=
+  branch 2 6 140288 (by decide) (by decide) normalized446 left446 right446 coveredNode447 coveredNode448
+theorem coveredNode445 : CovBy 9 PR (Pg cN 9 BS TS) cell889 :=
+  branch 4 5 47532 (by decide) (by decide) normalized445 left445 right445 coveredNode446 coveredLeaf437
+theorem coveredNode444 : CovBy 9 PR (Pg cN 9 BS TS) cell887 :=
+  branch 3 4 47724 (by decide) (by decide) normalized444 left444 right444 coveredNode445 coveredLeaf438
+theorem coveredNode443 : CovBy 9 PR (Pg cN 9 BS TS) cell885 :=
+  branch 5 6 47724 (by decide) (by decide) normalized443 left443 right443 coveredNode444 coveredLeaf439
+theorem coveredNode442 : CovBy 9 PR (Pg cN 9 BS TS) cell883 :=
+  branch 2 3 48230 (by decide) (by decide) normalized442 left442 right442 coveredNode443 coveredNode449
+theorem coveredNode441 : CovBy 9 PR (Pg cN 9 BS TS) cell881 :=
+  branch 6 7 48247 (by decide) (by decide) normalized441 left441 right441 coveredNode442 coveredNode450
+theorem coveredNode440 : CovBy 9 PR (Pg cN 9 BS TS) cell879 :=
+  branch 1 2 81036 (by decide) (by decide) normalized440 left440 right440 coveredNode441 coveredNode451
+theorem coveredNode439 : CovBy 9 PR (Pg cN 9 BS TS) cell756 :=
+  branch 8 9 49095 (by decide) (by decide) normalized439 left439 right439 coveredNode440 coveredNode454
+theorem coveredNode438 : CovBy 9 PR (Pg cN 9 BS TS) cell876 :=
+  branch 3 8 171152 (by decide) (by decide) normalized438 left438 right438 coveredLeaf431 coveredLeaf432
+theorem coveredNode437 : CovBy 9 PR (Pg cN 9 BS TS) cell856 :=
+  branch 3 7 136992 (by decide) (by decide) normalized437 left437 right437 coveredLeaf430 coveredNode438
+theorem coveredNode436 : CovBy 9 PR (Pg cN 9 BS TS) cell858 :=
+  branch 3 7 137664 (by decide) (by decide) normalized436 left436 right436 coveredLeaf428 coveredLeaf429
+theorem coveredNode435 : CovBy 9 PR (Pg cN 9 BS TS) cell868 :=
+  branch 2 6 174016 (by decide) (by decide) normalized435 left435 right435 coveredLeaf422 coveredLeaf423
+theorem coveredNode434 : CovBy 9 PR (Pg cN 9 BS TS) cell867 :=
+  branch 1 9 310271 (by decide) (by decide) normalized434 left434 right434 coveredLeaf420 coveredLeaf421
+theorem coveredNode433 : CovBy 9 PR (Pg cN 9 BS TS) cell865 :=
+  branch 3 7 140288 (by decide) (by decide) normalized433 left433 right433 coveredNode434 coveredNode435
+theorem coveredNode432 : CovBy 9 PR (Pg cN 9 BS TS) cell863 :=
+  branch 4 5 47629 (by decide) (by decide) normalized432 left432 right432 coveredNode433 coveredLeaf424
+theorem coveredNode431 : CovBy 9 PR (Pg cN 9 BS TS) cell861 :=
+  branch 5 6 47741 (by decide) (by decide) normalized431 left431 right431 coveredNode432 coveredLeaf425
+theorem coveredNode430 : CovBy 9 PR (Pg cN 9 BS TS) cell859 :=
+  branch 3 4 47741 (by decide) (by decide) normalized430 left430 right430 coveredNode431 coveredLeaf426
+theorem coveredNode429 : CovBy 9 PR (Pg cN 9 BS TS) cell857 :=
+  branch 6 7 48274 (by decide) (by decide) normalized429 left429 right429 coveredNode430 coveredLeaf427
+theorem coveredNode428 : CovBy 9 PR (Pg cN 9 BS TS) cell855 :=
+  branch 2 3 80690 (by decide) (by decide) normalized428 left428 right428 coveredNode429 coveredNode436
+theorem coveredNode427 : CovBy 9 PR (Pg cN 9 BS TS) cell758 :=
+  branch 8 9 49195 (by decide) (by decide) normalized427 left427 right427 coveredNode428 coveredNode437
+theorem coveredNode426 : CovBy 9 PR (Pg cN 9 BS TS) cell852 :=
+  branch 0 6 204288 (by decide) (by decide) normalized426 left426 right426 coveredLeaf418 coveredLeaf419
+theorem coveredNode425 : CovBy 9 PR (Pg cN 9 BS TS) cell834 :=
+  branch 2 6 137088 (by decide) (by decide) normalized425 left425 right425 coveredLeaf417 coveredNode426
+theorem coveredNode424 : CovBy 9 PR (Pg cN 9 BS TS) cell836 :=
+  branch 2 6 137664 (by decide) (by decide) normalized424 left424 right424 coveredLeaf415 coveredLeaf416
+theorem coveredNode423 : CovBy 9 PR (Pg cN 9 BS TS) cell844 :=
+  branch 3 7 174016 (by decide) (by decide) normalized423 left423 right423 coveredLeaf410 coveredLeaf411
+theorem coveredNode422 : CovBy 9 PR (Pg cN 9 BS TS) cell843 :=
+  branch 1 9 310271 (by decide) (by decide) normalized422 left422 right422 coveredLeaf408 coveredLeaf409
+theorem coveredNode421 : CovBy 9 PR (Pg cN 9 BS TS) cell841 :=
+  branch 2 6 140288 (by decide) (by decide) normalized421 left421 right421 coveredNode422 coveredNode423
+theorem coveredNode420 : CovBy 9 PR (Pg cN 9 BS TS) cell839 :=
+  branch 4 5 47629 (by decide) (by decide) normalized420 left420 right420 coveredNode421 coveredLeaf412
+theorem coveredNode419 : CovBy 9 PR (Pg cN 9 BS TS) cell837 :=
+  branch 3 4 47725 (by decide) (by decide) normalized419 left419 right419 coveredNode420 coveredLeaf413
+theorem coveredNode418 : CovBy 9 PR (Pg cN 9 BS TS) cell835 :=
+  branch 5 6 47741 (by decide) (by decide) normalized418 left418 right418 coveredNode419 coveredLeaf414
+theorem coveredNode417 : CovBy 9 PR (Pg cN 9 BS TS) cell833 :=
+  branch 6 7 80690 (by decide) (by decide) normalized417 left417 right417 coveredNode418 coveredNode424
+theorem coveredNode416 : CovBy 9 PR (Pg cN 9 BS TS) cell760 :=
+  branch 8 9 49195 (by decide) (by decide) normalized416 left416 right416 coveredNode417 coveredNode425
+theorem coveredNode415 : CovBy 9 PR (Pg cN 9 BS TS) cell830 :=
+  branch 4 7 102800 (by decide) (by decide) normalized415 left415 right415 coveredLeaf406 coveredLeaf407
+theorem coveredNode414 : CovBy 9 PR (Pg cN 9 BS TS) cell812 :=
+  branch 4 8 136640 (by decide) (by decide) normalized414 left414 right414 coveredLeaf405 coveredNode415
+theorem coveredNode413 : CovBy 9 PR (Pg cN 9 BS TS) cell826 :=
+  branch 3 6 140095 (by decide) (by decide) normalized413 left413 right413 coveredLeaf400 coveredLeaf401
+theorem coveredNode412 : CovBy 9 PR (Pg cN 9 BS TS) cell820 :=
+  branch 3 7 174270 (by decide) (by decide) normalized412 left412 right412 coveredLeaf399 coveredNode413
+theorem coveredNode411 : CovBy 9 PR (Pg cN 9 BS TS) cell822 :=
+  branch 0 8 310815 (by decide) (by decide) normalized411 left411 right411 coveredLeaf397 coveredLeaf398
+theorem coveredNode410 : CovBy 9 PR (Pg cN 9 BS TS) cell819 :=
+  branch 1 9 309819 (by decide) (by decide) normalized410 left410 right410 coveredLeaf396 coveredNode411
+theorem coveredNode409 : CovBy 9 PR (Pg cN 9 BS TS) cell817 :=
+  branch 2 6 173296 (by decide) (by decide) normalized409 left409 right409 coveredNode410 coveredNode412
+theorem coveredNode408 : CovBy 9 PR (Pg cN 9 BS TS) cell815 :=
+  branch 4 5 47629 (by decide) (by decide) normalized408 left408 right408 coveredNode409 coveredLeaf402
+theorem coveredNode407 : CovBy 9 PR (Pg cN 9 BS TS) cell813 :=
+  branch 5 6 47725 (by decide) (by decide) normalized407 left407 right407 coveredNode408 coveredLeaf403
+theorem coveredNode406 : CovBy 9 PR (Pg cN 9 BS TS) cell811 :=
+  branch 3 4 80140 (by decide) (by decide) normalized406 left406 right406 coveredNode407 coveredLeaf404
+theorem coveredNode405 : CovBy 9 PR (Pg cN 9 BS TS) cell762 :=
+  branch 8 9 49163 (by decide) (by decide) normalized405 left405 right405 coveredNode406 coveredNode414
+theorem coveredNode404 : CovBy 9 PR (Pg cN 9 BS TS) cell808 :=
+  branch 1 5 136640 (by decide) (by decide) normalized404 left404 right404 coveredLeaf394 coveredLeaf395
+theorem coveredNode403 : CovBy 9 PR (Pg cN 9 BS TS) cell792 :=
+  branch 2 5 102704 (by decide) (by decide) normalized403 left403 right403 coveredLeaf393 coveredNode404
+theorem coveredNode402 : CovBy 9 PR (Pg cN 9 BS TS) cell804 :=
+  branch 3 6 140095 (by decide) (by decide) normalized402 left402 right402 coveredLeaf389 coveredLeaf390
+theorem coveredNode401 : CovBy 9 PR (Pg cN 9 BS TS) cell798 :=
+  branch 2 6 174270 (by decide) (by decide) normalized401 left401 right401 coveredLeaf388 coveredNode402
+theorem coveredNode400 : CovBy 9 PR (Pg cN 9 BS TS) cell800 :=
+  branch 1 9 310815 (by decide) (by decide) normalized400 left400 right400 coveredLeaf386 coveredLeaf387
+theorem coveredNode399 : CovBy 9 PR (Pg cN 9 BS TS) cell797 :=
+  branch 0 8 309819 (by decide) (by decide) normalized399 left399 right399 coveredLeaf385 coveredNode400
+theorem coveredNode398 : CovBy 9 PR (Pg cN 9 BS TS) cell795 :=
+  branch 3 7 173296 (by decide) (by decide) normalized398 left398 right398 coveredNode399 coveredNode401
+theorem coveredNode397 : CovBy 9 PR (Pg cN 9 BS TS) cell793 :=
+  branch 4 5 47629 (by decide) (by decide) normalized397 left397 right397 coveredNode398 coveredLeaf391
+theorem coveredNode396 : CovBy 9 PR (Pg cN 9 BS TS) cell791 :=
+  branch 5 6 80140 (by decide) (by decide) normalized396 left396 right396 coveredNode397 coveredLeaf392
+theorem coveredNode395 : CovBy 9 PR (Pg cN 9 BS TS) cell764 :=
+  branch 8 9 49147 (by decide) (by decide) normalized395 left395 right395 coveredNode396 coveredNode403
+theorem coveredNode394 : CovBy 9 PR (Pg cN 9 BS TS) cell788 :=
+  branch 3 8 214592 (by decide) (by decide) normalized394 left394 right394 coveredLeaf383 coveredLeaf384
+theorem coveredNode393 : CovBy 9 PR (Pg cN 9 BS TS) cell774 :=
+  branch 3 8 201424 (by decide) (by decide) normalized393 left393 right393 coveredLeaf382 coveredNode394
+theorem coveredNode392 : CovBy 9 PR (Pg cN 9 BS TS) cell784 :=
+  branch 3 6 139600 (by decide) (by decide) normalized392 left392 right392 coveredLeaf379 coveredLeaf380
+theorem coveredNode391 : CovBy 9 PR (Pg cN 9 BS TS) cell778 :=
+  branch 3 7 173935 (by decide) (by decide) normalized391 left391 right391 coveredLeaf378 coveredNode392
+theorem coveredNode390 : CovBy 9 PR (Pg cN 9 BS TS) cell780 :=
+  branch 1 9 310847 (by decide) (by decide) normalized390 left390 right390 coveredLeaf376 coveredLeaf377
+theorem coveredNode389 : CovBy 9 PR (Pg cN 9 BS TS) cell777 :=
+  branch 0 8 309872 (by decide) (by decide) normalized389 left389 right389 coveredLeaf375 coveredNode390
+theorem coveredNode388 : CovBy 9 PR (Pg cN 9 BS TS) cell775 :=
+  branch 2 6 173168 (by decide) (by decide) normalized388 left388 right388 coveredNode389 coveredNode391
+theorem coveredNode387 : CovBy 9 PR (Pg cN 9 BS TS) cell773 :=
+  branch 4 5 80028 (by decide) (by decide) normalized387 left387 right387 coveredNode388 coveredLeaf381
+theorem coveredNode386 : CovBy 9 PR (Pg cN 9 BS TS) cell766 :=
+  branch 8 9 49131 (by decide) (by decide) normalized386 left386 right386 coveredNode387 coveredNode393
+theorem coveredNode385 : CovBy 9 PR (Pg cN 9 BS TS) cell768 :=
+  branch 3 7 140928 (by decide) (by decide) normalized385 left385 right385 coveredLeaf373 coveredLeaf374
+theorem coveredNode384 : CovBy 9 PR (Pg cN 9 BS TS) cell767 :=
+  branch 1 8 242305 (by decide) (by decide) normalized384 left384 right384 coveredLeaf371 coveredLeaf372
+theorem coveredNode383 : CovBy 9 PR (Pg cN 9 BS TS) cell765 :=
+  branch 2 6 140512 (by decide) (by decide) normalized383 left383 right383 coveredNode384 coveredNode385
+theorem coveredNode382 : CovBy 9 PR (Pg cN 9 BS TS) cell763 :=
+  branch 4 5 48555 (by decide) (by decide) normalized382 left382 right382 coveredNode383 coveredNode386
+theorem coveredNode381 : CovBy 9 PR (Pg cN 9 BS TS) cell761 :=
+  branch 5 6 48620 (by decide) (by decide) normalized381 left381 right381 coveredNode382 coveredNode395
+theorem coveredNode380 : CovBy 9 PR (Pg cN 9 BS TS) cell759 :=
+  branch 3 4 48652 (by decide) (by decide) normalized380 left380 right380 coveredNode381 coveredNode405
+theorem coveredNode379 : CovBy 9 PR (Pg cN 9 BS TS) cell757 :=
+  branch 6 7 49283 (by decide) (by decide) normalized379 left379 right379 coveredNode380 coveredNode416
+theorem coveredNode378 : CovBy 9 PR (Pg cN 9 BS TS) cell755 :=
+  branch 2 3 49315 (by decide) (by decide) normalized378 left378 right378 coveredNode379 coveredNode427
+theorem coveredNode377 : CovBy 9 PR (Pg cN 9 BS TS) cell753 :=
+  branch 1 2 49587 (by decide) (by decide) normalized377 left377 right377 coveredNode378 coveredNode439
+theorem coveredNode376 : CovBy 9 PR (Pg cN 9 BS TS) cell751 :=
+  branch 7 8 49619 (by decide) (by decide) normalized376 left376 right376 coveredNode377 coveredNode456
+theorem coveredNode375 : CovBy 9 PR (Pg cN 9 BS TS) cell070 :=
+  branch 0 1 49998 (by decide) (by decide) normalized375 left375 right375 coveredNode376 coveredNode476
+theorem coveredNode374 : CovBy 9 PR (Pg cN 9 BS TS) cell746 :=
+  branch 3 9 206240 (by decide) (by decide) normalized374 left374 right374 coveredLeaf369 coveredLeaf370
+theorem coveredNode373 : CovBy 9 PR (Pg cN 9 BS TS) cell745 :=
+  branch 3 9 203088 (by decide) (by decide) normalized373 left373 right373 coveredLeaf367 coveredLeaf368
+theorem coveredNode372 : CovBy 9 PR (Pg cN 9 BS TS) cell678 :=
+  branch 3 7 137856 (by decide) (by decide) normalized372 left372 right372 coveredNode373 coveredNode374
+theorem coveredNode371 : CovBy 9 PR (Pg cN 9 BS TS) cell742 :=
+  branch 0 9 338998 (by decide) (by decide) normalized371 left371 right371 coveredLeaf364 coveredLeaf365
+theorem coveredNode370 : CovBy 9 PR (Pg cN 9 BS TS) cell740 :=
+  branch 1 9 306080 (by decide) (by decide) normalized370 left370 right370 coveredLeaf363 coveredNode371
+theorem coveredNode369 : CovBy 9 PR (Pg cN 9 BS TS) cell738 :=
+  branch 1 8 270992 (by decide) (by decide) normalized369 left369 right369 coveredLeaf362 coveredNode370
+theorem coveredNode368 : CovBy 9 PR (Pg cN 9 BS TS) cell735 :=
+  branch 4 8 137600 (by decide) (by decide) normalized368 left368 right368 coveredLeaf361 coveredNode369
+theorem coveredNode367 : CovBy 9 PR (Pg cN 9 BS TS) cell734 :=
+  branch 3 9 248670 (by decide) (by decide) normalized367 left367 right367 coveredNode368 coveredLeaf366
+theorem coveredNode366 : CovBy 9 PR (Pg cN 9 BS TS) cell724 :=
+  branch 3 9 236832 (by decide) (by decide) normalized366 left366 right366 coveredLeaf360 coveredNode367
+theorem coveredNode365 : CovBy 9 PR (Pg cN 9 BS TS) cell730 :=
+  branch 0 9 341264 (by decide) (by decide) normalized365 left365 right365 coveredLeaf357 coveredLeaf358
+theorem coveredNode364 : CovBy 9 PR (Pg cN 9 BS TS) cell727 :=
+  branch 0 8 303696 (by decide) (by decide) normalized364 left364 right364 coveredLeaf356 coveredNode365
+theorem coveredNode363 : CovBy 9 PR (Pg cN 9 BS TS) cell726 :=
+  branch 0 6 248166 (by decide) (by decide) normalized363 left363 right363 coveredNode364 coveredLeaf359
+theorem coveredNode362 : CovBy 9 PR (Pg cN 9 BS TS) cell723 :=
+  branch 0 6 235824 (by decide) (by decide) normalized362 left362 right362 coveredLeaf355 coveredNode363
+theorem coveredNode361 : CovBy 9 PR (Pg cN 9 BS TS) cell680 :=
+  branch 4 7 103376 (by decide) (by decide) normalized361 left361 right361 coveredNode362 coveredNode366
+theorem coveredNode360 : CovBy 9 PR (Pg cN 9 BS TS) cell720 :=
+  branch 0 9 338990 (by decide) (by decide) normalized360 left360 right360 coveredLeaf352 coveredLeaf353
+theorem coveredNode359 : CovBy 9 PR (Pg cN 9 BS TS) cell718 :=
+  branch 0 8 306064 (by decide) (by decide) normalized359 left359 right359 coveredLeaf351 coveredNode360
+theorem coveredNode358 : CovBy 9 PR (Pg cN 9 BS TS) cell716 :=
+  branch 1 8 270992 (by decide) (by decide) normalized358 left358 right358 coveredLeaf350 coveredNode359
+theorem coveredNode357 : CovBy 9 PR (Pg cN 9 BS TS) cell713 :=
+  branch 1 5 137600 (by decide) (by decide) normalized357 left357 right357 coveredLeaf349 coveredNode358
+theorem coveredNode356 : CovBy 9 PR (Pg cN 9 BS TS) cell712 :=
+  branch 0 6 248670 (by decide) (by decide) normalized356 left356 right356 coveredNode357 coveredLeaf354
+theorem coveredNode355 : CovBy 9 PR (Pg cN 9 BS TS) cell702 :=
+  branch 0 6 236832 (by decide) (by decide) normalized355 left355 right355 coveredLeaf348 coveredNode356
+theorem coveredNode354 : CovBy 9 PR (Pg cN 9 BS TS) cell708 :=
+  branch 0 9 341264 (by decide) (by decide) normalized354 left354 right354 coveredLeaf345 coveredLeaf346
+theorem coveredNode353 : CovBy 9 PR (Pg cN 9 BS TS) cell705 :=
+  branch 1 9 303696 (by decide) (by decide) normalized353 left353 right353 coveredLeaf344 coveredNode354
+theorem coveredNode352 : CovBy 9 PR (Pg cN 9 BS TS) cell704 :=
+  branch 3 9 248166 (by decide) (by decide) normalized352 left352 right352 coveredNode353 coveredLeaf347
+theorem coveredNode351 : CovBy 9 PR (Pg cN 9 BS TS) cell701 :=
+  branch 3 9 235824 (by decide) (by decide) normalized351 left351 right351 coveredLeaf343 coveredNode352
+theorem coveredNode350 : CovBy 9 PR (Pg cN 9 BS TS) cell682 :=
+  branch 2 5 103376 (by decide) (by decide) normalized350 left350 right350 coveredNode351 coveredNode355
+theorem coveredNode349 : CovBy 9 PR (Pg cN 9 BS TS) cell698 :=
+  branch 0 6 240080 (by decide) (by decide) normalized349 left349 right349 coveredLeaf341 coveredLeaf342
+theorem coveredNode348 : CovBy 9 PR (Pg cN 9 BS TS) cell696 :=
+  branch 1 9 309520 (by decide) (by decide) normalized348 left348 right348 coveredLeaf340 coveredNode349
+theorem coveredNode347 : CovBy 9 PR (Pg cN 9 BS TS) cell688 :=
+  branch 0 9 339590 (by decide) (by decide) normalized347 left347 right347 coveredLeaf339 coveredNode348
+theorem coveredNode346 : CovBy 9 PR (Pg cN 9 BS TS) cell691 :=
+  branch 0 9 337806 (by decide) (by decide) normalized346 left346 right346 coveredLeaf336 coveredLeaf337
+theorem coveredNode345 : CovBy 9 PR (Pg cN 9 BS TS) cell690 :=
+  branch 0 9 342064 (by decide) (by decide) normalized345 left345 right345 coveredNode346 coveredLeaf338
+theorem coveredNode344 : CovBy 9 PR (Pg cN 9 BS TS) cell687 :=
+  branch 1 9 305696 (by decide) (by decide) normalized344 left344 right344 coveredLeaf335 coveredNode345
+theorem coveredNode343 : CovBy 9 PR (Pg cN 9 BS TS) cell686 :=
+  branch 0 8 307264 (by decide) (by decide) normalized343 left343 right343 coveredNode344 coveredNode347
+theorem coveredNode342 : CovBy 9 PR (Pg cN 9 BS TS) cell684 :=
+  branch 1 8 271632 (by decide) (by decide) normalized342 left342 right342 coveredLeaf334 coveredNode343
+theorem coveredNode341 : CovBy 9 PR (Pg cN 9 BS TS) cell681 :=
+  branch 4 5 59211 (by decide) (by decide) normalized341 left341 right341 coveredLeaf333 coveredNode342
+theorem coveredNode340 : CovBy 9 PR (Pg cN 9 BS TS) cell679 :=
+  branch 5 6 59238 (by decide) (by decide) normalized340 left340 right340 coveredNode341 coveredNode350
+theorem coveredNode339 : CovBy 9 PR (Pg cN 9 BS TS) cell677 :=
+  branch 3 4 59270 (by decide) (by decide) normalized339 left339 right339 coveredNode340 coveredNode361
+theorem coveredNode338 : CovBy 9 PR (Pg cN 9 BS TS) cell072 :=
+  branch 2 3 59281 (by decide) (by decide) normalized338 left338 right338 coveredNode339 coveredNode372
+theorem coveredNode337 : CovBy 9 PR (Pg cN 9 BS TS) cell672 :=
+  branch 0 6 206240 (by decide) (by decide) normalized337 left337 right337 coveredLeaf331 coveredLeaf332
+theorem coveredNode336 : CovBy 9 PR (Pg cN 9 BS TS) cell671 :=
+  branch 0 6 203088 (by decide) (by decide) normalized336 left336 right336 coveredLeaf329 coveredLeaf330
+theorem coveredNode335 : CovBy 9 PR (Pg cN 9 BS TS) cell664 :=
+  branch 2 6 137856 (by decide) (by decide) normalized335 left335 right335 coveredNode336 coveredNode337
+theorem coveredNode334 : CovBy 9 PR (Pg cN 9 BS TS) cell667 :=
+  branch 4 5 59211 (by decide) (by decide) normalized334 left334 right334 coveredLeaf325 coveredLeaf326
+theorem coveredNode333 : CovBy 9 PR (Pg cN 9 BS TS) cell665 :=
+  branch 3 4 59222 (by decide) (by decide) normalized333 left333 right333 coveredNode334 coveredLeaf327
+theorem coveredNode332 : CovBy 9 PR (Pg cN 9 BS TS) cell663 :=
+  branch 5 6 59238 (by decide) (by decide) normalized332 left332 right332 coveredNode333 coveredLeaf328
+theorem coveredNode331 : CovBy 9 PR (Pg cN 9 BS TS) cell074 :=
+  branch 6 7 59296 (by decide) (by decide) normalized331 left331 right331 coveredNode332 coveredNode335
+theorem coveredNode330 : CovBy 9 PR (Pg cN 9 BS TS) cell659 :=
+  branch 1 2 56208 (by decide) (by decide) normalized330 left330 right330 coveredLeaf319 coveredLeaf320
+theorem coveredNode329 : CovBy 9 PR (Pg cN 9 BS TS) cell657 :=
+  branch 2 3 48336 (by decide) (by decide) normalized329 left329 right329 coveredNode330 coveredLeaf321
+theorem coveredNode328 : CovBy 9 PR (Pg cN 9 BS TS) cell655 :=
+  branch 4 5 55099 (by decide) (by decide) normalized328 left328 right328 coveredNode329 coveredLeaf322
+theorem coveredNode327 : CovBy 9 PR (Pg cN 9 BS TS) cell653 :=
+  branch 5 6 55158 (by decide) (by decide) normalized327 left327 right327 coveredNode328 coveredLeaf323
+theorem coveredNode326 : CovBy 9 PR (Pg cN 9 BS TS) cell566 :=
+  branch 3 4 55158 (by decide) (by decide) normalized326 left326 right326 coveredNode327 coveredLeaf324
+theorem coveredNode325 : CovBy 9 PR (Pg cN 9 BS TS) cell649 :=
+  branch 7 8 56208 (by decide) (by decide) normalized325 left325 right325 coveredLeaf313 coveredLeaf314
+theorem coveredNode324 : CovBy 9 PR (Pg cN 9 BS TS) cell647 :=
+  branch 6 7 48336 (by decide) (by decide) normalized324 left324 right324 coveredNode325 coveredLeaf315
+theorem coveredNode323 : CovBy 9 PR (Pg cN 9 BS TS) cell645 :=
+  branch 4 5 55099 (by decide) (by decide) normalized323 left323 right323 coveredNode324 coveredLeaf316
+theorem coveredNode322 : CovBy 9 PR (Pg cN 9 BS TS) cell643 :=
+  branch 5 6 55243 (by decide) (by decide) normalized322 left322 right322 coveredNode323 coveredLeaf317
+theorem coveredNode321 : CovBy 9 PR (Pg cN 9 BS TS) cell568 :=
+  branch 3 4 55158 (by decide) (by decide) normalized321 left321 right321 coveredNode322 coveredLeaf318
+theorem coveredNode320 : CovBy 9 PR (Pg cN 9 BS TS) cell639 :=
+  branch 4 5 60251 (by decide) (by decide) normalized320 left320 right320 coveredLeaf310 coveredLeaf311
+theorem coveredNode319 : CovBy 9 PR (Pg cN 9 BS TS) cell570 :=
+  branch 3 4 60267 (by decide) (by decide) normalized319 left319 right319 coveredNode320 coveredLeaf312
+theorem coveredNode318 : CovBy 9 PR (Pg cN 9 BS TS) cell630 :=
+  branch 5 6 61008 (by decide) (by decide) normalized318 left318 right318 coveredLeaf307 coveredLeaf308
+theorem coveredNode317 : CovBy 9 PR (Pg cN 9 BS TS) cell632 :=
+  branch 5 6 49152 (by decide) (by decide) normalized317 left317 right317 coveredLeaf305 coveredLeaf306
+theorem coveredNode316 : CovBy 9 PR (Pg cN 9 BS TS) cell631 :=
+  branch 5 6 49152 (by decide) (by decide) normalized316 left316 right316 coveredLeaf303 coveredLeaf304
+theorem coveredNode315 : CovBy 9 PR (Pg cN 9 BS TS) cell629 :=
+  branch 2 9 262144 (by decide) (by decide) normalized315 left315 right315 coveredNode316 coveredNode317
+theorem coveredNode314 : CovBy 9 PR (Pg cN 9 BS TS) cell627 :=
+  branch 0 7 262144 (by decide) (by decide) normalized314 left314 right314 coveredNode315 coveredNode318
+theorem coveredNode313 : CovBy 9 PR (Pg cN 9 BS TS) cell616 :=
+  branch 2 5 114688 (by decide) (by decide) normalized313 left313 right313 coveredNode314 coveredLeaf309
+theorem coveredNode312 : CovBy 9 PR (Pg cN 9 BS TS) cell620 :=
+  branch 5 6 49152 (by decide) (by decide) normalized312 left312 right312 coveredLeaf300 coveredLeaf301
+theorem coveredNode311 : CovBy 9 PR (Pg cN 9 BS TS) cell621 :=
+  branch 5 7 81920 (by decide) (by decide) normalized311 left311 right311 coveredLeaf297 coveredLeaf298
+theorem coveredNode310 : CovBy 9 PR (Pg cN 9 BS TS) cell619 :=
+  branch 0 9 335872 (by decide) (by decide) normalized310 left310 right310 coveredNode311 coveredLeaf299
+theorem coveredNode309 : CovBy 9 PR (Pg cN 9 BS TS) cell617 :=
+  branch 0 6 229376 (by decide) (by decide) normalized309 left309 right309 coveredNode310 coveredNode312
+theorem coveredNode308 : CovBy 9 PR (Pg cN 9 BS TS) cell615 :=
+  branch 2 5 114688 (by decide) (by decide) normalized308 left308 right308 coveredNode309 coveredLeaf302
+theorem coveredNode307 : CovBy 9 PR (Pg cN 9 BS TS) cell600 :=
+  branch 1 9 294912 (by decide) (by decide) normalized307 left307 right307 coveredNode308 coveredNode313
+theorem coveredNode306 : CovBy 9 PR (Pg cN 9 BS TS) cell608 :=
+  branch 5 6 49152 (by decide) (by decide) normalized306 left306 right306 coveredLeaf294 coveredLeaf295
+theorem coveredNode305 : CovBy 9 PR (Pg cN 9 BS TS) cell609 :=
+  branch 5 7 81920 (by decide) (by decide) normalized305 left305 right305 coveredLeaf291 coveredLeaf292
+theorem coveredNode304 : CovBy 9 PR (Pg cN 9 BS TS) cell607 :=
+  branch 0 9 335872 (by decide) (by decide) normalized304 left304 right304 coveredNode305 coveredLeaf293
+theorem coveredNode303 : CovBy 9 PR (Pg cN 9 BS TS) cell605 :=
+  branch 3 9 229376 (by decide) (by decide) normalized303 left303 right303 coveredNode304 coveredNode306
+theorem coveredNode302 : CovBy 9 PR (Pg cN 9 BS TS) cell602 :=
+  branch 2 5 114688 (by decide) (by decide) normalized302 left302 right302 coveredNode303 coveredLeaf296
+theorem coveredNode301 : CovBy 9 PR (Pg cN 9 BS TS) cell601 :=
+  branch 2 5 114688 (by decide) (by decide) normalized301 left301 right301 coveredLeaf289 coveredLeaf290
+theorem coveredNode300 : CovBy 9 PR (Pg cN 9 BS TS) cell599 :=
+  branch 1 9 294912 (by decide) (by decide) normalized300 left300 right300 coveredNode301 coveredNode302
+theorem coveredNode299 : CovBy 9 PR (Pg cN 9 BS TS) cell572 :=
+  branch 0 8 294912 (by decide) (by decide) normalized299 left299 right299 coveredNode300 coveredNode307
+theorem coveredNode298 : CovBy 9 PR (Pg cN 9 BS TS) cell595 :=
+  branch 0 9 335872 (by decide) (by decide) normalized298 left298 right298 coveredLeaf283 coveredLeaf284
+theorem coveredNode297 : CovBy 9 PR (Pg cN 9 BS TS) cell593 :=
+  branch 1 8 262144 (by decide) (by decide) normalized297 left297 right297 coveredNode298 coveredLeaf285
+theorem coveredNode296 : CovBy 9 PR (Pg cN 9 BS TS) cell591 :=
+  branch 4 7 114688 (by decide) (by decide) normalized296 left296 right296 coveredNode297 coveredLeaf286
+theorem coveredNode295 : CovBy 9 PR (Pg cN 9 BS TS) cell589 :=
+  branch 2 5 114688 (by decide) (by decide) normalized295 left295 right295 coveredNode296 coveredLeaf287
+theorem coveredNode294 : CovBy 9 PR (Pg cN 9 BS TS) cell584 :=
+  branch 3 6 114688 (by decide) (by decide) normalized294 left294 right294 coveredNode295 coveredLeaf288
+theorem coveredNode293 : CovBy 9 PR (Pg cN 9 BS TS) cell585 :=
+  branch 2 5 114688 (by decide) (by decide) normalized293 left293 right293 coveredLeaf280 coveredLeaf281
+theorem coveredNode292 : CovBy 9 PR (Pg cN 9 BS TS) cell583 :=
+  branch 3 6 114688 (by decide) (by decide) normalized292 left292 right292 coveredNode293 coveredLeaf282
+theorem coveredNode291 : CovBy 9 PR (Pg cN 9 BS TS) cell574 :=
+  branch 1 9 294912 (by decide) (by decide) normalized291 left291 right291 coveredNode292 coveredNode294
+theorem coveredNode290 : CovBy 9 PR (Pg cN 9 BS TS) cell579 :=
+  branch 4 7 114688 (by decide) (by decide) normalized290 left290 right290 coveredLeaf276 coveredLeaf277
+theorem coveredNode289 : CovBy 9 PR (Pg cN 9 BS TS) cell577 :=
+  branch 2 5 114688 (by decide) (by decide) normalized289 left289 right289 coveredNode290 coveredLeaf278
+theorem coveredNode288 : CovBy 9 PR (Pg cN 9 BS TS) cell576 :=
+  branch 3 6 114688 (by decide) (by decide) normalized288 left288 right288 coveredNode289 coveredLeaf279
+theorem coveredNode287 : CovBy 9 PR (Pg cN 9 BS TS) cell573 :=
+  branch 1 9 294912 (by decide) (by decide) normalized287 left287 right287 coveredLeaf275 coveredNode288
+theorem coveredNode286 : CovBy 9 PR (Pg cN 9 BS TS) cell571 :=
+  branch 0 8 294912 (by decide) (by decide) normalized286 left286 right286 coveredNode287 coveredNode291
+theorem coveredNode285 : CovBy 9 PR (Pg cN 9 BS TS) cell569 :=
+  branch 4 6 81920 (by decide) (by decide) normalized285 left285 right285 coveredNode286 coveredNode299
+theorem coveredNode284 : CovBy 9 PR (Pg cN 9 BS TS) cell567 :=
+  branch 3 5 81920 (by decide) (by decide) normalized284 left284 right284 coveredNode285 coveredNode319
+theorem coveredNode283 : CovBy 9 PR (Pg cN 9 BS TS) cell565 :=
+  branch 3 8 196608 (by decide) (by decide) normalized283 left283 right283 coveredNode284 coveredNode321
+theorem coveredNode282 : CovBy 9 PR (Pg cN 9 BS TS) cell564 :=
+  branch 1 6 196608 (by decide) (by decide) normalized282 left282 right282 coveredNode283 coveredNode326
+theorem coveredNode281 : CovBy 9 PR (Pg cN 9 BS TS) cell562 :=
+  branch 3 7 131072 (by decide) (by decide) normalized281 left281 right281 coveredLeaf274 coveredNode282
+theorem coveredNode280 : CovBy 9 PR (Pg cN 9 BS TS) cell362 :=
+  branch 2 6 131072 (by decide) (by decide) normalized280 left280 right280 coveredLeaf273 coveredNode281
+theorem coveredNode279 : CovBy 9 PR (Pg cN 9 BS TS) cell558 :=
+  branch 4 7 114688 (by decide) (by decide) normalized279 left279 right279 coveredLeaf269 coveredLeaf270
+theorem coveredNode278 : CovBy 9 PR (Pg cN 9 BS TS) cell556 :=
+  branch 2 5 114688 (by decide) (by decide) normalized278 left278 right278 coveredLeaf268 coveredNode279
+theorem coveredNode277 : CovBy 9 PR (Pg cN 9 BS TS) cell554 :=
+  branch 3 6 98304 (by decide) (by decide) normalized277 left277 right277 coveredLeaf267 coveredNode278
+theorem coveredNode276 : CovBy 9 PR (Pg cN 9 BS TS) cell540 :=
+  branch 2 6 147456 (by decide) (by decide) normalized276 left276 right276 coveredLeaf266 coveredNode277
+theorem coveredNode275 : CovBy 9 PR (Pg cN 9 BS TS) cell549 :=
+  branch 0 7 278528 (by decide) (by decide) normalized275 left275 right275 coveredLeaf263 coveredLeaf264
+theorem coveredNode274 : CovBy 9 PR (Pg cN 9 BS TS) cell548 :=
+  branch 0 6 245760 (by decide) (by decide) normalized274 left274 right274 coveredNode275 coveredLeaf265
+theorem coveredNode273 : CovBy 9 PR (Pg cN 9 BS TS) cell546 :=
+  branch 1 8 262144 (by decide) (by decide) normalized273 left273 right273 coveredLeaf262 coveredNode274
+theorem coveredNode272 : CovBy 9 PR (Pg cN 9 BS TS) cell544 :=
+  branch 4 7 98304 (by decide) (by decide) normalized272 left272 right272 coveredLeaf261 coveredNode273
+theorem coveredNode271 : CovBy 9 PR (Pg cN 9 BS TS) cell542 :=
+  branch 3 6 98304 (by decide) (by decide) normalized271 left271 right271 coveredLeaf260 coveredNode272
+theorem coveredNode270 : CovBy 9 PR (Pg cN 9 BS TS) cell539 :=
+  branch 2 5 114688 (by decide) (by decide) normalized270 left270 right270 coveredLeaf259 coveredNode271
+theorem coveredNode269 : CovBy 9 PR (Pg cN 9 BS TS) cell526 :=
+  branch 2 7 196608 (by decide) (by decide) normalized269 left269 right269 coveredNode270 coveredNode276
+theorem coveredNode268 : CovBy 9 PR (Pg cN 9 BS TS) cell535 :=
+  branch 3 7 147456 (by decide) (by decide) normalized268 left268 right268 coveredLeaf256 coveredLeaf257
+theorem coveredNode267 : CovBy 9 PR (Pg cN 9 BS TS) cell534 :=
+  branch 5 7 81920 (by decide) (by decide) normalized267 left267 right267 coveredNode268 coveredLeaf258
+theorem coveredNode266 : CovBy 9 PR (Pg cN 9 BS TS) cell532 :=
+  branch 2 4 81920 (by decide) (by decide) normalized266 left266 right266 coveredLeaf255 coveredNode267
+theorem coveredNode265 : CovBy 9 PR (Pg cN 9 BS TS) cell530 :=
+  branch 4 7 98304 (by decide) (by decide) normalized265 left265 right265 coveredLeaf254 coveredNode266
+theorem coveredNode264 : CovBy 9 PR (Pg cN 9 BS TS) cell528 :=
+  branch 3 6 98304 (by decide) (by decide) normalized264 left264 right264 coveredLeaf253 coveredNode265
+theorem coveredNode263 : CovBy 9 PR (Pg cN 9 BS TS) cell525 :=
+  branch 2 5 114688 (by decide) (by decide) normalized263 left263 right263 coveredLeaf252 coveredNode264
+theorem coveredNode262 : CovBy 9 PR (Pg cN 9 BS TS) cell523 :=
+  branch 0 9 335872 (by decide) (by decide) normalized262 left262 right262 coveredNode263 coveredNode269
+theorem coveredNode261 : CovBy 9 PR (Pg cN 9 BS TS) cell521 :=
+  branch 4 6 81920 (by decide) (by decide) normalized261 left261 right261 coveredNode262 coveredLeaf271
+theorem coveredNode260 : CovBy 9 PR (Pg cN 9 BS TS) cell512 :=
+  branch 3 5 81920 (by decide) (by decide) normalized260 left260 right260 coveredNode261 coveredLeaf272
+theorem coveredNode259 : CovBy 9 PR (Pg cN 9 BS TS) cell517 :=
+  branch 2 5 114688 (by decide) (by decide) normalized259 left259 right259 coveredLeaf247 coveredLeaf248
+theorem coveredNode258 : CovBy 9 PR (Pg cN 9 BS TS) cell515 :=
+  branch 0 9 335872 (by decide) (by decide) normalized258 left258 right258 coveredNode259 coveredLeaf249
+theorem coveredNode257 : CovBy 9 PR (Pg cN 9 BS TS) cell513 :=
+  branch 4 6 81920 (by decide) (by decide) normalized257 left257 right257 coveredNode258 coveredLeaf250
+theorem coveredNode256 : CovBy 9 PR (Pg cN 9 BS TS) cell511 :=
+  branch 3 5 81920 (by decide) (by decide) normalized256 left256 right256 coveredNode257 coveredLeaf251
+theorem coveredNode255 : CovBy 9 PR (Pg cN 9 BS TS) cell502 :=
+  branch 1 9 294912 (by decide) (by decide) normalized255 left255 right255 coveredNode256 coveredNode260
+theorem coveredNode254 : CovBy 9 PR (Pg cN 9 BS TS) cell507 :=
+  branch 2 5 114688 (by decide) (by decide) normalized254 left254 right254 coveredLeaf242 coveredLeaf243
+theorem coveredNode253 : CovBy 9 PR (Pg cN 9 BS TS) cell505 :=
+  branch 0 9 335872 (by decide) (by decide) normalized253 left253 right253 coveredNode254 coveredLeaf244
+theorem coveredNode252 : CovBy 9 PR (Pg cN 9 BS TS) cell503 :=
+  branch 4 6 81920 (by decide) (by decide) normalized252 left252 right252 coveredNode253 coveredLeaf245
+theorem coveredNode251 : CovBy 9 PR (Pg cN 9 BS TS) cell501 :=
+  branch 3 5 81920 (by decide) (by decide) normalized251 left251 right251 coveredNode252 coveredLeaf246
+theorem coveredNode250 : CovBy 9 PR (Pg cN 9 BS TS) cell500 :=
+  branch 0 8 294912 (by decide) (by decide) normalized250 left250 right250 coveredNode251 coveredNode255
+theorem coveredNode249 : CovBy 9 PR (Pg cN 9 BS TS) cell412 :=
+  branch 3 7 131072 (by decide) (by decide) normalized249 left249 right249 coveredLeaf241 coveredNode250
+theorem coveredNode248 : CovBy 9 PR (Pg cN 9 BS TS) cell496 :=
+  branch 4 7 114688 (by decide) (by decide) normalized248 left248 right248 coveredLeaf238 coveredLeaf239
+theorem coveredNode247 : CovBy 9 PR (Pg cN 9 BS TS) cell494 :=
+  branch 2 5 114688 (by decide) (by decide) normalized247 left247 right247 coveredLeaf237 coveredNode248
+theorem coveredNode246 : CovBy 9 PR (Pg cN 9 BS TS) cell491 :=
+  branch 2 6 147456 (by decide) (by decide) normalized246 left246 right246 coveredLeaf236 coveredNode247
+theorem coveredNode245 : CovBy 9 PR (Pg cN 9 BS TS) cell460 :=
+  branch 0 9 335872 (by decide) (by decide) normalized245 left245 right245 coveredNode246 coveredLeaf240
+theorem coveredNode244 : CovBy 9 PR (Pg cN 9 BS TS) cell470 :=
+  branch 2 5 114688 (by decide) (by decide) normalized244 left244 right244 coveredLeaf234 coveredLeaf235
+theorem coveredNode243 : CovBy 9 PR (Pg cN 9 BS TS) cell485 :=
+  branch 2 4 81920 (by decide) (by decide) normalized243 left243 right243 coveredLeaf231 coveredLeaf232
+theorem coveredNode242 : CovBy 9 PR (Pg cN 9 BS TS) cell480 :=
+  branch 3 7 147456 (by decide) (by decide) normalized242 left242 right242 coveredNode243 coveredLeaf233
+theorem coveredNode241 : CovBy 9 PR (Pg cN 9 BS TS) cell481 :=
+  branch 2 4 81920 (by decide) (by decide) normalized241 left241 right241 coveredLeaf228 coveredLeaf229
+theorem coveredNode240 : CovBy 9 PR (Pg cN 9 BS TS) cell479 :=
+  branch 2 9 262144 (by decide) (by decide) normalized240 left240 right240 coveredNode241 coveredLeaf230
+theorem coveredNode239 : CovBy 9 PR (Pg cN 9 BS TS) cell478 :=
+  branch 0 7 262144 (by decide) (by decide) normalized239 left239 right239 coveredNode240 coveredNode242
+theorem coveredNode238 : CovBy 9 PR (Pg cN 9 BS TS) cell476 :=
+  branch 4 6 65536 (by decide) (by decide) normalized238 left238 right238 coveredLeaf227 coveredNode239
+theorem coveredNode237 : CovBy 9 PR (Pg cN 9 BS TS) cell474 :=
+  branch 3 5 65536 (by decide) (by decide) normalized237 left237 right237 coveredLeaf226 coveredNode238
+theorem coveredNode236 : CovBy 9 PR (Pg cN 9 BS TS) cell472 :=
+  branch 4 7 98304 (by decide) (by decide) normalized236 left236 right236 coveredLeaf225 coveredNode237
+theorem coveredNode235 : CovBy 9 PR (Pg cN 9 BS TS) cell469 :=
+  branch 2 5 114688 (by decide) (by decide) normalized235 left235 right235 coveredLeaf224 coveredNode236
+theorem coveredNode234 : CovBy 9 PR (Pg cN 9 BS TS) cell462 :=
+  branch 0 9 335872 (by decide) (by decide) normalized234 left234 right234 coveredNode235 coveredNode244
+theorem coveredNode233 : CovBy 9 PR (Pg cN 9 BS TS) cell466 :=
+  branch 2 4 81920 (by decide) (by decide) normalized233 left233 right233 coveredLeaf221 coveredLeaf222
+theorem coveredNode232 : CovBy 9 PR (Pg cN 9 BS TS) cell463 :=
+  branch 2 5 114688 (by decide) (by decide) normalized232 left232 right232 coveredLeaf220 coveredNode233
+theorem coveredNode231 : CovBy 9 PR (Pg cN 9 BS TS) cell461 :=
+  branch 0 9 335872 (by decide) (by decide) normalized231 left231 right231 coveredNode232 coveredLeaf223
+theorem coveredNode230 : CovBy 9 PR (Pg cN 9 BS TS) cell459 :=
+  branch 1 8 262144 (by decide) (by decide) normalized230 left230 right230 coveredNode231 coveredNode234
+theorem coveredNode229 : CovBy 9 PR (Pg cN 9 BS TS) cell434 :=
+  branch 2 7 196608 (by decide) (by decide) normalized229 left229 right229 coveredNode230 coveredNode245
+theorem coveredNode228 : CovBy 9 PR (Pg cN 9 BS TS) cell456 :=
+  branch 2 4 81920 (by decide) (by decide) normalized228 left228 right228 coveredLeaf215 coveredLeaf216
+theorem coveredNode227 : CovBy 9 PR (Pg cN 9 BS TS) cell454 :=
+  branch 4 7 98304 (by decide) (by decide) normalized227 left227 right227 coveredLeaf214 coveredNode228
+theorem coveredNode226 : CovBy 9 PR (Pg cN 9 BS TS) cell452 :=
+  branch 3 6 98304 (by decide) (by decide) normalized226 left226 right226 coveredLeaf213 coveredNode227
+theorem coveredNode225 : CovBy 9 PR (Pg cN 9 BS TS) cell449 :=
+  branch 2 5 114688 (by decide) (by decide) normalized225 left225 right225 coveredLeaf212 coveredNode226
+theorem coveredNode224 : CovBy 9 PR (Pg cN 9 BS TS) cell440 :=
+  branch 0 9 335872 (by decide) (by decide) normalized224 left224 right224 coveredNode225 coveredLeaf217
+theorem coveredNode223 : CovBy 9 PR (Pg cN 9 BS TS) cell446 :=
+  branch 2 4 81920 (by decide) (by decide) normalized223 left223 right223 coveredLeaf209 coveredLeaf210
+theorem coveredNode222 : CovBy 9 PR (Pg cN 9 BS TS) cell444 :=
+  branch 4 7 98304 (by decide) (by decide) normalized222 left222 right222 coveredLeaf208 coveredNode223
+theorem coveredNode221 : CovBy 9 PR (Pg cN 9 BS TS) cell441 :=
+  branch 2 5 114688 (by decide) (by decide) normalized221 left221 right221 coveredLeaf207 coveredNode222
+theorem coveredNode220 : CovBy 9 PR (Pg cN 9 BS TS) cell439 :=
+  branch 0 9 335872 (by decide) (by decide) normalized220 left220 right220 coveredNode221 coveredLeaf211
+theorem coveredNode219 : CovBy 9 PR (Pg cN 9 BS TS) cell437 :=
+  branch 0 6 229376 (by decide) (by decide) normalized219 left219 right219 coveredNode220 coveredNode224
+theorem coveredNode218 : CovBy 9 PR (Pg cN 9 BS TS) cell435 :=
+  branch 4 6 81920 (by decide) (by decide) normalized218 left218 right218 coveredNode219 coveredLeaf218
+theorem coveredNode217 : CovBy 9 PR (Pg cN 9 BS TS) cell433 :=
+  branch 3 5 81920 (by decide) (by decide) normalized217 left217 right217 coveredNode218 coveredLeaf219
+theorem coveredNode216 : CovBy 9 PR (Pg cN 9 BS TS) cell416 :=
+  branch 1 9 294912 (by decide) (by decide) normalized216 left216 right216 coveredNode217 coveredNode229
+theorem coveredNode215 : CovBy 9 PR (Pg cN 9 BS TS) cell429 :=
+  branch 2 5 114688 (by decide) (by decide) normalized215 left215 right215 coveredLeaf204 coveredLeaf205
+theorem coveredNode214 : CovBy 9 PR (Pg cN 9 BS TS) cell418 :=
+  branch 0 9 335872 (by decide) (by decide) normalized214 left214 right214 coveredNode215 coveredLeaf206
+theorem coveredNode213 : CovBy 9 PR (Pg cN 9 BS TS) cell426 :=
+  branch 2 4 81920 (by decide) (by decide) normalized213 left213 right213 coveredLeaf199 coveredLeaf200
+theorem coveredNode212 : CovBy 9 PR (Pg cN 9 BS TS) cell423 :=
+  branch 2 5 114688 (by decide) (by decide) normalized212 left212 right212 coveredLeaf198 coveredNode213
+theorem coveredNode211 : CovBy 9 PR (Pg cN 9 BS TS) cell421 :=
+  branch 0 9 335872 (by decide) (by decide) normalized211 left211 right211 coveredNode212 coveredLeaf201
+theorem coveredNode210 : CovBy 9 PR (Pg cN 9 BS TS) cell419 :=
+  branch 4 6 81920 (by decide) (by decide) normalized210 left210 right210 coveredNode211 coveredLeaf202
+theorem coveredNode209 : CovBy 9 PR (Pg cN 9 BS TS) cell417 :=
+  branch 3 5 81920 (by decide) (by decide) normalized209 left209 right209 coveredNode210 coveredLeaf203
+theorem coveredNode208 : CovBy 9 PR (Pg cN 9 BS TS) cell415 :=
+  branch 1 9 294912 (by decide) (by decide) normalized208 left208 right208 coveredNode209 coveredNode214
+theorem coveredNode207 : CovBy 9 PR (Pg cN 9 BS TS) cell414 :=
+  branch 0 8 294912 (by decide) (by decide) normalized207 left207 right207 coveredNode208 coveredNode216
+theorem coveredNode206 : CovBy 9 PR (Pg cN 9 BS TS) cell411 :=
+  branch 3 7 131072 (by decide) (by decide) normalized206 left206 right206 coveredLeaf197 coveredNode207
+theorem coveredNode205 : CovBy 9 PR (Pg cN 9 BS TS) cell366 :=
+  branch 1 6 196608 (by decide) (by decide) normalized205 left205 right205 coveredNode206 coveredNode249
+theorem coveredNode204 : CovBy 9 PR (Pg cN 9 BS TS) cell408 :=
+  branch 3 5 81920 (by decide) (by decide) normalized204 left204 right204 coveredLeaf195 coveredLeaf196
+theorem coveredNode203 : CovBy 9 PR (Pg cN 9 BS TS) cell406 :=
+  branch 1 9 294912 (by decide) (by decide) normalized203 left203 right203 coveredLeaf194 coveredNode204
+theorem coveredNode202 : CovBy 9 PR (Pg cN 9 BS TS) cell404 :=
+  branch 0 8 294912 (by decide) (by decide) normalized202 left202 right202 coveredLeaf193 coveredNode203
+theorem coveredNode201 : CovBy 9 PR (Pg cN 9 BS TS) cell368 :=
+  branch 3 7 131072 (by decide) (by decide) normalized201 left201 right201 coveredLeaf192 coveredNode202
+theorem coveredNode200 : CovBy 9 PR (Pg cN 9 BS TS) cell399 :=
+  branch 0 9 335872 (by decide) (by decide) normalized200 left200 right200 coveredLeaf186 coveredLeaf187
+theorem coveredNode199 : CovBy 9 PR (Pg cN 9 BS TS) cell398 :=
+  branch 2 5 114688 (by decide) (by decide) normalized199 left199 right199 coveredNode200 coveredLeaf188
+theorem coveredNode198 : CovBy 9 PR (Pg cN 9 BS TS) cell395 :=
+  branch 0 6 229376 (by decide) (by decide) normalized198 left198 right198 coveredLeaf185 coveredNode199
+theorem coveredNode197 : CovBy 9 PR (Pg cN 9 BS TS) cell393 :=
+  branch 1 9 294912 (by decide) (by decide) normalized197 left197 right197 coveredNode198 coveredLeaf189
+theorem coveredNode196 : CovBy 9 PR (Pg cN 9 BS TS) cell391 :=
+  branch 4 6 81920 (by decide) (by decide) normalized196 left196 right196 coveredNode197 coveredLeaf190
+theorem coveredNode195 : CovBy 9 PR (Pg cN 9 BS TS) cell372 :=
+  branch 3 5 81920 (by decide) (by decide) normalized195 left195 right195 coveredNode196 coveredLeaf191
+theorem coveredNode194 : CovBy 9 PR (Pg cN 9 BS TS) cell388 :=
+  branch 2 6 147456 (by decide) (by decide) normalized194 left194 right194 coveredLeaf178 coveredLeaf179
+theorem coveredNode193 : CovBy 9 PR (Pg cN 9 BS TS) cell386 :=
+  branch 4 7 98304 (by decide) (by decide) normalized193 left193 right193 coveredLeaf177 coveredNode194
+theorem coveredNode192 : CovBy 9 PR (Pg cN 9 BS TS) cell383 :=
+  branch 3 6 98304 (by decide) (by decide) normalized192 left192 right192 coveredLeaf176 coveredNode193
+theorem coveredNode191 : CovBy 9 PR (Pg cN 9 BS TS) cell382 :=
+  branch 2 4 81920 (by decide) (by decide) normalized191 left191 right191 coveredNode192 coveredLeaf180
+theorem coveredNode190 : CovBy 9 PR (Pg cN 9 BS TS) cell379 :=
+  branch 2 5 98304 (by decide) (by decide) normalized190 left190 right190 coveredLeaf175 coveredNode191
+theorem coveredNode189 : CovBy 9 PR (Pg cN 9 BS TS) cell377 :=
+  branch 0 9 335872 (by decide) (by decide) normalized189 left189 right189 coveredNode190 coveredLeaf181
+theorem coveredNode188 : CovBy 9 PR (Pg cN 9 BS TS) cell375 :=
+  branch 4 6 81920 (by decide) (by decide) normalized188 left188 right188 coveredNode189 coveredLeaf182
+theorem coveredNode187 : CovBy 9 PR (Pg cN 9 BS TS) cell373 :=
+  branch 3 5 81920 (by decide) (by decide) normalized187 left187 right187 coveredNode188 coveredLeaf183
+theorem coveredNode186 : CovBy 9 PR (Pg cN 9 BS TS) cell371 :=
+  branch 1 9 294912 (by decide) (by decide) normalized186 left186 right186 coveredNode187 coveredLeaf184
+theorem coveredNode185 : CovBy 9 PR (Pg cN 9 BS TS) cell370 :=
+  branch 0 8 294912 (by decide) (by decide) normalized185 left185 right185 coveredNode186 coveredNode195
+theorem coveredNode184 : CovBy 9 PR (Pg cN 9 BS TS) cell367 :=
+  branch 3 7 131072 (by decide) (by decide) normalized184 left184 right184 coveredLeaf174 coveredNode185
+theorem coveredNode183 : CovBy 9 PR (Pg cN 9 BS TS) cell365 :=
+  branch 1 6 196608 (by decide) (by decide) normalized183 left183 right183 coveredNode184 coveredNode201
+theorem coveredNode182 : CovBy 9 PR (Pg cN 9 BS TS) cell364 :=
+  branch 2 9 245760 (by decide) (by decide) normalized182 left182 right182 coveredNode183 coveredNode205
+theorem coveredNode181 : CovBy 9 PR (Pg cN 9 BS TS) cell361 :=
+  branch 2 6 131072 (by decide) (by decide) normalized181 left181 right181 coveredLeaf173 coveredNode182
+theorem coveredNode180 : CovBy 9 PR (Pg cN 9 BS TS) cell090 :=
+  branch 3 9 212992 (by decide) (by decide) normalized180 left180 right180 coveredNode181 coveredNode280
+theorem coveredNode179 : CovBy 9 PR (Pg cN 9 BS TS) cell357 :=
+  branch 2 6 147456 (by decide) (by decide) normalized179 left179 right179 coveredLeaf167 coveredLeaf168
+theorem coveredNode178 : CovBy 9 PR (Pg cN 9 BS TS) cell355 :=
+  branch 4 8 180224 (by decide) (by decide) normalized178 left178 right178 coveredNode179 coveredLeaf169
+theorem coveredNode177 : CovBy 9 PR (Pg cN 9 BS TS) cell354 :=
+  branch 2 4 81920 (by decide) (by decide) normalized177 left177 right177 coveredNode178 coveredLeaf170
+theorem coveredNode176 : CovBy 9 PR (Pg cN 9 BS TS) cell352 :=
+  branch 1 8 262144 (by decide) (by decide) normalized176 left176 right176 coveredLeaf166 coveredNode177
+theorem coveredNode175 : CovBy 9 PR (Pg cN 9 BS TS) cell350 :=
+  branch 5 7 81920 (by decide) (by decide) normalized175 left175 right175 coveredLeaf165 coveredNode176
+theorem coveredNode174 : CovBy 9 PR (Pg cN 9 BS TS) cell348 :=
+  branch 2 5 98304 (by decide) (by decide) normalized174 left174 right174 coveredLeaf164 coveredNode175
+theorem coveredNode173 : CovBy 9 PR (Pg cN 9 BS TS) cell346 :=
+  branch 3 6 98304 (by decide) (by decide) normalized173 left173 right173 coveredLeaf163 coveredNode174
+theorem coveredNode172 : CovBy 9 PR (Pg cN 9 BS TS) cell344 :=
+  branch 4 7 114688 (by decide) (by decide) normalized172 left172 right172 coveredLeaf162 coveredNode173
+theorem coveredNode171 : CovBy 9 PR (Pg cN 9 BS TS) cell328 :=
+  branch 1 9 294912 (by decide) (by decide) normalized171 left171 right171 coveredLeaf161 coveredNode172
+theorem coveredNode170 : CovBy 9 PR (Pg cN 9 BS TS) cell340 :=
+  branch 2 6 147456 (by decide) (by decide) normalized170 left170 right170 coveredLeaf158 coveredLeaf159
+theorem coveredNode169 : CovBy 9 PR (Pg cN 9 BS TS) cell337 :=
+  branch 1 9 294912 (by decide) (by decide) normalized169 left169 right169 coveredLeaf157 coveredNode170
+theorem coveredNode168 : CovBy 9 PR (Pg cN 9 BS TS) cell336 :=
+  branch 2 4 81920 (by decide) (by decide) normalized168 left168 right168 coveredNode169 coveredLeaf160
+theorem coveredNode167 : CovBy 9 PR (Pg cN 9 BS TS) cell334 :=
+  branch 5 7 81920 (by decide) (by decide) normalized167 left167 right167 coveredLeaf156 coveredNode168
+theorem coveredNode166 : CovBy 9 PR (Pg cN 9 BS TS) cell332 :=
+  branch 2 5 98304 (by decide) (by decide) normalized166 left166 right166 coveredLeaf155 coveredNode167
+theorem coveredNode165 : CovBy 9 PR (Pg cN 9 BS TS) cell330 :=
+  branch 3 6 98304 (by decide) (by decide) normalized165 left165 right165 coveredLeaf154 coveredNode166
+theorem coveredNode164 : CovBy 9 PR (Pg cN 9 BS TS) cell327 :=
+  branch 4 7 114688 (by decide) (by decide) normalized164 left164 right164 coveredLeaf153 coveredNode165
+theorem coveredNode163 : CovBy 9 PR (Pg cN 9 BS TS) cell325 :=
+  branch 0 9 335872 (by decide) (by decide) normalized163 left163 right163 coveredNode164 coveredNode171
+theorem coveredNode162 : CovBy 9 PR (Pg cN 9 BS TS) cell323 :=
+  branch 4 6 81920 (by decide) (by decide) normalized162 left162 right162 coveredNode163 coveredLeaf171
+theorem coveredNode161 : CovBy 9 PR (Pg cN 9 BS TS) cell308 :=
+  branch 3 5 81920 (by decide) (by decide) normalized161 left161 right161 coveredNode162 coveredLeaf172
+theorem coveredNode160 : CovBy 9 PR (Pg cN 9 BS TS) cell320 :=
+  branch 5 7 81920 (by decide) (by decide) normalized160 left160 right160 coveredLeaf147 coveredLeaf148
+theorem coveredNode159 : CovBy 9 PR (Pg cN 9 BS TS) cell317 :=
+  branch 2 5 98304 (by decide) (by decide) normalized159 left159 right159 coveredLeaf146 coveredNode160
+theorem coveredNode158 : CovBy 9 PR (Pg cN 9 BS TS) cell316 :=
+  branch 3 6 114688 (by decide) (by decide) normalized158 left158 right158 coveredNode159 coveredLeaf149
+theorem coveredNode157 : CovBy 9 PR (Pg cN 9 BS TS) cell313 :=
+  branch 4 7 114688 (by decide) (by decide) normalized157 left157 right157 coveredLeaf145 coveredNode158
+theorem coveredNode156 : CovBy 9 PR (Pg cN 9 BS TS) cell311 :=
+  branch 0 9 335872 (by decide) (by decide) normalized156 left156 right156 coveredNode157 coveredLeaf150
+theorem coveredNode155 : CovBy 9 PR (Pg cN 9 BS TS) cell309 :=
+  branch 4 6 81920 (by decide) (by decide) normalized155 left155 right155 coveredNode156 coveredLeaf151
+theorem coveredNode154 : CovBy 9 PR (Pg cN 9 BS TS) cell307 :=
+  branch 3 5 81920 (by decide) (by decide) normalized154 left154 right154 coveredNode155 coveredLeaf152
+theorem coveredNode153 : CovBy 9 PR (Pg cN 9 BS TS) cell306 :=
+  branch 0 8 294912 (by decide) (by decide) normalized153 left153 right153 coveredNode154 coveredNode161
+theorem coveredNode152 : CovBy 9 PR (Pg cN 9 BS TS) cell262 :=
+  branch 2 6 131072 (by decide) (by decide) normalized152 left152 right152 coveredLeaf144 coveredNode153
+theorem coveredNode151 : CovBy 9 PR (Pg cN 9 BS TS) cell302 :=
+  branch 4 7 114688 (by decide) (by decide) normalized151 left151 right151 coveredLeaf140 coveredLeaf141
+theorem coveredNode150 : CovBy 9 PR (Pg cN 9 BS TS) cell288 :=
+  branch 1 9 294912 (by decide) (by decide) normalized150 left150 right150 coveredLeaf139 coveredNode151
+theorem coveredNode149 : CovBy 9 PR (Pg cN 9 BS TS) cell298 :=
+  branch 6 7 49152 (by decide) (by decide) normalized149 left149 right149 coveredLeaf136 coveredLeaf137
+theorem coveredNode148 : CovBy 9 PR (Pg cN 9 BS TS) cell295 :=
+  branch 1 9 294912 (by decide) (by decide) normalized148 left148 right148 coveredLeaf135 coveredNode149
+theorem coveredNode147 : CovBy 9 PR (Pg cN 9 BS TS) cell294 :=
+  branch 2 4 81920 (by decide) (by decide) normalized147 left147 right147 coveredNode148 coveredLeaf138
+theorem coveredNode146 : CovBy 9 PR (Pg cN 9 BS TS) cell292 :=
+  branch 5 7 81920 (by decide) (by decide) normalized146 left146 right146 coveredLeaf134 coveredNode147
+theorem coveredNode145 : CovBy 9 PR (Pg cN 9 BS TS) cell290 :=
+  branch 2 5 98304 (by decide) (by decide) normalized145 left145 right145 coveredLeaf133 coveredNode146
+theorem coveredNode144 : CovBy 9 PR (Pg cN 9 BS TS) cell287 :=
+  branch 4 7 114688 (by decide) (by decide) normalized144 left144 right144 coveredLeaf132 coveredNode145
+theorem coveredNode143 : CovBy 9 PR (Pg cN 9 BS TS) cell270 :=
+  branch 0 9 335872 (by decide) (by decide) normalized143 left143 right143 coveredNode144 coveredNode150
+theorem coveredNode142 : CovBy 9 PR (Pg cN 9 BS TS) cell284 :=
+  branch 2 6 147456 (by decide) (by decide) normalized142 left142 right142 coveredLeaf128 coveredLeaf129
+theorem coveredNode141 : CovBy 9 PR (Pg cN 9 BS TS) cell281 :=
+  branch 1 9 294912 (by decide) (by decide) normalized141 left141 right141 coveredLeaf127 coveredNode142
+theorem coveredNode140 : CovBy 9 PR (Pg cN 9 BS TS) cell280 :=
+  branch 2 4 81920 (by decide) (by decide) normalized140 left140 right140 coveredNode141 coveredLeaf130
+theorem coveredNode139 : CovBy 9 PR (Pg cN 9 BS TS) cell278 :=
+  branch 5 7 81920 (by decide) (by decide) normalized139 left139 right139 coveredLeaf126 coveredNode140
+theorem coveredNode138 : CovBy 9 PR (Pg cN 9 BS TS) cell276 :=
+  branch 2 5 98304 (by decide) (by decide) normalized138 left138 right138 coveredLeaf125 coveredNode139
+theorem coveredNode137 : CovBy 9 PR (Pg cN 9 BS TS) cell274 :=
+  branch 3 6 98304 (by decide) (by decide) normalized137 left137 right137 coveredLeaf124 coveredNode138
+theorem coveredNode136 : CovBy 9 PR (Pg cN 9 BS TS) cell271 :=
+  branch 4 7 114688 (by decide) (by decide) normalized136 left136 right136 coveredLeaf123 coveredNode137
+theorem coveredNode135 : CovBy 9 PR (Pg cN 9 BS TS) cell269 :=
+  branch 0 9 335872 (by decide) (by decide) normalized135 left135 right135 coveredNode136 coveredLeaf131
+theorem coveredNode134 : CovBy 9 PR (Pg cN 9 BS TS) cell267 :=
+  branch 0 8 294912 (by decide) (by decide) normalized134 left134 right134 coveredNode135 coveredNode143
+theorem coveredNode133 : CovBy 9 PR (Pg cN 9 BS TS) cell265 :=
+  branch 4 6 81920 (by decide) (by decide) normalized133 left133 right133 coveredNode134 coveredLeaf142
+theorem coveredNode132 : CovBy 9 PR (Pg cN 9 BS TS) cell264 :=
+  branch 3 5 81920 (by decide) (by decide) normalized132 left132 right132 coveredNode133 coveredLeaf143
+theorem coveredNode131 : CovBy 9 PR (Pg cN 9 BS TS) cell261 :=
+  branch 2 6 131072 (by decide) (by decide) normalized131 left131 right131 coveredLeaf122 coveredNode132
+theorem coveredNode130 : CovBy 9 PR (Pg cN 9 BS TS) cell180 :=
+  branch 3 8 196608 (by decide) (by decide) normalized130 left130 right130 coveredNode131 coveredNode152
+theorem coveredNode129 : CovBy 9 PR (Pg cN 9 BS TS) cell258 :=
+  branch 2 5 114688 (by decide) (by decide) normalized129 left129 right129 coveredLeaf119 coveredLeaf120
+theorem coveredNode128 : CovBy 9 PR (Pg cN 9 BS TS) cell255 :=
+  branch 3 7 147456 (by decide) (by decide) normalized128 left128 right128 coveredLeaf118 coveredNode129
+theorem coveredNode127 : CovBy 9 PR (Pg cN 9 BS TS) cell240 :=
+  branch 0 9 335872 (by decide) (by decide) normalized127 left127 right127 coveredNode128 coveredLeaf121
+theorem coveredNode126 : CovBy 9 PR (Pg cN 9 BS TS) cell252 :=
+  branch 5 7 81920 (by decide) (by decide) normalized126 left126 right126 coveredLeaf115 coveredLeaf116
+theorem coveredNode125 : CovBy 9 PR (Pg cN 9 BS TS) cell249 :=
+  branch 4 7 114688 (by decide) (by decide) normalized125 left125 right125 coveredLeaf114 coveredNode126
+theorem coveredNode124 : CovBy 9 PR (Pg cN 9 BS TS) cell242 :=
+  branch 0 9 335872 (by decide) (by decide) normalized124 left124 right124 coveredNode125 coveredLeaf117
+theorem coveredNode123 : CovBy 9 PR (Pg cN 9 BS TS) cell246 :=
+  branch 5 7 81920 (by decide) (by decide) normalized123 left123 right123 coveredLeaf111 coveredLeaf112
+theorem coveredNode122 : CovBy 9 PR (Pg cN 9 BS TS) cell243 :=
+  branch 4 7 114688 (by decide) (by decide) normalized122 left122 right122 coveredLeaf110 coveredNode123
+theorem coveredNode121 : CovBy 9 PR (Pg cN 9 BS TS) cell241 :=
+  branch 0 9 335872 (by decide) (by decide) normalized121 left121 right121 coveredNode122 coveredLeaf113
+theorem coveredNode120 : CovBy 9 PR (Pg cN 9 BS TS) cell239 :=
+  branch 1 8 262144 (by decide) (by decide) normalized120 left120 right120 coveredNode121 coveredNode124
+theorem coveredNode119 : CovBy 9 PR (Pg cN 9 BS TS) cell238 :=
+  branch 2 7 196608 (by decide) (by decide) normalized119 left119 right119 coveredNode120 coveredNode127
+theorem coveredNode118 : CovBy 9 PR (Pg cN 9 BS TS) cell228 :=
+  branch 2 6 131072 (by decide) (by decide) normalized118 left118 right118 coveredLeaf109 coveredNode119
+theorem coveredNode117 : CovBy 9 PR (Pg cN 9 BS TS) cell234 :=
+  branch 5 7 81920 (by decide) (by decide) normalized117 left117 right117 coveredLeaf106 coveredLeaf107
+theorem coveredNode116 : CovBy 9 PR (Pg cN 9 BS TS) cell231 :=
+  branch 4 7 114688 (by decide) (by decide) normalized116 left116 right116 coveredLeaf105 coveredNode117
+theorem coveredNode115 : CovBy 9 PR (Pg cN 9 BS TS) cell230 :=
+  branch 0 9 335872 (by decide) (by decide) normalized115 left115 right115 coveredNode116 coveredLeaf108
+theorem coveredNode114 : CovBy 9 PR (Pg cN 9 BS TS) cell227 :=
+  branch 2 6 131072 (by decide) (by decide) normalized114 left114 right114 coveredLeaf104 coveredNode115
+theorem coveredNode113 : CovBy 9 PR (Pg cN 9 BS TS) cell182 :=
+  branch 0 8 294912 (by decide) (by decide) normalized113 left113 right113 coveredNode114 coveredNode118
+theorem coveredNode112 : CovBy 9 PR (Pg cN 9 BS TS) cell224 :=
+  branch 5 7 81920 (by decide) (by decide) normalized112 left112 right112 coveredLeaf101 coveredLeaf102
+theorem coveredNode111 : CovBy 9 PR (Pg cN 9 BS TS) cell222 :=
+  branch 4 7 114688 (by decide) (by decide) normalized111 left111 right111 coveredLeaf100 coveredNode112
+theorem coveredNode110 : CovBy 9 PR (Pg cN 9 BS TS) cell219 :=
+  branch 2 6 131072 (by decide) (by decide) normalized110 left110 right110 coveredLeaf099 coveredNode111
+theorem coveredNode109 : CovBy 9 PR (Pg cN 9 BS TS) cell212 :=
+  branch 0 9 335872 (by decide) (by decide) normalized109 left109 right109 coveredNode110 coveredLeaf103
+theorem coveredNode108 : CovBy 9 PR (Pg cN 9 BS TS) cell216 :=
+  branch 4 7 114688 (by decide) (by decide) normalized108 left108 right108 coveredLeaf096 coveredLeaf097
+theorem coveredNode107 : CovBy 9 PR (Pg cN 9 BS TS) cell213 :=
+  branch 2 6 131072 (by decide) (by decide) normalized107 left107 right107 coveredLeaf095 coveredNode108
+theorem coveredNode106 : CovBy 9 PR (Pg cN 9 BS TS) cell211 :=
+  branch 0 9 335872 (by decide) (by decide) normalized106 left106 right106 coveredNode107 coveredLeaf098
+theorem coveredNode105 : CovBy 9 PR (Pg cN 9 BS TS) cell204 :=
+  branch 1 8 262144 (by decide) (by decide) normalized105 left105 right105 coveredNode106 coveredNode109
+theorem coveredNode104 : CovBy 9 PR (Pg cN 9 BS TS) cell208 :=
+  branch 4 7 114688 (by decide) (by decide) normalized104 left104 right104 coveredLeaf092 coveredLeaf093
+theorem coveredNode103 : CovBy 9 PR (Pg cN 9 BS TS) cell205 :=
+  branch 2 6 131072 (by decide) (by decide) normalized103 left103 right103 coveredLeaf091 coveredNode104
+theorem coveredNode102 : CovBy 9 PR (Pg cN 9 BS TS) cell203 :=
+  branch 0 9 335872 (by decide) (by decide) normalized102 left102 right102 coveredNode103 coveredLeaf094
+theorem coveredNode101 : CovBy 9 PR (Pg cN 9 BS TS) cell184 :=
+  branch 1 9 294912 (by decide) (by decide) normalized101 left101 right101 coveredNode102 coveredNode105
+theorem coveredNode100 : CovBy 9 PR (Pg cN 9 BS TS) cell200 :=
+  branch 5 7 81920 (by decide) (by decide) normalized100 left100 right100 coveredLeaf088 coveredLeaf089
+theorem coveredNode099 : CovBy 9 PR (Pg cN 9 BS TS) cell198 :=
+  branch 4 7 114688 (by decide) (by decide) normalized099 left099 right099 coveredLeaf087 coveredNode100
+theorem coveredNode098 : CovBy 9 PR (Pg cN 9 BS TS) cell195 :=
+  branch 2 6 131072 (by decide) (by decide) normalized098 left098 right098 coveredLeaf086 coveredNode099
+theorem coveredNode097 : CovBy 9 PR (Pg cN 9 BS TS) cell186 :=
+  branch 0 9 335872 (by decide) (by decide) normalized097 left097 right097 coveredNode098 coveredLeaf090
+theorem coveredNode096 : CovBy 9 PR (Pg cN 9 BS TS) cell192 :=
+  branch 5 7 81920 (by decide) (by decide) normalized096 left096 right096 coveredLeaf083 coveredLeaf084
+theorem coveredNode095 : CovBy 9 PR (Pg cN 9 BS TS) cell190 :=
+  branch 4 7 114688 (by decide) (by decide) normalized095 left095 right095 coveredLeaf082 coveredNode096
+theorem coveredNode094 : CovBy 9 PR (Pg cN 9 BS TS) cell187 :=
+  branch 2 6 131072 (by decide) (by decide) normalized094 left094 right094 coveredLeaf081 coveredNode095
+theorem coveredNode093 : CovBy 9 PR (Pg cN 9 BS TS) cell185 :=
+  branch 0 9 335872 (by decide) (by decide) normalized093 left093 right093 coveredNode094 coveredLeaf085
+theorem coveredNode092 : CovBy 9 PR (Pg cN 9 BS TS) cell183 :=
+  branch 1 9 294912 (by decide) (by decide) normalized092 left092 right092 coveredNode093 coveredNode097
+theorem coveredNode091 : CovBy 9 PR (Pg cN 9 BS TS) cell181 :=
+  branch 0 8 294912 (by decide) (by decide) normalized091 left091 right091 coveredNode092 coveredNode101
+theorem coveredNode090 : CovBy 9 PR (Pg cN 9 BS TS) cell179 :=
+  branch 2 9 262144 (by decide) (by decide) normalized090 left090 right090 coveredNode091 coveredNode113
+theorem coveredNode089 : CovBy 9 PR (Pg cN 9 BS TS) cell094 :=
+  branch 3 9 229376 (by decide) (by decide) normalized089 left089 right089 coveredNode090 coveredNode130
+theorem coveredNode088 : CovBy 9 PR (Pg cN 9 BS TS) cell176 :=
+  branch 3 5 81920 (by decide) (by decide) normalized088 left088 right088 coveredLeaf079 coveredLeaf080
+theorem coveredNode087 : CovBy 9 PR (Pg cN 9 BS TS) cell164 :=
+  branch 1 9 294912 (by decide) (by decide) normalized087 left087 right087 coveredLeaf078 coveredNode088
+theorem coveredNode086 : CovBy 9 PR (Pg cN 9 BS TS) cell171 :=
+  branch 3 7 147456 (by decide) (by decide) normalized086 left086 right086 coveredLeaf072 coveredLeaf073
+theorem coveredNode085 : CovBy 9 PR (Pg cN 9 BS TS) cell169 :=
+  branch 0 9 335872 (by decide) (by decide) normalized085 left085 right085 coveredNode086 coveredLeaf074
+theorem coveredNode084 : CovBy 9 PR (Pg cN 9 BS TS) cell167 :=
+  branch 4 7 114688 (by decide) (by decide) normalized084 left084 right084 coveredNode085 coveredLeaf075
+theorem coveredNode083 : CovBy 9 PR (Pg cN 9 BS TS) cell165 :=
+  branch 4 6 81920 (by decide) (by decide) normalized083 left083 right083 coveredNode084 coveredLeaf076
+theorem coveredNode082 : CovBy 9 PR (Pg cN 9 BS TS) cell163 :=
+  branch 3 5 81920 (by decide) (by decide) normalized082 left082 right082 coveredNode083 coveredLeaf077
+theorem coveredNode081 : CovBy 9 PR (Pg cN 9 BS TS) cell162 :=
+  branch 0 8 294912 (by decide) (by decide) normalized081 left081 right081 coveredNode082 coveredNode087
+theorem coveredNode080 : CovBy 9 PR (Pg cN 9 BS TS) cell096 :=
+  branch 2 6 131072 (by decide) (by decide) normalized080 left080 right080 coveredLeaf071 coveredNode081
+theorem coveredNode079 : CovBy 9 PR (Pg cN 9 BS TS) cell157 :=
+  branch 2 6 147456 (by decide) (by decide) normalized079 left079 right079 coveredLeaf062 coveredLeaf063
+theorem coveredNode078 : CovBy 9 PR (Pg cN 9 BS TS) cell155 :=
+  branch 3 7 147456 (by decide) (by decide) normalized078 left078 right078 coveredNode079 coveredLeaf064
+theorem coveredNode077 : CovBy 9 PR (Pg cN 9 BS TS) cell154 :=
+  branch 2 4 81920 (by decide) (by decide) normalized077 left077 right077 coveredNode078 coveredLeaf065
+theorem coveredNode076 : CovBy 9 PR (Pg cN 9 BS TS) cell152 :=
+  branch 2 5 98304 (by decide) (by decide) normalized076 left076 right076 coveredLeaf061 coveredNode077
+theorem coveredNode075 : CovBy 9 PR (Pg cN 9 BS TS) cell149 :=
+  branch 3 6 98304 (by decide) (by decide) normalized075 left075 right075 coveredLeaf060 coveredNode076
+theorem coveredNode074 : CovBy 9 PR (Pg cN 9 BS TS) cell147 :=
+  branch 0 9 335872 (by decide) (by decide) normalized074 left074 right074 coveredNode075 coveredLeaf066
+theorem coveredNode073 : CovBy 9 PR (Pg cN 9 BS TS) cell126 :=
+  branch 4 7 114688 (by decide) (by decide) normalized073 left073 right073 coveredNode074 coveredLeaf067
+theorem coveredNode072 : CovBy 9 PR (Pg cN 9 BS TS) cell144 :=
+  branch 5 7 65536 (by decide) (by decide) normalized072 left072 right072 coveredLeaf055 coveredLeaf056
+theorem coveredNode071 : CovBy 9 PR (Pg cN 9 BS TS) cell141 :=
+  branch 3 8 180224 (by decide) (by decide) normalized071 left071 right071 coveredLeaf054 coveredNode072
+theorem coveredNode070 : CovBy 9 PR (Pg cN 9 BS TS) cell140 :=
+  branch 2 6 147456 (by decide) (by decide) normalized070 left070 right070 coveredNode071 coveredLeaf057
+theorem coveredNode069 : CovBy 9 PR (Pg cN 9 BS TS) cell134 :=
+  branch 4 7 98304 (by decide) (by decide) normalized069 left069 right069 coveredLeaf053 coveredNode070
+theorem coveredNode068 : CovBy 9 PR (Pg cN 9 BS TS) cell136 :=
+  branch 3 8 180224 (by decide) (by decide) normalized068 left068 right068 coveredLeaf051 coveredLeaf052
+theorem coveredNode067 : CovBy 9 PR (Pg cN 9 BS TS) cell133 :=
+  branch 4 7 98304 (by decide) (by decide) normalized067 left067 right067 coveredLeaf050 coveredNode068
+theorem coveredNode066 : CovBy 9 PR (Pg cN 9 BS TS) cell131 :=
+  branch 2 9 262144 (by decide) (by decide) normalized066 left066 right066 coveredNode067 coveredNode069
+theorem coveredNode065 : CovBy 9 PR (Pg cN 9 BS TS) cell130 :=
+  branch 2 4 81920 (by decide) (by decide) normalized065 left065 right065 coveredNode066 coveredLeaf058
+theorem coveredNode064 : CovBy 9 PR (Pg cN 9 BS TS) cell127 :=
+  branch 2 5 98304 (by decide) (by decide) normalized064 left064 right064 coveredLeaf049 coveredNode065
+theorem coveredNode063 : CovBy 9 PR (Pg cN 9 BS TS) cell125 :=
+  branch 0 9 335872 (by decide) (by decide) normalized063 left063 right063 coveredNode064 coveredLeaf059
+theorem coveredNode062 : CovBy 9 PR (Pg cN 9 BS TS) cell123 :=
+  branch 3 9 229376 (by decide) (by decide) normalized062 left062 right062 coveredNode063 coveredNode073
+theorem coveredNode061 : CovBy 9 PR (Pg cN 9 BS TS) cell121 :=
+  branch 0 8 294912 (by decide) (by decide) normalized061 left061 right061 coveredNode062 coveredLeaf068
+theorem coveredNode060 : CovBy 9 PR (Pg cN 9 BS TS) cell119 :=
+  branch 4 6 81920 (by decide) (by decide) normalized060 left060 right060 coveredNode061 coveredLeaf069
+theorem coveredNode059 : CovBy 9 PR (Pg cN 9 BS TS) cell100 :=
+  branch 3 5 81920 (by decide) (by decide) normalized059 left059 right059 coveredNode060 coveredLeaf070
+theorem coveredNode058 : CovBy 9 PR (Pg cN 9 BS TS) cell116 :=
+  branch 3 7 147456 (by decide) (by decide) normalized058 left058 right058 coveredLeaf042 coveredLeaf043
+theorem coveredNode057 : CovBy 9 PR (Pg cN 9 BS TS) cell114 :=
+  branch 2 5 98304 (by decide) (by decide) normalized057 left057 right057 coveredLeaf041 coveredNode058
+theorem coveredNode056 : CovBy 9 PR (Pg cN 9 BS TS) cell111 :=
+  branch 3 6 98304 (by decide) (by decide) normalized056 left056 right056 coveredLeaf040 coveredNode057
+theorem coveredNode055 : CovBy 9 PR (Pg cN 9 BS TS) cell110 :=
+  branch 5 7 81920 (by decide) (by decide) normalized055 left055 right055 coveredNode056 coveredLeaf044
+theorem coveredNode054 : CovBy 9 PR (Pg cN 9 BS TS) cell107 :=
+  branch 4 7 98304 (by decide) (by decide) normalized054 left054 right054 coveredLeaf039 coveredNode055
+theorem coveredNode053 : CovBy 9 PR (Pg cN 9 BS TS) cell105 :=
+  branch 0 9 335872 (by decide) (by decide) normalized053 left053 right053 coveredNode054 coveredLeaf045
+theorem coveredNode052 : CovBy 9 PR (Pg cN 9 BS TS) cell103 :=
+  branch 4 6 81920 (by decide) (by decide) normalized052 left052 right052 coveredNode053 coveredLeaf046
+theorem coveredNode051 : CovBy 9 PR (Pg cN 9 BS TS) cell101 :=
+  branch 3 5 81920 (by decide) (by decide) normalized051 left051 right051 coveredNode052 coveredLeaf047
+theorem coveredNode050 : CovBy 9 PR (Pg cN 9 BS TS) cell099 :=
+  branch 0 8 294912 (by decide) (by decide) normalized050 left050 right050 coveredNode051 coveredLeaf048
+theorem coveredNode049 : CovBy 9 PR (Pg cN 9 BS TS) cell098 :=
+  branch 1 9 294912 (by decide) (by decide) normalized049 left049 right049 coveredNode050 coveredNode059
+theorem coveredNode048 : CovBy 9 PR (Pg cN 9 BS TS) cell095 :=
+  branch 2 6 131072 (by decide) (by decide) normalized048 left048 right048 coveredLeaf038 coveredNode049
+theorem coveredNode047 : CovBy 9 PR (Pg cN 9 BS TS) cell093 :=
+  branch 3 8 196608 (by decide) (by decide) normalized047 left047 right047 coveredNode048 coveredNode080
+theorem coveredNode046 : CovBy 9 PR (Pg cN 9 BS TS) cell092 :=
+  branch 0 7 245760 (by decide) (by decide) normalized046 left046 right046 coveredNode047 coveredNode089
+theorem coveredNode045 : CovBy 9 PR (Pg cN 9 BS TS) cell089 :=
+  branch 3 7 131072 (by decide) (by decide) normalized045 left045 right045 coveredLeaf037 coveredNode046
+theorem coveredNode044 : CovBy 9 PR (Pg cN 9 BS TS) cell076 :=
+  branch 0 6 212992 (by decide) (by decide) normalized044 left044 right044 coveredNode045 coveredNode180
+theorem coveredNode043 : CovBy 9 PR (Pg cN 9 BS TS) cell085 :=
+  branch 4 6 81920 (by decide) (by decide) normalized043 left043 right043 coveredLeaf034 coveredLeaf035
+theorem coveredNode042 : CovBy 9 PR (Pg cN 9 BS TS) cell084 :=
+  branch 3 5 81920 (by decide) (by decide) normalized042 left042 right042 coveredNode043 coveredLeaf036
+theorem coveredNode041 : CovBy 9 PR (Pg cN 9 BS TS) cell082 :=
+  branch 3 7 131072 (by decide) (by decide) normalized041 left041 right041 coveredLeaf033 coveredNode042
+theorem coveredNode040 : CovBy 9 PR (Pg cN 9 BS TS) cell080 :=
+  branch 2 6 131072 (by decide) (by decide) normalized040 left040 right040 coveredLeaf032 coveredNode041
+theorem coveredNode039 : CovBy 9 PR (Pg cN 9 BS TS) cell078 :=
+  branch 3 9 212992 (by decide) (by decide) normalized039 left039 right039 coveredLeaf031 coveredNode040
+theorem coveredNode038 : CovBy 9 PR (Pg cN 9 BS TS) cell075 :=
+  branch 0 6 212992 (by decide) (by decide) normalized038 left038 right038 coveredLeaf030 coveredNode039
+theorem coveredNode037 : CovBy 9 PR (Pg cN 9 BS TS) cell073 :=
+  branch 1 8 245760 (by decide) (by decide) normalized037 left037 right037 coveredNode038 coveredNode044
+theorem coveredNode036 : CovBy 9 PR (Pg cN 9 BS TS) cell071 :=
+  branch 3 7 163840 (by decide) (by decide) normalized036 left036 right036 coveredNode037 coveredNode331
+theorem coveredNode035 : CovBy 9 PR (Pg cN 9 BS TS) cell069 :=
+  branch 2 6 163840 (by decide) (by decide) normalized035 left035 right035 coveredNode036 coveredNode338
+theorem coveredNode034 : CovBy 9 PR (Pg cN 9 BS TS) cell068 :=
+  branch 0 9 344064 (by decide) (by decide) normalized034 left034 right034 coveredNode035 coveredNode375
+theorem coveredNode033 : CovBy 9 PR (Pg cN 9 BS TS) cell010 :=
+  branch 1 9 278528 (by decide) (by decide) normalized033 left033 right033 coveredLeaf029 coveredNode034
+theorem coveredNode032 : CovBy 9 PR (Pg cN 9 BS TS) cell063 :=
+  branch 3 7 147456 (by decide) (by decide) normalized032 left032 right032 coveredLeaf021 coveredLeaf022
+theorem coveredNode031 : CovBy 9 PR (Pg cN 9 BS TS) cell062 :=
+  branch 2 6 147456 (by decide) (by decide) normalized031 left031 right031 coveredNode032 coveredLeaf023
+theorem coveredNode030 : CovBy 9 PR (Pg cN 9 BS TS) cell060 :=
+  branch 0 9 352256 (by decide) (by decide) normalized030 left030 right030 coveredLeaf020 coveredNode031
+theorem coveredNode029 : CovBy 9 PR (Pg cN 9 BS TS) cell057 :=
+  branch 0 8 262144 (by decide) (by decide) normalized029 left029 right029 coveredLeaf019 coveredNode030
+theorem coveredNode028 : CovBy 9 PR (Pg cN 9 BS TS) cell055 :=
+  branch 3 6 114688 (by decide) (by decide) normalized028 left028 right028 coveredNode029 coveredLeaf024
+theorem coveredNode027 : CovBy 9 PR (Pg cN 9 BS TS) cell053 :=
+  branch 4 7 114688 (by decide) (by decide) normalized027 left027 right027 coveredNode028 coveredLeaf025
+theorem coveredNode026 : CovBy 9 PR (Pg cN 9 BS TS) cell052 :=
+  branch 2 5 114688 (by decide) (by decide) normalized026 left026 right026 coveredNode027 coveredLeaf026
+theorem coveredNode025 : CovBy 9 PR (Pg cN 9 BS TS) cell050 :=
+  branch 3 9 245760 (by decide) (by decide) normalized025 left025 right025 coveredLeaf018 coveredNode026
+theorem coveredNode024 : CovBy 9 PR (Pg cN 9 BS TS) cell047 :=
+  branch 1 9 311296 (by decide) (by decide) normalized024 left024 right024 coveredLeaf017 coveredNode025
+theorem coveredNode023 : CovBy 9 PR (Pg cN 9 BS TS) cell045 :=
+  branch 4 6 81920 (by decide) (by decide) normalized023 left023 right023 coveredNode024 coveredLeaf027
+theorem coveredNode022 : CovBy 9 PR (Pg cN 9 BS TS) cell044 :=
+  branch 3 5 81920 (by decide) (by decide) normalized022 left022 right022 coveredNode023 coveredLeaf028
+theorem coveredNode021 : CovBy 9 PR (Pg cN 9 BS TS) cell042 :=
+  branch 3 7 131072 (by decide) (by decide) normalized021 left021 right021 coveredLeaf016 coveredNode022
+theorem coveredNode020 : CovBy 9 PR (Pg cN 9 BS TS) cell040 :=
+  branch 2 6 131072 (by decide) (by decide) normalized020 left020 right020 coveredLeaf015 coveredNode021
+theorem coveredNode019 : CovBy 9 PR (Pg cN 9 BS TS) cell016 :=
+  branch 0 8 245760 (by decide) (by decide) normalized019 left019 right019 coveredLeaf014 coveredNode020
+theorem coveredNode018 : CovBy 9 PR (Pg cN 9 BS TS) cell036 :=
+  branch 0 9 335872 (by decide) (by decide) normalized018 left018 right018 coveredLeaf007 coveredLeaf008
+theorem coveredNode017 : CovBy 9 PR (Pg cN 9 BS TS) cell033 :=
+  branch 0 8 262144 (by decide) (by decide) normalized017 left017 right017 coveredLeaf006 coveredNode018
+theorem coveredNode016 : CovBy 9 PR (Pg cN 9 BS TS) cell031 :=
+  branch 3 6 114688 (by decide) (by decide) normalized016 left016 right016 coveredNode017 coveredLeaf009
+theorem coveredNode015 : CovBy 9 PR (Pg cN 9 BS TS) cell029 :=
+  branch 4 7 114688 (by decide) (by decide) normalized015 left015 right015 coveredNode016 coveredLeaf010
+theorem coveredNode014 : CovBy 9 PR (Pg cN 9 BS TS) cell028 :=
+  branch 2 5 114688 (by decide) (by decide) normalized014 left014 right014 coveredNode015 coveredLeaf011
+theorem coveredNode013 : CovBy 9 PR (Pg cN 9 BS TS) cell025 :=
+  branch 3 9 229376 (by decide) (by decide) normalized013 left013 right013 coveredLeaf005 coveredNode014
+theorem coveredNode012 : CovBy 9 PR (Pg cN 9 BS TS) cell023 :=
+  branch 4 6 81920 (by decide) (by decide) normalized012 left012 right012 coveredNode013 coveredLeaf012
+theorem coveredNode011 : CovBy 9 PR (Pg cN 9 BS TS) cell022 :=
+  branch 3 5 81920 (by decide) (by decide) normalized011 left011 right011 coveredNode012 coveredLeaf013
+theorem coveredNode010 : CovBy 9 PR (Pg cN 9 BS TS) cell020 :=
+  branch 3 7 131072 (by decide) (by decide) normalized010 left010 right010 coveredLeaf004 coveredNode011
+theorem coveredNode009 : CovBy 9 PR (Pg cN 9 BS TS) cell018 :=
+  branch 2 6 131072 (by decide) (by decide) normalized009 left009 right009 coveredLeaf003 coveredNode010
+theorem coveredNode008 : CovBy 9 PR (Pg cN 9 BS TS) cell015 :=
+  branch 0 8 245760 (by decide) (by decide) normalized008 left008 right008 coveredLeaf002 coveredNode009
+theorem coveredNode007 : CovBy 9 PR (Pg cN 9 BS TS) cell012 :=
+  branch 0 9 344064 (by decide) (by decide) normalized007 left007 right007 coveredNode008 coveredNode019
+theorem coveredNode006 : CovBy 9 PR (Pg cN 9 BS TS) cell011 :=
+  branch 0 9 344064 (by decide) (by decide) normalized006 left006 right006 coveredLeaf000 coveredLeaf001
+theorem coveredNode005 : CovBy 9 PR (Pg cN 9 BS TS) cell009 :=
+  branch 1 9 294912 (by decide) (by decide) normalized005 left005 right005 coveredNode006 coveredNode007
+theorem coveredNode004 : CovBy 9 PR (Pg cN 9 BS TS) cell008 :=
+  branch 0 8 278528 (by decide) (by decide) normalized004 left004 right004 coveredNode005 coveredNode033
+theorem selected_covered : CovBy 9 PR (Pg cN 9 BS TS) selectedCell := coveredNode004
+theorem root_covered_of_siblings
+    (sibling000 : CovBy 9 PR (Pg cN 9 BS TS) cell002)
+    (sibling001 : CovBy 9 PR (Pg cN 9 BS TS) cell004)
+    (sibling002 : CovBy 9 PR (Pg cN 9 BS TS) cell005)
+    (sibling003 : CovBy 9 PR (Pg cN 9 BS TS) cell007)
+    : CovBy 9 PR (Pg cN 9 BS TS) RootBounds.initialCell := by
+  have route003 : CovBy 9 PR (Pg cN 9 BS TS) cell006 :=
+    branch 0 9 327680 (by decide) (by decide) normalized003 left003 right003 sibling003 coveredNode004
+  have route002 : CovBy 9 PR (Pg cN 9 BS TS) cell003 :=
+    branch 0 9 311296 (by decide) (by decide) normalized002 left002 right002 sibling002 route003
+  have route001 : CovBy 9 PR (Pg cN 9 BS TS) cell001 :=
+    branch 0 9 360448 (by decide) (by decide) normalized001 left001 right001 route002 sibling001
+  have route000 : CovBy 9 PR (Pg cN 9 BS TS) cell000 :=
+    branch 0 9 458752 (by decide) (by decide) normalized000 left000 right000 route001 sibling000
+  simpa only [root_eq] using route000
+
+set_option pp.fullNames true
+#print axioms selected_covered
+#print axioms root_covered_of_siblings
+end StructuralGoal20261016.W10Aux478
+end

@@ -1,0 +1,290 @@
+Multiwindow defect counting, distinct ledgers, and one bounded prototype
+2026-10-17
+
+This package changes the proposed counting mechanism, rather than adding
+moment cuts or recursively covering the former difficult cell.  It adds
+no Lean theorem, actual unconditional zero-proportion bound, or website
+submission claim.  All published scalar profiles and quartic packages
+remain unchanged.  The exact and floating results below have distinct
+scopes.
+
+1. A legitimate counting-layer combination, subject to actual hypotheses
+------------------------------------------------------------------------
+For each profile ell, let G_ell be its actual finite-height normalized
+Gram matrix on the SAME retained zero configuration, and D_ell its
+spectral defect.  Keep nonnegative weights theta_ell with sum theta=1.
+The following premises must hold for every profile, not just their mean:
+
+* a genuine admissible finite-height window and all actual trace/tail
+  limits and kernel approximation statements;
+* a positive normalized profile, giving |k_ell|<=1 and w_ell=k_ell^2;
+* the separated principal spectral cap <=2 at a common sep>=17/20;
+* the short-pair payment and all exact ledger sign/capacity conditions.
+
+The existing WindowCountingBase.actual_tail_passage has the form
+ H_ell*N + D_ell <= n0+o(N).
+Multiply each such inequality by theta_ell and add.  This yields
+ Hbar*N + Dbar <= n0+o(N),
+where Hbar=sum theta H and Dbar=sum theta D.  There is no free extra
+right-hand-side copy: normalization sum theta=1 is essential.
+
+Use ONE maximal short-pair matching of the common retained configuration.
+The unmatched set is sep-separated for every profile simultaneously.
+Apply spectral pinching to each G_ell on this SAME partition and then
+add with weights theta.  On its common separated remainder, let the
+configuration energy be
+
+ Fjoint(g)=sum_ell theta_ell [sum_r b_ell,r*g_r
+                          +sum_e a_ell,e*w_ell(s_e(g))].
+
+If an actual whole-domain or summed-window joint floor Fjoint>=c is
+proved, the same sliding-window and pressure arithmetic gives
+
+ Dbar >= c*m - Bbar*R - o(N)-O(1),
+ Bbar=sum_ell theta_ell sum_r b_ell,r.
+
+With the common deleted-strip and span estimates m>=n0-o(N), R<=N+o(N),
+this gives (Hbar-Bbar)*N <= (1-c)*n0+o(N), and hence the candidate bound
+
+ kappa >= (Hbar-Bbar)/(1-c),  provided 0<c<1.
+
+The retained labels are the same simple critical zeros with the same
+geometric cutoff: the at-window construction changes the window/trace
+parameters, while L,d and reflection labels come from the same base
+parameters.  A formal generic multiwindow development would still need
+the explicit retained-index identification, or work on their common
+intersection and pay the negligible discarded strips.  This package
+does not silently assume existing fixed24 theorems apply to arbitrary
+new profiles without rebuilding their actual analytic interfaces.
+
+2. The actual capacity and short-pair rules
+-------------------------------------------
+WindowDiscreteEnergy.window_pairs_le_band uses nonnegative coefficients
+and, for each rank r separately,
+ sum_(j-i=r) a_ell,(i,j) <= 2.
+Each profile has its own Gram offdiagonal energy, so each ORIGINAL ledger
+may have cap2.  After absorbing theta into A_ell=theta_ell*a_ell, the
+correct cap is sum_rank A_ell<=2*theta_ell.  Thus the total weighted mass
+is at most2.  One may NOT drop theta and take cap2 for every absorbed
+ledger.  The prototype below uses theta=1/2, hence cap1 per absorbed
+ledger, cap2 total.  The original pressure signs b_ell>=0 are also kept.
+
+More generally, a cross-profile capacity exchange would require a
+pointwise comparison such as, at every possible pair separation x,
+ sum_ell mass_ell,r*w_ell(x) <= 2*sum_ell theta_ell*w_ell(x).
+Total coefficient mass alone does not imply this when the kernels differ.
+The prototype does not use such an unproved exchange.
+
+For a matched short pair with separation t, the scalar block theorem
+uses min(1,offDiagSq), giving in the limit a payment
+ sum_ell theta_ell min(1,2*w_ell(t)).
+The correct common short-pair assumption is therefore
+
+ 2*c <= sum_ell theta_ell min(1,2*w_ell(t)),  |t|<=sep.
+
+Having each w_ell(t)>=c and c<=1/64 is sufficient, but not necessary.
+The joint condition is useful when one profile is smaller at the cutoff.
+At finite height the approximation pays the weighted error in every
+Gram; with sum theta=1 this is still O(delta), not a missing free budget.
+Separate matchings for the separate windows would leave different
+remainders and would not justify this joint configuration floor.
+
+3. Why this is more than averaging scalar proportions
+------------------------------------------------------
+If one uses only individual floors c_ell, then c=sum theta*c_ell and
+
+ (Hbar-Bbar)/(1-c)
+ = [sum theta_ell*(1-c_ell)*kappa_ell]
+   /[sum theta_ell*(1-c_ell)] <= max_ell kappa_ell.
+
+Thus an average of already derived proportions cannot improve the best.
+The possible new information is the JOINT floor
+ inf_g sum theta F_ell(g), which can be strictly larger than
+ sum theta inf_g F_ell(g), due to incompatible minimizing configurations.
+For example, two abstract energy tables (0,2*eta) and (2*eta,0) have
+individual floor0 and equal-weight joint floor eta.  This algebraic
+example is not a realizability assertion for the zeta kernels.  Different
+ledgers give an extra actual algebraic coupling, derived next.
+
+4. Exact window variance and the different-ledger cross term
+------------------------------------------------------------
+For a finite cosine profile
+ rho_mu(t)=cos(sqrt(2)*t)+sum_j mu_j cos(2*pi*j*t),
+all integer-cosine perturbations have zero integral.  Their common
+normalization is Z=sqrt(2)*sin(sqrt(2)/2)=sinc(sqrt(2)/2).
+WindowKernel.K_eq_sinc and WindowEnergy.H_eq give
+
+ k_mu(x)=k_base(x)+sum_j mu_j B_j(x)/Z,
+ B_j(x)=[sinc_pi(x-j)+sinc_pi(x+j)]/2,
+ H(mu)=H0-sum_j e_j*mu_j^2/Z^2,
+ e_j=1/2-1/(4*pi^2*j^2)>0.
+
+For rho_+=rho_mu+epsilon*q and rho_-=rho_mu-epsilon*q,
+write kq=sum_j q_j B_j/Z and C(q)=sum e_j q_j^2/Z^2.  Then, exactly,
+
+ (w_++w_-)/2=w_mu+epsilon^2*kq^2,
+ Hbar=H(mu)-epsilon^2*C(q).
+
+The H penalty is paid in full.  Removing the near-common scalar zeros
+does not make that penalty disappear.  With a common fixed ledger a,b,
+the target-K counting test at a fixed configuration g changes by
+
+ epsilon^2*q^T [K*sum_e a_e baseq(s_e)*baseq(s_e)^T
+                -diag(e_j/Z^2)] q.
+
+Now allow ORIGINAL ledgers a_+=a+d, a_-=a-d and pressures b_+,b_-.
+Let bbar=(b_++b_-)/2.  The joint energy is exactly
+
+ Fjoint=bbar.g+sum_e [a_e*k_mu^2
+                     +epsilon^2*a_e*kq^2
+                     +2*epsilon*d_e*k_mu*kq].
+
+The last, LINEAR-in-epsilon term is absent from same-ledger variance.
+The conditions a+/-d>=0 and each rank mass<=2 must both hold.  At a
+saturated rank of the mean ledger they imply rankmass(d)=0.  Distinct
+pressures contribute only through bbar, so they do not create an
+additional nonlinear frustration term in this equal-weight construction.
+A same-ledger PSD obstruction cannot be promoted to a no-go for this
+different-ledger cross term.
+
+5. Static diagnostics on existing points only
+---------------------------------------------
+multiwindow_diagnostic.py evaluates the 24-mode generalized reward/
+penalty matrix with the frozen new ledger and target
+ K=archived website ratio+1/100000.
+It uses the 69 frozen coherent anchors, two archived best configurations,
+and every legal row of two already saved sample files.  Rows with a gap
+below SEP=123/128 are dropped, never clipped into new points.  There is
+no parameter sweep, optimizer, new configuration, or adversary search.
+
+For the 71 explicit points, max generalized target variance margins lie
+between about -.31783 and -.24408.  The two fixed sample files contribute
+2617 and26483 legal rows.  Their lowest100-energy rows also all have
+negative variance margin.  This is not a universal matrix claim: one
+row in the first sample file and42 rows in the second have positive
+margin, at less constraining configurations.  All eigendata are floating
+diagnostics and never used as an exact PSD premise.
+
+One exact obstruction strengthens this diagnosis.  At the existing
+best new-ledger frame, all 24 directions obey
+
+ sum_e a_e*(sum_j q_j*B_j(s_e(g)))^2
+ <= (11/10)*sum_j e_j*q_j^2,  for every q in R^24.
+
+The certificate rounds each of the1080 basis entries to denominator
+10^12 and checks its error is <2e-12 by rational sinc intervals.  The
+entrywise Q error has operator norm <1e-8 by the row-sum/Cauchy bound.
+With e_lower from the lower pi bound, the rational matrix
+
+ (11/10)*diag(e_lower) - 1e-8*I - Q_rounded
+
+has all24 leading principal minors positive.  The producer uses exact
+integer Bareiss elimination.  The independent stdlib replay uses
+different42/43-term Taylor intervals and Fraction LDL, comparing products
+of positive pivots to the stored integer minors.  It passed all1080
+basis entries and24 pivots.  Z cancels on the two sides of the comparison.
+
+Consequently symmetric variance with this same fixed ledger worsens
+the target test at this fixed coherent frame by at least
+ epsilon^2*(1-11*K/10)*C(q),
+where 1-11*K/10 is about .25904956>0.  This is an exact one-frame upper
+ceiling comparison.  It is not a proof of a global optimum, not a no-go
+for different mean profiles/ledgers, and not a proof that every symmetric
+pair fails the desired global proportion.
+
+6. One fixed pair and one finite-sample joint-ledger LP
+-------------------------------------------------------
+The selected single pair is
+ q=(1,1,0,...,0), epsilon=1/100, theta_+=theta_-=1/2.
+This is an L1 tangent direction: mu_1>0 and mu_2<0, neither sign crosses,
+so BOTH profiles have the exact same L1 norm as their mean,
+ .078742791 < .08.
+No overly restrictive triangle bound sum|mu|+epsilon*||q||_1 is used.
+
+The actual endpoint squares have verified lower floors
+ w_-(SEP)>=.009152462823,
+ w_+(SEP)>=.011245464589.
+Their positivity and positive profiles imply each kernel is decreasing
+on[0,SEP] with positive endpoint.  Thus the combined matched-pair payment
+is bounded below by the averaged endpoint squares.  The LP imposes
+c<=joint endpoint floor, as well as nonnegative pressures and the
+two independent absorbed rank cap1 ledgers.
+
+For this one pair, the exact H identity gives Hbar about .671981615575.
+There are100 variables:45 absorbed pair coefficients for each profile,
+9 average pressure coefficients, and one joint floor.  The29171 fixed
+legal samples impose c<=Fjoint(g); the18 rank rows impose the correct
+capacity.  Maximizing K*c-sum b is a linear target-K test.  Allowing
+separate pressure vectors changes only their average, so one nonnegative
+average pressure vector loses no construction in this equal-weight LP.
+
+The only HiGHS-IPM solve took about8.99 seconds, below the45-second cap:
+
+ sample floor hint       .009001817010737255
+ pressure sum hint       .004477206343114320
+ sample ratio upper hint 67.35677427969738 percent
+ target test margin      -2.3352784500163537e-5.
+
+This falls below the archived website ratio67.3581307708 percent as
+well as the requested extra1e-5 in kappa.  No second LP, parameter
+change, extra sample, continuous adversary, or cover followed.  The
+finite samples only relax the required whole-domain constraints: their
+optimal value is a numerical UPPER bound for this fixed construction
+class, not a certified floor or a new zero proportion.  Floating solver
+output is not an exact dual no-go certificate.
+
+7. Actual admissibility is an additional duty, not implied by L1
+----------------------------------------------------------------
+The exact L1 bound yields positivity and the existing majorant profile
+domination mechanism, but it does NOT by itself instantiate
+WindowProfile.actual_profile or AdmWindow for these two new profiles.
+The actual Profile interface also needs derivative bounds, positive
+variation, the point value and both budget inequalities.  In the existing
+fixed24 specialization these are derivative constants4,128, rho=9/200,
+V(0)/MAM<=81/100 as a sufficient estimate, and
+
+ sqrt(V(0)/MAM)+2*rho<=1,
+ V(0)/MAM+4*rho<=1.
+
+One cannot merely copy those constants: for the plus profile,
+ V_+(0)=1031052017/1000000000, MAM=5/4,
+ V_+(0)/MAM+4*(9/200)=1.0048416136>1.
+Thus the old rho=9/200 explicitly fails budget_sq here.  A different
+genuine PV bound would have to satisfy
+ rho <=218947983/5000000000=.0437895966,
+and both budget conditions, with adequate actual derivative bounds.
+Larger finite derivative constants may change finite errors but do not
+waive the PV or budgets.  No new sine-grid PV audit was performed,
+because this pair already fails the finite-sample target upper test.
+The prototype retains these actual admissibility conditions as explicit
+UNPROVED premises.  It does not call the old actual-window theorems on
+the new profiles, and no actual counting improvement follows.
+
+8. Replay, frozen inputs and an earlier explanatory erratum
+-----------------------------------------------------------
+The independent replay is read-only by default:
+ python -S -B -X utf8 research-goal-20261017-multiwindow/multiwindow_replay.py
+Optional --write-receipt creates an absent receipt once.  It checks the
+exact same-ledger matrix certificate, fixed profile L1, H intervals,
+quadratic cancellation and short-pair endpoint arithmetic.  It imports
+no producer, numpy, scipy, optimizer or Lean.  It does not elevate any
+floating finite-LP optimum to an exact theorem.  The full package and
+its sources are pinned separately in multiwindow-files.json.
+
+Erratum to the explanatory text in the frozen quartic_note.txt, section1:
+the sentence giving a profile lower bound1-4/25 used the constant1 in
+place of the actual cos(sqrt(2)*t) base.  The valid core bound is
+ cos(sqrt(2)*t)>=1-t^2>=3/4 for |t|<=1/2,
+so subtracting sumabs<2/25 gives profile>67/100>0.  Even a hypothetical
+factor2 convention would give >=59/100>0.  The actual definition has
+no such factor2.  This corrects an explanatory inequality, not any
+generated quartic coefficient or moment certificate.  The quartic model
+had actual positivity/enclosures as explicit analytic premises, and its
+replay checks sumabs; all frozen pins and strict feasible-point results
+are unchanged.  This erratum deliberately does not rewrite those files.
+
+The mathematical gain here is a valid joint-defect counting interface
+and an exact limitation of same-ledger variance.  Different ledgers
+provide a genuine cross term, but this one fixed prototype did not beat
+the record even on its samples.  The general vector-window route remains
+open; no unconditional record or submission-ready result is claimed.

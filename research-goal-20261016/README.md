@@ -607,6 +607,20 @@ have equal sizes. See `lean_aux127_proof_index.json`. Its self-contained
 modules and the separate data module passed, but full root coverage is
 false. The failed/cancelled earlier large block is not counted as passed.
 
+The next complete sibling `r0011` now also passes: 478 numerical leaves,
+477 internal branches and four ancestor geometry steps, in 78 proof and
+nine data modules. `W10Aux478Join` formally checks the old literal cells
+by equality and combines this subtree with the 127-leaf and seven-leaf
+proofs. Its `r00_covered` root proves all 612 leaves without internal
+numeric or geometry hypotheses. Only `r1` and `r01` remain in the new
+original-root scaffold. The 25,166-byte seed reproduces all 87 new sources;
+2,885 printed roots have only allowed axioms. Observed total Linux wall
+time was 1,458.08 seconds and maximum RSS about 7.25 GiB. See
+`lean_aux478_proof_index.json` and `lean_aux478_sync_files.json`.
+The new sources alone total 2,495,702 bytes. Neither the full original
+cover, independent replay of these roots, nor final website source-size
+compliance is asserted. Further work must address that compression cost.
+
 The former whole-history search is stopped, with unknown termination
 reason. Its last complete snapshot has 132,000 nodes and SHA256
 `2e50e2303ca3705ae9ba91e741764e84550c382049b88ae5cbd064247bba671d`.
@@ -747,3 +761,28 @@ read-only replay verifies all six new blocks and the two exact separations;
 see `research-goal-20261017-quartic-split/split-files.json`. No parent
 exclusion or new record follows. Research next considers joint information
 from multiple windows, with every spectral-baseline cost retained.
+
+The first multiwindow study is now frozen in
+`research-goal-20261017-multiwindow/`. Its proposed counting interface uses
+one geometry-based matching for all windows, then averages the separately
+pinched defects and spectral baselines. Each original ledger has rank cap
+two; after absorbing its weight theta its cap is `2*theta`. A joint energy
+floor and the weighted short-pair minimum are separate obligations.
+This is a derived research interface, not a new Lean counting theorem.
+
+A rational matrix certificate at one frozen actual configuration rules out
+any benefit from symmetric 24-mode variance with the same ledger there.
+The independent replay verifies 1,080 basis interval entries and 24 exact
+LDL pivots. Different ledgers introduce an extra linear cross term, so that
+same-ledger obstruction does not settle the whole multiwindow family.
+One fixed pair of different profiles and ledgers was tested on 29,171 frozen
+configurations by a single LP optimizing the fixed target's linear margin.
+Its selected ledger has a finite-sample ratio hint of 67.35677428%, below
+the website baseline, and the optimized target margin is about `-2.33528e-5`.
+This is not a direct maximization of the ratio, a certified global score,
+or an exact optimization bound. No further profile, epsilon or
+adversary sweep was run. Moreover the plus profile fails the old
+`rho=9/200` square-budget test (`1.0048416136 > 1`); a new positive-variation
+bound and full admissibility would be required. These duties are not
+discharged by its L1 norm. See `multiwindow-files.json` and
+`multiwindow_note.txt`; no unconditional improvement is asserted.
