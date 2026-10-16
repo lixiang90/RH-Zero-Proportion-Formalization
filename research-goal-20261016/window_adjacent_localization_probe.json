@@ -1,0 +1,640 @@
+{
+  "scope": "Test a global minimizer localization by dominant adjacent potentials.\n\nAt an interior coordinate minimum the total gradient vanishes, and its\ndiagonal Hessian is nonnegative. Nonadjacent spans containing that coordinate\nhave length at least g+(rank-1)*sep; tail envelopes bound their possible\ngradient/curvature payments. This floating diagnostic is NOT a rigorous\nenvelope, a Lean localization theorem, or a zero-proportion result.\n",
+  "script_sha256": "8c0d30afe45c655afb635629a6414f1db015f57f4022efd17702d7049d1d0542",
+  "parameter_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "grid_step": "1/1024",
+  "sampled_tail_endpoint": 128,
+  "curves_are_floating": true,
+  "tail_envelopes_are_not_rigorous": true,
+  "rows": [
+    {
+      "coordinate": 0,
+      "adjacent_weight": 0.0975978555,
+      "pressure_root_upper": 23.34770687522525,
+      "gradient_allowed_intervals": [
+        [
+          0.96875,
+          23.34765625
+        ]
+      ],
+      "joint_allowed_intervals": [
+        [
+          0.9609375,
+          0.9609375
+        ],
+        [
+          0.96875,
+          23.34765625
+        ]
+      ],
+      "outside_integer_cores_intervals": [
+        [
+          1.2109375,
+          1.7890625
+        ],
+        [
+          2.2109375,
+          2.7890625
+        ],
+        [
+          3.2109375,
+          3.7890625
+        ],
+        [
+          4.2109375,
+          4.7890625
+        ],
+        [
+          5.2109375,
+          5.7890625
+        ],
+        [
+          6.2109375,
+          6.7890625
+        ],
+        [
+          7.2109375,
+          7.7890625
+        ],
+        [
+          8.2109375,
+          8.7890625
+        ],
+        [
+          9.2109375,
+          9.7890625
+        ],
+        [
+          10.2109375,
+          10.7890625
+        ],
+        [
+          11.2109375,
+          11.7890625
+        ],
+        [
+          12.2109375,
+          12.7890625
+        ],
+        [
+          13.2109375,
+          13.7890625
+        ],
+        [
+          14.2109375,
+          14.7890625
+        ],
+        [
+          15.2109375,
+          15.7890625
+        ],
+        [
+          16.2109375,
+          16.7890625
+        ],
+        [
+          17.2109375,
+          17.7890625
+        ],
+        [
+          18.2109375,
+          18.7890625
+        ],
+        [
+          19.2109375,
+          19.7890625
+        ],
+        [
+          20.2109375,
+          20.7890625
+        ],
+        [
+          21.2109375,
+          21.7890625
+        ],
+        [
+          22.2109375,
+          22.7890625
+        ],
+        [
+          23.2109375,
+          23.34765625
+        ]
+      ],
+      "joint_allowed_samples": 22918,
+      "outside_core_samples": 13187
+    },
+    {
+      "coordinate": 1,
+      "adjacent_weight": 0.1940903748,
+      "pressure_root_upper": 12.302773262000839,
+      "gradient_allowed_intervals": [
+        [
+          0.9609375,
+          12.302734375
+        ]
+      ],
+      "joint_allowed_intervals": [
+        [
+          0.9609375,
+          12.302734375
+        ]
+      ],
+      "outside_integer_cores_intervals": [
+        [
+          1.2109375,
+          1.7890625
+        ],
+        [
+          2.2109375,
+          2.7890625
+        ],
+        [
+          3.2109375,
+          3.7890625
+        ],
+        [
+          4.2109375,
+          4.7890625
+        ],
+        [
+          5.2109375,
+          5.7890625
+        ],
+        [
+          6.2109375,
+          6.7890625
+        ],
+        [
+          7.2109375,
+          7.7890625
+        ],
+        [
+          8.2109375,
+          8.7890625
+        ],
+        [
+          9.2109375,
+          9.7890625
+        ],
+        [
+          10.2109375,
+          10.7890625
+        ],
+        [
+          11.2109375,
+          11.7890625
+        ],
+        [
+          12.2109375,
+          12.302734375
+        ]
+      ],
+      "joint_allowed_samples": 11615,
+      "outside_core_samples": 6618
+    },
+    {
+      "coordinate": 2,
+      "adjacent_weight": 0.2565879585,
+      "pressure_root_upper": 9.077754594001906,
+      "gradient_allowed_intervals": [
+        [
+          0.9609375,
+          9.0771484375
+        ]
+      ],
+      "joint_allowed_intervals": [
+        [
+          0.9609375,
+          9.0771484375
+        ]
+      ],
+      "outside_integer_cores_intervals": [
+        [
+          1.2109375,
+          1.7890625
+        ],
+        [
+          2.2109375,
+          2.7890625
+        ],
+        [
+          3.2109375,
+          3.7890625
+        ],
+        [
+          4.2109375,
+          4.7890625
+        ],
+        [
+          5.2109375,
+          5.7890625
+        ],
+        [
+          6.2109375,
+          6.7890625
+        ],
+        [
+          7.2109375,
+          7.7890625
+        ],
+        [
+          8.2109375,
+          8.7890625
+        ]
+      ],
+      "joint_allowed_samples": 8312,
+      "outside_core_samples": 4744
+    },
+    {
+      "coordinate": 3,
+      "adjacent_weight": 0.2928557891,
+      "pressure_root_upper": 7.8057605317882945,
+      "gradient_allowed_intervals": [
+        [
+          0.9609375,
+          7.8056640625
+        ]
+      ],
+      "joint_allowed_intervals": [
+        [
+          0.9609375,
+          7.8056640625
+        ]
+      ],
+      "outside_integer_cores_intervals": [
+        [
+          1.2109375,
+          1.7890625
+        ],
+        [
+          2.2109375,
+          2.7890625
+        ],
+        [
+          3.2109375,
+          3.7890625
+        ],
+        [
+          4.2109375,
+          4.7890625
+        ],
+        [
+          5.2109375,
+          5.7890625
+        ],
+        [
+          6.2109375,
+          6.7890625
+        ],
+        [
+          7.2109375,
+          7.7890625
+        ]
+      ],
+      "joint_allowed_samples": 7010,
+      "outside_core_samples": 4151
+    },
+    {
+      "coordinate": 4,
+      "adjacent_weight": 0.317736044,
+      "pressure_root_upper": 7.24681595191049,
+      "gradient_allowed_intervals": [
+        [
+          0.9609375,
+          7.24609375
+        ]
+      ],
+      "joint_allowed_intervals": [
+        [
+          0.9609375,
+          7.24609375
+        ]
+      ],
+      "outside_integer_cores_intervals": [
+        [
+          1.2109375,
+          1.7890625
+        ],
+        [
+          2.2109375,
+          2.7890625
+        ],
+        [
+          3.2109375,
+          3.7890625
+        ],
+        [
+          4.2109375,
+          4.7890625
+        ],
+        [
+          5.2109375,
+          5.7890625
+        ],
+        [
+          6.2109375,
+          6.7890625
+        ],
+        [
+          7.2109375,
+          7.24609375
+        ]
+      ],
+      "joint_allowed_samples": 6437,
+      "outside_core_samples": 3595
+    },
+    {
+      "coordinate": 5,
+      "adjacent_weight": 0.2928557891,
+      "pressure_root_upper": 7.8057605317882945,
+      "gradient_allowed_intervals": [
+        [
+          0.9609375,
+          7.8056640625
+        ]
+      ],
+      "joint_allowed_intervals": [
+        [
+          0.9609375,
+          7.8056640625
+        ]
+      ],
+      "outside_integer_cores_intervals": [
+        [
+          1.2109375,
+          1.7890625
+        ],
+        [
+          2.2109375,
+          2.7890625
+        ],
+        [
+          3.2109375,
+          3.7890625
+        ],
+        [
+          4.2109375,
+          4.7890625
+        ],
+        [
+          5.2109375,
+          5.7890625
+        ],
+        [
+          6.2109375,
+          6.7890625
+        ],
+        [
+          7.2109375,
+          7.7890625
+        ]
+      ],
+      "joint_allowed_samples": 7010,
+      "outside_core_samples": 4151
+    },
+    {
+      "coordinate": 6,
+      "adjacent_weight": 0.2565879585,
+      "pressure_root_upper": 9.077754594001906,
+      "gradient_allowed_intervals": [
+        [
+          0.9609375,
+          9.0771484375
+        ]
+      ],
+      "joint_allowed_intervals": [
+        [
+          0.9609375,
+          9.0771484375
+        ]
+      ],
+      "outside_integer_cores_intervals": [
+        [
+          1.2109375,
+          1.7890625
+        ],
+        [
+          2.2109375,
+          2.7890625
+        ],
+        [
+          3.2109375,
+          3.7890625
+        ],
+        [
+          4.2109375,
+          4.7890625
+        ],
+        [
+          5.2109375,
+          5.7890625
+        ],
+        [
+          6.2109375,
+          6.7890625
+        ],
+        [
+          7.2109375,
+          7.7890625
+        ],
+        [
+          8.2109375,
+          8.7890625
+        ]
+      ],
+      "joint_allowed_samples": 8312,
+      "outside_core_samples": 4744
+    },
+    {
+      "coordinate": 7,
+      "adjacent_weight": 0.1940903748,
+      "pressure_root_upper": 12.302773262000839,
+      "gradient_allowed_intervals": [
+        [
+          0.9609375,
+          12.302734375
+        ]
+      ],
+      "joint_allowed_intervals": [
+        [
+          0.9609375,
+          12.302734375
+        ]
+      ],
+      "outside_integer_cores_intervals": [
+        [
+          1.2109375,
+          1.7890625
+        ],
+        [
+          2.2109375,
+          2.7890625
+        ],
+        [
+          3.2109375,
+          3.7890625
+        ],
+        [
+          4.2109375,
+          4.7890625
+        ],
+        [
+          5.2109375,
+          5.7890625
+        ],
+        [
+          6.2109375,
+          6.7890625
+        ],
+        [
+          7.2109375,
+          7.7890625
+        ],
+        [
+          8.2109375,
+          8.7890625
+        ],
+        [
+          9.2109375,
+          9.7890625
+        ],
+        [
+          10.2109375,
+          10.7890625
+        ],
+        [
+          11.2109375,
+          11.7890625
+        ],
+        [
+          12.2109375,
+          12.302734375
+        ]
+      ],
+      "joint_allowed_samples": 11615,
+      "outside_core_samples": 6618
+    },
+    {
+      "coordinate": 8,
+      "adjacent_weight": 0.0975978555,
+      "pressure_root_upper": 23.34770687522525,
+      "gradient_allowed_intervals": [
+        [
+          0.96875,
+          23.34765625
+        ]
+      ],
+      "joint_allowed_intervals": [
+        [
+          0.9609375,
+          0.9609375
+        ],
+        [
+          0.96875,
+          23.34765625
+        ]
+      ],
+      "outside_integer_cores_intervals": [
+        [
+          1.2109375,
+          1.7890625
+        ],
+        [
+          2.2109375,
+          2.7890625
+        ],
+        [
+          3.2109375,
+          3.7890625
+        ],
+        [
+          4.2109375,
+          4.7890625
+        ],
+        [
+          5.2109375,
+          5.7890625
+        ],
+        [
+          6.2109375,
+          6.7890625
+        ],
+        [
+          7.2109375,
+          7.7890625
+        ],
+        [
+          8.2109375,
+          8.7890625
+        ],
+        [
+          9.2109375,
+          9.7890625
+        ],
+        [
+          10.2109375,
+          10.7890625
+        ],
+        [
+          11.2109375,
+          11.7890625
+        ],
+        [
+          12.2109375,
+          12.7890625
+        ],
+        [
+          13.2109375,
+          13.7890625
+        ],
+        [
+          14.2109375,
+          14.7890625
+        ],
+        [
+          15.2109375,
+          15.7890625
+        ],
+        [
+          16.2109375,
+          16.7890625
+        ],
+        [
+          17.2109375,
+          17.7890625
+        ],
+        [
+          18.2109375,
+          18.7890625
+        ],
+        [
+          19.2109375,
+          19.7890625
+        ],
+        [
+          20.2109375,
+          20.7890625
+        ],
+        [
+          21.2109375,
+          21.7890625
+        ],
+        [
+          22.2109375,
+          22.7890625
+        ],
+        [
+          23.2109375,
+          23.34765625
+        ]
+      ],
+      "joint_allowed_samples": 22918,
+      "outside_core_samples": 13187
+    }
+  ],
+  "every_sampled_allowed_coordinate_inside_core": false,
+  "global_localization_proven": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 0.9944174000011117
+}

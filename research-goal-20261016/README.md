@@ -127,10 +127,36 @@ scope-dependent printed names. The first actual finite table pilot proves
 all 24 E coefficients and the first full base recurrence using kernel
 evaluation and the soundness theorem. Compiled table definitions alone are
 recorded separately and are not counted as interval-enclosure proofs.
-The full finite tables, actual scalar bounds and complete global cover
-remain unfinished. Consult hash-bound receipts;
-source existence alone does not establish a theorem. No new independent
-nanoda replay has yet been run for these modules.
+All 32 actual integer-centred kernel/derivative tables and all 1,567 actual
+value/slope anchors now have ordinary-kernel proofs, as does the actual
+short-pair bound. The first actual convex interval has passed; the other
+convex intervals and full minimizer cover remain unfinished.
+`WindowRecordFromFloor` and `WindowRecordDyadic` reduce the actual cumulative
+and dyadic counting conclusions to an explicit global floor hypothesis.
+That hypothesis remains a mathematical obligation.
+
+`WindowPressureRoot` retains the full shared pressure budget when bounding
+a span, rather than inferring those coupled bounds from independent
+coordinate bounds. `DifferenceCell` proves single-edge closure and split
+soundness for actual real positions. These are interfaces for an eventual
+complete checked cover, not substitutes for that cover.
+Consult hash-bound receipts; source existence alone does not establish a
+theorem. The selected independent nanoda replay is being prepared; its
+receipt must be consulted before claiming an independent-kernel pass.
+
+The full 22,500-node OBBT prefix was recovered into the compact representation
+and independently replayed: 164,093 contraction bounds, 17,785 Newton steps,
+and all accepted leaves passed. The recovered checkpoint shrank from
+882,186,203 to 147,894,201 bytes. Its frontier is nonempty. The small frozen
+600-node archive also replays without the original checkpoint; the immutable
+`cover-compact-progress-files.json` pins all selected recovery artifacts.
+
+Further mathematical diagnostics are explicitly negative evidence rather
+than proofs: adjacent-term localization does not force all coordinates into
+integer wells; truncating interactions at range six, even after reoptimizing
+the ledger on the fixed profile, falls short of the requested gain in sampled
+LP diagnostics. Finite integer moves to competing wells are a distinct
+global-minimizer exclusion currently under investigation.
 
 The frozen mixed-cover snapshot `snapshots/correlated-26000.json` describes
 an archived checkpoint of 26,000 checked nodes with 17 frontier cells. Its

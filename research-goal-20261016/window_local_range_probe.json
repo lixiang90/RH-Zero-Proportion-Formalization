@@ -1,0 +1,136 @@
+{
+  "scope": "Test a finite-range energy reduction for functional Bellman certificates.\n\nDiscarding positive long-span terms is mathematically valid. If the shorter\nrange energy retains the requested floor, its Markov state has dimension\nR-1 instead of nine gaps, opening a different global-proof route. All minima\nhere are floating local values (upper bounds on infima), never certificates.\n",
+  "script_sha256": "a4fdeaaf99a34cefd932caf7a8db9fdb83bfd3b7362c1d79ac3159e08bbd6e24",
+  "parameter_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "rows": [
+    {
+      "range_R": 2,
+      "Bellman_state_dimension": 1,
+      "terms": 15,
+      "observed_minimum_upper_hint": 0.005603611296374479,
+      "minimum_floor_needed_for_goal_hint": 0.008784609052634118,
+      "observed_conditional_percent_NOT_BOUND": 67.14365407938145,
+      "observed_margin_over_needed_floor": -0.0031809977562596388,
+      "worst_gaps": [
+        1.0644704894148276,
+        1.0568285210207091,
+        1.0473216988769554,
+        1.0443709942793664,
+        1.0457839402418392,
+        1.0443709942793664,
+        1.0473216988769554,
+        1.0568285210207091,
+        1.0644704894148276
+      ],
+      "starts": 477
+    },
+    {
+      "range_R": 3,
+      "Bellman_state_dimension": 2,
+      "terms": 22,
+      "observed_minimum_upper_hint": 0.00663895517780159,
+      "minimum_floor_needed_for_goal_hint": 0.008784609052634118,
+      "observed_conditional_percent_NOT_BOUND": 67.21363545401869,
+      "observed_margin_over_needed_floor": -0.0021456538748325284,
+      "worst_gaps": [
+        1.0569761534759081,
+        1.0463559097373754,
+        1.037582460922601,
+        1.0348405708226271,
+        1.0366329634571652,
+        1.0348405708226271,
+        1.037582460922601,
+        1.0463559097373754,
+        1.0569761534759081
+      ],
+      "starts": 477
+    },
+    {
+      "range_R": 4,
+      "Bellman_state_dimension": 3,
+      "terms": 26,
+      "observed_minimum_upper_hint": 0.007754334213040691,
+      "minimum_floor_needed_for_goal_hint": 0.008784609052634118,
+      "observed_conditional_percent_NOT_BOUND": 67.28919000915818,
+      "observed_margin_over_needed_floor": -0.0010302748395934272,
+      "worst_gaps": [
+        1.060041346935284,
+        1.0524092170012231,
+        1.9880030822839465,
+        1.047594015271713,
+        1.9847240270784205,
+        1.0475940152717127,
+        1.9880030822839465,
+        1.052409217001223,
+        1.060041346935284
+      ],
+      "starts": 477
+    },
+    {
+      "range_R": 5,
+      "Bellman_state_dimension": 4,
+      "terms": 31,
+      "observed_minimum_upper_hint": 0.008108610424253091,
+      "minimum_floor_needed_for_goal_hint": 0.008784609052634118,
+      "observed_conditional_percent_NOT_BOUND": 67.31322384949848,
+      "observed_margin_over_needed_floor": -0.0006759986283810266,
+      "worst_gaps": [
+        1.0538700029842645,
+        1.0479476022341458,
+        1.981687011802642,
+        1.046022053861553,
+        1.9743967273329568,
+        1.0460220538615526,
+        1.9816870118026417,
+        1.0479476022341458,
+        1.0538700029842645
+      ],
+      "starts": 477
+    },
+    {
+      "range_R": 6,
+      "Bellman_state_dimension": 5,
+      "terms": 35,
+      "observed_minimum_upper_hint": 0.008306771969753893,
+      "minimum_floor_needed_for_goal_hint": 0.008784609052634118,
+      "observed_conditional_percent_NOT_BOUND": 67.32667447323337,
+      "observed_margin_over_needed_floor": -0.0004778370828802253,
+      "worst_gaps": [
+        1.050887021981404,
+        1.0458448907216908,
+        1.9756301236796703,
+        1.0447020358867043,
+        1.9704731863885039,
+        1.0447020358867043,
+        1.9756301236796703,
+        1.0458448907216908,
+        1.050887021981404
+      ],
+      "starts": 477
+    },
+    {
+      "range_R": 9,
+      "Bellman_state_dimension": 8,
+      "terms": 41,
+      "observed_minimum_upper_hint": 0.008847438760183967,
+      "minimum_floor_needed_for_goal_hint": 0.008784609052634118,
+      "observed_conditional_percent_NOT_BOUND": 67.36340070330257,
+      "observed_margin_over_needed_floor": 6.282970754984893e-05,
+      "worst_gaps": [
+        1.9597816008986744,
+        1.034123070313213,
+        1.0373012147820664,
+        1.9621791137981592,
+        1.042765674280924,
+        1.9621791137981592,
+        1.0373012147820664,
+        1.034123070313213,
+        1.9597816008986744
+      ],
+      "starts": 477
+    }
+  ],
+  "global_floor_proven": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 27.53669169999921
+}

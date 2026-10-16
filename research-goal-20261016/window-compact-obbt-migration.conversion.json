@@ -1,0 +1,17 @@
+{
+  "scope": "Stream an immutable open checkpoint into compact-v2 without loading raw JSON.\n\nThe producer saves by atomic replacement; the opened file remains one whole\nsnapshot. Hashing occurs on that same file handle. Every large map/list is\ndecoded one entry at a time, packed losslessly and then released. No search,\nLP, scalar oracle, or minimizer semantics is changed by this conversion.\n",
+  "script_sha256": "cbbecd1b44b57a385a3b29175168c433a1338406f15ebe2e953f8cdb49f4022a",
+  "input": {
+    "source_path": "research-goal-20261016\\window-obbt-newton-cover.json",
+    "source_sha256": "975ae5c2166a9bdb4b219e2d09aa699de720cc30f4e69a8106e47eb7082ff162",
+    "source_bytes": 869665754,
+    "source_checked": 22000,
+    "codec_sha256": "1e0f59cfb3ca328af0df30b7eb4d419267b08eab88469066ffc84cf4109f288c"
+  },
+  "compact_bytes": 145719939,
+  "checked": 22000,
+  "pending": 21,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 56.78947139999946
+}

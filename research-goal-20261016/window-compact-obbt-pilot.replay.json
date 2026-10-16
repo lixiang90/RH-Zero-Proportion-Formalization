@@ -1,0 +1,40 @@
+{
+  "scope": "Pack an existing pilot, reconstruct every original field, then replay it.",
+  "input_sha256": "0e2ab52320f2e3951ef6597de2f4581a2535e9ac3db6e289eeb19355c12de018",
+  "packed_sha256": "23e0dd1dabe5e6ae364394a498290e50e163cde4d9307ce047bd5ea6a983aa7b",
+  "script_sha256": "121d2e88dcaedef99893163a1165a74530e5d5050f62ba2daa3fe0d8260914b7",
+  "codec_sha256": "1e0f59cfb3ca328af0df30b7eb4d419267b08eab88469066ffc84cf4109f288c",
+  "original_bytes": 34810164,
+  "compact_JSON_bytes": 5676247,
+  "compact_gzip_bytes": 1018795,
+  "all_original_fields_reconstructed": true,
+  "independent_full_replay": {
+    "counts": {
+      "value": 23,
+      "stationary": 213,
+      "Gram": 0,
+      "reflection": 9,
+      "stationary_empty": 0,
+      "frontier": 11,
+      "implicit_empty": 0,
+      "contraction_paths": 142,
+      "contraction_steps": 795,
+      "sublevel_paths": 411,
+      "sublevel_bounds": 5652,
+      "sublevel_empty": 0
+    },
+    "nodes_replayed": 511,
+    "checked_nodes": 500,
+    "exact_minimum_value_numerator": "2883630563947564819086166",
+    "sublevel_only_OBBT_replayed": true,
+    "KKT_only_contractions_replayed": true,
+    "pointwise_cover_asserted": false,
+    "complete_finite_minimizer_partition": false,
+    "separate_Gram_certificate_replay_required": true,
+    "actual_analytic_Lean_bridges_complete": false,
+    "new_zero_proportion_proven": false
+  },
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 49.50118769999972
+}

@@ -1,0 +1,39 @@
+{
+  "counts": {
+    "value": 3256,
+    "stationary": 7731,
+    "Gram": 0,
+    "reflection": 254,
+    "stationary_empty": 0,
+    "frontier": 19,
+    "implicit_empty": 0,
+    "contraction_paths": 3739,
+    "contraction_steps": 17785,
+    "sublevel_paths": 15360,
+    "sublevel_bounds": 164093,
+    "sublevel_empty": 0
+  },
+  "nodes_replayed": 22519,
+  "checked_nodes": 22500,
+  "exact_minimum_value_numerator": "2883601320035159200936592",
+  "sublevel_only_OBBT_replayed": true,
+  "KKT_only_contractions_replayed": true,
+  "pointwise_cover_asserted": false,
+  "complete_finite_minimizer_partition": false,
+  "separate_Gram_certificate_replay_required": true,
+  "actual_analytic_Lean_bridges_complete": false,
+  "new_zero_proportion_proven": false,
+  "scope": "Decode and replay a compact partial/full KKT-minimizer partition.\n\nContraction chains are checked by the independent stdlib verifier BEFORE\nprocessing the refined node. No contraction is mistaken for a pointwise\ncover. Value mixtures/flows, directional exclusions, Gram membership and all\ntree/frontier edges are replayed. The separate 69-Gram arithmetic receipt\nmust also be checked; all actual-kernel and global-minimum Lean bridges\nremain explicit obligations.\n",
+  "input_sha256": "8f6cd96fc409536a4760b441ed99c8c7aa079a4398b119cc4fc9d2b2b45ded3f",
+  "script_sha256": "4f8231ed4de1da3fc4d326276498aa1dc8c749ffda0b5c340cf8bf2c3a50f49b",
+  "independent_verifier_sources": {
+    "contractor_verifier_sha256": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389",
+    "verifier_api_sha256": "b8a1090e02b73d14305c0d800ec15c7d94d4323a1b55557dc0893adccfc778aa",
+    "verifier_helper_sha256": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "geometry_helper_sha256": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a",
+    "obbt_verifier_api_sha256": "792ab05762fe83146236aad8695055219e036176db82c602be25d0a3a4d1852f",
+    "obbt_verifier_helper_sha256": "4545b22a8bb0f19e4f8642d8018f437e8ab46ed4bb6580066b244f6285f9671c",
+    "minorant_checker_sha256": "ddf7997d466b647de17f6e92c334b948b5ae7eb2daf334e807158b39714e88a4"
+  },
+  "seconds": 583.2666878000018
+}

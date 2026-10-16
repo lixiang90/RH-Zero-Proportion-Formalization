@@ -84,6 +84,7 @@ def main():
         logname='lean_'+module.rsplit('.',1)[-1]+'_'+sourcehash[:12]+'.log'
         logpath=HERE/logname
         begin=time.time()
+        begin_monotonic=time.monotonic()
         with logpath.open('wb') as log:
             proc=subprocess.Popen(argv,stdout=log,stderr=subprocess.STDOUT)
             status={'driver_pid':os.getpid(),'wsl_process_pid':proc.pid,'module':module,'source_sha256':sourcehash,'index':index,'target_count':len(targets),'started_unix':begin,'live':True,'log':logname}
@@ -91,7 +92,7 @@ def main():
             print(json.dumps(status),flush=True)
             exitcode=proc.wait()
         raw=logpath.read_bytes()
-        result={'module':module,'source_sha256':sourcehash,'source_unchanged':sha(source.read_bytes())==sourcehash,'command':argv,'exit_code':exitcode,'whole_process_seconds':time.time()-begin,'log':logname,'log_sha256':sha(raw),'passed':exitcode==0 and b'sorryAx' not in raw and sha(source.read_bytes())==sourcehash,'synchronous_elaboration':'set_option Elab.async false' in source.read_text(encoding='utf8')}
+        result={'module':module,'source_sha256':sourcehash,'source_unchanged':sha(source.read_bytes())==sourcehash,'command':argv,'exit_code':exitcode,'whole_process_seconds':time.monotonic()-begin_monotonic,'duration_clock':'monotonic','log':logname,'log_sha256':sha(raw),'passed':exitcode==0 and b'sorryAx' not in raw and sha(source.read_bytes())==sourcehash,'synchronous_elaboration':'set_option Elab.async false' in source.read_text(encoding='utf8')}
         if result['passed']:
             result['olean_sha256']=subprocess.run(pre+['/usr/bin/sha256sum',outputolean],capture_output=True,check=True).stdout.decode().split()[0]
         known[module]=result

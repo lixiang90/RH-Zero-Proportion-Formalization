@@ -36,8 +36,28 @@ def main():
       'window_nine_point_cover.py','window-nine-point-convex.json','window_nine_point_replay.py','window_nine_point_snapshot.py',
       'window_generate_asymptotic.py','window_generate_counting_base.py','window_generate_discrete.py',
       'window_generate_matching.py','window_generate_separated.py','window_generate_uniform.py',
-      'window_generate_jet_tables.py','window_generate_convexity_checks.py']
+      'window_generate_jet_tables.py','window_generate_convexity_checks.py',
+      'window_adjacent_localization_probe.py','window_adjacent_localization_probe.json',
+      'window_local_range_probe.py','window_local_range_probe.json',
+      'window_range_ledger_search.py','window-range-ledger-n10-r6.json','window-range-ledger-n10-r6.npz',
+      'window_generate_fixed_kernel.py','window_fixed_kernel_modules.json',
+      'window_generate_fixed_tables_all.py','window_generate_anchor_certificate.py','window_anchor_certificate_modules.json',
+      'window_generate_anchor_all.py','window_generate_linear_convexity_checks.py','window_linear_convexity_modules.json',
+      'window_linear_bernstein_audit.json','window_generate_bernstein_weights.py','window_bernstein_weight_modules.json',
+      'window_generate_counting.py','window_generate_counting_geometry.py',
+      'window_generate_independent_roots.py','window-independent-roots.json','window_independent_replay.py']
     files+=['research-goal-20261016/'+s for s in names]
+    # This immutable manifest pins the reviewed compact-prefix recovery and
+    # replay artifacts, without adding the live 148+ MB search checkpoint.
+    compact_manifest=HERE/'cover-compact-progress-files.json'
+    assert hashlib.sha256(compact_manifest.read_bytes()).hexdigest()=='bc63e6decdd5c286362c1a4f5bb6fee85bd099b2e3fa3516b239a9b4d47cbed2'
+    compact=json.loads(compact_manifest.read_bytes())
+    for path,row in compact['files'].items():
+        p=HERE/path
+        assert p.is_file() and len(p.read_bytes())==row['bytes']
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
+        files.append(str(p.relative_to(ROOT)).replace('\\','/'))
+    files.append('research-goal-20261016/cover-compact-progress-files.json')
     compiled=receipt['modules']+receipt.get('compiled_without_printed_axiom_audit',[])
     for row in compiled:
         for key,sha_key in [('source','source_sha256'),('log','log_sha256')]:
