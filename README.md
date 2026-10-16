@@ -27,6 +27,14 @@ The complete source currently assembles to **5,777,945 bytes**, exceeding the
 website's 2,000,000-byte limit. These materials are explicitly **not ready for
 website submission**.
 
+Further [local Gram-envelope research](research-20261016-w10-unconditional/README.md)
+constructs rational quadratic minorants in 69 narrow and wider lattice
+chambers, with independent exact replay. The inherited-tangent and quadratic
+envelope lemmas, all 69 algebraic basin-polynomial bounds, and faster
+fixed-field cell geometry passed ordinary Lean checks. The scalar instances
+and global cover are still incomplete; this adds **no new unconditional
+zero-proportion bound**.
+
 The completed October 15 bound for critical-line zeros is
 
 \[

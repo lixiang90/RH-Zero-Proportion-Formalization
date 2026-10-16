@@ -1,0 +1,21 @@
+{
+  "scope": "Independent stdlib replay of the partial hybrid finite partitions.\n\nEvery branch child, normalization step, integer leaf and exact rational\nbasin inclusion is replayed. Frontier cells are retained explicitly. This\ndoes not establish the generic real quadratic lemma or a global Lean cover.\n",
+  "passed": true,
+  "pilot_sha256": "868f5dcf9dcf82944255e567468110c48d4685979c0548d5e62a6a551626b0a2",
+  "certificate_sha256": "5793d5d8607d9d7a27b1e66c403d1d2bf14abb5db1f84452784cf3b9f582ab53",
+  "script_sha256": "93af3f2bff45ff5f5374f4cd0574a84774b09f8874d859ecc3fb4161e0aa9c78",
+  "branches_replayed": 307,
+  "accepted_leaves_replayed": {
+    "numeric": 291,
+    "basin": 2
+  },
+  "frontier_cells_retained": 15,
+  "all_partition_edges_and_normalization_replayed": true,
+  "all_numeric_arithmetic_and_tangent_domains_recomputed": true,
+  "all_basin_inclusions_exact_rational_checked": true,
+  "all_inputs_unchanged": true,
+  "global_cover_complete": false,
+  "generic_basin_real_soundness_formalized": false,
+  "new_unconditional_zeta_bound_proven": false,
+  "seconds": 0.4480207999877166
+}

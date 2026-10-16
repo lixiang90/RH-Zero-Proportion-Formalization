@@ -1,0 +1,33 @@
+{
+  "scope": "Stdlib-only independent replay of the finite rational Gram evidence.\n\nThis deliberately does not import the generator, its hull builder, its\nlinear solver, NumPy, SciPy, or the exploratory curvature samples. Every\npiece uses one directly decoded frozen PT word. A successful replay is\nstill not a Lean proof or a proof that these chambers cover all gaps.\n",
+  "certificate": "research-20261016-w10-unconditional/analytic_gram_wide_adaptive.json",
+  "certificate_sha256": "77210611abca8d0ed4d1de70817e1e28ae1dd42b02fca6deb5228439ac3eaa1b",
+  "initial_sha256": {
+    "research-20261016-w10-unconditional/analytic_gram_wide_adaptive.json": "77210611abca8d0ed4d1de70817e1e28ae1dd42b02fca6deb5228439ac3eaa1b",
+    "research-20261016/spectral-w10-refined-rational.json": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+    "formal/upstream/ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "research-20261016-w10-unconditional/analytic_gram_replay.py": "ff10069955d98a02a10462c966d0599183be2412a83ecc9cd4263e2052570db6"
+  },
+  "final_sha256": {
+    "research-20261016-w10-unconditional/analytic_gram_wide_adaptive.json": "77210611abca8d0ed4d1de70817e1e28ae1dd42b02fca6deb5228439ac3eaa1b",
+    "research-20261016/spectral-w10-refined-rational.json": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+    "formal/upstream/ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "research-20261016-w10-unconditional/analytic_gram_replay.py": "ff10069955d98a02a10462c966d0599183be2412a83ecc9cd4263e2052570db6"
+  },
+  "all_inputs_unchanged": true,
+  "driver_sha256": "ff10069955d98a02a10462c966d0599183be2412a83ecc9cd4263e2052570db6",
+  "frozen_PT_source_sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+  "parameter_sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+  "passed": true,
+  "exact_chambers_checked": 69,
+  "exact_scalar_minorants_checked": 2691,
+  "exact_scalar_endpoint_checks": 854408,
+  "piecewise_affine_supports_checked": 2060,
+  "candidate_floor_pass_count": 69,
+  "minimum_Gram_lower_bound_exact": "2090654712702008417854018277706906734723989902364754391567532895242720889826740157416387236012243345474296639711394700851328559914168312771226856375766158087638073435199333528021382201/241350319726809221803174346505170611675603475969586391536055972886048036638685565189815597620553115348492309238708041883541049482281100398681497778280327473971200000000000000000000000000",
+  "minimum_Gram_lower_bound_float_display_only": 0.00866232418945405,
+  "seconds": 14.506814500011387,
+  "scalar_real_soundness_formalized": false,
+  "global_chamber_coverage_proven": false,
+  "new_unconditional_zeta_bound_proven": false
+}

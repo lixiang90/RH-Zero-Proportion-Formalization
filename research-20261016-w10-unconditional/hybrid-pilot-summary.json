@@ -1,0 +1,72 @@
+{
+  "scope": "Research-only hybrid partition pilot comparison; no global proof or demonstrated total size reduction.",
+  "runs": [
+    {
+      "path": "hybrid-seeded-pilot.json",
+      "sha256": "ad300450fe7a28d917a50f5935ab907363e3058fd303f7de5b8bc93cc7f3460f",
+      "checked": 600,
+      "counters": {
+        "numeric": 294,
+        "basin": 0,
+        "empty": 0,
+        "reflection": 0,
+        "phase_split": 31,
+        "heuristic_split": 275,
+        "basin_hint_selected": 20,
+        "basin_hint_point_in_region": 0,
+        "basin_hint_missed": 20,
+        "anchor_hint_selected": 1
+      },
+      "frontier": 13,
+      "branches": 306
+    },
+    {
+      "path": "hybrid-finished-carve-pilot.json",
+      "sha256": "868f5dcf9dcf82944255e567468110c48d4685979c0548d5e62a6a551626b0a2",
+      "checked": 600,
+      "counters": {
+        "numeric": 291,
+        "basin": 2,
+        "empty": 0,
+        "reflection": 0,
+        "phase_split": 148,
+        "heuristic_split": 159,
+        "basin_hint_selected": 16,
+        "basin_hint_point_in_region": 0,
+        "basin_hint_missed": 16,
+        "anchor_hint_selected": 1
+      },
+      "frontier": 15,
+      "branches": 307
+    },
+    {
+      "path": "hybrid-wide-200-pilot.json",
+      "sha256": "3da321494321096fc6df024ea5e5c72af11da6025f04b73221f19a7e3c15cc0f",
+      "checked": 200,
+      "counters": {
+        "numeric": 92,
+        "basin": 1,
+        "empty": 0,
+        "reflection": 0,
+        "phase_split": 106,
+        "heuristic_split": 1,
+        "basin_hint_selected": 2,
+        "basin_hint_point_in_region": 2,
+        "basin_hint_missed": 0,
+        "anchor_hint_selected": 0
+      },
+      "frontier": 15,
+      "branches": 107
+    }
+  ],
+  "interpretation": [
+    "At 600 nodes the affine-first control closes 294 numeric leaves with 13 frontier cells, while forced narrow carving closes 291 numeric plus 2 Gram basin leaves with 15 frontier cells.",
+    "Forced carving confirms exact basin leaves can occur in a sound partial partition but introduces cuts even where affine leaves could already close. It does not establish compression.",
+    "The wide adaptive 200-node pilot reaches 1 basin plus 92 numeric leaves and retains 15 frontier cells; its frontier differs from the controls, so leaf counts do not quantify a global saving.",
+    "Independent stdlib replay recomputed every numeric certificate, exact basin inclusion, normalization and both branch children for all three pilot outputs.",
+    "The original LP-guided 3000-node attempt stopped at its final hash guard because a replay receipt changed; the stable 2500-node checkpoint and rejection record are retained."
+  ],
+  "global_cover_complete": false,
+  "generic_basin_real_soundness_formalized": false,
+  "new_unconditional_zeta_bound_proven": false
+}

@@ -1,0 +1,3338 @@
+{
+  "scope": "Floating evidence for joint convexity on coherent lattice chambers.\n\nThe generic Taylor lower-bound lemma in the accompanying note is valid,\nbut scalar curvature extrema below are only sampled. No interval theorem,\ncoverage theorem, or unconditional zeta lower bound is asserted here.\n",
+  "parameter_sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+  "sample_archive_sha256": "e6e928df2aeb2f907a4f1fdd22c69bcd97dd4923942d14726fd969dcef6c2d81",
+  "sample_count": 27126,
+  "threshold_statistics": [
+    {
+      "floating_objective_threshold": 0.00867,
+      "sample_count": 1390,
+      "max_prefix_phase_width": 0.09940710509424378,
+      "integer_patterns": 17
+    },
+    {
+      "floating_objective_threshold": 0.00868,
+      "sample_count": 1517,
+      "max_prefix_phase_width": 0.1125367084045319,
+      "integer_patterns": 25
+    },
+    {
+      "floating_objective_threshold": 0.00869,
+      "sample_count": 1587,
+      "max_prefix_phase_width": 0.11663365969758566,
+      "integer_patterns": 40
+    },
+    {
+      "floating_objective_threshold": 0.0087,
+      "sample_count": 1672,
+      "max_prefix_phase_width": 0.11675003077640644,
+      "integer_patterns": 62
+    },
+    {
+      "floating_objective_threshold": 0.00871,
+      "sample_count": 1719,
+      "max_prefix_phase_width": 0.11800400573852698,
+      "integer_patterns": 69
+    }
+  ],
+  "scalar_chamber_radius": 0.21,
+  "point_phase_radius": 0.105,
+  "sampled_scalar_curvature_lower_bounds": {
+    "1": 0.18531275972903943,
+    "2": 0.07091760672200835,
+    "3": 0.024602635317568948,
+    "4": 0.008683972941900292,
+    "5": 0.007046967019379714,
+    "6": 0.0024744554453186626,
+    "7": 0.0013575909194584665,
+    "8": 0.00172242186512191,
+    "9": 0.0010128257472757154,
+    "10": 0.0018389084305273848,
+    "11": 0.002446098070416616,
+    "12": 0.002238370457243987,
+    "13": 0.0018710569284222946,
+    "14": 0.0016186190763559697,
+    "15": 0.0014147065273605016,
+    "16": 0.0012472828962821337,
+    "17": 0.0011080913120584822,
+    "18": 0.0009910922889930318,
+    "19": 0.0008917829727986136,
+    "20": 0.0008067515590020602,
+    "21": 0.0007333743592692085,
+    "22": 0.0006696063628867141,
+    "23": 0.0006138340118328714,
+    "24": 0.0005647699956243347,
+    "25": 0.0005213768945907464,
+    "26": 0.00048281095567894166,
+    "27": 0.00044838013929852114,
+    "28": 0.0004175124308596137,
+    "29": 0.00038973163573070965,
+    "30": 0.0003646386984055915,
+    "31": 0.0003418971468585716,
+    "32": 0.00032122165039453067,
+    "33": 0.0003023689507732936,
+    "34": 0.00028513061908732446,
+    "35": 0.0002693272292820453,
+    "36": 0.00025480363972514136,
+    "37": 0.00024142514798493965,
+    "38": 0.00022907433861749983,
+    "39": 0.00021764848460921238,
+    "40": 0.00020705739391758623,
+    "41": 0.00019722161595749093,
+    "42": 0.0001880709408012948,
+    "43": 0.00017954313768295092,
+    "44": 0.00017158289012641928
+  },
+  "all_scalar_curvature_samples_positive": true,
+  "tested_chambers": 69,
+  "min_hypothetical_chamber_lower_bound": 0.008667243687923066,
+  "results": [
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2073226,
+        1091787,
+        1097093,
+        3062121,
+        1099012,
+        2072328,
+        1094970,
+        2074105,
+        1091827
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667256039655336,
+      "gradient": [
+        3.886785345538855e-08,
+        1.64831636687826e-07,
+        -1.1593571816546216e-09,
+        1.6900504980644354e-07,
+        2.673141822309884e-07,
+        1.8602796197670236e-07,
+        4.329245149111045e-09,
+        2.1510473578940145e-08,
+        5.670893310331677e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011526983833067555,
+      "hypothetical_strong_convexity_penalty": 8.63781720776324e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008667256038791555,
+      "prefix_phase_width": 0.09568309783935547,
+      "prefix_phase_range": [
+        -0.022817611694335938,
+        0.07286548614501953
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2069559,
+        1091166,
+        2064420,
+        1093199,
+        2058807,
+        1085785,
+        1083041,
+        2054358,
+        1087982
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667256905125889,
+      "gradient": [
+        -1.4365688132231443e-08,
+        6.524333430669082e-08,
+        -9.612228687831681e-08,
+        -2.95441799839642e-07,
+        -1.8012604764694462e-07,
+        -3.0454220938190123e-07,
+        5.159898792917936e-08,
+        4.054986709904401e-08,
+        -3.842093296150314e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011370914401321106,
+      "hypothetical_strong_convexity_penalty": 1.0838261096490588e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008667256904042063,
+      "prefix_phase_width": 0.08374214172363281,
+      "prefix_phase_range": [
+        -0.026314735412597656,
+        0.057427406311035156
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1087364,
+        2068315,
+        1092858,
+        2065460,
+        1093223,
+        2065460,
+        1092858,
+        2068315,
+        1087364
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667265634921824,
+      "gradient": [
+        -6.926755864451305e-08,
+        -1.551699077659719e-09,
+        -2.4880490539819396e-07,
+        -1.3798312582585445e-09,
+        -6.647205589606353e-08,
+        -1.379831256957502e-09,
+        -2.4880490540079604e-07,
+        -1.5516990787439212e-09,
+        -6.926755864494673e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01838681763619824,
+      "hypothetical_strong_convexity_penalty": 1.144808801313124e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008667265633777016,
+      "prefix_phase_width": 0.0855722427368164,
+      "prefix_phase_range": [
+        0.0,
+        0.0855722427368164
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1087109,
+        2065805,
+        1092985,
+        2064392,
+        1093362,
+        2059586,
+        1086941,
+        1084586,
+        2058724
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00866726588997641,
+      "gradient": [
+        1.1349602026537904e-08,
+        2.3248621796852307e-08,
+        1.5378141547998068e-07,
+        4.301850260507358e-08,
+        1.8571865799724661e-07,
+        1.8564392982166767e-07,
+        2.709318536388717e-07,
+        4.4438546607653614e-08,
+        5.589791366767977e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011457037272002608,
+      "hypothetical_strong_convexity_penalty": 6.838075166542596e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008667265889292603,
+      "prefix_phase_width": 0.09577751159667969,
+      "prefix_phase_range": [
+        0.0,
+        0.09577751159667969
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2075141,
+        1091539,
+        2066517,
+        1093501,
+        2066396,
+        1093501,
+        2066517,
+        1091539,
+        2075141
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00866726606078893,
+      "gradient": [
+        3.337424744041546e-08,
+        1.907457612762022e-07,
+        1.24691123978035e-07,
+        1.5377111960417512e-07,
+        -3.122802120624629e-08,
+        1.5377111960590984e-07,
+        1.2469112397955288e-07,
+        1.9074576127750325e-07,
+        3.337424744041546e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010711320958893038,
+      "hypothetical_strong_convexity_penalty": 8.614009928405738e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008667266059927528,
+      "prefix_phase_width": 0.07987022399902344,
+      "prefix_phase_range": [
+        -0.02099132537841797,
+        0.05887889862060547
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1090144,
+        2063626,
+        1087321,
+        1092439,
+        3054346,
+        1092439,
+        1087321,
+        2063626,
+        1090144
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667267980139235,
+      "gradient": [
+        -9.848811556958156e-08,
+        -1.9706097623383963e-07,
+        -4.5098449827504165e-07,
+        -4.31427415965315e-07,
+        -3.278344686908144e-07,
+        -4.3142741596401395e-07,
+        -4.509844982736322e-07,
+        -1.9706097623535751e-07,
+        -9.848811556958156e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01853576951017557,
+      "hypothetical_strong_convexity_penalty": 2.250959368927194e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008667267977888275,
+      "prefix_phase_width": 0.08714866638183594,
+      "prefix_phase_range": [
+        -0.000698089599609375,
+        0.08645057678222656
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1090659,
+        2071543,
+        1096189,
+        2079641,
+        2078567,
+        1095973,
+        2070254,
+        1093273,
+        2076806
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667269908557321,
+      "gradient": [
+        -1.1001895316401378e-07,
+        -7.809858311344205e-08,
+        -2.4608313532942846e-07,
+        -6.658807568543385e-08,
+        -2.5135694267631147e-08,
+        -3.9420644662696135e-07,
+        -1.9252532739019116e-07,
+        -2.390137253529081e-07,
+        -6.96467917640298e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011542044462900764,
+      "hypothetical_strong_convexity_penalty": 1.6141737454137766e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008667269906943147,
+      "prefix_phase_width": 0.08887004852294922,
+      "prefix_phase_range": [
+        0.0,
+        0.08887004852294922
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2067419,
+        1091245,
+        2057380,
+        1084043,
+        1084669,
+        2058435,
+        1092210,
+        2063308,
+        1087199
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667261002271562,
+      "gradient": [
+        -1.9228693966190542e-08,
+        -8.137347270667375e-08,
+        -1.565762153005884e-07,
+        -2.9177302868818155e-07,
+        -2.4624783598217563e-07,
+        -2.4905781257223824e-07,
+        -1.851277491974907e-07,
+        5.494876988696492e-09,
+        3.012195020073594e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01136288228382963,
+      "hypothetical_strong_convexity_penalty": 8.335903946922197e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008667261001437972,
+      "prefix_phase_width": 0.08025455474853516,
+      "prefix_phase_range": [
+        -0.02835559844970703,
+        0.051898956298828125
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1087199,
+        2063308,
+        1092210,
+        2058435,
+        1084669,
+        1084043,
+        2057380,
+        1091245,
+        2067419
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667261002271562,
+      "gradient": [
+        3.012195020073594e-08,
+        5.494876989238593e-09,
+        -1.8512774919651493e-07,
+        -2.490578125709372e-07,
+        -2.462478359841272e-07,
+        -2.9177302868644683e-07,
+        -1.5657621529982946e-07,
+        -8.137347270710743e-08,
+        -1.9228693966407383e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011362882283829636,
+      "hypothetical_strong_convexity_penalty": 8.33590394686093e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008667261001437972,
+      "prefix_phase_width": 0.08025455474853516,
+      "prefix_phase_range": [
+        0.0,
+        0.08025455474853516
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1087982,
+        2054358,
+        1083041,
+        1085785,
+        2058807,
+        1093199,
+        2064420,
+        1091166,
+        2069559
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667256905125889,
+      "gradient": [
+        -3.842093296193682e-08,
+        4.054986710012821e-08,
+        5.159898793134776e-08,
+        -3.0454220937973283e-07,
+        -1.801260476473783e-07,
+        -2.9544179984137674e-07,
+        -9.612228687950943e-08,
+        6.524333430755818e-08,
+        -1.4365688132014602e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011370914401321099,
+      "hypothetical_strong_convexity_penalty": 1.0838261096584945e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008667256904042063,
+      "prefix_phase_width": 0.08374214172363281,
+      "prefix_phase_range": [
+        -0.003231048583984375,
+        0.08051109313964844
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1089622,
+        2070427,
+        1093507,
+        2068002,
+        1095590,
+        2078257,
+        2082491,
+        1096426,
+        2075837
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00866726708088244,
+      "gradient": [
+        -1.556399940188819e-08,
+        2.9367333602306565e-08,
+        5.0370894731188547e-08,
+        -1.6726940131064037e-08,
+        1.0114033172016652e-07,
+        9.238455174920713e-08,
+        9.590309592560214e-08,
+        3.5343338328425785e-08,
+        4.0049010126123365e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011503184375985949,
+      "hypothetical_strong_convexity_penalty": 2.2216573755707298e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008667267080660275,
+      "prefix_phase_width": 0.08717536926269531,
+      "prefix_phase_range": [
+        0.0,
+        0.08717536926269531
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        2070707,
+        1090705,
+        2063868,
+        1093202,
+        2064308,
+        1093231,
+        2060920,
+        1086783,
+        1082315
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667243689400424,
+      "gradient": [
+        -3.656772934511419e-08,
+        -1.1423394274701635e-07,
+        -6.484087080324899e-08,
+        2.215986525173257e-07,
+        -1.475271496991469e-07,
+        -3.4352173183024425e-07,
+        -1.9687855052838432e-08,
+        -1.4957264354555294e-07,
+        -6.902115124698873e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011604456378919907,
+      "hypothetical_strong_convexity_penalty": 1.4773582696746414e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008667243687923066,
+      "prefix_phase_width": 0.09631729125976562,
+      "prefix_phase_range": [
+        -0.02521991729736328,
+        0.07109737396240234
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2076806,
+        1093273,
+        2070254,
+        1095973,
+        2078567,
+        2079641,
+        1096189,
+        2071543,
+        1090659
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00866726990855732,
+      "gradient": [
+        -6.96467917640298e-08,
+        -2.390137253513902e-07,
+        -1.9252532739019116e-07,
+        -3.942064466256603e-07,
+        -2.5135694267739567e-08,
+        -6.658807568521701e-08,
+        -2.4608313532834426e-07,
+        -7.809858311495993e-08,
+        -1.1001895316379694e-07
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011542044462900766,
+      "hypothetical_strong_convexity_penalty": 1.614173745398922e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008667269906943146,
+      "prefix_phase_width": 0.08887004852294922,
+      "prefix_phase_range": [
+        -0.019403457641601562,
+        0.06946659088134766
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1082315,
+        1086783,
+        2060920,
+        1093231,
+        2064308,
+        1093202,
+        2063868,
+        1090705,
+        2070707
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667243689400424,
+      "gradient": [
+        -6.902115124655505e-08,
+        -1.4957264354511926e-07,
+        -1.968785505207949e-08,
+        -3.4352173183024425e-07,
+        -1.475271496969785e-07,
+        2.2159865251906042e-07,
+        -6.484087080389951e-08,
+        -1.1423394274831739e-07,
+        -3.656772934533103e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011604456378919917,
+      "hypothetical_strong_convexity_penalty": 1.4773582696813723e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008667243687923066,
+      "prefix_phase_width": 0.09631729125976562,
+      "prefix_phase_range": [
+        0.0,
+        0.09631729125976562
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2075837,
+        1096426,
+        2082491,
+        2078257,
+        1095590,
+        2068002,
+        1093507,
+        2070427,
+        1089622
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667267080882442,
+      "gradient": [
+        4.0049010125906524e-08,
+        3.5343338329076306e-08,
+        9.590309592571056e-08,
+        9.238455174833977e-08,
+        1.0114033171778128e-07,
+        -1.672694013236508e-08,
+        5.0370894729995924e-08,
+        2.9367333603499187e-08,
+        -1.5563999402105032e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011503184375985964,
+      "hypothetical_strong_convexity_penalty": 2.221657375564789e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008667267080660276,
+      "prefix_phase_width": 0.08717536926269531,
+      "prefix_phase_range": [
+        -0.02032756805419922,
+        0.0668478012084961
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2058724,
+        1084586,
+        1086941,
+        2059586,
+        1093362,
+        2064392,
+        1092985,
+        2065805,
+        1087109
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00866726588997641,
+      "gradient": [
+        5.5897913667896613e-08,
+        4.443854661003886e-08,
+        2.709318536388717e-07,
+        1.8564392982318555e-07,
+        1.8571865799529505e-07,
+        4.301850260485674e-08,
+        1.5378141547965542e-07,
+        2.3248621797177568e-08,
+        1.1349602026104223e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011457037272002625,
+      "hypothetical_strong_convexity_penalty": 6.838075166513332e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008667265889292603,
+      "prefix_phase_width": 0.09577751159667969,
+      "prefix_phase_range": [
+        -0.036647796630859375,
+        0.05912971496582031
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1091827,
+        2074105,
+        1094970,
+        2072328,
+        1099012,
+        3062121,
+        1097093,
+        1091787,
+        2073226
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008667256039655336,
+      "gradient": [
+        5.670893310353361e-08,
+        2.1510473579807506e-08,
+        4.329245149327886e-09,
+        1.8602796197496763e-07,
+        2.673141822304463e-07,
+        1.690050498056846e-07,
+        -1.1593571815462014e-09,
+        1.6483163668825967e-07,
+        3.886785345538855e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01152698383306755,
+      "hypothetical_strong_convexity_penalty": 8.637817207692498e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008667256038791555,
+      "prefix_phase_width": 0.09568309783935547,
+      "prefix_phase_range": [
+        0.0,
+        0.09568309783935547
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2069778,
+        1086777,
+        1089294,
+        2066624,
+        1099186,
+        3061148,
+        1096668,
+        1090955,
+        2073325
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008671322367336485,
+      "gradient": [
+        5.243753274208462e-08,
+        1.2631225185802874e-07,
+        1.4777563379865435e-07,
+        2.61194621566682e-07,
+        4.1356777823306403e-07,
+        1.9242703928120265e-07,
+        9.941535524784963e-08,
+        -5.913025574261427e-08,
+        1.8943436153160027e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011150965423600421,
+      "hypothetical_strong_convexity_penalty": 1.1811635212108708e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008671322366155322,
+      "prefix_phase_width": 0.10003280639648438,
+      "prefix_phase_range": [
+        -0.026105880737304688,
+        0.07392692565917969
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2073325,
+        1090955,
+        1096668,
+        3061148,
+        1099186,
+        2066624,
+        1089294,
+        1086777,
+        2069778
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008671322367336485,
+      "gradient": [
+        1.8943436153160027e-08,
+        -5.913025574218059e-08,
+        9.941535524719911e-08,
+        1.9242703928141949e-07,
+        4.1356777823100405e-07,
+        2.6119462156603147e-07,
+        1.477756337968112e-07,
+        1.263122518588961e-07,
+        5.243753274230146e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011150965423600421,
+      "hypothetical_strong_convexity_penalty": 1.1811635212044232e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008671322366155322,
+      "prefix_phase_width": 0.10003280639648438,
+      "prefix_phase_range": [
+        -0.02272319793701172,
+        0.07730960845947266
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2070092,
+        1089600,
+        1095112,
+        3056981,
+        1090606,
+        1087151,
+        2064106,
+        1093082,
+        2077593
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008673192925080104,
+      "gradient": [
+        8.878004327018702e-08,
+        1.5987119570602627e-07,
+        2.7848179789046953e-07,
+        2.779028268902039e-07,
+        6.986159728330013e-07,
+        7.228070217540948e-07,
+        3.286718218755433e-07,
+        3.035790250228618e-07,
+        9.402289539528572e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010908905756661001,
+      "hypothetical_strong_convexity_penalty": 2.9579280902519392e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008673192922122177,
+      "prefix_phase_width": 0.0878000259399414,
+      "prefix_phase_range": [
+        -0.026938438415527344,
+        0.06086158752441406
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2077593,
+        1093082,
+        2064106,
+        1087151,
+        1090606,
+        3056981,
+        1095112,
+        1089600,
+        2070092
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008673192925080104,
+      "gradient": [
+        9.402289539550256e-08,
+        3.035790250232955e-07,
+        3.286718218758686e-07,
+        7.228070217527938e-07,
+        6.986159728330013e-07,
+        2.7790282689052915e-07,
+        2.784817978892769e-07,
+        1.5987119570841151e-07,
+        8.878004326975334e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010908905756661003,
+      "hypothetical_strong_convexity_penalty": 2.957928090248454e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008673192922122177,
+      "prefix_phase_width": 0.0878000259399414,
+      "prefix_phase_range": [
+        -0.018652915954589844,
+        0.06914710998535156
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1090879,
+        2063751,
+        1087533,
+        1093007,
+        3057626,
+        1099510,
+        2070044,
+        1090218,
+        1085413
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008673540554746504,
+      "gradient": [
+        -9.529305905941945e-08,
+        -1.434102935220596e-07,
+        -2.746858436252506e-07,
+        -4.0324353014402434e-07,
+        -2.238368766540634e-07,
+        -1.569604035901685e-07,
+        -1.025809651292826e-07,
+        -2.6128957215378838e-08,
+        2.2062675536873612e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.018798779303608095,
+      "hypothetical_strong_convexity_penalty": 1.1171986479537124e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008673540553629306,
+      "prefix_phase_width": 0.10155963897705078,
+      "prefix_phase_range": [
+        0.0,
+        0.10155963897705078
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1085413,
+        1090218,
+        2070044,
+        1099510,
+        3057626,
+        1093007,
+        1087533,
+        2063751,
+        1090879
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008673540554746504,
+      "gradient": [
+        2.2062675537307293e-08,
+        -2.6128957217872503e-08,
+        -1.0258096512993312e-07,
+        -1.569604035923369e-07,
+        -2.2383687665471393e-07,
+        -4.0324353014250646e-07,
+        -2.7468584362351587e-07,
+        -1.4341029352119223e-07,
+        -9.529305905898577e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01879877930360811,
+      "hypothetical_strong_convexity_penalty": 1.1171986479472852e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008673540553629306,
+      "prefix_phase_width": 0.10155963897705078,
+      "prefix_phase_range": [
+        0.0,
+        0.10155963897705078
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1082716,
+        1088285,
+        2058650,
+        1086866,
+        1090155,
+        3052852,
+        1094545,
+        1088811,
+        2065957
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008677451053252246,
+      "gradient": [
+        1.8414174860490254e-09,
+        7.761793081130291e-08,
+        -6.381395374404839e-08,
+        4.040229536887187e-09,
+        -4.3061875351787203e-07,
+        -1.6003505453720656e-07,
+        -1.9244701791865364e-07,
+        -1.3465033888538725e-07,
+        -5.451834407174932e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011583905319779497,
+      "hypothetical_strong_convexity_penalty": 1.2973741393816098e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008677451051954872,
+      "prefix_phase_width": 0.1098785400390625,
+      "prefix_phase_range": [
+        0.0,
+        0.1098785400390625
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        2065957,
+        1088811,
+        1094545,
+        3052852,
+        1090155,
+        1086866,
+        2058650,
+        1088285,
+        1082716
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008677451053252246,
+      "gradient": [
+        -5.451834407174932e-08,
+        -1.3465033888712197e-07,
+        -1.9244701791919575e-07,
+        -1.6003505453785708e-07,
+        -4.3061875351808887e-07,
+        4.040229535586144e-09,
+        -6.381395374524101e-08,
+        7.761793081303764e-08,
+        1.8414174869163871e-09
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011583905319779498,
+      "hypothetical_strong_convexity_penalty": 1.2973741393908015e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008677451051954872,
+      "prefix_phase_width": 0.1098785400390625,
+      "prefix_phase_range": [
+        -0.03611278533935547,
+        0.07376575469970703
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1088976,
+        2069208,
+        1095657,
+        2077745,
+        2076294,
+        1095691,
+        2064629,
+        1088522,
+        1083024
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008680738739923474,
+      "gradient": [
+        1.0545053556623805e-07,
+        9.193854947942308e-08,
+        2.359802077598087e-07,
+        1.7440169689593617e-08,
+        2.0791082356403853e-08,
+        2.2063241560913317e-07,
+        2.7465231310498488e-08,
+        -1.2363277051386868e-07,
+        2.4946402477272513e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.018546892771515344,
+      "hypothetical_strong_convexity_penalty": 1.120706325373167e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008680738738802768,
+      "prefix_phase_width": 0.10324287414550781,
+      "prefix_phase_range": [
+        0.0,
+        0.10324287414550781
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1083024,
+        1088522,
+        2064629,
+        1095691,
+        2076294,
+        2077745,
+        1095657,
+        2069208,
+        1088976
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008680738739923475,
+      "gradient": [
+        2.4946402477272513e-08,
+        -1.236327705112666e-07,
+        2.7465231309739546e-08,
+        2.206324156126026e-07,
+        2.0791082355753332e-08,
+        1.744016969046098e-08,
+        2.359802077607845e-07,
+        9.193854947963992e-08,
+        1.0545053556623805e-07
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01854689277151535,
+      "hypothetical_strong_convexity_penalty": 1.120706325375097e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.00868073873880277,
+      "prefix_phase_width": 0.10324287414550781,
+      "prefix_phase_range": [
+        0.0,
+        0.10324287414550781
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1082714,
+        1087548,
+        2061744,
+        1093662,
+        2065027,
+        1094659,
+        2076498,
+        2078847,
+        1090852
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008680979444135154,
+      "gradient": [
+        1.9979841035431233e-08,
+        7.736912438315166e-08,
+        -1.173241303791114e-07,
+        2.0508422553613438e-08,
+        -1.4086104481816387e-07,
+        -2.2851313305905906e-07,
+        -6.446947066083772e-08,
+        -3.31396371070305e-08,
+        -1.406561261896571e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.017452244132685646,
+      "hypothetical_strong_convexity_penalty": 6.248947729452064e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.00868097944351026,
+      "prefix_phase_width": 0.0954275131225586,
+      "prefix_phase_range": [
+        0.0,
+        0.0954275131225586
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1090852,
+        2078847,
+        2076498,
+        1094659,
+        2065027,
+        1093662,
+        2061744,
+        1087548,
+        1082714
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008680979444135154,
+      "gradient": [
+        -1.406561261853203e-08,
+        -3.3139637105837876e-08,
+        -6.44694706612714e-08,
+        -2.2851313305905906e-07,
+        -1.4086104481903124e-07,
+        2.050842254971031e-08,
+        -1.1732413037932824e-07,
+        7.736912438098325e-08,
+        1.997984103478071e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.017452244132685625,
+      "hypothetical_strong_convexity_penalty": 6.248947729340521e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.00868097944351026,
+      "prefix_phase_width": 0.0954275131225586,
+      "prefix_phase_range": [
+        0.0,
+        0.0954275131225586
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1092650,
+        2081360,
+        2078906,
+        1094953,
+        2067110,
+        1093933,
+        2067192,
+        1092169,
+        2074065
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008683183185116615,
+      "gradient": [
+        -5.780166658882809e-08,
+        -9.23557882774595e-09,
+        -1.1922542652220616e-07,
+        -2.680435985650707e-07,
+        -2.544936007385038e-07,
+        9.920347750842946e-09,
+        -5.335122044418817e-08,
+        -1.8598090114442046e-07,
+        -3.895909879501457e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011239373967180085,
+      "hypothetical_strong_convexity_penalty": 9.560982378566834e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008683183184160517,
+      "prefix_phase_width": 0.0814065933227539,
+      "prefix_phase_range": [
+        0.0,
+        0.0814065933227539
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2074065,
+        1092169,
+        2067192,
+        1093933,
+        2067110,
+        1094953,
+        2078906,
+        2081360,
+        1092650
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008683183185116615,
+      "gradient": [
+        -3.895909879490615e-08,
+        -1.859809011435531e-07,
+        -5.335122044548921e-08,
+        9.920347753445032e-09,
+        -2.54493600738287e-07,
+        -2.680435985676728e-07,
+        -1.1922542652198932e-07,
+        -9.23557882823384e-09,
+        -5.780166658882809e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011239373967180095,
+      "hypothetical_strong_convexity_penalty": 9.560982378589525e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008683183184160517,
+      "prefix_phase_width": 0.0814065933227539,
+      "prefix_phase_range": [
+        -0.022017478942871094,
+        0.05938911437988281
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2080652,
+        1094502,
+        2075142,
+        1099699,
+        3061337,
+        1093489,
+        1088074,
+        2066092,
+        1092573
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008684501652859547,
+      "gradient": [
+        -5.557841962805683e-09,
+        -8.917417374578471e-08,
+        -2.8914393456142343e-08,
+        1.3209291602818852e-07,
+        -1.5948796551435926e-08,
+        -2.083443049071985e-07,
+        -1.9629112952190744e-07,
+        -2.046181169602446e-08,
+        -8.899718350198049e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01130726864825364,
+      "hypothetical_strong_convexity_penalty": 6.702100506932972e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008684501652189336,
+      "prefix_phase_width": 0.09283828735351562,
+      "prefix_phase_range": [
+        -0.024654388427734375,
+        0.06818389892578125
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1092573,
+        2066092,
+        1088074,
+        1093489,
+        3061337,
+        1099699,
+        2075142,
+        1094502,
+        2080652
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008684501652859548,
+      "gradient": [
+        -8.899718350198049e-08,
+        -2.046181169591604e-08,
+        -1.9629112952136533e-07,
+        -2.0834430490589747e-07,
+        -1.5948796552520128e-08,
+        1.3209291602732116e-07,
+        -2.8914393457985486e-08,
+        -8.917417374708575e-08,
+        -5.557841962805683e-09
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011307268648253661,
+      "hypothetical_strong_convexity_penalty": 6.702100506912461e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008684501652189338,
+      "prefix_phase_width": 0.09283828735351562,
+      "prefix_phase_range": [
+        0.0,
+        0.09283828735351562
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1080167,
+        1085646,
+        2057905,
+        1092912,
+        2062087,
+        1092912,
+        2057905,
+        1085646,
+        1080167
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008685110180328024,
+      "gradient": [
+        6.260638950588305e-08,
+        -6.462696243854068e-08,
+        -4.2729035588094134e-08,
+        2.0071281280249504e-07,
+        1.5660743285603879e-07,
+        2.0071281279989295e-07,
+        -4.2729035587660454e-08,
+        -6.462696244005856e-08,
+        6.260638950544937e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.02058021558124954,
+      "hypothetical_strong_convexity_penalty": 8.898262812555721e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008685110179438198,
+      "prefix_phase_width": 0.10722637176513672,
+      "prefix_phase_range": [
+        0.0,
+        0.10722637176513672
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1087963,
+        2068121,
+        1092966,
+        2066125,
+        1095070,
+        2076400,
+        2076278,
+        1091562,
+        1082750
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008685694787720506,
+      "gradient": [
+        -7.133149238804353e-08,
+        -7.366068383122268e-08,
+        -1.4486560803283338e-07,
+        -1.791546804603885e-08,
+        -2.3052438894268553e-07,
+        -7.063708551316005e-08,
+        -8.442389875270954e-08,
+        -3.176020531601509e-08,
+        -8.899561464972752e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.018658183114709417,
+      "hypothetical_strong_convexity_penalty": 5.56176501866387e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.00868569478716433,
+      "prefix_phase_width": 0.10084819793701172,
+      "prefix_phase_range": [
+        0.0,
+        0.10084819793701172
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1082750,
+        1091562,
+        2076278,
+        2076400,
+        1095070,
+        2066125,
+        1092966,
+        2068121,
+        1087963
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008685694787720506,
+      "gradient": [
+        -8.899561464972752e-08,
+        -3.176020531514773e-08,
+        -8.442389875336007e-08,
+        -7.063708551402741e-08,
+        -2.3052438894344447e-07,
+        -1.791546804560517e-08,
+        -1.4486560803218286e-07,
+        -7.366068383165636e-08,
+        -7.133149238760985e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.0186581831147094,
+      "hypothetical_strong_convexity_penalty": 5.561765018678193e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.00868569478716433,
+      "prefix_phase_width": 0.10084819793701172,
+      "prefix_phase_range": [
+        0.0,
+        0.10084819793701172
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1084411,
+        1088363,
+        2062570,
+        1094467,
+        2068537,
+        1097526,
+        3061235,
+        1097125,
+        1088223
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008687659804463684,
+      "gradient": [
+        7.700314033252335e-08,
+        2.2414529781994864e-08,
+        1.6652555508253793e-07,
+        3.720053993577213e-07,
+        2.8559980060375786e-07,
+        3.646258891358599e-07,
+        1.2093932574787272e-07,
+        2.3759768537308162e-07,
+        1.6379739256025712e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.016477476301239746,
+      "hypothetical_strong_convexity_penalty": 1.4649493605183588e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008687659802998734,
+      "prefix_phase_width": 0.10582828521728516,
+      "prefix_phase_range": [
+        0.0,
+        0.10582828521728516
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1088223,
+        1097125,
+        3061235,
+        1097526,
+        2068537,
+        1094467,
+        2062570,
+        1088363,
+        1084411
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008687659804463684,
+      "gradient": [
+        1.6379739256025712e-08,
+        2.3759768537253952e-07,
+        1.2093932574754745e-07,
+        3.646258891362936e-07,
+        2.8559980060375786e-07,
+        3.720053993557697e-07,
+        1.6652555508275477e-07,
+        2.2414529782970646e-08,
+        7.700314033252335e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01647747630123974,
+      "hypothetical_strong_convexity_penalty": 1.4649493605117001e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008687659802998734,
+      "prefix_phase_width": 0.10582828521728516,
+      "prefix_phase_range": [
+        0.0,
+        0.10582828521728516
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1086439,
+        1090583,
+        2069842,
+        1100070,
+        3060469,
+        1100070,
+        2069842,
+        1090583,
+        1086439
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008687859090209861,
+      "gradient": [
+        1.0177652066663354e-07,
+        1.713826666185892e-07,
+        1.7844211417760835e-07,
+        5.640695111398895e-08,
+        1.8568320069717315e-07,
+        5.640695111615735e-08,
+        1.784421141763073e-07,
+        1.713826666185892e-07,
+        1.0177652066663354e-07
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.020416918818285217,
+      "hypothetical_strong_convexity_penalty": 9.52728303612729e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008687859089257134,
+      "prefix_phase_width": 0.1171579360961914,
+      "prefix_phase_range": [
+        0.0,
+        0.1171579360961914
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2057615,
+        1083821,
+        1086971,
+        2058417,
+        1093486,
+        2058417,
+        1086971,
+        1083821,
+        2057615
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008688568095758785,
+      "gradient": [
+        -1.0128237378349923e-07,
+        -2.9940854933725594e-07,
+        -3.989389603820809e-07,
+        -4.97417399121145e-07,
+        -5.969181608184854e-07,
+        -4.974173991181092e-07,
+        -3.98938960383924e-07,
+        -2.994085493376896e-07,
+        -1.0128237378328239e-07
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010542505939791289,
+      "hypothetical_strong_convexity_penalty": 3.1262826674076107e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008688568092632503,
+      "prefix_phase_width": 0.109405517578125,
+      "prefix_phase_range": [
+        -0.037705421447753906,
+        0.0717000961303711
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1090001,
+        2075715,
+        1099698,
+        3059055,
+        1090439,
+        1087332,
+        2059533,
+        1089145,
+        1083272
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00869147494870075,
+      "gradient": [
+        6.841918681057494e-08,
+        5.6804476404506265e-08,
+        1.6089855018914124e-07,
+        1.731607596619977e-07,
+        1.9838418523557277e-07,
+        3.2012616359091035e-08,
+        7.504921975759818e-10,
+        1.0661314692915957e-07,
+        -5.422848342628069e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.017954567907373424,
+      "hypothetical_strong_convexity_penalty": 7.442842614252359e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008691474947956464,
+      "prefix_phase_width": 0.11278629302978516,
+      "prefix_phase_range": [
+        -0.014842033386230469,
+        0.09794425964355469
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1083272,
+        1089145,
+        2059533,
+        1087332,
+        1090439,
+        3059055,
+        1099698,
+        2075715,
+        1090001
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008691474948700748,
+      "gradient": [
+        -5.422848342628069e-08,
+        1.0661314692948483e-07,
+        7.504921962749392e-10,
+        3.201261635692263e-08,
+        1.9838418523882538e-07,
+        1.7316075966178086e-07,
+        1.6089855018849072e-07,
+        5.6804476405156786e-08,
+        6.841918681057494e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.017954567907373438,
+      "hypothetical_strong_convexity_penalty": 7.442842614308999e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008691474947956463,
+      "prefix_phase_width": 0.11278629302978516,
+      "prefix_phase_range": [
+        0.0,
+        0.11278629302978516
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2076686,
+        1095741,
+        2082023,
+        2076798,
+        1095687,
+        2061896,
+        1087540,
+        1085029,
+        2064044
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008692218872841438,
+      "gradient": [
+        -3.6463397755956244e-08,
+        -1.47182312065276e-07,
+        -1.198658309111214e-09,
+        -8.269891156023525e-08,
+        1.367823070129795e-07,
+        4.289823927615573e-09,
+        2.2337141070529268e-07,
+        -1.508937498757878e-07,
+        1.786568209875567e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010903258575951803,
+      "hypothetical_strong_convexity_penalty": 1.2816646688104616e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008692218871559774,
+      "prefix_phase_width": 0.09436988830566406,
+      "prefix_phase_range": [
+        -0.019517898559570312,
+        0.07485198974609375
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1091688,
+        2078007,
+        1100175,
+        3063049,
+        1090887,
+        1087616,
+        2064817,
+        1093788,
+        2077014
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008691902417263619,
+      "gradient": [
+        1.4359742569395977e-08,
+        -4.9085667943725864e-08,
+        -9.816280912807503e-08,
+        -1.4792524386582784e-07,
+        -2.489295250077475e-07,
+        1.7357093797583812e-07,
+        5.6126542695498875e-08,
+        -1.3778769682046494e-07,
+        -1.7386589607165485e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01140885539104666,
+      "hypothetical_strong_convexity_penalty": 1.0891276978592292e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008691902416174492,
+      "prefix_phase_width": 0.08986282348632812,
+      "prefix_phase_range": [
+        -0.006783485412597656,
+        0.08307933807373047
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2077014,
+        1093788,
+        2064817,
+        1087616,
+        1090887,
+        3063049,
+        1100175,
+        2078007,
+        1091688
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00869190241726362,
+      "gradient": [
+        -1.7386589606731805e-08,
+        -1.3778769681959758e-07,
+        5.6126542695065194e-08,
+        1.7357093797497076e-07,
+        -2.48929525007097e-07,
+        -1.47925243865611e-07,
+        -9.816280912915924e-08,
+        -4.9085667943942705e-08,
+        1.4359742569179136e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011408855391046626,
+      "hypothetical_strong_convexity_penalty": 1.089127697851256e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008691902416174494,
+      "prefix_phase_width": 0.08986282348632812,
+      "prefix_phase_range": [
+        -0.019205093383789062,
+        0.07065773010253906
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2064044,
+        1085029,
+        1087540,
+        2061896,
+        1095687,
+        2076798,
+        2082023,
+        1095741,
+        2076686
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008692218872841436,
+      "gradient": [
+        1.786568209875567e-08,
+        -1.5089374988034145e-07,
+        2.2337141070637688e-07,
+        4.289823928157674e-09,
+        1.3678230701601526e-07,
+        -8.269891155980157e-08,
+        -1.1986583088943736e-09,
+        -1.4718231206245708e-07,
+        -3.6463397756173084e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010903258575951808,
+      "hypothetical_strong_convexity_penalty": 1.2816646688299022e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008692218871559772,
+      "prefix_phase_width": 0.09436988830566406,
+      "prefix_phase_range": [
+        -0.031574249267578125,
+        0.06279563903808594
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2057061,
+        1083158,
+        1086236,
+        2052725,
+        1084769,
+        1083734,
+        2056725,
+        1090296,
+        2065883
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008694420684629596,
+      "gradient": [
+        -2.897127031223183e-09,
+        -1.4619261118391453e-07,
+        -1.703160240382846e-07,
+        3.999736639657449e-09,
+        5.151482232474552e-07,
+        5.285432047890575e-07,
+        1.24016630367982e-07,
+        2.3543823726750656e-07,
+        4.5020032825933594e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010707935240676104,
+      "hypothetical_strong_convexity_penalty": 2.3710411456742677e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008694420682258555,
+      "prefix_phase_width": 0.09580516815185547,
+      "prefix_phase_range": [
+        -0.03823375701904297,
+        0.0575714111328125
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2065883,
+        1090296,
+        2056725,
+        1083734,
+        1084769,
+        2052725,
+        1086236,
+        1083158,
+        2057061
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008694420684629597,
+      "gradient": [
+        4.5020032825716753e-08,
+        2.3543823726837393e-07,
+        1.2401663036613886e-07,
+        5.285432047916596e-07,
+        5.151482232494068e-07,
+        3.999736641825853e-09,
+        -1.7031602404001932e-07,
+        -1.4619261118391453e-07,
+        -2.897127031223183e-09
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01070793524067612,
+      "hypothetical_strong_convexity_penalty": 2.3710411456933013e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008694420682258557,
+      "prefix_phase_width": 0.09580516815185547,
+      "prefix_phase_range": [
+        -0.02982044219970703,
+        0.06598472595214844
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1079794,
+        1086095,
+        2058493,
+        1092912,
+        2056591,
+        1085419,
+        1082312,
+        2050627,
+        1086009
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008695453247414995,
+      "gradient": [
+        7.901385746568197e-08,
+        1.451927446823628e-07,
+        -1.9149955337509177e-08,
+        -4.263404193387537e-08,
+        -4.898753517201468e-08,
+        2.339711773397023e-07,
+        2.806412331700413e-07,
+        5.5725699448503415e-08,
+        -2.1986554936382317e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01875932517660731,
+      "hypothetical_strong_convexity_penalty": 9.190340841814781e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008695453246495961,
+      "prefix_phase_width": 0.0995941162109375,
+      "prefix_phase_range": [
+        0.0,
+        0.0995941162109375
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1086009,
+        2050627,
+        1082312,
+        1085419,
+        2056591,
+        1092912,
+        2058493,
+        1086095,
+        1079794
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008695453247414995,
+      "gradient": [
+        -2.1986554935948636e-08,
+        5.5725699448720255e-08,
+        2.8064123317090867e-07,
+        2.3397117733926862e-07,
+        -4.8987535170713636e-08,
+        -4.2634041931273285e-08,
+        -1.9149955335340772e-08,
+        1.4519274468257964e-07,
+        7.901385746611565e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.018759325176607333,
+      "hypothetical_strong_convexity_penalty": 9.190340841766705e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008695453246495961,
+      "prefix_phase_width": 0.0995941162109375,
+      "prefix_phase_range": [
+        -0.008670806884765625,
+        0.09092330932617188
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1088421,
+        2066579,
+        1092452,
+        2061127,
+        1086896,
+        1088445,
+        3059274,
+        1095842,
+        1085984
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00869607549398553,
+      "gradient": [
+        -3.714173369198919e-08,
+        -1.4730076714744491e-08,
+        1.302847832351751e-07,
+        -6.1799296665297765e-09,
+        9.29799364602496e-08,
+        1.9231915998195893e-07,
+        -2.4849813195669188e-09,
+        -1.334503646265397e-07,
+        4.442991983143966e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.017994788167426647,
+      "hypothetical_strong_convexity_penalty": 6.496549909123256e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008696075493335875,
+      "prefix_phase_width": 0.0908966064453125,
+      "prefix_phase_range": [
+        0.0,
+        0.0908966064453125
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1085984,
+        1095842,
+        3059274,
+        1088445,
+        1086896,
+        2061127,
+        1092452,
+        2066579,
+        1088421
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00869607549398553,
+      "gradient": [
+        4.442991983100598e-08,
+        -1.3345036462664812e-07,
+        -2.484981318699557e-09,
+        1.9231915997848948e-07,
+        9.297993646198432e-08,
+        -6.179929665987675e-09,
+        1.302847832356088e-07,
+        -1.473007671441923e-08,
+        -3.714173369155551e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01799478816742658,
+      "hypothetical_strong_convexity_penalty": 6.496549909051121e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008696075493335875,
+      "prefix_phase_width": 0.0908966064453125,
+      "prefix_phase_range": [
+        -0.001697540283203125,
+        0.08919906616210938
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "anchor_numerators": [
+        2061464,
+        1085170,
+        1087455,
+        2061172,
+        1093813,
+        2065972,
+        1093968,
+        2079386,
+        2087543
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008697303586448372,
+      "gradient": [
+        -4.9344606644881675e-08,
+        -1.6899699672138927e-07,
+        -3.17091614730888e-08,
+        -2.1209975155443272e-07,
+        -4.693870100892436e-07,
+        -2.959810946203496e-07,
+        -4.270562734582251e-07,
+        -1.3597987326511305e-07,
+        -5.070269563521492e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010535813168358076,
+      "hypothetical_strong_convexity_penalty": 1.820874562039351e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008697303584627497,
+      "prefix_phase_width": 0.09435844421386719,
+      "prefix_phase_range": [
+        -0.03403472900390625,
+        0.06032371520996094
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        2087543,
+        2079386,
+        1093968,
+        2065972,
+        1093813,
+        2061172,
+        1087455,
+        1085170,
+        2061464
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008697303586448372,
+      "gradient": [
+        -5.070269563521492e-08,
+        -1.359798732653299e-07,
+        -4.270562734586588e-07,
+        -2.9598109462121696e-07,
+        -4.6938701009097833e-07,
+        -2.1209975155616744e-07,
+        -3.170916147460668e-08,
+        -1.6899699672008823e-07,
+        -4.9344606644990095e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010535813168358077,
+      "hypothetical_strong_convexity_penalty": 1.820874562042149e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008697303584627497,
+      "prefix_phase_width": 0.09435844421386719,
+      "prefix_phase_range": [
+        -0.026106834411621094,
+        0.0682516098022461
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1080341,
+        1084485,
+        1093299,
+        3051648,
+        1090141,
+        1086808,
+        2061458,
+        1092201,
+        2072772
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008697246929538802,
+      "gradient": [
+        2.9024274074526853e-08,
+        -1.4623061912424256e-07,
+        1.6137518489296038e-07,
+        -1.3777317543653238e-08,
+        -2.0601674926169072e-07,
+        2.4103566126810073e-07,
+        3.761092557503457e-08,
+        -9.75553735394299e-08,
+        -2.2100683832819955e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011751966365070258,
+      "hypothetical_strong_convexity_penalty": 1.443674780899023e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008697246928095127,
+      "prefix_phase_width": 0.10719013214111328,
+      "prefix_phase_range": [
+        0.0,
+        0.10719013214111328
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        2072772,
+        1092201,
+        2061458,
+        1086808,
+        1090141,
+        3051648,
+        1093299,
+        1084485,
+        1080341
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.0086972469295388,
+      "gradient": [
+        -2.2100683833036795e-08,
+        -9.75553735394299e-08,
+        3.7610925577202976e-08,
+        2.41035661266366e-07,
+        -2.0601674926082336e-07,
+        -1.37773175445206e-08,
+        1.613751848946951e-07,
+        -1.4623061912532676e-07,
+        2.9024274074960534e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011751966365070267,
+      "hypothetical_strong_convexity_penalty": 1.4436747809035543e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008697246928095126,
+      "prefix_phase_width": 0.10719013214111328,
+      "prefix_phase_range": [
+        -0.029308319091796875,
+        0.0778818130493164
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1090093,
+        2071625,
+        1094451,
+        2070376,
+        1098524,
+        3056670,
+        1095330,
+        1086768,
+        1081624
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00869806981020315,
+      "gradient": [
+        -2.198622029174393e-08,
+        3.5825508628965514e-08,
+        2.4560857835953607e-07,
+        6.595786732033985e-08,
+        -1.3118637921956909e-08,
+        8.707223582958296e-08,
+        1.8720589542323227e-07,
+        1.273313106511082e-07,
+        4.333782833694597e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.018553111970527638,
+      "hypothetical_strong_convexity_penalty": 6.923939518304407e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008698069809510756,
+      "prefix_phase_width": 0.11252784729003906,
+      "prefix_phase_range": [
+        -0.0038347244262695312,
+        0.10869312286376953
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1081624,
+        1086768,
+        1095330,
+        3056670,
+        1098524,
+        2070376,
+        1094451,
+        2071625,
+        1090093
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00869806981020315,
+      "gradient": [
+        4.333782833651229e-08,
+        1.2733131065154188e-07,
+        1.8720589542540068e-07,
+        8.70722358287156e-08,
+        -1.3118637920764287e-08,
+        6.595786732164089e-08,
+        2.4560857835986133e-07,
+        3.582550862690553e-08,
+        -2.198622029217761e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01855311197052764,
+      "hypothetical_strong_convexity_penalty": 6.923939518362358e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008698069809510756,
+      "prefix_phase_width": 0.11252784729003906,
+      "prefix_phase_range": [
+        0.0,
+        0.11252784729003906
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        2086349,
+        2081560,
+        1093822,
+        2067023,
+        1093680,
+        2067016,
+        1093308,
+        2069849,
+        1088693
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008698619944415741,
+      "gradient": [
+        -8.562193006250024e-09,
+        -1.0037362606812915e-07,
+        -3.270661555271814e-07,
+        -3.604025839266207e-07,
+        -5.569996703355239e-07,
+        -1.5318524483858963e-07,
+        -1.0423799267169666e-07,
+        5.257594816487129e-09,
+        1.5984069523370704e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010818195655368512,
+      "hypothetical_strong_convexity_penalty": 2.0076025266550805e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008698619942408139,
+      "prefix_phase_width": 0.0835714340209961,
+      "prefix_phase_range": [
+        -0.02517223358154297,
+        0.058399200439453125
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "anchor_numerators": [
+        1088693,
+        2069849,
+        1093308,
+        2067016,
+        1093680,
+        2067023,
+        1093822,
+        2081560,
+        2086349
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008698619944415743,
+      "gradient": [
+        1.5984069523370704e-08,
+        5.257594817462911e-09,
+        -1.0423799267158824e-07,
+        -1.5318524483858963e-07,
+        -5.569996703344397e-07,
+        -3.6040258392835544e-07,
+        -3.2706615552750666e-07,
+        -1.0037362606704495e-07,
+        -8.562193006141604e-09
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.010818195655368517,
+      "hypothetical_strong_convexity_penalty": 2.0076025266581666e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.00869861994240814,
+      "prefix_phase_width": 0.0835714340209961,
+      "prefix_phase_range": [
+        0.0,
+        0.0835714340209961
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1085155,
+        2059307,
+        1091402,
+        2056475,
+        1084142,
+        1083726,
+        2051615,
+        1086136,
+        1079058
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008699307351279644,
+      "gradient": [
+        7.520819457972842e-08,
+        9.709451160910603e-08,
+        2.2944523982593862e-10,
+        2.2261745775064515e-07,
+        1.3576350929838527e-07,
+        4.657119021456895e-07,
+        1.1533640593844666e-07,
+        -1.1775901587060761e-07,
+        -4.2045837172501564e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.018504644856310343,
+      "hypothetical_strong_convexity_penalty": 1.6918564811951607e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008699307349587787,
+      "prefix_phase_width": 0.09095191955566406,
+      "prefix_phase_range": [
+        -0.0012073516845703125,
+        0.08974456787109375
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1079058,
+        1086136,
+        2051615,
+        1083726,
+        1084142,
+        2056475,
+        1091402,
+        2059307,
+        1085155
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008699307351279644,
+      "gradient": [
+        -4.2045837173368926e-08,
+        -1.1775901587277602e-07,
+        1.153364059381214e-07,
+        4.657119021491589e-07,
+        1.3576350930358944e-07,
+        2.2261745774847675e-07,
+        2.2944524199434296e-10,
+        9.709451160737131e-08,
+        7.520819457972842e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.018504644856310357,
+      "hypothetical_strong_convexity_penalty": 1.69185648119603e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008699307349587787,
+      "prefix_phase_width": 0.09095191955566406,
+      "prefix_phase_range": [
+        0.0,
+        0.09095191955566406
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1085441,
+        2051803,
+        1082524,
+        1085524,
+        2051617,
+        1085524,
+        1082524,
+        2051803,
+        1085441
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008702064928481636,
+      "gradient": [
+        -6.249530498040733e-08,
+        -1.3786288810671348e-07,
+        -3.7731439669409e-07,
+        -1.1765987732715016e-07,
+        -2.400808224779262e-07,
+        -1.1765987732801752e-07,
+        -3.773143966924637e-07,
+        -1.3786288810595454e-07,
+        -6.249530498084101e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01880341168473513,
+      "hypothetical_strong_convexity_penalty": 1.528861942835969e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.008702064926952774,
+      "prefix_phase_width": 0.0917978286743164,
+      "prefix_phase_range": [
+        -0.008090972900390625,
+        0.08370685577392578
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        2075745,
+        1096478,
+        2081515,
+        2078722,
+        1097435,
+        2078716,
+        2077317,
+        1092784,
+        1085600
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008702304607432834,
+      "gradient": [
+        -1.0203084874270234e-08,
+        -1.3844037865287347e-07,
+        -3.757909857544841e-08,
+        -5.999473105149696e-08,
+        1.230413177015239e-07,
+        6.792533079329633e-08,
+        1.729065516339976e-08,
+        7.401002637428883e-08,
+        5.188178141062819e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011432205159835103,
+      "hypothetical_strong_convexity_penalty": 4.993906331385083e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008702304606933444,
+      "prefix_phase_width": 0.10076045989990234,
+      "prefix_phase_range": [
+        -0.020415306091308594,
+        0.08034515380859375
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "anchor_numerators": [
+        1085600,
+        1092784,
+        2077317,
+        2078716,
+        1097435,
+        2078722,
+        2081515,
+        1096478,
+        2075745
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008702304607432834,
+      "gradient": [
+        5.188178141019451e-08,
+        7.40100263736383e-08,
+        1.729065516372502e-08,
+        6.792533079373001e-08,
+        1.2304131770282493e-07,
+        -5.999473105193064e-08,
+        -3.757909857707471e-08,
+        -1.3844037865265663e-07,
+        -1.0203084874270234e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011432205159835108,
+      "hypothetical_strong_convexity_penalty": 4.99390633138838e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008702304606933444,
+      "prefix_phase_width": 0.10076045989990234,
+      "prefix_phase_range": [
+        0.0,
+        0.10076045989990234
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        1083639,
+        1091869,
+        2075600,
+        2076955,
+        1096929,
+        2076955,
+        2075600,
+        1091869,
+        1083639
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008706965857098268,
+      "gradient": [
+        -4.581202267745551e-08,
+        1.295730850968727e-07,
+        -3.392363747995331e-08,
+        -1.881228486953334e-08,
+        -8.912770974836733e-08,
+        -1.881228486953334e-08,
+        -3.392363747908595e-08,
+        1.2957308509860743e-07,
+        -4.581202267745551e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.02034630354391149,
+      "hypothetical_strong_convexity_penalty": 6.568207310131134e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008706965856441448,
+      "prefix_phase_width": 0.1159353256225586,
+      "prefix_phase_range": [
+        0.0,
+        0.1159353256225586
+      ],
+      "anchor_in_fixed_chamber": false,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1090340,
+        2079365,
+        2076513,
+        1094607,
+        2059282,
+        1086114,
+        1083008,
+        2056546,
+        1088158
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008709033588025585,
+      "gradient": [
+        6.066612883738869e-08,
+        3.4089671583628287e-08,
+        9.237775752332644e-08,
+        1.7524761067235373e-07,
+        8.942293633655216e-08,
+        4.075687411272304e-07,
+        4.748218409753556e-08,
+        6.371598967571312e-08,
+        4.004238149922252e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.01728778637924403,
+      "hypothetical_strong_convexity_penalty": 8.671098159978588e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008709033587158474,
+      "prefix_phase_width": 0.07960224151611328,
+      "prefix_phase_range": [
+        0.0,
+        0.07960224151611328
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "anchor_numerators": [
+        1088158,
+        2056546,
+        1083008,
+        1086114,
+        2059282,
+        1094607,
+        2076513,
+        2079365,
+        1090340
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.008709033588025585,
+      "gradient": [
+        4.004238149900568e-08,
+        6.371598967565891e-08,
+        4.748218409731872e-08,
+        4.075687411302662e-07,
+        8.942293633525111e-08,
+        1.7524761067235373e-07,
+        9.23777575247359e-08,
+        3.40896715842246e-08,
+        6.066612883717185e-08
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.017287786379244035,
+      "hypothetical_strong_convexity_penalty": 8.671098160112053e-13,
+      "hypothetical_whole_chamber_lower_bound": 0.008709033587158474,
+      "prefix_phase_width": 0.07960224151611328,
+      "prefix_phase_range": [
+        -0.0009765625,
+        0.07862567901611328
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    },
+    {
+      "integer_gaps": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "anchor_numerators": [
+        2065311,
+        1085929,
+        1088676,
+        2064580,
+        1098701,
+        3055528,
+        1094830,
+        1085740,
+        1080854
+      ],
+      "anchor_denominator": 1048576,
+      "anchor_float_value": 0.00870979966611229,
+      "gradient": [
+        -4.9546502386434675e-08,
+        -2.0882306634107057e-07,
+        -2.2091285385088082e-07,
+        -4.3291794238006515e-07,
+        -7.062473007025429e-07,
+        -4.011195346109676e-07,
+        -5.306275024701207e-07,
+        -3.21250369700462e-07,
+        -1.4554406351679258e-07
+      ],
+      "sampled_hessian_lower_eigenvalue": 0.011797310669667695,
+      "hypothetical_strong_convexity_penalty": 3.879139483315006e-12,
+      "hypothetical_whole_chamber_lower_bound": 0.00870979966223315,
+      "prefix_phase_width": 0.11491966247558594,
+      "prefix_phase_range": [
+        -0.030365943908691406,
+        0.08455371856689453
+      ],
+      "anchor_in_fixed_chamber": true,
+      "curvature_minima_sampled_only": true
+    }
+  ],
+  "seconds": 0.8469465999951353,
+  "formal_scalar_curvature_proven": false,
+  "global_chamber_coverage_proven": false,
+  "new_unconditional_bound_proven": false
+}
