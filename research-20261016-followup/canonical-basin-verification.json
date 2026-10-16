@@ -1,0 +1,40 @@
+{
+  "scope": "Pinned Lean default-kernel proof. The statement of each module determines its proof scope; no new global zeta bound is inferred.",
+  "driver_sha256": "2764d7a5c3ed15ffbb189bfa8ea23a0fca06ae0e4acdb3924aad3f78f2991b7a",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "modules": [
+    {
+      "module": "StructuralW10Followup20261016.scalar_FwBasin7",
+      "source_sha256": "fa5fe3fab66692d0d2de793ab1834f47e187a7d7f7ed086116eca8bcc856e5ba",
+      "source_unchanged": true,
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "/usr/bin/prlimit",
+        "--stack=268435456:268435456",
+        "--",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=262144",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Followup20261016/scalar_FwBasin7.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Followup20261016/scalar_FwBasin7.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 118.1639381999994,
+      "log": "scalar_FwBasin7-fa5fe3fab666.log",
+      "log_sha256": "b79c13d60f1679f282760e11e0990fd88a72953346a06b7c4baf673971bb0dde",
+      "marks_milliseconds": {},
+      "synchronous_elaboration": true,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,72 @@
+{
+  "scope": "Pinned Lean default-kernel proof. The statement of each module determines its proof scope; no new global zeta bound is inferred.",
+  "driver_sha256": "2764d7a5c3ed15ffbb189bfa8ea23a0fca06ae0e4acdb3924aad3f78f2991b7a",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "modules": [
+    {
+      "module": "StructuralW10Followup20261016.scalar_FwBasin7",
+      "source_sha256": "dfc9072f0f9b7d6d51184fc706abd36c968655866a60a63280599c5953411720",
+      "source_unchanged": true,
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "/usr/bin/prlimit",
+        "--stack=268435456:268435456",
+        "--",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=262144",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Followup20261016/scalar_FwBasin7.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Followup20261016/scalar_FwBasin7.lean"
+      ],
+      "exit_code": 1,
+      "whole_process_seconds": 96.18418999999994,
+      "log": "scalar_FwBasin7-dfc9072f0f9b.log",
+      "log_sha256": "387a107e94b5784c049acd81d08f4d2970de3dab0d6f8075577185bd3806f9dd",
+      "marks_milliseconds": {},
+      "synchronous_elaboration": true,
+      "passed": false
+    },
+    {
+      "module": "StructuralW10Followup20261016.scalar_IntegerEndpoints",
+      "source_sha256": "e01b485452080560248ec49baf1558d811d94afddd53efdd842edf0b1425e232",
+      "source_unchanged": true,
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "/usr/bin/prlimit",
+        "--stack=268435456:268435456",
+        "--",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=262144",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Followup20261016/scalar_IntegerEndpoints.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Followup20261016/scalar_IntegerEndpoints.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 8.030055199999879,
+      "log": "scalar_IntegerEndpoints-e01b48545208.log",
+      "log_sha256": "035084634312017f918ae39b8b27d20f831dd8b0ebd90ccf855af1d7852cb0f8",
+      "marks_milliseconds": {},
+      "synchronous_elaboration": true,
+      "passed": true
+    }
+  ],
+  "passed": false
+}

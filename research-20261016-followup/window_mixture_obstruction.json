@@ -1,0 +1,28 @@
+{
+  "status": "EXACT_24_MODE_FRAME_VARIANCE_OBSTRUCTION_NOT_A_GLOBAL_OPTIMUM",
+  "frame_gaps_exact": [
+    "98739/50000",
+    "520089/500000",
+    "984129/500000",
+    "521279/500000",
+    "984339/500000",
+    "1042587/1000000",
+    "982723/500000",
+    "1036437/1000000",
+    "64511/62500"
+  ],
+  "old_weight_source": "research-20261016/spectral-w10-refined-rational.json",
+  "number_of_cosine_modes": 24,
+  "reward_energy_ratio_upper": "7/5",
+  "target_kappa_for_comparison": "67/100",
+  "strict_bad_direction_margin": "31/500",
+  "statement": "For q(t)=sum_{j=1}^24 d_j*cos(2*pi*j*t), this frame satisfies sum_pairs a_ij*qhat(x_j-x_i)^2 <= (7/5)*sum_j d_j^2*(1/2-1/(4*pi^2*j^2)). Thus at any target kappa>=67/100 but <5/7, the symmetric variance term in H+kappa*F is strictly negative. The displayed margin 31/500 is for kappa=67/100; for actual .6736 it is about .0569.",
+  "qualifier": "This is one frame, one frozen ledger and 24-mode perturbations. It does not prove that all mixed windows fail globally, nor that a new mean window cannot improve.",
+  "kernel_entry_quantization": 1000000000000,
+  "kernel_entry_abs_error_upper": "1/500000000000",
+  "matrix_perturbation_norm_upper_decimal": 1e-08,
+  "LDL_positive_pivots": 24,
+  "minimum_exact_pivot_decimal": 0.1927200222208468,
+  "all_fraction_checks_passed": true,
+  "Lean_checked": false
+}

@@ -35,6 +35,16 @@ fixed-field cell geometry passed ordinary Lean checks. The scalar instances
 and global cover are still incomplete; this adds **no new unconditional
 zero-proportion bound**.
 
+The [next follow-up](research-20261016-followup/README.md) connects concrete
+quadratic minorants to the actual kernel, generalizes matching thresholds,
+and redesigns the Fourier window and ten-point weights. The new exact
+research parameters target **67.36289513388591…%**, conditional on unproved
+global and analytic inputs. New profile positivity and majorant arguments
+are separated from the unfinished new-window counting specialization.
+[Current proof status](research-20261016-followup/proof-status.json) binds
+every ordinary-kernel claim to the exact source and log. There is still
+**no new unconditional zero-proportion record or submission-ready file**.
+
 The completed October 15 bound for critical-line zeros is
 
 \[

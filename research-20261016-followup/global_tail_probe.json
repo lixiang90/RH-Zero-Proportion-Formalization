@@ -1,0 +1,358 @@
+{
+  "scope": "Floating exploration of unused rank > 9 interactions.\n\nThe Poisson identity gives a finite Fourier expression for the infinite\nperiodic energy, but numerical quadrature/optimization here are discovery\nonly. No lower bound for arbitrary separated chains is asserted.\n",
+  "parameter_sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+  "fixed_pressure": 0.0043998724,
+  "fixed_old_rank_totals": [
+    1.9999999995,
+    1.9999999998,
+    1.9999999996,
+    1.9999999998,
+    1.9999999999,
+    1.9999999998,
+    1.9999999999,
+    2.0,
+    2.0
+  ],
+  "new_rank_totals": 2,
+  "results": [
+    {
+      "period": 1,
+      "old_R9_optimizer": [
+        2.0041069254070067
+      ],
+      "old_optimizer_infinite_energy": 0.010285990732160964,
+      "old_optimizer_Poisson_nonzero_modes": [
+        [
+          1,
+          0.49695933977384366
+        ],
+        [
+          2,
+          0.0014100413446834833
+        ]
+      ],
+      "stages": [
+        {
+          "R": 9,
+          "gaps": [
+            2.0041069254070067
+          ],
+          "finite_periodic_energy": 0.009644066252708847,
+          "infinite_periodic_energy_by_floating_Poisson": 0.010285990732160964,
+          "infinite_tail_after_R_at_same_gaps": 0.0006419244794521172,
+          "implied_percent_if_finite_energy_were_global_floor": 67.42712548178798
+        },
+        {
+          "R": 12,
+          "gaps": [
+            2.0031340664130726
+          ],
+          "finite_periodic_energy": 0.00965554291579467,
+          "infinite_periodic_energy_by_floating_Poisson": 0.010146823606755123,
+          "infinite_tail_after_R_at_same_gaps": 0.0004912806909604522,
+          "implied_percent_if_finite_energy_were_global_floor": 67.42790686486784
+        },
+        {
+          "R": 16,
+          "gaps": [
+            2.002384960931916
+          ],
+          "finite_periodic_energy": 0.009664724112645878,
+          "infinite_periodic_energy_by_floating_Poisson": 0.01003940354973346,
+          "infinite_tail_after_R_at_same_gaps": 0.00037467943708758243,
+          "implied_percent_if_finite_energy_were_global_floor": 67.42853197527364
+        },
+        {
+          "R": 24,
+          "gaps": [
+            2.001615257168219
+          ],
+          "finite_periodic_energy": 0.00967447259887643,
+          "infinite_periodic_energy_by_floating_Poisson": 0.00992880022899308,
+          "infinite_tail_after_R_at_same_gaps": 0.0002543276301166502,
+          "implied_percent_if_finite_energy_were_global_floor": 67.42919572279636
+        },
+        {
+          "R": 32,
+          "gaps": [
+            2.001221597537062
+          ],
+          "finite_periodic_energy": 0.00967958190285493,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009872145085824046,
+          "infinite_tail_after_R_at_same_gaps": 0.00019256318296911705,
+          "implied_percent_if_finite_energy_were_global_floor": 67.42954360642238
+        },
+        {
+          "R": 64,
+          "gaps": [
+            2.0006188511332352
+          ],
+          "finite_periodic_energy": 0.009687566474925982,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009785285679772548,
+          "infinite_tail_after_R_at_same_gaps": 9.771920484656638e-05,
+          "implied_percent_if_finite_energy_were_global_floor": 67.43008726924275
+        },
+        {
+          "R": 128,
+          "gaps": [
+            2.0003115401528135
+          ],
+          "finite_periodic_energy": 0.009691712316128769,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009740948704633028,
+          "infinite_tail_after_R_at_same_gaps": 4.923638850425939e-05,
+          "implied_percent_if_finite_energy_were_global_floor": 67.43036955955334
+        },
+        {
+          "R": 256,
+          "gaps": [
+            2.0001563118131735
+          ],
+          "finite_periodic_energy": 0.009693825594002697,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009718540231053572,
+          "infinite_tail_after_R_at_same_gaps": 2.471463705087419e-05,
+          "implied_percent_if_finite_energy_were_global_floor": 67.4305134535446
+        }
+      ]
+    },
+    {
+      "period": 2,
+      "old_R9_optimizer": [
+        1.0416882206501035,
+        1.971578913660937
+      ],
+      "old_optimizer_infinite_energy": 0.010434423285840311,
+      "old_optimizer_Poisson_nonzero_modes": [
+        [
+          1,
+          0.19980611780976665
+        ],
+        [
+          2,
+          0.13079808888908476
+        ],
+        [
+          3,
+          0.003984896124059181
+        ]
+      ],
+      "stages": [
+        {
+          "R": 9,
+          "gaps": [
+            1.0416882206501035,
+            1.971578913660937
+          ],
+          "finite_periodic_energy": 0.008673022018170851,
+          "infinite_periodic_energy_by_floating_Poisson": 0.010434423285840311,
+          "infinite_tail_after_R_at_same_gaps": 0.0017614012676694605,
+          "implied_percent_if_finite_energy_were_global_floor": 67.3610779284531
+        },
+        {
+          "R": 12,
+          "gaps": [
+            1.0408875375933866,
+            1.9690938239304192
+          ],
+          "finite_periodic_energy": 0.008734149036467036,
+          "infinite_periodic_energy_by_floating_Poisson": 0.010069466669641666,
+          "infinite_tail_after_R_at_same_gaps": 0.0013353176331746298,
+          "implied_percent_if_finite_energy_were_global_floor": 67.36523179074845
+        },
+        {
+          "R": 16,
+          "gaps": [
+            1.040214958436333,
+            1.9673236619718704
+          ],
+          "finite_periodic_energy": 0.008784746104442081,
+          "infinite_periodic_energy_by_floating_Poisson": 0.00979656338354049,
+          "infinite_tail_after_R_at_same_gaps": 0.0010118172790984092,
+          "implied_percent_if_finite_energy_were_global_floor": 67.36867048199001
+        },
+        {
+          "R": 24,
+          "gaps": [
+            1.0395407549826614,
+            1.9655336377411186
+          ],
+          "finite_periodic_energy": 0.008836840958872884,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009520063325336276,
+          "infinite_tail_after_R_at_same_gaps": 0.0006832223664633916,
+          "implied_percent_if_finite_energy_were_global_floor": 67.37221133300928
+        },
+        {
+          "R": 32,
+          "gaps": [
+            1.0392016444735506,
+            1.9646260553182855
+          ],
+          "finite_periodic_energy": 0.008863585684854413,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009379745017857414,
+          "infinite_tail_after_R_at_same_gaps": 0.0005161593330030006,
+          "implied_percent_if_finite_energy_were_global_floor": 67.37402929802887
+        },
+        {
+          "R": 64,
+          "gaps": [
+            1.0386890461036897,
+            1.9632435245548299
+          ],
+          "finite_periodic_energy": 0.00890472199806748,
+          "infinite_periodic_energy_by_floating_Poisson": 0.00916591692416791,
+          "infinite_tail_after_R_at_same_gaps": 0.00026119492610043003,
+          "implied_percent_if_finite_energy_were_global_floor": 67.3768257185478
+        },
+        {
+          "R": 128,
+          "gaps": [
+            1.0384305250955574,
+            1.9625409664601108
+          ],
+          "finite_periodic_energy": 0.008925797858673232,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009057245309576644,
+          "infinite_tail_after_R_at_same_gaps": 0.00013144745090341164,
+          "implied_percent_if_finite_energy_were_global_floor": 67.3782585321392
+        },
+        {
+          "R": 256,
+          "gaps": [
+            1.0383006169086175,
+            1.9621864979002843
+          ],
+          "finite_periodic_energy": 0.008936472986418219,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009002418375358145,
+          "infinite_tail_after_R_at_same_gaps": 6.594538893992669e-05,
+          "implied_percent_if_finite_energy_were_global_floor": 67.37898428936612
+        }
+      ]
+    },
+    {
+      "period": 3,
+      "old_R9_optimizer": [
+        1.0335404179541225,
+        1.0335404179541225,
+        1.956218035597611
+      ],
+      "old_optimizer_infinite_energy": 0.011302230999825677,
+      "old_optimizer_Poisson_nonzero_modes": [
+        [
+          1,
+          0.1088847531792052
+        ],
+        [
+          2,
+          0.08164699044718844
+        ],
+        [
+          3,
+          0.057193240201168234
+        ],
+        [
+          4,
+          0.005857877571621012
+        ]
+      ],
+      "stages": [
+        {
+          "R": 9,
+          "gaps": [
+            1.033540417892461,
+            1.033540417892461,
+            1.9562180355303584
+          ],
+          "finite_periodic_energy": 0.008747908313907763,
+          "infinite_periodic_energy_by_floating_Poisson": 0.011302230983095112,
+          "infinite_tail_after_R_at_same_gaps": 0.002554322669187349,
+          "implied_percent_if_finite_energy_were_global_floor": 67.36616686762933
+        },
+        {
+          "R": 12,
+          "gaps": [
+            1.0456900899149537,
+            1.9838774375219022,
+            1.9838774375219022
+          ],
+          "finite_periodic_energy": 0.008810776381820483,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009798117715100007,
+          "infinite_tail_after_R_at_same_gaps": 0.0009873413332795247,
+          "implied_percent_if_finite_energy_were_global_floor": 67.37043969531221
+        },
+        {
+          "R": 16,
+          "gaps": [
+            1.0451289491147346,
+            1.9825279259945268,
+            1.9825279259945268
+          ],
+          "finite_periodic_energy": 0.008844980441661652,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009594230210762765,
+          "infinite_tail_after_R_at_same_gaps": 0.0007492497691011131,
+          "implied_percent_if_finite_energy_were_global_floor": 67.37276460161385
+        },
+        {
+          "R": 24,
+          "gaps": [
+            1.0445963920164785,
+            1.9811344403053648,
+            1.9811344403053648
+          ],
+          "finite_periodic_energy": 0.00887925091862961,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009385968537031894,
+          "infinite_tail_after_R_at_same_gaps": 0.0005067176184022845,
+          "implied_percent_if_finite_energy_were_global_floor": 67.37509418333201
+        },
+        {
+          "R": 32,
+          "gaps": [
+            1.04431173260997,
+            1.9804362833602587,
+            1.9804362833602587
+          ],
+          "finite_periodic_energy": 0.00889743597637175,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009280252247039369,
+          "infinite_tail_after_R_at_same_gaps": 0.0003828162706676196,
+          "implied_percent_if_finite_energy_were_global_floor": 67.37633040249094
+        },
+        {
+          "R": 64,
+          "gaps": [
+            1.0439019787667698,
+            1.9793586131842071,
+            1.9793586131842071
+          ],
+          "finite_periodic_energy": 0.008924752647639976,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009118630212173757,
+          "infinite_tail_after_R_at_same_gaps": 0.00019387756453378112,
+          "implied_percent_if_finite_energy_were_global_floor": 67.37818747345884
+        },
+        {
+          "R": 128,
+          "gaps": [
+            1.043692018055882,
+            1.9788125208855931,
+            1.9788125208855931
+          ],
+          "finite_periodic_energy": 0.008938866442181025,
+          "infinite_periodic_energy_by_floating_Poisson": 0.009036445656792744,
+          "infinite_tail_after_R_at_same_gaps": 9.757921461171944e-05,
+          "implied_percent_if_finite_energy_were_global_floor": 67.37914701254512
+        },
+        {
+          "R": 256,
+          "gaps": [
+            1.0435868017338472,
+            1.9785368187867525,
+            1.9785368187867525
+          ],
+          "finite_periodic_energy": 0.008946008531127446,
+          "infinite_periodic_energy_by_floating_Poisson": 0.00899496901533993,
+          "infinite_tail_after_R_at_same_gaps": 4.896048421248328e-05,
+          "implied_percent_if_finite_energy_were_global_floor": 67.3796325843356
+        }
+      ]
+    }
+  ],
+  "seconds": 0.8731414000003497,
+  "arbitrary_chain_lower_bound_proven": false,
+  "new_unconditional_zeta_bound_proven": false
+}
