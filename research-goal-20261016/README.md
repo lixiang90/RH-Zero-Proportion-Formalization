@@ -158,6 +158,35 @@ the ledger on the fixed profile, falls short of the requested gain in sampled
 LP diagnostics. Finite integer moves to competing wells are a distinct
 global-minimizer exclusion currently under investigation.
 
+The first signed-curvature global-competitor sample is now independently
+replayed. A feasible integer vector sends every gap vector in a cell to
+another point in the original orthant. If the entire cell satisfies
+`F(g+delta)-F(g)<0`, it cannot contain a global minimizer, even if it contains
+local stationary points. For each affected span, the checker subtracts the
+same-phase Taylor coefficients before bounding the difference kernel
+`h_s(x)=w(x+s)-w(x)`. An upper bound on the signed `h_s''` suffices; concave
+intervals need no absolute-curvature remainder penalty. Exact integer flow
+bounds the correlated sum over all nine gaps.
+
+This test newly excludes 15 of the fixed 300 OBBT/Newton residual sample
+cells, distinct from the previous seven joint energy-gradient sample leaves.
+All preceding 193 OBBT bounds and 53 Newton steps, scalar difference bounds,
+and final flow certificates were independently replayed. The standalone
+72,868-byte gzip archive reconstructs the ancestor geometry and covers 141
+old descendant branches; it does not cover the full domain.
+An additional sublevel-conditioned pilot checks
+`DeltaF + lambda*(c-A) < 0`, with `A <= F < c` and `lambda >= 0`, and finds
+one further replayed exclusion. Formal actual finite-move consumers are
+being checked separately; these numerical receipts are not Lean passes.
+
+Independent three-floor probes on the same 300 original parents found
+80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.
+The small nonmonotonicity is due to heuristic certificate choices. Compact
+sample payloads fell only about 4.1%/4.5% at the lower floors. This is useful
+complexity evidence, not an impossibility theorem. The single active compact
+full-cover search uses `c=0.0088`, whose conditional score still meets the
+requested improvement margin.
+
 The frozen mixed-cover snapshot `snapshots/correlated-26000.json` describes
 an archived checkpoint of 26,000 checked nodes with 17 frontier cells. Its
 mixed replay passed for 10,674 value leaves, 1,788 directional exclusions and

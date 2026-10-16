@@ -58,6 +58,15 @@ def main():
         assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
         files.append(str(p.relative_to(ROOT)).replace('\\','/'))
     files.append('research-goal-20261016/cover-compact-progress-files.json')
+    move_manifest=HERE/'cover-global-move-progress-files.json'
+    assert hashlib.sha256(move_manifest.read_bytes()).hexdigest()=='c63e29e6cccd543fb710cd35d9c3ed8ab4094c750c6dccd0f52c301ec138ac38'
+    moves=json.loads(move_manifest.read_bytes())
+    for path,row in moves['files'].items():
+        p=HERE/path
+        assert p.is_file() and len(p.read_bytes())==row['bytes']
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
+        files.append(str(p.relative_to(ROOT)).replace('\\','/'))
+    files.append('research-goal-20261016/cover-global-move-progress-files.json')
     compiled=receipt['modules']+receipt.get('compiled_without_printed_axiom_audit',[])
     for row in compiled:
         for key,sha_key in [('source','source_sha256'),('log','log_sha256')]:
