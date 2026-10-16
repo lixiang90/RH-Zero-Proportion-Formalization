@@ -1,0 +1,224 @@
+{
+  "scope": "Compile the review/counting/coverage modules using frozen cached Core.\n\nThis is ordinary Lean elaboration and an axiom audit, not a complete higher\nproportion proof, Comparator verification, or independent nanoda replay.\n",
+  "passed": true,
+  "utc": "20261016T010019Z",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "modules": [
+    {
+      "module": "StructuralW10Cert20261016.Reflection",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T004905Z/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T004905Z/lib/StructuralW10Cert20261016/Reflection.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/Reflection.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 98.64934469999571,
+      "source_sha256": "25a9ec4a393ca701f63d82d084c6328c7738fc600a76a713583e6f29df3c5eb4",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T010019Z/lib/StructuralW10Cert20261016/Reflection.olean",
+      "olean_sha256": "aeabe69609ca0af09f5234f18fbc6471adc0ea82b957a928c0a241b550bbc4e3",
+      "log": "research-20261016-w10-cert\\review-lean-20261016T004905Z\\StructuralW10Cert20261016.Reflection.log",
+      "log_sha256": "7b907e2a443aadae87d7bcb6ba2c2f49286207fda65ab20a0f9d27455437b9b8",
+      "reused_exact_verified_olean": true
+    },
+    {
+      "module": "StructuralW10Cert20261016.FinalConditional",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T005756Z/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T005756Z/lib/StructuralW10Cert20261016/FinalConditional.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/FinalConditional.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 38.90269590000389,
+      "source_sha256": "6712abb9e41eec3beb0b9d1027341356b0b95259e5678a7b9f4d67c193cb2ceb",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T010019Z/lib/StructuralW10Cert20261016/FinalConditional.olean",
+      "olean_sha256": "39fc787771ac689806d01862261c29eba3c0ad58dfdb0fa6bb3c8ffaa10f969c",
+      "log": "research-20261016-w10-cert\\review-lean-20261016T005756Z\\StructuralW10Cert20261016.FinalConditional.log",
+      "log_sha256": "931739c88f591a5f87f0e1dc5c4328b6a8e798e888006ca21ed60cd925e573ce",
+      "reused_exact_verified_olean": true
+    },
+    {
+      "module": "StructuralW10Cert20261016.FloorTransfer",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T005756Z/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T005756Z/lib/StructuralW10Cert20261016/FloorTransfer.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/FloorTransfer.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.689022699996713,
+      "source_sha256": "87a77ff684694665b909f091264f1436708441ff2cd5339af513c247bb1fbc0e",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T010019Z/lib/StructuralW10Cert20261016/FloorTransfer.olean",
+      "olean_sha256": "1af28817004241e761f1f0b883557e6ad903a5a7881ece575574242f167a659c",
+      "log": "research-20261016-w10-cert\\review-lean-20261016T005756Z\\StructuralW10Cert20261016.FloorTransfer.log",
+      "log_sha256": "04662701eb4257f4370871dbb4e9416db55303b4283d13725a438029965ba121",
+      "reused_exact_verified_olean": true
+    },
+    {
+      "module": "StructuralW10Cert20261016.OrderCoverage",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T005756Z/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T005756Z/lib/StructuralW10Cert20261016/OrderCoverage.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/OrderCoverage.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.499686399998609,
+      "source_sha256": "41f8b2baf1952010ea170b70dbdcb57b5735634240d3fef6452aeb180f3766dc",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T010019Z/lib/StructuralW10Cert20261016/OrderCoverage.olean",
+      "olean_sha256": "b622fe164063cd59ed8be604472a62dcf153a5bed8afeaccbe743cf3c18bbdc1",
+      "log": "research-20261016-w10-cert\\review-lean-20261016T005756Z\\StructuralW10Cert20261016.OrderCoverage.log",
+      "log_sha256": "94b50eb72883a1c7d569dd30db5a96522e2b4c71512fa914c856c094af2db097",
+      "reused_exact_verified_olean": true
+    },
+    {
+      "module": "StructuralW10Cert20261016.LeafDispatch",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T010019Z/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T010019Z/lib/StructuralW10Cert20261016/LeafDispatch.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/LeafDispatch.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 42.314776999999594,
+      "source_sha256": "0538167d64c8e4aa38f4c19736afd14b4eaf564aa4ef8809473815665df86911",
+      "olean": "/var/tmp/rh-zero-20261015/research-20261016-w10-cert/review-20261016T010019Z/lib/StructuralW10Cert20261016/LeafDispatch.olean",
+      "olean_sha256": "3e4655ebb2339f4c3cb8f6387174d8d990eec92c9527cd5a19e32669bad3be69",
+      "log": "research-20261016-w10-cert\\review-lean-20261016T010019Z\\StructuralW10Cert20261016.LeafDispatch.log",
+      "log_sha256": "bf6cd1526309f5f7484cadabd33f9154d2561cbd561288dbb1c2021d6571c35b"
+    }
+  ],
+  "axioms": {
+    "StructuralW10Cert20261016.Reflection.point_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.Reflection.Fw_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.FinalConditional.exact_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.FinalConditional.strict_improvement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.FinalConditional.separated_summed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.FinalConditional.simple_dyadic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.FinalConditional.simple_cumulative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.FinalConditional.distinct_dyadic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.FinalConditional.distinct_cumulative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.FloorTransfer.separated_floor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.OrderCoverage.normalize_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.OrderCoverage.walk_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "StructuralW10Cert20261016.LeafDispatch.check_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "all_inputs_unchanged": true,
+  "source_sha256": {
+    "StructuralW10Cert20261016.Reflection": "25a9ec4a393ca701f63d82d084c6328c7738fc600a76a713583e6f29df3c5eb4",
+    "StructuralW10Cert20261016.FinalConditional": "6712abb9e41eec3beb0b9d1027341356b0b95259e5678a7b9f4d67c193cb2ceb",
+    "StructuralW10Cert20261016.FloorTransfer": "87a77ff684694665b909f091264f1436708441ff2cd5339af513c247bb1fbc0e",
+    "StructuralW10Cert20261016.OrderCoverage": "41f8b2baf1952010ea170b70dbdcb57b5735634240d3fef6452aeb180f3766dc",
+    "StructuralW10Cert20261016.LeafDispatch": "0538167d64c8e4aa38f4c19736afd14b4eaf564aa4ef8809473815665df86911"
+  },
+  "conditional_only": true,
+  "higher_kappa_proven": false
+}

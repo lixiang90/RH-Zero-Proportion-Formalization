@@ -1,0 +1,37 @@
+{
+  "status": "DRAFT_BLOCKED_ON_ANALYTIC_FINITE_CERTIFICATE",
+  "upload_ready": false,
+  "title": "Ten-point Gram-defect certificate with re-optimised pair weights",
+  "numerator": "3338842690820594373879991756052499665323",
+  "denominator": "4956700000000000000000000000000000000000",
+  "display_percent_truncated_10_decimal_places": "67.3601930885",
+  "display_percent_rounded_10_decimal_places": "67.3601930886",
+  "prior_record_numerator": "34191001116882886388531117129201664",
+  "prior_record_denominator": "50760020691785094633026544189453125",
+  "prior_record_source_commit": "9e6ca6615b9dbfec4a1d722995cff0ffe3abf9bb",
+  "method": "Ten-point weighted Gram-defect certificate, including rank-distance nine interactions; the accepted optimized AM window and generic matching/counting chain are retained.",
+  "author": "Li Xiang",
+  "model": "GPT-6",
+  "harness": "Codex",
+  "license": "Apache-2.0",
+  "required_global_theorems": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "known_remaining_condition": "For every g : Fin 9 -> Real with g_i >= 17/20, prove 433/50000 <= Fw W10 g using a complete Lean-checked finite certificate; the actual matching remainder has exactly this required separation.",
+  "missing_artifacts": [
+    "Complete local finite certificate and its Lean theorem",
+    "One-file UTF-8 Solution.lean with all finite data and no local repository imports",
+    "Comparator statement/dependency/axiom checks",
+    "Default Lean kernel export replay",
+    "Independent nanoda replay",
+    "Bound manifest with source SHA256 and final exact site record comparison"
+  ],
+  "site_constraints_observed": {
+    "proof_source": "one UTF-8 Lean source file, at most 2 MB",
+    "required_theorems": 3,
+    "allowed_submission_count_per_github_account_utc_day": 3,
+    "source": "https://www.riemannzeta.fun/submit"
+  }
+}

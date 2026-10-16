@@ -1,0 +1,50 @@
+{
+  "scope": "Independent exact audit of W10 mcheckGX cells and the exported partition.\n\nThis program imports neither the generator nor finite_margin_20261015.  It\nreads the frozen rational parameters and inherited analytic table source.  Its\ninteger audit is supporting evidence; only the Lean checkLeaf_sound theorem\nand a complete Lean cover can establish the analytic floor.\n",
+  "passed": true,
+  "seconds": 22.786095499999647,
+  "inputs": [
+    {
+      "path": "research-20261016-w10-cert\\ordered-master.json",
+      "sha256": "517395a730f0e23d632e737ec9740ef5e3035203b8877770c5ab956ce7e07256",
+      "bytes": 3508,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-0.json",
+      "sha256": "3077d797e39b6d3b5dd7054b9cdd13db0e629c07d9088896ba8d1553bd4cae6a",
+      "bytes": 26555957,
+      "unchanged_after_audit": false
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-1.json",
+      "sha256": "c658adaa66ea8504238d74695eb70bb4801c7da4d763f992c06ff5539d9a9917",
+      "bytes": 12998857,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-2.json",
+      "sha256": "f02d5351123c5966ebfafcec0c3206808c35bd0bc63ed0927f9ccf654040bc45",
+      "bytes": 9868047,
+      "unchanged_after_audit": true
+    }
+  ],
+  "packed_inputs": [],
+  "source_sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+  "parameter_sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+  "script_sha256": "636f067be79cc3ade4c076b2b0672f424caad075ab5e915c84dea0c59b0f23e0",
+  "root_reconstructed": true,
+  "all_partition_edges_replayed": true,
+  "branches": 22708,
+  "numeric_leaves": 22650,
+  "reflection_leaves": 0,
+  "empty_children": 0,
+  "ordered_normalization": true,
+  "normalized_empty_leaves": 23,
+  "independently_decoded_relative_leaves": 0,
+  "unresolved_frontier": 36,
+  "complete_finite_partition": false,
+  "minimum_integer_margin": "23501857229635021144",
+  "minimum_path": "r1100001100110010011001011000",
+  "lean_complete_certificate_proven": false,
+  "higher_kappa_proven": false
+}

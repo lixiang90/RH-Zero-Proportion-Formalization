@@ -1,0 +1,32 @@
+{
+  "scope": "Conservative packaging graph from existing Lean .ilean source indexes.\n\nThese are syntactic references, not a kernel dependency assertion. Definitions\nand theorems pruned using them must subsequently compile and replay in a fresh\noverlay; implicit elaborator dependencies may require restoring declarations.\n",
+  "index_provenance": {
+    "GramDefect20261015.Core": {
+      "path": "/var/tmp/rh-zero-20261015/record-verification/modular/lib/GramDefect20261015/Core.ilean",
+      "sha256": "1514c8a3bf31b108c1a1ba9576b978f30c2e37d98fedc861762549dc68a39458"
+    },
+    "GramDefect20261015.SharpWindow": {
+      "path": "/var/tmp/rh-zero-20261015/record-verification/modular/lib/GramDefect20261015/SharpWindow.ilean",
+      "sha256": "d24878688893b58b31b37201884bee6905714269cbea0e241fd6a431cd4856ec"
+    },
+    "GramDefect20261015.RefinedCounting": {
+      "path": "/var/tmp/rh-zero-20261015/record-verification/modular/lib/GramDefect20261015/RefinedCounting.ilean",
+      "sha256": "2a8a3fccc8bd4f900c281471ecf3e369c1b4230b7fea2d89e5d06b00e57373a2"
+    }
+  },
+  "rows": 3379,
+  "retained_rows": 2798,
+  "reachable_syntactic_declarations": 2968,
+  "kernel_dependency_metadata": false,
+  "conservative_source_fallback": [
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralResearch20261016/W10RefinedCandidate.lean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralResearch20261016/Coboundary.lean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralResearch20261016/CoboundaryCounting.lean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/LocalChecker.lean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/RootBounds.lean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/TreeCoverage.lean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/CompactLeaf.lean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/RelCompactLeaf.lean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/EncodedLiteral.lean"
+  ]
+}

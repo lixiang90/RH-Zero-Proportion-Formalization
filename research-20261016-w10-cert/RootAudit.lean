@@ -1,0 +1,8 @@
+import StructuralW10Cert20261016.Coercivity
+import StructuralW10Cert20261016.TreeCoverage
+import StructuralW10Cert20261016.RootBounds
+#print axioms StructuralW10Cert20261016.Coercivity.pressure_le_energy
+#print axioms StructuralW10Cert20261016.Coercivity.coordinate_bound
+#print axioms StructuralW10Cert20261016.Coercivity.span_bound
+#print axioms StructuralW10Cert20261016.TreeCoverage.walk_sound
+#print axioms StructuralW10Cert20261016.RootBounds.counterexample_in_root

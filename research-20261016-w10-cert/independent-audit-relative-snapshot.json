@@ -1,0 +1,84 @@
+{
+  "scope": "Independent exact audit of W10 mcheckGX cells and the exported partition.\n\nThis program imports neither the generator nor finite_margin_20261015.  It\nreads the frozen rational parameters and inherited analytic table source.  Its\ninteger audit is supporting evidence; only the Lean checkLeaf_sound theorem\nand a complete Lean cover can establish the analytic floor.\n",
+  "passed": true,
+  "seconds": 37.4659931999995,
+  "inputs": [
+    {
+      "path": "research-20261016-w10-cert\\parallel-master.json",
+      "sha256": "d1d6d943dfde6468fc6023faa07bcb1441ece9747966ba9a90d5b3cd021294d8",
+      "bytes": 10290767,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\parallel-0.json",
+      "sha256": "55034c818761f943d120504e10abc58e9ea9065162597e1e6334e6852b48f13f",
+      "bytes": 45735152,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\parallel-1-master.json",
+      "sha256": "72b70be7a75d73bd682fd109844313e8897d66e49566b21b78516986cedf5619",
+      "bytes": 42547403,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\parallel-1-0.json",
+      "sha256": "ad36587357eaf3ab2f97849bba0daebb3ca63bb9b5c1c748b4dde007476312d3",
+      "bytes": 38319977,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\parallel-1-1.json",
+      "sha256": "e171f2fd977ee4f9fe6d1141e29d9fec68c34d746106df9f1baf4324c1436852",
+      "bytes": 22663595,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\parallel-1-2.json",
+      "sha256": "49ba6a0d131d5c189bf73a4d7f3589ccdd9e164763cc156c4d1b6083e6488006",
+      "bytes": 36911823,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\parallel-2.json",
+      "sha256": "0afd87a10fc75b3c79526de3ecc416980591a9ac40104109b9fb51560cbabf13",
+      "bytes": 27006281,
+      "unchanged_after_audit": true
+    }
+  ],
+  "packed_inputs": [
+    {
+      "path": "research-20261016-w10-cert\\relative-master.json",
+      "sha256": "e8e34f663ecf8a86c1ca8ba3c76e630ca64f47f50b2e6647c55b4b5afa399ebf",
+      "bytes": 1909753
+    },
+    {
+      "path": "research-20261016-w10-cert\\relative-parallel-0.json",
+      "sha256": "1445e1fc9a3f6b10f9e47a88f7e36890cffed877ffea27699686fa0bb745d322",
+      "bytes": 8847583
+    },
+    {
+      "path": "research-20261016-w10-cert\\relative-parallel-2.json",
+      "sha256": "450e5ebfb69d68b8fe3e0d161a82de6306d1f69c72b33bea20680423a973e072",
+      "bytes": 4913169
+    }
+  ],
+  "source_sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+  "parameter_sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+  "script_sha256": "636f067be79cc3ade4c076b2b0672f424caad075ab5e915c84dea0c59b0f23e0",
+  "root_reconstructed": true,
+  "all_partition_edges_replayed": true,
+  "branches": 49760,
+  "numeric_leaves": 42868,
+  "reflection_leaves": 6837,
+  "empty_children": 0,
+  "ordered_normalization": false,
+  "normalized_empty_leaves": 0,
+  "independently_decoded_relative_leaves": 16324,
+  "unresolved_frontier": 56,
+  "complete_finite_partition": false,
+  "minimum_integer_margin": "15630180839226101392",
+  "minimum_path": "r010000000111100111110101101110010101110",
+  "lean_complete_certificate_proven": false,
+  "higher_kappa_proven": false
+}

@@ -1,0 +1,46 @@
+{
+  "scope": "Independent exact audit of W10 mcheckGX cells and the exported partition.\n\nThis program imports neither the generator nor finite_margin_20261015.  It\nreads the frozen rational parameters and inherited analytic table source.  Its\ninteger audit is supporting evidence; only the Lean checkLeaf_sound theorem\nand a complete Lean cover can establish the analytic floor.\n",
+  "passed": true,
+  "seconds": 8.16079770000215,
+  "inputs": [
+    {
+      "path": "research-20261016-w10-cert\\parallel-master.json",
+      "sha256": "d1d6d943dfde6468fc6023faa07bcb1441ece9747966ba9a90d5b3cd021294d8",
+      "bytes": 10290767,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\parallel-0.json",
+      "sha256": "993aa052e163de361a53f53ec3f4c92a9ee981a9ff241324745fc513e5e3d138",
+      "bytes": 16150307,
+      "unchanged_after_audit": false
+    },
+    {
+      "path": "research-20261016-w10-cert\\parallel-1.json",
+      "sha256": "50a328d77702a45fa001c1a6d7d659decc026c9de938db474bdc5006fa85684c",
+      "bytes": 15880452,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\parallel-2.json",
+      "sha256": "45bfa9f9b39dcbe95bbd8d0ddf82227b3c34e8a6f5372b966fcbe24e6f11f805",
+      "bytes": 16201069,
+      "unchanged_after_audit": true
+    }
+  ],
+  "source_sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+  "parameter_sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+  "script_sha256": "a512fa4da1156e5c8cc602bd0d61d6dffdc6137f9255b9345d512a6616a67900",
+  "root_reconstructed": true,
+  "all_partition_edges_replayed": true,
+  "branches": 11018,
+  "numeric_leaves": 10840,
+  "reflection_leaves": 142,
+  "empty_children": 0,
+  "unresolved_frontier": 37,
+  "complete_finite_partition": false,
+  "minimum_integer_margin": "71231772045665804080",
+  "minimum_path": "r0011000100011111000100010",
+  "lean_complete_certificate_proven": false,
+  "higher_kappa_proven": false
+}

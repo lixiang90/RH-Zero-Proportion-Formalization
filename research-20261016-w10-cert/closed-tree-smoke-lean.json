@@ -1,0 +1,29 @@
+{
+  "scope": "Real 63-node closed subtree ordinary Lean and kernel evaluation, not the complete global tree.",
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "env",
+    "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+    "-o",
+    "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/ClosedTreeSmoke.olean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/ClosedTreeSmoke.lean"
+  ],
+  "exit_code": 0,
+  "seconds": 95.91431560000638,
+  "nodes": 63,
+  "numeric_leaves": 32,
+  "source_sha256": "6310a0309715c7571c7521909490b96662a127817d307b9c80a228cd7ea3363b",
+  "source_unchanged": true,
+  "stdout": "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/ClosedTreeSmoke.lean:19:18: warning: Variable name `n` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _n\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'StructuralW10Cert20261016.ClosedTreeSmoke.covered' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "log_sha256": "653464c65410a2f0c455ba946694655d059f9e45f8543b45552cacb5e0e9cdb4",
+  "passed": true
+}

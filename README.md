@@ -2,7 +2,18 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
-The new exact bound for critical-line zeros is
+The website's [attempt-024](https://www.riemannzeta.fun/submissions/attempt-024)
+now proves **67.3581307708%**, exceeding this repository's completed October 15
+bound below. **The old upload is no longer a record improvement.**
+
+The fixed ten-point candidate targets **67.3601930885588067…%**. Its exact
+parameters, executable integer leaf checker, initial-domain proof and coverage
+machinery are being formalized in `StructuralW10Cert20261016`; full finite
+coverage and isolated submission verification must finish before it is
+described as a proved improvement. Current draft materials remain marked
+`upload_ready: false`.
+
+The completed October 15 bound for critical-line zeros is
 
 \[
 \kappa=\frac{3338957652820594373879991756052499665323}

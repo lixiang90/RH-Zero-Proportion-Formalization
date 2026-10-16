@@ -1,0 +1,76 @@
+{
+  "scope": "Independent exact audit of W10 mcheckGX cells and the exported partition.\n\nThis program imports neither the generator nor finite_margin_20261015.  It\nreads the frozen rational parameters and inherited analytic table source.  Its\ninteger audit is supporting evidence; only the Lean checkLeaf_sound theorem\nand a complete Lean cover can establish the analytic floor.\n",
+  "passed": true,
+  "seconds": 39.52467260000412,
+  "inputs": [
+    {
+      "path": "research-20261016-w10-cert\\ordered-master.json",
+      "sha256": "517395a730f0e23d632e737ec9740ef5e3035203b8877770c5ab956ce7e07256",
+      "bytes": 3508,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-0.json",
+      "sha256": "b7c2743d9b36ab7f51e6a4589db3ea7ea92081597b8e550f89205180f63e0106",
+      "bytes": 29283108,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-1-master.json",
+      "sha256": "c658adaa66ea8504238d74695eb70bb4801c7da4d763f992c06ff5539d9a9917",
+      "bytes": 12998857,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-1-0-master.json",
+      "sha256": "1f07167fb36edf0525be9f9ae273c760508bfa61ecf1cdeeaa92c0aada369a45",
+      "bytes": 41810819,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-1-1-master.json",
+      "sha256": "e27da6b7208bac702983843571b3c1877b7cfb06bc5b0afd598fa46467f92300",
+      "bytes": 40142535,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-2.json",
+      "sha256": "f02d5351123c5966ebfafcec0c3206808c35bd0bc63ed0927f9ccf654040bc45",
+      "bytes": 9868047,
+      "unchanged_after_audit": true
+    }
+  ],
+  "packed_inputs": [
+    {
+      "path": "research-20261016-w10-cert\\ordered-0-compact.json",
+      "sha256": "439d0ca500dd3c9bb99cb33f0f45ce20698666538eeaa2ba9303ac618815fb6f",
+      "bytes": 3720126,
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-2-compact.json",
+      "sha256": "8dd35890538b7e2bfb33b7c9a1c2ff376377c5fdd61cd167093c9229c8e35ffb",
+      "bytes": 1117574,
+      "unchanged_after_audit": true
+    }
+  ],
+  "source_sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+  "parameter_sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+  "script_sha256": "5f891f2a7a080741dea891066152f3b8ee67f85b5c8724fbcbe8f8b890b93878",
+  "root_reconstructed": true,
+  "all_partition_edges_replayed": true,
+  "branches": 39947,
+  "numeric_leaves": 39879,
+  "reflection_leaves": 0,
+  "empty_children": 0,
+  "ordered_normalization": true,
+  "normalized_empty_leaves": 28,
+  "independently_decoded_relative_leaves": 17919,
+  "independently_checked_packed_empty_leaves": 8,
+  "unresolved_frontier": 41,
+  "complete_finite_partition": false,
+  "minimum_integer_margin": "3133563358278936112",
+  "minimum_path": "r01100100111001100110010100",
+  "lean_complete_certificate_proven": false,
+  "higher_kappa_proven": false
+}
