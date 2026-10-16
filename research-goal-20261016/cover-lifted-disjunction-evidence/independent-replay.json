@@ -1,0 +1,49 @@
+{
+  "scope": "Standalone python -S replay of the strict two-child graph disjunction.",
+  "script_sha256": "4e9acd5f23b5c65bf03945ae958b0dc9f7bc3bdf71a21f19753d59acc64a8866",
+  "archive_manifest_sha256": "567054c80352d2da0eb0a417ec2a746670baf910346305af9821ff0a6f4ffaa1",
+  "all_passed": true,
+  "no_site_packages": 1,
+  "parent_closures": 1,
+  "split_nodes": 1,
+  "strict_graph_leaves": 2,
+  "ancestor_counts": {
+    "nodes": 25,
+    "source_OBBT_bounds": 163,
+    "source_Newton_steps": 0
+  },
+  "paired_nonclosing_controls": 1,
+  "control_OBBT_bounds": 13,
+  "control_Newton_steps": 0,
+  "disjoint_from_original13_parent_paths": true,
+  "strict_certificates": [
+    {
+      "path": "r001000001000001110011100",
+      "child": 0,
+      "strict_margin": "9273915747776907966958469120000000000",
+      "row_counts": {
+        "DBM": 2,
+        "slab": 15,
+        "facet": 25,
+        "KKT": 8
+      },
+      "facet_grid_indices": 402
+    },
+    {
+      "path": "r001000001000001110011100",
+      "child": 1,
+      "strict_margin": "16638686788409057404028846080000000000",
+      "row_counts": {
+        "DBM": 2,
+        "slab": 8,
+        "facet": 32,
+        "KKT": 9
+      },
+      "facet_grid_indices": 389
+    }
+  ],
+  "requires_full_parent64_snapshot": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 4.312308300002769
+}

@@ -1,0 +1,86 @@
+{
+  "scope": "Independent stdlib-only replay of lifted multi-facet KKT exclusions.\n\nRecomputes every used 1/64 derivative grid interval from the frozen Taylor\ncoefficients and its rational order-24 remainder.  Rechecks every supporting\nline over the entire clipped span, the old affine slabs, boundary KKT signs,\nall nonnegative Farkas weights, actual DBM edge costs, flow divergence and\nthe strict residual-paid contradiction.  No discovery code is imported.\n",
+  "script_sha256": "9490d3071fea06aea005d7d337cef3e87bb1fbb63a6493f1c70ce777f3c9ec00",
+  "input_sha256": "659e396a4c9a7bac5e962823b742536e84594dd0e0d66f3f0d618c71ab267339",
+  "all_passed": true,
+  "parents": 8,
+  "counts": {
+    "nodes": 111,
+    "source_OBBT_bounds": 725,
+    "source_Newton_steps": 0,
+    "checked_farkas_certificates": 4
+  },
+  "additional_over_single_slab": 4,
+  "additional_paths": [
+    "r001000001010011110010001",
+    "r001000001010101111001001",
+    "r001000001101101011010010",
+    "r001000001000101011011000"
+  ],
+  "strict_certificates": [
+    {
+      "path": "r001000001010011110010001",
+      "label": "graph",
+      "strict_margin": "8253007201114461095025049600000000000",
+      "row_counts": {
+        "DBM": 2,
+        "slab": 10,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 434
+    },
+    {
+      "path": "r001000001010101111001001",
+      "label": "graph",
+      "strict_margin": "25872574653216632844742492160000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 465
+    },
+    {
+      "path": "r001000001101101011010010",
+      "label": "graph",
+      "strict_margin": "13991715862547496305296015360000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 9
+      },
+      "facet_grid_indices": 478
+    },
+    {
+      "path": "r001000001000101011011000",
+      "label": "graph",
+      "strict_margin": "18849898867208839676115681280000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 9,
+        "facet": 27,
+        "KKT": 6
+      },
+      "facet_grid_indices": 497
+    }
+  ],
+  "independently_recomputed_derivative_grid_cells": 641,
+  "source_recorded_work_below_additional_parents": {
+    "branches": 14,
+    "accepted_leaves": 18,
+    "OBBT_paths": 18,
+    "OBBT_bounds": 184,
+    "Newton_paths": 8,
+    "Newton_steps": 35
+  },
+  "descendant_counts_are_source_projection_metrics": true,
+  "LP_residual_values_are_discovery_metadata": true,
+  "baseline_no_certificate_is_not_a_feasibility_theorem": true,
+  "complete_global_cover": false,
+  "actual_lifted_graph_Lean_consumer_complete": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 7.80830910000077
+}

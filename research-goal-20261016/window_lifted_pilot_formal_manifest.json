@@ -1,0 +1,461 @@
+{
+  "scope": "Seal the actual lifted pilot only after every current source has passed.\n\nThis records ordinary Lean verification. It deliberately does not claim a\nnew independent Nanoda replay, a complete global cover, or a zero record.\n",
+  "actual_theorem": "StructuralGoal20261016.WindowLiftedPilot.exclude",
+  "ordinary_Lean_complete": true,
+  "fully_actual_scalar_and_facet_premises_discharged": true,
+  "local_exclusion_requires": [
+    "Relevant (123/128) g",
+    "WindowDifferenceCell.Contains WindowLiftedPilotData.cell g"
+  ],
+  "atoms": 43,
+  "slabs": 10,
+  "graph_facets": 22,
+  "facet_grid_cells": 623,
+  "active_derivative_variables": 31,
+  "strict_integer_margin": "12310810974159504285408296960000000000",
+  "modules": [
+    {
+      "module": "StructuralGoal20261016.WindowLiftedFarkas",
+      "source": "StructuralGoal20261016/WindowLiftedFarkas.lean",
+      "source_sha256": "7b15caa017acf2c8ddc38bc9134c047276e802ec6a4f001f7f52114115fb6f61",
+      "source_bytes": 4937,
+      "log": "lean_WindowLiftedFarkas_7b15caa017ac.log",
+      "log_sha256": "d464689d0dd96c741758c219a523117997f63ff1ff29bff9728e5c68ca74c557",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 4,
+      "seconds": 6.413975499999651
+    },
+    {
+      "module": "StructuralGoal20261016.WindowDerivativeGraph",
+      "source": "StructuralGoal20261016/WindowDerivativeGraph.lean",
+      "source_sha256": "c9ecdbef27fd9681af08775dd609a88df43b7a1b99a64ab1a60882911b1fe085",
+      "source_bytes": 5544,
+      "log": "lean_WindowDerivativeGraph_c9ecdbef27fd.log",
+      "log_sha256": "0593c1abf93f35cae449630408535a60a9ddb40b874be24f5dcdc9410b5e4fd2",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 3,
+      "seconds": 11.005702399997972
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedKKT",
+      "source": "StructuralGoal20261016/WindowLiftedKKT.lean",
+      "source_sha256": "952673ba7641722e777db3198954a3ce36512708ce99f19e045b6e65fe034d22",
+      "source_bytes": 10089,
+      "log": "lean_WindowLiftedKKT_952673ba7641.log",
+      "log_sha256": "a1d3e1c891b1000c195ea798e60c7edacdbd6ffeba1c34e14b9fb0095b09035a",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 3,
+      "seconds": 40.11266450000039
+    },
+    {
+      "module": "StructuralGoal20261016.WindowGraphCover",
+      "source": "StructuralGoal20261016/WindowGraphCover.lean",
+      "source_sha256": "cc7d275a11c47acdc0c6d74d01af6fbb66368b3d54885b791039f11ce7b969ea",
+      "source_bytes": 5167,
+      "log": "lean_WindowGraphCover_cc7d275a11c4.log",
+      "log_sha256": "35a6b7bd226c975503319d1190083b4c92174fe3834ef9551bbf226caa68415b",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 6,
+      "seconds": 37.72403580000173
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilotData",
+      "source": "StructuralGoal20261016/WindowLiftedPilotData.lean",
+      "source_sha256": "50dbd37158a259befb7697b017f224c9252208daf17c113fdf06edf8c2a39f8f",
+      "source_bytes": 7908,
+      "log": "lean_WindowLiftedPilotData_50dbd37158a2.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 0,
+      "seconds": 5.8250824000024295
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms00",
+      "source": "StructuralGoal20261016/WindowLiftedPilotAtoms00.lean",
+      "source_sha256": "aa565e356c0fb1e60f06f8439be9dc9ba5c69e0a214d577b0e38440c951fb5e2",
+      "source_bytes": 542,
+      "log": "lean_WindowLiftedPilotAtoms00_aa565e356c0f.log",
+      "log_sha256": "1b27e31a5ccb7fda2a48b9649ca472e48f9b0fc53079304b6d57decd88cf42e7",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 1,
+      "seconds": 5.822272099998372
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms01",
+      "source": "StructuralGoal20261016/WindowLiftedPilotAtoms01.lean",
+      "source_sha256": "fba646bbadb5bde179c4f234a64ca2f2dd4971d45e55e111f38078fbd436accb",
+      "source_bytes": 543,
+      "log": "lean_WindowLiftedPilotAtoms01_fba646bbadb5.log",
+      "log_sha256": "0fde26fc329ee194840638f1f8017f0fb232abdf5b240f182093f3805adc0f39",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 1,
+      "seconds": 39.298563000000286
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms02",
+      "source": "StructuralGoal20261016/WindowLiftedPilotAtoms02.lean",
+      "source_sha256": "1e3b9bee17c6fd87183b6106138fac9988f91bbd87dacefc57fed589271fb9fa",
+      "source_bytes": 544,
+      "log": "lean_WindowLiftedPilotAtoms02_1e3b9bee17c6.log",
+      "log_sha256": "d05e62483228efe9b32c0a12510314bf35c701949531308303d50becd4d3f6be",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 1,
+      "seconds": 6.612166399998387
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms03",
+      "source": "StructuralGoal20261016/WindowLiftedPilotAtoms03.lean",
+      "source_sha256": "2d2bb16e9cd50fc38721f08a04548721469ade974b8316eec5674ce408a8d9ad",
+      "source_bytes": 544,
+      "log": "lean_WindowLiftedPilotAtoms03_2d2bb16e9cd5.log",
+      "log_sha256": "ea2e1f843bb88ffd621ff64071c79f506cfe9cde4cd8b3ad7db0defc23d9d98b",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 1,
+      "seconds": 6.23536470000181
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms04",
+      "source": "StructuralGoal20261016/WindowLiftedPilotAtoms04.lean",
+      "source_sha256": "17ccfd7033d787f14600db9b418e57f986a0a7b88eb7af31af49e4233b7b5df6",
+      "source_bytes": 544,
+      "log": "lean_WindowLiftedPilotAtoms04_17ccfd7033d7.log",
+      "log_sha256": "3d37866bf6277d01df081c31f4cdfa20ddb5cd420dd8d00b6462295b03d06805",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 1,
+      "seconds": 5.92469070000152
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms05",
+      "source": "StructuralGoal20261016/WindowLiftedPilotAtoms05.lean",
+      "source_sha256": "46ee60f1d9fe56679cc399f3409bd3c6923c95892e24a828a677bcde802fc943",
+      "source_bytes": 544,
+      "log": "lean_WindowLiftedPilotAtoms05_46ee60f1d9fe.log",
+      "log_sha256": "850b15ce9eed0d8d4481a1922abd39fc7985791a1ec3760dad531c1764ae1a2f",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 1,
+      "seconds": 5.70305830000143
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtomsAll",
+      "source": "StructuralGoal20261016/WindowLiftedPilotAtomsAll.lean",
+      "source_sha256": "df9ea8a78e3d0042404e9390f0ba3cb203a7b78b4b8d40a92d702b4e304361ec",
+      "source_bytes": 3101,
+      "log": "lean_WindowLiftedPilotAtomsAll_df9ea8a78e3d.log",
+      "log_sha256": "13f6435737f7e74e21cd7f0e9052a12d4884bca5752279262503cb6ade03c924",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 2,
+      "seconds": 5.789994899998419
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilotAggregate",
+      "source": "StructuralGoal20261016/WindowLiftedPilotAggregate.lean",
+      "source_sha256": "7ce452b37966530cf82fdedf33e499da82b5ffe2092f517b4cbed08fa2e1d56a",
+      "source_bytes": 1550,
+      "log": "lean_WindowLiftedPilotAggregate_7ce452b37966.log",
+      "log_sha256": "06c9cee01c14f2467ada8653a8e8deb0daec86d77e2cac72df57e60005f9d7b9",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 5,
+      "seconds": 7.445578799997747
+    },
+    {
+      "module": "StructuralGoal20261016.WindowLiftedPilot",
+      "source": "StructuralGoal20261016/WindowLiftedPilot.lean",
+      "source_sha256": "0f21571d063db1cba1f99cd1616f3387944850aa483f0f13b073024c715553f1",
+      "source_bytes": 1214,
+      "log": "lean_WindowLiftedPilot_0f21571d063d.log",
+      "log_sha256": "5209922e907e4450dc5f218ee19e751c7ac7d515ebf6f5b6229c2d2daf8ec577",
+      "ordinary_Lean_passed": true,
+      "proof_roots_printed": 2,
+      "seconds": 36.910835300001054
+    }
+  ],
+  "roots": [
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedFarkas.aggregate_eval",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedFarkas"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedFarkas.aggregate_valid",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedFarkas"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedFarkas.residual_lower",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedFarkas"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedFarkas.exclude",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedFarkas"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowDerivativeGraph.covered",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowDerivativeGraph"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowDerivativeGraph.upper_sound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowDerivativeGraph"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowDerivativeGraph.lower_sound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowDerivativeGraph"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedKKT.gradient_expansion",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedKKT"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedKKT.atom_sound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedKKT"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedKKT.exclude",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedKKT"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowGraphCover.leaf_sound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowGraphCover"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowGraphCover.sound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowGraphCover"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowGraphCover.global_floor884",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowGraphCover"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowGraphCover.global_floor880",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowGraphCover"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowGraphCover.lower_counting",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowGraphCover"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowGraphCover.lower_dyadic",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowGraphCover"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAtoms.checks00",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms00"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAtoms.checks01",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms01"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAtoms.checks02",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms02"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAtoms.checks03",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms03"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAtoms.checks04",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms04"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAtoms.checks05",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtoms05"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAtomsAll.pairAlignment",
+      "axioms": [
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtomsAll"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAtomsAll.checked",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAtomsAll"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAggregate.gap",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAggregate"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAggregate.scalar",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAggregate"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAggregate.bound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAggregate"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAggregate.equal",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAggregate"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilotAggregate.farkas_checked",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilotAggregate"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilot.checked",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilot"
+    },
+    {
+      "symbol": "StructuralGoal20261016.WindowLiftedPilot.exclude",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "module": "StructuralGoal20261016.WindowLiftedPilot"
+    }
+  ],
+  "inputs": {
+    "cover-lifted-graph-pilot.json": "85cf21587da73dc893979823ebdcb2e37d6e96d62e85133e739aefb8048c65a8",
+    "window_generate_lifted_pilot.py": "1df5407975aa995e1167f32cd7608e88b0592af4e9e7f9e5e1d56d602d2135f0",
+    "window_generate_lifted_pilot_proofs.py": "6d058fd96ddece48965f91f6553747eceaa3fbcc9dc8562d9afc35d261c3f9ea",
+    "window_lifted_pilot_generation.json": "ba743aeaa589d2f04a7cdf11f1a77c0a129922ff465f73a0b0d3b5103fd5461a",
+    "window_lifted_pilot_formal_manifest.py": "9c32bc1fff5701af68760d3611e253f236641bf509311693bb1c51967eddb35e"
+  },
+  "independent_Nanoda_replayed": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false
+}

@@ -1,0 +1,203 @@
+{
+  "scope": "Independent stdlib-only replay of lifted multi-facet KKT exclusions.\n\nRecomputes every used 1/64 derivative grid interval from the frozen Taylor\ncoefficients and its rational order-24 remainder.  Rechecks every supporting\nline over the entire clipped span, the old affine slabs, boundary KKT signs,\nall nonnegative Farkas weights, actual DBM edge costs, flow divergence and\nthe strict residual-paid contradiction.  No discovery code is imported.\n",
+  "script_sha256": "9490d3071fea06aea005d7d337cef3e87bb1fbb63a6493f1c70ce777f3c9ec00",
+  "input_sha256": "5c3dfb0e63287c599607a3362fb017b482441d46dacddf84ca7483502ff97d1e",
+  "all_passed": true,
+  "parents": 64,
+  "counts": {
+    "nodes": 562,
+    "source_OBBT_bounds": 4415,
+    "source_Newton_steps": 37,
+    "checked_farkas_certificates": 13
+  },
+  "additional_over_single_slab": 13,
+  "additional_paths": [
+    "r001000001000010111011001",
+    "r001000001000010111111001",
+    "r001000001000100110001001",
+    "r001000001000101000111111",
+    "r001000001000101001111110",
+    "r001000001000101011011000",
+    "r001000001010011110010001",
+    "r001000001010011111111101",
+    "r001000001010101111001001",
+    "r001000001101100111001101",
+    "r001000001101101011010010",
+    "r001000001110100101100111",
+    "r001000001111011110001111"
+  ],
+  "strict_certificates": [
+    {
+      "path": "r001000001000010111011001",
+      "label": "graph",
+      "strict_margin": "34950362076434318647704944640000000000",
+      "row_counts": {
+        "DBM": 3,
+        "facet": 31,
+        "slab": 8,
+        "KKT": 7
+      },
+      "facet_grid_indices": 471
+    },
+    {
+      "path": "r001000001000010111111001",
+      "label": "graph",
+      "strict_margin": "26363333933876535662129315840000000000",
+      "row_counts": {
+        "DBM": 4,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 593
+    },
+    {
+      "path": "r001000001000100110001001",
+      "label": "graph",
+      "strict_margin": "12310810974159504285408296960000000000",
+      "row_counts": {
+        "DBM": 4,
+        "slab": 10,
+        "facet": 22,
+        "KKT": 7
+      },
+      "facet_grid_indices": 623
+    },
+    {
+      "path": "r001000001000101000111111",
+      "label": "graph",
+      "strict_margin": "32840585394586725405544611840000000000",
+      "row_counts": {
+        "DBM": 2,
+        "facet": 28,
+        "slab": 11,
+        "KKT": 7
+      },
+      "facet_grid_indices": 489
+    },
+    {
+      "path": "r001000001000101001111110",
+      "label": "graph",
+      "strict_margin": "21809471556147925763713269760000000000",
+      "row_counts": {
+        "DBM": 2,
+        "facet": 31,
+        "slab": 9,
+        "KKT": 9
+      },
+      "facet_grid_indices": 558
+    },
+    {
+      "path": "r001000001000101011011000",
+      "label": "graph",
+      "strict_margin": "18849898867208839676115681280000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 9,
+        "facet": 27,
+        "KKT": 6
+      },
+      "facet_grid_indices": 497
+    },
+    {
+      "path": "r001000001010011110010001",
+      "label": "graph",
+      "strict_margin": "8253007201114461095025049600000000000",
+      "row_counts": {
+        "DBM": 2,
+        "slab": 10,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 434
+    },
+    {
+      "path": "r001000001010011111111101",
+      "label": "graph",
+      "strict_margin": "3405348510359071726096206725120000000000",
+      "row_counts": {
+        "DBM": 1,
+        "slab": 9,
+        "facet": 32,
+        "KKT": 9
+      },
+      "facet_grid_indices": 362
+    },
+    {
+      "path": "r001000001010101111001001",
+      "label": "graph",
+      "strict_margin": "25872574653216632844742492160000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 465
+    },
+    {
+      "path": "r001000001101100111001101",
+      "label": "graph",
+      "strict_margin": "19443319773479929317501829120000000000",
+      "row_counts": {
+        "DBM": 1,
+        "slab": 7,
+        "facet": 34,
+        "KKT": 9
+      },
+      "facet_grid_indices": 653
+    },
+    {
+      "path": "r001000001101101011010010",
+      "label": "graph",
+      "strict_margin": "13991715862547496305296015360000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 9
+      },
+      "facet_grid_indices": 478
+    },
+    {
+      "path": "r001000001110100101100111",
+      "label": "graph",
+      "strict_margin": "16705436240681358309030625280000000000",
+      "row_counts": {
+        "DBM": 3,
+        "facet": 30,
+        "slab": 7,
+        "KKT": 7
+      },
+      "facet_grid_indices": 545
+    },
+    {
+      "path": "r001000001111011110001111",
+      "label": "graph",
+      "strict_margin": "9308105570322181017211699200000000000",
+      "row_counts": {
+        "DBM": 4,
+        "slab": 16,
+        "facet": 21,
+        "KKT": 9
+      },
+      "facet_grid_indices": 327
+    }
+  ],
+  "independently_recomputed_derivative_grid_cells": 741,
+  "source_recorded_work_below_additional_parents": {
+    "branches": 27,
+    "accepted_leaves": 40,
+    "OBBT_paths": 38,
+    "OBBT_bounds": 422,
+    "Newton_paths": 14,
+    "Newton_steps": 69
+  },
+  "descendant_counts_are_source_projection_metrics": true,
+  "LP_residual_values_are_discovery_metadata": true,
+  "baseline_no_certificate_is_not_a_feasibility_theorem": true,
+  "complete_global_cover": false,
+  "actual_lifted_graph_Lean_consumer_complete": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 20.966449299998203
+}

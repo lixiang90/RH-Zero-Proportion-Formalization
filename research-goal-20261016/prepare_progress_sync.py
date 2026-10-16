@@ -134,6 +134,41 @@ def main():
         assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
         files.append(str(p.relative_to(ROOT)).replace('\\','/'))
     files.append('research-goal-20261016/cover-targeted-curvature-files.json')
+    # New graph and curvature archives are immutable, independently replayed
+    # local evidence. Their manifests retain their original verification
+    # scope; the separate current Lean receipt records later formal passes.
+    for name,digest in [
+      ('cover-curvature-actual-feed-files.json','1a97c06e106a94d16db31fbc2900d1a44fd85b9845f188ea85db8fbb8a4c5712'),
+      ('cover-lifted-graph8-files.json','9a185cddae2b0f02b3b32a7c87ac0437b8258816dbd7200e5d6389b924d509f3'),
+      ('cover-lifted-graph64-files.json','372b623d5831e05603de9518604007329fa42c0679702b70060aa88aaad749d3'),
+      ('cover-lifted-graph-discovery-input-files.json','78e2f828ce724e26db7399bfeadde6292e8065e63a4fb052b0c8c69a474fe04f'),
+      ('cover-lifted-graph-replacement-files.json','b491d496783ffd205aa1498bc137519e5e91121c3690d1a92f07513f1c32f9fa'),
+      ('cover-lifted-radial8-files.json','d00d183c4e9497589cea3d396490e58e5f2643469163f6e84726c70a594ae724'),
+      ('cover-lifted-disjunction-files.json','0c6de43b1cb1e71c9cfce72a52e7c77f0d9c2d3590b7302fbb472c4e274e52a3')]:
+        manifest=HERE/name
+        assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
+        pinned=json.loads(manifest.read_bytes())
+        rows=pinned['files']
+        if isinstance(rows,dict):
+            rows=[dict(row,path='research-goal-20261016/'+path) for path,row in rows.items()]
+        for row in rows:
+            p=ROOT/row['path'];raw=p.read_bytes()
+            assert len(raw)==row['bytes'] and hashlib.sha256(raw).hexdigest()==row['sha256']
+            files.append(row['path'])
+        files.append('research-goal-20261016/'+name)
+    pilot_manifest=HERE/'window_lifted_pilot_formal_manifest.json'
+    assert hashlib.sha256(pilot_manifest.read_bytes()).hexdigest()=='e596fdc941371d673dce842ca7592ca808a8d42fa79f32485e6001fd7708980f'
+    pilot=json.loads(pilot_manifest.read_bytes())
+    assert pilot['ordinary_Lean_complete'] and pilot['fully_actual_scalar_and_facet_premises_discharged']
+    for row in pilot['modules']:
+        for p,digest in [(ROOT/row['source'],row['source_sha256']),(HERE/row['log'],row['log_sha256'])]:
+            assert hashlib.sha256(p.read_bytes()).hexdigest()==digest
+            files.append(str(p.relative_to(ROOT)).replace('\\','/'))
+    for name,digest in pilot['inputs'].items():
+        p=HERE/name
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==digest
+        files.append(str(p.relative_to(ROOT)).replace('\\','/'))
+    files.append('research-goal-20261016/window_lifted_pilot_formal_manifest.json')
     compiled=receipt['modules']+receipt.get('compiled_without_printed_axiom_audit',[])
     for row in compiled:
         for key,sha_key in [('source','source_sha256'),('log','log_sha256')]:
@@ -151,7 +186,17 @@ def main():
       'window_generate_scalar_line_pilot.py','window_generate_scalar_line_pilot.json',
       'window_generate_rational_basins.py','window_rational_basin_audit.json','window_rational_basin_modules.json',
       'window_generate_rational_basin_groups.py','window_rational_basin_group_modules.json',
-      'lean_new_actual_bridges_20261017.json']]
+      'lean_new_actual_bridges_20261017.json', 'lean_window_closure_20261017.json',
+      'window_generate_curvature_oracle.py','window_generate_curvature_grid.py',
+      'window_curvature_grid_modules.json','window_curvature_scalar_audit.py',
+      'window_curvature_scalar_audit.json','window_generate_curvature_leaves.py',
+      'window_curvature_leaf_generation.json','window_curvature_leaf_modules.json',
+      'window_generate_curvature_subtree.py','window_generate_curvature_obbt_groups.py',
+      'window_generate_curvature_subtree_geometry.py','window_generate_curvature_subtree_proof.py',
+      'window_curvature_subtree_generation.json','window_curvature_obbt_group_modules.json',
+      'lean_local_mixed_snapshot.py','lean_local_mixed_20261017.json',
+      'window_generate_mixed_independent_roots.py','window-mixed-independent-roots.json',
+      'window_mixed_independent_replay.py','window_archive_mixed_replay.py']]
     files=sorted(set(files));assert all((ROOT/p).is_file() for p in files)
     # Keep the verified allowlist literal and avoid Windows' command-line
     # length limit as independent finite-check shards accumulate.

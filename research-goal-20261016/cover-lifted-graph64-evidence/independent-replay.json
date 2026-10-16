@@ -1,0 +1,175 @@
+{
+  "scope": "Standalone stdlib replay of ancestor-only lifted-graph Farkas archives.",
+  "script_sha256": "bd0ad29e98e3d3804205e0c44f30a416d7c88b4e2134714785d0911afa8c39d5",
+  "archive_manifest_sha256": "62baa214bc65c8103d92cc1ecd84e5b22320b54cdda96d3e0f92577b8d2d6d36",
+  "all_passed": true,
+  "witnesses": 13,
+  "ancestor_counts": {
+    "nodes": 153,
+    "source_OBBT_bounds": 1209,
+    "source_Newton_steps": 3
+  },
+  "paired_nonclosing_controls": 13,
+  "control_OBBT_bounds": 121,
+  "control_Newton_steps": 15,
+  "independently_recomputed_derivative_grid_cells": 741,
+  "strict_certificates": [
+    {
+      "path": "r001000001000010111011001",
+      "strict_margin": "34950362076434318647704944640000000000",
+      "row_counts": {
+        "DBM": 3,
+        "facet": 31,
+        "slab": 8,
+        "KKT": 7
+      },
+      "facet_grid_indices": 471
+    },
+    {
+      "path": "r001000001000010111111001",
+      "strict_margin": "26363333933876535662129315840000000000",
+      "row_counts": {
+        "DBM": 4,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 593
+    },
+    {
+      "path": "r001000001000100110001001",
+      "strict_margin": "12310810974159504285408296960000000000",
+      "row_counts": {
+        "DBM": 4,
+        "slab": 10,
+        "facet": 22,
+        "KKT": 7
+      },
+      "facet_grid_indices": 623
+    },
+    {
+      "path": "r001000001000101000111111",
+      "strict_margin": "32840585394586725405544611840000000000",
+      "row_counts": {
+        "DBM": 2,
+        "facet": 28,
+        "slab": 11,
+        "KKT": 7
+      },
+      "facet_grid_indices": 489
+    },
+    {
+      "path": "r001000001000101001111110",
+      "strict_margin": "21809471556147925763713269760000000000",
+      "row_counts": {
+        "DBM": 2,
+        "facet": 31,
+        "slab": 9,
+        "KKT": 9
+      },
+      "facet_grid_indices": 558
+    },
+    {
+      "path": "r001000001000101011011000",
+      "strict_margin": "18849898867208839676115681280000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 9,
+        "facet": 27,
+        "KKT": 6
+      },
+      "facet_grid_indices": 497
+    },
+    {
+      "path": "r001000001010011110010001",
+      "strict_margin": "8253007201114461095025049600000000000",
+      "row_counts": {
+        "DBM": 2,
+        "slab": 10,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 434
+    },
+    {
+      "path": "r001000001010011111111101",
+      "strict_margin": "3405348510359071726096206725120000000000",
+      "row_counts": {
+        "DBM": 1,
+        "slab": 9,
+        "facet": 32,
+        "KKT": 9
+      },
+      "facet_grid_indices": 362
+    },
+    {
+      "path": "r001000001010101111001001",
+      "strict_margin": "25872574653216632844742492160000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 465
+    },
+    {
+      "path": "r001000001101100111001101",
+      "strict_margin": "19443319773479929317501829120000000000",
+      "row_counts": {
+        "DBM": 1,
+        "slab": 7,
+        "facet": 34,
+        "KKT": 9
+      },
+      "facet_grid_indices": 653
+    },
+    {
+      "path": "r001000001101101011010010",
+      "strict_margin": "13991715862547496305296015360000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 9
+      },
+      "facet_grid_indices": 478
+    },
+    {
+      "path": "r001000001110100101100111",
+      "strict_margin": "16705436240681358309030625280000000000",
+      "row_counts": {
+        "DBM": 3,
+        "facet": 30,
+        "slab": 7,
+        "KKT": 7
+      },
+      "facet_grid_indices": 545
+    },
+    {
+      "path": "r001000001111011110001111",
+      "strict_margin": "9308105570322181017211699200000000000",
+      "row_counts": {
+        "DBM": 4,
+        "slab": 16,
+        "facet": 21,
+        "KKT": 9
+      },
+      "facet_grid_indices": 327
+    }
+  ],
+  "source_recorded_descendant_work": {
+    "branches": 27,
+    "accepted_leaves": 40,
+    "OBBT_paths": 38,
+    "OBBT_bounds": 422,
+    "Newton_paths": 14,
+    "Newton_steps": 69
+  },
+  "descendant_counts_are_source_projection_metrics": true,
+  "requires_full_parent64_snapshot": false,
+  "requires_original_large_checkpoint": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 10.324881900000037
+}

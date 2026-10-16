@@ -270,16 +270,100 @@ ancestor geometry: 28 reconstructed nodes, 178 unique prior OBBT bounds
 and zero prior Newton steps. Two of the three tested first-order affine
 upper bounds remain positive. `WindowCurvatureAffine` has an ordinary
 kernel proof of the actual 41-edge second-variation identity and correlated
-affine upper aggregation. Its scalar actual w'' bounds and the concrete
-integer witnesses still require Lean instantiation. The small frozen
+affine upper aggregation. Its selected actual scalar bounds and concrete
+integer witnesses have now passed the ordinary kernel, as detailed below. The small frozen
 `cover-targeted-curvature-files.json` package also records the unsuccessful
 quadratic-gradient trial. These three c=0.0088 cells cannot be added to the
 43 c=0.00884 sample regions. The running cover already closes the first
 targeted path by its older contraction process, so a branch-count reduction
 from the new curvature alternative has not yet been demonstrated.
 The integer curvature aggregate and negative-flow consumer in
-`WindowCurvatureFlow` also passed the ordinary kernel; the remaining scalar
-second-derivative feed is separate from that aggregate theorem.
+`WindowCurvatureFlow` also passed the ordinary kernel; the actual scalar
+second-derivative feed is verified separately from that aggregate theorem.
+
+The selected actual second-derivative feed has now been instantiated in Lean.
+All three concrete curvature leaves passed, using 331 selected second/fourth
+derivative grid cells, actual point jets, feasible interior-supported
+directions and strict integer-flow inequalities. The 24 actual OBBT bounds
+connecting their local common-ancestor subtree also passed, as did the finite
+matrix-closure and split geometry checks. `WindowCurvatureSubtree` has also
+passed: the local tree's complete Boolean check is proved true, and its
+exclusion theorem has only relevance and membership in the local ancestor
+cell as hypotheses. This removes numeric
+scalar premises for these leaves; it does not connect the local ancestor
+to a complete pressure-root cover.
+
+## Multi-facet derivative-graph improvement
+
+The new method lifts each actual scalar value
+`u_e = w'(span_e(g))` and keeps the shared nine gap coordinates `g`.
+Several affine supporting inequalities for each graph replace the loss of
+shape information in a single symmetric affine slab. They are valid over
+the entire current span interval, checked cell by cell on the existing
+derivative grid. The old slab inequalities remain available. Genuine
+orthant KKT equations apply only at strictly interior coordinates; boundary
+coordinates retain the one-sided gradient inequality.
+
+On the same fixed 64 difficult depth-24 parent cells, the old single-slab
+KKT relaxation produced no strict certificate. The graph relaxation gave
+13 strict integer Farkas/flow certificates, including the four positive
+cases of the initial eight-parent pilot. They are thirteen regions, not
+seventeen. Independent standalone replay reconstructs 153 ancestor nodes,
+1,209 prior OBBT bounds and three prior Newton steps, and independently
+recomputes 741 used derivative grid cells from rational jets. The archive
+also checks thirteen nonclosing old controls. The 13 excluded parent cells
+have 27 branch records and 40 accepted leaves below them in the frozen
+source projection. A separate exact replacement replay now verifies every
+old node and every new graph leaf in these thirteen complete local subtrees,
+including all 422 old contraction bounds and 69 Newton steps. The local
+forest reduces from 67 nodes to 13 graph leaves, with its gzip payload
+falling from 98,724 to 31,947 bytes (67.6%). This is a measured local
+certificate reduction, not a speedup or completed proof for the global
+search. `cover-lifted-graph-replacement-files.json` binds the independent
+standard-library-only replay and both complete local forests.
+
+The exact inequality combines nonnegative integer row weights. Residual
+coefficients of the `u_e` variables need not cancel: their absolute sum is
+paid with the proved global `|w'| <= 7` bound. A checked edge-forest flow
+then gives a strict integer contradiction on the shared gap polytope.
+`WindowLiftedFarkas` has passed ordinary Lean for this aggregation and
+payment. `WindowDerivativeGraph` and `WindowLiftedKKT` have also passed:
+their actual grid facets, slab bounds, DBM rows and original-orthant KKT
+rows discharge the analytic row-validity premises. The concrete
+`WindowLiftedPilot` has also passed ordinary Lean: all 43 rows, ten actual
+slabs, 22 facets over 623 grid cells, all aggregate coefficients and the
+strict residual-paid flow bound are checked. Its local exclusion theorem
+retains only relevance and cell membership, with no numeric oracle premise.
+Current source and log hashes are bound in `ordinary-verified-current.json`.
+The immutable numerical manifests deliberately retain the scope
+at the time they were frozen:
+`cover-lifted-graph8-files.json` and `cover-lifted-graph64-files.json`.
+
+An energy-epigraph extension on the first eight remaining cells produced
+no further strict certificate and was stopped without expanding the sample.
+The successful graph method has not changed the live full-cover runner.
+Its stable API reproduces all thirteen certificates on the frozen cohort.
+The minimal 516,598-byte discovery input and a recomputation driver that
+writes to a new output directory are pinned by
+`cover-lifted-graph-discovery-input-files.json`, so the fixed-cohort
+experiment can be repeated without the evolving large search checkpoint.
+`WindowGraphCover` also has an ordinary-kernel proof connecting checked
+graph leaves, the existing leaves and contractions, and the actual counting
+chain. Its hypothesis is still the complete tree check at the pressure
+root; no such complete check is asserted here.
+An additional fixed eight-parent test uses a one-level disjunction chosen
+from the graph relaxation's inconsistent scalar value. One new parent is
+excluded by two strict child certificates, with independently reconstructed
+split geometry and scalar/flow checks. It is disjoint from the thirteen
+direct graph exclusions, giving fourteen parent regions: thirteen direct
+leaves and one split with two leaves. The additional parent has not yet
+been instantiated in Lean. `cover-lifted-disjunction-files.json` pins its
+23,051-byte standalone archive and the full small experiment. Neither the
+old single-slab test on that same split nor the old split rule with graph
+leaves closed both children in the paired diagnostic. No second-level or
+whole-domain job was started for this experiment.
+This is a substantive new exclusion criterion, still local progress toward
+an unproved global floor and no new unconditional zero-proportion record.
 
 Independent three-floor probes on the same 300 original parents found
 80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.

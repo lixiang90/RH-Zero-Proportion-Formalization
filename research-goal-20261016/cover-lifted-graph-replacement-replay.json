@@ -1,0 +1,187 @@
+{
+  "scope": "Verify complete old local subtrees and their replacement by thirteen graph leaves.\n\nRun with python -S: only the standard library and rational scalar routines\nare available.  Both old and new local trees are checked; omitted ancestor\nsiblings remain open external obligations, never claimed as a global cover.\n",
+  "script_sha256": "6349d9dfec03b43b53717ffefa52f91bf55e091134148e20e6cde3806e503bcf",
+  "input_sha256": "85b38ce2f76e35d47a12dab0ad6d617c6a845c3ef8a9d732125d196112984eb1",
+  "all_passed": true,
+  "no_site_packages": 1,
+  "optimization_libraries_imported": false,
+  "ancestor_counts": {
+    "nodes": 153,
+    "source_OBBT_bounds": 1209,
+    "source_Newton_steps": 3
+  },
+  "old_complete_local_nodes": 67,
+  "old_branches": 27,
+  "old_leaves": 40,
+  "old_leaf_kinds": {
+    "stationary": 27,
+    "value": 12,
+    "reflection": 1
+  },
+  "old_OBBT_bounds": 422,
+  "old_Newton_steps": 69,
+  "replacement_graph_leaves": 13,
+  "nodes_saved": 54,
+  "payload_metrics": {
+    "old_branches": 27,
+    "old_leaves": 40,
+    "new_graph_leaves": 13,
+    "old_OBBT_paths": 38,
+    "old_OBBT_bounds": 422,
+    "old_Newton_paths": 14,
+    "old_Newton_steps": 69,
+    "old_subtrees_raw_bytes": 464417,
+    "old_subtrees_gzip_bytes": 98724,
+    "new_leaves_raw_bytes": 99612,
+    "new_leaves_gzip_bytes": 31947
+  },
+  "strict_certificates": [
+    {
+      "path": "r001000001000010111011001",
+      "strict_margin": "34950362076434318647704944640000000000",
+      "row_counts": {
+        "DBM": 3,
+        "facet": 31,
+        "slab": 8,
+        "KKT": 7
+      },
+      "facet_grid_indices": 471
+    },
+    {
+      "path": "r001000001000010111111001",
+      "strict_margin": "26363333933876535662129315840000000000",
+      "row_counts": {
+        "DBM": 4,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 593
+    },
+    {
+      "path": "r001000001000100110001001",
+      "strict_margin": "12310810974159504285408296960000000000",
+      "row_counts": {
+        "DBM": 4,
+        "slab": 10,
+        "facet": 22,
+        "KKT": 7
+      },
+      "facet_grid_indices": 623
+    },
+    {
+      "path": "r001000001000101000111111",
+      "strict_margin": "32840585394586725405544611840000000000",
+      "row_counts": {
+        "DBM": 2,
+        "facet": 28,
+        "slab": 11,
+        "KKT": 7
+      },
+      "facet_grid_indices": 489
+    },
+    {
+      "path": "r001000001000101001111110",
+      "strict_margin": "21809471556147925763713269760000000000",
+      "row_counts": {
+        "DBM": 2,
+        "facet": 31,
+        "slab": 9,
+        "KKT": 9
+      },
+      "facet_grid_indices": 558
+    },
+    {
+      "path": "r001000001000101011011000",
+      "strict_margin": "18849898867208839676115681280000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 9,
+        "facet": 27,
+        "KKT": 6
+      },
+      "facet_grid_indices": 497
+    },
+    {
+      "path": "r001000001010011110010001",
+      "strict_margin": "8253007201114461095025049600000000000",
+      "row_counts": {
+        "DBM": 2,
+        "slab": 10,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 434
+    },
+    {
+      "path": "r001000001010011111111101",
+      "strict_margin": "3405348510359071726096206725120000000000",
+      "row_counts": {
+        "DBM": 1,
+        "slab": 9,
+        "facet": 32,
+        "KKT": 9
+      },
+      "facet_grid_indices": 362
+    },
+    {
+      "path": "r001000001010101111001001",
+      "strict_margin": "25872574653216632844742492160000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 465
+    },
+    {
+      "path": "r001000001101100111001101",
+      "strict_margin": "19443319773479929317501829120000000000",
+      "row_counts": {
+        "DBM": 1,
+        "slab": 7,
+        "facet": 34,
+        "KKT": 9
+      },
+      "facet_grid_indices": 653
+    },
+    {
+      "path": "r001000001101101011010010",
+      "strict_margin": "13991715862547496305296015360000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 9
+      },
+      "facet_grid_indices": 478
+    },
+    {
+      "path": "r001000001110100101100111",
+      "strict_margin": "16705436240681358309030625280000000000",
+      "row_counts": {
+        "DBM": 3,
+        "facet": 30,
+        "slab": 7,
+        "KKT": 7
+      },
+      "facet_grid_indices": 545
+    },
+    {
+      "path": "r001000001111011110001111",
+      "strict_margin": "9308105570322181017211699200000000000",
+      "row_counts": {
+        "DBM": 4,
+        "slab": 16,
+        "facet": 21,
+        "KKT": 9
+      },
+      "facet_grid_indices": 327
+    }
+  ],
+  "open_ancestor_siblings_not_claimed_covered": true,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 15.617920499997126
+}

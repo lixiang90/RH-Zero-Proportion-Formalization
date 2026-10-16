@@ -1,0 +1,31 @@
+{
+  "scope": "Freeze at most 64 depth-24 branch parents from the located deep subtree.",
+  "script_sha256": "d9a37de1ba430743259ef2faf05e674391c0acfcb8e9811d36a67f332714d015",
+  "input_sha256": "f5df55809ffc099520a6cb95f92064436c956faed79a85f6818b9fa1f57e8d77",
+  "uncompressed_sha256": "f8c7e615d8850ef2b8bb007b6f173ad77f459dddab89e3c18de99afa3fcc93a3",
+  "compressed_bytes": 516598,
+  "uncompressed_bytes": 3106862,
+  "source_checked": 65500,
+  "selection": {
+    "prefix": "r00100000",
+    "depth": 24,
+    "all_candidate_count": 847,
+    "latest_pool_count": 512,
+    "sample_size": 64,
+    "rule": "Uniform discovery-order sample from latest at most 512 same-depth existing branch parents; no curvature-based selection."
+  },
+  "ancestor_and_parent_nodes": 562,
+  "captured_OBBT_paths": 551,
+  "captured_Newton_paths": 20,
+  "selected_recorded_descendant_totals": {
+    "branches": 213,
+    "accepted_leaves": 277,
+    "OBBT_paths": 293,
+    "OBBT_bounds": 3516,
+    "Newton_paths": 96,
+    "Newton_steps": 441
+  },
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 30.45251549999739
+}

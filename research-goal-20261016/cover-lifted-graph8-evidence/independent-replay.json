@@ -1,0 +1,76 @@
+{
+  "scope": "Standalone stdlib replay of ancestor-only lifted-graph Farkas archives.",
+  "script_sha256": "bd0ad29e98e3d3804205e0c44f30a416d7c88b4e2134714785d0911afa8c39d5",
+  "archive_manifest_sha256": "b2e3723e350004acd0a730b990bf0401fb3574b9847e93e352bf138a9003098a",
+  "all_passed": true,
+  "witnesses": 4,
+  "ancestor_counts": {
+    "nodes": 66,
+    "source_OBBT_bounds": 450,
+    "source_Newton_steps": 0
+  },
+  "paired_nonclosing_controls": 4,
+  "control_OBBT_bounds": 23,
+  "control_Newton_steps": 7,
+  "independently_recomputed_derivative_grid_cells": 641,
+  "strict_certificates": [
+    {
+      "path": "r001000001010011110010001",
+      "strict_margin": "8253007201114461095025049600000000000",
+      "row_counts": {
+        "DBM": 2,
+        "slab": 10,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 434
+    },
+    {
+      "path": "r001000001010101111001001",
+      "strict_margin": "25872574653216632844742492160000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 8
+      },
+      "facet_grid_indices": 465
+    },
+    {
+      "path": "r001000001101101011010010",
+      "strict_margin": "13991715862547496305296015360000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 8,
+        "facet": 30,
+        "KKT": 9
+      },
+      "facet_grid_indices": 478
+    },
+    {
+      "path": "r001000001000101011011000",
+      "strict_margin": "18849898867208839676115681280000000000",
+      "row_counts": {
+        "DBM": 3,
+        "slab": 9,
+        "facet": 27,
+        "KKT": 6
+      },
+      "facet_grid_indices": 497
+    }
+  ],
+  "source_recorded_descendant_work": {
+    "branches": 14,
+    "accepted_leaves": 18,
+    "OBBT_paths": 18,
+    "OBBT_bounds": 184,
+    "Newton_paths": 8,
+    "Newton_steps": 35
+  },
+  "descendant_counts_are_source_projection_metrics": true,
+  "requires_full_parent64_snapshot": false,
+  "requires_original_large_checkpoint": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 6.445723500000895
+}

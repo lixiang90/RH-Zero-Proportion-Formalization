@@ -45,6 +45,16 @@ are separated from the unfinished new-window counting specialization.
 every ordinary-kernel claim to the exact source and log. There is still
 **no new unconditional zero-proportion record or submission-ready file**.
 
+The [current minimizer-cover research](research-goal-20261016/README.md)
+has formalized the redesigned window's analytic/counting chain, all 69
+actual coherent basins, and the complete separated derivative grid.
+New multi-facet derivative-graph constraints retain the shared gap variables
+and exclude 13 of 64 fixed difficult cells by independently replayed integer
+certificates, where the earlier single-slab test closes none. This is local
+progress toward the missing complete cover, not an unconditional record.
+The [submission status](submission/goal-20261016/STATUS.zh.md) distinguishes
+the conditional candidate scores from proved global conclusions.
+
 The completed October 15 bound for critical-line zeros is
 
 \[
