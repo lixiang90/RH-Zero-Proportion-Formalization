@@ -1,0 +1,36 @@
+{
+  "scope": "Pure-stdlib exact algebra audit of the two-cell moment probe.\n\nExecute only its row-construction AST using rational vector operations and\nsynthetic dense old rows. No producer module, NumPy, optimizer, or Lean is\nimported. Factorized substitutions check the full RLT/McCormick index\npatterns and all recorded integer PSD-cut vectors. This audits algebra,\nnot floating LP feasibility or any new exclusion.\n",
+  "script_sha256": "6ea4a738dbfbb111c3a692789bfc0a92a4864562bcc485765ca034cd57f5cddd",
+  "producer_sha256": "7e1188a982fd42f5501c1121753410524eefc10fd9c71f9f65aecb32639e71b1",
+  "diagnostic_sha256": "d9d524125d2ba574ec4589fa72eec9fe659ed1f7dae6a90f1e41ff35922c81c0",
+  "cell_input_sha256": "f5df55809ffc099520a6cb95f92064436c956faed79a85f6818b9fa1f57e8d77",
+  "parameters_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "table_sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+  "all_algebra_checks_passed": true,
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "rational_factorized_samples": 5,
+      "RLT_exact_identities": 270,
+      "McCormick_valid_rows": 8280,
+      "recorded_PSD_cut_vectors": 20,
+      "PSD_exact_negative_square_identities": 100
+    },
+    {
+      "path": "r001000001000001110011100",
+      "rational_factorized_samples": 5,
+      "RLT_exact_identities": 270,
+      "McCormick_valid_rows": 8280,
+      "recorded_PSD_cut_vectors": 17,
+      "PSD_exact_negative_square_identities": 85
+    }
+  ],
+  "generic_dense_old_rows_per_case": 3,
+  "old_row_soundness_reproved": false,
+  "floating_LP_primal_verified": false,
+  "PSD_feasibility_proven": false,
+  "strict_certificates": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 5.726783400001295
+}

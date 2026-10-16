@@ -1,0 +1,18 @@
+{
+  "scope": "Stdlib-only exact audit of phase interval/payments and Gaussian PSD cut data.\n\nThis checks validity of finite constraint ingredients, not a final Farkas\ncertificate or a PSD-feasible primal.  Numerical LP/eigenvalue conclusions\nremain hints and no global cover is asserted.\n",
+  "script_sha256": "8869f6f2f0d58c3e4142fb9cf6519fab73d1ce7f524ad03f27d774892d4affd1",
+  "input_sha256": "29364c443738fe67e42fef957a6478058c5059eb280f7442ca01e689e935840b",
+  "input_archive_sha256": "bf8f4710039f118fd7fb7a1f71a1353a98f9d1be88711fba00375de765d69a89",
+  "input_path": "research-goal-20261016/cover-phase-kkt-case1.json.gz",
+  "all_constraint_ingredient_checks_passed": true,
+  "rational_phase_interval_rows": 180,
+  "rational_uniform_payments": 41,
+  "exact_Gaussian_integer_cut_expansions": 869,
+  "minimum_final_primal_cut_value_as_exact_decimal_interpretation": "-3857388720139053497/55040084350000000000000000",
+  "final_primal_PSD_verified": false,
+  "final_Farkas_certificate_verified": false,
+  "uniform_packet_Lean_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 0.7683639000024414
+}

@@ -147,7 +147,12 @@ def main():
       ('cover-lifted-disjunction-files.json','0c6de43b1cb1e71c9cfce72a52e7c77f0d9c2d3590b7302fbb472c4e274e52a3'),
       ('cover-phase-psd-files.json','7e46cef3d672741ea1f83f976f2b469f2d38aa1d6ac627224f346243315b1a7f'),
       ('window-mixed-independent-progress-files.json','2ff3acfa47fe9c840d1ab94f6699f8ca4c0e007929a3de40cf7dd4ec016b798a'),
-      ('window-phase-uniform-progress-files.json','f782555de142f67db56606f68fa43cb41c10a344266fbb98f056d9385dd78727')]:
+      ('window-phase-uniform-progress-files.json','f782555de142f67db56606f68fa43cb41c10a344266fbb98f056d9385dd78727'),
+      ('cover-phase-kkt-files.json','b633781f75b493affa8164300afc300fa58e46b78390a8c29d141074a563e94b'),
+      ('cover-gradient-mixture-files.json','bc83b24e89b6231a027aa8a450a659f78470762b030f2cb49b98aa639a69f015'),
+      ('cover-cross-moment-two-files.json','f1a499f158445218def874cddf6d440c89725bb07290a62b3058f18f72fe7683'),
+      ('moment-followup-auxiliary-files.json','93d553c98e6cfb4c5719078fe337968c513511908959d2d1b64843c139cd18a8'),
+      ('cover-cross-moment-remaining-files.json','a43e79af34ab38caea36f8dc9a11aead391eb11a6033945cf3b85dd95624b08b')]:
         manifest=HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())

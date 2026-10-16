@@ -1,0 +1,146 @@
+当前相位松弛的条件性障碍与可复用 PSD 权曲率判据
+2026-10-17
+
+范围
+本说明是对既有实际核、原正交锥极小点必要条件的代数推导。
+不声称当前两个 cell 存在实际梯度的零点凸组合；该前提必须由独立
+有理区间证据建立。有限点 LP 未发现组合，也不能证明整个 cell 可分离。
+本文只新增一个纯 stdlib 精确 verifier，未运行优化器或 Lean。
+
+记号
+F(g)=b·g+sum_t a_t w(x_t)，x_t=S_t·g，g_r>=s=123/128。
+S_t 为区间 [i,j) 的 0/1 incidence，a_t>0。实际实现中 a_t 和 b_r
+均有公共分母 D=10^10；以下实数公式把该分母包含在 a_t,b_r 中。
+H=Hessian F=sum_t a_t w''(x_t) S_t S_t^T。
+当前 cell 保证严格内点的坐标集合为 I={r:lower_adjacent[r]>SC*s}。
+SC=32768。cell 的人工边界不是原正交锥的边界。
+
+1. 为什么逐点合法的一阶凸相位模型可能无法排除
+设真实 cell 可行点 g^n 有正权 lambda_n，总和为 1，且
+sum_n lambda_n grad F(g^n)=0。
+在每个点取全部真实变量：g、u_t=w'(x_t)、两层实际相位、能量值等。
+每点都满足全部 DBM、w' 图包络、相位弧/弦/函数图、统一五系数付款
+不等式，实际 Gram 及 edge Toeplitz 矩阵均 PSD。
+这些条件的任意凸外逼近也包含所有这些真实 lifted 点的凸组合。
+梯度是 u 的仿射函数，所以组合满足线性 KKT 等式，残差可取 0。
+若另加入平均能量上界，且 sum lambda_n F(g^n)<c，该组合仍可行。
+若所有支持点 F(g^n)<c，则连逐点 sublevel 的凸包也包含这个组合。
+
+因此，继续增加只对所有 cell 点成立的线性相位 cuts 或 PSD 主子式，
+不可能消除一个已经严格建立的这种混合。该结论不涉及所有凸模型：
+只对真正极小点成立的 Hessian PSD、乘积 KKT 矩等条件可以消除它。
+同样，实际相位的 rank-one 等式没有凸性，不受这个结论限制。
+
+2. 低复杂度的新二阶证书：有限方向的 PSD 权，而非单一方向
+取有限整数方向 d_l 和非负整数权 mu_l，正权方向非零，且
+support(d_l) subset I。令 W=sum_l mu_l d_l d_l^T。
+在原正交锥的局部极小点，各 d_l 双向可行，因而
+  d_l^T H(g) d_l>=0，tr(W H(g))=sum_l mu_l d_l^T H(g)d_l>=0。
+如果整个 cell 上有严格上界 tr(W H(g))<0，即可排除该极小点。
+
+不同 d_l 的支持可以不同，但所有正权支持的并集必须在当前同一个
+cell 的 I 中。不能将分别仅在不同 child face 有效的方向混在父 cell。
+对于 cell 未保证严格内点的原边界坐标，正向可行本身不足以得到
+二阶非负；还需要方向属于临界锥，即一阶变化为 0。新 verifier
+选择较简单的 support subset I 条件，不声称处理更大的临界锥。
+
+这个判据严格包含旧的 rank-one curvature leaf。抽象矩阵族例子：
+H_theta=R_theta diag(-2,1) R_theta^T。任一固定非零 d 都有某个 theta
+使 d^T H_theta d>0；但 W=Id 时 tr(W H_theta)=-1 恒负。
+这只解释证书表达能力，不声称当前实际核实现该矩阵族。
+
+实现只需要新的整数二次权
+  q_t=a_upper_t sum_l mu_l (sum_{r=i}^{j-1} d_l[r])^2 >=0。
+旧单方向的 q_t=a_upper_t (sum_span d)^2 是 mu=1 的特例。
+无需新相位接口、PSD 浮点判定或大型 moment 矩。
+有理 mu 可以先通分成为整数；方向列表本身是精确 PSD 分解。
+
+3. 沿用旧 actual w'' 包与 DBM flow 的精确公式
+既有 scalar_affine_data 每项 [P,m0,m1,err,kind] 证明
+  |DS*w''(x_t)-m0-m1*(x_t-P/(2SC))|<=err，DS=10^15。
+把各项按 q_t 非负加权，得到
+  (2SC D DS) tr(W H(g)) <= C+E+sum_r coeff_r*(SC*g_r)，
+  C=sum_t q_t(2SC*m0_t-m1_t*P_t)，
+  E=2SC sum_t q_t err_t，
+  coeff_r=2 sum_{t:r in span_t} q_t m1_t。
+十节点有向 flow 的 divergence 必须是
+  [coeff_0,coeff_1-coeff_0,...,coeff_8-coeff_7,-coeff_8]。
+边流非负，edge endpoint 必须取当前 cell 的精确对应 DBM 上界。
+这样 flow cost 是线性式 sum coeff_r*(SC*g_r) 的合法上界。
+不要求 flow 真正最优；合法上界已足以检查 C+E+cost<0。
+分母仍为 2SC D DS。所有 C/E/coeff/flow/sign 都用整数重放。
+
+新文件
+  research-goal-20261016/cover_psd_weight_curvature_verify.py
+接口
+  expand(state, weighted_directions, scalar_affine_data, params, checker)
+  verify(state, result, params, checker)
+  promote_rank_one(old_result)
+weighted_directions=[{'weight':'非负整数','direction':[九个整数]},...]。
+result.kind='correlated_PSD_weight_curvature'；其他标量、flow、分母字段
+兼容旧 curvature certificate，可附 span_quadratic_weights 供逐项核对。
+checker 复用独立 CurvatureReplay；不导入生产 oracle、NumPy 或 SciPy。
+
+python -S 的兼容性检查重放了三个已经存在的 rank-one leaf；每个又
+以 mu=1 和 mu=2 的相同方向之和重放，总 numerator/flow 恰为三倍。
+负 PSD 权和伪造 q_t 均被拒绝。共六个有效重放，无任何新 cell 排除。
+receipt: cover-psd-weight-curvature-compatibility.json。
+此接口目前是独立整数验证器；新的 finite-direction Lean soundness
+consumer 尚未证明，完整压力根覆盖及无条件新比例也均未完成。
+
+4. 更强的组合证书：KKT + PSD 权曲率 + 能量 sublevel
+只要 v 在原边界可行、W 支持于 I、lambda>=0，L(g)<=F(g)，则任何
+RelevantBelow 极小点都满足
+  v·grad F(g)+tr(W H(g))+lambda*(c-L(g))>=0。
+三个部分可先合并全部 affine gap 系数，再用一次 DBM flow 求总上界。
+若总上界严格负，即便三个部分各自都没有负的全 cell 上界也可排除。
+这是原必要条件的联合分离，不需要把各条件先分别证明全 cell 严格负。
+其中 W 的有限方向列表仍完全适用；这个 hybrid consumer 尚未实现。
+它加强现有 rank-one curvature leaf，也不是已有 radial RLT 的改名。
+
+5. 一阶凸混合若确实存在，位置乘积 KKT 是下一层
+在 r in I 上，任意仿射 ell(g) 都满足 ell(g)*partial_r F(g)=0。
+故真实极小点还满足位置-梯度矩
+  (v·g-alpha)*partial_r F(g)=0。
+这不是只要求平均梯度为零。上文假混合通常有非零的
+E[(v·g-alpha)*partial_r F]，因而可能被排除；仍须允许重新拟合混合，
+单次发现某个原混合违反新约束不能证明整个新模型不可行。
+
+已有 radial RLT 只加入 sum_r(g_r-s)*partial_r F=0 一个缩并关系。
+低秩位置乘积可选一至三个 ell，各增加最多 41 个 product 变量
+T_lt=ell(g)*w'(x_t)，并保留九个 KKT 乘积关系
+  b_r ell(g)+sum_{t:r in span_t} a_t T_lt=0 (r in I)。
+用 ell 的 DBM 上下界、u 的严格上下界建立四条 McCormick 不等式；
+若仍弱，应加入 (ell,x_t,u_t,T_lt) 的联合包，而不是独立付款。
+全 9x41 交叉矩需要 369 个变量；优先低秩，不宜直接展开全矩。
+对于 r not in I，只能安全保留 grad_r>=0 与
+(g_r-s)*grad_r=0；任意交叉 ell*grad_r=0 在原边界一般不成立。
+
+相应直接证书可以用仿射向量场 q(g)=A(g-a)+v：
+  q(g)·grad F(g)<0 throughout cell。
+在 r in I 上 q_r 不受符号限制；其余 r 要在 g_r=s 的候选 face 上
+保证 q_r>=0。这样极小点有 q·grad F>=0，获得严格矛盾。
+A 为标量 Id 给出已探索的 radial 方向；非标量 A 的跨位置-梯度
+相关性才是新加强。近似负梯度向量场可绕过固定方向凸包障碍，
+但它的统一 product 余项必须严格验证，不能把浮点采样当上界。
+
+6. sublevel 乘子与 Hessian PSD 的边界
+自由坐标上 (c-F(g))*partial_r F(g)=0 也合法，但直接展开会出现
+w(x_s)w'(x_t) 的最多 41x41 项。更小的替代是使用已有 affine
+minorant L：ell=c-L 是仿射，sublevel 内 ell>0，可用第 5 节接口。
+仅给一个固定方向乘一个正 ell，并不创造新的逐点方向符号；应联合
+多个不同 ell/方向，或用非标量仿射向量场，避免只重述旧固定方向。
+
+在 I 上可增加 H_II PSD，连同 actual w'' 与 u、位置的共同图关系。
+把 H 的负特征向量量化成整数，只提供合法 rank-one PSD cuts；
+有限轮 cuts 无矛盾并不证明 PSD 可行。当前 PSD 权总负上界相当于
+一个显式有限 PSD dual witness，适合小规模精确发现和 Lean 消费。
+若 H 的平均仍可 PSD，下一层需位置 localizing 矩、位置依赖方向，
+或精确 disjunction。按单个 contiguous span 分裂可沿用现有 DBM
+几何，但分裂本身已经是既有方法，不应包装成新的数学比例纪录。
+
+结论性范围声明
+本文提供一个实际可复用的更强二阶证书接口和几条严格的下一层路径。
+其强度改善是证书表达能力的改善；只有新的严格负证书、相应 Lean
+soundness、完整根覆盖、真实零点计数及提交格式全部完成，才产生
+可宣称的无条件零点比例改善。

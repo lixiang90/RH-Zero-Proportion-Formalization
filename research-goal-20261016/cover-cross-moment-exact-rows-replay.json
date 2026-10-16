@@ -1,0 +1,36 @@
+{
+  "scope": "Finite stdlib audit of the exact sparse moment-row interface.\n\nCompare every row/index to the independently rationalized producer AST\non two cells and three generic dense old rows; recheck every integerization\npayment and a synthetic strict Farkas contradiction. Old scalar-row\nsoundness and a new real-cell contradiction are not claimed here.\n",
+  "script_sha256": "3ef7c5f26a31d0aedde6fee79345e1765ed00702c7988686922644c4c1415bee",
+  "exact_interface_sha256": "a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae",
+  "rationalized_AST_helper_sha256": "6ea4a738dbfbb111c3a692789bfc0a92a4864562bcc485765ca034cd57f5cddd",
+  "producer_sha256": "7e1188a982fd42f5501c1121753410524eefc10fd9c71f9f65aecb32639e71b1",
+  "cell_input_sha256": "f5df55809ffc099520a6cb95f92064436c956faed79a85f6818b9fa1f57e8d77",
+  "energy_input_sha256": "b610b3ac65d13825f86b650f0f4b1018d0080fca4d52faa4ba0675d16a50b40b",
+  "table_sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+  "parameters_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "generic_dense_old_rows": 3,
+      "producer_rows_compared": 1713,
+      "energy_rows_compared": 2,
+      "outward_integerization_box_checks": 1715,
+      "synthetic_strict_aggregate_passed": true
+    },
+    {
+      "path": "r001000001000001110011100",
+      "generic_dense_old_rows": 3,
+      "producer_rows_compared": 1713,
+      "energy_rows_compared": 2,
+      "outward_integerization_box_checks": 1715,
+      "synthetic_strict_aggregate_passed": true
+    }
+  ],
+  "actual_old_row_soundness_reproved": false,
+  "real_cell_strict_certificates": 0,
+  "new_Lean_consumer_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 5.216371000002255
+}

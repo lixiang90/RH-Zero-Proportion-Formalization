@@ -406,6 +406,42 @@ receipts are `phase-coefficient-independent-replay.json` and
 perturbation derivative bound and consumers remain to be formalized in Lean.
 No strict phase certificate, global floor or new proportion is asserted.
 
+The stopped strong-phase trials are pinned by `cover-phase-kkt-files.json`.
+Standard-library replays check all 3,081 Gaussian-integer PSD cut expansions,
+720 phase interval rows and 164 coefficient payments. Separately,
+`cover-gradient-mixture-files.json` pins 128 actual DBM-feasible points per
+cell, their gradients, and two whole-cell directional tests. No origin-in-hull
+witness was found in these finite samples; every sampled energy exceeds
+0.0088. The selected sample-separating directions fail the whole-cell
+interval and correlated-affine tests. These facts establish neither an
+obstruction for the full model nor a new exclusion. The detailed experiment
+notes distinguish arithmetic replay from all floating LP conclusions.
+
+A new joint energy/KKT criterion succeeds on the two fixed residual cells.
+It lifts all cross-products of centred gaps with the derivative variables,
+multiplies the existing actual graph/KKT rows by nonnegative gap slacks,
+and adds a uniform quadratic Taylor lower bound for energy at a feasible
+DBM midpoint. The finite integer certificates use 330 and 342 nonnegative
+weights. An independent standard-library replay reconstructs 33 ancestor
+nodes, 235 prior OBBT bounds, all old rows and the outward integer rounding;
+both residual-paid box contradictions are strictly positive. Only RLT rows
+and the midpoint energy row are needed; the successful certificates use
+no moment PSD cuts or sampled-anchor energy row. Cross-moments without the
+energy condition had given no strict certificate. The generic
+`WindowBoundedMomentFarkas` and its product/RLT lemmas have passed ordinary
+Lean. The actual finite scalar packets, lifted layout and concrete two-cell
+Lean exclusions remain unfinished. `cover-cross-moment-independent-replay.json`
+records the exact scope, including the shared helper used to recompute point
+kernel intervals. These are local numerical exclusions toward the missing
+cover, not a global floor or a new zero-proportion theorem.
+The same single-midpoint test on the other six cells of the original
+eight-cell cohort gave no positive slack hint. Of the two successful parent
+regions, one was already closed by the earlier one-split graph certificate.
+The path-level numerical union therefore covers fifteen non-nested parent
+regions, adding one distinct region to the previous fourteen. The new
+criterion also replaces that earlier split by a single moment-energy leaf;
+the union has not been instantiated in Lean or extended to the full domain.
+
 Independent three-floor probes on the same 300 original parents found
 80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.
 The small nonmonotonicity is due to heuristic certificate choices. Compact

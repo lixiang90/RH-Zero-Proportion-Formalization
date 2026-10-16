@@ -1,0 +1,45 @@
+{
+  "scope": "Stdlib replay of the fixed two-cell finite PSD-weight curvature search.\n\nRecheck every selected weight, scalar packet, summed coefficient, DBM flow,\nand final upper bound independently of the producer. A nonnegative upper\nbound is recorded as no exclusion, never as a feasibility theorem.\n",
+  "script_sha256": "30f5be79097e34c2189534736a38b4fbaf5cc170a31200d41e6891d5a8e30a92",
+  "input_sha256": "34cf9e0a42ffd156141ab723959ef56dbfa9eb4ad2621266909291909a269d85",
+  "cell_input_sha256": "f5df55809ffc099520a6cb95f92064436c956faed79a85f6818b9fa1f57e8d77",
+  "table_sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+  "parameters_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "verifier_sources_sha256": {
+    "PSD_weight_verifier": "ebe4c6d71693f60403f0804a0bfe646a113274b149af521e103434f20d19914f",
+    "curvature_scalar_verifier": "3db55f6c368e43e8f4b18a12f102afdc9c7bf0eb1d5dcfec1e8208d69d13481e",
+    "scalar_verifier": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "geometry_verifier": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a"
+  },
+  "flow_checker_sha256": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389",
+  "all_finite_checks_passed": true,
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "all_finite_checks_passed": true,
+      "positive_weight_directions": 2,
+      "upper_numerator": "3278951837560836469228750061890268827327871750",
+      "denominator": "655360000000000000000000000000",
+      "normalized_upper_per_direction_weight": "13115807350243345876915000247561075309311487/205564505597166918041600000000000000000000000",
+      "strict_exclusion": false,
+      "strict_receipt": null,
+      "nonnegative_upper_is_not_a_feasibility_proof": true
+    },
+    {
+      "path": "r001000001000001110011100",
+      "all_finite_checks_passed": true,
+      "positive_weight_directions": 1,
+      "upper_numerator": "51936496000234761198872110338",
+      "denominator": "655360000000000000000000000000",
+      "normalized_upper_per_direction_weight": "25968248000117380599436055169/327680000000000000000000000000",
+      "strict_exclusion": false,
+      "strict_receipt": null,
+      "nonnegative_upper_is_not_a_feasibility_proof": true
+    }
+  ],
+  "strict_exclusions": 0,
+  "PSD_weight_Lean_consumer_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 3.861390099998971
+}

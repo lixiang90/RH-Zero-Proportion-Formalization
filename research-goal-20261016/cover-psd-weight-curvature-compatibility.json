@@ -1,0 +1,105 @@
+{
+  "scope": "Stdlib compatibility replay only: the three OLD rank-one curvature leaves and their positive weighted duplicates. No new cell is excluded.",
+  "source_sha256": {
+    "PSD_weight_verifier": "ebe4c6d71693f60403f0804a0bfe646a113274b149af521e103434f20d19914f",
+    "curvature_scalar_verifier": "3db55f6c368e43e8f4b18a12f102afdc9c7bf0eb1d5dcfec1e8208d69d13481e",
+    "scalar_verifier": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "geometry_verifier": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a"
+  },
+  "rows": [
+    {
+      "path": "r001000001101101110001111",
+      "rank_one": {
+        "passed": true,
+        "strict_integer_margin": "542758182913015551461557957",
+        "denominator": "655360000000000000000000000000",
+        "positive_weight_directions": 1,
+        "affine_terms": 32,
+        "active_scalar_terms": 7,
+        "flow_edges": 3,
+        "new_Lean_soundness_proven": false,
+        "complete_global_cover": false,
+        "new_zero_proportion_proven": false
+      },
+      "summed_duplicate_directions": {
+        "passed": true,
+        "strict_integer_margin": "1628274548739046654384673871",
+        "denominator": "655360000000000000000000000000",
+        "positive_weight_directions": 2,
+        "affine_terms": 32,
+        "active_scalar_terms": 7,
+        "flow_edges": 3,
+        "new_Lean_soundness_proven": false,
+        "complete_global_cover": false,
+        "new_zero_proportion_proven": false
+      },
+      "negative_weight_rejected": true,
+      "tampered_q_rejected": true
+    },
+    {
+      "path": "r0010000011011011100011101",
+      "rank_one": {
+        "passed": true,
+        "strict_integer_margin": "8926484115066546552709524709",
+        "denominator": "655360000000000000000000000000",
+        "positive_weight_directions": 1,
+        "affine_terms": 41,
+        "active_scalar_terms": 13,
+        "flow_edges": 9,
+        "new_Lean_soundness_proven": false,
+        "complete_global_cover": false,
+        "new_zero_proportion_proven": false
+      },
+      "summed_duplicate_directions": {
+        "passed": true,
+        "strict_integer_margin": "26779452345199639658128574127",
+        "denominator": "655360000000000000000000000000",
+        "positive_weight_directions": 2,
+        "affine_terms": 41,
+        "active_scalar_terms": 13,
+        "flow_edges": 9,
+        "new_Lean_soundness_proven": false,
+        "complete_global_cover": false,
+        "new_zero_proportion_proven": false
+      },
+      "negative_weight_rejected": true,
+      "tampered_q_rejected": true
+    },
+    {
+      "path": "r0010000011011011100011100",
+      "rank_one": {
+        "passed": true,
+        "strict_integer_margin": "2137619571064586782436638229578",
+        "denominator": "655360000000000000000000000000",
+        "positive_weight_directions": 1,
+        "affine_terms": 34,
+        "active_scalar_terms": 31,
+        "flow_edges": 9,
+        "new_Lean_soundness_proven": false,
+        "complete_global_cover": false,
+        "new_zero_proportion_proven": false
+      },
+      "summed_duplicate_directions": {
+        "passed": true,
+        "strict_integer_margin": "6412858713193760347309914688734",
+        "denominator": "655360000000000000000000000000",
+        "positive_weight_directions": 2,
+        "affine_terms": 34,
+        "active_scalar_terms": 31,
+        "flow_edges": 9,
+        "new_Lean_soundness_proven": false,
+        "complete_global_cover": false,
+        "new_zero_proportion_proven": false
+      },
+      "negative_weight_rejected": true,
+      "tampered_q_rejected": true
+    }
+  ],
+  "all_passed": true,
+  "old_leaves": 3,
+  "new_cell_exclusions": 0,
+  "new_Lean_soundness_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 3.7670345999940764
+}

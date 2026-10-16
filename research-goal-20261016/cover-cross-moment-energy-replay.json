@@ -1,0 +1,68 @@
+{
+  "scope": "Independent stdlib replay of quadratic energy moment-row packets.\n\nRecompute whole-span w'' lower bounds from the independent Taylor checker,\nanchor feasibility, uniform gradient-error payment, all quadratic row\ncoefficients, and factorized polynomial identities. Stored point F/gradient\nintervals are inputs: their kernel evaluations are deliberately not rerun.\nThis is a finite packet/algebra audit, not a new Lean proof, floating LP\nfeasibility certificate, or zero-proportion improvement.\n",
+  "script_sha256": "f1043be963d7a0f9a43614b83ac5215cd366a20fc695974a9e7df149004fe38d",
+  "input_sha256": "b610b3ac65d13825f86b650f0f4b1018d0080fca4d52faa4ba0675d16a50b40b",
+  "producer_sha256": "8c3cedb767d940e17541f6ecb9f082ab8b08d798311cc0840dc6a7be71a4b06c",
+  "base_model_sha256": "7e1188a982fd42f5501c1121753410524eefc10fd9c71f9f65aecb32639e71b1",
+  "cell_input_sha256": "f5df55809ffc099520a6cb95f92064436c956faed79a85f6818b9fa1f57e8d77",
+  "table_sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+  "parameters_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "independent_scalar_checker_sha256": "3db55f6c368e43e8f4b18a12f102afdc9c7bf0eb1d5dcfec1e8208d69d13481e",
+  "all_packet_checks_passed": true,
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "packets": [
+        {
+          "passed": true,
+          "strict_anchor_DBM_checks": 45,
+          "whole_span_second_lower_checks": 41,
+          "rational_row_entries_compared": 464,
+          "factorized_polynomial_identities": 5,
+          "anchor_identity_passed": true,
+          "point_kernel_intervals_recomputed": false
+        },
+        {
+          "passed": true,
+          "strict_anchor_DBM_checks": 45,
+          "whole_span_second_lower_checks": 41,
+          "rational_row_entries_compared": 464,
+          "factorized_polynomial_identities": 5,
+          "anchor_identity_passed": true,
+          "point_kernel_intervals_recomputed": false
+        }
+      ]
+    },
+    {
+      "path": "r001000001000001110011100",
+      "packets": [
+        {
+          "passed": true,
+          "strict_anchor_DBM_checks": 45,
+          "whole_span_second_lower_checks": 41,
+          "rational_row_entries_compared": 464,
+          "factorized_polynomial_identities": 5,
+          "anchor_identity_passed": true,
+          "point_kernel_intervals_recomputed": false
+        },
+        {
+          "passed": true,
+          "strict_anchor_DBM_checks": 45,
+          "whole_span_second_lower_checks": 41,
+          "rational_row_entries_compared": 464,
+          "factorized_polynomial_identities": 5,
+          "anchor_identity_passed": true,
+          "point_kernel_intervals_recomputed": false
+        }
+      ]
+    }
+  ],
+  "point_kernel_intervals_recomputed": false,
+  "floating_LP_primal_verified": false,
+  "PSD_feasibility_proven": false,
+  "strict_certificates": 0,
+  "quadratic_energy_consumer_Lean_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 3.820199199995841
+}

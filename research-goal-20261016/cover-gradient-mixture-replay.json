@@ -1,0 +1,50 @@
+{
+  "scope": "Stdlib-only replay of finite feasible points and floating kernel diagnostics.\n\nThis checks rational DBM feasibility exactly and recomputes actual sinc\nvalues/derivatives with an independent math implementation. Floating\ncomparisons do not certify hull infeasibility or uniform cell separation.\n",
+  "passed": true,
+  "script_sha256": "e9dc83e28e39e8a02b95eb7e8ab7ac481469412f396d20a6ee59e4ce8bba31bf",
+  "input_sha256": "5a161258fc4207a4684aa9f9b089ec7c5379db777e06dc4c0b99ccb371ff211e",
+  "parent64_input_sha256": "f5df55809ffc099520a6cb95f92064436c956faed79a85f6818b9fa1f57e8d77",
+  "parameters_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "exact_rational_DBM_points_checked": 256,
+  "maximum_independent_energy_float_difference": 3.122502256758253e-17,
+  "maximum_independent_gradient_float_difference": 1.8041124150158794e-16,
+  "origin_in_actual_gradient_hull_proven": false,
+  "finite_sample_hull_infeasibility_exactly_proven": false,
+  "whole_cell_gradient_separation_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "direction_probe_sha256": "7a7aab880043e86c6087bceee4f4b91cf32c3f67efedcdfbe001614eef94f765",
+  "derivative_table_sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+  "exact_directional_bounds_checked": 2,
+  "directional_bounds": [
+    {
+      "path": "r001000001000001101011101",
+      "correlated_whole_cell_lower": "-51187260463524537686307614772018593/327680000000000000000000000000000000",
+      "strict_exclusion": false
+    },
+    {
+      "path": "r001000001000001110011100",
+      "correlated_whole_cell_lower": "-8003920407955219377293530277288757/65536000000000000000000000000000000",
+      "strict_exclusion": false
+    }
+  ],
+  "rows": [
+    {
+      "path": "r001000001000001101011101",
+      "points_checked": 128,
+      "minimum_sample_energy_hint": 0.022746067712677533,
+      "nearest_mixture_energy_hint": 0.030292039009951522,
+      "nearest_mixture_gradient_L1_hint": 0.0409295393828661,
+      "minimum_sample_directional_derivative_hint": 0.04092953938286508
+    },
+    {
+      "path": "r001000001000001110011100",
+      "points_checked": 128,
+      "minimum_sample_energy_hint": 0.01684098322731783,
+      "nearest_mixture_energy_hint": 0.025706027889035633,
+      "nearest_mixture_gradient_L1_hint": 0.011938272185626146,
+      "minimum_sample_directional_derivative_hint": 0.011938272185626105
+    }
+  ],
+  "seconds": 1.930216200002178
+}

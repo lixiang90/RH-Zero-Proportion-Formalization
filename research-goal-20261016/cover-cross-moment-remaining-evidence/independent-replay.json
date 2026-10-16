@@ -1,0 +1,179 @@
+{
+  "scope": "Standalone stdlib replay of the stopped six-case single-midpoint batch.\n\nReconstruct all required ancestors and check actual midpoint interval\ninputs, complete-span second-derivative lower bounds and energy-row algebra.\nPoint transcendental evaluation deliberately reruns the shared provider\nkernel helper. Floating zero-slack LPs remain inconclusive hints; there are\nno strict certificates or exact moment-primal feasibility claims here.\n",
+  "script_sha256": "d56bbd0197a9a53c36ba7a7e64c7e6be3a6f7e050d80a1f3e32775866fe2be67",
+  "archive_sha256": "faab5c00671d18ae2ff058d1ea99d709ac6a609d610ffc4ef5704a2ef78ae72f",
+  "archive_manifest_sha256": "a6ea6cb3348d6f105090867cbe8496e50cc3b2ee0d813380dc1246efe8618d74",
+  "parameters_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "table_sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+  "recovered_full_batch_sha256": "50225aec235d6d37f07f09c47a56fc1cb4d9d221e02b386d63e5231031a70619",
+  "full_batch_recovered_byte_identical": true,
+  "dependency_sources_sha256": {
+    "research-goal-20261016/cover_cross_moment_remaining_replay.py": "d56bbd0197a9a53c36ba7a7e64c7e6be3a6f7e050d80a1f3e32775866fe2be67",
+    "research-20261016-followup/global_periodic_upper_bound.py": "95fa8520e5fe5505763fe748b866755143c15176ecf1ebf607a0d23ce25cecfd",
+    "research-goal-20261016/window_interval_kernel.py": "159a8f270531e16887e89583b6e0ddc84f98d4ee7a2497585572192ec9efa1ca",
+    "research-goal-20261016/cover_exact_scalar_replay.py": "eaa745076330aaf3346611badc4fdf0a878ac8ce0a3b5a2efeb4662d1d917e14",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "research-goal-20261016/cover_correlated_verify.py": "b8a1090e02b73d14305c0d800ec15c7d94d4323a1b55557dc0893adccfc778aa",
+    "research-goal-20261016/cover_contractor_verify.py": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389",
+    "research-goal-20261016/cover_flow_basis.py": "7205524aa483b650e218cb842c8ee4c28d2185f70d92d874d74bbb9450f53b56",
+    "research-goal-20261016/cover_compact_codec.py": "1e0f59cfb3ca328af0df30b7eb4d419267b08eab88469066ffc84cf4109f288c",
+    "research-goal-20261016/cover_sublevel_verify.py": "ddf7997d466b647de17f6e92c334b948b5ae7eb2daf334e807158b39714e88a4",
+    "research-goal-20261016/cover_sublevel_obbt_verify.py": "4545b22a8bb0f19e4f8642d8018f437e8ab46ed4bb6580066b244f6285f9671c",
+    "research-goal-20261016/cover_lifted_graph_verify.py": "9490d3071fea06aea005d7d337cef3e87bb1fbb63a6493f1c70ce777f3c9ec00",
+    "research-goal-20261016/cover_correlated_curvature_verify.py": "3db55f6c368e43e8f4b18a12f102afdc9c7bf0eb1d5dcfec1e8208d69d13481e",
+    "research-goal-20261016/cover_cross_moment_exact_rows.py": "a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae",
+    "research-goal-20261016/cover_cross_moment_energy_replay.py": "f1043be963d7a0f9a43614b83ac5215cd366a20fc695974a9e7df149004fe38d",
+    "research-goal-20261016/cover_cross_moment_old_rows_replay.py": "bcdf654149f68196abb0d5fdfc22a38bc19df8c2c217440f62bf375a18a87aa3"
+  },
+  "all_supply_and_ancestor_checks_passed": true,
+  "cases": [
+    {
+      "path": "r001000001000100110011001",
+      "all_point_and_packet_checks_passed": true,
+      "energy_packets": 1,
+      "point_interval_checks": {
+        "point_energy_and_nine_gradient_intervals_match": true,
+        "scalar_point_calls": 41,
+        "shared_provider_kernel_implementation": true
+      },
+      "energy_row_checks": {
+        "passed": true,
+        "strict_anchor_DBM_checks": 45,
+        "whole_span_second_lower_checks": 41,
+        "rational_row_entries_compared": 464,
+        "factorized_polynomial_identities": 5,
+        "anchor_identity_passed": true,
+        "point_kernel_intervals_recomputed": false
+      },
+      "floating_energy_slack_hint": 0,
+      "strict_exclusions": 0,
+      "exact_LP_primal_feasibility_verified": false
+    },
+    {
+      "path": "r001000001000100110110110",
+      "all_point_and_packet_checks_passed": true,
+      "energy_packets": 1,
+      "point_interval_checks": {
+        "point_energy_and_nine_gradient_intervals_match": true,
+        "scalar_point_calls": 41,
+        "shared_provider_kernel_implementation": true
+      },
+      "energy_row_checks": {
+        "passed": true,
+        "strict_anchor_DBM_checks": 45,
+        "whole_span_second_lower_checks": 41,
+        "rational_row_entries_compared": 464,
+        "factorized_polynomial_identities": 5,
+        "anchor_identity_passed": true,
+        "point_kernel_intervals_recomputed": false
+      },
+      "floating_energy_slack_hint": 0,
+      "strict_exclusions": 0,
+      "exact_LP_primal_feasibility_verified": false
+    },
+    {
+      "path": "r001000001000100111100011",
+      "all_point_and_packet_checks_passed": true,
+      "energy_packets": 1,
+      "point_interval_checks": {
+        "point_energy_and_nine_gradient_intervals_match": true,
+        "scalar_point_calls": 41,
+        "shared_provider_kernel_implementation": true
+      },
+      "energy_row_checks": {
+        "passed": true,
+        "strict_anchor_DBM_checks": 45,
+        "whole_span_second_lower_checks": 41,
+        "rational_row_entries_compared": 464,
+        "factorized_polynomial_identities": 5,
+        "anchor_identity_passed": true,
+        "point_kernel_intervals_recomputed": false
+      },
+      "floating_energy_slack_hint": 0,
+      "strict_exclusions": 0,
+      "exact_LP_primal_feasibility_verified": false
+    },
+    {
+      "path": "r001000001000100111101110",
+      "all_point_and_packet_checks_passed": true,
+      "energy_packets": 1,
+      "point_interval_checks": {
+        "point_energy_and_nine_gradient_intervals_match": true,
+        "scalar_point_calls": 41,
+        "shared_provider_kernel_implementation": true
+      },
+      "energy_row_checks": {
+        "passed": true,
+        "strict_anchor_DBM_checks": 45,
+        "whole_span_second_lower_checks": 41,
+        "rational_row_entries_compared": 464,
+        "factorized_polynomial_identities": 5,
+        "anchor_identity_passed": true,
+        "point_kernel_intervals_recomputed": false
+      },
+      "floating_energy_slack_hint": 0,
+      "strict_exclusions": 0,
+      "exact_LP_primal_feasibility_verified": false
+    },
+    {
+      "path": "r001000001000100111111111",
+      "all_point_and_packet_checks_passed": true,
+      "energy_packets": 1,
+      "point_interval_checks": {
+        "point_energy_and_nine_gradient_intervals_match": true,
+        "scalar_point_calls": 41,
+        "shared_provider_kernel_implementation": true
+      },
+      "energy_row_checks": {
+        "passed": true,
+        "strict_anchor_DBM_checks": 45,
+        "whole_span_second_lower_checks": 41,
+        "rational_row_entries_compared": 464,
+        "factorized_polynomial_identities": 5,
+        "anchor_identity_passed": true,
+        "point_kernel_intervals_recomputed": false
+      },
+      "floating_energy_slack_hint": 0,
+      "strict_exclusions": 0,
+      "exact_LP_primal_feasibility_verified": false
+    },
+    {
+      "path": "r001000001000101011110111",
+      "all_point_and_packet_checks_passed": true,
+      "energy_packets": 1,
+      "point_interval_checks": {
+        "point_energy_and_nine_gradient_intervals_match": true,
+        "scalar_point_calls": 41,
+        "shared_provider_kernel_implementation": true
+      },
+      "energy_row_checks": {
+        "passed": true,
+        "strict_anchor_DBM_checks": 45,
+        "whole_span_second_lower_checks": 41,
+        "rational_row_entries_compared": 464,
+        "factorized_polynomial_identities": 5,
+        "anchor_identity_passed": true,
+        "point_kernel_intervals_recomputed": false
+      },
+      "floating_energy_slack_hint": 0,
+      "strict_exclusions": 0,
+      "exact_LP_primal_feasibility_verified": false
+    }
+  ],
+  "ancestor_counts": {
+    "nodes": 57,
+    "source_OBBT_bounds": 449,
+    "source_Newton_steps": 0
+  },
+  "independent_derivative_grid_cells": 0,
+  "no_site_packages": 1,
+  "no_optimization_packages_imported": true,
+  "point_intervals_use_shared_provider_kernel_helper": true,
+  "implementation_independent_point_transcendental_audit": false,
+  "exact_LP_primal_feasibility_verified": false,
+  "new_strict_exclusions": 0,
+  "actual_Lean_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 14.599546599994937
+}
