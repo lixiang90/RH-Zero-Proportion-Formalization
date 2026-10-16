@@ -1,0 +1,41 @@
+{
+  "scope": "Bounded-memory SQLite proof-store prototype; no search or mathematics.\n\nStream one immutable-open compact-v2 JSON snapshot into a single ACID\nbaseline transaction. Retain each complete canonical JSON unit, its hash,\ncollection order, all metadata and ordered frontier. Publish only after\ncommit. A separate append_node transaction stores supports/witnesses and\nfrontier/counters together. Mathematical verification remains the caller's\nobligation. This module does not adopt or restart any producer.\n",
+  "source_sha256": "aaecbe5a5481cf6b082abf75ca93a29a170a79e4bb77d038c83df801a4bb9f56",
+  "database_path": "research-goal-20261016\\main132000-proof-store.sqlite",
+  "database_bytes": 1091756032,
+  "baseline": {
+    "source_path": "research-goal-20261016\\window-compact-obbt-cover.json",
+    "source_bytes": 912240992,
+    "source_sha256": "2e50e2303ca3705ae9ba91e741764e84550c382049b88ae5cbd064247bba671d",
+    "canonical_document_sha256": "cf9e5d3e4618d3fdc96b37d6c6c5bb97ed5276cd290dc4e845f183f2365816e5",
+    "section_counts": {
+      "accepted": 65988,
+      "branches": 66012,
+      "contractions": 23112,
+      "sublevel_contractions": 89306,
+      "unresolved": 25,
+      "tangent_data": 2540
+    },
+    "section_canonical_payload_bytes": {
+      "accepted": 109702863,
+      "branches": 4006755,
+      "contractions": 301284790,
+      "sublevel_contractions": 493379277,
+      "unresolved": 16327,
+      "tangent_data": 96674
+    },
+    "largest_canonical_unit_bytes": 25075,
+    "frontier_sha256": "0090f6ea085ef0001b6ef6e965d5c0ba74f70e9376e9027df02509a78c042d2e",
+    "checked": 132000,
+    "schema": "RelevantBelow-KKT-OBBT-SQLite-prototype-v1"
+  },
+  "baseline_commit": "66e4c86fdc7662d46b6787a7474d121b375d3f71ca93eb4cf3ddcd4407c78710",
+  "SQLite_cache_KiB": 8192,
+  "SQLite_temp_store_FILE": true,
+  "process_peak_working_set_bytes": 42762240,
+  "entire_history_loaded_in_memory": false,
+  "baseline_semantic_replay": false,
+  "new_search_or_restart_started": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 45.014103599998634
+}

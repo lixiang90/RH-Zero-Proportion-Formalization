@@ -1,0 +1,52 @@
+{
+  "scope": "Independent stdlib edgewise expansion of four new energy/KKT packets.\n\nNo producer, matrix solver, optimizer, jet, or Lean module is imported.\nActual scalar enclosures and curvature tuples remain analytic inputs.\nChecks reverse, two fixed-h, and closed affine-h coefficient identities.\n",
+  "input_sha256_start": {
+    "cover-cross-moment-remaining-six.json": "50225aec235d6d37f07f09c47a56fc1cb4d9d221e02b386d63e5231031a70619",
+    "cover-reverse-taylor-pilot.json": "3cac206940d461c5448423602894b1d5b52f3b33a97268abf722f2cf80d4f4cd",
+    "cover-bregman-primal-check.json": "1fbd5a088e11b355fcb9f4fcb723b0b0ec40c947ebd93ee20b0d5cc70576e26f",
+    "cover-bregman-energy-pilot.json": "b4a0c2688457d20a1a7516a218c3302365ed71ecc482305091d53a224e244947",
+    "cover-bregman-closed-primal-check.json": "fec4c8259235d73af97185cb7426d22763181b503adf285dc464a5158baf5049",
+    "cover-bregman-closed-energy-pilot.json": "824a75ac783a69e56c0dc2f1167bb94d474a02809138c9c51aee96b79f1153f5",
+    "window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "cover_bregman_coupling_replay.py": "0ec0a8419a197fb6795b48813acc94abcda80bdd51e188b964e16679208bee13"
+  },
+  "input_sha256_end": {
+    "cover-cross-moment-remaining-six.json": "50225aec235d6d37f07f09c47a56fc1cb4d9d221e02b386d63e5231031a70619",
+    "cover-reverse-taylor-pilot.json": "3cac206940d461c5448423602894b1d5b52f3b33a97268abf722f2cf80d4f4cd",
+    "cover-bregman-primal-check.json": "1fbd5a088e11b355fcb9f4fcb723b0b0ec40c947ebd93ee20b0d5cc70576e26f",
+    "cover-bregman-energy-pilot.json": "b4a0c2688457d20a1a7516a218c3302365ed71ecc482305091d53a224e244947",
+    "cover-bregman-closed-primal-check.json": "fec4c8259235d73af97185cb7426d22763181b503adf285dc464a5158baf5049",
+    "cover-bregman-closed-energy-pilot.json": "824a75ac783a69e56c0dc2f1167bb94d474a02809138c9c51aee96b79f1153f5",
+    "window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "cover_bregman_coupling_replay.py": "0ec0a8419a197fb6795b48813acc94abcda80bdd51e188b964e16679208bee13"
+  },
+  "all_inputs_unchanged": true,
+  "passed": true,
+  "rows_checked": 4,
+  "checks": [
+    {
+      "kind": "reverse",
+      "exact_edgewise_expansion": true
+    },
+    {
+      "kind": "fixed_h",
+      "exact_edgewise_expansion": true
+    },
+    {
+      "kind": "fixed_h",
+      "exact_edgewise_expansion": true
+    },
+    {
+      "kind": "closed_affine_h",
+      "exact_edgewise_expansion": true
+    }
+  ],
+  "all_nine_free_KKT_hypotheses_checked_from_cell": true,
+  "closed_inverse_identity_checked": true,
+  "closed_gradient_error_box_payment_checked": true,
+  "actual_scalar_interval_semantics_independently_verified": false,
+  "cell_exclusion_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 0.283875100001751
+}

@@ -164,13 +164,25 @@ def main():
       ('cover-main-recovery-files.json','7cdd09185db00e5920b5ea6e3ea36dab420ea156bb952bd7df07bccb11773754'),
       ('cover-span-slack-files.json','98160e9301d384be90a38b632968a9820afbf6f235e80526f6dfee373643ef0c'),
       ('window_moment_actual_exclusion_sync_files.json','2bd71aff6dc350328d6fd44c0bf8ba1e562d8f7922c7fed0cf57779dd2308268'),
-      ('window-new-structural-cores-files.json','17d81b858aa1cb0f956dc89ed578a6b82981af55ee803336c1a684ffc6bcd74c')]:
+      ('window-new-structural-cores-files.json','17d81b858aa1cb0f956dc89ed578a6b82981af55ee803336c1a684ffc6bcd74c'),
+      ('window-post-sync14-static-research-files.json','96a9854573a63c5047c9782c5f9a305cc09063df34a4ca475d9f26c97cfea006'),
+      ('cover-main-streaming-design-files.json','10e0091e0402e9c3405db49aa4e18707ded79dc96ebe054b81289a20b6275647'),
+      ('cover-main-stopped-files.json','221fc5a87281f420b483c261187b0fd185beb495a31a694a1db5b4115c7766d8'),
+      ('cover-sqlite-proof-store-files.json','303140b2d05eb21e0250a2b0f205e3ccfc22c4b523f2517656a56c4db3e51b13'),
+      ('window-kkt-projection-variance-files.json','26c0d0254793324ddddf042fbc26d6787ac0db843d8c882031e428a0ea69d640'),
+      ('lean_leaf_pilot_sync_files.json','42bbd464797d35b25c81b7ba69145af6d0ae83c16a6b0d5a889ed592d2226b9a'),
+      ('window_bregman_core_sync_files.json','136c833c4bc76353ff6b092665f49da87644a4769eba7278ecf6edd32aa3ec9e'),
+      ('cover-residual-psd-rational-files.json','5995d2ba510e40e31edbd17d3337a4f39c89acc62e209c016b0d584464714c6b')]:
         manifest=HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
-        rows=pinned['files']
+        rows=pinned.get('files',pinned.get('package_files'))
         if isinstance(rows,dict):
             rows=[dict(row,path='research-goal-20261016/'+path) for path,row in rows.items()]
+        rows=rows+pinned.get('frozen_input_files',[])+pinned.get('SCS_discovery_sources_unchanged',[])
+        for path,digest in pinned.get('dependency_sha256',{}).items():
+            assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
+            files.append(path)
         for row in rows:
             p=ROOT/row['path'];raw=p.read_bytes()
             assert len(raw)==row['bytes'] and hashlib.sha256(raw).hexdigest()==row['sha256']

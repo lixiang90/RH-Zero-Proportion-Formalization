@@ -1,0 +1,31 @@
+{
+  "scope": "Static source/memory review and proposed lossless streaming checkpoint design only. No implementation or main-process changes.",
+  "files": [
+    {
+      "path": "research-goal-20261016/cover_streaming_checkpoint_design.md",
+      "bytes": 6735,
+      "sha256": "bc10ed716f82fc679c8c40e1cb6f43dc9ef1634d4b3bd51b8d3ca145972fe2e0"
+    },
+    {
+      "path": "research-goal-20261016/cover-main-streaming-review.json",
+      "bytes": 2846,
+      "sha256": "41570d6179a05a120b363e9465cbdaa79139fbade32611ff9f326f7356f9ec40"
+    }
+  ],
+  "file_count": 2,
+  "total_bytes": 9581,
+  "existing_source_dependencies": {
+    "research-goal-20261016/window_compact_obbt_guarded_cover.py": "ae2caaf0bd65a7d7fe0a4207dedd0dcf1a43eff52a1dd7285c9018c5ccbf1f4a",
+    "research-goal-20261016/cover_compact_checkpoint.py": "cbbecd1b44b57a385a3b29175168c433a1338406f15ebe2e953f8cdb49f4022a",
+    "research-goal-20261016/cover_compact_codec.py": "1e0f59cfb3ca328af0df30b7eb4d419267b08eab88469066ffc84cf4109f288c",
+    "research-goal-20261016/window_compact_obbt_replay.py": "4f8231ed4de1da3fc4d326276498aa1dc8c749ffda0b5c340cf8bf2c3a50f49b",
+    "research-goal-20261016/window_lower_global_cover.py": "eb07e276c66df137938b81da691d6c6746f1252427d6c2f9e0139e45c98504ce",
+    "research-goal-20261016/cover_correlated_direction.py": "493fc65fee7b905b83e42f54c1dc4c3923a1a9f4ffac89b7ce15d65a360141cb"
+  },
+  "recovery_manifest_sha256": "7cdd09185db00e5920b5ea6e3ea36dab420ea156bb952bd7df07bccb11773754",
+  "full_checkpoint_hash_or_semantic_replay_performed": false,
+  "streaming_producer_implemented": false,
+  "new_search_or_LP_run": false,
+  "main_restarted_or_modified": false,
+  "new_zero_proportion_proven": false
+}

@@ -1,0 +1,635 @@
+{
+  "scope": "Stdlib-only arithmetic replay of the fixed residual-PSD pilot cuts.\n\nNo optimizer or producer is imported. Taylor tuples are declared analytic\ninputs; this checks their centering/scale and all rational cut expansions,\nnot the actual transcendental enclosure or primal PSD feasibility.\n",
+  "input_sha256_start": {
+    "cover-residual-psd-pilot.json": "c47035fe5c51ca28deba8b0e488dc8601c2efb8bac19ce90138cabc12b191144",
+    "cover_residual_psd_replay.py": "64254b3e96dd4d77c5d7574682cad8a61f9d8671eb2783d929ea51d58e9c47ee"
+  },
+  "input_sha256_end": {
+    "cover-residual-psd-pilot.json": "c47035fe5c51ca28deba8b0e488dc8601c2efb8bac19ce90138cabc12b191144",
+    "cover_residual_psd_replay.py": "64254b3e96dd4d77c5d7574682cad8a61f9d8671eb2783d929ea51d58e9c47ee"
+  },
+  "all_inputs_unchanged": true,
+  "passed": true,
+  "cases": 1,
+  "cuts_checked": 32,
+  "cut_counts_by_iteration": {
+    "0": 16,
+    "1": 16
+  },
+  "scalar_centering_scales_checked": 41,
+  "cut_results": [
+    {
+      "term": 0,
+      "iteration": 0,
+      "integer_vector": [
+        -86,
+        32768,
+        -15873,
+        4550,
+        -7083,
+        -3071,
+        12074,
+        -1802,
+        -19407,
+        12906,
+        -4648
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 7,
+      "iteration": 0,
+      "integer_vector": [
+        -176,
+        -32768,
+        16175,
+        -4795,
+        7453,
+        3057,
+        -12166,
+        1796,
+        19257,
+        -13156,
+        -2833
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 36,
+      "iteration": 0,
+      "integer_vector": [
+        -19,
+        -32768,
+        16285,
+        -4877,
+        7546,
+        3046,
+        -12113,
+        1886,
+        19343,
+        -12924,
+        2114
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 22,
+      "iteration": 0,
+      "integer_vector": [
+        -37,
+        -32768,
+        16253,
+        -4700,
+        7441,
+        3149,
+        -12136,
+        1811,
+        19309,
+        -12923,
+        1989
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 33,
+      "iteration": 0,
+      "integer_vector": [
+        -57,
+        -32768,
+        16208,
+        -4797,
+        7464,
+        3074,
+        -12106,
+        1785,
+        19292,
+        -12951,
+        1518
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 29,
+      "iteration": 0,
+      "integer_vector": [
+        38,
+        32768,
+        -16227,
+        4764,
+        -7419,
+        -3114,
+        12105,
+        -1818,
+        -19270,
+        12983,
+        -1365
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 1,
+      "iteration": 0,
+      "integer_vector": [
+        30,
+        32768,
+        -16230,
+        4826,
+        -7514,
+        -3110,
+        12025,
+        -1756,
+        -19229,
+        13033,
+        -1304
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 15,
+      "iteration": 0,
+      "integer_vector": [
+        32,
+        32768,
+        -16256,
+        4742,
+        -7460,
+        -3120,
+        12054,
+        -1779,
+        -19294,
+        12970,
+        -1138
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 16,
+      "iteration": 0,
+      "integer_vector": [
+        45,
+        32768,
+        -16210,
+        4762,
+        -7422,
+        -3111,
+        12100,
+        -1796,
+        -19270,
+        12987,
+        952
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 25,
+      "iteration": 0,
+      "integer_vector": [
+        35,
+        32768,
+        -16235,
+        4766,
+        -7453,
+        -3099,
+        12090,
+        -1806,
+        -19271,
+        12999,
+        605
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 31,
+      "iteration": 0,
+      "integer_vector": [
+        -39,
+        -32768,
+        16226,
+        -4761,
+        7441,
+        3102,
+        -12092,
+        1798,
+        19267,
+        -12989,
+        -314
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 24,
+      "iteration": 0,
+      "integer_vector": [
+        -37,
+        -32768,
+        16226,
+        -4759,
+        7446,
+        3100,
+        -12089,
+        1800,
+        19268,
+        -12993,
+        -308
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 23,
+      "iteration": 0,
+      "integer_vector": [
+        -36,
+        -32768,
+        16227,
+        -4760,
+        7446,
+        3100,
+        -12086,
+        1800,
+        19268,
+        -12992,
+        307
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 30,
+      "iteration": 0,
+      "integer_vector": [
+        40,
+        32768,
+        -16223,
+        4764,
+        -7443,
+        -3098,
+        12096,
+        -1808,
+        -19273,
+        12983,
+        288
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 2,
+      "iteration": 0,
+      "integer_vector": [
+        -38,
+        -32768,
+        16226,
+        -4762,
+        7445,
+        3099,
+        -12085,
+        1799,
+        19269,
+        -12994,
+        -269
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 10,
+      "iteration": 0,
+      "integer_vector": [
+        37,
+        32768,
+        -16225,
+        4762,
+        -7447,
+        -3100,
+        12086,
+        -1800,
+        -19268,
+        12992,
+        -257
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 0,
+      "iteration": 1,
+      "integer_vector": [
+        180,
+        32768,
+        -5676,
+        8772,
+        -439,
+        -19737,
+        1994,
+        2235,
+        9818,
+        15340,
+        -6763
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 15,
+      "iteration": 1,
+      "integer_vector": [
+        674,
+        32768,
+        -4844,
+        8449,
+        205,
+        -19104,
+        2540,
+        2126,
+        10104,
+        15982,
+        -3286
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 28,
+      "iteration": 1,
+      "integer_vector": [
+        722,
+        32768,
+        -4597,
+        8303,
+        523,
+        -19013,
+        2758,
+        2037,
+        10231,
+        16157,
+        1736
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 8,
+      "iteration": 1,
+      "integer_vector": [
+        757,
+        32768,
+        -4655,
+        8303,
+        513,
+        -19095,
+        2675,
+        2080,
+        10181,
+        16047,
+        1657
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 16,
+      "iteration": 1,
+      "integer_vector": [
+        688,
+        32768,
+        -4702,
+        8330,
+        418,
+        -19087,
+        2768,
+        2146,
+        10214,
+        16150,
+        1568
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 36,
+      "iteration": 1,
+      "integer_vector": [
+        720,
+        32768,
+        -4752,
+        8260,
+        421,
+        -19097,
+        2514,
+        2129,
+        10056,
+        15874,
+        -1214
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 34,
+      "iteration": 1,
+      "integer_vector": [
+        705,
+        32768,
+        -4693,
+        8348,
+        387,
+        -19095,
+        2745,
+        2084,
+        10180,
+        16099,
+        1142
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 7,
+      "iteration": 1,
+      "integer_vector": [
+        727,
+        32768,
+        -4695,
+        8223,
+        412,
+        -19107,
+        2814,
+        2174,
+        10240,
+        16194,
+        1110
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 9,
+      "iteration": 1,
+      "integer_vector": [
+        690,
+        32768,
+        -4718,
+        8276,
+        436,
+        -19086,
+        2742,
+        2153,
+        10196,
+        16087,
+        -995
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 2,
+      "iteration": 1,
+      "integer_vector": [
+        684,
+        32768,
+        -4722,
+        8318,
+        427,
+        -19086,
+        2769,
+        2111,
+        10207,
+        16124,
+        916
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 25,
+      "iteration": 1,
+      "integer_vector": [
+        689,
+        32768,
+        -4686,
+        8325,
+        443,
+        -19058,
+        2801,
+        2131,
+        10226,
+        16160,
+        -867
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 37,
+      "iteration": 1,
+      "integer_vector": [
+        698,
+        32768,
+        -4718,
+        8249,
+        478,
+        -19092,
+        2696,
+        2119,
+        10176,
+        16065,
+        775
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 11,
+      "iteration": 1,
+      "integer_vector": [
+        692,
+        32768,
+        -4698,
+        8290,
+        452,
+        -19075,
+        2752,
+        2120,
+        10203,
+        16121,
+        -668
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 23,
+      "iteration": 1,
+      "integer_vector": [
+        685,
+        32768,
+        -4712,
+        8318,
+        434,
+        -19067,
+        2776,
+        2131,
+        10207,
+        16143,
+        664
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 30,
+      "iteration": 1,
+      "integer_vector": [
+        696,
+        32768,
+        -4686,
+        8305,
+        473,
+        -19060,
+        2771,
+        2133,
+        10209,
+        16142,
+        635
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    },
+    {
+      "term": 1,
+      "iteration": 1,
+      "integer_vector": [
+        697,
+        32768,
+        -4690,
+        8303,
+        474,
+        -19058,
+        2766,
+        2137,
+        10209,
+        16116,
+        -596
+      ],
+      "centered_fraction_expansion_matches": true,
+      "squared_factor_soundness_requires_actual_slab": true
+    }
+  ],
+  "actual_scalar_enclosures_independently_verified": false,
+  "actual_Lean_exclusion_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 0.03510100000130478
+}

@@ -1,0 +1,208 @@
+Separated spectral slack: source audit and sharpness obstruction
+2026-10-17
+
+Status and scope
+----------------
+Static source audit and exact algebra only. No optimizer, parameter search,
+Lean, new cover job, or frozen-source edit. The strict cap is a universal
+consequence of separation; it is NOT an extra exclusion on positions.
+This note proves no new zero-proportion bound and does not close the 9D floor.
+
+1. Exact meaning and direction of the defect
+------------------------------------------
+GramDefect20261015/Core.lean:3295 defines
+  Psi(t)=(t-1)^2                  if t<=2,
+         2*t-3                  if t>2.
+Core:3425 defines defect(G)=Tr Psi(G)=sum_j Psi(lambda_j(G)); :3430 defines
+blockDefect by principal compression. This is a nonnegative spectral
+deviation functional centred at eigenvalue ONE. It is neither the rank
+deficit m-rank(G), nor 2I-G, nor a sum of 2-lambda_j.
+
+Core:3363 stable_rank_trace_sharp and :3379 stable_rank_trace connect this
+specific Psi to the trace/rank inequality. Core:4597 count_defect and the
+actual WindowCountingBase.eventually_h7 retain this same defect. The tail
+bridge has direction
+  (H-epsilon)*N + Dcirc <= N0simple.
+An improved counting bound therefore needs a stronger LOWER payment for D.
+A smaller upper bound on D does not supply a positive counting bonus.
+
+Core:3561 proves Psi convex, and :4841 pinching_partition uses convexity to
+prove sum(blockDefect)<=global defect. Convexity, not operator monotonicity,
+is the relevant property. Psi decreases on [0,1] and increases on [1,infinity).
+For example (1/2)I<=I but Tr Psi((1/2)I)=m/4>0=Tr Psi(I). One cannot move
+eigenvalues downward and infer a fixed direction for the defect by matrix order.
+
+2. Where 63903/32500 is retained, and where it is weakened
+--------------------------------------------------------
+Both chains prove the strict cap Lambda=63903/32500, with
+  2-Lambda=1097/32500>0.
+Old Core:14620 eventually_submatrix_eigenvalues_le retains Lambda; :14641
+eventually_submatrix_eigenvalues_le_two composes it with Lambda<=2; :14651
+eventually_principal_eigenvalues_le_two exports only the cap two.
+
+For the actual 24-mode window, WindowSeparated.lean:302 and :334 retain the
+Lambda quadratic-form bound. WindowSeparatedSpectrum.:372 retains the
+Lambda eigenvalue bound, :392 explicitly weakens it by .trans (by norm_num),
+and :402 exports only <=2 for separated principal blocks.
+
+WindowCountingDefect.lean:23 consumes that last <=2 interface. It constructs
+hcap' with cap two and passes it to WindowMatching.matching_defect_bound_effective.
+WindowDiscreteEnergy.lean:372 remainder_bound_separated_summed uses the cap
+only through Core:14915 offdiag_le_defect_of_spectrum_le_two. The latter
+turns Psi into its quadratic branch exactly, not approximately:
+  if lambda_max(G)<=2, then
+  defect(G)=||G-I||_F^2
+           =sum_(i!=j)|G_ij|^2+sum_i|G_ii-1|^2.        (1)
+Thus every cap Lambda<2 gives precisely the SAME identity (1). Numerically
+weakening Lambda to two loses no term in this fixed-Psi block calculation.
+Only nonnegative diagonal error squares are dropped in offdiag<=defect.
+
+The separated cap is not available for an arbitrary close matching pair,
+whose distance may be below 17/20. WindowMatching.lean:19 instead invokes
+Core:4780 block_defect_of_isHermitian, min(1,offdiag)<=defect, and needs only
+the tiny payment 2*c-4*delta. Its c<=1/64 keeps that payment below the cap one.
+WindowMatching.:41/:130 and WindowCounting.:17 preserve the resulting local
+energy constants c,B; the final leading coefficient is (H-B)/(1-c).
+No hidden Lambda bonus is present in RefinedCounting's arithmetic.
+
+The majorant margin is already useful upstream for admissibility of the
+new Fourier window. The final defect consumer, however, has no unused
+positive term equal to 2-Lambda waiting to be added to its counting constant.
+
+3. Sharp two-by-two and three-by-three obstructions
+--------------------------------------------------
+For any 0<r<=Lambda-1, take
+  G=[[1,r],[r,1]].
+This is a real PSD correlation matrix with eigenvalues 1-r,1+r<=Lambda<2.
+Yet exactly
+  defect(G)=2*r^2=offDiagSq(G).                         (2)
+The rational choice r=1/2 already has lambda_max=3/2<Lambda and both
+quantities equal 1/2. Hence the cap alone cannot justify
+  defect>=(1+epsilon)*offDiagSq with epsilon>0,
+or any strictly positive per-vertex additive bonus. G=I independently rules
+out the latter. Taking G direct-sum [1] gives an exact three-by-three
+counterexample with the same equality and triangle product zero. Larger
+block sums give the same obstruction in every size.
+
+These examples refute improvements inferred ONLY from PSD, diagonal one
+and the strict cap; they are not claimed to be a new actual-kernel position
+counterexample. In fact (1) is already an exact algebraic equality for any
+unit-diagonal actual limiting kernel Gram whose cap is below two. Kernel-
+specific improvements must therefore change which energy is lower-bounded
+or use additional kernel/counting structure, not amplify its full pair sum.
+
+4. What a cubic or higher spectral support could and could not add
+----------------------------------------------------------------
+For a unit-diagonal PSD G with spectrum in [0,Lambda], put X=G-I. Spectral
+calculus gives the exact valid inequality
+  0<=Tr[(Lambda*I-G)*X^2]
+    =(Lambda-1)*defect(G)-Tr(X^3).                      (3)
+Consequently a separately established positive triangle sum could imply
+  defect(G)>=Tr(X^3)/(Lambda-1).
+For Hermitian zero-diagonal X,
+  Tr(X^3)=6*sum_(i<j<k) Re(G_ij*G_jk*G_ki).
+The coefficient 1/(Lambda-1)>1 does NOT amplify the pair energy; it multiplies
+a different signed triangle moment, which can vanish or be negative. The
+two-by-two direct-sum example makes it vanish while pair energy is positive.
+No positive triangle lower certificate has been produced here.
+
+Likewise any polynomial p<=Psi on [0,Lambda] gives Tr p(G)<=defect(G), but
+cannot exceed the exact identity (1) pointwise. It can help only if its
+different moments admit a substantially easier global lower payment.
+The existing StructuralResearch20261016/Fenchel.lean already formalizes
+the matrix supporting-functional bound with dual spectrum <=2. When the
+primal cap is Lambda<2, its exact quadratic optimizer S=2(G-I) already has
+spectrum <=2*(Lambda-1)<2 and attains (1). Strict slack can ease construction
+of an approximate dual, but does not increase the maximum pointwise payment.
+
+5. Two different cutoff changes: neither is a free improvement
+-------------------------------------------------------------
+First, if one keeps the centre ONE and replaces the cutoff two by a<2,
+the convex tangent extension is
+  Phi_a(t)=(t-1)^2                                  for t<=a,
+            2*(a-1)*t-(a^2-1)                      for t>a.
+For 1<a<2 it is pointwise <=Psi. On a<t<=2 the loss is (t-a)^2; on t>2
+the loss is (2-a)*(2*t-2-a)>=0. On blocks with spectrum <=a it is simply
+equal to Psi again. Thus lowering this cutoff weakens the global functional
+and adds nothing on the separated block. The direction is adverse.
+
+Second, the actual imported rank_trace_mult parameter is NOT that fixed-
+centre change. Sole-owner read of the pinned dependency
+  .lake/packages/Zeta23/Zeta23/ZeroSide/RankTraceMult.lean:30
+confirms exactly
+  gc(a,t)=t^2-a*t-max(t-a,0)^2.
+Its :281-284 rank_trace_mult theorem is
+  a*Tr(P)+sum gc(a,lambda(P))+2*a*Tr(Q)-a^2*b
+    <=||P+Q||_F^2,
+for a>0 and posIndex(Q)<=b (with the stated positive factorization inputs).
+The corresponding nonnegative shifted defect is
+  Psi_a(t)=gc(a,t)+a^2/4
+          =(t-a/2)^2-max(t-a,0)^2.                    (4)
+For a=2 this is exactly the repository's Psi. For a<2 it is not ordered
+against Psi globally: with a=19/10, Psi_a(1)=1/400>0=Psi(1), whereas
+Psi_a(10)=6517/400<17=Psi(10). One may not retain the increased near-one
+value but discard the changed trace coefficient and large-eigenvalue branch.
+
+There is an exact leading-coefficient check for this parameter family.
+Let r be the number of simple columns, Tr(P)<=r and 2*b<=N-r, precisely the
+counting inequalities used in Core. Define D_a=Tr Psi_a(Gram) and
+  d=a-a^2/4=1-z, z=(a-2)^2/4.
+Rearranging the general rank-trace theorem gives
+  d*r >= 2*a*Tr(A)-||A||_F^2-a^2*N/2+D_a.             (5)
+In the normalized leading-coefficient model Tr(A)~N and
+||A||_F^2~J*N, the baseline in (5) is (2*d-J)*N.
+
+For Lambda<=a<=2 and a unit-diagonal separated block, all eigenvalues are
+below a, so exactly D_a=offDiagSq+z*m. For a unit-diagonal two-point Gram
+with correlation r0 in [0,1], its shifted defect is
+  2*r0^2+2*z-max(1+r0-a,0)^2.
+This is increasing in r0>=0. If the existing pair floor is c<=(a-1)^2,
+it pays at least 2*c+2*z. Thus, in this ideal normalized matching model,
+retaining the full +z per retained point yields the same existing energy
+floor and pressure constants through
+  kappa_a=(H-B-2*z)/(1-c-2*z).
+This formula includes both the modified baseline and modified coefficient
+of the counted simple points. Its difference from a=2 is exactly
+  kappa_a-kappa_2
+    =-2*z*[(1-c)-(H-B)]/[(1-c)*(1-c-2*z)].             (6)
+For the present H,B,c, the bracket is positive and denominators are positive,
+so every z>0 makes the ratio SMALLER. This is an algebraic normalized-family
+comparison, not a newly formalized finite-height counting theorem; all its
+finite-height/strip/pair perturbation consumers would still need proofs.
+
+For scale only, at a=Lambda, z=1203409/4225000000. Using the existing exact
+new-window H lower, B and c=.0088 as identical inputs in both formulas gives
+  kappa_2 approximately .6736017669582564,
+  kappa_Lambda approximately .6734140719546109,
+a decrease of approximately .0001876950036454. Neither number here is an
+unconditional new bound; the new-window global energy premise remains open.
+
+Conclusion limited to this method
+--------------------------------
+The strict cap is preserved as a theorem upstream, then weakened before
+matching. For the current Psi it gives no extra deficit beyond the EXACT
+full quadratic already used. The pair-energy coefficient is sharp even
+under a much smaller cap. The obvious general rank-trace cutoff change
+loses leading counting coefficient after all terms are accounted for.
+A genuinely different signed higher moment with an easier global lower
+payment remains a possible research route, but no such payment is supplied
+by the cap itself and none is asserted here.
+
+Audited source SHA256 snapshot
+-----------------------------
+GramDefect20261015/Core.lean
+  2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5
+GramDefect20261015/RefinedCounting.lean
+  e756b01819f5063e1c9dba906b75e12c036e384156ff5734f566c2ea7c5d70cf
+StructuralGoal20261016/WindowSeparated.lean
+  5a7d4c6420c70c2f16468a2615d1d9906b664567ee5528c1e0dd12519adf1fb4
+StructuralGoal20261016/WindowDiscreteEnergy.lean
+  487eb81b913bbae024a36e4d4b2bfd86501d66e265463fb44fe0b2d50ec7117c
+StructuralGoal20261016/WindowMatching.lean
+  9bea1dffb2854e1b7a96d4f0f34ee5d31ce70f70946ad74971cee78ba9aaa1bd
+StructuralGoal20261016/WindowCountingDefect.lean
+  6a5951e13f196e6c68f92d7e451d99db63008bc5a7c32a49fdca4fba68e109e1
+StructuralGoal20261016/WindowCounting.lean
+  e93af3777cff158bd0d889fc569811230ac6248f4a5bf49792e183f11558c42f
+StructuralResearch20261016/Fenchel.lean
+  0e7a1e9c965031c6512dd73b18a7c1278bec8dff63d271a508382bb34aa01314

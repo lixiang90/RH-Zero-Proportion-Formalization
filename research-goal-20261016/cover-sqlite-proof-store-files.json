@@ -1,0 +1,126 @@
+{
+  "scope": "Pin only small source/test/roundtrip evidence; exclude large local stores.",
+  "files": [
+    {
+      "path": "research-goal-20261016/cover_sqlite_proof_store.py",
+      "bytes": 16631,
+      "sha256": "aaecbe5a5481cf6b082abf75ca93a29a170a79e4bb77d038c83df801a4bb9f56"
+    },
+    {
+      "path": "research-goal-20261016/cover_sqlite_proof_store_replay.py",
+      "bytes": 9382,
+      "sha256": "3f7300763aa6e5931a013bb4da891185064846d50cb57902bfe14af580d9ed1b"
+    },
+    {
+      "path": "research-goal-20261016/cover_sqlite_proof_store_test.py",
+      "bytes": 7279,
+      "sha256": "8b40c4b6c39a600fe0ed3f735c1ce17106c4bf0d7525d62fd35bd633b548c4aa"
+    },
+    {
+      "path": "research-goal-20261016/cover-sqlite-store-toy-tests.json",
+      "bytes": 1544,
+      "sha256": "422f21d9c8cd89c3bafcce7bbcc4fd950aadcf368d2de8f931c726f729b768d3"
+    },
+    {
+      "path": "research-goal-20261016/cover-sqlite-store132000-import.json",
+      "bytes": 2122,
+      "sha256": "9eb89fc0716d551bf5127d3108e3465b6cf3bf9bf8815cdbac6abbbaec1e180f"
+    },
+    {
+      "path": "research-goal-20261016/cover-sqlite-store132000-independent-replay.json",
+      "bytes": 1639,
+      "sha256": "16e33c4a5d36cf1f59344427f82bcc321a40618d19c5d882f79f0f83dbbbc7d9"
+    },
+    {
+      "path": "research-goal-20261016/cover-sqlite-store132000-local-binding.json",
+      "bytes": 994,
+      "sha256": "4bf6d10f0c73f8c5d4e5029ea54049da5caf14dca9f51e7ab523663c3a88c4d1"
+    },
+    {
+      "path": "research-goal-20261016/cover_sqlite_proof_store_note.md",
+      "bytes": 5897,
+      "sha256": "21c39281dc2b4a38d5d61faee55b7bd7846e0c48e2d0f40215ff4db45355c3f2"
+    },
+    {
+      "path": "research-goal-20261016/cover_sqlite_proof_store_manifest.py",
+      "bytes": 3954,
+      "sha256": "d366feb5c8d9bd9b8e13ee3ae449289c2f57e9121fc5a0661f5a2a673189c6bb"
+    }
+  ],
+  "file_count": 9,
+  "total_bytes": 49442,
+  "already_existing_source_dependencies": [
+    {
+      "path": "research-goal-20261016/cover_compact_checkpoint.py",
+      "bytes": 5252,
+      "sha256": "cbbecd1b44b57a385a3b29175168c433a1338406f15ebe2e953f8cdb49f4022a"
+    },
+    {
+      "path": "research-goal-20261016/cover_compact_codec.py",
+      "bytes": 9936,
+      "sha256": "1e0f59cfb3ca328af0df30b7eb4d419267b08eab88469066ffc84cf4109f288c"
+    },
+    {
+      "path": "research-goal-20261016/cover_correlated_replay.py",
+      "bytes": 7868,
+      "sha256": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273"
+    },
+    {
+      "path": "research-goal-20261016/cover_contractor_verify.py",
+      "bytes": 4578,
+      "sha256": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389"
+    },
+    {
+      "path": "research-goal-20261016/cover_flow_basis.py",
+      "bytes": 3893,
+      "sha256": "7205524aa483b650e218cb842c8ee4c28d2185f70d92d874d74bbb9450f53b56"
+    },
+    {
+      "path": "research-goal-20261016/cover_correlated_verify.py",
+      "bytes": 2912,
+      "sha256": "b8a1090e02b73d14305c0d800ec15c7d94d4323a1b55557dc0893adccfc778aa"
+    },
+    {
+      "path": "research-20261016-w10-cert/independent_integer_audit.py",
+      "bytes": 19062,
+      "sha256": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a"
+    }
+  ],
+  "stopped_snapshot_evidence_manifest": {
+    "path": "research-goal-20261016/cover-main-stopped-files.json",
+    "bytes": 1069,
+    "sha256": "221fc5a87281f420b483c261187b0fd185beb495a31a694a1db5b4115c7766d8"
+  },
+  "excluded_large_local_database": {
+    "scope": "Local-only physical database binding after independent full canonical roundtrip; database is not a Git/publication artifact.",
+    "database_path": "research-goal-20261016/main132000-proof-store.sqlite",
+    "database_bytes": 1091756032,
+    "database_sha256": "8612e68fca990cf4cd172e3f35aae091d686c722e669ce9bdc52ef54955c05af",
+    "SQLite_version": "3.50.4",
+    "baseline_commit_recomputed": "66e4c86fdc7662d46b6787a7474d121b375d3f71ca93eb4cf3ddcd4407c78710",
+    "baseline_source_sha256": "2e50e2303ca3705ae9ba91e741764e84550c382049b88ae5cbd064247bba671d",
+    "baseline_canonical_document_sha256": "cf9e5d3e4618d3fdc96b37d6c6c5bb97ed5276cd290dc4e845f183f2365816e5",
+    "frontier_sha256": "0090f6ea085ef0001b6ef6e965d5c0ba74f70e9376e9027df02509a78c042d2e",
+    "journal_sequence": 0,
+    "baseline_commit_and_runtime_head_independently_matched": true,
+    "actual_search_nodes_appended": 0,
+    "mathematical_baseline_semantic_replay": false,
+    "new_zero_proportion_proven": false
+  },
+  "excluded_original_snapshot": {
+    "path": "research-goal-20261016/window-compact-obbt-cover.json",
+    "bytes": 912240992,
+    "sha256": "2e50e2303ca3705ae9ba91e741764e84550c382049b88ae5cbd064247bba671d"
+  },
+  "excluded_toy_runtime_folder": "research-goal-20261016/sqlite-store-toy/",
+  "independent_unit_roundtrip_passed": true,
+  "units_checked": 246983,
+  "real_process_crash_and_rollback_test_passed": true,
+  "import_peak_working_set_bytes": 42762240,
+  "bounded_storage_only_not_live_engine_RSS_claim": true,
+  "actual_cover_producer_adopted": false,
+  "actual_search_nodes_appended": 0,
+  "baseline_semantic_witness_replay": false,
+  "new_search_started": false,
+  "new_zero_proportion_proven": false
+}

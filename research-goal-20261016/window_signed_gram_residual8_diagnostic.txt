@@ -1,0 +1,103 @@
+SignedGram on the eight original residual cells: finite sufficiency audit
+2026-10-17
+
+Scope: no new points, optimizer, Lean, new whole-cover process or frozen-file
+edit. The original target remains c=11/1250=.0088. This stopped diagnostic
+finds neither a local method obstruction nor a new whole-cell certificate.
+
+1. Precisely the saved rational points
+-------------------------------------
+Input sources are the eight prefix centres in the frozen joint-cycle receipt,
+all 256 rational points in cover-gradient-mixture.json (128 in each of the
+first two original cells), and all eight saved exact pressure-flow vertices
+in cover-phase-psd-obstruction.json. They total 272 distinct points, with
+counts 130,130,2,2,2,2,2,2 in the original selection order. The script checks
+every point against all 45 original rational DBM span intervals. All pass.
+No rounded floating LP primal is substituted for an actual saved sample.
+
+At each point use the actual amplitudes and kernel decomposition
+  u_e=A_e*sin(pi*x_e), v_e=B_e*cos(pi*x_e)+C_e,
+  Q=sum a_e*u_e^2, R=sum a_e*v_e^2, T=sum a_e*u_e*v_e,
+  GramLower=P+R-T^2/Q for Q>0; GramLower=P+R for Q=0.
+All 272 points have a positive-weight edge with an exact noninteger rational
+span, recorded as a Q>0 witness. Since A>0 and sin(pi*x)!=0 at a noninteger
+real x, Q>0 at each; the floating minimum Q is approximately .0060115121.
+The code handles the separate all-integer-span Q=0 branch without division,
+but that branch does not occur in these 272 saved points.
+
+The following minima are FLOATING diagnostics only, not strict interval
+certificates, and do not cover unsampled points in any cell:
+
+  selection index    minimum saved-point P+Gram kernel lower
+  0                  .010262870667521143 (gradient sample 8)
+  1                  .010313254858550022 (gradient sample 12)
+  2                  .010528688836408421 (prefix centre)
+  3                  .010214903342098930 (prefix centre)
+  4                  .010676237104290696 (prefix centre)
+  5                  .010080629899967141 (prefix centre)
+  6                  .011171420004697981 (prefix centre)
+  7                  .010624346123818205 (prefix centre)
+
+No candidate below .0088 was found. Therefore the requested conditional
+strict rational-interval upper certificate for a low method point was not
+triggered. This does not prove that such a point is absent from the cells.
+
+2. Exactly one new whole-cell dual: collect shared edges before payment
+----------------------------------------------------------------------
+Only case 0 is tried, at its unchanged prefix centre. Its 90 actual positive
+triangle rows satisfy Cmat*k=D and Cmat*u=0. A single centre SVD gives a
+minimum-norm dual hint, rounded to rational denominator 2^40. There is no
+dual optimization, LP, SDP, repeated rank-cut loop or second dual attempt.
+Uniform dual validity holds for ANY rational multipliers; numerical rank
+40 is discovery information and is not used as a theorem hypothesis.
+
+Write beta_e=v_e/A_e and collect exactly, over the rationals,
+  H_e(g)=A_e*(Cmat(g)^T*y)_e
+        =constant_e+sum_f coefficient_ef*cos(pi*x_f).
+All constants and repeated cosine coefficients are combined BEFORE any
+interval arithmetic. The complete shared-edge identity is
+  y.D=sum_e H_e*beta_e,
+and the actual energy dual is therefore
+  E >= L(g)=sum_e [2*H_e*beta_e-H_e^2/(a_e*A_e^2)].       (1)
+This pays each beta only once, after cycle cancellation. The older star
+packet had collected the quadratic term by edge but paid its linear y.D
+cycle by cycle; the shared linear payment here is new.
+
+Uniform beta, cosine and inverse-A hulls are reused from the already frozen
+case-0 scalar packets. The exact span endpoints and all source hashes are
+checked against the original parent state and current frozen parameter,
+Taylor provider and table sources. No new analytic scalar enclosure is
+silently substituted.
+
+There is one further elementary improvement over independent interval
+evaluation: if H in [hL,hU], beta in [bL,bU] and rho=1/(a*A^2)<=rhoU,
+  2*H*beta-rho*H^2 >=
+     min_{h in {hL,hU}, b in {bL,bU}} [2*h*b-rhoU*h^2].
+For fixed b the expression is concave in h, and for fixed h it is affine
+in b, so the four-corner minimum is a uniform lower bound. All four-corner
+comparisons and their sum use Fractions. This retains the shared H within
+its linear and quadratic terms instead of charging two independent H boxes.
+
+Results for this ONE rational dual:
+  centre E dual, floating                    .005192647816293330
+  raw shared-edge interval E lower           -6.941255100905540
+  shared-edge four-corner E lower             -6.884511901574179
+  independent adjacent pressure lower          .005366116802075195
+
+The negative energy lower bound is superseded by the elementary E>=0.
+Thus this particular uniform evaluation certifies no improvement over its
+pressure lower bound and gives no new cell exclusion. Its negativity does
+not imply that actual L becomes negative or that every other correlated
+dual payment must fail. Shared-edge cancellation is retained, but broad
+independent cosine/parameter hulls still erase the available margin.
+
+3. Reproduction and limits
+--------------------------
+  python research-goal-20261016/window_signed_gram_residual8_diagnostic.py
+
+Runtime is about two seconds. The companion JSON records all 272 exact gap
+vectors and origins, every floating Q/R/T and Gram expression, the rational
+90-triangle dual, exact H coefficients, every edge interval and its exact
+four-corner minimum. All original files and the frozen cycle/Gram packages
+remain untouched. No actual-F counterexample, whole-cell Gram certificate,
+global floor or zero-proportion increment is claimed.

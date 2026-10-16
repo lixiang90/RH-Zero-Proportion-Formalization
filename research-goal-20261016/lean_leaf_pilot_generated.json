@@ -1,0 +1,308 @@
+{
+  "scope": "Emit an eight-leaf W10 checkpoint pilot from the frozen complete tree.\n\nNo discovery or optimizer is run. Literal cells are untrusted, and each\nnormalization, split, and numeric leaf is an independent kernel obligation.\nThe only unconditional coverage theorem covers the selected subtree.\n",
+  "generator_sha256": "25214cf0e99c172b4f4d0e6b2d2fdbf4bc6d4a9c9f8b8c681dedd7928bd769c3",
+  "tree_sha256": "6f2bc79db4613b4130659c9e65e0a24ee07cc50fb0686878d01a8e3f73839c3e",
+  "compact_sha256": "5fbb16de9f2b74d1816d7e251efb16c07c4f318a1aedf1a390f18ef6fe499463",
+  "prefix": "r0010110010111111",
+  "selected_nodes": 15,
+  "selected_numeric_leaves": 8,
+  "ancestor_branches": 16,
+  "subtree_branches": 7,
+  "leaves": [
+    {
+      "path": "r001011001011111100",
+      "payload_bits": 24,
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf00"
+    },
+    {
+      "path": "r0010110010111111010",
+      "payload_bits": 289,
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf01"
+    },
+    {
+      "path": "r00101100101111110110",
+      "payload_bits": 405,
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf02"
+    },
+    {
+      "path": "r001011001011111101110",
+      "payload_bits": 362,
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf03"
+    },
+    {
+      "path": "r0010110010111111011110",
+      "payload_bits": 281,
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf04"
+    },
+    {
+      "path": "r00101100101111110111110",
+      "payload_bits": 307,
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf05"
+    },
+    {
+      "path": "r00101100101111110111111",
+      "payload_bits": 437,
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf06"
+    },
+    {
+      "path": "r00101100101111111",
+      "payload_bits": 285,
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf07"
+    }
+  ],
+  "unproved_sibling_hypotheses": [
+    {
+      "path": "r1",
+      "hypothesis": "sibling00"
+    },
+    {
+      "path": "r01",
+      "hypothesis": "sibling01"
+    },
+    {
+      "path": "r000",
+      "hypothesis": "sibling02"
+    },
+    {
+      "path": "r0011",
+      "hypothesis": "sibling03"
+    },
+    {
+      "path": "r00100",
+      "hypothesis": "sibling04"
+    },
+    {
+      "path": "r001010",
+      "hypothesis": "sibling05"
+    },
+    {
+      "path": "r0010111",
+      "hypothesis": "sibling06"
+    },
+    {
+      "path": "r00101101",
+      "hypothesis": "sibling07"
+    },
+    {
+      "path": "r001011000",
+      "hypothesis": "sibling08"
+    },
+    {
+      "path": "r0010110011",
+      "hypothesis": "sibling09"
+    },
+    {
+      "path": "r00101100100",
+      "hypothesis": "sibling10"
+    },
+    {
+      "path": "r001011001010",
+      "hypothesis": "sibling11"
+    },
+    {
+      "path": "r0010110010110",
+      "hypothesis": "sibling12"
+    },
+    {
+      "path": "r00101100101110",
+      "hypothesis": "sibling13"
+    },
+    {
+      "path": "r001011001011110",
+      "hypothesis": "sibling14"
+    },
+    {
+      "path": "r0010110010111110",
+      "hypothesis": "sibling15"
+    }
+  ],
+  "modules": [
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotData",
+      "source": "StructuralGoal20261016/W10LeafPilotData.lean",
+      "source_sha256": "39dca42d20af808b4bedbe8f861de7c3a83f7e12f809c6a39c0c565153fd451a",
+      "source_bytes": 60031,
+      "roots": []
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf00",
+      "source": "StructuralGoal20261016/W10LeafPilotLeaf00.lean",
+      "source_sha256": "191a5f04fc6fc0e3bb0c4d7e9e8e1e040728218dd34870fee1bf6071bfd47663",
+      "source_bytes": 1328,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.normalizedLeaf00",
+        "StructuralGoal20261016.W10LeafPilot.numeric00",
+        "StructuralGoal20261016.W10LeafPilot.coveredLeaf00"
+      ]
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf01",
+      "source": "StructuralGoal20261016/W10LeafPilotLeaf01.lean",
+      "source_sha256": "43545ed343311265aeccea20fc583e687257f5392787c15cd3be58ce397aead8",
+      "source_bytes": 1328,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.normalizedLeaf01",
+        "StructuralGoal20261016.W10LeafPilot.numeric01",
+        "StructuralGoal20261016.W10LeafPilot.coveredLeaf01"
+      ]
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf02",
+      "source": "StructuralGoal20261016/W10LeafPilotLeaf02.lean",
+      "source_sha256": "bf2f89b0e33c87f4e87a6a7e58829431bf85346ca6cbd7270eae842f64a0579e",
+      "source_bytes": 1328,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.normalizedLeaf02",
+        "StructuralGoal20261016.W10LeafPilot.numeric02",
+        "StructuralGoal20261016.W10LeafPilot.coveredLeaf02"
+      ]
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf03",
+      "source": "StructuralGoal20261016/W10LeafPilotLeaf03.lean",
+      "source_sha256": "d7d9ac4ea29d46a036ebf988b13988f9062a37a39c4317e0eaaf7fb7acf415f6",
+      "source_bytes": 1328,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.normalizedLeaf03",
+        "StructuralGoal20261016.W10LeafPilot.numeric03",
+        "StructuralGoal20261016.W10LeafPilot.coveredLeaf03"
+      ]
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf04",
+      "source": "StructuralGoal20261016/W10LeafPilotLeaf04.lean",
+      "source_sha256": "5c311facc3ed0448cac79e11b80e9550bfc4059636e24b0a5eee65ab705378c6",
+      "source_bytes": 1328,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.normalizedLeaf04",
+        "StructuralGoal20261016.W10LeafPilot.numeric04",
+        "StructuralGoal20261016.W10LeafPilot.coveredLeaf04"
+      ]
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf05",
+      "source": "StructuralGoal20261016/W10LeafPilotLeaf05.lean",
+      "source_sha256": "002747ede0a0072310dfcd265635f3c97cccda1aab2dda5a9fc28490f1414c7a",
+      "source_bytes": 1328,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.normalizedLeaf05",
+        "StructuralGoal20261016.W10LeafPilot.numeric05",
+        "StructuralGoal20261016.W10LeafPilot.coveredLeaf05"
+      ]
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf06",
+      "source": "StructuralGoal20261016/W10LeafPilotLeaf06.lean",
+      "source_sha256": "f0e58e2f58b8fc6552b1f961b70d9663e7f7a52a56811a7070dda29564fe275d",
+      "source_bytes": 1328,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.normalizedLeaf06",
+        "StructuralGoal20261016.W10LeafPilot.numeric06",
+        "StructuralGoal20261016.W10LeafPilot.coveredLeaf06"
+      ]
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotLeaf07",
+      "source": "StructuralGoal20261016/W10LeafPilotLeaf07.lean",
+      "source_sha256": "ba871840d66988c4ab254ca14b264d64cd0edc966c33e910ef12d8f8cc23d081",
+      "source_bytes": 1328,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.normalizedLeaf07",
+        "StructuralGoal20261016.W10LeafPilot.numeric07",
+        "StructuralGoal20261016.W10LeafPilot.coveredLeaf07"
+      ]
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotGeometry",
+      "source": "StructuralGoal20261016/W10LeafPilotGeometry.lean",
+      "source_sha256": "090392b4b21ac47ab6add9bc30a1e46c7786fe2c748bfb56b34e0ef559ae9917",
+      "source_bytes": 24425,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.root_eq",
+        "StructuralGoal20261016.W10LeafPilot.normalized00",
+        "StructuralGoal20261016.W10LeafPilot.left00",
+        "StructuralGoal20261016.W10LeafPilot.right00",
+        "StructuralGoal20261016.W10LeafPilot.normalized01",
+        "StructuralGoal20261016.W10LeafPilot.left01",
+        "StructuralGoal20261016.W10LeafPilot.right01",
+        "StructuralGoal20261016.W10LeafPilot.normalized02",
+        "StructuralGoal20261016.W10LeafPilot.left02",
+        "StructuralGoal20261016.W10LeafPilot.right02",
+        "StructuralGoal20261016.W10LeafPilot.normalized03",
+        "StructuralGoal20261016.W10LeafPilot.left03",
+        "StructuralGoal20261016.W10LeafPilot.right03",
+        "StructuralGoal20261016.W10LeafPilot.normalized04",
+        "StructuralGoal20261016.W10LeafPilot.left04",
+        "StructuralGoal20261016.W10LeafPilot.right04",
+        "StructuralGoal20261016.W10LeafPilot.normalized05",
+        "StructuralGoal20261016.W10LeafPilot.left05",
+        "StructuralGoal20261016.W10LeafPilot.right05",
+        "StructuralGoal20261016.W10LeafPilot.normalized06",
+        "StructuralGoal20261016.W10LeafPilot.left06",
+        "StructuralGoal20261016.W10LeafPilot.right06",
+        "StructuralGoal20261016.W10LeafPilot.normalized07",
+        "StructuralGoal20261016.W10LeafPilot.left07",
+        "StructuralGoal20261016.W10LeafPilot.right07",
+        "StructuralGoal20261016.W10LeafPilot.normalized08",
+        "StructuralGoal20261016.W10LeafPilot.left08",
+        "StructuralGoal20261016.W10LeafPilot.right08",
+        "StructuralGoal20261016.W10LeafPilot.normalized09",
+        "StructuralGoal20261016.W10LeafPilot.left09",
+        "StructuralGoal20261016.W10LeafPilot.right09",
+        "StructuralGoal20261016.W10LeafPilot.normalized10",
+        "StructuralGoal20261016.W10LeafPilot.left10",
+        "StructuralGoal20261016.W10LeafPilot.right10",
+        "StructuralGoal20261016.W10LeafPilot.normalized11",
+        "StructuralGoal20261016.W10LeafPilot.left11",
+        "StructuralGoal20261016.W10LeafPilot.right11",
+        "StructuralGoal20261016.W10LeafPilot.normalized12",
+        "StructuralGoal20261016.W10LeafPilot.left12",
+        "StructuralGoal20261016.W10LeafPilot.right12",
+        "StructuralGoal20261016.W10LeafPilot.normalized13",
+        "StructuralGoal20261016.W10LeafPilot.left13",
+        "StructuralGoal20261016.W10LeafPilot.right13",
+        "StructuralGoal20261016.W10LeafPilot.normalized14",
+        "StructuralGoal20261016.W10LeafPilot.left14",
+        "StructuralGoal20261016.W10LeafPilot.right14",
+        "StructuralGoal20261016.W10LeafPilot.normalized15",
+        "StructuralGoal20261016.W10LeafPilot.left15",
+        "StructuralGoal20261016.W10LeafPilot.right15",
+        "StructuralGoal20261016.W10LeafPilot.normalized16",
+        "StructuralGoal20261016.W10LeafPilot.left16",
+        "StructuralGoal20261016.W10LeafPilot.right16",
+        "StructuralGoal20261016.W10LeafPilot.normalized17",
+        "StructuralGoal20261016.W10LeafPilot.left17",
+        "StructuralGoal20261016.W10LeafPilot.right17",
+        "StructuralGoal20261016.W10LeafPilot.normalized18",
+        "StructuralGoal20261016.W10LeafPilot.left18",
+        "StructuralGoal20261016.W10LeafPilot.right18",
+        "StructuralGoal20261016.W10LeafPilot.normalized19",
+        "StructuralGoal20261016.W10LeafPilot.left19",
+        "StructuralGoal20261016.W10LeafPilot.right19",
+        "StructuralGoal20261016.W10LeafPilot.normalized20",
+        "StructuralGoal20261016.W10LeafPilot.left20",
+        "StructuralGoal20261016.W10LeafPilot.right20",
+        "StructuralGoal20261016.W10LeafPilot.normalized21",
+        "StructuralGoal20261016.W10LeafPilot.left21",
+        "StructuralGoal20261016.W10LeafPilot.right21",
+        "StructuralGoal20261016.W10LeafPilot.normalized22",
+        "StructuralGoal20261016.W10LeafPilot.left22",
+        "StructuralGoal20261016.W10LeafPilot.right22"
+      ]
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotSubtree",
+      "source": "StructuralGoal20261016/W10LeafPilotSubtree.lean",
+      "source_sha256": "3f09cde65d6e5a3e34cc98b22fb245848bcdf9adaaf58b8091af3245bda86c0c",
+      "source_bytes": 5614,
+      "roots": [
+        "StructuralGoal20261016.W10LeafPilot.selected_covered",
+        "StructuralGoal20261016.W10LeafPilot.root_covered_of_siblings"
+      ]
+    }
+  ],
+  "ordinary_Lean_verified": false,
+  "complete_W10_cover": false,
+  "source_size_compliant": false,
+  "new_zero_proportion_proven": false
+}

@@ -561,3 +561,56 @@ memory pressure; it was not passed. The later monolithic geometry module
 terminated with recursion-depth errors and was not passed. Smaller independent
 blocks and declarations are used to preserve real checkpoints. These execution
 issues do not establish or refute the mathematical floor.
+ 
+## Bregman coupling and an exact limitation of the current moment model
+
+The new `WindowScalarBregman` theorem concerns the actual 24-mode scalar
+kernel. It proves the full value/gradient interpolation inequality from
+two-sided curvature bounds on the same interval, including signed lower
+curvature. `WindowScalarBregmanPacket` pays point/slope uncertainty by
+`E * |d - eta|`. `WindowMomentResidualPSD` expresses scalar affine-error
+squares in the existing 464-variable rational row convention. These three
+ordinary-kernel modules, thirteen printed roots in total, have only the
+three allowed foundational axioms. Their source/log/index pins are in
+`window_bregman_core_sync_files.json`; no independent nanoda replay or new
+local exclusion is asserted for these roots.
+
+The shared-gap Bregman support parameter can be eliminated analytically.
+The resulting quadratic row is stronger than the old midpoint row at the
+saved approximate solutions, but bounded tests alone did not exclude the
+first remaining cell. We then tested the full forty-one 11-by-11 residual
+PSD cones, instead of continuing finite eigenvector-cut loops.
+
+An exact rational witness now proves the limitation of this particular
+relaxation: after one exact adjacent-edge KKT projection it satisfies all
+43,306 rational rows, 464 finite variable boxes, ninety KKT equalities, and
+all forty-one residual PSD blocks, including the closed Bregman energy
+row. Every block has an exactly checked positive LDL factorization. The
+independent standard-library replay reconstructs the old scalar graph
+rows and all rational checks without importing the producer or a solver.
+See `cover-residual-psd-rational-files.json` and its obstruction note.
+Positive position variances explicitly distinguish this lifted witness
+from an actual evaluation at a single gap vector. It does not refute the
+actual energy floor; it does rule out closing this cell by adding more
+cuts from these same cones and rows.
+
+The finite signed-Gram diagnostic and the spectral-slack audit are pinned
+by `window-post-sync14-static-research-files.json`. No sampled point or
+spectral-cutoff calculation is presented as a global floor certificate.
+
+The older fixed-window W10 fallback has a newly proved eight-leaf subtree,
+including sixty-nine literal geometry equalities. Its root scaffold still
+requires sixteen sibling-cover hypotheses. See
+`lean_leaf_pilot_proof_index.json`; full root coverage is false.
+
+The former whole-history search is stopped, with unknown termination
+reason. Its last complete snapshot has 132,000 nodes and SHA256
+`2e50e2303ca3705ae9ba91e741764e84550c382049b88ae5cbd064247bba671d`.
+`cover-main-stopped-files.json` binds this status. The new SQLite proof
+store preserves all 246,983 units in bounded memory; a separate decoder
+has checked every unit and both document hashes. Its 12-test transaction
+suite includes process termination before commit. The local 1.09 GB
+database is excluded from publication. See
+`cover-sqlite-proof-store-files.json` for the small source/receipt package.
+Storage roundtrip does not discharge mathematical packet replay or full
+coverage, and does not by itself bound the mathematical engine caches.

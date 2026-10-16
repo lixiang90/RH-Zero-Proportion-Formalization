@@ -1,0 +1,349 @@
+KKT-aware signed projection and a compressed derivative-variance lift
+2026-10-17
+
+Scope
+-----
+The identities and equivalence statements below are finite-dimensional
+algebra. Their application to the actual kernel needs the stated actual
+KKT and scalar Taylor-slab hypotheses. This note proves no whole-domain
+cover or zero proportion. The companion bounded pilot uses only the first
+of the already frozen six remaining cells, its unchanged midpoint-energy
+packet and target, at most two rounds of sixteen cuts, and a 45-second
+limit per HiGHS-IPM solve. No Lean or full-cover job is launched here.
+
+1. What KKT can and cannot say about the signed projection loss
+------------------------------------------------------------
+Write F(g)=P(g)+E(g), P=b.g, E=<k,k>_a, where a_e>0 and k_e is the actual
+amplitude at the actual span. Let J be the 41-by-9 Jacobian of the amplitude
+k, not the vector of w'=2*k*k' used in the graph LP. At an orthant minimum,
+  b+2*J^T*W*k=lambda, lambda>=0,
+  lambda_r*(g_r-sep)=0.
+Consequently, for any direction d supported on strictly free coordinates,
+  <J*d,k>_a=-b.d/2.                                      (1)
+These are two-sided free directions. At a boundary a merely one-sided
+feasible direction only gives a variational inequality; it does not give
+(1). In general the right side is (lambda.d-b.d)/2.
+
+The signed comparison vector is arbitrary. If it is chosen as u=J*d,
+then its discarded component is exactly
+  <u,k>_a^2/<u,u>_a=(b.d)^2/[4*<J*d,J*d>_a],             (2)
+provided the denominator is positive. A pressure-neutral free direction
+b.d=0 therefore gives zero discarded component: the signed projection is
+the exact actual E at this minimum. For two free coordinates i,j one may
+choose d=b_j*e_i-b_i*e_j, without any inverse or numerical rank claim.
+If J*d=0, the separate Q=0 branch is exact as well.
+
+The radial excess h=g-sep*1 is also supported on free coordinates. Hence
+  <J*h,k>_a=-(P-sep*sum b)/2.                             (3)
+If h!=0 and every b_r>0, the pressure excess is positive and J*h cannot
+vanish. This gives a pressure-related loss identity for the comparison
+vector J*h. A cell-wide upper bound qbar on ||J*h||_a^2 gives the valid
+KKT energy bound E>=(P-sep*sum b)^2/(4*qbar). Such a payment may be small;
+no useful global numerical bound is asserted here.
+
+For the original phase comparison u0=A*sin(pi*span), choose any free d
+and put r=u0-J*d. Then at a KKT point,
+  (<u0,k>_a+b.d/2)^2 <= ||r||_a^2*E.                    (4)
+Under F<c this yields
+  |<u0,k>_a| >= max(|b.d|/2-sqrt(||r||_a^2*(c-P)),0).
+Its square divided by Q=||u0||_a^2 is a valid extra lower payment for the
+discarded term when Q>0. Positive payment requires a proved closeness
+estimate relating the actual phase comparison to an amplitude-Jacobian
+direction. KKT alone does not provide that estimate.
+
+An exact obstruction to any general pressure-only claim is the smooth
+coercive one-coordinate model
+  x>=0, b=2, k(x)=(x-2,1), F(x)=2*x+(x-2)^2+1.
+Its unique minimum is x=1, where P=2, k=(-1,1), J=(1,0) and
+  b+2*J^T*k=0.
+For comparison u=(1,1), Q=2 and <u,k>=0, so the discarded component is
+zero. For comparison u=k it is E=2. Thus the same pressure and exact KKT
+data permit either extreme when no relation between u and J is supplied.
+This is a counterexample to a general algebraic inference, not to the
+actual zeta kernel or its proposed floor. Likewise, choosing u so that
+the projection is exact is not by itself a new bound: u=0 is already exact
+at every point. One still needs a simpler uniform payment for the new
+residual, or additional cuts which retain information discarded before.
+
+2. The proposed derivative-moment extension
+-----------------------------------------
+Use centred/scaled gap variables y in [-1,1]^9 and x=(1,y), of length 10.
+Here u_e denotes the actual scalar derivative w'(span_e), not the signed
+projection comparison from section 1. The existing 464 variables retain
+  means of g and u,
+  X=<x*x^T>, encoded by the 45 symmetric y-y products,
+  z_e=<x*u_e>, encoded by the 369 y-u products and the means of u.
+The moment brackets are a linear pseudo-expectation. An actual point has
+rank-one moments, but a relaxation must not impose that as an assumption.
+
+The old scalar oracle supplies an actual affine slab
+  |u_e-ell_e(y)|<=eps_e, ell_e(y)=beta_e^T*x, eps_e>=0.    (5)
+All beta and eps are fixed rational data for the current cell. For the
+actual old.build tuple (P,m0,m1,err,kind), its exact scale is
+  ell_e(g)=m0/DS+(m1/DS)*(span_e(g)-P/(2*SC)),
+  eps_e=err/DS.
+P is a DOUBLED centre coordinate. In y coordinates,
+  beta_0=m0/DS+(m1/DS)*(span_e(center)-P/(2*SC)),
+  beta_r=(m1/DS)*radius_r for r in the span, zero otherwise.
+The pilot checks both signed slab rows against old.build's original
+integer coefficient and RHS data, with Q=2*SC*DS*D.
+
+A direct large lift would introduce U=<u*u^T> (861 symmetric entries),
+require
+  M=[[X,Z],[Z^T,U]] >=PSD 0,
+and add 41 scalar quadratic-slab rows
+  U_ee-2*beta_e^T*z_e+beta_e^T*X*beta_e <= eps_e^2.        (6)
+For a free KKT equality H_r=c_r^T*x+a_r^T*u=0, the existing first and
+y-multiplied rows say
+  X*c_r+Z*a_r=0.                                         (7)
+Multiplication by all u_e would additionally demand
+  Z^T*c_r+U*a_r=0.                                       (8)
+Only proven free KKT equalities can be used this way. Multiplication of a
+one-sided KKT inequality by a derivative of unknown sign is invalid.
+
+3. Exact compression to 41 eleven-dimensional PSD blocks
+-------------------------------------------------------
+Under the precise constraint policy stated below, all of the large lift's
+information on the old 464 variables is equivalent to requiring, for
+each e,
+  N_e=[[X, z_e-X*beta_e],
+       [(z_e-X*beta_e)^T, eps_e^2]] >=PSD 0.              (9)
+There is no U variable in (9). The matrices have size 11, not 51.
+
+Forward implication: from a large M>=0 form the Gram vector for the
+residual u_e-beta_e^T*x. Its norm squared is the left side of (6). Its
+cross products with the x vectors are z_e-X*beta_e. Replacing its diagonal
+by the larger eps_e^2 preserves PSD, proving (9).
+
+Reverse implication, including singular X: choose Gram vectors X_i for
+X. PSD of N_e implies r_e=z_e-X*beta_e lies in range(X) and
+  r_e^T*X^dagger*r_e <= eps_e^2.
+Choose a vector R_e in span{X_i} with <X_i,R_e>=(r_e)_i and that minimum
+norm; set U_e=R_e+sum_i(beta_e)_i*X_i. All old z_e are preserved, the joint
+Gram matrix of the X_i and U_e is PSD, and (6) holds. No invertibility of
+X is required. This is a Gram-space existence argument, not an instruction
+to numerically invert a nearly singular moment matrix.
+
+Furthermore (7) says the Gram vector
+  sum_i(c_r)_i*X_i+sum_e(a_r)_e*U_e
+is perpendicular to every X_i. It also belongs to their span, so it is
+zero. Therefore (8) holds automatically for this extension.
+
+Exact equivalence policy: all remaining constraints and the objective
+depend only on the old 464 variables. The only uses of U are joint PSD,
+the upper slab norms (6), and the free KKT products (8). Under this policy,
+the u-multiplied KKT rows add no further old-variable projection strength.
+One may equivalently project every U_e onto span{X_i}; this preserves old
+moments, decreases every residual norm, and kills the free KKT vector.
+
+This equivalence need not survive added u-u cross-RLT constraints,
+additional nonmonotone U rows, fixed U cross moments, or new lower bounds
+on residual variance. Those could make a 1325-variable model stronger.
+They are not part of the compressed pilot. The claim also does not say a
+finite set of cuts enforces exact PSD: it is only an outer approximation.
+
+4. Exact rational cuts and a strictness example
+---------------------------------------------
+For any rational v in R^10 and t in R, (9) gives the linear moment row
+  v^T*X*v+2*t*v^T*(z_e-X*beta_e)+t^2*eps_e^2 >=0.         (10)
+Its actual-point factorization is exactly
+  (v^T*x+t*delta_e)^2+t^2*(eps_e^2-delta_e^2) >=0,
+  delta_e=u_e-beta_e^T*x.
+Both terms are nonnegative by (5). This uses only the already proved
+actual scalar slab; no new transcendental table or unknown matrix rank.
+A negative numerical eigenvector merely selects v,t. After quantizing
+them to integers, every coefficient is regenerated with Fraction and the
+factorization is expanded independently before a row is accepted.
+
+These rows genuinely strengthen position PSD, boxes, and KKT*y. Consider
+the exact toy moments
+  <y>=<u1>=<u2>=0, <y^2>=1/4,
+  <y*u1>=1/5, <y*u2>=-1/5,
+with y in [-1,1], u_i in [-3/10,3/10], ell_i=0, eps_i=3/10, and free KKT
+equation H=u1+u2=0. Position PSD holds. All four box McCormick rows for
+y*u_i hold because |1/5|<=3/10. H's first moment and y product are zero.
+But N_1 with v=(0,1), t=-2 gives
+  1/4-4/5+4*(3/10)^2=-19/100<0.
+Thus no proposed extended PSD/slab model has these old moments, while
+the old constraints allow them. This is a strict projected strengthening,
+not merely exclusion of an arbitrarily chosen U completion.
+
+5. Bounded-pilot interpretation
+------------------------------
+cover_residual_psd_pilot.py uses only the first row of the immutable
+cover-cross-moment-remaining-six.json. It keeps its midpoint energy packet
+and all old derivative graph, KKT, cross-moment RLT and McCormick rows.
+Each LP is HiGHS-IPM with time_limit=45, maximum two cut rounds, and no
+more than sixteen quantized cuts per round. It saves a durable receipt
+before/after solves and after each cut batch. Exact nonnegative Farkas
+extraction is attempted only if an energy-slack solve gives a positive
+hint. A floating hint or a negative eigenvalue is never a cell exclusion.
+
+Required eventual proof inputs are actual Taylor slabs on the current
+cell, exact centred-variable identities, actual free-coordinate KKT,
+sound energy packets, and exact nonnegative aggregation/box rounding.
+Even a successful local pilot would not prove a complete minimizer cover,
+an unconditional zero proportion, or a submission-ready source.
+
+The bounded residual pilot completed three IPMs (initial plus two batches)
+in about 1.34, 1.42, and 1.37 seconds. All energy slacks were zero; the final
+residual matrices still have negative eigenvalue hints. Thirty-two exact
+cuts passed a separate stdlib-only arithmetic replay. No exact feasible
+PSD primal or exclusion is asserted; no extra rounds were run.
+
+6. Reverse Taylor and the stronger fixed-h Bregman energy row
+------------------------------------------------------------
+For a scalar f on an interval containing s0 and s, f''<=M implies
+  f(s)>=f(s0)+f'(s)*(s-s0)-M*(s-s0)^2/2.                 (11)
+This is the ordinary upper Taylor estimate expanded from s back to s0.
+It differs from the old energy packet, which uses f'(s0) and f'' LOWER.
+The old scalar graph builder has derivative slabs and KKT rows, not (11).
+
+Using the existing actual derivative variables u_e=f'(s_e), the sum gives
+  F(g)>=F0_lower+P(g)-P(g0)
+        +sum_e a_e*[u_e*(s_e-s0_e)-M_e*(s_e-s0_e)^2/2]. (12)
+All terms fit the old 464 variables: g, u, y-u, and y-y. The scalar upper
+M_e is the upper half of the same whole-span SecondOracle query whose
+lower half was already used by the midpoint packet. No new anchor point
+is needed. At all-free KKT, the pressure difference and mixed derivative
+term cancel to (g-g0).grad F(g)=0. Thus (12) is then equivalent to
+  F(g)>=F0_lower-sum_e a_e*M_e*(s_e-s0_e)^2/2.
+At a boundary one cannot drop the gradient term without a valid sign or
+support argument.
+
+The single reverse pilot kept the old energy packet and added only (12).
+One 45-second-limited IPM took about 1.37 seconds and returned zero common
+energy slack. This does not exclude the fixed first remaining cell.
+
+Now assume, on the scalar segment, m<=f''<=M and L=M-m>0. Put d=s-s0,
+u=f'(s), u0=f'(s0), Delta=u-u0-m*d. Then
+  f(s)>=f(s0)+u0*d+m*d^2/2+Delta^2/(2*L).                (13)
+For d>=0, the derivative of f-m*t^2/2 is monotone and L-Lipschitz. Its
+increment psi(t) satisfies
+  psi(t)>=max(0,Delta-L*(d-t)), 0<=t<=d,
+and 0<=Delta<=L*d. Integrating the right endpoint cone gives exactly
+Delta^2/(2*L). For d<=0 apply the same argument to the reversed coordinate
+t -> s0-t. Thus (13) has no hidden sign restriction on d. If L=0, the
+derivative increment Delta is exactly zero and the constant-curvature
+Taylor identity supplies the separate branch.
+
+For any fixed real test number h_e, a square gives
+  Delta^2/(2*L)>=h_e*Delta-L*h_e^2/2.
+Consequently, including the constant-curvature branch,
+  f(s)>=f0+u0*(d-h_e)+h_e*u
+           +m*(d-h_e)^2/2-M*h_e^2/2.                   (14)
+The test number h_e need not define another evaluation point in the cell.
+Only s and s0 and the segment between them require the curvature bounds.
+
+Take h_e=span_e(h) for a fixed rational nine-vector h. Summing (14)
+retains all shared spans and collapses the 41 anchor derivatives into
+the already stored aggregate gradient:
+  F(g)>=F0+grad F(g0).(g-g0-h)+h.grad F(g)
+       +sum_e a_e*m_e*span_e(g-g0-h)^2/2
+       -sum_e a_e*M_e*span_e(h)^2/2.                    (15)
+Thus arbitrary independent 41 values u0_e are not required. On an actual
+KKT point one may delete h.grad F(g) only when h is supported on the
+strictly free coordinates. The fixed pilot's nine coordinates are all
+strictly free, checked against the original sep=123/128.
+
+The old anchor gradient is stored as intervals [l_r,u_r]. Define its
+midpoint q_r and error e_r. Replacing its term in (15) is paid by
+  payment(h)=sum_r e_r*max(|cell_low_r-g0_r-h_r|,
+                         |cell_high_r-g0_r-h_r|).       (16)
+The payment MUST be recomputed for each h; the old payment(0) cannot be
+silently reused. This is the only changed gradient-error payment in the
+new row, and the existing F0 lower endpoint is retained.
+
+Let H_m=sum_e a_e*m_e*v_e*v_e^T and
+H_L=sum_e a_e*(M_e-m_e)*v_e*v_e^T. For a saved pseudo-moment vector with
+mean dbar=<g>-g0, the gain over its old midpoint energy polynomial is
+  -(q+H_m*dbar).h-h^T*H_L*h/2
+             -[payment(h)-payment(0)].                 (17)
+Ignoring the separately paid, extremely small interval uncertainty, if
+H_L is positive definite this is maximized at
+  h*= -H_L^(-1)*(q+H_m*dbar),
+with ideal gain (q+H_m*dbar)^T*H_L^(-1)*(q+H_m*dbar)/2.
+The inverse only selects a candidate. Every fixed rational h produces a
+valid row independent of optimality. The helper uses exact elimination
+with positive pivots and rounds h to denominator 2^20, then recomputes
+(16) over the complete coordinate box.
+
+At the original frozen first-remaining LP primal, the old energy polynomial
+is approximately 0.0064428148536568. A fixed rational h selected as above
+gives 0.012555875375836736 after the complete new error payment, strictly
+above 11/1250. The exact decimal-primal violation is recorded in
+cover-bregman-primal-check.json. This cuts that one saved moment vector;
+it is not a proof of new-relaxation infeasibility.
+
+The authorized Bregman pilot then made exactly two IPMs on the same cell:
+original graph/KKT/RLT, original midpoint energy, and this first fixed-h
+row; then one further h from that returned primal, retaining the first
+row. The solves took about 1.64 and 1.50 seconds and both returned zero
+energy slack. No residual-PSD cuts or reverse row were mixed in. No
+Farkas extraction was triggered. The three energy packets are durable in
+cover-bregman-energy-pilot.json. The branch stops at this fixed budget.
+
+The Bregman formula and actual fixed-h semantic bridge still require
+their own Lean treatment. Exact row arithmetic, a cut of one saved primal,
+or these two zero-slack LPs supply no complete cover or new record.
+
+7. Analytic elimination of all h, retaining only the old position moments
+------------------------------------------------------------------------
+This is a different construction from sampling further constant h. The
+pointwise inequality (15) holds for every h, so at each actual g one may
+choose the affine feedback
+  h(g)=-B*(q+H_m*d), B=H_L^(-1), d=g-g0.
+Assume H_L is positive definite and all h(g)'s coordinates are free. In
+the fixed case all nine coordinates are strictly free. Thus h(g).grad F(g)
+is zero at actual KKT, and its lifted polynomial elimination uses only
+the existing first KKT and KKT*y equalities. The result is
+  F(g)>=F0_lower+q.d+d^T*H_m*d/2
+           +(q+H_m*d)^T*B*(q+H_m*d)/2 - payment_closed.  (18)
+No new scalar anchor, derivative table, or 861-entry u-u block occurs.
+
+The exact quadratic coefficients in d are
+  K=H_m+H_m*B*H_m,
+  linear=q+H_m*B*q,
+  constant=F0_lower+q^T*B*q/2-payment_closed.
+K is symmetric; this does not require commuting H_m and B. All inverse
+identities are checked over Fraction, and the edgewise expansion of (15)
+is replayed separately from this compact matrix formula.
+
+The complete uncertainty payment is again essential. Put
+  D=I+B*H_m, z=B*q, delta=center-g0.
+Then d-h(g)=D*d+z. In the coordinate box g=center+radius*y, |y_i|<=1,
+the valid exact upper bound is
+  |(d-h(g))_r| <= |(D*delta+z)_r|
+                        +sum_s |D_rs|*radius_s.
+Multiplying these nine bounds by the original anchor-gradient interval
+errors gives payment_closed. Neither fixed-h payment is reused.
+
+At the last saved two-fixed-h LP primal, the closed row evaluates to
+0.010778361690558121, exceeding 11/1250 by about 0.00197836. The exact
+coefficient identity, inverse, error payment, and decimal-primal violation
+are in cover-bregman-closed-primal-check.json. This is a strict cut of that
+saved lifted vector, not a cell contradiction.
+
+One final distinct pilot was authorized and completed: original base plus
+original midpoint energy plus this one analytically eliminated row, with
+no fixed-h sampled rows, residual PSD cuts, or reverse row. Its one IPM
+took about 1.65 seconds and returned zero energy slack. No Farkas extraction
+was triggered. The result is in cover-bregman-closed-energy-pilot.json;
+this LP branch is stopped, with no additional cases or iterations.
+
+cover_bregman_coupling_replay.py independently rebuilds the reverse,
+two fixed-h, and closed rows directly from the scalar-edge expansion,
+using only the standard library. All four exact coefficient identities,
+the closed inverse, shifted uncertainty budget, and strict saved-primal
+violation pass. This arithmetic audit treats the original actual point
+intervals and m/M packets as inputs; it does not establish their real
+semantics or a concrete new Lean exclusion.
+
+The closed row can carry more lifted information than all constant-h
+tests: after averaging, the point-dependent choice keeps the quadratic
+variation of q+H_m*d. With a PSD position covariance its extra term over
+optimizing only one constant h is
+  trace(B*H_m*Cov(d)*H_m)/2>=0.
+This observation is not a feasible-PSD-primal claim for the saved LPs.
+The frozen pin list records this entire bounded package and its negative
+local outcomes, while retaining complete_global_cover=false throughout.

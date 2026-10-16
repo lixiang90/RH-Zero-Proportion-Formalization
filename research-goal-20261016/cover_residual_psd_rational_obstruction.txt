@@ -1,0 +1,91 @@
+An exact feasible point of the current outer relaxation
+2026-10-17
+
+This package certifies a limitation of one finite moment relaxation. It
+does NOT give an actual Fw<c configuration, refute the proposed floor,
+prove a global cover, or improve a zero proportion.
+
+The one tested case is r001000001000100110011001, the first of the six
+previously frozen remaining cells. The model retains 43,304 old graph,
+DBM, first-order KKT, KKT-times-position, RLT and McCormick rows, together
+with the original midpoint energy and the closed affine-h Bregman energy
+row. All nine gap coordinates are strictly above the original 123/128
+boundary. It includes all 41 eleven-dimensional residual PSD cones, not
+only the finite cuts used in the earlier exploratory LP.
+
+Construction
+------------
+The root's joint SCS numerical point was decimalized once by F(str(float)).
+The nine adjacent-edge derivative variables were solved exactly from
+  b_r+sum_(i<=r<j) a_ij*u_ij=0.
+For each normalized position y_s, the corresponding 81 adjacent mixed
+variables were solved from
+  b_r*y_s+sum_(i<=r<j) a_ij*q_(s,ij)=0.
+Every adjacent weight is positive and its derivative occurs in exactly
+one coordinate equation, so these are independent explicit scalar solves.
+The normalized y values are recomputed from the same exact rational g,
+not rounded independently. No second precision choice, adjustment of g
+or the position moments, solver, or additional search was used.
+
+All 43,306 rational inequalities and all 464 finite boxes pass exactly.
+All 90 KKT equalities are exact. Each normalized residual matrix has
+bottom diagonal 1 and off-diagonal residual divided by its positive
+rational epsilon. The certificate provides an exact unit-lower LDL
+factorization with strictly positive rational diagonal for all 41 blocks.
+There is no SCS sqrt(2) packing or numerical eigenvalue in these checks.
+
+The scalar graph ingredients and complete old rows are reconstructed by
+the stdlib replay directly from the frozen graph grid and Taylor tuples.
+It then independently rebuilds the exact moment model, checks every row,
+and verifies each LDL identity. No NumPy, SciPy, SCS, producer, or floating
+linear algebra is imported by that replay.
+
+Numerical displays for context only: the two exact energy-row slacks are
+approximately 0.0103372090195 and 0.000302297678602. The smallest normalized
+LDL pivot is about 0.0354370. Exact fractions are in the certificate.
+
+Interpretation
+--------------
+The point's nine position variances are strictly positive, whereas an
+actual point evaluation would have all of them zero. It is therefore
+explicitly a pseudo-moment point, not an actual gap/derivative assignment.
+Neither a representing probability measure nor actual kernel identities
+u=w'(span) are asserted by this feasibility certificate.
+
+The result proves that the present full residual-PSD relaxation plus the
+closed Bregman energy row cannot exclude this cell. More necessary PSD
+cuts from the same 41 complete cones cannot change this conclusion.
+Additional constraints, higher-order information, or a different cover
+could still be stronger; no limitation on those is proved here.
+
+Under the constraint policy proved in window_kkt_projection_variance_note,
+the 41 residual blocks have a common joint derivative-moment extension,
+and the free KKT-times-derivative equations hold in the minimum-norm
+extension. Thus adding only that U block and those products, without
+further nonmonotone U constraints, cannot remove this exact point either.
+
+Files and replay
+----------------
+cover-residual-psd-rational-projection.json stores the 464 rational moments,
+90 exact updates, and the 41 LDL witnesses. Its driver is
+cover_residual_psd_rational_projection.py.
+
+cover-residual-psd-rational-inputs.json freezes the exact old row ingredients
+and the complete model fingerprint; its driver regenerates ingredients
+only and never changes the point.
+
+Run from the repository root:
+  python -S -B -X utf8 research-goal-20261016/cover_residual_psd_rational_replay.py
+The successful receipt is cover-residual-psd-rational-replay.json.
+
+The two SCS source/output pairs are retained byte-for-byte only as discovery
+provenance. Their output files contain nonstandard JSON NaN fields in solver
+diagnostics and must not be treated as strict mathematical certificates.
+The new rational certificate files use finite integer or Fraction-string
+values and are written with allow_nan=False. The independent replay only
+reads the finite 464 discovery coordinates before redoing the exact
+projection; every asserted inequality and PSD identity is then rational.
+
+This package is separately pinned. It does not modify the previously
+frozen 26c0d0254793324ddddf042fbc26d6787ac0db843d8c882031e428a0ea69d640
+KKT/variance/Bregman pilot package.

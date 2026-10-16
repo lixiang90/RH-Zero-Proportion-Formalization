@@ -1,0 +1,117 @@
+{
+  "schema": "exact-residual-PSD-relaxation-obstruction-v1",
+  "scope": "Pin one exact relaxation-feasibility obstruction and discovery provenance.",
+  "package_files": [
+    {
+      "path": "research-goal-20261016/cover_residual_psd_rational_projection.py",
+      "bytes": 7235,
+      "sha256": "7a56baa2bd01173a02132da9c957de1f110d7c61e660edad0589e887950c285c"
+    },
+    {
+      "path": "research-goal-20261016/cover-residual-psd-rational-projection.json",
+      "bytes": 626633,
+      "sha256": "7a8f31cbd2d44ad6ca699509ad7c8fbf17fd073089fa8bf88f2b2676f167d91e"
+    },
+    {
+      "path": "research-goal-20261016/cover_residual_psd_rational_inputs.py",
+      "bytes": 3375,
+      "sha256": "84e2a4fbbb84c8dc89e5b0bd826bb1cecbe3c055191ed802480477b5b3539d72"
+    },
+    {
+      "path": "research-goal-20261016/cover-residual-psd-rational-inputs.json",
+      "bytes": 805877,
+      "sha256": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622"
+    },
+    {
+      "path": "research-goal-20261016/cover_residual_psd_rational_replay.py",
+      "bytes": 6920,
+      "sha256": "61d38dddf119f6fbcc3ea4cdb37120a39676e9b27a1b1e5f08c0a40c8f06e56c"
+    },
+    {
+      "path": "research-goal-20261016/cover-residual-psd-rational-replay.json",
+      "bytes": 4836,
+      "sha256": "1091267ca1045859dc9ee195bc9c8b6012b9bc6e64bd365db81f9da70af3c2bf"
+    },
+    {
+      "path": "research-goal-20261016/cover_residual_psd_rational_obstruction.txt",
+      "bytes": 4782,
+      "sha256": "bc587e8e2f5a9fe48fe431d733cdcdf22c99def3e120c347f95f4c28f8881765"
+    },
+    {
+      "path": "research-goal-20261016/cover_residual_psd_rational_manifest.py",
+      "bytes": 3090,
+      "sha256": "008f52bbccc8fb500b46fa985e34d102152e9454a1cc32c779bc9bc6ba716fde"
+    }
+  ],
+  "SCS_discovery_sources_unchanged": [
+    {
+      "path": "research-goal-20261016/cover_residual_psd_full_cone.py",
+      "bytes": 7591,
+      "sha256": "521574a3586789f44c0828a4888aa5c3d1d22614b4cc2a44316569d46b73435e",
+      "role": "discovery_only_not_mathematical_certificate"
+    },
+    {
+      "path": "research-goal-20261016/cover-residual-psd-full-cone.json",
+      "bytes": 1310718,
+      "sha256": "4215ebf6137ad629662f769a04515c9a986c3bb114f0ce2f7c649bf70a16b04c",
+      "role": "discovery_only_not_mathematical_certificate",
+      "nonstandard_NaN_token_count": 3
+    },
+    {
+      "path": "research-goal-20261016/cover_residual_psd_bregman_full_cone.py",
+      "bytes": 7976,
+      "sha256": "8a50ce60c816016f6a5621d91e43f5f07c3bc899ec479f9525efb85cfaf767a7",
+      "role": "discovery_only_not_mathematical_certificate"
+    },
+    {
+      "path": "research-goal-20261016/cover-residual-psd-bregman-full-cone.json",
+      "bytes": 1314805,
+      "sha256": "645e784cd1fe95f635a931ba445f10116714d8b55b2b33e4d7062e38b0cd0acc",
+      "role": "discovery_only_not_mathematical_certificate",
+      "nonstandard_NaN_token_count": 3
+    }
+  ],
+  "dependency_sha256": {
+    "research-goal-20261016/cover_residual_psd_rational_manifest.py": "008f52bbccc8fb500b46fa985e34d102152e9454a1cc32c779bc9bc6ba716fde",
+    "research-20261016-followup/global_periodic_upper_bound.py": "95fa8520e5fe5505763fe748b866755143c15176ecf1ebf607a0d23ce25cecfd",
+    "research-goal-20261016/window_interval_kernel.py": "159a8f270531e16887e89583b6e0ddc84f98d4ee7a2497585572192ec9efa1ca",
+    "research-goal-20261016/cover_exact_scalar_replay.py": "eaa745076330aaf3346611badc4fdf0a878ac8ce0a3b5a2efeb4662d1d917e14",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "research-goal-20261016/cover_correlated_verify.py": "b8a1090e02b73d14305c0d800ec15c7d94d4323a1b55557dc0893adccfc778aa",
+    "research-goal-20261016/cover_contractor_verify.py": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389",
+    "research-goal-20261016/cover_flow_basis.py": "7205524aa483b650e218cb842c8ee4c28d2185f70d92d874d74bbb9450f53b56",
+    "research-goal-20261016/cover_compact_codec.py": "1e0f59cfb3ca328af0df30b7eb4d419267b08eab88469066ffc84cf4109f288c",
+    "research-goal-20261016/cover_sublevel_verify.py": "ddf7997d466b647de17f6e92c334b948b5ae7eb2daf334e807158b39714e88a4",
+    "research-goal-20261016/cover_sublevel_obbt_verify.py": "4545b22a8bb0f19e4f8642d8018f437e8ab46ed4bb6580066b244f6285f9671c",
+    "research-goal-20261016/cover_lifted_graph_verify.py": "9490d3071fea06aea005d7d337cef3e87bb1fbb63a6493f1c70ce777f3c9ec00",
+    "research-goal-20261016/cover_correlated_curvature_verify.py": "3db55f6c368e43e8f4b18a12f102afdc9c7bf0eb1d5dcfec1e8208d69d13481e",
+    "research-goal-20261016/cover_cross_moment_exact_rows.py": "a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae",
+    "research-goal-20261016/cover_cross_moment_energy_replay.py": "f1043be963d7a0f9a43614b83ac5215cd366a20fc695974a9e7df149004fe38d",
+    "research-goal-20261016/cover_cross_moment_old_rows_replay.py": "bcdf654149f68196abb0d5fdfc22a38bc19df8c2c217440f62bf375a18a87aa3",
+    "research-goal-20261016/cover-residual-psd-bregman-full-cone.json": "645e784cd1fe95f635a931ba445f10116714d8b55b2b33e4d7062e38b0cd0acc",
+    "research-goal-20261016/cover-cross-moment-remaining-six.json": "50225aec235d6d37f07f09c47a56fc1cb4d9d221e02b386d63e5231031a70619",
+    "research-goal-20261016/cover-bregman-closed-primal-check.json": "fec4c8259235d73af97185cb7426d22763181b503adf285dc464a5158baf5049",
+    "research-goal-20261016/cover-residual-psd-pilot.json": "c47035fe5c51ca28deba8b0e488dc8601c2efb8bac19ce90138cabc12b191144",
+    "research-goal-20261016/cover_newjet.json": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+    "research-goal-20261016/cover_residual_psd_rational_projection.py": "7a56baa2bd01173a02132da9c957de1f110d7c61e660edad0589e887950c285c",
+    "research-goal-20261016/cover_cross_moment_probe.py": "7e1188a982fd42f5501c1121753410524eefc10fd9c71f9f65aecb32639e71b1",
+    "research-goal-20261016/cover_lifted_graph_probe.py": "385f9a623acdf8f27de2b5cde9736221d806ba9e601339425ee4883be123b06a",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/cover-residual-psd-rational-projection.json": "7a8f31cbd2d44ad6ca699509ad7c8fbf17fd073089fa8bf88f2b2676f167d91e",
+    "research-goal-20261016/cover_residual_psd_rational_inputs.py": "84e2a4fbbb84c8dc89e5b0bd826bb1cecbe3c055191ed802480477b5b3539d72",
+    "research-goal-20261016/cover-residual-psd-rational-inputs.json": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622",
+    "research-goal-20261016/cover_residual_psd_rational_replay.py": "61d38dddf119f6fbcc3ea4cdb37120a39676e9b27a1b1e5f08c0a40c8f06e56c"
+  },
+  "path": "r001000001000100110011001",
+  "rational_rows_checked": 43306,
+  "finite_boxes_checked": 464,
+  "exact_KKT_equalities": 90,
+  "strict_positive_rational_LDL_blocks": 41,
+  "block_size": 11,
+  "status": "strict_exact_feasible_point_of_named_outer_relaxation",
+  "actual_Fw_counterexample": "not_claimed; nonzero position variances",
+  "new_zero_proportion": "not_proven",
+  "global_cover": "not_proven",
+  "submission_ready": "no",
+  "prior_26c0_package": "unchanged"
+}

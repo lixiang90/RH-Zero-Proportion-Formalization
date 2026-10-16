@@ -1,0 +1,29 @@
+{
+  "scope": "Independent bounded baseline roundtrip audit; stdlib and readonly SQLite.\n\nUses its own incremental source decoder and serialization implementation,\nwithout importing the store producer or mathematical discovery modules.\nChecks every canonical unit, key/order/hash, all small metadata and original\nfrontier; checks total raw-source and whole canonical-document hashes. This\nis storage fidelity, not mathematical validation of the contained witnesses.\n",
+  "source_sha256": "3f7300763aa6e5931a013bb4da891185064846d50cb57902bfe14af580d9ed1b",
+  "source_snapshot_sha256": "2e50e2303ca3705ae9ba91e741764e84550c382049b88ae5cbd064247bba671d",
+  "source_snapshot_bytes": 912240992,
+  "canonical_document_sha256": "cf9e5d3e4618d3fdc96b37d6c6c5bb97ed5276cd290dc4e845f183f2365816e5",
+  "canonical_units_independently_compared": 246983,
+  "section_counts": {
+    "accepted": 65988,
+    "branches": 66012,
+    "contractions": 23112,
+    "sublevel_contractions": 89306,
+    "unresolved": 25,
+    "tangent_data": 2540
+  },
+  "largest_unit_bytes": 25075,
+  "independent_decoder_maximum_buffer_chars": 284499,
+  "all_entry_payloads_orders_and_hashes_matched": true,
+  "all_metadata_and_baseline_frontier_matched": true,
+  "SQLite_integrity_check": "ok",
+  "all_frozen_source_hashes_matched": true,
+  "post_baseline_node_transactions_present": 0,
+  "post_baseline_transactions_semantically_replayed_here": false,
+  "baseline_semantic_witness_replay": false,
+  "entire_history_loaded_in_memory": false,
+  "new_search_started": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 34.238097800000105
+}

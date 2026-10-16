@@ -1,0 +1,162 @@
+{
+  "scope": "Freeze three ordinary-kernel analytic bridges; numerical inputs remain hypotheses.\n\nThis is not a new local exclusion, a complete cover, or an independent\nkernel replay. Existing local exclusion counts are unchanged.\n",
+  "script_sha256": "d75d404a86f36173c3f2c4647e13d78c85c3d3e9c2579331d14cd90253fef89f",
+  "canonical_receipt": "research-goal-20261016/lean_verification.json",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "proof_modules": 3,
+  "records": [
+    {
+      "module": "StructuralGoal20261016.WindowMomentResidualPSD",
+      "source": "StructuralGoal20261016/WindowMomentResidualPSD.lean",
+      "source_sha256": "adf9ca92034c14643556588090cfa844d86dc895d1334197cac59537e5244c81",
+      "source_bytes": 7024,
+      "log": "research-goal-20261016/lean_WindowMomentResidualPSD_adf9ca92034c.log",
+      "log_sha256": "692ddb866ae96b2cd928ba2476fbd4918dcf695ab98b10dc8d1fa962bb0792e7",
+      "olean_sha256": "fadfab52cc8e782636a1d9d07f94f74fb911970c812d6139e4bf132a321d3e07",
+      "whole_process_seconds": 38.18228239999735,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentResidualPSD.quadratic_eval",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentResidualPSD.linear_eval",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentResidualPSD.cut_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentResidualPSD.residual_polynomial_nonneg",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentResidualPSD.actual_cut_nonpos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowScalarBregman",
+      "source": "StructuralGoal20261016/WindowScalarBregman.lean",
+      "source_sha256": "07667d5d7d92ff993e42f67c1ddb2ce64c61ea9fcd596086ea21b6f414d50d28",
+      "source_bytes": 5826,
+      "log": "research-goal-20261016/lean_WindowScalarBregman_07667d5d7d92.log",
+      "log_sha256": "b88db525900ea19fc43dc55402c4c2180530dd670780ba051322ea07dfe38ebf",
+      "olean_sha256": "8f7dae2f9809fa9d667078651e35d73c3f9f898b4efd9d5e15e02f87b439bed2",
+      "whole_process_seconds": 40.49118960000487,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowScalarBregman.quadratic_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowScalarBregman.derivative_increment",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowScalarBregman.auxiliary_mem",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowScalarBregman.lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowScalarBregman.square_support",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowScalarBregman.affine_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowScalarBregmanPacket",
+      "source": "StructuralGoal20261016/WindowScalarBregmanPacket.lean",
+      "source_sha256": "cde37b93be262dea2bac1f9bd5554413ba6c19459afae65573c1c7b73418dd2f",
+      "source_bytes": 1372,
+      "log": "research-goal-20261016/lean_WindowScalarBregmanPacket_cde37b93be26.log",
+      "log_sha256": "82de8386c668ff3535bfc59f98076d604c96c7a9a038df53dee7a226ff7afc38",
+      "olean_sha256": "4352580aeccbd8a45d9cf0d32e9e2797e91efa652db60fb1734d9cd5aa0b67a8",
+      "whole_process_seconds": 37.78543979999813,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowScalarBregmanPacket.lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowScalarBregmanPacket.error_radius_of_interval",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    }
+  ],
+  "all_current_sources_and_logs_verified": true,
+  "analytic_hypotheses": {
+    "ResidualPSD": "Actual derivative affine enclosure, nonzero normalization radii.",
+    "ScalarBregman": "p,x in the certified interval; m<M; m<=actual w-second<=M on the whole interval.",
+    "BregmanPacket": "The preceding curvature hypotheses plus actual point value/slope enclosures and a certified |x-p-eta| error radius."
+  },
+  "new_actual_local_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "independent_Nanoda_replayed": false
+}
