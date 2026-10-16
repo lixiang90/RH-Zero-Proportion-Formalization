@@ -187,7 +187,9 @@ def main():
       ('window-large-embedding-files.json','0c9805d8f2a134b9c8df61d2c4cacffc03799e99d3a3f02f78e618d97e50ebc2'),
       ('cover-full-u-face-files.json','a5304f7603f971eee6bf1571411ae4da20765aa43470d314ef6bc93c67ce1dcf'),
       ('window-large-embedding-portable-files.json','bbb158e76d5817ccc5c0bce56a5048e55ff620a308e0b4400b36a569104c80bf'),
-      ('research-goal-20261017-quartic/quartic-files.json','4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1')]:
+      ('research-goal-20261017-quartic/quartic-files.json','4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1'),
+      ('research-goal-20261017-quartic/quartic-positivity-correction-files.json','014479ce687c9b0d418ba214b3f19b5761aaa7d7670cf6acef5111e47ed440a0'),
+      ('research-goal-20261017-quartic-split/split-files.json','8ec9a4e4314ae3071b59745c9730d2789c9329f1f31eb328cfa1cc78349dfedf')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())

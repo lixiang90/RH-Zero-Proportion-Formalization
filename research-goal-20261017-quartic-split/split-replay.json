@@ -1,0 +1,53 @@
+{
+  "scope": "Read-only stdlib audit of the exact halfspace split and two negative tests.\n\nReconstruct all six polynomial localizers and all 330 affine entries from\nthe frozen parent monomial order.  Verify the rational direction/threshold\nand both quadratic witnesses equal -1.  No producer/numerical import.\nDefault is read-only.  --write-receipt creates an absent receipt once.\n",
+  "status": "exact_halfspace_cover_localizers_and_two_negative_witnesses_verified",
+  "source_sha256_start": {
+    "research-goal-20261017-quartic-split/split_replay.py": "51233d1ffd57e21547892e1a21db4e4be2314b18cdb23997faf344c778877658",
+    "research-goal-20261017-quartic-split/split-model.json": "594a6f70c7e4fe9aadd01da760588dd8926b3ed02a796a1a91b0908714bec470",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-quartic/quartic-files.json": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1",
+    "research-goal-20261017-quartic/quartic-exact-primal.json": "84e754f780e9fdab170b9f18b63396042056871fc96b26f6b6ba767fd9a503ce",
+    "research-goal-20261017-quartic/quartic-result-replay.json": "98f16e984aae3e4360dd0313260462bd77eab2252c1e8a57badad36152c05039",
+    "research-goal-20261017-quartic-split/split_static.py": "7ed885c61a8d90ac0241d215554b9e1736bd9cc10007636ddad8a3bb029d625e",
+    "research-goal-20261017-quartic/quartic-build.json": "12f3be0796d8ca3a27b4d4ed77105932d61fae2cf5704f1fe7224efcc7b369fc"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-quartic-split/split_replay.py": "51233d1ffd57e21547892e1a21db4e4be2314b18cdb23997faf344c778877658",
+    "research-goal-20261017-quartic-split/split-model.json": "594a6f70c7e4fe9aadd01da760588dd8926b3ed02a796a1a91b0908714bec470",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-quartic/quartic-files.json": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1",
+    "research-goal-20261017-quartic/quartic-exact-primal.json": "84e754f780e9fdab170b9f18b63396042056871fc96b26f6b6ba767fd9a503ce",
+    "research-goal-20261017-quartic/quartic-result-replay.json": "98f16e984aae3e4360dd0313260462bd77eab2252c1e8a57badad36152c05039",
+    "research-goal-20261017-quartic-split/split_static.py": "7ed885c61a8d90ac0241d215554b9e1736bd9cc10007636ddad8a3bb029d625e",
+    "research-goal-20261017-quartic/quartic-build.json": "12f3be0796d8ca3a27b4d4ed77105932d61fae2cf5704f1fe7224efcc7b369fc"
+  },
+  "all_sources_unchanged": true,
+  "path": "r001000001000100110011001",
+  "alpha": [
+    "16/75",
+    "16/75",
+    "4/75",
+    "1/25",
+    "2/75",
+    "-7/75",
+    "-1/5",
+    "7/75",
+    "1/15"
+  ],
+  "threshold": "-1326025179689503439/37500000000000000000",
+  "branch_count": 2,
+  "extra_localizers_checked": 6,
+  "affine_PSD_entries_checked": 330,
+  "exact_old_point_quadratic_values": [
+    "-1",
+    "-1"
+  ],
+  "parent_constraints_unchanged": true,
+  "parent_analytic_hypotheses_unchanged": true,
+  "pure_stdlib_replay": true,
+  "solver_calls": 0,
+  "Lean_invocations": 0,
+  "cell_exclusion_proven": false,
+  "new_zero_proportion_proven": false,
+  "elapsed_milliseconds": 318
+}

@@ -1,0 +1,130 @@
+One covariance-directed halfspace split of the quartic gap moment model
+2026-10-17
+
+The frozen parent package has manifest SHA256
+4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1.
+It proves an exact strictly feasible 714-moment point for its fixed
+degree-four Taylor outer relaxation on r001000001000100110011001.
+The present package changes the representation by one finite disjunction.
+It does not modify that parent package or strengthen a numerical constant.
+
+1. One rational direction and an exact exhaustive disjunction
+-------------------------------------------------------------
+Let m=E[y] and C=E[yy^T]-m*m^T at the exact parent relaxation point.
+One floating eigendecomposition of this exact 9x9 rational covariance
+selected a maximal-eigenvalue direction as a discovery heuristic.  Scale
+that vector so its maximum absolute coordinate is 16, round once to
+integers, make the first nonzero coordinate positive, and L1 normalize.
+There is no direction sweep, alternative quantization, or repeated trial.
+The resulting exact direction is
+
+ alpha=(16,16,4,3,2,-7,-15,7,5)/75,
+ phi(y)=alpha.y,
+ t=alpha.m=-1326025179689503439/37500000000000000000
+           approximately -.035360671458386755.
+
+The floating eigensolver is not a mathematical premise.  Only the final
+integer alpha and rational t are used by the model and proofs.  Exact
+arithmetic verifies sum_i |alpha_i|=1 and -1<t<1.  On the parent cube
+|y_i|<=1, the triangle inequality gives -1<=phi<=1.
+
+Split into sigma=-1 and sigma=+1, where sigma*(phi-t)>=0.  Every actual
+parent point belongs to at least one side, because phi<=t or phi>=t by
+the total ordering of the reals.  Overlap at equality causes no problem.
+This is a general halfspace disjunction; neither side is asserted to be
+an existing DBM tree node or an axis-aligned child box.
+
+2. Three necessary degree-four localizers per side
+---------------------------------------------------
+For sigma in {-1,1}, define the positive rational length l=1-sigma*t,
+
+ A=sigma*(phi-t)/l,  B=(1-sigma*phi)/l.
+
+On that side of the parent cube, A>=0, B>=0 and A+B=1.  Therefore A, B,
+and 4*A*B are nonnegative.  Their products with the square of any affine
+function in y are nonnegative as well.  The corresponding three 10x10
+M1 localizing PSD matrices use only the existing shared degree<=4 moments.
+There is no new derivative graph variable or scalar sample.
+
+All original 5795 rows and all original 47 PSD blocks are retained.
+Each branch has 714 nonconstant gap moments, the same one energy slack,
+and 50 PSD blocks of sizes 55 followed by forty-nine 10s.  There are 10030
+total conic rows.  The original sublevel localizer is still unsoftened.
+Positive rational row/block scales change no mathematical constraint.
+
+All Taylor bounds, dynamic errors, old energy lower L2 and common anchor
+are those of the whole parent cell.  Their validity only requires that
+the actual scalar arguments lie in the parent intervals.  The old
+common anchor need not lie in a halfspace child; it remains a legal
+Taylor anchor with the entire original parent segment as the domain.
+The artificial halfspace does not change the actual free-KKT hypothesis:
+an original interior minimizer still obeys the original nine gradient
+equations even if it lies on this artificial splitting plane.
+
+3. Strict rational separation of the old fake covariance, both sides
+-------------------------------------------------------------------
+For the old parent exact moment point, E[phi]=t.  Consequently the first
+added block N=E[A*(1,y)*(1,y)^T] has N00=0.  Its first-row remainder is
+
+ N0,(j+1)=r_j=sigma*(C*alpha)_j/(1-sigma*t).
+
+The exact replay verifies some r_j is nonzero on each side.  Thus the
+principal 2x2 minor on indices 0,j+1 has determinant -r_j^2<0.  An even
+shorter explicit negative vector uses
+
+ v_(j+1)=1, v_0=-(N_(j+1,j+1)+1)/(2*r_j), all other v_i=0.
+
+Then v^T N v=-1 exactly.  The two negative Fraction vectors and all their
+entries are stored in split-model.json.  These are exact witnesses of
+strict failure of each child model at the old moment vector, not floating
+eigenvalue tests.  A mean point on the splitting plane therefore does
+not imply that its nonzero fake covariance is allowed on either side.
+
+This separation is a mathematical information gain over the unsplit
+model.  It does not imply that the new models are infeasible: other
+moment vectors can satisfy either side.  The convex hull of two branches
+can also retain mixtures whose mean lies on the splitting plane.
+
+4. Independent static replay
+-----------------------------
+split_replay.py imports no producer, numpy, scipy or SCS.  It verifies
+the frozen parent manifest, reconstructs alpha/t and A/B/4AB, checks all
+six new localizers and all 330 affine entries, and verifies both strict
+negative quadratic values -1 using Fraction arithmetic.  It passed in
+about .318 seconds.  Its default is read-only and can be invoked again:
+
+ python -S -B -X utf8 research-goal-20261017-quartic-split/split_replay.py
+
+The optional --write-receipt creates split-replay.json only when absent;
+it never overwrites a receipt.  The parent static model and strict
+feasible-point replays remain separate frozen obligations.
+
+5. Exactly two bounded numerical tests; no exclusion
+-----------------------------------------------------
+One SCS 3.3.1 call per side was authorized, each capped at 45 seconds and
+10000 iterations.  Both retain all parent constraints and use the three
+new localizers, without a recursive split or direction/parameter scan.
+The results were
+
+ sigma=-1: solved, 125 iterations, approximately .567 seconds,
+           energySlack=-2.5315e-14,
+           worst normalized scalar slack=-2.5315e-11,
+           minimum normalized PSD eigenvalue=6.24186e-5.
+
+ sigma=+1: solved, 150 iterations, approximately .570 seconds,
+           energySlack=-2.5972e-17,
+           worst normalized scalar slack=-2.5972e-14,
+           minimum normalized PSD eigenvalue=1.87868e-5.
+
+Neither branch supplied a positive energy bound or an infeasible dual
+ray hint.  No rational dual extraction, LP polish, second solve per side,
+new cell, new direction, deeper split, actual kernel evaluation, or Lean
+invocation was attempted.  Both numerical outputs are floating discovery
+data, not exact feasible certificates or exact exclusions.  Nonfinite
+unused diagnostics are strings in otherwise strict JSON.
+
+The exact old-point separation and exhaustive two-side cover are valid,
+but neither child is excluded.  The parent cell remains unproved.  There
+is no complete global cover or unconditional zero-proportion record from
+this package.  The result provides a valid finite moment decomposition
+and an honest bounded failure of this particular two-side experiment.

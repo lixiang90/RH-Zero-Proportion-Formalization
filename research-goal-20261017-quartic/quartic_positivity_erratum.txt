@@ -1,0 +1,22 @@
+Correction to the explanatory positivity paragraph in quartic_note.txt
+2026-10-17
+
+The frozen note's claim that the profile is bounded below by 1-4/25 is
+incorrect. Its base term is cos(sqrt(2)*t), not the constant 1. Preserve
+the old note and its hashes; this correction supersedes that sentence.
+
+The actual profile is
+  V(t)=cos(sqrt(2)*t)+sum_(j=1..24) c_j*cos(2*pi*j*t).
+For |t|<=1/2, cos(sqrt(2)*t)>=1-t^2>=3/4. The exact frozen coefficients
+have sum_j |c_j|=78742791/1000000000<2/25. Consequently
+  V(t)>=671257209/1000000000>67/100>0.
+The already ordinary-kernel-verified theorem
+  StructuralGoal20261016.WindowProfile.V_ge_core
+proves the conservative lower bound 67/100 directly for the actual profile.
+
+The quartic model and independent replay explicitly retain the actual
+positive-profile/Taylor interpretation as an analytic input; they do not
+use the erroneous 1-4/25 inequality. The corrected positive bound supplies
+the same positivity requirement. No matrix entry, Taylor packet, exact
+moment witness, replay output or previously frozen source is changed.
+This correction supplies no new region exclusion or zero-proportion result.

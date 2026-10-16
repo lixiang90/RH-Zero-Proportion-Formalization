@@ -1,0 +1,38 @@
+{
+  "scope": "Correct only the explanatory profile lower bound in the frozen quartic note.",
+  "package_files": [
+    {
+      "path": "research-goal-20261017-quartic/quartic_positivity_erratum.txt",
+      "bytes": 1149,
+      "sha256": "0c11285489433eb46109ac05f20e48b1d93693fcf5205194ca4f026957582044"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-goal-20261017-quartic/quartic-files.json",
+      "bytes": 5007,
+      "sha256": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic_note.txt",
+      "bytes": 11249,
+      "sha256": "61340223aa9bf2f2b463c439adaee201b1c2d8d46e4b6b0fdb96bb562dd5fdf5"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowProfile.lean",
+      "bytes": 25016,
+      "sha256": "81bde0ab94551f86be63b7a21d447ffc5c4b30603317c5df4bb74cb8865ae050"
+    },
+    {
+      "path": "research-20261016-followup/window_reweight_rational.json",
+      "bytes": 3838,
+      "sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+    }
+  ],
+  "coefficient_absolute_sum": "78742791/1000000000",
+  "correct_lower": "671257209/1000000000",
+  "existing_actual_Lean_root": "StructuralGoal20261016.WindowProfile.V_ge_core",
+  "existing_Lean_lower": "67/100",
+  "original_proof_bytes_changed": false,
+  "new_zero_proportion_proven": false
+}

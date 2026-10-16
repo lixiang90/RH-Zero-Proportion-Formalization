@@ -733,8 +733,17 @@ the same first moments fails six rows. Thus the witness is a nonfactorized
 moment vector, not an actual kernel or KKT counterexample. More cuts from
 the same retained degree-four model cannot close the first remaining cell.
 See `research-goal-20261017-quartic/quartic-files.json` and `quartic_note.txt`.
+The separate `quartic_positivity_erratum.txt` corrects the note's explanatory
+profile lower bound. The actual base is `cos(sqrt(2)*t)`, not a constant;
+the valid bound is at least `67/100`, already proved by
+`WindowProfile.V_ge_core`. The old model and witness hashes remain unchanged.
 
-The following research step uses one covariance-selected rational halfspace
-split and localizes each side separately. Its two sides together cover the
-parent, but strict certificates for both would be required to exclude that
-parent. This is ongoing research, not an asserted exclusion or new record.
+One covariance-selected rational halfspace split has now been tested.
+Its two sides cover the parent exactly, and each new localizer rejects the
+old pseudo-moment vector with a rational quadratic form equal to `-1`.
+Both subsequent bounded solver tests nevertheless converged without an
+exclusion hint. No recursive split or extra solver was run. The default
+read-only replay verifies all six new blocks and the two exact separations;
+see `research-goal-20261017-quartic-split/split-files.json`. No parent
+exclusion or new record follows. Research next considers joint information
+from multiple windows, with every spectral-baseline cost retained.

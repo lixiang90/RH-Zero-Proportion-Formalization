@@ -1,0 +1,93 @@
+{
+  "scope": "Freeze one exact covariance split and the two bounded numerical failures.",
+  "package_files": [
+    {
+      "path": "research-goal-20261017-quartic-split/split-cone-minus.json",
+      "bytes": 345958,
+      "sha256": "f635523dae72ae5e60cbe3dc373b8d4a0c1dcd7a9dc4dde5c5e875c4a75cefdf"
+    },
+    {
+      "path": "research-goal-20261017-quartic-split/split-cone-plus.json",
+      "bytes": 345937,
+      "sha256": "205d9c303332efaafc6b3a332082ca193a5f017aadd5ae2ce7b6b809d2003008"
+    },
+    {
+      "path": "research-goal-20261017-quartic-split/split-model.json",
+      "bytes": 1427490,
+      "sha256": "594a6f70c7e4fe9aadd01da760588dd8926b3ed02a796a1a91b0908714bec470"
+    },
+    {
+      "path": "research-goal-20261017-quartic-split/split-replay.json",
+      "bytes": 3327,
+      "sha256": "fd261fb0038f1863f05c217ea960991e427ed35f0126323661891d2e9c1b6d1c"
+    },
+    {
+      "path": "research-goal-20261017-quartic-split/split_cone.py",
+      "bytes": 7480,
+      "sha256": "eb1c7bbe87d1485067fc2b67904bda36ebec75f67ca2b01f46cec24f012ca3b8"
+    },
+    {
+      "path": "research-goal-20261017-quartic-split/split_note.txt",
+      "bytes": 6744,
+      "sha256": "7c89a61d1acb4bd061bae4a0118a3bac3db00cafac2a5fa1a612f0f25746182c"
+    },
+    {
+      "path": "research-goal-20261017-quartic-split/split_pin.py",
+      "bytes": 1744,
+      "sha256": "acf08593019bac873b453c2c5007eec6573595778b796c8b70076ca15e8d79e8"
+    },
+    {
+      "path": "research-goal-20261017-quartic-split/split_replay.py",
+      "bytes": 6363,
+      "sha256": "51233d1ffd57e21547892e1a21db4e4be2314b18cdb23997faf344c778877658"
+    },
+    {
+      "path": "research-goal-20261017-quartic-split/split_static.py",
+      "bytes": 7049,
+      "sha256": "7ed885c61a8d90ac0241d215554b9e1736bd9cc10007636ddad8a3bb029d625e"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "research-goal-20261017-quartic/quartic-build.json",
+      "bytes": 2855,
+      "sha256": "12f3be0796d8ca3a27b4d4ed77105932d61fae2cf5704f1fe7224efcc7b369fc"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-exact-primal.json",
+      "bytes": 159189,
+      "sha256": "84e754f780e9fdab170b9f18b63396042056871fc96b26f6b6ba767fd9a503ce"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-files.json",
+      "bytes": 5007,
+      "sha256": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-model.json.gz",
+      "bytes": 9516586,
+      "sha256": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-result-replay.json",
+      "bytes": 24516,
+      "sha256": "98f16e984aae3e4360dd0313260462bd77eab2252c1e8a57badad36152c05039"
+    }
+  ],
+  "independent_read_only_replay": "research-goal-20261017-quartic-split/split_replay.py",
+  "exact_disjunction_sides": 2,
+  "exact_old_point_quadratic_witness_values": [
+    "-1",
+    "-1"
+  ],
+  "solver_calls": 2,
+  "solver_time_limit_seconds_each": 45,
+  "solver_maximum_iterations_each": 10000,
+  "recursive_splits": 0,
+  "extra_directions": 0,
+  "actual_scalar_samples": 0,
+  "Lean_invocations": 0,
+  "exact_child_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false
+}
