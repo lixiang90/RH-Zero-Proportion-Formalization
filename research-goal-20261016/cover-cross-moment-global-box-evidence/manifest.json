@@ -1,0 +1,43 @@
+{
+  "scope": "Re-round the frozen Friendly grouped proof with global u/q boxes +/-7.\n\nAll 103/106 nonnegative affine factors and energy weights are unchanged.\nGap boxes stay at the cell limits; H has diagonal [0,1] and off-diagonal\n[-1,1]. No 41-term tight scalar-box query, LP, sample, point-kernel query,\nPSD round, threshold change or old-file edit is used.\n",
+  "script_sha256": "e1aee96af80ed62f7ca59f0105a831fe059bf56ff7dc83804d3d9ca6b22c6cfd",
+  "base_grouped_source_sha256": "d08fdf1e8dbb6abb6121938872f9ccbe10ece7570a3c302c13dd704a7827c2ee",
+  "proof_gzip_sha256": "6de47ed5bd5ba12a05c215c73d060c3e468eb4e7b9ba3a97ed24a9c57f2b29e8",
+  "proof_gzip_bytes": 35768,
+  "proof_uncompressed_sha256": "e51a65f4a156ea4dd648d261f010c41ac9a1c30273102ae762f3d828dd750871",
+  "proof_uncompressed_bytes": 163674,
+  "comparison_gzip_sha256": "020e63b463d238573364af04d1adae330b4587b95473d784b0ec45391c49bc18",
+  "comparison_gzip_bytes": 4406,
+  "consumer_view_sha256": "d799c39ab2c421c8d84606833b1bb87da04f6199e12da70534b36ed9bd5e1749",
+  "consumer_view_bytes": 41888,
+  "box_policy": "cell-g/unit-H/global7-u-q-v1",
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "affine_factor_groups": 103,
+      "energy_weight_unchanged": true,
+      "all_464_unrounded_coefficients_and_constant_unchanged": true,
+      "strict_margin": "2664839751256197379065398540759234306650047/32768",
+      "normalized_margin_original_weight_sum": "2664839751256197379065398540759234306650047/1218851111993344000000000000000000000000000000",
+      "outward_group_rounding_payment": "8179091583785010683071123277569/45462525515010893131515691008000000000000000000000000000000"
+    },
+    {
+      "path": "r001000001000001110011100",
+      "affine_factor_groups": 106,
+      "energy_weight_unchanged": true,
+      "all_464_unrounded_coefficients_and_constant_unchanged": true,
+      "strict_margin": "69432965982344610866962550992120815020017/16384",
+      "normalized_margin_original_weight_sum": "69432965982344610866962550992120815020017/684183716773888000000000000000000000000000000",
+      "outward_group_rounding_payment": "13723961820452343896169098314928621/66816973325537017860210151194624000000000000000000000000000000"
+    }
+  ],
+  "all_old_factors_and_energy_weights_preserved": true,
+  "tight_derivative_box_queries_required": 0,
+  "strict_local_integer_systems": 2,
+  "independent_replay_passed": false,
+  "new_cell_exclusions": 0,
+  "actual_Lean_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 1.9296861999973771
+}

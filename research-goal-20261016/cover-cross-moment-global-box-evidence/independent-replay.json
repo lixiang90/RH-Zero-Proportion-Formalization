@@ -1,0 +1,85 @@
+{
+  "scope": "Independent global-box wrapper around the unchanged factor replay.\n\nOverride only box construction with physical gap limits, unit moment boxes\nand +/-7 for every u/q variable. Canonical RLT decomposition, old actual\ngraph/facet checking, unmerged multiplier equality and independent outward\nrounding remain in the frozen replay. No tight scalar-box query is used.\n",
+  "script_sha256": "7c4c1b4f8af00103ebe0645a96a2cd9d6acc9ff21d0f139f514eb83e102db5e0",
+  "proof_gzip_sha256": "6de47ed5bd5ba12a05c215c73d060c3e468eb4e7b9ba3a97ed24a9c57f2b29e8",
+  "comparison_gzip_sha256": "020e63b463d238573364af04d1adae330b4587b95473d784b0ec45391c49bc18",
+  "parameters_sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+  "table_sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+  "dependency_sources_sha256": {
+    "research-goal-20261016/cover_cross_moment_global_box_replay.py": "7c4c1b4f8af00103ebe0645a96a2cd9d6acc9ff21d0f139f514eb83e102db5e0",
+    "research-20261016-followup/global_periodic_upper_bound.py": "95fa8520e5fe5505763fe748b866755143c15176ecf1ebf607a0d23ce25cecfd",
+    "research-goal-20261016/window_interval_kernel.py": "159a8f270531e16887e89583b6e0ddc84f98d4ee7a2497585572192ec9efa1ca",
+    "research-goal-20261016/cover_exact_scalar_replay.py": "eaa745076330aaf3346611badc4fdf0a878ac8ce0a3b5a2efeb4662d1d917e14",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "research-goal-20261016/cover_correlated_verify.py": "b8a1090e02b73d14305c0d800ec15c7d94d4323a1b55557dc0893adccfc778aa",
+    "research-goal-20261016/cover_contractor_verify.py": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389",
+    "research-goal-20261016/cover_flow_basis.py": "7205524aa483b650e218cb842c8ee4c28d2185f70d92d874d74bbb9450f53b56",
+    "research-goal-20261016/cover_compact_codec.py": "1e0f59cfb3ca328af0df30b7eb4d419267b08eab88469066ffc84cf4109f288c",
+    "research-goal-20261016/cover_sublevel_verify.py": "ddf7997d466b647de17f6e92c334b948b5ae7eb2daf334e807158b39714e88a4",
+    "research-goal-20261016/cover_sublevel_obbt_verify.py": "4545b22a8bb0f19e4f8642d8018f437e8ab46ed4bb6580066b244f6285f9671c",
+    "research-goal-20261016/cover_lifted_graph_verify.py": "9490d3071fea06aea005d7d337cef3e87bb1fbb63a6493f1c70ce777f3c9ec00",
+    "research-goal-20261016/cover_correlated_curvature_verify.py": "3db55f6c368e43e8f4b18a12f102afdc9c7bf0eb1d5dcfec1e8208d69d13481e",
+    "research-goal-20261016/cover_cross_moment_exact_rows.py": "a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae",
+    "research-goal-20261016/cover_cross_moment_energy_replay.py": "f1043be963d7a0f9a43614b83ac5215cd366a20fc695974a9e7df149004fe38d",
+    "research-goal-20261016/cover_cross_moment_old_rows_replay.py": "bcdf654149f68196abb0d5fdfc22a38bc19df8c2c217440f62bf375a18a87aa3",
+    "research-goal-20261016/cover_cross_moment_factor_replay.py": "d23adaed52000fbdecf6d4a7ed7589b93a9940a641c5f8563f5e8fc204276462"
+  },
+  "all_checks_passed": true,
+  "ancestor_counts": {
+    "nodes": 33,
+    "source_OBBT_bounds": 235,
+    "source_Newton_steps": 0
+  },
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "nonnegative_affine_factors": 103,
+      "integer_rows_with_energy": 104,
+      "all_464_unrounded_coefficients_and_constant_equal": true,
+      "strict_margin": "2664839751256197379065398540759234306650047/32768",
+      "strict_integer_system": true,
+      "finite_energy_polynomial": {
+        "finite_energy_polynomial_checked": true,
+        "point_intervals_are_input": true,
+        "whole_span_second_bounds_are_input": true,
+        "coarse_point_and_grid_composition_checked": true,
+        "point_rows": 41,
+        "new_point_and_grid_analytic_soundness_is_input": true,
+        "friendly_packets_sha256": "83fa5971057aab9afd1f6f7bac1e3c860c6c3676967514fb331497fd17917057"
+      },
+      "actual_Lean_exclusion_proven": false
+    },
+    {
+      "path": "r001000001000001110011100",
+      "nonnegative_affine_factors": 106,
+      "integer_rows_with_energy": 107,
+      "all_464_unrounded_coefficients_and_constant_equal": true,
+      "strict_margin": "69432965982344610866962550992120815020017/16384",
+      "strict_integer_system": true,
+      "finite_energy_polynomial": {
+        "finite_energy_polynomial_checked": true,
+        "point_intervals_are_input": true,
+        "whole_span_second_bounds_are_input": true,
+        "coarse_point_and_grid_composition_checked": true,
+        "point_rows": 41,
+        "new_point_and_grid_analytic_soundness_is_input": true,
+        "friendly_packets_sha256": "83fa5971057aab9afd1f6f7bac1e3c860c6c3676967514fb331497fd17917057"
+      },
+      "actual_Lean_exclusion_proven": false
+    }
+  ],
+  "no_site_packages": 1,
+  "point_kernel_evaluations_rerun": false,
+  "no_optimization_packages_imported": true,
+  "strict_local_integer_systems": 2,
+  "new_cell_exclusions": 0,
+  "actual_Lean_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 5.944606199998816,
+  "frozen_factor_replay_script_sha256": "d23adaed52000fbdecf6d4a7ed7589b93a9940a641c5f8563f5e8fc204276462",
+  "box_policy": "cell-g/unit-H/global7-u-q-v1",
+  "global_box_constructions": 2,
+  "tight_derivative_box_queries_required": 0,
+  "old_graph_atoms_and_facets_still_checked": true
+}

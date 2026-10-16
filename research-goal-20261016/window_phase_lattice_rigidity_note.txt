@@ -1,0 +1,160 @@
+Actual-rank-one phase rigidity: an exact inequality, a strict obstruction,
+and one signed-cycle repair
+2026-10-17
+
+Scope
+-----
+This is research only. No optimizer, Lean, cover search, or proof edit runs.
+The companion script reads the actual frozen 24-mode kernel and rational
+41-edge ledger. Algebra below is exact; specified rational interval checks
+are independently executable numerical evidence, not new Lean theorems.
+No new global floor, coverage result, minimizer localization, or zero ratio
+is claimed. The counterexample is to one sufficient localization strategy,
+not to the actual floor or to a strategy retaining additional KKT conditions.
+
+1. Exact norm/graph inequality retaining actual rank-one phases
+--------------------------------------------------------------
+Use the all-mode decomposition audited in window_phase_hermitian_audit.txt:
+  k(x) = A(x) sin(pi*x)+B(x) cos(pi*x)+C(x),
+  A(x) = cos(theta)*pi*x/[Z*(pi^2*x^2-1/2)] > 0,
+  B(x) = 1/(1-2*pi^2*x^2), theta=sqrt(2)/2, Z=sin(theta)/theta.
+For actual positions p, x_e=p_j-p_i, z_i=exp(2*pi*i*p_i), define
+  P=b.g, E=sum_e a_e*k(x_e)^2=F-P,
+  Q=sum_e a_e*A(x_e)^2*sin(pi*x_e)^2,
+  R=sum_e a_e*[B(x_e)*cos(pi*x_e)+C(x_e)]^2.
+These are real actual phases, with every cycle relation and rank one exact.
+The Euclidean triangle inequality on the 41 real edge components gives
+  sqrt(Q) <= sqrt(E)+sqrt(R).                            (1)
+Equivalently, for every 0<eta<1,
+  E >= (1-eta)*Q - (1/eta-1)*R.                          (2)
+No phase relaxation, independent layer, or sign assumption occurs here.
+
+For positive fixed lower conductances h_e<=a_e*A(x_e)^2, let L_h be the
+graph Laplacian. Then z*L_h*z/4<=Q. If F<c and R<=Rbar, (1) implies
+  z*L_h*z/4 < (sqrt(c-P)+sqrt(Rbar))^2.                   (3)
+For effective resistance rho_ij of this connected weighted graph,
+  sin(pi*(p_j-p_i))^2 <= rho_ij*z*L_h*z/4.               (4)
+This follows from Cauchy-Schwarz in the Laplacian energy inner product;
+it holds for complex z by adding the real and imaginary inequalities.
+Thus an energy budget M forces every positive edge into an integer band
+of radius r<1/2 if M<sin(pi*r)^2/max_e rho_e. A weighted complete-graph
+identity is a special case; the actual four missing edges cause no issue
+when using the connected Laplacian and resistance directly.
+
+2. Root constants, with an analytic global perturbation payment
+--------------------------------------------------------------
+Set s=123/128, c=11/1250, T=c-s*sum_r b_r. Nonnegativity of every kernel
+square implies P<c. For e=(i,j), positivity of pressure gives exactly
+  (j-i)*s <= x_e < U_e=(j-i)*s+T/min_{i<=r<j} b_r.
+A decreases on x>=s, since
+  A'(x)=-[pi*cos(theta)/Z]*(pi^2*x^2+1/2)/(pi^2*x^2-1/2)^2.
+Use h_e=a_e*A(U_e)_lower^2, with the rational interval lower endpoint.
+
+There is a much better elementary global C payment than sum|d_m|/Z.
+Put D2=sum_m d_m^2 and Vpert(t)=sum_m d_m*cos(2*pi*m*t). Orthogonality
+on [-1/2,1/2] gives integral Vpert^2=D2/2. Cauchy-Schwarz and
+  integral cos(2*pi*x*t)^2 dt=1/2+sin(2*pi*x)/(4*pi*x)
+give, for x>=ell>0,
+  |C(x)|^2 <= [D2/(2*Z^2)]*[1/2+1/(4*pi*ell)].           (5)
+Together with |B(x)|<=1/(2*pi^2*ell^2-1), this supplies a rational upper
+Rbar by summing a_e*(Bcap_e+Ccap_e)^2. The square roots in the script
+are rounded upward by integer isqrt and checked by rational squaring.
+
+The script records exact fractions and interval endpoints. Diagnostics:
+  T = 0.004550476459375 exactly;
+  Rbar approximately 0.016519574129105704;
+  paid phase budget approximately 0.03841040043424745;
+  sum_e h_e approximately 0.006466217918854913.
+The rational comparison Rbar>sum_e h_e is checked. Since |z_i-z_j|<=2,
+z*L_h*z/4<=sum_e h_e for every unit phase vector. Therefore this particular
+globally paid root inequality is completely vacuous, without needing a
+spectral numerical claim. Improving (5) cannot fix the next obstruction.
+
+A floating 10-by-10 inverse, explicitly not a certificate, gives
+max_e rho_e approximately 4121.144907792289, and a radius .21 sufficient
+budget approximately 0.00009115308120014933. Even the hypothetical
+zero-error root budget T is about 50 times too large for that criterion.
+
+3. Strict rational obstruction even with actual amplitudes and zero error
+------------------------------------------------------------------------
+Take the exact separated configuration
+  g=(9/4,1,1,1,1,1,1,1,1), p_0=0, p_i=i+5/4 (i>=1).
+Its actual phases are z_0=1 and z_1=...=z_9=i. The first adjacent span has
+distance 1/4 from every nearest integer, exceeding radius 21/100. Thus it
+belongs to none of the existing integer-centred coherent basins, regardless
+of which integer pattern is selected.
+
+All internal spans are integers, and every edge out of node 0 has sin^2=1/2.
+The exact pressure and a short rational interval enclosure are
+  P = 0.004678584775,
+  0.002801968097132 <= Q <= 0.002801968097134,
+  P+Q <= 0.007480552872134 < 0.0088.
+The script verifies these comparisons over the rationals using the actual
+transcendental interval constants. This is stronger than using root-frozen
+amplitudes: Q there is smaller still, about 0.000181448357513572.
+
+Consequently geometry, actual rank one, pressure, and even the strengthened
+hypothetical constraint Q<c-P with ZERO residual error do not imply the
+desired basin localization. The actual necessary inequality (3) is weaker.
+The direct actual F at this point is about 0.015547509851768743 (floating
+diagnostic only); this is emphatically not an actual F<c counterexample.
+The example need not satisfy minimizer KKT and makes no claim about that.
+
+4. One sign-preserving repair: exact triangle frustration
+--------------------------------------------------------
+Unlike the norm payment, a cycle identity retains the signed B cos+C cost.
+For positive x,y and all three actual positive edges, write
+  s0(x)=C(x)/A(x), h=Z/(2*pi*cos(theta)), B(x)/A(x)=-h/x,
+  K0(x)=k(x)/A(x), phi=pi*x, psi=pi*y.
+The sine addition identity gives the exact signed cycle residual
+  D=cos(psi)*K0(x)+cos(phi)*K0(y)-K0(x+y)
+   =-h*[(1/x+1/y)*cos(phi)*cos(psi)-cos(phi+psi)/(x+y)]
+     +s0(x)*cos(psi)+s0(y)*cos(phi)-s0(x+y).              (6)
+For edge weights a_x,a_y,a_xy>0, weighted Cauchy-Schwarz gives
+  a_x*k(x)^2+a_y*k(y)^2+a_xy*k(x+y)^2
+    >= D^2 / [cos(psi)^2/(a_x*A(x)^2)
+              +cos(phi)^2/(a_y*A(y)^2)+1/(a_xy*A(x+y)^2)]. (7)
+This is an actual rank-one cycle inequality; its right side still depends
+on the real spans. Freezing s0 without uniform payment is not justified.
+
+One small uniform packet demonstrates that signs can be retained. Assume
+  123/128<=x,y<=121/100 and x+y<=221/100,
+and choose actual edges (1,2),(2,3),(1,3), with weights respectively
+1940903748,2565879585,1568887398 divided by 10^10. Put delta=x-1,
+epsilon=y-1. Then cos(pi*delta),cos(pi*epsilon)>=79/100. The existing
+24th-order rational Taylor provider, on 18 outward grid intervals, checks
+  C(x)/A(x), C(y)/A(y) >= 257/10000,
+  C(x+y)/A(x+y) >= -89/1000.
+Its actual hulls are approximately [.0257495,.0307539] and
+[-.0887051,-.0562777]. No sampled maxima are used for these payments.
+
+Since 1/x+1/y>=4/(x+y), the bracket in (6) is at least
+  [4*(79/100)^2-1]/(221/100).
+Cos(phi) and cos(psi) are negative in this band. Therefore
+  D <= -h_lower*[4*(79/100)^2-1]/(221/100)
+       -2*(257/10000)*(79/100)+89/1000
+    < -2/25.
+The exact stronger magnitude lower endpoint is approximately .08183506556.
+Bounding the denominator in (7) using |cos|<=1 and the monotonic A lower
+values at 121/100 and 221/100 yields a strict rational lower bound greater
+than 1/100000 for this actual three-edge weighted kernel energy. The
+computed exact bound is approximately 0.00001084666958658908.
+
+This packet is interval evidence with a paper soundness derivation, not a
+Lean consumer. Its Taylor remainder and table semantics inherit the
+explicit analytic obligations of window_phase_coefficients.py. It is a
+single positive cycle cost, far below the full root energy budget; it
+does not establish a global band classification or the global floor.
+Amplifying it would require compatible band choices, enough signed cycles,
+and edge weight allocation preventing double counting. That is the one
+promising repair indicated here; another unsigned PSD or free-phase LP
+would discard the same cost exposed by the exact counterexample.
+
+Reproduction and artifacts
+--------------------------
+  python research-goal-20261016/window_phase_lattice_rigidity_probe.py
+The JSON records all exact endpoints, source hashes, root span intervals,
+18 uniform C/A packets, and exact signed-cycle bounds. NumPy is used only
+for the explicitly floating 10-by-10 resistance and direct F diagnostics.
+The decisive counterexample and the triangle comparisons use Fraction
+and the existing outward rational interval implementations.

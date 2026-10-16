@@ -1,0 +1,29 @@
+{
+  "scope": "Independent Fraction-vs-integer exact common-denominator one-row audit; no kernel, optimizer or rounding.",
+  "script_sha256": "ff5ee7e30b3039b9ad875d5cfbc9975c2fd5d246539c2327d00dd9bbf822193d",
+  "input_sha256": "dd86691b901c1f210054fb4de0992cba2d75a66cfab4561496e84f4a28769ee9",
+  "source_single_round_json_sha256": "ba02e6fe262d190e8f9b075b00d5c3328b9aea4e34e75eada62563c15e595733",
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "minimal_common_denominator_checked": true,
+      "all_464_exact_coefficients_and_bound_match": true,
+      "D0_digits": 51,
+      "strict_integer_box_check": true
+    },
+    {
+      "path": "r001000001000001110011100",
+      "minimal_common_denominator_checked": true,
+      "all_464_exact_coefficients_and_bound_match": true,
+      "D0_digits": 54,
+      "strict_integer_box_check": true
+    }
+  ],
+  "rounding_operations": 0,
+  "new_cell_exclusions": 0,
+  "actual_Lean_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 0.010772599998745136
+}

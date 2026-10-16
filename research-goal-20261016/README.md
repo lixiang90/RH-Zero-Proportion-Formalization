@@ -432,8 +432,11 @@ energy condition had given no strict certificate. The generic
 Lean. The actual lifted layout, signed-curvature quadratic energy theorem,
 and grouped multiplier theorem have also passed. All 82 actual point packets
 and 403 new second-derivative grid packets now pass ordinary Lean; 175
-previously checked second-derivative packets are reused. Per-cell dispatch,
-coefficient conversion and the concrete two-cell exclusions remain unfinished.
+previously checked second-derivative packets are reused. Both actual cell
+energy lower bounds, all 209 selected derivative-graph/KKT atoms, their factor
+budgets, actual boxes and polynomial conversion have now passed ordinary Lean.
+The final aggregate coefficient checks and concrete two-cell exclusions remain
+unfinished.
 `cover-cross-moment-independent-replay.json`
 records the exact scope, including the shared helper used to recompute point
 kernel intervals. These are local numerical exclusions toward the missing
@@ -457,6 +460,35 @@ representation reduction; it does not establish a website-size global proof.
 `moment-friendly-input-files.json` separately pins the actual scalar inputs
 and their independent arithmetic/semantic audits. Ordinary proof hashes and
 logs remain in `ordinary-verified-current.json`.
+The global `|u|,|q| <= 7` boxes also retain both strict contradictions, so
+the final proof need not rely on tight derivative boxes. The exact summed
+rational coefficients have common denominators of only 51/54 decimal
+digits. Clearing these denominators gives a single strict integer-row
+contradiction for each cell, with no rounding obligation. The corresponding
+numerical packages are pinned by `cover-cross-moment-global-box-files.json`
+and `cover-cross-moment-aggregate-files.json`; the fifty ordinary proof
+modules and five data modules for the actual inputs are pinned separately
+by `window_moment_actual_inputs_index.json`. The final two exclusion theorem
+instances are not asserted by that input index.
+The subsequent `WindowMomentFormSum` and `WindowMomentAggregateActual`
+ordinary-kernel proofs now assemble the valid rational sum for both actual
+cells. The complete coefficient-equality checks and the two final
+strict-support exclusions are still unfinished; passing only some blocks
+does not discharge either exclusion theorem.
+
+A separate actual-rank-one phase audit rules out a tempting shortcut to the
+global basin cover. The exact separated point `(9/4,1,...,1)` lies outside
+every radius-0.21 integer basin, yet its pressure plus the squared sine
+component of the actual kernel is below 0.0088. This refutes that unsigned
+localization criterion, not the actual energy floor or the KKT method.
+Retaining signed terms gives an exact three-edge cycle identity and a
+strict local kernel-energy payment above `1/100000` on one specified
+short-span triangle domain. That number is a local energy payment, not an
+increase in zero proportion. All 41 root-edge bounds, the counterexample,
+and eighteen uniform Taylor packets pass a separate standard-library
+replay sharing the disclosed interval providers. There is no Lean cycle
+consumer or global band classification. The frozen five-file evidence is
+`window-phase-lattice-rigidity-files.json`.
 
 Independent three-floor probes on the same 300 original parents found
 80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.

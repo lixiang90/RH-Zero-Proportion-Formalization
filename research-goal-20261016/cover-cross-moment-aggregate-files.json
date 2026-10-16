@@ -1,0 +1,85 @@
+{
+  "scope": "Read-only aggregate supplements of the same two Friendly/global-box proofs, including exact common-denominator one-row certificates with zero rounding.",
+  "files": [
+    {
+      "path": "research-goal-20261016/cover_cross_moment_single_round.py",
+      "bytes": 7641,
+      "sha256": "4e8cc3a2469d7190660dd1b71066a28c44e1ea6308c19e2811ffe97088aa22f3"
+    },
+    {
+      "path": "research-goal-20261016/cover_cross_moment_exact_aggregate.py",
+      "bytes": 6627,
+      "sha256": "ff5ee7e30b3039b9ad875d5cfbc9975c2fd5d246539c2327d00dd9bbf822193d"
+    },
+    {
+      "path": "research-goal-20261016/cover-cross-moment-single-round.json",
+      "bytes": 51278,
+      "sha256": "ba02e6fe262d190e8f9b075b00d5c3328b9aea4e34e75eada62563c15e595733"
+    },
+    {
+      "path": "research-goal-20261016/cover-cross-moment-single-round-replay.json",
+      "bytes": 3815,
+      "sha256": "412023fcc9ec5a0de43976645213203d9c0ec71b312f627347dc20db091c9f62"
+    },
+    {
+      "path": "research-goal-20261016/cover-cross-moment-exact-aggregate.json",
+      "bytes": 43337,
+      "sha256": "dd86691b901c1f210054fb4de0992cba2d75a66cfab4561496e84f4a28769ee9"
+    },
+    {
+      "path": "research-goal-20261016/cover-cross-moment-exact-aggregate-replay.json",
+      "bytes": 1123,
+      "sha256": "8182713e4794ca19da24ee4deb262b35731847c5f524b7048817e272e5ef80a0"
+    },
+    {
+      "path": "research-goal-20261016/cover_cross_moment_aggregate_note.md",
+      "bytes": 2235,
+      "sha256": "501f5e335d39f3ff01a52cb6d23eaf0dcee3b49781420f6a2b3d5c6dff4a7c76"
+    },
+    {
+      "path": "research-goal-20261016/cover_cross_moment_aggregate_manifest.py",
+      "bytes": 2626,
+      "sha256": "b07e0c869e8e0f711e27b5014b7f66097821761d440446d5efa4bdebb8ac16ba"
+    }
+  ],
+  "file_count": 8,
+  "total_bytes": 118682,
+  "dependency_global_box_manifest": {
+    "path": "research-goal-20261016/cover-cross-moment-global-box-files.json",
+    "bytes": 5651,
+    "sha256": "d5a8a471f46fefa0de591a13ba62fbc6f6097e664f9c6656958266d0a8b57790"
+  },
+  "external_source_dependencies_sha256": {
+    "research-20261016-followup/global_periodic_upper_bound.py": "95fa8520e5fe5505763fe748b866755143c15176ecf1ebf607a0d23ce25cecfd",
+    "research-goal-20261016/window_interval_kernel.py": "159a8f270531e16887e89583b6e0ddc84f98d4ee7a2497585572192ec9efa1ca",
+    "research-goal-20261016/cover_exact_scalar_replay.py": "eaa745076330aaf3346611badc4fdf0a878ac8ce0a3b5a2efeb4662d1d917e14",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "research-goal-20261016/cover_correlated_verify.py": "b8a1090e02b73d14305c0d800ec15c7d94d4323a1b55557dc0893adccfc778aa",
+    "research-goal-20261016/cover_contractor_verify.py": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389",
+    "research-goal-20261016/cover_flow_basis.py": "7205524aa483b650e218cb842c8ee4c28d2185f70d92d874d74bbb9450f53b56",
+    "research-goal-20261016/cover_compact_codec.py": "1e0f59cfb3ca328af0df30b7eb4d419267b08eab88469066ffc84cf4109f288c",
+    "research-goal-20261016/cover_sublevel_verify.py": "ddf7997d466b647de17f6e92c334b948b5ae7eb2daf334e807158b39714e88a4",
+    "research-goal-20261016/cover_sublevel_obbt_verify.py": "4545b22a8bb0f19e4f8642d8018f437e8ab46ed4bb6580066b244f6285f9671c",
+    "research-goal-20261016/cover_lifted_graph_verify.py": "9490d3071fea06aea005d7d337cef3e87bb1fbb63a6493f1c70ce777f3c9ec00",
+    "research-goal-20261016/cover_correlated_curvature_verify.py": "3db55f6c368e43e8f4b18a12f102afdc9c7bf0eb1d5dcfec1e8208d69d13481e",
+    "research-goal-20261016/cover_cross_moment_exact_rows.py": "a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae",
+    "research-goal-20261016/cover_cross_moment_energy_replay.py": "f1043be963d7a0f9a43614b83ac5215cd366a20fc695974a9e7df149004fe38d",
+    "research-goal-20261016/cover_cross_moment_old_rows_replay.py": "bcdf654149f68196abb0d5fdfc22a38bc19df8c2c217440f62bf375a18a87aa3",
+    "research-goal-20261016/cover_cross_moment_factor_replay.py": "d23adaed52000fbdecf6d4a7ed7589b93a9940a641c5f8563f5e8fc204276462",
+    "research-goal-20261016/cover_cross_moment_factor_compress.py": "9cfca163b492bfae3749d15d7a969c2acfcf1d74864d5b54d8700ef9ebb579bd",
+    "research-goal-20261016/cover_cross_moment_global_box.py": "e1aee96af80ed62f7ca59f0105a831fe059bf56ff7dc83804d3d9ca6b22c6cfd"
+  },
+  "single_round_replay_passed": true,
+  "exact_LCM_replay_passed": true,
+  "exact_LCM_denominator_digits": [
+    51,
+    54
+  ],
+  "exact_LCM_rounding_operations": 0,
+  "strict_local_integer_systems": 2,
+  "new_cell_exclusions": 0,
+  "actual_Lean_exclusions_instantiated_here": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "submission_ready": false
+}

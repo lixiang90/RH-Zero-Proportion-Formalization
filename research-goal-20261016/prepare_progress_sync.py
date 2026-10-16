@@ -155,7 +155,11 @@ def main():
       ('cover-cross-moment-remaining-files.json','a43e79af34ab38caea36f8dc9a11aead391eb11a6033945cf3b85dd95624b08b'),
       ('moment-friendly-input-files.json','78385cf83b95aa7d0f82e8c2f94378332e7fa787159bfca9f98b178e14a9db29'),
       ('cover-cross-moment-factor-files.json','2ac9f7c06164fe2d80a183794bb1578cb5666d8c44e9946be319782ad401e63b'),
-      ('window_moment_numeric_sync_files.json','6534d9a78342f55d406a4d54ec44c4db14aa2d5e9fa517d4bede48513197b2cb')]:
+      ('window_moment_numeric_sync_files.json','6534d9a78342f55d406a4d54ec44c4db14aa2d5e9fa517d4bede48513197b2cb'),
+      ('cover-cross-moment-global-box-files.json','d5a8a471f46fefa0de591a13ba62fbc6f6097e664f9c6656958266d0a8b57790'),
+      ('cover-cross-moment-aggregate-files.json','209cc75f7af3f151fb238cf0d4f8e9b82dd3763e37fda1aa3bdc1de8cf6e0b05'),
+      ('window_moment_actual_inputs_sync_files.json','292f094bd0ef5a1548f3a4e134fbd5a1041425824d73f5a7542ede2479129c83'),
+      ('window-phase-lattice-rigidity-files.json','4b005ad8c405126bc22b7c2858ad42999ab8b806cfc6433d595acba1477a2351')]:
         manifest=HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())

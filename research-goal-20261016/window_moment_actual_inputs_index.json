@@ -1,0 +1,1674 @@
+{
+  "scope": "Freeze the actually passed analytic/numeric inputs of the two moment cells.\n\nThe final aggregate coefficient checks and local exclusions are outside this\nindex until they have their own successful ordinary-kernel receipts.\n",
+  "script_sha256": "5335481a85777d2964f3f6aa51071eb74026f1ded3d76be1010c3fdf6b613417",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "proof_modules": 50,
+  "data_modules": 5,
+  "point_rows": 82,
+  "new_q2_rows": 403,
+  "old_q2_reused": 175,
+  "new_q4_rows": 0,
+  "actual_old_atoms": [
+    103,
+    106
+  ],
+  "actual_energy_cells": 2,
+  "actual_tight_box_cells": 2,
+  "records": [
+    {
+      "module": "StructuralGoal20261016.WindowMomentPointData",
+      "source_path": "StructuralGoal20261016/WindowMomentPointData.lean",
+      "source_sha256": "31ea5f46fca4d9792ed8fed9bc7329e4cac948c4e0b589717d09ab94892b99d4",
+      "source_bytes": 8358,
+      "log_path": "research-goal-20261016/lean_WindowMomentPointData_31ea5f46fca4.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+      "olean_sha256": "bb7126c9309b5770e5f14f4e79bd4e242074ba1fd1dfea87d793fd2b0791ca41",
+      "duration_seconds": 38.04432539999834,
+      "data_only": true,
+      "roots": [],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentPointChecks00",
+      "source_path": "StructuralGoal20261016/WindowMomentPointChecks00.lean",
+      "source_sha256": "76114adb23c171da61cc5c56355792d8818ddcfcab4a57b17842912408e47949",
+      "source_bytes": 503,
+      "log_path": "research-goal-20261016/lean_WindowMomentPointChecks00_76114adb23c1.log",
+      "log_sha256": "c04880ad26a82fbdd3dfdff740c8edcc3ca98d3af044c6ef4ea76af2d95f136b",
+      "olean_sha256": "409f5235575f3ae6c7457e5b0683feacda9e5e538080645a32eb2856691f817f",
+      "duration_seconds": 6.795666899997741,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentPointChecks.checks00",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentPointChecks01",
+      "source_path": "StructuralGoal20261016/WindowMomentPointChecks01.lean",
+      "source_sha256": "e508ecfcc127a1a9e05b606bf3d704869d860fe14ddad7d99a411da1bbb5f1db",
+      "source_bytes": 503,
+      "log_path": "research-goal-20261016/lean_WindowMomentPointChecks01_e508ecfcc127.log",
+      "log_sha256": "029aa7ea3e58524973ee73bcd0c8c1b60f71d7184007382f671246bcfdc185b8",
+      "olean_sha256": "ba79e8762df9159d1c81988c251d5e8b9e2db75cd7f39c18cfa06e5c6fe5b617",
+      "duration_seconds": 6.453483099998266,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentPointChecks.checks01",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentPointChecks02",
+      "source_path": "StructuralGoal20261016/WindowMomentPointChecks02.lean",
+      "source_sha256": "862cfdfd4e617b996adcfff4bc91677b494f79cd7d50601a1c452834a88bb460",
+      "source_bytes": 503,
+      "log_path": "research-goal-20261016/lean_WindowMomentPointChecks02_862cfdfd4e61.log",
+      "log_sha256": "afff108e15b42bd6593af807e9636b3d87cafecadfa22e3cd49dba20c8f04b87",
+      "olean_sha256": "57e2926983f7b6bcd90334d3163cb9c9c848214d2b3257aae08afa5c9e27e27d",
+      "duration_seconds": 6.629231400002027,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentPointChecks.checks02",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentPointChecks03",
+      "source_path": "StructuralGoal20261016/WindowMomentPointChecks03.lean",
+      "source_sha256": "4cb919c80a80255d9ac991351909a3cd3ba0ab846742e963e0f7c1c181468634",
+      "source_bytes": 503,
+      "log_path": "research-goal-20261016/lean_WindowMomentPointChecks03_4cb919c80a80.log",
+      "log_sha256": "1ba9dba3d8c3fc06a8019c50be26047e9f010f3602cad11cb33b30da4393361d",
+      "olean_sha256": "631656b59451ebf091db15b0fcd3b719802b6049acf5bf8b6ec5495c59c65a1b",
+      "duration_seconds": 6.955729900000733,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentPointChecks.checks03",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentPointChecks04",
+      "source_path": "StructuralGoal20261016/WindowMomentPointChecks04.lean",
+      "source_sha256": "42046b671245b5662f3e5de6995533bbd5cccaec6e18ca962361805c7a3ccfd5",
+      "source_bytes": 503,
+      "log_path": "research-goal-20261016/lean_WindowMomentPointChecks04_42046b671245.log",
+      "log_sha256": "c6fefc2b66617fcb19ba10c4bde22b9ed2672dd82047fbf96bae2a8e91e1c77d",
+      "olean_sha256": "f3655a27e7e7a0259c5520ffb6432c27c517003eb8c82f21cc23aedb144b7efd",
+      "duration_seconds": 6.430646000000706,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentPointChecks.checks04",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentPointChecks05",
+      "source_path": "StructuralGoal20261016/WindowMomentPointChecks05.lean",
+      "source_sha256": "718c8889b15d54649115a5319bf9e99dce341e133ff0299d3109c32bd0e4489f",
+      "source_bytes": 503,
+      "log_path": "research-goal-20261016/lean_WindowMomentPointChecks05_718c8889b15d.log",
+      "log_sha256": "ca8827ef30274e191f1f92ee3fa1babcf12d53f127ca8d733b131ef1676a9d11",
+      "olean_sha256": "14a4abbe310ef5faf136951ee15e02d29c027b9504a6f79ab16c349334af5432",
+      "duration_seconds": 5.800217099997099,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentPointChecks.checks05",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentPointAll",
+      "source_path": "StructuralGoal20261016/WindowMomentPointAll.lean",
+      "source_sha256": "a39010ffd9832344044cd04de7b1d47bf4d3361210564a3233caa2f971cf9a14",
+      "source_bytes": 1317,
+      "log_path": "research-goal-20261016/lean_WindowMomentPointAll_a39010ffd983.log",
+      "log_sha256": "25a8f5b3f3a0ddc6ea72067648496fcb54572d6c8dabf54d64586957fa541588",
+      "olean_sha256": "af8deca2c68341dc0d3ed579eb2c80139e9c2cb6615f7a11f879bd31a669050d",
+      "duration_seconds": 5.642243900001631,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentPointAll.valid",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondData",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondData.lean",
+      "source_sha256": "64c1fa2d6feb1643a44c2e7185c00c4b30858ab494a3080ade6f917e3cd53765",
+      "source_bytes": 38736,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondData_64c1fa2d6feb.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+      "olean_sha256": "482d48361685f3edf00f842e841cd73e45870404ae1ef9ef1c41886e23e9c60f",
+      "duration_seconds": 6.608629599999404,
+      "data_only": true,
+      "roots": [],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks00",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks00.lean",
+      "source_sha256": "58759a22364d806f368cef3ff0bea0f076731306e1296b454fc975dad462510c",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks00_58759a22364d.log",
+      "log_sha256": "9fc7a79d6c653fc7c3b344b0d1eaaf89df9c81b7314909013f9a0e489212dcf0",
+      "olean_sha256": "92e6c8ca1359158ca5a62ff191006011b367d9976be2288cf4e52e44b09bf311",
+      "duration_seconds": 7.823041800002102,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks00",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks01",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks01.lean",
+      "source_sha256": "92be777025433edfcb5c8bb704320e7950daea7a488899689778dd55deea0b1b",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks01_92be77702543.log",
+      "log_sha256": "70149a265c74b301a7a4bd14af73fd1cb8a174d59682cd71a13f16667756e687",
+      "olean_sha256": "a50e636325c4814132605ebb5adc3c574e6d6c9ad154a5f61683d6d2836ef6c3",
+      "duration_seconds": 7.91032709999854,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks01",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks02",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks02.lean",
+      "source_sha256": "ec76fcced8ac28edd8d77cfcd6f2ad708ccf49fe51e415b3e5d91de0aa8bc466",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks02_ec76fcced8ac.log",
+      "log_sha256": "b4d6d5eb9ea2703bb6d84d4cd81b22f779f838b2ff4fc33ea10a6f2ac65e813c",
+      "olean_sha256": "c0478a75fc58adb793a1108378e6d92d32004ac54663b253d01c30df1ca0c72f",
+      "duration_seconds": 8.40370200000325,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks02",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks03",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks03.lean",
+      "source_sha256": "224dbead82270d5b3889122874b977b9d8866d7115f8997ab4af187c18084de2",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks03_224dbead8227.log",
+      "log_sha256": "773a4e6b49075fc8c6aa23639a8ded0a0153f23e67dafca6a81270b701ca07d5",
+      "olean_sha256": "a7d019d4e61cbb5b0ab0d5c04262185cb73aa42fa43d024ef5eeb366acbb895b",
+      "duration_seconds": 8.940453299997898,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks03",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks04",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks04.lean",
+      "source_sha256": "a2c895510fae59baa47be3b4f2fc197fbc7d5c6c4513ea09d03c2806f44fa85b",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks04_a2c895510fae.log",
+      "log_sha256": "bf1cde646a7b2df6a9df7a51d8bf18813bb7204bfb451844754883a6ea9d6e65",
+      "olean_sha256": "8ab7d3cfa40a701b35f5175e879603a7274d041f619847cf5bdac8b6920f939a",
+      "duration_seconds": 8.750631800001429,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks04",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks05",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks05.lean",
+      "source_sha256": "fca3d2708a4616f9108bbcd2d21008922e4c525c36f31f6bc433f64b9abaf609",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks05_fca3d2708a46.log",
+      "log_sha256": "32b648439f9efa6221205baddf518e149ed7aa6cca93069eefcf8b7189161222",
+      "olean_sha256": "e2383c3c37f1c31b47584c48493bdb6f71e1cf155b36f198d868b2dde9fc24c8",
+      "duration_seconds": 8.065734600000724,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks05",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks06",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks06.lean",
+      "source_sha256": "2137ff42da3e1e6e43d0076578c3e47b0f17de6a4d55c108eac54463649de5cd",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks06_2137ff42da3e.log",
+      "log_sha256": "c51ce88da562562e450420ecb22fe415d016acbf600f0bdb3036f21a326efb14",
+      "olean_sha256": "135387a868078f9054bd32e2a9c1ba7620e97a7a28dabb061c37838859f39abd",
+      "duration_seconds": 7.901735100000224,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks06",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks07",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks07.lean",
+      "source_sha256": "57e8b212e1acefcc9829562b7d9cf3b7c24ffb4659d453aa1732ecfb1c0fe251",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks07_57e8b212e1ac.log",
+      "log_sha256": "7c1ac95feeaeed688dd9beab2598ccdbf5aa214fb0c0e9f50279a31dd1497749",
+      "olean_sha256": "6270720bc893581cc091287d238a3cda0d773fd0962067aa2ebafe931149ce84",
+      "duration_seconds": 7.700610599997162,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks07",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks08",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks08.lean",
+      "source_sha256": "2b187cabad472ca5e4aeee30dd1350b56fe9d3ba0d8c249fce9f590cbee250ec",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks08_2b187cabad47.log",
+      "log_sha256": "349e2c6a65361ee2f43dc41b0085f4f4c37512eae6d8b264620332dcfab8baef",
+      "olean_sha256": "a3ef75e3282b44aaf03bb55bac24c8d6a27873f342bd70940c1390bd21d9b21a",
+      "duration_seconds": 8.050544300000183,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks08",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks09",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks09.lean",
+      "source_sha256": "2fac4be4245f3a4c76ee6f3a0b082140252c73222b6e9fc6e5549a427c380deb",
+      "source_bytes": 507,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks09_2fac4be4245f.log",
+      "log_sha256": "601f421f19a02b2525738248b1ec84a6a9230bb475323e415ee07b806b9dbe62",
+      "olean_sha256": "27b5e7c2e488ca50f1ceb9ac57515ca78a0d938084b109c0b859aa541edc3306",
+      "duration_seconds": 8.060775799996918,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks09",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks10",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks10.lean",
+      "source_sha256": "949faf8874ed05fd6a7e4c95b27fa1a3405563cda5bb00c49c65b0f8c9cf1299",
+      "source_bytes": 509,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks10_949faf8874ed.log",
+      "log_sha256": "2fdc9edbdb01fd92c4d4ab7fa2a367a04eb822b037dce8d14528168be428cdbb",
+      "olean_sha256": "8f180121b8c318a4b184dd92f2eaa3a66a8ef7d093f3e54a3e035bc53df7b52f",
+      "duration_seconds": 7.991232899999886,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks10",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks11",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks11.lean",
+      "source_sha256": "d673b0228a463066bb65255065ff751cdfec07caf6977475c42f1e95f84c3141",
+      "source_bytes": 509,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks11_d673b0228a46.log",
+      "log_sha256": "cb5eac73e0065a91132ecb55690bc35dbecd77d88975f47b3bd657975e1fbead",
+      "olean_sha256": "f9453e38a29539bee3a6aaf07825a59deb7619c07d112b758d6cec3043e714bb",
+      "duration_seconds": 8.177611800005252,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks11",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondChecks12",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondChecks12.lean",
+      "source_sha256": "1a98ed7b365cf11bf485d2a20a9c74408e516bf0d34c229b08511cc2ab2bc1b3",
+      "source_bytes": 509,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondChecks12_1a98ed7b365c.log",
+      "log_sha256": "0d182ff27fb44c19dcd4b5d051acbc152f66886beff7f08b78304cbae12ea84a",
+      "olean_sha256": "91c004c3bdfc62e640a78983cbf2d9e7daa9ab84b99d37d5da92c661c1e50e7e",
+      "duration_seconds": 7.03130339999916,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondChecks.checks12",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentSecondAll",
+      "source_path": "StructuralGoal20261016/WindowMomentSecondAll.lean",
+      "source_sha256": "035596481657b5da728cbb94b19af3b3f9fcb336fb7129bcdd0d5a7ef355c736",
+      "source_bytes": 2477,
+      "log_path": "research-goal-20261016/lean_WindowMomentSecondAll_035596481657.log",
+      "log_sha256": "a10c459009c2de2855b726f97b4fb6d4d050044ddd3ef50076391613a56b3154",
+      "olean_sha256": "aecce4a6d824f89c67899833e2dc8f757b1378ec8a2fcfafda347e9d5c897a02",
+      "duration_seconds": 6.867279099998996,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondAll.newValid",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondAll.valid",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentSecondAll.second",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtomData",
+      "source_path": "StructuralGoal20261016/WindowMomentAtomData.lean",
+      "source_sha256": "3ca748ea7474daeec86376df0496016c41ab5d5ab963c652b02c947cb0b53bbb",
+      "source_bytes": 31085,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtomData_3ca748ea7474.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+      "olean_sha256": "95252f546e98fd35d03eb790500463e74dfd6fc9989ad1d85916927463e50c93",
+      "duration_seconds": 8.314071100001456,
+      "data_only": true,
+      "roots": [],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms0Checks00",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms0Checks00.lean",
+      "source_sha256": "d7888439ee5e7177997439855124c21728a5d45f5420cb51f25157fe51d32d24",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms0Checks00_d7888439ee5e.log",
+      "log_sha256": "13519bf96f9809de7d5274c3c863f86f0d38bee2fdeb42ab23f67a9bd66c8031",
+      "olean_sha256": "cdc9ca1301c646bef5a576029a744d4e5920a690afa6781ecea27b613b1a2d19",
+      "duration_seconds": 5.628680599998916,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks0_00",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms0Checks01",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms0Checks01.lean",
+      "source_sha256": "7a5efa799e2e983084096df0029d45d2ca0ed6b3dc3d34bdf5ea112a12bff3f2",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms0Checks01_7a5efa799e2e.log",
+      "log_sha256": "8fb97ea2ad05074841b4075946de7012336a1fba4af5781146bc617d7be8f38e",
+      "olean_sha256": "e6148f07e2fe1fa8b5ca6bced8062d4b295b254fecfbb76bce99c62b24e8e926",
+      "duration_seconds": 6.169348000003083,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks0_01",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms0Checks02",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms0Checks02.lean",
+      "source_sha256": "38eb3f976d1d3cb1bf0ea6d092e65ccc0c64505cfe8e9cd14858564b8b67fee0",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms0Checks02_38eb3f976d1d.log",
+      "log_sha256": "58c86480cb67e05308023c55d8ad5395399aac683ce8f170cc6e58bea4f36e40",
+      "olean_sha256": "d864a59c1af4233efc90c0848486f141b4e39371a58751b71a781f2f23753522",
+      "duration_seconds": 6.908857399997942,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks0_02",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms0Checks03",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms0Checks03.lean",
+      "source_sha256": "3e10aa37c2d7e729b5211d3776eff9d5dfecde91725a9ec1531f52b2cfd04c06",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms0Checks03_3e10aa37c2d7.log",
+      "log_sha256": "8622ce0a9db491558b94a6b35b1c2f00dabaf12a98e47f34e04a9411a6edc1b3",
+      "olean_sha256": "26b87b2ce4010a714b2411524e0047897619914c9ef9e46ddbf4fce2bccdf236",
+      "duration_seconds": 7.313990099995863,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks0_03",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms0Checks04",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms0Checks04.lean",
+      "source_sha256": "26465b831f1c620a17846186867a8592ac606a277ca0436ef306f7af6c0dac88",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms0Checks04_26465b831f1c.log",
+      "log_sha256": "91958b10f374600265fb30ef9f5a7592fbe1cc1113127aec3acb634843947cfb",
+      "olean_sha256": "378eb0149c96f939ae2fffe0163deeeafc459e77749cb010baa3b531f37ba486",
+      "duration_seconds": 6.787966500000039,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks0_04",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms0Checks05",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms0Checks05.lean",
+      "source_sha256": "e0edd6ca23878b47dcba6e8dd6d86dfcc1ae92c05a671da21f65876e14d23bc7",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms0Checks05_e0edd6ca2387.log",
+      "log_sha256": "bcb242248f130890ec4b26045f402136d6a10ee4901923aac760a617b9c69455",
+      "olean_sha256": "4d90afeffb79c4c6c29502de4b9a6ff8163365a481ef5fc508dee9b436e487d0",
+      "duration_seconds": 7.003789700000198,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks0_05",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms0Checks06",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms0Checks06.lean",
+      "source_sha256": "7d3760775940bb00a545cfb474072ab8a164f6b981b75957211dc9bb894e1dae",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms0Checks06_7d3760775940.log",
+      "log_sha256": "5a1b68bdbf9aa3dfb197d2a3e7e290e9bda09a3336d27529865f42d2b62ea8cb",
+      "olean_sha256": "25a1cbac17e682676af2a4ee7b8a06f1ea4fcad76ffca5c028e91859814983d4",
+      "duration_seconds": 6.683218400001351,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks0_06",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms1Checks00",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms1Checks00.lean",
+      "source_sha256": "bea48f8eee91888402a35c9112df55e920daddbe612b7ab179583f199b599a67",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms1Checks00_bea48f8eee91.log",
+      "log_sha256": "a7a9eb480979c7be4d54b62d124feccbef78abebf77fa36395867e10ccd59561",
+      "olean_sha256": "28821658b052c7e20dcd70374c51949e63ecfe05756cd21c1f67c0d07d9ed992",
+      "duration_seconds": 6.077063400000043,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks1_00",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms1Checks01",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms1Checks01.lean",
+      "source_sha256": "97421addeb7d8a82600179ce040f12f365df34af3e10a33165819c97a3b25449",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms1Checks01_97421addeb7d.log",
+      "log_sha256": "1669299b9c1e9605571d878e1f38c0941b959cfa4c955ed1af93da6512765821",
+      "olean_sha256": "2a9fe6477bac0106d22d64548e855db42402f09aef5e35ecf41ef4faec14ef26",
+      "duration_seconds": 7.018570700005512,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks1_01",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms1Checks02",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms1Checks02.lean",
+      "source_sha256": "95f4ab692d89f4e843c7a70b312b3f07f86d9d716a349312f2dc58f84493c0e3",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms1Checks02_95f4ab692d89.log",
+      "log_sha256": "a0999a726ef0e24d7981668106ca857c64a305eb5d7d82f78db5bb08ac9c2d4f",
+      "olean_sha256": "e133d30f2fe7c64045a4fbed59566a1e0360c21a8821d589ec5df19ec600056e",
+      "duration_seconds": 6.31264750000264,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks1_02",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms1Checks03",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms1Checks03.lean",
+      "source_sha256": "27a0a6bae66147a23d79102686034fcae03950015f11eb79f943a18700f9d230",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms1Checks03_27a0a6bae661.log",
+      "log_sha256": "a689fd9be7e8f2a436e5a34212039ad996c3bca33e27875b48ae257a9a68b4df",
+      "olean_sha256": "a9b2c7377ecf7ae20abcaadabb7fa9e5a049649774d062b93da62deaf73242be",
+      "duration_seconds": 6.181071899998642,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks1_03",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms1Checks04",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms1Checks04.lean",
+      "source_sha256": "ee8a56db9c2b0388b8001be1e61213cc4bfbc4013f0f7e237c2eacc74f50553d",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms1Checks04_ee8a56db9c2b.log",
+      "log_sha256": "8464cae0c1f7a1723704de6845bdd7a9cd94f852b1885ab7a1dc32166e35e74f",
+      "olean_sha256": "a49dc1f94a993b4dc8aca68b2e7124f08a8ecd815aa2a650e77474ece5f93674",
+      "duration_seconds": 6.378588500003389,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks1_04",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms1Checks05",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms1Checks05.lean",
+      "source_sha256": "7e24d07d9299754bf0c87231c3dad623c2ee4f24599b6214310dbce06f8c8b7a",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms1Checks05_7e24d07d9299.log",
+      "log_sha256": "2e70d9000421762d76066a9106878ab9ec63639867cd8681199001066cb7b4dd",
+      "olean_sha256": "e0bb945caa22df8e3b1cf6f70efc8adf7a13ae3891cac60f6d98fb8567cf7d35",
+      "duration_seconds": 6.5095539999965695,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks1_05",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtoms1Checks06",
+      "source_path": "StructuralGoal20261016/WindowMomentAtoms1Checks06.lean",
+      "source_sha256": "cdf512a519d1c2b19abc980503686b5241191a60b8aac049be29a42c3bbb63fc",
+      "source_bytes": 541,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtoms1Checks06_cdf512a519d1.log",
+      "log_sha256": "cfd3a9eac8b16a37052cc1151a217474ba6429f67a00ac346443df2cff242153",
+      "olean_sha256": "a520dcd3fef632f5d03f2c8a66ec9635bd8c114068423fedb2afba67bee53b6b",
+      "duration_seconds": 6.858873299999686,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomChecks.checks1_06",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentEnergyData",
+      "source_path": "StructuralGoal20261016/WindowMomentEnergyData.lean",
+      "source_sha256": "59add236164cd9f4fe53dbb8266d1829a1cf8a897adf7b1dc46491d9216ea865",
+      "source_bytes": 7070,
+      "log_path": "research-goal-20261016/lean_WindowMomentEnergyData_59add236164c.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+      "olean_sha256": "e806ec45672133fc15de7f5dae2666eb6a3f45c1187e0b1c851120c4e7275013",
+      "duration_seconds": 6.191362199999276,
+      "data_only": true,
+      "roots": [],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentEnergyCase00",
+      "source_path": "StructuralGoal20261016/WindowMomentEnergyCase00.lean",
+      "source_sha256": "0626ce1ec945798ec1dea89c4d450647f6211a4a1a27672e158af2a884ba9702",
+      "source_bytes": 1182,
+      "log_path": "research-goal-20261016/lean_WindowMomentEnergyCase00_0626ce1ec945.log",
+      "log_sha256": "7feae7cee7ad9543ee8e5ed4d9bfcbfe0028eb6cee1b620c18bd7b2a61bb7752",
+      "olean_sha256": "34d7f438025ab60a64df3682a2e5cb644dfa4356bd6a43f39c2027ef94e87d28",
+      "duration_seconds": 52.532189900004596,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase00.geometry",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase00.second",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase00.checked",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase00.lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase00.sublevel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentEnergyCase01",
+      "source_path": "StructuralGoal20261016/WindowMomentEnergyCase01.lean",
+      "source_sha256": "a397704894bd599eda375cf2d240d7dfb443736a6b0f699a9da3404a9edee878",
+      "source_bytes": 1182,
+      "log_path": "research-goal-20261016/lean_WindowMomentEnergyCase01_a397704894bd.log",
+      "log_sha256": "a5c844614197a89efdcee6ae77025b0b6594f37948af277b862965dc8c9db779",
+      "olean_sha256": "13b24c38a905443d5b1a19c8d0a7921ca02e0b2795b969da6133da0ed26a8720",
+      "duration_seconds": 46.95329830000264,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase01.geometry",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase01.second",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase01.checked",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase01.lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCase01.sublevel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentBoxData",
+      "source_path": "StructuralGoal20261016/WindowMomentBoxData.lean",
+      "source_sha256": "cf5b18f020e95d09dc622f93d18780b7a757a02eafe5d6bd762f94a7fa640786",
+      "source_bytes": 8260,
+      "log_path": "research-goal-20261016/lean_WindowMomentBoxData_cf5b18f020e9.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+      "olean_sha256": "b473b091529e4690c7854f8fe0cc6386d8c0e897da03c401b16c3858a9f8041d",
+      "duration_seconds": 37.03195209999831,
+      "data_only": true,
+      "roots": [],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentBoxCase00",
+      "source_path": "StructuralGoal20261016/WindowMomentBoxCase00.lean",
+      "source_sha256": "cbadacbafb812be3e56ce78ff348f078d31e203bd42f3c228d5e04d4d329761a",
+      "source_bytes": 699,
+      "log_path": "research-goal-20261016/lean_WindowMomentBoxCase00_cbadacbafb81.log",
+      "log_sha256": "ab70f608174712635afaf90e7e2b07a87bfd3d7b5cb87fe13c8603af9e307252",
+      "olean_sha256": "aedfd7f113bc40be906244feb2da636ea659b56b8752ef7107646bdbdeb94935",
+      "duration_seconds": 10.558784699998796,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentBoxCase00.checked",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentBoxCase00.bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentBoxCase01",
+      "source_path": "StructuralGoal20261016/WindowMomentBoxCase01.lean",
+      "source_sha256": "d91ad238c4be5f668b394fa2d09a064f94b4a9d5ae26ad59be2f124608ccec9d",
+      "source_bytes": 699,
+      "log_path": "research-goal-20261016/lean_WindowMomentBoxCase01_d91ad238c4be.log",
+      "log_sha256": "81e1cc0157eb669fe617682a3e4d51296370751ba746ce0c2df3b61920eb953a",
+      "olean_sha256": "719a94b4600127f7d1c41d1452ad1c973c8ebafe63f89ae8cb3614e72a80a570",
+      "duration_seconds": 10.079337800001667,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentBoxCase01.checked",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentBoxCase01.bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentAtomsAll",
+      "source_path": "StructuralGoal20261016/WindowMomentAtomsAll.lean",
+      "source_sha256": "3a7f660f09b9496ff42da18b90e68119cf3700d951e448866fd2cf144662c394",
+      "source_bytes": 3871,
+      "log_path": "research-goal-20261016/lean_WindowMomentAtomsAll_3a7f660f09b9.log",
+      "log_sha256": "b3e9875d35c5280ecd3cf2b223133ee1cd5f3e90822714991a8918fa82bfe326",
+      "olean_sha256": "a21866b12af151094d05bd315eb6b925ceb656b6990efa0f6bf02a79b72c180a",
+      "duration_seconds": 15.293886800005566,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomsAll.checked0",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomsAll.factor0",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomsAll.valid0",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomsAll.checked1",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomsAll.factor1",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentAtomsAll.valid1",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentLayout",
+      "source_path": "StructuralGoal20261016/WindowMomentLayout.lean",
+      "source_sha256": "8a96ecbd18a3b3a53fbd14eb9ad9bfe800113a848face2021208a1bddef9b29f",
+      "source_bytes": 4930,
+      "log_path": "research-goal-20261016/lean_WindowMomentLayout_8a96ecbd18a3.log",
+      "log_sha256": "e06e29ece2a5d2df61474b06e1af117c54396261b4f4170b252cda6efc20541a",
+      "olean_sha256": "3c0cdc8f075443e07922cf711ad26db363b1629865f681be382be582cec5d5c1",
+      "duration_seconds": 39.15607330000057,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentLayout.actual_gap",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentLayout.actual_u",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentLayout.actual_h",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentLayout.actual_q",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentLayout.normalized_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentLayout.rlt_nonpos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentLayout.diagonal_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentLayout.product_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentLayout.derivative_product_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentEnergy",
+      "source_path": "StructuralGoal20261016/WindowMomentEnergy.lean",
+      "source_sha256": "0f549a4d5e204d6cf11a4734a447c3e9c2a53a4354be4dc056c68489a313ff55",
+      "source_bytes": 4801,
+      "log_path": "research-goal-20261016/lean_WindowMomentEnergy_0f549a4d5e20.log",
+      "log_sha256": "e96b9e3e0ebef38bd522c1910ede7e1be67099b24e9dfd27e2fcbd31f9a5ab52",
+      "olean_sha256": "d75e45a63e64a6808cf0548d4739b24b3bd33523f568d4f8f4b96b1849fd3129",
+      "duration_seconds": 38.815805499994894,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergy.incidence_nonneg",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergy.span_sub_abs_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergy.payment_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergy.scalarPolynomial_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergy.lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergy.sublevel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentRLT",
+      "source_path": "StructuralGoal20261016/WindowMomentRLT.lean",
+      "source_sha256": "1174004cab3424339ba1b6d659cb6df7e8cbc5998935101082dd6a2b1e4322de",
+      "source_bytes": 2893,
+      "log_path": "research-goal-20261016/lean_WindowMomentRLT_1174004cab34.log",
+      "log_sha256": "5cd013690c356000456b968f08f7c4ea7488556bf2d1e3f54355f94beb8e3137",
+      "olean_sha256": "80366b9f9b4d401c55d7854adf822bcc951c9f77d4c861f1cfdbce5ecfe76e1f",
+      "duration_seconds": 37.94030390000262,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentRLT.multiplier_nonneg",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentRLT.grouped_nonpos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentRLT.actual_nonpos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentRLT.factor_compression",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentRLT.compression_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentEnergyCertificate",
+      "source_path": "StructuralGoal20261016/WindowMomentEnergyCertificate.lean",
+      "source_sha256": "9b0705563fa463d7807c4fa1eb3e69177dd3a8b70d1ff2169833f3a41b7b0b26",
+      "source_bytes": 6191,
+      "log_path": "research-goal-20261016/lean_WindowMomentEnergyCertificate_9b0705563fa4.log",
+      "log_sha256": "e6568c001540320204bd49b03a166aadce1b110363153414d2a456929f2fc3ca",
+      "olean_sha256": "261886811b3c04b2176d8e017a7bdec1174ea564c4c597d320d7a5a9181e3ba0",
+      "duration_seconds": 37.94587039999897,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCertificate.span_cast",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCertificate.lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyCertificate.sublevel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentRounding",
+      "source_path": "StructuralGoal20261016/WindowMomentRounding.lean",
+      "source_sha256": "8fc0ce2460732d97bdce870d61529146dac2e52c643734c9b54e4a3d7e399adb",
+      "source_bytes": 4186,
+      "log_path": "research-goal-20261016/lean_WindowMomentRounding_8fc0ce246073.log",
+      "log_sha256": "012879be36b6a4add90db4f2afff05db0c63b583fbe1e9579dbbfe0de1f6f38d",
+      "olean_sha256": "bcf4fdd840b15cb263c73b915164e3b10d6ad57641a5c1ac91b822cbb4e78a24",
+      "duration_seconds": 37.18010349999531,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentRounding.abs_box",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentRounding.payment_cast",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentRounding.row_error_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentRounding.valid",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentPolynomial",
+      "source_path": "StructuralGoal20261016/WindowMomentPolynomial.lean",
+      "source_sha256": "114d4b5a4d6cb3065f17e81beef0e63f5820aa95eed6c1ddcd5d775aca97284e",
+      "source_bytes": 11994,
+      "log_path": "research-goal-20261016/lean_WindowMomentPolynomial_114d4b5a4d6c.log",
+      "log_sha256": "664fd44e5454fd4e5eae1fcb0713cccb8f8517e3286d5ceaa33ccb0e86c50ff9",
+      "olean_sha256": "c5c37b45a79239e8a1ad60ef6f1a4be1f59ffade3e9a13c77c66309e0dd34e0a",
+      "duration_seconds": 40.94198619999952,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentPolynomial.decode_encode",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentPolynomial.encode_decode",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentPolynomial.sum_blocks",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentPolynomial.eval_actual",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentPolynomial.oldForm_eval",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentPolynomial.hLookup_alignment",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentPolynomial.collectH_eval",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentPolynomial.grouped_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentPolynomial.grouped_nonpos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentBox",
+      "source_path": "StructuralGoal20261016/WindowMomentBox.lean",
+      "source_sha256": "08e9e8c7c60f04c9840b480a305b1d81ec3713fb4a25ae85a614930ceb459830",
+      "source_bytes": 6497,
+      "log_path": "research-goal-20261016/lean_WindowMomentBox_08e9e8c7c60f.log",
+      "log_sha256": "16dc9c5a23b6819d1c66eb65f10f1b0fa3f949822910c0ce49e61f7e72be76c1",
+      "olean_sha256": "ec36e18b3196e59826b0ad853351804f3d9ceb1330f3e5a138ae3b3ba4933636",
+      "duration_seconds": 6.42698830000154,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentBox.bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentBox.sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentEnergyPolynomial",
+      "source_path": "StructuralGoal20261016/WindowMomentEnergyPolynomial.lean",
+      "source_sha256": "c9ff9efd0b016147edc91d163a9762fcf45f01e5ed181bdbddb05a06e58ec859",
+      "source_bytes": 13736,
+      "log_path": "research-goal-20261016/lean_WindowMomentEnergyPolynomial_c9ff9efd0b01.log",
+      "log_sha256": "5b1ec204e9831c88a9a04c3526a48843569f977cb0f45634a7f666fa3db9407b",
+      "olean_sha256": "b4ad9407311ca7b7dbd3dd22ff8875f7d085dc2a9ec83d38601fdf0bea36cc40",
+      "duration_seconds": 37.914855299997726,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.cross_dot",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.matrix_recenter",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.moment_matrix",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.form_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.F0Q_cast",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.gradientQ_cast",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.paymentQ_cast",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.matrixQ_cast",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.realMatrix_span",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.quadratic_eq_certificate",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.energyForm_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentEnergyPolynomial.energyForm_sublevel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentGlobalBox",
+      "source_path": "StructuralGoal20261016/WindowMomentGlobalBox.lean",
+      "source_sha256": "75b210693f1378fefb24d81a74f03993b098692d59e1cb22e621ff2d2841eeac",
+      "source_bytes": 2391,
+      "log_path": "research-goal-20261016/lean_WindowMomentGlobalBox_75b210693f13.log",
+      "log_sha256": "c7117074004d5c5197556ddd8cc163ecd0c135a78f387b590d11c84cfa768654",
+      "olean_sha256": "ccd4a8711881799fc46e3397ef8943b0b80a6de5718f39b5d1544dcaeb1ff3a5",
+      "duration_seconds": 37.47642939999787,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentGlobalBox.sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    },
+    {
+      "module": "StructuralGoal20261016.WindowMomentExactInteger",
+      "source_path": "StructuralGoal20261016/WindowMomentExactInteger.lean",
+      "source_sha256": "de51d7a2d9cf88e3dffe7bf087ab1764b658376ebcccaa638aa7d975b9fd5dfd",
+      "source_bytes": 3171,
+      "log_path": "research-goal-20261016/lean_WindowMomentExactInteger_de51d7a2d9cf.log",
+      "log_sha256": "4ae438598d2921d33985b3285f772a89dc6430ea7903618661ce5211d6318759",
+      "olean_sha256": "30aea5986d7aca2aadf014af7bbeeca08e95729a894eb42f2f997ec8da0b8bcf",
+      "duration_seconds": 41.57819860000018,
+      "data_only": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.WindowMomentExactInteger.eval_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentExactInteger.valid",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.WindowMomentExactInteger.exclude",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "ordinary_Lean_passed": true
+    }
+  ],
+  "all_current_sources_and_logs_verified": true,
+  "independently_replayed_here": false,
+  "actual_moment_exclusions_in_this_index": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false
+}
