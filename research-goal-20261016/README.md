@@ -429,8 +429,12 @@ and the midpoint energy row are needed; the successful certificates use
 no moment PSD cuts or sampled-anchor energy row. Cross-moments without the
 energy condition had given no strict certificate. The generic
 `WindowBoundedMomentFarkas` and its product/RLT lemmas have passed ordinary
-Lean. The actual finite scalar packets, lifted layout and concrete two-cell
-Lean exclusions remain unfinished. `cover-cross-moment-independent-replay.json`
+Lean. The actual lifted layout, signed-curvature quadratic energy theorem,
+and grouped multiplier theorem have also passed. All 82 actual point packets
+and 403 new second-derivative grid packets now pass ordinary Lean; 175
+previously checked second-derivative packets are reused. Per-cell dispatch,
+coefficient conversion and the concrete two-cell exclusions remain unfinished.
+`cover-cross-moment-independent-replay.json`
 records the exact scope, including the shared helper used to recompute point
 kernel intervals. These are local numerical exclusions toward the missing
 cover, not a global floor or a new zero-proportion theorem.
@@ -441,6 +445,18 @@ The path-level numerical union therefore covers fifteen non-nested parent
 regions, adding one distinct region to the previous fourteen. The new
 criterion also replaces that earlier split by a single moment-energy leaf;
 the union has not been instantiated in Lean or extended to the full domain.
+
+`cover-cross-moment-factor-files.json` pins an exact compression of the
+same two certificates: 329/341 product/base rows become 103/106 nonnegative
+affine factors, plus one energy row. All 464 unrounded coefficients and the
+constant agree exactly. Independent replays preserve strict box margins
+for both the original inputs and the wider Lean-friendly scalar inputs.
+The Friendly standalone gzip proof is 35,656 bytes, compared with 247,277
+bytes for the original full-certificate gzip. This is a measured local
+representation reduction; it does not establish a website-size global proof.
+`moment-friendly-input-files.json` separately pins the actual scalar inputs
+and their independent arithmetic/semantic audits. Ordinary proof hashes and
+logs remain in `ordinary-verified-current.json`.
 
 Independent three-floor probes on the same 300 original parents found
 80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.

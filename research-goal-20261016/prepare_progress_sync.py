@@ -152,7 +152,10 @@ def main():
       ('cover-gradient-mixture-files.json','bc83b24e89b6231a027aa8a450a659f78470762b030f2cb49b98aa639a69f015'),
       ('cover-cross-moment-two-files.json','f1a499f158445218def874cddf6d440c89725bb07290a62b3058f18f72fe7683'),
       ('moment-followup-auxiliary-files.json','93d553c98e6cfb4c5719078fe337968c513511908959d2d1b64843c139cd18a8'),
-      ('cover-cross-moment-remaining-files.json','a43e79af34ab38caea36f8dc9a11aead391eb11a6033945cf3b85dd95624b08b')]:
+      ('cover-cross-moment-remaining-files.json','a43e79af34ab38caea36f8dc9a11aead391eb11a6033945cf3b85dd95624b08b'),
+      ('moment-friendly-input-files.json','78385cf83b95aa7d0f82e8c2f94378332e7fa787159bfca9f98b178e14a9db29'),
+      ('cover-cross-moment-factor-files.json','2ac9f7c06164fe2d80a183794bb1578cb5666d8c44e9946be319782ad401e63b'),
+      ('window_moment_numeric_sync_files.json','6534d9a78342f55d406a4d54ec44c4db14aa2d5e9fa517d4bede48513197b2cb')]:
         manifest=HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())

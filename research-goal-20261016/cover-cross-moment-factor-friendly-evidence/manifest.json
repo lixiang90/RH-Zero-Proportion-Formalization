@@ -1,0 +1,42 @@
+{
+  "scope": "Retain grouped old-row multipliers and substitute only Friendly energy0.\n\nNo LP, sampling or point-kernel evaluation. All affine factors and original\nenergy weights remain byte-for-value identical. The coarser energy row is\nweighted before the single 1e30 outward rounding and strict box replay.\n",
+  "script_sha256": "ca5fb8e39d29ea01ceb65aaf1a4dcb27dfcdde513a345ca80bbaecf25a9cab90",
+  "base_proof_gzip_sha256": "a8156a4591fa8fee81fcfb1ab9fd26f325091292d1c2583b5a1c2c8352878daf",
+  "friendly_packets_sha256": "83fa5971057aab9afd1f6f7bac1e3c860c6c3676967514fb331497fd17917057",
+  "proof_gzip_sha256": "d08fdf1e8dbb6abb6121938872f9ccbe10ece7570a3c302c13dd704a7827c2ee",
+  "proof_gzip_bytes": 35656,
+  "proof_uncompressed_sha256": "f733721ba3c6cbbb2e4ed51fa202d5c61fc346cf49aa57c11651a00ab555c58d",
+  "proof_uncompressed_bytes": 163372,
+  "comparison_gzip_sha256": "afa19ec8124f12d8b46a3aaae940dd84948ae41d85a573fe49188f06707e3b8d",
+  "comparison_gzip_bytes": 4408,
+  "cases": [
+    {
+      "path": "r001000001000001101011101",
+      "affine_factor_groups": 103,
+      "all_factors_and_energy_weight_preserved": true,
+      "unrounded_original_after_energy_substitution_equals_grouped": true,
+      "new_strict_margin": "2664864980156783025161739109386303234650047/32768",
+      "new_normalized_margin_original_weight_sum": "2664864980156783025161739109386303234650047/1218851111993344000000000000000000000000000000",
+      "original_ungrouped_friendly_normalized_margin": "666216245039195756290434776279859038561223/304712777998336000000000000000000000000000000",
+      "new_group_rounding_payment": "8179091583785010683071123277569/45462525515010893131515691008000000000000000000000000000000"
+    },
+    {
+      "path": "r001000001000001110011100",
+      "affine_factor_groups": 106,
+      "all_factors_and_energy_weight_preserved": true,
+      "unrounded_original_after_energy_substitution_equals_grouped": true,
+      "new_strict_margin": "69445931161689012707509634832218299820017/16384",
+      "new_normalized_margin_original_weight_sum": "69445931161689012707509634832218299820017/684183716773888000000000000000000000000000000",
+      "original_ungrouped_friendly_normalized_margin": "17361482790422253176877408342287714890431/171045929193472000000000000000000000000000000",
+      "new_group_rounding_payment": "13723961820452343896169098314928621/66816973325537017860210151194624000000000000000000000000000000"
+    }
+  ],
+  "all_unrounded_polynomials_equal_after_energy_substitution": true,
+  "strict_integer_systems": 2,
+  "independent_replay_passed": false,
+  "new_cell_exclusions": 0,
+  "actual_Lean_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 2.1178799999979674
+}

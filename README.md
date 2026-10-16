@@ -56,6 +56,11 @@ Four selected mixed-cover roots, including the concrete graph/KKT pilot
 and a complete local curvature subtree, now pass both Lean's default kernel
 and independent nanoda replay (47,721 declarations). The global-floor root
 still assumes the complete pressure-root tree check.
+Joint quadratic-energy and cross-coordinate KKT constraints now give two
+further exact local certificates, one overlapping an earlier split proof.
+Their numerical union covers fifteen distinct parent regions. The new
+point and curvature tables pass ordinary Lean; complete local-instance and
+global-cover proofs remain unfinished.
 The [submission status](submission/goal-20261016/STATUS.zh.md) distinguishes
 the conditional candidate scores from proved global conclusions.
 

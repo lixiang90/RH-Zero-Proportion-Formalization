@@ -1,0 +1,69 @@
+WindowMomentLayout / WindowMomentEnergy 语义独立审阅（2026-10-17）
+
+结论：所审阅通用 Lean 源码与现有 Python actual-kernel moment 模型对应，
+未发现把实际函数、索引、权重、压力、符号或误差付款替换成较弱对象的缺口。
+本次只读源码并运行纯标准库字面量/有理恒等式核对，没有启动 Lean。
+通用模块的编译状态由 owner 的既有日志确认；本审计不把它们升级为两片叶子。
+
+索引与实际量
+Fin 464 按 g[0:9]、u[9:50]、H[50:95]、Q[95:464] 排列。
+hFirst/hSecond 全45项与 Python (s,r), 0<=s<=r<9 的顺序逐项相同。
+Q 索引95+41*s+t覆盖全部369项，无遗漏/重叠。
+normalized=(g-center)/radius；actual_h 是真实归一化坐标乘积，actual_q 是
+normalized_s*u_t。它没有把 Q 换成原始 g_s*u_t，也没有假设独立矩阵可行性。
+center/radius 的物理单位应由未来具体 cell 消费者用 lower/SC、upper/SC 接入；
+通用定理对任意 center/radius 正确，单靠它不能保证具体参数选择正确。
+
+核、ledger 与 incidence
+u=WindowGapEnergy.w1(span g e)=2*k24*jet24(1)。能量 f 明确定义为
+WindowKernel.w 24 d24，Fw24 使用 NewLedger.W，并非旧 AM Core.Fw。
+既有 WindowDerivativeAffineOracle.iterated_one_eq 证明 iteratedDeriv 1 f=w1，
+所以两种导数写法没有函数错配；未来具体行桥接时仍需显式使用这条等式。
+41个 pairI/pairJ 与 JSON a_upper 的正权项顺序相同；全部 weight=a_upper/10^10、
+pressure=NewLedger.b=b_numerators/10^10，经字面量有理比较全部匹配。
+incidence=1_{r<j}-1_{r<i} 正好是 [i,j) 的0/1 incidence，不是反号跨度。
+
+能量不等式
+WindowMomentEnergy.lower 保留全部41个跨度的 (L_e/2)*(span(g-p))^2。
+它只借用 GramDiagonal.constant/linear 的代数定义，没有使用该旧模块要求
+非负二次项的 diagonal reduction。因此 L 可以为负，方向仍是 polynomial<=Fw24。
+由实际 scalar quadratic_minorant 推出该结论：V<=f(anchor)、|f'-S|<=E，
+全跨度下界 L<=f'' 与 |g_r-p_r|<=R_r 都是显式前提，未被当成数值公理。
+scalarPolynomial 中先减 E_e*sum_span R；payment_eq 将它精确改写为
+sum_r [sum_e weight_e*E_e*incidence_er]*R_r，等于 friendly pack 的 ge·R。
+两case的 F_lower、gm、ge、两种付款求和已独立用有理数逐项比较一致。
+权重非负由已有 ledger/transfer 证明；不需要也没有假设 L 非负。
+sublevel 是由 polynomial<=Fw24 与真实 Fw24<c 得到 polynomial<c，方向正确。
+
+通用 PASS 尚未完成的具体消费者
+1. 两case的实际 cell/center/radius/anchor/point_indices/grid_ranges 的有限对应，
+   以及 cell Contains 到全部 span 区间与 |g-p|<=R 的实际几何消费者。
+2. 82个 value/slope 数值块、403个新增q2块与175个旧has2复用的最终 All 证明，
+   再实例化所有 V/S/E/L 的实际核前提。当前具体数值队列的进度不由本审计推断。
+3. 将 lower/sublevel 的 polynomial 精确展开为464实际变量的能量整数行；
+   对角/非对角二次系数、10^30外取整付款均需具体有限检查。
+4. 实际 KKT、DBM、scalar graph/slab 行到选中的 RLT/McCormick 行的声音性，
+   并由实际 normalized/products 建立全部紧 box 界。两case原正交锥严格内点
+   才可用双向 KKT 等式，人工 cell faces 不能替代原正交锥边界。
+5. 330/342个正整数权重和最终严格 box-Farkas check 的 Lean 消费与实际
+   RelevantBelow -> False 两叶子；再接到覆盖树。完整压力根覆盖仍为另一缺口。
+
+没有发现应阻塞当前 point/q2 数值队列的通用语义问题；具体消费者落盘后应再审。
+
+本次确定检查：45个H索引对，369个Q索引，41个跨度/权重，9个压力，
+两个实际friendly包的constant/linear/error/payment恒等式；所有464索引分区一致。
+
+读取源文件 SHA256（绑定本次审阅快照）
+StructuralGoal20261016/WindowMomentLayout.lean  8a96ecbd18a3b3a53fbd14eb9ad9bfe800113a848face2021208a1bddef9b29f
+StructuralGoal20261016/WindowMomentEnergy.lean  0f549a4d5e204d6cf11a4734a447c3e9c2a53a4354be4dc056c68489a313ff55
+StructuralGoal20261016/WindowBoundedMomentFarkas.lean  c2d43cd25643589ee87d1e3cccde41a2cc139daacc934b421843fc2b4a39245a
+StructuralGoal20261016/WindowGramExpansion.lean  c96182db1b236171b8dfa32b3e7a31a603ddf05a2f550ef86e95be040a0caf5f
+StructuralGoal20261016/WindowDirectionalAffine.lean  3c444b06e70b709bd0d641884a575d505d82993f3ee6b343f92d6ac50ea61d3e
+StructuralGoal20261016/WindowGramDiagonal.lean  d0b29c9dbb1acf8fdfb321e48d071c7e236383f474b3496075be8b3a5fc43c0b
+StructuralGoal20261016/WindowGapEnergy.lean  3f570bc83263355a239c086922e9bc138319fd2abd77668b594b5f94a5fd6564
+StructuralGoal20261016/WindowScalarMinorant.lean  7cea224a250677b941d110c698e4b2dacdcee93829ee88a69cccf9e46b3228e1
+StructuralGoal20261016/WindowDerivativeAffineOracle.lean  e66aabd8328e9e12f2bbfc10c7f3c5048be4bf02ca67fab7b3ea2f634181e2d0
+StructuralW10Followup20261016/NewLedger.lean  9db3e7633a3117f4fded88998da4ab3ebc4e24631ac50816f23931bdb8225d1a
+research-goal-20261016/cover_cross_moment_exact_rows.py  a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae
+research-goal-20261016/window-moment-friendly-packets.json  83fa5971057aab9afd1f6f7bac1e3c860c6c3676967514fb331497fd17917057
+research-20261016-followup/window_reweight_rational.json  61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11
