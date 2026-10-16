@@ -181,7 +181,11 @@ def main():
       ('cover-sqlite-campaign133004-files.json','75db72c3932e479f75f6126cc5c76694492f339f6ad9f31dad7d1e0ee4e26c0e'),
       ('cover-dynamic-sector-files.json','7ae3208f705a7fec9ca0796ff47f7c23426356c7b140e6920933be8048e28922'),
       ('cover-joint-jet-hessian-files.sha256.json','a582d06fd30a88b9756711ec5f3e0ac4a9c150d1c258f304ad885917601b21e2'),
-      ('window_scalar_sector_sync_files.json','ac8b344e559c5b3b7006787366019cb4aea05242cb014782205fc6bd89265017')]:
+      ('window_scalar_sector_sync_files.json','ac8b344e559c5b3b7006787366019cb4aea05242cb014782205fc6bd89265017'),
+      ('cover-full-u-files.json','fef4caa3f4566b398d66a3d9e8b12e846e128fb5bf8188bca1e0284267db1e46'),
+      ('cover-common-anchor-curvature-six-files.json','994e848cba046e35248ce4229ca6860cc75ad20d219dc935657e26014d4d26de'),
+      ('window-large-embedding-files.json','0c9805d8f2a134b9c8df61d2c4cacffc03799e99d3a3f02f78e618d97e50ebc2'),
+      ('cover-full-u-face-files.json','a5304f7603f971eee6bf1571411ae4da20765aa43470d314ef6bc93c67ce1dcf')]:
         manifest=HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -189,9 +193,14 @@ def main():
         if rows is None and 'files_sha256' in pinned:
             rows=[{'path':path,'sha256':digest,'bytes':(ROOT/path).stat().st_size}
                   for path,digest in pinned['files_sha256'].items()]
-            replay=json.loads((HERE/'cover-joint-jet-hessian-replay.json').read_bytes())
-            assert replay['inputs_unchanged'] and replay['input_sha256_start']==replay['input_sha256_end']
-            for path,digest in replay['input_sha256_end'].items():
+            if name=='cover-joint-jet-hessian-files.sha256.json':
+                replay=json.loads((HERE/'cover-joint-jet-hessian-replay.json').read_bytes())
+                assert replay['inputs_unchanged'] and replay['input_sha256_start']==replay['input_sha256_end']
+                inputs=replay['input_sha256_end']
+            elif name=='cover-common-anchor-curvature-six-files.json':
+                inputs=json.loads((HERE/'cover-common-anchor-curvature-six.json').read_bytes())['input_sha256']
+            else:raise AssertionError('Unreviewed files_sha256 schema: '+name)
+            for path,digest in inputs.items():
                 assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
                 files.append(path)
         if isinstance(rows,dict):

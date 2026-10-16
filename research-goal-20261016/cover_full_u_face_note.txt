@@ -1,0 +1,125 @@
+Exact free-KKT face reduction of the full derivative moment model
+2026-10-17
+
+This package changes only the computational representation of the frozen
+full-U model.  It adds no mathematical inequality, removes no box or other
+nonredundant condition, and does not reuse a Gram-minimal derivative
+completion.  The original full51 experiment remains frozen in manifest
+fef4caa3f4566b398d66a3d9e8b12e846e128fb5bf8188bca1e0284267db1e46.
+
+1. KKT nullspace and exact factorization
+----------------------------------------
+The full Gram feature vector is z=(1,y[9],v[41]), dimension 51, with
+v_e=(u_e-mu_e)/sigma_e and sigma_e>0 from the exact derivative box.
+Let A have nine columns encoding the free KKT linear forms
+
+  H_r = C_r*z0 + sum_(e contains r) a_e*sigma_e*v_e,
+  C_r = b_r+sum_(e contains r)a_e*mu_e.
+
+The old mean and y-multiplied KKT equalities, together with the newly
+retained u-multiplied KKT equalities, imply M*A=0 for the full symmetric
+moment matrix M.  The normalized v versions follow by subtracting mu_e
+times the mean equation and dividing by sigma_e.  The independent replay
+checks every one of these 51*9=459 null equations as an exact linear
+combination of the actually retained rows, rather than merely assuming
+that KKT products were present.
+
+For each gap r, the adjacent edge e_r=(r,r+1) occurs only in equation r.
+Its coefficient a_e_r*sigma_e_r is strictly positive.  Thus the nine
+adjacent derivatives are exact nonzero diagonal pivots.  Solve their
+features in terms of z0 and the 32 nonadjacent derivative features:
+
+  v_e_r = -C_r/(a_e_r*sigma_e_r)
+          -sum_(nonadjacent e contains r)
+             (a_e*sigma_e)/(a_e_r*sigma_e_r)*v_e.
+
+Keep q=(1,y[9],v_nonadjacent[32]), dimension 42.  Let T be the resulting
+51x42 rational feature map, and S the selector of the 42 kept rows.  The
+following identities are checked exactly:
+
+  S*T=I42, A^T*T=0, I51-T*S=J*A^T,
+
+where J has only the nine adjacent pivot rows, with entries equal to the
+reciprocals of those positive pivots.  In particular T has full column
+rank.  For every symmetric M satisfying M*A=0, symmetry and the last
+identity give
+
+  M=T*(S*M*S^T)*T^T.
+
+Hence full51 PSD is equivalent to PSD of the kept principal block
+Q=S*M*S^T, size 42.  Conversely M=T*Q*T^T reconstructs all KKT-null
+moments.  This statement is about the forced KKT face, not about
+projecting derivatives onto the ten-dimensional position Gram span.
+
+2. All moment variables and constraints are mapped
+--------------------------------------------------
+The 42 Gram features have 42*43/2-1=902 nonconstant moments.  The constant
+entry is Q00=1.  All 1325 original moments are affine expressions in these
+902 coordinates.  The eliminated coordinates are nine derivative means,
+81 position/derivative products, and 333 derivative/derivative products,
+423 in total.  The remaining 528 nonadjacent derivative cross moments
+are independent coordinates; cross-RLT information is not discarded.
+
+The original physical gaps, derivative means, h=yy, q=yu, and normalized
+W=vv are recovered using the exact T map and the unchanged box normalizers.
+The producer checks all 1326 original joint Gram entries after substitution
+against T*Q*T^T.  The independent replay reconstructs the map separately
+and also checks all 902 kept-entry inverse identities.  This proves that
+the change of variables has the stated left inverse.
+
+Every one of the original 50,221 linear rows, including all 1325 original
+boxes and the same slack condition, is pulled back exactly.  The full
+original row digest matches the frozen full51 solver's row digest before
+any reduction.  The energy slack remains in units of .001 and is present
+only on the same two original energy rows.  The objective is unchanged.
+
+The reduction removes exactly 1080 tautologies (the KKT equations and
+their implied products) and 2794 positive-proportional duplicates.  Every
+removal is recorded in an original-row map.  A retained inequality is
+normalized by its positive rational maximum coefficient/bound magnitude.
+The remaining model has 46,347 distinct rows.  The independent replay
+checks every original pullback against the retained row and its exact
+positive scale, or verifies that it is a nonnegative constant tautology.
+It therefore also checks every original box mapping.  No finite-width,
+curvature, derivative, RLT, dynamic-sector, or energy condition was weakened.
+
+The large model is a strict-JSON gzip file with deterministic compression.
+The build receipt records compressed and decompressed hashes.  All scalar
+parameters and coefficients are exact Fraction strings or integers.
+
+3. One separately authorized reduced42 numerical test
+-----------------------------------------------------
+After the exact static identities passed, one SCS 3.3.1 solve used 902
+moment variables plus the original slack, 46,347 linear rows, and one
+42x42 PSD cone.  Limits were 45 seconds and 10,000 iterations.  This was
+not a repeated full51 run: it eliminates the nine forced PSD null
+directions, 423 dependent moments, and the stated redundant rows exactly.
+
+The one call took about 34.92 seconds and reached 10,000 iterations with
+status "solved (inaccurate - reached max_iters)":
+
+  raw energy slack             -3.32e-10,
+  worst normalized row slack   -3.32e-7,
+  minimum reduced eigenvalue   -8.04e-9.
+
+The numerical residuals are much smaller than for the frozen full51
+representation, but remain nonzero.  There is no positive exclusion
+margin and no exact feasible point.  No second reduced solve, parameter
+change, dual extraction, LP polish, or additional case was attempted.
+The output is discovery data only.  Unused nonfinite SCS diagnostic fields
+are serialized as strings, so the receipt is valid strict JSON.
+
+4. Independent replay and scope
+--------------------------------
+cover_full_u_face_replay.py imports only the standard library and the
+previously audited exact-row algebra interface.  It verifies all 459
+KKT-null linear combinations, every T/J/S identity, all moment maps,
+1326 Gram identities, 902 inverse checks, and all 50,221 row/box pullbacks.
+It confirms 46,347 distinct retained rows, 1080 tautologies and 2794 positive
+duplicates.  It imports no face-reduction producer or numerical package.
+
+This is an exact computational representation improvement of the same
+full-U mathematical model.  The earlier full-U cross-RLT model is the
+mathematical strengthening; this face reduction is not a further one.
+No actual-kernel floor, whole-cell exclusion, global cover or new zero
+proportion is established here.  All earlier frozen packages are unchanged.

@@ -1,0 +1,34 @@
+{
+  "scope": "Independent stdlib polynomial replay of the full-U model and strict toy.\n\nReconstruct every one of 4264 added rows and 1326 joint PSD entries by\nexpanding degree-two polynomials in actual y and u, then substituting the\ndeclared moment coordinates.  No producer or optimizer is imported.\nThis checks the algebraic model; analytic scalar inputs remain frozen inputs.\n",
+  "status": "full_U_polynomial_model_and_strict_toy_independently_verified",
+  "path": "r001000001000100110011001",
+  "source_sha256_start": {
+    "research-goal-20261016/cover_full_u_replay.py": "da11674f5af5d2f7805d72d96bc474de47395463defe7d57d1e029aec631966d",
+    "research-goal-20261016/cover-full-u-model.json": "8ff8fa5589f3781718fa4d4dd96ad8722207b7d02b635b61827109ab2a2e6769",
+    "research-goal-20261016/cover-residual-psd-rational-inputs.json": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622",
+    "research-goal-20261016/cover-residual-psd-pilot.json": "c47035fe5c51ca28deba8b0e488dc8601c2efb8bac19ce90138cabc12b191144",
+    "research-goal-20261016/cover-dynamic-sector-static.json": "4cbc223f90cc8a6e3535220eebc51d3eb85f9f6fb42ce439bf7aec5ece0731c8",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+  },
+  "source_sha256_end": {
+    "research-goal-20261016/cover_full_u_replay.py": "da11674f5af5d2f7805d72d96bc474de47395463defe7d57d1e029aec631966d",
+    "research-goal-20261016/cover-full-u-model.json": "8ff8fa5589f3781718fa4d4dd96ad8722207b7d02b635b61827109ab2a2e6769",
+    "research-goal-20261016/cover-residual-psd-rational-inputs.json": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622",
+    "research-goal-20261016/cover-residual-psd-pilot.json": "c47035fe5c51ca28deba8b0e488dc8601c2efb8bac19ce90138cabc12b191144",
+    "research-goal-20261016/cover-dynamic-sector-static.json": "4cbc223f90cc8a6e3535220eebc51d3eb85f9f6fb42ce439bf7aec5ece0731c8",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+  },
+  "all_sources_unchanged": true,
+  "variables": 1325,
+  "new_rows_reconstructed": 4264,
+  "joint_PSD_entries_reconstructed": 1326,
+  "UU_box_RLT_rows": 3444,
+  "u_multiplied_KKT_equalities": 369,
+  "residual_square_upper_rows": 82,
+  "strict_toy_margin": "14/25",
+  "Gram_minimal_extension_not_accepted_as_UU_feasible": true,
+  "optimization_packages_imported": false,
+  "Lean_invocations": 0,
+  "cell_exclusion_proven": false,
+  "elapsed_milliseconds": 425
+}

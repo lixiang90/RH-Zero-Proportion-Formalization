@@ -1,0 +1,190 @@
+COMMON-ANCHOR SECOND-VARIATION EXCLUDER: SIX FROZEN CELLS
+2026-10-17. Target 11/1250. No Lean, global search, or case expansion.
+
+RESULT
+======
+No new cell exclusion was obtained. This is a bounded, documented negative
+result, not a claim that all second-order methods fail.
+
+* Cases 0 and 3 have exact actual-Hessian positive-definiteness witnesses
+  inside the cell (case 0: canonical prefix mean; case 3: prefix upper).
+  Consequently no one fixed direction can have strictly negative actual
+  curvature everywhere on either entire cell. The witnesses need not be
+  KKT or sublevel points, so this obstruction does NOT rule out a test
+  restricted to the joint KKT/sublevel locus.
+* Cases 1, 2, and 4: the single legal rational direction selected from the
+  most negative mean-Hessian eigenvector has strictly POSITIVE actual
+  curvature at the canonical prefix lower endpoint. Hence no improved
+  enclosure could make that same direction negative on the entire cell.
+  Other directions are not ruled out by these three scalar witnesses.
+* Case 5 remains unresolved even for the selected direction. It is
+  negative at all three canonical points tested, but neither the old
+  correlated affine bound nor the new shared cubic upper bound is <0.
+  This is an enclosure/relaxation obstruction, not a counterexample to
+  existence of another useful fixed direction.
+
+Only the six original remaining-six cells were used. Three canonical
+DBM potentials per cell were inspected; these were mean, lower and upper
+prefix potentials, not a random/parameter scan. Exactly four LP calls
+were made, each 219 variables and 3510 rows, once on cases 1,2,4,5. The
+two cells with strict PSD obstruction witnesses required no LP. No
+additional direction, sample, LP, SDP, contraction or cover job followed.
+An initial preflight stopped before any LP because not all six cells
+have every gap strictly free; candidate directions were then correctly
+restricted to the original orthant's strictly free coordinates. This
+abort consumed zero LP calls and produced no certificate artifact.
+
+RELATION TO EXISTING IMPLEMENTATIONS
+===================================
+window_newton_gram_cover_cached.py calls stationary first-derivative
+exclusions, then KKT-only interval-Newton contraction. Its cheap pipeline
+does not call a second-variation engine. Newton's approximate inverse
+Hessian merely SELECTS integer combinations of KKT equations; exact
+affine Taylor/DBM-flow bounds pay the resulting contraction.
+
+The second-variation criterion itself is already implemented separately:
+ cover_second_order.exclusion uses independent upper w'' intervals;
+ cover_correlated_curvature.CurvatureOracle.affine encloses each w'' by
+   m0 + m1*(s-s0) +/- err with a w'''' remainder;
+ cover_correlated_curvature.exact_upper collects all affine coefficients
+   over the common nine gaps and maximizes them by exact DBM min-cost
+   flow, then adds the scalar remainders;
+ cover_curvature_parent_probe.curvature_exclusion also reuses old integer
+   directions, free coordinate/pair directions, and quantized negative
+   eigenvectors from one feasible midpoint.
+
+Thus a midpoint affine w'' Taylor bound plus a shared-gap LP/flow is an
+existing method, not a new route. There are already sparse curvature
+certificates and actual second-variation consumers. This pilot genuinely
+changes the enclosing model by retaining degree-two and degree-three
+monomials of the SAME gap perturbation before any maximization.
+
+WindowSecondVariation.curvature_nonneg_of_relevant proves the actual
+necessary condition. With c_e the incidence vector of edge (i,j),
+
+  Q_d(g) = d^T Hessian F(g) d
+         = sum_e a_e (sum_{i<=r<j} d_r)^2 w''(s_e(g)).
+
+For a genuine orthant global minimum, Q_d >= 0 whenever d is supported
+on coordinates strictly above sep. The fixed cell's artificial boundary
+does not constrain a direction. For cases 1,4,5, gap 0 has lower bound
+equal to sep and the selected direction therefore has d_0=0; all other
+coordinates are free. Cases 0,2,3 have all nine coordinates strictly free.
+
+NEW AUDITABLE CUBIC INEQUALITY
+=============================
+Fix the feasible canonical prefix-mean gap vector g0, h=g-g0, and
+delta_e=sum_{i<=r<j} h_r. Normalize curvature by ||d||^2. Set
+
+  rho_e = a_e (sum_{i<=r<j} d_r)^2 / ||d||^2 >= 0.
+
+For each e, enclose actual derivatives f^(2),f^(3),f^(4),f^(5) at
+s0=s_e(g0) by [m_k-eta_k,m_k+eta_k], k=0,...,3. If
+|delta_e|<=r_e and |f^(6)|<=M_e over its whole scalar span interval,
+Taylor's theorem gives the concrete inequality
+
+ Q_d(g)/||d||^2 <= C + sum_{1<=|alpha|<=3} p_alpha y^alpha + E,
+ C = sum_e rho_e*m_0,
+ E = sum_e rho_e*(sum_{k=0}^3 eta_k*r_e^k/k! + M_e*r_e^4/24),
+ h_i=R_i*y_i, y_i in [ell_i,u_i] subset [-1,1].
+
+All polynomial coefficients p_alpha are COLLECTED across edges first,
+including their signs and shared y_i*y_j and y_i*y_j*y_k. E pays only
+anchor interval uncertainty and the fourth-order remainder of w''.
+The scalar f^(6) intervals are obtained from the frozen rational u=w'
+Taylor polynomial differentiated five times, plus the inherited analytic
+remainder (44/7)^24*(1/2)^18/18!, on the SAME 1/64 grid.
+
+An additional one-sided improvement is replayed using the SAME saved
+LP dual, with no second solve: replace M_e by
+
+  M_e^+ = max(0, upper bound of f^(6) on that span interval).
+
+This is valid because the fourth-order remainder contains delta_e^4>=0.
+If the upper derivative bound is negative, dropping its nonpositive
+contribution is a valid upper payment. The resulting bounds remain >0.
+
+LP RELAXATION AND EXACT PAYMENT
+==============================
+The lifted variables are nine y_i, 45 symmetric degree-two monomials,
+and 165 symmetric degree-three monomials. Retain all 90 DBM inequalities.
+Multiply each by y_i-ell_i and u_i-y_i, both nonnegative, retaining the
+degree-two terms exactly. Add the four McCormick inequalities for every
+degree-two product and every distinct factorization of each degree-three
+product. Actual rank-one monomials satisfy every row; three canonical
+rank-one vectors were checked in preflight. No independent v intervals
+replace the shared polynomial in this model.
+
+Write these exact rational rows as A z<=b, with finite boxes l<=z<=u.
+The one floating LP only selects nonnegative multipliers lambda. They
+are rounded to nonnegative integer multiples of 10^-12 after undoing
+row scaling. With r=p-A^T lambda, the exact, auditable payment is
+
+  C + E + lambda^T b
+    + sum_j r_j*(u_j if r_j>=0 else l_j).
+
+This upper bound is valid even if the rounded dual does not cancel p.
+No LP status or floating optimum is accepted as proof. The saved integer
+multipliers, residual coefficient vector and all Fraction payments are
+replayed without numerical libraries. The replay reuses the explicitly
+whitelisted pure algebraic row builder from the pinned producer; it is
+not an independent implementation of those row-generation formulas.
+Its scalar interval Horner/remainder and Hessian checks are separate.
+Unrounded rational Horner intervals are checked to lie inside the saved
+outward-rounded intervals, avoiding reliance on decimal equality.
+
+FINITE RESULTS (DISPLAY VALUES ONLY)
+===================================
+Case  selected Q(mean)  old affine upper  cubic exact upper  one-sided upper
+ 1       -.2915262          .4101583          4.6784474          4.5383718
+ 2       -.1266090          .6604174          3.1823870          3.1338886
+ 4       -.1682738          .3189169          1.8195258          1.7661945
+ 5       -.2192982          .6815750          7.8611384          7.7466320
+
+The corresponding original absolute remainder payments E are .5417276,
+.5749937, .6707226, and 2.0811596. All exceed |Q(mean)|. The shared
+monomial LP also loses information compared with exact rank-one gap
+products, so the cubic upper is substantially worse than old affine
+flow in this fixed test. Higher Taylor order alone did not help here.
+
+For the fixed directions, actual positive curvature LOWER bounds are:
+ case 1 prefix-lower > .06521658 (prefix-upper also > .08748029);
+ case 2 prefix-lower > .02088679;
+ case 4 prefix-lower > .01990428.
+The exact intervals and integer directions are in the producer JSON.
+
+STRICT ACTUAL PSD OBSTRUCTIONS
+==============================
+At a canonical actual point, form the rational midpoint Hessian M and
+entrywise interval error E_ij>=0. Set D_ii=sum_j E_ij. Then
+
+ actual H >= M-D,
+
+because |sum_ij Delta_ij x_i x_j| <= sum_i(sum_j E_ij)*x_i^2.
+The replay verifies positive rational LDL^T factorizations of M-D
+(restricted to the fixed legal free support). All pivots are >0.
+Both obstruction cells have all nine coordinates strictly free, so
+these are full actual 9x9 positive-definiteness witnesses.
+
+Case 0 mean: smallest displayed pivot .0340810; actual midpoint-matrix
+minimum eigenvalue hint .0287499.
+Case 3 upper: smallest displayed pivot .0647616; actual midpoint-matrix
+minimum eigenvalue hint .0320764.
+
+For any nonzero fixed d, curvature is positive at that point, which
+contradicts an unconditional Q_d<0 on the entire cell. This conclusion
+does not require the point to be a minimum, and makes no statement about
+its energy, KKT equations, or relevance to the sublevel target.
+
+READ-ONLY REPLAY / FROZEN SCOPE
+=============================
+From the repository root:
+ python research-goal-20261016/cover_common_anchor_curvature_six_replay.py
+
+This imports only the standard library and calls no solver. The original
+producer was invoked once past preflight and made exactly four small LP
+calls; its saved result must not be overwritten or rerun. Existing
+joint-jet/Hessian and earlier proof packages are unchanged. No new
+whole-cell exclusion, global floor, or zero-proportion increment is
+asserted. Case 5 and possible alternate directions in cases 1,2,4 remain
+open; this bounded task stops without scanning parameters.

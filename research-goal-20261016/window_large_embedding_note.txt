@@ -1,0 +1,66 @@
+Arbitrary larger-block reuse of the two old nine-point certificates
+2026-10-17
+
+One bounded LP tested all 12,870 translation classes of nine-point subsets
+of seventeen ordered vertices. This includes the ten-point delete-one
+construction and many sparse, nonconsecutive embeddings. The scalar kernel
+is unchanged; its old unconditional floor supplies every embedded floor.
+Only the pair/pressure ledger changes. No nine-dimensional numerical cover
+is needed for this construction class.
+
+The LP did not produce the requested improvement. An exact nonnegative
+rank dual was rounded and repaired. A standard-library-only implementation
+then reparsed both the locally proved and the current website nine-point
+ledgers, verified that their thirteen scalar-profile coefficients agree,
+and checked all 25,740 finite columns. A single uniform rational repair
+makes the same dual valid for both ledgers and their nonnegative mixtures.
+No second optimizer was used.
+
+There is an additional finite-to-infinite step. Translate any embedding
+so its first vertex is zero. If its last vertex is at most sixteen, its
+column was checked. Otherwise its eight positive integer index gaps have
+at least nine extra units. Its total pressure satisfies
+
+  B_embedding >= sum(b_old) + 9*min(b_old) > K*c_old,
+
+where K is the website score plus 1/100000. Its target profit is therefore
+negative and every nonnegative dual pays it automatically. Thus increasing
+the ambient block size cannot escape this particular obstruction.
+
+For either old certificate family, the exact finite column inequalities
+are
+
+  K*c_old - B_embedding <= sum_r y_r*a_embedding_rank_r,
+
+with y_r=0 beyond rank sixteen. For any finite nonnegative combination of
+these embedded inequalities and rank masses <=2, summation gives
+
+  K*C - B_total <= 2*sum(y) < K-H.
+
+Consequently (H-B_total)/(1-C)<K in the valid counting regime C<1.
+The strict shortfall is about 9.8278e-6 in this linear objective. The
+exact fraction and the two outside-span margins are in the replay receipt.
+The fixed H is the older profile enclosure used in the preceding ledger
+experiment; it is slightly more optimistic than the already proved local
+HW_ge, not a fresh improvement or assertion about every possible H bound.
+
+This rules out obtaining the requested gain solely by nonnegative reuse
+of these two frozen old nine-point certificates in arbitrarily large
+ordered blocks, with this H and the stated rank capacities. It does not
+rule out a new kernel, new local analytic information, signed combinations
+with separately justified residuals, or the outstanding W10 energy floor.
+It also does not rule out better finite-dimensional certificates for the
+same old kernel. No new unconditional zero proportion follows.
+
+Files and checks
+----------------
+window_large_embedding_pilot.py: exactly one 16-row/12,870-column LP.
+window_large_embedding_replay.py: independent Fraction replay, no numerical
+solver or producer imports. Initial receipt generation is single-use and
+refuses to overwrite its saved result. The saved receipts contain exact
+inputs, dual, repair, all-column minimum slack and strict target gap.
+The file manifest separately binds all source and receipt hashes.
+
+The rest of the project still lacks a complete global root cover, final
+unconditional website theorem, independent replay of all new roots, trusted
+statement comparison and the final one-file source-size check.

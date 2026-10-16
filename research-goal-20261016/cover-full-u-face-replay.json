@@ -1,0 +1,43 @@
+{
+  "scope": "Independent stdlib audit of exact full-U face reduction and every row map.\n\nNo reduction producer or numerical package is imported.  Verify the KKT\nnull equations as exact combinations of retained equalities, the T/J/S\nidentities, all old moment maps, all 1326 Gram entries, and every one of\n50221 original row/box pullbacks including removed tautologies/duplicates.\n",
+  "status": "exact_full_U_face_and_all_row_box_pullbacks_independently_verified",
+  "path": "r001000001000100110011001",
+  "source_sha256_start": {
+    "research-goal-20261016/cover_full_u_face_replay.py": "0d7af3e69503d3a1999357ac20299d963cac36cdf4de7d023ff9e0dd2811d1fb",
+    "research-goal-20261016/cover-full-u-face-model.json.gz": "bd238bc42473b3fe114639e8e265d9589aef9ba1bb5f1b7857cde5cbb6db26f2",
+    "research-goal-20261016/cover-full-u-face-build.json": "88fc11657634221726313ce87839be2c86b46d2b28690e5a4c582eadc3f85086",
+    "research-goal-20261016/cover-full-u-model.json": "8ff8fa5589f3781718fa4d4dd96ad8722207b7d02b635b61827109ab2a2e6769",
+    "research-goal-20261016/cover-residual-psd-rational-inputs.json": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/cover-full-u-joint-cone.json": "f413846f5b4d976621ca6379d53629d60759bb43b91215070c8eecabec339f02",
+    "research-goal-20261016/cover_cross_moment_exact_rows.py": "a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae"
+  },
+  "source_sha256_end": {
+    "research-goal-20261016/cover_full_u_face_replay.py": "0d7af3e69503d3a1999357ac20299d963cac36cdf4de7d023ff9e0dd2811d1fb",
+    "research-goal-20261016/cover-full-u-face-model.json.gz": "bd238bc42473b3fe114639e8e265d9589aef9ba1bb5f1b7857cde5cbb6db26f2",
+    "research-goal-20261016/cover-full-u-face-build.json": "88fc11657634221726313ce87839be2c86b46d2b28690e5a4c582eadc3f85086",
+    "research-goal-20261016/cover-full-u-model.json": "8ff8fa5589f3781718fa4d4dd96ad8722207b7d02b635b61827109ab2a2e6769",
+    "research-goal-20261016/cover-residual-psd-rational-inputs.json": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/cover-full-u-joint-cone.json": "f413846f5b4d976621ca6379d53629d60759bb43b91215070c8eecabec339f02",
+    "research-goal-20261016/cover_cross_moment_exact_rows.py": "a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae"
+  },
+  "all_sources_unchanged": true,
+  "old_variables": 1325,
+  "reduced_variables": 902,
+  "old_PSD_size": 51,
+  "reduced_PSD_size": 42,
+  "KKT_null_equations_identified_as_retained_linear_combinations": 459,
+  "full_Gram_entries_verified": 1326,
+  "reduced_coordinate_left_inverse_checks": 902,
+  "original_rows_checked": 50221,
+  "distinct_rows": 46347,
+  "tautologies_removed": 1080,
+  "positive_duplicates_removed": 2794,
+  "all_original_boxes_retained_under_substitution": true,
+  "mathematical_model_changes": 0,
+  "solver_calls": 0,
+  "Lean_invocations": 0,
+  "cell_exclusion_proven": false,
+  "elapsed_milliseconds": 15699
+}

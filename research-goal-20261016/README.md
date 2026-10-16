@@ -668,3 +668,42 @@ The actual Lean constants require `c > 0.008784609052634106` to exceed the
 website baseline by `1/100000` in absolute proportion. The working floor
 `11/1250` meets that conditional threshold. No unconditional new record or
 website-ready theorem is asserted by any of these packages.
+
+## Cross-derivative lift and larger-block transfer limitations
+
+The full derivative-product model adds 861 cross moments, a joint 51-by-51
+PSD matrix, all derivative-box RLT rows and derivative-multiplied free KKT
+equalities. Unlike the earlier compressed cone family, it retains
+nonmonotone cross-derivative information. An exact toy gives a strict
+`14/25` contradiction for the old projected model with those new cross
+constraints. The first bounded SCS test reached its iteration limit without
+convergence. It proves neither feasibility nor exclusion. A separate
+standard-library polynomial replay verifies every added rational row and
+Gram entry; see `cover-full-u-files.json`.
+
+A separate exact face reduction removes nine forced KKT null directions,
+reducing 51 Gram coordinates to 42 and 1,325 moment variables to 902. It
+preserves all original variable boxes and mathematical conditions. The
+independent replay checks 459 Gram/KKT identities, every original matrix
+entry and all 50,221 row/box pullbacks. A second, separately bounded solve
+has much smaller residuals but still no exact feasibility or exclusion
+certificate. This is an equivalent representation, not a new mathematical
+strengthening. See `cover-full-u-face-files.json`.
+
+The six-cell shared higher-order curvature test also has no new exclusion.
+Two cells contain rigorously positive-definite actual Hessians, so an
+unconditional fixed negative direction on each whole cell is impossible.
+Three other selected directions have exactly positive curvature at a
+feasible endpoint. The last selected direction remains unresolved. These
+obstructions do not apply to a test restricted to a KKT/sublevel locus.
+See `cover-common-anchor-curvature-six-files.json`.
+
+The larger-block old-certificate experiment goes beyond the previous ten
+embeddings: one LP considers 12,870 nine-point translation classes on
+seventeen vertices. An independent Fraction replay checks the dual for
+both frozen old ledgers, 25,740 finite columns in total, with a shared exact
+repair. Outside this finite range, pressure alone makes each target profit
+negative. Thus nonnegative combinations of either old nine-point floor in
+arbitrarily large ordered blocks cannot meet the requested target under
+this fixed H and rank-capacity rule. This does not exclude a new kernel or
+new local analytic input. See `window-large-embedding-files.json`.

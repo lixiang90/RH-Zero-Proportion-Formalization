@@ -1,0 +1,92 @@
+{
+  "scope": "Pin exact KKT face equivalence, independent full replay and one reduced solve.",
+  "package_files": [
+    {
+      "path": "research-goal-20261016/cover_full_u_face_model.py",
+      "bytes": 9552,
+      "sha256": "29da9bd475f867c8eca699051460905a76aaeb5b4f8ccf498fdedfa2bfe8d667"
+    },
+    {
+      "path": "research-goal-20261016/cover-full-u-face-model.json.gz",
+      "bytes": 4334564,
+      "sha256": "bd238bc42473b3fe114639e8e265d9589aef9ba1bb5f1b7857cde5cbb6db26f2"
+    },
+    {
+      "path": "research-goal-20261016/cover-full-u-face-build.json",
+      "bytes": 2910,
+      "sha256": "88fc11657634221726313ce87839be2c86b46d2b28690e5a4c582eadc3f85086"
+    },
+    {
+      "path": "research-goal-20261016/cover_full_u_face_replay.py",
+      "bytes": 9119,
+      "sha256": "0d7af3e69503d3a1999357ac20299d963cac36cdf4de7d023ff9e0dd2811d1fb"
+    },
+    {
+      "path": "research-goal-20261016/cover-full-u-face-replay.json",
+      "bytes": 3310,
+      "sha256": "62cf6f5d786d764968efa7e7267f048175959b3cb50d8785bb63da0edff31e57"
+    },
+    {
+      "path": "research-goal-20261016/cover_full_u_face_cone.py",
+      "bytes": 5951,
+      "sha256": "20f1b0ae4f8d06358608dccccc99082548d3b840f3dda64ecebf94c64571c639"
+    },
+    {
+      "path": "research-goal-20261016/cover-full-u-face-cone.json",
+      "bytes": 1245312,
+      "sha256": "bf29f02cd72b31e77ffbf5089c2a5eb3eee18a32297f43c7154587031c89ef30"
+    },
+    {
+      "path": "research-goal-20261016/cover_full_u_face_note.txt",
+      "bytes": 6596,
+      "sha256": "6e5192723750ecd440bec7d87ecfbf39674fffbc8e433dda8d03369ebbf26637"
+    },
+    {
+      "path": "research-goal-20261016/cover_full_u_face_manifest.py",
+      "bytes": 2851,
+      "sha256": "a3f096bd65c4519ffec5d8f494758e2990a44290af243016c4a2d1ee21d0e9d6"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-20261016-followup/window_reweight_rational.json",
+      "bytes": 3838,
+      "sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+    },
+    {
+      "path": "research-goal-20261016/cover-full-u-files.json",
+      "bytes": 3588,
+      "sha256": "fef4caa3f4566b398d66a3d9e8b12e846e128fb5bf8188bca1e0284267db1e46"
+    },
+    {
+      "path": "research-goal-20261016/cover-full-u-joint-cone.json",
+      "bytes": 1452122,
+      "sha256": "f413846f5b4d976621ca6379d53629d60759bb43b91215070c8eecabec339f02"
+    },
+    {
+      "path": "research-goal-20261016/cover-full-u-model.json",
+      "bytes": 5390546,
+      "sha256": "8ff8fa5589f3781718fa4d4dd96ad8722207b7d02b635b61827109ab2a2e6769"
+    },
+    {
+      "path": "research-goal-20261016/cover-residual-psd-rational-inputs.json",
+      "bytes": 805877,
+      "sha256": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622"
+    },
+    {
+      "path": "research-goal-20261016/cover_cross_moment_exact_rows.py",
+      "bytes": 8651,
+      "sha256": "a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae"
+    },
+    {
+      "path": "research-goal-20261016/cover_dynamic_sector_static.py",
+      "bytes": 12536,
+      "sha256": "5f3c6e300f46ed048766e0d78b4996f3a18d2daf72d2db80af8ee58567cb75ba"
+    }
+  ],
+  "mathematical_model_changes": 0,
+  "exact_result": "51-to-42 PSD face and 1325-to-902 moment substitution; every original row and box retained.",
+  "numerical_result": "One reduced SCS call reaches max_iters without an exclusion margin; no exact feasible point claimed.",
+  "prior_full51_package_unchanged": true,
+  "new_zero_proportion_proven": false
+}

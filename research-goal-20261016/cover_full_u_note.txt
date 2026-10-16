@@ -1,0 +1,161 @@
+Full cross-derivative moment model: strict new information, first bounded test
+2026-10-17
+
+This package preserves the first full 51x51 joint-PSD experiment unchanged.
+It adds genuine derivative-derivative cross constraints to the old 464
+variables.  An independent polynomial replay checks every added rational
+row and Gram entry.  The one numerical solve did not converge; it provides
+neither a feasible-point certificate nor an exclusion certificate.
+
+1. Variables and normalization
+------------------------------
+The cell is the first original remaining case,
+r001000001000100110011001.  All nine gap coordinates are strictly above
+the fixed separation, so a true minimum in this cell has nine free KKT
+equations H_r(u)=b_r+sum_(e contains r)a_e*u_e=0.
+
+Retain the old 464 variables: physical gap means g[9], derivative means
+u[41], normalized position products yy[45], and mixed products yu[369].
+Add all 41*42/2=861 derivative product variables.  The total is 1325.
+
+For conditioning, the new variables are W_et=<v_e*v_t>, where the existing
+exact derivative graph box is [l_e,h_e], mu_e=(l_e+h_e)/2,
+r_e=(h_e-l_e)/2>0, and v_e=(u_e-mu_e)/r_e.  This is an invertible affine
+change of moment coordinates.  The physical cross derivatives are retained:
+
+  U_et=<u_e*u_t>
+      = r_e*r_t*W_et + mu_e*<u_t> + mu_t*<u_e> - mu_e*mu_t.
+
+The full 51x51 joint matrix is the moment matrix of
+(1,y_0,...,y_8,v_0,...,v_40), where the old normalized y coordinates are
+unchanged.  The model records its 1326 rational affine lower entries.
+No Gram-minimal completion is substituted for U in the solver model.
+
+2. Constraints and actual-point validity
+-----------------------------------------
+All original 43,306 rows, including the original midpoint and closed
+Bregman energy packets, and every old finite box are retained exactly.
+The following 4264 rows are added:
+
+  41 old affine-slab residual-square upper bounds;
+  41 dynamic-sector residual-square upper bounds;
+  3444 derivative-box product RLT inequalities;
+  738 inequality rows encoding 369 u-multiplied free-KKT equalities.
+
+For a residual beta_e.x, the square upper rows are
+
+  U_ee-2*beta_e^T*z_e+beta_e^T*X*beta_e <= B_e.
+
+For an old slab B_e=epsilon_e^2; for the dynamic sector it is the exact
+dynamic expression gamma_e*<d_e^2>+1025*epsilon0_e^2.  Thus none of the
+old dynamic second moments is replaced by a maximum radius constant.
+
+The joint PSD implies the Gram block of (x,u_e-beta_e.x) is PSD.  Increasing
+its lower-right entry from its actual residual second moment to B_e proves
+the corresponding old independent 11x11 cone.  Consequently joint PSD plus
+these 82 scalar rows implies all 82 former independent cones; replacing
+their numerical representation by this one does not weaken their content.
+
+The 3444 RLT rows are all four nonnegative products
+
+  <(1+s*v_e)*(1+t*v_f)> >= 0,  s,t in {-1,1}, e<=f.
+
+Their diagonal cases include W_ee<=1 and lower tangent inequalities.
+The new boxes are W_ee in [0,1], off-diagonal W_ef in [-1,1].  These follow
+at every actual derivative-box point and under a nonnegative average.
+
+For every r=0,...,8 and t=0,...,40, retain
+
+  <u_t*H_r(u)> = b_r*<u_t> + sum_(e contains r)a_e*U_te = 0.
+
+Every equality is valid at an actual free-KKT point; no actual-box point
+is asserted to satisfy KKT automatically.  The independent replay expands
+these products directly, not through a projected completion.  New row
+normalizations are explicit positive rational scalars and do not alter
+their semantics.  Only the two original energy rows receive the unchanged
+numerical energy-slack variable in the SCS discovery program.
+
+3. Why the old independent-cone compression does not apply
+---------------------------------------------------------
+With only full joint PSD and upper bounds on individual residual squares,
+projecting every derivative Gram vector onto the span of x preserves the
+old moments, reduces every residual norm, and can satisfy the multiplied
+KKT equations.  This explains the earlier compression equivalence.  It
+also applies when the upper bound B_e depends affinely on old moments.
+
+Derivative-product RLT inequalities have lower as well as upper cross
+moment requirements.  They are not preserved by decreasing U in PSD order.
+The new model explicitly retains those requirements.  A strict rational
+toy proves the difference even with y-u box RLT already present:
+
+  X=diag(1,1/4), <y>=0,
+  z1=(<u1>,<y*u1>)=(1/2,2/5),
+  z2=(<u2>,<y*u2>)=(1/2,-2/5),
+  y,u1,u2 boxes [-1,1], each individual residual bound <u_i^2><=1.
+
+Each independent cone [[X,z_i],[z_i^T,1]] has Schur complement 11/100>0.
+Every y-u box RLT row has slack at least 1/10.  The position square 1/4
+also satisfies its PSD and box moment conditions.  The KKT toy
+H=u1+u2-1 has both <H>=0 and <y*H>=0.
+
+Full joint PSD applied to u1-u2-(16/5)*y forces
+
+  <(u1-u2)^2> >= 64/25.
+
+But derivative-box RLT gives U12>=<u1>+<u2>-1=0, and the diagonal bounds
+give U11,U22<=1.  Hence <(u1-u2)^2><=2, a contradiction with exact margin
+14/25.  The Gram-minimal U is [[89/100,-39/100],[-39/100,89/100]].  It
+satisfies the multiplied KKT equalities but violates the new lower cross
+bound U12>=0.  Thus uKKT alone is not the new information; preserving UU
+cross-RLT is essential.  Duplicating looser independent upper cones cannot
+repair this missing cross constraint.  This is an algebraic nonimplication
+example, not an actual-kernel or actual-minimizer counterexample.
+
+On the real cell's old exact 464 point, the Gram-minimal normalized W
+violates 15 UU-RLT rows.  The static two-coordinate PSD-room necessary
+tests, however, find no strict obstruction to a different extension under
+the old 41 slab bounds.  No U completion is claimed from this diagnostic.
+The same old point is already excluded by seven dynamic-sector cones, so
+it cannot itself establish infeasibility or feasibility of the new model.
+
+4. First full51 numerical test and its limit
+------------------------------------------
+cover_full_u_joint_cone.py makes one SCS 3.3.1 call with 1325 scalar moments
+and the original slack.  The model has 50,221 linear rows after boxes and
+one packed 51x51 PSD block.  All original and new rational rows and the
+affine Gram map are bound by hashes.  A factorized map test is performed
+before solving.  Limits are 45 seconds and 10,000 iterations.
+
+The one call used 10,000 iterations and about 29.44 seconds.  SCS returned
+"solved (inaccurate - reached max_iters)" with:
+
+  raw energy slack        -7.49e-8,
+  worst linear slack     -7.49e-5,
+  worst added-row slack  -3.07e-5,
+  minimum joint eigenvalue about -.009816.
+
+These are material constraint violations, so the output is not a feasible
+point.  It also provides no positive exclusion margin.  No exact dual,
+Farkas extraction, LP polish, or repeated full51 solve was attempted.
+The first result remains frozen as a numerical failure.
+
+The nine free KKT equations force at least nine null directions in the
+joint Gram matrix: mean KKT, old y*KKT, and the new u*KKT together give
+M*A=0.  Therefore strict joint-PSD feasibility is impossible in this
+representation, even when a valid model point exists.  This is a concrete
+reason to examine an exact face reduction as a separate computational
+representation; it is not proof that this alone caused nonconvergence.
+Any later reduction must preserve the same mathematical constraints and
+have its own source, output, proof of equivalence, and numerical budget.
+
+5. Independent audit and scope
+-------------------------------
+cover_full_u_replay.py imports only the standard library.  It reconstructs
+all 4264 rows by multiplying polynomials in actual y/u variables and then
+substituting the declared moments, and independently reconstructs all
+1326 joint Gram entries.  It checks the strict toy and the exact 14/25 gap.
+The old scalar/geometry/energy packets remain previously frozen analytic
+and finite inputs; this task makes no new actual-kernel evaluation or
+Lean invocation.  Prior packages 5995..., 26c0..., 240f..., and 7ae320...
+are unchanged.  No whole cell or global cover is proved and no new zero
+proportion follows from this package.
