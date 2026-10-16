@@ -1,0 +1,339 @@
+Two-layer phase / Hermitian candidate: static mathematical audit
+Date: 2026-10-17
+Scope: a possible future replacement for independent scalar span bounds.
+
+Status
+------
+The identities below have been checked against the actual frozen 24-mode
+kernel definitions. This note adds no Lean theorem, uniform coefficient
+certificate, PSD certificate, global energy floor, or zero-proportion record.
+No existing proof or pinned numerical evidence is modified. The accompanying
+small diagnostic checks identities at individual points; it proves none of
+the missing uniform assertions listed below.
+
+1. Authoritative definitions and normalization
+---------------------------------------------
+All source paths in this note are relative to the repository root.
+
+* StructuralGoal20261016/WindowEnergy.lean:16 defines the profile
+      V(t) = cos(sqrt(2)*t) + sum(m=1..24) d_m cos(2*pi*m*t).
+* StructuralW10Followup20261016/NewWindows.lean:48 defines nums24; :75
+  defines c24. Physical mode m is Lean index m-1. In this note
+      d_m = nums24(m-1)/10^9,  1 <= m <= 24.
+  Thus d_1=14152994/10^9 and d_24=-85339/10^9. There is no free mode-zero
+  coefficient among these 24 perturbations.
+* StructuralGoal20261016/WindowKernel.lean:17,20,21 defines
+      K(x) = integral[-1/2,1/2] V(t) cos(2*pi*x*t) dt,
+      k(x) = K(x)/K(0),                 w(x) = k(x)^2.
+* WindowKernel.K_eq_sinc, :32, and WindowKernel.K_zero, :75, identify
+      K(x) = KMT(x) + sum(m=1..24) (d_m/2)
+                     [sinc_rad(pi*(x-m)) + sinc_rad(pi*(x+m))],
+      Z := K(0) = sqrt(2)*sin(sqrt(2)/2) > 0.
+* formal/upstream/ajp88-reweighted-nine-point.lean:354 defines AMW.KMT;
+  :363 proves AMW.term_closed; :410 proves AMW.KMT_eq_gamma. These
+  generic scalar identities can be used with the new 24 coefficients; the
+  older twelve-mode aggregate KfunAM_closed is not being substituted for k.
+
+Convention: sinc_rad(z)=sin(z)/z, extended by sinc_rad(0)=1, is Mathlib's
+Real.sinc. Define S(delta)=sinc_rad(pi*delta), not sinc_rad(delta).
+Put theta=sqrt(2)/2, so theta^2=1/2 and
+      Z = sin(theta)/theta = sqrt(2)*sin(theta).
+The factor of pi and the normalization by Z are both essential.
+
+The coefficient vector, in physical order m=1,...,24, is
+ [14152994,-16636494,5847970,5916828,-410410,4365961,
+  -6299724,2688735,-4861059,5064801,-3022207,4508542,
+  -1810144,1344824,405092,-288857,227779,-187754,
+  158988,-137179,120042,-106220,94848,-85339]/10^9.
+
+2. Global meromorphic amplitudes, on their valid domain
+-----------------------------------------------------
+Write y=pi*x. Evenness of sinc_rad gives
+      KMT(x) = [sinc_rad(y-theta)+sinc_rad(y+theta)]/2.
+For y != +/-theta, direct addition of these fractions gives
+      KMT(x) = [y*cos(theta)*sin(y) - theta*sin(theta)*cos(y)]
+               / (y^2-theta^2).
+Consequently the normalized base term is
+      [y*cos(theta)/(Z*(y^2-theta^2))]*sin(y) + B(x)*cos(y),
+      B(x) = -theta*sin(theta)/(Z*(y^2-theta^2))
+           = 1/(1-2*y^2).
+In particular, the sign of B is fixed by this formula; replacing its
+denominator by 2*y^2-1 without a minus sign would be an error.
+
+For an integer m>=1 and x != +/-m, AMW.term_closed gives
+      [sinc_rad(pi*(x-m))+sinc_rad(pi*(x+m))]/2
+       = (-1)^m*x*sin(pi*x)/(pi*(x^2-m^2)).
+The factor x arises from adding 1/(x-m) and 1/(x+m); neither a factor 1/2
+nor an additional factor m belongs in this closed form.
+
+Therefore, away from x=+/-theta/pi and x=+/-1,...,+/-24,
+      k(x) = A(x)*sin(pi*x) + B(x)*cos(pi*x),
+      A(x) = (1/Z) [ cos(theta)*pi*x/(pi^2*x^2-theta^2)
+                     + sum(m=1..24) d_m*(-1)^m*x
+                                      /(pi*(x^2-m^2)) ].       (1)
+The whole sinc kernel is smooth at all the excluded points. The separate
+amplitudes in (1) are not smooth there, so (1) cannot itself be used as a
+uniform amplitude enclosure across an integer pole.
+
+3. Isolate the resonant mode at an integer well
+----------------------------------------------
+Fix 1<=n<=24 and 0<r<1/2, with x in [n-r,n+r]. In particular x+n>0;
+no other integer mode pole is in this interval. Also theta/pi<1/2, so the
+base poles are absent. The existing r=21/100 convexity wells fit this domain.
+
+Remove m=n from the sum in (1), and define
+      A_n(x) = (1/Z) [ cos(theta)*pi*x/(pi^2*x^2-theta^2)
+                       + sum(m=1..24,m!=n) d_m*(-1)^m*x
+                                           /(pi*(x^2-m^2)) ],
+      C_n(x) = d_n*x*S(x-n)/(Z*(x+n)).                         (2)
+For delta=x-n !=0, sin(pi*x)=(-1)^n*sin(pi*delta). Thus the two parity
+factors in the removed summand cancel, and that summand times sin(pi*x) is
+exactly C_n(x). There is no remaining (-1)^n in C_n.
+
+The regular identity is
+      k(x) = C_n(x) + A_n(x)*sin(pi*x) + B(x)*cos(pi*x).        (3)
+At x=n the sinc definition in (2) gives C_n(n)=d_n/(2*Z).
+The finite-sinc formula gives the same value: the resonant pair is
+[sinc_rad(0)+sinc_rad(2*pi*n)]/2=1/2, and all other integer-mode pairs
+vanish. The base value is (-1)^n*B(n). Hence the exact center value is
+      k(n) = d_n/(2*Z) + (-1)^n/(1-2*pi^2*n^2).               (4)
+Equation (3) extends across x=n by continuity, or by checking this center
+value separately. Establishing that extension as a new Lean lemma is still
+future work; no total-field division convention should replace this step.
+
+A_n and B are smooth rational functions of x with fixed transcendental
+constants on this well. C_n is smooth, but contains S(x-n): it is not a pure
+rational function of x. Its bounds and derivatives need an analytic payment.
+For a well with integer center n>24, there is no resonant perturbation;
+take C_n=0 and A_n=A. Negative wells can be treated by evenness of k and w.
+Spans in the current separated positive-gap problem are >=123/128, so
+the base poles +/-theta/pi are outside that problem's domain. A more general
+domain crossing either base pole needs a separate regularization. For this
+single-resonance parameterization, a cell crossing multiple integer poles
+needs a subdivision or isolation of every resonant term; the following
+all-mode option avoids the need to split at positive integer poles.
+
+3a. Global smooth all-mode C, and the intermediate subset option
+--------------------------------------------------------------
+The same cancellation applies to an entire symmetric sinc pair, not just
+its limit at the pole. For each m>=1 and EVERY x>0,
+      (d_m/(2*Z))*[sinc_rad(pi*(x-m))+sinc_rad(pi*(x+m))]
+       = d_m*x*S(x-m)/(Z*(x+m)).                            (2a)
+For x!=m this follows from AMW.term_closed and
+sin(pi*(x-m))=(-1)^m*sin(pi*x); at x=m both sides are d_m/(2*Z).
+Since x+m>0, the right side has no positive integer pole. Therefore put
+      C_all(x) = sum(m=1..24) d_m*x*S(x-m)/(Z*(x+m)),
+      A0(x) = cos(theta)*pi*x/(Z*(pi^2*x^2-theta^2)).
+Then, on x>=123/128,
+      k(x) = C_all(x)+A0(x)*sin(pi*x)+B(x)*cos(pi*x).          (3a)
+There is no positive integer pole in ANY of these three amplitudes; the
+only base denominators vanish below the separated positive domain.
+The first/second-harmonic and Hermitian constructions below apply to
+(3a) as well as (3), using the corresponding amplitudes consistently.
+
+More generally choose a fixed subset J of {1,...,24}, and put
+      C_J(x) = sum(m in J) d_m*x*S(x-m)/(Z*(x+m)),
+      A_J(x) = A0(x) + (1/Z)*sum(m not in J)
+                               d_m*(-1)^m*x/(pi*(x^2-m^2)).
+The identity k=C_J+A_J*sin(pi*x)+B*cos(pi*x) holds wherever the
+unextracted denominators do not vanish. Choosing J to contain all integer
+modes intersecting a cell gives regular amplitudes on that cell. J={n}
+is (3); J={1,...,24} is (3a). This offers a tradeoff between the variation
+of C_J and the regularity of A_J, without changing the kernel.
+
+C_all is also the normalized Fourier transform of the perturbation:
+      C_all(x)=(1/Z)*integral[-1/2,1/2]
+                   [sum d_m*cos(2*pi*m*t)]*cos(2*pi*x*t) dt.
+Its smoothness follows directly from this finite smooth integral. If
+D=sum|d_m|, then elementary differentiation under this finite integral
+and the triangle inequality give the paper-level global estimates
+      |C_all^(r)(x)| <= (D/Z)*pi^r/(r+1),   r=0,1,2,... .     (3b)
+Indeed the r-th cosine derivative is bounded by (2*pi*|t|)^r and
+integral[-1/2,1/2]|t|^r dt=1/(2^r*(r+1)). Here
+      D=78742791/10^9 <= 2/25.
+The existing profile theorem already proves the coarser D<=2/25; neither
+this new C_all definition nor (3b) has been formalized in Lean in this
+audit. This identifies a straightforward sufficient source of coarse
+uniform payments, not a numerically useful paid certificate.
+
+C_all remains a sinc function sum, not a rational amplitude. It still
+encodes oscillation and phase correlation in its x dependence. Extracting
+all modes removes positive integer poles but does not justify freezing
+C_all over a whole cell. Large errors from such freezing may offset the
+benefit of using one globally smooth parameterization. The local and
+all-mode versions should be compared with their actual payments.
+
+4. Exact first and second harmonic expansion
+-------------------------------------------
+Use either A=A_n,C=C_n or A=A0,C=C_all, and B=B(x), phi=pi*x.
+Squaring (3) or (3a),
+      w(x) = C^2 + (A^2+B^2)/2
+             +2*C*(A*sin(phi)+B*cos(phi))
+             +(B^2-A^2)*cos(2*phi)/2 + A*B*sin(2*phi).        (5)
+Equivalently, with complex amplitudes
+      t = B-i*A,
+      q0 = C^2+|t|^2/2,
+      q1 = 2*C*t,
+      q2 = t^2/2,
+we have
+      w(x) = q0 + Re(q1*exp(i*pi*x) + q2*exp(2*i*pi*x)).       (6)
+In particular Im(q2)=-A*B. The minus sign in this imaginary part produces
+the plus A*B*sin(2*phi) in (5). Omitting C_n would omit the first harmonic
+and give an invalid identity at the integer wells of the new kernel.
+
+These amplitudes are linked even before considering node phases:
+      |q2|=(A^2+B^2)/2,  q0=C^2+|q2|,  q1^2=8*C^2*q2.
+Treating q0,q1,q2 as unrelated interval variables can lose this structure.
+
+5. From the actual 41 edges to two Hermitian forms
+------------------------------------------------
+StructuralGoal20261016/WindowGramExpansion.lean:16-29, namespace
+StructuralGoal20261016.WindowGramTransfer, supplies the actual 41 positive
+edges, their weights a_ij, and the already proved energy identity
+      Fw24(g) = pressure(g) + sum(i<j,positive edges) a_ij*w(p_j-p_i),
+where p_i=ptsN 10 g i. Use this actual pair ordering, or a checked mapping;
+the DBM pair order and a numerical adjacency-first order are different.
+
+For the moment evaluate all amplitudes at the SAME configuration p. Put
+      u_i=exp(i*pi*p_i),       v_i=exp(2*i*pi*p_i)=u_i^2.
+Then exp(i*pi*(p_j-p_i))=conj(u_i)*u_j, and similarly for v. Construct
+two 10 by 10 Hermitian matrices with zero diagonal and, for i<j,
+      (H1)_ij = a_ij*q1_ij/2,      (H2)_ij = a_ij*q2_ij/2,
+      (H_l)_ji = conjugate((H_l)_ij).
+Zero-weight pairs have zero entries. The exact identity is
+      Fw24(g) = pressure(g) + sum a_ij*q0_ij
+                           + u^* H1 u + v^* H2 v.            (7)
+The factor 1/2 in each upper-triangular entry is necessary because the
+Hermitian quadratic form counts both off-diagonal entries.
+
+This is an exact re-expression, not an energy lower bound. In (7), the
+matrices and constant term still depend on every real span p_j-p_i. A
+numeric SDP using amplitudes only at a cell midpoint has not controlled
+those matrices on the cell.
+
+6. What a uniform rational certificate would need
+------------------------------------------------
+One valid future route is to choose rational reference A0_ij,B0_ij,C0_ij
+for every edge and prove, on the entire cell,
+      |A-A0|<=alpha, |B-B0|<=beta, |C-C0|<=gamma.              (8)
+Let eta=alpha+beta, T=|A0|+|B0|, c=|C0|. The triangle inequality gives
+the following sufficient payments for q0,q1,q2 relative to references
+constructed by the same formulas as (6):
+      eps0 = 2*c*gamma+gamma^2+T*eta+eta^2/2,
+      eps1 = 2*(c*eta+gamma*T+gamma*eta),
+      eps2 = T*eta+eta^2/2.                                 (9)
+They bound |q0-q0_0|, |q1-q1_0|, |q2-q2_0|, respectively. These
+conservative choices avoid an irrational norm in a rational certificate.
+Since phases have modulus one and all actual a_ij are nonnegative,
+      Fw24(g) >= pressure(g) + sum a_ij*q0_0,ij
+                   +u^*H1_0 u+v^*H2_0 v
+                   -sum a_ij*(eps0_ij+eps1_ij+eps2_ij).      (10)
+This states a possible sufficient condition, not a condition already
+proved for any candidate cell. Entrywise payments may erase the expected
+gain; a verified matrix perturbation bound could be sharper.
+
+For frozen rational Hermitian H_l, a rational PSD dual could certify
+      H_l-diag(lambda_l) is positive semidefinite,
+and therefore, for |u_i|=|v_i|=1,
+      u^*H1*u+v^*H2*v >= sum_i(lambda1_i+lambda2_i).           (11)
+A rational LDL/Gram factorization with exact residual sign conditions is
+one possible checkable PSD certificate. No such dual, factorization, or
+strict improved energy margin has been produced in this audit. Pressure
+must also be retained or minimized over the actual cell geometry before
+(10)-(11) could imply the desired floor.
+
+Unproved work remaining for this route:
+  (a) A Lean identity (3) or (3a), including its center and domain conditions.
+  (b) Uniform real coefficient bounds (8), including the sinc in C_n,
+      or a different rigorous bound on the matrix perturbation.
+  (c) Exact rational PSD duals and a positive final margin after all
+      coefficient and pressure payments.
+  (d) A complete global certificate, with coverage over all relevant cells,
+      before using the existing actual counting transfer to claim a record.
+Existing actual k/w derivative and Taylor tools could support (a)-(b), but
+they do not automatically prove these newly defined amplitudes' bounds.
+
+7. Phase consistency and the relaxation issue
+-------------------------------------------
+The true variables satisfy v_i=u_i^2, not just |u_i|=|v_i|=1. Two separate
+10 by 10 PSD duals, or a block-diagonal 20 by 20 Hermitian form with unit
+diagonal constraints alone, do NOT enforce that relation. Independent
+phase layers enlarge the feasible set: their lower bound remains valid
+if all other payments are correct, but it can be much weaker.
+
+Even a single node is a counterexample to automatic enforcement: u=1,v=-1
+has unit moduli and a positive semidefinite rank-one Gram matrix for the
+vector (u,v), yet v!=u^2. Thus adding arbitrary cross-layer Gram entries
+and PSD alone also does not suffice. A moment/SOS lift retaining products,
+or valid trigonometric consistency cuts, would require a precise theorem
+and additional checkable constraints. Common node phases do retain cycle
+relations within each layer; the missing issue is the relation BETWEEN
+the layers and, after relaxation, their relation to real cell geometry.
+
+An explicit single-edge weakness is k(phi)=1+cos(phi), with
+      k(phi)^2=3/2+2*cos(phi)+(1/2)*cos(2*phi)>=0.
+Independent rank-one phase layers u=(1,-1), v=(1,-1) assign cos(phi)=-1
+and cos(2*phi)=-1, giving the relaxed value -1. This is a VALID lower
+relaxation and shows a loss of square positivity; it is not a counterexample
+to the actual ledger or to a strengthened phase method retaining geometry.
+
+One natural necessary edge-level link uses z=X_ij, t=Y_ij and the Hermitian
+Toeplitz moment matrix
+      T(z,t) = [[1,       z,       t],
+                [conj(z), 1,       z],
+                [conj(t), conj(z), 1]].
+If T is PSD, its minors imply |z|<=1 and
+      |t-z^2| <= 1-|z|^2,
+because det(T)=(1-|z|^2)^2-|t-z^2|^2. In particular |z|=1 forces
+t=z^2. For coefficients of
+      exp(i*phi)*k(phi)=(B+i*A)/2+C*exp(i*phi)
+                                  +(B-i*A)*exp(2*i*phi)/2,
+the corresponding T quadratic form is the moment value of k(phi)^2.
+Thus this link preserves nonnegativity of every single-edge square with
+frozen A,B,C. That does not establish jointly realizable node phases, the
+actual span relation exp(i*pi*(p_j-p_i)), or any DBM/pressure relation.
+It also does not supply the uniform payments when A,B,C vary with x.
+No strengthened Toeplitz or moment certificate is generated by this note.
+
+The matrix route has no algebraic sign or removable-pole obstruction on
+the stated wells. Its quantitative value remains open. A practical first
+test is one difficult existing cell: certify (8), solve the two-layer
+relaxation, rationalize a dual, and subtract (9). If independent layers
+already lose the available margin before payments, further moment
+constraints or a different amplitude representation are needed before
+attempting a large formalization.
+
+8. Lightweight identity diagnostic, explicitly not a proof
+--------------------------------------------------------
+New files created for this audit only:
+  research-goal-20261016/window_phase_hermitian_diagnostic.py
+  research-goal-20261016/window_phase_hermitian_diagnostic.json
+The script reads the authoritative nums24 and actual NewLedger.aN tables,
+checks their alignment with the existing interval evaluator, and records
+input SHA256 hashes. It imports existing rational interval code unchanged.
+
+40 cases use n in {1,2,3,9,12,16,24,32} and
+delta in {-1/5,-10^-12,0,10^-12,1/5}. All reconstructed k differences and
+the harmonic w differences enclose zero for BOTH the local C_n and global
+C_all representations, including the resonant centers. Maximum absolute
+enclosure bounds, rounded outward, are
+      local: k difference <=5.213e-21, w difference <=6.366e-22;
+      global: k difference <=5.218e-21, w difference <=6.373e-22.
+One ten-node configuration p_i=i+i^2/1000 checks all 41 actual positive
+ledger edges against the two Hermitian forms with v_i=u_i^2, using each
+representation. Its difference encloses zero with absolute bound below
+7.343e-22 (local) and 7.392e-22 (global). This checks the parity,
+normalization, imaginary-part signs, and off-diagonal factor conventions.
+It evaluates amplitudes at those same points; no surrounding cell is
+covered. The decimal summaries are rounded outward here. The JSON keeps
+the exact rational diagnostic enclosures.
+
+Diagnostic script SHA256:
+  3828f10c08cc5c90a1872c502eb6f7476d488c167e30d728217b314fe75f5634
+Diagnostic JSON SHA256:
+  babcf3204df816bde6c1edd838d72c66bed78b8af560a30346c0377f9023ae7a
+
+Freeze: these three new audit/diagnostic files are complete. They should
+be included as research notes at a future checkpoint, without altering
+the frozen actual proof modules or their existing positive verification
+manifests. No result in this note discharges the global floor premise.

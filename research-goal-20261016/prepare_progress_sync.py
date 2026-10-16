@@ -144,7 +144,8 @@ def main():
       ('cover-lifted-graph-discovery-input-files.json','78e2f828ce724e26db7399bfeadde6292e8065e63a4fb052b0c8c69a474fe04f'),
       ('cover-lifted-graph-replacement-files.json','b491d496783ffd205aa1498bc137519e5e91121c3690d1a92f07513f1c32f9fa'),
       ('cover-lifted-radial8-files.json','d00d183c4e9497589cea3d396490e58e5f2643469163f6e84726c70a594ae724'),
-      ('cover-lifted-disjunction-files.json','0c6de43b1cb1e71c9cfce72a52e7c77f0d9c2d3590b7302fbb472c4e274e52a3')]:
+      ('cover-lifted-disjunction-files.json','0c6de43b1cb1e71c9cfce72a52e7c77f0d9c2d3590b7302fbb472c4e274e52a3'),
+      ('cover-phase-psd-files.json','7e46cef3d672741ea1f83f976f2b469f2d38aa1d6ac627224f346243315b1a7f')]:
         manifest=HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -169,6 +170,13 @@ def main():
         assert hashlib.sha256(p.read_bytes()).hexdigest()==digest
         files.append(str(p.relative_to(ROOT)).replace('\\','/'))
     files.append('research-goal-20261016/window_lifted_pilot_formal_manifest.json')
+    for name,digest in [
+      ('window_phase_hermitian_audit.txt','db6ac3c30d3bc991eee72475f40f2e16a25755ce61bfbfb0cdd47ff6df6abb90'),
+      ('window_phase_hermitian_diagnostic.py','3828f10c08cc5c90a1872c502eb6f7476d488c167e30d728217b314fe75f5634'),
+      ('window_phase_hermitian_diagnostic.json','babcf3204df816bde6c1edd838d72c66bed78b8af560a30346c0377f9023ae7a')]:
+        p=HERE/name
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==digest
+        files.append(str(p.relative_to(ROOT)).replace('\\','/'))
     compiled=receipt['modules']+receipt.get('compiled_without_printed_axiom_audit',[])
     for row in compiled:
         for key,sha_key in [('source','source_sha256'),('log','log_sha256')]:

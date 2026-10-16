@@ -36,6 +36,12 @@ def main():
     assert sha(roots) == receipt["root_manifest_sha256"]
     assert sha(work / "export.ndjson") == receipt["export_sha256"]
     assert (work / "export.ndjson").stat().st_size == receipt["export_bytes"]
+    old_archive = HERE / "window-independent-20261017"
+    old_manifest = old_archive / "archive-manifest.json"
+    assert sha(old_manifest) == "684b02c2bd1355cd89f1941f88b1d3c0c0494714df0ab1480b0b027deab87154"
+    for name, old in json.loads(old_manifest.read_text())["files"].items():
+        assert sha(old_archive / name) == old["sha256"]
+        assert (old_archive / name).stat().st_size == old["bytes"]
     source = ROOT / (receipt["module"].replace(".", "/") + ".lean")
     files = {
         "receipt.json": receipt_path,

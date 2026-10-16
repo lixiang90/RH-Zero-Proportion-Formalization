@@ -365,6 +365,21 @@ whole-domain job was started for this experiment.
 This is a substantive new exclusion criterion, still local progress toward
 an unproved global floor and no new unconditional zero-proportion record.
 
+The separate future phase route is audited in
+`window_phase_hermitian_audit.txt`: the actual 24-mode kernel admits a smooth
+positive-domain decomposition into a perturbation amplitude and first
+phase harmonics, and its square uses first and second phase layers. Forty
+point checks and the full actual 41-edge Hermitian identity diagnostic are
+consistent. This is an identity audit, not a uniform bound or Lean proof.
+`cover-phase-psd-files.json` freezes an independent challenge: two independent
+phase layers can lose square positivity, and the weak frozen-amplitude value
+proxy does not improve the earlier bound on seven of eight tested cells.
+The linked model retaining the old gap/derivative graph, actual phase arcs,
+KKT and cross-layer moment constraints remains untested. The note specifies
+a concrete next test using rational rank-one PSD cuts in the existing LP
+solver. No strict phase certificate, global floor or new proportion is
+asserted by these research notes.
+
 Independent three-floor probes on the same 300 original parents found
 80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.
 The small nonmonotonicity is due to heuristic certificate choices. Compact
