@@ -1,0 +1,202 @@
+{
+  "scope": "Standalone exact replay of signed 32-star-cycle interval evidence.\n\nDo not import the producer or numerical libraries. Rebuild fixed-dual\nuniform interval bounds and rational-star relaxed witnesses using our own\nQ30 interval arithmetic. The exact kernel/trigonometric helper and the\nphase coefficient Taylor Provider are shared, with source/data hashes.\nNo matrix solve, eigenvalue, SVD, optimizer, Lean, or cover search is run.\nThe five strict witnesses concern only the specified 32-star relaxation.\n",
+  "frozen_producer_sha256": {
+    "window_joint_cycle_projection_note.txt": "afe1507dab43817e07d638ad05a533768efabcbf5d8190b8ad323e18467d8de5",
+    "window_joint_cycle_projection_probe.py": "327f66ff40dbc62661525ee6a35d06edd2feb514648b777c7efbe83748581e0f",
+    "window_joint_cycle_projection_probe.json": "83e3d878b52146edbab52a120c4e01b84f47638585a6c69230feb0e62f90b9b0"
+  },
+  "dependency_sha256": {
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/cover-lifted-graph-energy8.json": "1a17680f6b45a5c6c5975dbbae280ded931f57d5ae48c85ec3f6d1254d9758bc",
+    "research-goal-20261016/cover-curvature-parent64.input.json.gz": "f5df55809ffc099520a6cb95f92064436c956faed79a85f6818b9fa1f57e8d77",
+    "research-goal-20261016/window_phase_coefficients.py": "b11340d96d02459a6b3f0a7882d8c81a3ef8c5c08dbcc1b2de22ff7194ed81c3",
+    "research-goal-20261016/window_interval_kernel.py": "159a8f270531e16887e89583b6e0ddc84f98d4ee7a2497585572192ec9efa1ca",
+    "StructuralGoal20261016/WindowJetTableData.lean": "f6afdae121fb933db7b468b861de75e2e38afe2068323837b7a18095306c2ec8",
+    "research-20261016-followup/global_periodic_upper_bound.py": "95fa8520e5fe5505763fe748b866755143c15176ecf1ebf607a0d23ce25cecfd",
+    "research-goal-20261016/window_joint_cycle_projection_replay.py": "2e2e5819071e80729fbf5f28f84d125d273a44a9b01186fb9d21255106c642c6"
+  },
+  "all_exact_checks_passed": true,
+  "no_site_packages": 1,
+  "no_numerical_libraries_or_producer_imported": true,
+  "shared_kernel_and_phase_Taylor_provider": true,
+  "independent_fixed_grid_interval_arithmetic": true,
+  "replayed_uniform_duals": 11,
+  "uniform_edge_packets": 451,
+  "replayed_relaxed_point_witnesses": 8,
+  "strict_32_star_subsystem_witnesses": 5,
+  "amplitude_Taylor_piece_calls": 6331,
+  "residual8": [
+    {
+      "selection_index": 0,
+      "path": "r001000001000001101011101",
+      "uniform_dual": {
+        "all_exact_packets_matched": true,
+        "edges": 41,
+        "uniform_E_lower": "-24940504095082384459260597641/1000000000000000000000000000000",
+        "uniform_F_lower": "219796144213/40960000000000",
+        "pressure_lower": "219796144213/40960000000000"
+      },
+      "relaxed_point_witness": {
+        "all_exact_point_bounds_matched": true,
+        "pressure_plus_projection_upper": "8286146443617849744374318097/1000000000000000000000000000000",
+        "strictly_below_0088": true,
+        "scope": "Only selected 32-star-cycle system; not actual kernel or KKT."
+      }
+    },
+    {
+      "selection_index": 1,
+      "path": "r001000001000001110011100",
+      "uniform_dual": {
+        "all_exact_packets_matched": true,
+        "edges": 41,
+        "uniform_E_lower": "-184717440680098567619278833467/1000000000000000000000000000000",
+        "uniform_F_lower": "887388162421/163840000000000",
+        "pressure_lower": "887388162421/163840000000000"
+      },
+      "relaxed_point_witness": {
+        "all_exact_point_bounds_matched": true,
+        "pressure_plus_projection_upper": "8590570944092028634028464631/1000000000000000000000000000000",
+        "strictly_below_0088": true,
+        "scope": "Only selected 32-star-cycle system; not actual kernel or KKT."
+      }
+    },
+    {
+      "selection_index": 2,
+      "path": "r001000001000100110011001",
+      "uniform_dual": {
+        "all_exact_packets_matched": true,
+        "edges": 41,
+        "uniform_E_lower": "-9050677626897475384109443111/250000000000000000000000000000",
+        "uniform_F_lower": "1788452950377/327680000000000",
+        "pressure_lower": "1788452950377/327680000000000"
+      },
+      "relaxed_point_witness": {
+        "all_exact_point_bounds_matched": true,
+        "pressure_plus_projection_upper": "1836133218354259397345111459/200000000000000000000000000000",
+        "strictly_below_0088": false,
+        "scope": "Only selected 32-star-cycle system; not actual kernel or KKT."
+      }
+    },
+    {
+      "selection_index": 3,
+      "path": "r001000001000100110110110",
+      "uniform_dual": {
+        "all_exact_packets_matched": true,
+        "edges": 41,
+        "uniform_E_lower": "-91047940847588116997576476157/500000000000000000000000000000",
+        "uniform_F_lower": "1615904434741/327680000000000",
+        "pressure_lower": "1615904434741/327680000000000"
+      },
+      "relaxed_point_witness": {
+        "all_exact_point_bounds_matched": true,
+        "pressure_plus_projection_upper": "9568172477476219819643305547/1000000000000000000000000000000",
+        "strictly_below_0088": false,
+        "scope": "Only selected 32-star-cycle system; not actual kernel or KKT."
+      }
+    },
+    {
+      "selection_index": 4,
+      "path": "r001000001000100111100011",
+      "uniform_dual": {
+        "all_exact_packets_matched": true,
+        "edges": 41,
+        "uniform_E_lower": "-37127554386874917726831193447/500000000000000000000000000000",
+        "uniform_F_lower": "1606531172129/327680000000000",
+        "pressure_lower": "1606531172129/327680000000000"
+      },
+      "relaxed_point_witness": {
+        "all_exact_point_bounds_matched": true,
+        "pressure_plus_projection_upper": "8627502795414294881908803211/1000000000000000000000000000000",
+        "strictly_below_0088": true,
+        "scope": "Only selected 32-star-cycle system; not actual kernel or KKT."
+      }
+    },
+    {
+      "selection_index": 5,
+      "path": "r001000001000100111101110",
+      "uniform_dual": {
+        "all_exact_packets_matched": true,
+        "edges": 41,
+        "uniform_E_lower": "-4401330602886231336044668981/20000000000000000000000000000",
+        "uniform_F_lower": "40632874361/8192000000000",
+        "pressure_lower": "40632874361/8192000000000"
+      },
+      "relaxed_point_witness": {
+        "all_exact_point_bounds_matched": true,
+        "pressure_plus_projection_upper": "4461861776031106986258403079/500000000000000000000000000000",
+        "strictly_below_0088": false,
+        "scope": "Only selected 32-star-cycle system; not actual kernel or KKT."
+      }
+    },
+    {
+      "selection_index": 6,
+      "path": "r001000001000100111111111",
+      "uniform_dual": {
+        "all_exact_packets_matched": true,
+        "edges": 41,
+        "uniform_E_lower": "-156590857721586282619795733909/1000000000000000000000000000000",
+        "uniform_F_lower": "433163543073/81920000000000",
+        "pressure_lower": "433163543073/81920000000000"
+      },
+      "relaxed_point_witness": {
+        "all_exact_point_bounds_matched": true,
+        "pressure_plus_projection_upper": "8669571232768896581973030059/1000000000000000000000000000000",
+        "strictly_below_0088": true,
+        "scope": "Only selected 32-star-cycle system; not actual kernel or KKT."
+      }
+    },
+    {
+      "selection_index": 7,
+      "path": "r001000001000101011110111",
+      "uniform_dual": {
+        "all_exact_packets_matched": true,
+        "edges": 41,
+        "uniform_E_lower": "-1137833862376909193446732393/50000000000000000000000000000",
+        "uniform_F_lower": "1722029306839/327680000000000",
+        "pressure_lower": "1722029306839/327680000000000"
+      },
+      "relaxed_point_witness": {
+        "all_exact_point_bounds_matched": true,
+        "pressure_plus_projection_upper": "4382418417029966200466017339/500000000000000000000000000000",
+        "strictly_below_0088": true,
+        "scope": "Only selected 32-star-cycle system; not actual kernel or KKT."
+      }
+    }
+  ],
+  "integer_bands": [
+    {
+      "radius": "1/128",
+      "all_exact_packets_matched": true,
+      "edges": 41,
+      "uniform_E_lower": "3141506710939891712562158889/500000000000000000000000000000",
+      "uniform_F_lower": "5335366425002391712562158889/500000000000000000000000000000",
+      "pressure_lower": "1404070217/320000000000"
+    },
+    {
+      "radius": "1/64",
+      "all_exact_packets_matched": true,
+      "edges": 41,
+      "uniform_E_lower": "2886250981283594502486509311/500000000000000000000000000000",
+      "uniform_F_lower": "5062836209408594502486509311/500000000000000000000000000000",
+      "pressure_lower": "696507273/160000000000"
+    },
+    {
+      "radius": "1/32",
+      "all_exact_packets_matched": true,
+      "edges": 41,
+      "uniform_E_lower": "2341604670895846488184403151/500000000000000000000000000000",
+      "uniform_F_lower": "4483640927145846488184403151/500000000000000000000000000000",
+      "pressure_lower": "342725801/80000000000"
+    }
+  ],
+  "all_one_radius_1_over_32_uniform_F_above_8967_over_1e6": true,
+  "ninety_triangle_combinatorial_count_checked": true,
+  "ninety_triangle_rank_40_or_SVD_replayed": false,
+  "floating_matrix_solves_or_eigen_computations_replayed": false,
+  "point_witnesses_are_actual_kernel_vectors": false,
+  "complete_cycle_route_refuted": false,
+  "ordinary_Lean_proven": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 5.71342249999725
+}

@@ -1,0 +1,13 @@
+{
+  "purpose": "Resume the same c880 DFS once from the complete persisted 117500 checkpoint; not from the root.",
+  "command": "python -B -X utf8 research-goal-20261016/window_compact_obbt_guarded_cover.py --floor 11/1250 --resume research-goal-20261016/window-compact-obbt-recovery117500.json --max-nodes 1905000 --output research-goal-20261016/window-compact-obbt-cover.json",
+  "command_sha256": "d3fda836e86de3aa19f998f5f3f1bd5873ee8d9b621dd8f7ad308b15de959ad8",
+  "script_sha256": "ae2caaf0bd65a7d7fe0a4207dedd0dcf1a43eff52a1dd7285c9018c5ccbf1f4a",
+  "resume_checkpoint_sha256": "30920f05d0352808e7dc7404ac5705281ff3a6ae9da73164ffd8807eaa1f58ae",
+  "resume_checkpoint_bytes": 831108505,
+  "resume_checked": 117500,
+  "remaining_original_node_budget": 1905000,
+  "immutable_resume_copy": true,
+  "hardlink_unavailable_WinError": 5,
+  "new_zero_proportion_proven": false
+}

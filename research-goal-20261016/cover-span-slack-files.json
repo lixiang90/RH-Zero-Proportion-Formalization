@@ -1,0 +1,133 @@
+{
+  "scope": "Freeze the bounded affine-slack RLT experiment and exact finite replay.",
+  "files": [
+    {
+      "path": "research-goal-20261016/cover_span_slack_separator.py",
+      "bytes": 9262,
+      "sha256": "ab5341ed5c6d000356971c6a6d64ae31df397554ae0da5dd4fb4be74165d3cca"
+    },
+    {
+      "path": "research-goal-20261016/cover_span_slack_probe.py",
+      "bytes": 11626,
+      "sha256": "0ac44973f51c210e6a11a2308a6a6a5d24c3823b48b846d1baac46d443977936"
+    },
+    {
+      "path": "research-goal-20261016/cover-span-slack-first-case.json",
+      "bytes": 205871,
+      "sha256": "136ad4eb5d20bdf80176744f1db232d977d078e0c4949abf24c1b5dfda44c3c3"
+    },
+    {
+      "path": "research-goal-20261016/cover_span_slack_ipm_probe.py",
+      "bytes": 5839,
+      "sha256": "e42891069ec714df771d2546d5dece58d2c65d687a094b74f7b9c8485cf8163b"
+    },
+    {
+      "path": "research-goal-20261016/cover-span-slack-first-case-ipm.json",
+      "bytes": 22633,
+      "sha256": "40ce1a37de50d1da494e438a5660e55955515419bae6923bd9553611a1edc0cd"
+    },
+    {
+      "path": "research-goal-20261016/cover_span_slack_audit.py",
+      "bytes": 8994,
+      "sha256": "e10ce43c7766e06639277d498afce5ffb8ce26fa5ac493675ab4f7e38388508f"
+    },
+    {
+      "path": "research-goal-20261016/cover-span-slack-old-atoms.json",
+      "bytes": 49329,
+      "sha256": "23d2864cf136ea3d7b6ad5368ee6e2f0208b36e0efd1172ac7ce835bd9082007"
+    },
+    {
+      "path": "research-goal-20261016/cover-span-slack-independent-replay.json",
+      "bytes": 1659,
+      "sha256": "fcd023d3441f8eb97d68b21265bdc9c110ad09060a24bf895f9b551d88111d55"
+    },
+    {
+      "path": "research-goal-20261016/cover_span_slack_note.md",
+      "bytes": 3684,
+      "sha256": "ddd648213b20437e9c78742f8bc09939647f676e563f727baa355b26a8f8c76e"
+    },
+    {
+      "path": "research-goal-20261016/cover_span_slack_manifest.py",
+      "bytes": 3720,
+      "sha256": "6ec6619ad77edcf82edfadd0ea32a077ca705c7aad222224e7f1f6d2237eb723"
+    }
+  ],
+  "file_count": 10,
+  "total_bytes": 322617,
+  "existing_dependencies": [
+    {
+      "path": "research-goal-20261016/cover_cross_moment_probe.py",
+      "bytes": 7095,
+      "sha256": "7e1188a982fd42f5501c1121753410524eefc10fd9c71f9f65aecb32639e71b1"
+    },
+    {
+      "path": "research-goal-20261016/cover_lifted_graph_probe.py",
+      "bytes": 7765,
+      "sha256": "385f9a623acdf8f27de2b5cde9736221d806ba9e601339425ee4883be123b06a"
+    },
+    {
+      "path": "research-goal-20261016/cover_cross_moment_exact_rows.py",
+      "bytes": 8651,
+      "sha256": "a3a14a4f31bb048684d14b82f22344aed1b4d700e2b5a9c42af98a05cb444eae"
+    },
+    {
+      "path": "research-goal-20261016/cover_cross_moment_factor_replay.py",
+      "bytes": 13470,
+      "sha256": "d23adaed52000fbdecf6d4a7ed7589b93a9940a641c5f8563f5e8fc204276462"
+    },
+    {
+      "path": "research-goal-20261016/cover_cross_moment_old_rows_replay.py",
+      "bytes": 13108,
+      "sha256": "bcdf654149f68196abb0d5fdfc22a38bc19df8c2c217440f62bf375a18a87aa3"
+    },
+    {
+      "path": "research-goal-20261016/cover_exact_scalar_replay.py",
+      "bytes": 2417,
+      "sha256": "eaa745076330aaf3346611badc4fdf0a878ac8ce0a3b5a2efeb4662d1d917e14"
+    },
+    {
+      "path": "research-goal-20261016/cover_lifted_graph_verify.py",
+      "bytes": 9063,
+      "sha256": "9490d3071fea06aea005d7d337cef3e87bb1fbb63a6493f1c70ce777f3c9ec00"
+    },
+    {
+      "path": "research-goal-20261016/cover_newjet.json",
+      "bytes": 278163,
+      "sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c"
+    },
+    {
+      "path": "research-goal-20261016/cover-cross-moment-remaining-files.json",
+      "bytes": 8764,
+      "sha256": "a43e79af34ab38caea36f8dc9a11aead391eb11a6033945cf3b85dd95624b08b"
+    },
+    {
+      "path": "research-goal-20261016/cover-cross-moment-remaining-six.json",
+      "bytes": 190771,
+      "sha256": "50225aec235d6d37f07f09c47a56fc1cb4d9d221e02b386d63e5231031a70619"
+    }
+  ],
+  "parameters": {
+    "path": "research-20261016-followup/window_reweight_rational.json",
+    "bytes": 3838,
+    "sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+  },
+  "discovery_seed_raw_alternative": "The already frozen remaining-six standalone proof contains the same records. Its standalone replay proves ancestry and energy0 provenance.",
+  "path": "r001000001000100110011001",
+  "target": "11/1250",
+  "new_kernel_samples": 0,
+  "new_energy_anchors": 0,
+  "new_variables": 0,
+  "new_cases": 1,
+  "maximum_cut_rounds": 2,
+  "fixed_products_saved": 128,
+  "candidate_factors": 39,
+  "default_final_outcome": "45-second timeout, inconclusive",
+  "same128_cut_IPM_outcome": "Approximate zero-slack primal; max floating row error7.14e-8; not exact feasibility.",
+  "independent_old_atom_and_factor_algebra_replay_passed": true,
+  "independent_replay_command": "python -S -B -X utf8 research-goal-20261016/cover_span_slack_audit.py --output NEW_RECEIPT.json",
+  "new_actual_Lean_factor_consumer_proven": false,
+  "strict_integer_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "main_search_or_frozen_sources_modified": false
+}

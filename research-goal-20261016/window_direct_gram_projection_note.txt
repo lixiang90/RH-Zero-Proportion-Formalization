@@ -1,0 +1,153 @@
+Direct signed Gram projection: exact inequality and ten saved-point checks
+2026-10-17
+
+Scope
+-----
+Pure finite-dimensional algebra plus a floating comparison at precisely
+the existing eight residual midpoints and two saved low-pressure points.
+No new sample, optimizer, matrix solve, Lean, or cover job is used. The
+previous cycle package remains untouched. The exact inequality below needs
+no phase rank assumption. No whole-cell certificate or global floor is
+produced, and no zero-proportion improvement is claimed.
+
+1. Exact general inequality
+--------------------------
+For the actual positive ledger weights a_e, define the real vectors
+  u_e=A(x_e)*sin(pi*x_e),
+  v_e=B(x_e)*cos(pi*x_e)+C(x_e),
+so the exact all-mode kernel decomposition says k_e=u_e+v_e. All B and C
+signs are retained. Put
+  Q=sum a_e*u_e^2, R=sum a_e*v_e^2, T=sum a_e*u_e*v_e,
+  E=sum a_e*k_e^2=Q+2*T+R.
+For Q>0, completing the square gives the identity
+  E-[R-T^2/Q]=(Q+T)^2/Q >=0.                            (1)
+Consequently
+  E >= R-T^2/Q = (Q*R-T^2)/Q.                          (2)
+This is the squared weighted norm of k projected onto u-perpendicular,
+equivalently the squared norm of v projected onto u-perpendicular.
+It holds for any finite real u,v and positive weights; actual phase
+realizability is needed for interpreting these u,v as the actual kernel,
+but not for the algebra or validity of (1).
+
+If Q=0, positivity of the weights forces every u_e=0. Thus T=0 and
+  E=R exactly.                                         (3)
+Formula (3) is a separate branch; it is not justified by dividing by Q
+or by assigning a limit to T^2/Q. Equality in (2), when Q>0, occurs iff
+Q+T=0, equivalently sum a_e*u_e*k_e=0.
+
+2. Relation to the cycle projection, with no rank shortcut
+--------------------------------------------------------
+Let Cmat be any collection of exact actual-phase homogeneous cycle rows
+as in the prior note, and D=Cmat*k. Each sine-addition row annihilates
+u exactly: Cmat*u=0. With whitened vectors U=sqrt(W)*u, V=sqrt(W)*v,
+K=U+V and H=Cmat*W^(-1/2), the rowspace S of H satisfies
+  S subset U-perpendicular.
+The optimal cycle-only least-squares bound is ||Proj_S K||^2, namely
+  D^T*(Cmat*W^(-1)*Cmat^T)^dagger*D.
+For Q>0, the direct bound (2) is ||Proj_(U-perp) K||^2. Therefore
+  cycle projection bound <= direct bound <= actual E.  (4)
+The same domination holds at Q=0 because the direct bound is E itself.
+
+If Q>0 and the cycle matrix has kernel precisely span(u), then S=U-perp
+and the two bounds coincide. Rank 40 for 41 columns plus the known
+nonzero null vector u would suffice. This is not needed to use (2).
+If there are extra null directions, equality is not automatic; a
+particular k can still yield equality if it has no component along the
+extra orthogonal null directions. The direct bound can be strictly stronger.
+The 32-star-cycle rowspace is a subspace of the complete-triangle rowspace,
+so its bound is no larger either. No two independent phase layers enter.
+
+3. Numerical comparison at exactly the saved 8+2 points
+-------------------------------------------------------
+The script reads the existing window_joint_cycle_projection_probe.json
+and actual rational ledger. It recomputes A,B and the all-24-mode C at
+exactly those ten saved rational gap vectors, then evaluates Q,R,T.
+Integer spans have sin(pi*x)=0 and cos(pi*x)=(-1)^x decided exactly from
+Fraction inputs, preventing a floating sine residual from creating a
+fake positive Q in the integer case. All nonzero numerical values below
+are floating diagnostics, not interval certificates.
+
+At the eight residual midpoints, the direct bounds are
+  .005192647816293330, .005518056736893214,
+  .004839706779345128, .004856514771124198,
+  .005458589662341232, .004734262081500954,
+  .005533689396256820, .004988295442504120.
+They match the saved complete 90-triangle projection results with maximum
+absolute difference 1.19696e-16. The saved numerical ranks are all 40;
+this agreement supports the generic one-null-direction interpretation,
+but proves neither exact rank nor a uniform rank statement on any cell.
+
+The two saved special points show why generic equivalence must not be
+used as a theorem without hypotheses:
+
+  g=(1,...,1): all phases are integers, Q=0 exactly.
+    Direct branch E=R is approximately .008601206904869608.
+    Saved full-triangle bound is .006771989146861409.
+    Saved triangle numerical rank is 32, not 40.
+    For integer phases the sine-cycle equations reduce, after signs and
+    A scalings, to ordinary graph cycle equations. The star basis has
+    41-10+1=32 rows, so the nine-dimensional nullspace is structural.
+
+  g=(9/4,1,...,1): Q=.0028019680971330266>0.
+    R=.008253674918848822, T=-.00009335896960655638.
+    Direct bound is .008250564284857338.
+    Saved full-triangle bound is .006016326924717835.
+    Saved triangle numerical rank is again 32.
+    Thus rank degeneration can also occur when Q is nonzero.
+
+These are accurately specified actual-phase test points with floating
+projection comparisons. They show non-equivalence of the formulas in
+degenerate cases; they are not actual-sublevel counterexamples. The
+general domination (4) and Q=0 branch are exact algebraic statements.
+
+The maximum direct identity (1) error in all ten floating evaluations is
+6.94e-18. No matrix is solved or inverted by the new script; complete
+triangle and star bounds are read from the frozen prior receipt.
+
+4. Gram determinant as 820 nonnegative edge-pair squares
+-------------------------------------------------------
+The exact two-column weighted Binet-Cauchy identity is
+  detGram=Q*R-T^2
+    =sum_(e<f) a_e*a_f*(u_e*v_f-u_f*v_e)^2.             (5)
+Expanding each square and collecting the diagonal and off-diagonal terms
+proves (5) directly. There are choose(41,2)=820 terms. Every term is
+nonnegative, so any chosen subset gives a valid lower bound on detGram;
+this incurs no triangle energy double counting. The floating script
+computes all 820 terms and checks their sum against Q*R-T^2, with maximum
+absolute discrepancy 1.36e-19 across the same ten saved points.
+
+For actual amplitudes each wedge has the sign-preserving expression
+  u_e*v_f-u_f*v_e
+    =A_e*A_f*{ -h*[sin(phi_e)*cos(phi_f)/x_f
+                       -sin(phi_f)*cos(phi_e)/x_e]
+                +(C_f/A_f)*sin(phi_e)-(C_e/A_e)*sin(phi_f) },
+where h=Z/[2*pi*cos(theta)] and phi_e=pi*x_e. Uniform payments would still
+have to control these linked real spans, phases and C/A coefficients.
+Merely sampling nonzero wedge values supplies no uniform positive bound.
+
+One division-free necessary condition for F=P+E<c, when Q>0, is
+  J:=detGram-(c-P)*Q <0,                                (6)
+because E*Q-detGram=(Q+T)^2. Thus proving J>=0 uniformly would exclude
+that positive-Q sublevel region. At Q=0, J=0 automatically and (6) cannot
+exclude anything; the separate actual E=R branch must prove P+R>=c.
+
+If a cell has uniform Q>=q0>0, R>=r0 and |T|<=t0, then (2) gives the
+valid scalar payment E>=r0-t0^2/q0. Alternatively, a positive determinant
+lower d0 and Q upper q1 give E>=d0/q1 on Q>0. A few uniformly nonzero
+wedges from (5) could supply d0. These are possible sufficient payments,
+not paid certificates for any residual cell in this research package.
+
+Near Q=0, the direct projection bound can be discontinuous as a function
+of u: for an abstract example u=epsilon*v with v!=0, (2) equals zero
+for every epsilon!=0, but the Q=0 branch at epsilon=0 equals R. This
+does not reflect discontinuity of the actual energy. It explains why a
+generic floating rank or a near-zero quotient must not replace a uniform
+argument around integer-phase degeneration.
+
+Reproduction
+------------
+From the repository root:
+  python research-goal-20261016/window_direct_gram_projection_probe.py
+The new companion JSON records hashes, exact input gaps, all Q/R/T values,
+saved cycle comparisons and algebraic identity errors. Runtime is under
+two seconds. There is no new whole-cell certificate in this package.

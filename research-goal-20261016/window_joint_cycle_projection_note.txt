@@ -1,0 +1,169 @@
+Joint signed-cycle projection: one strict local band, eight residual tests
+2026-10-17
+
+Scope
+-----
+New standalone note/script/JSON only. No optimizer, Lean, new cover job,
+or frozen artifact is modified. This is an actual-kernel cycle route;
+actual cosine factors, B/A and C/A are all retained. No global floor,
+complete localization, coverage result, or new zero proportion is claimed.
+The explicit five-point obstruction below applies ONLY to the selected
+32-star-cycle subsystem. It does not refute the complete cycle route.
+
+1. Exact independent cycles and joint energy inequality
+-------------------------------------------------------
+Use the actual 41 positive ledger edges, a_e>0, and W=diag(a_e).
+For each positive span x, put
+  A(x)=cos(theta)*pi*x/[Z*(pi^2*x^2-1/2)]>0,
+  B(x)/A(x)=-h/x, h=Z/[2*pi*cos(theta)],
+  beta(x)=[B(x)*cos(pi*x)+C(x)]/A(x),
+  k(x)/A(x)=sin(pi*x)+beta(x).
+Here C is the all-24-mode perturbation from the audited exact kernel
+decomposition, not a frozen independent coefficient or omitted bias.
+
+Vertex 1 has a positive ledger edge to every other vertex. Use its nine
+edges as a star tree, with t_i=|p_i-p_1| and sigma_i=sign(i-1). Each of
+the other 32 edges e=(i,j), i<j, gives one independent cycle. Write
+  c_i=cos(pi*t_i), k_i=k(t_i), A_i=A(t_i), beta_i=beta(t_i).
+The sine difference identity gives exactly
+  k_e/A_e-sigma_j*c_i*k_j/A_j+sigma_i*c_j*k_i/A_i
+     = D_e=beta_e-sigma_j*c_i*beta_j+sigma_i*c_j*beta_i.    (1)
+Let Cmat be this 32-by-41 coefficient matrix, so Cmat*k=D. The chord
+columns form the positive diagonal diag(1/A_e); therefore these 32 rows
+are independent for every actual configuration, regardless of cosine zeros.
+M=Cmat*W^(-1)*Cmat^T is positive definite. Weighted least squares gives
+  E=sum_e a_e*k_e^2 >= D^T*M^(-1)*D.                    (2)
+The minimizer among vectors satisfying only these linear cycle constraints
+is khat=W^(-1)*Cmat^T*M^(-1)*D. This automatically allocates every edge's
+energy once, with no sum of overlapping triangle bounds.
+
+A more convenient exact uniform certificate uses ANY fixed real dual y:
+  E >= 2*y^T*D-y^T*M*y
+     = 2*y^T*D-sum_e [(Cmat^T*y)_e]^2/a_e.              (3)
+Indeed subtracting the right side leaves
+  sum_e a_e*[k_e-(Cmat^T*y)_e/a_e]^2 >=0.
+No numerical inverse, PSD eigenvalue claim, or rank assumption is needed
+to validate a fixed y in (3). The script obtains a y by a floating 32-by-32
+solve at one specified point and rounds each coefficient to denominator
+2^30. All subsequent uniform certificate evaluations use rational outward
+intervals and those exact rational y values.
+
+2. Uniform interval semantics and a strict local band
+---------------------------------------------------
+Every scalar span interval is partitioned on the existing 1/32 SC grid.
+The existing 24th-order Taylor provider gives a uniform C/A interval on
+each piece; no sample maximum is used. The packets are joined by hull.
+The monotonic exact A formula bounds 1/A, and endpoint plus critical-point
+trigonometric intervals bound cos(pi*x). Beta is evaluated as
+  beta= -h*cos(pi*x)/x + C/A.
+Signed y*D and every component of Cmat^T*y are then accumulated before
+the weighted squares in (3). The receipt records every 41-edge hull,
+piece count and piece endpoint hash, and the exact rational resulting bound.
+Analytic soundness inherits the explicit C Taylor remainder and frozen
+table semantics in window_phase_coefficients.py; this is not a Lean proof.
+
+Consider the low-pressure integer configuration g=(1,...,1). Define a
+coherent span band by |(p_j-p_i)-(j-i)|<=r for every one of the 45 pairs.
+For r<=1/32 its adjacent gaps exceed 123/128. One fixed rational dual from
+the centre gives the following UNIFORM interval-evidence lower bounds:
+
+  r       kernel energy E lower       pressure+E lower
+  1/128   0.006283013421879783         0.010670732850004784
+  1/64    0.005772501962567189         0.010125672418817190
+  1/32    0.004683209341791693         0.008967281854291693
+
+All decimal entries summarize exact rational lower endpoints in the JSON.
+The script checks literally, over the rationals, for r=1/32:
+  E_lower > 4683/10^6,
+  F_lower > 8967/10^6 > 221/25000 = 0.00884.
+The pressure lower bound in this band is exactly
+  (31/32)*sum_r b_r = 0.0042840725125.
+Thus multiple signed cycles can pay much more than a single triangle's
+1e-5 local energy. This is one specified local band and has no global
+coverage consequence or zero-proportion increment.
+
+At the centre, floating diagnostics give E=0.00860120690487 and the joint
+32-cycle projection bound 0.00677198914686; the best single-cycle bound
+there is only 0.000160273515993. For g=(9/4,1,...,1), which defeated the
+earlier unsigned phase-energy strategy, this joint bound is 0.006016326925
+at the point. Those centre values are floating diagnostics, not uniform
+certificates, and the uniform band table is the paid statement.
+
+3. Eight frozen residual cells: uniform payment fails for this fixed dual
+------------------------------------------------------------------------
+The script reads precisely the eight paths in cover-lifted-graph-energy8.json
+and the corresponding 'before' states in cover-curvature-parent64.input.json.gz.
+Each chosen prefix midpoint is checked over the rationals to lie in its
+entire 45-pair DBM cell. No cell or selection is optimized or replaced.
+
+In selection order, the pointwise floating 32-cycle kernel-energy lower
+bounds are
+  .00257134, .00289451, .00349093, .00420892,
+  .00340890, .00357704, .00303138, .00312836.
+The largest single-cycle bounds are .000087 to .000938. The 32-by-32
+Gram condition numbers at these points are about 85 to 253; they are
+floating diagnostics, not uniform condition certificates.
+
+Using each centre's same fixed rational dual over its FULL residual cell
+gives negative lower endpoints:
+  -.0249405, -.1847174, -.0362027, -.1820959,
+  -.0742551, -.2200665, -.1565909, -.0227567.
+These are valid but unhelpful interval payments. They establish only that
+this particular uniform fixed-dual evaluation does not exclude those cells;
+they do not prove that no better dual or correlated bound can work.
+
+There is also a strict point obstruction for the selected 32-cycle
+subsystem. Choose the nine star components of the floating least-squares
+minimizer, round them to rational denominator 2^30, and define each chord
+component by the exact formula solving (1):
+  khat_e=A_e*[D_e+sigma_j*c_i*khat_j/A_j
+                   -sigma_i*c_j*khat_i/A_i].
+Then Cmat*khat=D holds exactly by construction. Rational intervals on an
+outward one-SC-unit enclosure of each exact midpoint span bound the cost
+sum a_e*khat_e^2 from ABOVE. This witnesses a feasible energy for that
+projection relaxation. The vectors khat are NOT the actual kernel vectors.
+
+For selection indices 0,1,4,6,7 the certified upper bounds on P+projection
+cost are respectively approximately
+  .008286146443618, .008590570944093, .008627502795415,
+  .008669571232769, .008764836834060,
+all strictly below .0088 by exact rational comparisons in the receipt.
+No uniform bound obtained from ONLY these 32 cycle equations and energy
+minimization can exclude those five whole cells, because each contains
+such a feasible relaxed point. These are not actual F<.0088 points and
+need not satisfy actual minimizer KKT. Additional cycle constraints can
+invalidate them; the next diagnostic shows this matters.
+
+4. Complete triangle diagnostic: explicitly not a route obstruction
+------------------------------------------------------------------
+There are 90 positive-edge triangles. For each ordered i<j<l, the exact
+addition row is
+  cos(pi*x_jl)*k_ij/A_ij + cos(pi*x_ij)*k_jl/A_jl-k_il/A_il
+    = cos(pi*x_jl)*beta_ij+cos(pi*x_ij)*beta_jl-beta_il.
+The script checks these identities numerically at the same ten points
+and applies an SVD of the 90-by-41 whitened matrix. No optimization runs.
+At all eight residual midpoints the numerical rank is 40 (relative
+singular cutoff 1e-10); their full-triangle projection lower bounds on E
+are approximately
+  .00519265, .00551806, .00483971, .00485651,
+  .00545859, .00473426, .00553369, .00498830.
+Adding the actual midpoint pressures puts all eight above .0088 at those
+points. This is floating pointwise evidence only, with no whole-cell
+claim, rank proof, rationalized full-triangle dual, or exclusion certificate.
+The actual sine vector A_e*sin(pi*x_e) lies in the homogeneous nullspace.
+Numerical rank 40 suggests that it may be the only generic null direction,
+but that is an inference, not a theorem established here. At both special
+low-pressure test points the numerical rank drops to 32. In particular,
+integer-phase degeneration cannot be ignored or paid by a generic inverse.
+
+The five strict witnesses above disprove sufficiency ONLY for the chosen
+32-star-cycle subsystem. They say nothing adverse about a correctly paid
+complete-cycle method retaining its extra independent constraints.
+
+Reproduction
+------------
+From the repository root:
+  python research-goal-20261016/window_joint_cycle_projection_probe.py
+Runtime is about seven seconds. The script produces the companion JSON
+with exact duals, rational bounds, five strict witnesses, frozen-input hashes,
+and explicitly tagged floating-only point matrix/SVD diagnostics.

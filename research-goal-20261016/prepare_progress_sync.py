@@ -159,7 +159,12 @@ def main():
       ('cover-cross-moment-global-box-files.json','d5a8a471f46fefa0de591a13ba62fbc6f6097e664f9c6656958266d0a8b57790'),
       ('cover-cross-moment-aggregate-files.json','209cc75f7af3f151fb238cf0d4f8e9b82dd3763e37fda1aa3bdc1de8cf6e0b05'),
       ('window_moment_actual_inputs_sync_files.json','292f094bd0ef5a1548f3a4e134fbd5a1041425824d73f5a7542ede2479129c83'),
-      ('window-phase-lattice-rigidity-files.json','4b005ad8c405126bc22b7c2858ad42999ab8b806cfc6433d595acba1477a2351')]:
+      ('window-phase-lattice-rigidity-files.json','4b005ad8c405126bc22b7c2858ad42999ab8b806cfc6433d595acba1477a2351'),
+      ('window-joint-cycle-projection-replay-files.json','137dccdf29cf46b6776571e2c020b47285cb42b31cd98ff3b101b740d0ac197e'),
+      ('cover-main-recovery-files.json','7cdd09185db00e5920b5ea6e3ea36dab420ea156bb952bd7df07bccb11773754'),
+      ('cover-span-slack-files.json','98160e9301d384be90a38b632968a9820afbf6f235e80526f6dfee373643ef0c'),
+      ('window_moment_actual_exclusion_sync_files.json','2bd71aff6dc350328d6fd44c0bf8ba1e562d8f7922c7fed0cf57779dd2308268'),
+      ('window-new-structural-cores-files.json','17d81b858aa1cb0f956dc89ed578a6b82981af55ee803336c1a684ffc6bcd74c')]:
         manifest=HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())

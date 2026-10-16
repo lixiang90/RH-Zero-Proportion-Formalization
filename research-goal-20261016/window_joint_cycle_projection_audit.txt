@@ -1,0 +1,59 @@
+联合 signed-cycle 投影：独立语义与有理区间审计（2026-10-17）
+
+结论：11组固定dual的完整统一区间付款、8个中点的32-star松弛向量上界，
+全部由不导入producer、无NumPy/SciPy的python -S脚本精确重放匹配。
+新脚本自己实现Q30整数区间四则/平方/区间三角极值枚举；明确共享并绑定
+window_interval_kernel及window_phase_coefficients.Provider的Taylor幅度来源。
+没有重新求解线性系统、LS、SVD、特征值或优化器，没有扩展case或覆盖搜索。
+
+共同实际核与符号
+令t_i=|p_i-p_1|，sigma_i=sign(i-1)。所有cell的相邻gap严格正，因此
+x_ij=sigma_j*t_j-sigma_i*t_i。实际kernel具有
+k(x)/A(x)=sin(pi*x)+beta(x)，beta=-h*cos(pi*x)/x+C_all(x)/A(x)。
+C_all保留实际全部24个扰动模式；cos因子、B/A和C/A均未丢弃。
+正弦差公式给
+k_e/A_e-sigma_j*c_i*k_star_j/A_star_j+sigma_i*c_j*k_star_i/A_star_i
+ = beta_e-sigma_j*c_i*beta_star_j+sigma_i*c_j*beta_star_i。
+故Cmat*k=D的三项及右端符号正确。32个chord列构成正的diag(1/A_e)，
+所以这32行结构独立，无需cos非零假设。x>=123/128时A>0，且
+A'=-(cos(theta)*pi/Z)*(pi^2*x^2+1/2)/(pi^2*x^2-1/2)^2<0，
+所以inverse_A=[1/A(lo)_upper,1/A(hi)_lower]端点方向正确。
+
+固定dual合法性
+任意固定有理y，令q=Cmat^T*y。由Cmat*k=D，
+ E-(2*y^T*D-sum_e q_e^2/a_e)=sum_e a_e*(k_e-q_e/a_e)^2>=0。
+因此无需数值inverse、Gram条件数、PSD或rank检查即可验证此下界。
+重放逐项累加signed yD和q_e后再对q_e平方，付款符号正确；
+1/32小区间上的C/A全覆盖Taylor hull、cos端点及全部半整数极值都重算。
+这些是带明确共享Taylor来源的数值区间证据，尚非Lean解析消费者。
+
+统一全1 span-band
+对全部45对跨度同时有|x_ij-(j-i)|<=1/32的指定局部band，
+独立重放确认E_lower>4683/10^6，F_lower>8967/10^6>221/25000。
+压力下界精确为(31/32)*sum b=0.0042840725125。
+完整F下界约0.008967281854291693；相邻gap>=31/32>123/128。
+1/128与1/64 band也全部重放。该结论只涉及三个指定局部band，
+不提供global localization、完整覆盖或零点比例提升。
+
+八个冻结残余cell与五个见证
+所有中点均以有理数检查全部45 DBM条件；八个固定dual的全cell下界
+均仍为负，说明这些特定dual的interval付款未排除cell，非路线不可能定理。
+星树9个khat分量为给定有理数；每个chord由相同实际beta/cos/A系数的
+解方程公式定义，所以32个star cycle方程恰好成立。
+以包围中点跨度的整数SC微盒，对全部41个khat分量加权平方的上界重算。
+选择序号0、1、4、6、7的pressure+relaxed_cost严格低于.0088，精确匹配输入。
+这些khat不是实际kernel向量，未要求实际KKT，故见证只针对所选32-star
+线性约束与能量最小化松弛，不能反驳保留更多cycle约束的完整路线。
+
+90 triangle范围
+仅精确复核正权triangle组合计数为90。保留producer的rank40、SVD、
+pointwise full-triangle bounds为浮点探索提示；没有重算或升级成严格结论。
+特别integer-phase rank退化不能用generic inverse的浮点诊断忽略。
+
+复现
+ python -S -B -X utf8 research-goal-20261016/window_joint_cycle_projection_replay.py
+冻结三份producer在运行开始与结束均逐字节哈希校验不变。
+收据包含8case与3band的精确下界、见证上界、共享依赖hash与全部scope flags。
+普通Lean证明、全局覆盖、新零点比例均为false。
+
+receipt SHA256: caf291b7b263c5ed962acde8c3056a9e3e1ca825e70a5fa6e99635a35cbb3d8d

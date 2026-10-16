@@ -470,11 +470,19 @@ and `cover-cross-moment-aggregate-files.json`; the fifty ordinary proof
 modules and five data modules for the actual inputs are pinned separately
 by `window_moment_actual_inputs_index.json`. The final two exclusion theorem
 instances are not asserted by that input index.
-The subsequent `WindowMomentFormSum` and `WindowMomentAggregateActual`
-ordinary-kernel proofs now assemble the valid rational sum for both actual
-cells. The complete coefficient-equality checks and the two final
-strict-support exclusions are still unfinished; passing only some blocks
-does not discharge either exclusion theorem.
+The separate final index `window_moment_actual_exclusion_index.json` now
+seals both actual ordinary-kernel exclusion roots:
+`WindowMomentExclusions.exclude0` and `exclude1`. All 464 coefficient
+identities per case, exact common denominators, actual variable boxes and
+strict integer contradictions are discharged inside Lean. The index binds
+70 proof modules and six data modules in this pipeline to current source
+and log hashes, including a fresh dependency-chain recheck. The roots
+retain only actual global-minimizer relevance, membership in their fixed
+contracted cell, and `Fw24 < 11/1250`. Their ancestry has separate Python
+replay; formal composition with the pressure-root cover is not asserted.
+These two new roots have not yet received independent nanoda replay.
+Guarded generation entry points preserve already-passed sources, while
+previously published generator files retain their original pinned bytes.
 
 A separate actual-rank-one phase audit rules out a tempting shortcut to the
 global basin cover. The exact separated point `(9/4,1,...,1)` lies outside
@@ -489,6 +497,50 @@ and eighteen uniform Taylor packets pass a separate standard-library
 replay sharing the disclosed interval providers. There is no Lean cycle
 consumer or global band classification. The frozen five-file evidence is
 `window-phase-lattice-rigidity-files.json`.
+
+The joint signed-cycle follow-up allocates edge energy once using a fixed
+rational dual. A separate standard-library replay checks eleven uniform
+dual packets (6,331 Taylor pieces) and eight relaxed point witnesses. It
+confirms `F > 0.008967` only in the specified all-one span band of radius
+`1/32`. Five strict relaxed point witnesses obstruct only the selected
+32-star-cycle subsystem, while full-triangle ranks remain floating hints.
+See `window-joint-cycle-projection-replay-files.json`; no Lean phase
+consumer or global floor is claimed by this package.
+
+The next RLT cone multiplies old valid inequalities by nonadjacent DBM
+span slacks and the common pressure slack. An exact finite counterexample
+shows this cone adds information beyond coordinate-box RLT, McCormick
+and position-moment positivity. The bounded one-cell test generated 128
+DBM product cuts. Default simplex timed out on the final system; an
+interior-point solve of that same system returned an approximate zero-slack
+point. All 39 factors and 128 products replay exactly, but there is no
+new strict exclusion. This is recorded by `cover-span-slack-files.json`.
+
+The full `c=0.0088` search resumed once from the structurally audited
+117,500-node checkpoint. Host process inspection confirms one writer; the
+frozen recovery package records later progress through 122,400 nodes.
+The large checkpoint and mutable search output are excluded from Git.
+That structural audit is not a semantic replay of its 880,632 contraction
+bounds. Its 29 saved frontier states show large shallow prefixes remain
+unvisited, and every deep frontier state is disjoint from the existing 69
+basins. Prefix counts are not a geometric completion percentage. See
+`cover-main-recovery-files.json` for the exact scope and the self-contained
+cone-counterexample replay.
+
+Two further structural cores now pass ordinary Lean. `WindowMomentAffineSlack`
+proves the grouped RLT row valid whenever its affine multiplier is paid by
+a joint gap inequality, with no coordinate-box absolute-sum requirement.
+`WindowSignedGramProjection` connects a smaller signed projection directly
+to the actual 41-edge energy. For any comparison vector `u`, put
+`v = actualK-u`, `Q = sum a*u^2`, `R = sum a*v^2`, `T = sum a*u*v`.
+It proves `Fw24 = pressure+Q+2*T+R` and
+`pressure+R-T^2/Q <= Fw24`, including the `Q=0` case. The division-free
+threshold theorem explicitly retains `Q>0` and the determinant lower-bound
+premise. This removes the matrix inverse and rank assumptions from the
+projection inequality, not the missing numerical global floor. The eight
+pointwise agreements with the full-triangle projection remain floating
+diagnostics. These sources, logs and research notes are pinned by
+`window-new-structural-cores-files.json`.
 
 Independent three-floor probes on the same 300 original parents found
 80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.

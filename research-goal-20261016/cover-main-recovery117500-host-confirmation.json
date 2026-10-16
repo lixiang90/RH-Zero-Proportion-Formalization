@@ -1,0 +1,39 @@
+{
+  "scope": "Recovery host confirmation and first persisted progress. Source is the trusted parent task host-elevated read-only CIM observation, not sandbox process enumeration.",
+  "recorded_UTC": "2026-10-16T20:46:12.434416+00:00",
+  "old_session_id": 69821,
+  "new_session_id": 1700,
+  "old_pid": 36004,
+  "new_pid": 46548,
+  "new_parent_pid": 19760,
+  "parent_host_CIM_confirmed_exactly_one_matching_writer": true,
+  "parent_host_CIM_old_pid_absent": true,
+  "sandbox_process_enumeration_is_not_authoritative": true,
+  "exit_cause_unknown": true,
+  "resume_checkpoint_sha256": "30920f05d0352808e7dc7404ac5705281ff3a6ae9da73164ffd8807eaa1f58ae",
+  "resumed_checked": 117500,
+  "first_checkpoint_schedule_after_resume": 118000,
+  "first_checkpoint_completed_evidence": "118100 and 118200 progress printed only after the synchronous 118000 save returned; current complete atomic checkpoint has new PID and resumed_from.",
+  "current_checkpoint": {
+    "pid": 46548,
+    "checked": 118000,
+    "accepted_count": 58989,
+    "counts": {
+      "value": 17301,
+      "stationary": 40519,
+      "reflection": 1169,
+      "Gram": 0,
+      "stationary_empty": 0,
+      "sublevel_empty": 0
+    },
+    "unresolved_count": 23,
+    "seconds": 138.53432519999478,
+    "resumed_from": {
+      "path": "research-goal-20261016\\window-compact-obbt-recovery117500.json",
+      "sha256": "30920f05d0352808e7dc7404ac5705281ff3a6ae9da73164ffd8807eaa1f58ae",
+      "checked": 117500
+    }
+  },
+  "current_checkpoint_bytes": 832964127,
+  "new_zero_proportion_proven": false
+}

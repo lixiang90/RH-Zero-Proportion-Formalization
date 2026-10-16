@@ -1,0 +1,43 @@
+One requested near-integer direct-Gram check
+2026-10-17
+
+Scope: floating diagnostic at precisely one new specified rational point.
+No optimizer, matrix solve, Lean, cover search, or whole-cell computation.
+The frozen three-file direct-Gram package and its manifest are unchanged.
+
+Point: g_r=1001/1000 for every r:Fin 9. Thus p_i=i*1001/1000 and each
+edge span x_ij=(j-i)*1001/1000. The floating calculation uses the actual
+41 positive rational ledger weights and actual 24 perturbation modes.
+
+Formula at each positive span x:
+  theta=sqrt(2)/2, Z=sin(theta)/theta,
+  A=cos(theta)*pi*x/[Z*(pi^2*x^2-1/2)],
+  B=1/(1-2*pi^2*x^2),
+  C=sum_(m=1..24) d_m*[sinc_pi(x-m)+sinc_pi(x+m)]/(2*Z),
+  u=A*sin(pi*x), v=B*cos(pi*x)+C.
+The numbers below use Q=sum a*u^2, R=sum a*v^2, T=sum a*u*v and P=b.g.
+
+Floating results:
+  Q = 0.000012524604839573234
+  R = 0.008574448313040370
+  T = -0.00015093060141526055
+  P = 0.0044266906684
+  P+R-T^2/Q = 0.011182315414919888
+  actual F=P+Q+2*T+R = 0.012711802383449423
+
+Conclusion limited to this point: the projection lower expression is
+approximately 0.0023823154 ABOVE .0088. This point therefore does not
+supply the proposed sufficient-method counterexample. These are floating
+evaluations, not rigorous interval inequalities or an actual Lean result.
+The requested conditional follow-up was to establish a strict interval
+upper bound below .0088 only if the floating point was below; that branch
+was not triggered. No additional points or uniform cells were examined.
+
+This does not establish global sufficiency of the Gram bound. The existing
+Q->0 algebraic discontinuity warning and the need for local/global coverage
+remain unchanged; this one uniform-gap perturbation simply is not a low
+counterexample. The actual_projection_all algebra theorem is unaffected.
+
+Parameter input:
+  research-20261016-followup/window_reweight_rational.json
+  SHA256 61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11

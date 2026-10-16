@@ -1,0 +1,24 @@
+{
+  "scope": "Package then independently audit only the128 frozen affine-slack rows.\n\nExport uses the unchanged old discovery builder, with no LP. Replay runs\nunder Python-S, reconstructs every active old atom with GraphReplay and\nchecks each exact product by a separate signed coordinate-RLT expansion.\nFactor positivity comes from its actual DBM bound or energy sublevel,\nnever from the independent gap box. No strict exclusion is claimed.\n",
+  "source_sha256": "e10ce43c7766e06639277d498afce5ffb8ce26fa5ac493675ab4f7e38388508f",
+  "packet_sha256": "23d2864cf136ea3d7b6ad5368ee6e2f0208b36e0efd1172ac7ce835bd9082007",
+  "default_run_sha256": "136ad4eb5d20bdf80176744f1db232d977d078e0c4949abf24c1b5dfda44c3c3",
+  "IPM_run_sha256": "40ce1a37de50d1da494e438a5660e55955515419bae6923bd9553611a1edc0cd",
+  "passed_exact_new_factor_and_old_atom_algebra": true,
+  "old_atoms_reconstructed_from_canonical_metadata": 108,
+  "active_scalar_slabs": 5,
+  "new_factors_checked": 39,
+  "products_checked": 128,
+  "product_factor_kinds": {
+    "nonnegative-by-DBM-span-bound": 128
+  },
+  "optimizer_imported": false,
+  "numpy_imported": false,
+  "actual_derivative_graph_finite_inputs_checked_by_GraphReplay": true,
+  "ancestry_replay_reused_from_frozen_remaining_manifest": "research-goal-20261016/cover-cross-moment-remaining-files.json",
+  "LP_claim": "Default second call timed out; same128-cut IPM has only an approximate zero-slack primal, max row error7.14e-8. No exact feasible primal or exclusion.",
+  "strict_certificates": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 1.557487600002787
+}

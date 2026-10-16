@@ -1,0 +1,90 @@
+{
+  "scope": "Pin small recovery/structure evidence, excluding both huge checkpoints.\n\nThe stream audit was made on the main filename while its complete contents\nwere the frozen117500 snapshot. Reproducing that full audit requires the\nexact checkpoint bytes; neither huge immutable copy nor mutable output is\nincluded here. The cone counterexample independently replays with Python-S\nand no checkpoint. The structure JSON preserves all29 frontier states.\n",
+  "files": [
+    {
+      "path": "research-goal-20261016/cover_main_recovery_audit.py",
+      "bytes": 6522,
+      "sha256": "7f5fdce687f22dac8357db028801991ca5d402ad83fbc185289ec67f42b2d1ac"
+    },
+    {
+      "path": "research-goal-20261016/cover-main-recovery117500-audit.json",
+      "bytes": 21800,
+      "sha256": "8fced389366abff9decf1e9d76b05f3805722adb610a2b486a3273e59baf1355"
+    },
+    {
+      "path": "research-goal-20261016/cover-main-recovery117500-launch.json",
+      "bytes": 889,
+      "sha256": "3f2cf110ed1c26f39af611536f9981d580585d580e65139d9773fda01e0f0f58"
+    },
+    {
+      "path": "research-goal-20261016/cover-main-recovery117500-host-confirmation.json",
+      "bytes": 1595,
+      "sha256": "f01fa67378198936aafbe7d52b0098aeb489a059f47f3e15d3d22b7585de9783"
+    },
+    {
+      "path": "research-goal-20261016/cover_main_structure_review.py",
+      "bytes": 6351,
+      "sha256": "b974059dc6900eec53875456524ab58eef89072498046337e1601d843d79f71d"
+    },
+    {
+      "path": "research-goal-20261016/cover-main117500-structure-review.json",
+      "bytes": 85369,
+      "sha256": "8f85734ed2ae227c0ffcf732c41e27e475218fd9c3a0722aa3f57414ece1f843"
+    },
+    {
+      "path": "research-goal-20261016/cover_main_structure_review.md",
+      "bytes": 5729,
+      "sha256": "fb4c7fd2a4bf66be690cf3ad60b585b8b639cd1dad12f5adaa88426ea8f74a33"
+    },
+    {
+      "path": "research-goal-20261016/cover_span_slack_cone_replay.py",
+      "bytes": 4043,
+      "sha256": "83eb22265a0115ab964817a7e70d021bc83d149e3948c52a104574b488e05194"
+    },
+    {
+      "path": "research-goal-20261016/cover-span-slack-cone-replay.json",
+      "bytes": 984,
+      "sha256": "4d8c3014ff18c3280c3e35bbb3c927489530adfa18dfc7be4266ea8846dab244"
+    },
+    {
+      "path": "research-goal-20261016/cover-main-recovery117500-observed-progress.json",
+      "bytes": 698,
+      "sha256": "4e82d153b2630e0731c07eaaedc29c7e007771c2700e41827ff6092b41bf3c3a"
+    },
+    {
+      "path": "research-goal-20261016/cover_main_recovery_manifest.py",
+      "bytes": 5193,
+      "sha256": "56302f8a5ded0d0482cbd7c89a670495045916722af735f79148f16e176f84b1"
+    }
+  ],
+  "file_count": 11,
+  "total_bytes": 139173,
+  "large_checkpoint_excluded": {
+    "path": "research-goal-20261016/window-compact-obbt-recovery117500.json",
+    "bytes": 831108505,
+    "sha256": "30920f05d0352808e7dc7404ac5705281ff3a6ae9da73164ffd8807eaa1f58ae",
+    "required_only_to_regenerate_complete_stream_audit": true
+  },
+  "mutable_main_output_excluded": "research-goal-20261016/window-compact-obbt-cover.json",
+  "recovery_launch_command_sha256": "d3fda836e86de3aa19f998f5f3f1bd5873ee8d9b621dd8f7ad308b15de959ad8",
+  "frozen_main_source_sha256": "ae2caaf0bd65a7d7fe0a4207dedd0dcf1a43eff52a1dd7285c9018c5ccbf1f4a",
+  "trusted_parent_host_confirmation": {
+    "single_writer_PID": 46548,
+    "old_PID36004_absent": true,
+    "sandbox_process_enumeration_is_not_host_authority": true
+  },
+  "checkpoint_structural_audit_passed": true,
+  "checkpoint_semantic_certificate_replay_complete": false,
+  "known_69_basin_data_dependency": {
+    "path": "research-goal-20261016/cover-newwindow-gram.json",
+    "sha256": "e996c4f77d011e96e4fe961ff6bd73cf6ed972e4d3789ed64a22b53c4cb28976",
+    "already_existing_dependency": true
+  },
+  "static_review_frontier_cells": 29,
+  "cone_counterexample_independent_Python_S_replay_passed": true,
+  "cone_replay_command": "python -S -B -X utf8 research-goal-20261016/cover_span_slack_cone_replay.py --output NEW_RECEIPT.json",
+  "prefixes_are_not_geometric_volume_or_completion_percentage": true,
+  "new_actual_cell_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false
+}

@@ -1,0 +1,1150 @@
+{
+  "scope": "Read-only structural/guard audit of one stable main-search checkpoint.\n\nThis checks complete JSON, path-tree accounting, frontier DBM closure and\nfrozen source guards. It does not replay all 880k analytic certificates.\nNo search state, checkpoint or existing source is modified.\n",
+  "audit_source_sha256": "7f5fdce687f22dac8357db028801991ca5d402ad83fbc185289ec67f42b2d1ac",
+  "checkpoint_sha256": "30920f05d0352808e7dc7404ac5705281ff3a6ae9da73164ffd8807eaa1f58ae",
+  "checkpoint_bytes": 831108505,
+  "metadata": {
+    "pid": 36004,
+    "checked": 117500,
+    "accepted_count": 58736,
+    "counts": {
+      "value": 17225,
+      "stationary": 40342,
+      "reflection": 1169,
+      "Gram": 0,
+      "stationary_empty": 0,
+      "sublevel_empty": 0
+    },
+    "unresolved_count": 29,
+    "maxdepth": 47,
+    "seconds": 16867.6107414,
+    "resumed_from": {
+      "path": "research-goal-20261016\\window-compact-obbt-migration22500.json",
+      "sha256": "8f6cd96fc409536a4760b441ed99c8c7aa079a4398b119cc4fc9d2b2b45ded3f",
+      "checked": 22500
+    },
+    "target": "11/1250",
+    "contraction_paths": 21691,
+    "contraction_steps": 119168,
+    "sublevel_contraction_paths": 79690,
+    "sublevel_bounds": 880632
+  },
+  "passed_complete_JSON_and_binary_prefix_tree": true,
+  "checked_source_guards": {
+    "research-goal-20261016\\window_compact_obbt_guarded_cover.py": "ae2caaf0bd65a7d7fe0a4207dedd0dcf1a43eff52a1dd7285c9018c5ccbf1f4a",
+    "research-goal-20261016\\window_global_cover.py": "f773d800df06e9e12e21665ec770d32829f9d998bd3662a87fbafa54f267a004",
+    "research-goal-20261016\\window_lower_global_cover.py": "eb07e276c66df137938b81da691d6c6746f1252427d6c2f9e0139e45c98504ce",
+    "research-goal-20261016\\window_direction_probe.py": "812adc3b5445d2d3bf84fca50b9090a05722f483014ac5808667fd50121a2082",
+    "research-goal-20261016\\window_interval_kernel.py": "159a8f270531e16887e89583b6e0ddc84f98d4ee7a2497585572192ec9efa1ca",
+    "research-20261016-followup\\window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016\\cover_newjet.json": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+    "research-goal-20261016\\window_interval_kernel.json": "651da343f61082261664e2ec682268337d5865f97d90d3dd5bf4ef7ac370d4f7",
+    "research-goal-20261016\\cover_correlated_api.py": "259a84e209ba2ab4185e14e958ac8972e3beabe265f8a9e56a683f0ae8eb7d8e",
+    "research-goal-20261016\\cover_correlated_direction.py": "493fc65fee7b905b83e42f54c1dc4c3923a1a9f4ffac89b7ce15d65a360141cb",
+    "research-goal-20261016\\cover_contractor_api.py": "5fe38ec9615f46bbacd4f05ffea2887df3f84e9e1130d22ab1011ea4df6aaa94",
+    "research-goal-20261016\\cover_newton_contractor.py": "a52dd033ff32838f4085d8b2363c96a64f0af33393b3fe0f9c20193561fa18c2",
+    "research-goal-20261016\\cover_gram_basin_api.py": "e6e26963e12076d5180b0efc799add44fbf76c22b0c95c2f36a2e11e7d51e6e7",
+    "research-goal-20261016\\cover-newwindow-gram.json": "e996c4f77d011e96e4fe961ff6bd73cf6ed972e4d3789ed64a22b53c4cb28976",
+    "research-goal-20261016\\cover_sublevel_obbt_api.py": "eb587170eaa714450651cfdc81228fe001b28fe7876e2e148c7df3c2a8b73fee",
+    "research-goal-20261016\\cover_sublevel_obbt.py": "1fbd3639e4d673628dc64487f527672a71ed6bf02b13246dbdbe8dba5d8209a5",
+    "research-goal-20261016\\cover_sublevel_contractor.py": "42abbdc144c7ea955da569b5eef9daebbf1798ecb057d44770944cdfba7e13b8",
+    "research-20261016-w10-cert\\generate.py": "b481790fc0f5e34ff27690314f8dd1365abed4ab39f788482517c1318c5e5783",
+    "research-20261016-followup\\global_periodic_upper_bound.py": "95fa8520e5fe5505763fe748b866755143c15176ecf1ebf607a0d23ce25cecfd",
+    "research-goal-20261016\\cover_compact_codec.py": "1e0f59cfb3ca328af0df30b7eb4d419267b08eab88469066ffc84cf4109f288c",
+    "research-goal-20261016\\cover_flow_basis.py": "7205524aa483b650e218cb842c8ee4c28d2185f70d92d874d74bbb9450f53b56",
+    "research-goal-20261016\\cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "research-goal-20261016\\cover_contractor_verify.py": "4ff6be06f17cec02312b9d86af325a1fa0eb5705ede122641694c0f3ece47389"
+  },
+  "branch_count": 58764,
+  "accepted_depth_counts": {
+    "6": 1,
+    "8": 3,
+    "9": 7,
+    "10": 11,
+    "11": 30,
+    "12": 56,
+    "13": 109,
+    "14": 180,
+    "15": 262,
+    "16": 396,
+    "17": 640,
+    "18": 897,
+    "19": 1217,
+    "20": 1642,
+    "21": 1957,
+    "22": 2335,
+    "23": 2853,
+    "24": 3342,
+    "25": 3815,
+    "26": 4135,
+    "27": 4274,
+    "28": 4276,
+    "29": 4076,
+    "30": 3748,
+    "31": 3327,
+    "32": 3111,
+    "33": 2755,
+    "34": 2347,
+    "35": 1931,
+    "36": 1515,
+    "37": 1128,
+    "38": 828,
+    "39": 550,
+    "40": 394,
+    "41": 264,
+    "42": 160,
+    "43": 85,
+    "44": 39,
+    "45": 23,
+    "46": 11,
+    "47": 6
+  },
+  "all_split_axis_counts": {
+    "0": 1585,
+    "1": 5754,
+    "2": 1590,
+    "3": 1360,
+    "4": 990,
+    "5": 1374,
+    "6": 3157,
+    "7": 5518,
+    "8": 2505,
+    "12": 140,
+    "14": 1158,
+    "15": 2595,
+    "16": 4677,
+    "17": 3,
+    "18": 635,
+    "19": 1557,
+    "20": 33,
+    "21": 5523,
+    "22": 968,
+    "23": 1359,
+    "24": 757,
+    "25": 71,
+    "26": 2637,
+    "28": 5910,
+    "29": 547,
+    "30": 323,
+    "31": 19,
+    "32": 2568,
+    "33": 13,
+    "35": 335,
+    "36": 79,
+    "37": 1171,
+    "38": 104,
+    "39": 1033,
+    "40": 712,
+    "42": 4
+  },
+  "recent_5000_common_prefix": "r001000100000001",
+  "recent_split_axes": {
+    "8": 177,
+    "7": 594,
+    "6": 381,
+    "2": 354,
+    "21": 300,
+    "1": 296,
+    "28": 455,
+    "24": 120,
+    "16": 440,
+    "3": 210,
+    "32": 110,
+    "18": 79,
+    "29": 52,
+    "26": 153,
+    "37": 216,
+    "5": 206,
+    "4": 147,
+    "39": 147,
+    "35": 31,
+    "31": 2,
+    "30": 35,
+    "40": 81,
+    "15": 129,
+    "23": 3,
+    "36": 10,
+    "38": 4,
+    "33": 12,
+    "14": 107,
+    "19": 139,
+    "22": 10
+  },
+  "recent_split_ranks": {
+    "1": 2365,
+    "6": 755,
+    "2": 333,
+    "9": 440,
+    "4": 618,
+    "3": 172,
+    "7": 169,
+    "8": 132,
+    "5": 16
+  },
+  "prefix_pending_binary_mass": "59588984703/68719476736",
+  "binary_mass_is_not_geometric_volume_or_completion_fraction": true,
+  "frontier_DBM_closure_checked": true,
+  "frontier": [
+    {
+      "path": "r1",
+      "depth": 1,
+      "free_coordinates": 0,
+      "midpoint_integer_pattern": [
+        11,
+        6,
+        5,
+        4,
+        4,
+        4,
+        5,
+        6,
+        11
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          2382896,
+          0,
+          9
+        ],
+        [
+          1723292,
+          1,
+          9
+        ],
+        [
+          1723292,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r01",
+      "depth": 2,
+      "free_coordinates": 0,
+      "midpoint_integer_pattern": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          1683590,
+          0,
+          9
+        ],
+        [
+          1457963,
+          1,
+          9
+        ],
+        [
+          1457963,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r0011",
+      "depth": 4,
+      "free_coordinates": 1,
+      "midpoint_integer_pattern": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          601768,
+          0,
+          9
+        ],
+        [
+          538685,
+          0,
+          8
+        ],
+        [
+          524813,
+          1,
+          9
+        ]
+      ]
+    },
+    {
+      "path": "r00101",
+      "depth": 5,
+      "free_coordinates": 0,
+      "midpoint_integer_pattern": [
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          625918,
+          0,
+          9
+        ],
+        [
+          575254,
+          0,
+          8
+        ],
+        [
+          561525,
+          1,
+          9
+        ]
+      ]
+    },
+    {
+      "path": "r001001",
+      "depth": 6,
+      "free_coordinates": 1,
+      "midpoint_integer_pattern": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          489324,
+          0,
+          9
+        ],
+        [
+          438660,
+          0,
+          8
+        ],
+        [
+          425588,
+          1,
+          9
+        ]
+      ]
+    },
+    {
+      "path": "r00100011",
+      "depth": 8,
+      "free_coordinates": 0,
+      "midpoint_integer_pattern": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          477257,
+          0,
+          9
+        ],
+        [
+          427246,
+          1,
+          9
+        ],
+        [
+          426593,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r001000101",
+      "depth": 9,
+      "free_coordinates": 0,
+      "midpoint_integer_pattern": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          416407,
+          0,
+          9
+        ],
+        [
+          366396,
+          1,
+          9
+        ],
+        [
+          365743,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r0010001001",
+      "depth": 10,
+      "free_coordinates": 0,
+      "midpoint_integer_pattern": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          385961,
+          0,
+          9
+        ],
+        [
+          335950,
+          1,
+          9
+        ],
+        [
+          335297,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r00100010001",
+      "depth": 11,
+      "free_coordinates": 1,
+      "midpoint_integer_pattern": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          302956,
+          0,
+          9
+        ],
+        [
+          277950,
+          1,
+          9
+        ],
+        [
+          252292,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r001000100001",
+      "depth": 12,
+      "free_coordinates": 1,
+      "midpoint_integer_pattern": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        2,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          248016,
+          0,
+          9
+        ],
+        [
+          223011,
+          1,
+          9
+        ],
+        [
+          197352,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r0010001000001",
+      "depth": 13,
+      "free_coordinates": 1,
+      "midpoint_integer_pattern": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          272690,
+          0,
+          9
+        ],
+        [
+          260187,
+          1,
+          9
+        ],
+        [
+          222026,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r00100010000001",
+      "depth": 14,
+      "free_coordinates": 1,
+      "midpoint_integer_pattern": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          272686,
+          0,
+          9
+        ],
+        [
+          266435,
+          1,
+          9
+        ],
+        [
+          222022,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r001000100000001111",
+      "depth": 18,
+      "free_coordinates": 3,
+      "midpoint_integer_pattern": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          187848,
+          0,
+          9
+        ],
+        [
+          181597,
+          1,
+          9
+        ],
+        [
+          154377,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r0010001000000011101",
+      "depth": 19,
+      "free_coordinates": 3,
+      "midpoint_integer_pattern": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          171569,
+          0,
+          9
+        ],
+        [
+          165318,
+          1,
+          9
+        ],
+        [
+          162972,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r00100010000000111001",
+      "depth": 20,
+      "free_coordinates": 3,
+      "midpoint_integer_pattern": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          163144,
+          0,
+          9
+        ],
+        [
+          156893,
+          1,
+          9
+        ],
+        [
+          154548,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r001000100000001110001",
+      "depth": 21,
+      "free_coordinates": 3,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          99437,
+          0,
+          9
+        ],
+        [
+          93186,
+          1,
+          9
+        ],
+        [
+          90841,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r00100010000000111000011",
+      "depth": 23,
+      "free_coordinates": 5,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          41570,
+          2,
+          9
+        ],
+        [
+          41570,
+          2,
+          8
+        ],
+        [
+          41570,
+          2,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r001000100000001110000101",
+      "depth": 24,
+      "free_coordinates": 6,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          41200,
+          2,
+          9
+        ],
+        [
+          41200,
+          2,
+          8
+        ],
+        [
+          41200,
+          2,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r0010001000000011100001001",
+      "depth": 25,
+      "free_coordinates": 7,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          41082,
+          2,
+          9
+        ],
+        [
+          41082,
+          2,
+          8
+        ],
+        [
+          41082,
+          2,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r00100010000000111000010001",
+      "depth": 26,
+      "free_coordinates": 7,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          41082,
+          2,
+          9
+        ],
+        [
+          41082,
+          2,
+          8
+        ],
+        [
+          41082,
+          2,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r001000100000001110000100001",
+      "depth": 27,
+      "free_coordinates": 6,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          26136,
+          0,
+          9
+        ],
+        [
+          24150,
+          2,
+          9
+        ],
+        [
+          24150,
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "path": "r0010001000000011100001000001",
+      "depth": 28,
+      "free_coordinates": 7,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          40812,
+          3,
+          9
+        ],
+        [
+          40812,
+          3,
+          8
+        ],
+        [
+          40812,
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r001000100000001110000100000011",
+      "depth": 30,
+      "free_coordinates": 6,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          29731,
+          3,
+          9
+        ],
+        [
+          29731,
+          3,
+          8
+        ],
+        [
+          29731,
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r0010001000000011100001000000101",
+      "depth": 31,
+      "free_coordinates": 6,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          29537,
+          3,
+          9
+        ],
+        [
+          29537,
+          3,
+          8
+        ],
+        [
+          29537,
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r00100010000000111000010000001001",
+      "depth": 32,
+      "free_coordinates": 6,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          23933,
+          2,
+          9
+        ],
+        [
+          23933,
+          2,
+          8
+        ],
+        [
+          23933,
+          2,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r001000100000001110000100000010001",
+      "depth": 33,
+      "free_coordinates": 7,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          19872,
+          0,
+          9
+        ],
+        [
+          15574,
+          0,
+          8
+        ],
+        [
+          14195,
+          0,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r0010001000000011100001000000100001",
+      "depth": 34,
+      "free_coordinates": 7,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          19273,
+          0,
+          9
+        ],
+        [
+          14975,
+          0,
+          8
+        ],
+        [
+          13596,
+          0,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r00100010000000111000010000001000001",
+      "depth": 35,
+      "free_coordinates": 7,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          23904,
+          0,
+          9
+        ],
+        [
+          19606,
+          0,
+          8
+        ],
+        [
+          18227,
+          0,
+          7
+        ]
+      ]
+    },
+    {
+      "path": "r001000100000001110000100000010000001",
+      "depth": 36,
+      "free_coordinates": 7,
+      "midpoint_integer_pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "largest_nonadjacent_correlation_units": [
+        [
+          23556,
+          0,
+          9
+        ],
+        [
+          19258,
+          0,
+          8
+        ],
+        [
+          17879,
+          0,
+          7
+        ]
+      ]
+    }
+  ],
+  "full_semantic_leaf_and_contraction_replay_performed": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 23.907341999998607
+}

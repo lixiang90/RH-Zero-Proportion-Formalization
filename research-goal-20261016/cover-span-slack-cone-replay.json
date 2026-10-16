@@ -1,0 +1,20 @@
+{
+  "scope": "Independent pure-Fraction cone counterexample; no checkpoint dependency.\n\nThe abstract counterexample separates nonadjacent span-slack RLT products\nfrom the coordinate-box RLT, McCormick, KKT and position-PSD model. It is\nnot a window-kernel exclusion and does not establish numerical speed gains.\n",
+  "source_sha256": "83eb22265a0115ab964817a7e70d021bc83d149e3948c52a104574b488e05194",
+  "passed": true,
+  "exact_counterexample": {
+    "base_rows": 11,
+    "coordinate_RLT_rows": 44,
+    "McCormick_rows": 28,
+    "position_matrix_exact_rank_one_PSD": true,
+    "KKT_and_both_products_exact": true,
+    "violated_new_row": "z*(x+y-1)<=0",
+    "new_residual": "1/2",
+    "checkpoint_required": false,
+    "actual_window_exclusion": false
+  },
+  "optimizer_imported": false,
+  "new_zero_proportion_proven": false,
+  "matches_frozen_structure_review": true,
+  "review_sha256": "8f85734ed2ae227c0ffcf732c41e27e475218fd9c3a0722aa3f57414ece1f843"
+}

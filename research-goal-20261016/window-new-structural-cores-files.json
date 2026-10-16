@@ -1,0 +1,137 @@
+{
+  "scope": "Two new ordinary-kernel structural cores plus signed Gram research notes. Actual energy projection is unconditional as an inequality; no numeric global floor is asserted.",
+  "files": [
+    {
+      "path": "research-goal-20261016/window_direct_gram_projection_note.txt",
+      "bytes": 7983,
+      "sha256": "4f28592ab2e194816af6f64b22cdd0770dda6bd76da4a30fcf7ffdf3795fda6e"
+    },
+    {
+      "path": "research-goal-20261016/window_direct_gram_projection_probe.py",
+      "bytes": 5989,
+      "sha256": "0d70e88b7a55db4168ae2a3a2b84bccafd77dee2e3cbf58ae1441b88b3ce9d1f"
+    },
+    {
+      "path": "research-goal-20261016/window_direct_gram_projection_probe.json",
+      "bytes": 14775,
+      "sha256": "6716561f5bf098b2e1acce7c0d06a883c5251984af5acb9018d09af29e7984fc"
+    },
+    {
+      "path": "research-goal-20261016/window_direct_gram_near_integer_diagnostic.txt",
+      "bytes": 1950,
+      "sha256": "dc2c63769016dfb0e3facd58b4fc8f23a2ae37bddc87b1092c2960b734098489"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowMomentAffineSlack.lean",
+      "bytes": 2398,
+      "sha256": "c10c0b1d5cca74ad59ffc0bd6d93684afd8214f2f297e34e69c888c039a66ed3"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowMomentAffineSlack_c10c0b1d5cca.log",
+      "bytes": 655,
+      "sha256": "48a068049e822661cd59ca6d377e7a022a26455e35a4e30a6d3f7fd0f3212e3a"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowSignedGramProjection.lean",
+      "bytes": 5461,
+      "sha256": "b82f40646dcc2617febdadee221cd366fa5b6d96c97beb7927c9dbfd100cb06d"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowSignedGramProjection_b82f40646dcc.log",
+      "bytes": 1585,
+      "sha256": "3cd7731444d2a2b4825f926d7feea9be5a59ae0d54b3f8e1da55a45b490aa4dd"
+    }
+  ],
+  "ordinary_core_records": [
+    {
+      "module": "StructuralGoal20261016.WindowMomentAffineSlack",
+      "source_sha256": "c10c0b1d5cca74ad59ffc0bd6d93684afd8214f2f297e34e69c888c039a66ed3",
+      "source_unchanged": true,
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "/usr/bin/prlimit",
+        "--stack=268435456:268435456",
+        "--",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "-M13500",
+        "--tstack=262144",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowMomentAffineSlack.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowMomentAffineSlack.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 37.09211840000353,
+      "duration_clock": "monotonic",
+      "log": "research-goal-20261016/lean_WindowMomentAffineSlack_c10c0b1d5cca.log",
+      "log_sha256": "48a068049e822661cd59ca6d377e7a022a26455e35a4e30a6d3f7fd0f3212e3a",
+      "passed": true,
+      "synchronous_elaboration": true,
+      "olean_sha256": "994b1eb50c45b60429f96eeac868e383e74a920ef8a25e4c4a51e12473d42ed2",
+      "source": "StructuralGoal20261016/WindowMomentAffineSlack.lean",
+      "printed_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "has_printed_axiom_audit": true,
+      "resolved_by_full_name_audit": false,
+      "independent_nanoda_replay_run": false
+    },
+    {
+      "module": "StructuralGoal20261016.WindowSignedGramProjection",
+      "source_sha256": "b82f40646dcc2617febdadee221cd366fa5b6d96c97beb7927c9dbfd100cb06d",
+      "source_unchanged": true,
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "/usr/bin/prlimit",
+        "--stack=268435456:268435456",
+        "--",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "-M13500",
+        "--tstack=262144",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowSignedGramProjection.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowSignedGramProjection.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 37.53518389999954,
+      "duration_clock": "monotonic",
+      "log": "research-goal-20261016/lean_WindowSignedGramProjection_b82f40646dcc.log",
+      "log_sha256": "3cd7731444d2a2b4825f926d7feea9be5a59ae0d54b3f8e1da55a45b490aa4dd",
+      "passed": true,
+      "synchronous_elaboration": true,
+      "olean_sha256": "cd2740d79253745c93721279f0b719657b02d1565726b4d439c39bced649094f",
+      "source": "StructuralGoal20261016/WindowSignedGramProjection.lean",
+      "printed_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "has_printed_axiom_audit": true,
+      "resolved_by_full_name_audit": false,
+      "independent_nanoda_replay_run": false
+    }
+  ],
+  "independent_new_roots_nanoda_replay": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "website_submission_ready": false
+}

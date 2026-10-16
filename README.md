@@ -59,8 +59,9 @@ still assumes the complete pressure-root tree check.
 Joint quadratic-energy and cross-coordinate KKT constraints now give two
 further exact local certificates, one overlapping an earlier split proof.
 Their numerical union covers fifteen distinct parent regions. The new
-point and curvature tables pass ordinary Lean; complete local-instance and
-global-cover proofs remain unfinished.
+point and curvature tables, all exact aggregate coefficients, and both actual
+local exclusion theorems now pass ordinary Lean. These theorems concern two
+specified contracted cells; complete pressure-root coverage remains unfinished.
 The [submission status](submission/goal-20261016/STATUS.zh.md) distinguishes
 the conditional candidate scores from proved global conclusions.
 
