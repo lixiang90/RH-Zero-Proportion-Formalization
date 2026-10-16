@@ -1,0 +1,44 @@
+{
+  "receipt": {
+    "scope": "Stream and parallelise the existing four-round relative leaf codec.\n\nReused low/high payloads are decoded and rechecked against the final cell.\nThis prepares exact data, not a Lean global proof or website submission.\n",
+    "input": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-20261016-w10-cert\\ordered-proof-input.json",
+    "input_sha256": "6f2bc79db4613b4130659c9e65e0a24ee07cc50fb0686878d01a8e3f73839c3e",
+    "input_closed": true,
+    "complete_leaf_conversion": true,
+    "accepted_count": 95779,
+    "numeric_count": 95615,
+    "unresolved_count": 0,
+    "rounds": 4,
+    "relative_FS_bits": 22349748,
+    "base92_payload_source_bytes": 3823990,
+    "average_numeric_source_bytes": 39.99362024786906,
+    "reused_numeric_count": 17919,
+    "all_numeric_integer_checks_passed": true,
+    "elapsed_seconds": 132.81451269999525,
+    "helpers_sha256": {
+      "convert_proof_input.py": "281f703e02e71b4fe7e08d0b8c2653aa12530cd76331bd91c048f9091a0c6abc",
+      "relative_codec.py": "dd8f857b57ec332e4b61f4b6a833f4c4e2413989fead8d05981745413832fe60",
+      "compact_thin.py": "48825620b72c4db7b66b5d7f275fde7778acb9aa6c87102ac35be40769111fba",
+      "tree_flow.py": "1a0ff015b490c2548b8110a73a0bde0c5096a3429bf02dce16b7cd79d108c129",
+      "generate.py": "b481790fc0f5e34ff27690314f8dd1365abed4ab39f788482517c1318c5e5783",
+      "reduce_proof_input.py": "09831e4aad4fb4683b20d8cc50c89f3df335ce64c8e0b41787c05c8043f29d7f"
+    },
+    "reuse_inputs_sha256": {
+      "ordered-0-compact.json": "439d0ca500dd3c9bb99cb33f0f45ce20698666538eeaa2ba9303ac618815fb6f",
+      "ordered-2-compact.json": "8dd35890538b7e2bfb33b7c9a1c2ff376377c5fdd61cd167093c9229c8e35ffb"
+    },
+    "encoding": "Original four-round thin/reflow + relative FS + Pruefer + base92; unchanged integer checker."
+  },
+  "output": {
+    "path": "ordered-compact.json",
+    "sha256": "5fbb16de9f2b74d1816d7e251efb16c07c4f318a1aedf1a390f18ef6fe499463",
+    "bytes": 25967810
+  },
+  "gzip": {
+    "path": "ordered-compact.json.gz",
+    "sha256": "523c0585159114fe737d7941f90b214b52fcf9947a0e7b9ca7461b320e410527",
+    "bytes": 9765896
+  },
+  "source_unchanged": true,
+  "helpers_unchanged": true
+}

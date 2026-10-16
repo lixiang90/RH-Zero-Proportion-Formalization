@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "scope": "Synthetic fail-closed gate checks only; no candidate proof claimed",
+  "checks": [
+    "consistent frozen fixture accepted",
+    "manifest certificate binding accepted",
+    "mutated compact rejected",
+    "mutated raw tree rejected",
+    "mutated actual Lean certificate rejected",
+    "bad audit required_all_packed rejected",
+    "bad audit required_complete rejected",
+    "bad audit unresolved_frontier rejected",
+    "bad audit minimum_integer_margin rejected",
+    "bad audit independently_decoded_relative_leaves rejected",
+    "changed-during-audit input rejected",
+    "stale emission tree SHA rejected",
+    "python -O rejected by bundle.py",
+    "python -O rejected by emit_tree.py",
+    "python -O rejected by prepare_materials.py",
+    "python -O rejected by verify_upload.py"
+  ],
+  "gate_sha256": "c1a4b7ffc499dc3d3f17e03668daa6d0cf1bf0d314d06f093792c371c3ff8e71",
+  "scripts_sha256": {
+    "bundle.py": "6286eb02e78fd882a7c93f0f80233757f980bb690ffb66faaa170d7fc0e42e4c",
+    "emit_tree.py": "a6f354fb9aaa5f4a3a52f724f1749b682ce35eb721eaef043ba4e12cfb1f19f4",
+    "prepare_materials.py": "c7871c431a64380be855e01996cc76c1a8633a300365a838767653e61dcabab2",
+    "verify_upload.py": "0deae56ecfac839a006b5c1fd79b3398faa98bd372ad5d69f5952c65907dfd30"
+  },
+  "higher_kappa_proven": false
+}

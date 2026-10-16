@@ -1,0 +1,56 @@
+{
+  "scope": "Stream a discovery tree to its exact certificate fields, without changing them.\n\nThe original discovery JSON remains immutable. Equality of every retained\nrecord is checked by a second streaming parse of the reduced JSON.\n",
+  "source": {
+    "path": "ordered-complete.json",
+    "sha256": "b51a34c743fa0c49f898e79e0b07dc0ae332e225e1af0218801de124fb7664d7",
+    "bytes": 435280874
+  },
+  "reduced": {
+    "path": "ordered-proof-input.json",
+    "sha256": "6f2bc79db4613b4130659c9e65e0a24ee07cc50fb0686878d01a8e3f73839c3e",
+    "bytes": 187586715
+  },
+  "gzip": {
+    "path": "ordered-proof-input.json.gz",
+    "sha256": "50cf39623b785f79042c34d56833aaaf7e6e89412139a4fc6e86944fa77bd0de",
+    "bytes": 37020864
+  },
+  "projection": {
+    "branch_keys": [
+      "path",
+      "axis",
+      "cut",
+      "normalize_cuts"
+    ],
+    "leaf_keys": [
+      "path",
+      "normalize_cuts"
+    ],
+    "result_keys": [
+      "FS",
+      "multiplier",
+      "mcheck_numerator",
+      "floor_numerator",
+      "empty",
+      "reflection",
+      "violation_axis"
+    ],
+    "certificate_keys": [
+      "lower_bounds",
+      "upper_bounds"
+    ]
+  },
+  "semantic_certificate_sha256": "b1cd6129b9500883c40afa199ba5f6f450198e5a98abfbdc2ca0e549f2dbaee4",
+  "all_retained_records_identical": true,
+  "all_tree_metadata_identical": true,
+  "original_unchanged": true,
+  "complete_finite_partition": true,
+  "counts": {
+    "branches": 95778,
+    "accepted": 95779,
+    "numeric": 95615,
+    "empty": 164
+  },
+  "script_sha256": "09831e4aad4fb4683b20d8cc50c89f3df335ce64c8e0b41787c05c8043f29d7f",
+  "elapsed_seconds": 23.49460270000418
+}

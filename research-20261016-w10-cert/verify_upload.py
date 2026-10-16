@@ -11,6 +11,7 @@ sys.path.insert(0,str(ROOT/'scripts'))
 import verify_record_20261015 as legacy
 import verify_single_solution as base
 from bundle_gram_defect_solution import code_mask
+from final_artifact_gate import finite_binding
 P='3338842690820594373879991756052499665323'
 Q='4956700000000000000000000000000000000000'
 RECORD=Fraction(34191001116882886388531117129201664,50760020691785094633026544189453125)
@@ -26,6 +27,9 @@ def prepare(args,info):
   for n,v in hashes.items():assert base.sha(args.website_repo/n)==v
   assert prov['commit']=='9e6ca6615b9dbfec4a1d722995cff0ffe3abf9bb'
   contract=json.loads((args.website_repo/'challenge/contract.json').read_text())
+  assert contract['theorems']=={'strictImprovement':'candidate_strict_improvement','dyadicBound':'candidate_critical_line_bound','cumulativeBound':'candidate_critical_line_bound_cumulative'}
+  assert set(contract['permittedAxioms'])==set(base.ALLOWED)
+  assert contract['trustedUpstream']['leanToolchain']=='leanprover/lean4:v4.33.0-rc2'
   assert contract['trustedUpstream']['commit']==base.PINS['Zeta23']
   assert contract['trustedUpstream']['mathlibCommit']==base.PINS['mathlib']
   for k,p in [('comparatorCommit','Comparator'),('lean4exportCommit','lean4export'),('nanodaCommit','nanoda')]:assert contract['verifier'][k]==base.PINS[p]
@@ -38,16 +42,23 @@ def prepare(args,info):
   (w/'source/ChallengeDeps/CandidateSpec.lean').write_text(spec,encoding='utf8')
   (w/'source/Challenge/Candidate.lean').write_bytes((args.website_repo/'challenge/templates/Challenge.Candidate.lean').read_bytes())
   data=args.upload.read_bytes();assert len(data)<=2_000_000
+  manifest=json.loads((ROOT/'submission/w10-20261016/manifest.json').read_bytes())
+  assert manifest['source_sha256']==hashlib.sha256(data).hexdigest()
+  assert manifest['source_bytes']==len(data)
+  assert manifest['numerator']==P and manifest['denominator']==Q
+  binding=finite_binding(manifest)
   assert not re.search(r'\b(?:sorry|admit|axiom|native_decide|unsafe)\b',code_mask(data.decode('utf8')))
   (w/'source/Solution/Candidate.lean').write_bytes(data)
   bound=[Path(__file__).resolve(),Path(base.__file__).resolve(),Path(legacy.__file__).resolve(),args.upload,
     args.runtime_manifest,args.sources_manifest,args.dependencies_manifest,args.nanoda_provenance,args.package_manifest,
     args.website_repo/'provenance.json']
+  bound += [Path(__file__).with_name('final_artifact_gate.py')]
+  bound += [ROOT/name for name in binding['file_sha256']]
   receipt={'stage':'prepared','scope':'Fresh isolated W10 single-file verification; no website upload',
     'runtime':info,'pins':base.PINS,'score':{'numerator':P,'denominator':Q},'current_record':record,
     'website_source_commit':prov['commit'],'website_source_sha256':hashes,
     'solution':str(w/'source/Solution/Candidate.lean'),'solution_sha256':hashlib.sha256(data).hexdigest(),
-    'solution_bytes':len(data),'upload_sha256':base.sha(args.upload),
+    'solution_bytes':len(data),'upload_sha256':base.sha(args.upload),'finite_certificate_binding':binding,
     'additional_bound_source_sha256':{str(p):base.sha(p) for p in bound},
     'generated_source_sha256':{str(p.relative_to(w)):base.sha(p) for p in (w/'source').rglob('*.lean')},
     'ordinary_single_file_lean_passed':False,'local_single_file_verified':False,
@@ -57,7 +68,8 @@ def prepare(args,info):
   return receipt,modules
 
 def main():
-  assert os.name!='nt' and __debug__
+  if not __debug__:raise RuntimeError('Upload verification assertions must remain enabled')
+  assert os.name!='nt'
   ap=argparse.ArgumentParser(description=__doc__)
   ap.add_argument('--work-dir',type=Path,default=Path('/var/tmp/rh-zero-20261015/w10-upload-verification'))
   ap.add_argument('--receipt-dir',type=Path,default=ROOT/'verification/w10-20261016/single')

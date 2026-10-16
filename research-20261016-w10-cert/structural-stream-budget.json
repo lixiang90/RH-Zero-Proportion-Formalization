@@ -1,0 +1,70 @@
+{
+  "scope": "Compression budget and byte roundtrip only; no Lean decoder or proof claim.",
+  "input_sha256": {
+    "ordered-0": [
+      "b7c2743d9b36ab7f51e6a4589db3ea7ea92081597b8e550f89205180f63e0106",
+      "439d0ca500dd3c9bb99cb33f0f45ce20698666538eeaa2ba9303ac618815fb6f"
+    ],
+    "ordered-2": [
+      "f02d5351123c5966ebfafcec0c3206808c35bd0bc63ed0927f9ccf654040bc45",
+      "8dd35890538b7e2bfb33b7c9a1c2ff376377c5fdd61cd167093c9229c8e35ffb"
+    ]
+  },
+  "results": [
+    {
+      "layout": "leaf40",
+      "leaves": 17919,
+      "raw_bytes": 3565885,
+      "FS_raw_bytes": 3494205,
+      "compressed_bytes": 942248,
+      "base92_bytes": 1154768,
+      "base92_bytes_per_leaf": 64.44377476421676,
+      "roundtrip_passed": true,
+      "seconds": 5.74978839999676
+    },
+    {
+      "layout": "term40",
+      "leaves": 17919,
+      "raw_bytes": 3565885,
+      "FS_raw_bytes": 3494205,
+      "compressed_bytes": 902879,
+      "base92_bytes": 1106334,
+      "base92_bytes_per_leaf": 61.74083375188348,
+      "roundtrip_passed": true,
+      "seconds": 5.4103826999999
+    },
+    {
+      "layout": "term_fields16",
+      "leaves": 17919,
+      "raw_bytes": 4963567,
+      "FS_raw_bytes": 4891887,
+      "compressed_bytes": 1064590,
+      "base92_bytes": 1304216,
+      "base92_bytes_per_leaf": 72.78397231988392,
+      "roundtrip_passed": true,
+      "seconds": 6.719160200002079
+    },
+    {
+      "layout": "term_sparse16",
+      "leaves": 17919,
+      "raw_bytes": 927178,
+      "FS_raw_bytes": 855498,
+      "compressed_bytes": 756610,
+      "base92_bytes": 927148,
+      "base92_bytes_per_leaf": 51.74105697862604,
+      "roundtrip_passed": true,
+      "seconds": 2.9840265000020736
+    },
+    {
+      "layout": "term_fields_bits",
+      "leaves": 17919,
+      "raw_bytes": 3565963,
+      "FS_raw_bytes": 3494283,
+      "compressed_bytes": 1071717,
+      "base92_bytes": 1313172,
+      "base92_bytes_per_leaf": 73.28377699648418,
+      "roundtrip_passed": true,
+      "seconds": 6.387770200002706
+    }
+  ]
+}

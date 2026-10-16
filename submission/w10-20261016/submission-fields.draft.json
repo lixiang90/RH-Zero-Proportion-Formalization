@@ -1,0 +1,57 @@
+{
+  "status": "CONDITIONAL_RESEARCH_DRAFT_NOT_SUBMITTABLE",
+  "upload_ready": false,
+  "higher_kappa_proven": false,
+  "submitted": false,
+  "official_website_acceptance": false,
+  "full_concrete_lean_instance_proven": false,
+  "assembled_source_bytes": 5777945,
+  "website_source_size_passed": false,
+  "numerator": "3338842690820594373879991756052499665323",
+  "denominator": "4956700000000000000000000000000000000000",
+  "percent": "67.3601930885588067440029002371033079533358887969818629329997780781568382189763350616337483",
+  "website_truncated_percent": "67.3601930885",
+  "rounded_percent": "67.3601930886",
+  "gain_percentage_points": "0.0020623177092726177911780464808968542776149092142970525370293301724216617704377616678384",
+  "author": "Li Xiang (lixiang90)",
+  "model": "GPT-6",
+  "harness": "Codex",
+  "license": "Apache-2.0",
+  "title": "Ten-point Gram-defect certificate with rank-distance nine interactions",
+  "method_draft": "Re-optimised ten-point pair weights and pressures, with a rank-distance nine interaction. Exact finite integer tangent-mixture and tree-flow certificates are intended to discharge the local separated floor 433/50000. The final complete Lean check, source-size compliant upload and independent kernel replays remain required.",
+  "local_analytic_premise": "For all g : Fin 9 -> Real with each gap >= 17/20, Fw W g >= 433/50000.",
+  "proved_conditional_module": "StructuralW10Cert20261016/FinalConditional.lean",
+  "finite_check_conditional_module": "StructuralW10Cert20261016/FiniteConditional.lean",
+  "required_remaining": [
+    "Complete finite-data Lean proof of the actual separated local floor",
+    "Single self-contained UTF-8 upload of at most 2000000 bytes",
+    "Fixed-statement comparison and permitted transitive axiom check",
+    "Default Lean kernel and independent nanoda replay of the exact upload"
+  ],
+  "supporting_receipts_sha256": {
+    "research-20261016-w10-cert/review-lean-verification.json": "ec92f95780f7dc056ad476d25f7cc439bcc2c82b98ab04d0623c423a36a159c2",
+    "research-20261016-w10-cert/finite-conditional-verification.json": "ae49d1bc661ecd3c9da5ca17230490158c298a038d46251c17724672aaa85c3f",
+    "research-20261016-w10-cert/compressed-preflight.json": "ca35c8432a74aed900baff052b096dc668c9278b4e63c7ce4f0a561558669e92",
+    "research-20261016-w10-cert/independent-audit-raw-complete.json": "3474ef1b4da6832a7b3249ba7ad315ca45052c18e30fe3dc07821a18c7166b0c",
+    "research-20261016-w10-cert/independent-audit-complete.json": "596de3588af086811b1a945b2adc0f0c73698d9b9270b497a3e06f94e1b09258",
+    "research-20261016-w10-cert/tailfix-final-merge-manifest.json": "1daa72635c896422e901b69c38b220b6cc3a70e5443ff676a8fbad00b4e95d6b",
+    "verification/w10-20261016/conditional/verification.json": "eddbfe2b86e90f4d86a0044d68e86751deb00135f618a17c14793b9fc4f90143"
+  },
+  "conditional_dual_kernel_verification": {
+    "modular_default_kernel_passed": true,
+    "modular_independent_nanoda_passed": true,
+    "standalone_modular_statement_comparison_passed": false,
+    "standalone_default_kernel_passed": true,
+    "standalone_independent_nanoda_passed": true,
+    "standalone_self_statement_comparison_passed": true,
+    "result_kind": "conditional_modular_plus_standalone_self_replay_comparison_failed"
+  },
+  "independent_raw_integer_audit": {
+    "branches": 95778,
+    "numeric_leaves": 95615,
+    "normalized_empty_leaves": 163,
+    "reflection_leaves": 1,
+    "unresolved_frontier": 0,
+    "minimum_integer_margin": "8455419770719847796"
+  }
+}

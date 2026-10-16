@@ -1,5 +1,5 @@
 {
-  "scope": "Completed auxiliary formalization and partial finite research only",
+  "scope": "Conditional formalization and complete independently audited finite data; full Lean instance and submission remain unfinished",
   "candidate_exact": "3338842690820594373879991756052499665323/4956700000000000000000000000000000000000",
   "candidate_percent_rounded": "67.3601930886",
   "current_site_percent_truncated": "67.3581307708",
@@ -13,14 +13,18 @@
     "Reversal invariance",
     "Sound ordered endpoint tightening",
     "Conditional counting transfer",
-    "Compact numeral expansion and selected leaf/subtree kernel checks"
+    "Compact numeral expansion and selected leaf/subtree kernel checks",
+    "Complete immutable finite partition with zero frontier",
+    "Independent exact full packed arithmetic and geometry audit",
+    "Self-contained conditional proof base ordinary Lean compilation",
+    "Finite-check conditional transfer to four actual zeta-count statements",
+    "Byte-bound split archives and exact reproduction instructions"
   ],
   "remaining": [
-    "Complete finite partition and its kernel proof",
-    "Source-size compliant standalone proof",
-    "Trusted-statement comparison",
-    "Full default-kernel and nanoda replay",
-    "Final submission materials"
+    "Full concrete finite-tree Lean kernel proof (generated source is unverified)",
+    "A substantially smaller complete proof encoding or a different analytic certificate",
+    "At-most-2000000-byte unconditional standalone source",
+    "Website fixed-statement comparison and full default-kernel/nanoda replay of that exact upload"
   ],
   "bound_source_and_receipt_sha256": {
     "StructuralW10Cert20261016/LocalChecker.lean": "64d5d57bcb8b50ce2ff9c4f503890e8e3382ee3e31371489b4610aee954e0c06",
@@ -41,9 +45,69 @@
     "StructuralW10Cert20261016/ClosedTreeSmoke.lean": "6310a0309715c7571c7521909490b96662a127817d307b9c80a228cd7ea3363b",
     "research-20261016-w10-cert/root-modules-verification.json": "21b2c402054f4cf077b5f132872c4e3379946e26cb65573a4c2e12da653fb565",
     "research-20261016-w10-cert/review-lean-verification.json": "ec92f95780f7dc056ad476d25f7cc439bcc2c82b98ab04d0623c423a36a159c2",
-    "research-20261016-w10-cert/closed-tree-smoke-lean.json": "a1f209bddf50322c6d8217655514ec00e1fc4505e35fa8f767d43c90e1f03f5e"
+    "research-20261016-w10-cert/closed-tree-smoke-lean.json": "a1f209bddf50322c6d8217655514ec00e1fc4505e35fa8f767d43c90e1f03f5e",
+    "StructuralW10Cert20261016/CbvClosedTreeSmoke.lean": "df0d1305037828813ae66b6480fe9e9e77ae37741acf1e6d043db6fc7d1c81e9",
+    "StructuralW10Cert20261016/CellOnlySmoke.lean": "14ba2601ed962752a63340f2cbca54c761ca26fc9e85246e228856fd52776a77",
+    "StructuralW10Cert20261016/RawLeaf.lean": "e24d12b4e66bba63b3ae21ba3571efe5867cec337f4d9331845eaf0325198667",
+    "StructuralW10Cert20261016/RawClosedTreeSmoke.lean": "0b462366475c5327f126808b8d9bb35841fcce42cae5b169bf03f4238d52c4a6",
+    "StructuralW10Cert20261016/AdaptiveCoverage.lean": "263673a0865a335e967bb9493f9f807a97295945563f0adad03c1d8e74ba0318",
+    "StructuralW10Cert20261016/AdaptiveClosedTreeSmoke.lean": "43ceaea7aa25f1a911afa2d4891e0c300ea7e8ab7a4d98c3dd5bf801524a5721",
+    "research-20261016-w10-cert/cbv-raw-adaptive-verification.json": "bf54dd38842e1cb33fddae09c2dd4b5acc174e8cf2984dafda28ae5790ca564d",
+    "StructuralW10Cert20261016/FastPruefer.lean": "2ef70002990b2d4aa9ce47827389e078236a1859fc3aa0391331dc00d71ba480",
+    "StructuralW10Cert20261016/FastClosedTreeSmoke.lean": "0c1b06d355a0f4c9cca5e275ba351b38c77ff2fe834dd3fc69b1b6c2a06dfcdf",
+    "research-20261016-w10-cert/fast-pruefer-verification.json": "96f6d60db46e8a60316caceb080ebf78ad816988863d3012faf0a9a2035c5c93",
+    "StructuralW10Cert20261016/FiniteConditional.lean": "82e6dbb8fdbd836c7b438639db7704cb2b5b39cc83dbe6878db4bbe438f8253b",
+    "research-20261016-w10-cert/finite-conditional-verification.json": "ae49d1bc661ecd3c9da5ca17230490158c298a038d46251c17724672aaa85c3f",
+    "StructuralW10Cert20261016/ForcedCoverage.lean": "8a883f5742a749c132cdc2c8bb65b2664b17b04b4b1331c8e13b57aad286a20e",
+    "StructuralW10Cert20261016/ForcedClosedTreeSmoke.lean": "3139ad0b7fbe568c863e4fecf23886f9972ecf62cd4e22322d70e195746372c4",
+    "research-20261016-w10-cert/forced-coverage-verification.json": "f31c9dc014c5c250570ebbd13474baf1215f569db70727fa53edd43815a6d57f",
+    "StructuralW10Cert20261016/ForcedCoverage2.lean": "045e26211b8c83ba9a1b98c1ab6f0bdfe1d822ccb98b7c32b3ba2281f37f21c9",
+    "StructuralW10Cert20261016/EagerLeaf.lean": "00c02bee934fa21b72694d93b777e33bbf4ec95cf00512b5cb55da911468ff63",
+    "research-20261016-w10-cert/timing-smokes-async-verification.json": "b8e497422f3ae4261bdc8ec6756d4c58e0d80d3f541d19c1e4f36f4652d5cf0c",
+    "StructuralW10Cert20261016/TimedClosedTreeSmoke.lean": "1c82f65c2457248f3e21a8abd4e9da22c6ed6030b41bdfd02deb3eb8556b9a87",
+    "StructuralW10Cert20261016/TimedForce2Smoke.lean": "21d31d6fb106dffa6cb3aa75cf2fe451ba8c00161bc0fe5d683dbfd0608a8c58",
+    "StructuralW10Cert20261016/TimedEagerLeafSmoke.lean": "5182cf55e7537da3e65df9bf91723720c604ee788e98b6cdfea8ade15f83dbd7",
+    "research-20261016-w10-cert/timing-smokes-synchronous-verification.json": "f0d34ddb96656c679a5ba7d5bd47b3dec8a0c74df331d10bafe036f6185aeb93",
+    "research-20261016-w10-cert/timing-smokes-verification.json": "a6cebb3571971abe63aac7cc01290811cc89072fd55173eabe562e9a111f45c1"
   },
-  "partial_integer_audits": "Checkpoint audits are partial and are never a global proof. Raw search checkpoints remain local until complete compressed archival.",
+  "partial_integer_audits": "Historical snapshot receipts are partial; independent-audit-complete.json is the final full packed integer audit, which is still not a Lean proof.",
   "submitted": false,
-  "official_website_acceptance": false
+  "official_website_acceptance": false,
+  "complete_discovery_partition": true,
+  "complete_independent_integer_audit": true,
+  "finite_data": {
+    "branches": 95778,
+    "numeric_leaves": 95615,
+    "normalized_empty_leaves": 163,
+    "reflection_leaves": 1,
+    "unresolved_frontier": 0,
+    "minimum_integer_margin": "2623983786731307008"
+  },
+  "assembled_source_bytes": 5777945,
+  "website_source_size_passed": false,
+  "generated_unverified_sources": {
+    "StructuralW10Cert20261016/Certificate.lean": "53a442744560847e8b423319d32062e1ab2c01550cb7f8d839562cbe2b53c2f1",
+    "StructuralW10Cert20261016/Final.lean": "a87caa5b28edbcd3a5ad0515404b56032433337a0d1f3bd0379a12124ee984ac"
+  },
+  "complete_finite_evidence_receipts": {
+    "research-20261016-w10-cert/independent-audit-complete.json": "596de3588af086811b1a945b2adc0f0c73698d9b9270b497a3e06f94e1b09258",
+    "research-20261016-w10-cert/independent-adaptive-complete.json": "8d851e03e0a3f181fad40009397000682eff90e810fc70ecc0bdbe3dfacb1f4b",
+    "research-20261016-w10-cert/emitted-tree.json": "f605a92907466ee93b2826df8b4e0d7317e040fe2090e17da587f6fcbdc3963e",
+    "research-20261016-w10-cert/proof-input-reduction-manifest.json": "76da60df050d4c4bec82a66c07ef9ffc0723a8e2f3aff78fdcfc1dbbe0a0b268",
+    "research-20261016-w10-cert/compact-conversion-manifest.json": "c633df230ca9f17378a12ca4df0b799b7cecefcccc48662b55707858a1a56ab8",
+    "research-20261016-w10-cert/final-manifest-verification.json": "f5ce06bda21de30e76a2a1a246af0e2fd8e622aea93aaa47a0ad7035606a3c94",
+    "research-20261016-w10-cert/evidence-parts/manifest.json": "26bc37218a4dfa1ddac932b2fe01ba2d622ae2c095ed59dd5558f9e0a9697b0a",
+    "research-20261016-w10-cert/submission-size-assessment.json": "85bcc9df377ce05b36bc36dde52e58ebe75ab922b0332ab65d11c7e97176e206"
+  },
+  "conditional_base_receipt_sha256": "b82a44b40bbb03621f68e50a7760f25be0201d0e2289d363581f878c41090646",
+  "conditional_dual_kernel_receipt_sha256": "eddbfe2b86e90f4d86a0044d68e86751deb00135f618a17c14793b9fc4f90143",
+  "conditional_dual_kernel_checks": {
+    "modular_default_kernel_passed": true,
+    "modular_independent_nanoda_passed": true,
+    "standalone_modular_statement_comparison_passed": false,
+    "standalone_default_kernel_passed": true,
+    "standalone_independent_nanoda_passed": true,
+    "standalone_self_statement_comparison_passed": true
+  },
+  "conditional_dual_kernel_result_kind": "conditional_modular_plus_standalone_self_replay_comparison_failed"
 }

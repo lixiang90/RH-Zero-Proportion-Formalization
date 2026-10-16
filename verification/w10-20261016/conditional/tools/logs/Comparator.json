@@ -1,0 +1,27 @@
+{
+  "module": "Comparator",
+  "source": "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/source/Comparator.lean",
+  "source_sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23",
+  "source_unchanged": true,
+  "command": [
+    "env",
+    "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+    "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/lib/Comparator.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/lib/Comparator.ilean",
+    "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/source/Comparator.lean"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.415,
+  "log": "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/logs/Comparator.log",
+  "olean": "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/lib/Comparator.olean",
+  "olean_sha256": "39a0edd1423054ffea13077253c0b9ea82d0e973c9240da654ba19d022bd6315"
+}

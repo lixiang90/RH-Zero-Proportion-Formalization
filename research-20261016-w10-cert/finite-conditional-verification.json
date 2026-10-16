@@ -1,0 +1,36 @@
+{
+  "scope": "Ordinary Lean subtree timing; imports/data are excluded from marked certificate milliseconds. No global floor.",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "modules": [
+    {
+      "module": "StructuralW10Cert20261016.FiniteConditional",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/FiniteConditional.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/FiniteConditional.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 40.06364439999743,
+      "source_sha256": "82e6dbb8fdbd836c7b438639db7704cb2b5b39cc83dbe6878db4bbe438f8253b",
+      "source_unchanged": true,
+      "stdout": "'StructuralW10Cert20261016.FiniteConditional.local_floor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'StructuralW10Cert20261016.FiniteConditional.strict_improvement' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'StructuralW10Cert20261016.FiniteConditional.simple_dyadic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'StructuralW10Cert20261016.FiniteConditional.simple_cumulative' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'StructuralW10Cert20261016.FiniteConditional.distinct_dyadic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'StructuralW10Cert20261016.FiniteConditional.distinct_cumulative' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "log_sha256": "ee7e5ec7fcfc2d8950480029c5476c438055eda31e5013e2444c459b4eede69a",
+      "marks_milliseconds": {},
+      "synchronous_elaboration": false,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

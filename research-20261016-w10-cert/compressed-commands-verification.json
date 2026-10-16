@@ -1,0 +1,30 @@
+{
+  "scope": "Already observed import-Lean-only compilation and small pure-source smoke; large bundle and nanoda pending.",
+  "recorded_utc": "2026-10-16T01:16:01.320776+00:00",
+  "modules": {
+    "CompressedCommands": {
+      "source_sha256": "05b019b7f320c0d30b2dff2e55d2be85d08b7b76209bcc349954cb9e13dbd02a",
+      "olean_sha256_observed": "c69db2cf86d3a0123a17847a40fe616e9dd31839dbabf83f8eeb6f7a991d14ea",
+      "ordinary_lean_compile_exit_code_observed": 0
+    },
+    "CompressedCommandsSmoke": {
+      "source_sha256": "d9ade3ad0899c34e5081e03f05ac4408959b9acf808e760bd0418e1a9a77f77d",
+      "olean_sha256_observed": "6f66b0bbb2e509a58892bcd180074f1edaf133156917c8327c80b1816fe8a5af",
+      "ordinary_lean_compile_exit_code_observed": 0
+    }
+  },
+  "smoke_properties": [
+    "UTF8",
+    "overlapping LZSS copies",
+    "namespace and section persist across command payloads",
+    "local notation persists",
+    "set_option maxRecDepth persists",
+    "ordinary theorem elaboration"
+  ],
+  "smoke_axioms": {
+    "W10CompressedSmoke.first": [],
+    "W10CompressedSmoke.middle": [],
+    "W10CompressedSmoke.second": []
+  },
+  "fresh_reexecution_by_this_receipt_writer": false
+}

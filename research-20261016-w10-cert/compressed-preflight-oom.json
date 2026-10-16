@@ -1,0 +1,28 @@
+{
+  "scope": "Compile the self-contained base in a trusted-package-only Lean environment.\n\nThis is a packaging/auxiliary-proof check, not complete finite coverage or a\nwebsite-ready proof.  The final upload has a separate full verifier.\n",
+  "passed": false,
+  "exit_code": 9,
+  "source_sha256": "24179a6b8b54fbd19056eb96ddd44de0ea155325eb69990c1ed35b77be36e6e4",
+  "source_unchanged": true,
+  "source_bytes": 473585,
+  "seconds": 584.3462112999987,
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "env",
+    "LEAN_PATH=/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+    "-o",
+    "/var/tmp/rh-zero-20261015/w10-base-preflight/Compressed.olean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-20261016-w10-cert/BundlePreflight.lean"
+  ],
+  "all_partition_checked": false,
+  "higher_kappa_proven": false
+}

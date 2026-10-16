@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "scope": "Independent extraction of the readable source carried by w10_expand.\n\nThis uses neither bundle.py nor lzss_source.py.  It checks the uploaded\nliteral chunks, byte stream, overlapping copy operations, and exact identity\nof the decoded body inside the accompanying readable source.  It supplies\nno mathematical evidence beyond that identity; Lean and nanoda must check\nthe exact upload separately.\n",
+  "decoded_bytes": 968259,
+  "compressed_bytes": 401660,
+  "source_chunks": 1578,
+  "copy_tokens": 71270,
+  "literal_tokens": 159050,
+  "source_expansion_commands": 20,
+  "blocks": [
+    {
+      "decoded_bytes": 50085,
+      "decoded_sha256": "c7247ede43f5af8426d0f15e30d675c2c86bb7ae54b13167d54ec0b2ded6513d",
+      "command_sha256": "f4a85f165c5e6f233aa4f80bebafb7a8a4db3082a8fe95a02f312ff2c420f708",
+      "compressed_bytes": 15276,
+      "source_chunks": 60,
+      "copy_tokens": 3729,
+      "literal_tokens": 3220
+    },
+    {
+      "decoded_bytes": 40830,
+      "decoded_sha256": "14cf976f3d6b4f5dae0cb0e9c3d4187093a33a2db0c370e7e90b3aeda7a29399",
+      "command_sha256": "4e300884a837dbfefee4185cc268c1ed0695ebf87dfe001d749c2b33e81ab720",
+      "compressed_bytes": 11654,
+      "source_chunks": 46,
+      "copy_tokens": 2707,
+      "literal_tokens": 2839
+    },
+    {
+      "decoded_bytes": 42604,
+      "decoded_sha256": "8b120ab839e9678fe481ff279400b2687e071b2cf8b3d854b3ea3338a67bc5a5",
+      "command_sha256": "270dd472163404e01fd4e429900b7cf9bc5bc18e8d8bb9009f3015193b509c59",
+      "compressed_bytes": 13802,
+      "source_chunks": 54,
+      "copy_tokens": 3371,
+      "literal_tokens": 2904
+    },
+    {
+      "decoded_bytes": 42283,
+      "decoded_sha256": "ebdf38e42c22481ad6bda6433d7ae9dcab6dfdcfb7304851736c95daf188c709",
+      "command_sha256": "53a8966da750cfa5aaa817f43bb23700a9a89adb0f3e79409c1bdeef58b71210",
+      "compressed_bytes": 16096,
+      "source_chunks": 63,
+      "copy_tokens": 3640,
+      "literal_tokens": 4196
+    },
+    {
+      "decoded_bytes": 34742,
+      "decoded_sha256": "d923a6bdb6d1b25db0b95f4824e0f375965245925dee1a51cc9e1b5602e3ae5e",
+      "command_sha256": "ab1d87b0c34a0816c556a57e1514c23318275d2dfc47984146d8bb6b8a5af8c6",
+      "compressed_bytes": 12945,
+      "source_chunks": 51,
+      "copy_tokens": 2956,
+      "literal_tokens": 3295
+    },
+    {
+      "decoded_bytes": 34050,
+      "decoded_sha256": "2b0fe0be90e6f1d6d9f23e74378ed60fa39ca9e4ddb9018d83f7ecff3f7cd9d4",
+      "command_sha256": "f2ca729bc4e5cc0132387d33eeb26e257b6526af251c9bf9dd08fc7dcd06b013",
+      "compressed_bytes": 12359,
+      "source_chunks": 49,
+      "copy_tokens": 2918,
+      "literal_tokens": 2880
+    },
+    {
+      "decoded_bytes": 34336,
+      "decoded_sha256": "c2d3a77d68cab456b38ff8c4b990917892c003b50f7abf00b4ee0db9a7829adf",
+      "command_sha256": "f12cc2bc00af8372622f8251ffecb61fe465e1547fadf4a6aeba02b40b5481dd",
+      "compressed_bytes": 12438,
+      "source_chunks": 49,
+      "copy_tokens": 2828,
+      "literal_tokens": 3200
+    },
+    {
+      "decoded_bytes": 35168,
+      "decoded_sha256": "0adb3ddc481a6f36a4805be87d7ed685f26bfbcad601273e4ce192dcf1c6bd49",
+      "command_sha256": "1349f09ba9b234d87c7c9868e11e0312decb2e62d6dc2eb56bd0d08b7a060f9d",
+      "compressed_bytes": 11318,
+      "source_chunks": 45,
+      "copy_tokens": 2615,
+      "literal_tokens": 2796
+    },
+    {
+      "decoded_bytes": 38902,
+      "decoded_sha256": "83b20d3649fc8e9239ccfa851eb3b081070bea7b2c8972bbf36180ee345db2d1",
+      "command_sha256": "5101c9e944fae0abe2407be5937d7cef1925a3a6ca11ccfa99e4819f32e83a19",
+      "compressed_bytes": 11878,
+      "source_chunks": 47,
+      "copy_tokens": 2832,
+      "literal_tokens": 2691
+    },
+    {
+      "decoded_bytes": 32923,
+      "decoded_sha256": "a5377eb2348e503c44fbbc7b1fc2043e158bea22f77814822e3b71a6369e58b0",
+      "command_sha256": "ed7e2e93f85f7753605d1b0a717ab44521b3811f131f6622d3a9f2a476748702",
+      "compressed_bytes": 10989,
+      "source_chunks": 43,
+      "copy_tokens": 2517,
+      "literal_tokens": 2776
+    },
+    {
+      "decoded_bytes": 51047,
+      "decoded_sha256": "088f471363feea7bb0867cf31a7a0c05fdff1cd9bdd0202faae35ce7d9cb9000",
+      "command_sha256": "6f3c74e8dc2307b24d9c58e8d27ad3b1879179050a06467e9d5dd7e77f4ed210",
+      "compressed_bytes": 16059,
+      "source_chunks": 63,
+      "copy_tokens": 3878,
+      "literal_tokens": 3502
+    },
+    {
+      "decoded_bytes": 33533,
+      "decoded_sha256": "ad7c3c8719d9f2e2d6886bbf56592fa988dcbd402ffb95d5e2868cce0ba57b62",
+      "command_sha256": "5c48c9650903554ac47da017921e42100f0ce9944c6e6eef4cf31160460530ea",
+      "compressed_bytes": 10738,
+      "source_chunks": 42,
+      "copy_tokens": 2558,
+      "literal_tokens": 2439
+    },
+    {
+      "decoded_bytes": 43580,
+      "decoded_sha256": "b716f31b4548ff5b08616f3e2467663a9069aa71d4ca38d28034591fd04fde1f",
+      "command_sha256": "0f5f4c5b596800d05f8f190a140e2953ad6e229ba288a0a73f44bf251705962e",
+      "compressed_bytes": 14149,
+      "source_chunks": 56,
+      "copy_tokens": 3399,
+      "literal_tokens": 3135
+    },
+    {
+      "decoded_bytes": 32986,
+      "decoded_sha256": "8d121148281893dff73a4cc1d93ed06a1607feb241e9ccc7d34d4400acb7c508",
+      "command_sha256": "d8484e70337be4ae55b4d08e9db9d0fc59a4cb694ea1dfdddccc83c97ba8ebc4",
+      "compressed_bytes": 11281,
+      "source_chunks": 45,
+      "copy_tokens": 2448,
+      "literal_tokens": 3227
+    },
+    {
+      "decoded_bytes": 230108,
+      "decoded_sha256": "103e918a096938f4ed59d3ab06ce6645799d950c7279d9032b4c229947811087",
+      "command_sha256": "9b3cb838a9ee1145bd1f23affa4ddb36eaeed1bb23c8c709d056f00f79ffba09",
+      "compressed_bytes": 150477,
+      "source_chunks": 588,
+      "copy_tokens": 13555,
+      "literal_tokens": 96104
+    },
+    {
+      "decoded_bytes": 34506,
+      "decoded_sha256": "6b77b70ad42ff42de6899140ee5da4825a96f1c0c2ca75f33edeb1c1b8a88ccc",
+      "command_sha256": "4196e4d159a18934aa2af5e128ed77b62bfbb6f56dc6089895fb1b4c07b1040a",
+      "compressed_bytes": 11545,
+      "source_chunks": 46,
+      "copy_tokens": 2663,
+      "literal_tokens": 2865
+    },
+    {
+      "decoded_bytes": 40343,
+      "decoded_sha256": "f7b9ed11b12e12f4e9b200f0d396faa987e32c02e057b6ec95db140da74da757",
+      "command_sha256": "64187f1e94581d32f9be28bbde629ff79aa4d152b6586572f5c97355e5d568a8",
+      "compressed_bytes": 14133,
+      "source_chunks": 56,
+      "copy_tokens": 3199,
+      "literal_tokens": 3676
+    },
+    {
+      "decoded_bytes": 49046,
+      "decoded_sha256": "b58a4beaff26b8ea87f9d47992559aac442fc9716324b0c00ce42a405fe50886",
+      "command_sha256": "0956f8e0bcc1b64aa152f83979ceae714d8d1a463150c8af3cfbec69f626e971",
+      "compressed_bytes": 20110,
+      "source_chunks": 79,
+      "copy_tokens": 4446,
+      "literal_tokens": 5525
+    },
+    {
+      "decoded_bytes": 39357,
+      "decoded_sha256": "c825ed4f1627c4f4fed1f931affaabd25561b572aa1b2ff904059b72e1b1aa80",
+      "command_sha256": "4793aa0b2b1ebf113a425324127709285fde7eb5303018cffb20f2a7367b165e",
+      "compressed_bytes": 12751,
+      "source_chunks": 50,
+      "copy_tokens": 2707,
+      "literal_tokens": 3814
+    },
+    {
+      "decoded_bytes": 27830,
+      "decoded_sha256": "5903edea78d232ef4483a0ccb9ae22ee80d40bb1f5b688cac061350fbaa934d4",
+      "command_sha256": "632ee2f8e6f2a3283b2fcc0f992a48b0c82babff65d061a2bfb6678ee15c4f64",
+      "compressed_bytes": 11662,
+      "source_chunks": 46,
+      "copy_tokens": 2304,
+      "literal_tokens": 3966
+    }
+  ],
+  "upload": "research-20261016-w10-cert\\BundlePreflight.lean",
+  "upload_sha256": "c82f5d7e3e07f563722f62fdd3087e00fb7ce490e9c1b2fe4c0b61404b734dae",
+  "readable": "research-20261016-w10-cert\\ExpandedPreflight.lean",
+  "readable_sha256": "d0e217e485f0226b45710506712b664ff93d4bdf36a4f86e4ed7e841608510e8",
+  "decoded_body_sha256": "c96ae5b98d41b464e551612c1a3937b429a157fcd50eee5cac20c14d072b4a2e",
+  "script_sha256": "8cee0603cb65433b04c7f3aa9e48497e47fb0a95304128987e238a3e57a065f3",
+  "decoded_body_exact_readable_region": true,
+  "lean_verification_claimed": false,
+  "nanoda_verification_claimed": false
+}

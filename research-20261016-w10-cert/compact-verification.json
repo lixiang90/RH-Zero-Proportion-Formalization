@@ -1,0 +1,108 @@
+{
+  "scope": "Record of already completed ordinary Lean tool executions and current source/olean hashes; not a new full-environment or nanoda replay.",
+  "recorded_utc": "2026-10-16T01:16:01.320776+00:00",
+  "fresh_recompilation_by_this_receipt_writer": false,
+  "compiler_sha256_observed": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "modules": [
+    {
+      "module": "StructuralW10Cert20261016.CompactLeaf",
+      "source": "StructuralW10Cert20261016/CompactLeaf.lean",
+      "source_sha256": "f06481d7788909ff0a76cc63c8e462fc3b811bcc1abd204729d233d265209db7",
+      "ordinary_lean_compile_exit_code_observed": 0,
+      "olean": "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/CompactLeaf.olean",
+      "olean_sha256_observed": "d687ee7bd4136a524fe88447559862439b71b2855a4c01a2736a8521608e3c20",
+      "printed_axioms": {
+        "check_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "checkWords_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "checkTreeCode_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "checkText_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "StructuralW10Cert20261016.RelCompactLeaf",
+      "source": "StructuralW10Cert20261016/RelCompactLeaf.lean",
+      "source_sha256": "738e780efcd3170a984188d47f401acdd2eccd5a05892bc35b53b76fcf503886",
+      "ordinary_lean_compile_exit_code_observed": 0,
+      "olean": "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/RelCompactLeaf.olean",
+      "olean_sha256_observed": "84a8275054b0e055b5255189aaece2e894852c16490f6608c42b25dc8035381d",
+      "printed_axioms": {
+        "checkTreeCode_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "checkText_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "StructuralW10Cert20261016.NumeralCodec",
+      "source": "StructuralW10Cert20261016/NumeralCodec.lean",
+      "source_sha256": "6584735296c4feae8affc6c5e50a542495a9d9cdb677813f3faaa20476214b70",
+      "ordinary_lean_compile_exit_code_observed": 0,
+      "olean": "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/NumeralCodec.olean",
+      "olean_sha256_observed": "82769ee118fc6150cf67a11694ac9581cf40b51d8971243fcb99265f1a7d6460",
+      "printed_axioms": {}
+    },
+    {
+      "module": "StructuralW10Cert20261016.EncodedLiteral",
+      "source": "StructuralW10Cert20261016/EncodedLiteral.lean",
+      "source_sha256": "e34f0219e3bf5f954eb2c258c76576d418356eb162bff8cbc31156d88de64577",
+      "ordinary_lean_compile_exit_code_observed": 0,
+      "olean": "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/EncodedLiteral.olean",
+      "olean_sha256_observed": "4163a0c8820668269dd12eeee83767ae35bb6c4ef5cda30823df7aa51b09236e",
+      "printed_axioms": {
+        "checkPacked_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "StructuralW10Cert20261016.CompactSmoke",
+      "source": "StructuralW10Cert20261016/CompactSmoke.lean",
+      "source_sha256": "bc3cb1bd5b534d5e5af13f903b0468085672654a2a0d94709011e95b8f58b4c2",
+      "ordinary_lean_compile_exit_code_observed": 0,
+      "olean": "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/CompactSmoke.olean",
+      "olean_sha256_observed": "2e6cbde1f1221fb36c30b7f31680a9dd1ca68db9edd366cfa3333cd39183d3cd",
+      "printed_axioms": {
+        "sound0": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ],
+  "stronger_end_to_end_receipt": "research-20261016-w10-cert/closed-tree-smoke-lean.json",
+  "end_to_end_receipt_sha256": "a1f209bddf50322c6d8217655514ec00e1fc4505e35fa8f767d43c90e1f03f5e",
+  "end_to_end_passed": true,
+  "notes": [
+    "All listed ordinary compilation exit codes and axiom printouts were observed directly from exec tools in this task.",
+    "ClosedTreeSmoke replays 63 real ordered nodes using current compact modules, packed payloads, and ordinary decide +kernel.",
+    "String.foldl-based checkText has conditional soundness but is not kernel reducible; actual data use NumeralCodec expansion to Nat and EncodedLiteral.checkPacked.",
+    "No improved global kappa is claimed by these module and subtree checks."
+  ],
+  "independent_nanoda_replay": false,
+  "complete_global_tree_replay": false
+}

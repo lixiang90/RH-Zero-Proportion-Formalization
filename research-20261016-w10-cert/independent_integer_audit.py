@@ -190,6 +190,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('inputs',nargs='+',type=Path)
     parser.add_argument('--relative',nargs='*',type=Path,default=[])
+    parser.add_argument('--require-complete',action='store_true',help='Fail on any frontier or any input changed during this audit')
+    parser.add_argument('--require-all-packed',action='store_true',help='Fail unless every numeric and empty leaf has a corresponding compact payload record')
     parser.add_argument('--output',type=Path,default=HERE/'independent-integer-audit.json')
     args=parser.parse_args()
     started=time.monotonic()
@@ -328,10 +330,16 @@ def main():
     assert set(packed)<=used_leaves, ('packed references missing raw leaves',set(packed)-used_leaves)
     assert set(packed_empty)<=used_leaves, ('packed empty references missing raw leaves',set(packed_empty)-used_leaves)
     assert counts['independently_decoded_relative_leaves']==len(packed)
+    if args.require_all_packed:
+        assert set(packed)|set(packed_empty)==used_leaves, 'Final compact data must represent every raw leaf'
+        assert counts['numeric_leaves']==len(packed)
     for row in inputs:
         row['unchanged_after_audit']=sha(Path(row['path']).read_bytes())==row['sha256']
     for row in packed_inputs:
         row['unchanged_after_audit']=sha(Path(row['path']).read_bytes())==row['sha256']
+    if args.require_complete:
+        assert not used_frontier, ('Incomplete finite partition',len(used_frontier))
+        assert all(row['unchanged_after_audit'] for row in inputs+packed_inputs), 'A final audited input changed while being checked'
     result={
         'scope':__doc__, 'passed':True, 'seconds':time.monotonic()-started,
         'inputs':inputs,'packed_inputs':packed_inputs,'source_sha256':sha(raw_source),'parameter_sha256':sha(raw_parameter),
@@ -342,6 +350,7 @@ def main():
         'ordered_normalization':ordered,'normalized_empty_leaves':counts['normalized_empty_leaves'],
         'independently_decoded_relative_leaves':counts['independently_decoded_relative_leaves'],
         'independently_checked_packed_empty_leaves':len(packed_empty),
+        'required_complete':args.require_complete,'required_all_packed':args.require_all_packed,
         'unresolved_frontier':len(used_frontier),'complete_finite_partition':not used_frontier,
         'minimum_integer_margin':str(minimum-TARGET) if minimum is not None else None,
         'minimum_path':minimum_path,

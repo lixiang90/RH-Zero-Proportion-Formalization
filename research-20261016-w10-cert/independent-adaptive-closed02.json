@@ -1,0 +1,36 @@
+{
+  "scope": "Compare adaptive and original ordered cells on a fixed exported tree.\n\nOnly the independent Nat-cuB implementation is reused; no search generator,\noptimizer or codec is imported. This checks compatibility of finite data,\nnot the analytic floor or any new proportion theorem.\n",
+  "passed": true,
+  "inputs": [
+    {
+      "path": "research-20261016-w10-cert\\ordered-master.json",
+      "sha256": "517395a730f0e23d632e737ec9740ef5e3035203b8877770c5ab956ce7e07256",
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-0.json",
+      "sha256": "b7c2743d9b36ab7f51e6a4589db3ea7ea92081597b8e550f89205180f63e0106",
+      "unchanged_after_audit": true
+    },
+    {
+      "path": "research-20261016-w10-cert\\ordered-2.json",
+      "sha256": "f02d5351123c5966ebfafcec0c3206808c35bd0bc63ed0927f9ccf654040bc45",
+      "unchanged_after_audit": true
+    }
+  ],
+  "visited_nodes": 35854,
+  "skipped_normalizations": 34610,
+  "performed_normalizations": 1244,
+  "numeric_leaves": 17919,
+  "empty_leaves": 8,
+  "unresolved_subtree_roots": 1,
+  "skip_proportion": 0.9653037318011938,
+  "all_visited_cells_equal": true,
+  "all_leaf_certificate_bounds_equal": true,
+  "first_cell_difference": null,
+  "first_leaf_difference": null,
+  "script_sha256": "4fad49ea18bfcc04e15c95e3f916d8f76439a7bcfd453e272e6e632f874248dc",
+  "independent_arithmetic_script_sha256": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a",
+  "seconds": 12.503615199995693,
+  "higher_kappa_proven": false
+}

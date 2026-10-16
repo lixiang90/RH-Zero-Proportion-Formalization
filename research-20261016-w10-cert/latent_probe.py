@@ -58,7 +58,12 @@ def main():
         ll=np.array(lo)/g.SC;uu=np.array(hi)/g.SC
         lp=linprog(np.zeros(9),A_ub=np.r_[INC,-INC],b_ub=np.r_[uu,-ll],bounds=[(None,None)]*9,method='highs');assert lp.success
         if args.lp_anchor:
-            cert=g.certify((lo,hi),False);position=np.array(cert['gaps']);fw=diag.fun(position)[0];success=True
+            saved_target=g.TARGET
+            try:
+                g.TARGET=10**100
+                cert=g.certify((lo,hi),False)
+            finally:g.TARGET=saved_target
+            position=np.array(cert['gaps']);fw=diag.fun(position)[0];success=True
         else:
             fit=minimize(diag.fun,lp.x,jac=True,method='SLSQP',constraints=[LinearConstraint(INC,ll,uu)],
                 options={'ftol':1e-14,'maxiter':300});position=fit.x;fw=float(fit.fun);success=bool(fit.success)

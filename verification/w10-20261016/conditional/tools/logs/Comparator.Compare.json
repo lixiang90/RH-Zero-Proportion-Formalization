@@ -1,0 +1,27 @@
+{
+  "module": "Comparator.Compare",
+  "source": "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/source/Comparator/Compare.lean",
+  "source_sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd",
+  "source_unchanged": true,
+  "command": [
+    "env",
+    "PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin",
+    "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/lib/Comparator/Compare.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/lib/Comparator/Compare.ilean",
+    "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/source/Comparator/Compare.lean"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.719,
+  "log": "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/logs/Comparator.Compare.log",
+  "olean": "/var/tmp/rh-zero-20261015/w10-conditional-replay/tools/lib/Comparator/Compare.olean",
+  "olean_sha256": "fb5767fae4d03c1303e23687610d1a8fcce380b81f0cb13ba42502e166eb26df"
+}

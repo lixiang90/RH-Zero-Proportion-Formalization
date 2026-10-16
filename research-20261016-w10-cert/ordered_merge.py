@@ -1,6 +1,6 @@
 """Merge disjoint ordered-search prefixes and replay their exact geometry."""
 from pathlib import Path
-import argparse, gzip, hashlib, json, time
+import argparse, gzip, hashlib, json, shutil, time
 import ordered_generate as o
 
 def main():
@@ -49,10 +49,24 @@ def main():
         'terms':o.g.TERMS,'denominator':str(o.g.DEN),'SC':o.g.SC,'mixture_denominator':o.g.LD,
         'elapsed_seconds':time.monotonic()-started,'branches':[branches[p] for p in sorted(branches)],
         'accepted':[leaves[p] for p in sorted(leaves)],'unresolved':[frontier[p] for p in sorted(frontier)]}
-    raw=(json.dumps(out,separators=(',',':'))+'\n').encode();args.output.write_bytes(raw)
-    packed=gzip.compress(raw,compresslevel=9,mtime=0);args.output.with_suffix('.json.gz').write_bytes(packed)
-    print(json.dumps({k:out[k] for k in ['checked','accepted_count','unresolved_count','complete_finite_partition',
-        'geometry_replayed','maxdepth','empty_leaves','numeric_leaves','elapsed_seconds']}),flush=True)
-    print(json.dumps({'json_bytes':len(raw),'gzip_bytes':len(packed),'sha256':hashlib.sha256(raw).hexdigest(),
-        'gzip_sha256':hashlib.sha256(packed).hexdigest()}),flush=True)
+    # The final data can be hundreds of megabytes; avoid a second full JSON
+    # string and a second full decompressed byte copy in memory.
+    with args.output.open('w',encoding='utf8',newline='\n') as handle:
+        json.dump(out,handle,separators=(',',':'));handle.write('\n')
+    packed_path=args.output.with_suffix('.json.gz')
+    with args.output.open('rb') as source,packed_path.open('wb') as target:
+        with gzip.GzipFile(filename='',mode='wb',fileobj=target,compresslevel=9,mtime=0) as packed:
+            shutil.copyfileobj(source,packed,1<<20)
+    def digest(path):
+        value=hashlib.sha256()
+        with path.open('rb') as stream:
+            while chunk:=stream.read(1<<20):value.update(chunk)
+        return value.hexdigest()
+    report={k:out[k] for k in ['checked','accepted_count','unresolved_count','complete_finite_partition',
+        'geometry_replayed','maxdepth','empty_leaves','numeric_leaves','elapsed_seconds']}
+    report['branches']=len(branches)
+    print(json.dumps(report),flush=True)
+    print(json.dumps({'json_bytes':args.output.stat().st_size,'gzip_bytes':packed_path.stat().st_size,
+        'sha256':digest(args.output),'gzip_sha256':digest(packed_path)}),flush=True)
+    return report
 if __name__=='__main__':main()

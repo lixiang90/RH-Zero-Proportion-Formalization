@@ -13,6 +13,20 @@ coverage and isolated submission verification must finish before it is
 described as a proved improvement. Current draft materials remain marked
 `upload_ready: false`.
 
+The complete discovery tree now has **95,615 numerical leaves, 163 empty
+leaves and one reflection leaf**, with no unresolved frontier. Its independent
+integer audit passed. The actual full-tree Lean computation, a size-compliant
+upload, and its complete dual-kernel replay remain unfinished. The
+[conditional materials](submission/w10-20261016/README.md) include a
+self-contained conditional proof base. Both the modular conditional roots and
+the sealed conditional roots passed their own default Lean kernel and nanoda
+replays. The strict comparison between these two versions failed at a numeral
+instance proof reference; this failure is preserved in the
+[conditional verification receipt](verification/w10-20261016/conditional/verification.json).
+The complete source currently assembles to **5,777,945 bytes**, exceeding the
+website's 2,000,000-byte limit. These materials are explicitly **not ready for
+website submission**.
+
 The completed October 15 bound for critical-line zeros is
 
 \[
@@ -74,7 +88,7 @@ The proved proportion and upload below are unchanged.
 
 ## Verification and submission
 
-**Verification of the exact bound at the top: passed.** Both proof forms passed ordinary Lean
+**Verification of the completed October 15 bound: passed.** Both proof forms passed ordinary Lean
 compilation, trusted-statement comparison, transitive axiom checks,
 default-kernel replay and independent nanoda replay with unchanged input hashes.
 

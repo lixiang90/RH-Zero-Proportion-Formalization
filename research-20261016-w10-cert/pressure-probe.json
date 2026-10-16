@@ -1,0 +1,813 @@
+{
+  "stats": {
+    "scope": "Test a pressure halfspace dual on previously failed parent cells.\n\nOnly the frozen original mcheckGX integer inequality can accept a cell.\nThe floating LP multiplier merely chooses new support mixtures.\n",
+    "processed": 100,
+    "old_failures_confirmed": 100,
+    "newly_closed": 0,
+    "positive_pressure_multiplier": 0,
+    "max_multiplier": 0.0,
+    "seconds": 7.570959800003038
+  },
+  "rows": [
+    {
+      "path": "r10",
+      "old_floor": 0.005490532551946637,
+      "pressure_lp_floor": 0.005490687228695603,
+      "new_floor": 0.005490532551946637,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100000000101000111",
+      "old_floor": 0.007597149487878701,
+      "pressure_lp_floor": 0.007599529631095508,
+      "new_floor": 0.007597149487878701,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100000000101001101101",
+      "old_floor": 0.007935860654881338,
+      "pressure_lp_floor": 0.007936027643505735,
+      "new_floor": 0.007935860654881338,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000000010100110111111",
+      "old_floor": 0.008174375000448009,
+      "pressure_lp_floor": 0.008176266215791012,
+      "new_floor": 0.008174375000448009,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000000001010011110101011",
+      "old_floor": 0.008537346392200358,
+      "pressure_lp_floor": 0.008537587088194748,
+      "new_floor": 0.008537346392200358,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000000010100111110011010",
+      "old_floor": 0.008510586685890121,
+      "pressure_lp_floor": 0.008510686838040004,
+      "new_floor": 0.008510586685890121,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000000010100111111011001111",
+      "old_floor": 0.008619176527475316,
+      "pressure_lp_floor": 0.008619314164181343,
+      "new_floor": 0.008619176527475316,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000000001011111000010",
+      "old_floor": 0.00843530413852622,
+      "pressure_lp_floor": 0.008435666127912819,
+      "new_floor": 0.00843530413852622,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000000010111110001111000",
+      "old_floor": 0.008504621829875554,
+      "pressure_lp_floor": 0.008504801804652993,
+      "new_floor": 0.008504621829875554,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000000010111110011101",
+      "old_floor": 0.008160971865156772,
+      "pressure_lp_floor": 0.008162573785526974,
+      "new_floor": 0.008160971865156772,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000000001011111001111100",
+      "old_floor": 0.007867849840203923,
+      "pressure_lp_floor": 0.007868011271476532,
+      "new_floor": 0.007867849840203923,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000000001011111001111101011011",
+      "old_floor": 0.00833399402561288,
+      "pressure_lp_floor": 0.00833421334162598,
+      "new_floor": 0.00833399402561288,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100000000101111101110",
+      "old_floor": 0.008097646993390146,
+      "pressure_lp_floor": 0.008098472593276842,
+      "new_floor": 0.008097646993390146,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000000001011111011110",
+      "old_floor": 0.007905373464668644,
+      "pressure_lp_floor": 0.007906150571809888,
+      "new_floor": 0.007905373464668644,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100000000101111101111001100",
+      "old_floor": 0.008554896315045257,
+      "pressure_lp_floor": 0.008554993231205918,
+      "new_floor": 0.008554896315045257,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000000001011111011111001000",
+      "old_floor": 0.00862248216691544,
+      "pressure_lp_floor": 0.008622620938114613,
+      "new_floor": 0.00862248216691544,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000000010111110111111011",
+      "old_floor": 0.007948200691614091,
+      "pressure_lp_floor": 0.007949042049687018,
+      "new_floor": 0.007948200691614091,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100000000101111101111111111111",
+      "old_floor": 0.008650827205577475,
+      "pressure_lp_floor": 0.008651086044231964,
+      "new_floor": 0.008650827205577475,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000000101101",
+      "old_floor": 0.008175362717539818,
+      "pressure_lp_floor": 0.008177624372945265,
+      "new_floor": 0.008175362717539818,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000001100110",
+      "old_floor": 0.008094267234299192,
+      "pressure_lp_floor": 0.00809450080651738,
+      "new_floor": 0.008094267234299192,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010000",
+      "old_floor": 0.0065219173963467925,
+      "pressure_lp_floor": 0.0065226977569933925,
+      "new_floor": 0.0065219173963467925,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000001000000110011110",
+      "old_floor": 0.008421707267894644,
+      "pressure_lp_floor": 0.008421912079402964,
+      "new_floor": 0.008421707267894644,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010000010000011",
+      "old_floor": 0.008471596960261495,
+      "pressure_lp_floor": 0.008471966433711915,
+      "new_floor": 0.008471596960261495,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010000011000000010100",
+      "old_floor": 0.008434475253297586,
+      "pressure_lp_floor": 0.008434592501907645,
+      "new_floor": 0.008434475253297586,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010000011000000010101010110",
+      "old_floor": 0.007897098893977222,
+      "pressure_lp_floor": 0.007897625259782326,
+      "new_floor": 0.007897098893977222,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010000011000000100010",
+      "old_floor": 0.007848206190691626,
+      "pressure_lp_floor": 0.00784874986124391,
+      "new_floor": 0.007848206190691626,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100000110000100",
+      "old_floor": 0.007792128238405926,
+      "pressure_lp_floor": 0.007792785606128597,
+      "new_floor": 0.007792128238405926,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100000110010100",
+      "old_floor": 0.00813103565945617,
+      "pressure_lp_floor": 0.008132565258724168,
+      "new_floor": 0.00813103565945617,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100001000",
+      "old_floor": 0.007534063123277577,
+      "pressure_lp_floor": 0.00753482139433289,
+      "new_floor": 0.007534063123277577,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000",
+      "old_floor": 0.0060942039735405185,
+      "pressure_lp_floor": 0.006095378788598486,
+      "new_floor": 0.0060942039735405185,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000100110111",
+      "old_floor": 0.00860665130304765,
+      "pressure_lp_floor": 0.008606922445509025,
+      "new_floor": 0.00860665130304765,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010011101111",
+      "old_floor": 0.008058916043070154,
+      "pressure_lp_floor": 0.008059099370010892,
+      "new_floor": 0.008058916043070154,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010001",
+      "old_floor": 0.0066361263371117205,
+      "pressure_lp_floor": 0.006636382336238742,
+      "new_floor": 0.0066361263371117205,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101000110011",
+      "old_floor": 0.007258215893092073,
+      "pressure_lp_floor": 0.007258613863093814,
+      "new_floor": 0.007258215893092073,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010001101010011",
+      "old_floor": 0.008349665258839603,
+      "pressure_lp_floor": 0.00834992367628148,
+      "new_floor": 0.008349665258839603,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101000110110101101",
+      "old_floor": 0.0085696443697008,
+      "pressure_lp_floor": 0.008569797987010833,
+      "new_floor": 0.0085696443697008,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010001101101101111",
+      "old_floor": 0.007525031143555836,
+      "pressure_lp_floor": 0.007525375568193894,
+      "new_floor": 0.007525031143555836,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010001101111001",
+      "old_floor": 0.007577484224462226,
+      "pressure_lp_floor": 0.007577991427105028,
+      "new_floor": 0.007577484224462226,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010100011110111",
+      "old_floor": 0.008444221985013156,
+      "pressure_lp_floor": 0.008444469873282012,
+      "new_floor": 0.008444221985013156,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010100101001001",
+      "old_floor": 0.00862065129776269,
+      "pressure_lp_floor": 0.008621169190419884,
+      "new_floor": 0.00862065129776269,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010010100110110",
+      "old_floor": 0.00767643640217062,
+      "pressure_lp_floor": 0.007676913677645233,
+      "new_floor": 0.00767643640217062,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101001010100100",
+      "old_floor": 0.008434345509557217,
+      "pressure_lp_floor": 0.008434825900353224,
+      "new_floor": 0.008434345509557217,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010100101010101",
+      "old_floor": 0.007549998163597592,
+      "pressure_lp_floor": 0.007550516569745359,
+      "new_floor": 0.007549998163597592,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010100101011000",
+      "old_floor": 0.008560570616257009,
+      "pressure_lp_floor": 0.008560747894295947,
+      "new_floor": 0.008560570616257009,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101001011",
+      "old_floor": 0.0064371834251635285,
+      "pressure_lp_floor": 0.006437357931024288,
+      "new_floor": 0.0064371834251635285,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010100101100101",
+      "old_floor": 0.007421628388080314,
+      "pressure_lp_floor": 0.007421961536144536,
+      "new_floor": 0.007421628388080314,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010100101101001",
+      "old_floor": 0.007856649273287926,
+      "pressure_lp_floor": 0.007856884268250439,
+      "new_floor": 0.007856649273287926,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010010110101111",
+      "old_floor": 0.008516654176603218,
+      "pressure_lp_floor": 0.008516792977763388,
+      "new_floor": 0.008516654176603218,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101001011101001",
+      "old_floor": 0.008266932120455182,
+      "pressure_lp_floor": 0.00826725001777442,
+      "new_floor": 0.008266932120455182,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101001011101011011",
+      "old_floor": 0.00849106818548143,
+      "pressure_lp_floor": 0.008491181969060206,
+      "new_floor": 0.008491022236726138,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101001011101110",
+      "old_floor": 0.007281966428386051,
+      "pressure_lp_floor": 0.007282230988028644,
+      "new_floor": 0.007281966428386051,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101001011101111100",
+      "old_floor": 0.008217681710197438,
+      "pressure_lp_floor": 0.008217898567468969,
+      "new_floor": 0.008217681710197438,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010100101111011100",
+      "old_floor": 0.00816932193824159,
+      "pressure_lp_floor": 0.00816948589494741,
+      "new_floor": 0.00816932193824159,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010100101111111001",
+      "old_floor": 0.008255181802723624,
+      "pressure_lp_floor": 0.00825549347600996,
+      "new_floor": 0.008255181802723624,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101001110111",
+      "old_floor": 0.008171756972147733,
+      "pressure_lp_floor": 0.008172226994771709,
+      "new_floor": 0.008171756972147733,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010001010",
+      "old_floor": 0.007318344208367442,
+      "pressure_lp_floor": 0.007319006066778355,
+      "new_floor": 0.007318344208367442,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101000101101101",
+      "old_floor": 0.008445524862092792,
+      "pressure_lp_floor": 0.008445876917516996,
+      "new_floor": 0.008445524862092792,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101000110011000",
+      "old_floor": 0.00853307824855953,
+      "pressure_lp_floor": 0.00853326092776347,
+      "new_floor": 0.008533093148325305,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101000110100100100",
+      "old_floor": 0.00861851551451108,
+      "pressure_lp_floor": 0.008618629865230654,
+      "new_floor": 0.008618479741084348,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100011011001",
+      "old_floor": 0.008267303644783664,
+      "pressure_lp_floor": 0.008267485632787779,
+      "new_floor": 0.008267303644783664,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101000111010",
+      "old_floor": 0.008229674575324163,
+      "pressure_lp_floor": 0.008229899981710668,
+      "new_floor": 0.008229674575324163,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010001110111111",
+      "old_floor": 0.008232284370654807,
+      "pressure_lp_floor": 0.008232540145282675,
+      "new_floor": 0.008232284370654807,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101",
+      "old_floor": 0.006285259376018819,
+      "pressure_lp_floor": 0.006285448427112036,
+      "new_floor": 0.006285259376018819,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001010001100000",
+      "old_floor": 0.008402623589411492,
+      "pressure_lp_floor": 0.008402684780536237,
+      "new_floor": 0.008402623589411492,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101000110011",
+      "old_floor": 0.008024732769452913,
+      "pressure_lp_floor": 0.00802513295545442,
+      "new_floor": 0.008024732769452913,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101001",
+      "old_floor": 0.006635571376102705,
+      "pressure_lp_floor": 0.006635777670879992,
+      "new_floor": 0.006635571376102705,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001010010010000110101",
+      "old_floor": 0.008613554192498705,
+      "pressure_lp_floor": 0.008613584343856189,
+      "new_floor": 0.008613508112909394,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001010010010110",
+      "old_floor": 0.00817120016450989,
+      "pressure_lp_floor": 0.008171444104538721,
+      "new_floor": 0.00817120016450989,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010100101010101",
+      "old_floor": 0.008413386737645571,
+      "pressure_lp_floor": 0.008413681774062138,
+      "new_floor": 0.008413386737645571,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001010011000010",
+      "old_floor": 0.008654904872891488,
+      "pressure_lp_floor": 0.008654978335012315,
+      "new_floor": 0.008654904872891488,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101001101010100",
+      "old_floor": 0.008302937499382159,
+      "pressure_lp_floor": 0.008303204292081657,
+      "new_floor": 0.008302937499382159,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101001101011001",
+      "old_floor": 0.008516381162555922,
+      "pressure_lp_floor": 0.008516523712966266,
+      "new_floor": 0.008516381162555922,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010100111",
+      "old_floor": 0.007556664872806216,
+      "pressure_lp_floor": 0.007557037411123651,
+      "new_floor": 0.007556664872806216,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001010100010000",
+      "old_floor": 0.008224502038710082,
+      "pressure_lp_floor": 0.008224583785359355,
+      "new_floor": 0.008224502038710082,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010101000101101",
+      "old_floor": 0.008283601874160414,
+      "pressure_lp_floor": 0.008284010676773543,
+      "new_floor": 0.008283601874160414,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001010100100111",
+      "old_floor": 0.008462251531509757,
+      "pressure_lp_floor": 0.008462789887446753,
+      "new_floor": 0.008462251531509757,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010101001010111",
+      "old_floor": 0.007843530334634708,
+      "pressure_lp_floor": 0.00784376939525913,
+      "new_floor": 0.007843530334634708,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101010011110",
+      "old_floor": 0.00854332057146555,
+      "pressure_lp_floor": 0.008543473924870494,
+      "new_floor": 0.00854332057146555,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101010101101001",
+      "old_floor": 0.008634172333909593,
+      "pressure_lp_floor": 0.008634468342265573,
+      "new_floor": 0.008634172333909593,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101010110",
+      "old_floor": 0.008300013350370979,
+      "pressure_lp_floor": 0.008300201836934818,
+      "new_floor": 0.008300013350370979,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101011000",
+      "old_floor": 0.00782998676157099,
+      "pressure_lp_floor": 0.007830313795935946,
+      "new_floor": 0.00782998676157099,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001010110100101",
+      "old_floor": 0.007387188433587461,
+      "pressure_lp_floor": 0.007387372630111536,
+      "new_floor": 0.007387188433587461,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010101101001101",
+      "old_floor": 0.008074112820736584,
+      "pressure_lp_floor": 0.008074313337419706,
+      "new_floor": 0.008074112820736584,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101011010111",
+      "old_floor": 0.00841303402885205,
+      "pressure_lp_floor": 0.008413455304933284,
+      "new_floor": 0.00841303402885205,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001010111",
+      "old_floor": 0.007172181100671984,
+      "pressure_lp_floor": 0.0071725093378260905,
+      "new_floor": 0.007172181100671984,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010101111100111",
+      "old_floor": 0.008480339056069998,
+      "pressure_lp_floor": 0.008480609655935438,
+      "new_floor": 0.008480339056069998,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010110001000",
+      "old_floor": 0.008100583111405107,
+      "pressure_lp_floor": 0.008100785940447148,
+      "new_floor": 0.008100583111405107,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101100010011",
+      "old_floor": 0.007810839608861944,
+      "pressure_lp_floor": 0.007811039330763404,
+      "new_floor": 0.007810839608861944,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101100010111011",
+      "old_floor": 0.008284462100140036,
+      "pressure_lp_floor": 0.008284649057223554,
+      "new_floor": 0.008284462100140036,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101100100001",
+      "old_floor": 0.008491887526891822,
+      "pressure_lp_floor": 0.008492039443954191,
+      "new_floor": 0.00849201136418367,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010110010110101",
+      "old_floor": 0.008420540827002285,
+      "pressure_lp_floor": 0.008420880136289591,
+      "new_floor": 0.008420540827002285,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010110010111011",
+      "old_floor": 0.0080647629252253,
+      "pressure_lp_floor": 0.008064881383391034,
+      "new_floor": 0.0080647629252253,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001011001110110",
+      "old_floor": 0.008351365641198824,
+      "pressure_lp_floor": 0.008351560481411724,
+      "new_floor": 0.008351365641198824,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010110101001",
+      "old_floor": 0.008376171006359505,
+      "pressure_lp_floor": 0.008376367460993465,
+      "new_floor": 0.00837615189022685,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r10000100010000101010010110101011111",
+      "old_floor": 0.007990792564057672,
+      "pressure_lp_floor": 0.007990894718488227,
+      "new_floor": 0.007990792564057672,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101101011100100",
+      "old_floor": 0.008610375421875285,
+      "pressure_lp_floor": 0.008610467296506039,
+      "new_floor": 0.008610375421875285,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101101100",
+      "old_floor": 0.008401896878816794,
+      "pressure_lp_floor": 0.008402052531136715,
+      "new_floor": 0.008401896878816794,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r100001000100001010100101101111011",
+      "old_floor": 0.00842195318190298,
+      "pressure_lp_floor": 0.008422109650038647,
+      "new_floor": 0.00842195318190298,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1000010001000010101001011100011",
+      "old_floor": 0.008126965795955038,
+      "pressure_lp_floor": 0.00812734119750731,
+      "new_floor": 0.008126965795955038,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    },
+    {
+      "path": "r1011",
+      "old_floor": 0.007738918531635625,
+      "pressure_lp_floor": 0.007741003123916143,
+      "new_floor": 0.007738918531635625,
+      "pressure_multiplier": 0.0,
+      "accepted_by_original_integer_checker": false
+    }
+  ]
+}

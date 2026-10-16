@@ -18,7 +18,8 @@ def balanced(names,var='n',lo=0):
   return f'(if {var} < {lo+mid} then {balanced(names[:mid],var,lo)} else {balanced(names[mid:],var,lo+mid)})'
 
 def main():
-  ap=argparse.ArgumentParser();ap.add_argument('--tree',type=Path,default=HERE/'ordered-complete.json')
+  if not __debug__:raise RuntimeError('Certificate assertions must remain enabled')
+  ap=argparse.ArgumentParser();ap.add_argument('--tree',type=Path,default=HERE/'ordered-proof-input.json')
   ap.add_argument('--compact',type=Path,default=HERE/'ordered-compact.json')
   ap.add_argument('--output',type=Path,default=ROOT/'StructuralW10Cert20261016/Certificate.lean');args=ap.parse_args()
   raw=args.tree.read_bytes();data=json.loads(raw);packed_raw=args.compact.read_bytes();packed=json.loads(packed_raw)
@@ -26,6 +27,8 @@ def main():
   assert packed['receipt']['input_closed'] and packed['receipt']['input_sha256']==hashlib.sha256(raw).hexdigest()
   branches={r['path']:r for r in data['branches']};leaves={r['path']:r for r in packed['leaves']}
   assert len(branches)==len(data['branches']) and len(leaves)==len(packed['leaves'])
+  assert len(data['accepted'])==len(leaves)
+  assert not set(branches)&set(leaves)
   assert set(leaves)=={r['path'] for r in data['accepted']}
   words=[];payloads=[];visits=set();maxdepth=0
   def visit(p):
@@ -43,6 +46,7 @@ def main():
         ident=46+len(payloads);payloads.append(n)
       elif r['kind']=='reflection':ident=0
       else:assert r['kind']=='empty' and 0<=r['violation_axis']<45;ident=r['violation_axis']+1
+      assert 0<=2*ident<2**28
       words.append(2*ident)
   visit('r');assert visits==set(branches)|set(leaves)
   assert maxdepth<127 and len(words)==len(branches)+len(leaves)
@@ -50,10 +54,13 @@ def main():
   slots={p:k for k,p in enumerate(allpairs)}
   sl=[slots.get((min(i,j),max(i,j)),0) for i in range(10) for j in range(10)]
   out=['''/- SPDX-License-Identifier: Apache-2.0
-Generated complete W10 finite certificate. Every leaf and every split is
-checked by ordinary Lean kernel evaluation; no external result is assumed. -/
-import StructuralW10Cert20261016.OrderCoverage
-import StructuralW10Cert20261016.LeafDispatch
+Generated source for the complete W10 finite certificate. Full compilation
+and replay are separate and remain pending until a matching receipt passes.
+Every intended leaf/split check uses ordinary kernel evaluation; no external
+arithmetic audit is assumed as a theorem. -/
+import StructuralW10Cert20261016.AdaptiveCoverage
+import StructuralW10Cert20261016.FastPruefer
+import StructuralW10Cert20261016.RootBounds
 noncomputable section
 open AMW.Cert AMW.Cert.Pyr AMW.Cert.PyrD AMW.Cert.PCell
 open StructuralW10Cert20261016.LocalChecker
@@ -81,19 +88,22 @@ namespace StructuralW10Cert20261016.Certificate
   | n+1, w => pick n (Nat.shiftRight w (11 + Nat.land w 2047))
 def payload (n : ℕ) : ℕ := pick (n%32) (payloadChunk (n/32))
 ''')
-  out.append('def leafCheck := LeafDispatch.check payload\n')
-  out.append(f'''theorem checked : OrderCoverage.walk SL read leafCheck 128 1 RootBounds.initialCell = {len(words)+1} := by
+  out.append('def leafCheck := FastPruefer.dispatch payload\n')
+  out.append(f'''theorem checked : AdaptiveCoverage.walk SL read leafCheck 128 1 RootBounds.initialCell = {len(words)+1} := by
   decide +kernel
 theorem initial_covered : CovBy 9 PR (Pg cN 9 BS TS) RootBounds.initialCell := by
-  apply OrderCoverage.walk_sound hSL read leafCheck (LeafDispatch.check_sound payload) 128 1 RootBounds.initialCell
+  apply AdaptiveCoverage.walk_sound hSL read leafCheck (FastPruefer.dispatch_sound payload) 128 1 RootBounds.initialCell
   rw [checked]
   decide
 #print axioms initial_covered
 end StructuralW10Cert20261016.Certificate
 end
 ''')
-  source=''.join(out).encode('utf8');args.output.write_bytes(source)
+  source=''.join(out).encode('utf8')
+  assert args.tree.read_bytes()==raw and args.compact.read_bytes()==packed_raw, 'Certificate inputs changed during emission'
+  args.output.write_bytes(source)
   receipt={'scope':'Generated source only; compilation and replay are separate required checks',
+    'tree_input':str(args.tree),'compact_input':str(args.compact),'source_output':str(args.output),
     'tree_input_sha256':hashlib.sha256(raw).hexdigest(),'compact_input_sha256':hashlib.sha256(packed_raw).hexdigest(),
     'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'branches':len(branches),'leaves':len(leaves),
     'numeric_leaves':len(payloads),'nodes':len(words),'maxdepth':maxdepth,'source_bytes':len(source),

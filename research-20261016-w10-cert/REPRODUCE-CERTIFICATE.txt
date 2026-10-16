@@ -1,0 +1,31 @@
+Run from the RH-Zero-Proportion-Formalization repository root.
+Python 3 standard library is sufficient for these two commands. Keep Python
+assertions enabled: do not use -O or PYTHONOPTIMIZE.
+
+Restore/check both immutable JSON files from the 12 archived evidence parts:
+
+python -B -X utf8 research-20261016-w10-cert/archive_evidence.py --restore
+
+Independently replay every cell, every split and every packed leaf:
+
+python -B -X utf8 research-20261016-w10-cert/independent_integer_audit.py research-20261016-w10-cert/ordered-proof-input.json --relative research-20261016-w10-cert/ordered-compact.json --require-complete --require-all-packed --output research-20261016-w10-cert/independent-audit-reproduced.json
+
+Expected: 95,778 branches; 95,615 numeric leaves; 163 normalized empty leaves;
+one reflection leaf; zero unresolved frontier. The reproduced receipt records
+its own runtime and file hashes, so its full file hash may differ.
+
+Required input SHA256:
+ordered-proof-input.json
+6f2bc79db4613b4130659c9e65e0a24ee07cc50fb0686878d01a8e3f73839c3e
+ordered-compact.json
+5fbb16de9f2b74d1816d7e251efb16c07c4f318a1aedf1a390f18ef6fe499463
+
+The original 435 MB discovery JSON is unnecessary for this replay and is not
+included in the archive. proof-input-reduction-manifest.json records equality
+of all retained certificate fields with that original discovery output.
+
+This replay establishes supporting exact-integer evidence. It does not run
+the complete Lean kernel check or make the 67.3601930886% candidate a proven
+record. The current relative leaf payload alone occupies 3,823,990 source
+bytes, before the analytic Core and coverage tree; it exceeds the website's
+2,000,000-byte source budget. See relative-codec-scale-report.json.

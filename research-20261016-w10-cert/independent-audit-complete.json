@@ -1,0 +1,42 @@
+{
+  "scope": "Independent exact audit of W10 mcheckGX cells and the exported partition.\n\nThis program imports neither the generator nor finite_margin_20261015.  It\nreads the frozen rational parameters and inherited analytic table source.  Its\ninteger audit is supporting evidence; only the Lean checkLeaf_sound theorem\nand a complete Lean cover can establish the analytic floor.\n",
+  "passed": true,
+  "seconds": 94.94685239999671,
+  "inputs": [
+    {
+      "path": "research-20261016-w10-cert\\ordered-proof-input.json",
+      "sha256": "6f2bc79db4613b4130659c9e65e0a24ee07cc50fb0686878d01a8e3f73839c3e",
+      "bytes": 187586715,
+      "unchanged_after_audit": true
+    }
+  ],
+  "packed_inputs": [
+    {
+      "path": "research-20261016-w10-cert\\ordered-compact.json",
+      "sha256": "5fbb16de9f2b74d1816d7e251efb16c07c4f318a1aedf1a390f18ef6fe499463",
+      "bytes": 25967810,
+      "unchanged_after_audit": true
+    }
+  ],
+  "source_sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+  "parameter_sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+  "script_sha256": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a",
+  "root_reconstructed": true,
+  "all_partition_edges_replayed": true,
+  "branches": 95778,
+  "numeric_leaves": 95615,
+  "reflection_leaves": 1,
+  "empty_children": 0,
+  "ordered_normalization": true,
+  "normalized_empty_leaves": 163,
+  "independently_decoded_relative_leaves": 95615,
+  "independently_checked_packed_empty_leaves": 164,
+  "required_complete": true,
+  "required_all_packed": true,
+  "unresolved_frontier": 0,
+  "complete_finite_partition": true,
+  "minimum_integer_margin": "2623983786731307008",
+  "minimum_path": "r10000101000001100100110101101000010",
+  "lean_complete_certificate_proven": false,
+  "higher_kappa_proven": false
+}

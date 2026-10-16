@@ -1,0 +1,162 @@
+{
+  "scope": "Ordinary Lean subtree timing; imports/data are excluded from marked certificate milliseconds. No global floor.",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "modules": [
+    {
+      "module": "StructuralW10Cert20261016.TimedClosedTreeSmoke",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/TimedClosedTreeSmoke.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/TimedClosedTreeSmoke.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 69.25699129999703,
+      "source_sha256": "64711421d0ae7e2f40af48e3c0ec6f7352571bc81ad891660857fc885f2e9a23",
+      "source_unchanged": true,
+      "stdout": "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/TimedClosedTreeSmoke.lean:24:18: warning: Variable name `n` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _n\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nW10_TIMING certificate_begin 878405\nW10_TIMING certificate_end 878407\nW10_TIMING soundness_end 878416\n'StructuralW10Cert20261016.TimedClosedTreeSmoke.covered' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "5753114c88771a1255624180160a38ba0554f8f60d7ef5bdcf03504355b6bdff",
+      "marks_milliseconds": {
+        "certificate_begin": 878405,
+        "certificate_end": 878407,
+        "soundness_end": 878416
+      },
+      "passed": true,
+      "certificate_seconds": 0.002
+    },
+    {
+      "module": "StructuralW10Cert20261016.ForcedCoverage2",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/ForcedCoverage2.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/ForcedCoverage2.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 7.061484099998779,
+      "source_sha256": "045e26211b8c83ba9a1b98c1ab6f0bdfe1d822ccb98b7c32b3ba2281f37f21c9",
+      "source_unchanged": true,
+      "stdout": "'StructuralW10Cert20261016.ForcedCoverage2.walk_sound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'StructuralW10Cert20261016.ForcedCoverage2.dispatch_sound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "cd16059066a48a95c8baa5d9c6c5872d68b39e044b2376c3cf63a4d044161b1a",
+      "marks_milliseconds": {},
+      "passed": true
+    },
+    {
+      "module": "StructuralW10Cert20261016.TimedForce2Smoke",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/TimedForce2Smoke.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/TimedForce2Smoke.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 29.435414799998398,
+      "source_sha256": "dc9269dd97915f3f241ff4b93696e88931d8a9f1d85314e193722e5b1b1cecc9",
+      "source_unchanged": true,
+      "stdout": "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/TimedForce2Smoke.lean:24:18: warning: Variable name `n` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _n\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nW10_TIMING certificate_begin 913467\nW10_TIMING certificate_end 913469\nW10_TIMING soundness_end 913479\n'StructuralW10Cert20261016.TimedForce2Smoke.covered' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "f2896605599759d0649a44b5b25663fb81395a51d3f13da9a8ffeed88be3e137",
+      "marks_milliseconds": {
+        "certificate_begin": 913467,
+        "certificate_end": 913469,
+        "soundness_end": 913479
+      },
+      "passed": true,
+      "certificate_seconds": 0.002
+    },
+    {
+      "module": "StructuralW10Cert20261016.EagerLeaf",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/EagerLeaf.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/EagerLeaf.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 7.716792899998836,
+      "source_sha256": "00c02bee934fa21b72694d93b777e33bbf4ec95cf00512b5cb55da911468ff63",
+      "source_unchanged": true,
+      "stdout": "'StructuralW10Cert20261016.EagerLeaf.checkTreeCode_sound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'StructuralW10Cert20261016.EagerLeaf.dispatch_sound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "9cd65d596512a554d0a5f00baef82f10410874e081f785b46ef27fda898375cc",
+      "marks_milliseconds": {},
+      "passed": true
+    },
+    {
+      "module": "StructuralW10Cert20261016.TimedEagerLeafSmoke",
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "--tstack=32768",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralW10Cert20261016/TimedEagerLeafSmoke.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/TimedEagerLeafSmoke.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 32.03934170000139,
+      "source_sha256": "30ff376f0be2ff6a1743c32e369d6e4db333e01ee1a97bc66111610eb3795540",
+      "source_unchanged": true,
+      "stdout": "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralW10Cert20261016/TimedEagerLeafSmoke.lean:24:18: warning: Variable name `n` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _n\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nW10_TIMING certificate_begin 951913\nW10_TIMING certificate_end 951915\nW10_TIMING soundness_end 951925\n'StructuralW10Cert20261016.TimedEagerLeafSmoke.covered' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "78dc4f5bdacb831a805db894e162eaa47d6581062603111a2730637d78a2a76c",
+      "marks_milliseconds": {
+        "certificate_begin": 951913,
+        "certificate_end": 951915,
+        "soundness_end": 951925
+      },
+      "passed": true,
+      "certificate_seconds": 0.002
+    }
+  ],
+  "passed": true
+}

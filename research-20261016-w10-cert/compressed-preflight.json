@@ -1,0 +1,33 @@
+{
+  "scope": "Compile the self-contained base in a trusted-package-only Lean environment.\n\nThis is a packaging/auxiliary-proof check, not complete finite coverage or a\nwebsite-ready proof.  The final upload has a separate full verifier.\n",
+  "passed": true,
+  "exit_code": 0,
+  "source_sha256": "c82f5d7e3e07f563722f62fdd3087e00fb7ce490e9c1b2fe4c0b61404b734dae",
+  "source_unchanged": true,
+  "source_bytes": 526640,
+  "seconds": 547.6819405999995,
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "env",
+    "LEAN_PATH=/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/var/tmp/rh-zero-20261015/w10-base-preflight/compressed-preflight-resources.log",
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+    "-o",
+    "/var/tmp/rh-zero-20261015/w10-base-preflight/Compressed.olean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/research-20261016-w10-cert/BundlePreflight.lean"
+  ],
+  "resource_log_sha256": "a9d202444f8927a7198275233790119a3b9e841ecdd891cf1a372112321562da",
+  "all_partition_checked": false,
+  "higher_kappa_proven": false
+}

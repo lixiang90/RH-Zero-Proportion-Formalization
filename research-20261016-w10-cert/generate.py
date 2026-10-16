@@ -108,7 +108,7 @@ def minimize(intercept,coeff,d):
     assert chk==div and cost==sum(int(v)*u for i,j,v,u in nonzero)
     return intercept-cost,{'divergence':list(map(str,div)),'nonzero_flow':nonzero,'cost':str(cost)}
 
-def certify(s,export=False):
+def certify(s,export=False,pressure=False):
     if OLD and s[1][Q-1]<s[0][0]:return {'empty':True,'reflection':True}
     cl=close(*s)
     if cl is None:return {'empty':True}
@@ -133,12 +133,16 @@ def certify(s,export=False):
         row=np.zeros(Q+len(TERMS));row[i:j]=1
         rows.extend([row,-row]);rhs.extend([u/SC,-l/SC])
     obj=np.r_[np.array(BS)/D,[a/D for i,j,a in TERMS]]
+    if pressure:
+        rows.append(np.r_[np.array(BS)/D,np.zeros(len(TERMS))]);rhs.append(.00866)
     lp=linprog(obj,A_ub=rows,b_ub=rhs,bounds=[(None,None)]*Q+[(0,None)]*len(TERMS),
         method='highs',options={'dual_feasibility_tolerance':1e-9,'primal_feasibility_tolerance':1e-9})
     if not lp.success:
+        if pressure:return certify(s,export,False)
         # Never accept infeasibility on a floating-only claim.
         return {'lp_failure':lp.message,'floor':-1,'gaps':lo[:Q]}
-    lam=[int(math.floor(max(0,-x)*LD)) for x in lp.ineqlin.marginals[:len(meta)]]
+    mu=max(0.,-float(lp.ineqlin.marginals[-1])) if pressure else 0.
+    lam=[int(math.floor(max(0,-x)*LD/(1+mu))) for x in lp.ineqlin.marginals[:len(meta)]]
     for t,(i,j,a) in enumerate(TERMS):
         ids=[k for k,m in enumerate(meta) if m[0]==t];mass=sum(lam[k] for k in ids);cap=a*(LD//D)
         if mass>cap:
@@ -178,6 +182,7 @@ def certify(s,export=False):
     else:exact,flow=minimize(intercept,coeff,d)
     rec={'floor_numerator':str(exact),'floor':exact/DEN,'lp_floor':float(lp.fun),'gaps':lp.x[:Q].tolist(),
          'relaxation_values':lp.x[Q:].tolist(),'active_lines':len(mix),'constraint_count':len(rows)}
+    if pressure:rec['pressure_multiplier']=mu
     if export:rec['certificate']={'lower_bounds':lo,'upper_bounds':hi,'mixture_denominator':LD,
         'mixture':mix,'intercept':str(intercept),'gap_coefficients':list(map(str,coeff)),'flow':flow}
     if OLD:
@@ -220,17 +225,23 @@ def cut(s,rec):
         for t,(i,j,a) in enumerate(TERMS):
             z=LOOK[i,j]
             if hi[z]-lo[z]<2:continue
+            # The frozen minorant library has no support beyond 16. Splitting
+            # a cell wholly in that tail cannot improve its zero minorant.
+            # Such a span must not dominate the adaptive error score forever.
+            if lo[z]>=16*SC:continue
             error=max(0,vals[t]-rec['relaxation_values'][t])*a/D
             # Float is used only to choose the branch; every leaf remains exact.
             if best is None or error>best[0]:best=(error,z)
         if best is not None and best[0]>1e-10:
             z=best[1];l=lo[z];u=hi[z];i,j=ALL[z]
+            if l<16*SC<u:return z,16*SC
             mid=round(sum(g[i:j])*SC)
             if not l+(u-l)//8<mid<u-(u-l)//8:mid=(l+u)//2
             return z,mid
         best=None
     for z,(i,j) in enumerate(ALL):
         if hi[z]-lo[z]<2:continue
+        if lo[z]>=16*SC:continue
         # Prioritize the weighted kernel uncertainty at the LP minimizer.
         a=next((a for ii,jj,a in TERMS if ii==i and jj==j),0)
         width=(hi[z]-lo[z])/SC

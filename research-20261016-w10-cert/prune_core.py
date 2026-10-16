@@ -7,6 +7,10 @@ not an additional trusted premise of the mathematical result.
 from pathlib import Path
 import hashlib,json
 HERE=Path(__file__).parent
+# The source-index graph does not record the dependency of the retained
+# attributed blockOf_apply declaration.  An isolated preflight found this
+# omission; retain its definition explicitly and recompile the generated file.
+FORCED_KEEP={'Meshuggah.Gram.blockOf'}
 
 def unused_ranges(source):
   rows=json.loads((HERE/'core-dependencies.json').read_text())
@@ -21,9 +25,9 @@ def unused_ranges(source):
   unused=[]
   used_intervals=[]
   for (sl,sc,el,ec),rs in groups.items():
-    if any(r['used'] for r in rs):used_intervals.append((offsets[sl-1]+sc,offsets[el-1]+ec))
+    if any(r['used'] or r['name'] in FORCED_KEEP for r in rs):used_intervals.append((offsets[sl-1]+sc,offsets[el-1]+ec))
   for (sl,sc,el,ec),rs in groups.items():
-    if any(r['used'] for r in rs):continue
+    if any(r['used'] or r['name'] in FORCED_KEEP for r in rs):continue
     a=offsets[sl-1]+sc;b=offsets[el-1]+ec
     if any(a<=ua and ub<=b for ua,ub in used_intervals):continue
     # Restrict deletion to top-level declaration commands.  Auxiliary clauses
@@ -52,6 +56,7 @@ def report(source,ranges):
   result={'scope':'Packaging-only declaration pruning; fresh isolated compilation required',
     'core_sha256':hashlib.sha256(source.encode('utf8')).hexdigest(),
     'metadata_sha256':hashlib.sha256((HERE/'core-dependencies.json').read_bytes()).hexdigest(),
+    'forced_keep':sorted(FORCED_KEEP),
     'unused_declaration_ranges':len(ranges),'deletable_source_characters':sum(b-a for a,b,_ in ranges),
     'ranges':[{'start':a,'end':b,'names':names} for a,b,names in ranges]}
   (HERE/'core-pruning.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')

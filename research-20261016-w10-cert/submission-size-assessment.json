@@ -1,0 +1,224 @@
+{
+  "scope": "Measure the current complete-source encoding without publishing an upload.\n\nPassing the finite input binding is not a Lean proof. This script records\nexact assembled bytes and whether they fit the website's source boundary.\n",
+  "finite_certificate_binding": {
+    "file_sha256": {
+      "research-20261016-w10-cert/ordered-proof-input.json": "6f2bc79db4613b4130659c9e65e0a24ee07cc50fb0686878d01a8e3f73839c3e",
+      "research-20261016-w10-cert/ordered-compact.json": "5fbb16de9f2b74d1816d7e251efb16c07c4f318a1aedf1a390f18ef6fe499463",
+      "research-20261016-w10-cert/independent-audit-complete.json": "596de3588af086811b1a945b2adc0f0c73698d9b9270b497a3e06f94e1b09258",
+      "research-20261016-w10-cert/independent_integer_audit.py": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a",
+      "research-20261016-w10-cert/emitted-tree.json": "f605a92907466ee93b2826df8b4e0d7317e040fe2090e17da587f6fcbdc3963e",
+      "research-20261016-w10-cert/emit_tree.py": "8b3757eafb838bc7022de2399f787209f60e4735b6c72bc90fb92bc07d8b864e",
+      "StructuralW10Cert20261016/Certificate.lean": "53a442744560847e8b423319d32062e1ab2c01550cb7f8d839562cbe2b53c2f1",
+      "research-20261016/spectral-w10-refined-rational.json": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+      "formal/upstream/ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244"
+    },
+    "tree_input_sha256": "6f2bc79db4613b4130659c9e65e0a24ee07cc50fb0686878d01a8e3f73839c3e",
+    "compact_input_sha256": "5fbb16de9f2b74d1816d7e251efb16c07c4f318a1aedf1a390f18ef6fe499463",
+    "certificate_source_sha256": "53a442744560847e8b423319d32062e1ab2c01550cb7f8d839562cbe2b53c2f1",
+    "complete_audit_sha256": "596de3588af086811b1a945b2adc0f0c73698d9b9270b497a3e06f94e1b09258",
+    "emission_receipt_sha256": "f605a92907466ee93b2826df8b4e0d7317e040fe2090e17da587f6fcbdc3963e",
+    "branches": 95778,
+    "leaves": 95779,
+    "numeric_leaves": 95615,
+    "nodes": 191557
+  },
+  "source_modules_sha256": {
+    "GramDefect20261015/Core.lean": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+    "GramDefect20261015/SharpWindow.lean": "830514965ca5cb26a19be2b216fbedd37744b7c66e862c46bf697b9e29d7c49f",
+    "GramDefect20261015/RefinedCounting.lean": "e756b01819f5063e1c9dba906b75e12c036e384156ff5734f566c2ea7c5d70cf",
+    "StructuralResearch20261016/Coboundary.lean": "730fdccd5d8faba2765f5b1d77b5e7ff897328b92ac6bcb4f3d1fe876702041a",
+    "StructuralResearch20261016/CoboundaryCounting.lean": "8933b6ae6bd5cb0b567a8e0e81b93235a1bb4ba863b2793dcd8177bb31a55a96",
+    "StructuralResearch20261016/W10RefinedCandidate.lean": "0bd02171737c392c4e316df107c3744bf4ccee486875e3061dcee0a475afb8da",
+    "StructuralW10Cert20261016/LocalChecker.lean": "64d5d57bcb8b50ce2ff9c4f503890e8e3382ee3e31371489b4610aee954e0c06",
+    "StructuralW10Cert20261016/TreeCoverage.lean": "3eb15beda87e720c84d8227202073d0366d001b0535ceb1116066851d18fa90e",
+    "StructuralW10Cert20261016/RootBounds.lean": "02bfe5ebb1797833a4cf158fdb1032988e1c01f748c606fc013ac1e0ee996b63",
+    "StructuralW10Cert20261016/Reflection.lean": "25a9ec4a393ca701f63d82d084c6328c7738fc600a76a713583e6f29df3c5eb4",
+    "StructuralW10Cert20261016/FinalConditional.lean": "6712abb9e41eec3beb0b9d1027341356b0b95259e5678a7b9f4d67c193cb2ceb",
+    "StructuralW10Cert20261016/FloorTransfer.lean": "87a77ff684694665b909f091264f1436708441ff2cd5339af513c247bb1fbc0e",
+    "StructuralW10Cert20261016/CompactLeaf.lean": "f06481d7788909ff0a76cc63c8e462fc3b811bcc1abd204729d233d265209db7",
+    "StructuralW10Cert20261016/RelCompactLeaf.lean": "738e780efcd3170a984188d47f401acdd2eccd5a05892bc35b53b76fcf503886",
+    "StructuralW10Cert20261016/EncodedLiteral.lean": "e34f0219e3bf5f954eb2c258c76576d418356eb162bff8cbc31156d88de64577",
+    "StructuralW10Cert20261016/OrderCoverage.lean": "41f8b2baf1952010ea170b70dbdcb57b5735634240d3fef6452aeb180f3766dc",
+    "StructuralW10Cert20261016/LeafDispatch.lean": "0538167d64c8e4aa38f4c19736afd14b4eaf564aa4ef8809473815665df86911",
+    "StructuralW10Cert20261016/FastPruefer.lean": "2ef70002990b2d4aa9ce47827389e078236a1859fc3aa0391331dc00d71ba480",
+    "StructuralW10Cert20261016/ForcedCoverage.lean": "8a883f5742a749c132cdc2c8bb65b2664b17b04b4b1331c8e13b57aad286a20e",
+    "StructuralW10Cert20261016/AdaptiveCoverage.lean": "263673a0865a335e967bb9493f9f807a97295945563f0adad03c1d8e74ba0318",
+    "StructuralW10Cert20261016/NumeralCodec.lean": "6584735296c4feae8affc6c5e50a542495a9d9cdb677813f3faaa20476214b70",
+    "StructuralW10Cert20261016/CompressedCommands.lean": "05b019b7f320c0d30b2dff2e55d2be85d08b7b76209bcc349954cb9e13dbd02a",
+    "StructuralW10Cert20261016/Certificate.lean": "53a442744560847e8b423319d32062e1ab2c01550cb7f8d839562cbe2b53c2f1",
+    "StructuralW10Cert20261016/Final.lean": "a87caa5b28edbcd3a5ad0515404b56032433337a0d1f3bd0379a12124ee984ac"
+  },
+  "imports": [
+    "ChallengeDeps",
+    "ChallengeDeps.CandidateSpec",
+    "Lean",
+    "Mathlib",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Intervals",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Analysis.Real.Pi.Bounds",
+    "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring",
+    "Zeta23.FinalMult",
+    "Zeta23.PrimeSideA.EndsE1",
+    "Zeta23.Taper.Norms",
+    "Zeta23.ThmD.Concrete",
+    "Zeta23.ThmD.Limit",
+    "Zeta23.ThmD.Mult",
+    "Zeta23.ThmD.Window",
+    "Zeta23.ThmD.WindowCore",
+    "Zeta23.ThmD.ZeroSideD",
+    "Zeta23.ZeroSide.RankTraceMult"
+  ],
+  "assembled_source_bytes": 5777945,
+  "assembled_source_sha256": "a6c73e2eabc30b7766b0ce8627b51b79ccf734528eb4302977cd9c6f67084843",
+  "website_max_source_bytes": 2000000,
+  "website_source_size_passed": false,
+  "excess_source_bytes": 3777945,
+  "source_file_published": false,
+  "complete_tree_lean_checked": false,
+  "upload_ready": false,
+  "higher_kappa_proven": false,
+  "script_sha256": "4dfca0474cdc2cde91a32245206b3e5e99e0c50344d23a8a1114cf9a92c072fb",
+  "expanded_base_bytes": 995260,
+  "expanded_base_sha256": "497ce147a59711539754caaf1ac789bd62bd1e06a56e5c062389b83a20a913a0",
+  "compressed_base_bytes": 412059,
+  "encoded_base_source_bytes": 512113,
+  "source_block_target_bytes": 32768,
+  "source_block_count": 21,
+  "source_blocks": [
+    {
+      "decoded_bytes": 50085,
+      "decoded_sha256": "c7247ede43f5af8426d0f15e30d675c2c86bb7ae54b13167d54ec0b2ded6513d",
+      "compressed_bytes": 15276,
+      "command_sha256": "f4a85f165c5e6f233aa4f80bebafb7a8a4db3082a8fe95a02f312ff2c420f708"
+    },
+    {
+      "decoded_bytes": 40830,
+      "decoded_sha256": "14cf976f3d6b4f5dae0cb0e9c3d4187093a33a2db0c370e7e90b3aeda7a29399",
+      "compressed_bytes": 11654,
+      "command_sha256": "4e300884a837dbfefee4185cc268c1ed0695ebf87dfe001d749c2b33e81ab720"
+    },
+    {
+      "decoded_bytes": 42604,
+      "decoded_sha256": "8b120ab839e9678fe481ff279400b2687e071b2cf8b3d854b3ea3338a67bc5a5",
+      "compressed_bytes": 13802,
+      "command_sha256": "270dd472163404e01fd4e429900b7cf9bc5bc18e8d8bb9009f3015193b509c59"
+    },
+    {
+      "decoded_bytes": 42283,
+      "decoded_sha256": "ebdf38e42c22481ad6bda6433d7ae9dcab6dfdcfb7304851736c95daf188c709",
+      "compressed_bytes": 16096,
+      "command_sha256": "53a8966da750cfa5aaa817f43bb23700a9a89adb0f3e79409c1bdeef58b71210"
+    },
+    {
+      "decoded_bytes": 34742,
+      "decoded_sha256": "d923a6bdb6d1b25db0b95f4824e0f375965245925dee1a51cc9e1b5602e3ae5e",
+      "compressed_bytes": 12945,
+      "command_sha256": "ab1d87b0c34a0816c556a57e1514c23318275d2dfc47984146d8bb6b8a5af8c6"
+    },
+    {
+      "decoded_bytes": 34050,
+      "decoded_sha256": "2b0fe0be90e6f1d6d9f23e74378ed60fa39ca9e4ddb9018d83f7ecff3f7cd9d4",
+      "compressed_bytes": 12359,
+      "command_sha256": "f2ca729bc4e5cc0132387d33eeb26e257b6526af251c9bf9dd08fc7dcd06b013"
+    },
+    {
+      "decoded_bytes": 34336,
+      "decoded_sha256": "c2d3a77d68cab456b38ff8c4b990917892c003b50f7abf00b4ee0db9a7829adf",
+      "compressed_bytes": 12438,
+      "command_sha256": "f12cc2bc00af8372622f8251ffecb61fe465e1547fadf4a6aeba02b40b5481dd"
+    },
+    {
+      "decoded_bytes": 35168,
+      "decoded_sha256": "0adb3ddc481a6f36a4805be87d7ed685f26bfbcad601273e4ce192dcf1c6bd49",
+      "compressed_bytes": 11318,
+      "command_sha256": "1349f09ba9b234d87c7c9868e11e0312decb2e62d6dc2eb56bd0d08b7a060f9d"
+    },
+    {
+      "decoded_bytes": 38902,
+      "decoded_sha256": "83b20d3649fc8e9239ccfa851eb3b081070bea7b2c8972bbf36180ee345db2d1",
+      "compressed_bytes": 11878,
+      "command_sha256": "5101c9e944fae0abe2407be5937d7cef1925a3a6ca11ccfa99e4819f32e83a19"
+    },
+    {
+      "decoded_bytes": 32923,
+      "decoded_sha256": "a5377eb2348e503c44fbbc7b1fc2043e158bea22f77814822e3b71a6369e58b0",
+      "compressed_bytes": 10989,
+      "command_sha256": "ed7e2e93f85f7753605d1b0a717ab44521b3811f131f6622d3a9f2a476748702"
+    },
+    {
+      "decoded_bytes": 51047,
+      "decoded_sha256": "088f471363feea7bb0867cf31a7a0c05fdff1cd9bdd0202faae35ce7d9cb9000",
+      "compressed_bytes": 16059,
+      "command_sha256": "6f3c74e8dc2307b24d9c58e8d27ad3b1879179050a06467e9d5dd7e77f4ed210"
+    },
+    {
+      "decoded_bytes": 33533,
+      "decoded_sha256": "ad7c3c8719d9f2e2d6886bbf56592fa988dcbd402ffb95d5e2868cce0ba57b62",
+      "compressed_bytes": 10738,
+      "command_sha256": "5c48c9650903554ac47da017921e42100f0ce9944c6e6eef4cf31160460530ea"
+    },
+    {
+      "decoded_bytes": 43580,
+      "decoded_sha256": "b716f31b4548ff5b08616f3e2467663a9069aa71d4ca38d28034591fd04fde1f",
+      "compressed_bytes": 14149,
+      "command_sha256": "0f5f4c5b596800d05f8f190a140e2953ad6e229ba288a0a73f44bf251705962e"
+    },
+    {
+      "decoded_bytes": 32986,
+      "decoded_sha256": "8d121148281893dff73a4cc1d93ed06a1607feb241e9ccc7d34d4400acb7c508",
+      "compressed_bytes": 11281,
+      "command_sha256": "d8484e70337be4ae55b4d08e9db9d0fc59a4cb694ea1dfdddccc83c97ba8ebc4"
+    },
+    {
+      "decoded_bytes": 230108,
+      "decoded_sha256": "103e918a096938f4ed59d3ab06ce6645799d950c7279d9032b4c229947811087",
+      "compressed_bytes": 150477,
+      "command_sha256": "9b3cb838a9ee1145bd1f23affa4ddb36eaeed1bb23c8c709d056f00f79ffba09"
+    },
+    {
+      "decoded_bytes": 34506,
+      "decoded_sha256": "6b77b70ad42ff42de6899140ee5da4825a96f1c0c2ca75f33edeb1c1b8a88ccc",
+      "compressed_bytes": 11545,
+      "command_sha256": "4196e4d159a18934aa2af5e128ed77b62bfbb6f56dc6089895fb1b4c07b1040a"
+    },
+    {
+      "decoded_bytes": 40343,
+      "decoded_sha256": "f7b9ed11b12e12f4e9b200f0d396faa987e32c02e057b6ec95db140da74da757",
+      "compressed_bytes": 14133,
+      "command_sha256": "64187f1e94581d32f9be28bbde629ff79aa4d152b6586572f5c97355e5d568a8"
+    },
+    {
+      "decoded_bytes": 49046,
+      "decoded_sha256": "b58a4beaff26b8ea87f9d47992559aac442fc9716324b0c00ce42a405fe50886",
+      "compressed_bytes": 20110,
+      "command_sha256": "0956f8e0bcc1b64aa152f83979ceae714d8d1a463150c8af3cfbec69f626e971"
+    },
+    {
+      "decoded_bytes": 39357,
+      "decoded_sha256": "c825ed4f1627c4f4fed1f931affaabd25561b572aa1b2ff904059b72e1b1aa80",
+      "compressed_bytes": 12751,
+      "command_sha256": "4793aa0b2b1ebf113a425324127709285fde7eb5303018cffb20f2a7367b165e"
+    },
+    {
+      "decoded_bytes": 34179,
+      "decoded_sha256": "ae760d1c55e2589e7ac901e83686fe298dd5439c053e09dc68d96b7f2a28a98a",
+      "compressed_bytes": 14557,
+      "command_sha256": "6147ab2806efe535e0d130c34656b12ef667de7b4a5b8465d6a8bc39088785e4"
+    },
+    {
+      "decoded_bytes": 20652,
+      "decoded_sha256": "b82454860192468af77d156c4b15aae75ae02901176bcddd9cecf2f1d0ca2ebb",
+      "compressed_bytes": 7504,
+      "command_sha256": "610540ffb7ff6713786abc4b6b438770d5ee525d63a182b696b0aa0ca5075dc5"
+    }
+  ],
+  "expanded_source_sha256": "79e54b0c1286a25bf640925be68d82a51b34d4d5946692067253706e8beb1d1c"
+}
