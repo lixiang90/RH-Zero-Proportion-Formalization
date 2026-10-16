@@ -1,0 +1,32 @@
+{
+  "scope": "Batch the same eight accepted pilot leaves into independent declarations.\n\nThe two import-only controls separate a cold start from a warm import. No\nadditional numerical leaves or complete-cover claims are introduced.\n",
+  "generator_sha256": "a663423221a80b187d644d19856260234097ad9f01056ba20abdfe4bca72ba59",
+  "pilot_manifest_sha256": "5b034b7191664e857c450ee00a3329e25df59d92bf86eca7af11249ffc559cd9",
+  "modules": [
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotColdImport",
+      "source": "StructuralGoal20261016/W10LeafPilotColdImport.lean",
+      "source_sha256": "5e95dbd2452b5f2fdf2bb55df2307597061e0d2b28570b1a13fc4d51e6ae9319",
+      "source_bytes": 674,
+      "numeric_leaves": 0
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotWarmImport",
+      "source": "StructuralGoal20261016/W10LeafPilotWarmImport.lean",
+      "source_sha256": "3e937032db4e9e16492ac450690ce1f79dfb26e7a2801981b676808802be64af",
+      "source_bytes": 674,
+      "numeric_leaves": 0
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotBatch",
+      "source": "StructuralGoal20261016/W10LeafPilotBatch.lean",
+      "source_sha256": "e4bf44e81b56829253d994ee42a85958e90d5bc3c305b613ba4a2a8d13e3e1be",
+      "source_bytes": 6700,
+      "numeric_leaves": 8
+    }
+  ],
+  "distinct_numerical_leaves": 8,
+  "complete_W10_cover": false,
+  "ordinary_Lean_verified": false,
+  "new_zero_proportion_proven": false
+}

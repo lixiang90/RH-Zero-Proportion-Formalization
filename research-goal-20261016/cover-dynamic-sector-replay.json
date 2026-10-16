@@ -1,0 +1,460 @@
+{
+  "scope": "Independent stdlib replay of 41 dynamic sector forms and seven violations.\n\nNo producer, solver, or numerical package is imported.  Rebuild anchor jets\nand curvature ranges from the frozen table through the older independent\nchecker.  Expand new forms directly in physical g, h=yy, and q=yu indices.\nThis verifies necessary-model inequalities and their exact old-point tests;\nit is not a proof of the actual analytic Taylor input or a cell exclusion.\n",
+  "status": "all_41_dynamic_cones_and_7_exact_violations_independently_verified",
+  "path": "r001000001000100110011001",
+  "source_sha256_start": {
+    "research-goal-20261016/cover_dynamic_sector_replay.py": "7d1e8b5d657aef5da21e66b4d23ef9869d039f30f832fc8afcac61325cb8cce3",
+    "research-goal-20261016/cover-dynamic-sector-static.json": "4cbc223f90cc8a6e3535220eebc51d3eb85f9f6fb42ce439bf7aec5ece0731c8",
+    "research-goal-20261016/cover-residual-psd-rational-projection.json": "7a8f31cbd2d44ad6ca699509ad7c8fbf17fd073089fa8bf88f2b2676f167d91e",
+    "research-goal-20261016/cover_newjet.json": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/cover-residual-psd-pilot.json": "c47035fe5c51ca28deba8b0e488dc8601c2efb8bac19ce90138cabc12b191144",
+    "research-goal-20261016/cover-residual-psd-rational-replay.json": "1091267ca1045859dc9ee195bc9c8b6012b9bc6e64bd365db81f9da70af3c2bf",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "research-goal-20261016/cover_correlated_curvature_verify.py": "3db55f6c368e43e8f4b18a12f102afdc9c7bf0eb1d5dcfec1e8208d69d13481e"
+  },
+  "source_sha256_end": {
+    "research-goal-20261016/cover_dynamic_sector_replay.py": "7d1e8b5d657aef5da21e66b4d23ef9869d039f30f832fc8afcac61325cb8cce3",
+    "research-goal-20261016/cover-dynamic-sector-static.json": "4cbc223f90cc8a6e3535220eebc51d3eb85f9f6fb42ce439bf7aec5ece0731c8",
+    "research-goal-20261016/cover-residual-psd-rational-projection.json": "7a8f31cbd2d44ad6ca699509ad7c8fbf17fd073089fa8bf88f2b2676f167d91e",
+    "research-goal-20261016/cover_newjet.json": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/cover-residual-psd-pilot.json": "c47035fe5c51ca28deba8b0e488dc8601c2efb8bac19ce90138cabc12b191144",
+    "research-goal-20261016/cover-residual-psd-rational-replay.json": "1091267ca1045859dc9ee195bc9c8b6012b9bc6e64bd365db81f9da70af3c2bf",
+    "research-goal-20261016/cover_correlated_replay.py": "de96c02a487d3db01d16548d305002da117672a47416268c70ce50719363f273",
+    "research-goal-20261016/cover_correlated_curvature_verify.py": "3db55f6c368e43e8f4b18a12f102afdc9c7bf0eb1d5dcfec1e8208d69d13481e"
+  },
+  "all_sources_unchanged": true,
+  "cones_checked": 41,
+  "strict_old_point_violations": 7,
+  "violated_terms": [
+    8,
+    9,
+    10,
+    11,
+    16,
+    17,
+    22
+  ],
+  "anchor_positions_new": 0,
+  "all_anchors_in_whole_curvature_intervals": true,
+  "moment_X_strict_positive_LDL_verified": true,
+  "dynamic_d2_forms_checked": 41,
+  "checks": [
+    {
+      "term": 0,
+      "edge": [
+        0,
+        1
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 1,
+      "edge": [
+        0,
+        3
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 2,
+      "edge": [
+        0,
+        5
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 3,
+      "edge": [
+        0,
+        6
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 4,
+      "edge": [
+        0,
+        7
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 5,
+      "edge": [
+        0,
+        8
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 6,
+      "edge": [
+        0,
+        9
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 7,
+      "edge": [
+        1,
+        2
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 8,
+      "edge": [
+        1,
+        3
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": -1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 9,
+      "edge": [
+        1,
+        4
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": -1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 10,
+      "edge": [
+        1,
+        5
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": -1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 11,
+      "edge": [
+        1,
+        6
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": -1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 12,
+      "edge": [
+        1,
+        7
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 13,
+      "edge": [
+        1,
+        8
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 14,
+      "edge": [
+        1,
+        9
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 15,
+      "edge": [
+        2,
+        3
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 16,
+      "edge": [
+        2,
+        4
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": -1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 17,
+      "edge": [
+        2,
+        5
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": -1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 18,
+      "edge": [
+        2,
+        6
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 19,
+      "edge": [
+        2,
+        7
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 20,
+      "edge": [
+        2,
+        8
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 21,
+      "edge": [
+        2,
+        9
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 22,
+      "edge": [
+        3,
+        4
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": -1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 23,
+      "edge": [
+        3,
+        5
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 24,
+      "edge": [
+        3,
+        6
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 25,
+      "edge": [
+        3,
+        7
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 26,
+      "edge": [
+        3,
+        8
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 27,
+      "edge": [
+        3,
+        9
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 28,
+      "edge": [
+        4,
+        5
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 29,
+      "edge": [
+        4,
+        6
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 30,
+      "edge": [
+        4,
+        7
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 31,
+      "edge": [
+        4,
+        8
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 32,
+      "edge": [
+        4,
+        9
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 33,
+      "edge": [
+        5,
+        6
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 34,
+      "edge": [
+        5,
+        7
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 35,
+      "edge": [
+        5,
+        8
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 36,
+      "edge": [
+        6,
+        7
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 37,
+      "edge": [
+        6,
+        8
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 38,
+      "edge": [
+        6,
+        9
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 39,
+      "edge": [
+        7,
+        8
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    },
+    {
+      "term": 40,
+      "edge": [
+        8,
+        9
+      ],
+      "exact_anchor_and_forms_match": true,
+      "exact_schur_sign": 1,
+      "dynamic_second_moment_preserved": true
+    }
+  ],
+  "optimization_packages_imported": false,
+  "Lean_invocations": 0,
+  "actual_kernel_analytic_input_proven_here": false,
+  "whole_cell_exclusion_proven": false,
+  "elapsed_milliseconds": 4145
+}

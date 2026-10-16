@@ -1,0 +1,180 @@
+{
+  "scope": "Freeze capped-campaign proof/source evidence after all independent replay.\n\nLosslessly gzip closed JSONL receipts, retaining both raw/compressed hashes.\nExclude large databases and the old JSON. No search or source mutation.\n",
+  "files": [
+    {
+      "path": "research-goal-20261016/window_sqlite_campaign.py",
+      "bytes": 13031,
+      "sha256": "28afb345916980d232c781324d8fe07c8ffbfd0aa51f1450beb33a123c2fe9fc"
+    },
+    {
+      "path": "research-goal-20261016/cover_sqlite_campaign_math.py",
+      "bytes": 5158,
+      "sha256": "3db138a8f349fc6e0bcebd5434233f8c77a78c9d0666e5b9a269335105dfa75c"
+    },
+    {
+      "path": "research-goal-20261016/cover_sqlite_campaign_checker.py",
+      "bytes": 13286,
+      "sha256": "0fe611a7137db96d4bb425d02e1931e2dbe2c56deaf53d1385022ed763e78905"
+    },
+    {
+      "path": "research-goal-20261016/cover_sqlite_campaign_archive.py",
+      "bytes": 11745,
+      "sha256": "95c63b5a22733fb14ee1f10fef37513b12f0d3d4ba432b314e8ad106100dae76"
+    },
+    {
+      "path": "research-goal-20261016/cover_sqlite_campaign_freeze.py",
+      "bytes": 8414,
+      "sha256": "69a20ccdc5bc9909e98936dc715830a4af75b213e08241593de485844f1d62fa"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/epoch.json",
+      "bytes": 1449,
+      "sha256": "409ede474de0d9d4f05ccc1d6b34289f02142c6485fef2240537bb40693800ae"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/transaction-regression.json",
+      "bytes": 1544,
+      "sha256": "422f21d9c8cd89c3bafcce7bbcc4fd950aadcf368d2de8f931c726f729b768d3"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/prefix-stream-replay.json",
+      "bytes": 1644,
+      "sha256": "cd4b1626fc50152b951c7fb16b3dfb93d3bec3772e7f94e81fa9a0b1089a5243"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/final-stream-replay.json",
+      "bytes": 1778,
+      "sha256": "177740ec5d98bd8cec17b969e654fbb601883d271bdeaef928729f020f67d887"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/progress.json",
+      "bytes": 5281,
+      "sha256": "0e6cb7b175ab8a41c4157614ad3a099cc1faafd757bd53b52d8465cafbf07590"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/standalone.jsonl.gz",
+      "bytes": 1287896,
+      "sha256": "02946fa1e3d6b8dbbb51c964e5721d47ca88d9da839f0198ebbc7e6167360061"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/standalone-export.json",
+      "bytes": 286,
+      "sha256": "94ed90e78444f393d32f62d26beb92af67348cd67fffec076da9c33cbaa494cc"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/standalone-replay.json",
+      "bytes": 1938,
+      "sha256": "8bd59e1d38583c28b92915b52a7a522340a4f6bce30a242bfd7300a0b308176f"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/log-compression.json",
+      "bytes": 1917,
+      "sha256": "2c6a1bc341bfbacaa665d2fd8a8e9d8019f8410e72a3222f24ea3eea2d8be687"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/SUMMARY.md",
+      "bytes": 2387,
+      "sha256": "c40bdb776c255e5da177da2c82b41401936ee99a16c6ff14c04a0d808b24ad63"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/node-gates.jsonl.gz",
+      "bytes": 173172,
+      "sha256": "192bff80ea1dfb26d6d6610269bb99f2589bfbcb32102dbd25c75ce2f44cb04a"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/metrics.jsonl.gz",
+      "bytes": 9650,
+      "sha256": "4916d4bcadc9281ac3b276e63c1706bc4c4ac756a2f7c6e2c11aade21227d901"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/final-stream-nodes.jsonl.gz",
+      "bytes": 91077,
+      "sha256": "3cdb905e220761ec37278d617da4fd9f425e1abf97c7a91fa1844ddf9fc0c8fe"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-campaign133004/standalone-replay-nodes.jsonl.gz",
+      "bytes": 49822,
+      "sha256": "d5c219e879d02ec76d48ee22bec6b8baf3240cf0a4a4db222b28e72d85136b2d"
+    }
+  ],
+  "file_count": 19,
+  "total_bytes": 1681475,
+  "source_epoch": {
+    "RSS_limit_bytes": 1610612736,
+    "maximum_checked": 133004,
+    "maximum_new_nodes": 1000,
+    "not_full_budget_resume": true,
+    "original_checked_endpoint": 2022500,
+    "prefix_checked": 132004,
+    "prefix_database_sha256": "5ff6714b9dab6e1188c8656da3804ee05276899d74e1ff494cba68f61a542b68",
+    "prefix_epoch_sha256": "4faec9f6803a82d7b1aa7af90cebf26174049b2ae2c2fb3355129ad1635c2a95",
+    "prefix_journal_head": "6f5a4c0fd8426ce53145ad3be22f2e60ea18697fb484ac540f5ed9f83e09dff0",
+    "prefix_manifest_sha256": "9098f8da0b31609d5ae352ceb165099c8f9e6606f6c4fbb011ff6dd61adaa4ec",
+    "prefix_sequence": 4,
+    "schema": "sqlite-capped1000-campaign-v1",
+    "single_writer_lock": "research-goal-20261016\\sqlite-campaign133004\\writer.lock",
+    "source_guards": {
+      "research-goal-20261016\\cover_sqlite_campaign_checker.py": "0fe611a7137db96d4bb425d02e1931e2dbe2c56deaf53d1385022ed763e78905",
+      "research-goal-20261016\\cover_sqlite_campaign_math.py": "3db138a8f349fc6e0bcebd5434233f8c77a78c9d0666e5b9a269335105dfa75c",
+      "research-goal-20261016\\cover_sqlite_node_replay.py": "748eb1c9f08790c8676caa6d4d3e312329a864586455311307743eb67a0008f2",
+      "research-goal-20261016\\cover_sqlite_proof_store.py": "aaecbe5a5481cf6b082abf75ca93a29a170a79e4bb77d038c83df801a4bb9f56",
+      "research-goal-20261016\\cover_sqlite_proof_store_test.py": "8b40c4b6c39a600fe0ed3f735c1ce17106c4bf0d7525d62fd35bd633b548c4aa",
+      "research-goal-20261016\\window_sqlite_campaign.py": "28afb345916980d232c781324d8fe07c8ffbfd0aa51f1450beb33a123c2fe9fc"
+    },
+    "target": "11/1250"
+  },
+  "four_node_prefix_manifest": {
+    "path": "research-goal-20261016/cover-sqlite-real-node-files.json",
+    "bytes": 8200,
+    "sha256": "9098f8da0b31609d5ae352ceb165099c8f9e6606f6c4fbb011ff6dd61adaa4ec"
+  },
+  "storage_prototype_manifest": {
+    "path": "research-goal-20261016/cover-sqlite-proof-store-files.json",
+    "bytes": 5327,
+    "sha256": "303140b2d05eb21e0250a2b0f205e3ccfc22c4b523f2517656a56c4db3e51b13"
+  },
+  "new_campaign_nodes": 1000,
+  "streamed_journal_nodes": 1004,
+  "all_candidate_math_and_commit_delta_gates_passed": true,
+  "final_stream_math_replay_passed": true,
+  "standalone_math_replay_passed": true,
+  "final_state": {
+    "accepted_count": 66492,
+    "checked": 133004,
+    "contraction_paths": 23189,
+    "contraction_steps": 126452,
+    "counts": {
+      "Gram": 0,
+      "reflection": 1180,
+      "stationary": 45405,
+      "stationary_empty": 0,
+      "sublevel_empty": 0,
+      "value": 19907
+    },
+    "maxdepth": 47,
+    "sublevel_bounds": 1003285,
+    "sublevel_contraction_paths": 89922,
+    "unresolved_count": 21
+  },
+  "final_journal_head": "0a08ca24b704ab8f03c908c0a2c77f4c68ad59463fdae786b5bc5750073609ee",
+  "actual_Newton_steps_exercised": 484,
+  "actual_OBBT_bounds_exercised": 6837,
+  "producer_peak_working_set_bytes": 237166592,
+  "resident_checker_max_durable_RSS_bytes": 152526848,
+  "excluded_new_database": {
+    "path": "research-goal-20261016/sqlite-campaign133004/campaign.sqlite",
+    "bytes": 1105702912,
+    "sha256": "f312c3d53eb71e6518c181406edf178bd882f8b9558843894122a27d939e2a5c"
+  },
+  "excluded_raw_logs": [
+    "research-goal-20261016/sqlite-campaign133004/node-gates.jsonl",
+    "research-goal-20261016/sqlite-campaign133004/metrics.jsonl",
+    "research-goal-20261016/sqlite-campaign133004/final-stream-nodes.jsonl",
+    "research-goal-20261016/sqlite-campaign133004/standalone-replay-nodes.jsonl"
+  ],
+  "standalone_replay_command": "python -B -X utf8 research-goal-20261016/cover_sqlite_campaign_archive.py --archive research-goal-20261016/sqlite-campaign133004/standalone.jsonl.gz --receipt NEW_RECEIPT.json --node-log NEW_NODE_LOG.jsonl",
+  "historical_baseline_semantic_replay": false,
+  "complete_global_cover": false,
+  "full_budget_search_started": false,
+  "new_zero_proportion_proven": false
+}

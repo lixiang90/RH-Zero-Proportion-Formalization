@@ -598,10 +598,14 @@ The finite signed-Gram diagnostic and the spectral-slack audit are pinned
 by `window-post-sync14-static-research-files.json`. No sampled point or
 spectral-cutoff calculation is presented as a global floor certificate.
 
-The older fixed-window W10 fallback has a newly proved eight-leaf subtree,
-including sixty-nine literal geometry equalities. Its root scaffold still
-requires sixteen sibling-cover hypotheses. See
-`lean_leaf_pilot_proof_index.json`; full root coverage is false.
+The older fixed-window W10 fallback now has an entire 127-leaf subtree
+proved by the ordinary kernel, including all 126 internal branches. The
+eight-leaf pilot is contained in these 127 leaves. Four sibling-cover
+hypotheses remain in its separate root scaffold; those siblings do not
+have equal sizes. See `lean_aux127_proof_index.json`. Its self-contained
+7,690-byte generation seed reproduces all 23 source hashes. All 22 proof
+modules and the separate data module passed, but full root coverage is
+false. The failed/cancelled earlier large block is not counted as passed.
 
 The former whole-history search is stopped, with unknown termination
 reason. Its last complete snapshot has 132,000 nodes and SHA256
@@ -614,3 +618,53 @@ database is excluded from publication. See
 `cover-sqlite-proof-store-files.json` for the small source/receipt package.
 Storage roundtrip does not discharge mathematical packet replay or full
 coverage, and does not by itself bound the mathematical engine caches.
+
+## Stronger moment constraints and resumed mathematical replay
+
+`WindowScalarSector` now proves a dynamic secant-sector inequality for the
+actual scalar kernel and its rational moment-row consumer. The uncertainty
+is proportional to the actual squared displacement `(x-p)^2`, rather than
+a maximum squared radius. All four roots passed ordinary Lean with only
+the three allowed foundational axioms. The numerical realization retains
+the second displacement moment and adds 41 new 11-by-11 cones. Exact
+standard-library replay shows that seven of them exclude the frozen old
+rational relaxation witness. This proves strict strengthening. One SCS
+test retaining both old and new cone families still gave no positive
+exclusion hint; no enlarged-model exact feasibility or actual exclusion
+is asserted. See `cover-dynamic-sector-files.json` and
+`window_scalar_sector_sync_files.json`.
+
+Another structural test uses 6,075 exactly paid joint position/first-/second-
+derivative facets and positivity of the full physical 9-by-9 Hessian.
+Its one solver test gave no exclusion. More decisively, a pure rational
+replay extends the old exact 464-variable witness to satisfy all added
+facets and an exactly positive Hessian LDL factorization. That checks the
+new constraints; the old constraints remain bound to their own frozen
+replay. This limits this particular relaxation, not the actual energy
+floor. See `cover-joint-jet-hessian-files.sha256.json`.
+
+Two alternative attempts to inherit the old unconditional floor were
+also closed without a new record. Ten unscaled delete-one embeddings
+have an exact upper bound below the required score; allowing one fixed
+dilation and a shared compact pressure budget gave no useful solver hint.
+The latter tests are not general impossibility proofs. An independent
+same-kernel ten-embedding ledger has a rational dual certificate ruling
+out the requested improvement within that construction class. See
+`window-kernel-transfer-files.json` and `window-embedded-old-ledger-files.json`.
+
+The new SQLite implementation has completed four pilot nodes and a capped
+1,000-node continuation, reaching 133,004 checked nodes, 66,492 closed leaves
+and 21 frontier cells. All new nodes passed independent pre-commit and
+post-commit mathematical checks. A separate standalone archive replay
+checked all 1,004 new packets, including 6,852 OBBT bounds and 484 actual
+Newton steps, without the old JSON or large database. Its 1,287,896-byte
+archive and hashes are in `cover-sqlite-campaign133004-files.json`. These
+counts are conditional on the historical baseline, whose full semantic
+replay is still incomplete. They are not a geometric completion percentage
+or a complete global cover. The producer's observed peak was about 226 MiB;
+its growing mathematical caches do not establish a uniform memory bound.
+
+The actual Lean constants require `c > 0.008784609052634106` to exceed the
+website baseline by `1/100000` in absolute proportion. The working floor
+`11/1250` meets that conditional threshold. No unconditional new record or
+website-ready theorem is asserted by any of these packages.

@@ -1,0 +1,273 @@
+{
+  "scope": "Freeze the same-eight-leaf auxiliary batch and resource measurements.\n\nOnly one mathematical module is new; two import controls are diagnostics.\nThere are no new distinct cells and no complete W10 coverage theorem.\n",
+  "script_sha256": "e448ca138f4413be7471d527e4cdb39094c36d5994e373d530cb636ed8d7ee57",
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "base_verifier_sha256": "44dc72d6f190b5df5484f6494de48a53b59a97267a7d2c21947f2f97ddf39593",
+  "benchmark_runner_sha256": "a08deb7968448818ab32ed2f946ab5aa782f597d73b058fc408ac5cccf43b242",
+  "GNU_time_sha256": "7310b9b4c51a8f4d26c1af0da250f03a49ec8a8141033123e79196ad18f6c81b",
+  "records": [
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotColdImport",
+      "source": "StructuralGoal20261016/W10LeafPilotColdImport.lean",
+      "source_sha256": "5e95dbd2452b5f2fdf2bb55df2307597061e0d2b28570b1a13fc4d51e6ae9319",
+      "source_bytes": 674,
+      "numeric_leaves": 0,
+      "ordinary_Lean_passed": true,
+      "diagnostic_control": true,
+      "roots": [],
+      "log": "research-goal-20261016/lean_W10LeafPilotColdImport_5e95dbd2452b.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+      "olean_sha256": "3cce78cda959d089a01b79fbded0798b9e2e6a1365bf08055b77e5b0292cde06",
+      "whole_process_seconds": 38.92455959999643,
+      "resource": "research-goal-20261016/lean_timed_W10LeafPilotColdImport_5e95dbd2452b.txt",
+      "resource_sha256": "e2c11e1762199379b993c7dfe01576ab15ae111058015f6a2fb67009d06d3c4a",
+      "Linux_wall_seconds": 38.8,
+      "user_seconds": 3.6,
+      "system_seconds": 9.71,
+      "CPU_seconds": 13.31,
+      "max_RSS_KiB": 7141032
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotWarmImport",
+      "source": "StructuralGoal20261016/W10LeafPilotWarmImport.lean",
+      "source_sha256": "3e937032db4e9e16492ac450690ce1f79dfb26e7a2801981b676808802be64af",
+      "source_bytes": 674,
+      "numeric_leaves": 0,
+      "ordinary_Lean_passed": true,
+      "diagnostic_control": true,
+      "roots": [],
+      "log": "research-goal-20261016/lean_W10LeafPilotWarmImport_3e937032db4e.log",
+      "log_sha256": "b280c454d6f559e56eb3f5ed39f3ba084b8d1744a3ff7fe016b21ff86dea1aca",
+      "olean_sha256": "b01c0d8bc34963a683a9cbcc2e690c22f5159aeb3c426f844da732aa05e1ccb8",
+      "whole_process_seconds": 6.000833000005514,
+      "resource": "research-goal-20261016/lean_timed_W10LeafPilotWarmImport_3e937032db4e.txt",
+      "resource_sha256": "f1a56e82c2298d88106d0698728b02be1ea60a182c652bea1acd5cbebad43ba6",
+      "Linux_wall_seconds": 5.89,
+      "user_seconds": 3.07,
+      "system_seconds": 2.79,
+      "CPU_seconds": 5.859999999999999,
+      "max_RSS_KiB": 7174728
+    },
+    {
+      "module": "StructuralGoal20261016.W10LeafPilotBatch",
+      "source": "StructuralGoal20261016/W10LeafPilotBatch.lean",
+      "source_sha256": "e4bf44e81b56829253d994ee42a85958e90d5bc3c305b613ba4a2a8d13e3e1be",
+      "source_bytes": 6700,
+      "numeric_leaves": 8,
+      "ordinary_Lean_passed": true,
+      "diagnostic_control": false,
+      "roots": [
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.normalizedLeaf00",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.numeric00",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.coveredLeaf00",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.normalizedLeaf01",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.numeric01",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.coveredLeaf01",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.normalizedLeaf02",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.numeric02",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.coveredLeaf02",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.normalizedLeaf03",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.numeric03",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.coveredLeaf03",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.normalizedLeaf04",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.numeric04",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.coveredLeaf04",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.normalizedLeaf05",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.numeric05",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.coveredLeaf05",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.normalizedLeaf06",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.numeric06",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.coveredLeaf06",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.normalizedLeaf07",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.numeric07",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "StructuralGoal20261016.W10LeafPilotBatch.coveredLeaf07",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "log": "research-goal-20261016/lean_W10LeafPilotBatch_e4bf44e81b56.log",
+      "log_sha256": "8ae471463d51060b68b2876e75beacaae9cf70e94e8c23c17cecf23c34f780e1",
+      "olean_sha256": "d3ffd163755c438530ae34b6410f60c3f5e3adeda5f6183d7de200ffc64845f9",
+      "whole_process_seconds": 11.024226999994426,
+      "resource": "research-goal-20261016/lean_timed_W10LeafPilotBatch_e4bf44e81b56.txt",
+      "resource_sha256": "f3149dc33114a614a80d534f06d270a99bb455f31e796e5bb4e28bde6d8b3fc8",
+      "Linux_wall_seconds": 10.9,
+      "user_seconds": 8.06,
+      "system_seconds": 2.83,
+      "CPU_seconds": 10.89,
+      "max_RSS_KiB": 7245488
+    }
+  ],
+  "proof_modules": 1,
+  "diagnostic_controls": 2,
+  "rechecked_numeric_leaves": 8,
+  "new_distinct_numeric_leaves": 0,
+  "batch_printed_roots": 24,
+  "pilot_proof_index_sha256": "af220f415e680db4f80a21a6e0f9b2704311c85239ab8116419740be6ba480db",
+  "pilot_sync_manifest_sha256": "42bbd464797d35b25c81b7ba69145af6d0ae83c16a6b0d5a889ed592d2226b9a",
+  "comparison": {
+    "warm_import_wall_seconds": 5.89,
+    "batch_wall_seconds": 10.9,
+    "incremental_wall_seconds": 5.010000000000001,
+    "incremental_CPU_seconds": 5.030000000000001,
+    "incremental_wall_seconds_per_leaf": 0.6262500000000001,
+    "incremental_CPU_seconds_per_leaf": 0.6287500000000001,
+    "RSS_increase_over_import_control_KiB": 70760,
+    "interpretation": "One small paired sample. The difference includes leaf normalization, arithmetic and soundness theorem work; it is not a certified full-tree runtime or 127-leaf memory prediction."
+  },
+  "all_current_sources_logs_resources_verified": true,
+  "independent_kernel_replay": false,
+  "complete_W10_cover": false,
+  "source_size_compliant": false,
+  "new_zero_proportion_proven": false,
+  "no_127_leaf_aux_source_generated_here": true
+}

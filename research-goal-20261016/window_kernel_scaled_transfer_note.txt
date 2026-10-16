@@ -1,0 +1,214 @@
+Fixed-scale scalar kernel-floor transfer: bounded pilots and final scope
+2026-10-17
+
+The unscaled obstruction in window_kernel_floor_transfer_note.txt is frozen.
+This note records two separately authorized, one-shot comparisons outside
+that obstruction: scaling r=24/25, then the same scale on a compact sublevel
+domain with one shared pressure multiplier.  Both numerical pilots failed
+to produce a useful candidate.  The scalar-transfer experiments stop here.
+No new unconditional zero proportion, actual-kernel floor, or uniform
+one-dimensional majorization certificate is claimed.
+
+1. Domain and threshold audit
+-----------------------------
+The completed old theorem is RiemannFail.cert_AM in
+GramDefect20261015/Core.lean:13250.  Its premise is only
+
+  forall g : Fin 8 -> R, (forall i, 0 <= g_i) -> c_old <= F_old(g),
+  c_old = 859538525913875481/10^20.
+
+The archived attempt-024 theorem at current-record-source.txt:14197 has
+the same full nonnegative domain.  These final theorems have no separated
+gap assumption.  Consequently applying the local completed theorem to
+r*D_d(g), where D_d deletes one of ten points, is legal for every r>=0
+and every nonnegative new gap vector.  In particular
+
+  r = 24/25, new SEP = 123/128, r*new SEP = 369/400 = .9225
+
+is valid.  It need not exceed an internal separation used when proving
+the old theorem.  Neither pilot calls an old table leaf outside its domain;
+they use the completed full-domain floor.  The old short-pair or counting
+arguments impose no new premise on this purely algebraic application.
+The final counting kernel remains the unchanged new 24-mode kernel; no
+counting admissibility for the rescaled old kernel is asserted or needed.
+
+Two H bounds must be distinguished.  The parameter JSON stores the finer
+research enclosure
+
+  H_param = 1680240849522559118481248059191797347567 /
+            2500000000000000000000000000000000000000.
+
+The already checked conservative actual-kernel H bound used by the root
+task is StructuralGoal20261016.WindowEnergyBound.H24_ge, in
+StructuralGoal20261016/WindowEnergyBound.lean:58:
+
+  H_formal = 6720963398090236473924/10^22
+           = 1680240849522559118481/2500000000000000000000.
+
+The new pressure is B_new=11055671/2500000000.  With the exact archived
+website score R_site from the frozen primary source, the formal thresholds
+are
+
+  match_site = 1-(H_formal-B_new)/R_site
+    = 122819148510186370134179370054035817022149811 /
+      14004634057475230264742345576121001574400000000
+    = .00876989345142006...,
+
+  goal = 1-(H_formal-B_new)/(R_site+1/100000)
+    = 5349002676301735733991141164305905087919557 /
+      608906172631303644195215758819391372800000000
+    = .008784609052634106... .
+
+The goal is an increase of 1e-5 in kappa, or .001 percentage points above
+the archived website score.  Strictly exceeding a threshold requires a
+strictly larger floor.  The reference candidate c_ref=11/1250=.0088 would
+meet this goal if its complete actual-kernel floor were proved.
+
+The frozen unscaled design and first pilot record the slightly smaller
+match threshold obtained with H_param, explicitly as a site-match threshold,
+not as the stronger goal.  The compact pilot preserves the supplied formal
+goal exactly.  Its initial independent inversion used H_param, so its JSON
+also records a difference of about 1.47e-22 between those two goal floors;
+the difference comes from the H enclosure precision.  This note resolves
+the provenance without changing any frozen receipt.  H does not enter
+either LP constraint or objective: it is used only to report the candidate
+counting ratio and threshold.  The discrepancy has no effect on either LP.
+
+2. Fixed-r unbounded comparison
+-------------------------------
+Use the same delete-one embedded old pressures p_d and weights A_(d,e) as
+in the frozen unscaled note, but apply the old floor to r*D_d(g).  Let
+lambda_d>=0, q_e>=0, d_e be free constants and
+
+  R = b_new - r*sum_d lambda_d*p_d - sum_e q_e*v_e.
+
+Require R>=0 and, for x>=rank(e)*SEP,
+
+  a_new[e]*w_new(x)+q_e*x
+      >= sum_d lambda_d*A_(d,e)*w_old(r*x)+d_e.
+
+The resulting lower bound is
+
+  L = sum_d lambda_d*c_old + sum_e d_e + SEP*sum_r R_r.
+
+Its objective includes every unused pressure residue.  Expanded LP
+coefficients are c_old-SEP*r*sum(p_d) on lambda_d,
+-SEP*rank(e) on q_e, 1 on d_e, and constant SEP*B_new.
+
+The root/pressure argument alone gives the optimistic upper bound
+
+  C*B_new + (b_new[4]/b_old[3])*(c_old/r-C*B_old), C=11/10,
+    = .00883389040682065191259... .
+
+This is above the goal, so it did not by itself rule out the fixed scale.
+No other scales were tried.
+
+window_kernel_scaled_transfer_pilot.py makes one HiGHS-IPM call with 100
+variables and 76,364 rows.  Scalar rows sample the exact finite sinc-sum
+formulas in floating arithmetic: SEP*rank, a 1/64 grid up to 16, then a
+1/8 grid through T=128.  The 45 tail rows use an explicit analytic bound:
+if A=sum_(j=1..12)|c_old,j| and x>=T, then
+
+  |k_old(r*x)| <= D/x,
+  D = (4/(11*r)) * [ 1/(1-1/(4*r*T))
+                    + A/(1-144/(r*T)^2) ].
+
+This follows from the finite sinc identity, sqrt(2)/(2*pi)<1/4, pi>=3,
+and Z>=11/12.  Thus w_old(r*x)<=D^2/x^2.  Since q and old weights are
+nonnegative, q*x-A_e*D^2/x^2 is increasing on the tail.  The sufficient
+tail constraint is
+
+  d_e <= T*q_e - sum_d lambda_d*A_(d,e)*D^2/T^2.
+
+The LP returned status 0 (optimal), 7 iterations, about 3.70 seconds:
+
+  L_hint = .0047331192133054,
+  all ten lambda_d = 0,
+  minimum sampled row slack about -3.06e-10.
+
+These are numerical discovery results, not exact feasible or optimal
+certificates.  The large failure margin did not justify an interval or
+dual refinement.  No extra solve, scalar refinement, or scale was added.
+
+3. Compact domain and a shared global pressure payment
+------------------------------------------------------
+The second, separately authorized pilot assumes a putative counterexample
+F_new(g)<c_ref=11/1250 with g>=SEP.  Nonnegative kernel energy implies
+P_new(g)=b_new.g<c_ref.  Hence for e=(i,j), writing m_e=min(b_new[i:j]),
+
+  rank(e)*SEP <= x_e
+      <= U_e = rank(e)*SEP + (c_ref-SEP*B_new)/m_e.
+
+The driver computes every endpoint as an exact Fraction from the same
+pressure ledger.  These are the actual sublevel pressure-root domains,
+not arbitrary numerical boxes or independent gap cutoffs.
+
+Now q_e may have either sign.  Permit R as above to have negative
+coordinates, and select one shared rho>=0 satisfying
+
+  R + rho*b_new >= 0 coordinatewise.
+
+The residual pressure then obeys
+
+  R.g = (R+rho*b_new).g - rho*P_new(g)
+      >= SEP*sum(R+rho*b_new) - rho*c_ref.
+
+There is one payment -rho*c_ref for the whole pressure budget, not one
+payment per edge.  On each finite interval [rank(e)*SEP,U_e], require the
+same scalar majorization, and maximize
+
+  L = sum_d lambda_d*c_old + sum_e d_e
+        + SEP*sum(R+rho*b_new) - rho*c_ref.
+
+The expanded objective adds rho*(SEP*B_new-c_ref) to the preceding one;
+the nine pressure rows are
+
+  r*sum_d lambda_d*p_d + sum_e q_e*v_e - rho*b_new <= b_new.
+
+If the scalar inequalities were proved uniformly, this would give
+F_new(g)>=L on the sublevel domain and hence the global separated-domain
+floor min(c_ref,L).  A value L above the formal goal would therefore be
+useful even if L<c_ref.  No such value was obtained.
+
+window_kernel_compact_transfer_pilot.py makes exactly one HiGHS-IPM call
+with 101 variables and 40,793 rows.  It includes both rational domain
+endpoints and a 1/64 scalar grid strictly between them.  There is no tail,
+because the global pressure argument proves the finite domains.  It
+returned status 0 (optimal), 39 iterations, about 2.08 seconds:
+
+  L_hint = .004733119176500874,
+  all ten lambda_d = 0, rho = 0,
+  minimum sampled row slack about -4.96e-20.
+
+The stronger pressure interface again declines to use the old floor and
+returns the new kernel's weak scalar-separable bound.  This is evidence
+that fixed-r=.96 scalar transfer is unproductive, not an exact no-go
+theorem for the scaled class.  No exact dual or uniform scalar certificate
+was extracted, because the numerical candidate falls far below the goal.
+
+4. End of this bounded route
+----------------------------
+Both permitted LPs used the locally completed old floor; neither relies on
+importing the archived website's proof.  Each respected its 45-second limit
+and made one solve.  The second pilot was not a resampling loop for the
+first.  It uses a genuinely different, compact pressure-coupled comparison
+principle, whose mathematical interface is recorded above.  No further
+r, grid, kernel, ledger, embedding, or nine-dimensional search was run.
+
+All sampled LP values and feasibility residuals remain numerical hints.
+The unscaled root/pressure obstruction is a separate exact algebraic
+argument with explicit analytic root/decay inputs.  The earlier exact
+relaxation-feasible obstruction is also separate and remains sealed.
+The new window's complete unconditional floor and goal remain unproved.
+
+Reproduction of each one-shot discovery (existing outputs are protected
+against overwriting):
+
+  python -B -X utf8 research-goal-20261016/window_kernel_scaled_transfer_pilot.py
+  python -B -X utf8 research-goal-20261016/window_kernel_compact_transfer_pilot.py
+
+The JSON receipts record their immutable source hashes, phases before the
+solver call, matrix sizes, the fixed scale, exact domain/tail data, primal
+and sparse dual hints, and start/end source-hash equality.  No NaN or
+infinity occurs in these new receipts.  The companion transfer-files
+manifest pins the complete design/pilot bundle and its frozen dependencies.

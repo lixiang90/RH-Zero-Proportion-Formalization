@@ -1,0 +1,220 @@
+Dynamic secant-sector PSD: exact strengthening and one bounded cone test
+2026-10-17
+
+This is a new family of derivative/position moment inequalities.  It is
+not another collection of cuts from the old constant-error residual cones.
+All 41 dynamic cones use the same 464 variables and the same existing
+common energy anchor.  Seven of them exactly exclude the previously
+certified old-model feasible point.  One subsequent 82-cone SCS experiment
+still produced no positive energy slack.  The whole cell is not excluded,
+and no exact feasible point for the enlarged model is claimed.
+
+1. Scalar theorem and assumptions
+---------------------------------
+Let I be a closed interval.  Suppose f is twice continuously differentiable
+on a neighborhood of I, or has the regularity needed for the existing
+derivative_increment mean-value theorem.  Suppose p,s belong to I and
+
+  m <= f''(t) <= M  for every t in I, with m<=M.
+
+Write u=f'(s), u0=f'(p), d=s-p, k=(m+M)/2 and L=(M-m)/2.  Then
+
+  a = u-u0-k*d satisfies a^2 <= L^2*d^2.                  (S1)
+
+For d=0 this is immediate.  For d!=0 the secant slope of f' lies between
+m and M, so |(u-u0)/d-k|<=L.  This handles negative d too: dividing an
+oriented derivative increment by its same oriented displacement produces
+the same interval of secant slopes.  Equivalently the nonnegative sector
+product is
+
+  L^2*d^2-a^2 = (u-u0-m*d)*(M*d-u+u0) >= 0.
+
+Let [l0,h0] enclose the actual anchor derivative u0.  Define
+mid=(l0+h0)/2, epsilon0=(h0-l0)/2, b=u0-mid and eta=u-mid-k*d=a+b.
+For every tau>0 Young's exact identity gives
+
+  eta^2 <= (1+tau)*L^2*d^2 + (1+1/tau)*epsilon0^2 = B.    (S2)
+
+There is an explicit nonnegative decomposition:
+
+  B-eta^2 = (1+tau)*(L^2*d^2-a^2)
+          + (1+1/tau)*(epsilon0^2-b^2)
+          + (tau*a-b)^2/tau.
+
+No sign condition on m or M is needed.  The fixed choice in this package
+is tau=1/1024, hence the anchor-error payment is 1025*epsilon0^2.  This is
+the derivative error at the old anchor alone, not the old uniform slab
+error, and not an aggregate gradient error with cancellation between edges.
+
+2. Dynamic PSD lift without any uu variables
+--------------------------------------------
+For the fixed cell, use normalized gaps y_r=(g_r-c_r)/R_r and x=(1,y).
+The existing 464-variable lift has
+
+  g[9], u[41], h_rs=<y_r*y_s>[45], q_re=<y_r*u_e>[369].
+
+Let X=<x*x^T> (10x10) and z_e=<x*u_e>.  The old common energy anchor is
+g0; for edge e=(i,j), set p_e=sum(g0[i:j]).  Put
+
+  d_e = span_e(g)-p_e = delta0_e + sum_(r in e) R_r*y_r,
+  delta0_e = sum_(r in e)c_r-p_e,
+  beta_e = (mid_e+k_e*delta0_e, k_e*R_r*1_(r in e)).
+
+Thus eta_e=u_e-beta_e.x and its mixed moments are
+z_e-X*beta_e.  Set gamma_e=(1+tau)*L_e^2.  The necessary dynamic cone is
+
+  N_e = [ X                  z_e-X*beta_e ]
+        [ (z_e-X*beta_e)^T   gamma_e*<d_e^2>+1025*epsilon0_e^2 ] >= 0.  (D)
+
+Every entry is affine in the old 464 variables.  In particular
+
+  <d_e^2> = delta0_e^2
+      + 2*delta0_e*sum_(r in e) R_r*<y_r>
+      + sum_(r,t in e) R_r*R_t*h_rt.
+
+The implementation retains this dynamic second moment exactly.  It never
+replaces it by a maximum squared displacement or a radius constant.
+
+For an actual point, with a test vector (v,t), the quadratic form is
+
+  (v.x+t*eta_e)^2 + t^2*(B_e-eta_e^2) >= 0.
+
+Taking a nonnegative average gives (D).  This is the semantic bridge needed
+for a moment relaxation: actual points and their convex combinations must
+satisfy it.  One does not assert that every abstract PSD moment vector has
+an actual representing measure.  No u_e*u_f variable or product of a KKT
+equation by u is required.  The new cones do not rely on KKT for their
+validity; the retained old KKT rows are additional constraints.
+
+Neither this note nor this numerical package asserts that a dynamic cone
+alone dominates its old constant-error counterpart.  The numerical test
+retains both families.  Adding all dynamic cones is a strict strengthening
+of the old model, because an exactly verified old-model feasible point
+violates seven new cones.
+
+3. Actual anchors, interval domains, and frozen Taylor data
+----------------------------------------------------------
+The cell is the first original remaining case,
+r001000001000100110011001.  Its original midpoint energy packet has a
+single feasible point g0 obtained from midpoint prefix positions.  This
+is not generally the midpoint of each coordinate or each tightened span.
+The static driver first checks the common g0 against all 45 cell span
+constraints.  For each of the 41 weighted edges it verifies
+
+  p_e=span_e(g0) belongs to [cell_lo_e/32768, cell_hi_e/32768],
+  P_e=2*32768*p_e is an integer.
+
+Thus the entire segment from p_e to every actual s in the cell lies inside
+the same interval used for m_e,M_e.  This shared-anchor domain check is
+essential: using a derivative anchor outside that interval would not
+justify (S1) from the supplied curvature bounds.
+
+The anchor derivative interval is reconstructed at precisely P_e from the
+already frozen integer-centered Taylor coefficients in cover_newjet.json.
+No actual kernel is sampled at a new position and no new table coefficient
+is generated.  The old common energy packet had already used these same
+41 anchor positions.  A second implementation reconstructs the same point
+intervals using the older independent ScalarReplay.point method.  The
+integer Taylor inputs describe w' with the order-24 remainder bound
+(44/7)^24, so the derivative point remainder is
+
+  (44/7)^24 * |p_e-round(p_e)|^23 / 23!.
+
+Whole-span second derivative bounds m_e,M_e are the existing lower bounds
+from the original midpoint energy packet and upper bounds from the frozen
+reverse-Taylor packet.  The driver rebuilds all 658 relevant old grid
+curvature cells and checks containment in those old bounds.  The independent
+replay rebuilds the full old curvature grid through a separate class and
+obtains identical relevant integer ranges.  All coefficient and point
+arithmetic is Fraction arithmetic.  The actual-kernel interpretation of
+the original Taylor coefficients and derivative remainder bound remains
+an explicit analytic input; this task did not invoke Lean.  The root task
+owns the separate generic/actual sector bridge and its compilation.
+
+4. Exact old-point separation
+-----------------------------
+The prior exact relaxation-feasibility package is unchanged, manifest
+SHA256 5995d2ba510e40e31edbd17d3337a4f39c89acc62e209c016b0d584464714c6b.
+It certifies 43,306 Fraction rows, 464 bounds, and all 41 old residual PSD
+blocks after exact KKT projection.  It does not give an actual F_new point.
+
+For its same 464 rational moments, X is strictly positive definite by a
+verified rational LDL factorization.  For each new cone, writing
+r_e=z_e-X*beta_e and b_e=gamma_e*<d_e^2>+1025*epsilon0_e^2, compute
+
+  S_e=b_e-r_e^T*X^(-1)*r_e.
+
+The exact rational test vector (-X^(-1)*r_e,1) has N_e quadratic form S_e.
+All 41 forms, exact Schur values, and vectors are saved.  Exactly seven
+Schur complements are strictly negative.  Their approximate unscaled and
+old-epsilon-normalized values are:
+
+  edge    S_e                  S_e / epsilon_old,e^2
+  (1,3)  -.00024288300594418   -.2886738258824
+  (1,4)  -.00015251744187382   -.9211294743112
+  (1,5)  -.00006139677268435  -1.3861057268913
+  (1,6)  -.00001110796346090  -1.0016620530832
+  (2,4)  -.00000927667724393   -.2050380719394
+  (2,5)  -.00000159437095854   -.2202665847087
+  (3,4)  -.00003410045617015   -.3606534359191
+
+The displayed decimals are hints; the full rational values establish the
+signs.  cover_dynamic_sector_replay.py imports no producer or optimization
+package.  It independently rebuilds every mixed residual directly in the
+physical g/h/q variables, the dynamic d^2 and bottom forms, all anchor and
+curvature enclosures, X's positive LDL factorization, and all 41 Schur test
+vector identities.  It confirms exactly these seven negative signs.
+
+This is an exact separation of the old abstract moment point.  It does not
+prove that the enlarged moment model is infeasible, the cell is excluded,
+or the actual new-kernel floor is false or true.
+
+5. One authorized 82-cone SCS experiment
+---------------------------------------
+After the exact seven-point separation, the parent task authorized one
+solve on this same cell, keeping every old constraint:
+
+  464 scalar moment variables plus the original energy-slack variable;
+  43,304 old linear rows, all boxes, midpoint and closed-Bregman energy rows;
+  41 old residual 11x11 cones plus 41 new dynamic sector 11x11 cones.
+
+No old cone was replaced.  No new cell, sample, cut loop, or scalar anchor
+was added.  Each new cone uses the explicitly positive rational congruence
+diag(1,...,1,1/epsilon_old,e).  Its mixed column is divided by epsilon_old,e
+and bottom by epsilon_old,e^2.  All 41 scales, all original Fraction forms,
+and the exact packed-affine-map hash are saved.  SCS's off-diagonal sqrt(2)
+packing is a numerical serialization only, not part of rational semantics.
+The complete packed map was checked on the old exact point before solving.
+
+cover_dynamic_sector_full_cone.py made one SCS 3.3.1 call, with 45 seconds
+and 10,000 iterations as hard configured limits.  It returned solved in
+425 iterations and about 1.66 seconds:
+
+  energy slack hint        1.0424e-14,
+  worst linear slack      -3.0604e-9,
+  min old-cone eigenvalue   .0041754788,
+  min dynamic eigenvalue   .0023863443.
+
+These are floating diagnostics.  No rational projection or feasibility
+certificate for the enlarged model has been attempted.  As there was no
+positive exclusion margin, no dual rationalization, LP polish, additional
+SCS call, or refinement was performed.  The experiment stops here.
+Nonfinite SCS diagnostic fields such as its unused infeasibility residual
+are saved as the string "NaN"; the new receipt is valid strict JSON and
+contains no nonfinite numeric tokens.  It is still discovery data only.
+
+The useful mathematical result is the dynamic necessary cone and its exact
+separation from the old model.  This stronger model has not yet closed the
+global floor gap, and no new unconditional zero-proportion result follows.
+
+Reproduction
+------------
+  python -S -B -X utf8 research-goal-20261016/cover_dynamic_sector_static.py
+  python -S -B -X utf8 research-goal-20261016/cover_dynamic_sector_replay.py
+  python -B -X utf8 research-goal-20261016/cover_dynamic_sector_full_cone.py
+
+Outputs are protected against overwriting.  The SCS command requires the
+already installed local discovery runtime and is not needed for the pure
+stdlib replay.  The companion manifest pins this package and all direct
+and previously frozen transitive source dependencies, without changing the
+5995..., 26c0..., or scalar-transfer 240f... packages.

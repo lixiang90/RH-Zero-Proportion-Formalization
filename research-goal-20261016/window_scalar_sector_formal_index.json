@@ -1,0 +1,99 @@
+{
+  "scope": "Freeze the ordinary-kernel dynamic scalar-sector bridge.\n\nThis core retains the actual displacement squared. Curvature and point-slope\nbounds remain explicit hypotheses; it supplies no new numerical exclusion or\nglobal zero-proportion theorem.\n",
+  "module": "StructuralGoal20261016.WindowScalarSector",
+  "source": "StructuralGoal20261016/WindowScalarSector.lean",
+  "source_sha256": "6853994bf0371136d43ea2e7b34c9badb2caa851673ffd182b27b46d48f5a32b",
+  "source_bytes": 3120,
+  "log": "research-goal-20261016/lean_WindowScalarSector_6853994bf037.log",
+  "log_sha256": "8743756258b147f9e3cd9ba2a53985eed0a61130f8c152f2d5fb926479a21b5d",
+  "olean_sha256": "ad4f0a75b1dc4c1a32bb01088d70690417e1d1f8c5243db7dc3dee9e77c8c277",
+  "whole_process_seconds": 41.21194970000215,
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "canonical_receipt": "research-goal-20261016/lean_verification.json",
+  "receipt_record": {
+    "module": "StructuralGoal20261016.WindowScalarSector",
+    "source_sha256": "6853994bf0371136d43ea2e7b34c9badb2caa851673ffd182b27b46d48f5a32b",
+    "source_unchanged": true,
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu",
+      "--exec",
+      "/usr/bin/prlimit",
+      "--stack=268435456:268435456",
+      "--",
+      "env",
+      "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+      "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "-M13500",
+      "--tstack=262144",
+      "-DrelaxedAutoImplicit=false",
+      "-R",
+      "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+      "-o",
+      "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowScalarSector.olean",
+      "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowScalarSector.lean"
+    ],
+    "exit_code": 0,
+    "whole_process_seconds": 41.21194970000215,
+    "duration_clock": "monotonic",
+    "log": "lean_WindowScalarSector_6853994bf037.log",
+    "log_sha256": "8743756258b147f9e3cd9ba2a53985eed0a61130f8c152f2d5fb926479a21b5d",
+    "passed": true,
+    "synchronous_elaboration": true,
+    "olean_sha256": "ad4f0a75b1dc4c1a32bb01088d70690417e1d1f8c5243db7dc3dee9e77c8c277"
+  },
+  "roots": [
+    {
+      "name": "StructuralGoal20261016.WindowScalarSector.secant_abs",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowScalarSector.square_from_abs",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowScalarSector.actual_square",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowScalarSector.residual_cut",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "proof_modules": 1,
+  "ordinary_Lean_passed": true,
+  "all_current_sources_and_logs_verified": true,
+  "frozen_dependency_index": "research-goal-20261016/window_bregman_core_formal_index.json",
+  "frozen_dependency_index_sha256": "188b8897808fe90d9984002a887e4a3d2b8ca91272c6858ba93f678e2e9fc16d",
+  "analytic_hypotheses": [
+    "f is the actual WindowKernel.w 24 WindowKernel.d24.",
+    "p and x lie in the certified closed interval; m < M.",
+    "m <= actual w-second <= M holds throughout that interval.",
+    "For actual_square: |actual w-first(p)-S| <= E and tau > 0.",
+    "residual_cut requires an upper bound on the actual residual square."
+  ],
+  "retains_dynamic_displacement_squared": true,
+  "new_actual_local_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "independent_Nanoda_replayed": false,
+  "script_sha256": "2399f6b7f524628144452e0195f393966b64a525ecb8f3042eb3b54e442a6c83"
+}

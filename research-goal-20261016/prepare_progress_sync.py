@@ -172,14 +172,31 @@ def main():
       ('window-kkt-projection-variance-files.json','26c0d0254793324ddddf042fbc26d6787ac0db843d8c882031e428a0ea69d640'),
       ('lean_leaf_pilot_sync_files.json','42bbd464797d35b25c81b7ba69145af6d0ae83c16a6b0d5a889ed592d2226b9a'),
       ('window_bregman_core_sync_files.json','136c833c4bc76353ff6b092665f49da87644a4769eba7278ecf6edd32aa3ec9e'),
-      ('cover-residual-psd-rational-files.json','5995d2ba510e40e31edbd17d3337a4f39c89acc62e209c016b0d584464714c6b')]:
+      ('cover-residual-psd-rational-files.json','5995d2ba510e40e31edbd17d3337a4f39c89acc62e209c016b0d584464714c6b'),
+      ('lean_leaf_batch_sync_files.json','e814c478d4f9f8d35026a3f1b3fa69e57873b5d34c498464f0cf9f421c2a8b49'),
+      ('lean_aux127_sync_files.json','73381a7c26f11a36b9749a8078adb9e35d7e2d4bcf3964bdf58be2cd74e8b606'),
+      ('cover-sqlite-real-node-files.json','9098f8da0b31609d5ae352ceb165099c8f9e6606f6c4fbb011ff6dd61adaa4ec'),
+      ('window-kernel-transfer-files.json','240f532c0b4752dd4a779e56a168ffed1b25369a21de9fe9b8d693aa3b120564'),
+      ('window-embedded-old-ledger-files.json','e0709586f2b36241ce6a42482225bc281ccec254e440b3e59dbadc569d473334'),
+      ('cover-sqlite-campaign133004-files.json','75db72c3932e479f75f6126cc5c76694492f339f6ad9f31dad7d1e0ee4e26c0e'),
+      ('cover-dynamic-sector-files.json','7ae3208f705a7fec9ca0796ff47f7c23426356c7b140e6920933be8048e28922'),
+      ('cover-joint-jet-hessian-files.sha256.json','a582d06fd30a88b9756711ec5f3e0ac4a9c150d1c258f304ad885917601b21e2'),
+      ('window_scalar_sector_sync_files.json','ac8b344e559c5b3b7006787366019cb4aea05242cb014782205fc6bd89265017')]:
         manifest=HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
         rows=pinned.get('files',pinned.get('package_files'))
+        if rows is None and 'files_sha256' in pinned:
+            rows=[{'path':path,'sha256':digest,'bytes':(ROOT/path).stat().st_size}
+                  for path,digest in pinned['files_sha256'].items()]
+            replay=json.loads((HERE/'cover-joint-jet-hessian-replay.json').read_bytes())
+            assert replay['inputs_unchanged'] and replay['input_sha256_start']==replay['input_sha256_end']
+            for path,digest in replay['input_sha256_end'].items():
+                assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
+                files.append(path)
         if isinstance(rows,dict):
             rows=[dict(row,path='research-goal-20261016/'+path) for path,row in rows.items()]
-        rows=rows+pinned.get('frozen_input_files',[])+pinned.get('SCS_discovery_sources_unchanged',[])
+        rows=rows+pinned.get('frozen_input_files',[])+pinned.get('SCS_discovery_sources_unchanged',[])+pinned.get('dependencies',[])
         for path,digest in pinned.get('dependency_sha256',{}).items():
             assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
             files.append(path)

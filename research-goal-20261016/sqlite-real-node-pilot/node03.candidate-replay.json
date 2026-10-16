@@ -1,0 +1,21 @@
+{
+  "scope": "Independent per-node mathematics and <=4-node SQLite journal replay.\n\nUses the frozen independent OBBT/Newton/flow/scalar verifiers, not producer\nselection or optimization. Baseline frontier is a conditional starting\nboundary: the132000-node historical baseline is not semantically replayed\nhere. Check candidate before commit and all committed transitions afterward.\n",
+  "script_sha256": "748eb1c9f08790c8676caa6d4d3e312329a864586455311307743eb67a0008f2",
+  "passed": true,
+  "candidate_only": true,
+  "result": {
+    "candidate_sha256": "9f3d69a17ea8dbe37831fd8110b5915a6420f0b73ab6e01c87be4642c21255f3",
+    "result": {
+      "OBBT_bounds": 0,
+      "Newton_steps": 0,
+      "implicit_empty_children": 0,
+      "resolution": "value",
+      "children": []
+    }
+  },
+  "historical_baseline_semantic_replay": false,
+  "actual_Lean_new_node_theorems_compiled": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 1.8300195000047097
+}

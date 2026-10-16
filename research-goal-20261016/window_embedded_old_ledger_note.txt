@@ -1,0 +1,40 @@
+Ten-point ledger made only from old nine-point certificates
+2026-10-17
+
+This bounded experiment keeps the already formalized old kernel. For each
+deleted vertex k in a ten-point ordered configuration, apply the old
+nine-point floor to the remaining points. Any nonnegative weights lambda_k
+give an exact global floor c_old*sum(lambda), with the pair and pressure
+ledger equal to the same weighted sum of the ten embeddings. Every old
+gap is a sum of nonnegative new gaps, so this step has no analytic gap.
+
+The actual WCert.Adm condition is rank-by-rank pair mass at most two.
+For this certificate class it is a nine-constraint, ten-variable LP.
+The pressure cost B_k is known exactly for every embedding. To reach
+K = current website record + 1/100000, one needs
+
+  sum_k lambda_k*(K*c_old-B_k) >= K-H_old,
+
+with the positive denominator 1-c_old*sum(lambda). The total pair-mass
+capacity also implies that denominator is positive for every admissible
+mixture, as checked exactly in the independent replay.
+
+The numerical selector returned a single endpoint embedding of weight
+one, giving the original ratio 67.3581220659004 percent. This is below the
+website record, and introduces no new bound. A second solve of the same
+fixed instance was used only to extract a dual hint. After nonnegative
+rational rounding and exact repair, all ten dual column inequalities are
+true. Its objective upper bound is strictly less than K-H_old, by about
+0.0000100003474. Thus no admissible nonnegative mixture of these ten old
+certificate embeddings reaches the requested target.
+
+The certificate and a separate standard-library-only replay are in
+window-embedded-old-ledger-dual.json and
+window_embedded_old_ledger_replay.py. The latter does not import an LP
+solver or the producer. All coefficient and ratio arithmetic is rational.
+This excludes one specified construction class. It does not exclude new
+ledgers with new analytic input, larger blocks, adaptive arguments, or
+the actual W10 energy-floor candidate.
+
+No new Lean theorem, unconditional zero-proportion improvement, completed
+root cover, or website-ready submission is claimed by this package.

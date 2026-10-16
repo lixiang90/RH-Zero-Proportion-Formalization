@@ -1,0 +1,128 @@
+JOINT FIRST/SECOND DERIVATIVE GRAPH + FULL HESSIAN: LIMITED CASE-0 PILOT
+2026-10-17. One cell, one solver call, no Lean, no cover expansion.
+
+Outcome and precise scope
+-------------------------
+On original remaining-six case 0, path r001000001000100110011001, target
+11/1250, the one permitted SCS run found essentially zero energy slack.
+It gives no positive exclusion hint. More decisively, a pure rational
+static check extends the already frozen exact 464-variable relaxation
+vector through ALL 6075 new graph facets and the full 9x9 Hessian cone.
+This is an obstruction to this specified finite outer relaxation. It is
+not an actual Fw sublevel counterexample, nor a claim that every joint
+graph or higher-order method fails. In particular, finite rounded facets
+need not describe the complete convex hull of the exact derivative curve.
+
+The new replay checks the newly added constraints. It pins and references
+the separate frozen baseline certificate, which checks 43306 rational
+rows, 464 boxes, 90 first/mixed KKT equalities, and 41 residual 11x11 PSD
+blocks. Those old checks are not executed again by this new replay.
+Their exact feasible vector already satisfies both energy rows with zero
+energy slack. Thus feasibility for this combined finite model follows by
+combining that prior certificate with the extension verified here; no
+SCS primal is used for this composition.
+
+Mathematical assumptions
+------------------------
+Let f=w24,d24, u_e=f'(s_e), v_e=f''(s_e), and c_e be the incidence vector
+of the consecutive gap coordinates i,...,j-1 for edge e=(i,j). The exact
+weights a_e are positive. At a global orthant minimizer with every gap
+strictly above sep, every real direction d has
+
+  d^T H d = sum_e a_e v_e (c_e^T d)^2 >= 0,
+  H = sum_e a_e v_e c_e c_e^T.
+
+WindowSecondVariation.curvature_nonneg_of_relevant proves this actual
+second-variation condition. The first nine lower cell bounds are strictly
+above the original separation constraint, so no artificial cell boundary
+is treated as a feasible-domain boundary. The linear pressure has zero
+Hessian. WindowSecondVariation.w2_eq_actual identifies the scalar v with
+the actual second derivative. No extra positional exclusion is assumed.
+
+Exact graph facets
+------------------
+The existing newjet u-grid and SecondOracle v-grid use the same 1/64
+intervals. For an intersected grid box write
+
+  s in [a,b]/SC, u in [L,U]/DS, v in [J,K]/DS,
+  SC=32768, DS=10^15.
+
+The v-grid is independently recomputed from the frozen rational interval
+Taylor coefficients of u: interval Horner evaluation of its derivative
+on the same grid, enlarged by (44/7)^24*(1/2)^22/22!. The replay checks
+658 distinct v-grid intervals, all 1453 edge/grid rectangles, and their
+identity with the saved boxes. Existing newjet coefficients and their
+analytic derivative-remainder premises are inherited unchanged.
+
+A floating 3D ConvexHull of the eight physical-coordinate box corners
+only suggests outward normals. Each normal is rounded to integer n with
+maximum proposed scale 10^6 and divided by its positive gcd. Six signed
+coordinate normals are included. For every such integer n=(ns,nu,nv),
+the exact intercept numerator is
+
+ C = max_boxes { ns*X*DS + SC*(nu*Y + nv*Z) },
+ X=b if ns>=0 else a; Y=U if nu>=0 else L; Z=K if nv>=0 else J.
+
+The valid affine constraint is
+
+  ns*s + nu*u + nv*v <= C/(SC*DS).
+
+The maximum is recomputed over every rectangle, not just hull vertices,
+after rounding the normal. The replay independently repeats the maximum
+over all eight corners of every rectangle. No floating hull intercept is
+trusted. There are 6075 distinct edge facets, of which 4047 have both
+nu != 0 and nv != 0. No RLT products involving the new v are introduced.
+
+Bounded numerical diagnostic
+----------------------------
+The old 464 variables, two energy packets, and 41 normalized residual PSD
+blocks are retained. Add 41 v variables and one nonnegative energy-slack
+variable: 506 total. The residual affine-map serialization is identical
+to the frozen full-cone baseline. The new Hessian cone is 100*H >= 0;
+the positive fixed scaling does not change feasibility. Its 45 packed
+entries were compared with a direct physical Hessian formula.
+
+Exactly one SCS 3.3.1 call, requested limits 45 seconds / 10000 iterations:
+  status solved; 475 iterations; solver solve_time 1.2233743 seconds;
+  raw physical energy slack 1.1470969655737104e-12;
+  minimum scaled linear slack -2.7788756445999534e-8;
+  minimum residual-block eigenvalue hint 0.0009673295913397984;
+  minimum physical Hessian eigenvalue hint 0.025163723870254923.
+
+These are floating hints, with the displayed row violation explicitly
+retained. No second solve, dual extraction, new cell, or actual point was
+run. The JSON's NaN entries are only SCS's undefined diagnostic fields.
+
+Rational extension of the frozen vector
+--------------------------------------
+Fix s and u from the frozen exact 464-vector. Each new facet becomes an
+affine upper/lower bound on its one v_e (or a satisfied v-free row).
+Every edge has a nonempty rational interval [lo_e,up_e]. Choose v_e=up_e.
+Every saved facet is then checked exactly. Because a_e>0 and c_e c_e^T
+is PSD, H is monotone in each v_e in the Loewner order. Thus this is also
+the largest Hessian available inside these per-edge facet intervals for
+the fixed old (s,u). This choice is deterministic, not an optimization.
+
+The resulting physical H has an exact rational unit-lower LDL^T
+factorization with nine strictly positive pivots. Decimal displays only:
+ .2317864279784401, .45776504008479585, .8535636489032536,
+ 1.0095832556105373, 1.037540861295814, .8109481350146175,
+ .11778052703386604, .10037266580296728, .03306544048939844.
+
+The replay stores the exact rational v vector, L, and positive diagonal;
+it verifies all 81 H=LDL^T entries. Hence the newly added Hessian cone is
+strictly positive at this outer-relaxation extension. The earlier trial
+of interval midpoints was not positive definite and is not the witness.
+Old position variances remain nonzero: no claim identifies this lifted
+vector with actual products or an actual kernel configuration.
+
+Read-only replay command, from repository root
+----------------------------------------------
+  python research-goal-20261016/cover_joint_jet_hessian_replay.py
+
+It imports only the standard library and does not invoke a solver or
+overwrite an artifact. --write-receipt is solely for initial generation
+at an absent receipt path. The pilot producer is single-use and guards
+against overwriting its saved experiment. Its saved run is frozen; do not
+rerun the solver. The accompanying sha256 manifest pins source, output,
+replay, receipt, and this note. No frozen earlier file was changed.

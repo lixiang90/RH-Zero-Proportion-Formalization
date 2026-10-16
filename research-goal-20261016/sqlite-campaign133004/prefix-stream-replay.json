@@ -1,0 +1,45 @@
+{
+  "scope": "Resident independent candidate/commit gate and streaming1004-node replay.\n\nKeeps one fixed exact-checking context, an ordered frontier and counters.\nNo historical record list is accumulated. Reuses frozen independent node\nmathematics. Checks each transaction's complete units and expected delta;\na fresh final process streams the whole new journal from the old boundary.\n",
+  "source_sha256": "0fe611a7137db96d4bb425d02e1931e2dbe2c56deaf53d1385022ed763e78905",
+  "passed": true,
+  "journal_nodes_replayed": 4,
+  "new_campaign_nodes": 0,
+  "totals": {
+    "nodes": 4,
+    "OBBT_bounds": 15,
+    "Newton_steps": 0
+  },
+  "resolution_counts": {
+    "branch": 1,
+    "stationary": 1,
+    "value": 2
+  },
+  "first_actual_Newton": null,
+  "final_state": {
+    "accepted_count": 65991,
+    "checked": 132004,
+    "contraction_paths": 23112,
+    "contraction_steps": 125968,
+    "counts": {
+      "Gram": 0,
+      "reflection": 1173,
+      "stationary": 45079,
+      "stationary_empty": 0,
+      "sublevel_empty": 0,
+      "value": 19739
+    },
+    "maxdepth": 47,
+    "sublevel_bounds": 996448,
+    "sublevel_contraction_paths": 89307,
+    "unresolved_count": 23
+  },
+  "journal_head": "6f5a4c0fd8426ce53145ad3be22f2e60ea18697fb484ac540f5ed9f83e09dff0",
+  "checker_RSS_bytes": 138133504,
+  "records_list_accumulated": false,
+  "all_OBBT_Newton_resolutions_children_and_hashes_checked": true,
+  "historical_baseline_semantic_replay": false,
+  "full_budget_search_started": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 2.6097571999998763
+}

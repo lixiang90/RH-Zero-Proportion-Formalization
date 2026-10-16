@@ -1,0 +1,250 @@
+Affine kernel-floor transfer: a static feasibility design and a rigorous obstruction
+2026-10-17
+
+Scope
+-----
+This note examines a way to reuse an already unconditional nine-point local
+floor, rather than prove another nine-dimensional minimizer cover.  It gives
+the precise semi-infinite LP interface and proves that its natural unscaled,
+edgewise-affine version is too weak for the frozen new 24-mode window.  This is
+a limitation of a certificate class, not a counterexample to the desired
+actual local floor, and not an upper bound on any actual zeta-zero density.
+No optimizer, Lean, or global cover was invoked for this audit.
+
+The earlier exact residual-PSD relaxation obstruction is a separate sealed
+package, manifest SHA256
+5995d2ba510e40e31edbd17d3337a4f39c89acc62e209c016b0d584464714c6b.
+Nothing in that package or the preceding 26c0d025... package was modified.
+
+1. Which old result and which kernels?
+-----------------------------------
+The locally completed unconditional result is GramDefect20261015/Final.lean.
+Its four final counting theorems call RiemannFail.cert_AM, W9_adm, W9_B, and
+the sharp window bound.  The floor theorem is for every nonnegative vector
+of eight gaps, not just a bounded domain or a conditional minimizer:
+
+  F_old(h) >= c_old = 859538525913875481/10^20,
+  B_old = sum b_old = 437688/10^8,
+  b_old[3] = b_old[4] = 19037/25000000.
+
+The full counting ratio is about 67.3581220659%, below the archived website
+attempt-024 record.  The exact locally completed window floor is
+6721684105641188747759983512104999330646/10^40.
+
+The locally archived primary source for attempt-024 is
+research-20261016-w10-cert/current-record-source.txt, GitHub blob
+fe197ef0eeb3109b74d38e6d635b72169a59cc47 at website commit
+9e6ca6615b9dbfec4a1d722995cff0ffe3abf9bb.  Its accepted rational score is
+
+  R_site = 34191001116882886388531117129201664 /
+           50760020691785094633026544189453125
+         = 0.67358130770849... .
+
+This is an archived source, not a fresh claim about the live leaderboard.
+Its old nine-point ledger differs slightly from the local one:
+
+  c_site = 72086209857930095324931/8388608000000000000000000,
+  B_site = 437542/10^8,
+  b_site[3] = b_site[4] = 38049/50000000.
+
+current-record-review.json records byte identity of 18 kernel/analytic
+definitions between that source and the frozen local Core.  This audit
+checks the referenced source hashes and the equality of all 13 old profile
+coefficients.  It does not re-run the website proof in Lean.
+
+Both old sources use the same normalized cosine-profile kernel
+
+  v_old(t) = cos(sqrt(2)*t) + sum_(j=1..12) c_j cos(2*pi*j*t),
+  k_old(x) = integral_[-1/2,1/2] v_old(t) cos(2*pi*x*t) dt / Z,
+  w_old(x) = k_old(x)^2,
+  Z = sin(sqrt(2)/2)/(sqrt(2)/2).
+
+The new frozen profile has the same base term and normalization Z, but 24
+cosine coefficients, from window_reweight_rational.json.  It therefore
+has a different k_new and w_new.  Its ten-point ledger has
+
+  B_new = 11055671/2500000000 = .0044222684,
+  b_new[4] = 182571/250000000 = .000730284,
+  H_new = 1680240849522559118481248059191797347567 /
+          2500000000000000000000000000000000000000.
+
+The difficult separated domain is g_r >= s = 123/128, r=0,...,8.  The old
+floor remains applicable there because merged old gaps are nonnegative.
+The exact floor needed merely to match the archived website ratio is
+
+  c_required = 1 - (H_new-B_new)/R_site
+             = .0087698934514200602896507274547... .
+
+The candidate floor 11/1250 is .0088 and the more ambitious frozen proposal
+221/25000 is .00884.  Both exceed c_required.  Neither is concluded here.
+
+2. Exact transfer interface
+---------------------------
+For a new edge e=(i,j), put v_e[r]=1 if i<=r<j, zero otherwise, and
+x_e=v_e dot g.  Let a_e be its frozen new weight.  There are ten ordered
+nine-point subconfigurations of ten points: delete one vertex d, d=0,...,9.
+For such a deletion let p_d be the old pressure vector expressed in the nine
+new gaps, and let A_(d,e) be the old weight transported to the new edge e.
+The actual old floor gives
+
+  p_d dot g + sum_e A_(d,e) w_old(x_e) >= c_old.
+
+Select nonnegative multipliers lambda_d.  Write
+alpha=sum_d lambda_d and A_e=sum_d lambda_d A_(d,e).  An affine edgewise
+transfer certificate consists of rational q_e, d_e, and rho_r such that
+
+  a_e w_new(x) + q_e*x >= A_e w_old(x) + d_e
+       for every x >= (j-i)*s,                              (T1)
+  b_new - sum_d lambda_d p_d - sum_e q_e v_e = rho,          (T2)
+  lambda_d >= 0, rho_r >= 0.                               (T3)
+
+Then exact summation, followed by the old floor and g_r>=s, proves
+
+  F_new(g) >= alpha*c_old + sum_e d_e + s*sum_r rho_r.      (T4)
+
+Thus the natural search is a semi-infinite LP: maximize (T4), with one
+univariate nonnegativity family (T1) per new edge.  A proposed rational
+solution could be audited through interval/envelope univariate proofs and
+a tail bound.  No nine-dimensional cover is needed if this LP succeeds.
+
+The data also show that omitting q_e and simply requiring coefficientwise
+domination cannot transfer any positive copy of any one deletion: every
+one of the ten deletions transports at least one strictly positive old
+weight onto a zero new weight.  All ten lists of these holes are recorded
+in window-kernel-floor-transfer-design.json.  This observation alone would
+not exclude a compensated certificate (T1)-(T3); the next argument does.
+
+3. Root/pressure upper bound on the whole certificate class
+----------------------------------------------------------
+Lemma.  Suppose w_new,w_old are nonnegative continuous functions tending
+to zero at positive infinity.  Suppose for each new edge rank r=1,...,9
+there is a zero z_r of w_new in [r*s,C*r], where C>=s.  Every transfer
+certificate (T1)-(T3) obeys
+
+  alpha*c_old + sum_e d_e + s*sum_r rho_r
+    <= alpha*c_old + C*(B_new-alpha*B_old).                 (U)
+
+Proof.  In (T1) let x tend to positive infinity.  If q_e<0 the left side
+minus the old kernel term tends to negative infinity, contradicting the
+finite d_e.  Hence q_e>=0.  At x=z_(j-i), new energy vanishes and the old
+term is nonnegative; thus
+
+  d_e <= q_e*z_(j-i) - A_e*w_old(z_(j-i))
+      <= C*(j-i)*q_e.
+
+Sum (T2) over the nine coordinates.  Since sum_r v_e[r]=j-i,
+
+  sum_e (j-i)*q_e = B_new - sum_d lambda_d*sum_r p_d[r]
+                              - sum_r rho_r.
+
+Deleting an interior point merges two gaps: the old pressure on that old
+gap is charged to two new gaps.  Consequently sum_r p_d[r]>=B_old, with
+equality for either endpoint deletion.  It follows that sum_e d_e plus
+s*sum rho is at most
+
+  C*(B_new-alpha*B_old) - (C-s)*sum rho
+    <= C*(B_new-alpha*B_old).
+
+This proves (U).  It permits arbitrary real/rational d_e and arbitrary
+univariate proofs of (T1).  It does not rely on a sampled LP optimum.
+
+Every deletion has p_d[4]=b_old[3]=b_old[4]: central new gap 4 belongs to
+old gap 3 if the deleted vertex is on its left, or old gap 4 otherwise.
+Since q_e>=0 and rho>=0, coordinate 4 of (T2) implies
+
+  alpha <= b_new[4]/b_old[3].                              (A)
+
+For both old ledgers c_old-C*B_old>0.  Substitution of the maximal alpha
+from (A) into (U) is therefore a valid upper bound for every certificate.
+Notice that old energies and most coordinate pressure constraints were
+dropped to derive it.  Restoring them can only lower the upper bound.
+
+The finite sinc-sum identity gives k_new(x)=O(1/x) as x tends to infinity,
+and likewise for k_old.  Their squares satisfy the required decay and
+nonnegativity.  A rational interval audit supplies the zero-existence
+inputs with C=11/10.  For each rank r it evaluates k_new at
+
+  left_r = max(r*123/128, r-1/10), right_r = r+1/10.
+
+The two endpoint enclosures have strictly opposite signs for all r=1,...,9.
+These endpoints lie in [r*s,C*r].  Continuity and IVT therefore give the
+roots.  The audit uses 18 exact rational endpoint computations, not a root
+optimizer.  The interval implementation uses Machin's arctangent identity,
+alternating-series atan bounds, a Taylor sin enclosure after range reduction,
+and an integer-square-root enclosure.  The chosen integer for range
+reduction can be selected by a float because the full reduced rational
+interval is subsequently checked; no rounding decision is trusted.
+The actual integral/sinc identity and those standard analytic interval
+facts are explicit analytic inputs.  They were not newly checked in Lean.
+
+4. Quantitative outcome
+-----------------------
+With the locally formalized old floor:
+
+  alpha <= 182571/190370 = .959032410568892157...,
+  transfer floor <=
+    161632154665702160441651/19037000000000000000000000
+    = .008490421529952311837... .
+
+Even using the archived website's better old ledger:
+
+  alpha <= 60857/63415 = .959662540408420720...,
+  transfer floor <=
+    4517641103805188655989325867/531963576320000000000000000000
+    = .008492388022234861600... .
+
+Both are strictly below c_required by more than .0002775.  Substituting
+these method ceilings in the counting formula with the frozen H_new would
+give at most 67.3391448663% and 67.3392784224%, respectively.  These are
+ceilings on what this transfer proof can report with the frozen H bound,
+not upper bounds on the actual zero proportion or actual F_new minimum.
+
+Mixtures of the two old ledger families cannot improve this ceiling.
+Their objective contributions above C*B_new are
+lambda_t*(c_t-C*B_t), while the same central budget is
+sum_t lambda_t*b_t[3]<=b_new[4].  Hence use the larger ratio
+(c_t-C*B_t)/b_t[3]; its maximum is the archived website family.  The mixed
+ceiling is therefore the same .008492388022234861600... .
+
+5. Remaining variants and why no optimization was launched
+----------------------------------------------------------
+This obstruction excludes the unscaled old-kernel comparison w_old(x),
+all ten delete-one subconfigurations, their nonnegative combinations,
+arbitrary affine edge payments, arbitrary constant edge floors, and a
+nonnegative unused pressure residue.  Merely improving the univariate
+interval tables or selecting a different LP solver cannot bypass (U).
+
+It does not exclude a genuinely different comparison.  For example apply
+the old floor to scaled configurations t*D_d(g).  Then the old kernel is
+w_old(t*x) and old pressure is t*p_d.  Dropping the old root penalties as
+above gives the optimistic bound
+
+  U(t)=C*B_new + (b_new[4]/b_old[3])*(c_old/t-C*B_old).
+
+A necessary condition for this loose upper bound to reach c_required is
+t<=.9672086190... locally, or t<=.9674450555... for the website ledger.
+These are necessary, not sufficient, and not a discovery of a transfer:
+at a new-kernel zero, w_old(t*z_r) is generally positive and imposes the
+additional negative payments that (U(t)) deliberately discarded.  Testing
+scaled comparisons would require new uniform univariate inequalities; no
+such optimization or claim is made in this task.
+
+Comparisons restricted to an already proved compact sublevel domain can
+also escape the q_e>=0 tail argument.  They must explicitly use the new
+global pressure constraint or upper gap bounds, and pay the resulting
+signed linear residues.  Coupled multi-span inequalities or a nonlinear
+telescoping potential can use additive geometry absent from (T1).  None
+is supplied here.  The current result instead shows a concrete reason why
+the most direct scalar kernel-majorization transfer cannot replace the
+missing whole-domain proof for this new window.
+
+Reproduction
+------------
+  python -S -B -X utf8 research-goal-20261016/window_kernel_floor_transfer_design.py
+
+The output JSON records all 18 rational endpoint enclosures, both exact
+old ledgers and their ten pressure embeddings, all zero-weight holes,
+the exact method ceilings and required threshold, and start/end matching
+SHA256 hashes of the driver and seven frozen inputs.  It contains no NaN
+or infinite values.  The existing SCS discovery files and sealed exact
+relaxation certificates were not inputs to this transfer design.

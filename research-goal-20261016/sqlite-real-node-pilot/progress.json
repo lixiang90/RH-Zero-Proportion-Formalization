@@ -1,0 +1,417 @@
+{
+  "scope": "At most4 real nodes on a fresh SQLite backup; no full search/resume.\n\nThe frozen compact producer's mathematical call order is copied. Historical\nwitnesses are not loaded: only metadata/runtime/frontier and2540 supports.\nEvery candidate must pass the independent node mathematics before commit;\nafter commit the complete short journal is independently replayed before\nanother node may start. All authoritative mutations use append_node.\n",
+  "pilot_PID": 32996,
+  "nodes_limit": 4,
+  "records": [
+    {
+      "node": 1,
+      "path": "r0010001000000100000101001101111010110101",
+      "packet_sha256": "79845084d7614ed18cb7777c1d3f46dc685b7b4d037ce6d5e47fe4479cd7d2eb",
+      "resolution": "branch",
+      "leaf_kind": null,
+      "OBBT_bounds": 15,
+      "Newton_steps": 0,
+      "new_supports": 0,
+      "candidate_math_replay": {
+        "receipt": "node01.candidate-replay.json",
+        "sha256": "08cc25a08ccacd90d0ea6acf1512796666b67085715d500c47f382e3fc788e38",
+        "seconds": 1.9682908999966457
+      },
+      "commit": {
+        "sequence": 1,
+        "commit": "ea23e29ab299893a82086833d4c653adaac34332259875ac9caf39ca4fed4dfe",
+        "frontier_sha256": "f481868b0e87e3f5a28836b3b267b2f269d690407c2c47eea56ab054653217d9",
+        "state": {
+          "accepted_count": 65988,
+          "checked": 132001,
+          "contraction_paths": 23112,
+          "contraction_steps": 125968,
+          "counts": {
+            "Gram": 0,
+            "reflection": 1173,
+            "stationary": 45078,
+            "stationary_empty": 0,
+            "sublevel_empty": 0,
+            "value": 19737
+          },
+          "maxdepth": 47,
+          "sublevel_bounds": 996448,
+          "sublevel_contraction_paths": 89307,
+          "unresolved_count": 26
+        },
+        "mathematical_node_soundness_checked": false
+      },
+      "whole_short_journal_math_replay": {
+        "receipt": "node01.journal-replay.json",
+        "sha256": "88d9eba0bfc82ee612084a49ac024c9797170eaada2170f93087a23295b86a4a",
+        "seconds": 1.980006300000241
+      },
+      "seconds": 14.208034500006761
+    },
+    {
+      "node": 2,
+      "path": "r00100010000001000001010011011110101101010",
+      "packet_sha256": "333c71e358c9331e4545b1c8365f8b2ab173c8037574b9d575e1e98d586aa060",
+      "resolution": "leaf",
+      "leaf_kind": "stationary",
+      "OBBT_bounds": 0,
+      "Newton_steps": 0,
+      "new_supports": 0,
+      "candidate_math_replay": {
+        "receipt": "node02.candidate-replay.json",
+        "sha256": "80c4c5f08ab9601cb4aa9526ff0bf8307f8f26c6f147134bb664dc0c556220a5",
+        "seconds": 1.3972625999958836
+      },
+      "commit": {
+        "sequence": 2,
+        "commit": "8a06c613d4d6c7f0440c8b3fa3baad397cb5894792fb073305662b4c0020a1a6",
+        "frontier_sha256": "2fd83a58aead7308c107747e90d746ce8750301ac1d6f4f4838c6516a10f3fda",
+        "state": {
+          "accepted_count": 65989,
+          "checked": 132002,
+          "contraction_paths": 23112,
+          "contraction_steps": 125968,
+          "counts": {
+            "Gram": 0,
+            "reflection": 1173,
+            "stationary": 45079,
+            "stationary_empty": 0,
+            "sublevel_empty": 0,
+            "value": 19737
+          },
+          "maxdepth": 47,
+          "sublevel_bounds": 996448,
+          "sublevel_contraction_paths": 89307,
+          "unresolved_count": 25
+        },
+        "mathematical_node_soundness_checked": false
+      },
+      "whole_short_journal_math_replay": {
+        "receipt": "node02.journal-replay.json",
+        "sha256": "7e5b0187eeb92d9e62cfdcba78c732bfc21df587b4525c393d0eba8317810bdc",
+        "seconds": 2.008987500004878
+      },
+      "seconds": 9.124707099996158
+    },
+    {
+      "node": 3,
+      "path": "r00100010000001000001010011011110101101011",
+      "packet_sha256": "9f3d69a17ea8dbe37831fd8110b5915a6420f0b73ab6e01c87be4642c21255f3",
+      "resolution": "leaf",
+      "leaf_kind": "value",
+      "OBBT_bounds": 0,
+      "Newton_steps": 0,
+      "new_supports": 0,
+      "candidate_math_replay": {
+        "receipt": "node03.candidate-replay.json",
+        "sha256": "8211257b8393ef3f049d061383ae23f4e1705c2c8b07537a4908daf2e9d98c08",
+        "seconds": 1.8300195000047097
+      },
+      "commit": {
+        "sequence": 3,
+        "commit": "882d09da7a513a635ae6cd5f246e618c96fc02a00dd7eeb2d15d23ec264976de",
+        "frontier_sha256": "09f60d5e954fc4fb22be2a5d16db8e798cee6eb71dfcbe7f6a33b6706ad225f1",
+        "state": {
+          "accepted_count": 65990,
+          "checked": 132003,
+          "contraction_paths": 23112,
+          "contraction_steps": 125968,
+          "counts": {
+            "Gram": 0,
+            "reflection": 1173,
+            "stationary": 45079,
+            "stationary_empty": 0,
+            "sublevel_empty": 0,
+            "value": 19738
+          },
+          "maxdepth": 47,
+          "sublevel_bounds": 996448,
+          "sublevel_contraction_paths": 89307,
+          "unresolved_count": 24
+        },
+        "mathematical_node_soundness_checked": false
+      },
+      "whole_short_journal_math_replay": {
+        "receipt": "node03.journal-replay.json",
+        "sha256": "4c1d8386cc4496b9fb98bf4ed786f050a87e3326c6dd12bedb64341b227286b5",
+        "seconds": 2.300451899995096
+      },
+      "seconds": 9.973273299998255
+    },
+    {
+      "node": 4,
+      "path": "r001000100000010000010100110111101011011",
+      "packet_sha256": "4e6185484128805b274e5049a8b420b79bbc957dcc23047ad08f8ad8c1b9867e",
+      "resolution": "leaf",
+      "leaf_kind": "value",
+      "OBBT_bounds": 0,
+      "Newton_steps": 0,
+      "new_supports": 0,
+      "candidate_math_replay": {
+        "receipt": "node04.candidate-replay.json",
+        "sha256": "908d2fac3ef78835604561a3a9cab798f37bab24d3c33a70f169da09062af9c1",
+        "seconds": 1.8730297000001883
+      },
+      "commit": {
+        "sequence": 4,
+        "commit": "6f5a4c0fd8426ce53145ad3be22f2e60ea18697fb484ac540f5ed9f83e09dff0",
+        "frontier_sha256": "756b21d24b2cb7618e19d42025cd36dd8a2d1aae815ef6ccc76662d4eac0b85c",
+        "state": {
+          "accepted_count": 65991,
+          "checked": 132004,
+          "contraction_paths": 23112,
+          "contraction_steps": 125968,
+          "counts": {
+            "Gram": 0,
+            "reflection": 1173,
+            "stationary": 45079,
+            "stationary_empty": 0,
+            "sublevel_empty": 0,
+            "value": 19739
+          },
+          "maxdepth": 47,
+          "sublevel_bounds": 996448,
+          "sublevel_contraction_paths": 89307,
+          "unresolved_count": 23
+        },
+        "mathematical_node_soundness_checked": false
+      },
+      "whole_short_journal_math_replay": {
+        "receipt": "node04.journal-replay.json",
+        "sha256": "28f3c531dd13e3277217f3ee3ffd9031eaf51e59f675c68712ea9cc8d813e5fb",
+        "seconds": 2.6467941000009887
+      },
+      "seconds": 11.698268199994345
+    }
+  ],
+  "cache_history": [
+    {
+      "at": "initial",
+      "HINTS_interval_keys": 0,
+      "HINTS_points": 0,
+      "USED_SUPPORTS": 2540,
+      "peak_working_set_bytes": 136368128,
+      "constant_lower": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 200000,
+        "currsize": 0
+      },
+      "base_anchors": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 200000,
+        "currsize": 0
+      },
+      "kernel_jet": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": null,
+        "currsize": 0
+      },
+      "point": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 200000,
+        "currsize": 0
+      },
+      "affine": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 200000,
+        "currsize": 0
+      },
+      "third_bound": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 200000,
+        "currsize": 0
+      }
+    },
+    {
+      "at": "after_node1",
+      "HINTS_interval_keys": 40,
+      "HINTS_points": 67,
+      "USED_SUPPORTS": 2540,
+      "peak_working_set_bytes": 136368128,
+      "constant_lower": {
+        "hits": 213,
+        "misses": 74,
+        "maxsize": 200000,
+        "currsize": 74
+      },
+      "base_anchors": {
+        "hits": 213,
+        "misses": 74,
+        "maxsize": 200000,
+        "currsize": 74
+      },
+      "kernel_jet": {
+        "hits": 20,
+        "misses": 181,
+        "maxsize": null,
+        "currsize": 181
+      },
+      "point": {
+        "hits": 0,
+        "misses": 74,
+        "maxsize": 200000,
+        "currsize": 74
+      },
+      "affine": {
+        "hits": 49,
+        "misses": 74,
+        "maxsize": 200000,
+        "currsize": 74
+      },
+      "third_bound": {
+        "hits": 0,
+        "misses": 74,
+        "maxsize": 200000,
+        "currsize": 74
+      }
+    },
+    {
+      "at": "after_node2",
+      "HINTS_interval_keys": 40,
+      "HINTS_points": 67,
+      "USED_SUPPORTS": 2540,
+      "peak_working_set_bytes": 136368128,
+      "constant_lower": {
+        "hits": 213,
+        "misses": 74,
+        "maxsize": 200000,
+        "currsize": 74
+      },
+      "base_anchors": {
+        "hits": 213,
+        "misses": 74,
+        "maxsize": 200000,
+        "currsize": 74
+      },
+      "kernel_jet": {
+        "hits": 20,
+        "misses": 181,
+        "maxsize": null,
+        "currsize": 181
+      },
+      "point": {
+        "hits": 0,
+        "misses": 93,
+        "maxsize": 200000,
+        "currsize": 93
+      },
+      "affine": {
+        "hits": 71,
+        "misses": 93,
+        "maxsize": 200000,
+        "currsize": 93
+      },
+      "third_bound": {
+        "hits": 0,
+        "misses": 93,
+        "maxsize": 200000,
+        "currsize": 93
+      }
+    },
+    {
+      "at": "after_node3",
+      "HINTS_interval_keys": 40,
+      "HINTS_points": 67,
+      "USED_SUPPORTS": 2540,
+      "peak_working_set_bytes": 136491008,
+      "constant_lower": {
+        "hits": 243,
+        "misses": 85,
+        "maxsize": 200000,
+        "currsize": 85
+      },
+      "base_anchors": {
+        "hits": 243,
+        "misses": 85,
+        "maxsize": 200000,
+        "currsize": 85
+      },
+      "kernel_jet": {
+        "hits": 20,
+        "misses": 193,
+        "maxsize": null,
+        "currsize": 193
+      },
+      "point": {
+        "hits": 0,
+        "misses": 104,
+        "maxsize": 200000,
+        "currsize": 104
+      },
+      "affine": {
+        "hits": 101,
+        "misses": 104,
+        "maxsize": 200000,
+        "currsize": 104
+      },
+      "third_bound": {
+        "hits": 0,
+        "misses": 104,
+        "maxsize": 200000,
+        "currsize": 104
+      }
+    },
+    {
+      "at": "after_node4",
+      "HINTS_interval_keys": 55,
+      "HINTS_points": 84,
+      "USED_SUPPORTS": 2540,
+      "peak_working_set_bytes": 136749056,
+      "constant_lower": {
+        "hits": 291,
+        "misses": 119,
+        "maxsize": 200000,
+        "currsize": 119
+      },
+      "base_anchors": {
+        "hits": 291,
+        "misses": 119,
+        "maxsize": 200000,
+        "currsize": 119
+      },
+      "kernel_jet": {
+        "hits": 28,
+        "misses": 246,
+        "maxsize": null,
+        "currsize": 246
+      },
+      "point": {
+        "hits": 0,
+        "misses": 138,
+        "maxsize": 200000,
+        "currsize": 138
+      },
+      "affine": {
+        "hits": 108,
+        "misses": 138,
+        "maxsize": 200000,
+        "currsize": 138
+      },
+      "third_bound": {
+        "hits": 0,
+        "misses": 138,
+        "maxsize": 200000,
+        "currsize": 138
+      }
+    }
+  ],
+  "baseline_semantic_replay": false,
+  "full_search_started": false,
+  "new_zero_proportion_proven": false,
+  "epoch_sha256": "4faec9f6803a82d7b1aa7af90cebf26174049b2ae2c2fb3355129ad1635c2a95",
+  "baseline_database_sha256": "8612e68fca990cf4cd172e3f35aae091d686c722e669ce9bdc52ef54955c05af",
+  "baseline_source_sha256": "2e50e2303ca3705ae9ba91e741764e84550c382049b88ae5cbd064247bba671d",
+  "historical_supports_loaded": 2540,
+  "stage": "bounded_pilot_finished",
+  "seconds": 54.45313950000127,
+  "all_committed_nodes_math_and_journal_replayed": true,
+  "database_bytes": 1091801088,
+  "database_sha256": "5ff6714b9dab6e1188c8656da3804ee05276899d74e1ff494cba68f61a542b68",
+  "HINTS_were_never_cleared": true
+}
