@@ -1,0 +1,22 @@
+{
+  "scope": "Full arithmetic replay of two valid hull chains, intersection and Newton.",
+  "input_sha256": "0ad1f42ed808e1b316990a3ff85ee9d8482360fa997bf2efd0e79e19a252f623",
+  "script_sha256": "5b2219bff2b1f1995d2d9613c6ae3287df2b8b3ba7bf4bccb5ac2f498ddf2d4e",
+  "all_passed": true,
+  "counts": {
+    "paths": 32,
+    "prior_OBBT_bounds": 411,
+    "prior_Newton_steps": 96,
+    "single_bounds": 452,
+    "mixed_bounds": 447,
+    "new_Newton_steps": 78,
+    "closed": 4
+  },
+  "preserves_original_global_minima_below_target": true,
+  "preserves_all_KKT_points": false,
+  "full_tree_ancestry_replayed": false,
+  "complete_global_cover": false,
+  "actual_analytic_Lean_bridges_complete": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 555.0900553000029
+}

@@ -3,6 +3,24 @@ from pathlib import Path
 import hashlib,json,subprocess
 ROOT=Path(__file__).resolve().parents[1];HERE=Path(__file__).parent
 def git(*args):return subprocess.check_output(['git',*args],cwd=ROOT)
+def indexed_blobs(paths):
+    index={}
+    for row in git('ls-files','--stage','-z').split(b'\0'):
+        if not row:continue
+        head,path=row.split(b'\t',1);mode,sha,stage=head.split()
+        assert stage==b'0','Unmerged index'
+        index[path.decode('utf8')]=sha
+    shas=[index[path]for path in paths]
+    batch=subprocess.check_output(['git','cat-file','--batch'],
+      input=b'\n'.join(shas)+b'\n',cwd=ROOT)
+    offset=0
+    for path,sha in zip(paths,shas):
+        end=batch.index(b'\n',offset);actual,kind,size=batch[offset:end].split()
+        assert actual==sha and kind==b'blob'
+        offset=end+1;raw=batch[offset:offset+int(size)];offset+=int(size)
+        assert batch[offset:offset+1]==b'\n';offset+=1
+        yield path,raw
+    assert offset==len(batch)
 def main():
     receipt=json.loads((HERE/'ordinary-verified-current.json').read_bytes())
     files=['.gitattributes','README.md','submission/goal-20261016/STATUS.zh.md']
@@ -97,6 +115,25 @@ def main():
         assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
         files.append(str(p.relative_to(ROOT)).replace('\\','/'))
     files.append('research-goal-20261016/cover-global-cut-progress-files.json')
+    cut_union_manifest=HERE/'cover-global-cut-union-files.json'
+    assert hashlib.sha256(cut_union_manifest.read_bytes()).hexdigest()=='8b5d4d86bea3c638dd29db9a6436e44b4fa8016070674f6b652e5bb1ab221fbd'
+    cut_union=json.loads(cut_union_manifest.read_bytes())
+    assert cut_union['combined_topmost_global_regions']==43 and not cut_union['complete_global_cover']
+    for path,row in cut_union['files'].items():
+        p=HERE/path
+        assert p.is_file() and len(p.read_bytes())==row['bytes']
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
+        files.append(str(p.relative_to(ROOT)).replace('\\','/'))
+    files.append('research-goal-20261016/cover-global-cut-union-files.json')
+    curvature_manifest=HERE/'cover-targeted-curvature-files.json'
+    assert hashlib.sha256(curvature_manifest.read_bytes()).hexdigest()=='f50faebb40cc501ceb4590c5f645dd78c713d108ab7d88d28310fe9f314ffef5'
+    curvature=json.loads(curvature_manifest.read_bytes())
+    for path,row in curvature['files'].items():
+        p=HERE/path
+        assert p.is_file() and len(p.read_bytes())==row['bytes']
+        assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256']
+        files.append(str(p.relative_to(ROOT)).replace('\\','/'))
+    files.append('research-goal-20261016/cover-targeted-curvature-files.json')
     compiled=receipt['modules']+receipt.get('compiled_without_printed_axiom_audit',[])
     for row in compiled:
         for key,sha_key in [('source','source_sha256'),('log','log_sha256')]:
@@ -106,12 +143,26 @@ def main():
               for p in sorted((HERE/folder).glob('*')) if p.is_file()]
     # Keep the generation programs that reproduce the verified actual profile.
     files += ['research-goal-20261016/'+s for s in ['window_generate_energy.py','window_generate_energy_bound.py','window_generate_profile.py']]
+    files += ['research-goal-20261016/'+s for s in [
+      'window_generate_root_cell.py','window_generate_root_cell.json','window_generate_lower_root_cell.json',
+      'window_generate_convexity_all.py','window_generate_actual_basins.py','window_actual_basin_modules.json',
+      'window_generate_raw_coefficients.py','window_generate_choice_grid.py','window_choice_grid.json',
+      'window_generate_grid_checks.py','window_grid_check_modules.json',
+      'window_generate_scalar_line_pilot.py','window_generate_scalar_line_pilot.json',
+      'window_generate_rational_basins.py','window_rational_basin_audit.json','window_rational_basin_modules.json',
+      'window_generate_rational_basin_groups.py','window_rational_basin_group_modules.json',
+      'lean_new_actual_bridges_20261017.json']]
     files=sorted(set(files));assert all((ROOT/p).is_file() for p in files)
-    subprocess.run(['git','add','-f','--',*files],cwd=ROOT,check=True)
-    subprocess.run(['git','add','--renormalize','-f','--',*files],cwd=ROOT,check=True)
+    # Keep the verified allowlist literal and avoid Windows' command-line
+    # length limit as independent finite-check shards accumulate.
+    pathspec=b'\0'.join(path.encode('utf8') for path in files)+b'\0'
+    subprocess.run(['git','--literal-pathspecs','add','-f','--pathspec-from-file=-','--pathspec-file-nul'],
+                   input=pathspec,cwd=ROOT,check=True)
+    subprocess.run(['git','--literal-pathspecs','add','--renormalize','-f',
+                    '--pathspec-from-file=-','--pathspec-file-nul'],input=pathspec,cwd=ROOT,check=True)
     entries=[]
-    for path in files:
-        raw=git('show',':'+path);sha=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+    for path,raw in indexed_blobs(files):
+        sha=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
         actual=(ROOT/path).read_bytes()
         assert raw==actual or (path in ['README.md','.gitattributes'] and raw==actual.replace(b'\r\n',b'\n')),('Index differs from selected source',path)
         try:raw.decode('utf8');binary=b'\0' in raw

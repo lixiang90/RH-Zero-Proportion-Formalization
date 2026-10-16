@@ -1,0 +1,73 @@
+{
+  "scope": "Floating stationary-well diagnosis for patterns appearing in the frontier.\n\nThese optimization results are upper-bound hints, not certified floors.\n",
+  "script_sha256": "d9e736a8c615122c0168b89bca1165a138626958453f6804f5e3ab95c23fc4a2",
+  "snapshot_sha256": "df8a3484543f5b039e2ca8df4ad7698eb0f55946f500906e95236a4bfc671960",
+  "results": [
+    {
+      "integer_pattern": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "anchor_hint": [
+        1.942093752762765,
+        1.0226025175256543,
+        1.0193404253815308,
+        1.017462429089851,
+        1.017480413224602,
+        1.017462429089851,
+        1.0193404253815308,
+        1.0226025175256543,
+        1.942093752762765
+      ],
+      "energy_hint": 0.010068698367729752,
+      "gradient_infinity_hint": 1.0229822967455088e-10,
+      "maximum_abs_positive_weight_span_offset": 0.13629115721867358,
+      "positive_weight_spans_outside_integer_core": 0,
+      "frontier_cells_containing_anchor_hint": [],
+      "optimization_success": true
+    },
+    {
+      "integer_pattern": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "anchor_hint": [
+        1.9851030580460278,
+        1.9662987659206883,
+        1.0299051391317884,
+        1.024830434136373,
+        1.0257499566507946,
+        1.0317469678527045,
+        1.9721733656073384,
+        1.98605763345726,
+        1.9918739235716774
+      ],
+      "energy_hint": 0.009244521354060595,
+      "gradient_infinity_hint": 4.281692870698392e-09,
+      "maximum_abs_positive_weight_span_offset": 0.11223249777166089,
+      "positive_weight_spans_outside_integer_core": 0,
+      "frontier_cells_containing_anchor_hint": [
+        "r01"
+      ],
+      "optimization_success": true
+    }
+  ],
+  "new_rigorous_exclusions": 0,
+  "global_floor_proven": false,
+  "complete_global_cover": false,
+  "seconds": 0.08613029999833088
+}

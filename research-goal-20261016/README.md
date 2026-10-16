@@ -129,8 +129,11 @@ evaluation and the soundness theorem. Compiled table definitions alone are
 recorded separately and are not counted as interval-enclosure proofs.
 All 32 actual integer-centred kernel/derivative tables and all 1,567 actual
 value/slope anchors now have ordinary-kernel proofs, as does the actual
-short-pair bound. The first actual convex interval has passed; the other
-convex intervals and full minimizer cover remain unfinished.
+short-pair bound. All 128 convex subintervals in the 16 required wells,
+their combined actual convexity theorem, and the scalar-to-actual-kernel
+bridge have now passed the ordinary kernel. All 69 actual coherent basins
+have passed through a shared rational/diagonal certificate. The full
+minimizer cover remains unfinished.
 `WindowRecordFromFloor` and `WindowRecordDyadic` reduce the actual cumulative
 and dyadic counting conclusions to an explicit global floor hypothesis.
 That hypothesis remains a mathematical obligation.
@@ -192,8 +195,10 @@ their preceding 102 OBBT bounds and 30 Newton steps, and the separate
 source checkpoint. The two batches are topmost disjoint regions, together
 covering 251 old descendant branches; both are distinct from the previous
 seven joint gradient sample leaves. Formal actual finite-move consumers are
-written separately and await their ordinary Lean verification; these
-numerical receipts are not Lean passes.
+now ordinary-kernel verified, including actual energy differences,
+signed-curvature scalar bounds and sublevel objective payment. The frozen
+numerical witnesses still need concrete Lean instantiation; these numerical
+receipts are not Lean passes.
 
 A direct positive combination of multiple moves found no new separation in
 the fixed 100-cell portfolio pilot. This negative evidence motivates using
@@ -218,6 +223,63 @@ diagnostic; the independently verified claim is the eight cut certificates.
 Energy-only contraction had a smaller median box-volume ratio, so global
 cuts are not claimed to dominate it on every metric. A separate variant
 will retain both kinds of bounds instead of dropping energy-only bounds.
+
+The subsequent inclusive and signed-difference-hypograph cuts have
+complementary successes. Their union with the first cut trial closes 15
+regions; intersecting both valid hulls and applying Newton adds four.
+The standalone 211,364-byte gzip in `cover-global-cut-union-evidence/`
+independently reconstructs 184 ancestor nodes and all 19 closing chains,
+including 277 prior OBBT bounds, 89 prior Newton steps, 391 cut bounds and
+16 extra Newton steps selected for this projection. These 19 and the prior
+24 finite-move regions are mutually nonnested: 43 topmost regions, covering
+558 old descendant branch records. This is a partial c=0.00884 sample,
+distinct from the running c=0.0088 full search. The immutable file manifest
+is `cover-global-cut-union-files.json`.
+
+The actual dynamic LP support consumer now has an ordinary-kernel proof,
+including convex-core tangents and their valid zero extensions. The actual
+k/k' Horner point intervals and the whole-cell k-based constant lower
+support also passed. Directional affine aggregation, Newton retention,
+signed difference upper bounds and the cross-grid range consumer passed.
+`WindowScalarLine` dispatches actual zero/tangent/constant supports and
+supplies the value-flow scalar premise; all eight concrete scalar pilots
+passed. `WindowValueSublevel` checks the actual sublevel objective bound
+from these scalar checks, capacities, augmented integer flow and rounding.
+Neither theorem assumes an externally asserted analytic minorant.
+All 1,987 separated grid cells (indices 61 through 2047), their combined
+range theorem and the actual derivative oracle now have ordinary-kernel
+proofs. Actual integer directional and dual-flow Newton aggregate
+consumers also passed. Full tree instantiation remains an obligation,
+recorded alongside per-module verification in
+`ordinary-verified-current.json`; source presence alone is not a pass.
+`WindowBasinCell` now checks the 41 rational cell-span containment conditions
+and supplies the actual basin region automatically, yielding the local
+0.00884 (and weaker 0.0088) floor without an external region premise.
+
+Targeted diagnostics explain why the remaining search is difficult. Deep
+frontier cells are outside all 69 currently registered basin regions;
+nearby unconstrained stationary points lie outside those cells. Their
+independent scalar derivative intervals admit correlated false candidates.
+Integer translations and feasible affine reflections found no strict
+whole-cell exclusion on the current coarse sample, despite midpoint hints.
+These are research diagnostics, not impossibility or record claims.
+
+Targeting those six identified cells, second-order necessity gives three
+whole-cell negative-curvature certificates with independently replayed
+ancestor geometry: 28 reconstructed nodes, 178 unique prior OBBT bounds
+and zero prior Newton steps. Two of the three tested first-order affine
+upper bounds remain positive. `WindowCurvatureAffine` has an ordinary
+kernel proof of the actual 41-edge second-variation identity and correlated
+affine upper aggregation. Its scalar actual w'' bounds and the concrete
+integer witnesses still require Lean instantiation. The small frozen
+`cover-targeted-curvature-files.json` package also records the unsuccessful
+quadratic-gradient trial. These three c=0.0088 cells cannot be added to the
+43 c=0.00884 sample regions. The running cover already closes the first
+targeted path by its older contraction process, so a branch-count reduction
+from the new curvature alternative has not yet been demonstrated.
+The integer curvature aggregate and negative-flow consumer in
+`WindowCurvatureFlow` also passed the ordinary kernel; the remaining scalar
+second-derivative feed is separate from that aggregate theorem.
 
 Independent three-floor probes on the same 300 original parents found
 80/81/80 remaining branches for `c=0.00884/0.0088/0.008785`, respectively.

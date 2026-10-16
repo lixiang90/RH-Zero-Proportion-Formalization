@@ -1,0 +1,95 @@
+{
+  "scope": "Small actual constant/tangent pilots; no global partition is asserted.\n\nConstant floors are taken from the original independent sinc oracle, while\ntheir point intervals are recomputed from the frozen 10^-30 K table using\nthe same integer Horner arithmetic and 22/7 Taylor errors as the Lean check.\n",
+  "script_sha256": "ddf814e6fdae1c87a474df6cb179e61aa51d3d807891fa4ffafca9beb434efdf",
+  "K_table_sha256": "f6afdae121fb933db7b468b861de75e2e38afe2068323837b7a18095306c2ec8",
+  "original_scalar_oracle_sha256": "f773d800df06e9e12e21665ec770d32829f9d998bd3662a87fbafa54f267a004",
+  "generated_sha256": "dfd73a449aced1d346a1db42cd52216385e69ee5b3f286a192f1c7aad737ed22",
+  "constant_pilots": [
+    {
+      "center": 1,
+      "anchor": 36864,
+      "lower": 36832,
+      "upper": 36896,
+      "k_lower": "-4775065357770245891/100000000000000000000",
+      "k_upper": "-4775065357770245889/100000000000000000000",
+      "d_lower": "-14954807287718617177/20000000000000000000",
+      "d_upper": "-37387018219296542941/50000000000000000000",
+      "radius": "1/1024",
+      "original_value_numerator": 22107422
+    },
+    {
+      "center": 3,
+      "anchor": 86016,
+      "lower": 85984,
+      "upper": 86048,
+      "k_lower": "566773748301612103/6250000000000000000",
+      "k_upper": "181367599456515873/2000000000000000000",
+      "d_lower": "-11720300102951100179/100000000000000000000",
+      "d_upper": "-732518756434443761/6250000000000000000",
+      "radius": "1/1024",
+      "original_value_numerator": 82024605
+    },
+    {
+      "center": 8,
+      "anchor": 274432,
+      "lower": 274400,
+      "upper": 274464,
+      "k_lower": "2792027503549062313/100000000000000000000",
+      "k_upper": "1396013751774531157/50000000000000000000",
+      "d_lower": "91685439635599877/3125000000000000000",
+      "d_upper": "2933934068339196067/100000000000000000000",
+      "radius": "1/1024",
+      "original_value_numerator": 7778362
+    },
+    {
+      "center": 16,
+      "anchor": 516096,
+      "lower": 516064,
+      "upper": 516128,
+      "k_lower": "-251352501715630201/20000000000000000000",
+      "k_upper": "-314190627144537751/25000000000000000000",
+      "d_lower": "3883192977450778887/100000000000000000000",
+      "d_upper": "485399122181347361/12500000000000000000",
+      "radius": "1/1024",
+      "original_value_numerator": 1569456
+    }
+  ],
+  "tangent_pilots": [
+    {
+      "anchor": 28672,
+      "lower": 28608,
+      "upper": 28736,
+      "value": 385761515,
+      "slope": -458749500,
+      "error": 1
+    },
+    {
+      "anchor": 36864,
+      "lower": 36800,
+      "upper": 36928,
+      "value": 22801249,
+      "slope": 71410182,
+      "error": 1
+    },
+    {
+      "anchor": 126976,
+      "lower": 126912,
+      "upper": 127040,
+      "value": 5753651,
+      "slope": -8962353,
+      "error": 1
+    },
+    {
+      "anchor": 135168,
+      "lower": 135104,
+      "upper": 135232,
+      "value": 5264633,
+      "slope": 7768409,
+      "error": 1
+    }
+  ],
+  "original_constant_floors_preserved": true,
+  "ordinary_Lean_passed": false,
+  "global_floor_proven": false,
+  "submission_ready": false
+}

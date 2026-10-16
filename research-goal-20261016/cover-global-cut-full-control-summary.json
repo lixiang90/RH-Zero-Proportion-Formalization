@@ -1,0 +1,43 @@
+{
+  "scope": "Diagnostic paired energy-only control; final leaf witnesses not stored.",
+  "source_sha256": "f0e5111d339a137ebfca2f4c61e0a3961c727ba11884636225ac6c838fddb402",
+  "receipt": {
+    "scope": "Paired energy-only OBBT control from the identical refined cells.",
+    "script_sha256": "f745f72d13ffde8435b49707fc03dd9632c12bff15809fb0870d6186ee4ab393",
+    "input_sha256": "b1c9c44f9f47c3a7a63dc92d5092b00d935883bacbf991201014beff383751ed",
+    "counts": {
+      "paths": 47,
+      "control_contracted": 46,
+      "control_closed": 6,
+      "global_cut_closed": 12,
+      "only_global_cut_closed": 6
+    },
+    "control_median_volume_ratio_hint": 0.49038091890181795,
+    "complete_global_cover": false,
+    "new_zero_proportion_proven": false,
+    "seconds": 56.020497599998635
+  },
+  "control_closed_paths": [
+    "r000110110011",
+    "r0010000110010000110",
+    "r001000011001001010100",
+    "r0010000110010010101101000000",
+    "r00100010001",
+    "r001000101100110100"
+  ],
+  "global_closed_paths": [
+    "r000110110011",
+    "r0001110011110110",
+    "r00011101100001",
+    "r0010000100111101101100",
+    "r0010000110010000110",
+    "r001000011001001010100",
+    "r0010000110010010101101000000",
+    "r00100010001",
+    "r0010001010000010000110101",
+    "r001000101100110100",
+    "r00100010110011100011000",
+    "r001000101100111001001010001"
+  ],
+  "independent_control_terminal_leaf_replay_passed": false
+}

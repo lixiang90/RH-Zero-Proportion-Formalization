@@ -1,0 +1,22 @@
+{
+  "scope": "Replay prior refinements, every mixed global-cut bound, and final leaves.",
+  "input_sha256": "aab595327aa62f133d278f10213177b1abe0472017655bbec6254f743526b997",
+  "script_sha256": "9d83cb644a49674b1a8cf886baaaca9bb449e2681bb0b03c9947c5b31e054e6b",
+  "all_passed": true,
+  "counts": {
+    "paths": 47,
+    "prior_OBBT_bounds": 635,
+    "prior_Newton_steps": 153,
+    "cut_steps": 74,
+    "bounds": 658,
+    "bounds_using_global_moves": 195,
+    "closed": 11
+  },
+  "full_tree_ancestry_replayed": false,
+  "preserves_original_global_minima_below_target": true,
+  "preserves_all_KKT_points": false,
+  "complete_global_cover": false,
+  "actual_analytic_Lean_bridges_complete": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 162.9512168000001
+}

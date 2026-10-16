@@ -1,0 +1,882 @@
+{
+  "scope": "Targeted six-cell gradient/Hessian diagnosis and total-quadratic bounds.\n\nFloating optimizers select points/directions only. Quadratic upper estimates\nuse exact integer jets, signed total matrices, exact LDL and balanced flows.\nAny successful certificate still requires separate independent replay.\n",
+  "script_sha256": "46be7eea443bfbfe552a18c0d559afb9a50a7df23b19456b54761889eccd7b55",
+  "snapshot_sha256": "df8a3484543f5b039e2ca8df4ad7698eb0f55946f500906e95236a4bfc671960",
+  "cells": 6,
+  "negative_quadratic_upper_candidates": 0,
+  "uniform_negative_curvature_candidates": 1,
+  "independent_quadratic_replay_passed": false,
+  "results": [
+    {
+      "path": "r001000001101101111",
+      "depth": 18,
+      "free_coordinates": [
+        0,
+        6,
+        8
+      ],
+      "constrained_energy_minimum_hint": {
+        "point": [
+          1.9313985227291575,
+          1.0238204698500755,
+          1.0195426235068408,
+          1.0205033665096406,
+          1.0213593336433824,
+          1.0285013036921047,
+          1.9423312229833691,
+          1.0294221004294504,
+          2.12054443359375
+        ],
+        "energy_hint": 0.010421276572040863,
+        "gradient_infinity_hint": 0.010775992158311348,
+        "Hessian_min_eigenvalue_hint": 0.04266533070881949,
+        "free_block_min_eigenvalue_hint": 0.043055404967540505,
+        "inside_cell_hint": true
+      },
+      "constrained_smallest_gradient_hint": {
+        "point": [
+          1.9210850534183848,
+          1.0246401753040548,
+          1.0198976314622155,
+          1.020668345449362,
+          1.0215631099743958,
+          1.0288822730783864,
+          1.9415665279445593,
+          1.029203828667202,
+          2.12054443359375
+        ],
+        "energy_hint": 0.010426176135418162,
+        "gradient_infinity_hint": 0.010672088339396613,
+        "Hessian_min_eigenvalue_hint": 0.04323106065722891,
+        "free_block_min_eigenvalue_hint": 0.04363741004703337,
+        "inside_cell_hint": true
+      },
+      "root_hint": {
+        "point": [
+          1.9469299746364375,
+          1.0252873610728472,
+          1.0204872561213398,
+          1.0210533255770973,
+          1.0224681491325043,
+          1.0289336937934606,
+          1.953267327073634,
+          1.038232925020158,
+          1.9610423628191826
+        ],
+        "energy_hint": 0.009478589005260222,
+        "gradient_infinity_hint": 1.1563514902557248e-13,
+        "Hessian_min_eigenvalue_hint": 0.0760421329570907,
+        "free_block_min_eigenvalue_hint": 0.07770038109874132,
+        "inside_cell_hint": false
+      },
+      "root_solver_success": true,
+      "energy_solver_success": true,
+      "energy_solver_message": "Optimization terminated successfully",
+      "gradient_solver_success": true,
+      "gradient_solver_message": "Optimization terminated successfully",
+      "best_linear_upper_per_direction_unit": 0.007516189252083387,
+      "best_quadratic_upper_per_direction_unit": 0.5562758974598869,
+      "best_quadratic_error_payment_per_unit": 0.16818007182793607,
+      "best_quadratic_matrix_payment_per_unit": 0.2124765611841502,
+      "candidate_directions": 15,
+      "bound_seconds": 0.11208439999973052,
+      "quadratic_candidate_certificate": null,
+      "uniform_negative_curvature_certificate": null
+    },
+    {
+      "path": "r0010000011011011101",
+      "depth": 19,
+      "free_coordinates": [
+        0,
+        6,
+        8
+      ],
+      "constrained_energy_minimum_hint": {
+        "point": [
+          1.8983154296875,
+          1.005431965041219,
+          1.0138939348157554,
+          1.018749313051985,
+          1.021485811963992,
+          1.0359858100545336,
+          1.864044189453125,
+          1.016391641635015,
+          2.12054443359375
+        ],
+        "energy_hint": 0.012230103883843485,
+        "gradient_infinity_hint": 0.035000233504750254,
+        "Hessian_min_eigenvalue_hint": 0.0612023465134404,
+        "free_block_min_eigenvalue_hint": 0.06228683285961512,
+        "inside_cell_hint": true
+      },
+      "constrained_smallest_gradient_hint": {
+        "point": [
+          1.8983154296874993,
+          0.9957740066360866,
+          1.023041674572743,
+          1.0276313587397332,
+          1.030556063298183,
+          1.0572291553424655,
+          1.8326694750652555,
+          1.0090809323611591,
+          2.12054443359375
+        ],
+        "energy_hint": 0.01315659270319447,
+        "gradient_infinity_hint": 0.038353658542192935,
+        "Hessian_min_eigenvalue_hint": 0.06091003628155931,
+        "free_block_min_eigenvalue_hint": 0.0619463154033025,
+        "inside_cell_hint": true
+      },
+      "root_hint": {
+        "point": [
+          1.946929974636483,
+          1.0252873610727797,
+          1.0204872561213552,
+          1.0210533255770922,
+          1.022468149132554,
+          1.0289336937934899,
+          1.9532673270735736,
+          1.038232925020434,
+          1.9610423628201104
+        ],
+        "energy_hint": 0.009478589005260224,
+        "gradient_infinity_hint": 1.3782540646961605e-13,
+        "Hessian_min_eigenvalue_hint": 0.07604213295701145,
+        "free_block_min_eigenvalue_hint": 0.07770038109865784,
+        "inside_cell_hint": false
+      },
+      "root_solver_success": true,
+      "energy_solver_success": true,
+      "energy_solver_message": "Optimization terminated successfully",
+      "gradient_solver_success": false,
+      "gradient_solver_message": "Positive directional derivative for linesearch",
+      "best_linear_upper_per_direction_unit": 0.007753999802153379,
+      "best_quadratic_upper_per_direction_unit": 0.16787477366434275,
+      "best_quadratic_error_payment_per_unit": 0.05035352881571752,
+      "best_quadratic_matrix_payment_per_unit": 0.006987297202591646,
+      "candidate_directions": 15,
+      "bound_seconds": 0.10845460000200546,
+      "quadratic_candidate_certificate": null,
+      "uniform_negative_curvature_certificate": null
+    },
+    {
+      "path": "r00100000110110111001",
+      "depth": 20,
+      "free_coordinates": [
+        0,
+        6,
+        8
+      ],
+      "constrained_energy_minimum_hint": {
+        "point": [
+          1.8983154296875004,
+          0.9803718345704363,
+          1.0076630732492375,
+          1.0188988040234122,
+          1.0257951369943974,
+          1.0499368555855717,
+          1.6083984375,
+          1.0108096373738198,
+          2.12054443359375
+        ],
+        "energy_hint": 0.030099248983256464,
+        "gradient_infinity_hint": 0.0744330866166752,
+        "Hessian_min_eigenvalue_hint": -0.20057429051464162,
+        "free_block_min_eigenvalue_hint": -0.19233104626359082,
+        "inside_cell_hint": true
+      },
+      "constrained_smallest_gradient_hint": {
+        "point": [
+          1.8983154296875,
+          1.06013899710612,
+          1.0293765741595942,
+          1.0340092332172692,
+          1.0404633142000834,
+          1.034609130376178,
+          1.3524386067610168,
+          1.127948120667413,
+          2.14343423640295
+        ],
+        "energy_hint": 0.03320111935165486,
+        "gradient_infinity_hint": 0.012392218493372254,
+        "Hessian_min_eigenvalue_hint": -0.570769645832066,
+        "free_block_min_eigenvalue_hint": -0.4407811368417013,
+        "inside_cell_hint": true
+      },
+      "root_hint": {
+        "point": [
+          2.033115507490406,
+          1.0444412504046907,
+          1.034543529655506,
+          1.035106251932723,
+          1.0421724512731407,
+          1.0592702660125153,
+          1.3689106589343616,
+          1.1770314288281107,
+          2.1961662397299926
+        ],
+        "energy_hint": 0.03201005950809355,
+        "gradient_infinity_hint": 3.689789576308278e-12,
+        "Hessian_min_eigenvalue_hint": -0.38098084775516033,
+        "free_block_min_eigenvalue_hint": -0.34605956866318666,
+        "inside_cell_hint": false
+      },
+      "root_solver_success": true,
+      "energy_solver_success": true,
+      "energy_solver_message": "Optimization terminated successfully",
+      "gradient_solver_success": true,
+      "gradient_solver_message": "Optimization terminated successfully",
+      "best_linear_upper_per_direction_unit": 0.007368096009938098,
+      "best_quadratic_upper_per_direction_unit": 0.0766718480594258,
+      "best_quadratic_error_payment_per_unit": 0.02175223905278004,
+      "best_quadratic_matrix_payment_per_unit": 0.006977406273456331,
+      "candidate_directions": 15,
+      "bound_seconds": 0.11290100000042003,
+      "quadratic_candidate_certificate": null,
+      "uniform_negative_curvature_certificate": null
+    },
+    {
+      "path": "r001000001101101110001111",
+      "depth": 24,
+      "free_coordinates": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "constrained_energy_minimum_hint": {
+        "point": [
+          1.9229431152343754,
+          1.0834845683534158,
+          1.0422911533191983,
+          1.030476757567891,
+          1.0297366107536947,
+          1.0306526286642392,
+          1.040224736419686,
+          1.16473388671875,
+          2.1706237792968754
+        ],
+        "energy_hint": 0.019287735894558858,
+        "gradient_infinity_hint": 0.039586316603747805,
+        "Hessian_min_eigenvalue_hint": -0.1708452582409786,
+        "free_block_min_eigenvalue_hint": -0.1708452582409786,
+        "inside_cell_hint": true
+      },
+      "constrained_smallest_gradient_hint": {
+        "point": [
+          1.8983154296875,
+          1.0376744690669513,
+          1.0303903495941964,
+          1.0240931246009708,
+          1.026864877585445,
+          1.0262916744969581,
+          1.0396994567908673,
+          1.33038330078125,
+          2.1699665166146107
+        ],
+        "energy_hint": 0.023859829319729804,
+        "gradient_infinity_hint": 0.01924113766253574,
+        "Hessian_min_eigenvalue_hint": -0.36388404778623595,
+        "free_block_min_eigenvalue_hint": -0.36388404778623595,
+        "inside_cell_hint": true
+      },
+      "root_hint": {
+        "point": [
+          1.942216240237756,
+          1.0279424657457217,
+          1.0249895847658554,
+          1.0218820318224457,
+          1.0232687684174848,
+          1.026751436360308,
+          1.0366577142505058,
+          1.4696869591730979,
+          1.7515173260089896
+        ],
+        "energy_hint": 0.026374113622674705,
+        "gradient_infinity_hint": 1.7601393433042123e-13,
+        "Hessian_min_eigenvalue_hint": -0.37828553014904764,
+        "free_block_min_eigenvalue_hint": -0.37828553014904764,
+        "inside_cell_hint": false
+      },
+      "root_solver_success": true,
+      "energy_solver_success": true,
+      "energy_solver_message": "Optimization terminated successfully",
+      "gradient_solver_success": true,
+      "gradient_solver_message": "Optimization terminated successfully",
+      "best_linear_upper_per_direction_unit": 0.008973251632491555,
+      "best_quadratic_upper_per_direction_unit": 0.009968401902269114,
+      "best_quadratic_error_payment_per_unit": 0.0015775287866681414,
+      "best_quadratic_matrix_payment_per_unit": 0.004460061610116806,
+      "candidate_directions": 21,
+      "bound_seconds": 0.1650967000023229,
+      "quadratic_candidate_certificate": null,
+      "uniform_negative_curvature_certificate": null
+    },
+    {
+      "path": "r0010000011011011100011101",
+      "depth": 25,
+      "free_coordinates": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "constrained_energy_minimum_hint": {
+        "point": [
+          1.9229431152343748,
+          1.18438720703125,
+          1.032927424419577,
+          1.028128984478953,
+          1.026995151242238,
+          1.0289404134213664,
+          1.0390106343343595,
+          1.0812105268691317,
+          2.170623779296874
+        ],
+        "energy_hint": 0.01989237733702869,
+        "gradient_infinity_hint": 0.04619459636938327,
+        "Hessian_min_eigenvalue_hint": -0.1447550189557649,
+        "free_block_min_eigenvalue_hint": -0.1447550189557649,
+        "inside_cell_hint": true
+      },
+      "constrained_smallest_gradient_hint": {
+        "point": [
+          1.9820198890267167,
+          1.330078125,
+          1.0302164102868718,
+          1.022636661767027,
+          1.021870141041416,
+          1.0219272238272932,
+          1.0254208100569604,
+          1.028965504618715,
+          2.1205444335937504
+        ],
+        "energy_hint": 0.024487087549293924,
+        "gradient_infinity_hint": 0.027927349699468702,
+        "Hessian_min_eigenvalue_hint": -0.40874653931737154,
+        "free_block_min_eigenvalue_hint": -0.40874653931737154,
+        "inside_cell_hint": true
+      },
+      "root_hint": {
+        "point": [
+          1.751517326013965,
+          1.4696869591719455,
+          1.0366577142508095,
+          1.026751436360408,
+          1.0232687684175572,
+          1.0218820318225197,
+          1.0249895847659336,
+          1.0279424657464256,
+          1.942216240242934
+        ],
+        "energy_hint": 0.02637411362267471,
+        "gradient_infinity_hint": 2.4631143479003637e-13,
+        "Hessian_min_eigenvalue_hint": -0.37828553015464533,
+        "free_block_min_eigenvalue_hint": -0.37828553015464533,
+        "inside_cell_hint": false
+      },
+      "root_solver_success": true,
+      "energy_solver_success": true,
+      "energy_solver_message": "Optimization terminated successfully",
+      "gradient_solver_success": true,
+      "gradient_solver_message": "Optimization terminated successfully",
+      "best_linear_upper_per_direction_unit": -0.0095594153915039,
+      "best_quadratic_upper_per_direction_unit": 0.010951991928157042,
+      "best_quadratic_error_payment_per_unit": 0.0011370187818749383,
+      "best_quadratic_matrix_payment_per_unit": 0.003949720044411032,
+      "candidate_directions": 21,
+      "bound_seconds": 0.1633116000011796,
+      "quadratic_candidate_certificate": null,
+      "uniform_negative_curvature_certificate": null
+    },
+    {
+      "path": "r0010000011011011100011100",
+      "depth": 25,
+      "free_coordinates": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "constrained_energy_minimum_hint": {
+        "point": [
+          1.922943115234376,
+          1.1089731851660982,
+          1.044372904329063,
+          1.0319724423445058,
+          1.0308555162485162,
+          1.0312573890310397,
+          1.0514223314681843,
+          1.1227465732094681,
+          2.1706237792968746
+        ],
+        "energy_hint": 0.01899660378553162,
+        "gradient_infinity_hint": 0.03423564227399889,
+        "Hessian_min_eigenvalue_hint": -0.1445481422082557,
+        "free_block_min_eigenvalue_hint": -0.1445481422082557,
+        "inside_cell_hint": true
+      },
+      "constrained_smallest_gradient_hint": {
+        "point": [
+          1.8983154296875004,
+          1.18438720703125,
+          1.0204622282868174,
+          1.018002399462289,
+          1.0200744608309926,
+          1.0186591780281207,
+          1.0276296142511547,
+          1.13238525390625,
+          2.2637634277343746
+        ],
+        "energy_hint": 0.02067864894103117,
+        "gradient_infinity_hint": 0.044775655699385596,
+        "Hessian_min_eigenvalue_hint": -0.09927318184486712,
+        "free_block_min_eigenvalue_hint": -0.09927318184486712,
+        "inside_cell_hint": true
+      },
+      "root_hint": {
+        "point": [
+          1.9514713955020369,
+          1.026602439977017,
+          1.0218418055992933,
+          1.0191540305835063,
+          1.0191989314796455,
+          1.0193653809903775,
+          1.0223042757854324,
+          1.0317850127295431,
+          2.387964894139
+        ],
+        "energy_hint": 0.014108376958356289,
+        "gradient_infinity_hint": 3.53595408161822e-13,
+        "Hessian_min_eigenvalue_hint": -0.10426911582468146,
+        "free_block_min_eigenvalue_hint": -0.10426911582468146,
+        "inside_cell_hint": false
+      },
+      "root_solver_success": true,
+      "energy_solver_success": true,
+      "energy_solver_message": "Optimization terminated successfully",
+      "gradient_solver_success": true,
+      "gradient_solver_message": "Optimization terminated successfully",
+      "best_linear_upper_per_direction_unit": 0.004792565771452491,
+      "best_quadratic_upper_per_direction_unit": 0.009049644836277656,
+      "best_quadratic_error_payment_per_unit": 0.0015931130746889733,
+      "best_quadratic_matrix_payment_per_unit": 0.00396642926473943,
+      "candidate_directions": 21,
+      "bound_seconds": 0.15440579999994952,
+      "quadratic_candidate_certificate": null,
+      "uniform_negative_curvature_certificate": {
+        "kind": "correlated_negative_curvature",
+        "direction": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          16
+        ],
+        "direction_scale": 16,
+        "upper_numerator": "-2137619571064586782436638229578",
+        "denominator": "655360000000000000000000000000",
+        "eigenvalue_hint": -0.10426911582468143,
+        "scalar_affine_data": [
+          [
+            127460,
+            "373216850003698",
+            "219826494500024",
+            "16607159571293",
+            "affine"
+          ],
+          [
+            267408,
+            "32920556235968",
+            "0",
+            "43248246963851",
+            "interval"
+          ],
+          [
+            400357,
+            "7926410695964",
+            "0",
+            "25609004224128",
+            "interval"
+          ],
+          [
+            466714,
+            "14563693904610",
+            "-130177747350707",
+            "19230933524931",
+            "affine"
+          ],
+          [
+            545190,
+            "-10029419118518",
+            "-93825161230504",
+            "7152844097404",
+            "affine"
+          ],
+          [
+            615483,
+            "-13228000141114",
+            "-41189960163360",
+            "1768398044389",
+            "affine"
+          ],
+          [
+            756903,
+            "-9301978825904",
+            "33190520041295",
+            "284261107824",
+            "affine"
+          ],
+          [
+            72038,
+            "1169156237432086",
+            "-9770012409178024",
+            "97671401066278",
+            "affine"
+          ],
+          [
+            139948,
+            "203872345890681",
+            "-1655924426751243",
+            "93160600510810",
+            "affine"
+          ],
+          [
+            207451,
+            "58807250545288",
+            "-703030942350768",
+            "63580461102803",
+            "affine"
+          ],
+          [
+            272897,
+            "28665069725100",
+            "-410284003150984",
+            "35030286683250",
+            "affine"
+          ],
+          [
+            339254,
+            "16735330193447",
+            "-269382708374521",
+            "19305535227465",
+            "affine"
+          ],
+          [
+            420782,
+            "-27392208436177",
+            "-52925429750569",
+            "11808144528021",
+            "affine"
+          ],
+          [
+            491075,
+            "-22934787910271",
+            "23321136745113",
+            "2739624455437",
+            "affine"
+          ],
+          [
+            631688,
+            "-6761910024011",
+            "80785100583108",
+            "516902642536",
+            "affine"
+          ],
+          [
+            67910,
+            "1796437817962659",
+            "-9997171930839683",
+            "11858793114858",
+            "affine"
+          ],
+          [
+            135413,
+            "305330703143600",
+            "-1221624466746750",
+            "33018769585151",
+            "affine"
+          ],
+          [
+            200859,
+            "118058314129015",
+            "-428761709086658",
+            "13649855125082",
+            "affine"
+          ],
+          [
+            267216,
+            "59532452797989",
+            "-282538030214063",
+            "5151884763109",
+            "affine"
+          ],
+          [
+            346276,
+            "-12283585218777",
+            "-251788719277901",
+            "30255451000328",
+            "affine"
+          ],
+          [
+            419037,
+            "-25587396485614",
+            "-82390300933300",
+            "16808821420673",
+            "affine"
+          ],
+          [
+            559650,
+            "-15764456394577",
+            "47919018409853",
+            "7273612657905",
+            "affine"
+          ],
+          [
+            67651,
+            "1835915321783100",
+            "-9980554357503297",
+            "10633288730027",
+            "affine"
+          ],
+          [
+            135383,
+            "305889015265186",
+            "-1217676167183990",
+            "32538400220103",
+            "affine"
+          ],
+          [
+            201119,
+            "116325739501002",
+            "-444608637709738",
+            "13649855125082",
+            "affine"
+          ],
+          [
+            278366,
+            "-6647852769202",
+            "-416536636759103",
+            "67041688487915",
+            "affine"
+          ],
+          [
+            351127,
+            "-12386070510047",
+            "0",
+            "35050403608681",
+            "interval"
+          ],
+          [
+            491740,
+            "-15981267676398",
+            "0",
+            "11683886777459",
+            "interval"
+          ],
+          [
+            67732,
+            "1823576233814522",
+            "-9986160489436513",
+            "10174255367316",
+            "affine"
+          ],
+          [
+            135756,
+            "298820621213763",
+            "-1265803988495566",
+            "30525687886807",
+            "affine"
+          ],
+          [
+            212538,
+            "2642231386497",
+            "-714835643824445",
+            "124022864334211",
+            "affine"
+          ],
+          [
+            283624,
+            "-9610928616981",
+            "0",
+            "64503559854950",
+            "interval"
+          ],
+          [
+            424237,
+            "-19450011405480",
+            "0",
+            "14938114337095",
+            "interval"
+          ],
+          [
+            68024,
+            "1779042296814629",
+            "-10003282494851265",
+            "7995874929751",
+            "affine"
+          ],
+          [
+            144806,
+            "75229438661829",
+            "-1752233740998222",
+            "204755295462463",
+            "affine"
+          ],
+          [
+            217294,
+            "-45074674674656",
+            "-579267732797947",
+            "107986729160318",
+            "affine"
+          ],
+          [
+            76782,
+            "501859106667912",
+            "-8510371280606759",
+            "434481994768441",
+            "affine"
+          ],
+          [
+            149270,
+            "-38175526769996",
+            "-1533649943137407",
+            "158565952362675",
+            "affine"
+          ],
+          [
+            292434,
+            "-42491145346618",
+            "0",
+            "31623343125314",
+            "interval"
+          ],
+          [
+            70293,
+            "1432376093312874",
+            "-9975605331515667",
+            "34422495332956",
+            "affine"
+          ],
+          [
+            143665,
+            "105859786970592",
+            "-1763118877581821",
+            "14833779672160",
+            "affine"
+          ]
+        ],
+        "exact_flow": {
+          "constant": "-422129531517231372281627766164704",
+          "error": "5741295091679295266397042573312",
+          "coefficient": [
+            "588265896320541298208017142",
+            "1181537426778813666491037710",
+            "1433835521318672706953439908",
+            "1434079050626361467165890774",
+            "1433171677322066664337735124",
+            "1388239578171964219960935906",
+            "1310339022539930626057616942",
+            "1248487475520125169969679688",
+            "634588544992540923269698370"
+          ],
+          "negative_maximum": "-414250616854487490232794085361814",
+          "flow": {
+            "divergence": [
+              "588265896320541298208017142",
+              "593271530458272368283020568",
+              "252298094539859040462402198",
+              "243529307688760212450866",
+              "-907373304294802828155650",
+              "-44932099150102444376799218",
+              "-77900555632033593903318964",
+              "-61851547019805456087937254",
+              "-613898930527584246699981318",
+              "-634588544992540923269698370"
+            ],
+            "nonzero_flow": [
+              [
+                0,
+                9,
+                "1181537426778813666491037710",
+                379574
+              ],
+              [
+                1,
+                0,
+                "593271530458272368283020568",
+                -62204
+              ],
+              [
+                2,
+                4,
+                "663843996606042615704784",
+                70035
+              ],
+              [
+                2,
+                6,
+                "184684201801941494368055436",
+                135609
+              ],
+              [
+                2,
+                9,
+                "66950048741311503478641978",
+                284142
+              ],
+              [
+                3,
+                4,
+                "243529307688760212450866",
+                34994
+              ],
+              [
+                6,
+                5,
+                "44932099150102444376799218",
+                -32851
+              ],
+              [
+                6,
+                7,
+                "61851547019805456087937254",
+                43392
+              ],
+              [
+                9,
+                8,
+                "613898930527584246699981318",
+                -69486
+              ]
+            ],
+            "cost": "414250616854487490232794085361814"
+          }
+        },
+        "affine_terms": 34
+      }
+    }
+  ],
+  "global_cover_complete": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 7.933860600001935
+}

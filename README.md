@@ -181,7 +181,11 @@ the Fourier window and pair ledger and studies a minimizer cover using
 correlated directional derivatives and interval Newton contraction.
 Additional modules have current ordinary-kernel receipts, including the
 actual new kernel and energy bound and genuine coercive minimum/KKT results.
-The new global floor, remaining analytic/counting connections and final
-independent submission checks are still incomplete. The
+All 16 required convex wells, all 69 actual coherent basin floors, the
+1,987-cell separated derivative grid, actual scalar support tools,
+finite-move inequalities and conditional counting reductions have ordinary-kernel
+proofs. A compact independent numerical archive closes 43 mutually
+nonnested global-competitor sample regions. The new global floor, complete
+finite cover and final independent submission checks remain incomplete. The
 [submission status](submission/goal-20261016/STATUS.zh.md) lists the candidates
 and remaining obligations; it does not claim a new unconditional record.
