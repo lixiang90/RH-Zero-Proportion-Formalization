@@ -1,0 +1,82 @@
+Fixed full8-gap ternary antisymmetric potential discovery (2026-10-17)
+
+Exactly ONE HiGHS LP was called for this model, time_limit30, on the
+original29171 legal samples/current24 rational profile and ledger. No
+sample compression, adversary, point fit, profile/ledger change, break
+scan, extra optimization or Lean was used. The earlier clipped model's
+two calls (one output failure plus authorized recovery) are separate.
+
+V is constant on each eight-gap ternary word, breaks3/2 and5/2, and
+V(reverse(word))=-V(word). There are6561 states,81 palindromes forced0,
+3240 independent potentials plus c,35651 rows and95930 nonzeros.
+Every sample row remains present. State bounds are +/-2V-c<=0;
+0<=c<=1/64. All6561 states and19683 nine-gap class words occur in the
+fixed pool. The pool itself is not exactly reflection-closed, but the
+actual fixed ledger is reversal symmetric and so is the modified energy.
+
+One normal completion and its limits
+------------------------------------
+HiGHS returned optimal in about.287s. The zero-V sample minimum is
+.008847438760183938, while the LP floor hint is.008847458822891154,
+an increase of only2.00627e-8. The maximum float row violation is about
+1.735e-18. No substantial sampled improvement was found; this model
+was stopped without a retry. The floor upper cap is not active.
+
+The fixed D=10^12 candidate has c=8847458822/10^12. All6561 rational
+state values obey reversal antisymmetry and |V|<=c/2 exactly. The
+oscillation bound is4423729411/500000000000, equal to c. Quantization
+leaves33 of29171 finite surrogate rows slightly negative, worst about
+-8.50e-14; no repair was made. Even exact feasibility for these saved
+binary float F values would not prove inequalities for actual F.
+
+Raw OptimizeResult was durably saved before summary; the sync archive
+raw-result.json.gz reconstructs its full raw JSON byte-for-byte. The
+redundant uncompressed local raw-result.json is not in the package.
+Saved float-F and head/tail-word arrays are lossless gzip with explicit
+raw hashes, shapes and byte order. The independent stdlib replay checks
+these files, reconstructs the old sample-pool byte hash from NPZ/JSON,
+rebuilds word codes and exact layout counts, and checks rational budgets.
+It performs no optimizer or kernel evaluation.
+
+Why this is not a general continuous-potential obstruction
+---------------------------------------------------------
+The zero-V minimum is row69, the saved window_reweight_challenge point.
+Its class word is[1,0,0,1,0,1,0,0,1], head271 and tail2277. They differ;
+the nine real gaps are not constant. Row39 has the same word pair and
+almost identical saved F. The smallest of404 head=tail samples is row
+17232, word3280, F about.00977736, and is not a tight upper support.
+
+The true finite-LP upper support is five Gram-anchor rows[1,2,7,13,15]
+with exact weights[2,1,2,2,2]/9. Their canonical class-potential
+coefficients cancel exactly, weights sum1, giving the finite binary-F
+upper bound15300638307052189/1729382256910270464. support_audit.py
+independently checks this, the original float gap vectors and word IDs.
+The corresponding actual real eight-gap state coefficients do NOT cancel
+(nine nonzero states remain). Thus this supports only the fixed ternary
+antisymmetric class-word surrogate, not an obstruction to arbitrary
+bounded continuous eight-gap potentials. No new actual uniform-gap
+point was evaluated.
+
+Formal and counting gaps
+------------------------
+WindowPairCertificate currently proves only short-pair floor221/25000
+=.00884. This larger mean candidate cannot alone be substituted into an
+unconditional kappa formula at the same separation. Improving the pair
+floor or changing separation would require new proof, and so would the
+global mean-floor inequality itself. No new kappa is inferred here.
+
+This step potential is discontinuous. One cannot use the old continuous
+global-minimizer theorem for F+V(head)-V(tail). A safe future route would
+prove every closed nine-gap class separately: class0=[sep,1.5],
+class1=[1.5,2.5],class2=[2.5,infinity), allowing overlapping boundaries.
+Each regional objective is F plus a fixed constant, but its minima have
+new upper/lower class-face KKT conditions. Old global-F-minimum Newton,
+KKT or finite-competitor exclusions cannot simply be reused. State range
+bounds give only the conservative pressure root P<2c. These regional
+and boundary proofs have not been constructed. No complete cover, actual
+scalar inequality, Lean instance or zero-proportion record is claimed.
+
+Read-only arithmetic/metadata checks, no optimizer/kernel queries:
+ python research-goal-20261017-ternary-coboundary/independent_replay.py
+ python research-goal-20261017-ternary-coboundary/support_audit.py
+Optimizer source refuses all existing start/output artifacts; do not rerun.

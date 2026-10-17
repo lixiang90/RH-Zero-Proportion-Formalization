@@ -1,0 +1,27 @@
+{
+  "scope": "Make lossless 3MiB pieces of the already independently audited NPZ.\n\nThis does not recompute or alter any numeric coefficient. Existing pieces\nand manifest must match exactly. The raw NPZ is a reconstructed dependency,\nnot a second repository upload.\n",
+  "outputs": [
+    {
+      "name": "new-rows-float.npz",
+      "bytes": 6980634,
+      "sha256": "213be8da6f73755e582763ef63ea2685041aed5d1af6b98f44a0116672f4009c",
+      "parts": [
+        {
+          "name": "new-rows-float.npz.part000",
+          "bytes": 3145728,
+          "sha256": "7aa769ef64842750c087037224d0c6004166e9ba2a46b0b124dcfcb92726a616"
+        },
+        {
+          "name": "new-rows-float.npz.part001",
+          "bytes": 3145728,
+          "sha256": "40c8c64389c617cd95062ca08af4f006728904db2a9161f884facb367b91f78d"
+        },
+        {
+          "name": "new-rows-float.npz.part002",
+          "bytes": 689178,
+          "sha256": "c67c8c05e2951faf0ad6b8308b8a5bbfe2cdaabbde1d51621d93484604a1182a"
+        }
+      ]
+    }
+  ]
+}

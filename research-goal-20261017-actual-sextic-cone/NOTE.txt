@@ -1,0 +1,108 @@
+ONE ACTUAL-SEXTIC DIRECT-CONE EXPERIMENT
+
+Scope and mathematical meaning
+
+This fixed first remaining cell and target c=11/1250 retain the complete
+degree-six lifted model: 5004 nonconstant moments plus diagnostic slack
+column 5004, 14383 original scalar rows, 73 PSD blocks, and 96580 packed
+PSD entries. There is no new case, point fit, parameter scan or warm seed.
+
+The actual-sextic-static packet supplies 181 additional unsoftened rows:
+one absolute lower energy L6<=c, then 9*10*2 free-gradient necessary rows
+Err6_r +/- test*P5_r>=0, test=1,y0,...,y8. The energy and error polynomials
+come from normalized-W jets0..6 and whole-span q7,d16 bounds on |w7|;
+all point coefficient errors and dynamic sixth-moment remainder payments
+are retained. The new energy row has no slack variable. None of the 181
+rows contains the diagnostic slack. They are degree-six scalar/M0 rows,
+not M1 degree-eight localizers.
+
+The previous pure-moment indirect attempt had no new actual-sextic data.
+The present direct attempt uses a different necessary mathematical model.
+It does not replace or amend that frozen experiment. The complete old
+constraints are retained; the only old scalar column remapping remains
+714->5004. The combined model has 14564 scalar rows, 111144 conic rows,
+5005 optimization variables, and 3153411 matrix nonzeros.
+
+Pre-solve exact checks
+
+prepare_rows.py reconstructs exact Fraction coefficients from the frozen
+factored packet and hashes each canonical row before numerical rounding.
+The independent stdlib preflight reconstructed all 181 rows, bounds,
+positive rational scales, exact rank-one packing identities, and checked
+905724 coefficients plus 905905 float64 values bit for bit. It checked
+all CSR indices/indptr, the old 5803-row adapter and 8580 explicit boxes.
+The new rows are dense in the 5004 moment columns and omit column5004.
+
+The worker also verifies the full 1416525 exact plan/product identities
+and b-Ax=q/divisor at a prescribed rational rank-one point. This is an
+algebraic packing test only. That point need not satisfy the geometry,
+stationarity or sublevel premises and is never used as a solver seed.
+PSD packing uses the standard lower-triangle svec factor sqrt(2), with
+one explicit positive rational divisor for each whole PSD block.
+
+Independent source review locks worker.py/run_once.py and confirms the
+single constructor/solve call, direct QDLDL backend, and monitor behavior.
+The SCS3.3.1 direct CPython3.14 extension was separately import-checked
+without constructing a solver. The runtime __init__/pyd hashes are kept
+as runtime dependencies only; installing packages is not part of replay.
+
+Budget and output policy
+
+Exactly one cold CPU-direct (QDLDL) solve is authorized: BLAS1,
+time_limit_secs45, max_iters2000, eps_abs=eps_rel=1e-7. No fallback,
+retry, different seed or later parameter change is permitted. The parent
+monitors only its own subprocess handle, terminating that process if
+current or peak working set exceeds1.5GiB, total wall time exceeds90s
+including import/assembly/setup, or live memory monitoring fails.
+
+Native x/y/s arrays, if returned, are written to gzip with flush/fsync
+and atomic replace before derived diagnostics. A numerical residual,
+energy-slack sign, eigenvalue, or solver infeasibility status is a hint
+only. None establishes exact feasibility, infeasibility or cell exclusion.
+The particular analytic table instances have not been newly Lean checked.
+There is no new unconditional zero proportion established by this packet.
+
+Input transport and replay
+
+new-rows-float.npz is a 6980634-byte local reconstructed dependency. Its
+three 3MiB-or-smaller lossless parts are repository package files. The
+raw NPZ is not uploaded in addition to the parts. To verify pieces:
+
+  python -S research-goal-20261017-actual-sextic-cone/restore_inputs.py
+
+To restore an absent original, append --restore. Existing files are only
+verified and never overwritten. This transports bytes without recomputing
+coefficients. The factored exact packet and canonical hashes remain the
+mathematical row source. Independent audits are read-only by default.
+
+Terminal outcome
+
+The sole SCS call returned status "infeasible" (status_val=-2) at125
+iterations. Its reported res_infeas was4.130910915064931e-12. The saved
+dual ray is finite, b.dot(y)=-0.9999999999999982 and the independently
+computed floating ||A.transpose()*y||_infinity=4.134026454494233e-12.
+This is a positive numerical infeasibility hint, not an exact certificate.
+The ordinary objective-dual residual A.transpose()*y+c is not the
+infeasibility-ray condition; the worker records both diagnostics.
+
+SCS reported setup26.197316s and solve34.4079872s; measured constructor
+plus solve time was60.637799s. The internal time_limit_secs45 governs
+the solver, not a hard total45-second setup-and-solve wall cap. Parent
+total was68.198s, below the explicit90-second subprocess wall cap.
+Peak working set728928256B was below1.5GiB; no guard triggered.
+There was one subprocess, one constructor and exactly one cold solve.
+
+Native full x/y/s hint gzip was saved before diagnostics:1057101B,
+SHA2569ad1f4594b3981f2a5bff6e1ffbd1d76ae1e24d5f8b3538b7e89846d8b4ba693.
+Lengths are5005/111144/111144. Nonfinite infeasible primal/slack outputs
+are explicit strings rather than invalid JSON NaN literals; this hint
+file is not an exact primal witness. Source hashes agree at start/end.
+
+The fixed rational packing test had maximum floating discrepancies
+1.970645868709653e-15 (scalar) and4.440892098500626e-16 (PSD), in
+addition to the exact term identities. These verify the encoding only.
+
+No second solve, point adjustment, exact dual extraction, Lean compile,
+cell exclusion or zero-proportion improvement is performed in this
+packet. A separate exact dual/PSD certificate would be needed before
+using this numerical hint to establish even the selected cell's exclusion.

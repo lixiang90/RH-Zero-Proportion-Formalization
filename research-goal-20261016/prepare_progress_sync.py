@@ -23,8 +23,9 @@ def indexed_blobs(paths):
     assert offset==len(batch)
 def main():
     receipt=json.loads((HERE/'ordinary-verified-current.json').read_bytes())
-    files=['.gitattributes','README.md','submission/goal-20261016/STATUS.zh.md']
-    names=['README.md','ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
+    files=['.gitattributes','AGENTS.md','README.md','submission/goal-20261016/STATUS.zh.md']
+    names=['README.md','DIRECTION.zh.md','direction-state.json','macro-reviews/001-20261017.zh.md',
+      'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
       'window_interval_kernel.py','window_interval_kernel.json','window_jet_crosscheck.py','window_jet_crosscheck.json',
       'window_global_cover.py','window_lower_global_cover.py','window_make_lower_variant.py','window_make_lower_variant.json',
       'window_minimizer_cover.py','window_correlated_minimizer_cover.py','window_make_correlated_variant.py','window_make_correlated_variant.json',
@@ -220,7 +221,16 @@ def main():
       ('research-goal-20261017-sextic-envelope-plan/plan-files.json','efe5a4dd640004086f10ae9c98b03f9b6fcd729a331f869339950a031f397326'),
       ('research-goal-20261017-period9-gate/files.json','e85f7d8998d32b3bc4496d70afce2db0d1f09ad5b84860c3ac98163c1194dde5'),
       ('research-goal-20261017-degree6-run-audit/audit-files.json','b909eef7ffee44a05fc771c3cbbe9333f09bfa4b69082e730c375763996c5548'),
-      ('research-goal-20261017-degree6-cone/degree6-cone-files.json','6689194501b4e8613389da78ea95b04b7f2a7285215b82293a33cdbd8b844196')]:
+      ('research-goal-20261017-degree6-cone/degree6-cone-files.json','6689194501b4e8613389da78ea95b04b7f2a7285215b82293a33cdbd8b844196'),
+      ('research-goal-20261017-actual-sextic-static/actual-sextic-files.json','de6b1928b99a73db303f5c37994a1354ebe39ec1152342dac61ca9b475c8a5fb'),
+      ('research-goal-20261017-actual-sextic-audit/sextic-audit-files.json','4a7782404601be29ea913fb45d7a580fe7e971c1940e3166b250edfc0050d300'),
+      ('research-goal-20261017-clipped-coboundary/files.json','1adf2aec40b6e4854e75d404afacaeb6cd8a123bb5a496ace0ac16ba2dab32a7'),
+      ('research-goal-20261017-ternary-coboundary/files.json','689cae3b63506e640b5c973aa3765682e9a3aa4b01c05913cbb9b44637f1c205'),
+      ('research-goal-20261017-quadratic-coboundary-budget/files.json','7e819375590d5b66ef72f48c4a159ff82cf48b4a188300fa6c1fc9f5db97c8c0'),
+      ('research-goal-20261017-actual-sextic-cone/actual-sextic-cone-files.json','4094f05bf934e083aebd99ed548836b1487681a963f53fe2fa95d930b8ecffd8'),
+      ('research-goal-20261017-actual-sextic-cone-audit/preflight-files.json','885d7665637ea4aa71268376907042099c3cf01a2330646dbb95c99cabad299e'),
+      ('research-goal-20261017-actual-sextic-cone-audit/worker-review-files.json','f1bd017848b3013e5d0ec24ecd689a4eb3155a96187b45a2f41d9e848697d68b'),
+      ('research-goal-20261017-actual-sextic-run-audit/run-audit-files.json','3c0153cd799b769960b7fc092bcdf5510bbf475d5ec9f2f9f9439e17f5792d96')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -230,6 +240,10 @@ def main():
             raw=(ROOT/runtime['path']).read_bytes()
             assert hashlib.sha256(raw).hexdigest()==runtime['sha256']
             if 'bytes' in runtime:assert len(raw)==runtime['bytes']
+        for restored in pinned.get('reconstructed_dependency_files',[]):
+            raw=(ROOT/restored['path']).read_bytes()
+            assert hashlib.sha256(raw).hexdigest()==restored['sha256']
+            if 'bytes' in restored:assert len(raw)==restored['bytes']
         rows=pinned.get('files',pinned.get('package_files'))
         if rows is None and 'files_sha256' in pinned:
             rows=[{'path':path,'sha256':digest,'bytes':(ROOT/path).stat().st_size}
@@ -283,8 +297,9 @@ def main():
                 continue
             if row['path'] in [
                   'research-goal-20261017-swap-family-quartic/swap-family-quartic.json.gz',
-                  'research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz']:
-                # Both complete packets are reproduced from their published
+                  'research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz',
+                  'research-goal-20261017-actual-sextic-cone/new-rows-float.npz']:
+                # These complete packets are reproduced from their published
                 # hash-checked pieces; do not stage a second copy of the bytes.
                 continue
             files.append(row['path'])

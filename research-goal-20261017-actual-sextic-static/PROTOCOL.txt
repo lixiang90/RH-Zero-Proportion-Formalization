@@ -1,0 +1,190 @@
+Coherent actual sextic analytic packet: STATIC only
+===================================================
+
+Scope and outcome
+-----------------
+This is one fixed construction on the original case
+r001000001000100110011001, target c=11/1250, SEP=123/128. It retains the
+complete prior degree-six model by hash and adds181 unsoftened scalar
+constraints. There is no new solver, actual kernel sampling, point fit,
+anchor scan, numeric moment evaluation, compiler job or cell exclusion.
+No strict new inequality violation, new floor or RH proportion is claimed.
+
+The build used41 original positive ledger edges,658 distinct seventh-
+derivative grid cells,287 shared span powers and2501 moment-shift plans.
+It completed in2.568 seconds with Windows peak working set150478848
+bytes (about143.5MiB). The raw JSON size is3433971 bytes, gzip884271;
+the shift-index binary is412556 bytes. Both the1.5GiB peak-RSS and40MiB
+single-raw-file guards passed. Actual data sizes and all source hashes at
+both ends are recorded in sextic-build.json.
+
+One normalized-W source, independent of old F0 and derivative literals
+---------------------------------------------------------------------
+For each positive edge e=(i,j), use the OLD parent DBM whole-span domain
+[l_e/SC,u_e/SC], SC=32768. Its deterministic anchor is the whole-span
+midpoint p_e=(l_e+u_e)/(2SC), and R_e=(u_e-l_e)/(2SC)>0. There is no
+selection among anchors. The whole interval contains the anchor and the
+complete segment between it and every permitted real span value.
+
+Normalized actual-W integer Taylor data contain24 terms of degree23,
+enclosing w^(k)(n)/k! for k=0,...,23. At each rational p_e, Taylor is
+applied SEPARATELY to w^(j) for j=0,...,6; the additional remainder is
+
+    M24*abs(p_e-n)^(24-j)/(24-j)!, M24=(44/7)^24.
+
+This does not differentiate an inequality about an unknown remainder.
+All used nearest integer anchors are in1,...,32 and at distance<=1/2.
+Midpoint/half-width of the resulting rational intervals give mu_j,eps_j.
+In particular j=0 is included. The NEW energy does not borrow the old
+common F0 packet, and the NEW derivative envelopes do not read the old
+cover_newjet w-prime literal table. Old geometry and normalized variables
+are the only fields taken from the quartic model for this construction.
+
+A complete-span M7 bounds abs(w^(7)). On each old1/64 grid cell, the
+normalized-W polynomial is differentiated7 times, giving17 terms of
+degree16, with coefficient factor k!/(k-7)!. The Taylor remainder is
+
+    M24*(1/2)^17/17!.
+
+Every selected cell's rational lower/upper bounds and outward1e-15
+absolute bound are stored once. The whole-span M7 is their maximum.
+This matches q=7,d=16, q+d+1=24. It is not q=6 or an18th-power remainder.
+There is no new transcendental table or actual scalar sampling position.
+
+The normalized-W table identity and generic actual order24 derivative
+APIs are already available, but the particular point/grid packets still
+need their concrete finite checks or exact-rational interval soundness
+consumer in Lean. Exact rational Horner is not silently identified with
+FI-Q30 rounded endpoints. No new concrete analytic instance is claimed
+Lean-checked here; this is an auditable static packet with explicit
+actual-enclosure premises.
+
+Correct energy and derivative payments
+---------------------------------------
+For d=s_e(y)-p_e and abs(d)<=R, define
+
+    T6(d)=sum(j=0,...,6) mu_j*d^j/j!,
+    A6(d)=eps0+eps1*R
+           +(eps2/2+eps3*R/6)*d^2
+           +(eps4/24+eps5*R/120)*d^4
+           +(eps6/720+M7*R/5040)*d^6.
+
+The actual energy enclosure is T6-A6<=w(s)<=T6+A6. All odd coefficient
+errors are paid with abs(d)^(2k+1)<=R*d^(2k). The seventh energy remainder
+uses7!=5040 and is bounded by M7*R*d^6/5040. The absolute lower energy is
+
+    L6=pressure+sum_e a_e*(T6_e-A6_e).
+
+Its use of mu0/eps0 avoids any inheritance of the old F0 interval. All
+nonzero ledger weights are checked positive and pressure is the exact
+same nine-gap linear form.
+
+For w-prime, SEPARATELY apply its degree-five Taylor enclosure:
+
+    U5(d)=sum(j=1,...,6) mu_j*d^(j-1)/(j-1)!,
+    E6(d)=eps1+eps2*R
+           +(eps3/2+eps4*R/6)*d^2
+           +(eps5/24+eps6*R/120)*d^4
+           +M7*d^6/720.
+
+Then abs(w'(s)-U5(d))<=E6(d). This remainder uses6!=720, not7!.
+E6 is not obtained by differentiating A6; differentiating an absolute
+error bound would be invalid. Only the CENTRAL coefficient identity
+U5[k]=(k+1)*T6[k+1] is checked as a useful arithmetic consistency test.
+
+For each original coordinate r let
+
+    P5_r=b_r+sum_(e contains r) a_e*U5_e,
+    Err6_r=sum_(e contains r) a_e*E6_e.
+
+All nine adjacent original lower endpoints are strictly above SEP.
+Thus an actual relevant global minimum in this cell has gradient_r=0
+and abs(P5_r)<=Err6_r. With each normalized abs(y_s)<=1, the necessary
+scalar constraints are
+
+    L6<=c,
+    Err6_r+sign*P5_r>=0,
+    Err6_r+sign*y_s*P5_r>=0, sign=-1,+1.
+
+There are1+9*10*2=181 rows. The sign is Err6+/-P5, NEVER P5-Err6>=0.
+Only P5 is multiplied by the test monomial; the error is NOT multiplied.
+The new energy condition is unsoftened: the diagnostic energy slack
+column5004 is absent from EVERY new row. For actual F<c the stronger
+L6<c holds; the closed L6<=c is a valid necessary relaxation.
+
+All rows have degree<=6 and are scalar/M0 constraints. A new Err6+/-P5
+multiplier times an M1 square basis would require degree8 moments; no
+such invalid localizer is added to the5005-monomial layout. The old14383
+rows and73 PSD blocks are retained, giving14564 scalar rows and still73
+PSD blocks if the new packet is later assembled with that model.
+
+Full shared-variable factored representation
+---------------------------------------------
+All spans use the SAME nine y coordinates and the SAME canonical5005
+monomials through degree six. The first715 monomials remain the old
+degree<=4 prefix. MomentID0 is fixed1, positive momentID k means column
+k-1, and separate energy slack column5004 is never a moment. No
+independent edge variables or edge moments are introduced.
+
+Each edge stores its exact affine d polynomial and all powers d^0,...,d^6
+as canonical moment-ID coefficient lists. There are287 powers with41794
+stored coefficients, each stored once. Univariate T6,A6,L6,U5,E6
+coefficient lists multiply those powers; the positive edge weight is
+also stored once. Incident-edge lists recover each P5_r and Err6_r
+exactly. The exact pressure polynomial and pressure derivatives b_r are
+stored explicitly.
+
+The2501 shift plans cover every unshifted power and every product of a
+power d^k, k<=5, with each of the nine y coordinates. A plan is
+
+    [spanPowerID,testMonomialID,targetOffset,termCount].
+
+Test monomial IDs0,...,9 mean1,y0,...,y8. The binary target stream is
+little-endian uint16 canonical moment IDs. It has206278 entries. For
+every coefficient monomial alpha, its target is alpha+test; injectivity
+and maximum degree6 are checked. Degree-six powers have ONLY test0,
+because they are never multiplied by y in the new constraints.
+
+This representation determines each scalar row as a complete exact
+rational linear form, including all cross-coordinate y_s*d^k moments.
+It does not discard cross terms or replace them with independent averages.
+The181 row descriptors and aggregate definitions say how to combine
+these coefficient references, signs and constants. Expanding repeated
+giant Fraction rows is unnecessary and is not performed. All binary
+offsets, counts, source/artifact hashes and finite scalar data are saved.
+
+Limits of the result
+---------------------
+There is no automatic ordering between these new rational sextic and
+old quartic enclosures: the fixed anchors and error payments differ.
+Preserving the old model is essential. Only a verified violation at a
+previous exact feasible point, or an exact infeasibility certificate,
+could establish an actual improvement in the relaxation for this cell.
+Neither test is run here. The earlier indirect SCS result was inaccurate
+and is not promoted to an exact point for this packet.
+
+The old model's separate analytic obligations also remain visible; new
+normalized-W envelopes do not retroactively prove the old literals. The
+packet changes analytic information while retaining the same Fourier
+profile, ledger, separation and target. It is not by itself a proof of
+the target floor, a complete global cover, an unconditional zero record,
+or a website-submittable formal source.
+
+Completed independent replay
+-----------------------------
+The independent stdlib replay passed once in1.187 seconds, without any
+producer import, new point, solver or compiler. Point derivative intervals
+were recomputed by direct fixed-scalar interval sums instead of Horner;
+span powers were recomputed from closed multinomial coefficients instead
+of iterative multiplication. All41 ledger edges,287 point intervals,
+658 q7,d16 cells,41794 span-power coefficients,2501 shift plans with206278
+targets, and181 unsoftened row descriptors matched exactly. Input hashes
+were unchanged at both ends. No strict shrink or analytic Lean-instance
+claim follows from this representation replay.
+
+Read-only command from repository root:
+
+    python -S research-goal-20261017-actual-sextic-audit/independent_replay.py
+
+The independent receipt and its small pin are stored in that audit
+directory. The optional --write-receipt mode writes only an absent file.

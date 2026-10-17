@@ -943,3 +943,47 @@ contractions, and does not classify arbitrary low-energy windows. A new
 potential would require a new cover of the modified energy, with its
 pressure root and KKT conditions changed accordingly. See
 `research-goal-20261017-period9-gate/NOTE.txt`.
+
+The new actual-function sextic packet is now constructed and independently
+replayed: all 41 original edges, 287 point derivative intervals through
+order six, 658 seventh-derivative grid cells, 41,794 multinomial terms and
+206,278 target references match. It adds 181 unsoftened scalar conditions,
+including an absolute L6<=c row independent of the old F0/w-prime literals.
+The old model is retained. No degree-eight localizer is silently added.
+See `research-goal-20261017-actual-sextic-static/actual-sextic-files.json`.
+Concrete analytic Lean instances, exclusion and a global floor remain open.
+
+One fixed four-parameter bounded separable overlapping potential was also
+tested on the frozen sample pool. Its apparent gain is of the same size as
+the numerical constraint residual, so it supplies no reliable improvement.
+The first result-save failure and the authorized identical recovery are
+both retained, with total LP calls explicitly two. The package is
+`research-goal-20261017-clipped-coboundary/files.json`. No sampled floor is
+an unconditional counting bound. In particular, the currently proved
+short-pair payment at SEP=123/128 is only 221/25000=.00884; increasing a
+separated mean floor alone does not silently increase that payment.
+
+The complete eight-gap ternary coupled potential was subsequently tested
+once, with 3,241 variables after exact antisymmetric elimination. All
+6,561 states occur in the frozen pool. The sample floor increases by only
+about 2.0e-8. Five samples with rational weights [2,1,2,2,2]/9 cancel the
+word-potential coefficients exactly and constrain this finite model. Their
+actual continuous eight-gap states do not cancel, so this is not an
+obstruction to arbitrary continuous potentials. Quantization leaves small
+negative surrogate sample slacks and was not repaired or accepted as a
+certificate. See `research-goal-20261017-ternary-coboundary/files.json`.
+
+The augmented actual-sextic model's sole direct solve now reports
+infeasibility at iteration 125, with a ray residual about 4.13e-12 and
+b-dot-y near -1. Complete raw arrays and the independently audited runtime
+record are frozen in
+`research-goal-20261017-actual-sextic-cone/actual-sextic-cone-files.json`.
+This is a numerical hint, not an exact cell exclusion. The main route is
+now exact rational scalar/Gram multipliers with rigorous box payment,
+followed by actual analytic Lean bridges and full coverage.
+
+The human-requested macro review runs every four to eight main research
+rounds, normally six; compaction never resets the counter. Read
+`DIRECTION.zh.md`, `direction-state.json` and
+`macro-reviews/001-20261017.zh.md`. Further optimization families are paused
+while the promising certificate is converted and independently checked.

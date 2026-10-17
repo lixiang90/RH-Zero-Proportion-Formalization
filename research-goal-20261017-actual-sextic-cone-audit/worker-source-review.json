@@ -1,0 +1,90 @@
+{
+  "scope": "Read-only static source gate for the ONE actual-sextic CPU-direct attempt.\n\nParse source without importing the worker, NumPy, SciPy or SCS. Check the\none-call cold direct configuration and own-PID monitor, and independently\ncount all retained scalar/PSD rows and nonzeros. No worker is executed.\n--write-receipt creates an absent additive receipt; old preflight is frozen.\n",
+  "status": "frozen_worker_static_gate_passed_for_one_cold_CPU_direct_attempt",
+  "source_sha256_start": {
+    "research-goal-20261017-actual-sextic-cone-audit/review_worker.py": "bd11c09b6d45d6f9136701de59be73710a06f83f3d6c698506e6e27eaa2574c5",
+    "research-goal-20261017-actual-sextic-cone/worker.py": "c0c9c942eae956576934ca9bd8b60aa3146077f062f80e1bed672fffc1e59626",
+    "research-goal-20261017-actual-sextic-cone/run_once.py": "df7b67869457d4c523b81f047447b36dda025ceae1747a27e604662280499cc5",
+    "research-goal-20261017-actual-sextic-cone-audit/independent-preflight.json": "e71e570a108a5320ce7d8e4d70b6e243cf5729fb92b12cecf3b5bcece08e4fa4",
+    "research-goal-20261017-actual-sextic-cone-audit/preflight-files.json": "885d7665637ea4aa71268376907042099c3cf01a2330646dbb95c99cabad299e",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-degree6-static/degree6-targets.bin": "2f33955dca14c310a993df8d0930044e00c0af63b137f309bd7252fc3ce5052d",
+    "research-goal-20261017-degree6-static/degree6-entryplans.bin": "3f906a5b5abbac6829dd8fb87329bdc3de0f27b5388102305b1792af78d90c01",
+    "research-goal-20261017-actual-sextic-cone/aggregation.json": "3a63912b326e81719fa8dfa861cec86a817aaad3bf41cf3ea539c8e6faedf13a",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0",
+    "tmp/goal-20261016/python-sdp/scs/_scs_direct.cp314-win_amd64.pyd": "55583ea77840727ee357ba7b42c5443caf250f55039199a924a2b1910459cd6c",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-actual-sextic-cone-audit/review_worker.py": "bd11c09b6d45d6f9136701de59be73710a06f83f3d6c698506e6e27eaa2574c5",
+    "research-goal-20261017-actual-sextic-cone/worker.py": "c0c9c942eae956576934ca9bd8b60aa3146077f062f80e1bed672fffc1e59626",
+    "research-goal-20261017-actual-sextic-cone/run_once.py": "df7b67869457d4c523b81f047447b36dda025ceae1747a27e604662280499cc5",
+    "research-goal-20261017-actual-sextic-cone-audit/independent-preflight.json": "e71e570a108a5320ce7d8e4d70b6e243cf5729fb92b12cecf3b5bcece08e4fa4",
+    "research-goal-20261017-actual-sextic-cone-audit/preflight-files.json": "885d7665637ea4aa71268376907042099c3cf01a2330646dbb95c99cabad299e",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-degree6-static/degree6-targets.bin": "2f33955dca14c310a993df8d0930044e00c0af63b137f309bd7252fc3ce5052d",
+    "research-goal-20261017-degree6-static/degree6-entryplans.bin": "3f906a5b5abbac6829dd8fb87329bdc3de0f27b5388102305b1792af78d90c01",
+    "research-goal-20261017-actual-sextic-cone/aggregation.json": "3a63912b326e81719fa8dfa861cec86a817aaad3bf41cf3ea539c8e6faedf13a",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0",
+    "tmp/goal-20261016/python-sdp/scs/_scs_direct.cp314-win_amd64.pyd": "55583ea77840727ee357ba7b42c5443caf250f55039199a924a2b1910459cd6c",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a"
+  },
+  "all_inputs_unchanged": true,
+  "one_SCS_constructor_in_source": true,
+  "one_SCS_solve_in_source": true,
+  "constructor_line": 182,
+  "solve_line": 185,
+  "solver_keywords": {
+    "linear_solver": "scs.LinearSolver.QDLDL",
+    "verbose": false,
+    "time_limit_secs": 45,
+    "max_iters": 2000,
+    "eps_abs": 1e-07,
+    "eps_rel": 1e-07
+  },
+  "solve_keywords": {
+    "warm_start": false
+  },
+  "BLAS_threads_before_import": 1,
+  "optimization_variables": 5005,
+  "old_scalar_rows": 14383,
+  "new_unsoftened_scalar_rows": 181,
+  "total_scalar_rows": 14564,
+  "PSD_blocks": 73,
+  "PSD_packed_rows": 96580,
+  "matrix_shape": [
+    111144,
+    5005
+  ],
+  "exact_nonzero_count": 3153411,
+  "nonzero_components": {
+    "old_rows": 204400,
+    "higher_moment_boxes": 8580,
+    "new_rows": 905724,
+    "PSD": 2034707
+  },
+  "retained_old_column_remap": [
+    714,
+    5004
+  ],
+  "new_rows_slack_column_absent": true,
+  "uniform_positive_block_scaling_and_SCS_sqrt2_sign_reviewed": true,
+  "full_x_y_s_fsync_before_diagnostics": true,
+  "durable_archive_write_line": 194,
+  "monitor_total_wall_seconds": 90,
+  "monitor_RSS_bytes": 1610612736,
+  "monitor_tracks_only_created_process_handle": true,
+  "monitor_includes_import_assembly_and_setup": true,
+  "monitor_missing_memory_read_stops_only_worker": true,
+  "retry_or_backend_fallback_in_source": false,
+  "source_gate_only_not_worker_execution": true,
+  "worker_executions": 0,
+  "solver_calls": 0,
+  "Lean_invocations": 0,
+  "strict_feasibility_or_exclusion_claimed": false,
+  "global_floor_proved": false,
+  "new_zero_proportion_proven": false,
+  "elapsed_milliseconds": 524
+}

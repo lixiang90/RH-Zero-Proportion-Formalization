@@ -1,0 +1,75 @@
+Fixed clipped-separable overlap discovery, with one output recovery
+=================================================================
+
+There were TWO actual HiGHS LP calls, not one successful original call:
+the first returned but lost its result at JSON serialization of a NumPy
+bool_; Root then explicitly authorized one identical-model recovery.
+failure-files.json freezes the original source/start/failure/trace. No
+original objective or v is claimed. The recovery fork changes only JSON
+conversion and persistence, checks the complete prospective output schema
+before solving, and writes the full raw OptimizeResult durably before any
+summary. The independent checker confirms an identical LP-call AST and
+byte-identical sample/kernel/features/matrix/objective construction.
+
+Both calls use the original fixed29171 legal9-gap pool, current rational
+24-mode profile and ledger, one HiGHS call with time_limit30 per process.
+No adversary, point fit, new sample, profile/ledger change, parameter/phi
+scan, cover, compiler or further retry occurs. The pool consists of69
+Gram anchors, two saved challenge best points and legal rows2617/26483
+from the two frozen NPZ files, in the original order. Its byte hash is
+7ff5940c1b622d1da96a6ffa1840b578c1f81617fbd766760b208cf93d449f8e.
+Old NPZ kernel features are not used. The independent stdlib replay
+rebuilds this pool byte hash directly from stored rows, without NumPy.
+
+Fixed mathematical family
+-------------------------
+Let p_i=clip(g_i-123/128,0,1). For eight-state arguments x define
+ V8(x)=sum(j=0..3) v_j*(phi(x_j)-phi(x_(7-j))).
+This changes sign under reversal and has range within[-sum|v|,+sum|v|],
+so osc(V8)<=2*sum|v|. Its nine-gap coboundary features are exactly
+ [p0-p1-p7+p8, p1-p2-p6+p7, p2-p3-p5+p6, p3-2*p4+p5].
+Every feature is reversal-symmetric and has zero total coefficient.
+The LP has nine variables(v4,u4,c),29180 inequalities:
+ -Phi*v+c<=float_F_s; +/-v_j<=u_j;2*sum(u)<=c;
+ u>=0;v free;0<=c<=1/64. It maximizes c with H and B unchanged.
+
+Recovery result and exact checks
+-------------------------------
+The recovery returned HiGHS optimal in about.133s. The zero-potential
+sample minimum is .008847438760183938; the LP floor hint is
+.008847466293377132, an apparent gain2.7533193e-8. Maximum row violation
+is2.0980531e-8, and the actual minimum float sample G is only
+.008847445312846529. Thus the tiny apparent gain is comparable to the
+solver row tolerance and establishes no reliable structural improvement.
+Neither the floor cap nor the oscillation budget is active.
+
+A single fixed quantization D=10^12 gives v numerators
+[26676,27497,21644,9968] and c numerator8847466293. Auxiliaries are
+defined as abs(v). The independent exact rational check gives
+osc<=17157/100000000000<=c, with budget slack8847294723/10^12.
+This range/budget check does NOT prove any actual scalar sample or
+continuous energy inequality. Rational-candidate float row violation
+remains about2.098e-8. No candidate is presented as a valid global floor.
+
+The full raw OptimizeResult was durably retained locally as
+raw-result.json. Its lossless raw-result.json.gz is included in the
+sync package; the independent replay checks the exact uncompressed SHA
+3b67809953e3460ca103a428e6a834714bb628138f0da56cf95a7c19ee792e7c.
+The uncompressed2.25MB file is excluded from the package as redundant.
+
+Formal scope
+------------
+Old W9 seven-gap clipped/state-dependent potentials are earlier work;
+this was the untested current v24/W10 four-parameter specialization.
+It supplies no substantial positive evidence. Any future proof for the
+modified energy G=F+V(head)-V(tail) needs a NEW minimizer/value cover.
+If osc(V)=C, G>=pressure-C so a G<c root requires pressure<c+C.
+On each smooth clipping branch the Hessian equals that of F, but the
+gradient pressure correction and clipping-boundary minimum conditions
+change. The old F global-minimum KKT/Newton/finite-competitor leaves
+cannot simply be reused. No actual scalar inequalities, global mean
+floor, full coverage, Lean instance or improved kappa is proved here.
+
+Read-only arithmetic/metadata replay (no LP/kernel evaluation):
+ python research-goal-20261017-clipped-coboundary/independent_replay.py
+All optimizer sources refuse existing start markers; do not re-run them.

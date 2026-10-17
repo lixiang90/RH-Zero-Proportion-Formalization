@@ -1,0 +1,304 @@
+{
+  "scope": "Read-only support audit: distinguish class-word cycles from real cycles.\n\nOnly existing float-F/word arrays, OptimizeResult and saved sample records\nare read. No kernel evaluation, optimizer, new point or potential fit.\nDefault read-only; --write-receipt creates an absent receipt once.\n",
+  "passed": true,
+  "source_sha256_start": {
+    "research-goal-20261017-ternary-coboundary/support_audit.py": "138d96aa33a5d393946cb30fa92d293a79558c428518ac5f4fa1e4036badc915",
+    "research-goal-20261017-ternary-coboundary/ternary-pilot.json": "05e124048b901b9315bec772a48868df74f035c8c7e14ddb3465604f594b1fdf",
+    "research-goal-20261017-ternary-coboundary/float-F.bin.gz": "f20c79930349469105d4403273f8421c2256aa80447d729acfc304ce64712e1c",
+    "research-goal-20261017-ternary-coboundary/sample-words.bin.gz": "53060aa6e561c2a0fb059f2eef4760c447fa9579e76a2826a8cf6006b1869f3a",
+    "research-goal-20261017-ternary-coboundary/raw-result.json.gz": "649a306e4c0fdea52a70ccb497bcce410d645df966eee6b80aa83e629bad2918",
+    "research-goal-20261016/cover-newwindow-gram.json": "e996c4f77d011e96e4fe961ff6bd73cf6ed972e4d3789ed64a22b53c4cb28976",
+    "research-20261016-followup/window_reweight_challenge.json": "4d79a1c05aba683d9971755eb7bad6b109d042abad359c74e43cc1403b3f903b"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-ternary-coboundary/support_audit.py": "138d96aa33a5d393946cb30fa92d293a79558c428518ac5f4fa1e4036badc915",
+    "research-goal-20261017-ternary-coboundary/ternary-pilot.json": "05e124048b901b9315bec772a48868df74f035c8c7e14ddb3465604f594b1fdf",
+    "research-goal-20261017-ternary-coboundary/float-F.bin.gz": "f20c79930349469105d4403273f8421c2256aa80447d729acfc304ce64712e1c",
+    "research-goal-20261017-ternary-coboundary/sample-words.bin.gz": "53060aa6e561c2a0fb059f2eef4760c447fa9579e76a2826a8cf6006b1869f3a",
+    "research-goal-20261017-ternary-coboundary/raw-result.json.gz": "649a306e4c0fdea52a70ccb497bcce410d645df966eee6b80aa83e629bad2918",
+    "research-goal-20261016/cover-newwindow-gram.json": "e996c4f77d011e96e4fe961ff6bd73cf6ed972e4d3789ed64a22b53c4cb28976",
+    "research-20261016-followup/window_reweight_challenge.json": "4d79a1c05aba683d9971755eb7bad6b109d042abad359c74e43cc1403b3f903b"
+  },
+  "all_inputs_unchanged": true,
+  "zeroV_minimum_sample_row": 69,
+  "source": "research-20261016-followup/window_reweight_challenge.json:best_gaps",
+  "zeroV_minimum_sample_float_gaps": [
+    1.9597816036853384,
+    1.0341230686256604,
+    1.0373012144076457,
+    1.9621791152329087,
+    1.0427656703407489,
+    1.9621791152329089,
+    1.0373012144076457,
+    1.0341230686256604,
+    1.9597816036853384
+  ],
+  "zeroV_minimum_sample_exact_binary_float_gaps": [
+    "8826071700084843/4503599627370496",
+    "2328638133258879/2251799813685248",
+    "1167897340669309/1125899906842624",
+    "8836869132197097/4503599627370496",
+    "2348099542190671/2251799813685248",
+    "4418434566098549/2251799813685248",
+    "1167897340669309/1125899906842624",
+    "2328638133258879/2251799813685248",
+    "8826071700084843/4503599627370496"
+  ],
+  "zeroV_minimum_saved_binary_float_F": "5100201203654101/576460752303423488",
+  "zeroV_minimum_F_hint": 0.008847438760183938,
+  "zeroV_minimum_gap_classes": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1
+  ],
+  "zeroV_head_word": 271,
+  "zeroV_tail_word": 2277,
+  "zeroV_head_equals_tail": false,
+  "zeroV_actual_uniform_gap_period1": false,
+  "same_word_near_minimum_samples": [
+    {
+      "row": 39,
+      "F_hint": 0.008847438760183974
+    },
+    {
+      "row": 69,
+      "F_hint": 0.008847438760183938
+    }
+  ],
+  "selfloop_rows": 404,
+  "minimum_selfloop_sample": {
+    "row": 17232,
+    "head": 3280,
+    "tail": 3280,
+    "F_hint": 0.009777363241994349
+  },
+  "nonzero_dual_sample_support": [
+    {
+      "sample_row": 1,
+      "weight": "2/9",
+      "head_word": 2278,
+      "tail_word": 759,
+      "saved_binary_float_F": "5100215168308803/576460752303423488",
+      "F_hint": 0.008847462984998283,
+      "integer_gap_pattern": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "saved_anchor": [
+        "98720069/50000000",
+        "104153577/100000000",
+        "196846943/100000000",
+        "26077731/25000000",
+        "98163601/50000000",
+        "25881177/25000000",
+        "3230477/3125000",
+        "24505749/12500000",
+        "103911407/100000000"
+      ],
+      "sample_float_gaps": [
+        1.97440138,
+        1.04153577,
+        1.96846943,
+        1.04310924,
+        1.96327202,
+        1.03524708,
+        1.03375264,
+        1.96045992,
+        1.03911407
+      ]
+    },
+    {
+      "sample_row": 2,
+      "weight": "1/9",
+      "head_word": 2460,
+      "tail_word": 820,
+      "saved_binary_float_F": "5100216655049913/576460752303423488",
+      "F_hint": 0.00884746556408299,
+      "integer_gap_pattern": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "saved_anchor": [
+        "103703323/100000000",
+        "24602423/12500000",
+        "6521171/6250000",
+        "39398027/20000000",
+        "104290213/100000000",
+        "39398027/20000000",
+        "6521171/6250000",
+        "24602423/12500000",
+        "103703323/100000000"
+      ],
+      "sample_float_gaps": [
+        1.03703323,
+        1.96819384,
+        1.04338736,
+        1.96990135,
+        1.04290213,
+        1.96990135,
+        1.04338736,
+        1.96819384,
+        1.03703323
+      ]
+    },
+    {
+      "sample_row": 7,
+      "weight": "2/9",
+      "head_word": 2440,
+      "tail_word": 813,
+      "saved_binary_float_F": "2550105144043973/288230376151711744",
+      "F_hint": 0.008847454519164594,
+      "integer_gap_pattern": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "saved_anchor": [
+        "98451779/50000000",
+        "104083671/100000000",
+        "3924139/2000000",
+        "25863339/25000000",
+        "51741169/50000000",
+        "98154379/50000000",
+        "104281491/100000000",
+        "4919691/2500000",
+        "103818921/100000000"
+      ],
+      "sample_float_gaps": [
+        1.96903558,
+        1.04083671,
+        1.9620695,
+        1.03453356,
+        1.03482338,
+        1.96308758,
+        1.04281491,
+        1.9678764,
+        1.03818921
+      ]
+    },
+    {
+      "sample_row": 13,
+      "weight": "2/9",
+      "head_word": 819,
+      "tail_word": 2460,
+      "saved_binary_float_F": "5100216963939117/576460752303423488",
+      "F_hint": 0.008847466099920343,
+      "integer_gap_pattern": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "saved_anchor": [
+        "103459541/100000000",
+        "103802447/100000000",
+        "39287069/20000000",
+        "26085273/25000000",
+        "98411333/50000000",
+        "104350209/100000000",
+        "196826637/100000000",
+        "20836233/20000000",
+        "197453471/100000000"
+      ],
+      "sample_float_gaps": [
+        1.03459541,
+        1.03802447,
+        1.96435345,
+        1.04341092,
+        1.96822666,
+        1.04350209,
+        1.96826637,
+        1.04181165,
+        1.97453471
+      ]
+    },
+    {
+      "sample_row": 15,
+      "weight": "2/9",
+      "head_word": 2458,
+      "tail_word": 819,
+      "saved_binary_float_F": "5100206712717461/576460752303423488",
+      "F_hint": 0.008847448316885479,
+      "integer_gap_pattern": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "saved_anchor": [
+        "19583991/10000000",
+        "2585033/2500000",
+        "5186423/5000000",
+        "196320097/100000000",
+        "10428311/10000000",
+        "49218313/25000000",
+        "26083987/25000000",
+        "6151067/3125000",
+        "51878597/50000000"
+      ],
+      "sample_float_gaps": [
+        1.9583991,
+        1.0340132,
+        1.0372846,
+        1.96320097,
+        1.0428311,
+        1.96873252,
+        1.04335948,
+        1.96834144,
+        1.03757194
+      ]
+    }
+  ],
+  "support_weight_sum": "1",
+  "weighted_class_potential_coefficients_cancel_exactly": true,
+  "finite_binary_float_F_model_upper_bound": "15300638307052189/1729382256910270464",
+  "finite_model_upper_hint": 0.008847458822891154,
+  "actual_8gap_state_coefficients_do_not_cancel": true,
+  "nonzero_actual_state_coefficients": 9,
+  "scope_of_obstruction": "Only the fixed ternary antisymmetric word-potential finite surrogate; no obstruction to arbitrary bounded real8-gap potentials is proved.",
+  "actual_scalar_upper_bounds_proven": false,
+  "new_uniform_actual_point_evaluated": false,
+  "kernel_evaluations": 0,
+  "LP_calls": 0,
+  "new_Lean_invocations": 0,
+  "global_mean_floor_proven": false,
+  "cell_exclusion_proven": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 0.08286790001147892
+}

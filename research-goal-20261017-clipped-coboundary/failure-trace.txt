@@ -1,0 +1,27 @@
+Original invocation (2026-10-17):
+ python research-goal-20261017-clipped-coboundary/clipped_pilot.py
+
+Process exited1 after linprog returned. No result JSON was persisted.
+The startup guard and pool/hash/baseline metadata were already saved.
+
+Traceback (most recent call last):
+  File "research-goal-20261017-clipped-coboundary/clipped_pilot.py", line95, in <module>
+    main()
+  File "research-goal-20261017-clipped-coboundary/clipped_pilot.py", line89, in main
+    OUT.write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf8')
+  File "C:\Python314\Lib\json\__init__.py", line242, in dumps
+    **kw).encode(obj)
+  File "C:\Python314\Lib\json\encoder.py", line202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python314\Lib\json\encoder.py", line263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python314\Lib\json\encoder.py", line182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable
+when serializing dict item 'oscillation_budget_active_hint'
+
+Cause: the comparison of a NumPy reduction returned numpy.bool_ rather
+than builtin bool. This was a serialization bug, not an optimizer failure
+or a mathematical result. No original v/objective/status is recoverable
+from the saved artifacts, and none is claimed. No automatic retry occurred.
+Root explicitly authorized one identical-model recovery after this record.

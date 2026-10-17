@@ -1,0 +1,112 @@
+{
+  "scope": "Exact aggregation of the181 new unsoftened actual-sextic scalar rows.\n\nStore one canonical exact row hash per row and its exact fixed-rational\nrank1 slack. Store the corresponding rounded numerical CSR arrays in NPZ.\nThe factored exact source stays authoritative; no huge repeated Fraction\nmatrix is serialized. This prepares no solver, warm seed or point fit.\n",
+  "phase": "all181_new_exact_rows_prepared_no_solver",
+  "source_sha256_start": {
+    "research-goal-20261017-actual-sextic-cone/prepare_rows.py": "95b53c43da449698e84bee14bd0bb14b50be16277586f26d0313264595abfb17",
+    "research-goal-20261017-actual-sextic-static/actual-sextic-files.json": "de6b1928b99a73db303f5c37994a1354ebe39ec1152342dac61ca9b475c8a5fb",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-static/sextic-build.json": "6a4940562bd07c26f86f06dc75b74a85489d0b4096dd5c30a46efcf2e4aa3131",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-actual-sextic-audit/independent-replay.json": "284798cadd64ef493782c9da3d40055c5be8e1699f2c962c7a5a28930d26fdf5"
+  },
+  "memory_snapshots": [
+    {
+      "working_set_bytes": 30990336,
+      "peak_working_set_bytes": 40361984,
+      "private_commit_bytes": 21884928,
+      "phase": "loading_exact_source",
+      "elapsed_milliseconds": 21
+    },
+    {
+      "working_set_bytes": 97234944,
+      "peak_working_set_bytes": 97234944,
+      "private_commit_bytes": 87797760,
+      "phase": "exact_L6_P5_E6_aggregated_same5005_monomials",
+      "elapsed_milliseconds": 1448
+    },
+    {
+      "working_set_bytes": 118247424,
+      "peak_working_set_bytes": 119181312,
+      "private_commit_bytes": 108335104,
+      "phase": "exact_rows_aggregated_30",
+      "elapsed_milliseconds": 3472
+    },
+    {
+      "working_set_bytes": 131960832,
+      "peak_working_set_bytes": 134017024,
+      "private_commit_bytes": 122839040,
+      "phase": "exact_rows_aggregated_60",
+      "elapsed_milliseconds": 5640
+    },
+    {
+      "working_set_bytes": 142548992,
+      "peak_working_set_bytes": 144461824,
+      "private_commit_bytes": 133173248,
+      "phase": "exact_rows_aggregated_90",
+      "elapsed_milliseconds": 7789
+    },
+    {
+      "working_set_bytes": 156844032,
+      "peak_working_set_bytes": 159535104,
+      "private_commit_bytes": 148033536,
+      "phase": "exact_rows_aggregated_120",
+      "elapsed_milliseconds": 10145
+    },
+    {
+      "working_set_bytes": 167157760,
+      "peak_working_set_bytes": 173543424,
+      "private_commit_bytes": 158412800,
+      "phase": "exact_rows_aggregated_150",
+      "elapsed_milliseconds": 12615
+    },
+    {
+      "working_set_bytes": 178606080,
+      "peak_working_set_bytes": 179978240,
+      "private_commit_bytes": 170078208,
+      "phase": "exact_rows_aggregated_180",
+      "elapsed_milliseconds": 14861
+    },
+    {
+      "working_set_bytes": 179347456,
+      "peak_working_set_bytes": 211664896,
+      "private_commit_bytes": 170131456,
+      "phase": "all181_new_exact_rows_prepared_no_solver",
+      "elapsed_milliseconds": 15230
+    }
+  ],
+  "solver_calls": 0,
+  "new_points_or_fits": 0,
+  "Lean_invocations": 0,
+  "strict_feasibility_or_exclusion_claimed": false,
+  "source_sha256_end": {
+    "research-goal-20261017-actual-sextic-cone/prepare_rows.py": "95b53c43da449698e84bee14bd0bb14b50be16277586f26d0313264595abfb17",
+    "research-goal-20261017-actual-sextic-static/actual-sextic-files.json": "de6b1928b99a73db303f5c37994a1354ebe39ec1152342dac61ca9b475c8a5fb",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-static/sextic-build.json": "6a4940562bd07c26f86f06dc75b74a85489d0b4096dd5c30a46efcf2e4aa3131",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-actual-sextic-audit/independent-replay.json": "284798cadd64ef493782c9da3d40055c5be8e1699f2c962c7a5a28930d26fdf5"
+  },
+  "all_inputs_unchanged": true,
+  "elapsed_milliseconds": 15230,
+  "new_unsoftened_rows": 181,
+  "nonzero_numeric_coefficients": 905724,
+  "shape": [
+    181,
+    5005
+  ],
+  "exact_canonical_rows_JSONL_sha256": "3491df37b6f36e00359c1af20ee89f15fe2ccfddba50892286064b77828b2475",
+  "all_new_rows_have_no_energy_slack": true,
+  "all181_exact_rank1_row_vs_factored_identities_checked": true,
+  "row_hashes_file": {
+    "path": "research-goal-20261017-actual-sextic-cone/new-row-hashes.json",
+    "bytes": 342437,
+    "sha256": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0"
+  },
+  "numeric_CSR_file": {
+    "path": "research-goal-20261017-actual-sextic-cone/new-rows-float.npz",
+    "bytes": 6980634,
+    "sha256": "213be8da6f73755e582763ef63ea2685041aed5d1af6b98f44a0116672f4009c"
+  },
+  "new_energy_row_unsoftened": true,
+  "aggregate_full_Fraction_rows_not_serialized": true
+}

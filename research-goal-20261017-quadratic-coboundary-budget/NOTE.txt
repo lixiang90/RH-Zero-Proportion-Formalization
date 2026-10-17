@@ -1,0 +1,44 @@
+Exact quadratic-potential support-budget diagnostic (2026-10-17)
+
+This uses only the five already frozen sample rows[1,2,7,13,15] and
+weights[2,1,2,2,2]/9. It does not evaluate F again, choose new points,
+solve an LP, fit coefficients, change clipping, or test degree3+.
+Each saved original sample float is converted with Fraction.from_float;
+phi=clip(g-123/128,0,1) is then evaluated exactly, without rounding.
+
+The eight-state antisymmetric basis consists of four linear differences,
+four square differences and twelve off-diagonal product differences
+ phi_i*phi_j-phi_(7-j)*phi_(7-i), with(i,j)lexicographically before its
+reflected pair. The four fixed-reflection pairs vanish and are omitted.
+Every basis value lies in[-1,1] because phi and its products lie in[0,1].
+Thus V=sum a_k*b_k has osc(V)<=2*sum|a_k|. The specified coefficient
+budget sum|a_k|<=c/2 suffices for osc(V)<=c.
+
+For each basis the script computes exactly
+ R_k=sum_s weight_s*(b_k(head8(g_s))-b_k(tail8(g_s))).
+The maximum absolute drift is
+ 4914148502932905408377393803/1426106925256758076683791106048
+ ~.0034458485657014506, attained by cross(0,1).
+The weighted saved binary-F value is
+ Fbar=15300638307052189/1729382256910270464.
+
+If all five finite surrogate inequalities hold, then
+ c<=Fbar+sum a_k*R_k<=Fbar+c*max|R|/2.
+Since max|R|<2 this implies exactly
+ c<=2*Fbar/(2-max|R|) ~.008862728633265725,
+only1.5269810e-5 above Fbar. This leaves some finite budget space for
+quadratic coupling, while ruling out a large sampled-floor gain in this
+specific20-basis L1-budget surrogate. It does not assert that this upper
+bound is attained, or that any continuous energy inequality is proved.
+
+These F values are saved floating evaluations, not actual analytic upper
+enclosures. Therefore this is a precise finite-surrogate algebra bound,
+not an actual-F obstruction, an impossibility for arbitrary bounded
+potentials, a global mean floor or a zero-proportion theorem. No new
+short-pair proof or Lean instance is supplied. Root authorization of a
+future quadratic-potential LP remains a separate decision.
+
+Read-only reproduction:
+ python research-goal-20261017-quadratic-coboundary-budget/exact_budget.py
+--write-receipt creates an absent receipt once. All source inputs are
+hash-bound and unchanged. No producer is imported.

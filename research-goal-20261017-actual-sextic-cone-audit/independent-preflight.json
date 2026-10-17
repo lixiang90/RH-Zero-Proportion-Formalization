@@ -1,0 +1,109 @@
+{
+  "scope": "Independent pre-solver replay of all 181 exact actual-sextic rows.\n\nStdlib only: integer moment-ID accumulation, exact Fraction row hashes,\nthe prescribed rank-one packing identity, old scalar adapter and every\nrounded CSR double decoded directly from NPZ/NPY. No producer imports,\nsolver, Lean, fit, new anchor or actual-function evaluation. Default is\nread-only; --write-receipt creates an absent immutable receipt.\n",
+  "status": "all181_exact_rows_old_adapter_and_every_CSR_float_independently_passed",
+  "source_sha256_start": {
+    "research-goal-20261017-actual-sextic-cone-audit/preflight.py": "ee33b5258ce20eeb8e5013a01914503e10173f6add60adf18a08e8cb761245d1",
+    "research-goal-20261017-actual-sextic-cone/aggregation.json": "3a63912b326e81719fa8dfa861cec86a817aaad3bf41cf3ea539c8e6faedf13a",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0",
+    "research-goal-20261017-actual-sextic-cone/new-rows-float.npz": "213be8da6f73755e582763ef63ea2685041aed5d1af6b98f44a0116672f4009c",
+    "research-goal-20261017-actual-sextic-cone/prepare_rows.py": "95b53c43da449698e84bee14bd0bb14b50be16277586f26d0313264595abfb17",
+    "research-goal-20261017-actual-sextic-static/actual-sextic-files.json": "de6b1928b99a73db303f5c37994a1354ebe39ec1152342dac61ca9b475c8a5fb",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-static/sextic-build.json": "6a4940562bd07c26f86f06dc75b74a85489d0b4096dd5c30a46efcf2e4aa3131",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-actual-sextic-audit/independent-replay.json": "284798cadd64ef493782c9da3d40055c5be8e1699f2c962c7a5a28930d26fdf5",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a",
+    "research-goal-20261017-degree6-audit/independent-replay.json": "80455aaddf4b2a5520add71dc9e5d1fd75034731f8bfccd6b1eda10d637906c0"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-actual-sextic-cone-audit/preflight.py": "ee33b5258ce20eeb8e5013a01914503e10173f6add60adf18a08e8cb761245d1",
+    "research-goal-20261017-actual-sextic-cone/aggregation.json": "3a63912b326e81719fa8dfa861cec86a817aaad3bf41cf3ea539c8e6faedf13a",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0",
+    "research-goal-20261017-actual-sextic-cone/new-rows-float.npz": "213be8da6f73755e582763ef63ea2685041aed5d1af6b98f44a0116672f4009c",
+    "research-goal-20261017-actual-sextic-cone/prepare_rows.py": "95b53c43da449698e84bee14bd0bb14b50be16277586f26d0313264595abfb17",
+    "research-goal-20261017-actual-sextic-static/actual-sextic-files.json": "de6b1928b99a73db303f5c37994a1354ebe39ec1152342dac61ca9b475c8a5fb",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-static/sextic-build.json": "6a4940562bd07c26f86f06dc75b74a85489d0b4096dd5c30a46efcf2e4aa3131",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-actual-sextic-audit/independent-replay.json": "284798cadd64ef493782c9da3d40055c5be8e1699f2c962c7a5a28930d26fdf5",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a",
+    "research-goal-20261017-degree6-audit/independent-replay.json": "80455aaddf4b2a5520add71dc9e5d1fd75034731f8bfccd6b1eda10d637906c0"
+  },
+  "all_inputs_unchanged": true,
+  "new_exact_canonical_rows_checked": 181,
+  "exact_canonical_rows_JSONL_sha256": "3491df37b6f36e00359c1af20ee89f15fe2ccfddba50892286064b77828b2475",
+  "row_bounds_scales_and_meta_checked": 181,
+  "fixed_rank1_packing_identities_checked": 181,
+  "fixed_rank1_is_not_a_feasibility_or_seed_claim": true,
+  "numeric_CSR_shape": [
+    181,
+    5005
+  ],
+  "exact_nonzero_coefficients_checked": 905724,
+  "IEEE754_float64_values_checked_bitwise": 905905,
+  "CSR_indices_and_indptr_exact": true,
+  "new_rows_energy_slack_column_absent": true,
+  "old_adapter_rows_checked": 5803,
+  "only_old_column_remap": [
+    714,
+    5004
+  ],
+  "mapped_old_rows_JSONL_sha256": "d2df2ce75133a674034a90031c1001fe75bf677d841f29ba495aacd16afce0c6",
+  "legacy_slack_row_indices": [
+    5793,
+    5794
+  ],
+  "high_degree_moment_boxes_checked": 4290,
+  "box_scalar_rows": 8580,
+  "old_PSD_blocks_retained_by_hash": 73,
+  "NPY_headers": {
+    "data": {
+      "descr": "<f8",
+      "fortran_order": false,
+      "shape": [
+        905724
+      ]
+    },
+    "indices": {
+      "descr": "<i4",
+      "fortran_order": false,
+      "shape": [
+        905724
+      ]
+    },
+    "indptr": {
+      "descr": "<i4",
+      "fortran_order": false,
+      "shape": [
+        182
+      ]
+    },
+    "b": {
+      "descr": "<f8",
+      "fortran_order": false,
+      "shape": [
+        181
+      ]
+    },
+    "shape": {
+      "descr": "<i4",
+      "fortran_order": false,
+      "shape": [
+        2
+      ]
+    }
+  },
+  "producer_imported": false,
+  "pure_stdlib": true,
+  "new_points_or_fits": 0,
+  "new_actual_function_evaluations": 0,
+  "solver_calls": 0,
+  "Lean_invocations": 0,
+  "numerical_feasibility_or_exclusion_claimed": false,
+  "strict_projection_shrink_proved": false,
+  "global_floor_proved": false,
+  "new_zero_proportion_proven": false,
+  "elapsed_milliseconds": 16455
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "single-full-eight-gap-ternary-potential-discovery-v1",
+  "package_files": [
+    {
+      "path": "research-goal-20261017-ternary-coboundary/ternary_pilot.py",
+      "bytes": 12974,
+      "sha256": "2411d8c1bfd6fdca3ace954833ac3c0063d353b20c5a0ecb97f8ef7554f6dfcf"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/LP-started.json",
+      "bytes": 39246,
+      "sha256": "2804e2dfd6b03650be3a1e109c0b5a1d99f7e6483ce37891bd96e25bfe1c2d04"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/ternary-pilot.json",
+      "bytes": 283990,
+      "sha256": "05e124048b901b9315bec772a48868df74f035c8c7e14ddb3465604f594b1fdf"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/raw-result.json.gz",
+      "bytes": 592248,
+      "sha256": "649a306e4c0fdea52a70ccb497bcce410d645df966eee6b80aa83e629bad2918"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/float-F.bin.gz",
+      "bytes": 182451,
+      "sha256": "f20c79930349469105d4403273f8421c2256aa80447d729acfc304ce64712e1c"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/sample-words.bin.gz",
+      "bytes": 77709,
+      "sha256": "53060aa6e561c2a0fb059f2eef4760c447fa9579e76a2826a8cf6006b1869f3a"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/independent_replay.py",
+      "bytes": 9808,
+      "sha256": "cc9fa65d9e6cb7dbe04af1cdb0360ce5ea5beb89aed17ace02c06cf35ae7b16e"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/independent-replay.json",
+      "bytes": 6293,
+      "sha256": "66ece3ca63adf951d38cb7cfde0b430c763662a935f86f0b7166933ad18f69fa"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/support_audit.py",
+      "bytes": 6135,
+      "sha256": "138d96aa33a5d393946cb30fa92d293a79558c428518ac5f4fa1e4036badc915"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/support-audit.json",
+      "bytes": 9237,
+      "sha256": "3d7fc73a21b5f8e8294be0eeb40881a08072412568dd684f7bed785fe1dc24db"
+    },
+    {
+      "path": "research-goal-20261017-ternary-coboundary/NOTE.txt",
+      "bytes": 4793,
+      "sha256": "0fa858480ba86afb5d1834794b20a48f2ee75aad5bb2d71563425392de009f0c"
+    }
+  ],
+  "package_bytes": 1224884,
+  "dependency_files": [
+    {
+      "path": "research-20261016-followup/window_reweight_rational.json",
+      "sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+    },
+    {
+      "path": "research-goal-20261016/cover-newwindow-gram.json",
+      "sha256": "e996c4f77d011e96e4fe961ff6bd73cf6ed972e4d3789ed64a22b53c4cb28976"
+    },
+    {
+      "path": "research-20261016-followup/window_reweight_challenge.json",
+      "sha256": "4d79a1c05aba683d9971755eb7bad6b109d042abad359c74e43cc1403b3f903b"
+    },
+    {
+      "path": "research-20261016-followup/window_profile_24_challenge.json",
+      "sha256": "c8adb7a5da3effa5683dfcf0b29b79772211fdb8ddcd066cc2bde4d4361611b3"
+    },
+    {
+      "path": "research-20261016-followup/window_profile_24.npz",
+      "sha256": "99905747d9ef17377a593b65ba221aab375cb54835ed2e2192674ac461096afd"
+    },
+    {
+      "path": "research-20261016/spectral-wcert-reopt-full-ternary-samples-n10.npz",
+      "sha256": "e6e928df2aeb2f907a4f1fdd22c69bcd97dd4923942d14726fd969dcef6c2d81"
+    },
+    {
+      "path": "research-goal-20261017-multiwindow/multiwindow_fixed_pair_pilot.py",
+      "sha256": "0bdbaba2e852a7b3b5271afd2d88202f497a43cb428fefcdb07a5e888c56698a"
+    },
+    {
+      "path": "research-goal-20261017-multiwindow/multiwindow-fixed-pair-pilot.json",
+      "sha256": "b4bedad61eea95dc6bf40293c045111dd3fdd082906cbb0366133e1a929f6f94"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowPairCertificate.lean",
+      "sha256": "305dc7433f27d4d5f2f4df5d3d8e295545966070fa01f4a3804de805e2d4bb54"
+    }
+  ],
+  "LP_calls_this_model": 1,
+  "metadata_arithmetic_replay_passed": true,
+  "sample_rows": 29171,
+  "variables": 3241,
+  "inequalities": 35651,
+  "matrix_nonzeros": 95930,
+  "substantial_sampled_gain_found": false,
+  "five_row_finite_word_dual_upper_checked": true,
+  "arbitrary_real_potential_cycle_obstruction_proven": false,
+  "exact_rational_range_bounds_checked": true,
+  "rational_surrogate_negative_rows": 33,
+  "short_pair_floor": "221/25000",
+  "larger_mean_floor_does_not_imply_unconditional_kappa": true,
+  "redundant_uncompressed_raw_not_in_package": "raw-result.json",
+  "new_Lean_invocations": 0,
+  "global_mean_floor_proven": false,
+  "cell_exclusion_proven": false,
+  "new_zero_proportion_proven": false
+}
