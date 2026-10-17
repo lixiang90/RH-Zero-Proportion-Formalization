@@ -1,0 +1,64 @@
+{
+  "scope": "Freeze read-only relevance evidence; do not publish the large local DB.",
+  "package_files": [
+    {
+      "path": "research-goal-20261017-global-relevance-audit/audit_relevance.py",
+      "bytes": 7027,
+      "sha256": "5bdd86e0ec5be3de0e3fa491a61d5124e5a9e1970c4084ff1e6293f477bf94c1"
+    },
+    {
+      "path": "research-goal-20261017-global-relevance-audit/global-relevance.json",
+      "bytes": 334523,
+      "sha256": "0053de28579a0bd8646df4dedb14d10735e5324756f415b58f523bc08377ad85"
+    },
+    {
+      "path": "research-goal-20261017-global-relevance-audit/NOTE.zh.md",
+      "bytes": 1849,
+      "sha256": "d8f508dc6c10205477c0843cd5c6ac7791ef3ba1c6e7c2105554b4bd986129e6"
+    },
+    {
+      "path": "research-goal-20261017-global-relevance-audit/freeze_relevance.py",
+      "bytes": 2085,
+      "sha256": "e9c9ac400079b535152e5074707521a3085eb7a2077d7bc8993b55f35233ff19"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "research-goal-20261016/sqlite-bounded143004/progress.json",
+      "bytes": 5400,
+      "sha256": "2d54c6f6ccceac3423298589f2752b64e05a97f00634d98e4095033a06df973b"
+    },
+    {
+      "path": "research-goal-20261016/sqlite-bounded143004/epoch.json",
+      "bytes": 2279,
+      "sha256": "8c99385e704f12bc549ca9e35813710e484c83c772e5023f816e838e64593da5"
+    },
+    {
+      "path": "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz",
+      "bytes": 884271,
+      "sha256": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5"
+    },
+    {
+      "path": "research-goal-20261017-actual-sextic-exact-ray/exact-ray-files.json",
+      "bytes": 10091,
+      "sha256": "c19797f38f2a7687817735b91163bf329d6f2ad7cb26e9989b3e76bb99f5ceae"
+    },
+    {
+      "path": "research-goal-20261017-global-relevance-independent/audit-files.json",
+      "bytes": 2559,
+      "sha256": "957a2523611f815ec94cab29f62e60f3ccf374faf3f9ce7c392dc7ff7eb0b86c"
+    }
+  ],
+  "local_database_evidence": {
+    "path": "research-goal-20261016/sqlite-bounded143004/campaign.sqlite",
+    "bytes": 1215361024,
+    "sha256": "ceb41e0e34b79e92bff8bf658b91510be8c6bc2da4fe527d5bbc1200f5866296",
+    "published": false,
+    "verified_before_and_after_readonly": true
+  },
+  "fixed_target_cell_already_recorded_closed": true,
+  "newly_closed_frontier_count": 0,
+  "historical_baseline_math_replayed": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false
+}

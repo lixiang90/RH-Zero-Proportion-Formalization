@@ -24,7 +24,7 @@ def indexed_blobs(paths):
 def main():
     receipt=json.loads((HERE/'ordinary-verified-current.json').read_bytes())
     files=['.gitattributes','AGENTS.md','README.md','submission/goal-20261016/STATUS.zh.md']
-    names=['README.md','DIRECTION.zh.md','direction-state.json','macro-reviews/001-20261017.zh.md',
+    names=['README.md','DIRECTION.zh.md','direction-state.json','macro-reviews/001-20261017.zh.md','macro-reviews/002-20261017.zh.md',
       'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
       'window_interval_kernel.py','window_interval_kernel.json','window_jet_crosscheck.py','window_jet_crosscheck.json',
       'window_global_cover.py','window_lower_global_cover.py','window_make_lower_variant.py','window_make_lower_variant.json',
@@ -235,7 +235,14 @@ def main():
       ('research-goal-20261017-exact-ray-audit/audit-files.json','1c481ad3f3055b175791a373d28eedb331913faa03e434b783d185f31db21cb8'),
       ('research-goal-20261017-actual-sextic-lean-plan/actual-lean-plan-files.json','f973491641f2014d96c787cbfd867ce132b1a3729ab822e2d243cf4b7ed591d0'),
       ('research-goal-20261017-transfer-budget-audit/audit-files.json','92be5868bc25e1367378583c1959516aa4c086e3e5af8af65a35dca6bfea4c9e'),
-      ('research-goal-20261017-old-analytic-transfer-budget/transfer-budget-files.json','bdba0046a75ea098ffbe566de6951ca83058e2cedef96c631c162eb25476236e')]:
+      ('research-goal-20261017-old-analytic-transfer-budget/transfer-budget-files.json','bdba0046a75ea098ffbe566de6951ca83058e2cedef96c631c162eb25476236e'),
+      ('research-goal-20261017-fixed-gram-tail/fixed-tail-files.json','7811b31d9453ad344d47cebc016c980cfbac6a88e21230cb788dea7d93c935f0'),
+      ('research-goal-20261017-fixed-gram-tail-audit/audit-files.json','41475b2345a6146ea97df8ce8101c69596677372f99a4404f8fa836f6f67135f'),
+      ('research-goal-20261017-edge6-bernstein-transfer/edge6-transfer-files.json','4bf905c38868e07f64b91afb681ae9bf75b2f57bcc35fafa82bc40e46d1643ae'),
+      ('research-goal-20261017-edge6-transfer-audit/audit-files.json','df2b75b49cf0f6a2632fef55f17e6262bcebc2984ab0ab08ef0f1e13daf4b4ee'),
+      ('research-goal-20261017-edge6-payment-audit/audit-files.json','df1076f2a378507fc4bf6b61c7a3e084b9113e4c22475f11a19a2c30420b6e3d'),
+      ('research-goal-20261017-global-relevance-audit/relevance-files.json','065d2cfe8b4dd8e11e3f47633d18a5dfbe72dc2e712df3a75cbb1b0890ba36f1'),
+      ('research-goal-20261017-global-relevance-independent/audit-files.json','957a2523611f815ec94cab29f62e60f3ccf374faf3f9ce7c392dc7ff7eb0b86c')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())

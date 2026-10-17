@@ -2,6 +2,18 @@
 
 No new unconditional zero proportion is asserted by this directory.
 
+The latest [macro review 002](macro-reviews/002-20261017.zh.md) corrects the
+research priority: the fixed sextic cell was already closed by five old
+numerical leaves and is unrelated to the current frontier. Its exact
+contradiction is local model evidence. Deterministic Gram-tail deletion
+still leaves 2,394,367 bytes of data source; the edgewise Bernstein transfer
+cost is about 59.4992, exceeding its .95486138 margin. Both were independently
+checked and no old actual analytic premise was removed. Further work on
+this cell is stopped. The next gate is a full-tree opportunity/source audit
+for the old W10 backup, retaining a few failed affine-support components as
+their actual nonlinear span functions and bounding the remainder by DBM
+dual flow. No numerical pilot or compiler batch is yet authorized.
+
 The primary candidate changes the Fourier profile to 24 rational cosine
 modes and changes the pair ledger. It is not a tightening of the old numerical
 constant. Its frozen parameters are in

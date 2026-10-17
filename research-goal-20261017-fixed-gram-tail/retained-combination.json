@@ -1,0 +1,273 @@
+{
+  "scope": "One exact atom-enclosure rebuild of the deterministically retained ray.\n\nPure stdlib. No optimizer, eigensolver, sampled point or transcendental\nevaluation. DS=10^30 is fixed: each rational atom is enclosed by exact\ninteger divmod floor/ceil, then the explicit monomial box bounds give a\nstrict upper bound. This is not literal cancellation of exact residuals.\nThe independently checkable PSD witnesses are the given integer Gram\nfactors, not floating positive-eigenvalue assertions.\n",
+  "phase": "exact_interval_and_box_certificate_PASS",
+  "source_sha256_start": {
+    "research-goal-20261017-fixed-gram-tail/rebuild_retained.py": "923058cbd481626b31e2a443c29e5c13ed3d589f07c68d09500e21ffaeae61fe",
+    "research-goal-20261017-fixed-gram-tail/prune_once.py": "48e8a429b3cd5bbb0773a99e6bd9d77177cd01b6fee63826741f9f65b41f4a11",
+    "research-goal-20261017-fixed-gram-tail/retained-ray.json.gz": "b51724e37d219705828d08a5af8db3d1588563d22908fe75b9dc29261e944d21",
+    "research-goal-20261017-fixed-gram-tail/pruning.json": "0c57b00892298cb8cf67b500ad616848b81a9adbe0226cd084c89f32ead9a717",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-degree6-static/degree6-targets.bin": "2f33955dca14c310a993df8d0930044e00c0af63b137f309bd7252fc3ce5052d",
+    "research-goal-20261017-degree6-static/degree6-entryplans.bin": "3f906a5b5abbac6829dd8fb87329bdc3de0f27b5388102305b1792af78d90c01",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0",
+    "research-goal-20261017-actual-sextic-cone/actual-sextic-cone-files.json": "4094f05bf934e083aebd99ed548836b1487681a963f53fe2fa95d930b8ecffd8",
+    "research-goal-20261017-fixed-gram-tail/run_retained_once.py": "f24eb8d0c3f965b08d4634d46a597e54b068dcb0becb47327430ec4d6c169ffc",
+    "research-goal-20261017-fixed-gram-tail/tail-selection.json": "01ee6806c3ee6f1486ddcc9cf196cdf516ac829725bf4caf92ecb62582857eef",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-enclosure-certificate.json": "7935f4945013c087357141c6f4406ef1b83c03fd9c8cfef61a7cd397f21e57a0"
+  },
+  "DS": 1000000000000000000000000000000,
+  "scalar_weight_denominator": 1000000000000,
+  "Gram_factor_denominator": 1000000000000,
+  "memory_snapshots": [
+    {
+      "working_set_bytes": 22749184,
+      "peak_working_set_bytes": 32538624,
+      "private_commit_bytes": 14114816,
+      "phase": "loading_frozen_exact_sources",
+      "elapsed_milliseconds": 33
+    },
+    {
+      "working_set_bytes": 170758144,
+      "peak_working_set_bytes": 174276608,
+      "private_commit_bytes": 163545088,
+      "phase": "old_scalar_rows_1000",
+      "elapsed_milliseconds": 425
+    },
+    {
+      "working_set_bytes": 170307584,
+      "peak_working_set_bytes": 180293632,
+      "private_commit_bytes": 163299328,
+      "phase": "old_scalar_rows_2000",
+      "elapsed_milliseconds": 498
+    },
+    {
+      "working_set_bytes": 170487808,
+      "peak_working_set_bytes": 180293632,
+      "private_commit_bytes": 163360768,
+      "phase": "old_scalar_rows_3000",
+      "elapsed_milliseconds": 614
+    },
+    {
+      "working_set_bytes": 170606592,
+      "peak_working_set_bytes": 180404224,
+      "private_commit_bytes": 163352576,
+      "phase": "old_scalar_rows_4000",
+      "elapsed_milliseconds": 712
+    },
+    {
+      "working_set_bytes": 170815488,
+      "peak_working_set_bytes": 180404224,
+      "private_commit_bytes": 163352576,
+      "phase": "old_scalar_rows_5000",
+      "elapsed_milliseconds": 1605
+    },
+    {
+      "working_set_bytes": 172445696,
+      "peak_working_set_bytes": 180404224,
+      "private_commit_bytes": 164401152,
+      "phase": "all14383_existing_scalar_rows_combined_as_exact_intervals",
+      "elapsed_milliseconds": 1686
+    },
+    {
+      "working_set_bytes": 198901760,
+      "peak_working_set_bytes": 201707520,
+      "private_commit_bytes": 190681088,
+      "phase": "actual_sextic_rows_30",
+      "elapsed_milliseconds": 4458
+    },
+    {
+      "working_set_bytes": 200765440,
+      "peak_working_set_bytes": 208420864,
+      "private_commit_bytes": 192675840,
+      "phase": "actual_sextic_rows_60",
+      "elapsed_milliseconds": 5733
+    },
+    {
+      "working_set_bytes": 197955584,
+      "peak_working_set_bytes": 208420864,
+      "private_commit_bytes": 189755392,
+      "phase": "actual_sextic_rows_90",
+      "elapsed_milliseconds": 7011
+    },
+    {
+      "working_set_bytes": 200802304,
+      "peak_working_set_bytes": 208420864,
+      "private_commit_bytes": 192692224,
+      "phase": "actual_sextic_rows_120",
+      "elapsed_milliseconds": 8296
+    },
+    {
+      "working_set_bytes": 199737344,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 191684608,
+      "phase": "actual_sextic_rows_150",
+      "elapsed_milliseconds": 9525
+    },
+    {
+      "working_set_bytes": 197808128,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 189550592,
+      "phase": "actual_sextic_rows_180",
+      "elapsed_milliseconds": 10708
+    },
+    {
+      "working_set_bytes": 94629888,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 86736896,
+      "phase": "exact_Gram_trace_blocks_5",
+      "elapsed_milliseconds": 11552
+    },
+    {
+      "working_set_bytes": 95809536,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 87703552,
+      "phase": "exact_Gram_trace_blocks_10",
+      "elapsed_milliseconds": 11644
+    },
+    {
+      "working_set_bytes": 93405184,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 85045248,
+      "phase": "exact_Gram_trace_blocks_15",
+      "elapsed_milliseconds": 11779
+    },
+    {
+      "working_set_bytes": 94793728,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 86589440,
+      "phase": "exact_Gram_trace_blocks_20",
+      "elapsed_milliseconds": 12052
+    },
+    {
+      "working_set_bytes": 94830592,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 87064576,
+      "phase": "exact_Gram_trace_blocks_25",
+      "elapsed_milliseconds": 12255
+    },
+    {
+      "working_set_bytes": 94846976,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 87064576,
+      "phase": "exact_Gram_trace_blocks_30",
+      "elapsed_milliseconds": 12445
+    },
+    {
+      "working_set_bytes": 94851072,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 87064576,
+      "phase": "exact_Gram_trace_blocks_35",
+      "elapsed_milliseconds": 12632
+    },
+    {
+      "working_set_bytes": 94851072,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 87064576,
+      "phase": "exact_Gram_trace_blocks_40",
+      "elapsed_milliseconds": 12804
+    },
+    {
+      "working_set_bytes": 94851072,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 87064576,
+      "phase": "exact_Gram_trace_blocks_45",
+      "elapsed_milliseconds": 12939
+    },
+    {
+      "working_set_bytes": 94654464,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 86634496,
+      "phase": "exact_Gram_trace_blocks_50",
+      "elapsed_milliseconds": 13168
+    },
+    {
+      "working_set_bytes": 94605312,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 86581248,
+      "phase": "exact_Gram_trace_blocks_55",
+      "elapsed_milliseconds": 13427
+    },
+    {
+      "working_set_bytes": 94605312,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 86581248,
+      "phase": "exact_Gram_trace_blocks_60",
+      "elapsed_milliseconds": 13861
+    },
+    {
+      "working_set_bytes": 93466624,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 85241856,
+      "phase": "exact_Gram_trace_blocks_65",
+      "elapsed_milliseconds": 14283
+    },
+    {
+      "working_set_bytes": 94822400,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 86757376,
+      "phase": "exact_Gram_trace_blocks_70",
+      "elapsed_milliseconds": 14712
+    },
+    {
+      "working_set_bytes": 94195712,
+      "peak_working_set_bytes": 210382848,
+      "private_commit_bytes": 85950464,
+      "phase": "exact_interval_and_box_certificate_PASS",
+      "elapsed_milliseconds": 15002
+    }
+  ],
+  "optimizer_calls": 0,
+  "eigh_calls": 0,
+  "Lean_invocations": 0,
+  "actual_cell_exclusion_proven": false,
+  "actual_analytic_instances_Lean_proved": false,
+  "new_zero_proportion_proven": false,
+  "source_sha256_end": {
+    "research-goal-20261017-fixed-gram-tail/rebuild_retained.py": "923058cbd481626b31e2a443c29e5c13ed3d589f07c68d09500e21ffaeae61fe",
+    "research-goal-20261017-fixed-gram-tail/prune_once.py": "48e8a429b3cd5bbb0773a99e6bd9d77177cd01b6fee63826741f9f65b41f4a11",
+    "research-goal-20261017-fixed-gram-tail/retained-ray.json.gz": "b51724e37d219705828d08a5af8db3d1588563d22908fe75b9dc29261e944d21",
+    "research-goal-20261017-fixed-gram-tail/pruning.json": "0c57b00892298cb8cf67b500ad616848b81a9adbe0226cd084c89f32ead9a717",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-degree6-static/degree6-targets.bin": "2f33955dca14c310a993df8d0930044e00c0af63b137f309bd7252fc3ce5052d",
+    "research-goal-20261017-degree6-static/degree6-entryplans.bin": "3f906a5b5abbac6829dd8fb87329bdc3de0f27b5388102305b1792af78d90c01",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0",
+    "research-goal-20261017-actual-sextic-cone/actual-sextic-cone-files.json": "4094f05bf934e083aebd99ed548836b1487681a963f53fe2fa95d930b8ecffd8",
+    "research-goal-20261017-fixed-gram-tail/run_retained_once.py": "f24eb8d0c3f965b08d4634d46a597e54b068dcb0becb47327430ec4d6c169ffc",
+    "research-goal-20261017-fixed-gram-tail/tail-selection.json": "01ee6806c3ee6f1486ddcc9cf196cdf516ac829725bf4caf92ecb62582857eef",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-enclosure-certificate.json": "7935f4945013c087357141c6f4406ef1b83c03fd9c8cfef61a7cd397f21e57a0"
+  },
+  "all_inputs_unchanged": true,
+  "elapsed_milliseconds": 15002,
+  "exact_certificate": {
+    "path": "research-goal-20261017-fixed-gram-tail/retained-enclosure-certificate.json",
+    "bytes": 866541,
+    "sha256": "7c8d083cec89942c19642a8206156a2f77879e3c1278d21c56bf3f2da2233332"
+  },
+  "coefficient_interval_count": 5005,
+  "enclosed_nonzero_atoms": 2548856,
+  "nonintegral_atom_enclosures": 2496537,
+  "box_bounds_checked": 5004,
+  "constant_upper_numerator": -954861379977679627115791937265,
+  "strict_margin": "190972275995535925423158387453/200000000000000000000000000000",
+  "strict_negative_constant_upper": true,
+  "outer_polynomial_model_infeasible": true,
+  "literal_exact_residual_cancellation": false,
+  "maximum_endpoint_bit_length": 100,
+  "no_global_common_denominator_constructed": true,
+  "global_common_denominator_bit_length": null,
+  "sole_interval_denominator": 1000000000000000000000000000000,
+  "exact_Gram_blocks": 73,
+  "active_scalar_rows": 14562,
+  "all181_actual_sextic_rows_active": true,
+  "old_KKT_and_swap_scalar_dependencies_retained": true,
+  "old_sublevel_Gram_still_active": true,
+  "active_retained_Gram_blocks": 73,
+  "predicted_margin_bound_verified": true,
+  "already_covered_historical_cell_not_current_frontier": true
+}

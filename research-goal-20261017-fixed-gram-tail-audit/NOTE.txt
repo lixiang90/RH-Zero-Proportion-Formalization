@@ -1,0 +1,47 @@
+Independent audit of the one deterministic fixed-Gram tail deletion
+
+Complete exact replay PASS. From 3010 original integer Gram columns, the
+fixed rule deletes 125 and retains 2885 columns and 182495 integer entries.
+All lambda weights, denominators and retained column entries are unchanged.
+
+The selection checker recomputes each exact cost
+  ||q||_coefficient_l1 * (sum_i |L_integer(i,column)|)^2 /(10^24*divisor).
+The q norm includes the constant coefficient. Polynomial coefficient l1
+submultiplicativity bounds the absolute change on the normalized cube.
+It independently checks exact Fraction sorting, tie order (block,column),
+the unique maximal prefix within the original margin/4, the next excluded
+cost, original column order, and the fixed DS30 rounding reserve. Unique
+multiplier and plan/shift keys bound both aggregate atom-rounding costs.
+
+The retained certificate is independently rebuilt in full, rather than
+inferred from that cost estimate. The main checker is adapted from this
+agent's previously frozen independent exact-ray checker. It imports only
+the new independent selection checker and Python standard-library modules,
+never a producer. It reconstructs all old scalar rows, new moment boxes,
+181 sextic rows, and 73 SOS polynomials directly from integer column
+squares; off-diagonal factors of two are checked. Every one of 2548856
+nonzero atoms, 5005 coefficient intervals and 5004 box payments matches.
+The retained aggregate upper bound is exactly
+  -954861379977679627115791937265 / 10^30 < 0.
+
+The ordinary data-only Lean representation is independently serialized
+and compared byte-for-byte: 2394367 bytes, still 394367 bytes above the
+website's 2000000-byte limit before any checker, actual table or full-cover
+source. It was not compiled. This fixed experiment therefore does not
+establish website source-size compliance.
+
+The first checker invocation stopped at an outdated schema-name assertion
+before any mathematical replay. The checker-only assertion was corrected
+to the retained packet's declared schema; the complete recorded invocation
+then passed in about 18.15 seconds. No producer/data or mathematical rule
+changed, and no alternate deletion, precision, rank or bound was tried.
+
+The tested cell r001000001000100110011001 is already closed in the imported
+historical baseline and is unrelated to all 17 current frontier paths.
+This is a representation/actualization feasibility audit, not a new
+frontier closure. Old analytic premises remain active. No actual analytic
+Lean instance, complete global cover or new unconditional zero-proportion
+record is claimed.
+
+Reproduce read-only from the repository root:
+  python -S research-goal-20261017-fixed-gram-tail-audit/independent_replay.py

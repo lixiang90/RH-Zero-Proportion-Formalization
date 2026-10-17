@@ -1,0 +1,76 @@
+{
+  "scope": "One deterministic coefficient-l1-budgeted deletion of fixed Gram columns.\n\nNo eigensolver, optimizer, rounding, precision/rank/parameter trial. Costs\nare exact, sorted by(cost,block,column). Delete one maximal prefix with\nsum<=delta/4. Preserve every remaining integer column in its old order.\n",
+  "phase": "one_deterministic_prefix_selected_no_retained_rebuild_yet",
+  "source_sha256_start": {
+    "research-goal-20261017-fixed-gram-tail/prune_once.py": "48e8a429b3cd5bbb0773a99e6bd9d77177cd01b6fee63826741f9f65b41f4a11",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-ray-files.json": "c19797f38f2a7687817735b91163bf329d6f2ad7cb26e9989b3e76bb99f5ceae",
+    "research-goal-20261017-actual-sextic-exact-ray/quantized-ray.json.gz": "4862b3437fbc68766e1870afdabda9ea466b18750e2715cbe953e0b8cd363805",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-enclosure-certificate.json": "7935f4945013c087357141c6f4406ef1b83c03fd9c8cfef61a7cd397f21e57a0",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552"
+  },
+  "memory_snapshots": [
+    {
+      "working_set_bytes": 22052864,
+      "peak_working_set_bytes": 23195648,
+      "private_commit_bytes": 14086144,
+      "phase": "loading_fixed_full_certificate",
+      "elapsed_milliseconds": 9
+    },
+    {
+      "working_set_bytes": 61063168,
+      "peak_working_set_bytes": 63459328,
+      "private_commit_bytes": 53125120,
+      "phase": "one_deterministic_prefix_selected_no_retained_rebuild_yet",
+      "elapsed_milliseconds": 623
+    }
+  ],
+  "new_eigh_calls": 0,
+  "optimizer_calls": 0,
+  "integer_rerounding_operations": 0,
+  "budget_or_prefix_trials": 1,
+  "Lean_invocations": 0,
+  "same_fixed_lambda_and_integer_entries": true,
+  "actual_cell_exclusion_Lean_proved": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "source_sha256_end": {
+    "research-goal-20261017-fixed-gram-tail/prune_once.py": "48e8a429b3cd5bbb0773a99e6bd9d77177cd01b6fee63826741f9f65b41f4a11",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-ray-files.json": "c19797f38f2a7687817735b91163bf329d6f2ad7cb26e9989b3e76bb99f5ceae",
+    "research-goal-20261017-actual-sextic-exact-ray/quantized-ray.json.gz": "4862b3437fbc68766e1870afdabda9ea466b18750e2715cbe953e0b8cd363805",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-enclosure-certificate.json": "7935f4945013c087357141c6f4406ef1b83c03fd9c8cfef61a7cd397f21e57a0",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552"
+  },
+  "all_inputs_unchanged": true,
+  "elapsed_milliseconds": 623,
+  "retained_packet": {
+    "path": "research-goal-20261017-fixed-gram-tail/retained-ray.json.gz",
+    "bytes": 1067689,
+    "sha256": "b51724e37d219705828d08a5af8db3d1588563d22908fe75b9dc29261e944d21",
+    "uncompressed_bytes": 2221087
+  },
+  "selection_packet": {
+    "path": "research-goal-20261017-fixed-gram-tail/tail-selection.json",
+    "bytes": 88303,
+    "sha256": "01ee6806c3ee6f1486ddcc9cf196cdf516ac829725bf4caf92ecb62582857eef"
+  },
+  "uncompiled_data_source": {
+    "path": "research-goal-20261017-fixed-gram-tail/RetainedRayData.lean",
+    "bytes": 2394367,
+    "sha256": "700eccec4ab1283a6fc106de609cb36a8d283dc6ac2d3c27b9df6572bf98ed66"
+  },
+  "deleted_columns": 125,
+  "retained_columns": 2885,
+  "retained_factor_entries": 182495,
+  "total_deleted_cost": "484972791790862457349990282985183745923313275494882388651286519389123189906414651398053178891255478537747808933858711846109872929913086800736014681974185824021485484593015077439672127579971210709945986914928236783157938681886255129417860241964223592018687505503302478407386487577462653462625258894838363670622003424506776357015873591/1943484616223471574933776418049185918559946267595984733888949373291125176625301187437357539470973988023631945056576407631226786510096812821417359874235040291464630569171354966210737777879984013183914344200594485428484435368057241600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "predicted_margin": "1458511819721993171575854890233474940779879053670683793814273253634068665283493425763399781244824280640769045070470752695522609160594932692613196134238654130025129482016577996334934569942526181614501380629636552672215140369012569967007979905908120828244445678496697521592613512422537346537374741105161636329377996575493223642984126409/1943484616223471574933776418049185918559946267595984733888949373291125176625301187437357539470973988023631945056576407631226786510096812821417359874235040291464630569171354966210737777879984013183914344200594485428484435368057241600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "source_size": {
+    "retained_ray_uncompressed_JSON_bytes": 2221087,
+    "retained_ray_gzip_bytes": 1067689,
+    "ordinary_uncompiled_Lean_data_file_bytes": 2394367,
+    "website_source_limit_bytes": 2000000,
+    "remaining_bytes_after_data_only": -394367,
+    "checker_and_actual_tables_reserve_allocated": false,
+    "other_cells_and_fullcover_reserve_allocated": false,
+    "checker_tables_fullcover_reserve_bytes": null,
+    "complete_source_budget_met": false
+  }
+}

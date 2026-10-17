@@ -1,0 +1,31 @@
+Independent read-only global relevance audit
+
+The immutable 1215361024-byte database is streamed for SHA256 before and
+after a mode=ro, PRAGMA query_only connection. Both hashes equal
+ceb41e0e34b79e92bff8bf658b91510be8c6bc2da4fe527d5bbc1200f5866296.
+The database and the root producer's exported receipt remain unchanged.
+
+All 17 target-prefix records and all 17 current frontier records are
+queried independently from SQLite; their exact payload bytes, SHA256,
+decoded content, positions and exported summaries match. The frontier
+paths form a prefix antichain, and none is an ancestor or descendant of
+r001000001000100110011001. The target records contain a complete binary
+prefix tree with 4 branches and 5 accepted leaves, Kraft sum exactly one.
+Their accepted positions are 23790 through 23794. No matching path is
+present in the new node journal. The receipt's ancestor/frontier projections
+are also checked. Global ancestor byte/count inventories are not recomputed.
+
+Consequently the fixed quartic/sextic/Gram experiments concern an already
+closed imported-baseline subtree, not the unresolved frontier. This is a
+storage/topology and scope finding. No historical baseline mathematical
+certificate is replayed or newly proved sound here. In particular, a
+complete prefix tree alone does not prove the leaves' mathematical claims.
+
+No new frontier closure, replacement-source compression benefit, actual
+Lean cell exclusion, global cover or unconditional zero-proportion record
+is established. The checker uses only the standard library, imports no
+producer, and invokes no solver, oracle, new point or Lean.
+
+Reproduce read-only from the repository root:
+  python -S research-goal-20261017-global-relevance-independent/independent_replay.py
+Recorded execution: exit code 0 in about 2.90 seconds.

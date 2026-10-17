@@ -1,0 +1,41 @@
+Independent fixed Bernstein/retained-Gram transfer payment audit
+
+Arithmetic replay PASS; the fixed transfer-budget gate FAILS.
+
+The already independently audited whole-span degree6 Bernstein epsilons
+and retained integer ray are kept unchanged. This checker recomputes all
+180 normalized scalar payments and all 19 Gram payments, including every
+positive original row scale and block divisor. It independently expands
+the absolute products in each column-l1 squared SOS bound and compares
+the retained entries with their original columns. epsilon0 already
+includes 1/c and is paid without an extra division by c.
+
+Decimal displays, not the basis for the comparison:
+  180 scalar payments       0.1755160257655382
+  18 gradient Gram payments 30.270897734292884
+  q0 Gram payment          29.052806606644072
+  K                        59.499220366702495
+
+The exact Fraction comparison is K>59>1>retained_margin, where
+retained_margin = 190972275995535925423158387453 /
+                  200000000000000000000000000000.
+The packet stores full exact Fractions; this audit stores a digest of K
+instead of duplicating its large numerator and denominator.
+
+Producer provenance is explicitly two arithmetic executions of one fixed
+mathematical candidate: its first execution failed only when Python's
+integer string-length guard prevented output serialization. The authorized
+recovery disabled that guard and changed no epsilon, lambda, Gram factor,
+divisor, margin, interval or bound. This independent replay likewise
+disables the display guard. No alternative bound is attempted here.
+
+This failure only means the fixed Bernstein/column-l1 payment does not
+remove the old analytic premises. It does not disprove analytic transfer
+or the actual cell claim. The selected cell was already closed in the
+historical baseline, so there is no new frontier closure. The eight swap
+analytic obligations and old actual analytic obligations remain. No Lean,
+global-cover, website-size or unconditional-proportion completion follows.
+
+Reproduce read-only from the repository root:
+  python -S research-goal-20261017-edge6-payment-audit/independent_replay.py
+Recorded execution: exit code 0, about 0.481 seconds; standard library only.

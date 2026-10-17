@@ -1,0 +1,46 @@
+Independent audit: one fixed whole-span degree6 Bernstein transfer
+
+Arithmetic replay PASS. This is epsilon preparation only; no weighted
+transfer budget K is evaluated by this audit.
+
+The checker uses only Python's standard library. It does not import the
+producer, evaluate a kernel or transcendental oracle, choose new points,
+subdivide a span, solve a numerical program or invoke Lean.
+
+Every old U3/A4 and new U5/E6/L6 univariate polynomial is rebuilt from the
+frozen edge packets. Physical-span shifts are exact rational identities.
+The same nine normalized gaps are preserved; the span-power expansions
+are independently checked by polynomial multiplication against the shared
+5005-monomial basis. Old and new coordinate polynomials and all eighteen
+signed differences are checked coefficient by coefficient.
+
+For each of the 41 original whole DBM span intervals [l,u], the checker
+transforms a degree<=6 power polynomial p(s) to p(l+(u-l)t). It recomputes
+the seven Bernstein coefficients using binomial ratios and independently
+expands the Bernstein basis back to the power basis. Their maximum is a
+valid upper bound on the whole interval. All 123 forward/inverse identities
+(two derivative differences and one energy difference per edge) pass.
+Negative edge upper bounds remain signed until incidence aggregation.
+All ledger weights used for aggregation are checked strictly positive.
+
+The two derivative differences are (E6-A4)+(U3-U5) and
+(E6-A4)-(U3-U5). Summing the appropriate edge upper bounds and taking
+max(0, plus, minus) produces the nine fixed epsilons. The old quadratic
+energy is decomposed into its exact pressure/anchor constant, adjacent
+linear correction and whole-span quadratic terms. Its difference from
+L6 is checked as one full 5005-basis polynomial before division by
+c=11/1250. The factor 1/c is applied exactly once. epsilon0 is about
+2.6025923775786204; full exact values and all bindings are in the receipt.
+
+The selected cell r001000001000100110011001 was already closed in the
+historical baseline. This audit measures an analytic-transfer method;
+it is not a new frontier closure or global-cover improvement. Preparation
+alone removes none of the old analytic premises. The later single fixed
+retained-ray payment is a separate gate, not performed here.
+
+Reproduce read-only from the repository root:
+  python -S research-goal-20261017-edge6-transfer-audit/independent_replay.py
+
+The recorded execution returned exit code 0 in about 6.06 seconds.
+No actual analytic Lean instance, full root cover, unconditional improved
+zero proportion, or website-ready submission is asserted.

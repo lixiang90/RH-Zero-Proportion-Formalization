@@ -1,0 +1,79 @@
+{
+  "scope": "Independent stdlib read-only audit of fixed-cell coverage relevance.\n\nVerify immutable database bytes, exported records/frontier, target subtree\ntopology and absence from the new journal. No historical math replay,\nsearch, solver, oracle or Lean. --write-receipt creates an absent receipt.\n",
+  "passed": true,
+  "source_sha256_start": {
+    "research-goal-20261017-global-relevance-audit/audit_relevance.py": "5bdd86e0ec5be3de0e3fa491a61d5124e5a9e1970c4084ff1e6293f477bf94c1",
+    "research-goal-20261016/sqlite-bounded143004/progress.json": "2d54c6f6ccceac3423298589f2752b64e05a97f00634d98e4095033a06df973b",
+    "research-goal-20261016/sqlite-bounded143004/epoch.json": "8c99385e704f12bc549ca9e35813710e484c83c772e5023f816e838e64593da5",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-ray-files.json": "c19797f38f2a7687817735b91163bf329d6f2ad7cb26e9989b3e76bb99f5ceae",
+    "research-goal-20261017-global-relevance-audit/global-relevance.json": "0053de28579a0bd8646df4dedb14d10735e5324756f415b58f523bc08377ad85",
+    "research-goal-20261017-global-relevance-independent/independent_replay.py": "8a386c8e91e0bf21837ee609ddbfefbb80f05869abf74045595c7ca781bfff3e"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-global-relevance-audit/audit_relevance.py": "5bdd86e0ec5be3de0e3fa491a61d5124e5a9e1970c4084ff1e6293f477bf94c1",
+    "research-goal-20261016/sqlite-bounded143004/progress.json": "2d54c6f6ccceac3423298589f2752b64e05a97f00634d98e4095033a06df973b",
+    "research-goal-20261016/sqlite-bounded143004/epoch.json": "8c99385e704f12bc549ca9e35813710e484c83c772e5023f816e838e64593da5",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-ray-files.json": "c19797f38f2a7687817735b91163bf329d6f2ad7cb26e9989b3e76bb99f5ceae",
+    "research-goal-20261017-global-relevance-audit/global-relevance.json": "0053de28579a0bd8646df4dedb14d10735e5324756f415b58f523bc08377ad85",
+    "research-goal-20261017-global-relevance-independent/independent_replay.py": "8a386c8e91e0bf21837ee609ddbfefbb80f05869abf74045595c7ca781bfff3e"
+  },
+  "all_inputs_unchanged": true,
+  "database_path": "research-goal-20261016/sqlite-bounded143004/campaign.sqlite",
+  "database_bytes": 1215361024,
+  "database_sha256_before": "ceb41e0e34b79e92bff8bf658b91510be8c6bc2da4fe527d5bbc1200f5866296",
+  "database_sha256_after": "ceb41e0e34b79e92bff8bf658b91510be8c6bc2da4fe527d5bbc1200f5866296",
+  "database_readonly_and_queryonly": true,
+  "target": "r001000001000100110011001",
+  "floor": "11/1250",
+  "exported_target_records_checked_against_DB": 17,
+  "frontier_records_checked_against_DB": 17,
+  "frontier_prefix_antichain": true,
+  "related_frontier_count": 0,
+  "binary_subtree_branches": 4,
+  "binary_subtree_leaves": 5,
+  "complete_binary_prefix_tree": true,
+  "kraft_sum": "1",
+  "accepted_positions": [
+    23790,
+    23791,
+    23792,
+    23793,
+    23794
+  ],
+  "target_record_summary": {
+    "accepted": {
+      "records": 5,
+      "payload_bytes": 6021
+    },
+    "branches": {
+      "records": 4,
+      "payload_bytes": 239
+    },
+    "contractions": {
+      "records": 2,
+      "payload_bytes": 26068
+    },
+    "sublevel_contractions": {
+      "records": 6,
+      "payload_bytes": 34783
+    }
+  },
+  "matching_new_journal_nodes": 0,
+  "ancestor_frontier_projections_checked": true,
+  "full_ancestor_record_counts_recomputed": false,
+  "fixed_cell_already_closed_in_imported_baseline": true,
+  "historical_baseline_mathematics_replayed": false,
+  "baseline_closure_soundness_reproved": false,
+  "new_frontier_closure": false,
+  "source_compression_benefit_proved": false,
+  "producer_imports": 0,
+  "solver_calls": 0,
+  "eigh_calls": 0,
+  "Lean_invocations": 0,
+  "new_points": 0,
+  "global_cover_completed": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 2.9003025999991223
+}

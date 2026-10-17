@@ -2,6 +2,16 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
+A new [global relevance audit](research-goal-20261017-global-relevance-audit/NOTE.zh.md)
+shows that the sextic test cell already has a five-leaf numerical subtree
+in the historical baseline and is unrelated to the current 17-cell frontier.
+Its exact certificate therefore closes no new frontier. The measured
+data-source simplification still exceeds 2 MB, and the fixed transfer of
+old analytic premises fails. [Macro review 002](research-goal-20261016/macro-reviews/002-20261017.zh.md)
+stops further work on that cell and selects a full-tree opportunity audit
+for low-dimensional nonlinear-span certificates on the old W10 backup.
+No new unconditional proportion or submission-ready proof is asserted.
+
 The latest [fixed sextic certificate](research-goal-20261017-actual-sextic-exact-ray/NOTE.txt)
 and [independent integer replay](research-goal-20261017-exact-ray-audit/independent-replay.json)
 prove the enhanced degree-six polynomial/moment model infeasible on one
