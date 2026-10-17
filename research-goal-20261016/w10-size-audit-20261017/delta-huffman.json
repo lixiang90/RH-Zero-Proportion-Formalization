@@ -1,0 +1,503 @@
+{
+  "scope": "Lossless semantic delta streams with shared canonical Huffman dictionaries.\n\nThis changes no mathematical witness. The exact printable Lean data bytes\nare counted separately from the unchanged analytic base and the reserved\nfuture decoder/checkpoint expander. No Lean proof is asserted.\n",
+  "codec": "delta-huffman",
+  "script_sha256": "3c10f6acdc0641c1c6464cdbb927cffbd99f2eff1340a6167f5c82f503afbe9a",
+  "semantics_sha256": "277463c05b5e9944135f878fb9dfec5bfe890f86b36faf76a67f9a7a3ad10d08",
+  "numeric_leaves": 95615,
+  "all_nodes": 191557,
+  "channels": [
+    {
+      "name": "node_kind",
+      "alphabet": 4,
+      "tokens": 191557,
+      "model_bytes": 4,
+      "coded_bits": 287500,
+      "coded_bytes": 35938
+    },
+    {
+      "name": "axis",
+      "alphabet": 45,
+      "tokens": 95941,
+      "model_bytes": 45,
+      "coded_bits": 462832,
+      "coded_bytes": 57854
+    },
+    {
+      "name": "cut0",
+      "alphabet": 256,
+      "tokens": 95778,
+      "model_bytes": 256,
+      "coded_bits": 649068,
+      "coded_bytes": 81134
+    },
+    {
+      "name": "cut1",
+      "alphabet": 256,
+      "tokens": 89923,
+      "model_bytes": 256,
+      "coded_bits": 693297,
+      "coded_bytes": 86663
+    },
+    {
+      "name": "cut2",
+      "alphabet": 256,
+      "tokens": 52224,
+      "model_bytes": 256,
+      "coded_bits": 143492,
+      "coded_bytes": 17937
+    },
+    {
+      "name": "cut3",
+      "alphabet": 256,
+      "tokens": 0,
+      "model_bytes": 256,
+      "coded_bits": 0,
+      "coded_bytes": 0
+    },
+    {
+      "name": "term0",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 163468,
+      "coded_bytes": 20434
+    },
+    {
+      "name": "term1",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 122335,
+      "coded_bytes": 15292
+    },
+    {
+      "name": "term2",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 135731,
+      "coded_bytes": 16967
+    },
+    {
+      "name": "term3",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 142873,
+      "coded_bytes": 17860
+    },
+    {
+      "name": "term4",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 152656,
+      "coded_bytes": 19082
+    },
+    {
+      "name": "term5",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 123548,
+      "coded_bytes": 15444
+    },
+    {
+      "name": "term6",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 167550,
+      "coded_bytes": 20944
+    },
+    {
+      "name": "term7",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 125819,
+      "coded_bytes": 15728
+    },
+    {
+      "name": "term8",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 125332,
+      "coded_bytes": 15667
+    },
+    {
+      "name": "term9",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 131535,
+      "coded_bytes": 16442
+    },
+    {
+      "name": "term10",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 141418,
+      "coded_bytes": 17678
+    },
+    {
+      "name": "term11",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 130754,
+      "coded_bytes": 16345
+    },
+    {
+      "name": "term12",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 143794,
+      "coded_bytes": 17975
+    },
+    {
+      "name": "term13",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 141811,
+      "coded_bytes": 17727
+    },
+    {
+      "name": "term14",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 167813,
+      "coded_bytes": 20977
+    },
+    {
+      "name": "term15",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 159999,
+      "coded_bytes": 20000
+    },
+    {
+      "name": "term16",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 157856,
+      "coded_bytes": 19732
+    },
+    {
+      "name": "term17",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 154549,
+      "coded_bytes": 19319
+    },
+    {
+      "name": "term18",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 135399,
+      "coded_bytes": 16925
+    },
+    {
+      "name": "term19",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 128996,
+      "coded_bytes": 16125
+    },
+    {
+      "name": "term20",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 129508,
+      "coded_bytes": 16189
+    },
+    {
+      "name": "term21",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 158270,
+      "coded_bytes": 19784
+    },
+    {
+      "name": "term22",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 171502,
+      "coded_bytes": 21438
+    },
+    {
+      "name": "term23",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 167924,
+      "coded_bytes": 20991
+    },
+    {
+      "name": "term24",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 155452,
+      "coded_bytes": 19432
+    },
+    {
+      "name": "term25",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 135739,
+      "coded_bytes": 16968
+    },
+    {
+      "name": "term26",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 122438,
+      "coded_bytes": 15305
+    },
+    {
+      "name": "term27",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 160681,
+      "coded_bytes": 20086
+    },
+    {
+      "name": "term28",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 172738,
+      "coded_bytes": 21593
+    },
+    {
+      "name": "term29",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 155041,
+      "coded_bytes": 19381
+    },
+    {
+      "name": "term30",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 128221,
+      "coded_bytes": 16028
+    },
+    {
+      "name": "term31",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 111921,
+      "coded_bytes": 13991
+    },
+    {
+      "name": "term32",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 160359,
+      "coded_bytes": 20045
+    },
+    {
+      "name": "term33",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 157711,
+      "coded_bytes": 19714
+    },
+    {
+      "name": "term34",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 125638,
+      "coded_bytes": 15705
+    },
+    {
+      "name": "term35",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 173874,
+      "coded_bytes": 21735
+    },
+    {
+      "name": "term36",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 127045,
+      "coded_bytes": 15881
+    },
+    {
+      "name": "term37",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 191241,
+      "coded_bytes": 23906
+    },
+    {
+      "name": "term38",
+      "alphabet": 5,
+      "tokens": 95615,
+      "model_bytes": 5,
+      "coded_bits": 182447,
+      "coded_bytes": 22806
+    },
+    {
+      "name": "mix",
+      "alphabet": 2047,
+      "tokens": 145356,
+      "model_bytes": 2047,
+      "coded_bits": 1385418,
+      "coded_bytes": 173178
+    },
+    {
+      "name": "point0",
+      "alphabet": 256,
+      "tokens": 1272069,
+      "model_bytes": 256,
+      "coded_bits": 9347646,
+      "coded_bytes": 1168456
+    },
+    {
+      "name": "point1",
+      "alphabet": 256,
+      "tokens": 349415,
+      "model_bytes": 256,
+      "coded_bits": 1133571,
+      "coded_bytes": 141697
+    },
+    {
+      "name": "point2",
+      "alphabet": 256,
+      "tokens": 9,
+      "model_bytes": 256,
+      "coded_bits": 9,
+      "coded_bytes": 2
+    },
+    {
+      "name": "second0",
+      "alphabet": 256,
+      "tokens": 132416,
+      "model_bytes": 256,
+      "coded_bits": 371825,
+      "coded_bytes": 46479
+    },
+    {
+      "name": "second1",
+      "alphabet": 256,
+      "tokens": 37,
+      "model_bytes": 256,
+      "coded_bits": 37,
+      "coded_bytes": 5
+    },
+    {
+      "name": "second2",
+      "alphabet": 256,
+      "tokens": 0,
+      "model_bytes": 256,
+      "coded_bits": 0,
+      "coded_bytes": 0
+    },
+    {
+      "name": "tree0",
+      "alphabet": 10,
+      "tokens": 95615,
+      "model_bytes": 10,
+      "coded_bits": 312579,
+      "coded_bytes": 39073
+    },
+    {
+      "name": "tree1",
+      "alphabet": 10,
+      "tokens": 95615,
+      "model_bytes": 10,
+      "coded_bits": 316644,
+      "coded_bytes": 39581
+    },
+    {
+      "name": "tree2",
+      "alphabet": 10,
+      "tokens": 95615,
+      "model_bytes": 10,
+      "coded_bits": 316478,
+      "coded_bytes": 39560
+    },
+    {
+      "name": "tree3",
+      "alphabet": 10,
+      "tokens": 95615,
+      "model_bytes": 10,
+      "coded_bits": 317527,
+      "coded_bytes": 39691
+    },
+    {
+      "name": "tree4",
+      "alphabet": 10,
+      "tokens": 95615,
+      "model_bytes": 10,
+      "coded_bits": 320322,
+      "coded_bytes": 40041
+    },
+    {
+      "name": "tree5",
+      "alphabet": 10,
+      "tokens": 95615,
+      "model_bytes": 10,
+      "coded_bits": 319211,
+      "coded_bytes": 39902
+    },
+    {
+      "name": "tree6",
+      "alphabet": 10,
+      "tokens": 95615,
+      "model_bytes": 10,
+      "coded_bits": 314739,
+      "coded_bytes": 39343
+    },
+    {
+      "name": "tree7",
+      "alphabet": 10,
+      "tokens": 95615,
+      "model_bytes": 10,
+      "coded_bits": 285276,
+      "coded_bytes": 35660
+    }
+  ],
+  "delta": true,
+  "unchanged_full_term_rows": 2007453,
+  "encoded_active_rows": 1272069,
+  "binary_bytes": 2845373,
+  "binary_sha256": "bb263a6b560eac9273b0f5a0c6ee355cd09a3b45dbe1faac357002a9cdc6b249",
+  "data_source_bytes": 3528019,
+  "data_source_sha256": "635e3cc46f8f79bcfa27bd7cfee6ea299766721b4894463afcda307ead664f00",
+  "source_literal_chunks": 11115,
+  "field_alphabet_tables_are_shared": true,
+  "roundtrip_verified": false,
+  "Lean_decoder_implemented": false,
+  "Lean_verified": false,
+  "seconds": 12.504094100004295
+}

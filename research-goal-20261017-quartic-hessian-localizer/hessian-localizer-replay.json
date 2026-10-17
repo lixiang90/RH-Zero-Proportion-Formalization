@@ -1,0 +1,39 @@
+{
+  "scope": "Read-only stdlib replay of the affine-position Hessian matrix construction.\n\nRebuild its 8100 entries directly edge by edge, rather than aggregating\nmatrix polynomials as in the producer.  No numerical eigenvalue premise,\nproducer import, optimizer or Lean.  This checks coefficients, not PSD.\n",
+  "status": "exact_affine_position_Hessian_coefficients_and_8100_entries_verified",
+  "source_sha256_start": {
+    "research-goal-20261017-quartic-hessian-localizer/hessian_localizer_replay.py": "39e96e6affa8b69fb24a7935853ac5589852b87c79f2828067d151ad036dd774",
+    "research-goal-20261017-quartic-hessian-localizer/hessian-localizer-static.json": "d1fb5675cc63d3f11c057c3ffb793f755fa4d126f0dd72ef530162a31557b24c",
+    "research-goal-20261017-quartic-hessian-localizer/hessian_localizer_static.py": "57c7d9df56afd1d5aabd53fcdc76606f41577f0d6b17b09fc9d6e6005673f9c1",
+    "research-goal-20261017-quartic/quartic-files.json": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-quartic/quartic-build.json": "12f3be0796d8ca3a27b4d4ed77105932d61fae2cf5704f1fe7224efcc7b369fc",
+    "research-goal-20261017-quartic/quartic-exact-primal.json": "84e754f780e9fdab170b9f18b63396042056871fc96b26f6b6ba767fd9a503ce",
+    "research-goal-20261017-quartic/quartic-result-replay.json": "98f16e984aae3e4360dd0313260462bd77eab2252c1e8a57badad36152c05039",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-quartic-hessian-localizer/hessian_localizer_replay.py": "39e96e6affa8b69fb24a7935853ac5589852b87c79f2828067d151ad036dd774",
+    "research-goal-20261017-quartic-hessian-localizer/hessian-localizer-static.json": "d1fb5675cc63d3f11c057c3ffb793f755fa4d126f0dd72ef530162a31557b24c",
+    "research-goal-20261017-quartic-hessian-localizer/hessian_localizer_static.py": "57c7d9df56afd1d5aabd53fcdc76606f41577f0d6b17b09fc9d6e6005673f9c1",
+    "research-goal-20261017-quartic/quartic-files.json": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-quartic/quartic-build.json": "12f3be0796d8ca3a27b4d4ed77105932d61fae2cf5704f1fe7224efcc7b369fc",
+    "research-goal-20261017-quartic/quartic-exact-primal.json": "84e754f780e9fdab170b9f18b63396042056871fc96b26f6b6ba767fd9a503ce",
+    "research-goal-20261017-quartic/quartic-result-replay.json": "98f16e984aae3e4360dd0313260462bd77eab2252c1e8a57badad36152c05039",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+  },
+  "all_sources_unchanged": true,
+  "edge_packets": 41,
+  "matrix_size": 90,
+  "matrix_entries_checked": 8100,
+  "exact_matrix_sha256": "0bd917714d38e2cfa9458412a1f753e1893d92e9171669908360e0c57f88885d",
+  "pure_stdlib_replay": true,
+  "exact_negative_witness_obtained": false,
+  "exact_PSD_of_pseudomoment_localizer_proved": false,
+  "optimizer_calls": 0,
+  "Lean_invocations": 0,
+  "cell_exclusion_proven": false,
+  "new_zero_proportion_proven": false,
+  "elapsed_milliseconds": 1727
+}

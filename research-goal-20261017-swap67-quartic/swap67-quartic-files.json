@@ -1,0 +1,119 @@
+{
+  "scope": "Freeze the one fixed swap67 common-quartic separation and its audit.",
+  "package_files": [
+    {
+      "path": "research-goal-20261017-swap67-audit/independent-replay.json",
+      "bytes": 7301,
+      "sha256": "7c7b2b99c3334f690785a37f7122799d215c0569f7a16fab8f68de803ee5d44c"
+    },
+    {
+      "path": "research-goal-20261017-swap67-audit/independent_replay.py",
+      "bytes": 12836,
+      "sha256": "1f1bafc9b1eb072d450ffe36da7a45ec2f4dec46868cf9fbda8700e0ed1e17cf"
+    },
+    {
+      "path": "research-goal-20261017-swap67-quartic/swap67-quartic-static.json",
+      "bytes": 3102655,
+      "sha256": "e315e2439ef5324719b317d8e1b652b995c0496f369be30f5f9b9c8bd4ba6a96"
+    },
+    {
+      "path": "research-goal-20261017-swap67-quartic/swap67_quartic_note.txt",
+      "bytes": 8626,
+      "sha256": "4fa488f26bf0e8231f10293d62d05a6f02bd69a9dc52b161b29d28ba9196c2cf"
+    },
+    {
+      "path": "research-goal-20261017-swap67-quartic/swap67_quartic_pin.py",
+      "bytes": 2792,
+      "sha256": "70ec52b1acf42f66209fbf161fe1279e3a1d72a2e4cb8e832a58cab16f7af805"
+    },
+    {
+      "path": "research-goal-20261017-swap67-quartic/swap67_quartic_static.py",
+      "bytes": 11145,
+      "sha256": "76d79f37cc06ad29af9e1c0408c8e0f9867f5c9608280375d82184785d9e3c3f"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "StructuralGoal20261016/WindowGlobalCompetitor.lean",
+      "bytes": 4965,
+      "sha256": "33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowMinimizerCover.lean",
+      "bytes": 3811,
+      "sha256": "ffbeccae4857ff0fb57f3b58c0bfa8f0a78f5d213d37782f0e948da1da455292"
+    },
+    {
+      "path": "research-20261016-followup/window_reweight_rational.json",
+      "bytes": 3838,
+      "sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+    },
+    {
+      "path": "research-goal-20261016/cover_newjet.json",
+      "bytes": 278163,
+      "sha256": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowGlobalCompetitor_33d8e5412518.log",
+      "bytes": 1571,
+      "sha256": "96b9d46b6e2949ebc1b2d2ce379e54d798064fc470b3951a6a3c54b8dda343ca"
+    },
+    {
+      "path": "research-goal-20261016/window_global_competitor_formal_index.json",
+      "bytes": 6609,
+      "sha256": "87b6fd3c17404a119f34781aa26c203dfd0ff8783df714d33dd8687128be6933"
+    },
+    {
+      "path": "research-goal-20261016/window_normalized_interval.json",
+      "bytes": 101176,
+      "sha256": "15e389817127095be26e2ebca6e8bea0d356547a3cb041710029f566cfc13255"
+    },
+    {
+      "path": "research-goal-20261016/window_normalized_interval.py",
+      "bytes": 4919,
+      "sha256": "c10327c87fa8c09d6e577ae18c2f3a7a74090f7964976bc795f92871ee76ae96"
+    },
+    {
+      "path": "research-goal-20261017-adjacent-swap-family/swap-family-files.json",
+      "bytes": 2948,
+      "sha256": "cb58c919806562b89e1af167ed66f2e6b15d2c09dffb22383e1a6ad52ff0084e"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-exact-primal.json",
+      "bytes": 159189,
+      "sha256": "84e754f780e9fdab170b9f18b63396042056871fc96b26f6b6ba767fd9a503ce"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-files.json",
+      "bytes": 5007,
+      "sha256": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-model.json.gz",
+      "bytes": 9516586,
+      "sha256": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-result-replay.json",
+      "bytes": 24516,
+      "sha256": "98f16e984aae3e4360dd0313260462bd77eab2252c1e8a57badad36152c05039"
+    }
+  ],
+  "single_fixed_swap_zero_based": [
+    6,
+    7
+  ],
+  "changed_nonzero_edges": 8,
+  "exactly_cancelled_nonzero_edges": 33,
+  "new_necessary_rows": 1,
+  "old_exact714_point_separated": true,
+  "expected_upper_difference_exact": "-44729720748292577174804457808209100341136507657767712925516932883032936501514211082461689403209787341936832700560065469932550364341961020335857528946124617288063543683550904660355415913311454155018099/25033941506757485845353796324634052773284067685286495164520420830748155718132566342281111000328747695093014842354341831595772891632082329010176000000000000000000000000000000000000000000000000000000000000",
+  "exact_short_threshold": "-17/10000",
+  "independent_stdlib_replay_passed": true,
+  "generic_actual_Fw24_Lean_bridge_passed": true,
+  "concrete_numerical_envelope_newly_Lean_proved": false,
+  "solver_calls": 0,
+  "Lean_invocations_by_this_package": 0,
+  "cell_exclusion_proven": false,
+  "new_zero_proportion_proven": false
+}

@@ -1,0 +1,61 @@
+One fixed feasible competitor: adjacent swap g5,g6
+2026-10-17
+
+An actual GLOBAL minimizer g of F on g_r>=SEP satisfies
+ F(Tg)-F(g)>=0
+for every fixed feasible map T.  This compares finite competitors and is
+not implied by local KKT or Hessian PSD.  Every gap permutation preserves
+the original orthant.  It need not preserve an artificial covering cell.
+
+For the adjacent swap of g_r and g_(r+1), only vertex m=r+1 moves.  If
+Delta=g_(r+1)-g_r, its position changes by Delta and all other vertices
+remain fixed.  Hence only spans ending at m or starting at m change:
+
+ F(Tg)-F(g)=(b_r-b_(r+1))*Delta
+ +sum_(i<m) a_(i,m) [w(s_(i,m)+Delta)-w(s_(i,m))]
+ +sum_(j>m) a_(m,j) [w(s_(m,j)-Delta)-w(s_(m,j))].
+
+The previous cover_competitor_diagnostic.py explored ten integer wells
+and floating integer-translation/parity-reflection comparisons.  It
+did not construct a common-moment necessary inequality.  The present
+fixed adjacent-swap cancellation identity and its possible polynomial
+consumer are therefore distinct from that exploratory comparison, but
+no successful common-moment consumer is claimed here.
+
+The chosen SINGLE map before any value evaluation was swap(g5,g6),
+zero-based: the boundary between six short gaps and three longer gaps
+in the first remaining parent cell.  At its exact midpoint, all nine
+gaps and their permuted competitor remain above SEP=123/128.  There
+are9 changed positive-weight edge terms and32 exact cancellations.
+
+Using only the frozen actual-w integer Taylor table(24 coefficients,
+degree23) at its existing integer anchors0..32 and paying
+ (44/7)^24*|x-n|^24/24!,
+the exact interval arithmetic gives
+
+ .0030172373934778058
+ <= F(Tg_mid)-F(g_mid)
+ <= .0030172373943467565.
+
+The exact rational endpoints are stored in swap-midpoint-static.json.
+The producer uses interval Horner; the independent stdlib replay sums
+the coefficient intervals by direct powers and obtains the same exact
+endpoints.  Actual Taylor enclosures and the global derivative bound
+remain the inherited analytic inputs, not new Lean theorems.
+
+This map strictly INCREASES F at that midpoint.  Under the agreed stop
+rule no other map was tried in this task, no quartic difference model
+was built, and no solver or Lean was invoked.  This result does not
+exclude the exact714 pseudo-point, the parent cell, or the general
+finite-competitor route.
+
+If pursued under a separate authorization, the valid common-moment
+interface would be a quartic polynomial U(g)>=F(Tg)-F(g) on the parent
+cell.  At an actual global minimizer, U(g)>=0, yielding a degree<=4
+necessary moment row.  The orientation MUST be an UPPER bound on the
+difference; a lower bound alone does not provide this implication.
+Only the changed spans need approximation; all others cancel exactly.
+The transformed spans must receive scalar bounds on their whole image
+intervals, even if those intervals leave the original cell's individual
+span bounds.  Reusing old edge packets outside their proved domains
+would be invalid.  No such out-of-domain packet was used here.

@@ -1,0 +1,100 @@
+{
+  "scope": "Fixed first1000 W10 cell predictor negative diagnosis; exact original exception reconstruction and independent portable prefix arithmetic replay. No tuning/optimizer/Lean/new cover.",
+  "files": [
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/protocol.json",
+      "bytes": 914,
+      "sha256": "e79fb6ec9ad45fdbf2a66b3f3e0995c31a7685d150dd8d250c42126b9c3879e1"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/pilot.py",
+      "bytes": 13274,
+      "sha256": "e835fffddfad9c8bb2262b7d3b2e0f89930d9f0f918c0bcf5ff075f531ad8805"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/result.json",
+      "bytes": 9026,
+      "sha256": "8a8cfd409961eb91b95e6c4962be2a25acf764d6965662dee6a9b17d719a6ca1"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/standalone.py",
+      "bytes": 8626,
+      "sha256": "de03e404218351856882bc3fb1fc7f1e28e6ebbd1bb2c47d3d4d59208476ae77"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/sample-input.json.gz",
+      "bytes": 57253,
+      "sha256": "9848228a3ab5bafb70ea7445815baf0fe0f426b6d6152df527225abed44faf84"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/standalone-replay.json",
+      "bytes": 1252,
+      "sha256": "6a8eef4504a4c02d09a82de657c26a39f68ed08d147e70066750fbee1c93fa2e"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/NOTE.md",
+      "bytes": 7463,
+      "sha256": "19bd8d0a6b75d10a61a3c9159e9c84bb5e58ea423d546d66fa747fb77ed5f6b8"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/rule0-exceptions.bin.gz",
+      "bytes": 35973,
+      "sha256": "cacae01f87e7015b1a5129361fb34cacbf122cad4d88131dbc4e792eca01523c"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/rule1-exceptions.bin.gz",
+      "bytes": 38082,
+      "sha256": "a48442c142038b4fc6ab69a559bf0e3736491f183f77d5156a52773328f32360"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/rule2-exceptions.bin.gz",
+      "bytes": 34662,
+      "sha256": "f47cfc00375f891971911ad6906cd427b3f9086e04c89b8619b605e350dfa600"
+    }
+  ],
+  "file_count": 10,
+  "total_bytes": 206525,
+  "dependency_pin": {
+    "path": "research-goal-20261016/w10-size-audit-20261017/independent-codec-files.json",
+    "bytes": 3527,
+    "sha256": "02a68ff5e65a7d9525a7d0e6e00b285760db7a2ee6e5dbf965c8a1a0a9912401"
+  },
+  "numeric_leaves": 1000,
+  "predicted_FS_with_old_tree_pass": [
+    4,
+    1,
+    3
+  ],
+  "original_FS_fixed_tree_portfolio_pass": 332,
+  "standalone_replay_passed": true,
+  "excluded_uncompressed_exception_files": [
+    "rule0-exceptions.bin",
+    "rule1-exceptions.bin",
+    "rule2-exceptions.bin"
+  ],
+  "full95615_predictor_run": false,
+  "new_Lean_verified": false,
+  "complete_source_under_two_MB": false,
+  "new_zero_proportion_proven": false,
+  "source_and_input_sha256": {
+    "research-goal-20261016/w10-cell-predictor-20261017/pilot.py": "e835fffddfad9c8bb2262b7d3b2e0f89930d9f0f918c0bcf5ff075f531ad8805",
+    "research-goal-20261016/w10-cell-predictor-20261017/protocol.json": "e79fb6ec9ad45fdbf2a66b3f3e0995c31a7685d150dd8d250c42126b9c3879e1",
+    "research-goal-20261016/w10-size-audit-20261017/semantics.json": "277463c05b5e9944135f878fb9dfec5bfe890f86b36faf76a67f9a7a3ad10d08",
+    "research-goal-20261016/w10-size-audit-20261017/field-huffman.json": "27af486863fc4d1d0e40b234ac03a24f4c63741ffd32d90f0239b14e8a1a48e1",
+    "research-goal-20261016/w10-size-audit-20261017/source-size-accounting.json": "e3e3e7f8fb6f70dcd28a5c7119a9b18d42a176afd28be24e12ed2ea91434d496",
+    "research-goal-20261016/w10-size-audit-20261017/independent_codec_replay.py": "0c910afe345f9e436a3cd17182d2b6e30adacc3a9bf48841facc835eabe761e8",
+    "research-20261016-w10-cert/independent_integer_audit.py": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a",
+    "research-20261016-w10-cert/tree_flow.py": "1a0ff015b490c2548b8110a73a0bde0c5096a3429bf02dce16b7cd79d108c129",
+    "research-20261016/spectral-w10-refined-rational.json": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+    "formal/upstream/ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "research-goal-20261016/w10-size-audit-20261017/nodes.bin": "9956f3830dd44e330c7d455f234ab213c25f44b88a715508bd29825fb706edab",
+    "research-goal-20261016/w10-size-audit-20261017/fs.bin": "e8697215283fb691dbdceb41813527527d0be033bcdb33f91166bf7cec7a611e",
+    "research-goal-20261016/w10-size-audit-20261017/treecodes.bin": "57e5b4db17ac2180582c6bc17a5f62d49105903212bd1f47c8ddae0e534c8b4c"
+  },
+  "excluded_large_semantic_caches": {
+    "research-goal-20261016/w10-size-audit-20261017/nodes.bin": "9956f3830dd44e330c7d455f234ab213c25f44b88a715508bd29825fb706edab",
+    "research-goal-20261016/w10-size-audit-20261017/fs.bin": "e8697215283fb691dbdceb41813527527d0be033bcdb33f91166bf7cec7a611e",
+    "research-goal-20261016/w10-size-audit-20261017/treecodes.bin": "57e5b4db17ac2180582c6bc17a5f62d49105903212bd1f47c8ddae0e534c8b4c"
+  },
+  "unpublished_scaffold_manifest_excluded": "research-goal-20261016/w10-cell-predictor-20261017/files.json"
+}

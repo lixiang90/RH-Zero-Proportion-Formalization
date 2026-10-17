@@ -1,0 +1,85 @@
+{
+  "scope": "Count actual printable source, including the retained old analytic proof.\n\nThe source skeleton is not a functional submission: the proposed Huffman\ndecoder/checkpoint expander and the complete Lean cover are still absent.\nEven its known retained parts exceed the site's decimal 2,000,000-byte cap.\n",
+  "script_sha256": "4c4a2fd3373df9cb7b7251dfac3b8af3a30b323d751dfef74b9e14f649d22a75",
+  "frozen_original_bundle_sha256": "a6c73e2eabc30b7766b0ce8627b51b79ccf734528eb4302977cd9c6f67084843",
+  "frozen_original_bundle_bytes": 5777945,
+  "retained_source_module_sha256": {
+    "GramDefect20261015/Core.lean": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+    "GramDefect20261015/SharpWindow.lean": "830514965ca5cb26a19be2b216fbedd37744b7c66e862c46bf697b9e29d7c49f",
+    "GramDefect20261015/RefinedCounting.lean": "e756b01819f5063e1c9dba906b75e12c036e384156ff5734f566c2ea7c5d70cf",
+    "StructuralResearch20261016/Coboundary.lean": "730fdccd5d8faba2765f5b1d77b5e7ff897328b92ac6bcb4f3d1fe876702041a",
+    "StructuralResearch20261016/CoboundaryCounting.lean": "8933b6ae6bd5cb0b567a8e0e81b93235a1bb4ba863b2793dcd8177bb31a55a96",
+    "StructuralResearch20261016/W10RefinedCandidate.lean": "0bd02171737c392c4e316df107c3744bf4ccee486875e3061dcee0a475afb8da",
+    "StructuralW10Cert20261016/LocalChecker.lean": "64d5d57bcb8b50ce2ff9c4f503890e8e3382ee3e31371489b4610aee954e0c06",
+    "StructuralW10Cert20261016/TreeCoverage.lean": "3eb15beda87e720c84d8227202073d0366d001b0535ceb1116066851d18fa90e",
+    "StructuralW10Cert20261016/RootBounds.lean": "02bfe5ebb1797833a4cf158fdb1032988e1c01f748c606fc013ac1e0ee996b63",
+    "StructuralW10Cert20261016/Reflection.lean": "25a9ec4a393ca701f63d82d084c6328c7738fc600a76a713583e6f29df3c5eb4",
+    "StructuralW10Cert20261016/FinalConditional.lean": "6712abb9e41eec3beb0b9d1027341356b0b95259e5678a7b9f4d67c193cb2ceb",
+    "StructuralW10Cert20261016/FloorTransfer.lean": "87a77ff684694665b909f091264f1436708441ff2cd5339af513c247bb1fbc0e",
+    "StructuralW10Cert20261016/CompactLeaf.lean": "f06481d7788909ff0a76cc63c8e462fc3b811bcc1abd204729d233d265209db7",
+    "StructuralW10Cert20261016/RelCompactLeaf.lean": "738e780efcd3170a984188d47f401acdd2eccd5a05892bc35b53b76fcf503886",
+    "StructuralW10Cert20261016/EncodedLiteral.lean": "e34f0219e3bf5f954eb2c258c76576d418356eb162bff8cbc31156d88de64577",
+    "StructuralW10Cert20261016/OrderCoverage.lean": "41f8b2baf1952010ea170b70dbdcb57b5735634240d3fef6452aeb180f3766dc",
+    "StructuralW10Cert20261016/LeafDispatch.lean": "0538167d64c8e4aa38f4c19736afd14b4eaf564aa4ef8809473815665df86911",
+    "StructuralW10Cert20261016/FastPruefer.lean": "2ef70002990b2d4aa9ce47827389e078236a1859fc3aa0391331dc00d71ba480",
+    "StructuralW10Cert20261016/ForcedCoverage.lean": "8a883f5742a749c132cdc2c8bb65b2664b17b04b4b1331c8e13b57aad286a20e",
+    "StructuralW10Cert20261016/AdaptiveCoverage.lean": "263673a0865a335e967bb9493f9f807a97295945563f0adad03c1d8e74ba0318",
+    "StructuralW10Cert20261016/NumeralCodec.lean": "6584735296c4feae8affc6c5e50a542495a9d9cdb677813f3faaa20476214b70",
+    "StructuralW10Cert20261016/CompressedCommands.lean": "05b019b7f320c0d30b2dff2e55d2be85d08b7b76209bcc349954cb9e13dbd02a",
+    "StructuralW10Cert20261016/Certificate.lean": "53a442744560847e8b423319d32062e1ab2c01550cb7f8d839562cbe2b53c2f1",
+    "StructuralW10Cert20261016/Final.lean": "a87caa5b28edbcd3a5ad0515404b56032433337a0d1f3bd0379a12124ee984ac"
+  },
+  "Certificate_block_removed_bytes": 5235094,
+  "Certificate_block_removed_sha256": "3b7a1527f04e311d352c20acf0830766ce89a75cffe732c38651027f870bca09",
+  "exact_retained_base_wrapper_license_bytes": 542851,
+  "retained_encoded_analytic_base_bytes": 512113,
+  "website_limit_bytes": 2000000,
+  "rows": [
+    {
+      "codec": "field-huffman",
+      "printable_data_source_bytes": 3461607,
+      "known_retained_source_bytes": 4004458,
+      "known_part_excess_bytes": 2004458,
+      "budgeted_decoder_expander_bytes": 128000,
+      "budgeted_complete_source_bytes": 4132458,
+      "budgeted_complete_source_sha256": "844ac6836ad99ce9c5bebc04359392268f82adb058bb1316589b20f7afd6cd6a",
+      "known_parts_under_limit": false,
+      "proportional_merge_target_without_new_decoder_cost": {
+        "remaining_numeric_leaves_at_observed_average": 40248,
+        "numeric_leaf_reduction": 55367,
+        "reduction_fraction": "4259/7355"
+      },
+      "proportional_merge_target_with_reserved_decoder_cost": {
+        "remaining_numeric_leaves_at_observed_average": 36713,
+        "numeric_leaf_reduction": 58902,
+        "reduction_fraction": "58902/95615"
+      }
+    },
+    {
+      "codec": "delta-huffman",
+      "printable_data_source_bytes": 3528019,
+      "known_retained_source_bytes": 4070870,
+      "known_part_excess_bytes": 2070870,
+      "budgeted_decoder_expander_bytes": 128000,
+      "budgeted_complete_source_bytes": 4198870,
+      "budgeted_complete_source_sha256": "4d2b0652b38fa12031b19edefea302e96a92bab661ae36c9bc5aec97cbd7ae5b",
+      "known_parts_under_limit": false,
+      "proportional_merge_target_without_new_decoder_cost": {
+        "remaining_numeric_leaves_at_observed_average": 39491,
+        "numeric_leaf_reduction": 56124,
+        "reduction_fraction": "56124/95615"
+      },
+      "proportional_merge_target_with_reserved_decoder_cost": {
+        "remaining_numeric_leaves_at_observed_average": 36022,
+        "numeric_leaf_reduction": 59593,
+        "reduction_fraction": "59593/95615"
+      }
+    }
+  ],
+  "merge_target_assumptions": "Encoded bytes scale in proportion to numeric leaf count; fixed Huffman models and nonnumeric leaves are not separately reoptimized. These are engineering targets, not a proof that every compressor needs these merges.",
+  "new_Lean_decoder_implemented": false,
+  "new_Lean_compilation_performed": false,
+  "complete_W10_cover_Lean_proven": false,
+  "website_submission_ready": false,
+  "new_zero_proportion_proven": false
+}

@@ -1,0 +1,163 @@
+{
+  "scope": "Freeze the actual global gap-swap competitor core after ordinary Lean.\n\nOnly current source/hash-bound receipts with fully qualified allowed axioms\nare accepted. No numerical envelope or local exclusion is supplied here.\n",
+  "module": "StructuralGoal20261016.WindowGlobalCompetitor",
+  "source": {
+    "path": "StructuralGoal20261016/WindowGlobalCompetitor.lean",
+    "bytes": 4965,
+    "sha256": "33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966"
+  },
+  "log": {
+    "path": "research-goal-20261016/lean_WindowGlobalCompetitor_33d8e5412518.log",
+    "bytes": 1571,
+    "sha256": "96b9d46b6e2949ebc1b2d2ce379e54d798064fc470b3951a6a3c54b8dda343ca"
+  },
+  "receipt_record": {
+    "module": "StructuralGoal20261016.WindowGlobalCompetitor",
+    "source_sha256": "33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966",
+    "source_unchanged": true,
+    "command": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu",
+      "--exec",
+      "/usr/bin/prlimit",
+      "--stack=268435456:268435456",
+      "--",
+      "env",
+      "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+      "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+      "-j1",
+      "-M13500",
+      "--tstack=262144",
+      "-DrelaxedAutoImplicit=false",
+      "-R",
+      "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+      "-o",
+      "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowGlobalCompetitor.olean",
+      "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowGlobalCompetitor.lean"
+    ],
+    "exit_code": 0,
+    "whole_process_seconds": 57.7158030999999,
+    "duration_clock": "monotonic",
+    "log": "lean_WindowGlobalCompetitor_33d8e5412518.log",
+    "log_sha256": "96b9d46b6e2949ebc1b2d2ce379e54d798064fc470b3951a6a3c54b8dda343ca",
+    "passed": true,
+    "synchronous_elaboration": true,
+    "olean_sha256": "29352553ee795e58fb83ec130c8cf38677a1229140d38049fbff27d87de8f722"
+  },
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "canonical_receipt": "research-goal-20261016/lean_verification.json",
+  "roots": [
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.swapGap_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.swapGap_feasible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.swap_energy_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.swap_change_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.envelope_difference_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.upper_change_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.weighted_changes_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.weighted_envelopes_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.exclude_by_upper_change",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.exclude_by_weighted_envelopes",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "StructuralGoal20261016.WindowGlobalCompetitor.exclude_cell_of_envelopes",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "ordinary_Lean_passed": true,
+  "fully_qualified_axiom_audit_passed": true,
+  "direct_import_source": {
+    "path": "StructuralGoal20261016/WindowMinimizerCover.lean",
+    "bytes": 3811,
+    "sha256": "ffbeccae4857ff0fb57f3b58c0bfa8f0a78f5d213d37782f0e948da1da455292"
+  },
+  "direct_import_ordinary_pass_log_sha256": "72f94392dba296a09c05a16e7c0d1a5a6e4dd976c07547c75260655127245d7a",
+  "script_sha256": "fd1aa298ca3c10e43832cbee78520ab051891fe68521c9e8c884fb0af0835c88",
+  "semantic_scope": [
+    "swapGap g i j is the actual vector g composed with Equiv.swap i j.",
+    "A gap swap preserves the same separated orthant.",
+    "Relevant's entire-orthant global minimum clause compares actual Fw24 energies.",
+    "The competitor does not have to satisfy the orientation g(0) <= g(8).",
+    "Actual lower/current and upper/competitor energy bounds remain explicit hypotheses.",
+    "Finite nonnegative combinations preserve nonnegative energy-difference cuts.",
+    "A uniform strict negative envelope difference excludes a relevant cell only after those numerical hypotheses are supplied."
+  ],
+  "new_numerical_tables": 0,
+  "new_actual_local_exclusions": 0,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "independent_Nanoda_replayed": false
+}

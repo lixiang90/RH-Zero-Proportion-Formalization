@@ -1,0 +1,65 @@
+One affine-position Hessian necessary-condition check, no exclusion
+2026-10-17
+
+Only the frozen unadjusted exact714-moment point from quartic-exact-primal
+is tested.  Neither of the split-side numerical points is used.  No
+optimizer, new Taylor position, parameter sweep, Lean invocation or
+modification of a frozen source is performed.
+
+All nine original gap coordinates in this case have lower endpoint
+strictly greater than SEP=123/128.  Therefore an actual local minimizer
+in the original gap orthant is an unconstrained minimum in all nine
+coordinates and its actual Hessian is PSD.  An artificial cell face does
+not alter this assertion.  If a gap touched the original SEP boundary,
+full-Hessian PSD would require replacement by a critical-cone condition;
+that case is not silently treated here.
+
+For a retained edge, use only the existing common parent anchor jets:
+ |w^(j)(p)-mu_j|<=eps_j for j=1,...,4,
+ |w^(5)(x)|<=M5 on the whole parent span,
+ d=s_e(g)-p, |d|<=R.
+Taylor applied to w'' gives the valid quadratic upper bound
+
+ U_e(d)=mu2+mu3*d+mu4*d^2/2
+        +eps2+eps3*R+(eps4/2+M5*R/6)*d^2 >= w''(p+d).
+
+In particular eps4*d^2/2 is retained, and the third-order remainder is
+M5*|d|^3/6<=M5*R*d^2/6.  The mixed-index eps3 payment is eps3*R, not
+eps3*d with an unproved sign.  All weights a_e are nonnegative.
+
+Let e be the edge's physical-gap incidence vector.  The actual Hessian
+is sum a_e*w''(s_e)*e*e^T.  Hence
+
+ Hplus(g)=sum a_e*U_e(d_e)*e*e^T >= Hess F(g)
+
+in PSD order throughout the parent cell.  At an actual free local
+minimum, Hplus is PSD.  For any affine physical-gap direction vector
+v(y), this implies v(y)^T*Hplus(y)*v(y)>=0.
+
+The affine basis(1,y0,...,y8) has dimension10.  Using nine such direction
+components gives a90x90 localizer whose entries are degree<=4 moments.
+This is a new MINIMIZER necessary condition.  It is not one of the old
+pointwise nonnegative-square/geometry localizers, and it is stronger than
+only requiring the mean9x9 Hessian upper bound PSD.  Earlier phase/curvature
+work used constant directions or their nonnegative combinations, not this
+affine-position localized condition.  Nonetheless stronger representation
+does not by itself imply that a particular pseudo-point is excluded.
+
+Exactly one numerical eigh was performed on the reconstructed rational
+matrix at the frozen exact714 point.  Its eigenvalue hints range from
+approximately+.004423307145 to+4.215899237.  There is no negative hint,
+so no rational-vector quantization was attempted and no solver followed.
+Positive floating eigenvalues are NOT recorded as an exact PSD proof.
+This result supplies no exact point separation or actual cell exclusion.
+
+The independent read-only stdlib replay reconstructs all41 upper
+polynomials and all8100 entries edge by edge.  The producer instead
+aggregates the nine-by-nine matrix polynomials first.  Both exact matrix
+hashes agree.  The replay proves coefficient consistency only, not
+analytic table validity, localizer PSD, or a new zero proportion.
+
+The actual table/jet enclosures and differentiability are the same
+explicit analytic inputs as in the frozen quartic package.  No new
+analytic facts or formal bridge are claimed here.  The fixed proposed
+pilot has been checked and did not provide the desired exclusion; the
+task stops without tuning the upper bound or adding other directions.

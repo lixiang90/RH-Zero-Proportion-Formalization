@@ -1,0 +1,197 @@
+{
+  "scope": "Hard-capped10000-node SQLite campaign,133004->at most143004.\n\nNew backup only; no changes to frozen sources or prefix databases. One\nresident independent checker gates every candidate and committed delta.\nA fresh final process streams all<=11004 journal nodes. No cumulative\nhistory list is kept. Stop after a durable checked node if either worker's\nRSS exceeds1.5GiB. No HINTS clearing, full-budget resume or global claim.\n",
+  "producer_PID": 35592,
+  "hard_stop_checked": 143004,
+  "original_checked_endpoint": 2022500,
+  "RSS_limit_bytes": 1610612736,
+  "committed_campaign_nodes": 10000,
+  "new_OBBT_bounds": 64087,
+  "new_Newton_steps": 1954,
+  "first_actual_Newton": {
+    "sequence": 1061,
+    "path": "r00100010000001000010010110010101010100",
+    "Newton_steps": 8
+  },
+  "historical_baseline_semantic_replay": false,
+  "full_budget_search_started": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "process_cache_start": "empty; no historical HINTS trajectory claim",
+  "epoch_sha256": "643ed314434c48e9c8f0e533951d2e19b81f822ce22a601e7bc49c35065d50b9",
+  "prefix_database_sha256": "f312c3d53eb71e6518c181406edf178bd882f8b9558843894122a27d939e2a5c",
+  "stage": "capped_campaign_and_full_new_journal_replay_finished",
+  "seconds": 2813.8757758000065,
+  "checker_PID": 17396,
+  "checker_start_RSS_bytes": 137015296,
+  "supports_loaded": 2540,
+  "initial_cache": {
+    "HINTS_interval_keys": 0,
+    "HINTS_points": 0,
+    "USED_SUPPORTS": 2540,
+    "peak_working_set_bytes": 136904704,
+    "constant_lower": {
+      "hits": 0,
+      "misses": 0,
+      "maxsize": 200000,
+      "currsize": 0
+    },
+    "base_anchors": {
+      "hits": 0,
+      "misses": 0,
+      "maxsize": 200000,
+      "currsize": 0
+    },
+    "kernel_jet": {
+      "hits": 0,
+      "misses": 0,
+      "maxsize": null,
+      "currsize": 0
+    },
+    "point": {
+      "hits": 0,
+      "misses": 0,
+      "maxsize": 200000,
+      "currsize": 0
+    },
+    "affine": {
+      "hits": 0,
+      "misses": 0,
+      "maxsize": 200000,
+      "currsize": 0
+    },
+    "third_bound": {
+      "hits": 0,
+      "misses": 0,
+      "maxsize": 200000,
+      "currsize": 0
+    }
+  },
+  "producer_RSS_bytes": 800133120,
+  "checker_RSS_bytes": 204247040,
+  "state": {
+    "accepted_count": 71494,
+    "checked": 143004,
+    "contraction_paths": 23570,
+    "contraction_steps": 128406,
+    "counts": {
+      "Gram": 0,
+      "reflection": 1431,
+      "stationary": 48475,
+      "stationary_empty": 0,
+      "sublevel_empty": 0,
+      "value": 21588
+    },
+    "maxdepth": 47,
+    "sublevel_bounds": 1067372,
+    "sublevel_contraction_paths": 95884,
+    "unresolved_count": 17
+  },
+  "journal_head": "096860fae295ad170bdda9de832bd12124bc406080559fb42fdda06fbd7cd36f",
+  "latest_cache": {
+    "HINTS_interval_keys": 105374,
+    "HINTS_points": 406216,
+    "USED_SUPPORTS": 2540,
+    "peak_working_set_bytes": 801873920,
+    "constant_lower": {
+      "hits": 1460259,
+      "misses": 234312,
+      "maxsize": 200000,
+      "currsize": 200000
+    },
+    "base_anchors": {
+      "hits": 1460259,
+      "misses": 234312,
+      "maxsize": 200000,
+      "currsize": 200000
+    },
+    "kernel_jet": {
+      "hits": 206329,
+      "misses": 5862,
+      "maxsize": null,
+      "currsize": 5862
+    },
+    "point": {
+      "hits": 101605,
+      "misses": 181782,
+      "maxsize": 200000,
+      "currsize": 181782
+    },
+    "affine": {
+      "hits": 679685,
+      "misses": 287341,
+      "maxsize": 200000,
+      "currsize": 200000
+    },
+    "third_bound": {
+      "hits": 1,
+      "misses": 283386,
+      "maxsize": 200000,
+      "currsize": 200000
+    }
+  },
+  "stop_reason": "hard_checked_cap",
+  "final_stream_replay_passed": true,
+  "final_state": {
+    "accepted_count": 71494,
+    "checked": 143004,
+    "contraction_paths": 23570,
+    "contraction_steps": 128406,
+    "counts": {
+      "Gram": 0,
+      "reflection": 1431,
+      "stationary": 48475,
+      "stationary_empty": 0,
+      "sublevel_empty": 0,
+      "value": 21588
+    },
+    "maxdepth": 47,
+    "sublevel_bounds": 1067372,
+    "sublevel_contraction_paths": 95884,
+    "unresolved_count": 17
+  },
+  "database_bytes": 1215361024,
+  "database_sha256": "ceb41e0e34b79e92bff8bf658b91510be8c6bc2da4fe527d5bbc1200f5866296",
+  "HINTS_were_never_cleared": true,
+  "final_cache": {
+    "HINTS_interval_keys": 105374,
+    "HINTS_points": 406216,
+    "USED_SUPPORTS": 2540,
+    "peak_working_set_bytes": 802304000,
+    "constant_lower": {
+      "hits": 1460259,
+      "misses": 234312,
+      "maxsize": 200000,
+      "currsize": 200000
+    },
+    "base_anchors": {
+      "hits": 1460259,
+      "misses": 234312,
+      "maxsize": 200000,
+      "currsize": 200000
+    },
+    "kernel_jet": {
+      "hits": 206329,
+      "misses": 5862,
+      "maxsize": null,
+      "currsize": 5862
+    },
+    "point": {
+      "hits": 101605,
+      "misses": 181782,
+      "maxsize": 200000,
+      "currsize": 181782
+    },
+    "affine": {
+      "hits": 679685,
+      "misses": 287341,
+      "maxsize": 200000,
+      "currsize": 200000
+    },
+    "third_bound": {
+      "hits": 1,
+      "misses": 283386,
+      "maxsize": 200000,
+      "currsize": 200000
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "scope": "Seal only current, actually passed ordinary-kernel modules and their logs.",
   "seal_script_sha256": "18da0fe53c554704209c0b6079181d8652b13c540990f3e83c200ff9921c60b0",
-  "verified_module_count": 513,
+  "verified_module_count": 514,
   "modules": [
     {
       "module": "StructuralGoal20261016.LeanCoverBase",
@@ -22738,6 +22738,49 @@
       "synchronous_elaboration": true,
       "olean_sha256": "470c195791603adc97167722b8b465ef5c33da3153d8080d7f2e73c7fc7a989b",
       "source": "StructuralGoal20261016/W10Aux478Join.lean",
+      "printed_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "has_printed_axiom_audit": true,
+      "resolved_by_full_name_audit": false,
+      "independent_nanoda_replay_run": false
+    },
+    {
+      "module": "StructuralGoal20261016.WindowGlobalCompetitor",
+      "source_sha256": "33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966",
+      "source_unchanged": true,
+      "command": [
+        "wsl.exe",
+        "--distribution",
+        "Ubuntu",
+        "--exec",
+        "/usr/bin/prlimit",
+        "--stack=268435456:268435456",
+        "--",
+        "env",
+        "LEAN_PATH=/var/tmp/rh-zero-20261015/w10-cert/lib:/var/tmp/rh-zero-20261015/research-20261016/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+        "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+        "-j1",
+        "-M13500",
+        "--tstack=262144",
+        "-DrelaxedAutoImplicit=false",
+        "-R",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+        "-o",
+        "/var/tmp/rh-zero-20261015/w10-cert/lib/StructuralGoal20261016/WindowGlobalCompetitor.olean",
+        "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralGoal20261016/WindowGlobalCompetitor.lean"
+      ],
+      "exit_code": 0,
+      "whole_process_seconds": 57.7158030999999,
+      "duration_clock": "monotonic",
+      "log": "research-goal-20261016/lean_WindowGlobalCompetitor_33d8e5412518.log",
+      "log_sha256": "96b9d46b6e2949ebc1b2d2ce379e54d798064fc470b3951a6a3c54b8dda343ca",
+      "passed": true,
+      "synchronous_elaboration": true,
+      "olean_sha256": "29352553ee795e58fb83ec130c8cf38677a1229140d38049fbff27d87de8f722",
+      "source": "StructuralGoal20261016/WindowGlobalCompetitor.lean",
       "printed_axioms": [
         "Classical.choice",
         "Quot.sound",

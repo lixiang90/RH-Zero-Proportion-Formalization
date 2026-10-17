@@ -1,0 +1,52 @@
+{
+  "scope": "Stream a capped campaign's new journal into a standalone gzip proof.\n\nOnly the conditional old frontier/metadata and <=11004 new node packets\nare exported, never the132000 historical proofs. Replay streams one node\nat a time through the frozen independent mathematical checker. No search,\noptimizer, full historical semantic replay or global claim is performed.\n",
+  "script_sha256": "cbb1ad524a36395607e40b366028786eb760a7f0119af21b50d9a8f637392ba5",
+  "passed": true,
+  "archive_sha256": "862106020e7e51bca8ebeffb67643cac696ebdeaa9dc14138a3633c3cec8083b",
+  "archive_bytes": 11785298,
+  "uncompressed_stream_sha256": "60156691c837087afe4516edc7ad67328c453468191cc75c57669b55e8becf30",
+  "journal_nodes": 11004,
+  "campaign_nodes": 10000,
+  "totals": {
+    "nodes": 11004,
+    "OBBT_bounds": 70939,
+    "Newton_steps": 2438
+  },
+  "resolution_counts": {
+    "branch": 5498,
+    "stationary": 3397,
+    "value": 1851,
+    "reflection": 258
+  },
+  "first_actual_Newton": {
+    "sequence": 5,
+    "path": "r0010001000000100000101001101111010111",
+    "steps": 1
+  },
+  "final_state": {
+    "accepted_count": 71494,
+    "checked": 143004,
+    "contraction_paths": 23570,
+    "contraction_steps": 128406,
+    "counts": {
+      "Gram": 0,
+      "reflection": 1431,
+      "stationary": 48475,
+      "stationary_empty": 0,
+      "sublevel_empty": 0,
+      "value": 21588
+    },
+    "maxdepth": 47,
+    "sublevel_bounds": 1067372,
+    "sublevel_contraction_paths": 95884,
+    "unresolved_count": 17
+  },
+  "journal_head": "096860fae295ad170bdda9de832bd12124bc406080559fb42fdda06fbd7cd36f",
+  "no_node_record_list_accumulated": true,
+  "original_JSON_or_large_database_required": false,
+  "conditional_on_historical_baseline": true,
+  "historical_baseline_semantic_replay": false,
+  "complete_global_cover": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 328.0176436999973
+}

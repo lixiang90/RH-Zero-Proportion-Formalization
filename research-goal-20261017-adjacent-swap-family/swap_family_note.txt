@@ -1,0 +1,49 @@
+The fixed complete family of eight adjacent-gap competitors
+2026-10-17
+
+This is a newly authorized natural finite family, separate from the
+earlier frozen singleton swap(g5,g6).  Exactly all eight adjacent swaps
+T_r, r=0,...,7, are fixed together.  No optimizer, direction selection,
+parameter sweep, extra gap point, new Taylor table or Lean is used.
+
+For any global minimum on the SEP orthant, ALL eight conditions
+ F(T_r*g)-F(g)>=0
+hold simultaneously because each permutation preserves the orthant.
+This is not a statement that a selected single map lowers every parent
+point.  The actual formal relevance predicate is
+ StructuralGoal20261016.WindowMinimizerCover.Relevant,
+defined in WindowMinimizerCover.lean as Orthant sep g, g0<=g8, AND
+forall y, Orthant sep y -> Fw24 g<=Fw24 y.  The comparison domain is
+the entire orthant, not only the ordered pressure root.  Therefore
+competitors need not remain ordered or inside the artificial parent.
+
+Each adjacent swap moves only its middle vertex.  Every term not incident
+to that vertex cancels exactly.  At the one frozen parent midpoint, the
+inherited actual-w degree23 integer Taylor table with the full order24
+remainder gives strict signs for all eight differences:
+
+ swap01: -0.000185542358
+ swap12: +0.002087014682
+ swap23: +0.000004379366
+ swap34: -0.000000165571
+ swap45: +0.000013706124
+ swap56: +0.003017237394
+ swap67: -0.004121499055
+ swap78: -0.000216497077.
+
+Exact rational intervals and all changed/cancelled terms are stored in
+swap-family-static.json.  The calculation uses87 distinct scalar
+arguments through existing integer-anchor tables and takes about.500s.
+Independent stdlib direct-power interval evaluation reproduces all
+eight cases.  There are four strict negative and four strict positive
+differences.  The negative midpoint values indicate that fixed finite
+competitor inequalities can carry useful global information, but they
+do not exclude a pseudo-moment or any whole cell.
+
+A degree<=4 upper polynomial R_r>=F(T_r*g)-F(g), valid throughout the
+parent, would imply the necessary moment row E[R_r]>=0 at an actual
+global minimizer.  This needs complete Taylor value/derivative error
+payments on every transformed span's actual image interval.  No such
+new moment model is built in this family diagnostic.  The separately
+authorized fixed swap67 follow-up has its own source/directory and
+does not alter this frozen eight-map diagnostic.

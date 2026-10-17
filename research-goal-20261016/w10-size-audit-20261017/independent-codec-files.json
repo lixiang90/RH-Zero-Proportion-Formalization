@@ -1,0 +1,90 @@
+{
+  "scope": "Pin only the independent read-only codec review and its frozen dependencies.",
+  "package_files": [
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent_codec_replay.py",
+      "bytes": 15599,
+      "sha256": "0c910afe345f9e436a3cd17182d2b6e30adacc3a9bf48841facc835eabe761e8"
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent-codec-replay.json",
+      "bytes": 5454,
+      "sha256": "3f5ef7f1e5c0ced8b42e252b782d3249f8b0e70cb945e6c6f1995e10acd71f10"
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent_codec_note.txt",
+      "bytes": 11811,
+      "sha256": "039c36eed8d5bef30f174a43c7050b15551c098774bd1c1adbeb1189c948821c"
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent_codec_pin.py",
+      "bytes": 1538,
+      "sha256": "1898690504dc4043b4020f86adde698ee2f109c79ce4ccbc6788aa078150668f"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/field-huffman.bin",
+      "bytes": 2792034,
+      "sha256": "9d0b93eed206e14eff3b0d25dc639cb75f5515ea855e6a7c36100ef87a3c5ba3"
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/field-huffman.json",
+      "bytes": 11223,
+      "sha256": "27af486863fc4d1d0e40b234ac03a24f4c63741ffd32d90f0239b14e8a1a48e1"
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/field-huffman-data.lean",
+      "bytes": 3461607,
+      "sha256": "344f60f1003d6e415dac3501d0289f12512f7ff36fa161841fd2e6d7552081a3"
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/semantics.json",
+      "bytes": 5076,
+      "sha256": "277463c05b5e9944135f878fb9dfec5bfe890f86b36faf76a67f9a7a3ad10d08"
+    },
+    {
+      "path": "research-20261016/spectral-w10-refined-rational.json",
+      "bytes": 3886,
+      "sha256": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03"
+    },
+    {
+      "path": "formal/upstream/ajp88-reweighted-nine-point.lean",
+      "bytes": 1915423,
+      "sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244"
+    },
+    {
+      "path": "research-20261016-w10-cert/independent_integer_audit.py",
+      "bytes": 19062,
+      "sha256": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a"
+    },
+    {
+      "path": "StructuralW10Cert20261016/FastPruefer.lean",
+      "bytes": 4666,
+      "sha256": "2ef70002990b2d4aa9ce47827389e078236a1859fc3aa0391331dc00d71ba480"
+    },
+    {
+      "path": "StructuralW10Cert20261016/LocalChecker.lean",
+      "bytes": 5738,
+      "sha256": "64d5d57bcb8b50ce2ff9c4f503890e8e3382ee3e31371489b4610aee954e0c06"
+    },
+    {
+      "path": "StructuralW10Cert20261016/AdaptiveCoverage.lean",
+      "bytes": 3080,
+      "sha256": "263673a0865a335e967bb9493f9f807a97295945563f0adad03c1d8e74ba0318"
+    },
+    {
+      "path": "StructuralGoal20261016/LeanCoverBase.lean",
+      "bytes": 1838,
+      "sha256": "ae5481b26ff9f710194f8c7b83c4726390499a47af96dd935ae45fc881e46e09"
+    }
+  ],
+  "read_only_replay": "research-goal-20261016/w10-size-audit-20261017/independent_codec_replay.py",
+  "numeric_leaves_checked": 95615,
+  "all_nodes_checked": 191557,
+  "mathematical_integer_checks_passed": true,
+  "Lean_invocations": 0,
+  "new_Huffman_Lean_consumer_implemented": false,
+  "two_MB_complete_source_achieved": false,
+  "new_zero_proportion_proven": false
+}

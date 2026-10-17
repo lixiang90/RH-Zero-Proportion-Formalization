@@ -1,0 +1,44 @@
+{
+  "scope": "Read-only stdlib replay of the single fixed swap midpoint comparison.\n\nEvaluate existing coefficient intervals by direct powers, independent of\nthe producer's interval Horner.  No map selection, optimizer, new scalar\ntable, quartic difference model or actual minimizer claim.\n",
+  "status": "single_fixed_swap_midpoint_increase_independently_verified",
+  "source_sha256_start": {
+    "research-goal-20261017-global-competitor/swap_replay.py": "54b20b21b420e6fbc99dfa85e2ccc235d39cc36de74f02e0574527d656f21ea5",
+    "research-goal-20261017-global-competitor/swap-midpoint-static.json": "7bc682427c3d21da4f7b8ab81ac1d9b8df6f7b81764b6b7de8633862cab6381b",
+    "research-goal-20261017-global-competitor/swap_midpoint_static.py": "af9187f0b514f34ad524617c481457338bcc9c9c6da3f0de9bd2eb2e63f1a9e6",
+    "research-goal-20261017-quartic/quartic-files.json": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-quartic/quartic-exact-primal.json": "84e754f780e9fdab170b9f18b63396042056871fc96b26f6b6ba767fd9a503ce",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/window_normalized_interval.json": "15e389817127095be26e2ebca6e8bea0d356547a3cb041710029f566cfc13255",
+    "research-goal-20261016/window_normalized_interval.py": "c10327c87fa8c09d6e577ae18c2f3a7a74090f7964976bc795f92871ee76ae96",
+    "research-goal-20261016/cover_competitor_diagnostic.py": "1bf08b31d494a186eab1be721f9fc96c304c995e30b676f559c7c1359db611f2"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-global-competitor/swap_replay.py": "54b20b21b420e6fbc99dfa85e2ccc235d39cc36de74f02e0574527d656f21ea5",
+    "research-goal-20261017-global-competitor/swap-midpoint-static.json": "7bc682427c3d21da4f7b8ab81ac1d9b8df6f7b81764b6b7de8633862cab6381b",
+    "research-goal-20261017-global-competitor/swap_midpoint_static.py": "af9187f0b514f34ad524617c481457338bcc9c9c6da3f0de9bd2eb2e63f1a9e6",
+    "research-goal-20261017-quartic/quartic-files.json": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-quartic/quartic-exact-primal.json": "84e754f780e9fdab170b9f18b63396042056871fc96b26f6b6ba767fd9a503ce",
+    "research-20261016-followup/window_reweight_rational.json": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11",
+    "research-goal-20261016/window_normalized_interval.json": "15e389817127095be26e2ebca6e8bea0d356547a3cb041710029f566cfc13255",
+    "research-goal-20261016/window_normalized_interval.py": "c10327c87fa8c09d6e577ae18c2f3a7a74090f7964976bc795f92871ee76ae96",
+    "research-goal-20261016/cover_competitor_diagnostic.py": "1bf08b31d494a186eab1be721f9fc96c304c995e30b676f559c7c1359db611f2"
+  },
+  "all_sources_unchanged": true,
+  "changed_edges_checked": 9,
+  "cancelled_edges_checked": 32,
+  "difference_interval": [
+    "1699500249457308269067749525931244625824741985318756873575610397521024373059416727222929542988912277429125648575177826387207615480271820895628075971229754484364548194985217602815821/563263683902043431520460417304266187398891522918946141201709468691833503657982742701324997507396823139592833952972691210904890061721852402728960000000000000000000000000000000000000000",
+    "3399000499893513320942185570135356748629686236146383076089128431111653607505866946250039284005332935306709214774324856334060309338388941538193021992141120058843599788185299400232541/1126527367804086863040920834608532374797783045837892282403418937383667007315965485402649995014793646279185667905945382421809780123443704805457920000000000000000000000000000000000000000"
+  ],
+  "actual_Taylor_enclosures_remain_analytic_inputs": true,
+  "optimizer_calls": 0,
+  "new_maps_tested": 0,
+  "new_moment_model_built": false,
+  "Lean_invocations": 0,
+  "exact_714_pseudomoment_excluded": false,
+  "cell_exclusion_proven": false,
+  "new_zero_proportion_proven": false,
+  "elapsed_milliseconds": 424
+}

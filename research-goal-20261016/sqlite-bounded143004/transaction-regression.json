@@ -1,0 +1,27 @@
+{
+  "scope": "Small isolated storage tests; no kernel evaluation or actual cover search.\n\nExercise baseline roundtrip, genuine process exit before commit, rollback,\nsource guards, duplicate/stale nodes, support conflicts, atomic counters,\nand immutable baseline retention after node commits. Toy witnesses are\nopaque placeholders and carry no mathematical claim.\n",
+  "source_sha256": "8b40c4b6c39a600fe0ed3f735c1ce17106c4bf0d7525d62fd35bd633b548c4aa",
+  "producer_sha256": "aaecbe5a5481cf6b082abf75ca93a29a170a79e4bb77d038c83df801a4bb9f56",
+  "independent_replay_source_sha256": "3f7300763aa6e5931a013bb4da891185064846d50cb57902bfe14af580d9ed1b",
+  "toy_baseline_raw_sha256": "bbf75501ae621aebce94773fd57a64fb728874ce024c32d9e6762f012fb558dd",
+  "toy_baseline_canonical_sha256": "b6f550e6950861215bfb2b80b7d3f3c7ffe129ff91334523831acfc06659af00",
+  "actual_os_exit_before_commit_returncode": 77,
+  "tests_passed": [
+    "independent_baseline_roundtrip",
+    "rollback_after_witnesses",
+    "rollback_before_commit",
+    "real_process_exit_SQLite_recovery",
+    "source_guard_rejection",
+    "stale_frontier_rejection",
+    "atomic_witness_support_frontier_counter_commit",
+    "duplicate_node_rejection",
+    "conflicting_support_rejection",
+    "identical_support_reuse",
+    "second_node_commit",
+    "immutable_baseline_roundtrip_after_two_commits"
+  ],
+  "all_passed": true,
+  "toy_witnesses_are_mathematically_sound": false,
+  "actual_cover_search_started": false,
+  "new_zero_proportion_proven": false
+}

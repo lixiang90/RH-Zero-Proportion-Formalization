@@ -1,0 +1,80 @@
+{
+  "scope": "Freeze the one fixed swap midpoint comparison and its independent replay.",
+  "package_files": [
+    {
+      "path": "research-goal-20261017-global-competitor/swap-midpoint-static.json",
+      "bytes": 33425,
+      "sha256": "7bc682427c3d21da4f7b8ab81ac1d9b8df6f7b81764b6b7de8633862cab6381b"
+    },
+    {
+      "path": "research-goal-20261017-global-competitor/swap-replay.json",
+      "bytes": 4300,
+      "sha256": "456cdffc5c1317e1ef1047c1f76d92c31b60335989c6ddd652c487c395bdcb40"
+    },
+    {
+      "path": "research-goal-20261017-global-competitor/swap_midpoint_static.py",
+      "bytes": 5221,
+      "sha256": "af9187f0b514f34ad524617c481457338bcc9c9c6da3f0de9bd2eb2e63f1a9e6"
+    },
+    {
+      "path": "research-goal-20261017-global-competitor/swap_note.txt",
+      "bytes": 3036,
+      "sha256": "f7af758e39229c974b60b188e24743fd17f15ee0583c1c204241d4a5d7ad8016"
+    },
+    {
+      "path": "research-goal-20261017-global-competitor/swap_pin.py",
+      "bytes": 1413,
+      "sha256": "15b8bd884e0fe70b4be0b2dc35e762accc38e91b4d6cd705a6ca075bc106b325"
+    },
+    {
+      "path": "research-goal-20261017-global-competitor/swap_replay.py",
+      "bytes": 4222,
+      "sha256": "54b20b21b420e6fbc99dfa85e2ccc235d39cc36de74f02e0574527d656f21ea5"
+    }
+  ],
+  "dependency_files": [
+    {
+      "path": "research-20261016-followup/window_reweight_rational.json",
+      "bytes": 3838,
+      "sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+    },
+    {
+      "path": "research-goal-20261016/cover_competitor_diagnostic.py",
+      "bytes": 2163,
+      "sha256": "1bf08b31d494a186eab1be721f9fc96c304c995e30b676f559c7c1359db611f2"
+    },
+    {
+      "path": "research-goal-20261016/window_normalized_interval.json",
+      "bytes": 101176,
+      "sha256": "15e389817127095be26e2ebca6e8bea0d356547a3cb041710029f566cfc13255"
+    },
+    {
+      "path": "research-goal-20261016/window_normalized_interval.py",
+      "bytes": 4919,
+      "sha256": "c10327c87fa8c09d6e577ae18c2f3a7a74090f7964976bc795f92871ee76ae96"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-exact-primal.json",
+      "bytes": 159189,
+      "sha256": "84e754f780e9fdab170b9f18b63396042056871fc96b26f6b6ba767fd9a503ce"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-files.json",
+      "bytes": 5007,
+      "sha256": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-model.json.gz",
+      "bytes": 9516586,
+      "sha256": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233"
+    }
+  ],
+  "maps_tested": 1,
+  "map": "swap(g5,g6)",
+  "midpoint_difference_strictly_positive": true,
+  "optimizer_calls": 0,
+  "new_moment_model_built": false,
+  "Lean_invocations": 0,
+  "cell_exclusion_proven": false,
+  "new_zero_proportion_proven": false
+}

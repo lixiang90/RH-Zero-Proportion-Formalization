@@ -1,0 +1,178 @@
+One fixed finite global competitor in the shared quartic representation
+=====================================================================
+
+Scope and exact output
+----------------------
+This package uses only case r001000001000100110011001 and the already
+frozen exact 714 nonconstant gap moments of the quartic package. It uses
+one fixed map: exchange g_6 and g_7, with indices beginning at zero. No
+optimizer, parameter choice based on the outcome, new actual scalar
+sampling table, Lean invocation, or region cover is performed here.
+
+swap67-quartic-static.json contains the full rational degree-four upper
+difference Dplus, all 16 scalar packets, and the exact expected value.
+It has 450 nonzero monomial coefficients in the original 715-element
+monomial order. Direct Fraction evaluation gives approximately
+
+    E[Dplus] = -0.0017867630127768154 < -17/10000 < 0.
+
+This is a strict separation of ONE prior exact pseudo-moment point by a
+new necessary condition. It is not the exclusion of the entire cell,
+an actual counterexample to the objective, or a new zero-proportion
+bound. Actual scalar enclosure obligations remain explicit. Independent
+replay is recorded separately and does not import the producer. The one
+independent stdlib replay passed in 0.922 seconds, reconstructing all
+16 scalar packets, 391 selected fifth-derivative grid bounds, 450 final
+coefficients, and the exact short-threshold separation. Its read-only
+entry point is research-goal-20261017-swap67-audit/independent_replay.py;
+independent-replay.json records the input hashes at both ends.
+
+The condition uses global rather than local minimum information
+---------------------------------------------------------------
+StructuralGoal20261016/WindowMinimizerCover.lean defines
+
+    Relevant sep g := Orthant sep g AND g_0 <= g_8 AND
+                     (forall y, Orthant sep y -> Fw24 g <= Fw24 y).
+
+Thus a relevant point minimizes over the entire separated orthant, not
+only its pressure root, its DBM cell, or the ordered half of that domain.
+Any exchange of gap coordinates preserves every inequality g_r >= sep.
+In particular T=(6 7) is feasible and
+
+    0 <= Delta(g) := Fw24(Tg) - Fw24(g).
+
+The same conclusion is not valid for an arbitrary cell-local KKT point.
+The image need not remain in the parent cell. This is why its scalar
+domains are rebuilt rather than copied from the original edge domains.
+
+The sole Lean owner has separately checked the actual-Fw24 generic bridge
+in StructuralGoal20261016/WindowGlobalCompetitor.lean, source SHA256
+33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966.
+Its ordinary-Lean receipt and 11 allowed-axiom roots are recorded in
+research-goal-20261016/window_global_competitor_formal_index.json.
+The theorems swap_energy_le and upper_change_nonneg have exactly the
+interface required here. No concrete scalar envelope or this numerical
+714-moment separation has been checked by Lean in this package.
+
+Exact cancellation and common variables
+---------------------------------------
+Write s_ij(g)=sum_{i<=r<j}g_r. Swapping g_6,g_7 moves only vertex 7.
+Consequently every nonzero-ledger span not incident to vertex 7 is
+identical before and after T, including spans containing both gaps.
+There are exactly 8 changed nonzero terms and 33 exact cancellations in
+the actual 41-edge ledger. The (7,9) term has zero weight. The counts
+9/32 apply to some other swaps, not this one.
+
+The pressure contribution is exactly
+
+    DeltaP = (b_6-b_7)(g_7-g_6).
+
+Each old and new span is expanded using the SAME nine variables
+
+    g_r = center_r + radius_r*y_r,
+
+and the same moments of all monomials of total degree <=4. There are no
+new independent span variables, derivative variables, or moments of the
+competitor. In particular the correlations responsible for the new
+condition cannot be replaced by unrelated scalar evaluations.
+
+For a left-incident edge (i,7), the transformed span has the exact
+identities
+
+    s_i7(Tg) = s_i6(g)+g_7 = s_i8(g)-g_6.
+
+For a right-incident edge (7,j), the corresponding identities are
+
+    s_7j(Tg) = g_6+s_8j(g) = s_6j(g)-g_7.
+
+Degenerate s_ii is zero. The image interval is the intersection of the
+intervals from these two identities and the sum of the permuted adjacent
+gap boxes. These are deterministic consequences of the parent DBM
+inequalities. This step uses no LP, scanning, or new geometry premise.
+
+One scalar enclosure, with all uncertainties paid
+-------------------------------------------------
+For each old or transformed scalar span x, take the midpoint p of its
+proved whole-domain interval [l,u], R=(u-l)/2, and d=x-p. The interval
+contains p and implies |d|<=R. The rational p is evaluated by translating
+an EXISTING nearest-integer Taylor packet. This adds no actual scalar
+sampling position or transcendental table entry.
+
+The frozen actual-w integer Taylor table has 24 terms, degree 23, with
+coefficient intervals enclosing w^(k)(n)/k!, 0<=k<=23. With the explicit
+analytic input |w^(24)| <= M24=(44/7)^24, translating its jth derivative
+gives an enclosure for w^(j)(p), 0<=j<=4, with additional remainder
+
+    M24*|p-n|^(24-j)/(24-j)!.
+
+This reapplies Taylor's theorem to w^(j), whose required coefficients
+are present. It does not differentiate an inequality for a remainder.
+
+Let mu_j and eps_j denote the midpoint and half-width of that enclosure.
+The old w-prime table instead has 23 terms, degree 22. Differentiating
+it four times encloses w^(5), with remainder M24*(1/2)^19/19! on each
+old 1/64 grid cell. Rational interval Horner and an outward 1e-15 ceiling
+give M5 bounding |w^(5)| on every grid cell meeting [l,u]. This packet
+uses 391 distinct old grid cells; no new function samples are involved.
+The exponent 19 is essential: the old table is not degree 23 for w'.
+
+Define the central polynomial and nonnegative even error polynomial
+
+    P4(d) = sum_{j=0}^4 mu_j*d^j/j!,
+    E4(d) = eps_0 + eps_1*R
+          + (eps_2/2 + eps_3*R/6)*d^2
+          + (eps_4/24 + M5*R/120)*d^4.
+
+Taylor's theorem, |d|<=R, and nonnegative eps_j,M5 imply
+
+    P4(d)-E4(d) <= w(x) <= P4(d)+E4(d).
+
+In detail, the odd coefficient errors satisfy
+eps_1*|d|<=eps_1*R and eps_3*|d|^3/6<=eps_3*R*d^2/6.
+The fifth remainder is M5*|d|^5/120<=M5*R*d^4/120; its fourth moment
+is retained. It is not replaced by a radius-to-the-fifth constant.
+The eps_4 contribution is eps_4*d^4/24. The zeroth coefficient error
+eps_0 is also paid; no old aggregate F0 interval is silently reused.
+
+The one new row and why its sign is correct
+--------------------------------------------
+For each changed edge of nonnegative weight a_e, use the upper bound at
+the transformed span and the LOWER bound at the original span:
+
+    Dplus(g) = DeltaP(g)
+       + sum_changed a_e * (U_e(s_e(Tg)) - L_e(s_e(g))).
+
+The cancelled edges contribute exactly zero before approximation. Hence
+Delta(g)<=Dplus(g) everywhere in the original parent cell. At an actual
+relevant global minimum in that cell,
+
+    0 <= Delta(g) <= Dplus(g).
+
+Thus E[Dplus]>=0 is a necessary scalar linear inequality on the common
+degree-four moments of any supported measure of such minimizers. It is
+an unsoftened global-minimizer row, separate from the old energy slack.
+Using a LOWER bound on the difference would give the wrong implication.
+
+For interpretation only, at the frozen exact pseudo-moment the central
+quartic difference plus pressure is about -0.0031061153787492854 and all
+positive enclosure payments total about +0.0013193523659724702. Their
+sum remains negative. The large negative midpoint actual difference
+from the earlier fixed-eight-family diagnostic is therefore not lost
+when the existing shared second, third, and fourth moments are used.
+The JSON stores every exact coefficient and the exact final Fraction;
+these decimals are not used for any sign decision.
+
+Limits and prospective cost
+----------------------------
+The earlier cover_competitor_diagnostic.py explored finite integer-well
+translations and parity/reflection competitors numerically. This package
+adds a shared-variable polynomial necessary condition, and credits that
+earlier global-competitor motivation. It does not claim the idea of
+comparing energies at feasible competitors is new.
+
+The whole natural family of eight adjacent swaps would involve 68
+changed-edge occurrences. Adding one unsoftened row per map would leave
+the original 714+one-slack variable count and the 47 PSD blocks unchanged.
+It would add only eight linear rows. No such model or solver is run by
+this package. The single-row result justifies considering that bounded
+next experiment after independent review, but is not its outcome.

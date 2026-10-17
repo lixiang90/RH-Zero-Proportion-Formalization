@@ -1,0 +1,40 @@
+{
+  "scope": "Prepare lossless <=3MiB pieces of the two frozen research packets.",
+  "maximum_part_bytes": 3145728,
+  "outputs": [
+    {
+      "name": "swap-family-quartic.json.gz",
+      "bytes": 6179942,
+      "sha256": "322a3c93f7118a232e64ea161c4d3a5f68f84cad4f33c71a0638362f30297b80",
+      "parts": [
+        {
+          "name": "swap-family-quartic.json.gz.part000",
+          "bytes": 3145728,
+          "sha256": "214ed942f0d38aaa0ac66538a3c312cab2718478ad56a980adc02ea605efa5ca"
+        },
+        {
+          "name": "swap-family-quartic.json.gz.part001",
+          "bytes": 3034214,
+          "sha256": "73fa63a7b680cb06e8638b6d3382b20449b420969a0a3faf4816e89a8c9359e2"
+        }
+      ]
+    },
+    {
+      "name": "swap-family-normalized.json.gz",
+      "bytes": 6180693,
+      "sha256": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a",
+      "parts": [
+        {
+          "name": "swap-family-normalized.json.gz.part000",
+          "bytes": 3145728,
+          "sha256": "259836574c8a04a2d87f81de490becc981f1601c3d9bc982f2b384f25bd6ae46"
+        },
+        {
+          "name": "swap-family-normalized.json.gz.part001",
+          "bytes": 3034965,
+          "sha256": "4cf648a73836615893d4da014a46820182b77ea9bbc3c4f9f9d746b8b6732f2e"
+        }
+      ]
+    }
+  ]
+}

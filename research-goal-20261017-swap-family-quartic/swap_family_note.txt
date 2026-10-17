@@ -1,0 +1,162 @@
+Complete adjacent-swap family in the fixed shared quartic model
+==============================================================
+
+Outcome and scope
+-----------------
+All eight adjacent swaps are used simultaneously at the single frozen
+case r001000001000100110011001, SEP=123/128, target c=11/1250. No case,
+window, pressure budget, target, anchor strategy, or solver settings were
+selected by a scan. The new constraints strictly remove the prior exact
+714-moment point: its swap(6,7) expectation is below -17/10000. However,
+one authorized SCS call found a different numerical point, and the ONE
+unadjusted rationalization of all its 714 coordinates, energy slack zero,
+passes all 5803 rational rows and all 47 PSD blocks exactly.
+
+An independent stdlib Fraction LDL replay also passes, comparing pivot
+products to every stored integer Bareiss leading minor. Therefore this
+particular fixed degree-four model, even with the complete eight scalar
+global-competitor rows, has a strict positive-definite pseudo-moment
+witness. It cannot exclude this cell. The witness is not an actual gap
+vector, actual F value, actual KKT counterexample, or new RH proportion.
+It does not show that all possible global competitors, their localizers,
+higher-degree models, or other joint structures are ineffective.
+
+Mathematical condition and shared representation
+------------------------------------------------
+For r=0,...,7, let T_r exchange actual gap coordinates r and r+1. Each
+map preserves the whole SEP orthant. Relevant.2.2 in the actual
+WindowMinimizerCover definition compares Fw24(g) with every point in
+that orthant, including competitors outside the ordered half-domain or
+the current cell. Thus all eight inequalities
+
+    0 <= Fw24(T_r g)-Fw24(g)
+
+hold simultaneously at every actual relevant minimizer. This global
+property is stronger than local first- or second-order stationarity.
+
+Only vertex r+1 moves. Exactly 68 changed positive-weight edge
+occurrences remain across all eight maps: their counts in order are
+9,8,9,8,8,9,8,9. All unchanged edge terms cancel BEFORE approximation.
+The pressure change is (b_r-b_(r+1))*(g_(r+1)-g_r). Both energies use the
+same nine normalized variables g=center+radius*y and all their shared
+moments through degree four; no independent competitor variables occur.
+
+For a left-incident edge (i,r+1), the transformed scalar span equals
+
+    span(i,r)+g_(r+1) = span(i,r+2)-g_r.
+
+For a right-incident edge (r+1,j), it equals
+
+    g_r+span(r+2,j) = span(r,j)-g_(r+1).
+
+The interval is the intersection of those two exact DBM-decomposition
+intervals and the safe sum of the permuted adjacent gap boxes. Each
+old/new scalar anchor is the deterministic midpoint of its resulting
+whole interval; its radius is half the interval width. These operations
+do not require optimization or actual function sampling.
+
+For every changed scalar term, all zeroth through fourth coefficient
+uncertainties and the fifth remainder are paid as in the frozen single67
+note. With d=x-p and |d|<=R, P4=sum mu_j*d^j/j! and
+
+    E4 = eps0+eps1*R
+       + (eps2/2+eps3*R/6)*d^2
+       + (eps4/24+M5*R/120)*d^4,
+
+the enclosure is P4-E4<=w(x)<=P4+E4. The upper difference D_r uses
+upper(new)-LOWER(old), nonnegative ledger weights, and the exact pressure
+change. Thus Fw24(T_r g)-Fw24(g)<=D_r on the original parent cell, and
+every relevant minimizer there satisfies D_r>=0. A lower difference would
+not justify this constraint. Each new row is exactly
+
+    -sum_nonconstant D_r[mon]*moment[mon] <= D_r[constant].
+
+All eight are unsoftened. They have NO coefficient at energy-slack index
+714. The original 5795 rows, the original 47 PSD blocks of sizes
+55,10,...,10, all original geometry/KKT/sublevel conditions, and the sole
+energy-slack objective are referenced byte-identically. Only eight scalar
+rows are added, giving 5803 rows and still 714+one-slack variables.
+
+Normalized coefficient source and formal limits
+------------------------------------------------
+The first preliminary static construction used the old w-prime table to
+bound w5. Its three files swap_family_quartic_static.py,
+swap-family-quartic.json.gz, and swap-family-quartic-build.json are retained
+unchanged as provenance. No solver consumed them. A formal API audit
+identified that the old w-prime coefficient intervals are not literal
+copies of the normalized w-table derivatives. They remain explicit
+analytic premises in old packages; they must not be described as newly
+Lean-certified by table identity.
+
+The sole consumed version is swap_family_normalized_static.py and
+swap-family-normalized.json.gz. It uses ONLY the normalized actual-w
+integer coefficient table for all new point jets and w5 bounds. Its
+24 terms have degree23. Differentiating the coefficient polynomial five
+times gives 19 terms of degree18, with coefficient factor j!/(j-5)! and
+Taylor remainder M24*(1/2)^19/19!, M24=(44/7)^24. All used nearest integer
+anchors lie in 1,...,32. There are 87 deduplicated scalar packets and 622
+distinct old 1/64 grid cells. No new transcendental coefficient table or
+actual scalar sampling position is added.
+
+The normalized JSON coefficient table has separately been checked against
+WindowJetTableData and the actual-profile/ledger literals. The existing
+actual API WindowCellDerivative.interval supports q=5,d=18 once its
+explicit finite check is supplied. Our exact rational Horner evaluation
+does not perform the current FI-Q30 roundings. In particular its point
+jet errors are not asserted to be the output of an existing FI point
+checker without an additional check. A future pure exact-QI Horner bridge
+can reuse interval addition/multiplication soundness, shifted_coeff, and
+derivative_remainder. No concrete new 87-packet Lean instances have been
+compiled here. The old base's actual-analytic premises also remain
+explicit and unchanged.
+
+The actual global-competitor logic itself is separately ordinary-Lean
+checked in WindowGlobalCompetitor, with 11 standard-axiom roots. That
+generic result supplies no particular numerical envelope or local
+exclusion. Coefficient-source identity, exact rational arithmetic replay,
+and completed actual Lean instantiation are distinct claims here.
+
+Computation, counters, and reproducibility
+-----------------------------------------
+The normalized static packet's eight rows were independently rebuilt by
+research-goal-20261017-swap-family-audit/independent_replay.py before the
+solver ran: all 87 scalar packets, 622 normalized w5 cells, 68 edge
+occurrences, shared monomial indices, all bounds and error directions,
+and the eight row signs/scales passed. The single67 row is exactly equal
+to its frozen earlier version after outward 1e-15 ceiling, despite the
+coefficient-source correction. No attempt was made to tune this equality.
+
+One SCS invocation used the original settings: max10000 iterations,
+45-second solver time cap, eps_abs=eps_rel=1e-7. It returned solved after
+125 iterations, about 0.883 seconds including setup. Its floating energy
+slack was about 7.10e-14 and minimum normalized PSD eigenvalue about
+0.0001448023. These are discovery hints. An earlier startup stopped at a
+receipt-field-name KeyError before ANY SCS call; correcting that name did
+not alter a model, setting, or solver outcome. There was exactly one
+actual SCS call and no optimizer retry, polishing, or parameter change.
+
+The only rational candidate is Fraction(str(float(raw_primal[i]))) for
+every i=0,...,713, followed by energy slack exactly zero. There is no
+projection, repair, precision loop, or second candidate. Its exact row
+slacks and positive leading minors are in swap-family-exact-primal.json.
+The independent result replay uses Fraction Schur/LDL, not the producer's
+fraction-free Bareiss algorithm, and verifies all 4070 PSD entries and
+5803 inequalities. It passed in about 5.262 seconds. Every new D_r has
+strictly positive expectation at this NEW pseudo-moment point.
+
+Read-only replay (from repository root):
+
+    python research-goal-20261017-swap-family-audit/independent_replay.py
+    python research-goal-20261017-swap-family-quartic/swap_family_result_replay.py
+
+The --write-receipt option on replay scripts is optional and accepts only
+an absent destination. Do not rerun a discovery/producer script merely
+to verify an existing frozen result. The SCS output is numerical discovery
+data; only the rational point and exact replay establish this fixed
+relaxation's feasibility. No exact dual extraction is applicable because
+there is no positive or infeasibility hint.
+
+Two large research gzip packets have lossless <=3MiB pieces and a restore
+manifest so the same bytes can be restored before replay on GitHub copies.
+These are research-data transport files, not a claim of compliance with
+the website's 2MB Lean-source submission limit.

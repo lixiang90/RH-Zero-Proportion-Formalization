@@ -1,0 +1,141 @@
+{
+  "scope": "Frozen full-tree lossless source-size audit and independent integer replay; no new Lean compiler or new exclusion.",
+  "files": [
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/extract_semantics.py",
+      "sha256": "1f9002cb1e56439da610793ccf4ab14ded9bd42f7abba03f2f1fe970e0b95c1c",
+      "bytes": 6690
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/encode_channels.py",
+      "sha256": "3c10f6acdc0641c1c6464cdbb927cffbd99f2eff1340a6167f5c82f503afbe9a",
+      "bytes": 6616
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/assemble_size.py",
+      "sha256": "4c4a2fd3373df9cb7b7251dfac3b8af3a30b323d751dfef74b9e14f649d22a75",
+      "bytes": 4161
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/parent_uniform_probe.py",
+      "sha256": "b185d801c4b13ee74933b069d9edb72deff11b352e651292ab230c7e0a3732e5",
+      "bytes": 4317
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/semantics.json",
+      "sha256": "277463c05b5e9944135f878fb9dfec5bfe890f86b36faf76a67f9a7a3ad10d08",
+      "bytes": 5076
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/selected-parent.json",
+      "sha256": "12c51dd33a07f13d5beb4fe491a189c579e74afb4609b67d651895f2fce6f091",
+      "bytes": 11580
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/field-huffman.bin",
+      "sha256": "9d0b93eed206e14eff3b0d25dc639cb75f5515ea855e6a7c36100ef87a3c5ba3",
+      "bytes": 2792034
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/field-huffman.json",
+      "sha256": "27af486863fc4d1d0e40b234ac03a24f4c63741ffd32d90f0239b14e8a1a48e1",
+      "bytes": 11223
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/field-huffman-data.lean",
+      "sha256": "344f60f1003d6e415dac3501d0289f12512f7ff36fa161841fd2e6d7552081a3",
+      "bytes": 3461607
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/delta-huffman.json",
+      "sha256": "afb1dccd629d1d529ebca241f6e2a52484174f5d99deb485b810c54cae4b2ea3",
+      "bytes": 11223
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/source-size-accounting.json",
+      "sha256": "e3e3e7f8fb6f70dcd28a5c7119a9b18d42a176afd28be24e12ed2ea91434d496",
+      "bytes": 6019
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/parent-uniform-probe.json",
+      "sha256": "b82de64f4285e42275666c90580b6695d150e70e548069d81a2349f5042f6307",
+      "bytes": 7522
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/README.md",
+      "sha256": "5922e445255f37ba89744f3ff380286e3cad7e4bb3e0daab327ca4ca4dd5453f",
+      "bytes": 6317
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent_codec_replay.py",
+      "sha256": "0c910afe345f9e436a3cd17182d2b6e30adacc3a9bf48841facc835eabe761e8",
+      "bytes": 15599
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent-codec-replay.json",
+      "sha256": "3f5ef7f1e5c0ced8b42e252b782d3249f8b0e70cb945e6c6f1995e10acd71f10",
+      "bytes": 5454
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent-codec-files.json",
+      "sha256": "02a68ff5e65a7d9525a7d0e6e00b285760db7a2ee6e5dbf965c8a1a0a9912401",
+      "bytes": 3527
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent_codec_note.txt",
+      "sha256": "039c36eed8d5bef30f174a43c7050b15551c098774bd1c1adbeb1189c948821c",
+      "bytes": 11811
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent_codec_pin.py",
+      "sha256": "1898690504dc4043b4020f86adde698ee2f109c79ce4ccbc6788aa078150668f",
+      "bytes": 1538
+    }
+  ],
+  "rebuildable_not_required_for_independent_replay": [
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/nodes.bin",
+      "sha256": "9956f3830dd44e330c7d455f234ab213c25f44b88a715508bd29825fb706edab",
+      "bytes": 670610,
+      "rebuildable": true
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/fs.bin",
+      "sha256": "e8697215283fb691dbdceb41813527527d0be033bcdb33f91166bf7cec7a611e",
+      "bytes": 26102895,
+      "rebuildable": true
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/treecodes.bin",
+      "sha256": "57e5b4db17ac2180582c6bc17a5f62d49105903212bd1f47c8ddae0e534c8b4c",
+      "bytes": 382460,
+      "rebuildable": true
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/delta-huffman.bin",
+      "sha256": "bb263a6b560eac9273b0f5a0c6ee355cd09a3b45dbe1faac357002a9cdc6b249",
+      "bytes": 2845373,
+      "rebuildable": true
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/delta-huffman-data.lean",
+      "sha256": "635e3cc46f8f79bcfa27bd7cfee6ea299766721b4894463afcda307ead664f00",
+      "bytes": 3528019,
+      "rebuildable": true
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/single-file-size-skeleton.txt",
+      "sha256": "844ac6836ad99ce9c5bebc04359392268f82adb058bb1316589b20f7afd6cd6a",
+      "bytes": 4132458,
+      "rebuildable": true
+    }
+  ],
+  "frozen_external_dependency_pin": "research-goal-20261016/w10-size-audit-20261017/independent-codec-files.json",
+  "frozen_external_dependency_pin_sha256": "02a68ff5e65a7d9525a7d0e6e00b285760db7a2ee6e5dbf965c8a1a0a9912401",
+  "actual_source_lower_bound_known_parts": 4004458,
+  "budgeted_complete_source_bytes": 4132458,
+  "website_size_passed": false,
+  "new_Lean_decoder_verified": false,
+  "complete_W10_cover_Lean_proven": false,
+  "new_zero_proportion_proven": false
+}

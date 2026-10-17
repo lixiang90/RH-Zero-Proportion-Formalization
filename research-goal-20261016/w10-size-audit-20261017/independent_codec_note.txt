@@ -1,0 +1,205 @@
+Independent mathematical audit of the W10 field-Huffman size prototype
+2026-10-17
+
+Result: the selected field-Huffman stream preserves the complete frozen
+certificate semantics, and every integer leaf check succeeds independently.
+This is NOT a completed <=2MB Lean source: the data literal alone is
+3,461,607 bytes, and its new Lean decoder/macro proof expander has not been
+implemented or compiled.  No encoder, extractor, Core/Base, old profile,
+or previously frozen package was modified by this audit.
+
+1. One full read-only reconstruction and mathematical replay
+------------------------------------------------------------
+independent_codec_replay.py is a stdlib-only independent implementation.
+It imports neither encode_channels.py nor extract_semantics.py.  It uses
+the already independent analytic-table reader solely to parse the actual
+frozen upstream PT/BK/TOP data; geometry, Huffman/varint decoding, Pruefer
+peeling and final numerical arithmetic are implemented in this new source.
+All input/source hashes are checked at the start and end.  Its default
+is read-only, and --write-receipt creates an absent receipt once.
+
+The single full run took51.013 seconds and verified:
+
+* all10907 printable base92 literal chunks reconstruct the selected
+  2,792,034-byte binary exactly, including per-chunk little-endian padding;
+* canonical Huffman lengths/codes, all60 channel frames, symbol counts,
+  codeword termination, zero padding, ULEB termination/minimality, signed
+  natural bounds, and complete consumption of every channel;
+* the entire preorder tree:191557 nodes,95778 branches,95615 numeric
+  leaves,163 empty leaves and1 reflection leaf;
+* exact recovery of nodes.bin, fs.bin and treecodes.bin, with all three
+  original semantic cache hashes identical;
+* exact normalized geometry hash
+  ad1efe1caa8d0bbff299ef1ae734eafc08795c7b3a104c24faf70d2495d7ace5;
+* all95615 PT support domains, recomputed slope-derived Pruefer dual
+  amounts, and final mcheckGX integer inequalities.
+
+The minimum integer leaf numerator exceeds the fixed target numerator by
+2623983786731307008 exactly.  Thus the result is more than byte roundtrip
+equality: it reconstructs and checks the actual mathematical witnesses.
+The receipt independent-codec-replay.json records the exact minimum path,
+all hashes, counts, target and margin.  It is supporting arithmetic
+evidence; no new Lean coverage theorem is asserted by this Python replay.
+
+2. Geometry: root, branch, ordered normalization, both children
+---------------------------------------------------------------
+The root is independently rebuilt from the old BS pressure vector, sep
+27852/32768, cN=86600000 and the fixed conservative pressure-root formula,
+then compared with the exported root.  It is not trusted merely because
+it appears in semantics.json.  The actual global root coverage still
+belongs to the existing formal root/floor-transfer theorems.
+
+At every preorder node use AdaptiveCoverage.normalize: if the endpoint
+upper/lower ordering tests both hold, leave the state unchanged; otherwise
+perform the actual two ordered tightening rounds.  Child updates use
+the Core's Nat.sub order in dE/colB/rowB/cuB, not signed arithmetic with a
+late clamp.  The replay recomputes all90 bounds and checks the resulting
+full-tree geometry hash.  All branch axes lie in0..44 and all cuts are
+the same strict interior natural cuts as the original tree.
+
+LeanCoverBase.branch uses this AdaptiveCoverage normalization.
+ForcedCoverage2.walk, in contrast, always performs two rounds.  The
+two computations must not be swapped without the relevant proved
+equivalence.  The chosen cache/extractor uses the adaptive version.
+
+A future compressed consumer must either (a) implement a stateful walker
+with a soundness theorem preserving both branches, or (b) use an untrusted
+pure macro/expander to reconstruct literal states and the already proved
+branch/leaf auxiliary proof obligations.  The owner currently plans(b).
+Then every generated geometry equality, both child proofs and final root
+composition must still be checked by the ordinary Lean kernel.  A Python
+state hash or a successful decoder cannot replace those proof obligations.
+
+3. Why 39 supports plus eight Pruefer digits determine the useful dual
+---------------------------------------------------------------------
+The real current chain is
+ LeanCoverBase / per-aux branch proofs
+ -> ForcedCoverage2.dispatch / FastPruefer.checkPacked/checkTreeCode
+ -> LocalChecker.checkLeaf
+ -> inherited Core mcheckGX.
+It is NOT the separate new-window FlowBasisCodec interface.
+
+For each of39 fixed weighted terms, the support tuple(k,m,p,r) determines
+the tangent weights
+ (0,0), (1024,0), (m,0), or(1024-m,m).
+Read actual PT midpoint slopes at each active point.  For gap z, compute
+
+ C_z=1024000000000*BS_z
+     +sum_(terms containing z) a_t*sum_active w*(PT_slope-2000000000).
+
+The ten node divergences are
+ (-C_0,C_0-C_1,...,C_7-C_8,C_8).
+Their sum is zero identically.  Eight base10 digits specify an ordinary
+labelled10-vertex Pruefer tree.  Successive smallest leaves receive their
+full current signed divergence; that value is transferred to the parent.
+Hence edge amounts need not be serialized.  The replay reconstructs
+every amount and checks all ten rebuilt divergences against this vector.
+The sign chooses lower or upper partial-span multiplier, its absolute
+value is nonnegative, and adjacent edges are omitted exactly as in the
+actual FastPruefer.edgeMove interface.
+
+Crucially, neither tree optimality nor balance is a soundness premise of
+LocalChecker.checkLeaf.  Every generated DualMove is a nonnegative use of
+a valid partial-span inequality; dualStep_good establishes MulOKg for
+ANY such moves.  mcheckGX explicitly pays remaining coordinate slope
+through its interval penalty.  Even a poor or malformed reconstruction
+cannot prove a false floor if the actual final checkLeaf=true theorem is
+still required.  The Pruefer structure is a compact way to propose a
+strong certificate, not a trusted mathematical assumption.  Therefore
+the owner need not prove an elaborate Pruefer-correctness theorem merely
+to consume successful generated leaf checks.
+
+At every numeric leaf the replay also checks kind/mass ranges, actual
+PT validity intervals and anchor membership, all lower-table payments,
+dual positive/negative sums, coordinate residual penalty, and the final
+integer floor.  This final Boolean/arithmetic check must remain in Lean;
+flow reconstruction or previously passing cache hashes do not replace it.
+
+4. Fields that can be omitted, and the conditions on doing so
+-------------------------------------------------------------
+Safe already-used omissions include explicit paths/preorder indices,
+all per-leaf90-bound cells, explicit Pruefer edge lists/amounts, and the
+unused fields of kind0/1/2 supports.  Geometry is reconstructed from the
+root and complete branch stream; paths are implicit preorder; amounts
+come from the fixed coefficients/PT and tree digits.  The32-grid quotient
+is exact because all anchors are divisible by32.  Shared constants
+BS/TS/PR/SC and analytic tables must remain bound to the actual checker.
+
+The terminal empty-axis label is not mathematically essential if a
+consumer scans the45 reconstructed intervals and actually checks one
+contradiction.  Reflection is likewise checked from the reconstructed
+endpoint bounds.  Such an omission changes the computational witness
+selector and needs its own checked consumer; it is not permission to
+assume an empty/reflection flag.  Changing branch or point predictions
+is also harmless only if all generated geometry and leaf obligations
+are still discharged.  Approximate or rounded cuts/anchors cannot be
+called lossless merely because they are nearby.
+
+The following cannot simply be dropped: enough information to reconstruct
+the complete two-child tree, all nontrivial support choices not fixed by
+a proved/recomputed rule, the Pruefer topology or another effective dual
+proposal, and every actual finite scalar/flow check.  A failed all-leaf
+Boolean cannot be replaced by an encoder guarantee or a stored true bit.
+
+5. Decoder state, bounds, cache and source-size hazards
+-------------------------------------------------------
+The channel order is fixed by source, not encoded names: node_kind,axis,
+four cut-byte channels,39 term-kind channels,mix,three point and three
+second-point channels,then eight tree-digit channels.  Binary headers
+contain alphabet/count/packed length, but coded_bits is only in the audit
+JSON.  A self-contained Lean decoder can instead decode the given count,
+then verify that at most seven zero pad bits remain in the stated packed
+byte extent.  It must not silently require external metadata to define
+the certificate semantics.
+
+Cuts are zigzag deltas from the last cut for that axis in GLOBAL preorder.
+Point indices are zigzag deltas from the last NONZERO support point for
+that term; kind0 does not reset that history.  These histories must not
+be reset at a child or chunk boundary unless a complete correct restart
+state is supplied.  The delta codec additionally needs old full tuples
+and old tree digits.  This audit selected only the smaller non-delta
+field stream; no full delta replay was run.
+
+Random access to a payload is invalid without reconstructing this decoder
+history.  Pure cached PT entries may be keyed by point, and lower-table
+values by BOTH interval endpoints.  Any cache keyed only by ordinal,
+wrong cell, previous support kind, or prior prefix state risks using the
+wrong witness.  An external precomputed verdict/geometry cache is not a
+Lean proof premise.  A pure macro may propose decoded literals; the
+kernel checks their actual obligations.
+
+The independent decoder rejects invalid dictionary prefix codes,
+truncation, out-of-range symbols/points, negative reconstructed naturals,
+unterminated or nonminimal varints, nonzero pads, unread channel symbols,
+and trailing binary bytes.  Default getD0 behavior is not an acceptable
+claim of exact archive preservation.  Mathematical soundness nevertheless
+ultimately comes from the actual leaf/branch theorems, not a decoder's
+ability to reject every corrupt archive.
+
+The selected binary is2,792,034 bytes and the printable Lean DATA source
+is3,461,607 bytes.  The alternative delta data source is3,528,019 bytes.
+Using the owner's fixed-base overhead estimate542,770 bytes already gives
+4,004,377 bytes before adding a new decoder/expander.  The data alone
+exceeds both2,000,000 bytes and2MiB.  No gzip/archive size is substituted
+for source size.  Consequently this codec is a lossless prototype with
+verified evidence, not a solution to the2MB source limit.  The new Lean
+decoder/aux expander is still unimplemented/uncompiled and no completeness
+or runtime claim about it is made.
+
+6. Correction to the preceding frozen multiwindow LP wording
+------------------------------------------------------------
+The fixed dual-window LP minimizes B-K*c for a fixed targetK; it does NOT
+directly maximize the ratio(Hbar-B)/(1-c).  Therefore67.35677427969738%
+is the sample ratio of its selected target-margin-optimal ledger, not
+literally the optimal ratio upper bound for that entire LP class.
+Its negative optimum margin is delta approximately2.3352784500163537e-5.
+At the level of numerical hints, for any feasible c>=0 with c<1,
+
+ ratio <= K-delta/(1-c) <= K-delta,
+
+whose last percentage is approximately67.3567954924%, still below the
+archived website record.  Without an exact dual certificate this remains
+a floating numerical upper hint.  This corrects the corresponding loose
+"sample ratio upper/optimal ratio" wording in the frozen multiwindow
+pilot/note without changing those frozen files or their pins.  It does
+not change the conclusion that no submission-ready improvement emerged.

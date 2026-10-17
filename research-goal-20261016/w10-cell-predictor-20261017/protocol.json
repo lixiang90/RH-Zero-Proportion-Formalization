@@ -1,0 +1,14 @@
+{
+  "scope": "Fixed first1000 numeric leaves of frozen W10 preorder; static arithmetic and lossless exception reconstruction only.",
+  "limit": 1000,
+  "rules": ["nearest midpoint legal PT, smaller anchor on ties", "leftmost legal PT", "rightmost legal PT"],
+  "PT_legality": "valid_u>0 and valid_l<=cell_left<=anchor<=cell_right<=valid_u; cell_left=max(spanLo,sum gapLo), cell_right=min(spanHi,sum gapHi)",
+  "predicted_FS": "kind1 with weight1024 at selected legal PT; if no legal PT, kind0 inherited interval lower bound",
+  "fixed_tree_codes": [87654321, 0, 55555555, 99999999],
+  "fixed_tree_names": ["adjacent chain", "star0", "star5", "star9"],
+  "selection": "No rule, anchors, tree portfolio or sample size will be tuned after seeing this sample. Every declared rule is reported.",
+  "optimizer_calls": 0,
+  "Lean_invocations": 0,
+  "new_cover_search": false,
+  "full_data_or_two_MB_proof_claim": false
+}

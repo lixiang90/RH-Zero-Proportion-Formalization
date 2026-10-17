@@ -786,3 +786,105 @@ adversary sweep was run. Moreover the plus profile fails the old
 bound and full admissibility would be required. These duties are not
 discharged by its L1 norm. See `multiwindow-files.json` and
 `multiwindow_note.txt`; no unconditional improvement is asserted.
+
+## Complete replay of the new batch and current proof-size gap
+
+A further capped 10,000-node batch reached 143,004 checked nodes, 71,494
+closed leaves and 17 frontier cells. Both the database replay and the
+database-independent archive replay checked all 11,004 new journal packets.
+This batch exercised 64,087 OBBT bounds and 1,954 Newton steps. The standalone
+gzip is represented by three lossless pieces, each at most 4 MiB; the combined
+hash and read-only replay command are in `cover-sqlite-bounded143004-files.json`.
+The observed producer peak was 802,304,000 bytes. The historical 132,000-node
+baseline still lacks a complete mathematical replay, and the frontier count
+does not measure a geometric completion percentage. No next batch is implied.
+
+The old complete numerical W10 tree has also received a lossless source-size
+audit. An independent reader reconstructs all 191,557 nodes and checks every
+one of its 95,615 numerical leaves, including whole-cell tangent validity
+and the exact integer inequalities. This is a Python mathematical replay,
+not the missing complete Lean root. The best tested Huffman data source is
+3,461,607 bytes; adding the currently assembled base gives 4,004,458 bytes,
+before implementing its new decoder. It exceeds the 2,000,000-byte website
+source limit. The audit makes no information-theoretic impossibility claim.
+See `w10-size-audit-20261017/audit-files.json` and its independent replay.
+
+One complete bottom-up pass tried at most two original child witnesses at
+each of 95,778 parents and merged none. A lower-floor pilot at `0.008645`
+also merged none of the same 1,000 parents, although its conditional ratio
+of 67.35917387455744% would still meet the requested margin. Whole-parent
+tangent domains, rather than only the final constant, are the main pilot
+obstruction. The zero-merge tree has a separate complete independent replay
+and a lossless archive in `w10-size-merge-20261017/merge-files.json`.
+Three fixed geometric anchor predictors were also tested on the first
+1,000 numerical leaves. Using each predicted support with the old tree,
+recomputing all flow amounts, and running the actual integer conditions
+passed only 4, 1 and 3 leaves respectively. These tests do not rule out
+every possible algorithmic certificate reconstruction; their portable
+prefix evidence is in `w10-cell-predictor-files.json`.
+
+A new necessary condition for free minimizers localizes an upper Hessian
+envelope by affine position-dependent directions. Its shared fourth moments
+form a 90-by-90 matrix. All 8,100 rational entries have an independent replay.
+One eigenvalue diagnostic at the old exact pseudo-moment point gave no
+negative direction; this is neither an exact PSD certificate nor a cell
+exclusion. See `research-goal-20261017-quartic-hessian-localizer/`.
+The full global floor and an unconditional improved zero proportion remain
+unproved.
+
+## Global competitors beyond local stationarity
+
+The current structural route uses the full global-minimum clause in
+`WindowMinimizerCover.Relevant`. Every gap permutation preserves the
+separated orthant, so all eight adjacent swaps satisfy
+`Fw24(g) <= Fw24(T_r(g))` at a relevant minimizer. The competitor need not
+remain in the original cell or reflection orientation. This is global
+information beyond the local gradient and Hessian conditions.
+`WindowGlobalCompetitor.lean` has an actual ordinary-kernel pass for eleven
+roots, including feasible swaps, actual-energy comparison, envelope cuts,
+nonnegative combinations and uniform cell exclusion. Its numerical envelope
+premises remain explicit. See `window_global_competitor_sync_files.json`.
+
+The fixed eight-map midpoint diagnostic gives four strictly negative and
+four strictly positive exact interval differences. Those point comparisons
+alone exclude no whole cell. The fixed swap of gaps 6 and 7 additionally
+has a common-variable quartic upper envelope for `Fw24(Tg)-Fw24(g)` on the
+full parent cell: eight positive-weight terms change and thirty-three
+cancel exactly. Transformed span intervals retain two exact DBM identities.
+Every old and transformed span uses the same nine normalized variables;
+the fifth-derivative remainder is paid by `M5*R*d^4/120`.
+
+The old exact 714-coordinate pseudo-moment vector evaluates this necessary
+upper envelope strictly below `-17/10000` (about `-0.0017867630`). An
+independent standard-library replay reconstructs all sixteen scalar packets,
+391 derivative-grid cells, 450 polynomial coefficients and the exact
+expectation. Thus this is a strict strengthening that rejects the earlier
+pseudo-point. It is not a whole-cell contradiction, an actual-kernel
+counterexample, a concrete Lean numerical exclusion or a new zeta bound.
+The actual table semantics remain explicit analytic inputs of this numerical
+package. See `research-goal-20261017-swap67-quartic/swap67-quartic-files.json`.
+
+All eight adjacent-swap envelopes have now been added together as eight
+unsoftened rows to the frozen fourth-moment model. The new rows derive M5
+from the normalized W table itself, which an independent identity audit
+matches to the formal table. The older higher-precision w-prime literals
+are not silently treated as already proved table entries. The independent
+gate reconstructs all 87 scalar packets and 622 fifth-derivative grid cells.
+One SCS call solved the strengthened model in 125 iterations, with no
+exclusion hint. Its unadjusted rationalized 714 coordinates at zero energy
+slack satisfy all 5,803 exact rows and all 47 matrices are strictly positive
+definite. Bareiss minors and an independent Fraction LDL replay both pass.
+This is an exact feasible pseudo-moment vector for this fixed strengthened
+model, not a point of the actual energy or evidence that the desired floor
+is false. See `research-goal-20261017-swap-family-quartic/swap-family-files.json`.
+Its two packet versions are restored from lossless pieces using the supplied
+read-only verifier or its explicit `--restore` option.
+
+A separate single eigenvalue test of the existing 90-by-90 Hessian localizer
+at that new pseudo-point found no negative direction. The positive numerical
+eigenvalues are not an exact PSD proof, and no combined model was solved.
+The remaining actual-envelope proof duties are laid out in
+`research-goal-20261017-swap67-formal-plan/PLAN.md`. In particular, a static
+comparison confirms that normalized-W fifth-derivative bounds can retain
+the old single-swap M5 maxima, but those finite checks still need Lean
+instances. No full floor or submission-ready proportion follows.

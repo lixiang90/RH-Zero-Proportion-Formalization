@@ -1,0 +1,3725 @@
+{
+  "scope": "One authorized static comparison of 391 fifth-derivative grid bounds.\n\nUse frozen normalized W coefficients already linked to actual derivatives by\nLean. Compare exact interval Horner and the existing FI-1e30 implementation\nwith the old provider's M5 values. No Lean, optimizer, new sample or producer\nexecution; all inputs must retain their initial hashes.\n",
+  "source_sha256_start": {
+    "research-goal-20261017-swap67-formal-plan/audit_m5_compatibility.py": "0f1101a5a7acf600e870b406b64666038db1d9d767fd637881b35c3c1fb0dbb4",
+    "research-goal-20261017-swap67-quartic/swap67-quartic-static.json": "e315e2439ef5324719b317d8e1b652b995c0496f369be30f5f9b9c8bd4ba6a96",
+    "research-goal-20261016/window_normalized_interval.json": "15e389817127095be26e2ebca6e8bea0d356547a3cb041710029f566cfc13255",
+    "research-goal-20261016/cover_newjet.json": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+    "StructuralGoal20261016/WindowRawCoefficientData.lean": "1c5b0ca115c7242fe7daae3aff8c0cc9667dabfb14b2c2fa169bda695f97c6be",
+    "StructuralGoal20261016/WindowRawCoefficients.lean": "6d1511d7024916b0dce4805b913e31b7a42f75a8488e4fb6054e6fd6a680916d",
+    "StructuralGoal20261016/WindowFixedDerivative.lean": "261d1cdc2541741729a55e1332b7ac6bb494af21db15a61bf57bba585974b501",
+    "StructuralGoal20261016/WindowCellDerivative.lean": "249cc8b5acca671a60ab52fdc5f330beabbc637cb85ffb01fb67eb0902e09278",
+    "StructuralGoal20261016/WindowFixedHornerChoice.lean": "c4fbde6c63eda3147163ea921512ed922e199825e08b5c889064cf5dd6809a19",
+    "StructuralGoal20261016/WindowFixedInterval.lean": "daa3759d76278c07cc862b4325d88f0542ce7acba7e245ca629c8e26f768e742"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-swap67-formal-plan/audit_m5_compatibility.py": "0f1101a5a7acf600e870b406b64666038db1d9d767fd637881b35c3c1fb0dbb4",
+    "research-goal-20261017-swap67-quartic/swap67-quartic-static.json": "e315e2439ef5324719b317d8e1b652b995c0496f369be30f5f9b9c8bd4ba6a96",
+    "research-goal-20261016/window_normalized_interval.json": "15e389817127095be26e2ebca6e8bea0d356547a3cb041710029f566cfc13255",
+    "research-goal-20261016/cover_newjet.json": "f64ecdfb3972dd3421fe68394662f2f6d288798ab77d82b081053881ef56719c",
+    "StructuralGoal20261016/WindowRawCoefficientData.lean": "1c5b0ca115c7242fe7daae3aff8c0cc9667dabfb14b2c2fa169bda695f97c6be",
+    "StructuralGoal20261016/WindowRawCoefficients.lean": "6d1511d7024916b0dce4805b913e31b7a42f75a8488e4fb6054e6fd6a680916d",
+    "StructuralGoal20261016/WindowFixedDerivative.lean": "261d1cdc2541741729a55e1332b7ac6bb494af21db15a61bf57bba585974b501",
+    "StructuralGoal20261016/WindowCellDerivative.lean": "249cc8b5acca671a60ab52fdc5f330beabbc637cb85ffb01fb67eb0902e09278",
+    "StructuralGoal20261016/WindowFixedHornerChoice.lean": "c4fbde6c63eda3147163ea921512ed922e199825e08b5c889064cf5dd6809a19",
+    "StructuralGoal20261016/WindowFixedInterval.lean": "daa3759d76278c07cc862b4325d88f0542ce7acba7e245ca629c8e26f768e742"
+  },
+  "all_sources_unchanged": true,
+  "normalized_W_matches_proved_raw_literals": 768,
+  "whole_old_table_comparison": {
+    "coefficients": 736,
+    "identical": 0,
+    "normalized_contains_old": 445,
+    "old_contains_normalized": 135
+  },
+  "used_centers_2_to_9_old_orders_4_to_22_comparison": {
+    "coefficients": 152,
+    "identical": 0,
+    "normalized_contains_old": 81,
+    "old_contains_normalized": 40
+  },
+  "table_containment_does_not_assert_old_table_invalid": true,
+  "static_cell_checks": 391,
+  "scalar_packets": 16,
+  "unique_anchor_points": 14,
+  "grid_cell_rows": [
+    {
+      "k": 120,
+      "integer_center": 2,
+      "old_M5_ticks": "12966511231550761",
+      "normalized_exact_M5_ticks": "12966511231550761",
+      "normalized_FI_M5_ticks": "12966511231550761",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 121,
+      "integer_center": 2,
+      "old_M5_ticks": "4913431893599001",
+      "normalized_exact_M5_ticks": "4913431893599001",
+      "normalized_FI_M5_ticks": "4913431893599001",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 122,
+      "integer_center": 2,
+      "old_M5_ticks": "12920269799474720",
+      "normalized_exact_M5_ticks": "12920269799474720",
+      "normalized_FI_M5_ticks": "12920269799474720",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 123,
+      "integer_center": 2,
+      "old_M5_ticks": "20572904831814918",
+      "normalized_exact_M5_ticks": "20572904831814918",
+      "normalized_FI_M5_ticks": "20572904831814918",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 124,
+      "integer_center": 2,
+      "old_M5_ticks": "27818413415129801",
+      "normalized_exact_M5_ticks": "27818413415129801",
+      "normalized_FI_M5_ticks": "27818413415129801",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 125,
+      "integer_center": 2,
+      "old_M5_ticks": "34608430856564809",
+      "normalized_exact_M5_ticks": "34608430856564809",
+      "normalized_FI_M5_ticks": "34608430856564809",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 126,
+      "integer_center": 2,
+      "old_M5_ticks": "40899419281089382",
+      "normalized_exact_M5_ticks": "40899419281089382",
+      "normalized_FI_M5_ticks": "40899419281089382",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 127,
+      "integer_center": 2,
+      "old_M5_ticks": "46652892593486210",
+      "normalized_exact_M5_ticks": "46652892593486210",
+      "normalized_FI_M5_ticks": "46652892593486210",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 128,
+      "integer_center": 2,
+      "old_M5_ticks": "52126080268908585",
+      "normalized_exact_M5_ticks": "52126080268908585",
+      "normalized_FI_M5_ticks": "52126080268908585",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 129,
+      "integer_center": 2,
+      "old_M5_ticks": "57009913342040233",
+      "normalized_exact_M5_ticks": "57009913342040233",
+      "normalized_FI_M5_ticks": "57009913342040233",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 130,
+      "integer_center": 2,
+      "old_M5_ticks": "61281972686827486",
+      "normalized_exact_M5_ticks": "61281972686827486",
+      "normalized_FI_M5_ticks": "61281972686827486",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 131,
+      "integer_center": 2,
+      "old_M5_ticks": "64925357458439795",
+      "normalized_exact_M5_ticks": "64925357458439795",
+      "normalized_FI_M5_ticks": "64925357458439795",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 132,
+      "integer_center": 2,
+      "old_M5_ticks": "67928694222017654",
+      "normalized_exact_M5_ticks": "67928694222017654",
+      "normalized_FI_M5_ticks": "67928694222017654",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 133,
+      "integer_center": 2,
+      "old_M5_ticks": "70286102299077109",
+      "normalized_exact_M5_ticks": "70286102299077109",
+      "normalized_FI_M5_ticks": "70286102299077109",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 134,
+      "integer_center": 2,
+      "old_M5_ticks": "71997116448678235",
+      "normalized_exact_M5_ticks": "71997116448678235",
+      "normalized_FI_M5_ticks": "71997116448678235",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 135,
+      "integer_center": 2,
+      "old_M5_ticks": "73066568323405627",
+      "normalized_exact_M5_ticks": "73066568323405627",
+      "normalized_FI_M5_ticks": "73066568323405627",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 136,
+      "integer_center": 2,
+      "old_M5_ticks": "73504428447248187",
+      "normalized_exact_M5_ticks": "73504428447248187",
+      "normalized_FI_M5_ticks": "73504428447248187",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 137,
+      "integer_center": 2,
+      "old_M5_ticks": "73325610751361953",
+      "normalized_exact_M5_ticks": "73325610751361953",
+      "normalized_FI_M5_ticks": "73325610751361953",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 138,
+      "integer_center": 2,
+      "old_M5_ticks": "72549741972388506",
+      "normalized_exact_M5_ticks": "72549741972388506",
+      "normalized_FI_M5_ticks": "72549741972388506",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 139,
+      "integer_center": 2,
+      "old_M5_ticks": "71200898464608305",
+      "normalized_exact_M5_ticks": "71200898464608305",
+      "normalized_FI_M5_ticks": "71200898464608305",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 140,
+      "integer_center": 2,
+      "old_M5_ticks": "69307313200063128",
+      "normalized_exact_M5_ticks": "69307313200063128",
+      "normalized_FI_M5_ticks": "69307313200063128",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 141,
+      "integer_center": 2,
+      "old_M5_ticks": "66901055928429942",
+      "normalized_exact_M5_ticks": "66901055928429942",
+      "normalized_FI_M5_ticks": "66901055928429942",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 142,
+      "integer_center": 2,
+      "old_M5_ticks": "64018906552183560",
+      "normalized_exact_M5_ticks": "64018906552183560",
+      "normalized_FI_M5_ticks": "64018906552183560",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 143,
+      "integer_center": 2,
+      "old_M5_ticks": "60700765234189566",
+      "normalized_exact_M5_ticks": "60700765234189566",
+      "normalized_FI_M5_ticks": "60700765234189566",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 144,
+      "integer_center": 2,
+      "old_M5_ticks": "56987531185242533",
+      "normalized_exact_M5_ticks": "56987531185242533",
+      "normalized_FI_M5_ticks": "56987531185242533",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 145,
+      "integer_center": 2,
+      "old_M5_ticks": "52923517793977622",
+      "normalized_exact_M5_ticks": "52923517793977622",
+      "normalized_FI_M5_ticks": "52923517793977622",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 146,
+      "integer_center": 2,
+      "old_M5_ticks": "48555061146184376",
+      "normalized_exact_M5_ticks": "48555061146184376",
+      "normalized_FI_M5_ticks": "48555061146184376",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 147,
+      "integer_center": 2,
+      "old_M5_ticks": "44066250463498425",
+      "normalized_exact_M5_ticks": "44066250463498425",
+      "normalized_FI_M5_ticks": "44066250463498425",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 148,
+      "integer_center": 2,
+      "old_M5_ticks": "39457586185560813",
+      "normalized_exact_M5_ticks": "39457586185560813",
+      "normalized_FI_M5_ticks": "39457586185560813",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 149,
+      "integer_center": 2,
+      "old_M5_ticks": "34735084629105643",
+      "normalized_exact_M5_ticks": "34735084629105643",
+      "normalized_FI_M5_ticks": "34735084629105643",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 150,
+      "integer_center": 2,
+      "old_M5_ticks": "29928805934624621",
+      "normalized_exact_M5_ticks": "29928805934624621",
+      "normalized_FI_M5_ticks": "29928805934624621",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 151,
+      "integer_center": 2,
+      "old_M5_ticks": "25065761004802908",
+      "normalized_exact_M5_ticks": "25065761004802908",
+      "normalized_FI_M5_ticks": "25065761004802908",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 152,
+      "integer_center": 2,
+      "old_M5_ticks": "20195847676268109",
+      "normalized_exact_M5_ticks": "20195847676268109",
+      "normalized_FI_M5_ticks": "20195847676268109",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 153,
+      "integer_center": 2,
+      "old_M5_ticks": "15368178114661478",
+      "normalized_exact_M5_ticks": "15368178114661478",
+      "normalized_FI_M5_ticks": "15368178114661478",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 154,
+      "integer_center": 2,
+      "old_M5_ticks": "10630718651963541",
+      "normalized_exact_M5_ticks": "10630718651963541",
+      "normalized_FI_M5_ticks": "10630718651963541",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 155,
+      "integer_center": 2,
+      "old_M5_ticks": "9506146642735989",
+      "normalized_exact_M5_ticks": "9506146642735989",
+      "normalized_FI_M5_ticks": "9506146642735989",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 156,
+      "integer_center": 2,
+      "old_M5_ticks": "15086426804881443",
+      "normalized_exact_M5_ticks": "15086426804881443",
+      "normalized_FI_M5_ticks": "15086426804881443",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 157,
+      "integer_center": 2,
+      "old_M5_ticks": "20504141617468359",
+      "normalized_exact_M5_ticks": "20504141617468360",
+      "normalized_FI_M5_ticks": "20504141617468360",
+      "exact_minus_old_ticks": 1,
+      "FI_minus_old_ticks": 1
+    },
+    {
+      "k": 158,
+      "integer_center": 2,
+      "old_M5_ticks": "25725376471300934",
+      "normalized_exact_M5_ticks": "25725376471300934",
+      "normalized_FI_M5_ticks": "25725376471300934",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 159,
+      "integer_center": 2,
+      "old_M5_ticks": "30719363815659212",
+      "normalized_exact_M5_ticks": "30719363815659212",
+      "normalized_FI_M5_ticks": "30719363815659212",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 160,
+      "integer_center": 3,
+      "old_M5_ticks": "29974073833657928",
+      "normalized_exact_M5_ticks": "29974073833657928",
+      "normalized_FI_M5_ticks": "29974073833657928",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 161,
+      "integer_center": 3,
+      "old_M5_ticks": "33319118175425657",
+      "normalized_exact_M5_ticks": "33319118175425657",
+      "normalized_FI_M5_ticks": "33319118175425657",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 162,
+      "integer_center": 3,
+      "old_M5_ticks": "36336597875424624",
+      "normalized_exact_M5_ticks": "36336597875424624",
+      "normalized_FI_M5_ticks": "36336597875424624",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 163,
+      "integer_center": 3,
+      "old_M5_ticks": "39004531380566761",
+      "normalized_exact_M5_ticks": "39004531380566761",
+      "normalized_FI_M5_ticks": "39004531380566761",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 164,
+      "integer_center": 3,
+      "old_M5_ticks": "41304749309302573",
+      "normalized_exact_M5_ticks": "41304749309302573",
+      "normalized_FI_M5_ticks": "41304749309302573",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 165,
+      "integer_center": 3,
+      "old_M5_ticks": "43222946306141134",
+      "normalized_exact_M5_ticks": "43222946306141134",
+      "normalized_FI_M5_ticks": "43222946306141134",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 184,
+      "integer_center": 3,
+      "old_M5_ticks": "14520986467950795",
+      "normalized_exact_M5_ticks": "14520986467950795",
+      "normalized_FI_M5_ticks": "14520986467950795",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 185,
+      "integer_center": 3,
+      "old_M5_ticks": "10935572263978867",
+      "normalized_exact_M5_ticks": "10935572263978867",
+      "normalized_FI_M5_ticks": "10935572263978867",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 186,
+      "integer_center": 3,
+      "old_M5_ticks": "7345113130864823",
+      "normalized_exact_M5_ticks": "7345113130864823",
+      "normalized_FI_M5_ticks": "7345113130864823",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 187,
+      "integer_center": 3,
+      "old_M5_ticks": "3781467570771279",
+      "normalized_exact_M5_ticks": "3781467570771279",
+      "normalized_FI_M5_ticks": "3781467570771279",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 188,
+      "integer_center": 3,
+      "old_M5_ticks": "3220951419139265",
+      "normalized_exact_M5_ticks": "3220951419139265",
+      "normalized_FI_M5_ticks": "3220951419139265",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 189,
+      "integer_center": 3,
+      "old_M5_ticks": "6478897020496537",
+      "normalized_exact_M5_ticks": "6478897020496537",
+      "normalized_FI_M5_ticks": "6478897020496537",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 190,
+      "integer_center": 3,
+      "old_M5_ticks": "9613444744037843",
+      "normalized_exact_M5_ticks": "9613444744037843",
+      "normalized_FI_M5_ticks": "9613444744037843",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 191,
+      "integer_center": 3,
+      "old_M5_ticks": "12597790960369234",
+      "normalized_exact_M5_ticks": "12597790960369234",
+      "normalized_FI_M5_ticks": "12597790960369234",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 192,
+      "integer_center": 3,
+      "old_M5_ticks": "15498565518321066",
+      "normalized_exact_M5_ticks": "15498565518321066",
+      "normalized_FI_M5_ticks": "15498565518321066",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 193,
+      "integer_center": 3,
+      "old_M5_ticks": "18209006673811582",
+      "normalized_exact_M5_ticks": "18209006673811582",
+      "normalized_FI_M5_ticks": "18209006673811582",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 194,
+      "integer_center": 3,
+      "old_M5_ticks": "20708509921072499",
+      "normalized_exact_M5_ticks": "20708509921072499",
+      "normalized_FI_M5_ticks": "20708509921072499",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 195,
+      "integer_center": 3,
+      "old_M5_ticks": "22978844976202337",
+      "normalized_exact_M5_ticks": "22978844976202337",
+      "normalized_FI_M5_ticks": "22978844976202337",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 196,
+      "integer_center": 3,
+      "old_M5_ticks": "25004272722361768",
+      "normalized_exact_M5_ticks": "25004272722361768",
+      "normalized_FI_M5_ticks": "25004272722361768",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 197,
+      "integer_center": 3,
+      "old_M5_ticks": "26771638245521552",
+      "normalized_exact_M5_ticks": "26771638245521552",
+      "normalized_FI_M5_ticks": "26771638245521552",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 198,
+      "integer_center": 3,
+      "old_M5_ticks": "28270439568772219",
+      "normalized_exact_M5_ticks": "28270439568772219",
+      "normalized_FI_M5_ticks": "28270439568772219",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 199,
+      "integer_center": 3,
+      "old_M5_ticks": "29492871911746272",
+      "normalized_exact_M5_ticks": "29492871911746272",
+      "normalized_FI_M5_ticks": "29492871911746272",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 200,
+      "integer_center": 3,
+      "old_M5_ticks": "30433847518405832",
+      "normalized_exact_M5_ticks": "30433847518405832",
+      "normalized_FI_M5_ticks": "30433847518405832",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 201,
+      "integer_center": 3,
+      "old_M5_ticks": "31090991309474773",
+      "normalized_exact_M5_ticks": "31090991309474773",
+      "normalized_FI_M5_ticks": "31090991309474773",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 202,
+      "integer_center": 3,
+      "old_M5_ticks": "31464612823364756",
+      "normalized_exact_M5_ticks": "31464612823364756",
+      "normalized_FI_M5_ticks": "31464612823364756",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 203,
+      "integer_center": 3,
+      "old_M5_ticks": "31557655109850332",
+      "normalized_exact_M5_ticks": "31557655109850332",
+      "normalized_FI_M5_ticks": "31557655109850332",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 204,
+      "integer_center": 3,
+      "old_M5_ticks": "31375621432365859",
+      "normalized_exact_M5_ticks": "31375621432365859",
+      "normalized_FI_M5_ticks": "31375621432365859",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 205,
+      "integer_center": 3,
+      "old_M5_ticks": "30926480816100772",
+      "normalized_exact_M5_ticks": "30926480816100772",
+      "normalized_FI_M5_ticks": "30926480816100772",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 206,
+      "integer_center": 3,
+      "old_M5_ticks": "30220553648644085",
+      "normalized_exact_M5_ticks": "30220553648644085",
+      "normalized_FI_M5_ticks": "30220553648644085",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 207,
+      "integer_center": 3,
+      "old_M5_ticks": "29270378696479366",
+      "normalized_exact_M5_ticks": "29270378696479366",
+      "normalized_FI_M5_ticks": "29270378696479366",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 208,
+      "integer_center": 3,
+      "old_M5_ticks": "28090563042993872",
+      "normalized_exact_M5_ticks": "28090563042993872",
+      "normalized_FI_M5_ticks": "28090563042993872",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 209,
+      "integer_center": 3,
+      "old_M5_ticks": "26697616636138967",
+      "normalized_exact_M5_ticks": "26697616636138967",
+      "normalized_FI_M5_ticks": "26697616636138967",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 210,
+      "integer_center": 3,
+      "old_M5_ticks": "25109773054928150",
+      "normalized_exact_M5_ticks": "25109773054928150",
+      "normalized_FI_M5_ticks": "25109773054928150",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 211,
+      "integer_center": 3,
+      "old_M5_ticks": "23346798417410826",
+      "normalized_exact_M5_ticks": "23346798417410826",
+      "normalized_FI_M5_ticks": "23346798417410826",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 212,
+      "integer_center": 3,
+      "old_M5_ticks": "21429790448417107",
+      "normalized_exact_M5_ticks": "21429790448417107",
+      "normalized_FI_M5_ticks": "21429790448417107",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 213,
+      "integer_center": 3,
+      "old_M5_ticks": "19380969508146196",
+      "normalized_exact_M5_ticks": "19380969508146196",
+      "normalized_FI_M5_ticks": "19380969508146196",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 214,
+      "integer_center": 3,
+      "old_M5_ticks": "17223463698618282",
+      "normalized_exact_M5_ticks": "17223463698618282",
+      "normalized_FI_M5_ticks": "17223463698618282",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 215,
+      "integer_center": 3,
+      "old_M5_ticks": "14981090072442555",
+      "normalized_exact_M5_ticks": "14981090072442555",
+      "normalized_FI_M5_ticks": "14981090072442555",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 216,
+      "integer_center": 3,
+      "old_M5_ticks": "12678133993704088",
+      "normalized_exact_M5_ticks": "12678133993704088",
+      "normalized_FI_M5_ticks": "12678133993704088",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 217,
+      "integer_center": 3,
+      "old_M5_ticks": "10426000315106116",
+      "normalized_exact_M5_ticks": "10426000315106116",
+      "normalized_FI_M5_ticks": "10426000315106116",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 218,
+      "integer_center": 3,
+      "old_M5_ticks": "8159346406256660",
+      "normalized_exact_M5_ticks": "8159346406256660",
+      "normalized_FI_M5_ticks": "8159346406256660",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 219,
+      "integer_center": 3,
+      "old_M5_ticks": "5899135643001325",
+      "normalized_exact_M5_ticks": "5899135643001325",
+      "normalized_FI_M5_ticks": "5899135643001325",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 220,
+      "integer_center": 3,
+      "old_M5_ticks": "4237600526341631",
+      "normalized_exact_M5_ticks": "4237600526341631",
+      "normalized_FI_M5_ticks": "4237600526341631",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 221,
+      "integer_center": 3,
+      "old_M5_ticks": "6929681429686461",
+      "normalized_exact_M5_ticks": "6929681429686461",
+      "normalized_FI_M5_ticks": "6929681429686461",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 222,
+      "integer_center": 3,
+      "old_M5_ticks": "9559515282307159",
+      "normalized_exact_M5_ticks": "9559515282307159",
+      "normalized_FI_M5_ticks": "9559515282307159",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 223,
+      "integer_center": 3,
+      "old_M5_ticks": "12107720487260092",
+      "normalized_exact_M5_ticks": "12107720487260092",
+      "normalized_FI_M5_ticks": "12107720487260092",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 224,
+      "integer_center": 4,
+      "old_M5_ticks": "12412660321314572",
+      "normalized_exact_M5_ticks": "12412660321314572",
+      "normalized_FI_M5_ticks": "12412660321314572",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 225,
+      "integer_center": 4,
+      "old_M5_ticks": "14278634568736136",
+      "normalized_exact_M5_ticks": "14278634568736136",
+      "normalized_FI_M5_ticks": "14278634568736136",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 226,
+      "integer_center": 4,
+      "old_M5_ticks": "16009821394412408",
+      "normalized_exact_M5_ticks": "16009821394412408",
+      "normalized_FI_M5_ticks": "16009821394412408",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 227,
+      "integer_center": 4,
+      "old_M5_ticks": "17590536450241205",
+      "normalized_exact_M5_ticks": "17590536450241205",
+      "normalized_FI_M5_ticks": "17590536450241205",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 228,
+      "integer_center": 4,
+      "old_M5_ticks": "19006901805786357",
+      "normalized_exact_M5_ticks": "19006901805786357",
+      "normalized_FI_M5_ticks": "19006901805786357",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 229,
+      "integer_center": 4,
+      "old_M5_ticks": "20246931001436492",
+      "normalized_exact_M5_ticks": "20246931001436492",
+      "normalized_FI_M5_ticks": "20246931001436492",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 230,
+      "integer_center": 4,
+      "old_M5_ticks": "21300596540098860",
+      "normalized_exact_M5_ticks": "21300596540098860",
+      "normalized_FI_M5_ticks": "21300596540098860",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 231,
+      "integer_center": 4,
+      "old_M5_ticks": "22159879397691565",
+      "normalized_exact_M5_ticks": "22159879397691565",
+      "normalized_FI_M5_ticks": "22159879397691565",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 232,
+      "integer_center": 4,
+      "old_M5_ticks": "22818800307037801",
+      "normalized_exact_M5_ticks": "22818800307037801",
+      "normalized_FI_M5_ticks": "22818800307037801",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 233,
+      "integer_center": 4,
+      "old_M5_ticks": "23273432743165165",
+      "normalized_exact_M5_ticks": "23273432743165165",
+      "normalized_FI_M5_ticks": "23273432743165165",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 234,
+      "integer_center": 4,
+      "old_M5_ticks": "23521897709004478",
+      "normalized_exact_M5_ticks": "23521897709004478",
+      "normalized_FI_M5_ticks": "23521897709004478",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 247,
+      "integer_center": 4,
+      "old_M5_ticks": "10698998899983980",
+      "normalized_exact_M5_ticks": "10698998899983980",
+      "normalized_FI_M5_ticks": "10698998899983980",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 248,
+      "integer_center": 4,
+      "old_M5_ticks": "8859500734304609",
+      "normalized_exact_M5_ticks": "8859500734304609",
+      "normalized_FI_M5_ticks": "8859500734304609",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 249,
+      "integer_center": 4,
+      "old_M5_ticks": "6973261990443411",
+      "normalized_exact_M5_ticks": "6973261990443411",
+      "normalized_FI_M5_ticks": "6973261990443411",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 250,
+      "integer_center": 4,
+      "old_M5_ticks": "5058329021857995",
+      "normalized_exact_M5_ticks": "5058329021857995",
+      "normalized_FI_M5_ticks": "5058329021857995",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 251,
+      "integer_center": 4,
+      "old_M5_ticks": "3132735646434159",
+      "normalized_exact_M5_ticks": "3132735646434159",
+      "normalized_FI_M5_ticks": "3132735646434159",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 252,
+      "integer_center": 4,
+      "old_M5_ticks": "1214334588530020",
+      "normalized_exact_M5_ticks": "1214334588530020",
+      "normalized_FI_M5_ticks": "1214334588530020",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 253,
+      "integer_center": 4,
+      "old_M5_ticks": "2552603730351059",
+      "normalized_exact_M5_ticks": "2552603730351059",
+      "normalized_FI_M5_ticks": "2552603730351059",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 254,
+      "integer_center": 4,
+      "old_M5_ticks": "4330806395598149",
+      "normalized_exact_M5_ticks": "4330806395598149",
+      "normalized_FI_M5_ticks": "4330806395598149",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 255,
+      "integer_center": 4,
+      "old_M5_ticks": "6046111991800644",
+      "normalized_exact_M5_ticks": "6046111991800644",
+      "normalized_FI_M5_ticks": "6046111991800644",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 256,
+      "integer_center": 4,
+      "old_M5_ticks": "7724701354603806",
+      "normalized_exact_M5_ticks": "7724701354603806",
+      "normalized_FI_M5_ticks": "7724701354603806",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 257,
+      "integer_center": 4,
+      "old_M5_ticks": "9315076630526331",
+      "normalized_exact_M5_ticks": "9315076630526331",
+      "normalized_FI_M5_ticks": "9315076630526331",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 258,
+      "integer_center": 4,
+      "old_M5_ticks": "10803699208600721",
+      "normalized_exact_M5_ticks": "10803699208600721",
+      "normalized_FI_M5_ticks": "10803699208600721",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 259,
+      "integer_center": 4,
+      "old_M5_ticks": "12178219096519382",
+      "normalized_exact_M5_ticks": "12178219096519382",
+      "normalized_FI_M5_ticks": "12178219096519382",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 260,
+      "integer_center": 4,
+      "old_M5_ticks": "13427572305640305",
+      "normalized_exact_M5_ticks": "13427572305640305",
+      "normalized_FI_M5_ticks": "13427572305640305",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 261,
+      "integer_center": 4,
+      "old_M5_ticks": "14542065169916539",
+      "normalized_exact_M5_ticks": "14542065169916539",
+      "normalized_FI_M5_ticks": "14542065169916539",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 262,
+      "integer_center": 4,
+      "old_M5_ticks": "15513445015766313",
+      "normalized_exact_M5_ticks": "15513445015766313",
+      "normalized_FI_M5_ticks": "15513445015766313",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 263,
+      "integer_center": 4,
+      "old_M5_ticks": "16334956733168733",
+      "normalized_exact_M5_ticks": "16334956733168733",
+      "normalized_FI_M5_ticks": "16334956733168733",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 264,
+      "integer_center": 4,
+      "old_M5_ticks": "17001384933876414",
+      "normalized_exact_M5_ticks": "17001384933876414",
+      "normalized_FI_M5_ticks": "17001384933876414",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 265,
+      "integer_center": 4,
+      "old_M5_ticks": "17509081519335133",
+      "normalized_exact_M5_ticks": "17509081519335133",
+      "normalized_FI_M5_ticks": "17509081519335133",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 266,
+      "integer_center": 4,
+      "old_M5_ticks": "17855978617451200",
+      "normalized_exact_M5_ticks": "17855978617451200",
+      "normalized_FI_M5_ticks": "17855978617451200",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 267,
+      "integer_center": 4,
+      "old_M5_ticks": "18041586982525950",
+      "normalized_exact_M5_ticks": "18041586982525950",
+      "normalized_FI_M5_ticks": "18041586982525950",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 268,
+      "integer_center": 4,
+      "old_M5_ticks": "18066980085287506",
+      "normalized_exact_M5_ticks": "18066980085287506",
+      "normalized_FI_M5_ticks": "18066980085287506",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 269,
+      "integer_center": 4,
+      "old_M5_ticks": "17934764248834452",
+      "normalized_exact_M5_ticks": "17934764248834452",
+      "normalized_FI_M5_ticks": "17934764248834452",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 270,
+      "integer_center": 4,
+      "old_M5_ticks": "17649035310354177",
+      "normalized_exact_M5_ticks": "17649035310354177",
+      "normalized_FI_M5_ticks": "17649035310354177",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 271,
+      "integer_center": 4,
+      "old_M5_ticks": "17215322406637419",
+      "normalized_exact_M5_ticks": "17215322406637419",
+      "normalized_FI_M5_ticks": "17215322406637419",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 272,
+      "integer_center": 4,
+      "old_M5_ticks": "16640519592693535",
+      "normalized_exact_M5_ticks": "16640519592693535",
+      "normalized_FI_M5_ticks": "16640519592693535",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 273,
+      "integer_center": 4,
+      "old_M5_ticks": "15932806106265871",
+      "normalized_exact_M5_ticks": "15932806106265871",
+      "normalized_FI_M5_ticks": "15932806106265871",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 274,
+      "integer_center": 4,
+      "old_M5_ticks": "15101556185922939",
+      "normalized_exact_M5_ticks": "15101556185922939",
+      "normalized_FI_M5_ticks": "15101556185922939",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 275,
+      "integer_center": 4,
+      "old_M5_ticks": "14157239435917107",
+      "normalized_exact_M5_ticks": "14157239435917107",
+      "normalized_FI_M5_ticks": "14157239435917107",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 276,
+      "integer_center": 4,
+      "old_M5_ticks": "13111312806507632",
+      "normalized_exact_M5_ticks": "13111312806507632",
+      "normalized_FI_M5_ticks": "13111312806507632",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 277,
+      "integer_center": 4,
+      "old_M5_ticks": "11976105323396635",
+      "normalized_exact_M5_ticks": "11976105323396635",
+      "normalized_FI_M5_ticks": "11976105323396635",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 278,
+      "integer_center": 4,
+      "old_M5_ticks": "10764696753867405",
+      "normalized_exact_M5_ticks": "10764696753867405",
+      "normalized_FI_M5_ticks": "10764696753867405",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 279,
+      "integer_center": 4,
+      "old_M5_ticks": "9490791439814632",
+      "normalized_exact_M5_ticks": "9490791439814632",
+      "normalized_FI_M5_ticks": "9490791439814632",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 280,
+      "integer_center": 4,
+      "old_M5_ticks": "8168588558874694",
+      "normalized_exact_M5_ticks": "8168588558874694",
+      "normalized_FI_M5_ticks": "8168588558874694",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 281,
+      "integer_center": 4,
+      "old_M5_ticks": "6812650094179103",
+      "normalized_exact_M5_ticks": "6812650094179103",
+      "normalized_FI_M5_ticks": "6812650094179103",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 282,
+      "integer_center": 4,
+      "old_M5_ticks": "5460299067179807",
+      "normalized_exact_M5_ticks": "5460299067179807",
+      "normalized_FI_M5_ticks": "5460299067179807",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 283,
+      "integer_center": 4,
+      "old_M5_ticks": "4129804793966628",
+      "normalized_exact_M5_ticks": "4129804793966628",
+      "normalized_FI_M5_ticks": "4129804793966628",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 284,
+      "integer_center": 4,
+      "old_M5_ticks": "2806396757535564",
+      "normalized_exact_M5_ticks": "2806396757535564",
+      "normalized_FI_M5_ticks": "2806396757535564",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 285,
+      "integer_center": 4,
+      "old_M5_ticks": "3679633775795660",
+      "normalized_exact_M5_ticks": "3679633775795660",
+      "normalized_FI_M5_ticks": "3679633775795660",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 286,
+      "integer_center": 4,
+      "old_M5_ticks": "5311619855548060",
+      "normalized_exact_M5_ticks": "5311619855548060",
+      "normalized_FI_M5_ticks": "5311619855548060",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 287,
+      "integer_center": 4,
+      "old_M5_ticks": "6908061645036379",
+      "normalized_exact_M5_ticks": "6908061645036379",
+      "normalized_FI_M5_ticks": "6908061645036379",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 288,
+      "integer_center": 5,
+      "old_M5_ticks": "7166739153248863",
+      "normalized_exact_M5_ticks": "7166739153248863",
+      "normalized_FI_M5_ticks": "7166739153248863",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 289,
+      "integer_center": 5,
+      "old_M5_ticks": "8319667451056262",
+      "normalized_exact_M5_ticks": "8319667451056262",
+      "normalized_FI_M5_ticks": "8319667451056262",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 290,
+      "integer_center": 5,
+      "old_M5_ticks": "9403530609088903",
+      "normalized_exact_M5_ticks": "9403530609088903",
+      "normalized_FI_M5_ticks": "9403530609088903",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 291,
+      "integer_center": 5,
+      "old_M5_ticks": "10407409804077697",
+      "normalized_exact_M5_ticks": "10407409804077697",
+      "normalized_FI_M5_ticks": "10407409804077697",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 292,
+      "integer_center": 5,
+      "old_M5_ticks": "11323824130130430",
+      "normalized_exact_M5_ticks": "11323824130130430",
+      "normalized_FI_M5_ticks": "11323824130130430",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 293,
+      "integer_center": 5,
+      "old_M5_ticks": "12153711734798991",
+      "normalized_exact_M5_ticks": "12153711734798991",
+      "normalized_FI_M5_ticks": "12153711734798991",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 294,
+      "integer_center": 5,
+      "old_M5_ticks": "12874150922874219",
+      "normalized_exact_M5_ticks": "12874150922874219",
+      "normalized_FI_M5_ticks": "12874150922874219",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 295,
+      "integer_center": 5,
+      "old_M5_ticks": "13478947254622259",
+      "normalized_exact_M5_ticks": "13478947254622259",
+      "normalized_FI_M5_ticks": "13478947254622259",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 296,
+      "integer_center": 5,
+      "old_M5_ticks": "13963136952549165",
+      "normalized_exact_M5_ticks": "13963136952549165",
+      "normalized_FI_M5_ticks": "13963136952549165",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 297,
+      "integer_center": 5,
+      "old_M5_ticks": "14323012643638862",
+      "normalized_exact_M5_ticks": "14323012643638862",
+      "normalized_FI_M5_ticks": "14323012643638862",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 298,
+      "integer_center": 5,
+      "old_M5_ticks": "14556137486375710",
+      "normalized_exact_M5_ticks": "14556137486375710",
+      "normalized_FI_M5_ticks": "14556137486375710",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 299,
+      "integer_center": 5,
+      "old_M5_ticks": "14661347656869872",
+      "normalized_exact_M5_ticks": "14661347656869872",
+      "normalized_FI_M5_ticks": "14661347656869872",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 300,
+      "integer_center": 5,
+      "old_M5_ticks": "14638743279440927",
+      "normalized_exact_M5_ticks": "14638743279440927",
+      "normalized_FI_M5_ticks": "14638743279440927",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 301,
+      "integer_center": 5,
+      "old_M5_ticks": "14489667995665822",
+      "normalized_exact_M5_ticks": "14489667995665822",
+      "normalized_FI_M5_ticks": "14489667995665822",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 302,
+      "integer_center": 5,
+      "old_M5_ticks": "14216677471218481",
+      "normalized_exact_M5_ticks": "14216677471218481",
+      "normalized_FI_M5_ticks": "14216677471218481",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 303,
+      "integer_center": 5,
+      "old_M5_ticks": "13823497240915758",
+      "normalized_exact_M5_ticks": "13823497240915758",
+      "normalized_FI_M5_ticks": "13823497240915758",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 310,
+      "integer_center": 5,
+      "old_M5_ticks": "8309652277411560",
+      "normalized_exact_M5_ticks": "8309652277411560",
+      "normalized_FI_M5_ticks": "8309652277411560",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 311,
+      "integer_center": 5,
+      "old_M5_ticks": "7217590132661835",
+      "normalized_exact_M5_ticks": "7217590132661835",
+      "normalized_FI_M5_ticks": "7217590132661835",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 312,
+      "integer_center": 5,
+      "old_M5_ticks": "6076276387468848",
+      "normalized_exact_M5_ticks": "6076276387468848",
+      "normalized_FI_M5_ticks": "6076276387468848",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 313,
+      "integer_center": 5,
+      "old_M5_ticks": "4896907372532730",
+      "normalized_exact_M5_ticks": "4896907372532730",
+      "normalized_FI_M5_ticks": "4896907372532730",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 314,
+      "integer_center": 5,
+      "old_M5_ticks": "3690900815849184",
+      "normalized_exact_M5_ticks": "3690900815849184",
+      "normalized_FI_M5_ticks": "3690900815849184",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 315,
+      "integer_center": 5,
+      "old_M5_ticks": "2469784589269742",
+      "normalized_exact_M5_ticks": "2469784589269742",
+      "normalized_FI_M5_ticks": "2469784589269742",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 316,
+      "integer_center": 5,
+      "old_M5_ticks": "1245085849538963",
+      "normalized_exact_M5_ticks": "1245085849538963",
+      "normalized_FI_M5_ticks": "1245085849538963",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 317,
+      "integer_center": 5,
+      "old_M5_ticks": "1184044053903228",
+      "normalized_exact_M5_ticks": "1184044053903228",
+      "normalized_FI_M5_ticks": "1184044053903228",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 318,
+      "integer_center": 5,
+      "old_M5_ticks": "2341388593544905",
+      "normalized_exact_M5_ticks": "2341388593544905",
+      "normalized_FI_M5_ticks": "2341388593544905",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 319,
+      "integer_center": 5,
+      "old_M5_ticks": "3465524075383226",
+      "normalized_exact_M5_ticks": "3465524075383226",
+      "normalized_FI_M5_ticks": "3465524075383226",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 320,
+      "integer_center": 5,
+      "old_M5_ticks": "4569521139371068",
+      "normalized_exact_M5_ticks": "4569521139371068",
+      "normalized_FI_M5_ticks": "4569521139371068",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 321,
+      "integer_center": 5,
+      "old_M5_ticks": "5623205237419549",
+      "normalized_exact_M5_ticks": "5623205237419549",
+      "normalized_FI_M5_ticks": "5623205237419549",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 322,
+      "integer_center": 5,
+      "old_M5_ticks": "6617252096909094",
+      "normalized_exact_M5_ticks": "6617252096909094",
+      "normalized_FI_M5_ticks": "6617252096909094",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 323,
+      "integer_center": 5,
+      "old_M5_ticks": "7543037880889977",
+      "normalized_exact_M5_ticks": "7543037880889977",
+      "normalized_FI_M5_ticks": "7543037880889977",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 324,
+      "integer_center": 5,
+      "old_M5_ticks": "8392712355718396",
+      "normalized_exact_M5_ticks": "8392712355718396",
+      "normalized_FI_M5_ticks": "8392712355718396",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 325,
+      "integer_center": 5,
+      "old_M5_ticks": "9159264093099073",
+      "normalized_exact_M5_ticks": "9159264093099073",
+      "normalized_FI_M5_ticks": "9159264093099073",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 326,
+      "integer_center": 5,
+      "old_M5_ticks": "9836577192730301",
+      "normalized_exact_M5_ticks": "9836577192730301",
+      "normalized_FI_M5_ticks": "9836577192730301",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 327,
+      "integer_center": 5,
+      "old_M5_ticks": "10419479097271599",
+      "normalized_exact_M5_ticks": "10419479097271599",
+      "normalized_FI_M5_ticks": "10419479097271599",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 328,
+      "integer_center": 5,
+      "old_M5_ticks": "10903779159928584",
+      "normalized_exact_M5_ticks": "10903779159928584",
+      "normalized_FI_M5_ticks": "10903779159928584",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 329,
+      "integer_center": 5,
+      "old_M5_ticks": "11286297715729335",
+      "normalized_exact_M5_ticks": "11286297715729335",
+      "normalized_FI_M5_ticks": "11286297715729335",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 330,
+      "integer_center": 5,
+      "old_M5_ticks": "11564885499695495",
+      "normalized_exact_M5_ticks": "11564885499695495",
+      "normalized_FI_M5_ticks": "11564885499695495",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 331,
+      "integer_center": 5,
+      "old_M5_ticks": "11738433347730101",
+      "normalized_exact_M5_ticks": "11738433347730101",
+      "normalized_FI_M5_ticks": "11738433347730101",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 332,
+      "integer_center": 5,
+      "old_M5_ticks": "11806872208298447",
+      "normalized_exact_M5_ticks": "11806872208298447",
+      "normalized_FI_M5_ticks": "11806872208298447",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 333,
+      "integer_center": 5,
+      "old_M5_ticks": "11771163584025978",
+      "normalized_exact_M5_ticks": "11771163584025978",
+      "normalized_FI_M5_ticks": "11771163584025978",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 334,
+      "integer_center": 5,
+      "old_M5_ticks": "11633280611356916",
+      "normalized_exact_M5_ticks": "11633280611356916",
+      "normalized_FI_M5_ticks": "11633280611356916",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 335,
+      "integer_center": 5,
+      "old_M5_ticks": "11396180072614855",
+      "normalized_exact_M5_ticks": "11396180072614855",
+      "normalized_FI_M5_ticks": "11396180072614855",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 336,
+      "integer_center": 5,
+      "old_M5_ticks": "11063765717422873",
+      "normalized_exact_M5_ticks": "11063765717422873",
+      "normalized_FI_M5_ticks": "11063765717422873",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 337,
+      "integer_center": 5,
+      "old_M5_ticks": "10640843348757761",
+      "normalized_exact_M5_ticks": "10640843348757761",
+      "normalized_FI_M5_ticks": "10640843348757761",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 338,
+      "integer_center": 5,
+      "old_M5_ticks": "10133068202260840",
+      "normalized_exact_M5_ticks": "10133068202260840",
+      "normalized_FI_M5_ticks": "10133068202260840",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 339,
+      "integer_center": 5,
+      "old_M5_ticks": "9546885215189442",
+      "normalized_exact_M5_ticks": "9546885215189442",
+      "normalized_FI_M5_ticks": "9546885215189442",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 340,
+      "integer_center": 5,
+      "old_M5_ticks": "8889462843010626",
+      "normalized_exact_M5_ticks": "8889462843010626",
+      "normalized_FI_M5_ticks": "8889462843010626",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 341,
+      "integer_center": 5,
+      "old_M5_ticks": "8168621136616858",
+      "normalized_exact_M5_ticks": "8168621136616858",
+      "normalized_FI_M5_ticks": "8168621136616858",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 342,
+      "integer_center": 5,
+      "old_M5_ticks": "7392754841054698",
+      "normalized_exact_M5_ticks": "7392754841054698",
+      "normalized_FI_M5_ticks": "7392754841054698",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 343,
+      "integer_center": 5,
+      "old_M5_ticks": "6570752317144772",
+      "normalized_exact_M5_ticks": "6570752317144772",
+      "normalized_FI_M5_ticks": "6570752317144772",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 344,
+      "integer_center": 5,
+      "old_M5_ticks": "5711911120150635",
+      "normalized_exact_M5_ticks": "5711911120150635",
+      "normalized_FI_M5_ticks": "5711911120150635",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 345,
+      "integer_center": 5,
+      "old_M5_ticks": "4825851094516932",
+      "normalized_exact_M5_ticks": "4825851094516932",
+      "normalized_FI_M5_ticks": "4825851094516932",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 346,
+      "integer_center": 5,
+      "old_M5_ticks": "3922425860511372",
+      "normalized_exact_M5_ticks": "3922425860511372",
+      "normalized_FI_M5_ticks": "3922425860511372",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 347,
+      "integer_center": 5,
+      "old_M5_ticks": "3027843952246509",
+      "normalized_exact_M5_ticks": "3027843952246509",
+      "normalized_FI_M5_ticks": "3027843952246509",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 348,
+      "integer_center": 5,
+      "old_M5_ticks": "2150493254208563",
+      "normalized_exact_M5_ticks": "2150493254208563",
+      "normalized_FI_M5_ticks": "2150493254208563",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 349,
+      "integer_center": 5,
+      "old_M5_ticks": "2186849643170823",
+      "normalized_exact_M5_ticks": "2186849643170823",
+      "normalized_FI_M5_ticks": "2186849643170823",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 350,
+      "integer_center": 5,
+      "old_M5_ticks": "3292205916607792",
+      "normalized_exact_M5_ticks": "3292205916607792",
+      "normalized_FI_M5_ticks": "3292205916607792",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 351,
+      "integer_center": 5,
+      "old_M5_ticks": "4378972025177333",
+      "normalized_exact_M5_ticks": "4378972025177333",
+      "normalized_FI_M5_ticks": "4378972025177333",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 352,
+      "integer_center": 6,
+      "old_M5_ticks": "4623102312734449",
+      "normalized_exact_M5_ticks": "4623102312734449",
+      "normalized_FI_M5_ticks": "4623102312734449",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 353,
+      "integer_center": 6,
+      "old_M5_ticks": "5409964712964862",
+      "normalized_exact_M5_ticks": "5409964712964862",
+      "normalized_FI_M5_ticks": "5409964712964862",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 354,
+      "integer_center": 6,
+      "old_M5_ticks": "6154012563887096",
+      "normalized_exact_M5_ticks": "6154012563887096",
+      "normalized_FI_M5_ticks": "6154012563887096",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 355,
+      "integer_center": 6,
+      "old_M5_ticks": "6847494225488333",
+      "normalized_exact_M5_ticks": "6847494225488333",
+      "normalized_FI_M5_ticks": "6847494225488333",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 356,
+      "integer_center": 6,
+      "old_M5_ticks": "7483300868862794",
+      "normalized_exact_M5_ticks": "7483300868862794",
+      "normalized_FI_M5_ticks": "7483300868862794",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 357,
+      "integer_center": 6,
+      "old_M5_ticks": "8055021669979383",
+      "normalized_exact_M5_ticks": "8055021669979383",
+      "normalized_FI_M5_ticks": "8055021669979383",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 358,
+      "integer_center": 6,
+      "old_M5_ticks": "8556992257362163",
+      "normalized_exact_M5_ticks": "8556992257362163",
+      "normalized_FI_M5_ticks": "8556992257362163",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 359,
+      "integer_center": 6,
+      "old_M5_ticks": "8985544829925838",
+      "normalized_exact_M5_ticks": "8985544829925838",
+      "normalized_FI_M5_ticks": "8985544829925838",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 360,
+      "integer_center": 6,
+      "old_M5_ticks": "9341508091502129",
+      "normalized_exact_M5_ticks": "9341508091502129",
+      "normalized_FI_M5_ticks": "9341508091502129",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 361,
+      "integer_center": 6,
+      "old_M5_ticks": "9613844716128348",
+      "normalized_exact_M5_ticks": "9613844716128348",
+      "normalized_FI_M5_ticks": "9613844716128348",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 362,
+      "integer_center": 6,
+      "old_M5_ticks": "9800407719978185",
+      "normalized_exact_M5_ticks": "9800407719978185",
+      "normalized_FI_M5_ticks": "9800407719978185",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 363,
+      "integer_center": 6,
+      "old_M5_ticks": "9899921048633351",
+      "normalized_exact_M5_ticks": "9899921048633351",
+      "normalized_FI_M5_ticks": "9899921048633351",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 364,
+      "integer_center": 6,
+      "old_M5_ticks": "9911980176986742",
+      "normalized_exact_M5_ticks": "9911980176986742",
+      "normalized_FI_M5_ticks": "9911980176986742",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 365,
+      "integer_center": 6,
+      "old_M5_ticks": "9837044678895361",
+      "normalized_exact_M5_ticks": "9837044678895361",
+      "normalized_FI_M5_ticks": "9837044678895361",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 366,
+      "integer_center": 6,
+      "old_M5_ticks": "9676422897660243",
+      "normalized_exact_M5_ticks": "9676422897660243",
+      "normalized_FI_M5_ticks": "9676422897660243",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 377,
+      "integer_center": 6,
+      "old_M5_ticks": "3428849179629538",
+      "normalized_exact_M5_ticks": "3428849179629538",
+      "normalized_FI_M5_ticks": "3428849179629538",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 378,
+      "integer_center": 6,
+      "old_M5_ticks": "2599442445955053",
+      "normalized_exact_M5_ticks": "2599442445955053",
+      "normalized_FI_M5_ticks": "2599442445955053",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 379,
+      "integer_center": 6,
+      "old_M5_ticks": "1756662589433948",
+      "normalized_exact_M5_ticks": "1756662589433948",
+      "normalized_FI_M5_ticks": "1756662589433948",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 380,
+      "integer_center": 6,
+      "old_M5_ticks": "908566270049940",
+      "normalized_exact_M5_ticks": "908566270049940",
+      "normalized_FI_M5_ticks": "908566270049940",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 381,
+      "integer_center": 6,
+      "old_M5_ticks": "782036284673048",
+      "normalized_exact_M5_ticks": "782036284673048",
+      "normalized_FI_M5_ticks": "782036284673048",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 382,
+      "integer_center": 6,
+      "old_M5_ticks": "1590881954633253",
+      "normalized_exact_M5_ticks": "1590881954633253",
+      "normalized_FI_M5_ticks": "1590881954633253",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 383,
+      "integer_center": 6,
+      "old_M5_ticks": "2378995150628684",
+      "normalized_exact_M5_ticks": "2378995150628684",
+      "normalized_FI_M5_ticks": "2378995150628684",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 384,
+      "integer_center": 6,
+      "old_M5_ticks": "3154218326819056",
+      "normalized_exact_M5_ticks": "3154218326819056",
+      "normalized_FI_M5_ticks": "3154218326819056",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 385,
+      "integer_center": 6,
+      "old_M5_ticks": "3896447245475669",
+      "normalized_exact_M5_ticks": "3896447245475669",
+      "normalized_FI_M5_ticks": "3896447245475669",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 386,
+      "integer_center": 6,
+      "old_M5_ticks": "4598928573382452",
+      "normalized_exact_M5_ticks": "4598928573382452",
+      "normalized_FI_M5_ticks": "4598928573382452",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 387,
+      "integer_center": 6,
+      "old_M5_ticks": "5255371673298964",
+      "normalized_exact_M5_ticks": "5255371673298964",
+      "normalized_FI_M5_ticks": "5255371673298964",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 388,
+      "integer_center": 6,
+      "old_M5_ticks": "5860004151526001",
+      "normalized_exact_M5_ticks": "5860004151526001",
+      "normalized_FI_M5_ticks": "5860004151526001",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 389,
+      "integer_center": 6,
+      "old_M5_ticks": "6407622073264985",
+      "normalized_exact_M5_ticks": "6407622073264985",
+      "normalized_FI_M5_ticks": "6407622073264985",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 390,
+      "integer_center": 6,
+      "old_M5_ticks": "6893634424968948",
+      "normalized_exact_M5_ticks": "6893634424968948",
+      "normalized_FI_M5_ticks": "6893634424968948",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 391,
+      "integer_center": 6,
+      "old_M5_ticks": "7314101461649355",
+      "normalized_exact_M5_ticks": "7314101461649355",
+      "normalized_FI_M5_ticks": "7314101461649355",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 392,
+      "integer_center": 6,
+      "old_M5_ticks": "7665766638743272",
+      "normalized_exact_M5_ticks": "7665766638743272",
+      "normalized_FI_M5_ticks": "7665766638743272",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 393,
+      "integer_center": 6,
+      "old_M5_ticks": "7946081892061433",
+      "normalized_exact_M5_ticks": "7946081892061433",
+      "normalized_FI_M5_ticks": "7946081892061433",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 394,
+      "integer_center": 6,
+      "old_M5_ticks": "8153226094916115",
+      "normalized_exact_M5_ticks": "8153226094916115",
+      "normalized_FI_M5_ticks": "8153226094916115",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 395,
+      "integer_center": 6,
+      "old_M5_ticks": "8286116588144889",
+      "normalized_exact_M5_ticks": "8286116588144889",
+      "normalized_FI_M5_ticks": "8286116588144889",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 396,
+      "integer_center": 6,
+      "old_M5_ticks": "8344413745774993",
+      "normalized_exact_M5_ticks": "8344413745774993",
+      "normalized_FI_M5_ticks": "8344413745774993",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 397,
+      "integer_center": 6,
+      "old_M5_ticks": "8328518605888098",
+      "normalized_exact_M5_ticks": "8328518605888098",
+      "normalized_FI_M5_ticks": "8328518605888098",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 398,
+      "integer_center": 6,
+      "old_M5_ticks": "8239563662229076",
+      "normalized_exact_M5_ticks": "8239563662229076",
+      "normalized_FI_M5_ticks": "8239563662229076",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 399,
+      "integer_center": 6,
+      "old_M5_ticks": "8079396976651493",
+      "normalized_exact_M5_ticks": "8079396976651493",
+      "normalized_FI_M5_ticks": "8079396976651493",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 400,
+      "integer_center": 6,
+      "old_M5_ticks": "7850559835022148",
+      "normalized_exact_M5_ticks": "7850559835022148",
+      "normalized_FI_M5_ticks": "7850559835022148",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 401,
+      "integer_center": 6,
+      "old_M5_ticks": "7556258229157112",
+      "normalized_exact_M5_ticks": "7556258229157112",
+      "normalized_FI_M5_ticks": "7556258229157112",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 402,
+      "integer_center": 6,
+      "old_M5_ticks": "7200328504201800",
+      "normalized_exact_M5_ticks": "7200328504201800",
+      "normalized_FI_M5_ticks": "7200328504201800",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 403,
+      "integer_center": 6,
+      "old_M5_ticks": "6787197564101440",
+      "normalized_exact_M5_ticks": "6787197564101440",
+      "normalized_FI_M5_ticks": "6787197564101440",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 404,
+      "integer_center": 6,
+      "old_M5_ticks": "6321838076978386",
+      "normalized_exact_M5_ticks": "6321838076978386",
+      "normalized_FI_M5_ticks": "6321838076978386",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 405,
+      "integer_center": 6,
+      "old_M5_ticks": "5809719166924196",
+      "normalized_exact_M5_ticks": "5809719166924196",
+      "normalized_FI_M5_ticks": "5809719166924196",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 406,
+      "integer_center": 6,
+      "old_M5_ticks": "5256753118558852",
+      "normalized_exact_M5_ticks": "5256753118558852",
+      "normalized_FI_M5_ticks": "5256753118558852",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 407,
+      "integer_center": 6,
+      "old_M5_ticks": "4669238655387726",
+      "normalized_exact_M5_ticks": "4669238655387726",
+      "normalized_FI_M5_ticks": "4669238655387726",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 408,
+      "integer_center": 6,
+      "old_M5_ticks": "4053801382231933",
+      "normalized_exact_M5_ticks": "4053801382231933",
+      "normalized_FI_M5_ticks": "4053801382231933",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 409,
+      "integer_center": 6,
+      "old_M5_ticks": "3417332005606692",
+      "normalized_exact_M5_ticks": "3417332005606692",
+      "normalized_FI_M5_ticks": "3417332005606692",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 410,
+      "integer_center": 6,
+      "old_M5_ticks": "2766922963718303",
+      "normalized_exact_M5_ticks": "2766922963718303",
+      "normalized_FI_M5_ticks": "2766922963718303",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 411,
+      "integer_center": 6,
+      "old_M5_ticks": "2119418075392845",
+      "normalized_exact_M5_ticks": "2119418075392845",
+      "normalized_FI_M5_ticks": "2119418075392845",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 412,
+      "integer_center": 6,
+      "old_M5_ticks": "1485199374905938",
+      "normalized_exact_M5_ticks": "1485199374905938",
+      "normalized_FI_M5_ticks": "1485199374905938",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 413,
+      "integer_center": 6,
+      "old_M5_ticks": "1636014085433349",
+      "normalized_exact_M5_ticks": "1636014085433349",
+      "normalized_FI_M5_ticks": "1636014085433349",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 414,
+      "integer_center": 6,
+      "old_M5_ticks": "2440385966303060",
+      "normalized_exact_M5_ticks": "2440385966303060",
+      "normalized_FI_M5_ticks": "2440385966303060",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 415,
+      "integer_center": 6,
+      "old_M5_ticks": "3232821297984387",
+      "normalized_exact_M5_ticks": "3232821297984387",
+      "normalized_FI_M5_ticks": "3232821297984387",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 416,
+      "integer_center": 7,
+      "old_M5_ticks": "3462698343161687",
+      "normalized_exact_M5_ticks": "3462698343161687",
+      "normalized_FI_M5_ticks": "3462698343161687",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 417,
+      "integer_center": 7,
+      "old_M5_ticks": "4036921945673713",
+      "normalized_exact_M5_ticks": "4036921945673713",
+      "normalized_FI_M5_ticks": "4036921945673713",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 418,
+      "integer_center": 7,
+      "old_M5_ticks": "4581032110157823",
+      "normalized_exact_M5_ticks": "4581032110157823",
+      "normalized_FI_M5_ticks": "4581032110157823",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 419,
+      "integer_center": 7,
+      "old_M5_ticks": "5089244550778453",
+      "normalized_exact_M5_ticks": "5089244550778453",
+      "normalized_FI_M5_ticks": "5089244550778453",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 420,
+      "integer_center": 7,
+      "old_M5_ticks": "5556224213762818",
+      "normalized_exact_M5_ticks": "5556224213762818",
+      "normalized_FI_M5_ticks": "5556224213762818",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 421,
+      "integer_center": 7,
+      "old_M5_ticks": "5977128463909689",
+      "normalized_exact_M5_ticks": "5977128463909689",
+      "normalized_FI_M5_ticks": "5977128463909689",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 422,
+      "integer_center": 7,
+      "old_M5_ticks": "6347645519731908",
+      "normalized_exact_M5_ticks": "6347645519731908",
+      "normalized_FI_M5_ticks": "6347645519731908",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 423,
+      "integer_center": 7,
+      "old_M5_ticks": "6664027789599385",
+      "normalized_exact_M5_ticks": "6664027789599385",
+      "normalized_FI_M5_ticks": "6664027789599385",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 424,
+      "integer_center": 7,
+      "old_M5_ticks": "6923119814631711",
+      "normalized_exact_M5_ticks": "6923119814631711",
+      "normalized_FI_M5_ticks": "6923119814631711",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 425,
+      "integer_center": 7,
+      "old_M5_ticks": "7123706773112680",
+      "normalized_exact_M5_ticks": "7123706773112680",
+      "normalized_FI_M5_ticks": "7123706773112680",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 426,
+      "integer_center": 7,
+      "old_M5_ticks": "7265382185644823",
+      "normalized_exact_M5_ticks": "7265382185644823",
+      "normalized_FI_M5_ticks": "7265382185644823",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 427,
+      "integer_center": 7,
+      "old_M5_ticks": "7342947186352683",
+      "normalized_exact_M5_ticks": "7342947186352683",
+      "normalized_FI_M5_ticks": "7342947186352683",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 428,
+      "integer_center": 7,
+      "old_M5_ticks": "7355918502810362",
+      "normalized_exact_M5_ticks": "7355918502810362",
+      "normalized_FI_M5_ticks": "7355918502810362",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 429,
+      "integer_center": 7,
+      "old_M5_ticks": "7304452857058098",
+      "normalized_exact_M5_ticks": "7304452857058098",
+      "normalized_FI_M5_ticks": "7304452857058098",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 430,
+      "integer_center": 7,
+      "old_M5_ticks": "7189338687612365",
+      "normalized_exact_M5_ticks": "7189338687612365",
+      "normalized_FI_M5_ticks": "7189338687612365",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 441,
+      "integer_center": 7,
+      "old_M5_ticks": "2548617294901819",
+      "normalized_exact_M5_ticks": "2548617294901819",
+      "normalized_FI_M5_ticks": "2548617294901819",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 442,
+      "integer_center": 7,
+      "old_M5_ticks": "1926972042962088",
+      "normalized_exact_M5_ticks": "1926972042962088",
+      "normalized_FI_M5_ticks": "1926972042962088",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 443,
+      "integer_center": 7,
+      "old_M5_ticks": "1294202140835527",
+      "normalized_exact_M5_ticks": "1294202140835527",
+      "normalized_FI_M5_ticks": "1294202140835527",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 444,
+      "integer_center": 7,
+      "old_M5_ticks": "656339936533397",
+      "normalized_exact_M5_ticks": "656339936533397",
+      "normalized_FI_M5_ticks": "656339936533397",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 445,
+      "integer_center": 7,
+      "old_M5_ticks": "618650566110556",
+      "normalized_exact_M5_ticks": "618650566110556",
+      "normalized_FI_M5_ticks": "618650566110556",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 446,
+      "integer_center": 7,
+      "old_M5_ticks": "1230163100986682",
+      "normalized_exact_M5_ticks": "1230163100986682",
+      "normalized_FI_M5_ticks": "1230163100986682",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 447,
+      "integer_center": 7,
+      "old_M5_ticks": "1827101908914616",
+      "normalized_exact_M5_ticks": "1827101908914616",
+      "normalized_FI_M5_ticks": "1827101908914616",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 448,
+      "integer_center": 7,
+      "old_M5_ticks": "2414837938498670",
+      "normalized_exact_M5_ticks": "2414837938498670",
+      "normalized_FI_M5_ticks": "2414837938498670",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 449,
+      "integer_center": 7,
+      "old_M5_ticks": "2978668606972306",
+      "normalized_exact_M5_ticks": "2978668606972306",
+      "normalized_FI_M5_ticks": "2978668606972306",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 450,
+      "integer_center": 7,
+      "old_M5_ticks": "3513420146934066",
+      "normalized_exact_M5_ticks": "3513420146934066",
+      "normalized_FI_M5_ticks": "3513420146934066",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 451,
+      "integer_center": 7,
+      "old_M5_ticks": "4014250937189154",
+      "normalized_exact_M5_ticks": "4014250937189154",
+      "normalized_FI_M5_ticks": "4014250937189154",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 452,
+      "integer_center": 7,
+      "old_M5_ticks": "4476695117617262",
+      "normalized_exact_M5_ticks": "4476695117617262",
+      "normalized_FI_M5_ticks": "4476695117617262",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 453,
+      "integer_center": 7,
+      "old_M5_ticks": "4896702370106314",
+      "normalized_exact_M5_ticks": "4896702370106314",
+      "normalized_FI_M5_ticks": "4896702370106314",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 454,
+      "integer_center": 7,
+      "old_M5_ticks": "5270673520934509",
+      "normalized_exact_M5_ticks": "5270673520934509",
+      "normalized_FI_M5_ticks": "5270673520934509",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 455,
+      "integer_center": 7,
+      "old_M5_ticks": "5595491662797211",
+      "normalized_exact_M5_ticks": "5595491662797211",
+      "normalized_FI_M5_ticks": "5595491662797211",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 456,
+      "integer_center": 7,
+      "old_M5_ticks": "5868548540019126",
+      "normalized_exact_M5_ticks": "5868548540019126",
+      "normalized_FI_M5_ticks": "5868548540019126",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 457,
+      "integer_center": 7,
+      "old_M5_ticks": "6087765987923084",
+      "normalized_exact_M5_ticks": "6087765987923084",
+      "normalized_FI_M5_ticks": "6087765987923084",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 458,
+      "integer_center": 7,
+      "old_M5_ticks": "6251612266385759",
+      "normalized_exact_M5_ticks": "6251612266385759",
+      "normalized_FI_M5_ticks": "6251612266385759",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 459,
+      "integer_center": 7,
+      "old_M5_ticks": "6359113177827218",
+      "normalized_exact_M5_ticks": "6359113177827218",
+      "normalized_FI_M5_ticks": "6359113177827218",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 460,
+      "integer_center": 7,
+      "old_M5_ticks": "6409857910777919",
+      "normalized_exact_M5_ticks": "6409857910777919",
+      "normalized_FI_M5_ticks": "6409857910777919",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 461,
+      "integer_center": 7,
+      "old_M5_ticks": "6403999601263512",
+      "normalized_exact_M5_ticks": "6403999601263512",
+      "normalized_FI_M5_ticks": "6403999601263512",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 462,
+      "integer_center": 7,
+      "old_M5_ticks": "6342250655066688",
+      "normalized_exact_M5_ticks": "6342250655066688",
+      "normalized_FI_M5_ticks": "6342250655066688",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 463,
+      "integer_center": 7,
+      "old_M5_ticks": "6225872923994945",
+      "normalized_exact_M5_ticks": "6225872923994945",
+      "normalized_FI_M5_ticks": "6225872923994945",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 464,
+      "integer_center": 7,
+      "old_M5_ticks": "6056662878143217",
+      "normalized_exact_M5_ticks": "6056662878143217",
+      "normalized_FI_M5_ticks": "6056662878143217",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 465,
+      "integer_center": 7,
+      "old_M5_ticks": "5836931963345650",
+      "normalized_exact_M5_ticks": "5836931963345650",
+      "normalized_FI_M5_ticks": "5836931963345650",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 466,
+      "integer_center": 7,
+      "old_M5_ticks": "5569482378135884",
+      "normalized_exact_M5_ticks": "5569482378135884",
+      "normalized_FI_M5_ticks": "5569482378135884",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 467,
+      "integer_center": 7,
+      "old_M5_ticks": "5257578547177573",
+      "normalized_exact_M5_ticks": "5257578547177573",
+      "normalized_FI_M5_ticks": "5257578547177573",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 468,
+      "integer_center": 7,
+      "old_M5_ticks": "4904914607911121",
+      "normalized_exact_M5_ticks": "4904914607911121",
+      "normalized_FI_M5_ticks": "4904914607911121",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 469,
+      "integer_center": 7,
+      "old_M5_ticks": "4515578263743848",
+      "normalized_exact_M5_ticks": "4515578263743848",
+      "normalized_FI_M5_ticks": "4515578263743848",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 470,
+      "integer_center": 7,
+      "old_M5_ticks": "4094011390177238",
+      "normalized_exact_M5_ticks": "4094011390177238",
+      "normalized_FI_M5_ticks": "4094011390177238",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 471,
+      "integer_center": 7,
+      "old_M5_ticks": "3644967809541425",
+      "normalized_exact_M5_ticks": "3644967809541425",
+      "normalized_FI_M5_ticks": "3644967809541425",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 472,
+      "integer_center": 7,
+      "old_M5_ticks": "3173468675256630",
+      "normalized_exact_M5_ticks": "3173468675256630",
+      "normalized_FI_M5_ticks": "3173468675256630",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 473,
+      "integer_center": 7,
+      "old_M5_ticks": "2684755927568017",
+      "normalized_exact_M5_ticks": "2684755927568017",
+      "normalized_FI_M5_ticks": "2684755927568017",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 474,
+      "integer_center": 7,
+      "old_M5_ticks": "2184244299350411",
+      "normalized_exact_M5_ticks": "2184244299350411",
+      "normalized_FI_M5_ticks": "2184244299350411",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 475,
+      "integer_center": 7,
+      "old_M5_ticks": "1682816275105750",
+      "normalized_exact_M5_ticks": "1682816275105750",
+      "normalized_FI_M5_ticks": "1682816275105750",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 476,
+      "integer_center": 7,
+      "old_M5_ticks": "1192709969943604",
+      "normalized_exact_M5_ticks": "1192709969943604",
+      "normalized_FI_M5_ticks": "1192709969943604",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 477,
+      "integer_center": 7,
+      "old_M5_ticks": "1196433623681558",
+      "normalized_exact_M5_ticks": "1196433623681558",
+      "normalized_FI_M5_ticks": "1196433623681558",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 478,
+      "integer_center": 7,
+      "old_M5_ticks": "1820247280425781",
+      "normalized_exact_M5_ticks": "1820247280425781",
+      "normalized_FI_M5_ticks": "1820247280425781",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 479,
+      "integer_center": 7,
+      "old_M5_ticks": "2436014297776675",
+      "normalized_exact_M5_ticks": "2436014297776675",
+      "normalized_FI_M5_ticks": "2436014297776675",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 480,
+      "integer_center": 8,
+      "old_M5_ticks": "2643954919905681",
+      "normalized_exact_M5_ticks": "2643954919905681",
+      "normalized_FI_M5_ticks": "2643954919905681",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 481,
+      "integer_center": 8,
+      "old_M5_ticks": "3092864255049170",
+      "normalized_exact_M5_ticks": "3092864255049170",
+      "normalized_FI_M5_ticks": "3092864255049170",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 482,
+      "integer_center": 8,
+      "old_M5_ticks": "3519415046869809",
+      "normalized_exact_M5_ticks": "3519415046869809",
+      "normalized_FI_M5_ticks": "3519415046869809",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 483,
+      "integer_center": 8,
+      "old_M5_ticks": "3919065271964912",
+      "normalized_exact_M5_ticks": "3919065271964912",
+      "normalized_FI_M5_ticks": "3919065271964912",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 484,
+      "integer_center": 8,
+      "old_M5_ticks": "4287606034302613",
+      "normalized_exact_M5_ticks": "4287606034302613",
+      "normalized_FI_M5_ticks": "4287606034302613",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 485,
+      "integer_center": 8,
+      "old_M5_ticks": "4621196431690644",
+      "normalized_exact_M5_ticks": "4621196431690644",
+      "normalized_FI_M5_ticks": "4621196431690644",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 486,
+      "integer_center": 8,
+      "old_M5_ticks": "4916394881565957",
+      "normalized_exact_M5_ticks": "4916394881565957",
+      "normalized_FI_M5_ticks": "4916394881565957",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 487,
+      "integer_center": 8,
+      "old_M5_ticks": "5170186616640568",
+      "normalized_exact_M5_ticks": "5170186616640568",
+      "normalized_FI_M5_ticks": "5170186616640568",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 488,
+      "integer_center": 8,
+      "old_M5_ticks": "5380007101055065",
+      "normalized_exact_M5_ticks": "5380007101055065",
+      "normalized_FI_M5_ticks": "5380007101055065",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 489,
+      "integer_center": 8,
+      "old_M5_ticks": "5543761159705530",
+      "normalized_exact_M5_ticks": "5543761159705530",
+      "normalized_FI_M5_ticks": "5543761159705530",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 490,
+      "integer_center": 8,
+      "old_M5_ticks": "5659837656929375",
+      "normalized_exact_M5_ticks": "5659837656929375",
+      "normalized_FI_M5_ticks": "5659837656929375",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 491,
+      "integer_center": 8,
+      "old_M5_ticks": "5729026859499774",
+      "normalized_exact_M5_ticks": "5729026859499774",
+      "normalized_FI_M5_ticks": "5729026859499774",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 492,
+      "integer_center": 8,
+      "old_M5_ticks": "5749190276853061",
+      "normalized_exact_M5_ticks": "5749190276853061",
+      "normalized_FI_M5_ticks": "5749190276853061",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 493,
+      "integer_center": 8,
+      "old_M5_ticks": "5719119721259806",
+      "normalized_exact_M5_ticks": "5719119721259806",
+      "normalized_FI_M5_ticks": "5719119721259806",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 494,
+      "integer_center": 8,
+      "old_M5_ticks": "5639297164896177",
+      "normalized_exact_M5_ticks": "5639297164896177",
+      "normalized_FI_M5_ticks": "5639297164896177",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 495,
+      "integer_center": 8,
+      "old_M5_ticks": "5510688051190420",
+      "normalized_exact_M5_ticks": "5510688051190420",
+      "normalized_FI_M5_ticks": "5510688051190420",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 496,
+      "integer_center": 8,
+      "old_M5_ticks": "5334727718056531",
+      "normalized_exact_M5_ticks": "5334727718056531",
+      "normalized_FI_M5_ticks": "5334727718056531",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 497,
+      "integer_center": 8,
+      "old_M5_ticks": "5113303517434348",
+      "normalized_exact_M5_ticks": "5113303517434348",
+      "normalized_FI_M5_ticks": "5113303517434348",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 498,
+      "integer_center": 8,
+      "old_M5_ticks": "4848732824241338",
+      "normalized_exact_M5_ticks": "4848732824241338",
+      "normalized_FI_M5_ticks": "4848732824241338",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 499,
+      "integer_center": 8,
+      "old_M5_ticks": "4543737166043040",
+      "normalized_exact_M5_ticks": "4543737166043040",
+      "normalized_FI_M5_ticks": "4543737166043040",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 500,
+      "integer_center": 8,
+      "old_M5_ticks": "4201412740436350",
+      "normalized_exact_M5_ticks": "4201412740436350",
+      "normalized_FI_M5_ticks": "4201412740436350",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 501,
+      "integer_center": 8,
+      "old_M5_ticks": "3831340677595615",
+      "normalized_exact_M5_ticks": "3831340677595615",
+      "normalized_FI_M5_ticks": "3831340677595615",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 502,
+      "integer_center": 8,
+      "old_M5_ticks": "3432088736616467",
+      "normalized_exact_M5_ticks": "3432088736616467",
+      "normalized_FI_M5_ticks": "3432088736616467",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 503,
+      "integer_center": 8,
+      "old_M5_ticks": "3005212725679963",
+      "normalized_exact_M5_ticks": "3005212725679963",
+      "normalized_FI_M5_ticks": "3005212725679963",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 504,
+      "integer_center": 8,
+      "old_M5_ticks": "2554918786270442",
+      "normalized_exact_M5_ticks": "2554918786270442",
+      "normalized_FI_M5_ticks": "2554918786270442",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 505,
+      "integer_center": 8,
+      "old_M5_ticks": "2085606511976551",
+      "normalized_exact_M5_ticks": "2085606511976551",
+      "normalized_FI_M5_ticks": "2085606511976551",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 506,
+      "integer_center": 8,
+      "old_M5_ticks": "1601825135363613",
+      "normalized_exact_M5_ticks": "1601825135363613",
+      "normalized_FI_M5_ticks": "1601825135363613",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 507,
+      "integer_center": 8,
+      "old_M5_ticks": "1108228639347709",
+      "normalized_exact_M5_ticks": "1108228639347709",
+      "normalized_FI_M5_ticks": "1108228639347709",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 508,
+      "integer_center": 8,
+      "old_M5_ticks": "609530223512666",
+      "normalized_exact_M5_ticks": "609530223512666",
+      "normalized_FI_M5_ticks": "609530223512666",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 509,
+      "integer_center": 8,
+      "old_M5_ticks": "390764233778932",
+      "normalized_exact_M5_ticks": "390764233778932",
+      "normalized_FI_M5_ticks": "390764233778932",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 510,
+      "integer_center": 8,
+      "old_M5_ticks": "872044727661732",
+      "normalized_exact_M5_ticks": "872044727661732",
+      "normalized_FI_M5_ticks": "872044727661732",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 511,
+      "integer_center": 8,
+      "old_M5_ticks": "1342951995743255",
+      "normalized_exact_M5_ticks": "1342951995743255",
+      "normalized_FI_M5_ticks": "1342951995743255",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 512,
+      "integer_center": 8,
+      "old_M5_ticks": "1807157925467288",
+      "normalized_exact_M5_ticks": "1807157925467288",
+      "normalized_FI_M5_ticks": "1807157925467288",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 513,
+      "integer_center": 8,
+      "old_M5_ticks": "2253597279623035",
+      "normalized_exact_M5_ticks": "2253597279623035",
+      "normalized_FI_M5_ticks": "2253597279623035",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 514,
+      "integer_center": 8,
+      "old_M5_ticks": "2678147582536049",
+      "normalized_exact_M5_ticks": "2678147582536049",
+      "normalized_FI_M5_ticks": "2678147582536049",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 515,
+      "integer_center": 8,
+      "old_M5_ticks": "3076935701507243",
+      "normalized_exact_M5_ticks": "3076935701507243",
+      "normalized_FI_M5_ticks": "3076935701507243",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 516,
+      "integer_center": 8,
+      "old_M5_ticks": "3446373171450881",
+      "normalized_exact_M5_ticks": "3446373171450881",
+      "normalized_FI_M5_ticks": "3446373171450881",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 517,
+      "integer_center": 8,
+      "old_M5_ticks": "3783188629410949",
+      "normalized_exact_M5_ticks": "3783188629410949",
+      "normalized_FI_M5_ticks": "3783188629410949",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 518,
+      "integer_center": 8,
+      "old_M5_ticks": "4084457072224964",
+      "normalized_exact_M5_ticks": "4084457072224964",
+      "normalized_FI_M5_ticks": "4084457072224964",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 519,
+      "integer_center": 8,
+      "old_M5_ticks": "4347625683189050",
+      "normalized_exact_M5_ticks": "4347625683189050",
+      "normalized_FI_M5_ticks": "4347625683189050",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 520,
+      "integer_center": 8,
+      "old_M5_ticks": "4570536008362590",
+      "normalized_exact_M5_ticks": "4570536008362590",
+      "normalized_FI_M5_ticks": "4570536008362590",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 521,
+      "integer_center": 8,
+      "old_M5_ticks": "4751442299794385",
+      "normalized_exact_M5_ticks": "4751442299794385",
+      "normalized_FI_M5_ticks": "4751442299794385",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 522,
+      "integer_center": 8,
+      "old_M5_ticks": "4889025881099221",
+      "normalized_exact_M5_ticks": "4889025881099221",
+      "normalized_FI_M5_ticks": "4889025881099221",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 523,
+      "integer_center": 8,
+      "old_M5_ticks": "4982405430096658",
+      "normalized_exact_M5_ticks": "4982405430096658",
+      "normalized_FI_M5_ticks": "4982405430096658",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 524,
+      "integer_center": 8,
+      "old_M5_ticks": "5031143113267181",
+      "normalized_exact_M5_ticks": "5031143113267181",
+      "normalized_FI_M5_ticks": "5031143113267181",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 525,
+      "integer_center": 8,
+      "old_M5_ticks": "5035246547204645",
+      "normalized_exact_M5_ticks": "5035246547204645",
+      "normalized_FI_M5_ticks": "5035246547204645",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 526,
+      "integer_center": 8,
+      "old_M5_ticks": "4995166602667401",
+      "normalized_exact_M5_ticks": "4995166602667401",
+      "normalized_FI_M5_ticks": "4995166602667401",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 527,
+      "integer_center": 8,
+      "old_M5_ticks": "4911791106875661",
+      "normalized_exact_M5_ticks": "4911791106875661",
+      "normalized_FI_M5_ticks": "4911791106875661",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 528,
+      "integer_center": 8,
+      "old_M5_ticks": "4786434538997992",
+      "normalized_exact_M5_ticks": "4786434538997992",
+      "normalized_FI_M5_ticks": "4786434538997992",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 529,
+      "integer_center": 8,
+      "old_M5_ticks": "4620823851953581",
+      "normalized_exact_M5_ticks": "4620823851953581",
+      "normalized_FI_M5_ticks": "4620823851953581",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 530,
+      "integer_center": 8,
+      "old_M5_ticks": "4417080590380910",
+      "normalized_exact_M5_ticks": "4417080590380910",
+      "normalized_FI_M5_ticks": "4417080590380910",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 531,
+      "integer_center": 8,
+      "old_M5_ticks": "4177699509555623",
+      "normalized_exact_M5_ticks": "4177699509555623",
+      "normalized_FI_M5_ticks": "4177699509555623",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 532,
+      "integer_center": 8,
+      "old_M5_ticks": "3905523932868726",
+      "normalized_exact_M5_ticks": "3905523932868726",
+      "normalized_FI_M5_ticks": "3905523932868726",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 533,
+      "integer_center": 8,
+      "old_M5_ticks": "3603718115910871",
+      "normalized_exact_M5_ticks": "3603718115910871",
+      "normalized_FI_M5_ticks": "3603718115910871",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 534,
+      "integer_center": 8,
+      "old_M5_ticks": "3275736912984955",
+      "normalized_exact_M5_ticks": "3275736912984955",
+      "normalized_FI_M5_ticks": "3275736912984955",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 535,
+      "integer_center": 8,
+      "old_M5_ticks": "2925293066750375",
+      "normalized_exact_M5_ticks": "2925293066750375",
+      "normalized_FI_M5_ticks": "2925293066750375",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 536,
+      "integer_center": 8,
+      "old_M5_ticks": "2556322463480848",
+      "normalized_exact_M5_ticks": "2556322463480848",
+      "normalized_FI_M5_ticks": "2556322463480848",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 537,
+      "integer_center": 8,
+      "old_M5_ticks": "2172947714917803",
+      "normalized_exact_M5_ticks": "2172947714917803",
+      "normalized_FI_M5_ticks": "2172947714917803",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 538,
+      "integer_center": 8,
+      "old_M5_ticks": "1779440442780303",
+      "normalized_exact_M5_ticks": "1779440442780303",
+      "normalized_FI_M5_ticks": "1779440442780303",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 539,
+      "integer_center": 8,
+      "old_M5_ticks": "1380182653542012",
+      "normalized_exact_M5_ticks": "1380182653542012",
+      "normalized_FI_M5_ticks": "1380182653542012",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 540,
+      "integer_center": 8,
+      "old_M5_ticks": "992156026505530",
+      "normalized_exact_M5_ticks": "992156026505530",
+      "normalized_FI_M5_ticks": "992156026505530",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 541,
+      "integer_center": 8,
+      "old_M5_ticks": "893398939509891",
+      "normalized_exact_M5_ticks": "893398939509891",
+      "normalized_FI_M5_ticks": "893398939509891",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 542,
+      "integer_center": 8,
+      "old_M5_ticks": "1388691067766343",
+      "normalized_exact_M5_ticks": "1388691067766343",
+      "normalized_FI_M5_ticks": "1388691067766343",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 543,
+      "integer_center": 8,
+      "old_M5_ticks": "1878423705121203",
+      "normalized_exact_M5_ticks": "1878423705121203",
+      "normalized_FI_M5_ticks": "1878423705121203",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 544,
+      "integer_center": 9,
+      "old_M5_ticks": "2059510935301338",
+      "normalized_exact_M5_ticks": "2059510935301338",
+      "normalized_FI_M5_ticks": "2059510935301338",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 545,
+      "integer_center": 9,
+      "old_M5_ticks": "2417253501945407",
+      "normalized_exact_M5_ticks": "2417253501945407",
+      "normalized_FI_M5_ticks": "2417253501945407",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 546,
+      "integer_center": 9,
+      "old_M5_ticks": "2757854747703717",
+      "normalized_exact_M5_ticks": "2757854747703717",
+      "normalized_FI_M5_ticks": "2757854747703717",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 547,
+      "integer_center": 9,
+      "old_M5_ticks": "3077649629990718",
+      "normalized_exact_M5_ticks": "3077649629990718",
+      "normalized_FI_M5_ticks": "3077649629990718",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 548,
+      "integer_center": 9,
+      "old_M5_ticks": "3373229878980055",
+      "normalized_exact_M5_ticks": "3373229878980055",
+      "normalized_FI_M5_ticks": "3373229878980055",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 549,
+      "integer_center": 9,
+      "old_M5_ticks": "3641472792060217",
+      "normalized_exact_M5_ticks": "3641472792060217",
+      "normalized_FI_M5_ticks": "3641472792060217",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 550,
+      "integer_center": 9,
+      "old_M5_ticks": "3879567283925578",
+      "normalized_exact_M5_ticks": "3879567283925578",
+      "normalized_FI_M5_ticks": "3879567283925578",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 551,
+      "integer_center": 9,
+      "old_M5_ticks": "4085036948028163",
+      "normalized_exact_M5_ticks": "4085036948028163",
+      "normalized_FI_M5_ticks": "4085036948028163",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 552,
+      "integer_center": 9,
+      "old_M5_ticks": "4255759916390072",
+      "normalized_exact_M5_ticks": "4255759916390072",
+      "normalized_FI_M5_ticks": "4255759916390072",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 553,
+      "integer_center": 9,
+      "old_M5_ticks": "4389985337743203",
+      "normalized_exact_M5_ticks": "4389985337743203",
+      "normalized_FI_M5_ticks": "4389985337743203",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 554,
+      "integer_center": 9,
+      "old_M5_ticks": "4486346328312440",
+      "normalized_exact_M5_ticks": "4486346328312440",
+      "normalized_FI_M5_ticks": "4486346328312440",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 555,
+      "integer_center": 9,
+      "old_M5_ticks": "4543869284968364",
+      "normalized_exact_M5_ticks": "4543869284968364",
+      "normalized_FI_M5_ticks": "4543869284968364",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 556,
+      "integer_center": 9,
+      "old_M5_ticks": "4562931127263479",
+      "normalized_exact_M5_ticks": "4562931127263479",
+      "normalized_FI_M5_ticks": "4562931127263479",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 557,
+      "integer_center": 9,
+      "old_M5_ticks": "4543089020702147",
+      "normalized_exact_M5_ticks": "4543089020702147",
+      "normalized_FI_M5_ticks": "4543089020702147",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 558,
+      "integer_center": 9,
+      "old_M5_ticks": "4483365203768724",
+      "normalized_exact_M5_ticks": "4483365203768724",
+      "normalized_FI_M5_ticks": "4483365203768724",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 559,
+      "integer_center": 9,
+      "old_M5_ticks": "4384457559878742",
+      "normalized_exact_M5_ticks": "4384457559878742",
+      "normalized_FI_M5_ticks": "4384457559878742",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 560,
+      "integer_center": 9,
+      "old_M5_ticks": "4247443892193034",
+      "normalized_exact_M5_ticks": "4247443892193034",
+      "normalized_FI_M5_ticks": "4247443892193034",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 561,
+      "integer_center": 9,
+      "old_M5_ticks": "4073768632125454",
+      "normalized_exact_M5_ticks": "4073768632125454",
+      "normalized_FI_M5_ticks": "4073768632125454",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 562,
+      "integer_center": 9,
+      "old_M5_ticks": "3865226178923367",
+      "normalized_exact_M5_ticks": "3865226178923367",
+      "normalized_FI_M5_ticks": "3865226178923367",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 563,
+      "integer_center": 9,
+      "old_M5_ticks": "3623941044572264",
+      "normalized_exact_M5_ticks": "3623941044572264",
+      "normalized_FI_M5_ticks": "3623941044572264",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 564,
+      "integer_center": 9,
+      "old_M5_ticks": "3352345007996221",
+      "normalized_exact_M5_ticks": "3352345007996221",
+      "normalized_FI_M5_ticks": "3352345007996221",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 565,
+      "integer_center": 9,
+      "old_M5_ticks": "3055720189469178",
+      "normalized_exact_M5_ticks": "3055720189469178",
+      "normalized_FI_M5_ticks": "3055720189469178",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "k": 566,
+      "integer_center": 9,
+      "old_M5_ticks": "2737841648872573",
+      "normalized_exact_M5_ticks": "2737841648872573",
+      "normalized_FI_M5_ticks": "2737841648872573",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    }
+  ],
+  "packet_M5_comparison": [
+    {
+      "packet": "[0, 7]:old",
+      "cells": 55,
+      "old_M5_ticks": "5035246547204645",
+      "normalized_exact_M5_ticks": "5035246547204645",
+      "normalized_FI_M5_ticks": "5035246547204645",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[0, 7]:new",
+      "cells": 48,
+      "old_M5_ticks": "5035246547204645",
+      "normalized_exact_M5_ticks": "5035246547204645",
+      "normalized_FI_M5_ticks": "5035246547204645",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[1, 7]:old",
+      "cells": 58,
+      "old_M5_ticks": "6409857910777919",
+      "normalized_exact_M5_ticks": "6409857910777919",
+      "normalized_FI_M5_ticks": "6409857910777919",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[1, 7]:new",
+      "cells": 30,
+      "old_M5_ticks": "6409857910777919",
+      "normalized_exact_M5_ticks": "6409857910777919",
+      "normalized_FI_M5_ticks": "6409857910777919",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[2, 7]:old",
+      "cells": 49,
+      "old_M5_ticks": "8344413745774993",
+      "normalized_exact_M5_ticks": "8344413745774993",
+      "normalized_FI_M5_ticks": "8344413745774993",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[2, 7]:new",
+      "cells": 13,
+      "old_M5_ticks": "6407622073264985",
+      "normalized_exact_M5_ticks": "6407622073264985",
+      "normalized_FI_M5_ticks": "6407622073264985",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[3, 7]:old",
+      "cells": 52,
+      "old_M5_ticks": "11806872208298447",
+      "normalized_exact_M5_ticks": "11806872208298447",
+      "normalized_FI_M5_ticks": "11806872208298447",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[3, 7]:new",
+      "cells": 17,
+      "old_M5_ticks": "9836577192730301",
+      "normalized_exact_M5_ticks": "9836577192730301",
+      "normalized_FI_M5_ticks": "9836577192730301",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[4, 7]:old",
+      "cells": 52,
+      "old_M5_ticks": "18066980085287506",
+      "normalized_exact_M5_ticks": "18066980085287506",
+      "normalized_FI_M5_ticks": "18066980085287506",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[4, 7]:new",
+      "cells": 17,
+      "old_M5_ticks": "16334956733168733",
+      "normalized_exact_M5_ticks": "16334956733168733",
+      "normalized_FI_M5_ticks": "16334956733168733",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[5, 7]:old",
+      "cells": 46,
+      "old_M5_ticks": "31557655109850332",
+      "normalized_exact_M5_ticks": "31557655109850332",
+      "normalized_FI_M5_ticks": "31557655109850332",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[5, 7]:new",
+      "cells": 11,
+      "old_M5_ticks": "20708509921072499",
+      "normalized_exact_M5_ticks": "20708509921072499",
+      "normalized_FI_M5_ticks": "20708509921072499",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[6, 7]:old",
+      "cells": 41,
+      "old_M5_ticks": "73504428447248187",
+      "normalized_exact_M5_ticks": "73504428447248187",
+      "normalized_FI_M5_ticks": "73504428447248187",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[6, 7]:new",
+      "cells": 6,
+      "old_M5_ticks": "34608430856564809",
+      "normalized_exact_M5_ticks": "34608430856564809",
+      "normalized_FI_M5_ticks": "34608430856564809",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[7, 8]:old",
+      "cells": 6,
+      "old_M5_ticks": "34608430856564809",
+      "normalized_exact_M5_ticks": "34608430856564809",
+      "normalized_FI_M5_ticks": "34608430856564809",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    },
+    {
+      "packet": "[7, 8]:new",
+      "cells": 41,
+      "old_M5_ticks": "73504428447248187",
+      "normalized_exact_M5_ticks": "73504428447248187",
+      "normalized_FI_M5_ticks": "73504428447248187",
+      "exact_minus_old_ticks": 0,
+      "FI_minus_old_ticks": 0
+    }
+  ],
+  "max_extra_FI_ticks_per_cell": 1,
+  "max_extra_FI_ticks_per_packet": 0,
+  "all_packet_M5_preserved_by_normalized_FI": true,
+  "Horner_FI_scale": "1000000000000000000000000000000",
+  "M5_tick_scale": "1000000000000000",
+  "required_new_Lean_cell_checks": 391,
+  "Lean_invocations": 0,
+  "solver_calls": 0,
+  "old_producer_executed": false,
+  "actual_numeric_M5_Lean_proven_here": false,
+  "new_actual_cell_exclusion": false,
+  "new_zero_proportion_proven": false,
+  "elapsed_seconds": 0.6218446999992011
+}

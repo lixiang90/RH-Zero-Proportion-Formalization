@@ -1,0 +1,56 @@
+{
+  "scope": "Lossless missing-input restoration only; all existing bytes are checked and never overwritten.",
+  "maximum_part_bytes": 3145728,
+  "outputs": [
+    {
+      "name": "merged-tree.json.gz",
+      "bytes": 6501272,
+      "sha256": "610c6f860be34a557f6ac03bea53a9cdf5bf324e5ce8b52e5788ebc68d44fc0c",
+      "encoding": "concatenation",
+      "parts": [
+        {
+          "name": "merged-tree.json.gz.part000",
+          "bytes": 3145728,
+          "sha256": "755c6f1fe2f0c6904126c1a7b5e383e29904ba10ca149f76b4b6798171fbf1e9"
+        },
+        {
+          "name": "merged-tree.json.gz.part001",
+          "bytes": 3145728,
+          "sha256": "b17d8d05cbb801d70745562e63861ab3a34432ec57d122aa3cbf0b7d60fee1cb"
+        },
+        {
+          "name": "merged-tree.json.gz.part002",
+          "bytes": 209816,
+          "sha256": "9b6e71314b427d0b7ac8bf12e91809adeda9dce88a1f87cda30d0180a34833e3"
+        }
+      ]
+    },
+    {
+      "name": "pilot-original.json",
+      "bytes": 2493602,
+      "sha256": "9ff65ec9efff364b9773363d1cdcc4701738ea6d55ac8aff5e3317f99be521b5",
+      "encoding": "gzip",
+      "parts": [
+        {
+          "name": "pilot-original.json.gz",
+          "bytes": 103938,
+          "sha256": "be7a1aca014314ace62d40e6d9ddd0692edd0240060e34b4f8b6072275c56f90"
+        }
+      ]
+    },
+    {
+      "name": "pilot-lower.json",
+      "bytes": 745958,
+      "sha256": "6ecd5ecaeee3ede8220450620351c8ae9ab2287be149ddd3329f28c6fb465e16",
+      "encoding": "gzip",
+      "parts": [
+        {
+          "name": "pilot-lower.json.gz",
+          "bytes": 34831,
+          "sha256": "b53931e1609ba9b736a5da4b438da431aedbe12e20dbb3f3ffdf5f58584211a7"
+        }
+      ]
+    }
+  ],
+  "derived_semantic_caches_recreated_from_zero_merge_packet_and_checked_against_frozen_hashes": true
+}

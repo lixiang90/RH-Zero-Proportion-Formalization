@@ -191,7 +191,22 @@ def main():
       ('research-goal-20261017-quartic/quartic-positivity-correction-files.json','014479ce687c9b0d418ba214b3f19b5761aaa7d7670cf6acef5111e47ed440a0'),
       ('research-goal-20261017-quartic-split/split-files.json','8ec9a4e4314ae3071b59745c9730d2789c9329f1f31eb328cfa1cc78349dfedf'),
       ('lean_aux478_sync_files.json','bf665097729da8ca772e67481adc0c25a09141820000b874c5b89454872adc7f'),
-      ('research-goal-20261017-multiwindow/multiwindow-files.json','1d67f1eabe6ce212bfea667635f238b8722a1b73e2e9401763947c67685b022f')]:
+      ('research-goal-20261017-multiwindow/multiwindow-files.json','1d67f1eabe6ce212bfea667635f238b8722a1b73e2e9401763947c67685b022f'),
+      ('cover-sqlite-bounded143004-files.json','4e89d569ba203f02637b73f8e24590403233ac93e4350585e52d34d523bc764a'),
+      ('research-goal-20261016/w10-size-audit-20261017/audit-files.json','0c5f9ea5b6970be10dab268f03a99d7057a911383aeef5a1a2ea4e09798d6a72'),
+      ('research-goal-20261016/w10-size-audit-20261017/independent-codec-files.json','02a68ff5e65a7d9525a7d0e6e00b285760db7a2ee6e5dbf965c8a1a0a9912401'),
+      ('research-goal-20261016/w10-size-merge-20261017/merge-files.json','d8de91c3dac67e581e68c5f93a778d0ffbfd01c929398f4c0072551197f77f34'),
+      ('research-goal-20261017-global-competitor/swap-files.json','25a6e4998bdea29bde92794aabe8a8893ac10f9946f589d0707ca6d6016ce979'),
+      ('w10-cell-predictor-files.json','19f68bd8b566d245e326beac61b0418f1c78659d5a9dea9de480f89bc46b69c4'),
+      ('research-goal-20261017-adjacent-swap-family/swap-family-files.json','cb58c919806562b89e1af167ed66f2e6b15d2c09dffb22383e1a6ad52ff0084e'),
+      ('window_global_competitor_sync_files.json','5250cb779cf5d696e1e4866ca30faa2c653e73887efb9c51b791a4b5ca4730f0'),
+      ('research-goal-20261017-swap67-quartic/swap67-quartic-files.json','2aff4318c4f9f6945d0dde8ad79cfdd35fac24cfad5e9d00a65d50c9213dcf6f'),
+      ('research-goal-20261017-swap67-audit/audit-files.json','26c1d38c21b3389355ab67172473cd2adb33169a43080ae40fb8e171f13e1a3c'),
+      ('research-goal-20261017-swap67-formal-plan/formal-plan-files.json','698ed0ce1b239af5369dbd5b551fbc0befcb88b5b2289f42664aef4b4cfba639'),
+      ('research-goal-20261017-swap-family-audit/audit-files.json','84c7564e8010896a795143bbf5b3823c20100ebf7d8ccd1bd8145ae8a3807fcd'),
+      ('research-goal-20261017-swap-family-quartic/swap-family-files.json','c5801f1d784cbcbfb6e7b135490076340c004b19a067ce3ed7555431c0cab49d'),
+      ('research-goal-20261017-swap-point-hessian/files.json','d170aad38757e1d6101d2a8cd8fb77bacf5388a033522a3d035e567142fc7fcd'),
+      ('research-goal-20261017-quartic-hessian-localizer/hessian-localizer-files.json','bcf5a8d24a7c2a55adec85567c6aac727c55b524ed882edc47ac31bf64fe18ab')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -211,13 +226,32 @@ def main():
                 files.append(path)
         if isinstance(rows,dict):
             rows=[dict(row,path='research-goal-20261016/'+path) for path,row in rows.items()]
-        rows=rows+pinned.get('frozen_input_files',[])+pinned.get('SCS_discovery_sources_unchanged',[])+pinned.get('dependencies',[])
+        rows=(rows+pinned.get('frozen_input_files',[])+pinned.get('SCS_discovery_sources_unchanged',[])
+              +pinned.get('dependencies',[])+pinned.get('dependency_files',[])
+              +pinned.get('frozen_dependencies',[]))
+        if name=='research-goal-20261016/w10-size-merge-20261017/merge-files.json':
+            # The published lossless pieces recreate these large audit inputs.
+            # Verify their pins without also staging the duplicate raw caches.
+            independent_merge=json.loads((ROOT/'research-goal-20261016/w10-size-merge-20261017/independent-merge-files.json').read_bytes())
+            for row in independent_merge['dependency_files']:
+                raw=(ROOT/row['path']).read_bytes()
+                assert len(raw)==row['bytes'] and hashlib.sha256(raw).hexdigest()==row['sha256']
+        if name=='w10-cell-predictor-files.json':
+            for path,digest in pinned['source_and_input_sha256'].items():
+                assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
         for path,digest in pinned.get('dependency_sha256',{}).items():
             assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
             files.append(path)
         for row in rows:
             p=ROOT/row['path'];raw=p.read_bytes()
             assert len(raw)==row['bytes'] and hashlib.sha256(raw).hexdigest()==row['sha256']
+            if (name=='research-goal-20261017-swap-family-quartic/swap-family-files.json'
+                and row['path'] in [
+                  'research-goal-20261017-swap-family-quartic/swap-family-quartic.json.gz',
+                  'research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz']):
+                # Both complete packets are reproduced from their published
+                # hash-checked pieces; do not stage a second copy of the bytes.
+                continue
             files.append(row['path'])
         files.append(str(manifest.relative_to(ROOT)).replace('\\','/'))
     pilot_manifest=HERE/'window_lifted_pilot_formal_manifest.json'

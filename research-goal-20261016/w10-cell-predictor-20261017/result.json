@@ -1,0 +1,196 @@
+{
+  "scope": "Fixed cell-to-witness predictors on the first1000 frozen W10 numeric leaves.\n\nRead-only frozen caches. No optimizer, new cover, Lean or predictor tuning.\nExplicit exceptions reconstruct every original FS byte; original Pruefer\ncodes are retained. Every domain and integer leaf inequality is rechecked.\n",
+  "source_and_input_sha256": {
+    "research-goal-20261016/w10-cell-predictor-20261017/pilot.py": "e835fffddfad9c8bb2262b7d3b2e0f89930d9f0f918c0bcf5ff075f531ad8805",
+    "research-goal-20261016/w10-cell-predictor-20261017/protocol.json": "e79fb6ec9ad45fdbf2a66b3f3e0995c31a7685d150dd8d250c42126b9c3879e1",
+    "research-goal-20261016/w10-size-audit-20261017/semantics.json": "277463c05b5e9944135f878fb9dfec5bfe890f86b36faf76a67f9a7a3ad10d08",
+    "research-goal-20261016/w10-size-audit-20261017/field-huffman.json": "27af486863fc4d1d0e40b234ac03a24f4c63741ffd32d90f0239b14e8a1a48e1",
+    "research-goal-20261016/w10-size-audit-20261017/source-size-accounting.json": "e3e3e7f8fb6f70dcd28a5c7119a9b18d42a176afd28be24e12ed2ea91434d496",
+    "research-goal-20261016/w10-size-audit-20261017/independent_codec_replay.py": "0c910afe345f9e436a3cd17182d2b6e30adacc3a9bf48841facc835eabe761e8",
+    "research-20261016-w10-cert/independent_integer_audit.py": "a27a458706ced817f8456d3a99eaa099e980f612645ca3e13f9105123d3ce74a",
+    "research-20261016-w10-cert/tree_flow.py": "1a0ff015b490c2548b8110a73a0bde0c5096a3429bf02dce16b7cd79d108c129",
+    "research-20261016/spectral-w10-refined-rational.json": "ad117819d63588c55d89bd59ae7f0ad11072faaf33ffc53bf08d7eef54010e03",
+    "formal/upstream/ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "research-goal-20261016/w10-size-audit-20261017/nodes.bin": "9956f3830dd44e330c7d455f234ab213c25f44b88a715508bd29825fb706edab",
+    "research-goal-20261016/w10-size-audit-20261017/fs.bin": "e8697215283fb691dbdceb41813527527d0be033bcdb33f91166bf7cec7a611e",
+    "research-goal-20261016/w10-size-audit-20261017/treecodes.bin": "57e5b4db17ac2180582c6bc17a5f62d49105903212bd1f47c8ddae0e534c8b4c"
+  },
+  "protocol_sha256": "e79fb6ec9ad45fdbf2a66b3f3e0995c31a7685d150dd8d250c42126b9c3879e1",
+  "sample_numeric_leaves": 1000,
+  "preorder_nodes_consumed": 2009,
+  "first_path": "r0000",
+  "last_path": "r0101010111101000",
+  "sample_normalized_geometry_sha256": "655ba203f2162dae0968abad4e0f6971c210aacd55c10e12ba0c3c305c4d4bff",
+  "rules": [
+    {
+      "rule": "nearest midpoint legal PT, smaller anchor on ties",
+      "counts": {
+        "terms": 39000,
+        "exact_row_matches": 5081,
+        "kind_matches": 20168,
+        "PT_available": 37491,
+        "exception_rows": 33919,
+        "original_active": 19386,
+        "active_first_point_matches": 3578
+      },
+      "predicted_FS_with_old_tree_pass": 4,
+      "minimum_predicted_margin": "-489371376687672984955420672",
+      "lossless_exception_bytes_with_original_tree_codes": 68238,
+      "gzip_bytes_not_a_Lean_decoder_claim": 35973,
+      "raw_sha256": "54eff301ef430160aafc93f3b5ea157fc7ff5e724a52ab09989167fa18bd1cf5",
+      "gzip_sha256": "cacae01f87e7015b1a5129361fb34cacbf122cad4d88131dbc4e792eca01523c",
+      "all_1000_original_FS_exactly_reconstructed_and_integer_checked": true,
+      "exception_Huffman_payload_bits": {
+        "kind": 50460,
+        "mix": 6053,
+        "mask0": 4157,
+        "mask1": 4008,
+        "mask2": 4003,
+        "mask3": 4100,
+        "mask4": 2124,
+        "p0": 122132,
+        "p1": 11166,
+        "p2": 0,
+        "r0": 1587,
+        "r1": 0,
+        "r2": 0
+      },
+      "exception_Huffman_payload_bits_total": 209790,
+      "shared_model_bytes": 3844,
+      "nonrigorous_prefix_distribution_extrapolation": {
+        "binary_bytes": 3086156,
+        "source_bytes_with_1p25_literal_factor_542851_retained_and_128000_decoder_reserve": 4529570,
+        "assumption": "First1000 nonrandom preorder leaves have identical residual distributions to all95615 leaves; not a bound or full-source artifact."
+      }
+    },
+    {
+      "rule": "leftmost legal PT",
+      "counts": {
+        "terms": 39000,
+        "exact_row_matches": 2990,
+        "kind_matches": 20168,
+        "PT_available": 37491,
+        "exception_rows": 36010,
+        "original_active": 19386,
+        "active_first_point_matches": 1483
+      },
+      "predicted_FS_with_old_tree_pass": 1,
+      "minimum_predicted_margin": "-5177145577194546731951876096",
+      "lossless_exception_bytes_with_original_tree_codes": 80937,
+      "gzip_bytes_not_a_Lean_decoder_claim": 38082,
+      "raw_sha256": "a886e2bcf4fa1a005bc818b1a7402510410d9882699b1834c2f33e4b9268439a",
+      "gzip_sha256": "a48442c142038b4fc6ab69a559bf0e3736491f183f77d5156a52773328f32360",
+      "all_1000_original_FS_exactly_reconstructed_and_integer_checked": true,
+      "exception_Huffman_payload_bits": {
+        "kind": 54642,
+        "mix": 6053,
+        "mask0": 3043,
+        "mask1": 2475,
+        "mask2": 2686,
+        "mask3": 3115,
+        "mask4": 1693,
+        "p0": 114487,
+        "p1": 36046,
+        "p2": 0,
+        "r0": 1587,
+        "r1": 0,
+        "r2": 0
+      },
+      "exception_Huffman_payload_bits_total": 225827,
+      "shared_model_bytes": 3844,
+      "nonrigorous_prefix_distribution_extrapolation": {
+        "binary_bytes": 3277829,
+        "source_bytes_with_1p25_literal_factor_542851_retained_and_128000_decoder_reserve": 4769162,
+        "assumption": "First1000 nonrandom preorder leaves have identical residual distributions to all95615 leaves; not a bound or full-source artifact."
+      }
+    },
+    {
+      "rule": "rightmost legal PT",
+      "counts": {
+        "terms": 39000,
+        "exact_row_matches": 5603,
+        "kind_matches": 20168,
+        "PT_available": 37491,
+        "exception_rows": 33397,
+        "original_active": 19386,
+        "active_first_point_matches": 4099
+      },
+      "predicted_FS_with_old_tree_pass": 3,
+      "minimum_predicted_margin": "-1158919808350977644788854784",
+      "lossless_exception_bytes_with_original_tree_codes": 67347,
+      "gzip_bytes_not_a_Lean_decoder_claim": 34662,
+      "raw_sha256": "b0837553e0c6db9438e324935ad142c5a98ef3736456b0f00b69bee05d75aaa1",
+      "gzip_sha256": "f47cfc00375f891971911ad6906cd427b3f9086e04c89b8619b605e350dfa600",
+      "all_1000_original_FS_exactly_reconstructed_and_integer_checked": true,
+      "exception_Huffman_payload_bits": {
+        "kind": 49416,
+        "mix": 6053,
+        "mask0": 4260,
+        "mask1": 4227,
+        "mask2": 4264,
+        "mask3": 3916,
+        "mask4": 1856,
+        "p0": 104156,
+        "p1": 15096,
+        "p2": 0,
+        "r0": 1587,
+        "r1": 0,
+        "r2": 0
+      },
+      "exception_Huffman_payload_bits_total": 194831,
+      "shared_model_bytes": 3844,
+      "nonrigorous_prefix_distribution_extrapolation": {
+        "binary_bytes": 2907368,
+        "source_bytes_with_1p25_literal_factor_542851_retained_and_128000_decoder_reserve": 4306085,
+        "assumption": "First1000 nonrandom preorder leaves have identical residual distributions to all95615 leaves; not a bound or full-source artifact."
+      }
+    }
+  ],
+  "fixed_tree_results": [
+    {
+      "name": "adjacent chain",
+      "code": 87654321,
+      "exact_original_code_matches": 0,
+      "original_FS_domain_valid_and_integer_check_passes": 254,
+      "minimum_margin": "-834120621748111115529551872"
+    },
+    {
+      "name": "star0",
+      "code": 0,
+      "exact_original_code_matches": 0,
+      "original_FS_domain_valid_and_integer_check_passes": 64,
+      "minimum_margin": "-216717724480362424560009216"
+    },
+    {
+      "name": "star5",
+      "code": 55555555,
+      "exact_original_code_matches": 0,
+      "original_FS_domain_valid_and_integer_check_passes": 20,
+      "minimum_margin": "-255497742237574049461919744"
+    },
+    {
+      "name": "star9",
+      "code": 99999999,
+      "exact_original_code_matches": 0,
+      "original_FS_domain_valid_and_integer_check_passes": 63,
+      "minimum_margin": "-288831764740322955989999616"
+    }
+  ],
+  "fixed_tree_portfolio_integer_check_passes": 332,
+  "global_original_Huffman_category_bytes": {
+    "geometry": 280659,
+    "FS": 2217236,
+    "tree": 294132
+  },
+  "retained_source_bytes": 542851,
+  "decoder_expander_reserved_bytes": 128000,
+  "tree_recompute_static_review": "tree_flow.recompute calls nx.network_simplex on all directed arcs with DBM costs and divergence demands; not simple greedy. It then completes its flow forest by ordered adjacent zero-flow edges. No call was executed.",
+  "optimizer_calls": 0,
+  "Lean_invocations": 0,
+  "new_cover_search": false,
+  "full95615_predictor_run": false,
+  "complete_Lean_decoder_or_cover_proven": false,
+  "two_MB_complete_source_achieved": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 8.407302799998433
+}

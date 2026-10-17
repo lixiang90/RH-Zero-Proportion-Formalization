@@ -1,0 +1,29 @@
+{
+  "scope": "Project/replay exactly the existing first1000-leaf W10 predictor pilot.\n\nNo tuning, optimizer, cover search or Lean. The small projection binds\nthe original full-cache hashes, but checks only this prefix. Default\nreplay needs the frozen analytic/geometry readers, not the large caches.\n",
+  "passed": true,
+  "source_sha256": "de03e404218351856882bc3fb1fc7f1e28e6ebbd1bb2c47d3d4d59208476ae77",
+  "sample_input_sha256": "9848228a3ab5bafb70ea7445815baf0fe0f426b6d6152df527225abed44faf84",
+  "numeric_leaves": 1000,
+  "original_FS_checks_passed": 1000,
+  "exception_stream_exact_reconstructions": 3000,
+  "predicted_FS_with_old_Pruefer_recomputed_flow_and_scalar_guards_pass": [
+    4,
+    1,
+    3
+  ],
+  "original_FS_with_fixed_tree_pass": [
+    254,
+    64,
+    20,
+    63
+  ],
+  "original_FS_fixed_tree_portfolio_pass": 332,
+  "all_analytic_domain_and_flow_conservation_guards_checked": true,
+  "large_caches_required_for_this_replay": false,
+  "original_cache_projection_membership_attested_by_export_hashes_not_full_file_replayed": true,
+  "optimizer_calls": 0,
+  "Lean_invocations": 0,
+  "complete_source_under_two_MB": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 13.479607499997655
+}
