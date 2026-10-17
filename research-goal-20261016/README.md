@@ -982,6 +982,30 @@ This is a numerical hint, not an exact cell exclusion. The main route is
 now exact rational scalar/Gram multipliers with rigorous box payment,
 followed by actual analytic Lean bridges and full coverage.
 
+The fixed ray has now been converted to exact nonnegative rational scalar
+weights and 73 integer Gram factors. Atomwise integer floor/ceil enclosures
+at denominator 10^30, with all 5,004 explicit moment boxes, give the strict
+upper bound `-999999997576201063457841009740 / 10^30`. A separate pure-stdlib
+replay rebuilds every Gram polynomial from its factor columns and matches
+all 2,548,856 atoms and all endpoints/payments. See
+`research-goal-20261017-actual-sextic-exact-ray/` and
+`research-goal-20261017-exact-ray-audit/`. This proves the fixed augmented
+polynomial/moment system infeasible, while its concrete actual analytic
+Lean premises and complete root coverage remain open. All retained old
+analytic families remain active. Direct ordinary Lean integer-list data
+alone are estimated at 2,486,924 characters for this single cell; compressed
+packet sizes do not meet the final source-size gate. The sole fixed exact
+budget tested whether new sextic envelopes could replace old analytic identities
+with rigorously paid polynomial error, without another numerical solve. Its
+exact comparison failed: K is about 1970.66, versus a margin about 1. This
+rejects that expanded-monomial-box/column-l1 payment, and removes no old
+analytic premise. No alternative bound was scanned. A realistic smaller
+fixed certificate is the next source-size gate before a concrete Lean batch.
+The failure was independently replayed with the exact comparison
+`K>1970>1>margin`; its frozen packages are
+`research-goal-20261017-old-analytic-transfer-budget/transfer-budget-files.json`
+and `research-goal-20261017-transfer-budget-audit/audit-files.json`.
+
 The human-requested macro review runs every four to eight main research
 rounds, normally six; compaction never resets the counter. Read
 `DIRECTION.zh.md`, `direction-state.json` and

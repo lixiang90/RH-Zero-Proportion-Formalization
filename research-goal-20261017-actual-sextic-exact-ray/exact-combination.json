@@ -1,0 +1,265 @@
+{
+  "scope": "Exact atom-enclosure certificate for the one fixed rounded dual ray.\n\nPure stdlib. No optimizer, eigensolver, sampled point or transcendental\nevaluation. DS=10^30 is fixed: each rational atom is enclosed by exact\ninteger divmod floor/ceil, then the explicit monomial box bounds give a\nstrict upper bound. This is not literal cancellation of exact residuals.\nThe independently checkable PSD witnesses are the given integer Gram\nfactors, not floating positive-eigenvalue assertions.\n",
+  "phase": "exact_interval_and_box_certificate_PASS",
+  "source_sha256_start": {
+    "research-goal-20261017-actual-sextic-exact-ray/combine_ray.py": "45378f4473717927d00f707b16b9ed6fc5e24430a7327f2d70e85a0cabdfaaa8",
+    "research-goal-20261017-actual-sextic-exact-ray/quantize_ray.py": "d16c69715512010e0c095a686a63ab9ef0d32251138e06786a33d68acd58825a",
+    "research-goal-20261017-actual-sextic-exact-ray/quantized-ray.json.gz": "4862b3437fbc68766e1870afdabda9ea466b18750e2715cbe953e0b8cd363805",
+    "research-goal-20261017-actual-sextic-exact-ray/quantization.json": "1bbe997c433efef5baf26d249423de096ffb298a4fd900b957896e8cd1dd9fb5",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-degree6-static/degree6-targets.bin": "2f33955dca14c310a993df8d0930044e00c0af63b137f309bd7252fc3ce5052d",
+    "research-goal-20261017-degree6-static/degree6-entryplans.bin": "3f906a5b5abbac6829dd8fb87329bdc3de0f27b5388102305b1792af78d90c01",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0",
+    "research-goal-20261017-actual-sextic-cone/actual-sextic-cone-files.json": "4094f05bf934e083aebd99ed548836b1487681a963f53fe2fa95d930b8ecffd8",
+    "research-goal-20261017-actual-sextic-exact-ray/run_exact_once.py": "bbb2104be2442b94dcbe0057fb9670965e30e9d6b351bcbbb78a495ea926dd36"
+  },
+  "DS": 1000000000000000000000000000000,
+  "scalar_weight_denominator": 1000000000000,
+  "Gram_factor_denominator": 1000000000000,
+  "memory_snapshots": [
+    {
+      "working_set_bytes": 22822912,
+      "peak_working_set_bytes": 32608256,
+      "private_commit_bytes": 14368768,
+      "phase": "loading_frozen_exact_sources",
+      "elapsed_milliseconds": 100
+    },
+    {
+      "working_set_bytes": 170983424,
+      "peak_working_set_bytes": 174575616,
+      "private_commit_bytes": 163233792,
+      "phase": "old_scalar_rows_1000",
+      "elapsed_milliseconds": 532
+    },
+    {
+      "working_set_bytes": 170946560,
+      "peak_working_set_bytes": 180506624,
+      "private_commit_bytes": 163225600,
+      "phase": "old_scalar_rows_2000",
+      "elapsed_milliseconds": 605
+    },
+    {
+      "working_set_bytes": 170958848,
+      "peak_working_set_bytes": 180506624,
+      "private_commit_bytes": 163225600,
+      "phase": "old_scalar_rows_3000",
+      "elapsed_milliseconds": 719
+    },
+    {
+      "working_set_bytes": 170967040,
+      "peak_working_set_bytes": 180523008,
+      "private_commit_bytes": 163225600,
+      "phase": "old_scalar_rows_4000",
+      "elapsed_milliseconds": 820
+    },
+    {
+      "working_set_bytes": 171184128,
+      "peak_working_set_bytes": 180875264,
+      "private_commit_bytes": 163225600,
+      "phase": "old_scalar_rows_5000",
+      "elapsed_milliseconds": 1704
+    },
+    {
+      "working_set_bytes": 172904448,
+      "peak_working_set_bytes": 181088256,
+      "private_commit_bytes": 166215680,
+      "phase": "all14383_existing_scalar_rows_combined_as_exact_intervals",
+      "elapsed_milliseconds": 1787
+    },
+    {
+      "working_set_bytes": 199712768,
+      "peak_working_set_bytes": 202821632,
+      "private_commit_bytes": 191438848,
+      "phase": "actual_sextic_rows_30",
+      "elapsed_milliseconds": 4643
+    },
+    {
+      "working_set_bytes": 197808128,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 189591552,
+      "phase": "actual_sextic_rows_60",
+      "elapsed_milliseconds": 6004
+    },
+    {
+      "working_set_bytes": 197787648,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 189571072,
+      "phase": "actual_sextic_rows_90",
+      "elapsed_milliseconds": 7374
+    },
+    {
+      "working_set_bytes": 196775936,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 188547072,
+      "phase": "actual_sextic_rows_120",
+      "elapsed_milliseconds": 8642
+    },
+    {
+      "working_set_bytes": 199327744,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 191496192,
+      "phase": "actual_sextic_rows_150",
+      "elapsed_milliseconds": 9899
+    },
+    {
+      "working_set_bytes": 197750784,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 189526016,
+      "phase": "actual_sextic_rows_180",
+      "elapsed_milliseconds": 11335
+    },
+    {
+      "working_set_bytes": 96739328,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 88367104,
+      "phase": "exact_Gram_trace_blocks_5",
+      "elapsed_milliseconds": 12311
+    },
+    {
+      "working_set_bytes": 98037760,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 90034176,
+      "phase": "exact_Gram_trace_blocks_10",
+      "elapsed_milliseconds": 12407
+    },
+    {
+      "working_set_bytes": 98037760,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 90034176,
+      "phase": "exact_Gram_trace_blocks_15",
+      "elapsed_milliseconds": 12552
+    },
+    {
+      "working_set_bytes": 96907264,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 88772608,
+      "phase": "exact_Gram_trace_blocks_20",
+      "elapsed_milliseconds": 12836
+    },
+    {
+      "working_set_bytes": 97832960,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 89763840,
+      "phase": "exact_Gram_trace_blocks_25",
+      "elapsed_milliseconds": 13053
+    },
+    {
+      "working_set_bytes": 97832960,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 89763840,
+      "phase": "exact_Gram_trace_blocks_30",
+      "elapsed_milliseconds": 13259
+    },
+    {
+      "working_set_bytes": 97832960,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 89763840,
+      "phase": "exact_Gram_trace_blocks_35",
+      "elapsed_milliseconds": 13447
+    },
+    {
+      "working_set_bytes": 97832960,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 89763840,
+      "phase": "exact_Gram_trace_blocks_40",
+      "elapsed_milliseconds": 13617
+    },
+    {
+      "working_set_bytes": 97832960,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 89763840,
+      "phase": "exact_Gram_trace_blocks_45",
+      "elapsed_milliseconds": 13752
+    },
+    {
+      "working_set_bytes": 96907264,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 88772608,
+      "phase": "exact_Gram_trace_blocks_50",
+      "elapsed_milliseconds": 13990
+    },
+    {
+      "working_set_bytes": 97832960,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 89763840,
+      "phase": "exact_Gram_trace_blocks_55",
+      "elapsed_milliseconds": 14259
+    },
+    {
+      "working_set_bytes": 97832960,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 89763840,
+      "phase": "exact_Gram_trace_blocks_60",
+      "elapsed_milliseconds": 14707
+    },
+    {
+      "working_set_bytes": 97832960,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 89763840,
+      "phase": "exact_Gram_trace_blocks_65",
+      "elapsed_milliseconds": 15157
+    },
+    {
+      "working_set_bytes": 97832960,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 89763840,
+      "phase": "exact_Gram_trace_blocks_70",
+      "elapsed_milliseconds": 15572
+    },
+    {
+      "working_set_bytes": 98246656,
+      "peak_working_set_bytes": 209248256,
+      "private_commit_bytes": 90243072,
+      "phase": "exact_interval_and_box_certificate_PASS",
+      "elapsed_milliseconds": 15836
+    }
+  ],
+  "optimizer_calls": 0,
+  "eigh_calls": 0,
+  "Lean_invocations": 0,
+  "actual_cell_exclusion_proven": false,
+  "actual_analytic_instances_Lean_proved": false,
+  "new_zero_proportion_proven": false,
+  "source_sha256_end": {
+    "research-goal-20261017-actual-sextic-exact-ray/combine_ray.py": "45378f4473717927d00f707b16b9ed6fc5e24430a7327f2d70e85a0cabdfaaa8",
+    "research-goal-20261017-actual-sextic-exact-ray/quantize_ray.py": "d16c69715512010e0c095a686a63ab9ef0d32251138e06786a33d68acd58825a",
+    "research-goal-20261017-actual-sextic-exact-ray/quantized-ray.json.gz": "4862b3437fbc68766e1870afdabda9ea466b18750e2715cbe953e0b8cd363805",
+    "research-goal-20261017-actual-sextic-exact-ray/quantization.json": "1bbe997c433efef5baf26d249423de096ffb298a4fd900b957896e8cd1dd9fb5",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-degree6-static/degree6-targets.bin": "2f33955dca14c310a993df8d0930044e00c0af63b137f309bd7252fc3ce5052d",
+    "research-goal-20261017-degree6-static/degree6-entryplans.bin": "3f906a5b5abbac6829dd8fb87329bdc3de0f27b5388102305b1792af78d90c01",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0",
+    "research-goal-20261017-actual-sextic-cone/actual-sextic-cone-files.json": "4094f05bf934e083aebd99ed548836b1487681a963f53fe2fa95d930b8ecffd8",
+    "research-goal-20261017-actual-sextic-exact-ray/run_exact_once.py": "bbb2104be2442b94dcbe0057fb9670965e30e9d6b351bcbbb78a495ea926dd36"
+  },
+  "all_inputs_unchanged": true,
+  "elapsed_milliseconds": 15836,
+  "exact_certificate": {
+    "path": "research-goal-20261017-actual-sextic-exact-ray/exact-enclosure-certificate.json",
+    "bytes": 758192,
+    "sha256": "7935f4945013c087357141c6f4406ef1b83c03fd9c8cfef61a7cd397f21e57a0"
+  },
+  "coefficient_interval_count": 5005,
+  "enclosed_nonzero_atoms": 2548856,
+  "nonintegral_atom_enclosures": 2496554,
+  "box_bounds_checked": 5004,
+  "constant_upper_numerator": -999999997576201063457841009740,
+  "strict_margin": "49999999878810053172892050487/50000000000000000000000000000",
+  "strict_negative_constant_upper": true,
+  "outer_polynomial_model_infeasible": true,
+  "literal_exact_residual_cancellation": false,
+  "maximum_endpoint_bit_length": 100,
+  "no_global_common_denominator_constructed": true,
+  "global_common_denominator_bit_length": null,
+  "sole_interval_denominator": 1000000000000000000000000000000,
+  "exact_Gram_blocks": 73,
+  "active_scalar_rows": 14562,
+  "all181_actual_sextic_rows_active": true,
+  "all_old_analytic_KKT_swap_and_sublevel_dependencies_retained": true
+}

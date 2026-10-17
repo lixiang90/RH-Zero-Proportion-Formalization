@@ -230,7 +230,12 @@ def main():
       ('research-goal-20261017-actual-sextic-cone/actual-sextic-cone-files.json','4094f05bf934e083aebd99ed548836b1487681a963f53fe2fa95d930b8ecffd8'),
       ('research-goal-20261017-actual-sextic-cone-audit/preflight-files.json','885d7665637ea4aa71268376907042099c3cf01a2330646dbb95c99cabad299e'),
       ('research-goal-20261017-actual-sextic-cone-audit/worker-review-files.json','f1bd017848b3013e5d0ec24ecd689a4eb3155a96187b45a2f41d9e848697d68b'),
-      ('research-goal-20261017-actual-sextic-run-audit/run-audit-files.json','3c0153cd799b769960b7fc092bcdf5510bbf475d5ec9f2f9f9439e17f5792d96')]:
+      ('research-goal-20261017-actual-sextic-run-audit/run-audit-files.json','3c0153cd799b769960b7fc092bcdf5510bbf475d5ec9f2f9f9439e17f5792d96'),
+      ('research-goal-20261017-actual-sextic-exact-ray/exact-ray-files.json','c19797f38f2a7687817735b91163bf329d6f2ad7cb26e9989b3e76bb99f5ceae'),
+      ('research-goal-20261017-exact-ray-audit/audit-files.json','1c481ad3f3055b175791a373d28eedb331913faa03e434b783d185f31db21cb8'),
+      ('research-goal-20261017-actual-sextic-lean-plan/actual-lean-plan-files.json','f973491641f2014d96c787cbfd867ce132b1a3729ab822e2d243cf4b7ed591d0'),
+      ('research-goal-20261017-transfer-budget-audit/audit-files.json','92be5868bc25e1367378583c1959516aa4c086e3e5af8af65a35dca6bfea4c9e'),
+      ('research-goal-20261017-old-analytic-transfer-budget/transfer-budget-files.json','bdba0046a75ea098ffbe566de6951ca83058e2cedef96c631c162eb25476236e')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())

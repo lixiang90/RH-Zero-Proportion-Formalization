@@ -1,0 +1,1908 @@
+{
+  "scope": "Static active-dependency, reuse and source-byte inventory of one fixed ray.\n\nRead existing integers, rationals, schemas and source only. No optimizer,\neigensolver, transcendental/actual-function evaluation, precision/rank\nchoice, new point, Lean invocation or certificate recombination occurs.\nDefault read-only; --write-receipt creates an absent inventory.\n",
+  "status": "fixed_all_active_dependency_and_source_inventory_complete",
+  "source_sha256_start": {
+    "research-goal-20261017-actual-sextic-lean-plan/inventory.py": "3103357097dae3a4fc2f6e1fd328706c767b06bd866818fd5e3f964c4d477d6f",
+    "research-goal-20261017-actual-sextic-exact-ray/quantized-ray.json.gz": "4862b3437fbc68766e1870afdabda9ea466b18750e2715cbe953e0b8cd363805",
+    "research-goal-20261017-actual-sextic-exact-ray/quantization.json": "1bbe997c433efef5baf26d249423de096ffb298a4fd900b957896e8cd1dd9fb5",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-enclosure-certificate.json": "7935f4945013c087357141c6f4406ef1b83c03fd9c8cfef61a7cd397f21e57a0",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-combination.json": "304c77522e5b9f5bcca8e15f014309d288256958fc09bfc06c12c69b19de5da0",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261016/cover-residual-psd-rational-inputs.json": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622",
+    "research-goal-20261016/window-moment-friendly-packets.json": "83fa5971057aab9afd1f6f7bac1e3c860c6c3676967514fb331497fd17917057",
+    "StructuralGoal20261016/WindowMomentEnergyCertificate.lean": "9b0705563fa463d7807c4fa1eb3e69177dd3a8b70d1ff2169833f3a41b7b0b26",
+    "StructuralGoal20261016/WindowCellDerivative.lean": "249cc8b5acca671a60ab52fdc5f330beabbc637cb85ffb01fb67eb0902e09278",
+    "StructuralGoal20261016/WindowFixedDerivative.lean": "261d1cdc2541741729a55e1332b7ac6bb494af21db15a61bf57bba585974b501",
+    "StructuralGoal20261016/WindowDerivativeTableArithmetic.lean": "4c1bf1a5f2bdc3e35dbe55d7b32e5504cf14dcea2103db7bdef1002d6c592cbb",
+    "StructuralGoal20261016/WindowRationalInterval.lean": "d0eae7ba9caed1d44c9d8e2b3884cca64edc79d0925897190c15f5591f890c88",
+    "StructuralGoal20261016/WindowConvexityCertificate.lean": "cc5bdfba83cdf45fd2f81ea9741899b9b263e55af54a43226f74c299979526e9",
+    "StructuralGoal20261016/WindowGlobalCompetitor.lean": "33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966",
+    "StructuralGoal20261016/WindowBoundedMomentFarkas.lean": "c2d43cd25643589ee87d1e3cccde41a2cc139daacc934b421843fc2b4a39245a",
+    "research-goal-20261016/DIRECTION.zh.md": "2a7eff1f8842b5be223143bbbbd6e0e4ac97d6ba213d759ad4dd8c6c63ba2d7d"
+  },
+  "source_sha256_end": {
+    "research-goal-20261017-actual-sextic-lean-plan/inventory.py": "3103357097dae3a4fc2f6e1fd328706c767b06bd866818fd5e3f964c4d477d6f",
+    "research-goal-20261017-actual-sextic-exact-ray/quantized-ray.json.gz": "4862b3437fbc68766e1870afdabda9ea466b18750e2715cbe953e0b8cd363805",
+    "research-goal-20261017-actual-sextic-exact-ray/quantization.json": "1bbe997c433efef5baf26d249423de096ffb298a4fd900b957896e8cd1dd9fb5",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-enclosure-certificate.json": "7935f4945013c087357141c6f4406ef1b83c03fd9c8cfef61a7cd397f21e57a0",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-combination.json": "304c77522e5b9f5bcca8e15f014309d288256958fc09bfc06c12c69b19de5da0",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261016/cover-residual-psd-rational-inputs.json": "41d901d5c4f9894d9ddbae6514f4d690c9e04a98a53aedf017115d928db1f622",
+    "research-goal-20261016/window-moment-friendly-packets.json": "83fa5971057aab9afd1f6f7bac1e3c860c6c3676967514fb331497fd17917057",
+    "StructuralGoal20261016/WindowMomentEnergyCertificate.lean": "9b0705563fa463d7807c4fa1eb3e69177dd3a8b70d1ff2169833f3a41b7b0b26",
+    "StructuralGoal20261016/WindowCellDerivative.lean": "249cc8b5acca671a60ab52fdc5f330beabbc637cb85ffb01fb67eb0902e09278",
+    "StructuralGoal20261016/WindowFixedDerivative.lean": "261d1cdc2541741729a55e1332b7ac6bb494af21db15a61bf57bba585974b501",
+    "StructuralGoal20261016/WindowDerivativeTableArithmetic.lean": "4c1bf1a5f2bdc3e35dbe55d7b32e5504cf14dcea2103db7bdef1002d6c592cbb",
+    "StructuralGoal20261016/WindowRationalInterval.lean": "d0eae7ba9caed1d44c9d8e2b3884cca64edc79d0925897190c15f5591f890c88",
+    "StructuralGoal20261016/WindowConvexityCertificate.lean": "cc5bdfba83cdf45fd2f81ea9741899b9b263e55af54a43226f74c299979526e9",
+    "StructuralGoal20261016/WindowGlobalCompetitor.lean": "33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966",
+    "StructuralGoal20261016/WindowBoundedMomentFarkas.lean": "c2d43cd25643589ee87d1e3cccde41a2cc139daacc934b421843fc2b4a39245a",
+    "research-goal-20261016/DIRECTION.zh.md": "2a7eff1f8842b5be223143bbbbd6e0e4ac97d6ba213d759ad4dd8c6c63ba2d7d"
+  },
+  "all_inputs_unchanged": true,
+  "fixed_denominators": {
+    "scalar": 1000000000000,
+    "factor": 1000000000000,
+    "atom_enclosure": 1000000000000000000000000000000
+  },
+  "active_scalar_rows": 14562,
+  "only_zero_scalar_rows": [
+    5793,
+    5794
+  ],
+  "active_old_scalar_metadata_counts": {
+    "DBM_mean": 90,
+    "all_slack_pair_RLT": 4095,
+    "free_KKT_with_dynamic_error": 180,
+    "redundant_cube_moment_box": 1428,
+    "unsoftened_global_adjacent_swap_necessary": 8
+  },
+  "active_new_rows": 181,
+  "active_Gram_blocks": [
+    {
+      "block_id": 0,
+      "name": "degree6_M2_shared_degree4",
+      "basis_size": 220,
+      "factor_columns": 220,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        0
+      ],
+      "multiplier_terms": 1
+    },
+    {
+      "block_id": 1,
+      "name": "degree6_sublevel_old_quadratic_energy",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        1
+      ],
+      "multiplier_terms": 55
+    },
+    {
+      "block_id": 2,
+      "name": "degree6_span_product_0",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        2
+      ],
+      "multiplier_terms": 2
+    },
+    {
+      "block_id": 3,
+      "name": "degree6_span_product_1",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        3
+      ],
+      "multiplier_terms": 2
+    },
+    {
+      "block_id": 4,
+      "name": "degree6_span_product_2",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        4
+      ],
+      "multiplier_terms": 2
+    },
+    {
+      "block_id": 5,
+      "name": "degree6_span_product_3",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        5
+      ],
+      "multiplier_terms": 2
+    },
+    {
+      "block_id": 6,
+      "name": "degree6_span_product_4",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        6
+      ],
+      "multiplier_terms": 2
+    },
+    {
+      "block_id": 7,
+      "name": "degree6_span_product_5",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        7
+      ],
+      "multiplier_terms": 2
+    },
+    {
+      "block_id": 8,
+      "name": "degree6_span_product_6",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        8
+      ],
+      "multiplier_terms": 2
+    },
+    {
+      "block_id": 9,
+      "name": "degree6_span_product_7",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        9
+      ],
+      "multiplier_terms": 2
+    },
+    {
+      "block_id": 10,
+      "name": "degree6_span_product_8",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        10
+      ],
+      "multiplier_terms": 2
+    },
+    {
+      "block_id": 11,
+      "name": "degree6_span_product_9",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        11
+      ],
+      "multiplier_terms": 4
+    },
+    {
+      "block_id": 12,
+      "name": "degree6_span_product_10",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        12
+      ],
+      "multiplier_terms": 7
+    },
+    {
+      "block_id": 13,
+      "name": "degree6_span_product_11",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        13
+      ],
+      "multiplier_terms": 15
+    },
+    {
+      "block_id": 14,
+      "name": "degree6_span_product_12",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        14
+      ],
+      "multiplier_terms": 21
+    },
+    {
+      "block_id": 15,
+      "name": "degree6_span_product_13",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        15
+      ],
+      "multiplier_terms": 28
+    },
+    {
+      "block_id": 16,
+      "name": "degree6_span_product_14",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        16
+      ],
+      "multiplier_terms": 36
+    },
+    {
+      "block_id": 17,
+      "name": "degree6_span_product_15",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        17
+      ],
+      "multiplier_terms": 45
+    },
+    {
+      "block_id": 18,
+      "name": "degree6_span_product_16",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        18
+      ],
+      "multiplier_terms": 55
+    },
+    {
+      "block_id": 19,
+      "name": "degree6_span_product_17",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        19
+      ],
+      "multiplier_terms": 4
+    },
+    {
+      "block_id": 20,
+      "name": "degree6_span_product_18",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        20
+      ],
+      "multiplier_terms": 10
+    },
+    {
+      "block_id": 21,
+      "name": "degree6_span_product_19",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        21
+      ],
+      "multiplier_terms": 15
+    },
+    {
+      "block_id": 22,
+      "name": "degree6_span_product_20",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        22
+      ],
+      "multiplier_terms": 21
+    },
+    {
+      "block_id": 23,
+      "name": "degree6_span_product_21",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        23
+      ],
+      "multiplier_terms": 28
+    },
+    {
+      "block_id": 24,
+      "name": "degree6_span_product_22",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        24
+      ],
+      "multiplier_terms": 36
+    },
+    {
+      "block_id": 25,
+      "name": "degree6_span_product_23",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        25
+      ],
+      "multiplier_terms": 45
+    },
+    {
+      "block_id": 26,
+      "name": "degree6_span_product_24",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        26
+      ],
+      "multiplier_terms": 6
+    },
+    {
+      "block_id": 27,
+      "name": "degree6_span_product_25",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        27
+      ],
+      "multiplier_terms": 10
+    },
+    {
+      "block_id": 28,
+      "name": "degree6_span_product_26",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        28
+      ],
+      "multiplier_terms": 15
+    },
+    {
+      "block_id": 29,
+      "name": "degree6_span_product_27",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        29
+      ],
+      "multiplier_terms": 21
+    },
+    {
+      "block_id": 30,
+      "name": "degree6_span_product_28",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        30
+      ],
+      "multiplier_terms": 28
+    },
+    {
+      "block_id": 31,
+      "name": "degree6_span_product_29",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        31
+      ],
+      "multiplier_terms": 36
+    },
+    {
+      "block_id": 32,
+      "name": "degree6_span_product_30",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        32
+      ],
+      "multiplier_terms": 4
+    },
+    {
+      "block_id": 33,
+      "name": "degree6_span_product_31",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        33
+      ],
+      "multiplier_terms": 10
+    },
+    {
+      "block_id": 34,
+      "name": "degree6_span_product_32",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        34
+      ],
+      "multiplier_terms": 15
+    },
+    {
+      "block_id": 35,
+      "name": "degree6_span_product_33",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        35
+      ],
+      "multiplier_terms": 21
+    },
+    {
+      "block_id": 36,
+      "name": "degree6_span_product_34",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        36
+      ],
+      "multiplier_terms": 28
+    },
+    {
+      "block_id": 37,
+      "name": "degree6_span_product_35",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        37
+      ],
+      "multiplier_terms": 6
+    },
+    {
+      "block_id": 38,
+      "name": "degree6_span_product_36",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        38
+      ],
+      "multiplier_terms": 10
+    },
+    {
+      "block_id": 39,
+      "name": "degree6_span_product_37",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        39
+      ],
+      "multiplier_terms": 15
+    },
+    {
+      "block_id": 40,
+      "name": "degree6_span_product_38",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        40
+      ],
+      "multiplier_terms": 21
+    },
+    {
+      "block_id": 41,
+      "name": "degree6_span_product_39",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        41
+      ],
+      "multiplier_terms": 4
+    },
+    {
+      "block_id": 42,
+      "name": "degree6_span_product_40",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        42
+      ],
+      "multiplier_terms": 7
+    },
+    {
+      "block_id": 43,
+      "name": "degree6_span_product_41",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        43
+      ],
+      "multiplier_terms": 11
+    },
+    {
+      "block_id": 44,
+      "name": "degree6_span_product_42",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        44
+      ],
+      "multiplier_terms": 4
+    },
+    {
+      "block_id": 45,
+      "name": "degree6_span_product_43",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        45
+      ],
+      "multiplier_terms": 7
+    },
+    {
+      "block_id": 46,
+      "name": "degree6_span_product_44",
+      "basis_size": 55,
+      "factor_columns": 55,
+      "multiplier_meta": [
+        "old_PSD_upgrade",
+        46
+      ],
+      "multiplier_terms": 4
+    },
+    {
+      "block_id": 47,
+      "name": "global_adjacent_swap_0",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "global_relevant_swap",
+        0,
+        1
+      ],
+      "multiplier_terms": 660
+    },
+    {
+      "block_id": 48,
+      "name": "global_adjacent_swap_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "global_relevant_swap",
+        1,
+        2
+      ],
+      "multiplier_terms": 450
+    },
+    {
+      "block_id": 49,
+      "name": "global_adjacent_swap_2",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "global_relevant_swap",
+        2,
+        3
+      ],
+      "multiplier_terms": 340
+    },
+    {
+      "block_id": 50,
+      "name": "global_adjacent_swap_3",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "global_relevant_swap",
+        3,
+        4
+      ],
+      "multiplier_terms": 228
+    },
+    {
+      "block_id": 51,
+      "name": "global_adjacent_swap_4",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "global_relevant_swap",
+        4,
+        5
+      ],
+      "multiplier_terms": 228
+    },
+    {
+      "block_id": 52,
+      "name": "global_adjacent_swap_5",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "global_relevant_swap",
+        5,
+        6
+      ],
+      "multiplier_terms": 340
+    },
+    {
+      "block_id": 53,
+      "name": "global_adjacent_swap_6",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "global_relevant_swap",
+        6,
+        7
+      ],
+      "multiplier_terms": 450
+    },
+    {
+      "block_id": 54,
+      "name": "global_adjacent_swap_7",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "global_relevant_swap",
+        7,
+        8
+      ],
+      "multiplier_terms": 660
+    },
+    {
+      "block_id": 55,
+      "name": "free_KKT_0_-1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        0,
+        -1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 56,
+      "name": "free_KKT_0_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        0,
+        1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 57,
+      "name": "free_KKT_1_-1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        1,
+        -1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 58,
+      "name": "free_KKT_1_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        1,
+        1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 59,
+      "name": "free_KKT_2_-1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        2,
+        -1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 60,
+      "name": "free_KKT_2_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        2,
+        1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 61,
+      "name": "free_KKT_3_-1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        3,
+        -1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 62,
+      "name": "free_KKT_3_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        3,
+        1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 63,
+      "name": "free_KKT_4_-1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        4,
+        -1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 64,
+      "name": "free_KKT_4_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        4,
+        1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 65,
+      "name": "free_KKT_5_-1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        5,
+        -1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 66,
+      "name": "free_KKT_5_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        5,
+        1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 67,
+      "name": "free_KKT_6_-1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        6,
+        -1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 68,
+      "name": "free_KKT_6_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        6,
+        1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 69,
+      "name": "free_KKT_7_-1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        7,
+        -1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 70,
+      "name": "free_KKT_7_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        7,
+        1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 71,
+      "name": "free_KKT_8_-1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        8,
+        -1
+      ],
+      "multiplier_terms": 715
+    },
+    {
+      "block_id": 72,
+      "name": "free_KKT_8_1",
+      "basis_size": 10,
+      "factor_columns": 10,
+      "multiplier_meta": [
+        "free_gradient_E_plus_sign_P",
+        8,
+        1
+      ],
+      "multiplier_terms": 715
+    }
+  ],
+  "old_common_anchor_equals_new_layout_center": false,
+  "old_common_anchor_equals_inputs_energy0": true,
+  "existing_proved_friendly_energy_paths": [
+    "r001000001000001101011101",
+    "r001000001000001110011100"
+  ],
+  "current_cell_path": "r001000001000100110011001",
+  "current_cell_has_same_path_as_proved_friendly_packet": false,
+  "point_provider_counts": {
+    "old_P3_anchors": 41,
+    "new_sextic_anchors": 41,
+    "swap_normalized_anchors": 87,
+    "proved_friendly_anchors": 82,
+    "old_P3_anchor_matches_to_friendly": 2,
+    "new_sextic_anchor_matches_to_friendly": 1,
+    "swap_anchor_matches_to_friendly": 1,
+    "old_P3_integer_anchors": 0,
+    "new_sextic_integer_anchors": 0,
+    "swap_integer_anchors": 0,
+    "new_sextic_orders0to4_exact_matches_in_swap_packets": 40
+  },
+  "exact_shared_point_packets": [
+    [
+      0,
+      [
+        0
+      ]
+    ],
+    [
+      1,
+      [
+        29
+      ]
+    ],
+    [
+      2,
+      [
+        52
+      ]
+    ],
+    [
+      3,
+      [
+        61
+      ]
+    ],
+    [
+      4,
+      [
+        71
+      ]
+    ],
+    [
+      5,
+      [
+        78
+      ]
+    ],
+    [
+      7,
+      [
+        1
+      ]
+    ],
+    [
+      8,
+      [
+        2
+      ]
+    ],
+    [
+      9,
+      [
+        4
+      ]
+    ],
+    [
+      10,
+      [
+        6
+      ]
+    ],
+    [
+      11,
+      [
+        8
+      ]
+    ],
+    [
+      12,
+      [
+        10
+      ]
+    ],
+    [
+      13,
+      [
+        12
+      ]
+    ],
+    [
+      14,
+      [
+        14
+      ]
+    ],
+    [
+      15,
+      [
+        16
+      ]
+    ],
+    [
+      16,
+      [
+        17
+      ]
+    ],
+    [
+      17,
+      [
+        19
+      ]
+    ],
+    [
+      18,
+      [
+        21
+      ]
+    ],
+    [
+      19,
+      [
+        23
+      ]
+    ],
+    [
+      20,
+      [
+        25
+      ]
+    ],
+    [
+      21,
+      [
+        27
+      ]
+    ],
+    [
+      22,
+      [
+        31
+      ]
+    ],
+    [
+      23,
+      [
+        32
+      ]
+    ],
+    [
+      24,
+      [
+        34
+      ]
+    ],
+    [
+      25,
+      [
+        36
+      ]
+    ],
+    [
+      26,
+      [
+        38
+      ]
+    ],
+    [
+      27,
+      [
+        40
+      ]
+    ],
+    [
+      28,
+      [
+        43
+      ]
+    ],
+    [
+      29,
+      [
+        44
+      ]
+    ],
+    [
+      30,
+      [
+        46
+      ]
+    ],
+    [
+      31,
+      [
+        48
+      ]
+    ],
+    [
+      32,
+      [
+        50
+      ]
+    ],
+    [
+      33,
+      [
+        56
+      ]
+    ],
+    [
+      34,
+      [
+        57
+      ]
+    ],
+    [
+      35,
+      [
+        59
+      ]
+    ],
+    [
+      36,
+      [
+        66
+      ]
+    ],
+    [
+      37,
+      [
+        67
+      ]
+    ],
+    [
+      38,
+      [
+        69
+      ]
+    ],
+    [
+      39,
+      [
+        77
+      ]
+    ],
+    [
+      40,
+      [
+        86
+      ]
+    ]
+  ],
+  "grid_provider_counts": {
+    "old_q5_cells": 658,
+    "swap_q5_cells": 622,
+    "new_q7_cells": 658,
+    "old_q5_minus_swap_q5": 57,
+    "swap_q5_minus_old_q5": 21,
+    "union_cell_indices": 679
+  },
+  "literal_data_inventory": {
+    "scalar_integer_count": 14564,
+    "Gram_integer_count": 190150,
+    "Gram_positive_columns": 3010,
+    "scalar_max_bit_length": 44,
+    "factor_max_absolute_bit_length": 44,
+    "scalar_flat_decimal_array_bytes": 138875,
+    "factor_flat_decimal_arrays_bytes": 2131443,
+    "weights_and_factors_decimal_array_bytes": 2270318,
+    "two_coefficient_endpoint_decimal_arrays_bytes": 194558,
+    "weights_factors_and_endpoints_decimal_array_bytes": 2464876,
+    "fixed_quantized_packet_gzip_bytes": 1106957,
+    "fixed_quantized_packet_uncompressed_bytes": 2295719,
+    "full_metadata_certificate_bytes": 758192
+  },
+  "naive_selected_existing_API_import_closure": {
+    "root_modules": [
+      "StructuralGoal20261016.WindowBoundedMomentFarkas",
+      "StructuralGoal20261016.WindowRationalInterval",
+      "StructuralGoal20261016.WindowDerivativeTableArithmetic",
+      "StructuralGoal20261016.WindowGramExpansion",
+      "StructuralGoal20261016.WindowDirectionalAffine",
+      "StructuralGoal20261016.WindowGlobalCompetitor",
+      "StructuralGoal20261016.WindowKKTInstance",
+      "StructuralGoal20261016.WindowMomentEnergy",
+      "StructuralGoal20261016.WindowRecordLowerFloor"
+    ],
+    "module_count": 132,
+    "own_unminified_source_bytes": 3087115,
+    "files": [
+      {
+        "path": "StructuralGoal20261016/WindowRecordLowerFloor.lean",
+        "bytes": 3912,
+        "sha256": "518379640c1841340703cf3bfbbab427a21a4adcb798f5cd31dabd5fbf5fa605"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowRecordDyadic.lean",
+        "bytes": 1777,
+        "sha256": "3a2bf541e019af56e3c94101f26dfe4c386879b85273c937fc9dc105d889162d"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowRecordFromFloor.lean",
+        "bytes": 2606,
+        "sha256": "76660f180603444e25e9f07da514d502ecf11ef749e4f62417568c8b370807ef"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowEnergyBound.lean",
+        "bytes": 3819,
+        "sha256": "29bb4a9ab7c8cbdd0c067993241d093999fdc63a983102968a74c23850dd8e14"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowKernel.lean",
+        "bytes": 5762,
+        "sha256": "4c01794657e775391ba57642e7d753be961ac4e89e87c3f29109be8f5f05547e"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowEnergy.lean",
+        "bytes": 11897,
+        "sha256": "ffb24882e2f7e588a5787c00dd4ba0a6139d7d99c788701890d3febb74b428d8"
+      },
+      {
+        "path": "StructuralW10Followup20261016/NewWindows.lean",
+        "bytes": 2706,
+        "sha256": "d9ea408b5ae22c079a3090bb8dea36b1d7e8b7dab7778506f59daffa9c388a70"
+      },
+      {
+        "path": "StructuralW10Followup20261016/WindowMajorantGeneral.lean",
+        "bytes": 6690,
+        "sha256": "95a35950b6b5de2a9fa395452c0e30eeaa3e0c6a3b41b5391855459bf51a7b84"
+      },
+      {
+        "path": "StructuralW10Followup20261016/WindowProfileGeneral.lean",
+        "bytes": 2485,
+        "sha256": "50b5818f60a96075bfe78f81fc8af96a4d484600cccc2e9ec9d4e9f8191de8c9"
+      },
+      {
+        "path": "GramDefect20261015/Core.lean",
+        "bytes": 1912350,
+        "sha256": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowPairCertificate.lean",
+        "bytes": 2577,
+        "sha256": "305dc7433f27d4d5f2f4df5d3d8e295545966070fa01f4a3804de805e2d4bb54"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowClosePair.lean",
+        "bytes": 4084,
+        "sha256": "3f2a475936a469f926882c5b321add38ed4ed4f6ffa4fdc6345d9d887afaa650"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowDerivative.lean",
+        "bytes": 8122,
+        "sha256": "c5c2cb3032d24f6a3e0523bfe8af96b470d3ee42a95a726087f20109633c15b2"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedPoint.lean",
+        "bytes": 3418,
+        "sha256": "901d7b87e6aba6da6e9f61858701719aef5c7da7fdcc3a5f83a97a6645418d60"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableData.lean",
+        "bytes": 322302,
+        "sha256": "f6afdae121fb933db7b468b861de75e2e38afe2068323837b7a18095306c2ec8"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableConsumer.lean",
+        "bytes": 4760,
+        "sha256": "db87baf4ab54eb51fe592d26345c328fd6f25db32b40702a25f98fb38372707f"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowIntegerKernelRecipe.lean",
+        "bytes": 5640,
+        "sha256": "d8449325165296ea6c2db318c87f8aaf9fc7e14b4f241efa42e1acc2dce6e112"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowIntegerJetRecipe.lean",
+        "bytes": 4382,
+        "sha256": "80306036c62fe9b5f2d06e8c1ddeafd2e0df6c97ae89f5dd3c23edce6ccfea56"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowBasicEnclosures.lean",
+        "bytes": 2562,
+        "sha256": "e4988ebf261e40ee20b1b836fd5cf2572e41570ca33d9b4f6a242c767861f31b"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowNormalizedJets.lean",
+        "bytes": 4744,
+        "sha256": "8b47725eb97a47e0a86294a771cfb06a9fc299e4a0a7e7edf4410885cb01b6cc"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowSincJet.lean",
+        "bytes": 9105,
+        "sha256": "3fd7aaa1b09db4339e305612462423ef39e1aa8cfd30becb97716e1c5ce638a2"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowTaylorBridge.lean",
+        "bytes": 3507,
+        "sha256": "b3db359086705edb1b5552106248bdd2e5aac6dae6333b4e4cc72f48855bda24"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowRationalInterval.lean",
+        "bytes": 6722,
+        "sha256": "d0eae7ba9caed1d44c9d8e2b3884cca64edc79d0925897190c15f5591f890c88"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedPolynomial.lean",
+        "bytes": 5085,
+        "sha256": "ed57641b5bd8df365331eb9a141e8fa2ffa91fd3c65ec8c67a619a67b1e04df9"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowPointTableArithmetic.lean",
+        "bytes": 4666,
+        "sha256": "c05d5f34dafc329e0ad997341e48ad76ddd5b8471fed5d3875cd39785db2c8b7"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowScalarMinorant.lean",
+        "bytes": 3660,
+        "sha256": "7cea224a250677b941d110c698e4b2dacdcee93829ee88a69cccf9e46b3228e1"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowConvexityCertificate.lean",
+        "bytes": 5669,
+        "sha256": "cc5bdfba83cdf45fd2f81ea9741899b9b263e55af54a43226f74c299979526e9"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowConvexityArithmetic.lean",
+        "bytes": 4262,
+        "sha256": "9f838bcb46fdf45b5c648f95f9e91beeafb85e4959b53a2519a18c0af1514cf9"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowBernsteinTransform.lean",
+        "bytes": 2569,
+        "sha256": "c9f020a9beab8bdb00e79deb3520cea8a53ab5b993fe12ed4c8c4f19b8fc71c4"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedRational.lean",
+        "bytes": 1443,
+        "sha256": "b536c095fbf38559b6d85ad3ed68399a5c09c0faef9e18439b13863847a4ae59"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedInterval.lean",
+        "bytes": 6338,
+        "sha256": "daa3759d76278c07cc862b4325d88f0542ce7acba7e245ca629c8e26f768e742"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter01.lean",
+        "bytes": 913,
+        "sha256": "0e1af22cfcb96ebed36dbae0c30d4f31a7f942d273fe3a35fc87b8c1ce8ca40c"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelPilot.lean",
+        "bytes": 1152,
+        "sha256": "1f0f1b79e58f49031b5cb8b7d8d8967e8a4937ed376217edb1ec01b724952b6e"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernel.lean",
+        "bytes": 3958,
+        "sha256": "604c8eec05a2823f165f2455343afac3f43b415a9aee6e9b5b55a4f5a40fe381"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTablesAll.lean",
+        "bytes": 5358,
+        "sha256": "e83fc7283a7bffbc53ad2e2e3f64234bf56862a45651cf8161e860b37244fec8"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos10.lean",
+        "bytes": 1232,
+        "sha256": "273a2ec8ccd0f702ce471fbcfc64bcfa485b189e53a68109e17185cbc953591d"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTablePilot.lean",
+        "bytes": 1366,
+        "sha256": "3b22e3daecefee90b0c5bd937df6ff729146d0b9a2e901f3546a515a0ea68223"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos09.lean",
+        "bytes": 5859,
+        "sha256": "cb2c0a5c6d3a612830542357c3cdd56ab3eb286c546038ce6568029fca870583"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos08.lean",
+        "bytes": 5859,
+        "sha256": "74ad3171d775becdcbdb4c898b751a110f342198552576622fa0be7349cd84bb"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos07.lean",
+        "bytes": 5859,
+        "sha256": "fcdf325bf53a80e61f25e6171383458a4e9fbfb8fe0ca0582922f0ea70034bdd"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos06.lean",
+        "bytes": 5859,
+        "sha256": "b4a8fc916eb284ffe886f52b8c96f71778ef8671af0c88fb47a1a215e10d807b"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos05.lean",
+        "bytes": 5859,
+        "sha256": "9b631b452d9c98428d09bd9be3d53087460e759aa68a182d92e1dda5c664c619"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos04.lean",
+        "bytes": 5835,
+        "sha256": "2c72dac38b37365974fa1c9bd6b615141ad9c2e7d6162e69284f083beb92ced1"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos03.lean",
+        "bytes": 5483,
+        "sha256": "efdd01bc70ee6e9db639fbdc999cd7f996c5d730a8375a14a3770a694e0e5b71"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos02.lean",
+        "bytes": 5891,
+        "sha256": "91a8b1634263c27f0a3ee8fc1e78e55d8852cb8f6e7c2215ee302791828afafb"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos01.lean",
+        "bytes": 5975,
+        "sha256": "0939f96d2a9ec7b4254c6f2d10c3939251fef834a3782a2185f76a63029779ea"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableCos00.lean",
+        "bytes": 5987,
+        "sha256": "9997e5777e88cdbe91eea070f8228cb02d5779e8b7fabd4dfcc41e25fcf19f2b"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableBase07.lean",
+        "bytes": 4775,
+        "sha256": "293ea12d517ad6806ac34011aaa99403c96f696ace7bf6c68c344060b116bc98"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableBase06.lean",
+        "bytes": 4775,
+        "sha256": "9876aa348bea63f16d5981b400a2105fc839a75d791b389f60a6249fcd6e2270"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableBase05.lean",
+        "bytes": 4775,
+        "sha256": "c381bf818dc436b0e190feb45e175cd395702c674c6c384da361212f0837c3d3"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableBase04.lean",
+        "bytes": 4775,
+        "sha256": "f4f4e2464c44444cc10ae331308ad3231bb5a02d2baafa86dbc596b2384f52b1"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableBase03.lean",
+        "bytes": 4775,
+        "sha256": "84418e69e7eb5813895478f3fee98a2ea6ad27c8d2f89279f3eaa700c70b5902"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableBase02.lean",
+        "bytes": 4747,
+        "sha256": "91f27f9d6755525070f0220ab83609219bfe73ad85f4502e34d18848e1060912"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableBase01.lean",
+        "bytes": 4663,
+        "sha256": "acb5ee6b064474da551817c96c9b2dceff92e99747ec79fec637cd2fcfa9e897"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowJetTableBase00.lean",
+        "bytes": 4663,
+        "sha256": "ad18c9bb9a768398b8144db3dcb09b74e741df9fcdc7e0d3355d149a7bcceb61"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowCounting.lean",
+        "bytes": 7722,
+        "sha256": "e93af3777cff158bd0d889fc569811230ac6248f4a5bf49792e183f11558c42f"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowCountingGeometry.lean",
+        "bytes": 8628,
+        "sha256": "f3f144e20f504b1c9d6cac14909e55589ed193a202292424f1e2f14e7f619818"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowCountingBase.lean",
+        "bytes": 13585,
+        "sha256": "9f9e552e84630ae280e4e4a84ad3390d617318918798faf2786e66bc880bbe2b"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowAsymptotic.lean",
+        "bytes": 30183,
+        "sha256": "f06ef7f38aab6c795025ad255e77babcddd9b7dda1156486c08a7b4fd883a9c9"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowRealization.lean",
+        "bytes": 4652,
+        "sha256": "34c14e68afa798a76513d1d85a9be6c6af0665c9cec28540f00902ceeabba8c5"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowProfile.lean",
+        "bytes": 25016,
+        "sha256": "81bde0ab94551f86be63b7a21d447ffc5c4b30603317c5df4bb74cb8865ae050"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowCountingDefect.lean",
+        "bytes": 3114,
+        "sha256": "6a5951e13f196e6c68f92d7e451d99db63008bc5a7c32a49fdca4fba68e109e1"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowSeparated.lean",
+        "bytes": 21574,
+        "sha256": "5a7d4c6420c70c2f16468a2615d1d9906b664567ee5528c1e0dd12519adf1fb4"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowUniformKernel.lean",
+        "bytes": 12670,
+        "sha256": "11afe5f95efdd6628775cd1da7b103aac19d694eedfc6131b871c65b9d3403b7"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowMatching.lean",
+        "bytes": 7872,
+        "sha256": "9bea1dffb2854e1b7a96d4f0f34ee5d31ce70f70946ad74971cee78ba9aaa1bd"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowDiscreteEnergy.lean",
+        "bytes": 21441,
+        "sha256": "487eb81b913bbae024a36e4d4b2bfd86501d66e265463fb44fe0b2d50ec7117c"
+      },
+      {
+        "path": "StructuralResearch20261016/Coboundary.lean",
+        "bytes": 19992,
+        "sha256": "730fdccd5d8faba2765f5b1d77b5e7ff897328b92ac6bcb4f3d1fe876702041a"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowGapEnergy.lean",
+        "bytes": 13554,
+        "sha256": "3f570bc83263355a239c086922e9bc138319fd2abd77668b594b5f94a5fd6564"
+      },
+      {
+        "path": "StructuralW10Followup20261016/NewLedger.lean",
+        "bytes": 4044,
+        "sha256": "9db3e7633a3117f4fded88998da4ab3ebc4e24631ac50816f23931bdb8225d1a"
+      },
+      {
+        "path": "StructuralGoal20261016/CoverCoerciveKKT.lean",
+        "bytes": 6087,
+        "sha256": "6ba6b27c6d783438beab2303e7d29eab96fd0d6265040b7184b8cd9c21f025e3"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowMomentEnergy.lean",
+        "bytes": 4801,
+        "sha256": "0f549a4d5e204d6cf11a4734a447c3e9c2a53a4354be4dc056c68489a313ff55"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowGramDiagonal.lean",
+        "bytes": 5437,
+        "sha256": "d0b29c9dbb1acf8fdfb321e48d071c7e236383f474b3496075be8b3a5fc43c0b"
+      },
+      {
+        "path": "StructuralW10Unconditional20261016/DiagonalPolynomial.lean",
+        "bytes": 1161,
+        "sha256": "e747d940480ec90f4b415aa67951a660803fe5918ab690df90faa46a06b9e693"
+      },
+      {
+        "path": "StructuralW10Unconditional20261016/QuadraticEnvelope.lean",
+        "bytes": 3634,
+        "sha256": "35120fae9971f7c0d53c9324b6165e70e26f6e9f0ecfc97b267fe297844ab4d0"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowDifferenceCell.lean",
+        "bytes": 4202,
+        "sha256": "df618f3c2965a203eb94ef0ced212de859033d58c7fe27ca607ace3314079ba0"
+      },
+      {
+        "path": "StructuralGoal20261016/DifferenceCell.lean",
+        "bytes": 2442,
+        "sha256": "39e1638dc2768dc6ff0fc34409feb73eb25710c5b5cc234bdfc911e9a22820ad"
+      },
+      {
+        "path": "StructuralGoal20261016/FlowBasisCodec.lean",
+        "bytes": 3836,
+        "sha256": "927f3f8fca7e049fcf20a176b0d8d9b46393f5455d0138b7e6da3c694ea7baad"
+      },
+      {
+        "path": "StructuralGoal20261016/AffineFlowCertificate.lean",
+        "bytes": 2724,
+        "sha256": "94b8aa67e553fe5f026e40ee78669309fac09090223e01c03de02aeb93ffbfc1"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowDirectionalAffine.lean",
+        "bytes": 6168,
+        "sha256": "3c444b06e70b709bd0d641884a575d505d82993f3ee6b343f92d6ac50ea61d3e"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowMinimizerCover.lean",
+        "bytes": 3811,
+        "sha256": "ffbeccae4857ff0fb57f3b58c0bfa8f0a78f5d213d37782f0e948da1da455292"
+      },
+      {
+        "path": "StructuralGoal20261016/MinimizerCover.lean",
+        "bytes": 4372,
+        "sha256": "7d3bbe16ecb0ea002554f29f261db259f7ce32d24482357fb903bc6e22ab6de1"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowGramExpansion.lean",
+        "bytes": 3423,
+        "sha256": "c96182db1b236171b8dfa32b3e7a31a603ddf05a2f550ef86e95be040a0caf5f"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowKKTInstance.lean",
+        "bytes": 1249,
+        "sha256": "25f6722fe1e937db7c774b01a52fd1a1594226d21898891fc10885c9c1633fa2"
+      },
+      {
+        "path": "StructuralGoal20261016/CoverKKTContraction.lean",
+        "bytes": 3470,
+        "sha256": "77432f404d98267047907a05f093b14c474d22755fbe8053a44a1a294a0fff6b"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowGlobalCompetitor.lean",
+        "bytes": 4965,
+        "sha256": "33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowDerivativeTableArithmetic.lean",
+        "bytes": 3326,
+        "sha256": "4c1bf1a5f2bdc3e35dbe55d7b32e5504cf14dcea2103db7bdef1002d6c592cbb"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowBoundedMomentFarkas.lean",
+        "bytes": 8781,
+        "sha256": "c2d43cd25643589ee87d1e3cccde41a2cc139daacc934b421843fc2b4a39245a"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowLiftedFarkas.lean",
+        "bytes": 4937,
+        "sha256": "7b15caa017acf2c8ddc38bc9134c047276e802ec6a4f001f7f52114115fb6f61"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowGridRange.lean",
+        "bytes": 4123,
+        "sha256": "2c3f656de4520c33eb578faa786367879ee2cfac40a7b80fbd01a5e051ee7aab"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowGridCertificateData.lean",
+        "bytes": 207485,
+        "sha256": "9ec3c80af2dea8888b63ede9f674d826c23de7868e48839357ac23ffd7712296"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowGridCertificate.lean",
+        "bytes": 2218,
+        "sha256": "164089b01cfd27ee5aaac2d9ea879af8e6c9337a0d27633fe456db287f406cb0"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowCellDerivative.lean",
+        "bytes": 3843,
+        "sha256": "249cc8b5acca671a60ab52fdc5f330beabbc637cb85ffb01fb67eb0902e09278"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedHornerChoice.lean",
+        "bytes": 2646,
+        "sha256": "c4fbde6c63eda3147163ea921512ed922e199825e08b5c889064cf5dd6809a19"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedDerivative.lean",
+        "bytes": 2591,
+        "sha256": "261d1cdc2541741729a55e1332b7ac6bb494af21db15a61bf57bba585974b501"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowRawCoefficients.lean",
+        "bytes": 1196,
+        "sha256": "6d1511d7024916b0dce4805b913e31b7a42f75a8488e4fb6054e6fd6a680916d"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedTablesAll.lean",
+        "bytes": 6487,
+        "sha256": "7511ac0f532150ad4f9fa4ae63b67c5a11fe3caf248ae84cdda1581dffd4c6f0"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter32.lean",
+        "bytes": 1316,
+        "sha256": "95030522aca35631accee1abb4eb988cd4cecc8a52b594da76db08675ecd21ae"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter31.lean",
+        "bytes": 1316,
+        "sha256": "865b4c3c19bd7c2b7a38816ec0869f5d95100b6a3af68b55f9db078926b1cd31"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter30.lean",
+        "bytes": 1316,
+        "sha256": "d10a14ad657ca4aa369e9f678a16daf3feca41c42a1052468efa2593d400b09c"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter29.lean",
+        "bytes": 1316,
+        "sha256": "afcad564f24c52598da828aa96bdd737a755e45fd665dcb41e9de5793c117011"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter28.lean",
+        "bytes": 1316,
+        "sha256": "5cfc95b2d8846e48fe8a3ec1cd2097c7e667051f16f54ddb6995a9cb9320b7c1"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter27.lean",
+        "bytes": 1316,
+        "sha256": "dc6861046a6f46bce4a597e8a831f31533b455a7f3bc10cd82eac621466c2f8d"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter26.lean",
+        "bytes": 1316,
+        "sha256": "0670fe80689c2adc99e13a55d6679a4a93403a678f50721063ac2e9b3037c6be"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter25.lean",
+        "bytes": 1316,
+        "sha256": "38516e1f82ee920b390f3cdeb1117ed78652ddd6fa9dff0a5e86900aa18b25f2"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter24.lean",
+        "bytes": 1316,
+        "sha256": "ce0cdbf36360fb9565e953f356ecafb774905b976d86b4fd21be8213e976efe9"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter23.lean",
+        "bytes": 1316,
+        "sha256": "148bd9c3d032c93b895fa172ddb6995f38fa905d4b8030fd0027827200a87a75"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter22.lean",
+        "bytes": 1316,
+        "sha256": "8a48a42a8046629b88308ea19266f456d92b6ba9a261a869dd6adcea8d462f8d"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter21.lean",
+        "bytes": 1316,
+        "sha256": "3107de23b2d41873134b05fc0fcc4e3cc6953f87557b677978f5a31623dd367f"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter20.lean",
+        "bytes": 1316,
+        "sha256": "bc3145952e0022b4ec66324e5a7283c1e2da90d8b19f9991e66e64e3731e8d6f"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter19.lean",
+        "bytes": 1316,
+        "sha256": "3e5a298b803776dd30560af0261870fe88e46d62a6d7ef18ce0368e3d2934e63"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter18.lean",
+        "bytes": 1316,
+        "sha256": "f74ae7c4367680ce58ee163df301088035361618920dedba04a6e9b4ec553328"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter17.lean",
+        "bytes": 1316,
+        "sha256": "feb3ad4966f4f6eba4930dc04c2f981eef2c7b76ee73334ab32149a9e8bef0d3"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter16.lean",
+        "bytes": 1316,
+        "sha256": "b04a7420cf4e80b339504dc10d73225be9a2ccd683925f095693ebe396c76aed"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter15.lean",
+        "bytes": 1316,
+        "sha256": "c88ff5d7f6d6b99eb16487c7b2d6bbf6ce233ab7acb43228210d0bc0f1a7aa47"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter14.lean",
+        "bytes": 1316,
+        "sha256": "4ca6e1d417a31ab8d0826d54b328da7b2e552ff5eb3a2d8ab8d970669a8c1dde"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter13.lean",
+        "bytes": 1316,
+        "sha256": "76f6419fb600f93000211f76bc8981b9814b4b76b6cabbb85f2066e5456bb3ed"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter12.lean",
+        "bytes": 1316,
+        "sha256": "fc19439715c875d9cf924b57b5853abd0565f04df34d245779cda41a8600b7ec"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter11.lean",
+        "bytes": 1316,
+        "sha256": "e6c07aa604130d457f29ca380d72a68efe94dafe84c1ebe31e5914213d1a07b1"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter10.lean",
+        "bytes": 1316,
+        "sha256": "91875aada8bb87b16c4d5ac31ea95a2fc43885a780406a1e718302792708f265"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter09.lean",
+        "bytes": 1300,
+        "sha256": "0334b355d6a178b4b422287c2a18624103a63db713d807e940a3a5f592bb2e36"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter08.lean",
+        "bytes": 1300,
+        "sha256": "0ad7ea15584a9fc1e7a3b19631950b6b04709bcfb6c25f5904f19063c7a816af"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter07.lean",
+        "bytes": 1300,
+        "sha256": "fe323bd0e19c53dc8b12e6007ddd9ae6335c420054f27133416fcebdc730555e"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter06.lean",
+        "bytes": 1300,
+        "sha256": "a16e0e99c45139a101703515da4d42719577996fc631fd4cc6c97c21858480de"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter05.lean",
+        "bytes": 1300,
+        "sha256": "26f883150f511fa0f66e7e9f2bcc1a266cd3a01ebbfb4c93ab5a78c7c6c64df5"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter04.lean",
+        "bytes": 1300,
+        "sha256": "2e97e81bb42d0ffccc979c78e27360fd48391ad5e6ca6e5a86ba80905d8e71d7"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter03.lean",
+        "bytes": 1300,
+        "sha256": "3c8e353768828fe8a40aa98e8cae0b2ff4ec95622d07a9dc4c03bbf6fda07fb9"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter02.lean",
+        "bytes": 1300,
+        "sha256": "0d24db91fd54c8aaca33262ac9caf0952c1ac34c71a125f9f7e8e500325004ec"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowRawCoefficientData.lean",
+        "bytes": 35292,
+        "sha256": "1c5b0ca115c7242fe7daae3aff8c0cc9667dabfb14b2c2fa169bda695f97c6be"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowDirectionalFlow.lean",
+        "bytes": 8661,
+        "sha256": "7e21dcbf719156b192725804a0ae47f96eef44f0adf7ab96bcd8e7083203329e"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowValueFlow.lean",
+        "bytes": 9541,
+        "sha256": "9dea855bdabb81a19b4a99423b4e172cc9d2899d0727f4d3ba5d1e3cb34fac75"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowRootCell.lean",
+        "bytes": 5860,
+        "sha256": "4631ec87a087bddbf0abe71a6a99e569d648b00c58549135e1cdbe308ee8428a"
+      },
+      {
+        "path": "StructuralGoal20261016/WindowPressureRoot.lean",
+        "bytes": 3617,
+        "sha256": "6ee2ad48f9f34e0da75ece45cb7e11ddad5aadd23602602a2feb80345c934891"
+      }
+    ],
+    "external_imports": [
+      "Mathlib",
+      "Mathlib.Algebra.BigOperators.Fin",
+      "Mathlib.Algebra.BigOperators.Intervals",
+      "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas",
+      "Mathlib.Analysis.Calculus.ParametricIntegral",
+      "Mathlib.Analysis.Calculus.Taylor",
+      "Mathlib.Analysis.Real.Pi.Bounds",
+      "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+      "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+      "Mathlib.Data.Nat.Choose.Cast",
+      "Mathlib.Data.Nat.Choose.Sum",
+      "Mathlib.Data.Rat.Floor",
+      "Mathlib.Data.Real.Basic",
+      "Mathlib.Tactic",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Ring",
+      "Zeta23.FinalMult",
+      "Zeta23.PrimeSideA.EndsE1",
+      "Zeta23.Taper.Norms",
+      "Zeta23.ThmD.Concrete",
+      "Zeta23.ThmD.Limit",
+      "Zeta23.ThmD.Mult",
+      "Zeta23.ThmD.Window",
+      "Zeta23.ThmD.WindowCore",
+      "Zeta23.ThmD.ZeroSideD",
+      "Zeta23.ZeroSide.RankTraceMult"
+    ],
+    "includes_current_unused_helpers": true,
+    "future_new_analytic_and_SOS_sources_not_included": true
+  },
+  "exact_certificate_replayed_here": false,
+  "fixed_ray_recombined_here": false,
+  "dependency_transfer_payments_computed": false,
+  "new_kernel_evaluations": 0,
+  "new_points": 0,
+  "optimizer_calls": 0,
+  "eigensolver_calls": 0,
+  "Lean_invocations": 0,
+  "parameter_or_rank_changes": 0,
+  "actual_cell_exclusion_proven": false,
+  "global_floor_proved": false,
+  "single_file_size_contract_proved": false,
+  "elapsed_milliseconds": 1935
+}

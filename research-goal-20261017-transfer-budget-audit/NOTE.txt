@@ -1,0 +1,67 @@
+Independent replay of the fixed legacy-analytic transfer budget
+
+Result: arithmetic PASS, transfer-budget gate FAIL.
+
+The independent standard-library checker rebuilds the new L6/P5/E6
+polynomials and all 181 canonical scalar row hashes. It checks the same
+fixed integer lambda weights and Gram factors as the previously certified
+exact ray. No producer module is imported. No solver, eigenvalue routine,
+kernel evaluation, new point, Lean invocation or alternate bound is used.
+
+For a polynomial in the common nine real coordinates y in [-1,1], the box
+upper bound retains the signed constant, pays abs(a) for a monomial with
+an odd exponent, and max(0,a) for every nonconstant all-even monomial.
+The replay reconstructs both signs of
+
+  eps_r = max(0, UB(E6_r-E4_r+(P3_r-P5_r)),
+                 UB(E6_r-E4_r-(P3_r-P5_r)))
+
+and eps0 = max(0, UB((L2-L6)/c)), c=11/1250. The exact inverse c is already
+included in eps0; it is not paid a second time. The old q0 multiplier is
+checked to be exactly (c-L2)/c.
+
+At a real point satisfying the new necessary conditions, these epsilons
+bound deficits of the old 180 scalar rows, 18 gradient Gram multipliers,
+and the one sublevel Gram multiplier. For every Gram factor column l,
+|sum_i l_i*basis_i(y)| <= sum_i |l_i| because each basis monomial has
+absolute value at most one. Thus its nonnegative SOS is bounded above by
+the sum of the column l1 norms squared. The replay independently expands
+the absolute integer products and checks this bound, each original
+positive block divisor, and all 180 scalar normalization scales.
+
+The exact cost components (decimal displays only) are:
+
+  180 scalar rows       8.383681828209971
+  18 gradient Grams  1794.9775694602345
+  q0 sublevel Gram    167.30261802334476
+  total K            1970.6638693117893
+
+The comparison uses exact Fractions, not these displays:
+
+  K > 1970 > 1 > margin
+
+where margin = 49999999878810053172892050487 /
+               50000000000000000000000000000.
+
+The original packet retains the complete exact K, whose denominator has
+57428 bits. This addon records its Fraction-string SHA256 instead of
+duplicating the large numerator and denominator.
+
+Therefore this fixed expanded-y box / column-l1 payment cannot remove the
+old analytic premises from the exact ray certificate. The result does
+not disprove analytic transfer or any different error bound. The original
+exact ray remains valid with its original premises, including the old
+quartic KKT/error inequalities, old sublevel inequality and the eight swap
+analytic dependencies. This real-point deficit argument is not a generic
+pseudomoment substitution: multiplying a new sextic multiplier by the old
+SOS may exceed the modeled degree.
+
+Reproduce, read-only by default, from the repository root:
+
+  python -S research-goal-20261017-transfer-budget-audit/independent_replay.py
+
+The recorded run completed with exit code 0 in 9.674 seconds. Its receipt
+binds every mathematical input before and after the computation. All
+producer files and the original exact-ray certificate were left unchanged.
+No actual analytic Lean bridge, complete root cover, unconditional zero
+proportion improvement or website-ready submission is claimed here.

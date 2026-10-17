@@ -1,0 +1,90 @@
+ONE FIXED OLD-ANALYTIC TRANSFER BUDGET: FAILED
+
+The original independently checked exact ray remains unchanged. Its
+positive normalized contradiction margin is
+49999999878810053172892050487/50000000000000000000000000000.
+This packet tests one previously specified sufficient budget for replacing
+the old analytic inequalities by new actual-sextic necessary conditions.
+The exact comparison fails: K>margin. No old analytic premise is removed.
+
+Approximate display of the exact rational costs:
+ old180 gradient scalar rows:8.383681828209971;
+ old18 gradient Gram blocks:1794.9775694602345;
+ old quadratic sublevel Gram block:167.30261802334476;
+ total K:1970.6638693117893;
+ original exact-ray margin:0.9999999975762011.
+The exact Fraction strings, not these displays, decide the comparison.
+
+There was one fixed budget evaluation, with the frozen lambda and L,
+no new eigensolver, optimizer, sampled point, rank/precision/parameter
+trial or different bound. Failure only says this fixed sufficient budget
+is too large. It does not prove that old-analytic transfer is impossible.
+
+Derivation and conditions
+
+Use the same original nine normalized gaps y in[-1,1]^9 and c=11/1250.
+The new actual-sextic necessary conditions are L6(y)<=c and
+|P5_r(y)|<=E6_r(y) at all nine free coordinates. For the rational old
+cubic-gradient and dynamic-error polynomials P3_r,E4_r, define
+
+ eps_r=max(0,boxUpper(E6_r-E4_r+(P3_r-P5_r)),
+              boxUpper(E6_r-E4_r-(P3_r-P5_r))).
+
+For every test1,y0,...,y8 and either sign,
+ E4_r +/- test*P3_r >= E4_r-|P3_r|
+ >= E4_r-E6_r-|P3_r-P5_r| >= -eps_r.
+No assumption E4_r>=0 is needed. This inference uses the new true-gradient
+necessary conditions, not the old w-prime table's actual-function identity.
+
+For the old sublevel multiplier q0=(c-L2)/c, set
+ eps0=max(0,boxUpper((L2-L6)/c)).
+Then L6<=c implies q0>=-eps0. The factor1/c is fully retained.
+
+boxUpper is the unique prescribed expanded-monomial support: constant
+terms are kept; any monomial with an odd exponent lies in[-1,1] and pays
+the absolute coefficient; all-even monomials lie in[0,1] and pay the
+positive part of the coefficient. The complete5005 canonical monomial
+map and actual shared normalized centers/radii are checked. No other
+bound, grouping strategy or anchor choice is tried here.
+
+An integer Gram factor column gives polynomial
+ p_col(y)=sum_i Lint_i,col*basis_i(y)/10^12.
+As each basis monomial has absolute value at most1, the fixed bound is
+
+ S_b=sum_col p_col(y)^2 <= B_b
+ =sum_col(sum_i abs(Lint_i,col))^2/10^24.
+
+All180 scalar costs are lambda_i*eps_r/old_row_scale_i.
+The18 gradient Gram costs are eps_r*B_b/blockDivisor_b.
+The sublevel cost is eps0*B_1/blockDivisor_1. All scales/divisors
+are the original positive rationals. The script checks exact identities
+for the old180 scalar polynomials, old18 Gram multipliers and q0.
+It also reconstructs all new L6/P5/E6 polynomials and matches their181
+frozen canonical row hashes before using any difference.
+
+If K<margin held, the frozen aggregate H would satisfy H>=-K from the
+remaining actual-point inequalities, yet H<=-margin by the original
+certificate, a contradiction. The present K does not satisfy it.
+This argument concerns polynomials evaluated at actual nine-variable
+points. It does not assert an equivalent transformation of arbitrary
+non-flat pseudo-moment models.
+
+The old L2/F0/gradient/curvature and old P3/E4 analytic obligations all
+remain. Eight global-swap actual upper envelopes and the new sextic
+actual-function obligations remain in any event. No concrete new Lean
+connection, actual cell exclusion, full coverage or zero proportion is
+proved by this failed budget.
+
+Resources and replay
+
+Pure Fraction/integer computation took9.209s, the one monitored worker
+9.687s, and peak working set176676864B. No1.5GiB guard was triggered.
+The exact K denominator has57428bits; the longest rational string is
+34581bytes. transfer-budget.json is311500bytes, below40MiB.
+Python3.14 replay must allow large integer strings before Fraction
+parsing (sys.set_int_max_str_digits(0)). No full coefficient matrix or
+5005-copy global common denominator is constructed.
+
+The original ray and proof packet are immutable dependencies. Independent
+replay is read-only by default and has its own receipt and file pin.
+No alternate estimate or second trial follows this failure.

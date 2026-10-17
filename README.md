@@ -2,6 +2,15 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
+The latest [fixed sextic certificate](research-goal-20261017-actual-sextic-exact-ray/NOTE.txt)
+and [independent integer replay](research-goal-20261017-exact-ray-audit/independent-replay.json)
+prove the enhanced degree-six polynomial/moment model infeasible on one
+specified difficult cell. Exact scalar weights, integer Gram factors and
+all 5,004 moment-box payments give the strict upper bound
+`-999999997576201063457841009740 / 10^30`. Concrete actual-function Lean
+bridges, complete root coverage and the website source-size contract remain
+open. This is **not an unconditional zero-proportion record**.
+
 The website's [attempt-024](https://www.riemannzeta.fun/submissions/attempt-024)
 now proves **67.3581307708%**, exceeding this repository's completed October 15
 bound below. **The old upload is no longer a record improvement.**

@@ -1,0 +1,127 @@
+FIXED ACTUAL-SEXTIC RAY: EXACT OUTER-MODEL CONTRADICTION
+
+Result and scope
+
+The frozen first-cell polynomial necessary-condition model has an exact
+arithmetic contradiction. Its verified aggregate is nonnegative under
+the model inequalities, but has the rational uniform upper bound
+
+ -999999997576201063457841009740 / 10^30 < 0.
+
+The positive normalized margin is
+ 49999999878810053172892050487 / 50000000000000000000000000000.
+This normalization comes from the numerical ray's b.dot(y) near-1. It is
+not an increase in physical energy, a zero-proportion improvement, or a
+statement of the distance from the true analytic minimum.
+
+The conclusion is currently a finite outer-polynomial-model result.
+Actual function-to-polynomial implications still have concrete analytic
+proof obligations; no new actual cell exclusion is Lean proved here.
+The other remaining cells and the complete unconditional cover are not
+closed by this packet. No website submission-ready record is claimed.
+
+Fixed data extraction
+
+The only numerical input is the saved infeasible dual from the one
+actual-sextic direct SCS call. No new optimizer is invoked. Scalar weights
+are max(0,round(10^12*y_i))/10^12. Rows5793 and5794 are then exactly0;
+these are the old soft-energy and slack-nonnegative rows. All other rows
+are checked to omit the unbounded solver slack column5004. There are
+14562 positive scalar weights, including all181 new actual-sextic rows.
+
+Each of the73 PSD blocks is unsvec'd once: diagonal native y, offdiagonal
+y/sqrt(2). Exactly one eigh per block constructs V*sqrt(max(eigenvalue,0)).
+Every positive eigenvalue is retained; no rank or precision search is
+performed. Each factor entry is rounded once to an integer over10^12.
+The saved factors have190150 integer entries and3010 columns in total.
+The exact dual matrices are defined by Z=L*transpose(L); their PSD
+property is an algebraic sum-of-squares identity, independent of the
+eigensolver's accuracy. Subsequent combination/replay uses no eigensolver.
+
+Exact proof rule
+
+For scalar row a_i.m<=b_i, its normalized slack is
+ q_i(m)=(b_i-a_i.m)/scale_i, with scale_i a positive rational. A block
+has localizing matrix M_b(m) and a positive rational block divisor d_b.
+For model-feasible moments,
+
+ H(m)=sum_i lambda_i*q_i(m)+sum_b trace(Z_b*M_b(m)/d_b)>=0.
+
+Every term in this expression is accounted for. Within a Gram block,
+entries with the same basis-product monomial are combined by integer
+addition first. Offdiagonal entries have coefficient2. Each resulting
+integer coefficient then multiplies each rational multiplier term. There
+is no sqrt(2) in the exact proof expression and no floating PSD claim.
+
+The fixed enclosure denominator DS=10^30 avoids the enormous global LCM
+that arbitrary normalized row scales could create. For each rational atom
+n/d, d>0, Python integer divmod(DS*n,d) gives its exact floor and ceiling.
+Both endpoints are checked by integer inequalities. These endpoints are
+summed into5005 coefficient intervals, for monomial IDs0 through5004.
+ID0 is constant; IDs1..5004 correspond to solver columns0..5003. Solver
+slack column5004 is separate and identically absent from H.
+
+There are2548856 nonzero enclosed atoms, of which2496554 are nonintegral
+at DS. The producer reconstructs and hashes all181 actual sextic rows,
+uses all73 integer-Gram blocks, and checks every target monomial mapping.
+The maximum aggregate endpoint integer has100 bits; no huge common
+denominator or expanded coefficient matrix is constructed.
+
+All5004 nonconstant moments have explicit box rows. A monomial with any
+odd exponent lies in[-1,1]; an all-even monomial lies in[0,1]. If its
+coefficient enclosure is[lo/DS,hi/DS], the product upper numerator is
+ max(lo*lower,lo*upper,hi*lower,hi*upper).
+The certificate gives both exact box-row IDs for each monomial. Adding
+these5004 upper payments to the upper constant endpoint gives the strict
+negative rational number above. This is an exact enclosure-and-box upper
+bound, not literal cancellation of the exact residual coefficients.
+
+Activity and remaining analytic dependencies
+
+The following scalar groups all remain active:
+ 90 DBM means;4095 geometry slack-pair RLT;180 old free-KKT rows;
+ 1428 old monomial boxes;8 global adjacent-swap comparisons;
+ 8580 high-degree boxes;181 actual-sextic rows.
+Only the two unbounded-slack rows have been removed. All73 Gram blocks
+remain nonzero: one moment block, the old quadratic sublevel block,
+45 span-product blocks,8 swap localizers, and18 old KKT localizers.
+
+Consequently the old quadratic L2/F0/gradient/curvature construction and
+the old cubic-gradient P3/E4 packets remain analytic dependencies. The
+old w-prime literals do not become formally identified with normalized-W
+derivatives merely by deleting the soft-energy row. All8 concrete swap
+Taylor bounds and the new41-edge sextic L6/P5/E6 packet also retain their
+specific actual-function/formal checks. Generic existing Lean APIs do
+not automatically discharge these concrete obligations.
+
+Resources and reproducibility
+
+The fixed quantization took0.523s. The pure-stdlib exact combination took
+15.836s; its one monitored worker took16.314s and peaked at209248256B.
+No1.5GiB guard was triggered. All new raw files are below40MiB. No second
+SCS, additional eig pass, point search, precision or rank trial, Lean
+compile, or other optimizer is used in this packet.
+
+quantized-ray.json.gz is1106957B, uncompressed2295719B.
+exact-enclosure-certificate.json is758192B. Their combined compressed
+transport size below1.9MiB is not a website source-size check. The scalar
+integer list alone is138874JSON bytes, and Gram integer factor rows alone
+are2137390JSON bytes. Ordinary Lean integer-list literals are estimated
+at2486924 characters before the checker, tables or any other cell. Thus
+the ordinary literal representation already exceeds the2MB source goal.
+No compression decoder or smaller proof representation is proved here.
+
+Governance history
+
+quantization.json and its packet preserve the actual source-start/end
+hashes from the original run. AGENTS.md, DIRECTION.zh.md and the then
+counter0 direction-state.json are historical governance read provenance,
+not mathematical premises. Their exact HEAD blob snapshots and hashes
+are archived in governance-provenance.json. The live main-round counter
+may advance normally; it is not a frozen numerical dependency. All actual
+mathematical and producer inputs remain strictly hash-bound.
+
+Independent replay and the final file manifest are separate artifacts.
+Their default operation is read-only; a receipt is written only when
+explicitly requested and absent. Successful arithmetic replay still does
+not assert a complete actual-function or zero-counting theorem.

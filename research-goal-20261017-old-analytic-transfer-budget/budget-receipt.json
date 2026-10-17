@@ -1,0 +1,140 @@
+{
+  "scope": "One fixed pure-rational budget to transfer old analytic inequalities.\n\nNo optimizer, eigensolver, rank/precision/parameter search, new point or\nkernel evaluation. Keep the frozen lambda and integer Gram factors.\nUse the unique agreed odd/even monomial box supports and column-l1 SOS\nbound. A strict exact K<margin is required; failure permits no retry.\n",
+  "phase": "fixed_transfer_budget_FAILED_cost_not_below_margin",
+  "source_sha256_start": {
+    "research-goal-20261017-old-analytic-transfer-budget/budget.py": "b0521104e6aa6d01589624a1e1db380e8acff80fb196eb3c2ae4164db127eed2",
+    "research-goal-20261017-old-analytic-transfer-budget/run_budget_once.py": "4fe4da062c2ea72626f175c66aa77377aed8addf3287144fca7c751ca275fdff",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-ray-files.json": "c19797f38f2a7687817735b91163bf329d6f2ad7cb26e9989b3e76bb99f5ceae",
+    "research-goal-20261017-actual-sextic-exact-ray/quantized-ray.json.gz": "4862b3437fbc68766e1870afdabda9ea466b18750e2715cbe953e0b8cd363805",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-enclosure-certificate.json": "7935f4945013c087357141c6f4406ef1b83c03fd9c8cfef61a7cd397f21e57a0",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0"
+  },
+  "memory_snapshots": [
+    {
+      "working_set_bytes": 22876160,
+      "peak_working_set_bytes": 32731136,
+      "private_commit_bytes": 14348288,
+      "phase": "loading_fixed_frozen_data",
+      "elapsed_milliseconds": 23
+    },
+    {
+      "working_set_bytes": 165371904,
+      "peak_working_set_bytes": 168202240,
+      "private_commit_bytes": 158658560,
+      "phase": "fixed_gradient_epsilon_0",
+      "elapsed_milliseconds": 7117
+    },
+    {
+      "working_set_bytes": 166141952,
+      "peak_working_set_bytes": 175513600,
+      "private_commit_bytes": 158670848,
+      "phase": "fixed_gradient_epsilon_1",
+      "elapsed_milliseconds": 7207
+    },
+    {
+      "working_set_bytes": 165752832,
+      "peak_working_set_bytes": 175681536,
+      "private_commit_bytes": 158609408,
+      "phase": "fixed_gradient_epsilon_2",
+      "elapsed_milliseconds": 7295
+    },
+    {
+      "working_set_bytes": 165867520,
+      "peak_working_set_bytes": 176041984,
+      "private_commit_bytes": 158609408,
+      "phase": "fixed_gradient_epsilon_3",
+      "elapsed_milliseconds": 7390
+    },
+    {
+      "working_set_bytes": 165736448,
+      "peak_working_set_bytes": 176041984,
+      "private_commit_bytes": 158613504,
+      "phase": "fixed_gradient_epsilon_4",
+      "elapsed_milliseconds": 7478
+    },
+    {
+      "working_set_bytes": 166256640,
+      "peak_working_set_bytes": 176041984,
+      "private_commit_bytes": 158629888,
+      "phase": "fixed_gradient_epsilon_5",
+      "elapsed_milliseconds": 7563
+    },
+    {
+      "working_set_bytes": 167157760,
+      "peak_working_set_bytes": 176533504,
+      "private_commit_bytes": 159666176,
+      "phase": "fixed_gradient_epsilon_6",
+      "elapsed_milliseconds": 7651
+    },
+    {
+      "working_set_bytes": 165412864,
+      "peak_working_set_bytes": 176676864,
+      "private_commit_bytes": 158490624,
+      "phase": "fixed_gradient_epsilon_7",
+      "elapsed_milliseconds": 7741
+    },
+    {
+      "working_set_bytes": 165801984,
+      "peak_working_set_bytes": 176676864,
+      "private_commit_bytes": 158568448,
+      "phase": "fixed_gradient_epsilon_8",
+      "elapsed_milliseconds": 7829
+    },
+    {
+      "working_set_bytes": 168767488,
+      "peak_working_set_bytes": 176676864,
+      "private_commit_bytes": 160837632,
+      "phase": "fixed_transfer_budget_FAILED_cost_not_below_margin",
+      "elapsed_milliseconds": 9209
+    }
+  ],
+  "optimizer_calls": 0,
+  "eigh_calls": 0,
+  "Lean_invocations": 0,
+  "parameter_rank_or_precision_changes": 0,
+  "actual_cell_exclusion_Lean_proved": false,
+  "new_zero_proportion_proven": false,
+  "source_sha256_end": {
+    "research-goal-20261017-old-analytic-transfer-budget/budget.py": "b0521104e6aa6d01589624a1e1db380e8acff80fb196eb3c2ae4164db127eed2",
+    "research-goal-20261017-old-analytic-transfer-budget/run_budget_once.py": "4fe4da062c2ea72626f175c66aa77377aed8addf3287144fca7c751ca275fdff",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-ray-files.json": "c19797f38f2a7687817735b91163bf329d6f2ad7cb26e9989b3e76bb99f5ceae",
+    "research-goal-20261017-actual-sextic-exact-ray/quantized-ray.json.gz": "4862b3437fbc68766e1870afdabda9ea466b18750e2715cbe953e0b8cd363805",
+    "research-goal-20261017-actual-sextic-exact-ray/exact-enclosure-certificate.json": "7935f4945013c087357141c6f4406ef1b83c03fd9c8cfef61a7cd397f21e57a0",
+    "research-goal-20261017-quartic/quartic-model.json.gz": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233",
+    "research-goal-20261017-degree6-static/degree6-model.json.gz": "9aa2e3759d63e4e1c8bdbd3b76004f3c9cf4080dcb5dde5599aff3e96ed0a552",
+    "research-goal-20261017-actual-sextic-static/actual-sextic.json.gz": "e9a1194205d9d52dfbbae2a33e3a353f6c63dd40c8013d4280cf21e7c30e48b5",
+    "research-goal-20261017-actual-sextic-cone/new-row-hashes.json": "2923c46ac7c57c0a563a339282254a5a78c8842fc59901f85898c122d3a97ac0"
+  },
+  "all_inputs_unchanged": true,
+  "elapsed_milliseconds": 9209,
+  "budget_packet": {
+    "path": "research-goal-20261017-old-analytic-transfer-budget/transfer-budget.json",
+    "bytes": 311500,
+    "sha256": "2352833fe99336a786c96bde7d48a45fc9fac5a22932aba2201825d9fecead46"
+  },
+  "gradient_epsilons_float_hints": [
+    1.1309254134761904,
+    1.6105206223412418,
+    1.820206161772474,
+    1.9876993967753795,
+    2.1132824617829087,
+    2.184259651170458,
+    2.2228949661067863,
+    1.6318095226970744,
+    1.0089409413327537
+  ],
+  "sublevel_epsilon_float_hint": 14.987210162233637,
+  "cost180_scalar_float_hint": 8.383681828209971,
+  "cost18_Gram_float_hint": 1794.9775694602345,
+  "cost_sublevel_float_hint": 167.30261802334476,
+  "total_K_float_hint": 1970.6638693117893,
+  "margin_float_hint": 0.9999999975762011,
+  "strict_K_less_than_margin": false,
+  "K_denominator_bits": 57428,
+  "maximum_rational_string_bytes": 34581,
+  "old_analytic_dependencies_removed": false,
+  "no_alternate_bound_attempted": true
+}

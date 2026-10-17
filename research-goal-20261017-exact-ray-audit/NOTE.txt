@@ -1,0 +1,70 @@
+Independent exact Gram/interval-ray replay (2026-10-17)
+
+The fixed enhanced degree6 polynomial/moment system on cell
+r001000001000100110011001, target11/1250, has passed a complete
+independent pure-stdlib exact arithmetic replay in about17.935 seconds.
+No producer was imported; no NumPy/SciPy, optimizer, eigenvalue routine,
+point evaluation, transcendental calculation or Lean was invoked.
+
+Exact replay gates
+------------------
+All14564 rational scalar multipliers are nonnegative, with14562 positive.
+Only5793/5794, the old soft-energy/slack rows, are forced exactly0. These
+are the only source rows involving the unbounded solver slack column.
+That column is absent from the final exact polynomial, not merely small.
+Monomial IDs0..5004 mean constant plus5004 bounded moments; the distinct
+solver column5004 is the removed slack, not the last monomial ID.
+
+The checker reconstructs the old normalized scalar rows, all181 new
+actual-sextic rows and their canonical hashes, and all5004 explicit
+moment boxes. It reconstructs each SOS from the COLUMNS of the given
+integer factor L: sum_column(sum_i L_i,column*basis_i)^2. This independently
+checks the73 Gram blocks without trusting floating PSD claims. The
+96580 lower-triangle product identities include the factor2 for every
+off-diagonal trace entry. All1416525 basis/multiplier target mappings
+are checked. Uniform positive rational block divisors are retained.
+
+Dlambda=DL=10^12 and DS=10^30 are unchanged. Each rational atom is
+enclosed independently with integer floor/ceil division; all2548856
+nonzero atoms and every one of5005 aggregate endpoint pairs match.
+All5004 box payments match: [-1,1] pays the maximum absolute endpoint,
+while every all-even monomial has [0,1] and pays max(0,upper).
+This is a verified coefficient-enclosure proof, NOT literal exact
+cancellation of the residual coefficients.
+
+The final strict upper is
+ -999999997576201063457841009740/10^30 <0.
+The nonnegative scalar slacks and Gram traces imply H>=0; the verified
+intervals and moment boxes imply H is at most this negative constant.
+This is an exact contradiction for the stated outer polynomial system.
+
+Scope and active old analytic obligations
+-----------------------------------------
+Every old analytic dependency remains active in this certificate:
+180 old quartic KKT/error scalar rows, the18 old gradient-error PSD
+localizers, the old quadratic-energy sublevel PSD localizer, and the
+eight normalized-W quartic global-swap scalar/PSD constraints. Geometry,
+moment, and span-product constraints are also retained. The receipt's
+compact dependency labels are not a claim that those18 PSD obligations
+have disappeared. New actual-sextic rows being present does not by itself
+license removing any active old premise. Any later analytic transfer
+needs its own independently checked error payment below this margin.
+
+The actual analytic-to-polynomial literal instances have not been newly
+Lean-checked by this audit. The result is not a full actual-cell Lean
+exclusion, not a replay of the historical cover, not complete root
+coverage, and not a new unconditional zero-proportion theorem. Final
+Comparator/nanoda, source-size and website-submission gates remain open.
+
+Provenance and reproduction
+---------------------------
+All mathematical input hashes are checked at start/end. The mutable
+direction-state counter is NOT a mathematical premise: the three
+historical governance reads are verified through archived gitblob
+snapshots and governance-provenance.json. The current counter is not
+required to equal its old0 value and is never reset by this subagent.
+
+Read-only reproduction from repository root:
+ python -S research-goal-20261017-exact-ray-audit/independent_replay.py
+--write-receipt creates an absent receipt once. Original producers,
+candidate packet, receipts and governance files remain unchanged.
