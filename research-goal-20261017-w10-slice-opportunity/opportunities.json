@@ -1,0 +1,2825 @@
+{
+  "scope": "One read-only whole-W10 support-domain opportunity audit.\n\nNo integer floor/oracle, new witness, curve, solver, codec or Lean check.\nOriginal leftmost-child representatives and all original masses are fixed.\nPrefix potentials assume the selected nonempty curve family can be proved;\nthe attributed original-stream source burden is an engineering estimate,\nnot a new decodable stream or mathematical merge.\n",
+  "phase": "one_read_only_whole_W10_opportunity_pass_complete_no_new_certificates",
+  "source_sha256_start": {
+    "research-goal-20261017-w10-slice-opportunity/audit_opportunities.py": "4a77389f5265ed559591eaa8574dcc51b9ba293a34cbf28a20e40d5f91d03605",
+    "research-goal-20261017-w10-slice-opportunity/run_once.py": "abd99d09a4872702e88f15b94c2f2715dbdcd265768578ca7bb53198bad46012",
+    "research-goal-20261016/w10-size-audit-20261017/semantics.json": "277463c05b5e9944135f878fb9dfec5bfe890f86b36faf76a67f9a7a3ad10d08",
+    "research-goal-20261016/w10-size-audit-20261017/nodes.bin": "9956f3830dd44e330c7d455f234ab213c25f44b88a715508bd29825fb706edab",
+    "research-goal-20261016/w10-size-audit-20261017/fs.bin": "e8697215283fb691dbdceb41813527527d0be033bcdb33f91166bf7cec7a611e",
+    "research-goal-20261016/w10-size-audit-20261017/treecodes.bin": "57e5b4db17ac2180582c6bc17a5f62d49105903212bd1f47c8ddae0e534c8b4c",
+    "research-goal-20261016/w10-size-audit-20261017/field-huffman.bin": "9d0b93eed206e14eff3b0d25dc639cb75f5515ea855e6a7c36100ef87a3c5ba3",
+    "research-goal-20261016/w10-size-audit-20261017/field-huffman.json": "27af486863fc4d1d0e40b234ac03a24f4c63741ffd32d90f0239b14e8a1a48e1",
+    "research-goal-20261016/w10-size-audit-20261017/field-huffman-data.lean": "344f60f1003d6e415dac3501d0289f12512f7ff36fa161841fd2e6d7552081a3",
+    "research-goal-20261016/w10-size-audit-20261017/source-size-accounting.json": "e3e3e7f8fb6f70dcd28a5c7119a9b18d42a176afd28be24e12ed2ea91434d496",
+    "formal/upstream/ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "research-goal-20261016/w10-size-merge-20261017/merged-summary.json": "e948be95469ef04e6a32f33c047fdb8e1312e03f5d92aa95d4917196693c5130"
+  },
+  "memory_snapshots": [
+    {
+      "working_set_bytes": 23109632,
+      "peak_working_set_bytes": 48640000,
+      "private_commit_bytes": 14770176,
+      "phase": "loading_frozen_sources",
+      "elapsed_milliseconds": 37
+    },
+    {
+      "working_set_bytes": 78970880,
+      "peak_working_set_bytes": 78970880,
+      "private_commit_bytes": 71278592,
+      "phase": "whole_parent_supports_10000",
+      "elapsed_milliseconds": 3478
+    },
+    {
+      "working_set_bytes": 88363008,
+      "peak_working_set_bytes": 105746432,
+      "private_commit_bytes": 80662528,
+      "phase": "whole_parent_supports_20000",
+      "elapsed_milliseconds": 6661
+    },
+    {
+      "working_set_bytes": 97198080,
+      "peak_working_set_bytes": 113643520,
+      "private_commit_bytes": 89157632,
+      "phase": "whole_parent_supports_30000",
+      "elapsed_milliseconds": 9782
+    },
+    {
+      "working_set_bytes": 105914368,
+      "peak_working_set_bytes": 123396096,
+      "private_commit_bytes": 97562624,
+      "phase": "whole_parent_supports_40000",
+      "elapsed_milliseconds": 12906
+    },
+    {
+      "working_set_bytes": 115630080,
+      "peak_working_set_bytes": 132689920,
+      "private_commit_bytes": 107724800,
+      "phase": "whole_parent_supports_50000",
+      "elapsed_milliseconds": 15973
+    },
+    {
+      "working_set_bytes": 124182528,
+      "peak_working_set_bytes": 140582912,
+      "private_commit_bytes": 116776960,
+      "phase": "whole_parent_supports_60000",
+      "elapsed_milliseconds": 19067
+    },
+    {
+      "working_set_bytes": 132620288,
+      "peak_working_set_bytes": 150958080,
+      "private_commit_bytes": 125210624,
+      "phase": "whole_parent_supports_70000",
+      "elapsed_milliseconds": 22148
+    },
+    {
+      "working_set_bytes": 141029376,
+      "peak_working_set_bytes": 158363648,
+      "private_commit_bytes": 133689344,
+      "phase": "whole_parent_supports_80000",
+      "elapsed_milliseconds": 25162
+    },
+    {
+      "working_set_bytes": 149721088,
+      "peak_working_set_bytes": 167735296,
+      "private_commit_bytes": 142180352,
+      "phase": "whole_parent_supports_90000",
+      "elapsed_milliseconds": 28122
+    },
+    {
+      "working_set_bytes": 163868672,
+      "peak_working_set_bytes": 206684160,
+      "private_commit_bytes": 156725248,
+      "phase": "one_read_only_whole_W10_opportunity_pass_complete_no_new_certificates",
+      "elapsed_milliseconds": 32327
+    }
+  ],
+  "solver_calls": 0,
+  "oracle_calls": 0,
+  "integer_floor_checks": 0,
+  "actual_kernel_evaluations": 0,
+  "new_witnesses": 0,
+  "new_partitions": 0,
+  "codec_generation_calls": 0,
+  "Lean_invocations": 0,
+  "mathematical_merges_proven": 0,
+  "complete_source_proven_feasible": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "source_sha256_end": {
+    "research-goal-20261017-w10-slice-opportunity/audit_opportunities.py": "4a77389f5265ed559591eaa8574dcc51b9ba293a34cbf28a20e40d5f91d03605",
+    "research-goal-20261017-w10-slice-opportunity/run_once.py": "abd99d09a4872702e88f15b94c2f2715dbdcd265768578ca7bb53198bad46012",
+    "research-goal-20261016/w10-size-audit-20261017/semantics.json": "277463c05b5e9944135f878fb9dfec5bfe890f86b36faf76a67f9a7a3ad10d08",
+    "research-goal-20261016/w10-size-audit-20261017/nodes.bin": "9956f3830dd44e330c7d455f234ab213c25f44b88a715508bd29825fb706edab",
+    "research-goal-20261016/w10-size-audit-20261017/fs.bin": "e8697215283fb691dbdceb41813527527d0be033bcdb33f91166bf7cec7a611e",
+    "research-goal-20261016/w10-size-audit-20261017/treecodes.bin": "57e5b4db17ac2180582c6bc17a5f62d49105903212bd1f47c8ddae0e534c8b4c",
+    "research-goal-20261016/w10-size-audit-20261017/field-huffman.bin": "9d0b93eed206e14eff3b0d25dc639cb75f5515ea855e6a7c36100ef87a3c5ba3",
+    "research-goal-20261016/w10-size-audit-20261017/field-huffman.json": "27af486863fc4d1d0e40b234ac03a24f4c63741ffd32d90f0239b14e8a1a48e1",
+    "research-goal-20261016/w10-size-audit-20261017/field-huffman-data.lean": "344f60f1003d6e415dac3501d0289f12512f7ff36fa161841fd2e6d7552081a3",
+    "research-goal-20261016/w10-size-audit-20261017/source-size-accounting.json": "e3e3e7f8fb6f70dcd28a5c7119a9b18d42a176afd28be24e12ed2ea91434d496",
+    "formal/upstream/ajp88-reweighted-nine-point.lean": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+    "research-goal-20261016/w10-size-merge-20261017/merged-summary.json": "e948be95469ef04e6a32f33c047fdb8e1312e03f5d92aa95d4917196693c5130"
+  },
+  "all_inputs_unchanged": true,
+  "elapsed_milliseconds": 32327,
+  "parents_completed": 90000,
+  "parent_records": {
+    "path": "research-goal-20261017-w10-slice-opportunity/opportunity-records.bin.gz",
+    "bytes": 3377573,
+    "sha256": "c6f53fcc3bc4ee9be9b391621a84a5008dadf311de99622cabc5475c7d708791",
+    "uncompressed_bytes": 11301816,
+    "uncompressed_sha256": "b761bc15f62cdc89b6ea27a2aba3c3713acb39114042b067782f06087761e8b2",
+    "record_size": 118,
+    "schema": "header6=W10OP byte1; uint32records,uint16recordSize. Postorder parents: <IIIIIIQQ nodeID,endID_exclusive,firstNumeric,numericCount,subtreeNodes,subtreeBranches,ownAttributedBits,subtreeAttributedBits; two candidates <I10sQBBBHQL repID,invalidComponentMask78bitLE,invalidSpanMask39bit,componentCount,distinctCount,Qrank,massSum,ledgerWeightedMassNumerator,repAttributedBits; 0xffffffff rep absent."
+  },
+  "complete_one_geometry_and_support_pass": true,
+  "counts": {
+    "nodes": 191557,
+    "branches": 95778,
+    "numeric": 95615,
+    "empty": 163,
+    "reflection": 1
+  },
+  "normalized_states_sha256": "ad1efe1caa8d0bbff299ef1ae734eafc08795c7b3a104c24faf70d2495d7ace5",
+  "candidate_count": 191392,
+  "invalid_component_histogram": {
+    "0": 5737,
+    "1": 24400,
+    "2": 19728,
+    "3": 16115,
+    "4": 16058,
+    "5": 16767,
+    "6": 19021,
+    "7": 16874,
+    "8": 13698,
+    "9": 10635,
+    "10": 7932,
+    "11": 6152,
+    "12": 4479,
+    "13": 3430,
+    "14": 2497,
+    "15": 1810,
+    "16": 1366,
+    "17": 1037,
+    "18": 718,
+    "19": 601,
+    "20": 498,
+    "21": 432,
+    "22": 324,
+    "23": 322,
+    "24": 182,
+    "25": 161,
+    "26": 140,
+    "27": 99,
+    "28": 68,
+    "29": 55,
+    "30": 40,
+    "31": 10,
+    "32": 5,
+    "33": 1
+  },
+  "joint_component_distinct_rank_histogram": [
+    [
+      0,
+      0,
+      0,
+      5737
+    ],
+    [
+      1,
+      1,
+      1,
+      24400
+    ],
+    [
+      2,
+      1,
+      1,
+      2987
+    ],
+    [
+      2,
+      2,
+      2,
+      16741
+    ],
+    [
+      3,
+      2,
+      2,
+      1632
+    ],
+    [
+      3,
+      3,
+      2,
+      268
+    ],
+    [
+      3,
+      3,
+      3,
+      14215
+    ],
+    [
+      4,
+      2,
+      2,
+      216
+    ],
+    [
+      4,
+      3,
+      2,
+      36
+    ],
+    [
+      4,
+      3,
+      3,
+      1328
+    ],
+    [
+      4,
+      4,
+      3,
+      1846
+    ],
+    [
+      4,
+      4,
+      4,
+      12632
+    ],
+    [
+      5,
+      3,
+      2,
+      1
+    ],
+    [
+      5,
+      3,
+      3,
+      262
+    ],
+    [
+      5,
+      4,
+      3,
+      138
+    ],
+    [
+      5,
+      4,
+      4,
+      1145
+    ],
+    [
+      5,
+      5,
+      3,
+      83
+    ],
+    [
+      5,
+      5,
+      4,
+      7368
+    ],
+    [
+      5,
+      5,
+      5,
+      7770
+    ],
+    [
+      6,
+      3,
+      3,
+      54
+    ],
+    [
+      6,
+      4,
+      3,
+      18
+    ],
+    [
+      6,
+      4,
+      4,
+      254
+    ],
+    [
+      6,
+      5,
+      3,
+      9
+    ],
+    [
+      6,
+      5,
+      4,
+      461
+    ],
+    [
+      6,
+      5,
+      5,
+      694
+    ],
+    [
+      6,
+      6,
+      3,
+      4
+    ],
+    [
+      6,
+      6,
+      4,
+      4833
+    ],
+    [
+      6,
+      6,
+      5,
+      9080
+    ],
+    [
+      6,
+      6,
+      6,
+      3614
+    ],
+    [
+      7,
+      4,
+      3,
+      2
+    ],
+    [
+      7,
+      4,
+      4,
+      47
+    ],
+    [
+      7,
+      5,
+      3,
+      9
+    ],
+    [
+      7,
+      5,
+      4,
+      87
+    ],
+    [
+      7,
+      5,
+      5,
+      159
+    ],
+    [
+      7,
+      6,
+      4,
+      288
+    ],
+    [
+      7,
+      6,
+      5,
+      527
+    ],
+    [
+      7,
+      6,
+      6,
+      311
+    ],
+    [
+      7,
+      7,
+      4,
+      735
+    ],
+    [
+      7,
+      7,
+      5,
+      7632
+    ],
+    [
+      7,
+      7,
+      6,
+      5589
+    ],
+    [
+      7,
+      7,
+      7,
+      1488
+    ],
+    [
+      8,
+      4,
+      4,
+      9
+    ],
+    [
+      8,
+      5,
+      4,
+      12
+    ],
+    [
+      8,
+      5,
+      5,
+      38
+    ],
+    [
+      8,
+      6,
+      4,
+      46
+    ],
+    [
+      8,
+      6,
+      5,
+      116
+    ],
+    [
+      8,
+      6,
+      6,
+      66
+    ],
+    [
+      8,
+      7,
+      4,
+      104
+    ],
+    [
+      8,
+      7,
+      5,
+      395
+    ],
+    [
+      8,
+      7,
+      6,
+      387
+    ],
+    [
+      8,
+      7,
+      7,
+      161
+    ],
+    [
+      8,
+      8,
+      4,
+      64
+    ],
+    [
+      8,
+      8,
+      5,
+      3056
+    ],
+    [
+      8,
+      8,
+      6,
+      5982
+    ],
+    [
+      8,
+      8,
+      7,
+      2758
+    ],
+    [
+      8,
+      8,
+      8,
+      504
+    ],
+    [
+      9,
+      5,
+      5,
+      15
+    ],
+    [
+      9,
+      6,
+      4,
+      7
+    ],
+    [
+      9,
+      6,
+      5,
+      15
+    ],
+    [
+      9,
+      6,
+      6,
+      27
+    ],
+    [
+      9,
+      7,
+      4,
+      11
+    ],
+    [
+      9,
+      7,
+      5,
+      89
+    ],
+    [
+      9,
+      7,
+      6,
+      85
+    ],
+    [
+      9,
+      7,
+      7,
+      27
+    ],
+    [
+      9,
+      8,
+      4,
+      8
+    ],
+    [
+      9,
+      8,
+      5,
+      180
+    ],
+    [
+      9,
+      8,
+      6,
+      335
+    ],
+    [
+      9,
+      8,
+      7,
+      235
+    ],
+    [
+      9,
+      8,
+      8,
+      67
+    ],
+    [
+      9,
+      9,
+      4,
+      3
+    ],
+    [
+      9,
+      9,
+      5,
+      1089
+    ],
+    [
+      9,
+      9,
+      6,
+      3573
+    ],
+    [
+      9,
+      9,
+      7,
+      3498
+    ],
+    [
+      9,
+      9,
+      8,
+      1283
+    ],
+    [
+      9,
+      9,
+      9,
+      88
+    ],
+    [
+      10,
+      6,
+      5,
+      1
+    ],
+    [
+      10,
+      6,
+      6,
+      10
+    ],
+    [
+      10,
+      7,
+      4,
+      2
+    ],
+    [
+      10,
+      7,
+      5,
+      18
+    ],
+    [
+      10,
+      7,
+      6,
+      8
+    ],
+    [
+      10,
+      7,
+      7,
+      17
+    ],
+    [
+      10,
+      8,
+      5,
+      24
+    ],
+    [
+      10,
+      8,
+      6,
+      62
+    ],
+    [
+      10,
+      8,
+      7,
+      46
+    ],
+    [
+      10,
+      8,
+      8,
+      22
+    ],
+    [
+      10,
+      9,
+      4,
+      1
+    ],
+    [
+      10,
+      9,
+      5,
+      70
+    ],
+    [
+      10,
+      9,
+      6,
+      220
+    ],
+    [
+      10,
+      9,
+      7,
+      244
+    ],
+    [
+      10,
+      9,
+      8,
+      135
+    ],
+    [
+      10,
+      9,
+      9,
+      4
+    ],
+    [
+      10,
+      10,
+      5,
+      262
+    ],
+    [
+      10,
+      10,
+      6,
+      1695
+    ],
+    [
+      10,
+      10,
+      7,
+      2995
+    ],
+    [
+      10,
+      10,
+      8,
+      1760
+    ],
+    [
+      10,
+      10,
+      9,
+      336
+    ],
+    [
+      11,
+      6,
+      6,
+      2
+    ],
+    [
+      11,
+      7,
+      5,
+      7
+    ],
+    [
+      11,
+      7,
+      6,
+      3
+    ],
+    [
+      11,
+      7,
+      7,
+      9
+    ],
+    [
+      11,
+      8,
+      5,
+      5
+    ],
+    [
+      11,
+      8,
+      6,
+      6
+    ],
+    [
+      11,
+      8,
+      7,
+      8
+    ],
+    [
+      11,
+      8,
+      8,
+      10
+    ],
+    [
+      11,
+      9,
+      5,
+      11
+    ],
+    [
+      11,
+      9,
+      6,
+      30
+    ],
+    [
+      11,
+      9,
+      7,
+      42
+    ],
+    [
+      11,
+      9,
+      8,
+      34
+    ],
+    [
+      11,
+      9,
+      9,
+      2
+    ],
+    [
+      11,
+      10,
+      5,
+      42
+    ],
+    [
+      11,
+      10,
+      6,
+      123
+    ],
+    [
+      11,
+      10,
+      7,
+      234
+    ],
+    [
+      11,
+      10,
+      8,
+      142
+    ],
+    [
+      11,
+      10,
+      9,
+      45
+    ],
+    [
+      11,
+      11,
+      5,
+      78
+    ],
+    [
+      11,
+      11,
+      6,
+      766
+    ],
+    [
+      11,
+      11,
+      7,
+      2086
+    ],
+    [
+      11,
+      11,
+      8,
+      1785
+    ],
+    [
+      11,
+      11,
+      9,
+      682
+    ],
+    [
+      12,
+      7,
+      6,
+      2
+    ],
+    [
+      12,
+      7,
+      7,
+      2
+    ],
+    [
+      12,
+      8,
+      5,
+      1
+    ],
+    [
+      12,
+      8,
+      6,
+      1
+    ],
+    [
+      12,
+      8,
+      7,
+      7
+    ],
+    [
+      12,
+      8,
+      8,
+      2
+    ],
+    [
+      12,
+      9,
+      6,
+      7
+    ],
+    [
+      12,
+      9,
+      7,
+      11
+    ],
+    [
+      12,
+      9,
+      8,
+      13
+    ],
+    [
+      12,
+      9,
+      9,
+      3
+    ],
+    [
+      12,
+      10,
+      5,
+      5
+    ],
+    [
+      12,
+      10,
+      6,
+      20
+    ],
+    [
+      12,
+      10,
+      7,
+      34
+    ],
+    [
+      12,
+      10,
+      8,
+      26
+    ],
+    [
+      12,
+      10,
+      9,
+      10
+    ],
+    [
+      12,
+      11,
+      5,
+      7
+    ],
+    [
+      12,
+      11,
+      6,
+      92
+    ],
+    [
+      12,
+      11,
+      7,
+      190
+    ],
+    [
+      12,
+      11,
+      8,
+      173
+    ],
+    [
+      12,
+      11,
+      9,
+      58
+    ],
+    [
+      12,
+      12,
+      5,
+      10
+    ],
+    [
+      12,
+      12,
+      6,
+      300
+    ],
+    [
+      12,
+      12,
+      7,
+      1239
+    ],
+    [
+      12,
+      12,
+      8,
+      1511
+    ],
+    [
+      12,
+      12,
+      9,
+      755
+    ],
+    [
+      13,
+      9,
+      5,
+      1
+    ],
+    [
+      13,
+      9,
+      7,
+      1
+    ],
+    [
+      13,
+      9,
+      8,
+      3
+    ],
+    [
+      13,
+      9,
+      9,
+      3
+    ],
+    [
+      13,
+      10,
+      6,
+      10
+    ],
+    [
+      13,
+      10,
+      7,
+      4
+    ],
+    [
+      13,
+      10,
+      8,
+      15
+    ],
+    [
+      13,
+      10,
+      9,
+      4
+    ],
+    [
+      13,
+      11,
+      5,
+      5
+    ],
+    [
+      13,
+      11,
+      6,
+      18
+    ],
+    [
+      13,
+      11,
+      7,
+      22
+    ],
+    [
+      13,
+      11,
+      8,
+      21
+    ],
+    [
+      13,
+      11,
+      9,
+      9
+    ],
+    [
+      13,
+      12,
+      5,
+      1
+    ],
+    [
+      13,
+      12,
+      6,
+      26
+    ],
+    [
+      13,
+      12,
+      7,
+      144
+    ],
+    [
+      13,
+      12,
+      8,
+      146
+    ],
+    [
+      13,
+      12,
+      9,
+      93
+    ],
+    [
+      13,
+      13,
+      5,
+      4
+    ],
+    [
+      13,
+      13,
+      6,
+      123
+    ],
+    [
+      13,
+      13,
+      7,
+      746
+    ],
+    [
+      13,
+      13,
+      8,
+      1256
+    ],
+    [
+      13,
+      13,
+      9,
+      775
+    ],
+    [
+      14,
+      8,
+      8,
+      1
+    ],
+    [
+      14,
+      9,
+      7,
+      1
+    ],
+    [
+      14,
+      9,
+      8,
+      2
+    ],
+    [
+      14,
+      10,
+      6,
+      1
+    ],
+    [
+      14,
+      10,
+      7,
+      1
+    ],
+    [
+      14,
+      10,
+      8,
+      2
+    ],
+    [
+      14,
+      10,
+      9,
+      1
+    ],
+    [
+      14,
+      11,
+      7,
+      4
+    ],
+    [
+      14,
+      11,
+      8,
+      6
+    ],
+    [
+      14,
+      11,
+      9,
+      6
+    ],
+    [
+      14,
+      12,
+      6,
+      11
+    ],
+    [
+      14,
+      12,
+      7,
+      26
+    ],
+    [
+      14,
+      12,
+      8,
+      41
+    ],
+    [
+      14,
+      12,
+      9,
+      22
+    ],
+    [
+      14,
+      13,
+      6,
+      18
+    ],
+    [
+      14,
+      13,
+      7,
+      88
+    ],
+    [
+      14,
+      13,
+      8,
+      133
+    ],
+    [
+      14,
+      13,
+      9,
+      88
+    ],
+    [
+      14,
+      14,
+      5,
+      1
+    ],
+    [
+      14,
+      14,
+      6,
+      41
+    ],
+    [
+      14,
+      14,
+      7,
+      435
+    ],
+    [
+      14,
+      14,
+      8,
+      797
+    ],
+    [
+      14,
+      14,
+      9,
+      771
+    ],
+    [
+      15,
+      11,
+      7,
+      2
+    ],
+    [
+      15,
+      11,
+      8,
+      3
+    ],
+    [
+      15,
+      11,
+      9,
+      6
+    ],
+    [
+      15,
+      12,
+      7,
+      2
+    ],
+    [
+      15,
+      12,
+      8,
+      12
+    ],
+    [
+      15,
+      12,
+      9,
+      12
+    ],
+    [
+      15,
+      13,
+      6,
+      6
+    ],
+    [
+      15,
+      13,
+      7,
+      15
+    ],
+    [
+      15,
+      13,
+      8,
+      31
+    ],
+    [
+      15,
+      13,
+      9,
+      24
+    ],
+    [
+      15,
+      14,
+      6,
+      9
+    ],
+    [
+      15,
+      14,
+      7,
+      44
+    ],
+    [
+      15,
+      14,
+      8,
+      100
+    ],
+    [
+      15,
+      14,
+      9,
+      96
+    ],
+    [
+      15,
+      15,
+      6,
+      11
+    ],
+    [
+      15,
+      15,
+      7,
+      238
+    ],
+    [
+      15,
+      15,
+      8,
+      576
+    ],
+    [
+      15,
+      15,
+      9,
+      623
+    ],
+    [
+      16,
+      9,
+      8,
+      2
+    ],
+    [
+      16,
+      12,
+      6,
+      2
+    ],
+    [
+      16,
+      12,
+      7,
+      1
+    ],
+    [
+      16,
+      12,
+      9,
+      2
+    ],
+    [
+      16,
+      13,
+      7,
+      7
+    ],
+    [
+      16,
+      13,
+      8,
+      4
+    ],
+    [
+      16,
+      13,
+      9,
+      13
+    ],
+    [
+      16,
+      14,
+      6,
+      3
+    ],
+    [
+      16,
+      14,
+      7,
+      15
+    ],
+    [
+      16,
+      14,
+      8,
+      31
+    ],
+    [
+      16,
+      14,
+      9,
+      34
+    ],
+    [
+      16,
+      15,
+      6,
+      4
+    ],
+    [
+      16,
+      15,
+      7,
+      32
+    ],
+    [
+      16,
+      15,
+      8,
+      68
+    ],
+    [
+      16,
+      15,
+      9,
+      89
+    ],
+    [
+      16,
+      16,
+      6,
+      5
+    ],
+    [
+      16,
+      16,
+      7,
+      109
+    ],
+    [
+      16,
+      16,
+      8,
+      368
+    ],
+    [
+      16,
+      16,
+      9,
+      577
+    ],
+    [
+      17,
+      12,
+      9,
+      1
+    ],
+    [
+      17,
+      13,
+      8,
+      1
+    ],
+    [
+      17,
+      13,
+      9,
+      2
+    ],
+    [
+      17,
+      14,
+      7,
+      4
+    ],
+    [
+      17,
+      14,
+      8,
+      2
+    ],
+    [
+      17,
+      14,
+      9,
+      8
+    ],
+    [
+      17,
+      15,
+      6,
+      4
+    ],
+    [
+      17,
+      15,
+      7,
+      11
+    ],
+    [
+      17,
+      15,
+      8,
+      18
+    ],
+    [
+      17,
+      15,
+      9,
+      29
+    ],
+    [
+      17,
+      16,
+      7,
+      20
+    ],
+    [
+      17,
+      16,
+      8,
+      85
+    ],
+    [
+      17,
+      16,
+      9,
+      111
+    ],
+    [
+      17,
+      17,
+      7,
+      61
+    ],
+    [
+      17,
+      17,
+      8,
+      239
+    ],
+    [
+      17,
+      17,
+      9,
+      441
+    ],
+    [
+      18,
+      10,
+      8,
+      1
+    ],
+    [
+      18,
+      13,
+      7,
+      1
+    ],
+    [
+      18,
+      14,
+      8,
+      1
+    ],
+    [
+      18,
+      15,
+      6,
+      1
+    ],
+    [
+      18,
+      15,
+      7,
+      1
+    ],
+    [
+      18,
+      15,
+      8,
+      5
+    ],
+    [
+      18,
+      15,
+      9,
+      5
+    ],
+    [
+      18,
+      16,
+      6,
+      1
+    ],
+    [
+      18,
+      16,
+      7,
+      11
+    ],
+    [
+      18,
+      16,
+      8,
+      11
+    ],
+    [
+      18,
+      16,
+      9,
+      35
+    ],
+    [
+      18,
+      17,
+      7,
+      13
+    ],
+    [
+      18,
+      17,
+      8,
+      38
+    ],
+    [
+      18,
+      17,
+      9,
+      92
+    ],
+    [
+      18,
+      18,
+      7,
+      38
+    ],
+    [
+      18,
+      18,
+      8,
+      141
+    ],
+    [
+      18,
+      18,
+      9,
+      323
+    ],
+    [
+      19,
+      11,
+      8,
+      2
+    ],
+    [
+      19,
+      13,
+      9,
+      1
+    ],
+    [
+      19,
+      15,
+      9,
+      1
+    ],
+    [
+      19,
+      16,
+      8,
+      4
+    ],
+    [
+      19,
+      16,
+      9,
+      8
+    ],
+    [
+      19,
+      17,
+      7,
+      7
+    ],
+    [
+      19,
+      17,
+      8,
+      21
+    ],
+    [
+      19,
+      17,
+      9,
+      29
+    ],
+    [
+      19,
+      18,
+      7,
+      14
+    ],
+    [
+      19,
+      18,
+      8,
+      35
+    ],
+    [
+      19,
+      18,
+      9,
+      106
+    ],
+    [
+      19,
+      19,
+      7,
+      14
+    ],
+    [
+      19,
+      19,
+      8,
+      91
+    ],
+    [
+      19,
+      19,
+      9,
+      268
+    ],
+    [
+      20,
+      14,
+      9,
+      1
+    ],
+    [
+      20,
+      16,
+      9,
+      1
+    ],
+    [
+      20,
+      17,
+      7,
+      2
+    ],
+    [
+      20,
+      17,
+      8,
+      2
+    ],
+    [
+      20,
+      17,
+      9,
+      10
+    ],
+    [
+      20,
+      18,
+      7,
+      3
+    ],
+    [
+      20,
+      18,
+      8,
+      10
+    ],
+    [
+      20,
+      18,
+      9,
+      34
+    ],
+    [
+      20,
+      19,
+      7,
+      7
+    ],
+    [
+      20,
+      19,
+      8,
+      28
+    ],
+    [
+      20,
+      19,
+      9,
+      109
+    ],
+    [
+      20,
+      20,
+      7,
+      12
+    ],
+    [
+      20,
+      20,
+      8,
+      81
+    ],
+    [
+      20,
+      20,
+      9,
+      198
+    ],
+    [
+      21,
+      15,
+      9,
+      1
+    ],
+    [
+      21,
+      16,
+      9,
+      1
+    ],
+    [
+      21,
+      17,
+      9,
+      2
+    ],
+    [
+      21,
+      18,
+      7,
+      1
+    ],
+    [
+      21,
+      18,
+      8,
+      6
+    ],
+    [
+      21,
+      18,
+      9,
+      9
+    ],
+    [
+      21,
+      19,
+      7,
+      1
+    ],
+    [
+      21,
+      19,
+      8,
+      7
+    ],
+    [
+      21,
+      19,
+      9,
+      38
+    ],
+    [
+      21,
+      20,
+      8,
+      25
+    ],
+    [
+      21,
+      20,
+      9,
+      87
+    ],
+    [
+      21,
+      21,
+      7,
+      4
+    ],
+    [
+      21,
+      21,
+      8,
+      55
+    ],
+    [
+      21,
+      21,
+      9,
+      195
+    ],
+    [
+      22,
+      18,
+      9,
+      4
+    ],
+    [
+      22,
+      19,
+      8,
+      1
+    ],
+    [
+      22,
+      19,
+      9,
+      11
+    ],
+    [
+      22,
+      20,
+      8,
+      4
+    ],
+    [
+      22,
+      20,
+      9,
+      33
+    ],
+    [
+      22,
+      21,
+      8,
+      13
+    ],
+    [
+      22,
+      21,
+      9,
+      81
+    ],
+    [
+      22,
+      22,
+      8,
+      19
+    ],
+    [
+      22,
+      22,
+      9,
+      158
+    ],
+    [
+      23,
+      18,
+      8,
+      1
+    ],
+    [
+      23,
+      19,
+      9,
+      6
+    ],
+    [
+      23,
+      20,
+      8,
+      1
+    ],
+    [
+      23,
+      20,
+      9,
+      10
+    ],
+    [
+      23,
+      21,
+      8,
+      4
+    ],
+    [
+      23,
+      21,
+      9,
+      45
+    ],
+    [
+      23,
+      22,
+      8,
+      10
+    ],
+    [
+      23,
+      22,
+      9,
+      86
+    ],
+    [
+      23,
+      23,
+      8,
+      11
+    ],
+    [
+      23,
+      23,
+      9,
+      148
+    ],
+    [
+      24,
+      19,
+      9,
+      1
+    ],
+    [
+      24,
+      20,
+      9,
+      3
+    ],
+    [
+      24,
+      21,
+      9,
+      5
+    ],
+    [
+      24,
+      22,
+      8,
+      1
+    ],
+    [
+      24,
+      22,
+      9,
+      29
+    ],
+    [
+      24,
+      23,
+      8,
+      4
+    ],
+    [
+      24,
+      23,
+      9,
+      62
+    ],
+    [
+      24,
+      24,
+      8,
+      3
+    ],
+    [
+      24,
+      24,
+      9,
+      74
+    ],
+    [
+      25,
+      20,
+      9,
+      1
+    ],
+    [
+      25,
+      21,
+      9,
+      1
+    ],
+    [
+      25,
+      22,
+      8,
+      1
+    ],
+    [
+      25,
+      22,
+      9,
+      3
+    ],
+    [
+      25,
+      23,
+      9,
+      33
+    ],
+    [
+      25,
+      24,
+      8,
+      4
+    ],
+    [
+      25,
+      24,
+      9,
+      53
+    ],
+    [
+      25,
+      25,
+      9,
+      65
+    ],
+    [
+      26,
+      22,
+      9,
+      1
+    ],
+    [
+      26,
+      23,
+      8,
+      1
+    ],
+    [
+      26,
+      23,
+      9,
+      11
+    ],
+    [
+      26,
+      24,
+      9,
+      19
+    ],
+    [
+      26,
+      25,
+      9,
+      57
+    ],
+    [
+      26,
+      26,
+      9,
+      51
+    ],
+    [
+      27,
+      23,
+      9,
+      1
+    ],
+    [
+      27,
+      24,
+      9,
+      9
+    ],
+    [
+      27,
+      25,
+      9,
+      24
+    ],
+    [
+      27,
+      26,
+      9,
+      30
+    ],
+    [
+      27,
+      27,
+      9,
+      35
+    ],
+    [
+      28,
+      23,
+      9,
+      1
+    ],
+    [
+      28,
+      24,
+      9,
+      4
+    ],
+    [
+      28,
+      25,
+      9,
+      12
+    ],
+    [
+      28,
+      26,
+      9,
+      11
+    ],
+    [
+      28,
+      27,
+      9,
+      23
+    ],
+    [
+      28,
+      28,
+      9,
+      17
+    ],
+    [
+      29,
+      25,
+      9,
+      3
+    ],
+    [
+      29,
+      26,
+      9,
+      15
+    ],
+    [
+      29,
+      27,
+      9,
+      7
+    ],
+    [
+      29,
+      28,
+      9,
+      18
+    ],
+    [
+      29,
+      29,
+      9,
+      12
+    ],
+    [
+      30,
+      25,
+      9,
+      1
+    ],
+    [
+      30,
+      26,
+      9,
+      1
+    ],
+    [
+      30,
+      27,
+      9,
+      9
+    ],
+    [
+      30,
+      28,
+      9,
+      8
+    ],
+    [
+      30,
+      29,
+      9,
+      11
+    ],
+    [
+      30,
+      30,
+      9,
+      10
+    ],
+    [
+      31,
+      28,
+      9,
+      3
+    ],
+    [
+      31,
+      29,
+      9,
+      3
+    ],
+    [
+      31,
+      30,
+      9,
+      1
+    ],
+    [
+      31,
+      31,
+      9,
+      3
+    ],
+    [
+      32,
+      29,
+      9,
+      3
+    ],
+    [
+      32,
+      30,
+      9,
+      1
+    ],
+    [
+      32,
+      31,
+      9,
+      1
+    ],
+    [
+      33,
+      30,
+      9,
+      1
+    ]
+  ],
+  "parent_min_nonempty_dimension_histogram": [
+    [
+      "min_nonempty_distinct",
+      -1,
+      297
+    ],
+    [
+      "min_nonempty_distinct",
+      1,
+      25541
+    ],
+    [
+      "min_nonempty_distinct",
+      2,
+      14704
+    ],
+    [
+      "min_nonempty_distinct",
+      3,
+      9886
+    ],
+    [
+      "min_nonempty_distinct",
+      4,
+      8418
+    ],
+    [
+      "min_nonempty_distinct",
+      5,
+      7613
+    ],
+    [
+      "min_nonempty_distinct",
+      6,
+      7657
+    ],
+    [
+      "min_nonempty_distinct",
+      7,
+      6322
+    ],
+    [
+      "min_nonempty_distinct",
+      8,
+      4589
+    ],
+    [
+      "min_nonempty_distinct",
+      9,
+      3358
+    ],
+    [
+      "min_nonempty_distinct",
+      10,
+      2316
+    ],
+    [
+      "min_nonempty_distinct",
+      11,
+      1671
+    ],
+    [
+      "min_nonempty_distinct",
+      12,
+      1171
+    ],
+    [
+      "min_nonempty_distinct",
+      13,
+      848
+    ],
+    [
+      "min_nonempty_distinct",
+      14,
+      538
+    ],
+    [
+      "min_nonempty_distinct",
+      15,
+      348
+    ],
+    [
+      "min_nonempty_distinct",
+      16,
+      217
+    ],
+    [
+      "min_nonempty_distinct",
+      17,
+      119
+    ],
+    [
+      "min_nonempty_distinct",
+      18,
+      56
+    ],
+    [
+      "min_nonempty_distinct",
+      19,
+      34
+    ],
+    [
+      "min_nonempty_distinct",
+      20,
+      30
+    ],
+    [
+      "min_nonempty_distinct",
+      21,
+      15
+    ],
+    [
+      "min_nonempty_distinct",
+      22,
+      10
+    ],
+    [
+      "min_nonempty_distinct",
+      23,
+      14
+    ],
+    [
+      "min_nonempty_distinct",
+      24,
+      3
+    ],
+    [
+      "min_nonempty_distinct",
+      25,
+      2
+    ],
+    [
+      "min_nonempty_distinct",
+      28,
+      1
+    ],
+    [
+      "min_nonempty_rank",
+      -1,
+      297
+    ],
+    [
+      "min_nonempty_rank",
+      1,
+      25541
+    ],
+    [
+      "min_nonempty_rank",
+      2,
+      14907
+    ],
+    [
+      "min_nonempty_rank",
+      3,
+      10661
+    ],
+    [
+      "min_nonempty_rank",
+      4,
+      13568
+    ],
+    [
+      "min_nonempty_rank",
+      5,
+      12814
+    ],
+    [
+      "min_nonempty_rank",
+      6,
+      8437
+    ],
+    [
+      "min_nonempty_rank",
+      7,
+      5395
+    ],
+    [
+      "min_nonempty_rank",
+      8,
+      2987
+    ],
+    [
+      "min_nonempty_rank",
+      9,
+      1171
+    ]
+  ],
+  "J0_candidate_count_not_a_slice_opportunity": 5737,
+  "representative_rule": "Each child original-subtree leftmost numeric; at most one per side. No hypothetical success is propagated to choose a new representative. Per-family eligible parent chooses left before right.",
+  "mass_rule": "k0 const1024; k1 p1024; k2 p*m+const*(1024-m); k3 p*(1024-m)+r*m. Only positive support masses are checked individually.",
+  "dimension_rule": "Distinct actual spans and exact rational rank are separate. Same-span invalid components retain their individual masses; rank is not a separable-curve proof.",
+  "candidate_guard_rule": "vu>0 and vl<=max(parent_lo_span,sum adjacent lo)<=anchor<=min(parent_hi_span,sum adjacent hi)<=vu",
+  "prefix_results": [
+    {
+      "family": "distinct1",
+      "prefix_free_replacements_assumed_provable": 17336,
+      "original_numeric_covered_without_overlap": 53727,
+      "hypothetical_remaining_numeric_including_new_curve_leaves": 59224,
+      "hypothetical_numeric_reduction": 36391,
+      "original_nodes_removed": 90322,
+      "original_branches_removed": 36493,
+      "original_nodes_retained": 101235,
+      "original_branch_records_retained": 59285,
+      "attributed_original_codeword_bits_removed": 11371047,
+      "attributed_original_codeword_bits_retained": 10929209,
+      "old_representative_attributed_bit_budget": 3289244,
+      "retained_base_source_bytes": 542851,
+      "new_consumer_source_reserve_bytes": 128000,
+      "ideal_zero_new_payload_literal_equivalent_bytes": 1721657,
+      "ideal_source_equivalent_total_bytes": 2392508,
+      "representative_payload_budget_literal_equivalent_bytes": 2224963,
+      "budgeted_source_equivalent_before_curve_proofs": 2895814,
+      "additional_curve_proof_payload_budget_total_bytes": -895814,
+      "additional_curve_proof_payload_budget_mean_bytes": "-447907/8668",
+      "curve_proof_payload_assumed_zero_only_in_explicit_ideal_scenario": true,
+      "actual_curve_proof_payload_known": false,
+      "new_decodable_stream_or_source_feasibility_proven": false,
+      "selection_packet": {
+        "path": "research-goal-20261017-w10-slice-opportunity/prefix-distinct1.json.gz",
+        "bytes": 478320,
+        "sha256": "126d3227130cb4baf9556164b6ea09c4d6076d40ca3b94d63345b2735ffc7c3a",
+        "uncompressed_bytes": 10150900
+      }
+    },
+    {
+      "family": "distinct2",
+      "prefix_free_replacements_assumed_provable": 19337,
+      "original_numeric_covered_without_overlap": 72708,
+      "hypothetical_remaining_numeric_including_new_curve_leaves": 42244,
+      "hypothetical_numeric_reduction": 53371,
+      "original_nodes_removed": 126317,
+      "original_branches_removed": 53490,
+      "original_nodes_retained": 65240,
+      "original_branch_records_retained": 42288,
+      "attributed_original_codeword_bits_removed": 15744990,
+      "attributed_original_codeword_bits_retained": 6555266,
+      "old_representative_attributed_bit_budget": 3808082,
+      "retained_base_source_bytes": 542851,
+      "new_consumer_source_reserve_bytes": 128000,
+      "ideal_zero_new_payload_literal_equivalent_bytes": 1052374,
+      "ideal_source_equivalent_total_bytes": 1723225,
+      "representative_payload_budget_literal_equivalent_bytes": 1635071,
+      "budgeted_source_equivalent_before_curve_proofs": 2305922,
+      "additional_curve_proof_payload_budget_total_bytes": -305922,
+      "additional_curve_proof_payload_budget_mean_bytes": "-305922/19337",
+      "curve_proof_payload_assumed_zero_only_in_explicit_ideal_scenario": true,
+      "actual_curve_proof_payload_known": false,
+      "new_decodable_stream_or_source_feasibility_proven": false,
+      "selection_packet": {
+        "path": "research-goal-20261017-w10-slice-opportunity/prefix-distinct2.json.gz",
+        "bytes": 617144,
+        "sha256": "ae3b9900adfc748e468b3a67b049b0b3245f97b6c101cf01fa1689be1b9982cd",
+        "uncompressed_bytes": 11348485
+      }
+    },
+    {
+      "family": "rank1",
+      "prefix_free_replacements_assumed_provable": 17336,
+      "original_numeric_covered_without_overlap": 53727,
+      "hypothetical_remaining_numeric_including_new_curve_leaves": 59224,
+      "hypothetical_numeric_reduction": 36391,
+      "original_nodes_removed": 90322,
+      "original_branches_removed": 36493,
+      "original_nodes_retained": 101235,
+      "original_branch_records_retained": 59285,
+      "attributed_original_codeword_bits_removed": 11371047,
+      "attributed_original_codeword_bits_retained": 10929209,
+      "old_representative_attributed_bit_budget": 3289244,
+      "retained_base_source_bytes": 542851,
+      "new_consumer_source_reserve_bytes": 128000,
+      "ideal_zero_new_payload_literal_equivalent_bytes": 1721657,
+      "ideal_source_equivalent_total_bytes": 2392508,
+      "representative_payload_budget_literal_equivalent_bytes": 2224963,
+      "budgeted_source_equivalent_before_curve_proofs": 2895814,
+      "additional_curve_proof_payload_budget_total_bytes": -895814,
+      "additional_curve_proof_payload_budget_mean_bytes": "-447907/8668",
+      "curve_proof_payload_assumed_zero_only_in_explicit_ideal_scenario": true,
+      "actual_curve_proof_payload_known": false,
+      "new_decodable_stream_or_source_feasibility_proven": false,
+      "selection_packet": {
+        "path": "research-goal-20261017-w10-slice-opportunity/prefix-rank1.json.gz",
+        "bytes": 478349,
+        "sha256": "d6a634873eb639f713b352f2bb0a82cb2b0e0f8897e74f650232ee317bfbbd49",
+        "uncompressed_bytes": 10150924
+      }
+    },
+    {
+      "family": "rank2",
+      "prefix_free_replacements_assumed_provable": 19348,
+      "original_numeric_covered_without_overlap": 72899,
+      "hypothetical_remaining_numeric_including_new_curve_leaves": 42064,
+      "hypothetical_numeric_reduction": 53551,
+      "original_nodes_removed": 126696,
+      "original_branches_removed": 53674,
+      "original_nodes_retained": 64861,
+      "original_branch_records_retained": 42104,
+      "attributed_original_codeword_bits_removed": 15790726,
+      "attributed_original_codeword_bits_retained": 6509530,
+      "old_representative_attributed_bit_budget": 3812358,
+      "retained_base_source_bytes": 542851,
+      "new_consumer_source_reserve_bytes": 128000,
+      "ideal_zero_new_payload_literal_equivalent_bytes": 1045376,
+      "ideal_source_equivalent_total_bytes": 1716227,
+      "representative_payload_budget_literal_equivalent_bytes": 1628727,
+      "budgeted_source_equivalent_before_curve_proofs": 2299578,
+      "additional_curve_proof_payload_budget_total_bytes": -299578,
+      "additional_curve_proof_payload_budget_mean_bytes": "-149789/9674",
+      "curve_proof_payload_assumed_zero_only_in_explicit_ideal_scenario": true,
+      "actual_curve_proof_payload_known": false,
+      "new_decodable_stream_or_source_feasibility_proven": false,
+      "selection_packet": {
+        "path": "research-goal-20261017-w10-slice-opportunity/prefix-rank2.json.gz",
+        "bytes": 619475,
+        "sha256": "99dab265dec9d9ab45332ac98b6aca1a9b37b143a2eb4119159a335b7a228053",
+        "uncompressed_bytes": 11355493
+      }
+    },
+    {
+      "family": "all_nonempty",
+      "prefix_free_replacements_assumed_provable": 1,
+      "original_numeric_covered_without_overlap": 95615,
+      "hypothetical_remaining_numeric_including_new_curve_leaves": 1,
+      "hypothetical_numeric_reduction": 95614,
+      "original_nodes_removed": 191557,
+      "original_branches_removed": 95778,
+      "original_nodes_retained": 0,
+      "original_branch_records_retained": 0,
+      "attributed_original_codeword_bits_removed": 22300256,
+      "attributed_original_codeword_bits_retained": 0,
+      "old_representative_attributed_bit_budget": 192,
+      "retained_base_source_bytes": 542851,
+      "new_consumer_source_reserve_bytes": 128000,
+      "ideal_zero_new_payload_literal_equivalent_bytes": 49315,
+      "ideal_source_equivalent_total_bytes": 720166,
+      "representative_payload_budget_literal_equivalent_bytes": 49344,
+      "budgeted_source_equivalent_before_curve_proofs": 720195,
+      "additional_curve_proof_payload_budget_total_bytes": 1279805,
+      "additional_curve_proof_payload_budget_mean_bytes": "1279805",
+      "curve_proof_payload_assumed_zero_only_in_explicit_ideal_scenario": true,
+      "actual_curve_proof_payload_known": false,
+      "new_decodable_stream_or_source_feasibility_proven": false,
+      "selection_packet": {
+        "path": "research-goal-20261017-w10-slice-opportunity/prefix-all_nonempty.json.gz",
+        "bytes": 489,
+        "sha256": "04e34dad7d241e3eb0b5e7856cdf50e3ba203c1e4fdd68c8b8e048455c99c297",
+        "uncompressed_bytes": 907
+      }
+    }
+  ],
+  "prefix_files": [
+    {
+      "path": "research-goal-20261017-w10-slice-opportunity/prefix-distinct1.json.gz",
+      "bytes": 478320,
+      "sha256": "126d3227130cb4baf9556164b6ea09c4d6076d40ca3b94d63345b2735ffc7c3a",
+      "uncompressed_bytes": 10150900
+    },
+    {
+      "path": "research-goal-20261017-w10-slice-opportunity/prefix-distinct2.json.gz",
+      "bytes": 617144,
+      "sha256": "ae3b9900adfc748e468b3a67b049b0b3245f97b6c101cf01fa1689be1b9982cd",
+      "uncompressed_bytes": 11348485
+    },
+    {
+      "path": "research-goal-20261017-w10-slice-opportunity/prefix-rank1.json.gz",
+      "bytes": 478349,
+      "sha256": "d6a634873eb639f713b352f2bb0a82cb2b0e0f8897e74f650232ee317bfbbd49",
+      "uncompressed_bytes": 10150924
+    },
+    {
+      "path": "research-goal-20261017-w10-slice-opportunity/prefix-rank2.json.gz",
+      "bytes": 619475,
+      "sha256": "99dab265dec9d9ab45332ac98b6aca1a9b37b143a2eb4119159a335b7a228053",
+      "uncompressed_bytes": 11355493
+    },
+    {
+      "path": "research-goal-20261017-w10-slice-opportunity/prefix-all_nonempty.json.gz",
+      "bytes": 489,
+      "sha256": "04e34dad7d241e3eb0b5e7856cdf50e3ba203c1e4fdd68c8b8e048455c99c297",
+      "uncompressed_bytes": 907
+    }
+  ],
+  "original_all_codeword_bits": 22300256,
+  "original_all_field_literal_source_bytes": 3461607,
+  "fixed_literal_syntax_overhead_bytes": 43803,
+  "literal_accounting_formula": "syntaxOverhead+ceil(originalLiteralChars*(originalBinaryBits-removedAttributedBits+oldRepBitBudget)/originalBinaryBits). This is fixed-original-stream proportional engineering burden, not a new encoding.",
+  "source_accounting_caveat": "point and cut deltas cross records; removing a subtree or moving a representative changes later symbols/varints and may require absent Huffman codes. No resynchronization, decoder, curve payload or valid new source is supplied.",
+  "future_slice_obligations": [
+    "Keep original FS-decoded DualMove AMOUNTS fixed; tree_code alone cannot preserve them after changing FS slopes.",
+    "Recompute whole-parent runDual/CpCm and coordinate residual; none computed here.",
+    "Use actual safe affine V+dminus*(s-L0)-dplus*(p-L0), with mcp/mcn offsets; do not replace by V+dminus*(s-p).",
+    "Preserve all component masses/1024 and old actual kernel identity; future curve and partial consumer soundness remain unproved."
+  ],
+  "rank_cache": [
+    223111,
+    63896,
+    8192,
+    8192
+  ],
+  "raw_file_limit_bytes": 41943040
+}

@@ -1,0 +1,156 @@
+WHOLE-W10 SUPPORT-DOMAIN OPPORTUNITY AUDIT
+
+This is a single read-only opportunity measurement, not a new floor proof,
+mathematical merge, valid compressed proof source, or unconditional record.
+The complete producer ran once (PID19784, session75460), exited0, and was not
+restarted. It used32.327 seconds and peak RSS206,684,160 bytes. The1.5GiB
+resource guard did not trigger. No solver, oracle, integer leaf inequality,
+new witness, curve certificate, changed codec, or Lean compilation was run.
+The frozen monitor docstring has an irrelevant copied sentence about an old
+73-block Gram pass. This pass has no Gram input or computation; that prose
+is a provenance typo, not an analytic premise. The source and run hashes
+are preserved rather than silently rewriting the historical monitor.
+The summary's parents_completed=90000 is its last periodic progress
+checkpoint, not a terminal record count. The binary header has95778 records,
+the complete-pass flag is true, and the independent replay consumes and
+checks all95778 records. The freeze manifest makes this distinction explicit.
+
+Frozen tree and geometry
+------------------------
+The original tree has191557 nodes:95778 branches,95615 numeric leaves,
+163 empty leaves and1 reflection leaf. The source cache contains39 positive
+weighted terms, with9 adjacent gaps and45 total span slots. The original
+conditional normalization/closure and the intersection with adjacent-gap
+sums determine every whole-parent span interval. The complete normalized
+state hash agrees with the frozen extraction. Every original numeric FS
+passes its support validity guards on its own original leaf; this does not
+recheck its numerical lower bound.
+
+Each child supplies its original leftmost numeric leaf, if present. Because
+the earlier whole-parent reuse test had zero successes, this audit never
+propagates a hypothetical merged representative. At most these two original
+representatives are considered per parent. A candidate keeps its original
+FS and tree code. There are191392 present candidate records.
+
+For a component of positive integer mass m/1024, the scalar-domain guard is
+vu>0 and vl<=left<=anchor<=right<=vu. Term kinds are decoded component by
+component: kind0 has only constant mass; kind1 has support mass1024;
+kind2 has support mass m and constant mass1024-m; kind3 has support masses
+1024-m and m. Zero-mass supports are ignored. Thus an invalid component is
+never silently charged the entire term. Records include invalid component
+mask, span mask, total invalid mass and sum(a*mass), not just a term count.
+
+Distinct span count is a nonlinear-argument count, not automatically linear
+dimension. Exact Q-rank of the gap-indicator vectors is also recorded.
+The independent audit uses the equivalent incidence-graph rank as a check.
+Neither count proves a curve bound or a separable representation.
+
+Candidate counts by invalid component count are:
+  0:5737; 1:24400; 2:19728; at least3:141527.
+Counts by distinct invalid span count are:
+  0:5737; 1:27387; 2:18589; at least3:139679.
+Counts by exact rank are:
+  0:5737; 1:27387; 2:18894; at least3:139374.
+
+The5737 J=0 candidates are counted only. They are excluded from the family
+that retains invalid terms as true nonlinear terms: an empty nonlinear
+collection cannot repair the failed parent numerator using the same moves.
+An alternative representative with nonempty J can still qualify.
+
+Prefix-free hypothetical replacements
+------------------------------------
+For each fixed family, choose the topmost eligible original parent, the
+first qualifying left/right representative, and skip its whole subtree.
+This gives disjoint original leaf ranges. It preserves a hypothetical
+cover topology only if every selected new whole-parent inequality is proved.
+No such inequality is produced here. Original empty/reflection leaves and
+branch-record burden outside selected subtrees remain in the accounting.
+
+family       new leaves   original numeric covered   numeric reduction
+distinct1       17336             53727                    36391
+distinct2       19337             72708                    53371
+rank1           17336             53727                    36391
+rank2           19348             72899                    53551
+all nonempty        1             95615                    95614
+
+The all-nonempty selection is the root with8 invalid components on8 spans
+of rank8 and total invalid mass8192. It is not a low-dimensional result.
+The small r001100 example has only2 original leaves and is not global
+evidence. This full-tree audit is the relevant opportunity measurement.
+
+Source accounting and its limits
+-------------------------------
+The cost model explicitly retains542851 bytes of old analytic/checker base
+and128000 bytes of new consumer reserve. The latter is an allocation, not
+an implemented consumer. All remaining literal syntax/header/model/padding
+burden stays. Original per-record Huffman codeword bits are attributed by
+reproducing the old symbol stream and verifying all channel token counts
+and bit totals. No new stream or dictionary is encoded.
+
+Point deltas use the last nonzero point across records; branch cuts also
+use cross-record deltas. Removing a subtree or moving a representative can
+change subsequent symbols, ULEB lengths and even require a symbol with no
+code in the old dictionary. Consequently deleting attributed bits does
+not yield a valid compressed stream. The following numbers are only a
+fixed-original-stream proportional literal-equivalent engineering model.
+They are not exact bytes of a new decodable source or a source no-go theorem.
+
+family      ideal source total   rep-budget source total   curve headroom
+distinct1         2392508                 2895814              -895814
+distinct2         1723225                 2305922              -305922
+rank1             2392508                 2895814              -895814
+rank2             1716227                 2299578              -299578
+all nonempty       720166                  720195              1279805
+
+Ideal means zero replacement payload, an explicitly optimistic limit.
+Rep-budget means each new leaf is allocated the attributed bits of its
+original representative; the additional curve-proof payload is unknown.
+The one-dimensional fixed-representative model is over2MB even at the
+zero-payload limit. For distinct2 the ideal headroom is276775 bytes, about
+14.31 bytes per new leaf for all representative/curve material; merely
+keeping the representative bit budget already exceeds2MB by305922 bytes.
+Rank2 gains only180 further numeric reductions over distinct2. Neither
+two-dimensional reduction reaches the inherited observed-average target
+58902; that target is itself an engineering comparison, not a lower bound.
+The high-dimensional root option demonstrates only the weakness of a
+zero-payload idealization, not a provable or practical replacement.
+
+The gzip files here are transport of audit statistics. Their archive sizes
+do not measure a website Lean proof source. The11,301,816-byte uncompressed
+parent-record stream and all uncompressed selection packets are below the
+40MiB raw-file guard. The theorem/checker/table/full-cover payload for any
+future curve approach is not known and must not be assumed to cost zero.
+
+Unresolved mathematics of any future slice
+----------------------------------------
+A future partial certificate must keep the original FS-decoded DualMove
+AMOUNTS, not merely its tree code: changing FS slopes changes decoded move
+amounts. Its whole-parent runDual, CpCm and coordinate residual must be
+recomputed. The actual safe affine support is
+  V+dminus*(s-L0)-dplus*(p-L0),
+with the mcp/mcn offsets. It is not V+dminus*(s-p). All component masses,
+the old actual-kernel identity, and a sound partial consumer remain needed.
+This audit supplies none of those bounds or consumer proofs. A parent with
+small invalid-span rank is an opportunity category, not an accepted leaf.
+
+Replay and stopping boundary
+---------------------------
+Producer: python -S research-goal-20261017-w10-slice-opportunity/run_once.py
+This command has already run once; do not rerun it as routine verification.
+Use the separately frozen independent read-only replay instead. Its default
+must not overwrite an existing receipt. The package manifest binds the
+mathematical inputs and the complete original-run outputs by byte hashes;
+mutable research governance is provenance, not a mathematical premise.
+Independent replay: python -S
+  research-goal-20261017-w10-slice-opportunity-audit/independent_replay.py
+It completed once in57.18 seconds and passed all95778 parent records,
+191392 candidates, original95615 leaf support guards, five prefix sets,
+original token-bit accounting and source-equivalent formulas. Its receipt
+SHA is de02257c9d513ff5c4d8d689830ccb61e1a52ace9bc2f8ad86e9650a3d529405;
+the independent audit pin SHA is
+8eef18b2b1988210861d8b48892dfc56b0308ed6c7111ab9ca1ff7abc3cd78f9.
+
+This authorized pass ends with the statistics, independent replay and pin.
+No curve pilot, LP, floor search, codec, parameter scan or Lean task follows
+automatically. The unconditional proportion, complete actual-function
+proof, source-size contract and submission material remain incomplete.

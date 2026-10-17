@@ -242,7 +242,10 @@ def main():
       ('research-goal-20261017-edge6-transfer-audit/audit-files.json','df2b75b49cf0f6a2632fef55f17e6262bcebc2984ab0ab08ef0f1e13daf4b4ee'),
       ('research-goal-20261017-edge6-payment-audit/audit-files.json','df1076f2a378507fc4bf6b61c7a3e084b9113e4c22475f11a19a2c30420b6e3d'),
       ('research-goal-20261017-global-relevance-audit/relevance-files.json','065d2cfe8b4dd8e11e3f47633d18a5dfbe72dc2e712df3a75cbb1b0890ba36f1'),
-      ('research-goal-20261017-global-relevance-independent/audit-files.json','957a2523611f815ec94cab29f62e60f3ccf374faf3f9ce7c392dc7ff7eb0b86c')]:
+      ('research-goal-20261017-global-relevance-independent/audit-files.json','957a2523611f815ec94cab29f62e60f3ccf374faf3f9ce7c392dc7ff7eb0b86c'),
+      ('research-goal-20261017-w10-slice-opportunity/opportunity-files.json','845a7956173a35b3e7f07a3ac1ec217e39b6724eee7c30259d64149faff97957'),
+      ('research-goal-20261017-w10-slice-opportunity-audit/audit-files.json','8eef18b2b1988210861d8b48892dfc56b0308ed6c7111ab9ca1ff7abc3cd78f9'),
+      ('research-goal-20261017-w10-generator-policy/policy-files.json','195fbd6987adc8e2515541aa3f2645afa6021454d9904a19adf4d4b76df381db')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -310,7 +313,10 @@ def main():
             if row['path'] in [
                   'research-goal-20261017-swap-family-quartic/swap-family-quartic.json.gz',
                   'research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz',
-                  'research-goal-20261017-actual-sextic-cone/new-rows-float.npz']:
+                  'research-goal-20261017-actual-sextic-cone/new-rows-float.npz',
+                  'research-goal-20261016/w10-size-audit-20261017/fs.bin',
+                  'research-goal-20261016/w10-size-audit-20261017/nodes.bin',
+                  'research-goal-20261016/w10-size-audit-20261017/treecodes.bin']:
                 # These complete packets are reproduced from their published
                 # hash-checked pieces; do not stage a second copy of the bytes.
                 continue

@@ -9,10 +9,14 @@ contradiction is local model evidence. Deterministic Gram-tail deletion
 still leaves 2,394,367 bytes of data source; the edgewise Bernstein transfer
 cost is about 59.4992, exceeding its .95486138 margin. Both were independently
 checked and no old actual analytic premise was removed. Further work on
-this cell is stopped. The next gate is a full-tree opportunity/source audit
-for the old W10 backup, retaining a few failed affine-support components as
-their actual nonlinear span functions and bounding the remainder by DBM
-dual flow. No numerical pilot or compiler batch is yet authorized.
+this cell is stopped. The full old-W10 opportunity audit and independent
+replay have now finished: all95,778 parents and191,392 candidates agree.
+The fixed-representative one/two-dimensional family fails its current
+whole-source cost gate and is stopped, with no mathematical merge proved.
+This does not rule out other witnesses or encodings. A static review of
+in-source witness discovery must address the3200-second production limit
+and ordinary checker/export/kernel costs before any implementation or
+prototype. No numerical pilot or compiler batch is authorized.
 
 The primary candidate changes the Fourier profile to 24 rational cosine
 modes and changes the pair ledger. It is not a tightening of the old numerical

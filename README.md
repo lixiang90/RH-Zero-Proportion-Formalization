@@ -10,6 +10,11 @@ data-source simplification still exceeds 2 MB, and the fixed transfer of
 old analytic premises fails. [Macro review 002](research-goal-20261016/macro-reviews/002-20261017.zh.md)
 stops further work on that cell and selects a full-tree opportunity audit
 for low-dimensional nonlinear-span certificates on the old W10 backup.
+That [whole-tree audit](research-goal-20261017-w10-slice-opportunity/NOTE.txt)
+and its independent replay now pass. Fixed one/two-dimensional representatives
+fail the current source-cost gate; this family is stopped without a new
+mathematical merge. In-source witness discovery is under static review and
+has no demonstrated whole-tree runtime under the website's3200-second limit.
 No new unconditional proportion or submission-ready proof is asserted.
 
 The latest [fixed sextic certificate](research-goal-20261017-actual-sextic-exact-ray/NOTE.txt)

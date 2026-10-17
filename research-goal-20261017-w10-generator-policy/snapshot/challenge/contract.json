@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "name": "Riemann.fail critical-line bound",
+  "track": "critical-line",
+  "direction": "higher",
+  "trustedUpstream": {
+    "repository": "anthropics/zeta-23-lean",
+    "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "leanToolchain": "leanprover/lean4:v4.33.0-rc2",
+    "mathlibCommit": "51e6992efd06126df61a496bebf8f49482a4e129"
+  },
+  "verifier": {
+    "comparatorCommit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+    "landrunCommit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+    "lean4exportCommit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+    "nanodaCommit": "418320295890faed83a96fd97907b12a3b6728c2"
+  },
+  "baseline": {
+    "recordId": "anthropic-2026-montgomery-taylor",
+    "leanExpression": "2 - 1 / cMT",
+    "decimal": "0.672500703679411645734379790803",
+    "percent": "67.2500703679411645734379790803"
+  },
+  "theorems": {
+    "strictImprovement": "candidate_strict_improvement",
+    "dyadicBound": "candidate_critical_line_bound",
+    "cumulativeBound": "candidate_critical_line_bound_cumulative"
+  },
+  "permittedAxioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "trustedPaths": [
+    ".github/workflows/build-e2b-template.yml",
+    ".github/workflows/verifier-smoke.yml",
+    "challenge/contract.json",
+    "challenge/smoke",
+    "challenge/submission.schema.json",
+    "challenge/templates",
+    "data/records.json",
+    "e2b/build-template.ts",
+    "e2b/mathlib-cache-bounded-disk.patch",
+    "e2b/run-verification-job.sh",
+    "e2b/runtime",
+    "e2b/template.ts",
+    "package.json",
+    "package-lock.json",
+    "scripts/install-lean-toolchain.sh",
+    "scripts/install-native-build-toolchains.sh",
+    "scripts/install-verifier-tools.sh",
+    "scripts/lake-runtime-wrapper.sh",
+    "scripts/prune-lake-build-runtime.sh",
+    "scripts/prune-lean-runtime.sh",
+    "scripts/run-lake-build-bounded-disk.sh",
+    "scripts/finalize-e2b-job.ts",
+    "scripts/prepare-e2b-template.sh",
+    "scripts/prepare-candidate.ts",
+    "scripts/promote-record.ts",
+    "scripts/run-comparator-sandbox.sh",
+    "scripts/run-comparator-e2b.sh",
+    "scripts/smoke-verifier.sh",
+    "scripts/trusted-material.ts",
+    "scripts/verify-submission.ts",
+    "src/lib/attestation.ts",
+    "src/lib/challenge.ts",
+    "src/lib/direct-submission.ts",
+    "src/lib/e2b-config.ts",
+    "src/lib/e2b-verifier.ts",
+    "src/lib/e2b-webhooks.ts",
+    "src/lib/github-promotion.ts",
+    "src/lib/submission-finalization.ts",
+    "src/lib/submission-jobs.ts"
+  ]
+}

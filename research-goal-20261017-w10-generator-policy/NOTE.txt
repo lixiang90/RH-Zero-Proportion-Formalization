@@ -1,0 +1,52 @@
+Scope: current public verifier policy, read-only static feasibility evidence.
+
+Snapshot upstream: josusanmartin/riemann
+Commit: cb97717d3ea82c45f19f2ce04c410440b6492aa6
+Retrieved: 2026-10-17, exact UTC time in policy-snapshot.json.
+All nine upstream files are byte-preserved and hashed there. The downloader
+only requests bounded public data, writes the snapshot and records hashes.
+No downloaded code is run. No credentials, uploads or website submissions.
+
+Observed requirements, with one-based source line references:
+- CONTRIBUTING.md:37-39 and50-53: one UTF-8 Lean file, maximum2MB. The direct upload
+  contract is stricter than prepare-candidate.ts's legacy multi-file tree
+  helper at lines49-74. That helper is not permission to upload other files.
+- CONTRIBUTING.md:64-71: exact statement, permitted transitive axioms,
+  both Lean and nanoda, strict rational improvement and both count forms.
+- CONTRIBUTING.md:83 and SECURITY.md:9-22 explicitly describe execution of
+  contributor metaprograms during elaboration and subsequent kernel replay.
+- SECURITY.md:16-18: pinned sealed runtime; no candidate compiled oleans;
+  bounded resources. The source cannot depend on an external LP binary,
+  SciPy/HiGHS, network data, a local certificate cache or custom imports.
+- scripts/run-comparator-e2b.sh:96-97: production Comparator is wrapped
+  in3200-second timeout, with15-second forced-termination grace.
+- e2b/run-verification-job.sh:32-33: outer production verification job
+  is3240 seconds. That total includes preparation and artifact finalization.
+- scripts/verify-submission.ts:290-293 has local systemd limits12G and
+  RuntimeMaxSec9000. This is the non-E2B branch and does not establish
+  production E2B memory or a9000-second website allowance.
+- scripts/run-lake-build-bounded-disk.sh prunes completed setup metadata.
+  It does not waive the proof source, axiom or kernel requirements.
+
+Inference, not an explicit acceptance guarantee:
+These materials do not prohibit an in-source, in-memory Lean metaprogram
+which discovers finite witnesses and emits closed Nat/Int/List literals.
+The original integer checker can then verify those literals and ordinary
+proof terms can be replayed by both kernels. Metaprogram computation is
+untrusted discovery: a native Boolean/Float answer cannot serve as proof.
+This reading has not been tested against a new candidate or production.
+
+Research gate:
+Before choosing an implementation, identify the actual original W10 LP,
+1024-mass quantization and integer-flow algorithm; whether existing pinned
+Lean exact-Rat simplex code supplies the needed witnesses; the bytes of all
+retained geometry/metadata/base/checker/generator; and total discovery,
+proof construction, kernel, export and nanoda runtime within3200 seconds.
+Current policy alone proves none of source size, discovery success rate,
+runtime, global energy floor, unconditional zero proportion or submission
+readiness. No new solver/optimizer, generator implementation, Lean compile,
+export, nanoda or website proof upload was performed in this package.
+
+The fixed original-representative low-dimensional slice family is stopped
+on its own independently audited cost model. This static inquiry does not
+restart that family or the already-closed five-leaf sextic cell.
