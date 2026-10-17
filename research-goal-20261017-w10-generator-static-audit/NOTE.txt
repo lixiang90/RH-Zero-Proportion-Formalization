@@ -1,0 +1,152 @@
+Static audit: regenerate W10 witnesses inside a pure Lean elaborator
+
+Conclusion
+
+The trust architecture is plausible: a deterministic in-process algorithm
+can propose ordinary FS/DualMove data, and the existing integer checker
+and kernel can verify the generated data. It need not reproduce old FS
+bytes, old optimal flows, HiGHS pivots or the thinning choices. However,
+there is no implemented or benchmarked generator known to certify all
+95615 fixed cells. The existing checker architecture also has a severe
+runtime/memory gate. This is a static feasibility review, not selection
+of this route, a new experiment, or a source/runtime feasibility claim.
+
+What the original producer actually does
+
+generate.py:27 loads integer PT value/slope/error/domain records. Its
+lines() at87 lists every whole-cell legal PT support plus the inherited
+interval lower bound. certify() at111 constructs 48 real LP variables:
+9 gaps and 39 epigraph variables. DBM bounds contribute 90 inequalities;
+the support inequality count varies with the cell. linprog at138 calls
+HiGHS with primal and dual tolerances1e-9. Its duals select supports, not
+prove a floor. Lines145-171 cap their masses, keep the top two per term,
+and quantize the OLD-format mixture to denominator1024. The selected
+affine form is minimized on a ten-vertex complete directed DBM graph by
+network_simplex (97-109,180). Finally203-218 recompute the exact integer
+mcheck numerator. Floating success without that check never certifies.
+
+The final stored FS is not merely the first LP output. compact_thin.py:86
+tries deleting active terms and replacing two tangents with one while
+holding moves fixed and testing the exact inequality. relative_codec.py:54
+alternates thinning with tree_flow.recompute, stopping when unchanged or
+at its fixed round limit. tree_flow.py:73-101 calls a genuine min-cost-flow
+network simplex, obtains a forest, completes it by adjacent zero-flow
+edges and encodes a Prüfer tree. It is not a greedy nearest-anchor rule.
+
+Why fixing geometry matters
+
+The frozen tree has95778 branch records,95615 numeric leaves,163 empty
+leaves and1 reflection leaf. Inline geometry and actual analytic tables
+are still necessary input; “no external data” can mean no filesystem,
+Python, NumPy, SciPy, NetworkX, or external FS/flow files, not no inline
+tree/PT data at all. Root and split closure/normalization must be exactly
+the existing ordered-cell operations.
+
+generate.kernel uses floating sinc only for cut selection (221 onward).
+ordered_generate.py:47-75 assembles seeds and old hints;77 onward reuses
+hints or calls certify, then chooses cuts. If the branch/cut tree is
+already inline, all cut heuristics, actual sinc evaluation, old hint
+checkpoints and scheduling history can be omitted. Old thinning is not
+mathematically needed when no FS payload is being compressed. Per-leaf
+generation is therefore independent once its exact cell is reconstructed.
+
+Concrete minimal candidate, not implemented here
+
+1. Decode only the fixed inline branch/cut/kind tree, reconstruct and
+   normalize each cell, and discharge empty/reflection nodes as before.
+2. From integer PT records enumerate all legal lines in fixed table order;
+   use exact domain tests and interval lower-table queries. Try the
+   existing all-constant fast path first. Build the fixed support LP for
+   each remaining numeric cell.
+3. Obtain deterministic rational support multipliers. The local mathlib
+   already has an exact Rat feasibility-certificate simplex, including
+   sparse/dense wrappers, Rat Gaussian elimination and Bland pivots.
+   It can be an in-process hint source for the contradictory affine
+   model with F<target. This oracle stops at the first positive strict
+   coefficient, and is NOT the original objective-maximizing HiGHS call.
+   Recovering those multipliers and applying the original top-two/1024
+   rule is consequently only a candidate; a weak ray may quantize badly.
+4. Generate a nonnegative exact dual flow on the ten-vertex/90-arc graph,
+   using a deterministic integer min-cost algorithm with fixed tie rules.
+   No proof of optimality is needed if the final checker succeeds. The
+   returned moves may be used directly if the chosen checker interface
+   permits them; otherwise produce a deterministic forest/Prüfer code
+   and reconstruct every amount from the NEW FS divergence.
+5. Emit ordinary witness declarations and the existing kernel-checked
+   integer equality/theorem. Fail closed if any scalar guard, balance,
+   sign/capacity, target inequality or kernel check fails. Compose the
+   unchanged full-tree coverage proof only if every numeric leaf passes.
+
+This needs an LP/flow implementation or a carefully checked adapter;
+ordinary elaborator execution does not supply those algorithms by itself.
+Reusing old tree codes after changing FS is not preserving old flow amounts.
+No external solver or untrusted Boolean assertion may be treated as a
+proof. A complete finite enumeration of all FS/trees is theoretically
+possible because the old finite witnesses exist, but its combinatorial
+cost gives no practical website-time guarantee and is not a useful fallback.
+
+Stability and stopping gates
+
+Exact Rat arithmetic removes floating soundness concerns, but not large
+denominators, simplex degeneracy, weak-margin selection or1024 quantization
+loss. Define support order, equal-weight tie rules, round-half behavior and
+flow tie order explicitly. If Float hints are used instead, no tolerance
+proves validity: convert to finite integers and recheck everything. The
+old full numeric minimum margin is2623983786731307008 divided by
+3355443200000000000000000000 (about7.82e-10), so the original1e-9 LP
+tolerance is not a guarantee of robust reconstruction on every fixed leaf.
+
+The existing simple geometry predictor pilot already checks true new FS
+with old tree codes: midpoint/left/right legal-anchor rules pass only4/1/3
+of the fixed first1000 leaves. The332/1000 constant-tree portfolio uses
+ORIGINAL FS and must not be added to those counts. This refutes those
+simple rules as a full reconstruction method, not all finite algorithms.
+
+A future authorized gate must have fixed pivot/resource caps and stop on
+the first uncovered cell or resource guard. A failed LP, quantized FS,
+flow or final integer check is an algorithm failure, not a mathematical
+counterexample. Do not silently branch, change target, scan parameters,
+read old FS exceptions or introduce external state to hide that failure.
+The built-in simplex loop calls Core.checkSystem but has no fixed pivot
+cap of its own. Its exact certificate postprocess takes an lcm of rational
+denominators. Both must be budgeted, not assumed cheap.
+
+Static source and time evidence
+
+The saved field-Huffman category accounting attributes280659 binary bytes
+to geometry,2217236 to FS and294132 to trees. Regeneration could remove
+the latter two payloads in principle. The retained formal/analytic base is
+542851 bytes; the earlier explicit decoder/consumer reserve is128000.
+These measurements show potential source headroom, not a measured new
+single file: a generator, geometry-only framing, all imports/declarations
+and proof consumer still need their actual combined byte count. No new
+codec or source was produced here. Generated environment/proof data can
+remain large even when submitted metaprogram source is small.
+
+Saved Python observations, not Lean timings: tree-flow-100 reports100
+existing-FS flow reconstructions in0.2624058 seconds; the complete Python
+decode/geometry/95615-leaf integer replay reports51.013 seconds. Neither
+includes a pure Lean LP implementation, its witness generation or its
+kernel/export/Nano checks and neither justifies a website runtime estimate.
+
+The ordinary Lean8-leaf batch took11.024226999994426 seconds against a
+warm-import control6.000833000005514 seconds: about5.023394 seconds net
+for eight leaves, roughly0.628 seconds/leaf. A naive linear extrapolation
+alone is about60000 seconds for95615 leaves, BEFORE new generation and
+independent replay. This is a small-sample engineering warning, not a hard
+lower bound. The478-leaf numeric modules are another actual saved workload,
+not a full-tree or generated-source benchmark. Kernel proof cost cannot
+be omitted merely because witness generation moves into elaboration.
+
+The root's pinned current website policy has a3200-second verification
+timeout and3240-second outer job limit. The old local9000-second setting
+is not applicable. All decoding+generation+kernel proofs+tree composition+
+export+Nano must fit. Even assigning every other stage zero,3200/95615
+seconds per numeric leaf is only about33.5ms. No current end-to-end
+benchmark passes that gate. Source size, peak resident memory, generated
+declaration/proof size and full verification time are separate gates.
+
+Outcome: technically meaningful untrusted-generation architecture, but
+not an established all-leaf algorithm or practical submission path. No
+generator, numerical test, optimization, new Lean module, compilation,
+codec, full-tree replay or mathematical proof was executed in this review.

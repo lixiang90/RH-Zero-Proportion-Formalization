@@ -1,0 +1,104 @@
+{
+  "scope": "Independent stdlib exact audit of the fixed W9 deletion-gluing obstruction.\n\nReads actual Core/W10/SharpWindow statements and literal coefficients.\nImports no producer or numerical package; invokes no solver or Lean.\nDefault read-only; --write-receipt creates an absent receipt once.\n",
+  "passed": true,
+  "source_sha256_start": {
+    "GramDefect20261015/Core.lean": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+    "GramDefect20261015/SharpWindow.lean": "830514965ca5cb26a19be2b216fbedd37744b7c66e862c46bf697b9e29d7c49f",
+    "StructuralResearch20261016/W10RefinedCandidate.lean": "0bd02171737c392c4e316df107c3744bf4ccee486875e3061dcee0a475afb8da",
+    "StructuralW10Cert20261016/FinalConditional.lean": "6712abb9e41eec3beb0b9d1027341356b0b95259e5678a7b9f4d67c193cb2ceb",
+    "research-goal-20261017-ninepoint-decomposition/coefficient-gluing.json": "e39f511b50d8e45ecf9f058f3f717d050c2cd1c316e2d7c846031b833bbfc25b",
+    "research-goal-20261017-ninepoint-decomposition/support-obstruction.json": "adad9dbc9ef49a7a024e6564247580cd5b9eeded2c90217ad795e2cea67d01c9",
+    "research-goal-20261017-ninepoint-decomposition/presolver-failure.json": "a1323a79d1a70fad0121a914abae1d1f113fa093f71066cb360f2a81cea8276a",
+    "research-goal-20261017-ninepoint-decomposition/coefficient_gluing.py": "f7ad5f1ac6db7064dd9174005fed3bf9de8c58cd08f7c69c7a971aa780b174e2",
+    "research-goal-20261017-ninepoint-decomposition/coefficient_gluing_presolver_failed.py": "ea810f97bd2f104f92684dc650ea27c98681d2b99f3da9bdd8ff800e79cfe5ce",
+    "research-goal-20261017-ninepoint-decomposition/support_obstruction.py": "cb776e75b17dbe196d55635041f232225360fa0b7e784a6113249e500e72e3ca",
+    "research-goal-20261017-ninepoint-worker-audit/verify.py": "f1f1cc60b9adc2ffdd54e6cfc256d804a79c18a881d6dba67d844074998c56b7"
+  },
+  "source_sha256_end": {
+    "GramDefect20261015/Core.lean": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+    "GramDefect20261015/SharpWindow.lean": "830514965ca5cb26a19be2b216fbedd37744b7c66e862c46bf697b9e29d7c49f",
+    "StructuralResearch20261016/W10RefinedCandidate.lean": "0bd02171737c392c4e316df107c3744bf4ccee486875e3061dcee0a475afb8da",
+    "StructuralW10Cert20261016/FinalConditional.lean": "6712abb9e41eec3beb0b9d1027341356b0b95259e5678a7b9f4d67c193cb2ceb",
+    "research-goal-20261017-ninepoint-decomposition/coefficient-gluing.json": "e39f511b50d8e45ecf9f058f3f717d050c2cd1c316e2d7c846031b833bbfc25b",
+    "research-goal-20261017-ninepoint-decomposition/support-obstruction.json": "adad9dbc9ef49a7a024e6564247580cd5b9eeded2c90217ad795e2cea67d01c9",
+    "research-goal-20261017-ninepoint-decomposition/presolver-failure.json": "a1323a79d1a70fad0121a914abae1d1f113fa093f71066cb360f2a81cea8276a",
+    "research-goal-20261017-ninepoint-decomposition/coefficient_gluing.py": "f7ad5f1ac6db7064dd9174005fed3bf9de8c58cd08f7c69c7a971aa780b174e2",
+    "research-goal-20261017-ninepoint-decomposition/coefficient_gluing_presolver_failed.py": "ea810f97bd2f104f92684dc650ea27c98681d2b99f3da9bdd8ff800e79cfe5ce",
+    "research-goal-20261017-ninepoint-decomposition/support_obstruction.py": "cb776e75b17dbe196d55635041f232225360fa0b7e784a6113249e500e72e3ca",
+    "research-goal-20261017-ninepoint-worker-audit/verify.py": "f1f1cc60b9adc2ffdd54e6cfc256d804a79c18a881d6dba67d844074998c56b7"
+  },
+  "all_inputs_unchanged": true,
+  "source_references": [
+    {
+      "path": "GramDefect20261015/Core.lean",
+      "line": 13250,
+      "role": "W9 floor on every nonnegative eight-gap vector"
+    },
+    {
+      "path": "GramDefect20261015/Core.lean",
+      "line": 13242,
+      "role": "same actual kernel identity"
+    },
+    {
+      "path": "GramDefect20261015/Core.lean",
+      "line": 4992,
+      "role": "capacity by rank, not physical span"
+    },
+    {
+      "path": "GramDefect20261015/SharpWindow.lean",
+      "line": 97,
+      "role": "same-kernel H lower bound"
+    },
+    {
+      "path": "StructuralW10Cert20261016/FinalConditional.lean",
+      "line": 20,
+      "role": "frozen H and record wrapper"
+    }
+  ],
+  "actual_theorem_domain_statically_checked": "all eight old gaps nonnegative; deletion gaps are sums of original nonnegative gaps",
+  "same_old_kernel_identity_statically_checked": true,
+  "theorems_recompiled_or_independently_kernel_replayed": false,
+  "ordered_embeddings_rebuilt": 10,
+  "capacity_matrix_shape": [
+    9,
+    10
+  ],
+  "internal_deletion_pressure_duplication_checked": true,
+  "old_total_pair_mass": "1599999987/100000000",
+  "mass_equals_16": false,
+  "all_feasible_family_floors_below_one_over_64": true,
+  "old_floor": "859538525913875481/100000000000000000000",
+  "H": "3360842052820594373879991756052499665323/5000000000000000000000000000000000000000",
+  "record": "34191001116882886388531117129201664/50760020691785094633026544189453125",
+  "goal": "1094128278946873735663278316628593873/1624320662137123028256849414062500000",
+  "nonnegative_primal_weights_checked": 10,
+  "primal_capacity_rows_checked": 9,
+  "nonnegative_dual_weights_checked": 9,
+  "dual_column_bounds_checked": 10,
+  "all10_support_embeddings_have_positive_into_zero_clashes": true,
+  "arbitrary_injective_support_embedding_impossible_by_34_vs_at_most33_edges": true,
+  "unchanged_nonnegative_coefficient_decomposition_forces_all_lambda_zero": true,
+  "ratio_denominator_positive_for_every_capacity_feasible_lambda": true,
+  "strict_ratio_linearization_identity_checked": true,
+  "exact_dual_upper": "706448404331833/500000000000000000",
+  "exact_threshold": "59167775531689051783381565785408938489600910650924364438067713/41582608950710349523375345000000000000000000000000000000000000000",
+  "exact_strict_gap": "415840049321205857358084622229756774830910650924364438067713/41582608950710349523375345000000000000000000000000000000000000000",
+  "gap_hint": 1.0000335712800486e-05,
+  "primal_percent_hint": 67.35812206567651,
+  "fixed_continuous_nonnegative_gluing_family_cannot_reach_goal": true,
+  "no_solver_optimality_assumption": true,
+  "initial_failed_main_executions_before_solver": 1,
+  "later_solver_calls_reported": 1,
+  "failure_provenance_statically_consistent": true,
+  "failure_scope": "Unchanged-ledger nonnegative embedding decomposition and the ten ordered deletion-embedding coefficient family only; no obstruction to signed paid remainders, new kernels, nonlinear arguments or other families.",
+  "producer_imports": 0,
+  "solver_calls": 0,
+  "NumPy_or_SciPy_imports": 0,
+  "kernel_evaluations": 0,
+  "tree_records_read": 0,
+  "Lean_invocations": 0,
+  "new_global_floor_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false,
+  "seconds": 0.05473929998697713
+}

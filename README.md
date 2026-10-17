@@ -2,22 +2,27 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
-A new [global relevance audit](research-goal-20261017-global-relevance-audit/NOTE.zh.md)
-shows that the sextic test cell already has a five-leaf numerical subtree
-in the historical baseline and is unrelated to the current 17-cell frontier.
-Its exact certificate therefore closes no new frontier. The measured
-data-source simplification still exceeds 2 MB, and the fixed transfer of
-old analytic premises fails. [Macro review 002](research-goal-20261016/macro-reviews/002-20261017.zh.md)
-stops further work on that cell and selects a full-tree opportunity audit
-for low-dimensional nonlinear-span certificates on the old W10 backup.
-That [whole-tree audit](research-goal-20261017-w10-slice-opportunity/NOTE.txt)
-and its independent replay now pass. Fixed one/two-dimensional representatives
-fail the current source-cost gate; this family is stopped without a new
-mathematical merge. In-source witness discovery is under static review and
-has no demonstrated whole-tree runtime under the website's3200-second limit.
+A [common-shift integer rounding comparison](research-goal-20261017-common-rounding/NOTE.zh.md)
+now gives a new whole-domain necessary condition for actual24-mode global
+minima. Separate static reviews agree on its finite convex-combination
+proof; both target floors need only existing integer centres1–32. It is
+not a floor lower bound. A subsequent [exact arithmetic gate](research-goal-20261017-rounding-benefit/NOTE.zh.md)
+gives an all-positive-integer configuration floor of about0.00980215689
+on paper from existing actual tables. The continuous transfer loss remains
+open; a fixed two-point test did not settle its feasibility. Useful global
+transfer loss or full-domain certificate savings must precede a new Lean batch.
+
+The [fixed nine-point linear reuse family](research-goal-20261017-ninepoint-decomposition/NOTE.zh.md)
+fails the requested magnitude gate by an exact rational dual, checked by
+two separate standard-library implementations. This does not rule out a
+stronger joint floor for the same glued ledger. The fixed low-dimensional
+slice family and already closed five-leaf sextic cell remain stopped under
+[macro review002](research-goal-20261016/macro-reviews/002-20261017.zh.md).
+In-source witness generation has no demonstrated all-leaf/source/runtime
+path and remains a static backup.
 No new unconditional proportion or submission-ready proof is asserted.
 
-The latest [fixed sextic certificate](research-goal-20261017-actual-sextic-exact-ray/NOTE.txt)
+The preserved [fixed sextic certificate](research-goal-20261017-actual-sextic-exact-ray/NOTE.txt)
 and [independent integer replay](research-goal-20261017-exact-ray-audit/independent-replay.json)
 prove the enhanced degree-six polynomial/moment model infeasible on one
 specified difficult cell. Exact scalar weights, integer Gram factors and

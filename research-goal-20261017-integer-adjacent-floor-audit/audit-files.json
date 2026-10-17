@@ -1,0 +1,404 @@
+{
+  "scope": "Fixed exact integer adjacent-gap arithmetic and existing-table source identity audit; no new Lean theorem or rounding transfer.",
+  "files": [
+    {
+      "path": "research-goal-20261017-integer-adjacent-floor-audit/replay.py",
+      "bytes": 8142,
+      "sha256": "95f84c6e4ceeb5f5eee8996d2d0fe327a38b1495044f2dd48ed7d9fb31447c1d"
+    },
+    {
+      "path": "research-goal-20261017-integer-adjacent-floor-audit/independent-replay.json",
+      "bytes": 69352,
+      "sha256": "48543c2176c416b21832a11e35faa0be6cdf432e6348429d26d800373f296d33"
+    },
+    {
+      "path": "research-goal-20261017-integer-adjacent-floor-audit/NOTE.zh.txt",
+      "bytes": 2073,
+      "sha256": "d95a66356b7c89e1bcf8152f344b99464c24e7322e0bc155ba9d8255fd75339e"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-goal-20261016/window_normalized_interval.json",
+      "bytes": 101176,
+      "sha256": "15e389817127095be26e2ebca6e8bea0d356547a3cb041710029f566cfc13255"
+    },
+    {
+      "path": "research-20261016-followup/window_reweight_rational.json",
+      "bytes": 3838,
+      "sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowJetTableData.lean",
+      "bytes": 322302,
+      "sha256": "f6afdae121fb933db7b468b861de75e2e38afe2068323837b7a18095306c2ec8"
+    },
+    {
+      "path": "StructuralW10Followup20261016/NewLedger.lean",
+      "bytes": 4044,
+      "sha256": "9db3e7633a3117f4fded88998da4ab3ebc4e24631ac50816f23931bdb8225d1a"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowNormalizedJets.lean",
+      "bytes": 4744,
+      "sha256": "8b47725eb97a47e0a86294a771cfb06a9fc299e4a0a7e7edf4410885cb01b6cc"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowRationalInterval.lean",
+      "bytes": 6722,
+      "sha256": "d0eae7ba9caed1d44c9d8e2b3884cca64edc79d0925897190c15f5591f890c88"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedTablesAll.lean",
+      "bytes": 6487,
+      "sha256": "7511ac0f532150ad4f9fa4ae63b67c5a11fe3caf248ae84cdda1581dffd4c6f0"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowKernel.lean",
+      "bytes": 5762,
+      "sha256": "4c01794657e775391ba57642e7d753be961ac4e89e87c3f29109be8f5f05547e"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowGramExpansion.lean",
+      "bytes": 3423,
+      "sha256": "c96182db1b236171b8dfa32b3e7a31a603ddf05a2f550ef86e95be040a0caf5f"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowGapEnergy.lean",
+      "bytes": 13554,
+      "sha256": "3f570bc83263355a239c086922e9bc138319fd2abd77668b594b5f94a5fd6564"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter01.lean",
+      "bytes": 913,
+      "sha256": "0e1af22cfcb96ebed36dbae0c30d4f31a7f942d273fe3a35fc87b8c1ce8ca40c"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter01_0e1af22cfcb9.log",
+      "bytes": 358,
+      "sha256": "a150ead437602c65be1e6d31430536e812d6ae8f73b84a39e4443ebf320ee086"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter02.lean",
+      "bytes": 1300,
+      "sha256": "0d24db91fd54c8aaca33262ac9caf0952c1ac34c71a125f9f7e8e500325004ec"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter02_0d24db91fd54.log",
+      "bytes": 358,
+      "sha256": "065d626fddb57e05916f108ffdae35e693872a550cf3d6f97d29aa3d77e49782"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter03.lean",
+      "bytes": 1300,
+      "sha256": "3c8e353768828fe8a40aa98e8cae0b2ff4ec95622d07a9dc4c03bbf6fda07fb9"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter03_3c8e35376882.log",
+      "bytes": 358,
+      "sha256": "b97a0724f8d11fc32314a02c052e427700c80a510e5336bf35320c49ade0bfd3"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter04.lean",
+      "bytes": 1300,
+      "sha256": "2e97e81bb42d0ffccc979c78e27360fd48391ad5e6ca6e5a86ba80905d8e71d7"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter04_2e97e81bb42d.log",
+      "bytes": 358,
+      "sha256": "bca7e261c60f2b12566f97de078dccdf56bc78e7540f8408bb6c2b7aac58d30c"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter05.lean",
+      "bytes": 1300,
+      "sha256": "26f883150f511fa0f66e7e9f2bcc1a266cd3a01ebbfb4c93ab5a78c7c6c64df5"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter05_26f883150f51.log",
+      "bytes": 358,
+      "sha256": "3927da2cf00e917ea73e4626c58b0f6cc015553e24117d492a3f88bc6fa56e18"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter06.lean",
+      "bytes": 1300,
+      "sha256": "a16e0e99c45139a101703515da4d42719577996fc631fd4cc6c97c21858480de"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter06_a16e0e99c451.log",
+      "bytes": 358,
+      "sha256": "9edd3766ded3a1d295e55910f51f621e6951fe023002c70d9e8eb53d2bee9c11"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter07.lean",
+      "bytes": 1300,
+      "sha256": "fe323bd0e19c53dc8b12e6007ddd9ae6335c420054f27133416fcebdc730555e"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter07_fe323bd0e19c.log",
+      "bytes": 358,
+      "sha256": "4215dc1c90f78419afabfd15e41cbf4d0178a12e1c6f404bc89edc024ade5733"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter08.lean",
+      "bytes": 1300,
+      "sha256": "0ad7ea15584a9fc1e7a3b19631950b6b04709bcfb6c25f5904f19063c7a816af"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter08_0ad7ea15584a.log",
+      "bytes": 358,
+      "sha256": "030856ba4bd7fc0e04964c1b1573ad67a7bba50f2a8f31d2566dcbf4639ff83e"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter09.lean",
+      "bytes": 1300,
+      "sha256": "0334b355d6a178b4b422287c2a18624103a63db713d807e940a3a5f592bb2e36"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter09_0334b355d6a1.log",
+      "bytes": 358,
+      "sha256": "fd816540907601716180ab37234ba4d6cfeaec958942586c601973382ae180e1"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter10.lean",
+      "bytes": 1316,
+      "sha256": "91875aada8bb87b16c4d5ac31ea95a2fc43885a780406a1e718302792708f265"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter10_91875aada8bb.log",
+      "bytes": 360,
+      "sha256": "2741a3d254a1647167e03b6b5951248aecfc6480a77b4e4e4c0d19a512810095"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter11.lean",
+      "bytes": 1316,
+      "sha256": "e6c07aa604130d457f29ca380d72a68efe94dafe84c1ebe31e5914213d1a07b1"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter11_e6c07aa60413.log",
+      "bytes": 360,
+      "sha256": "693a770e4af0f125cc2dac03c4ab81836a8e7e6d09e66f8c98f8c93523765acd"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter12.lean",
+      "bytes": 1316,
+      "sha256": "fc19439715c875d9cf924b57b5853abd0565f04df34d245779cda41a8600b7ec"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter12_fc19439715c8.log",
+      "bytes": 360,
+      "sha256": "d352cfd0d886e6ac8040a1dc32f59e1e3f32afc288c75bfda5d209a6babfe9bc"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter13.lean",
+      "bytes": 1316,
+      "sha256": "76f6419fb600f93000211f76bc8981b9814b4b76b6cabbb85f2066e5456bb3ed"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter13_76f6419fb600.log",
+      "bytes": 360,
+      "sha256": "8bfcdeed825736867a58d53beb3f71490075efd73653bb803a4a074217862e83"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter14.lean",
+      "bytes": 1316,
+      "sha256": "4ca6e1d417a31ab8d0826d54b328da7b2e552ff5eb3a2d8ab8d970669a8c1dde"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter14_4ca6e1d417a3.log",
+      "bytes": 360,
+      "sha256": "f401107e9783505bebf39b7c528099968a0e3e02ed0f38487ab1861c4b008bf6"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter15.lean",
+      "bytes": 1316,
+      "sha256": "c88ff5d7f6d6b99eb16487c7b2d6bbf6ce233ab7acb43228210d0bc0f1a7aa47"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter15_c88ff5d7f6d6.log",
+      "bytes": 360,
+      "sha256": "29659209868a9139c2d56172c9bce68742f839d9f2af71aab767df9c48bad11e"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter16.lean",
+      "bytes": 1316,
+      "sha256": "b04a7420cf4e80b339504dc10d73225be9a2ccd683925f095693ebe396c76aed"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter16_b04a7420cf4e.log",
+      "bytes": 360,
+      "sha256": "5aecb62681868369b72b79d8bcb36ab2d284da9039737b3c6382bca28bffe023"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter17.lean",
+      "bytes": 1316,
+      "sha256": "feb3ad4966f4f6eba4930dc04c2f981eef2c7b76ee73334ab32149a9e8bef0d3"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter17_feb3ad4966f4.log",
+      "bytes": 360,
+      "sha256": "dfcdbd7a1460b047043063cc1c21bc3edd23314f2f63bf0740d80c24d051bb55"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter18.lean",
+      "bytes": 1316,
+      "sha256": "f74ae7c4367680ce58ee163df301088035361618920dedba04a6e9b4ec553328"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter18_f74ae7c43676.log",
+      "bytes": 360,
+      "sha256": "151d7bb44dafee9f0931b28829a3be36e46142710af1a1f11f8b91e8d045242f"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter19.lean",
+      "bytes": 1316,
+      "sha256": "3e5a298b803776dd30560af0261870fe88e46d62a6d7ef18ce0368e3d2934e63"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter19_3e5a298b8037.log",
+      "bytes": 360,
+      "sha256": "126591e44819459cbeef6086ab2fb7b4cfa1180dca82a512b75bcbde79af7be8"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter20.lean",
+      "bytes": 1316,
+      "sha256": "bc3145952e0022b4ec66324e5a7283c1e2da90d8b19f9991e66e64e3731e8d6f"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter20_bc3145952e00.log",
+      "bytes": 360,
+      "sha256": "b333ef67769bd67f36908273b71df8f31792994efeaf2a3c89ec337f43548599"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter21.lean",
+      "bytes": 1316,
+      "sha256": "3107de23b2d41873134b05fc0fcc4e3cc6953f87557b677978f5a31623dd367f"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter21_3107de23b2d4.log",
+      "bytes": 360,
+      "sha256": "5358e7faae9781b69b799d640b75ec1f9d22013b4d62a3e00d67477405d246c4"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter22.lean",
+      "bytes": 1316,
+      "sha256": "8a48a42a8046629b88308ea19266f456d92b6ba9a261a869dd6adcea8d462f8d"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter22_8a48a42a8046.log",
+      "bytes": 360,
+      "sha256": "29f4a6e8c8c9a7fe4b50cc5901de1fda2dba821701bc1bcce73ec9032621a26d"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter23.lean",
+      "bytes": 1316,
+      "sha256": "148bd9c3d032c93b895fa172ddb6995f38fa905d4b8030fd0027827200a87a75"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter23_148bd9c3d032.log",
+      "bytes": 360,
+      "sha256": "0892ed51d4e89d1c8250edc8836769172dc246e00b8ce63af95d064e71be7488"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter24.lean",
+      "bytes": 1316,
+      "sha256": "ce0cdbf36360fb9565e953f356ecafb774905b976d86b4fd21be8213e976efe9"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter24_ce0cdbf36360.log",
+      "bytes": 360,
+      "sha256": "c17d61ba77d6e68b6335e9e6e4e4967c98723d36cf248c752279863b64bfb561"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter25.lean",
+      "bytes": 1316,
+      "sha256": "38516e1f82ee920b390f3cdeb1117ed78652ddd6fa9dff0a5e86900aa18b25f2"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter25_38516e1f82ee.log",
+      "bytes": 360,
+      "sha256": "37ad7873f431ab614a3a4caa20f4fe4e44e9afcdb21b560f41cb00b81c7929f4"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter26.lean",
+      "bytes": 1316,
+      "sha256": "0670fe80689c2adc99e13a55d6679a4a93403a678f50721063ac2e9b3037c6be"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter26_0670fe80689c.log",
+      "bytes": 360,
+      "sha256": "6e47e6c5394bc3c5252b98b291c88c684175b0190172bb909de9c15b8af7321f"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter27.lean",
+      "bytes": 1316,
+      "sha256": "dc6861046a6f46bce4a597e8a831f31533b455a7f3bc10cd82eac621466c2f8d"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter27_dc6861046a6f.log",
+      "bytes": 360,
+      "sha256": "c431248a4a303f5608382790e2413c1cfaee30f420956865f9fb808caa5866f1"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter28.lean",
+      "bytes": 1316,
+      "sha256": "5cfc95b2d8846e48fe8a3ec1cd2097c7e667051f16f54ddb6995a9cb9320b7c1"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter28_5cfc95b2d884.log",
+      "bytes": 360,
+      "sha256": "e9f9d33bf31c7d52f7416a6d51dc6b3f47303617bb48f0c2f0ab7c9ffd00abfe"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter29.lean",
+      "bytes": 1316,
+      "sha256": "afcad564f24c52598da828aa96bdd737a755e45fd665dcb41e9de5793c117011"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter29_afcad564f24c.log",
+      "bytes": 360,
+      "sha256": "6158bb87cafacf6cb2d639f13b1884413f9ec6fd5f2b3092fdecfbc802e7216f"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter30.lean",
+      "bytes": 1316,
+      "sha256": "d10a14ad657ca4aa369e9f678a16daf3feca41c42a1052468efa2593d400b09c"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter30_d10a14ad657c.log",
+      "bytes": 360,
+      "sha256": "1c4265f803b0ae31faeaf172b10a4bb3d971b2c584209a02c72de4913e381347"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter31.lean",
+      "bytes": 1316,
+      "sha256": "865b4c3c19bd7c2b7a38816ec0869f5d95100b6a3af68b55f9db078926b1cd31"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter31_865b4c3c19bd.log",
+      "bytes": 360,
+      "sha256": "6b6ec77ac2cbebf794fcef2f1588d20a75eed071164b578f64c1736eb5f42a2f"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedKernelCenter32.lean",
+      "bytes": 1316,
+      "sha256": "95030522aca35631accee1abb4eb988cd4cecc8a52b594da76db08675ecd21ae"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedKernelCenter32_95030522aca3.log",
+      "bytes": 360,
+      "sha256": "ff47602e52636d4c9742c5ac6743345573da654a9615b454f96690397c34754a"
+    },
+    {
+      "path": "research-goal-20261016/lean_WindowFixedTablesAll_7511ac0f5321.log",
+      "bytes": 358,
+      "sha256": "6246cc88f235de60e78ccd1a4b5050f20955aeb0be9bb8348de9a4db90b492e2"
+    }
+  ],
+  "status": "PASS_fixed_integer_adjacent_arithmetic_and_table_identity",
+  "new_Lean_theorem_proven": false,
+  "Lean_invocations": 0,
+  "solver_calls": 0,
+  "new_kernel_values": 0,
+  "complete_global_floor_proven": false,
+  "new_zero_proportion_proven": false
+}

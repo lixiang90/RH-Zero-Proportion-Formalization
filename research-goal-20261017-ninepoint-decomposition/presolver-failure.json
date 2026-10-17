@@ -1,0 +1,8 @@
+{
+  "stage": "before importing scipy or optimizer call",
+  "solver_calls": 0,
+  "execution_exit_code": 1,
+  "assertion": "sum(mass)==16",
+  "reason": "Incorrect assumption that the rounded old ledger saturates all eight capacity sums exactly; inspect exact source coefficients and use their actual total mass.",
+  "failed_source_sha256": "ea810f97bd2f104f92684dc650ea27c98681d2b99f3da9bdd8ff800e79cfe5ce"
+}

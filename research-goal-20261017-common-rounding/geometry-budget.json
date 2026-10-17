@@ -1,0 +1,866 @@
+{
+  "schema": "common-shift-rounding-exact-integer-index-budget-v1",
+  "dependency_files": [
+    {
+      "path": "research-20261016-followup/window_reweight_rational.json",
+      "bytes": 3838,
+      "sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+    }
+  ],
+  "source": {
+    "path": "research-goal-20261017-common-rounding/geometry_budget.py",
+    "bytes": 3063,
+    "sha256": "c27654268a49bbfb1c24926a6bdbe249c44b08435d0c79d11a3b3386fbc69a11"
+  },
+  "separation": "123/128",
+  "pressure_sum": "11055671/2500000000",
+  "fixed_rounding_pressure_cost": "11055671/64000000000",
+  "minimum_pressure_coefficient": "2050531/10000000000",
+  "cases": [
+    {
+      "floor": "11/1250",
+      "excess_pressure_budget": "1456152467/320000000000",
+      "positive_pairs": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "positive_weight": "195195711/2000000000",
+          "strict_interpolation_argument_upper": "217395637/9373856",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 24
+        },
+        {
+          "pair": [
+            0,
+            3
+          ],
+          "positive_weight": "1008375533/10000000000",
+          "strict_interpolation_argument_upper": "236143349/9373856",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 26
+        },
+        {
+          "pair": [
+            0,
+            5
+          ],
+          "positive_weight": "1879917691/5000000000",
+          "strict_interpolation_argument_upper": "254891061/9373856",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 28
+        },
+        {
+          "pair": [
+            0,
+            6
+          ],
+          "positive_weight": "2851965903/10000000000",
+          "strict_interpolation_argument_upper": "264264917/9373856",
+          "smallest_integer_argument": 6,
+          "largest_integer_argument_upper": 29
+        },
+        {
+          "pair": [
+            0,
+            7
+          ],
+          "positive_weight": "1310911881/2000000000",
+          "strict_interpolation_argument_upper": "273638773/9373856",
+          "smallest_integer_argument": 7,
+          "largest_integer_argument_upper": 30
+        },
+        {
+          "pair": [
+            0,
+            8
+          ],
+          "positive_weight": "1",
+          "strict_interpolation_argument_upper": "283012629/9373856",
+          "smallest_integer_argument": 8,
+          "largest_integer_argument_upper": 31
+        },
+        {
+          "pair": [
+            0,
+            9
+          ],
+          "positive_weight": "2",
+          "strict_interpolation_argument_upper": "292386485/9373856",
+          "smallest_integer_argument": 9,
+          "largest_integer_argument_upper": 32
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "positive_weight": "485225937/2500000000",
+          "strict_interpolation_argument_upper": "144151705/11774208",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 13
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "positive_weight": "784443699/5000000000",
+          "strict_interpolation_argument_upper": "155925913/11774208",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 14
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "positive_weight": "648608813/2000000000",
+          "strict_interpolation_argument_upper": "167700121/11774208",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 15
+        },
+        {
+          "pair": [
+            1,
+            5
+          ],
+          "positive_weight": "506909809/1250000000",
+          "strict_interpolation_argument_upper": "179474329/11774208",
+          "smallest_integer_argument": 4,
+          "largest_integer_argument_upper": 16
+        },
+        {
+          "pair": [
+            1,
+            6
+          ],
+          "positive_weight": "2227433729/5000000000",
+          "strict_interpolation_argument_upper": "191248537/11774208",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 17
+        },
+        {
+          "pair": [
+            1,
+            7
+          ],
+          "positive_weight": "446752131/625000000",
+          "strict_interpolation_argument_upper": "203022745/11774208",
+          "smallest_integer_argument": 6,
+          "largest_integer_argument_upper": 18
+        },
+        {
+          "pair": [
+            1,
+            8
+          ],
+          "positive_weight": "6890881189/10000000000",
+          "strict_interpolation_argument_upper": "214796953/11774208",
+          "smallest_integer_argument": 7,
+          "largest_integer_argument_upper": 19
+        },
+        {
+          "pair": [
+            1,
+            9
+          ],
+          "positive_weight": "1",
+          "strict_interpolation_argument_upper": "283012629/9373856",
+          "smallest_integer_argument": 8,
+          "largest_integer_argument_upper": 31
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "positive_weight": "513175917/2000000000",
+          "strict_interpolation_argument_upper": "1637128883/180976416",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 10
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "positive_weight": "4121909221/10000000000",
+          "strict_interpolation_argument_upper": "1818105299/180976416",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 11
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "positive_weight": "3824161541/10000000000",
+          "strict_interpolation_argument_upper": "1999081715/180976416",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 12
+        },
+        {
+          "pair": [
+            2,
+            6
+          ],
+          "positive_weight": "5944721527/10000000000",
+          "strict_interpolation_argument_upper": "2180058131/180976416",
+          "smallest_integer_argument": 4,
+          "largest_integer_argument_upper": 13
+        },
+        {
+          "pair": [
+            2,
+            7
+          ],
+          "positive_weight": "1785297159/5000000000",
+          "strict_interpolation_argument_upper": "2361034547/180976416",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 14
+        },
+        {
+          "pair": [
+            2,
+            8
+          ],
+          "positive_weight": "446752131/625000000",
+          "strict_interpolation_argument_upper": "203022745/11774208",
+          "smallest_integer_argument": 6,
+          "largest_integer_argument_upper": 18
+        },
+        {
+          "pair": [
+            2,
+            9
+          ],
+          "positive_weight": "1310911881/2000000000",
+          "strict_interpolation_argument_upper": "273638773/9373856",
+          "smallest_integer_argument": 7,
+          "largest_integer_argument_upper": 30
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "positive_weight": "2928557891/10000000000",
+          "strict_interpolation_argument_upper": "1670760275/214607808",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 8
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "positive_weight": "215460169/500000000",
+          "strict_interpolation_argument_upper": "1885368083/214607808",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 9
+        },
+        {
+          "pair": [
+            3,
+            6
+          ],
+          "positive_weight": "1924418859/5000000000",
+          "strict_interpolation_argument_upper": "2099975891/214607808",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 10
+        },
+        {
+          "pair": [
+            3,
+            7
+          ],
+          "positive_weight": "5944721527/10000000000",
+          "strict_interpolation_argument_upper": "2180058131/180976416",
+          "smallest_integer_argument": 4,
+          "largest_integer_argument_upper": 13
+        },
+        {
+          "pair": [
+            3,
+            8
+          ],
+          "positive_weight": "2227433729/5000000000",
+          "strict_interpolation_argument_upper": "191248537/11774208",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 17
+        },
+        {
+          "pair": [
+            3,
+            9
+          ],
+          "positive_weight": "2851965903/10000000000",
+          "strict_interpolation_argument_upper": "264264917/9373856",
+          "smallest_integer_argument": 6,
+          "largest_integer_argument_upper": 29
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "positive_weight": "79434011/250000000",
+          "strict_interpolation_argument_upper": "1689843347/233690880",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 8
+        },
+        {
+          "pair": [
+            4,
+            6
+          ],
+          "positive_weight": "215460169/500000000",
+          "strict_interpolation_argument_upper": "1885368083/214607808",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 9
+        },
+        {
+          "pair": [
+            4,
+            7
+          ],
+          "positive_weight": "3824161541/10000000000",
+          "strict_interpolation_argument_upper": "1999081715/180976416",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 12
+        },
+        {
+          "pair": [
+            4,
+            8
+          ],
+          "positive_weight": "506909809/1250000000",
+          "strict_interpolation_argument_upper": "179474329/11774208",
+          "smallest_integer_argument": 4,
+          "largest_integer_argument_upper": 16
+        },
+        {
+          "pair": [
+            4,
+            9
+          ],
+          "positive_weight": "1879917691/5000000000",
+          "strict_interpolation_argument_upper": "254891061/9373856",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 28
+        },
+        {
+          "pair": [
+            5,
+            6
+          ],
+          "positive_weight": "2928557891/10000000000",
+          "strict_interpolation_argument_upper": "1670760275/214607808",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 8
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "positive_weight": "4121909221/10000000000",
+          "strict_interpolation_argument_upper": "1818105299/180976416",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 11
+        },
+        {
+          "pair": [
+            5,
+            8
+          ],
+          "positive_weight": "648608813/2000000000",
+          "strict_interpolation_argument_upper": "167700121/11774208",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 15
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "positive_weight": "513175917/2000000000",
+          "strict_interpolation_argument_upper": "1637128883/180976416",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 10
+        },
+        {
+          "pair": [
+            6,
+            8
+          ],
+          "positive_weight": "784443699/5000000000",
+          "strict_interpolation_argument_upper": "155925913/11774208",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 14
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "positive_weight": "1008375533/10000000000",
+          "strict_interpolation_argument_upper": "236143349/9373856",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 26
+        },
+        {
+          "pair": [
+            7,
+            8
+          ],
+          "positive_weight": "485225937/2500000000",
+          "strict_interpolation_argument_upper": "144151705/11774208",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 13
+        },
+        {
+          "pair": [
+            8,
+            9
+          ],
+          "positive_weight": "195195711/2000000000",
+          "strict_interpolation_argument_upper": "217395637/9373856",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 24
+        }
+      ],
+      "max_integer_argument": 32
+    },
+    {
+      "floor": "221/25000",
+      "excess_pressure_budget": "1468952467/320000000000",
+      "positive_pairs": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "positive_weight": "195195711/2000000000",
+          "strict_interpolation_argument_upper": "1534569459/65616992",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 24
+        },
+        {
+          "pair": [
+            0,
+            3
+          ],
+          "positive_weight": "1008375533/10000000000",
+          "strict_interpolation_argument_upper": "1665803443/65616992",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 26
+        },
+        {
+          "pair": [
+            0,
+            5
+          ],
+          "positive_weight": "1879917691/5000000000",
+          "strict_interpolation_argument_upper": "1797037427/65616992",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 28
+        },
+        {
+          "pair": [
+            0,
+            6
+          ],
+          "positive_weight": "2851965903/10000000000",
+          "strict_interpolation_argument_upper": "1862654419/65616992",
+          "smallest_integer_argument": 6,
+          "largest_integer_argument_upper": 29
+        },
+        {
+          "pair": [
+            0,
+            7
+          ],
+          "positive_weight": "1310911881/2000000000",
+          "strict_interpolation_argument_upper": "1928271411/65616992",
+          "smallest_integer_argument": 7,
+          "largest_integer_argument_upper": 30
+        },
+        {
+          "pair": [
+            0,
+            8
+          ],
+          "positive_weight": "1",
+          "strict_interpolation_argument_upper": "1993888403/65616992",
+          "smallest_integer_argument": 8,
+          "largest_integer_argument_upper": 31
+        },
+        {
+          "pair": [
+            0,
+            9
+          ],
+          "positive_weight": "2",
+          "strict_interpolation_argument_upper": "2059505395/65616992",
+          "smallest_integer_argument": 9,
+          "largest_integer_argument_upper": 32
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "positive_weight": "485225937/2500000000",
+          "strict_interpolation_argument_upper": "1598468755/129516288",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 13
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "positive_weight": "784443699/5000000000",
+          "strict_interpolation_argument_upper": "1727985043/129516288",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 14
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "positive_weight": "648608813/2000000000",
+          "strict_interpolation_argument_upper": "1857501331/129516288",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 15
+        },
+        {
+          "pair": [
+            1,
+            5
+          ],
+          "positive_weight": "506909809/1250000000",
+          "strict_interpolation_argument_upper": "1987017619/129516288",
+          "smallest_integer_argument": 4,
+          "largest_integer_argument_upper": 16
+        },
+        {
+          "pair": [
+            1,
+            6
+          ],
+          "positive_weight": "2227433729/5000000000",
+          "strict_interpolation_argument_upper": "2116533907/129516288",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 17
+        },
+        {
+          "pair": [
+            1,
+            7
+          ],
+          "positive_weight": "446752131/625000000",
+          "strict_interpolation_argument_upper": "2246050195/129516288",
+          "smallest_integer_argument": 6,
+          "largest_integer_argument_upper": 18
+        },
+        {
+          "pair": [
+            1,
+            8
+          ],
+          "positive_weight": "6890881189/10000000000",
+          "strict_interpolation_argument_upper": "2375566483/129516288",
+          "smallest_integer_argument": 7,
+          "largest_integer_argument_upper": 19
+        },
+        {
+          "pair": [
+            1,
+            9
+          ],
+          "positive_weight": "1",
+          "strict_interpolation_argument_upper": "1993888403/65616992",
+          "smallest_integer_argument": 8,
+          "largest_integer_argument_upper": 31
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "positive_weight": "513175917/2000000000",
+          "strict_interpolation_argument_upper": "1649928883/180976416",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 10
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "positive_weight": "4121909221/10000000000",
+          "strict_interpolation_argument_upper": "1830905299/180976416",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 11
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "positive_weight": "3824161541/10000000000",
+          "strict_interpolation_argument_upper": "2011881715/180976416",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 12
+        },
+        {
+          "pair": [
+            2,
+            6
+          ],
+          "positive_weight": "5944721527/10000000000",
+          "strict_interpolation_argument_upper": "2192858131/180976416",
+          "smallest_integer_argument": 4,
+          "largest_integer_argument_upper": 13
+        },
+        {
+          "pair": [
+            2,
+            7
+          ],
+          "positive_weight": "1785297159/5000000000",
+          "strict_interpolation_argument_upper": "2373834547/180976416",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 14
+        },
+        {
+          "pair": [
+            2,
+            8
+          ],
+          "positive_weight": "446752131/625000000",
+          "strict_interpolation_argument_upper": "2246050195/129516288",
+          "smallest_integer_argument": 6,
+          "largest_integer_argument_upper": 18
+        },
+        {
+          "pair": [
+            2,
+            9
+          ],
+          "positive_weight": "1310911881/2000000000",
+          "strict_interpolation_argument_upper": "1928271411/65616992",
+          "smallest_integer_argument": 7,
+          "largest_integer_argument_upper": 30
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "positive_weight": "2928557891/10000000000",
+          "strict_interpolation_argument_upper": "1683560275/214607808",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 8
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "positive_weight": "215460169/500000000",
+          "strict_interpolation_argument_upper": "1898168083/214607808",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 9
+        },
+        {
+          "pair": [
+            3,
+            6
+          ],
+          "positive_weight": "1924418859/5000000000",
+          "strict_interpolation_argument_upper": "2112775891/214607808",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 10
+        },
+        {
+          "pair": [
+            3,
+            7
+          ],
+          "positive_weight": "5944721527/10000000000",
+          "strict_interpolation_argument_upper": "2192858131/180976416",
+          "smallest_integer_argument": 4,
+          "largest_integer_argument_upper": 13
+        },
+        {
+          "pair": [
+            3,
+            8
+          ],
+          "positive_weight": "2227433729/5000000000",
+          "strict_interpolation_argument_upper": "2116533907/129516288",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 17
+        },
+        {
+          "pair": [
+            3,
+            9
+          ],
+          "positive_weight": "2851965903/10000000000",
+          "strict_interpolation_argument_upper": "1862654419/65616992",
+          "smallest_integer_argument": 6,
+          "largest_integer_argument_upper": 29
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "positive_weight": "79434011/250000000",
+          "strict_interpolation_argument_upper": "1702643347/233690880",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 8
+        },
+        {
+          "pair": [
+            4,
+            6
+          ],
+          "positive_weight": "215460169/500000000",
+          "strict_interpolation_argument_upper": "1898168083/214607808",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 9
+        },
+        {
+          "pair": [
+            4,
+            7
+          ],
+          "positive_weight": "3824161541/10000000000",
+          "strict_interpolation_argument_upper": "2011881715/180976416",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 12
+        },
+        {
+          "pair": [
+            4,
+            8
+          ],
+          "positive_weight": "506909809/1250000000",
+          "strict_interpolation_argument_upper": "1987017619/129516288",
+          "smallest_integer_argument": 4,
+          "largest_integer_argument_upper": 16
+        },
+        {
+          "pair": [
+            4,
+            9
+          ],
+          "positive_weight": "1879917691/5000000000",
+          "strict_interpolation_argument_upper": "1797037427/65616992",
+          "smallest_integer_argument": 5,
+          "largest_integer_argument_upper": 28
+        },
+        {
+          "pair": [
+            5,
+            6
+          ],
+          "positive_weight": "2928557891/10000000000",
+          "strict_interpolation_argument_upper": "1683560275/214607808",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 8
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "positive_weight": "4121909221/10000000000",
+          "strict_interpolation_argument_upper": "1830905299/180976416",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 11
+        },
+        {
+          "pair": [
+            5,
+            8
+          ],
+          "positive_weight": "648608813/2000000000",
+          "strict_interpolation_argument_upper": "1857501331/129516288",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 15
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "positive_weight": "513175917/2000000000",
+          "strict_interpolation_argument_upper": "1649928883/180976416",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 10
+        },
+        {
+          "pair": [
+            6,
+            8
+          ],
+          "positive_weight": "784443699/5000000000",
+          "strict_interpolation_argument_upper": "1727985043/129516288",
+          "smallest_integer_argument": 2,
+          "largest_integer_argument_upper": 14
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "positive_weight": "1008375533/10000000000",
+          "strict_interpolation_argument_upper": "1665803443/65616992",
+          "smallest_integer_argument": 3,
+          "largest_integer_argument_upper": 26
+        },
+        {
+          "pair": [
+            7,
+            8
+          ],
+          "positive_weight": "485225937/2500000000",
+          "strict_interpolation_argument_upper": "1598468755/129516288",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 13
+        },
+        {
+          "pair": [
+            8,
+            9
+          ],
+          "positive_weight": "195195711/2000000000",
+          "strict_interpolation_argument_upper": "1534569459/65616992",
+          "smallest_integer_argument": 1,
+          "largest_integer_argument_upper": 24
+        }
+      ],
+      "max_integer_argument": 32
+    }
+  ],
+  "actual_integer_values_checked_here": false,
+  "claim": "Only integer arguments1..32 are required under either sublevel budget; actual values and formal consumers remain separate obligations.",
+  "optimizer_calls": 0,
+  "actual_kernel_evaluations": 0,
+  "tree_records_read": 0,
+  "new_partition_or_witness_generated": false,
+  "Lean_invocations": 0,
+  "global_rounding_inequality_Lean_proven": false,
+  "new_global_floor_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false
+}

@@ -1,0 +1,733 @@
+{
+  "schema": "exact-static-nine-to-ten-support-obstruction-v1",
+  "source_files": [
+    {
+      "path": "GramDefect20261015/Core.lean",
+      "bytes": 1912350,
+      "sha256": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5"
+    },
+    {
+      "path": "StructuralResearch20261016/W10RefinedCandidate.lean",
+      "bytes": 3256,
+      "sha256": "0bd02171737c392c4e316df107c3744bf4ccee486875e3061dcee0a475afb8da"
+    }
+  ],
+  "old_floor": "859538525913875481/100000000000000000000",
+  "target_floor": "433/50000",
+  "old_positive_edges": 34,
+  "old_missing_edges": [
+    [
+      0,
+      2
+    ],
+    [
+      6,
+      8
+    ]
+  ],
+  "target_positive_edges": 39,
+  "target_missing_edges": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      7,
+      9
+    ]
+  ],
+  "target_missing_graph_degrees": [
+    3,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    3
+  ],
+  "nine_vertex_subset_minimum_missing_edges": 3,
+  "ordered_embeddings": [
+    {
+      "omitted": 0,
+      "ordered_image": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "remaining_missing_edges": 3,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            4,
+            8
+          ],
+          "image_pair": [
+            5,
+            9
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            5,
+            8
+          ],
+          "image_pair": [
+            6,
+            9
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          4,
+          8
+        ],
+        "image_pair": [
+          5,
+          9
+        ],
+        "old_positive_integer_coefficient": 20098491000000000000,
+        "target_integer_coefficient": 0
+      }
+    },
+    {
+      "omitted": 1,
+      "ordered_image": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "remaining_missing_edges": 6,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            0,
+            1
+          ],
+          "image_pair": [
+            0,
+            2
+          ],
+          "old_positive_integer_coefficient": 11490145000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            0,
+            3
+          ],
+          "image_pair": [
+            0,
+            4
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            4,
+            8
+          ],
+          "image_pair": [
+            5,
+            9
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            5,
+            8
+          ],
+          "image_pair": [
+            6,
+            9
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          0,
+          1
+        ],
+        "image_pair": [
+          0,
+          2
+        ],
+        "old_positive_integer_coefficient": 11490145000000000000,
+        "target_integer_coefficient": 0
+      }
+    },
+    {
+      "omitted": 2,
+      "ordered_image": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "remaining_missing_edges": 5,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            0,
+            3
+          ],
+          "image_pair": [
+            0,
+            4
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            4,
+            8
+          ],
+          "image_pair": [
+            5,
+            9
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            5,
+            8
+          ],
+          "image_pair": [
+            6,
+            9
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          0,
+          3
+        ],
+        "image_pair": [
+          0,
+          4
+        ],
+        "old_positive_integer_coefficient": 8916854000000000000,
+        "target_integer_coefficient": 0
+      }
+    },
+    {
+      "omitted": 3,
+      "ordered_image": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "remaining_missing_edges": 5,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            0,
+            3
+          ],
+          "image_pair": [
+            0,
+            4
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            4,
+            8
+          ],
+          "image_pair": [
+            5,
+            9
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            5,
+            8
+          ],
+          "image_pair": [
+            6,
+            9
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          0,
+          3
+        ],
+        "image_pair": [
+          0,
+          4
+        ],
+        "old_positive_integer_coefficient": 8916854000000000000,
+        "target_integer_coefficient": 0
+      }
+    },
+    {
+      "omitted": 4,
+      "ordered_image": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "remaining_missing_edges": 5,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            0,
+            3
+          ],
+          "image_pair": [
+            0,
+            3
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            4,
+            8
+          ],
+          "image_pair": [
+            5,
+            9
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            5,
+            8
+          ],
+          "image_pair": [
+            6,
+            9
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          0,
+          3
+        ],
+        "image_pair": [
+          0,
+          3
+        ],
+        "old_positive_integer_coefficient": 8916854000000000000,
+        "target_integer_coefficient": 0
+      }
+    },
+    {
+      "omitted": 5,
+      "ordered_image": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "remaining_missing_edges": 5,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            0,
+            3
+          ],
+          "image_pair": [
+            0,
+            3
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            0,
+            4
+          ],
+          "image_pair": [
+            0,
+            4
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            5,
+            8
+          ],
+          "image_pair": [
+            6,
+            9
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          0,
+          3
+        ],
+        "image_pair": [
+          0,
+          3
+        ],
+        "old_positive_integer_coefficient": 8916854000000000000,
+        "target_integer_coefficient": 0
+      }
+    },
+    {
+      "omitted": 6,
+      "ordered_image": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "remaining_missing_edges": 5,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            0,
+            3
+          ],
+          "image_pair": [
+            0,
+            3
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            0,
+            4
+          ],
+          "image_pair": [
+            0,
+            4
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            5,
+            8
+          ],
+          "image_pair": [
+            5,
+            9
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          0,
+          3
+        ],
+        "image_pair": [
+          0,
+          3
+        ],
+        "old_positive_integer_coefficient": 8916854000000000000,
+        "target_integer_coefficient": 0
+      }
+    },
+    {
+      "omitted": 7,
+      "ordered_image": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "remaining_missing_edges": 5,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            0,
+            3
+          ],
+          "image_pair": [
+            0,
+            3
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            0,
+            4
+          ],
+          "image_pair": [
+            0,
+            4
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            5,
+            8
+          ],
+          "image_pair": [
+            5,
+            9
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          0,
+          3
+        ],
+        "image_pair": [
+          0,
+          3
+        ],
+        "old_positive_integer_coefficient": 8916854000000000000,
+        "target_integer_coefficient": 0
+      }
+    },
+    {
+      "omitted": 8,
+      "ordered_image": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "remaining_missing_edges": 6,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            0,
+            3
+          ],
+          "image_pair": [
+            0,
+            3
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            0,
+            4
+          ],
+          "image_pair": [
+            0,
+            4
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            5,
+            8
+          ],
+          "image_pair": [
+            5,
+            9
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            7,
+            8
+          ],
+          "image_pair": [
+            7,
+            9
+          ],
+          "old_positive_integer_coefficient": 11490145000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          0,
+          3
+        ],
+        "image_pair": [
+          0,
+          3
+        ],
+        "old_positive_integer_coefficient": 8916854000000000000,
+        "target_integer_coefficient": 0
+      }
+    },
+    {
+      "omitted": 9,
+      "ordered_image": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "remaining_missing_edges": 3,
+      "all_zero_edge_clashes": [
+        {
+          "old_pair": [
+            0,
+            3
+          ],
+          "image_pair": [
+            0,
+            3
+          ],
+          "old_positive_integer_coefficient": 8916854000000000000,
+          "target_integer_coefficient": 0
+        },
+        {
+          "old_pair": [
+            0,
+            4
+          ],
+          "image_pair": [
+            0,
+            4
+          ],
+          "old_positive_integer_coefficient": 20098491000000000000,
+          "target_integer_coefficient": 0
+        }
+      ],
+      "first_exact_clash": {
+        "old_pair": [
+          0,
+          3
+        ],
+        "image_pair": [
+          0,
+          3
+        ],
+        "old_positive_integer_coefficient": 8916854000000000000,
+        "target_integer_coefficient": 0
+      }
+    }
+  ],
+  "all_ordered_embeddings_have_exact_positive_into_zero_clash": true,
+  "arbitrary_injective_relabellings_also_fail_by_support_count": true,
+  "coefficientwise_nonnegative_combination_forces_all_embedding_weights_zero": true,
+  "scope": "Injective embeddings of the unchanged W9 pair ledger into unchanged W10 with coefficientwise nonnegative pair residual. Pressure residual cannot repair a negative coefficient in this specific proof rule.",
+  "does_not_rule_out_actual_function_inequalities_with_signed_coefficients": true,
+  "does_not_rule_out_paid_remainders_or_other_local_bounds": true,
+  "optimizer_calls": 0,
+  "actual_kernel_evaluations": 0,
+  "tree_records_read": 0,
+  "Lean_invocations": 0,
+  "new_global_floor_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false
+}

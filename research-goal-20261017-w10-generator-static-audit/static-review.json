@@ -1,0 +1,404 @@
+{
+  "schema": "independent-static-W10-inprocess-witness-generation-review-v1",
+  "scope": "Read source and existing frozen metadata only; no new solver, algorithm, codec, point, kernel or Lean run.",
+  "source_files": [
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "bytes": 15408,
+      "sha256": "b481790fc0f5e34ff27690314f8dd1365abed4ab39f788482517c1318c5e5783"
+    },
+    {
+      "path": "research-20261016-w10-cert/ordered_generate.py",
+      "bytes": 8126,
+      "sha256": "b3b1137b83f7167f4cee036459e308afb4d790638c1d44c9de6978eb6b69177a"
+    },
+    {
+      "path": "research-20261016-w10-cert/compact_thin.py",
+      "bytes": 6096,
+      "sha256": "48825620b72c4db7b66b5d7f275fde7778acb9aa6c87102ac35be40769111fba"
+    },
+    {
+      "path": "research-20261016-w10-cert/relative_codec.py",
+      "bytes": 3935,
+      "sha256": "dd8f857b57ec332e4b61f4b6a833f4c4e2413989fead8d05981745413832fe60"
+    },
+    {
+      "path": "research-20261016-w10-cert/tree_flow.py",
+      "bytes": 5251,
+      "sha256": "1a0ff015b490c2548b8110a73a0bde0c5096a3429bf02dce16b7cd79d108c129"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/pilot.py",
+      "bytes": 13274,
+      "sha256": "e835fffddfad9c8bb2262b7d3b2e0f89930d9f0f918c0bcf5ff075f531ad8805"
+    },
+    {
+      "path": "StructuralGoal20261016/W10LeafPilotBatch.lean",
+      "bytes": 6700,
+      "sha256": "e4bf44e81b56829253d994ee42a85958e90d5bc3c305b613ba4a2a8d13e3e1be"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/scripts/run-comparator-e2b.sh",
+      "bytes": 2818,
+      "sha256": "86308ed0ed625524e8ed26f08dd8087d3046f5729da0d7e4d1cd5199a41dbde0"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/e2b/run-verification-job.sh",
+      "bytes": 2084,
+      "sha256": "4a072eebbbb1bf0e230f38755ea2f11b38a5e650e0986179dac17c973dd47aaa"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/result.json",
+      "bytes": 9026,
+      "sha256": "8a8cfd409961eb91b95e6c4962be2a25acf764d6965662dee6a9b17d719a6ca1"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/standalone-replay.json",
+      "bytes": 1252,
+      "sha256": "6a8eef4504a4c02d09a82de657c26a39f68ed08d147e70066750fbee1c93fa2e"
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/semantics.json",
+      "bytes": 5076,
+      "sha256": "277463c05b5e9944135f878fb9dfec5bfe890f86b36faf76a67f9a7a3ad10d08"
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/source-size-accounting.json",
+      "bytes": 6019,
+      "sha256": "e3e3e7f8fb6f70dcd28a5c7119a9b18d42a176afd28be24e12ed2ea91434d496"
+    },
+    {
+      "path": "research-goal-20261016/w10-size-audit-20261017/independent-codec-replay.json",
+      "bytes": 5454,
+      "sha256": "3f5ef7f1e5c0ced8b42e252b782d3249f8b0e70cb945e6c6f1995e10acd71f10"
+    },
+    {
+      "path": "research-20261016-w10-cert/tree-flow-100.json",
+      "bytes": 102441,
+      "sha256": "2c7435462976186c39be8af089a3e9d66f6ca1e6f9835981d2c214ae077f10d2"
+    },
+    {
+      "path": "research-goal-20261016/lean_leaf_batch_benchmark_receipt.json",
+      "bytes": 8335,
+      "sha256": "0a2261ce02d97afbc76355a1c71e510edc7dc85d5059b37ead9905fde44bb4f3"
+    },
+    {
+      "path": "research-goal-20261016/lean_aux478_verification.json",
+      "bytes": 237857,
+      "sha256": "1f813ef831e8a50ba91903f53fba059a08f36df0f06dd85c9d5c167298149293"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/policy-snapshot.json",
+      "bytes": 3992,
+      "sha256": "fe6f9e0362a5bf8fc940a2079632ce590aabf00be77c1572a12f6529a4d9fd2d"
+    }
+  ],
+  "source_line_references": [
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 27,
+      "text": "def table():"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 42,
+      "text": "def kernel(xs):"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 87,
+      "text": "def lines(l,u,base=None):"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 97,
+      "text": "def minimize(intercept,coeff,d):"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 111,
+      "text": "def certify(s,export=False,pressure=False):"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 138,
+      "text": "lp=linprog(obj,A_ub=rows,b_ub=rhs,bounds=[(None,None)]*Q+[(0,None)]*len(TERMS),"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 145,
+      "text": "lam=[int(math.floor(max(0,-x)*LD/(1+mu))) for x in lp.ineqlin.marginals[:len(meta)]]"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 156,
+      "text": "ids=sorted(ids,key=lambda k:lam[k],reverse=True)[:2]"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 164,
+      "text": "quant[k]=a*m;fs.append([1,0,meta[k][3],0] if m==1024 else [2,m,meta[k][3],0])"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 180,
+      "text": "ex10,fl10=minimize(0,[c//10 for c in coeff],d)"
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 203,
+      "text": "# Direct generic mcheckGX arithmetic, independent of the affine flow floor."
+    },
+    {
+      "path": "research-20261016-w10-cert/generate.py",
+      "line": 221,
+      "text": "def cut(s,rec):"
+    },
+    {
+      "path": "research-20261016-w10-cert/ordered_generate.py",
+      "line": 22,
+      "text": "def normalize(s):"
+    },
+    {
+      "path": "research-20261016-w10-cert/ordered_generate.py",
+      "line": 31,
+      "text": "def hint_check(s,h):"
+    },
+    {
+      "path": "research-20261016-w10-cert/ordered_generate.py",
+      "line": 47,
+      "text": "def make_seeds():"
+    },
+    {
+      "path": "research-20261016-w10-cert/ordered_generate.py",
+      "line": 77,
+      "text": "def main():"
+    },
+    {
+      "path": "research-20261016-w10-cert/ordered_generate.py",
+      "line": 119,
+      "text": "if rec is None:rec=g.certify(s,True)"
+    },
+    {
+      "path": "research-20261016-w10-cert/compact_thin.py",
+      "line": 86,
+      "text": "def leaf_thin(rec):"
+    },
+    {
+      "path": "research-20261016-w10-cert/compact_thin.py",
+      "line": 108,
+      "text": "# Keep moves fixed and try a single tangent in place of a two-tangent mixture."
+    },
+    {
+      "path": "research-20261016-w10-cert/relative_codec.py",
+      "line": 54,
+      "text": "def prepare(rec,rounds=3):"
+    },
+    {
+      "path": "research-20261016-w10-cert/relative_codec.py",
+      "line": 59,
+      "text": "th=thin.leaf_thin(rec);fs=th['FS'];d=tree.recompute(fs,lo,hi)"
+    },
+    {
+      "path": "research-20261016-w10-cert/tree_flow.py",
+      "line": 22,
+      "text": "def divergence(fs):"
+    },
+    {
+      "path": "research-20261016-w10-cert/tree_flow.py",
+      "line": 47,
+      "text": "def moves(fs,code):"
+    },
+    {
+      "path": "research-20261016-w10-cert/tree_flow.py",
+      "line": 73,
+      "text": "def recompute(fs,lo,hi):"
+    },
+    {
+      "path": "research-20261016-w10-cert/tree_flow.py",
+      "line": 80,
+      "text": "cost,flow=nx.network_simplex(graph)"
+    },
+    {
+      "path": "research-20261016-w10-cert/tree_flow.py",
+      "line": 91,
+      "text": "# Complete every forest with zero-flow adjacent edges. Adding such an edge"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/pilot.py",
+      "line": 74,
+      "text": "def predictions(state,terms,points,anchors,slot):"
+    },
+    {
+      "path": "research-goal-20261016/w10-cell-predictor-20261017/pilot.py",
+      "line": 86,
+      "text": "def main():"
+    },
+    {
+      "path": "StructuralGoal20261016/W10LeafPilotBatch.lean",
+      "line": 22,
+      "text": "theorem numeric00 : ForcedCoverage2.dispatch (fun _ => payload00) normal018 46 = true := by"
+    },
+    {
+      "path": "StructuralGoal20261016/W10LeafPilotBatch.lean",
+      "line": 23,
+      "text": "decide +kernel"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/scripts/run-comparator-e2b.sh",
+      "line": 96,
+      "text": "exec timeout --signal=TERM --kill-after=15s 3200s \\"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/e2b/run-verification-job.sh",
+      "line": 32,
+      "text": "timeout --signal=TERM --kill-after=15s 3240s \\"
+    }
+  ],
+  "local_mathlib_reference_excerpts": [
+    {
+      "path_reference_only": "tmp/setup-20261015/packages/mathlib/Mathlib/Tactic/Linarith/Oracle/SimplexAlgorithm.lean",
+      "sha256": "fb958977e27b834775f006c7ec41e59bb9a5eeab4aba83b77c2e7de2fece1e1c",
+      "bytes": 2432,
+      "line_excerpts": [
+        {
+          "first": 24,
+          "last": 39,
+          "text": "/-- Preprocess the goal to pass it to `Linarith.SimplexAlgorithm.findPositiveVector`. -/\ndef preprocess (matType : \u2115 \u2192 \u2115 \u2192 Type) [UsableInSimplexAlgorithm matType] (hyps : List Comp)\n    (maxVar : \u2115) : matType (maxVar + 1) (hyps.length) \u00d7 List Nat :=\n  let values : List (\u2115 \u00d7 \u2115 \u00d7 \u211a) := hyps.foldlIdx (init := []) fun idx cur comp =>\n    cur ++ comp.coeffs.map fun (var, c) => (var, idx, c)\n\n  let strictIndexes := hyps.findIdxs (\u00b7.str == Ineq.lt)\n  (ofValues values, strictIndexes)\n\n/--\nExtract the certificate from the `vec` found by `Linarith.SimplexAlgorithm.findPositiveVector`.\n-/\ndef postprocess (vec : Array \u211a) : Std.HashMap \u2115 \u2115 :=\n  let common_den : \u2115 := vec.foldl (fun acc item => acc.lcm item.den) 1\n  let vecNat : Array \u2115 := vec.map (fun x : \u211a => (x * common_den).floor.toNat)\n  (\u2205 : Std.HashMap Nat Nat).insertMany <| vecNat.zipIdx.filterMap"
+        },
+        {
+          "first": 46,
+          "last": 61,
+          "text": "/-- An oracle that uses the Simplex Algorithm. -/\ndef CertificateOracle.simplexAlgorithmSparse : CertificateOracle where\n  produceCertificate hyps maxVar := do\n    let (A, strictIndexes) := preprocess SparseMatrix hyps maxVar\n    let vec \u2190 findPositiveVector A strictIndexes\n    return postprocess vec\n\n/--\nThe same oracle as `CertificateOracle.simplexAlgorithmSparse`, but uses dense matrices. Works faster\non dense states.\n-/\ndef CertificateOracle.simplexAlgorithmDense : CertificateOracle where\n  produceCertificate hyps maxVar := do\n    let (A, strictIndexes) := preprocess DenseMatrix hyps maxVar\n    let vec \u2190 findPositiveVector A strictIndexes\n    return postprocess vec"
+        }
+      ],
+      "not_a_new_generator_or_website_compatibility_proof": true
+    },
+    {
+      "path_reference_only": "tmp/setup-20261015/packages/mathlib/Mathlib/Tactic/Linarith/Oracle/SimplexAlgorithm/PositiveVector.lean",
+      "sha256": "43178dcf55885cce93dfebeb38b8a194bad612ced1b1754bc40a84293fd4c172",
+      "bytes": 4586,
+      "line_excerpts": [
+        {
+          "first": 84,
+          "last": 105,
+          "text": "/--\nFinds a nonnegative vector `v`, such that `A v = 0` and some of its coordinates from\n`strictCoords`\nare positive, in the case such `v` exists. If not, throws the error. The latter prevents\n`linarith` from doing useless post-processing.\n-/\ndef findPositiveVector {n m : Nat} {matType : Nat \u2192 Nat \u2192 Type} [UsableInSimplexAlgorithm matType]\n    (A : matType n m) (strictIndexes : List Nat) : Lean.Meta.MetaM <| Array Rat := do\n  /- State the linear programming problem. -/\n  let B := stateLP A strictIndexes\n\n  /- Using Gaussian elimination split variable into free and basic forming the tableau that will be\n  operated by the Simplex Algorithm. -/\n  let initTableau \u2190 Gauss.getTableau B\n\n  /- Run the Simplex Algorithm and extract the solution. -/\n  let res \u2190 runSimplexAlgorithm.run initTableau\n  if res.fst.isOk then\n    return extractSolution res.snd\n  else\n    throwError \"Simplex Algorithm failed\"\n"
+        }
+      ],
+      "not_a_new_generator_or_website_compatibility_proof": true
+    },
+    {
+      "path_reference_only": "tmp/setup-20261015/packages/mathlib/Mathlib/Tactic/Linarith/Oracle/SimplexAlgorithm/SimplexAlgorithm.lean",
+      "sha256": "b3332dc1aad54e3861486924d60d223a4cec6a72c74a90139d190e0b9f30ab48",
+      "bytes": 4939,
+      "line_excerpts": [
+        {
+          "first": 60,
+          "last": 70,
+          "text": "\n/--\nCheck if the solution is found: the objective function is positive and all basic variables are\nnonnegative.\n-/\ndef checkSuccess : SimplexAlgorithmM matType Bool := do\n  let lastIdx := (\u2190 get).free.size - 1\n  return (\u2190 get).mat[(0, lastIdx)]! > 0 &&\n    (\u2190 (\u2190 get).basic.size.allM (fun i _ => do return (\u2190 get).mat[(i, lastIdx)]! \u2265 0))\n\n/--"
+        },
+        {
+          "first": 109,
+          "last": 126,
+          "text": "Chooses entering and exiting variables using\n[Bland's rule](https://en.wikipedia.org/wiki/Bland%27s_rule) that guarantees that the Simplex\nAlgorithm terminates.\n-/\ndef choosePivots : SimplexAlgorithmM matType (Nat \u00d7 Nat) := do\n  let enterIdx \u2190 chooseEnteringVar\n  let exitIdx \u2190 chooseExitingVar enterIdx\n  return \u27e8exitIdx, enterIdx\u27e9\n\n/--\nRuns the Simplex Algorithm inside the `SimplexAlgorithmM`. It always terminates, finding solution if\nsuch exists.\n-/\ndef runSimplexAlgorithm : SimplexAlgorithmM matType Unit := do\n  while !(\u2190 checkSuccess) do\n    Lean.Core.checkSystem decl_name%.toString\n    let \u27e8exitIdx, enterIdx\u27e9 \u2190 choosePivots\n    doPivotOperation exitIdx enterIdx"
+        }
+      ],
+      "not_a_new_generator_or_website_compatibility_proof": true
+    }
+  ],
+  "library_files_are_reference_only_not_packaged_dependencies": true,
+  "geometry_counts": {
+    "nodes": 191557,
+    "branches": 95778,
+    "numeric": 95615,
+    "empty": 163,
+    "reflection": 1
+  },
+  "LP_original_real_variables": 48,
+  "LP_dimensions": {
+    "gaps": 9,
+    "epigraphs": 39,
+    "fixed_DBM_rows": 90,
+    "PT_rows": "vary by cell"
+  },
+  "flow_graph": {
+    "vertices": 10,
+    "directed_arcs": 90
+  },
+  "mixture_denominator": 1024,
+  "fixed_geometry_omits_original_cut_kernel_hints_and_thinning": true,
+  "inline_geometry_and_analytic_tables_still_required": true,
+  "generated_witness_need_not_equal_original_bytes": true,
+  "existing_simple_predictor_success_first1000": [
+    4,
+    1,
+    3
+  ],
+  "original_FS_fixed_tree_portfolio_success_first1000": 332,
+  "predictor_results_are_not_full_tree_statistics": true,
+  "old_minimum_integer_margin": "2623983786731307008",
+  "old_checker_denominator": "3355443200000000000000000000",
+  "original_HiGHS_primal_and_dual_tolerance": "1e-9",
+  "tolerance_is_no_completeness_or_soundness_guarantee": true,
+  "known_binary_category_bytes": {
+    "geometry": 280659,
+    "FS": 2217236,
+    "tree": 294132
+  },
+  "known_retained_base_bytes": 542851,
+  "old_decoder_consumer_reserve_bytes": 128000,
+  "no_measured_new_complete_source_or_codec": true,
+  "existing_python_flow100_seconds": 0.26240580000012415,
+  "existing_python_full_decode_and_check_milliseconds": 51013,
+  "existing_Lean_warm_import_seconds": 6.000833000005514,
+  "existing_Lean_eight_leaf_batch_seconds": 11.024226999994426,
+  "existing_Lean_eight_leaf_batch_minus_warm_seconds": 5.023393999988912,
+  "existing_478_leaf_numeric_modules": 15,
+  "existing_478_leaf_numeric_module_wall_seconds_sum": 440.59018720000313,
+  "timing_facts_are_not_new_benchmarks_or_runtime_lower_bounds": true,
+  "website_snapshot_commit": "cb97717d3ea82c45f19f2ce04c410440b6492aa6",
+  "verification_timeout_seconds": 3200,
+  "outer_job_timeout_seconds": 3240,
+  "all_stages_include": [
+    "decode",
+    "discover_FS_and_flow",
+    "kernel_leaf_proofs",
+    "geometry_and_tree_composition",
+    "export",
+    "independent_Nano"
+  ],
+  "per_leaf_seconds_upper_if_all_other_stages_zero": "3200/95615",
+  "old_local9000s_not_website_budget": true,
+  "minimal_candidate_steps": [
+    "fixed inline geometry and normalization",
+    "legal integer PT/LB model and existing constant fast path",
+    "deterministic rational support certificate candidate",
+    "original top2/1024 projection with explicit ties",
+    "deterministic exact flow or checked forest",
+    "emit ordinary witnesses and fail-closed original integer/kernel proof",
+    "compose full tree only after all leaves pass"
+  ],
+  "key_open_gates": [
+    "no implemented or full-tested pureLean all95615 generator",
+    "exact feasibility oracle is not HiGHS objective optimization; quantization may fail",
+    "exact Rat growth/pivots/resource caps",
+    "all95615 integer success without old FS exceptions",
+    "actual combined source bytes",
+    "kernel proof and generated environment memory",
+    "full3200s pipeline including export and Nano"
+  ],
+  "implementation_paused_pending_explicit_root_selection": true,
+  "all_leaf_success_proven": false,
+  "complete_source_budget_passed": false,
+  "full_runtime_budget_passed": false,
+  "producer_imports": 0,
+  "new_solver_calls": 0,
+  "new_numeric_algorithm_runs": 0,
+  "new_codec_runs": 0,
+  "Lean_invocations": 0,
+  "new_witnesses": 0,
+  "new_global_floor_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false,
+  "mutable_governance_files_hashed": false
+}

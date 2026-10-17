@@ -1,0 +1,113 @@
+{
+  "schema": "fixed-global-ninepoint-decomposition-evidence-v1",
+  "package_files": [
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/support_obstruction.py",
+      "bytes": 4830,
+      "sha256": "cb776e75b17dbe196d55635041f232225360fa0b7e784a6113249e500e72e3ca"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/support-obstruction.json",
+      "bytes": 14864,
+      "sha256": "adad9dbc9ef49a7a024e6564247580cd5b9eeded2c90217ad795e2cea67d01c9"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/coefficient_gluing.py",
+      "bytes": 7810,
+      "sha256": "f7ad5f1ac6db7064dd9174005fed3bf9de8c58cd08f7c69c7a971aa780b174e2"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/coefficient-gluing.json",
+      "bytes": 14159,
+      "sha256": "e39f511b50d8e45ecf9f058f3f717d050c2cd1c316e2d7c846031b833bbfc25b"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/coefficient_gluing_presolver_failed.py",
+      "bytes": 7213,
+      "sha256": "ea810f97bd2f104f92684dc650ea27c98681d2b99f3da9bdd8ff800e79cfe5ce"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/presolver-failure.json",
+      "bytes": 407,
+      "sha256": "a1323a79d1a70fad0121a914abae1d1f113fa093f71066cb360f2a81cea8276a"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/NOTE.zh.md",
+      "bytes": 5417,
+      "sha256": "b45984c3478b82a61091545dcad6b13afe5d680085f709729cd624bb2cf020b0"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/freeze_package.py",
+      "bytes": 3621,
+      "sha256": "b210924f90c5ce46e45d97ed0efa680238cef9938c6243bf22aaca164566964c"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition-audit/independent-replay.json",
+      "bytes": 3648,
+      "sha256": "920e299b475fd62c1b999d570ea9e85cf0df3f7eba4a674121b1e300def4a307"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition-audit/verify.py",
+      "bytes": 7677,
+      "sha256": "fa8951defc4107603bd5231684d8309a2a2f816117c19024f8f2ce98deb7ccb5"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-worker-audit/audit-files.json",
+      "bytes": 3346,
+      "sha256": "dcda20afd7956c412fe2d445ca52814acbc21834ec0f3d4a997f19d3fe5e0cec"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-worker-audit/verify.py",
+      "bytes": 12754,
+      "sha256": "f1f1cc60b9adc2ffdd54e6cfc256d804a79c18a881d6dba67d844074998c56b7"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-worker-audit/independent-replay.json",
+      "bytes": 6808,
+      "sha256": "4b2ee93ee1d3cf8e1af9d954dc628b29fad206bfbc67f9bcba61fcc8d851a118"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-worker-audit/NOTE.txt",
+      "bytes": 3699,
+      "sha256": "97b611d373440a1e8050f10aa4dbe894c291a96a04aa5205b57401e399fc770c"
+    }
+  ],
+  "package_bytes": 96253,
+  "dependency_files": [
+    {
+      "path": "GramDefect20261015/Core.lean",
+      "bytes": 1912350,
+      "sha256": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5"
+    },
+    {
+      "path": "GramDefect20261015/SharpWindow.lean",
+      "bytes": 4397,
+      "sha256": "830514965ca5cb26a19be2b216fbedd37744b7c66e862c46bf697b9e29d7c49f"
+    },
+    {
+      "path": "StructuralResearch20261016/W10RefinedCandidate.lean",
+      "bytes": 3256,
+      "sha256": "0bd02171737c392c4e316df107c3744bf4ccee486875e3061dcee0a475afb8da"
+    },
+    {
+      "path": "StructuralW10Cert20261016/FinalConditional.lean",
+      "bytes": 4598,
+      "sha256": "6712abb9e41eec3beb0b9d1027341356b0b95259e5678a7b9f4d67c193cb2ceb"
+    }
+  ],
+  "support_obstruction_passed": true,
+  "one_coefficient_solver_call": true,
+  "pre_solver_failed_execution_preserved": true,
+  "root_separate_stdlib_replay_passed": true,
+  "independent_worker_stdlib_replay_passed": true,
+  "dual_scope": "Fixed H and direct c9*sum(lambda) linear reuse of the ten deletion embeddings. This does not bound the stronger actual joint minimum of a glued ledger.",
+  "stronger_joint_floor_not_ruled_out": true,
+  "fixed_direct_linear_reuse_family_stopped": true,
+  "new_Lean_invocations": 0,
+  "actual_kernel_evaluations": 0,
+  "tree_records_read": 0,
+  "new_global_floor_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false,
+  "mutable_governance_state_hashed": false
+}

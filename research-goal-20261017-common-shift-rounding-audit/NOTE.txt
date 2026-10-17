@@ -1,0 +1,166 @@
+INDEPENDENT STATIC REVIEW: COMMON-SHIFT BIASED INTEGER ROUNDING
+
+Scope
+-----
+This independently reviews the root's proposed global necessary condition.
+The derivation below is valid. It is not a global floor, a localization
+classification, a tree reduction or a new zero-proportion result. The only
+arithmetic execution in this package checks exact rational ledger metadata
+for the stated cutoff32; it evaluates no kernel, table coefficient, point,
+tree record, optimizer or Lean module. The earlier broad macro/Kuramoto
+review is paused in favour of this single concrete proposition.
+
+Statement, with precise conventions
+----------------------------------
+Let N>=2, 0<s<=1, g_r>=s for r=0,...,N-2, and
+  p_0=0, p_i=sum_(r<i) g_r,
+  F(g)=sum_r b_r*g_r + sum_(i<j) a_ij*w(p_j-p_i),
+  B=sum_r b_r.
+The proof works for any real function w at the displayed arguments and
+arbitrary fixed real a,b. Actual applications retain their positive ledger
+and actual kernel; no positivity, smoothness or phase relaxation of w is
+used for the rounding comparison itself.
+
+Assume g is a GLOBAL minimum on the entire separated orthant. For real
+z>=1 define the actual-integer linear interpolant
+  hatw(z)=(1-frac(z))*w(floor(z))+frac(z)*w(floor(z)+1).
+At an integer, the coefficient of the second endpoint is exactly zero.
+Write s_ij=p_j-p_i, d_ij=j-i, delta=1-s. Then
+
+  sum_(i<j) a_ij*[w(s_ij)-hatw(s_ij+d_ij*delta)] <= delta*B.    (R)
+
+The integer in w(n) denotes the real embedding of n. This is the same
+actual w as in F. Old-window integer values cannot replace new-window
+values. In the concrete actual24 energy, F is WindowGapEnergy.Fw24 and
+B is NewLedger.W.B, not an unrelated energy-normalization constant.
+
+Finite convex-combination proof; no probability integration needed
+---------------------------------------------------------------
+Set x_i=p_i-i*s. Then x_0=0 and
+  x_(i+1)-x_i=g_i-s>=0.
+For 0<=u<1 define integer positions
+  q_i(u)=i+floor(x_i+u).
+They satisfy q_0(u)=0 and
+  q_(i+1)(u)-q_i(u)=1+floor(x_(i+1)+u)-floor(x_i+u)>=1>=s.
+Thus their gap vectors belong to the ORIGINAL separated orthant for every
+u. They need not obey the orientation g_0<=g_(N-2), a pressure-root box,
+the original artificial cell, or a KKT contraction. None is required by
+the global-minimum clause. In the actual Lean interface, use Relevant.2.2
+and the feasible q gaps, not just directional_nonneg or local minimality.
+
+Put n_i=floor(x_i), f_i=x_i-n_i in[0,1). For f_i>0 the sole jump in[0,1)
+is at theta_i=1-f_i; for f_i=0 there is no jump in that half-open interval.
+Sort the distinct internal theta_i and add endpoints0 and1:
+  0=t_0<t_1<...<t_m=1.
+There are at most N-1 internal thresholds because x_0=0, so m<=N.
+Define lambda_l=t_(l+1)-t_l>0 and Q^l=q(t_l), l=0,...,m-1.
+The floors are constant on each half-open interval[t_l,t_(l+1)); choosing
+the LEFT endpoint includes its right-continuous jump correctly. Equal
+thresholds are merged. No sample at u=1 is used. These are at most N
+joint configurations with nonnegative REAL weights summing to1. We do not
+claim the weights are rational for arbitrary real g.
+
+The finite weighted average of floor(x_i+u) is n_i+f_i=x_i: the part of
+[0,1) after its sole threshold has length f_i. Hence
+  sum_l lambda_l*(Q^l_j-Q^l_i)=d_ij+(x_j-x_i)
+                            =s_ij+d_ij*delta.             (1)
+For h=x_j-x_i>=0 and v=frac(x_i+u) in[0,1),
+  floor(x_j+u)-floor(x_i+u)=floor(h+v).
+It therefore takes only floor(h), floor(h)+1; if h is an integer, only
+the first value occurs. Adding the integer d_ij shows that Q^l_j-Q^l_i
+takes the floor/ceiling of z=s_ij+d_ij*delta. By(1), the total weight
+of the upper value is frac(z). Thus exactly
+  sum_l lambda_l*w(Q^l_j-Q^l_i)=hatw(z).                  (2)
+The different edges are correlated by the SAME u. This is essential for
+their simultaneous feasible realizations, but causes no problem: only
+linearity of a finite weighted sum is used, not independence of edges.
+
+For an adjacent pair, (1) gives expected gap g_r+delta. Therefore
+  sum_l lambda_l*F(gaps(Q^l))
+    =sum_r b_r*g_r+delta*B+sum_(i<j) a_ij*hatw(z_ij).    (3)
+Global minimality gives F(g)<=F(gaps(Q^l)) separately for every l. Multiply
+by lambda_l and sum, use sum lambda=1, then cancel the pressure in(3).
+This proves(R) with its stated <= sign. No Jensen inequality or assumed
+convexity of w is involved. At zero fractional parts the formula remains
+exact and has no division by a phase deviation.
+
+What differs from the previous competitors and failed phase implication
+----------------------------------------------------------------------
+The inspected old cover_competitor_diagnostic.py uses g'=g+(p-n), with
+integer gap vectors p,n, and optionally g'=p+sign*(g-n), sign=+/-1 selected
+by parity. Its computations are floating diagnostics around ten old wells.
+Translations preserve each gap's fractional part; these reflections retain
+that deviation up to sign. Here each q gap is an integer and the total
+span/pressure can change by a fractional amount. For example g=s*1 maps
+to gaps1 for every u, a change delta=5/128 per gap, which is not an integer
+translation. This is not a repackaging of that inspected move family.
+The finite-global-comparison principle is the same general minimum
+principle as WindowGlobalCompetitor, but the shared rounding map and its
+exact marginal interpolation identity are additional mathematical content.
+No exhaustive claim of historical priority outside the cited sources is made.
+
+The old phase-lattice counterexample g=(9/4,1,...,1) refutes forcing every
+span into a21/100 integer band from pressure plus unsigned A^2*sin^2 alone.
+It is not a true sublevel/minimizer example; its actual F was above target.
+It does not refute(R), which keeps the actual signed kernel before squaring
+and subtracts its integer baseline. Nor does(R) itself prove those old69
+basins complete. The previous exact pseudo-moment points only establish
+feasibility of their listed polynomial outer constraints; this new actual
+inequality was not among them. No evaluation of those points is made here.
+
+Specific finite-table reuse gate: exact metadata check only
+---------------------------------------------------------
+For the published41-positive-edge24-mode ledger,
+  s=123/128, B=11055671/2500000000,
+  delta*B=11055671/64000000000,
+  min_r b_r=2050531/10000000000.
+For a true sublevel F(g)<c, positivity of a and w=k^2 implies
+  sum_r b_r*(g_r-s)<T=c-s*B.
+For edge(i,j), set beta_ij=min_(i<=r<j)b_r>0. Since g_r-s>=0,
+  z_ij=d_ij+sum_(i<=r<j)(g_r-s)<d_ij+T/beta_ij.          (4)
+The independent Fraction-only metadata replay parses aN and bN from
+NewLedger.lean directly and checks (4) for all41 positive edges, once for
+c=11/1250 and once for c=221/25000. In both cases every exact upper bound
+is <=32 and the largest ceiling is32. Also z_ij>=d_ij>=1. Consequently all
+NONZERO interpolation endpoints needed for(R) belong to centres1,...,32.
+There is no spurious requirement for w(33) at a zero-weight upper endpoint:
+the strict bound z<32 gives floor(z)<=31.
+
+WindowFixedTablesAll.w_sound already states actual normalized coefficient
+enclosures at all these centres, including order0. This is a source/API
+reuse observation, not a new compilation or independent check of its whole
+proof chain. Converting order0 wc to actual w and using the correct upper
+endpoint of each existing interval remains an explicit consumer obligation.
+Since(R) contains -hatw, replacing each w(n) there by a certified UPPER
+endpoint gives a weaker still-valid necessary inequality. A lower endpoint
+would have the wrong direction for this use. No w(n) value is evaluated in
+this audit, and no new scalar/derivative table or precision is proposed.
+
+Global relevance, falsifiable next gate and stopping boundary
+-----------------------------------------------------------
+The comparison theorem is uniform over the entire orthant, including all
+faces, every current frontier and every old leaf. It does not depend on a
+closed historical cell, a preferred basin, an arbitrary phase rank, or a
+location-specific multiplier. It could supply one common additional
+root/minimizer condition with a32-value integer baseline rather than a
+new witness per old leaf. This is a possible change in proof description;
+there is no measured leaf reduction or compliant source/runtime path yet.
+
+Validity is established here, utility is not. To justify a later bounded
+test, first express the proposed exclusion/classification implication with
+the exact domain and target and the actual integer-interpolation upper
+baseline. A single exact point in that domain satisfying its antecedents
+but violating its claimed residual sign refutes that SUFFICIENT implication.
+It does not refute(R) unless the point is also an actual global minimum.
+Conversely, finding a low residual value or an old pseudo-point that passes
+(R) shows that that test alone does not exclude it, not that the floor fails.
+The condition may be weak because comparison configurations may have high
+energy. No general improvement follows merely from having finitely many
+rounding configurations.
+
+This package freezes only the finite proof and cutoff metadata. No old
+curve family, higher moment solve, potential scan, kernel evaluation, new
+Lean batch or full-tree scan is resumed. No second macro candidate is
+advertised to fill a quota. Any further experimental test requires the
+root's separate scope decision, actual frontier/ancestor relevance and
+explicit whole-source plus3200-second validation budget.

@@ -245,11 +245,23 @@ def main():
       ('research-goal-20261017-global-relevance-independent/audit-files.json','957a2523611f815ec94cab29f62e60f3ccf374faf3f9ce7c392dc7ff7eb0b86c'),
       ('research-goal-20261017-w10-slice-opportunity/opportunity-files.json','845a7956173a35b3e7f07a3ac1ec217e39b6724eee7c30259d64149faff97957'),
       ('research-goal-20261017-w10-slice-opportunity-audit/audit-files.json','8eef18b2b1988210861d8b48892dfc56b0308ed6c7111ab9ca1ff7abc3cd78f9'),
-      ('research-goal-20261017-w10-generator-policy/policy-files.json','195fbd6987adc8e2515541aa3f2645afa6021454d9904a19adf4d4b76df381db')]:
+      ('research-goal-20261017-w10-generator-policy/policy-files.json','195fbd6987adc8e2515541aa3f2645afa6021454d9904a19adf4d4b76df381db'),
+      ('research-goal-20261017-w10-generator-static-audit/audit-files.json','40ea66b6da4727b91a0481b6fa51cd386d30d2c9fe2be6966e66798cacd5ec52'),
+      ('research-goal-20261017-w10-elaboration-generator-review/review-files.json','a8026c6d47d534c32677eb71f23a3f3b9e9b86f83797569ee13e6818e89f2f85'),
+      ('research-goal-20261017-ninepoint-decomposition/decomposition-files.json','794508e11eb5becfcf4aad4785b72bc674a6639c6ea2b3ea1f811d260f1b555d'),
+      ('research-goal-20261017-ninepoint-worker-audit/audit-files.json','dcda20afd7956c412fe2d445ca52814acbc21834ec0f3d4a997f19d3fe5e0cec'),
+      ('research-goal-20261017-common-rounding/rounding-files.json','ee38c50b20cbe0f8cedfe22c01f78d65d9330dd826e86622fb14756825ada0d2'),
+      ('research-goal-20261017-common-shift-rounding-audit/rounding-audit-files.json','eb0b85e624f2580cd7be593da61327e20be7e23fd16f8b71d94f12c63f63d445'),
+      ('research-goal-20261017-new24-integer-floor-inventory/files.json','a70b84041c9ab0890707f9c921e3fa6aa182539689d6e17045013d6912bdaf3d'),
+      ('research-goal-20261017-new24-integer-floor-inventory/addendum-files.json','43fc1e860df549dfa6228c195327e0f5bfafcc73217b50953c5c9523a8180caf'),
+      ('research-goal-20261017-rounding-benefit/files.json','4da900e24183e2fd4b541cbe931c1368472498d305479ec523c77923c67b9d5e'),
+      ('research-goal-20261017-integer-adjacent-floor-audit/audit-files.json','f143123dd9f302e0a77f745b0649a805afe91328815c857ee06f17f286387242'),
+      ('research-goal-20261017-rounding-benefit-independent/audit-files.json','ef3d0fac3d33321e915e4d70e2d3e414e9c4e9ae985d50612d4436dc06f4ad66')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
-        for runtime in pinned.get('runtime_dependency_files',[]):
+        for runtime in (pinned.get('runtime_dependency_files',[])
+                        +pinned.get('runtime_dependency_not_staged_wholesale',[])):
             # Bind the measured local runtime without publishing its
             # platform-specific temporary installation as research source.
             raw=(ROOT/runtime['path']).read_bytes()
@@ -278,6 +290,10 @@ def main():
         rows=(rows+pinned.get('frozen_input_files',[])+pinned.get('SCS_discovery_sources_unchanged',[])
               +pinned.get('dependencies',[])+pinned.get('dependency_files',[])
               +pinned.get('frozen_dependencies',[]))
+        if name=='research-goal-20261017-new24-integer-floor-inventory/files.json':
+            rows+=pinned['reference_inputs']
+        if name=='research-goal-20261017-rounding-benefit-independent/audit-files.json':
+            rows+=pinned['pinned_inputs']
         if name=='research-goal-20261017-local-phase/local-phase-files.json':
             source_index=json.loads((ROOT/pinned['dependency_index']['path']).read_bytes())
             identity_rows=source_index['actual_identity_sources']+source_index['prior_work_reviewed']
@@ -309,6 +325,10 @@ def main():
             if row['path'].startswith('tmp/goal-20261016/python-sdp/'):
                 # Independent record audits may repeat runtime pins as
                 # dependencies. Verify them, but keep the install local.
+                continue
+            if row['path']=='tmp/setup-20261015/packages/Comparator/Main.lean':
+                # This pinned installed verifier source is reviewed runtime,
+                # not candidate source; its official commit is in the report.
                 continue
             if row['path'] in [
                   'research-goal-20261017-swap-family-quartic/swap-family-quartic.json.gz',

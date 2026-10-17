@@ -2,6 +2,23 @@
 
 No new unconditional zero proportion is asserted by this directory.
 
+The current [global rounding comparison](../research-goal-20261017-common-rounding/NOTE.zh.md)
+uses one common shift to produce at most ten feasible integer configurations.
+It gives an actual-global-minimum necessary condition and needs no new
+integer centres beyond1–32. Static soundness is checked; a useful global
+defect lower bound or quantified whole-domain certificate benefit is still
+required. A necessary upper defect condition alone is not a floor proof.
+An [all-integer adjacency bound](../research-goal-20261017-rounding-benefit/NOTE.zh.md)
+now gives L>=0.00980215689 on paper, using the existing integer jets and a
+pressure bound for the infinite tail. A separate exact source-table audit
+confirms the old JSON endpoints equal the actual Lean data. No new Lean
+integer-domain theorem or continuous-domain floor is claimed. One fixed
+two-point transfer obstruction test failed its gate and is preserved;
+neither success nor impossibility of uniform loss transfer follows.
+The fixed directW9 linear-combination rule has been stopped by an exact
+rational dual excluding the requested magnitude, with two separate replays.
+No new optimizer or Lean batch follows automatically from either result.
+
 The latest [macro review 002](macro-reviews/002-20261017.zh.md) corrects the
 research priority: the fixed sextic cell was already closed by five old
 numerical leaves and is unrelated to the current frontier. Its exact

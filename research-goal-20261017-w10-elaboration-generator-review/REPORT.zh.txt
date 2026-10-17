@@ -1,0 +1,100 @@
+旧 W10：elaboration 内生成见证的静态可行性审查
+
+结论：原则上可把部分证书数据替换为不可信的纯 Lean 发现程序；目前不应
+实施大型优化器移植。它最多直接解决上传 payload，未解决 95,615 个叶子的
+普通内核、几何、export 和独立重放成本。本报告未实现或运行优化器、Lean
+原型、solver、搜索或新的数值检查，也没有新的覆盖/零点比例证明。
+
+1. 验证边界
+
+本轮网站快照 commit cb97717d3ea82c45f19f2ce04c410440b6492aa6 的
+CONTRIBUTING 明确说明 elaboration 会执行提交者的 metaprograms；SECURITY
+也把 macros/elaborators/tactics 当作编译期执行代码处理。已固定 Comparator
+273294467ce06429e6667ece7f5699f8678c9f4e 的 Main.lean 正常 build/export，
+比较目标声明、primitive 与传递 axioms，之后做 nanoda/default kernel replay。
+没有发现禁止纯 Lean 内存内生成候选整数的条文。这是对固定源码的可行性
+推断，不是官方批准、已运行测试或未来验证器行为保证。
+
+正确分层：生成器在 elaboration 内执行，返回具体 Nat/Int/List 数值；将其
+物化成闭合 literal，再正常 elaboration 旧 checkLeaf 的等式证明及 soundness。
+Float、优化器、近似可行性声明不能进入最终证明依赖；不能把 native Bool
+真值转成未核验的证明；不能用 native_decide/新 axiom/外部文件、进程或网络。
+特别不能定义 FS := floatingOptimizer cell 然后要求内核计算该浮点算法。
+输出提案错误时必须由原整数 checker 拒绝，不能捕获失败后宣称该叶已证。
+
+已有 StructuralW10Cert20261016/CompressedCommands.lean（5,370 bytes）提供
+elab_rules -> elaborateSource -> Parser.parseCommand -> elabCommandTopLevel。
+纯解压器和小命令 smoke 已通过普通 Lean；它只还原已有文本，不生成优化见证。
+其大基础包预检通过也不证明完整数值树或网站资源合规。
+
+2. 实际发现程序与不能省略的选择
+
+research-20261016-w10-cert/generate.py:
+  lines：枚举继承 PT 中覆盖整个 cell 的合法切线及 interval lower bound。
+  certify：48 个原始变量（9 gaps +39 epigraph），每条支持线一行，加90条
+  DBM上下界；epigraph>=0。HiGHS linprog 以 pressure+39正权 epigraph为目标，
+  原代码 dual/primal feasibility tolerance均1e-9，未固定独立pivot规则/迭代上限。
+  marginals 给lambda；OLD分支每term仅取权重最大的两项，按1/1024量化为
+  kind0/1/2/3和至多两个PT anchors；随后 exact integer arithmetic 再判。
+  minimize：10 vertices/90 directed arcs 的 nx.network_simplex，整数成本
+  和散度，返回非负流，再转换为旧 DualMove。
+tree_flow.py：同样用 network_simplex；以相邻零流边补全forest，编码8个十进制
+Pruefer digits。最优性/forest身份不用成为数学前提，任意候选 moves 都须检查。
+compact_thin.py/relative_codec.py 另做删支持、双切线改单切线和流重算；若新程序
+能直接产生通过的FS/moves，不必重现压缩阶段或相同原始FS。
+
+固定旧 node_kind/axis/cut 几何即可省去 generate.kernel 的浮点 sinc 和切分
+启发式，也不必重做 ordered_generate 的旧hint/选树过程。固定旧 treecode也
+允许，但FS改变后必须按新斜率重建金额；旧tree不保证新FS的最终不等式通过。
+若要替代tree码，需要真正的流提案算法，不可把tree解码当成最小费用流。
+原PT静态表共2,993个点；直接每leaf的39项全扫约需上百亿次资格检查，需索引/
+有界缓存。此为源码循环量级观察，不是已测新运行时间。
+
+3. 已有 Mathlib 发现 API
+
+固定 Mathlib 51e6992efd06126df61a496bebf8f49482a4e129 中
+Mathlib.Tactic.Linarith.Oracle.SimplexAlgorithm 提供
+CertificateOracle.simplexAlgorithmSparse/Dense；preprocess ->
+findPositiveVector -> postprocess，精确 Rat Gauss elimination+Bland pivot，
+返回 Nat Farkas 权。checkSuccess 在严格行权为正时即停止，while调用checkSystem，
+不是原HiGHS优化器，也没有这个W10任务的成功率/运行成本记录。
+
+候选用法是合法支持、DBM、epigraph非负和目标F<tau严格行组成Farkas问题，
+除目标行权恢复lambda，再执行原top2/1024量化和整数检查。仅可称候选发现器。
+它可能找到余量太小或量化后失败的证书；精确Rat还可能有分母增长问题。
+本次未调用该API。Mathlib是网站固定运行依赖；manifest只绑定所读小源码，
+不要求stage整个tmp库。公开源URL可按mathlib commit及对应相对路径核对。
+
+4. 源码尺寸仅有条件预算
+
+旧field-Huffman分类已测 binary：geometry280659，FS2217236，tree294132bytes。
+若全部FS由程序重建，保留geometry+tree，采用旧审计1.25可打印系数及7byte
+framing、542851固定基础源码、128000尚未实现decoder/expander预留，则条件
+规划式为 1,389,349 + G + E bytes；G是新算法源，E是失败例外源。
+若tree亦全部生成，则为 1,021,684 + G + E。上述不是完整Lean文件、实测新
+codec上界或小于2MB证明；shared models、真实源码、封装和最终定理必须重算。
+单纯生成flow而保留FS不足以解决2MB，必须解决支持类型、anchor与混合权重。
+
+旧三个简单几何预测器在固定首1000叶的新FS+旧tree仅4/1/3叶通过；原FS+
+四个固定tree的并集332叶通过。这不否定有耦合优化的生成器，也不能证明它。
+没有找到同一路线的已实现纯Lean simplex/flow见证生成器；现有CompressedCommands
+和预测器是不同尝试。本结论限于本次检索的旧W10/goal源码和记录。
+
+5. 当前足以停止大型实现的资源证据
+
+网站生产 Comparator 总3200s，outer job3240s；本地verify-submission中的
+9000s不适用于网站。生成、ordinary proof、export、Nano/default replay全算在内。
+旧8aux：warm import6.000833s，batch11.024227s，差5.023394s，约.628s/leaf。
+朴素线性外推95615约六万秒；这不是全树benchmark或不可突破的数学下界，
+但已足以反对因payload变小就立即移植大优化器。原478 numeric_aux 15模块
+CPU合计410.49s（含重复import），也未显示所需的整个数量级加速。
+旧compressed-base预检547.68s、RSS8350076KiB，接近8GiB名义限制，不能默认
+有足够额外内存容纳LP tableau、缓存和更多生成声明。
+
+若未来出现独立的checker成本突破，才考虑单次固定8leaf原型，复用既有8aux
+集合，不增加发现样本；必须无旧FS读取、固定算法/停止规则，8/8提案被原checker
+普通证明并审axioms，分别计生成/证明/驻留/输出大小，失败即停止，不调参重试。
+该8leaf原型最多证明实现接口和给出成本信号；首1000非随机前缀也不能证明全树
+尺寸/时间。最终仍需全部95615numeric+全部geometry与根组合的真实核验，以及
+精确最终单文件<=2000000 bytes和网站等同设置完整双核<=3200s。现不建议启动
+此原型或优化器移植；无新Lean、数据生成或求解授权从本报告产生。

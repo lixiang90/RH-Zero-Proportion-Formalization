@@ -1,0 +1,34 @@
+固定整数 gap 下界的独立纯算术审查
+
+结论：精确有理数检查通过，尚无本轮新增 Lean theorem。
+
+WindowJetTableData.wValues 的33中心×24阶共792对、1584个端点，全部与
+window_normalized_interval.json 的 integer_w_Taylor_coefficients 精确相等，
+不是仅仅外扩。这里只使用n=1..32、r=0，不计算新核值。
+
+现有 WindowFixedKernelCenter01..32.w_n 与 WindowFixedTablesAll.w_sound
+给 Holds (W n 0) (wc 24 d24 0 n)。wc 的定义在r=0为实际w，Holds包含所需
+下端点不等式。审查程序绑定这些现有current-source普通PASS和log哈希；
+没有再次编译，也不把新算术结论冒充已完成Lean命题。
+
+对任意正整数9-gap向量，每个r有
+ b_r*n + a_(r,r+1)*w(n) >= l_r：
+  n=1..32用上述实际值下界；n>=33用b_r*n>=33*b_r和w>=0。
+所有ledger系数非负，故删去全部非相邻项仍为实际Fw24下界。9个l_r均在n=2
+唯一取最小；总和精确为
+ L=49010784449364406850369272140464640617/
+   5000000000000000000000000000000000000000
+  ≈0.009802156889872881 >0.00884>0.0088。
+这不是整数格点枚举/DP，也不需有限pressure范围；tail处理覆盖所有n>=33。
+
+对公共平移舍入，每个q的gap为正整数，故平均F(q)>=L>c。于是对任意
+真正F(g)<c的原向量，F(g)<=平均F(q)已经自动成立，毋须最小性。这条必要
+上界不能单独给新floor。令Phi=Σa[w(span)-hatw(span+d*5/128)]，点态恒等式为
+ F(g)=平均F(q)-(5/128)*B+Phi(g)。
+因此可用方向必须证明Phi的统一下界m，使L-(5/128)*B+m>=c，或获得等价
+的真正排除/转移证据。本次没有计算Phi、其budget或任何新核值。
+
+审查程序默认只读；--write-receipt只创建原本不存在的收据。第一次调用已过
+算术断言，但随后将某旧log按UTF8解码失败；没有写收据。移除不必要的文本
+解码后，同输入第二次完成。未修改原JSON、Lean源、证明log、参数或候选。
+唯一新输出是审查源码/收据/本说明/manifest；无Lean/solver/舍入实现。

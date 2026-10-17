@@ -1,0 +1,1857 @@
+{
+  "scope": "Independent exact read-only audit of a fixed integer-gap lower bound.\n\nNo kernel value, solver, Lean process, lattice enumeration or new point is\ncomputed.  Default is read-only; --write-receipt creates an absent receipt.\n",
+  "status": "PASS_fixed_integer_adjacent_arithmetic_and_table_identity",
+  "auditor": {
+    "path": "research-goal-20261017-integer-adjacent-floor-audit/replay.py",
+    "bytes": 8142,
+    "sha256": "95f84c6e4ceeb5f5eee8996d2d0fe327a38b1495044f2dd48ed7d9fb31447c1d"
+  },
+  "inputs": [
+    {
+      "path": "research-goal-20261016/window_normalized_interval.json",
+      "bytes": 101176,
+      "sha256": "15e389817127095be26e2ebca6e8bea0d356547a3cb041710029f566cfc13255"
+    },
+    {
+      "path": "research-20261016-followup/window_reweight_rational.json",
+      "bytes": 3838,
+      "sha256": "61ad18366b0234d75c4204bc661446c94f1705c29c3e6041bed0147dd6476f11"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowJetTableData.lean",
+      "bytes": 322302,
+      "sha256": "f6afdae121fb933db7b468b861de75e2e38afe2068323837b7a18095306c2ec8"
+    },
+    {
+      "path": "StructuralW10Followup20261016/NewLedger.lean",
+      "bytes": 4044,
+      "sha256": "9db3e7633a3117f4fded88998da4ab3ebc4e24631ac50816f23931bdb8225d1a"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowNormalizedJets.lean",
+      "bytes": 4744,
+      "sha256": "8b47725eb97a47e0a86294a771cfb06a9fc299e4a0a7e7edf4410885cb01b6cc"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowRationalInterval.lean",
+      "bytes": 6722,
+      "sha256": "d0eae7ba9caed1d44c9d8e2b3884cca64edc79d0925897190c15f5591f890c88"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowFixedTablesAll.lean",
+      "bytes": 6487,
+      "sha256": "7511ac0f532150ad4f9fa4ae63b67c5a11fe3caf248ae84cdda1581dffd4c6f0"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowKernel.lean",
+      "bytes": 5762,
+      "sha256": "4c01794657e775391ba57642e7d753be961ac4e89e87c3f29109be8f5f05547e"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowGramExpansion.lean",
+      "bytes": 3423,
+      "sha256": "c96182db1b236171b8dfa32b3e7a31a603ddf05a2f550ef86e95be040a0caf5f"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowGapEnergy.lean",
+      "bytes": 13554,
+      "sha256": "3f570bc83263355a239c086922e9bc138319fd2abd77668b594b5f94a5fd6564"
+    }
+  ],
+  "exact_table_identity": {
+    "centres": 33,
+    "orders_per_centre": 24,
+    "pairs": 792,
+    "endpoints": 1584,
+    "relation": "exactly_equal_not_merely_outward"
+  },
+  "existing_proof_bindings": [
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter01",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter01.lean",
+        "bytes": 913,
+        "sha256": "0e1af22cfcb96ebed36dbae0c30d4f31a7f942d273fe3a35fc87b8c1ce8ca40c"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter01_0e1af22cfcb9.log",
+        "bytes": 358,
+        "sha256": "a150ead437602c65be1e6d31430536e812d6ae8f73b84a39e4443ebf320ee086"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "c1cb55cda2e32ebf0f10581ec70b715874093b7465351e5baa1a14b8722249b6"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter02",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter02.lean",
+        "bytes": 1300,
+        "sha256": "0d24db91fd54c8aaca33262ac9caf0952c1ac34c71a125f9f7e8e500325004ec"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter02_0d24db91fd54.log",
+        "bytes": 358,
+        "sha256": "065d626fddb57e05916f108ffdae35e693872a550cf3d6f97d29aa3d77e49782"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "9f3a9264250274497eb07f802850eec4a1085afdd3c53ad37a4c6b297f6d4519"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter03",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter03.lean",
+        "bytes": 1300,
+        "sha256": "3c8e353768828fe8a40aa98e8cae0b2ff4ec95622d07a9dc4c03bbf6fda07fb9"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter03_3c8e35376882.log",
+        "bytes": 358,
+        "sha256": "b97a0724f8d11fc32314a02c052e427700c80a510e5336bf35320c49ade0bfd3"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "7fa57588596b0ed7a1521b04f6732da04d3bec71d846e6e75299f14710a496a0"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter04",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter04.lean",
+        "bytes": 1300,
+        "sha256": "2e97e81bb42d0ffccc979c78e27360fd48391ad5e6ca6e5a86ba80905d8e71d7"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter04_2e97e81bb42d.log",
+        "bytes": 358,
+        "sha256": "bca7e261c60f2b12566f97de078dccdf56bc78e7540f8408bb6c2b7aac58d30c"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "108e816b71eed76bf1a64d70a99e712a16df9df360f25d2f904dd17105acb893"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter05",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter05.lean",
+        "bytes": 1300,
+        "sha256": "26f883150f511fa0f66e7e9f2bcc1a266cd3a01ebbfb4c93ab5a78c7c6c64df5"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter05_26f883150f51.log",
+        "bytes": 358,
+        "sha256": "3927da2cf00e917ea73e4626c58b0f6cc015553e24117d492a3f88bc6fa56e18"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "a3420374efd4a45a12e78df430c17a85023fe00b86127388d96e49ce15686281"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter06",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter06.lean",
+        "bytes": 1300,
+        "sha256": "a16e0e99c45139a101703515da4d42719577996fc631fd4cc6c97c21858480de"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter06_a16e0e99c451.log",
+        "bytes": 358,
+        "sha256": "9edd3766ded3a1d295e55910f51f621e6951fe023002c70d9e8eb53d2bee9c11"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "a173300db50b618a976704c18c2028c9458f9de6ca5f8fdd098f1622f63a2cbf"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter07",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter07.lean",
+        "bytes": 1300,
+        "sha256": "fe323bd0e19c53dc8b12e6007ddd9ae6335c420054f27133416fcebdc730555e"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter07_fe323bd0e19c.log",
+        "bytes": 358,
+        "sha256": "4215dc1c90f78419afabfd15e41cbf4d0178a12e1c6f404bc89edc024ade5733"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "5fe3641f380ffacc24fb1232e878a02e3e945930eba4f9e7c3eaf94bc8e0fc9c"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter08",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter08.lean",
+        "bytes": 1300,
+        "sha256": "0ad7ea15584a9fc1e7a3b19631950b6b04709bcfb6c25f5904f19063c7a816af"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter08_0ad7ea15584a.log",
+        "bytes": 358,
+        "sha256": "030856ba4bd7fc0e04964c1b1573ad67a7bba50f2a8f31d2566dcbf4639ff83e"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "666b35fcac13f2faa4b2041329e0b04a9df3d8a7ef1580ef09d0275f37c65c1e"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter09",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter09.lean",
+        "bytes": 1300,
+        "sha256": "0334b355d6a178b4b422287c2a18624103a63db713d807e940a3a5f592bb2e36"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter09_0334b355d6a1.log",
+        "bytes": 358,
+        "sha256": "fd816540907601716180ab37234ba4d6cfeaec958942586c601973382ae180e1"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "2772a5c93dcf74fe4bcf565612e3dd3b276ac8774ee1ae3ec0253653f20c1496"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter10",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter10.lean",
+        "bytes": 1316,
+        "sha256": "91875aada8bb87b16c4d5ac31ea95a2fc43885a780406a1e718302792708f265"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter10_91875aada8bb.log",
+        "bytes": 360,
+        "sha256": "2741a3d254a1647167e03b6b5951248aecfc6480a77b4e4e4c0d19a512810095"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "3ce806076fc413b85e1382879b6dc1298be99089951ee97bad6fc91f949abc04"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter11",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter11.lean",
+        "bytes": 1316,
+        "sha256": "e6c07aa604130d457f29ca380d72a68efe94dafe84c1ebe31e5914213d1a07b1"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter11_e6c07aa60413.log",
+        "bytes": 360,
+        "sha256": "693a770e4af0f125cc2dac03c4ab81836a8e7e6d09e66f8c98f8c93523765acd"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "3ae5197763a53a3e6fbce4e5e4a1648a085ba27a6658f4fed7ecbda735b40abe"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter12",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter12.lean",
+        "bytes": 1316,
+        "sha256": "fc19439715c875d9cf924b57b5853abd0565f04df34d245779cda41a8600b7ec"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter12_fc19439715c8.log",
+        "bytes": 360,
+        "sha256": "d352cfd0d886e6ac8040a1dc32f59e1e3f32afc288c75bfda5d209a6babfe9bc"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "c89097f015151ca8787b332ed29ffd63e0017289e503c2f73c98fe058f7dd9df"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter13",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter13.lean",
+        "bytes": 1316,
+        "sha256": "76f6419fb600f93000211f76bc8981b9814b4b76b6cabbb85f2066e5456bb3ed"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter13_76f6419fb600.log",
+        "bytes": 360,
+        "sha256": "8bfcdeed825736867a58d53beb3f71490075efd73653bb803a4a074217862e83"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "1c0f2d5bcec38dbd566b29f5249a7933b90efee2538f5f4c89725a10d80cc7cf"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter14",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter14.lean",
+        "bytes": 1316,
+        "sha256": "4ca6e1d417a31ab8d0826d54b328da7b2e552ff5eb3a2d8ab8d970669a8c1dde"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter14_4ca6e1d417a3.log",
+        "bytes": 360,
+        "sha256": "f401107e9783505bebf39b7c528099968a0e3e02ed0f38487ab1861c4b008bf6"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "b65e4b73732bc449ccc9e472b1e28e25c8d1e0b438477b7f4a10b394cff9658d"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter15",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter15.lean",
+        "bytes": 1316,
+        "sha256": "c88ff5d7f6d6b99eb16487c7b2d6bbf6ce233ab7acb43228210d0bc0f1a7aa47"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter15_c88ff5d7f6d6.log",
+        "bytes": 360,
+        "sha256": "29659209868a9139c2d56172c9bce68742f839d9f2af71aab767df9c48bad11e"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "ff68f84e98ecf31ffd3b8c87a3dc0b9706d5eb4badacdba976449e80d9affc85"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter16",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter16.lean",
+        "bytes": 1316,
+        "sha256": "b04a7420cf4e80b339504dc10d73225be9a2ccd683925f095693ebe396c76aed"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter16_b04a7420cf4e.log",
+        "bytes": 360,
+        "sha256": "5aecb62681868369b72b79d8bcb36ab2d284da9039737b3c6382bca28bffe023"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "710c4db4876aa1c9361fd8170905d9b3508e5c38a195bb42fbd70d34084931e5"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter17",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter17.lean",
+        "bytes": 1316,
+        "sha256": "feb3ad4966f4f6eba4930dc04c2f981eef2c7b76ee73334ab32149a9e8bef0d3"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter17_feb3ad4966f4.log",
+        "bytes": 360,
+        "sha256": "dfcdbd7a1460b047043063cc1c21bc3edd23314f2f63bf0740d80c24d051bb55"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "de1d5b43c4014e3d2ed9c25b09b4ee41169c844e13698d7f641803d02276015d"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter18",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter18.lean",
+        "bytes": 1316,
+        "sha256": "f74ae7c4367680ce58ee163df301088035361618920dedba04a6e9b4ec553328"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter18_f74ae7c43676.log",
+        "bytes": 360,
+        "sha256": "151d7bb44dafee9f0931b28829a3be36e46142710af1a1f11f8b91e8d045242f"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "81af418336174c6029dbf848bf2cf520036f094e0cc043c1e327e666ab9e1c2c"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter19",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter19.lean",
+        "bytes": 1316,
+        "sha256": "3e5a298b803776dd30560af0261870fe88e46d62a6d7ef18ce0368e3d2934e63"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter19_3e5a298b8037.log",
+        "bytes": 360,
+        "sha256": "126591e44819459cbeef6086ab2fb7b4cfa1180dca82a512b75bcbde79af7be8"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "e116055567104d4f2d0680d8fd53b66041c05741205300eadf59b104b4d84112"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter20",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter20.lean",
+        "bytes": 1316,
+        "sha256": "bc3145952e0022b4ec66324e5a7283c1e2da90d8b19f9991e66e64e3731e8d6f"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter20_bc3145952e00.log",
+        "bytes": 360,
+        "sha256": "b333ef67769bd67f36908273b71df8f31792994efeaf2a3c89ec337f43548599"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "0805f7fd3019a3cc0d11499a60d6657c587b84f77fa67fae33e6c1dda4025d16"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter21",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter21.lean",
+        "bytes": 1316,
+        "sha256": "3107de23b2d41873134b05fc0fcc4e3cc6953f87557b677978f5a31623dd367f"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter21_3107de23b2d4.log",
+        "bytes": 360,
+        "sha256": "5358e7faae9781b69b799d640b75ec1f9d22013b4d62a3e00d67477405d246c4"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "f5bd428f558b98a4f492c5a29ca1ed97b7f1fe9890698b2d8da97f8e187053f9"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter22",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter22.lean",
+        "bytes": 1316,
+        "sha256": "8a48a42a8046629b88308ea19266f456d92b6ba9a261a869dd6adcea8d462f8d"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter22_8a48a42a8046.log",
+        "bytes": 360,
+        "sha256": "29f4a6e8c8c9a7fe4b50cc5901de1fda2dba821701bc1bcce73ec9032621a26d"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "e3fb1dc0ea181c6e19d18c010b3983d5975d2009d4136d2f4ba6690b6bbb52eb"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter23",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter23.lean",
+        "bytes": 1316,
+        "sha256": "148bd9c3d032c93b895fa172ddb6995f38fa905d4b8030fd0027827200a87a75"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter23_148bd9c3d032.log",
+        "bytes": 360,
+        "sha256": "0892ed51d4e89d1c8250edc8836769172dc246e00b8ce63af95d064e71be7488"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "ea4bdd3f5280ec5ae09f5bd2cc1e866b9ad9d443936766272ee0cf936824f7dd"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter24",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter24.lean",
+        "bytes": 1316,
+        "sha256": "ce0cdbf36360fb9565e953f356ecafb774905b976d86b4fd21be8213e976efe9"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter24_ce0cdbf36360.log",
+        "bytes": 360,
+        "sha256": "c17d61ba77d6e68b6335e9e6e4e4967c98723d36cf248c752279863b64bfb561"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "9143aaa73d3f900342831a4f84d884de7bdcbf87b719db2568603fbeb410f15d"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter25",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter25.lean",
+        "bytes": 1316,
+        "sha256": "38516e1f82ee920b390f3cdeb1117ed78652ddd6fa9dff0a5e86900aa18b25f2"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter25_38516e1f82ee.log",
+        "bytes": 360,
+        "sha256": "37ad7873f431ab614a3a4caa20f4fe4e44e9afcdb21b560f41cb00b81c7929f4"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "bad97bf8d09704019b335339d2365084c57f291c9507ceff0f80d9017a93170f"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter26",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter26.lean",
+        "bytes": 1316,
+        "sha256": "0670fe80689c2adc99e13a55d6679a4a93403a678f50721063ac2e9b3037c6be"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter26_0670fe80689c.log",
+        "bytes": 360,
+        "sha256": "6e47e6c5394bc3c5252b98b291c88c684175b0190172bb909de9c15b8af7321f"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "30443b7a6f5651c170f2c40767995e66c5a64291a9f8a126f49148e7375599d8"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter27",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter27.lean",
+        "bytes": 1316,
+        "sha256": "dc6861046a6f46bce4a597e8a831f31533b455a7f3bc10cd82eac621466c2f8d"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter27_dc6861046a6f.log",
+        "bytes": 360,
+        "sha256": "c431248a4a303f5608382790e2413c1cfaee30f420956865f9fb808caa5866f1"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "0d6b66bb1099858f9b2e6e1d5d5c167ed7da66c6022bb73549f1805b3bf5e63a"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter28",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter28.lean",
+        "bytes": 1316,
+        "sha256": "5cfc95b2d8846e48fe8a3ec1cd2097c7e667051f16f54ddb6995a9cb9320b7c1"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter28_5cfc95b2d884.log",
+        "bytes": 360,
+        "sha256": "e9f9d33bf31c7d52f7416a6d51dc6b3f47303617bb48f0c2f0ab7c9ffd00abfe"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "0e6c1f3a9fc26b89ca0e1764bf25e33a37e642668cd3b64d42d99c8999dc8730"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter29",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter29.lean",
+        "bytes": 1316,
+        "sha256": "afcad564f24c52598da828aa96bdd737a755e45fd665dcb41e9de5793c117011"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter29_afcad564f24c.log",
+        "bytes": 360,
+        "sha256": "6158bb87cafacf6cb2d639f13b1884413f9ec6fd5f2b3092fdecfbc802e7216f"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "c4a723843c2a0ff130ee23c76db56c85a0404ac4126596aa9aeac4f0b0f2a3ec"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter30",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter30.lean",
+        "bytes": 1316,
+        "sha256": "d10a14ad657ca4aa369e9f678a16daf3feca41c42a1052468efa2593d400b09c"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter30_d10a14ad657c.log",
+        "bytes": 360,
+        "sha256": "1c4265f803b0ae31faeaf172b10a4bb3d971b2c584209a02c72de4913e381347"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "3219efadb03308ab2ca15d223131a849aa78d5f38b5a76d0b2fa6829a0bf291e"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter31",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter31.lean",
+        "bytes": 1316,
+        "sha256": "865b4c3c19bd7c2b7a38816ec0869f5d95100b6a3af68b55f9db078926b1cd31"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter31_865b4c3c19bd.log",
+        "bytes": 360,
+        "sha256": "6b6ec77ac2cbebf794fcef2f1588d20a75eed071164b578f64c1736eb5f42a2f"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "9815e1cfd0e33f4559001b1ca03d92417db8bf0ee521902d8c2d4feff1dc8a4f"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedKernelCenter32",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedKernelCenter32.lean",
+        "bytes": 1316,
+        "sha256": "95030522aca35631accee1abb4eb988cd4cecc8a52b594da76db08675ecd21ae"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedKernelCenter32_95030522aca3.log",
+        "bytes": 360,
+        "sha256": "ff47602e52636d4c9742c5ac6743345573da654a9615b454f96690397c34754a"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "52378eb5ed8c864f39ebd5df1fd5a3c622180ae69bec2c5d6fd75796f1e31b33"
+    },
+    {
+      "module": "StructuralGoal20261016.WindowFixedTablesAll",
+      "source": {
+        "path": "StructuralGoal20261016/WindowFixedTablesAll.lean",
+        "bytes": 6487,
+        "sha256": "7511ac0f532150ad4f9fa4ae63b67c5a11fe3caf248ae84cdda1581dffd4c6f0"
+      },
+      "log": {
+        "path": "research-goal-20261016/lean_WindowFixedTablesAll_7511ac0f5321.log",
+        "bytes": 358,
+        "sha256": "6246cc88f235de60e78ccd1a4b5050f20955aeb0be9bb8348de9a4db90b492e2"
+      },
+      "existing_ordinary_passed": true,
+      "olean_sha256_from_existing_receipt": "c7d490a018967cfcb493fd890953c75fd8e1cdc6ed169393c80649777a5cb58b"
+    }
+  ],
+  "rows": [
+    {
+      "gap": 0,
+      "b": "2050531/10000000000",
+      "a_adjacent": "195195711/2000000000",
+      "minimizing_integer_among_1_to_32": [
+        2
+      ],
+      "minimum": "913674067164656656041575734405206313/2000000000000000000000000000000000000000",
+      "tail_from_33": "67667523/10000000000",
+      "candidates": [
+        {
+          "n": 1,
+          "lower": "1138015407650830239574360574991909839/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 2,
+          "lower": "913674067164656656041575734405206313/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 3,
+          "lower": "249116854885403578949725494023183571/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 4,
+          "lower": "102526573387965623135919669018006449/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 5,
+          "lower": "2051168489609965856549590232265773521/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 6,
+          "lower": "153801229888953321262501471211302557/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 7,
+          "lower": "1435930847701510406147074287095885401/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 8,
+          "lower": "3280937510665343145728781413108946949/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 9,
+          "lower": "1845876025680428412339823157212178703/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 10,
+          "lower": "820409959330496060151440526633421999/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 11,
+          "lower": "4511461557926412977941876589362902301/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 12,
+          "lower": "2461068328534445880751060185747396783/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 13,
+          "lower": "1066294453231707914776956986135753023/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 14,
+          "lower": "2870765268480510777684537537647137997/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 15,
+          "lower": "1537907942660388947048102873636479629/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 16,
+          "lower": "1312344763717307105987149692941545927/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 17,
+          "lower": "3485911442372012187646947938317158839/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 18,
+          "lower": "57671286328805074584013338510888267/15625000000000000000000000000000000000"
+        },
+        {
+          "n": 19,
+          "lower": "7792027847621363774448874496695331951/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 20,
+          "lower": "4101065955803064453124339313603405909/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 21,
+          "lower": "4306118269924501877765522518141724337/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 22,
+          "lower": "9022341553749447293775384314634171869/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 23,
+          "lower": "943244684069585072565110590099830379/200000000000000000000000000000000000000"
+        },
+        {
+          "n": 24,
+          "lower": "9842552326120789198322803229028548421/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 25,
+          "lower": "5126328141344192291795651477939209267/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 26,
+          "lower": "10662762296433995878421844295868161951/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 27,
+          "lower": "1107286834279244831084097630431905479/200000000000000000000000000000000000000"
+        },
+        {
+          "n": 28,
+          "lower": "2296594883028970977985294652353852543/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 29,
+          "lower": "1486635063548484801715072147688663039/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 30,
+          "lower": "6151593309274894888132929329677383243/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 31,
+          "lower": "6356646371256283939228208561386465237/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 32,
+          "lower": "3280849719452118662338350509852809081/500000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "gap": 1,
+      "b": "505923/1250000000",
+      "a_adjacent": "485225937/2500000000",
+      "minimizing_integer_among_1_to_32": [
+        2
+      ],
+      "minimum": "2256023052722529642114217851247916871/2500000000000000000000000000000000000000",
+      "tail_from_33": "16695459/1250000000",
+      "candidates": [
+        {
+          "n": 1,
+          "lower": "2821314176958568888972174143602510913/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 2,
+          "lower": "2256023052722529642114217851247916871/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 3,
+          "lower": "614697214689624708091224549140770557/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 4,
+          "lower": "252961558138816041966800693463966783/156250000000000000000000000000000000000"
+        },
+        {
+          "n": 5,
+          "lower": "5060814699232061749975041753951282207/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 6,
+          "lower": "379470600766010203261378521438838419/156250000000000000000000000000000000000"
+        },
+        {
+          "n": 7,
+          "lower": "3542850953529187857708434386474342167/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 8,
+          "lower": "8094986532132416686721028973039130283/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 9,
+          "lower": "4554296678027964656144586362722784001/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 10,
+          "lower": "2024183101524526035624784252741473633/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 11,
+          "lower": "11131035241815769785386357180829544467/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 12,
+          "lower": "6072147717949242948597489636299819361/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 13,
+          "lower": "2630845173539951966762041711082559441/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 14,
+          "lower": "7082976361614260101957764928126444899/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 15,
+          "lower": "3794446594434222735641251364035623843/625000000000000000000000000000000000000"
+        },
+        {
+          "n": 16,
+          "lower": "3237919439589341507710551179666155209/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 17,
+          "lower": "8600712732166293430117479059568893913/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 18,
+          "lower": "142291097191176266574744346710793989/19531250000000000000000000000000000000"
+        },
+        {
+          "n": 19,
+          "lower": "19225098976811559443920423980291226017/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 20,
+          "lower": "10118469833506272772246774013129568603/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 21,
+          "lower": "10624390879935367242249677966335631679/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 22,
+          "lower": "22260624811413180212521550340844675923/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 23,
+          "lower": "2327246854170507722050402939385349093/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 24,
+          "lower": "24284312765383497150383908923449670507/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 25,
+          "lower": "12648076594281119446803431049304600989/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 26,
+          "lower": "26307998725563027400542512328719836017/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 27,
+          "lower": "2731984434363422630813788723696910793/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 28,
+          "lower": "5666338005264464038037807961413083281/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 29,
+          "lower": "3667941970117651600666856301390935313/312500000000000000000000000000000000000"
+        },
+        {
+          "n": 30,
+          "lower": "15177690768808904119162796638228850181/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 31,
+          "lower": "15683613674300597422194684165115541979/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 32,
+          "lower": "8094768296939240660714685156057332727/625000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "gap": 2,
+      "b": "5655513/10000000000",
+      "a_adjacent": "513175917/2000000000",
+      "minimizing_integer_among_1_to_32": [
+        2
+      ],
+      "minimum": "2507918983903640533650297355295579211/2000000000000000000000000000000000000000",
+      "tail_from_33": "186631929/10000000000",
+      "candidates": [
+        {
+          "n": 1,
+          "lower": "3044799746393540501537465532529659933/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 2,
+          "lower": "2507918983903640533650297355295579211/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 3,
+          "lower": "686688351605793385196907719420255337/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 4,
+          "lower": "282775711487727593652157612144725603/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 5,
+          "lower": "5657188981062781654938752334661857987/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 6,
+          "lower": "424193458826575491759036602001512679/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 7,
+          "lower": "3960329117619706023968770933432816347/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 8,
+          "lower": "9049051920018316124420541366120179103/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 9,
+          "lower": "5091008385452710072381369405807256541/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 10,
+          "lower": "2262724589950065151447424227093131453/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 11,
+          "lower": "12442899847596194357344374700154860647/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 12,
+          "lower": "6787749051036786002645816124223706301/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 13,
+          "lower": "2940914958666584854632501386415049581/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 14,
+          "lower": "7917775692951469179395266976962378359/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 15,
+          "lower": "4241660232321603200994896016381915063/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 16,
+          "lower": "3619541264614055187337449919130376069/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 17,
+          "lower": "9614395083982338164852907964238862933/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 18,
+          "lower": "159061571164892591640522462763316049/15625000000000000000000000000000000000"
+        },
+        {
+          "n": 19,
+          "lower": "21490975815525631215039260465408179197/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 20,
+          "lower": "11311036399935811459208682829499150223/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 21,
+          "lower": "11876585633835332436636089453991786339/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 22,
+          "lower": "24884270749376085436766339797752050343/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 23,
+          "lower": "2601537094892827698571267118061275313/200000000000000000000000000000000000000"
+        },
+        {
+          "n": 24,
+          "lower": "27146471670287037452441767068679528287/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 25,
+          "lower": "14138784186114885956518609283396903049/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 26,
+          "lower": "29408670482560884060015798499606189197/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 27,
+          "lower": "3053977267863222364855608459626555013/200000000000000000000000000000000000000"
+        },
+        {
+          "n": 28,
+          "lower": "6334174988608504001371169450218527021/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 29,
+          "lower": "4100247157796866561687389340800060333/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 30,
+          "lower": "16966539813093827606162045367141219921/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 31,
+          "lower": "17532091013141654288325055465776858639/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 32,
+          "lower": "9048821114043532094505377667653429307/500000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "gap": 3,
+      "b": "3353247/5000000000",
+      "a_adjacent": "2928557891/10000000000",
+      "minimizing_integer_among_1_to_32": [
+        2
+      ],
+      "minimum": "14815210935528900255171228844605541253/10000000000000000000000000000000000000000",
+      "tail_from_33": "110657151/5000000000",
+      "candidates": [
+        {
+          "n": 1,
+          "lower": "17627452473300658080581054074348256659/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 2,
+          "lower": "14815210935528900255171228844605541253/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 3,
+          "lower": "4069703155769013960828576237545852551/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 4,
+          "lower": "1676623850894038240786088339024985069/625000000000000000000000000000000000000"
+        },
+        {
+          "n": 5,
+          "lower": "33542034376277181732947382780959023501/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 6,
+          "lower": "2515106359689701264562912275848978217/625000000000000000000000000000000000000"
+        },
+        {
+          "n": 7,
+          "lower": "23481117997919594721733559555711009781/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 8,
+          "lower": "53653270940213259755726834352289315569/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 9,
+          "lower": "30185196154312946820939067050496101843/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 10,
+          "lower": "13415952019717958423281707297807909619/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 11,
+          "lower": "73775835304034206591129923060281248681/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 12,
+          "lower": "40245432302326513462101440915299950323/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 13,
+          "lower": "17437159456916520800127687676064957763/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 14,
+          "lower": "46945786096917887799791866915365960857/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 15,
+          "lower": "25149497920803159112481230835896226649/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 16,
+          "lower": "21460854671454956192705692072620342187/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 17,
+          "lower": "57005330163448270385826469859396125659/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 18,
+          "lower": "943102248382074593323701692120253727/78125000000000000000000000000000000000"
+        },
+        {
+          "n": 19,
+          "lower": "127423536746349291772316634474441745331/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 20,
+          "lower": "67064999349655893034344814579531299329/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 21,
+          "lower": "70418234558972306765359913150151836397/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 22,
+          "lower": "147542945322670333207651765033810250089/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 23,
+          "lower": "15424942562395584077953240632036862399/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 24,
+          "lower": "160955908903052064632177340011389060401/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 25,
+          "lower": "83831184622207299335381040699222554727/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 26,
+          "lower": "174368860450005044375251507137049975331/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 27,
+          "lower": "18107535214489206720286472893944675499/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 28,
+          "lower": "37556368845954252648455077663622314883/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 29,
+          "lower": "24311042078509538317449223419401625859/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 30,
+          "lower": "100597414640109299905863466668957911583/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 31,
+          "lower": "103950661069708943623066260058562919297/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 32,
+          "lower": "53651953792162557840522125496667891861/2500000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "gap": 4,
+      "b": "182571/250000000",
+      "a_adjacent": "79434011/250000000",
+      "minimizing_integer_among_1_to_32": [
+        2
+      ],
+      "minimum": "403175802380195103914090322118175213/250000000000000000000000000000000000000",
+      "tail_from_33": "6024843/250000000",
+      "candidates": [
+        {
+          "n": 1,
+          "lower": "478790357030530929081133310515586539/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 2,
+          "lower": "403175802380195103914090322118175213/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 3,
+          "lower": "110785059421004550810708455265279871/50000000000000000000000000000000000000"
+        },
+        {
+          "n": 4,
+          "lower": "45642759517626740147996886488416149/15625000000000000000000000000000000000"
+        },
+        {
+          "n": 5,
+          "lower": "913114423511054572089366105771104821/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 6,
+          "lower": "68468766167933100229093024240244657/15625000000000000000000000000000000000"
+        },
+        {
+          "n": 7,
+          "lower": "639226042626038552243092915801780701/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 8,
+          "lower": "1460603774847316623450781793999006649/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 9,
+          "lower": "821731515443456813405669801874114603/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 10,
+          "lower": "365222395875254537111864043254746699/50000000000000000000000000000000000000"
+        },
+        {
+          "n": 11,
+          "lower": "2008400380680211901174292617321367601/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 12,
+          "lower": "1095601445805505367740812722346756683/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 13,
+          "lower": "474692060625654587518984286407984923/50000000000000000000000000000000000000"
+        },
+        {
+          "n": 14,
+          "lower": "1278005899279151919481530561372712097/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 15,
+          "lower": "684645194384269564632480173673343329/62500000000000000000000000000000000000"
+        },
+        {
+          "n": 16,
+          "lower": "584229203684469960240885695320249027/50000000000000000000000000000000000000"
+        },
+        {
+          "n": 17,
+          "lower": "1551857057668716308042658409890535539/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 18,
+          "lower": "25674088364639461321782505535793367/1953125000000000000000000000000000000"
+        },
+        {
+          "n": 19,
+          "lower": "3468853088834031470571468733286442251/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 20,
+          "lower": "1825711609796150365225943685845153609/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 21,
+          "lower": "1916996789986426757747495646186700437/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 22,
+          "lower": "4016564097295008124321308008544707569/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 23,
+          "lower": "419913472573198011607810341848169079/25000000000000000000000000000000000000"
+        },
+        {
+          "n": 24,
+          "lower": "4381705434938893490893633073963849721/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 25,
+          "lower": "2282137760992115883594445316735414367/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 26,
+          "lower": "4746846446188851400431208462558272251/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 27,
+          "lower": "492941738366511910623012372955274179/25000000000000000000000000000000000000"
+        },
+        {
+          "n": 28,
+          "lower": "1022397666343901757062503557023940443/50000000000000000000000000000000000000"
+        },
+        {
+          "n": 29,
+          "lower": "661819911034405058074087805368299739/31250000000000000000000000000000000000"
+        },
+        {
+          "n": 30,
+          "lower": "2738565125858018481603803670849181143/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 31,
+          "lower": "2829850610386516854603310676101211337/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 32,
+          "lower": "1460568048610498966329694714047808381/62500000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "gap": 5,
+      "b": "3353247/5000000000",
+      "a_adjacent": "2928557891/10000000000",
+      "minimizing_integer_among_1_to_32": [
+        2
+      ],
+      "minimum": "14815210935528900255171228844605541253/10000000000000000000000000000000000000000",
+      "tail_from_33": "110657151/5000000000",
+      "candidates": [
+        {
+          "n": 1,
+          "lower": "17627452473300658080581054074348256659/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 2,
+          "lower": "14815210935528900255171228844605541253/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 3,
+          "lower": "4069703155769013960828576237545852551/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 4,
+          "lower": "1676623850894038240786088339024985069/625000000000000000000000000000000000000"
+        },
+        {
+          "n": 5,
+          "lower": "33542034376277181732947382780959023501/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 6,
+          "lower": "2515106359689701264562912275848978217/625000000000000000000000000000000000000"
+        },
+        {
+          "n": 7,
+          "lower": "23481117997919594721733559555711009781/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 8,
+          "lower": "53653270940213259755726834352289315569/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 9,
+          "lower": "30185196154312946820939067050496101843/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 10,
+          "lower": "13415952019717958423281707297807909619/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 11,
+          "lower": "73775835304034206591129923060281248681/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 12,
+          "lower": "40245432302326513462101440915299950323/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 13,
+          "lower": "17437159456916520800127687676064957763/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 14,
+          "lower": "46945786096917887799791866915365960857/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 15,
+          "lower": "25149497920803159112481230835896226649/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 16,
+          "lower": "21460854671454956192705692072620342187/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 17,
+          "lower": "57005330163448270385826469859396125659/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 18,
+          "lower": "943102248382074593323701692120253727/78125000000000000000000000000000000000"
+        },
+        {
+          "n": 19,
+          "lower": "127423536746349291772316634474441745331/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 20,
+          "lower": "67064999349655893034344814579531299329/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 21,
+          "lower": "70418234558972306765359913150151836397/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 22,
+          "lower": "147542945322670333207651765033810250089/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 23,
+          "lower": "15424942562395584077953240632036862399/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 24,
+          "lower": "160955908903052064632177340011389060401/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 25,
+          "lower": "83831184622207299335381040699222554727/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 26,
+          "lower": "174368860450005044375251507137049975331/10000000000000000000000000000000000000000"
+        },
+        {
+          "n": 27,
+          "lower": "18107535214489206720286472893944675499/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 28,
+          "lower": "37556368845954252648455077663622314883/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 29,
+          "lower": "24311042078509538317449223419401625859/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 30,
+          "lower": "100597414640109299905863466668957911583/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 31,
+          "lower": "103950661069708943623066260058562919297/5000000000000000000000000000000000000000"
+        },
+        {
+          "n": 32,
+          "lower": "53651953792162557840522125496667891861/2500000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "gap": 6,
+      "b": "5655513/10000000000",
+      "a_adjacent": "513175917/2000000000",
+      "minimizing_integer_among_1_to_32": [
+        2
+      ],
+      "minimum": "2507918983903640533650297355295579211/2000000000000000000000000000000000000000",
+      "tail_from_33": "186631929/10000000000",
+      "candidates": [
+        {
+          "n": 1,
+          "lower": "3044799746393540501537465532529659933/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 2,
+          "lower": "2507918983903640533650297355295579211/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 3,
+          "lower": "686688351605793385196907719420255337/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 4,
+          "lower": "282775711487727593652157612144725603/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 5,
+          "lower": "5657188981062781654938752334661857987/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 6,
+          "lower": "424193458826575491759036602001512679/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 7,
+          "lower": "3960329117619706023968770933432816347/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 8,
+          "lower": "9049051920018316124420541366120179103/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 9,
+          "lower": "5091008385452710072381369405807256541/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 10,
+          "lower": "2262724589950065151447424227093131453/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 11,
+          "lower": "12442899847596194357344374700154860647/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 12,
+          "lower": "6787749051036786002645816124223706301/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 13,
+          "lower": "2940914958666584854632501386415049581/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 14,
+          "lower": "7917775692951469179395266976962378359/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 15,
+          "lower": "4241660232321603200994896016381915063/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 16,
+          "lower": "3619541264614055187337449919130376069/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 17,
+          "lower": "9614395083982338164852907964238862933/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 18,
+          "lower": "159061571164892591640522462763316049/15625000000000000000000000000000000000"
+        },
+        {
+          "n": 19,
+          "lower": "21490975815525631215039260465408179197/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 20,
+          "lower": "11311036399935811459208682829499150223/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 21,
+          "lower": "11876585633835332436636089453991786339/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 22,
+          "lower": "24884270749376085436766339797752050343/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 23,
+          "lower": "2601537094892827698571267118061275313/200000000000000000000000000000000000000"
+        },
+        {
+          "n": 24,
+          "lower": "27146471670287037452441767068679528287/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 25,
+          "lower": "14138784186114885956518609283396903049/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 26,
+          "lower": "29408670482560884060015798499606189197/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 27,
+          "lower": "3053977267863222364855608459626555013/200000000000000000000000000000000000000"
+        },
+        {
+          "n": 28,
+          "lower": "6334174988608504001371169450218527021/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 29,
+          "lower": "4100247157796866561687389340800060333/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 30,
+          "lower": "16966539813093827606162045367141219921/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 31,
+          "lower": "17532091013141654288325055465776858639/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 32,
+          "lower": "9048821114043532094505377667653429307/500000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "gap": 7,
+      "b": "505923/1250000000",
+      "a_adjacent": "485225937/2500000000",
+      "minimizing_integer_among_1_to_32": [
+        2
+      ],
+      "minimum": "2256023052722529642114217851247916871/2500000000000000000000000000000000000000",
+      "tail_from_33": "16695459/1250000000",
+      "candidates": [
+        {
+          "n": 1,
+          "lower": "2821314176958568888972174143602510913/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 2,
+          "lower": "2256023052722529642114217851247916871/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 3,
+          "lower": "614697214689624708091224549140770557/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 4,
+          "lower": "252961558138816041966800693463966783/156250000000000000000000000000000000000"
+        },
+        {
+          "n": 5,
+          "lower": "5060814699232061749975041753951282207/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 6,
+          "lower": "379470600766010203261378521438838419/156250000000000000000000000000000000000"
+        },
+        {
+          "n": 7,
+          "lower": "3542850953529187857708434386474342167/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 8,
+          "lower": "8094986532132416686721028973039130283/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 9,
+          "lower": "4554296678027964656144586362722784001/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 10,
+          "lower": "2024183101524526035624784252741473633/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 11,
+          "lower": "11131035241815769785386357180829544467/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 12,
+          "lower": "6072147717949242948597489636299819361/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 13,
+          "lower": "2630845173539951966762041711082559441/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 14,
+          "lower": "7082976361614260101957764928126444899/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 15,
+          "lower": "3794446594434222735641251364035623843/625000000000000000000000000000000000000"
+        },
+        {
+          "n": 16,
+          "lower": "3237919439589341507710551179666155209/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 17,
+          "lower": "8600712732166293430117479059568893913/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 18,
+          "lower": "142291097191176266574744346710793989/19531250000000000000000000000000000000"
+        },
+        {
+          "n": 19,
+          "lower": "19225098976811559443920423980291226017/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 20,
+          "lower": "10118469833506272772246774013129568603/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 21,
+          "lower": "10624390879935367242249677966335631679/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 22,
+          "lower": "22260624811413180212521550340844675923/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 23,
+          "lower": "2327246854170507722050402939385349093/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 24,
+          "lower": "24284312765383497150383908923449670507/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 25,
+          "lower": "12648076594281119446803431049304600989/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 26,
+          "lower": "26307998725563027400542512328719836017/2500000000000000000000000000000000000000"
+        },
+        {
+          "n": 27,
+          "lower": "2731984434363422630813788723696910793/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 28,
+          "lower": "5666338005264464038037807961413083281/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 29,
+          "lower": "3667941970117651600666856301390935313/312500000000000000000000000000000000000"
+        },
+        {
+          "n": 30,
+          "lower": "15177690768808904119162796638228850181/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 31,
+          "lower": "15683613674300597422194684165115541979/1250000000000000000000000000000000000000"
+        },
+        {
+          "n": 32,
+          "lower": "8094768296939240660714685156057332727/625000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "gap": 8,
+      "b": "2050531/10000000000",
+      "a_adjacent": "195195711/2000000000",
+      "minimizing_integer_among_1_to_32": [
+        2
+      ],
+      "minimum": "913674067164656656041575734405206313/2000000000000000000000000000000000000000",
+      "tail_from_33": "67667523/10000000000",
+      "candidates": [
+        {
+          "n": 1,
+          "lower": "1138015407650830239574360574991909839/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 2,
+          "lower": "913674067164656656041575734405206313/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 3,
+          "lower": "249116854885403578949725494023183571/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 4,
+          "lower": "102526573387965623135919669018006449/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 5,
+          "lower": "2051168489609965856549590232265773521/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 6,
+          "lower": "153801229888953321262501471211302557/125000000000000000000000000000000000000"
+        },
+        {
+          "n": 7,
+          "lower": "1435930847701510406147074287095885401/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 8,
+          "lower": "3280937510665343145728781413108946949/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 9,
+          "lower": "1845876025680428412339823157212178703/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 10,
+          "lower": "820409959330496060151440526633421999/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 11,
+          "lower": "4511461557926412977941876589362902301/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 12,
+          "lower": "2461068328534445880751060185747396783/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 13,
+          "lower": "1066294453231707914776956986135753023/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 14,
+          "lower": "2870765268480510777684537537647137997/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 15,
+          "lower": "1537907942660388947048102873636479629/500000000000000000000000000000000000000"
+        },
+        {
+          "n": 16,
+          "lower": "1312344763717307105987149692941545927/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 17,
+          "lower": "3485911442372012187646947938317158839/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 18,
+          "lower": "57671286328805074584013338510888267/15625000000000000000000000000000000000"
+        },
+        {
+          "n": 19,
+          "lower": "7792027847621363774448874496695331951/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 20,
+          "lower": "4101065955803064453124339313603405909/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 21,
+          "lower": "4306118269924501877765522518141724337/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 22,
+          "lower": "9022341553749447293775384314634171869/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 23,
+          "lower": "943244684069585072565110590099830379/200000000000000000000000000000000000000"
+        },
+        {
+          "n": 24,
+          "lower": "9842552326120789198322803229028548421/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 25,
+          "lower": "5126328141344192291795651477939209267/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 26,
+          "lower": "10662762296433995878421844295868161951/2000000000000000000000000000000000000000"
+        },
+        {
+          "n": 27,
+          "lower": "1107286834279244831084097630431905479/200000000000000000000000000000000000000"
+        },
+        {
+          "n": 28,
+          "lower": "2296594883028970977985294652353852543/400000000000000000000000000000000000000"
+        },
+        {
+          "n": 29,
+          "lower": "1486635063548484801715072147688663039/250000000000000000000000000000000000000"
+        },
+        {
+          "n": 30,
+          "lower": "6151593309274894888132929329677383243/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 31,
+          "lower": "6356646371256283939228208561386465237/1000000000000000000000000000000000000000"
+        },
+        {
+          "n": 32,
+          "lower": "3280849719452118662338350509852809081/500000000000000000000000000000000000000"
+        }
+      ]
+    }
+  ],
+  "L": "49010784449364406850369272140464640617/5000000000000000000000000000000000000000",
+  "L_decimal_diagnostic_only": 0.009802156889872881,
+  "strict_thresholds": [
+    {
+      "c": "11/1250",
+      "margin": "5010784449364406850369272140464640617/5000000000000000000000000000000000000000"
+    },
+    {
+      "c": "221/25000",
+      "margin": "4810784449364406850369272140464640617/5000000000000000000000000000000000000000"
+    }
+  ],
+  "mathematical_scope": [
+    "For any positive integer 9-gap vector, drop all nonadjacent nonnegative weighted squares.",
+    "For n=1..32 use actual w(n)>=W(n,0).lower; wc at order0 is definitionally w.",
+    "For n>=33 use b*n+a*w(n)>=33*b, since b,a,w are nonnegative.",
+    "Sum the 9 independent lower bounds; no upper gap bound or lattice search is needed.",
+    "This is an exact arithmetic implication from already proved tables, not a new Lean theorem.",
+    "Consequently common-shift averaged integer energy >=L>c; the minimizer upper comparison alone supplies no new floor.",
+    "A useful rounding route must instead bound the pointwise transfer loss from below."
+  ],
+  "new_kernel_values": 0,
+  "solver_calls": 0,
+  "Lean_invocations": 0,
+  "audit_history": "First invocation passed the arithmetic assertions but failed while unnecessarily decoding an existing binary/non-UTF8 log. No receipt was written. Only that unused decoding step was removed; fixed inputs and arithmetic were unchanged. This is the second audit invocation, not a new candidate.",
+  "new_Lean_theorem_proven": false,
+  "rounding_transfer_lower_bound_proven": false,
+  "complete_global_floor_proven": false,
+  "new_zero_proportion_proven": false,
+  "seconds": 0.4317108000104781
+}

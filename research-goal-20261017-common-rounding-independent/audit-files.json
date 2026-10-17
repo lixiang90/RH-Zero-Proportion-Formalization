@@ -1,0 +1,134 @@
+{
+  "schema": "common-rounding-independent-static-audit-v1",
+  "reviewed_on": "2026-10-17",
+  "verdict": "correct",
+  "main_rounds_since_review_read": 2,
+  "main_round_counter_modified": false,
+  "scope": "Necessary condition for global minima over the full original lower-separated orthant. No new global floor or unconditional zeta-zero proportion.",
+  "construction": {
+    "points": 10,
+    "gaps": 9,
+    "separation": "123/128",
+    "pressure_increment": "5*B/128",
+    "max_positive_weight_configurations": 10,
+    "requested_max_configurations_11_satisfied": true,
+    "finite_convex_combination": true,
+    "lebesgue_integration_required": false,
+    "all_coordinates_use_same_u": true
+  },
+  "actual_ledger_rhs": "11055671/64000000000",
+  "original_missing_requested_path": "StructuralGoal20261016/WindowMinimizer.lean",
+  "used_minimality_api": "StructuralGoal20261016.WindowMinimizerCover.Relevant",
+  "boundary_audit": {
+    "integer_x": true,
+    "integer_pair_difference": true,
+    "repeated_thresholds": true,
+    "active_gap_face": true,
+    "half_open_left_endpoints": true,
+    "excluded_endpoint_u_1": true,
+    "q0_exactly_zero": true,
+    "feasible_full_orthant": true,
+    "competitor_orientation_not_required": true,
+    "competitor_pressure_box_not_required": true
+  },
+  "old_move_comparison": {
+    "old_moves": "integer gap translations",
+    "common_rounding_generally_changes_fractional_gap_parts": true,
+    "generic_nonredundancy_counterexample": "w(t)=sin(pi*t)^2, a_01=1, b=0, g_0=3/2",
+    "actual_kernel_global_gain_proved": false
+  },
+  "negative_scope": {
+    "arbitrary_kkt_points": false,
+    "arbitrary_local_minima": false,
+    "arbitrary_sublevel_points": false,
+    "new_actual_global_floor_proved": false,
+    "unconditional_record_proved": false,
+    "website_ready": false
+  },
+  "execution": {
+    "source_reads_and_hashing_only": true,
+    "optimizer_calls": 0,
+    "kernel_numeric_evaluations": 0,
+    "cover_tree_scans": 0,
+    "lean_compilations": 0,
+    "lean_modules_added": 0
+  },
+  "next_gate": "Fix c_goal and a finite union U; certify on the full original pressure sublevel that D<=0, with any other explicitly retained necessary conditions, forces membership in U, and supply actual-kernel floor evidence and quantified whole-domain benefit. A feasible point satisfying all antecedents outside U falsifies that proposed classification.",
+  "note": {
+    "path": "research-goal-20261017-common-rounding-independent/NOTE.zh.md",
+    "bytes": 7439,
+    "sha256": "11c37475e495007e460c2b35dbc21265a2e94c54d28049e39e1e048890113ffd"
+  },
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1993,
+      "sha256": "28799a143fbc27684673e1976e0518ffe1898a5fc1e5577cbf1ef49661a69655"
+    },
+    {
+      "path": "research-goal-20261016/DIRECTION.zh.md",
+      "bytes": 7060,
+      "sha256": "931b48d3a9c513b27a67cafdc30a5cd7c32216386a446141408a9a7e9adc3217"
+    },
+    {
+      "path": "research-goal-20261016/direction-state.json",
+      "bytes": 2787,
+      "sha256": "751f6ab84f7ed540ab04838a1a381cbeda0f9fdc3aa2dde5b7978d1ee6dfb7c6"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowEnergy.lean",
+      "bytes": 11897,
+      "sha256": "ffb24882e2f7e588a5787c00dd4ba0a6139d7d99c788701890d3febb74b428d8"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowKernel.lean",
+      "bytes": 5762,
+      "sha256": "4c01794657e775391ba57642e7d753be961ac4e89e87c3f29109be8f5f05547e"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowGapEnergy.lean",
+      "bytes": 13554,
+      "sha256": "3f570bc83263355a239c086922e9bc138319fd2abd77668b594b5f94a5fd6564"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowMinimizerCover.lean",
+      "bytes": 3811,
+      "sha256": "ffbeccae4857ff0fb57f3b58c0bfa8f0a78f5d213d37782f0e948da1da455292"
+    },
+    {
+      "path": "StructuralGoal20261016/WindowGlobalCompetitor.lean",
+      "bytes": 4965,
+      "sha256": "33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966"
+    },
+    {
+      "path": "StructuralGoal20261016/MinimizerCover.lean",
+      "bytes": 4372,
+      "sha256": "7d3bbe16ecb0ea002554f29f261db259f7ce32d24482357fb903bc6e22ab6de1"
+    },
+    {
+      "path": "StructuralW10Followup20261016/NewLedger.lean",
+      "bytes": 4044,
+      "sha256": "9db3e7633a3117f4fded88998da4ab3ebc4e24631ac50816f23931bdb8225d1a"
+    },
+    {
+      "path": "research-goal-20261016/cover_global_cut_allmoves.py",
+      "bytes": 7728,
+      "sha256": "a5ee7ddc3251c69f9de0f4d481e7ae070ad952306a6f1e55653a9752eb9bb772"
+    },
+    {
+      "path": "research-goal-20261016/cover_global_cut_full_contractor.py",
+      "bytes": 8401,
+      "sha256": "fcf4ab73cf5ea5289fedd4a9587ef6ca566ad541e904cdb82955faca3dfffd1d"
+    },
+    {
+      "path": "research-goal-20261016/cover_global_move_portfolio.py",
+      "bytes": 7431,
+      "sha256": "e98feb7c013d3f449fcf849236bc788c0a8bd314a9c8ee519cf2e2e442de339c"
+    },
+    {
+      "path": "research-goal-20261016/cover_integer_move.py",
+      "bytes": 8341,
+      "sha256": "fe21adfb359a6096fb29f9fa3864a6b3cbce77467ef6c6427dadc32514c909ba"
+    }
+  ]
+}

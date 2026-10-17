@@ -1,0 +1,121 @@
+{
+  "schema": "separate-stdlib-fixed-global-gluing-dual-audit-v1",
+  "passed": true,
+  "dependency_files": [
+    {
+      "path": "GramDefect20261015/Core.lean",
+      "bytes": 1912350,
+      "sha256": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5"
+    },
+    {
+      "path": "StructuralResearch20261016/W10RefinedCandidate.lean",
+      "bytes": 3256,
+      "sha256": "0bd02171737c392c4e316df107c3744bf4ccee486875e3061dcee0a475afb8da"
+    },
+    {
+      "path": "StructuralW10Cert20261016/FinalConditional.lean",
+      "bytes": 4598,
+      "sha256": "6712abb9e41eec3beb0b9d1027341356b0b95259e5678a7b9f4d67c193cb2ceb"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/support-obstruction.json",
+      "bytes": 14864,
+      "sha256": "adad9dbc9ef49a7a024e6564247580cd5b9eeded2c90217ad795e2cea67d01c9"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/coefficient-gluing.json",
+      "bytes": 14159,
+      "sha256": "e39f511b50d8e45ecf9f058f3f717d050c2cd1c316e2d7c846031b833bbfc25b"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/presolver-failure.json",
+      "bytes": 407,
+      "sha256": "a1323a79d1a70fad0121a914abae1d1f113fa093f71066cb360f2a81cea8276a"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/coefficient_gluing.py",
+      "bytes": 7810,
+      "sha256": "f7ad5f1ac6db7064dd9174005fed3bf9de8c58cd08f7c69c7a971aa780b174e2"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/coefficient_gluing_presolver_failed.py",
+      "bytes": 7213,
+      "sha256": "ea810f97bd2f104f92684dc650ea27c98681d2b99f3da9bdd8ff800e79cfe5ce"
+    }
+  ],
+  "source": {
+    "path": "research-goal-20261017-ninepoint-decomposition-audit/verify.py",
+    "bytes": 7677,
+    "sha256": "fa8951defc4107603bd5231684d8309a2a2f816117c19024f8f2ce98deb7ccb5"
+  },
+  "ordered_embeddings_checked": 10,
+  "support_count_checks": [
+    {
+      "omitted": 9,
+      "positive_target_edges_in_subset": 33,
+      "clashes": 2
+    },
+    {
+      "omitted": 8,
+      "positive_target_edges_in_subset": 30,
+      "clashes": 4
+    },
+    {
+      "omitted": 7,
+      "positive_target_edges_in_subset": 31,
+      "clashes": 3
+    },
+    {
+      "omitted": 6,
+      "positive_target_edges_in_subset": 31,
+      "clashes": 3
+    },
+    {
+      "omitted": 5,
+      "positive_target_edges_in_subset": 31,
+      "clashes": 3
+    },
+    {
+      "omitted": 4,
+      "positive_target_edges_in_subset": 31,
+      "clashes": 3
+    },
+    {
+      "omitted": 3,
+      "positive_target_edges_in_subset": 31,
+      "clashes": 3
+    },
+    {
+      "omitted": 2,
+      "positive_target_edges_in_subset": 31,
+      "clashes": 3
+    },
+    {
+      "omitted": 1,
+      "positive_target_edges_in_subset": 30,
+      "clashes": 4
+    },
+    {
+      "omitted": 0,
+      "positive_target_edges_in_subset": 33,
+      "clashes": 2
+    }
+  ],
+  "capacity_rows_checked": 9,
+  "dual_columns_checked": 10,
+  "old_pair_mass": "1599999987/100000000",
+  "exact_dual_gap": "415840049321205857358084622229756774830910650924364438067713/41582608950710349523375345000000000000000000000000000000000000000",
+  "gap_hint": 1.0000335712800486e-05,
+  "family_cannot_reach_required_target": true,
+  "solver_output_optimality_assumed": false,
+  "producer_imports": 0,
+  "optimizer_calls": 0,
+  "NumPy_imports": 0,
+  "actual_kernel_evaluations": 0,
+  "tree_records_read": 0,
+  "Lean_invocations": 0,
+  "preexisting_analytic_theorems_reproved_here": false,
+  "new_global_floor_Lean_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false
+}
