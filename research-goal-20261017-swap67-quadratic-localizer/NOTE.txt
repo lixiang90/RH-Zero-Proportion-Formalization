@@ -1,0 +1,86 @@
+Fixed67 quadratic upper-difference localizer
+===========================================
+
+Only the fixed swap of zero-based gaps 6 and 7 is considered, at the NEW
+exact 714-moment point from the complete-eight-swap package. The old
+parent case, profile, target, scalar tables, and all domains are unchanged.
+There is no solver, scalar resampling, parameter scan, or Lean invocation.
+
+The new necessary condition is not another scalar bound on the objective.
+It retains a quadratic upper competitor difference Q2 and the position
+correlations in the 10x10 localizer E[Q2*z*z^T], z=(1,y0,...,y8). This fits
+within the existing degree-four shared moment representation.
+
+Pointwise construction and validity
+-----------------------------------
+Take the 16 normalized-W scalar packets referenced by maps[6] of
+swap-family-normalized.json.gz. For a transformed scalar use P4+E4; for
+an original scalar use -(P4-E4). Each such signed scalar polynomial has
+the exact form
+
+    P(d)=c0+c1*d+c2*d^2+c3*d^3+c4*d^4,  |d|<=R.
+
+Here all old/new coefficient errors and M5*R*d^4/120 payments have already
+been included. In particular c4 can have either sign. Define
+
+    q(d)=c0+c1*d+(c2+|c3|*R+max(c4,0)*R^2)*d^2.
+
+Then q-P is nonnegative for every |d|<=R. Its cubic component is
+
+    d^2*(|c3|*R-c3*d) >= 0.
+
+For c4>=0, the quartic component is c4*d^2*(R^2-d^2)>=0. For c4<=0,
+it is -c4*d^4>=0. These are exact scalar polynomial identities and domain
+implications; no approximation or sampling is used. The source explicitly
+checks each signed polynomial against its frozen packet and checks the
+factorized-difference coefficient identity.
+
+The weighted sum of q over the 16 signed scalar terms, together with the
+EXACT pressure change, is Q2. All ledger weights are nonnegative. Thus
+
+    Q2 >= D4upper >= Fw24(Tg)-Fw24(g)
+
+on the original parent cell. The unchanged 33 nonzero edge terms have
+already cancelled exactly. The actual Relevant predicate supplies global
+minimum over the entire SEP orthant, so
+
+    0 <= Fw24(Tg)-Fw24(g) <= D4upper <= Q2
+
+at a relevant minimizer. T need not remain in the parent cell or in its
+ordered subdomain; its original scalar envelopes are valid on the proved
+whole image intervals.
+
+For every affine function l(y), Q2*l(y)^2 is therefore nonnegative at
+such a minimizer. Taking moments gives the necessary matrix inequality
+
+    M1(Q2) = E[Q2*(1,y)*(1,y)^T] >= 0.
+
+The degree is 2+1+1=4, so all its entries use the SAME 715 moments. A
+scalar Q2 condition alone is weaker than scalar D4upper>=0. Nevertheless
+this matrix involves affine test functions and is not supplied by the
+eight scalar D4upper rows already checked in the frozen model. Whether it
+separates a particular pseudo-moment is a separate exact/numerical question.
+
+The one test and its limitation
+-------------------------------
+At the frozen new 714 point, the exact expectations, displayed here only
+as decimals, are
+
+    E[D4upper] approximately +0.000014487059480682778,
+    E[Q2]      approximately +0.0063768584878346425.
+
+The one authorized numpy.linalg.eigh of this fixed 10x10 exact-rational
+matrix gave minimum eigenvalue hint +0.00028049510197924847 and maximum
+hint +0.017108257086761308. Hence no integer-vector quantization was
+attempted. There is no negative-vector certificate, no new solver, and
+no cell exclusion. Positive floating eigenvalues are not claimed to be an
+exact PSD proof or a joint-model exact feasibility proof.
+
+The matrix, its rational hash, all signed reductions, final Q2, and its
+difference from D4upper are saved in swap67-q2-localizer.json. An
+independent stdlib replay, recorded separately when complete, checks the
+coefficients and matrix entries without repeating the eigensolve. The
+whole construction is conditional
+on the same actual scalar envelopes as the frozen packets. Generic actual
+global-competitor Lean logic is available, but no new concrete numerical
+envelope or localizer instance is Lean-checked here.

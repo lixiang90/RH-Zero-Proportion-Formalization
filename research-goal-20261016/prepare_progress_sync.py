@@ -206,10 +206,30 @@ def main():
       ('research-goal-20261017-swap-family-audit/audit-files.json','84c7564e8010896a795143bbf5b3823c20100ebf7d8ccd1bd8145ae8a3807fcd'),
       ('research-goal-20261017-swap-family-quartic/swap-family-files.json','c5801f1d784cbcbfb6e7b135490076340c004b19a067ce3ed7555431c0cab49d'),
       ('research-goal-20261017-swap-point-hessian/files.json','d170aad38757e1d6101d2a8cd8fb77bacf5388a033522a3d035e567142fc7fcd'),
-      ('research-goal-20261017-quartic-hessian-localizer/hessian-localizer-files.json','bcf5a8d24a7c2a55adec85567c6aac727c55b524ed882edc47ac31bf64fe18ab')]:
+      ('research-goal-20261017-quartic-hessian-localizer/hessian-localizer-files.json','bcf5a8d24a7c2a55adec85567c6aac727c55b524ed882edc47ac31bf64fe18ab'),
+      ('research-goal-20261017-local-phase/local-phase-files.json','5bd98be403f6738c378a1e174dba45a321f09bc202226b8702f11d36e5f3cd4b'),
+      ('research-goal-20261017-swap67-quadratic-localizer/q2-files.json','2683b0927c2dd60f70b9dc1e56fd69013b2b6e5c1e2ba79ca101c8c9b0c22b17'),
+      ('research-goal-20261017-swap67-q2-audit/audit-files.json','91c9ad31dfd4f4612d71eb55cde7bcdd4320c0aca8e07a282afc151b341279bb'),
+      ('research-goal-20261017-swap67-divided-difference/divided-files.json','f3a617be27477c26d12acb70850baf8df10194871a1998b658b7d0e1e192f802'),
+      ('research-goal-20261017-swap67-divided-audit/audit-files.json','1211af4ba21b2dc44df2ae5c82dc4deefb953d7c531c4d9a801e1b58d3fbbf29'),
+      ('research-goal-20261017-stationary-swap-audit/stationary-audit-files.json','2bee34739565a3027c108941ba97b45dae6ab0a4872f12be20acb58202f6d541'),
+      ('research-goal-20261017-degree6-review/degree6-review-files.json','8d2d3bcbba63cb7e49efe9905d0528f64b8d023ebba521470b259e0ad82ba9a9'),
+      ('research-goal-20261017-degree6-static/degree6-files.json','5087488b96c95d5f59adaf406ae8a208e9fdcbe26ca27178dd535ee41ff6c01f'),
+      ('research-goal-20261017-degree6-audit/degree6-audit-files.json','83641d25a1a080db1750c0c30975f92f10e189812050752f519fb5286bbbb789'),
+      ('research-goal-20261017-rankone-full8/files.json','11fefa4b3f1db11d68889ad2e03351fb5165a467d69088497550225c3d269bed'),
+      ('research-goal-20261017-sextic-envelope-plan/plan-files.json','efe5a4dd640004086f10ae9c98b03f9b6fcd729a331f869339950a031f397326'),
+      ('research-goal-20261017-period9-gate/files.json','e85f7d8998d32b3bc4496d70afce2db0d1f09ad5b84860c3ac98163c1194dde5'),
+      ('research-goal-20261017-degree6-run-audit/audit-files.json','b909eef7ffee44a05fc771c3cbbe9333f09bfa4b69082e730c375763996c5548'),
+      ('research-goal-20261017-degree6-cone/degree6-cone-files.json','6689194501b4e8613389da78ea95b04b7f2a7285215b82293a33cdbd8b844196')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
+        for runtime in pinned.get('runtime_dependency_files',[]):
+            # Bind the measured local runtime without publishing its
+            # platform-specific temporary installation as research source.
+            raw=(ROOT/runtime['path']).read_bytes()
+            assert hashlib.sha256(raw).hexdigest()==runtime['sha256']
+            if 'bytes' in runtime:assert len(raw)==runtime['bytes']
         rows=pinned.get('files',pinned.get('package_files'))
         if rows is None and 'files_sha256' in pinned:
             rows=[{'path':path,'sha256':digest,'bytes':(ROOT/path).stat().st_size}
@@ -229,6 +249,15 @@ def main():
         rows=(rows+pinned.get('frozen_input_files',[])+pinned.get('SCS_discovery_sources_unchanged',[])
               +pinned.get('dependencies',[])+pinned.get('dependency_files',[])
               +pinned.get('frozen_dependencies',[]))
+        if name=='research-goal-20261017-local-phase/local-phase-files.json':
+            source_index=json.loads((ROOT/pinned['dependency_index']['path']).read_bytes())
+            identity_rows=source_index['actual_identity_sources']+source_index['prior_work_reviewed']
+            rows+=identity_rows
+            rows += [row['ordinary_log'] for row in identity_rows if 'ordinary_log' in row]
+        if name=='research-goal-20261017-degree6-review/degree6-review-files.json':
+            embedding=json.loads((ROOT/pinned['external_model_source_index']['path']).read_bytes())
+            api=json.loads((ROOT/pinned['actual_API_source_index']['path']).read_bytes())
+            rows+=embedding['source_dependencies']+api['sources']
         if name=='research-goal-20261016/w10-size-merge-20261017/merge-files.json':
             # The published lossless pieces recreate these large audit inputs.
             # Verify their pins without also staging the duplicate raw caches.
@@ -244,11 +273,17 @@ def main():
             files.append(path)
         for row in rows:
             p=ROOT/row['path'];raw=p.read_bytes()
-            assert len(raw)==row['bytes'] and hashlib.sha256(raw).hexdigest()==row['sha256']
-            if (name=='research-goal-20261017-swap-family-quartic/swap-family-files.json'
-                and row['path'] in [
+            # Some independent addons pin dependencies by SHA256 alone;
+            # package rows additionally retain their explicit byte length.
+            assert hashlib.sha256(raw).hexdigest()==row['sha256']
+            if 'bytes' in row:assert len(raw)==row['bytes']
+            if row['path'].startswith('tmp/goal-20261016/python-sdp/'):
+                # Independent record audits may repeat runtime pins as
+                # dependencies. Verify them, but keep the install local.
+                continue
+            if row['path'] in [
                   'research-goal-20261017-swap-family-quartic/swap-family-quartic.json.gz',
-                  'research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz']):
+                  'research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz']:
                 # Both complete packets are reproduced from their published
                 # hash-checked pieces; do not stage a second copy of the bytes.
                 continue
@@ -303,6 +338,7 @@ def main():
       'window_generate_mixed_independent_roots.py','window-mixed-independent-roots.json',
       'window_mixed_independent_replay.py','window_archive_mixed_replay.py']]
     files=sorted(set(files));assert all((ROOT/p).is_file() for p in files)
+    assert not any(p.startswith('tmp/') for p in files),'Temporary runtime leaked into allowlist'
     # Keep the verified allowlist literal and avoid Windows' command-line
     # length limit as independent finite-check shards accumulate.
     pathspec=b'\0'.join(path.encode('utf8') for path in files)+b'\0'

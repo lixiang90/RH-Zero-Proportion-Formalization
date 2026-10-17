@@ -1,0 +1,246 @@
+{
+  "scope": "Freeze the static removable-pole review; never compile or run a solver.",
+  "actual_identity_sources": [
+    {
+      "path": "StructuralGoal20261016/WindowKernel.lean",
+      "bytes": 5762,
+      "sha256": "4c01794657e775391ba57642e7d753be961ac4e89e87c3f29109be8f5f05547e",
+      "relevant_definitions_or_theorems": [
+        "K_eq_sinc",
+        "K_zero",
+        "K_zero_pos",
+        "k",
+        "d24"
+      ],
+      "current_ordinary_module_passed": true,
+      "ordinary_log": {
+        "path": "research-goal-20261016/lean_WindowKernel_4c01794657e7.log",
+        "bytes": 669,
+        "sha256": "48fc69258db5eec38fd3fab1af522f571092e19ac5effb7d7f833ecf8c67d8ab"
+      }
+    },
+    {
+      "path": "StructuralGoal20261016/WindowEnergy.lean",
+      "bytes": 11897,
+      "sha256": "ffb24882e2f7e588a5787c00dd4ba0a6139d7d99c788701890d3febb74b428d8",
+      "relevant_definitions_or_theorems": [
+        "v",
+        "integral_v"
+      ],
+      "current_ordinary_module_passed": true,
+      "ordinary_log": {
+        "path": "research-goal-20261016/lean_WindowEnergy_ffb24882e2f7.log",
+        "bytes": 669,
+        "sha256": "514e1c0d2f815d9574db6596edf4c3483560859b592303860faf55d9b6d18ec7"
+      }
+    },
+    {
+      "path": "StructuralGoal20261016/WindowSincJet.lean",
+      "bytes": 9105,
+      "sha256": "3fd7aaa1b09db4339e305612462423ef39e1aa8cfd30becb97716e1c5ce638a2",
+      "relevant_definitions_or_theorems": [
+        "sincMoment_zero_order",
+        "sincMoment_at_zero",
+        "iterated_k_eq_finiteJet"
+      ],
+      "current_ordinary_module_passed": true,
+      "ordinary_log": {
+        "path": "research-goal-20261016/lean_WindowSincJet_3fd7aaa1b09d.log",
+        "bytes": 2673,
+        "sha256": "744257bfb221c7fb191e366d95fbd0eec8a1908649fc6a0e511a933781c333f1"
+      }
+    },
+    {
+      "path": "StructuralGoal20261016/WindowGramExpansion.lean",
+      "bytes": 3423,
+      "sha256": "c96182db1b236171b8dfa32b3e7a31a603ddf05a2f550ef86e95be040a0caf5f",
+      "relevant_definitions_or_theorems": [
+        "actual_energy_expansion",
+        "weight_nonneg"
+      ],
+      "current_ordinary_module_passed": true,
+      "ordinary_log": {
+        "path": "research-goal-20261016/lean_WindowGramExpansion_c96182db1b23.log",
+        "bytes": 403,
+        "sha256": "cfb0094bd052635fd69b431b245533f181b3e9afea946313a5154db8b6357d0d"
+      }
+    },
+    {
+      "path": "StructuralGoal20261016/WindowGlobalCompetitor.lean",
+      "bytes": 4965,
+      "sha256": "33d8e541251869193a9c4520a1ba6f06d10a9e7218af2e8b2941c5f2fe1c9966",
+      "relevant_definitions_or_theorems": [
+        "swapGap_feasible",
+        "swap_energy_le",
+        "upper_change_nonneg"
+      ],
+      "current_ordinary_module_passed": true,
+      "ordinary_log": {
+        "path": "research-goal-20261016/lean_WindowGlobalCompetitor_33d8e5412518.log",
+        "bytes": 1571,
+        "sha256": "96b9d46b6e2949ebc1b2d2ce379e54d798064fc470b3951a6a3c54b8dda343ca"
+      }
+    },
+    {
+      "path": "StructuralW10Followup20261016/NewWindows.lean",
+      "bytes": 2706,
+      "sha256": "d9ea408b5ae22c079a3090bb8dea36b1d7e8b7dab7778506f59daffa9c388a70",
+      "relevant_definitions_or_theorems": [
+        "nums24",
+        "c24"
+      ]
+    },
+    {
+      "path": "StructuralW10Followup20261016/NewLedger.lean",
+      "bytes": 4044,
+      "sha256": "9db3e7633a3117f4fded88998da4ab3ebc4e24631ac50816f23931bdb8225d1a",
+      "relevant_definitions_or_theorems": [
+        "aN",
+        "bN"
+      ]
+    },
+    {
+      "path": "formal/upstream/ajp88-reweighted-nine-point.lean",
+      "bytes": 1915423,
+      "sha256": "153e1ebfa23b5ef307dc39e36ee712d6f14d840b3b1fa5ff70b82e9dbc8dd244",
+      "relevant_definitions_or_theorems": [
+        "AMW.KMT",
+        "AMW.term_closed",
+        "AMW.KMT_eq_gamma"
+      ]
+    }
+  ],
+  "prior_work_reviewed": [
+    {
+      "path": "research-goal-20261016/window_phase_hermitian_audit.txt",
+      "bytes": 18492,
+      "sha256": "db6ac3c30d3bc991eee72475f40f2e16a25755ce61bfbfb0cdd47ff6df6abb90"
+    },
+    {
+      "path": "research-goal-20261016/window_phase_hermitian_diagnostic.py",
+      "bytes": 8909,
+      "sha256": "3828f10c08cc5c90a1872c502eb6f7476d488c167e30d728217b314fe75f5634"
+    },
+    {
+      "path": "research-goal-20261016/window_phase_hermitian_diagnostic.json",
+      "bytes": 52543,
+      "sha256": "babcf3204df816bde6c1edd838d72c66bed78b8af560a30346c0377f9023ae7a"
+    },
+    {
+      "path": "research-goal-20261016/window_joint_cycle_projection_note.txt",
+      "bytes": 9263,
+      "sha256": "afe1507dab43817e07d638ad05a533768efabcbf5d8190b8ad323e18467d8de5"
+    },
+    {
+      "path": "research-goal-20261016/window_joint_cycle_projection_audit.txt",
+      "bytes": 3687,
+      "sha256": "efd844818a3030ea2e5c6366d70035eff2616adfe9f747808e9d1e8f7ad6607f"
+    },
+    {
+      "path": "research-goal-20261016/window_joint_cycle_projection_probe.py",
+      "bytes": 14494,
+      "sha256": "327f66ff40dbc62661525ee6a35d06edd2feb514648b777c7efbe83748581e0f"
+    },
+    {
+      "path": "research-goal-20261016/window_phase_obstruction_and_PSD_weight_route.txt",
+      "bytes": 8938,
+      "sha256": "d78f96ae9578a4f0135cb57a3c3fae17ca8dbe9dda3d4bd1e946aabef18a8bfe"
+    },
+    {
+      "path": "research-goal-20261016/cover_phase_kkt_diagnostic.md",
+      "bytes": 3540,
+      "sha256": "be323a99d485fb29abd8b0ecfbed64fcc498fdc3e8bf63cd37622ef31d3ee187"
+    },
+    {
+      "path": "research-goal-20261016/cover_phase_kkt_probe.py",
+      "bytes": 12437,
+      "sha256": "a1388651245dc40841d194706a4ea3b8e0bf0baef659840badce11768b4f0d1e"
+    },
+    {
+      "path": "research-goal-20261016/cover_phase_kkt_graph_probe.py",
+      "bytes": 5781,
+      "sha256": "ba9ff10955e3d4c557fc5606c5abf9c7cf38598c5212d51d5457b9b5511e07a9"
+    },
+    {
+      "path": "research-goal-20261016/window_phase_coefficients.py",
+      "bytes": 15615,
+      "sha256": "b11340d96d02459a6b3f0a7882d8c81a3ef8c5c08dbcc1b2de22ff7194ed81c3"
+    }
+  ],
+  "fixed_pilot_design_only": {
+    "gaps": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "65/32",
+      "31/32",
+      "1"
+    ],
+    "triangle": [
+      6,
+      7,
+      8
+    ],
+    "all_gaps_strictly_above_sep": true,
+    "edges": [
+      {
+        "edge": [
+          6,
+          7
+        ],
+        "weight": "513175917/2000000000",
+        "span": "65/32",
+        "integer_label": 2,
+        "delta": "1/32",
+        "raw_cosine_sign": 1
+      },
+      {
+        "edge": [
+          7,
+          8
+        ],
+        "weight": "485225937/2500000000",
+        "span": "31/32",
+        "integer_label": 1,
+        "delta": "-1/32",
+        "raw_cosine_sign": -1
+      },
+      {
+        "edge": [
+          6,
+          8
+        ],
+        "weight": "784443699/5000000000",
+        "span": "3",
+        "integer_label": 3,
+        "delta": "0",
+        "raw_cosine_sign": -1
+      }
+    ],
+    "band": [
+      "abs(g6-2)<=1/32",
+      "abs(g7-1)<=1/32",
+      "abs(g6+g7-3)<=1/32"
+    ],
+    "pilot_executed": false,
+    "solver_calls": 0
+  },
+  "novelty_assessment": "The regular sinc/cos form is algebraically identical to the previous local phase audit; only a demonstrated joint phase-position/rank constraint or reduced uniform payment could strengthen a relaxation.",
+  "all_new_actual_coefficients_rational_numbers": false,
+  "coefficients_are_rational_functions_with_fixed_actual_real_constants": true,
+  "symbolic_audit": {
+    "path": "research-goal-20261017-local-phase/symbolic-identity-audit.json",
+    "bytes": 1540,
+    "sha256": "1c2cf6be6d204bc985c7ec09d8df9c2a8185e8962449b0144059491cf6f0efd9"
+  },
+  "new_point_evaluations": 0,
+  "new_Lean_invocations": 0,
+  "solver_calls": 0,
+  "new_actual_kernel_identity_Lean_proven": false,
+  "new_exclusion": false,
+  "new_global_cover": false,
+  "new_zero_proportion_proven": false
+}

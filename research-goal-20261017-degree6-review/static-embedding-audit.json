@@ -1,0 +1,104 @@
+{
+  "scope": "Static source/monomial audit, not a degree-six model builder or solver.",
+  "source_dependencies": [
+    {
+      "path": "research-goal-20261017-quartic/quartic-model.json.gz",
+      "bytes": 9516586,
+      "sha256": "080f60fe1a3392e12a37219be13cbd6d9ae305651acebfe01fa1920a74e11233"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic_static.py",
+      "bytes": 13548,
+      "sha256": "1767d35c2ccc0554b25e31f357fc7329b5144516e5f5a6cc3eb40d3399e648d7"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic-files.json",
+      "bytes": 5007,
+      "sha256": "4a0681e23ea0810c9b7656ba120189c97911d41fa3ea958766aa660f61d189c1"
+    },
+    {
+      "path": "research-goal-20261017-quartic/quartic_positivity_erratum.txt",
+      "bytes": 1149,
+      "sha256": "0c11285489433eb46109ac05f20e48b1d93693fcf5205194ca4f026957582044"
+    },
+    {
+      "path": "research-goal-20261017-swap-family-quartic/swap-family-normalized.json.gz",
+      "bytes": 6180693,
+      "sha256": "293ef092f90b1a18e96cf45552afb55a76ebc7b94324126ef04ea567504c248a"
+    },
+    {
+      "path": "research-goal-20261017-swap-family-quartic/swap_family_normalized_static.py",
+      "bytes": 13512,
+      "sha256": "1b869f910263bee34dd3242e5a550f191e13ffac880ee9505004cfbc37b66daf"
+    },
+    {
+      "path": "research-goal-20261017-swap-family-quartic/swap-family-files.json",
+      "bytes": 11896,
+      "sha256": "c5801f1d784cbcbfb6e7b135490076340c004b19a067ce3ed7555431c0cab49d"
+    },
+    {
+      "path": "research-goal-20261017-stationary-swap/stationary-swap-static.json",
+      "bytes": 1940677,
+      "sha256": "10c2275dbb9eb460d594a97436c39ee82f9ecfd90b5f198b729caf790eaff38d"
+    },
+    {
+      "path": "research-goal-20261017-stationary-swap/stationary_swap_static.py",
+      "bytes": 10833,
+      "sha256": "73df2f07b1aa8e478ed0917af533553065327dfedef7452d52d320383f5492e8"
+    }
+  ],
+  "old_KKT_rows_exactly_match_E_plus_or_minus_P": 180,
+  "all_nine_coordinates_free_margins_SC_units": [
+    760,
+    1401,
+    943,
+    958,
+    977,
+    1127,
+    32691,
+    30196,
+    26915
+  ],
+  "old_PSD_entries_checked_against_multiplier_times_monomials": 4070,
+  "old_monomial_prefix_preserved": true,
+  "new_moment_count_including_constant": 5005,
+  "new_nonconstant_moments": 5004,
+  "old_slack_column": 714,
+  "required_new_slack_column": 5004,
+  "new_meaning_of_column_714": "y0^5",
+  "old_slack_occurrences": [
+    {
+      "row": 5793,
+      "meta": [
+        "quartic_energy_only_slack"
+      ]
+    },
+    {
+      "row": 5794,
+      "meta": [
+        "energy_slack_nonnegative"
+      ]
+    }
+  ],
+  "old_5795_plus_8_rows_referenced_intact": true,
+  "new_basis_sizes": [
+    220,
+    55,
+    10
+  ],
+  "expected_new_blocks": 73,
+  "expected_new_lower_triangle_entries": 96580,
+  "new_degree5_degree6_moments": 4290,
+  "new_all_even_moments": 165,
+  "new_moment_box_rows": 8580,
+  "expected_scalar_rows_after_boxes": 14383,
+  "positive_h_lower_bound": "117/32768",
+  "new_model_built_or_implementation_audited": false,
+  "new_points": 0,
+  "solver_calls": 0,
+  "Lean_invocations": 0,
+  "old_exact714_extension_decided": false,
+  "strict_projection_shrink_proved": false,
+  "new_exclusion": false,
+  "new_zero_proportion_proven": false
+}

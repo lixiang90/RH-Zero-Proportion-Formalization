@@ -1,0 +1,25 @@
+Independent fixed67 Q2 audit (2026-10-17)
+
+Run from the repository root:
+  python research-goal-20261017-swap67-q2-audit/independent_replay.py
+The default is read-only. --write-receipt creates the absent receipt once.
+
+The independent stdlib implementation reconstructs all sixteen signed
+scalar quartics, applies c3*d^3 <= |c3|*R*d^2 and
+c4*d^4 <= max(c4,0)*R^2*d^2 for |d| <= R, then aggregates positive
+edge weights in the original nine normalized gap variables. It verifies
+the old/new whole-image DBM bounds and all argument maps. The old
+450-term D4 row is exactly preserved; the Q2 upper row has44 terms.
+All55 independent entries of E[Q2*(1,y)*(1,y)^T], all100 serialized
+symmetric entries, the matrix SHA and both expectations are rebuilt.
+
+This addon performs zero producer imports, eigensolves, optimizations or
+Lean invocations. It does not turn the producer's positive eigenvalue
+hint into an exact PSD claim. E[Q2] is positive, so there is no new
+separating witness here. Concrete scalar analytic premises are inherited
+from the hash-bound family audit; no new actual-kernel Lean proof, cell
+exclusion, full cover or zero-proportion record is claimed.
+
+The producer package and previous audit files remain unchanged. The
+receipt pins all consumed sources at start/end. This small addon is
+intended to be read with the already frozen family/single67 packages.

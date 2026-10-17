@@ -1,0 +1,38 @@
+One fixed-seed rank-one full-eight outer-model pilot (2026-10-17)
+
+This package contains exactly one nonlinear optimizer call: L-BFGS-B with
+analytic Jacobian, bounds [-1,1]^9, the first nine moments of the frozen
+f0498ca4... exact714 point as its sole seed, maxiter500 and a30-second
+objective/callback deadline. It minimizes the squared positive normalized
+violations of all5795 old rows plus the eight frozen adjacent-swap rows,
+with energy slack fixed0, and all47 PSD-localizer q00 inequalities.
+Original scalar row scales are unchanged; q00 scales are explicitly saved.
+No new point/Taylor sampling, polynomial rows, seed, algorithm, PSD cuts,
+SCS call, precision repair or alternative attempt was used.
+
+The single run ended normally after223 iterations/307 evaluations and
+about .620 optimizer seconds. Its normalized squared penalty is about
+.365706529, with maximum violation about .461434861. A small penalty
+would not itself be a witness, and this run does not even attain that.
+
+The candidate was converted exactly once as Fraction(str(float(y_i))),
+without repair. The independent stdlib checker evaluates all5803 rows,
+reconstructs every pointwise polynomial identity q(y)*v(y)*v(y)^T, and
+checks all4070 serialized entries in the47 blocks. The arithmetic audit
+passes, but188 rows have negative slack and three q00 multipliers are
+negative. Violations include176 slack-pair RLT rows, eight KKT-error
+rows, two DBM rows, the quartic energy row and one adjacent-swap row.
+Negative localizer multipliers are the old quadratic sublevel row and
+span-product16/26. The result is NOT a rank-one outer-model witness.
+Failure of this one local search does NOT prove no rank-one point exists.
+
+All conclusions concern only the frozen Taylor outer relaxation. No
+actual function value, actual KKT equation, actual sublevel, global
+minimum/cell exclusion, full cover or zero-proportion record is proved.
+
+Reproduce the exact arithmetic without re-running the optimizer:
+  python research-goal-20261017-rankone-full8/independent_replay.py
+The optimizer intentionally refuses to run if optimizer-started.json or
+rankone-pilot.json exists, preventing an accidental second attempt.
+The independent checker defaults to read-only; --write-receipt creates
+the absent receipt once. Old producer/model/pin files were not changed.

@@ -1,0 +1,41 @@
+Independent completed-degree6-run audit (2026-10-17)
+
+This addon reads only the frozen worker/monitor source, receipts, build
+metadata and complete compressed hint payload. It does not import a
+producer or solver, reconstruct a matrix, evaluate a new point, repeat
+an eigenvalue computation, or check numerical hints as exact feasibility.
+
+The configured model is complete:5005 variables (5004 moments plus slack),
+old slack714 remapped to5004,14383 scalar rows,73 PSD blocks and96580
+lower-triangle entries. The worker uses a positive rational uniform
+divisor per PSD block and standard column-major svec with sqrt2 on
+off-diagonal entries, so b-Ax is the scaled matrix. The fixed-point
+packing check is recorded by the worker and not re-executed by this audit.
+The corrected diagnostic stationarity expression is A.T@y+c, matching
+the SCS primal Ax+s=b,min c'x convention.
+
+Only PID20232 was launched and monitored. There was one solver object,
+one cold CPU_INDIRECT solve, no retry or warm start, eps_abs/rel1e-6,
+max_iters1000 and configured time_limit_secs45. The worker exited0 and
+the parent observed a peak working set391667712B, below1.5GiB.
+
+The solver returned225 iterations and status
+  solved (inaccurate - reached time_limit_secs)
+after51.8701857 seconds including setup (internal solve51.5954418s).
+The configured45 seconds was NOT a hard wall-clock stop. Solver-internal
+stopping checks returned later; no tighter runtime guarantee is claimed.
+Reported primal/dual residuals are about.01146216/.02698853 and the
+reported smallest PSD eigenvalue hint is-.00680468. All saved x/y/s
+entries are finite, with lengths5005/110963/110963, but these arrays
+are NOT exact feasible points or an infeasibility certificate. The
+recorded positive-slack and infeasible-ray hints are both false.
+
+The exact compressed/uncompressed hashes, source hashes at start/end,
+configuration and monitor counts are independently checked. No actual
+analytic-to-Lean instance, exact exclusion, full cover or improved
+zero-proportion theorem is established by this numerical attempt.
+
+Read-only reproduction:
+ python research-goal-20261017-degree6-run-audit/independent_replay.py
+--write-receipt creates an absent receipt once. All original files remain
+unchanged. The addon pin references the original package as dependencies.

@@ -888,3 +888,58 @@ The remaining actual-envelope proof duties are laid out in
 comparison confirms that normalized-W fifth-derivative bounds can retain
 the old single-swap M5 maxima, but those finite checks still need Lean
 instances. No full floor or submission-ready proportion follows.
+
+## Sixth moments and the analytic-versus-moment gap
+
+Three further fixed comparisons have independent exact replays: the
+swap67 quadratic upper localizer, the positive-divided derivative integral,
+and its stationary second-divided curvature integral. All three give positive
+upper expectations at the latest exact pseudo-point, so none rejects it.
+The last condition is an exact re-expression of the same actual global swap
+and free stationarity conditions; a tighter finite envelope could help, but
+it is not an independent new actual hypothesis.
+
+One fixed-start L-BFGS-B attempt to find an ordinary nine-variable feasible
+point failed its unadjusted rational replay: 188 scalar rows and three
+localizer multipliers have the wrong sign. It is not a rank-one witness and
+does not prove that no such witness exists. See
+`research-goal-20261017-rankone-full8/files.json`.
+
+The canonical degree-six extension has now been fully constructed as a
+factored exact map: 5,004 moment columns plus one diagnostic slack, 14,383
+scalar rows, and 73 complete PSD blocks. All 96,580 lower-triangle entry
+references, all 5,803 retained rows, all 4,070 old principal entries, the
+18 legal E4+/-P3 multipliers and all 8,580 new moment bounds have an
+independent standard-library replay. Only the old slack column moves from
+714 to 5004. The static build's measured peak working set is about 163 MiB;
+this does not bound a future numerical solver's memory or guarantee
+convergence. See `research-goal-20261017-degree6-static/degree6-files.json`.
+
+This extension retains the old scalar envelopes. A feasible ordinary point
+of their polynomial outer model would have Dirac extensions at every moment
+order, regardless of whether it is an actual stationary point. The failed
+single fit has not established that obstruction. The separate reviewed
+`research-goal-20261017-sextic-envelope-plan/PLAN.md` specifies how normalized-W
+jets0..6 and seventh-derivative bounds could instead add new analytic
+information: an absolute sextic energy minorant and a fifth-degree gradient
+with sixth-degree error. It is a specification, not a finite numerical
+packet or a Lean proof. The existing analytic literal obligations remain
+explicit, and no new unconditional proportion or website-ready submission
+is asserted.
+
+The sole full degree-six CPU-indirect SCS attempt subsequently reached its
+configured 45-second time limit at iteration 225, returning after about
+51.87 seconds including setup. Residuals remain about .01146 primal and
+.02699 dual; the minimum normalized PSD eigenvalue is about -.00680.
+This is neither a feasible point nor an exclusion certificate. No iterate
+repair or numerical retry was made; the complete raw vectors are retained.
+
+A separate fixed period-nine necessary test for a bounded overlapping
+potential gives an actual interval average near .024153633093. It does not
+refute either target floor, but proves no uniform mean floor. Exact
+incompatibility of the hard cell and its reversal in adjacent windows also
+does not supply such a floor: the cell comes from minimizer-only
+contractions, and does not classify arbitrary low-energy windows. A new
+potential would require a new cover of the modified energy, with its
+pressure root and KKT conditions changed accordingly. See
+`research-goal-20261017-period9-gate/NOTE.txt`.

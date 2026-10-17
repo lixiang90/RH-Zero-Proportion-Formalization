@@ -1,0 +1,80 @@
+One fixed period9 overlap-potential necessary gate (2026-10-17)
+
+Source: the normalized_gap_center of the frozen hard parent
+r001000001000100110011001 in quartic-model.json.gz. This exact rational
+nine-gap vector is repeated periodically without adjustment. It satisfies
+the original orthant separation123/128. We do NOT assert that the center
+satisfies every DBM constraint of its source cell, or that it is a minimum.
+
+The nine cyclic windows are evaluated with the actual fixed v24 normalized-W
+Taylor23 coefficient intervals, order24 bound (44/7)^24, original41 positive
+ledger edges and positive pressure. There are369 edge evaluations and73
+unique scalar spans. A separate rank-length aggregate gives exactly the
+same interval. No new table, LP, V fit, optimizer, point scan or Lean is used.
+
+The certified arithmetic interval for this single cycle's mean is
+approximately [.024153633093156088, .024153633093581317]. It is strictly
+above both221/25000=.00884 and11/1250=.0088. This cycle therefore supplies
+no obstruction to either target. It proves NO global mean floor, overlap
+inequality, actual minimum, complete cover or zero-proportion improvement.
+
+The necessary comparison is exact: for any function V of eight gaps, if
+F(g)+V(g0,...,g7)-V(g1,...,g8)>=c holds for EVERY separated nine-gap g,
+summing these nine cyclic windows cancels V exactly, so c<=meanF. No
+boundedness of V is needed for this finite periodic identity; boundedness
+is needed for a uniform endpoint payment in general finite strings.
+
+Old overlap route and its limits
+--------------------------------
+docs/structural-research-20261016.md already describes a W9 seven-gap
+piecewise affine/three-class potential, c=.008598, osc(V)<=.00276. Its
+conditional kappa .6735829971738194 is BELOW the present goal
+.673591307708. Its numerical exceptional-cell replay does not instantiate
+the full local inequality in Lean. This is old work, not a new result.
+The current energy uses W10/nine gaps, a different24-mode kernel, different
+ledger and sep123/128. Its natural overlap state has eight gaps. Neither
+the old inequality nor its finite cover transfers by changing the state
+dimension. The pure telescoping logic is reusable, but the actual local
+inequality, finite data and counting-interface instantiation must be new.
+
+Exact four-way incompatibility of this C and R=reverse(C)
+--------------------------------------------------------
+All bounds below are integers with denominator32768. Consecutive windows
+must equate old gap k with next gap k-1. The source adjacent bounds are:
+ L=[32248,32889,32431,32446,32465,32615,64179,61684,58403]
+ U=[41491,41360,35476,35317,35246,35506,84665,64062,59986]
+ C -> C: old g6>=64179 > next g5<=35506.
+ C -> R: old g1<=41360 < next R0=Cg8>=58403.
+ R -> C: old R1=Cg7>=61684 > next g0<=41491.
+ R -> R: old R3=Cg5<=35506 < next R2=Cg6>=64179.
+Thus no two consecutive separated windows both belong to C union R.
+This is only a compatibility observation about these exact boxes.
+
+Possible two-window sufficient condition -- NOT PROVED
+------------------------------------------------------
+Let B=C union R. Suppose one proves, on the complete separated orthant:
+ (1) every window outside B has F>=c;
+ (2) every window in B, and every feasible appended gap t, satisfies
+     F(g0,...,g8)+F(g1,...,g8,t)>=2c;
+ (3) a uniform finite lower bound holds for an unpaired endpoint window.
+Then greedily pairing each B-window with its successor gives an average
+floor with an O(1) endpoint charge. With global F>=0 that charge is at
+most c. The four-way observation shows a B-successor lies outside B,
+but does not establish (1), (2), or any surplus on that successor.
+Other bad cells can be adjacent to B and must not be silently omitted.
+
+CRITICAL applicability gap: the current search is a global-minimizer
+cover, using KKT, energy-sublevel OBBT and Newton contractions. Its
+retained C is NOT a cover of every arbitrary low-energy window. A
+stationary/global-minimum exclusion outside C does not prove (1) for
+all windows. The old minimizer-only cover therefore cannot be plugged
+into the greedy/mean argument. A new pointwise two-window/value cover,
+or a separately proved complete arbitrary-low-window classification,
+would be required. The period9 necessary test above does not depend
+on any such classification and remains valid independently.
+
+Reproduce the read-only arithmetic:
+ python research-goal-20261017-period9-gate/period9_gate.py
+--write-receipt creates an absent receipt once. Consumed sources and the
+published table-identity receipt are hash-bound; this script does not
+newly prove their actual scalar analytic obligations in Lean.

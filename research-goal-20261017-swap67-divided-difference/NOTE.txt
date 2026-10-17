@@ -1,0 +1,59 @@
+Positive-divided global comparison for fixed swap(6,7)
+=====================================================
+
+The original parent cell proves
+
+    h=g6-g7 >= (64179-64062)/32768 = 117/32768 > 0.
+
+The exact pressure difference is h*(b7-b6). Each changed left-incident
+span is s-h; the right-incident span is s+h. The fundamental theorem of
+calculus therefore gives the actual identity DeltaF=h*G, where
+
+    G=(b7-b6) - sum_left a*integral_0^1 w'(s-theta*h) dtheta
+                 + sum_right a*integral_0^1 w'(s+theta*h) dtheta.
+
+Global minimality over the full SEP orthant implies DeltaF>=0 and hence
+G>=0. This is division by a positive FUNCTION with a proved lower bound,
+not division of an old row by the midpoint value of h. It can yield a
+different moment inequality even though the actual global comparison
+is the same. All normalized y correlations and the path variable theta
+must be retained when constructing an upper bound on G.
+
+Each of the eight changed paths lies in the convex hull of its OLD and
+NEW DBM-derived scalar domains. The anchor is the deterministic midpoint
+of that whole hull, radius R its half-width. Normalized actual-W integer
+coefficients give jets mu1,...,mu5 and their errors eps1,...,eps5. The
+sixth derivative bound uses q=6,d=17, eighteen Taylor terms, with
+(44/7)^24*(1/2)^18/18! remainder on each old 1/64 grid cell. No actual
+kernel sampling positions or coefficient tables are added.
+
+For delta(theta)=s+sign*theta*h-p, a quartic w' polynomial has error
+
+    eps1+eps2*R
+      +(eps3/2+eps4*R/6)*delta^2
+      +(eps5/24+M6*R/120)*delta^4.
+
+The last term pays M6*abs(delta)^5/120 by using abs(delta)<=R. All
+errors have positive sign even when the derivative central polynomial
+has negative sign for a left edge. Every theta power is integrated
+EXACTLY as integral_0^1 theta^r=1/(r+1), before applying the shared 714
+moments. There is no independent averaging of endpoint errors or moments.
+
+The sole fixed result is NOT a separation:
+
+    central derivative integrals + pressure approximately -0.00226365316,
+    all error payments                         approximately +0.00885121042,
+    upper-G expectation                        approximately +0.00658755726.
+
+The exact Fraction and 495 polynomial coefficients are saved. A separate
+stdlib audit uses a tenth formal theta variable, expands it directly,
+then integrates each power; it independently reproduces all eight paths,
+all 391 selected sixth-derivative cells, and the exact expectation. The
+audit passed in 0.684 seconds. Its small pin is
+research-goal-20261017-swap67-divided-audit/audit-files.json, SHA256
+1211af4ba21b2dc44df2ae5c82dc4deefb953d7c531c4d9a801e1b58d3fbbf29.
+
+There is no solver, alternative anchor, h-threshold adjustment, retry,
+new zero-proportion result, or cell exclusion. The actual FTC identity
+and concrete scalar-envelope instances have not newly been checked in
+Lean. The analytic smoothness/enclosure premises remain explicit.

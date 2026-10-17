@@ -1,0 +1,41 @@
+{
+  "scope": "Exact symbolic rational cross-multiplication of the regular local formula.\n\nThe stated sinc periodicity and sin/cos substitutions are assumptions of this\nalgebra audit. No point evaluation, transcendental approximation, solver, Lean\nor search is run. Actual analytic sources and domains are recorded separately.\n",
+  "status": "symbolic_rational_identities_verified_under_stated_trigonometric_substitutions",
+  "indeterminates": [
+    "x",
+    "n",
+    "j",
+    "pi",
+    "alpha",
+    "Z",
+    "S",
+    "c",
+    "sigma_n",
+    "sigma_j",
+    "d_n",
+    "d_j"
+  ],
+  "coefficient_ring": "integer multivariate polynomials with rational-function fractions",
+  "checks": [
+    "normalized_base_two_phase_terms",
+    "active_sinc_pair_without_delta_division",
+    "arbitrary_nonactive_mode",
+    "combined_local_formula",
+    "active_centre_value"
+  ],
+  "all_cross_multiplied_polynomials_exactly_zero": true,
+  "assumed_analytic_inputs": [
+    "sin(pi*x)=(-1)^n*pi*(x-n)*sinc(pi*(x-n))",
+    "cos(pi*x)=(-1)^n*cos(pi*(x-n))",
+    "active paired-sinc periodicity including x=n",
+    "actual finite-sinc and normalized base formulas",
+    "stated domain makes all displayed denominators nonzero"
+  ],
+  "source_sha256": "310d58ca8187ffa3e38e3fb72fe5ef856fb3f55d9dc479100f3472b6cda14467",
+  "new_point_evaluations": 0,
+  "solver_calls": 0,
+  "Lean_invocations": 0,
+  "new_actual_kernel_identity_Lean_proven": false,
+  "new_exclusion": false,
+  "elapsed_seconds": 0.0020270000022719614
+}

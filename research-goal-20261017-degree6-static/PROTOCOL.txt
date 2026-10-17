@@ -1,0 +1,196 @@
+Canonical degree-six shared-moment extension: STATIC prototype
+==============================================================
+
+Scope and result
+----------------
+This is one fully constructed sparse/factored algebraic model at the same
+case r001000001000100110011001, SEP=123/128, c=11/1250. There is no solver,
+new point, actual scalar sampling, sixth-order Taylor packet, compiler,
+cloud operation, feasibility test, or cell exclusion. The construction
+preserves the old model in projection and adds valid moment/localizer
+conditions, conditional on the same explicit actual analytic premises.
+Whether its projection is STRICTLY smaller for this cell is not proved.
+No extension of the existing exact714 pseudo-moment is attempted here.
+
+The actual static build finished in 3.331 seconds with Windows
+GetProcessMemoryInfo peak working set 170799104 bytes (about 162.9 MiB).
+Every resource snapshot, source hash at both ends, artifact hash and exact
+count is in degree6-build.json. The 1.5 GiB peak-working-set and 40 MiB
+uncompressed-single-file guards passed. All files are research data;
+this is not a website 2MB Lean-source submission claim.
+
+Monomials, slack, and scalar constraints
+---------------------------------------
+There are nine underlying normalized REAL variables y. Canonical sorted
+tuples enumerate every monomial by total degree from zero through six,
+using combinations_with_replacement for each degree. There are 5005
+monomials including fixed constant1, hence 5004 moment columns. The old
+715 monomials through degree four are exactly the prefix of this list.
+
+MOMENT ID zero means fixed1. Every other moment ID k maps to optimization
+column k-1. Column5004 is the separate diagnostic energy slack, not an
+underlying variable and never a moment or power in a PSD block.
+
+All 5803 old scalar rows are retained from their frozen byte sources in
+the SAME order: 5795 old rows followed by the eight global-swap rows.
+Only the old slack COLUMN714 is remapped to5004. Old moment columns0..713
+are unchanged. In particular old MOMENT ID714 maps to column713, while
+NEW column714 now denotes degree-five monomial y0^5. Confusing columns
+and moment IDs would silently corrupt this embedding.
+
+The adapter is reversible and is checked on every coefficient. The only
+old slack occurrences are original rows5793 and5794. The exact canonical
+JSONL hash of all mapped rows is stored. No old scale, bound, metadata,
+sign, normalization, or actual coefficient value is changed. The old
+quadratic sublevel multiplier remains unsoftened; the old quartic energy
+row remains the only softened energy inequality.
+
+All 4290 new degree-five/six moments have explicit bounds. Each actual
+y_i is in[-1,1], so -1<=y^alpha<=1. For all-even alpha the sharper lower
+bound is0. Exactly165 of the new moments are all-even (all degree six).
+The stored triplet[column,lo,hi] means TWO actual scalar rows,
+-moment<=-lo followed by moment<=hi. Thus 8580 new one-sparse rows are
+present, and the total scalar-row count is14383. No new moment is left
+unbounded through an omitted box condition.
+
+Exactly73 PSD blocks, without dropping constraints
+--------------------------------------------------
+The multiplier q and basis v define E[q*v*v^T]. The block list is:
+
+    1 shared M3 block, basis degree<=3, size220;
+    46 original quadratic multipliers, basis degree<=2, size55;
+    8 global-swap D4 multipliers, basis degree<=1, size10;
+    18 actual free-KKT E4+/-P3 multipliers, basis degree<=1, size10.
+
+The first46 quadratic multipliers consist of the original unsoftened L2
+sublevel and45 DBM span-product multipliers; their values and scales are
+identical to the old blocks. Counts: 24310+46*1540+26*55=96580 lower-
+triangle entries. These are all built. No chordal subset, restricted
+basis, selected direction, sampled test vector, or sparse relaxation is
+substituted for a full block. Factoring the coefficient representation
+changes only storage, not the mathematical PSD constraints.
+
+The old shared M2 is the first55 principal indices of M3. Each original
+10x10 localizer is the first10 principal indices of its upgraded55 block.
+All4070 old stored matrix-entry coefficient forms are compared exactly
+to the new target-index plans and the old multiplier coefficients. Hence
+the old PSD conditions are actual principal submatrices, not merely
+claimed to be heuristically covered by a new moment matrix.
+
+The KKT sign is important. The old interface gives
+
+    abs(actual_gradient_r-P3_r)<=E4_r.
+
+All nine adjacent lower endpoints exceed the original SEP, so every
+actual relevant minimizer in this cell has actual_gradient_r=0. The
+necessary nonnegative polynomials are E4_r+P3_r and E4_r-P3_r. The
+alternative P3_r-E4_r>=0 is false in general and is NOT used. The source
+checks all180 old scalar KKT rows E4_r+sign*y_s*P3_r (including y_s=1)
+against the frozen exact coefficient convention before extracting these
+18 multiplier polynomials. It does not mistakenly use an already
+y-multiplied row as the original derivative residual.
+
+The eight D4 polynomials are the complete natural adjacent-swap family
+from the normalized-W packet. At a genuine global minimum in the full
+SEP orthant, F(Tg)-F(g)>=0 and D4>=F(Tg)-F(g), so D4>=0. Their localizers
+therefore retain new affine-position correlations. They are not asserted
+nonnegative at every arbitrary point of the parent cell. The same
+distinction applies to the KKT multipliers. Geometry multipliers hold
+throughout the cell; (c-L2)/c requires L2<=F<c and c>0.
+
+Factored format: every entry can be recovered exactly
+------------------------------------------------------
+degree6-model.json.gz is an ordinary JSON document after decompression.
+It contains all5005 canonical monomials, all73 multiplier coefficient
+lists, all73 block bases and offsets, all39325 unique entry plans, every
+new moment box and the old-row adapter. Its actual raw size is4337101
+bytes, compressed size1350684 bytes.
+
+Each multiplier coefficient is stored ONCE as an exact Fraction string.
+For an entry with basis monomials beta_i,beta_j, let shift=beta_i+beta_j.
+An entry plan contains
+
+    [multiplierID,shiftMonomialID,targetIndexOffset,numberOfTerms].
+
+For each ordered multiplier term (alpha,a), the target moment ID is
+ID(alpha+shift). The binary target array stores these IDs as little-
+endian uint16. A fixed shift is injective on alpha, so no two coefficient
+terms collide and no numeric cancellation or rounding is hidden in this
+representation. There are1416525 such plan target references, in2833050
+bytes. Every reference is actually generated and range-checked.
+
+There are96580 block-entry PLAN references in the second binary file,
+little-endian uint32,386320 bytes. Each block's entries are ordered by
+column j, then row i>=j; the offset formula is j*n-j*(j-1)/2+i-j. There
+are39325 unique plans: 5005 for M3,46*715 for quadratic multipliers, and
+26*55 for quartic multipliers. Both binaries have explicit byte lengths
+and hashes in the JSON and receipt. All targets refer to fixed1 or an
+actual moment, never to the energy slack.
+
+To recover an entry, read its plan, fetch that multiplier's ordered
+coefficient list, fetch the equal-length target-ID slice, and sum
+
+    coefficient[j] * moment[targetID[j]].
+
+This is a full exact linear form, not an oracle requiring a producer or
+an optimizer. No repeated giant Fraction matrix was materialized. The
+naive repeated coefficient TEXT alone would occupy at least207370570
+bytes, before target indices or JSON overhead. That counterfactual
+expanded representation exceeds the file guard; it is not written.
+
+Cost if a future solver is separately authorized
+------------------------------------------------
+The actual symbolic mapping corresponds to2034707 PSD variable nonzeros
+and212980 scalar variable nonzeros, total2247687. It has110963 packed
+conic rows and5005 optimization columns. These counts exclude fixed
+constant terms from the matrix and include the remapped slack and boxes.
+No sparse numerical matrix or SCS workspace is allocated by this STATIC
+prototype.
+
+A float64/int32 CSC coefficient matrix alone would be about27 MB, but
+COO assembly, PSD workspaces and a direct KKT factorization would add
+memory. Direct-factor fill and convergence time have not been measured.
+PSD eigensolver work grows considerably: the sum of block size cubed is
+about18.3 million per projection, compared with about0.21 million for the
+old47-block layout. Actual BLAS performance, sparsity and solver iteration
+counts do not follow from this arithmetic estimate. A45-second capped
+solve could be feasible to ATTEMPT, but convergence or a1.5GiB solver
+workspace is not guaranteed by the low STATIC working set. No timing
+estimate is presented as measured solve performance.
+
+Analytic and mathematical limits
+--------------------------------
+This level extension reuses the old scalar P3/E4 and L2/L4 enclosures and
+the eight normalized-W D4 polynomials. The old derivative literals, F0,
+whole-span remainder bounds, concrete normalized-W packet instances and
+actual-envelope-to-polynomial bridges remain the explicit obligations
+listed in the separate degree6-review package. Increasing moment order
+does not discharge any such analytic premise.
+
+If a rank-one point satisfies all underlying old polynomial rows and
+nonnegative multipliers, its true higher monomials extend it at every
+order. A failed numerical rank-one fit does not prove no such point
+exists. The present build neither finds nor rules out such a point, and
+does not show the existing 714-moment witness has no degree-six extension.
+Consequently it proves only a reproducible resource-feasible STATIC model
+with old constraints preserved, not strict strengthening for this cell,
+global coverage, or an unconditional zero-proportion record.
+
+Independent completed representation replay
+-------------------------------------------
+The independent decoder ran once under python -S and passed in1.961s.
+It imported no producer and used only the standard library. All39325
+plans and1416525 targets were checked for exact monomial addition and
+injectivity, every target/entry stream was fully consumed, all96580
+entry references were checked, and all4070 old principal coefficient
+forms were equal. It separately checked the18 legal E+/-P multipliers,
+all180 original KKT rows, the5803-row adapter/hash and all4290 new boxes.
+The input hashes were unchanged at both ends. It did not test PSD
+feasibility, allocate a huge repeated Fraction matrix or evaluate a point.
+
+Read-only command from repository root:
+
+    python -S research-goal-20261017-degree6-audit/independent_decode.py
+
+Its receipt and small source pin are in research-goal-20261017-degree6-audit.
+The --write-receipt switch is optional and writes only an absent receipt.

@@ -1,0 +1,91 @@
+One cold indirect SCS attempt on the complete degree-six model
+==============================================================
+
+Outcome: no usable certificate
+------------------------------
+The sole solver attempt returned
+
+    solved (inaccurate - reached time_limit_secs), iteration225.
+
+Its primal residual was approximately0.0114622, dual residual0.0269885,
+and the minimum eigenvalue of the normalized b-Ax PSD matrices was about
+-0.00680468. The diagnostic physical energy slack was -4.18e-8, including
+a violation of the required t>=0 row. Neither numerical feasibility nor
+infeasibility was established. There is no positive-energy/infeasible-ray
+hint, exact dual, exact PSD proof, region exclusion or RH improvement.
+The inaccurate iterate is not an actual F/KKT counterexample.
+
+The configured time_limit_secs was EXACTLY45. SCS's internal time-limit
+checking returned only after about51.870 seconds including setup, with
+reported solve_time51.595 seconds. This is an actual observed overrun of
+the configured limit, not a claim of a hard45-second wall cutoff. The
+parent's complete worker lifetime was59.312 seconds. There was no second
+attempt or settings adjustment to compensate for this outcome.
+
+Unchanged mathematical model and checks
+---------------------------------------
+The entire frozen STATIC model is decoded:5005 optimization variables
+(5004 nonconstant moments plus slack column5004),14383 scalar rows,
+73 PSD blocks,96580 lower-triangle entries, and2247687 variable nonzeros.
+No localizer, box, row, PSD direction or moment is dropped. All old5803
+rows use the exact old adapter, mapping only old slack714 to5004, followed
+by all8580 higher-moment box inequalities. The objective is only the old
+diagnostic energy slack; its original soft-energy coefficient is retained.
+
+For each PSD block, a uniform positive rational divisor is the maximum
+of1 and the absolute multiplier coefficients. Dividing the entire block
+by this scalar preserves its PSD condition. Lower-triangle column-major
+packing uses sqrt2 on off-diagonal entries. The stored A has the signs
+required by SCS: b-Ax is the packed positive PSD matrix.
+
+Before any SCS object was constructed, assembly checked one fixed rational
+rank-one substitution y_r=(-1)^r*(r+1)/19, t=0. This point was only an
+algebraic test; it was not required to satisfy sublevel/KKT/PSD conditions
+and was never supplied as a warm start. All1416525 target monomial
+product identities were checked exactly with Fraction. Distributivity
+with the cached rational multiplier evaluation proves the full rational
+entry identity q(y)*v_i(y)*v_j(y). The assembled numerical b-Ax was also
+compared with every such entry and all14383 scalar forms, to less than
+1e-9 absolute error. No large repeated Fraction coefficient matrix was
+created to perform this check.
+
+One process, one solver call, explicit monitor
+----------------------------------------------
+run_once.py starts one independent worker PID with CREATE_NO_WINDOW.
+BLAS, OpenMP, MKL and NumExpr thread variables are all1. The parent uses
+Windows GetProcessMemoryInfo on ONLY its own worker handle. If current
+or peak working set exceeds1.5GiB, it terminates only that PID and records
+the reason. A live worker with an unavailable/failed monitor is likewise
+stopped safely. No process-name, tree or unrelated-process termination is
+used. The observed PID was20232, peak working set391667712 bytes (about
+373.5MiB), exit code0; no memory termination occurred.
+
+The fixed settings were CPU indirect, max_iters1000, eps_abs=eps_rel=1e-6,
+time_limit_secs45. The installed SCS3.3.1 interface selects this backend
+with linear_solver=LinearSolver.CPU_INDIRECT; its former use_indirect
+keyword is not present in this version. Local package source and the
+actual indirect extension were checked before execution. The result
+reports lin_sys_solver=sparse-indirect-scs. There is exactly one SCS
+construction and one engine.solve(warm_start=False) call. No x/y/s seed,
+fallback, direct solve, retry, parameter scan or new point fit is used.
+
+All input and source hashes match before and after. Monitor snapshots,
+worker phases and full settings are durable JSON records. The dual
+stationarity diagnostic uses the correct SCS convention A^T*y+c=0;
+the infeasible-ray diagnostic separately uses A^T*y=0. These floating
+diagnostics are not exact Farkas checks.
+
+Saved discovery data and reproducibility
+----------------------------------------
+degree6-hints.json.gz holds all raw numerical x/y/s arrays with lengths
+5005,110963,110963. Its raw JSON size is4589310 bytes; gzip size1967899
+bytes, below4MiB. Its raw and compressed hashes are in worker-receipt.json.
+No array was truncated. Nonfinite values, if present, use explicit string
+markers rather than invalid JSON NaN values. The monitor and small worker
+receipt contain no substituted exact-certificate claim.
+
+The source assert forbids rerunning discovery over existing outputs.
+Do not rerun run_once.py merely to inspect these frozen results. All
+model inputs and record hashes can be checked read-only. The generic
+actual analytic obligations inherited from the static packet remain
+visible and unproved by a numerical SCS run. No Lean compiler was used.
