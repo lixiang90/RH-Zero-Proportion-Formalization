@@ -8,9 +8,11 @@ minima. Separate static reviews agree on its finite convex-combination
 proof; both target floors need only existing integer centres1–32. It is
 not a floor lower bound. A subsequent [exact arithmetic gate](research-goal-20261017-rounding-benefit/NOTE.zh.md)
 gives an all-positive-integer configuration floor of about0.00980215689
-on paper from existing actual tables. The continuous transfer loss remains
-open; a fixed two-point test did not settle its feasibility. Useful global
-transfer loss or full-domain certificate savings must precede a new Lean batch.
+on paper from existing actual tables. A subsequent [fixed-point obstruction](research-goal-20261017-pressure-budget/NOTE.zh.md)
+now excludes every whole-domain uniform scalar affine-pressure transfer
+budget, even with the best possible uniform integer floor. Its independent
+exact replay agrees on every endpoint. This stops that specific transfer
+family; it does not refute either continuous floor candidate.
 
 The [fixed nine-point linear reuse family](research-goal-20261017-ninepoint-decomposition/NOTE.zh.md)
 fails the requested magnitude gate by an exact rational dual, checked by
@@ -20,6 +22,11 @@ slice family and already closed five-leaf sextic cell remain stopped under
 [macro review002](research-goal-20261016/macro-reviews/002-20261017.zh.md).
 In-source witness generation has no demonstrated all-leaf/source/runtime
 path and remains a static backup.
+The [separated overlapping-window alternative](research-goal-20261017-gluing-separated-review/PREFIX-SUFFIX.zh.md)
+has existing counting and scalar interfaces, but still needs complete
+exception coverage and overlap certificates. Its current full base plus
+bridges is1,971,160bytes before the new proof. The zero-gap lifting
+obstruction does not automatically apply at a fixed positive separation.
 No new unconditional proportion or submission-ready proof is asserted.
 
 The preserved [fixed sextic certificate](research-goal-20261017-actual-sextic-exact-ray/NOTE.txt)

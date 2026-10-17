@@ -1,0 +1,51 @@
+全原域统一线性压力缺陷预算：静态逻辑审查
+
+状态：逻辑审查通过；接受固定数值端点作为本审查输入，不独立重放它们。
+本包只读源码/已有收据并记录哈希，没有新数值试验、budget、solver或Lean。
+
+固定对象是实际24-mode核、原41-edge ledger、分离域g_r>=123/128；
+P(g)=Σb_r*g_r，delta=5/128，Phi为公共平移舍入的实际缺陷和。
+已审查的点态恒等式给
+ F(g)=平均F(q)-delta*B+Phi(g)。
+若L是所有正整数9gap配置的统一能量下界，并存在全原域预算
+ Phi(g)>=-alpha*P(g)-beta，alpha>=0，beta为任意实数，
+则由P<=F可得
+ (1+alpha)*F >= L-delta*B-beta，
+从而本接口能保证的floor为C=(L-delta*B-beta)/(1+alpha)。
+欲以本接口得到目标c，必须使beta+alpha*c<=L-delta*B-c。
+
+在固定原域点g*，预算自身强制beta>=-Phi(g*)-alpha*P(g*)。
+与目标条件合并得到
+ Phi(g*)+L-delta*B-c >= alpha*(c-P(g*))。
+只要P(g*)<=c，右边非负。任意有效uniform整数floor还必须满足
+ L<=F(all2)<=Uq。
+因此使用Phi的UPPER端点与F(all2)的UPPER端点，若
+ Phi_upper+Uq-delta*B<c，便使左边严格负而矛盾。
+不能把此处的upper端点换成lower端点。beta不必非负；该论证一次排除
+全部alpha>=0，而非只排除某个拟合alpha或原先的L_adj。
+
+更强的整个接口输出cap也成立。令
+ T=Phi_upper+Uq-delta*B，P*=P(g*)，则
+ C <= (T+alpha*P*)/(1+alpha)
+   <= max(T,P*)。
+中间项是T和P*的凸组合，alpha>=0确保分母正与两权非负。
+固定family-cap.json给P*<T≈0.007388741326026388，故C<=T。
+在同一个固定H、B且H>B、C<1的计数公式下，(H-B)/(1-C)随C递增，
+该接口可交付的比例系数至多约67.26440644054021%。这不是实际ζ零点比例
+的上界，也不是对别的H、ledger、kernel或证明接口的限制。
+
+scope与停止条件：
+1. 固定点不必是globalmin。它在原域且P*<c已够；其实际F约0.00884744，
+   高于本轮目标，所以它不是连续floor反例。
+2. 该论证仅排除全原域、单一uniform整数floor L、常数alpha>=0和beta的
+   线性压力预算。它不排除只在已证明的极小元缩域成立的预算、依赖g的
+   整数族下界、或保留其他相关变量的联合界。新缩域不能仅凭数值猜测。
+3. vary alpha已被量词排除；更精确端点不会使已严格失败的upper cap变大；
+   改进uniform整数floor也不能超过actual all2。因此不应继续这些扫描、
+   为本预算家族新增Lean消费者，或将其包装成新的全域研究收益。
+4. 本轮是macro002后的第3主轮。按根代理最终安排，本轮记录决定性停止，
+   第4个实际主轮再做macro003；本审查不改计数、不重置、不修改治理文件。
+5. 原全域floor、无条件比例、最终源码与网站资源关均未完成。
+
+读取并绑定的producer源码：pressure_budget.py只给固定点数值证据，budget_cap.py
+给固定区间的family cap后处理。独立数值重放由另一个owner负责，本包不替代。

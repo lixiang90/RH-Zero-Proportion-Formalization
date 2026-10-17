@@ -1,0 +1,140 @@
+{
+  "schema": "prefix-suffix-exception-classification-static-review-v1",
+  "date": "2026-10-17",
+  "scope": "Static mathematics and source-interface review only; no numerical leaf, decoder, kernel, solver, pair enumeration, or Lean execution.",
+  "parameters": {
+    "kernel": "Old Core actual wfun, not actual24",
+    "ledger": "Old RiemannFail.W9 for each prefix/suffix",
+    "gaps_per_window": 8,
+    "joint_gaps": 9,
+    "shared_gaps": 7,
+    "sep": "123/128",
+    "old_c9": "859538525913875481/100000000000000000000",
+    "joint_c": "8611/1000000",
+    "tau": "862661474086124519/100000000000000000000",
+    "tau_definition": "2*c-c9"
+  },
+  "sufficient_statement": "An outer union E covers EVERY h>=sep with F9(h)<tau. No joint g>=sep has prefix8 in E and suffix8 in E. Together with old arbitrary-domain F9>=c9 this implies the average floor >=c.",
+  "orientation": {
+    "independent_per_window": true,
+    "four_combinations_required_without_proven_symmetry_reduction": [
+      [
+        "id",
+        "id"
+      ],
+      [
+        "id",
+        "rev"
+      ],
+      [
+        "rev",
+        "id"
+      ],
+      [
+        "rev",
+        "rev"
+      ]
+    ],
+    "physical_span_mapping": {
+      "prefix_id": "(i,j)->(i,j)",
+      "prefix_rev": "(i,j)->(8-j,8-i)",
+      "suffix_id": "(i,j)->(i+1,j+1)",
+      "suffix_rev": "(i,j)->(9-j,9-i)"
+    },
+    "reflection_leaf_is_energy_bound": false,
+    "ties_must_be_covered": true
+  },
+  "completeness_requirements": {
+    "arbitrary_sublevel_not_only_minimizers": true,
+    "new24_KKT_Newton_residual_not_substitutable": true,
+    "all_original_roots_and_streams": true,
+    "root_outside_payments_reproved_at_tau": true,
+    "failed_threshold_check_is_only_conservative_exception": true,
+    "whole_original_witness_consumption_independent_of_new_threshold_success": true,
+    "boundaries_preserved": true,
+    "all_pair_indices_and_reflections_covered": true,
+    "exact_negative_cycle_or_Farkas_required": true,
+    "compatible_outer_boxes_are_not_actual_counterexamples": true
+  },
+  "current_status": {
+    "conditional_logic_sound": true,
+    "no_additional_minimizer_assumption_needed": true,
+    "whole_sublevel_exception_cover_constructed": false,
+    "pair_incompatibility_proven": false,
+    "joint_floor_proven": false,
+    "new_unconditional_zero_proportion_proven": false,
+    "website_submission_ready": false
+  },
+  "actions": {
+    "new_leaf_decodes": 0,
+    "leaf_checks": 0,
+    "kernel_evaluations": 0,
+    "solver_calls": 0,
+    "cell_pair_enumerations": 0,
+    "Lean_runs": 0,
+    "new_cover_searches": 0
+  },
+  "stop_conditions": [
+    "Any identity, stream-consumption or complete-cover gap leaves classification unproved.",
+    "Any geometrically feasible outer exception pair leaves pure-geometry sufficient gate unpassed.",
+    "Neither outcome authorizes threshold changes, refinement, new witness search or optimization.",
+    "Even a successful geometry gate still requires actual theorem and full formal/source/verification budget."
+  ],
+  "sources": [
+    {
+      "path": "GramDefect20261015/Core.lean",
+      "bytes": 1912350,
+      "sha256": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5",
+      "source_line_ranges": [
+        [
+          9281,
+          9281
+        ],
+        [
+          9398,
+          9460
+        ],
+        [
+          10555,
+          10577
+        ],
+        [
+          10906,
+          10914
+        ],
+        [
+          10980,
+          11038
+        ],
+        [
+          12511,
+          12524
+        ],
+        [
+          12941,
+          12960
+        ],
+        [
+          13243,
+          13256
+        ]
+      ],
+      "scope": "Old actual W9 arbitrary nonnegative floor, threshold-bound traversal, original roots and reflection semantics."
+    },
+    {
+      "path": "research-goal-20261017-gluing-separated-review/PREFIX-SUFFIX.zh.md",
+      "bytes": 7632,
+      "sha256": "40fdc9b6f632cc549c40d2a8a56c584ec92b53a13c6f7768a9e6227be530e623",
+      "source_line_ranges": [],
+      "scope": "Separate static primary review for coefficient/score/source budget and root-tail arithmetic; not a leaf replay."
+    },
+    {
+      "path": "research-goal-20261017-gluing-separated-review/review-files.json",
+      "bytes": 3252,
+      "sha256": "bc5b29003f0ef9f4e5b4b898419873f2dc2541894c37cecb500a0046b47d89fd",
+      "source_line_ranges": [],
+      "scope": "Frozen primary review pin; no mutable governance dependency."
+    }
+  ],
+  "mutable_governance_is_not_a_dependency": true
+}

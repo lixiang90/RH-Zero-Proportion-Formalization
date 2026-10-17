@@ -1,0 +1,331 @@
+{
+  "schema": "fixed-saved-gluing-support-joint-infimum-static-v1",
+  "scope": "Saved exact primal weights only: ordered deletions 0 and 1",
+  "source_files": [
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/coefficient-gluing.json",
+      "bytes": 14159,
+      "sha256": "e39f511b50d8e45ecf9f058f3f717d050c2cd1c316e2d7c846031b833bbfc25b"
+    },
+    {
+      "path": "GramDefect20261015/Core.lean",
+      "bytes": 1912350,
+      "sha256": "2062b1f9540e1ea7b78d382f46a234780dcda03f4e3a6c21467c84b611505ff5"
+    },
+    {
+      "path": "research-goal-20261017-ninepoint-decomposition/NOTE.zh.md",
+      "bytes": 5417,
+      "sha256": "b45984c3478b82a61091545dcad6b13afe5d680085f709729cd624bb2cf020b0"
+    }
+  ],
+  "cert_AM_domain": "all eight gaps nonnegative; no positive-separation hypothesis",
+  "positive_weight_indices": [
+    0,
+    1
+  ],
+  "exact_positive_weights": [
+    "6666666576972640000000000/6666666732353512328627341",
+    "538164163700000000/20000000197060536985882023"
+  ],
+  "total_weight": "20000000269082083700000000/20000000197060536985882023",
+  "deletion0_pullback": [
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "deletion1_pullback": [
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "canonical_lifting": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "both_pullbacks_composed_with_lifting_are_identity": true,
+  "all_maps_preserve_nonnegative_orthants": true,
+  "global_lower_bound_equivalence": "forall g>=0, F_lambda(g)>=L iff forall h>=0, F9(h)>=L/S",
+  "infimum_identity": "inf_{g>=0} F_lambda = S * inf_{h>=0} F9",
+  "no_joint_frustration_gain_for_saved_support": true,
+  "old_certified_c9": "859538525913875481/100000000000000000000",
+  "old_actual_infimum_known_equal_to_c9": false,
+  "window_floor_H": "3360842052820594373879991756052499665323/5000000000000000000000000000000000000000",
+  "required_strict_ratio_K": "1094128278946873735663278316628593873/1624320662137123028256849414062500000",
+  "saved_total_pressure_B": "29179200441294616933076/6666666732353512328627341",
+  "existing_reused_floor": "57302569165213090644440203899399199/6666666732353512328627341000000000000",
+  "needed_total_floor_strictly_greater_than": "1607799122209220470194897277282252319227473567352273776043642888933507186755207701141133/186731228113467570295256928224870451996061825275977345353771340800000000000000000000000000",
+  "needed_total_floor_hint": 0.008610231606425458,
+  "needed_extra_total_floor_strictly_greater_than": "2772270882019341275141158492894441082287454412315176094793509797309375555207701141133/186731228113467570295256928224870451996061825275977345353771340800000000000000000000000000",
+  "needed_extra_total_floor_hint": 1.4846316334056165e-05,
+  "needed_old_global_floor_strictly_greater_than": "4823397366627661410584691831846756957682420702056821328130928666800521560265623103423399/560193686357703471293060933776635096869130197706065154560000000000000000000000000000000000",
+  "needed_old_global_floor_hint": 0.008610231575419349,
+  "needed_old_floor_increment_strictly_greater_than": "8316812646058023825423475478683323246862363236945528284380529391928126665623103423399/560193686357703471293060933776635096869130197706065154560000000000000000000000000000000000",
+  "needed_old_floor_increment_hint": 1.4846316280593432e-05,
+  "strictly_positive_gaps_scope": "Same infimum by continuity of the old finite energy; proof in note, not Lean",
+  "other_supports_excluded": false,
+  "new_optimizer_calls": 0,
+  "new_actual_kernel_evaluations": 0,
+  "new_tree_or_cover_records_read": 0,
+  "Lean_invocations": 0,
+  "new_global_floor_Lean_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false
+}

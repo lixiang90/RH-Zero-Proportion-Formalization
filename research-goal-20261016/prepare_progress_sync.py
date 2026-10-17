@@ -256,7 +256,14 @@ def main():
       ('research-goal-20261017-new24-integer-floor-inventory/addendum-files.json','43fc1e860df549dfa6228c195327e0f5bfafcc73217b50953c5c9523a8180caf'),
       ('research-goal-20261017-rounding-benefit/files.json','4da900e24183e2fd4b541cbe931c1368472498d305479ec523c77923c67b9d5e'),
       ('research-goal-20261017-integer-adjacent-floor-audit/audit-files.json','f143123dd9f302e0a77f745b0649a805afe91328815c857ee06f17f286387242'),
-      ('research-goal-20261017-rounding-benefit-independent/audit-files.json','ef3d0fac3d33321e915e4d70e2d3e414e9c4e9ae985d50612d4436dc06f4ad66')]:
+      ('research-goal-20261017-rounding-benefit-independent/audit-files.json','ef3d0fac3d33321e915e4d70e2d3e414e9c4e9ae985d50612d4436dc06f4ad66'),
+      ('research-goal-20261017-fixed-best-point-identity/files.json','2851d5d85cf8d0ce30125ea207e6041ad93eb6fcf940ee3573f783d6e7a5a24e'),
+      ('research-goal-20261017-pressure-budget/files.json','8f67f34cc7da5834008b9f89e1f77fe565093344eb0f1ced9f0096a80c65f12b'),
+      ('research-goal-20261017-pressure-budget-independent/audit-files.json','397b118250fdb38fc12b397747f190b05ec474fc45891dc9ffdcb0bab0731276'),
+      ('research-goal-20261017-pressure-budget-static-review/review-files.json','d3357cd81df489bbe77ba680e5616d846e5ebf9b66cfe695340b76054f475ffb'),
+      ('research-goal-20261017-gluing-joint-infimum/joint-infimum-files.json','03f27afd41379548da4e0374905190b26cb3f625b4c3012f600f07b4623d3877'),
+      ('research-goal-20261017-gluing-separated-review/review-files.json','bc5b29003f0ef9f4e5b4b898419873f2dc2541894c37cecb500a0046b47d89fd'),
+      ('research-goal-20261017-gluing-exception-static-audit/files.json','0d1e6ad17c69b527238bcc4d563c91c76fe72e86123436728334ef1272eaff96')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -292,8 +299,13 @@ def main():
               +pinned.get('frozen_dependencies',[]))
         if name=='research-goal-20261017-new24-integer-floor-inventory/files.json':
             rows+=pinned['reference_inputs']
-        if name=='research-goal-20261017-rounding-benefit-independent/audit-files.json':
+        if name in ['research-goal-20261017-rounding-benefit-independent/audit-files.json',
+                    'research-goal-20261017-pressure-budget-independent/audit-files.json']:
             rows+=pinned['pinned_inputs']
+        if name=='research-goal-20261017-fixed-best-point-identity/files.json':
+            rows+=pinned['read_only_reference_inputs']
+        if name=='research-goal-20261017-gluing-exception-static-audit/files.json':
+            rows+=pinned['read_only_references']
         if name=='research-goal-20261017-local-phase/local-phase-files.json':
             source_index=json.loads((ROOT/pinned['dependency_index']['path']).read_bytes())
             identity_rows=source_index['actual_identity_sources']+source_index['prior_work_reviewed']

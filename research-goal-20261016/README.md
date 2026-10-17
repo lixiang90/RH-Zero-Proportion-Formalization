@@ -15,6 +15,12 @@ confirms the old JSON endpoints equal the actual Lean data. No new Lean
 integer-domain theorem or continuous-domain floor is claimed. One fixed
 two-point transfer obstruction test failed its gate and is preserved;
 neither success nor impossibility of uniform loss transfer follows.
+The newer [one-point pressure-budget gate](../research-goal-20261017-pressure-budget/NOTE.zh.md)
+does give a strict obstruction for every whole-domain uniform scalar
+affine-pressure defect budget. Its output floor is capped by about0.00738874
+for any nonnegative pressure multiplier and any valid uniform integer floor.
+This is a limitation of that proof interface, not a counterexample to the
+continuous energy floor or a bound on the actual zeta-zero proportion.
 The fixed directW9 linear-combination rule has been stopped by an exact
 rational dual excluding the requested magnitude, with two separate replays.
 No new optimizer or Lean batch follows automatically from either result.
