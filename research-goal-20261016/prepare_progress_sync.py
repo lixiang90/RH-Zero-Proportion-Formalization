@@ -24,13 +24,21 @@ def indexed_blobs(paths):
 def main():
     receipt=json.loads((HERE/'ordinary-verified-current.json').read_bytes())
     files=['.gitattributes','AGENTS.md','README.md','submission/goal-20261016/STATUS.zh.md']
-    names=['README.md','DIRECTION.zh.md','direction-state.json','macro-reviews/001-20261017.zh.md','macro-reviews/002-20261017.zh.md','macro-reviews/003-20261018.zh.md',
+    names=['README.md','DIRECTION.zh.md','direction-state.json','macro-reviews/001-20261017.zh.md','macro-reviews/002-20261017.zh.md','macro-reviews/003-20261018.zh.md','macro-reviews/004-20261018.zh.md',
       'gates/stageB-20261018.json','gates/stageC-dbm-20261018.json',
       'gates/stageD-affine-point-20261018.json',
       'gates/stageE-margin-dbm-20261018.json',
       'gates/stageF-exact-lp-20261018.json',
       'gates/stageG-complete-classification-20261018.json',
       'gates/stageH-ordered-transport-20261018.json',
+      'gates/stageI-fixed-original-affine-point-20261018.json',
+      'gates/stageI-independent-original-affine-20261018.json',
+      'gates/stageJ-fixed-basis-complete-20261018.json',
+      'gates/stageJ-independent-complete-20261018.json',
+      'gates/stageL-J-enhanced-fixed-cycle-20261018.json',
+      'gates/stageL-independent-upgraded-cycle-20261018.json',
+      'gates/stageK-window-potential-cycle-20261018.json',
+      'gates/stageK-independent-cycle-20261018.json',
       'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
       'window_interval_kernel.py','window_interval_kernel.json','window_jet_crosscheck.py','window_jet_crosscheck.json',
       'window_global_cover.py','window_lower_global_cover.py','window_make_lower_variant.py','window_make_lower_variant.json',
@@ -305,7 +313,18 @@ def main():
       ('research-goal-20261018-ordered-ray-fan-static/files.json','84a0089fa3c4b1e079ff17af22ae3ea43e0716872540689488030ff4f018f00b'),
       ('research-goal-20261018-stageH-ordered-transport/files.json','327562525e30d7b706777e71af003e51ca93a218ac7cfd9bfa0994abe56f8f8c'),
       ('research-goal-20261018-stageH-independent/audit-files.json','a0018aa4ce33e4cb6cea2019739e857fa3a1b58cc8b48f001e17d651e1dcbb3a'),
-      ('research-goal-20261018-stageI-static-contract/files.json','f526477985915b2e26d9db1c81ecbcd246564ed7241a9724bc325fb7e0dfca76')]:
+      ('research-goal-20261018-stageI-static-contract/files.json','f526477985915b2e26d9db1c81ecbcd246564ed7241a9724bc325fb7e0dfca76'),
+      ('research-goal-20261018-stageI-original-affine-point/files.json','afaece4fee2e74d064258f689faff64d9732c53f8a412d0c71f6140d7653f482'),
+      ('research-goal-20261018-stageI-independent/audit-files.json','2e0e18319ceabada6e2466ecfabc2d19b63d8c5282dc98099315a4131f4d538e'),
+      ('research-goal-20261018-nonlinear-remainder-static/delivery-files.json','15418d3c8ef19489d26f15bd9ccb6e522e63e888498e01e430323b14dc226cdc'),
+      ('research-goal-20261018-window-potential-static/delivery-files.json','610650840f9b6ec8cecdd90f23d6d329bc491ebd13124082b39e86e48b3a459b'),
+      ('research-goal-20261018-window-potential-cycle/files.json','89fd14950a06a8e12c9feb7c09efd90bfdb6723f021fde14ddc39b2ca27c6916'),
+      ('research-goal-20261018-window-potential-cycle-independent/audit-files.json','98983c69e3fb9070149afbd79e01f5877138a5983641b2e0b7523698bf6a635d'),
+      ('research-goal-20261018-stageJ-fixed-basis-preparation/prepared-files.json','6fe73e334d4011ae3dbdb3cec601874fcdce4ab7f683d413f89715894c06fd62'),
+      ('research-goal-20261018-stageJ-fixed-basis-preparation/files.json','90726f8987fd69820f70a63cc55c22f279a872263ced314fa41a452d4f1b09cd'),
+      ('research-goal-20261018-stageJ-independent/audit-files.json','32de2e9381d1c103209c89b8f007d29815746a398c5c3d197f7762a727f55005'),
+      ('research-goal-20261018-upgraded-cycle/files.json','38d82a7df7ec213cf478eb7f8e2144293767b6e236063a1a2caf5eb05d791bd5'),
+      ('research-goal-20261018-upgraded-cycle-independent/audit-files.json','ca36c252e5a72c92e2066e8c195d3ef464ac9fc57e089ce74a74d24401afd055')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -316,8 +335,13 @@ def main():
             assert hashlib.sha256(raw).hexdigest()==runtime['sha256_start']==runtime['sha256_end']
         if 'external_read_only_runtime' in pinned:
             runtime=pinned['external_read_only_runtime']
-            raw=Path(runtime['path']).read_bytes()
+            runtime_path=runtime.get('path',runtime.get('executable'))
+            assert runtime_path is not None
+            raw=Path(runtime_path).read_bytes()
             assert len(raw)==runtime['bytes'] and hashlib.sha256(raw).hexdigest()==runtime['sha256']
+            for extra in runtime.get('additional_files',[]):
+                raw=Path(extra['path']).read_bytes()
+                assert len(raw)==extra['bytes'] and hashlib.sha256(raw).hexdigest()==extra['sha256']
         for runtime in (pinned.get('runtime_dependency_files',[])
                         +pinned.get('runtime_dependency_not_staged_wholesale',[])):
             # Bind the measured local runtime without publishing its
@@ -372,7 +396,18 @@ def main():
                     'research-goal-20261018-ordered-ray-fan-static/files.json',
                     'research-goal-20261018-stageH-ordered-transport/files.json',
                     'research-goal-20261018-stageH-independent/audit-files.json',
-                    'research-goal-20261018-stageI-static-contract/files.json']:
+                    'research-goal-20261018-stageI-static-contract/files.json',
+                    'research-goal-20261018-stageI-original-affine-point/files.json',
+                    'research-goal-20261018-stageI-independent/audit-files.json',
+                    'research-goal-20261018-nonlinear-remainder-static/delivery-files.json',
+                    'research-goal-20261018-window-potential-static/delivery-files.json',
+                    'research-goal-20261018-window-potential-cycle/files.json',
+                    'research-goal-20261018-window-potential-cycle-independent/audit-files.json',
+                    'research-goal-20261018-stageJ-fixed-basis-preparation/prepared-files.json',
+                    'research-goal-20261018-stageJ-fixed-basis-preparation/files.json',
+                    'research-goal-20261018-stageJ-independent/audit-files.json',
+                    'research-goal-20261018-upgraded-cycle/files.json',
+                    'research-goal-20261018-upgraded-cycle-independent/audit-files.json']:
             rows+=pinned['read_only_dependencies']
         if name=='research-goal-20261018-stageE-independent/plan-files.json':
             rows+=pinned['dependency_manifests']

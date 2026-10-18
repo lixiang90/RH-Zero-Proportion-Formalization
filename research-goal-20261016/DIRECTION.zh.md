@@ -503,3 +503,23 @@ I静态合同已冻结SHAf5264779…，没有producer或任何新原FS/点值/
 矩阵计算。root已核point-free整数因式和四chart映射，下一实际
 round4先macro004，再决定固定2417必要关；不能因静态接口完成
 自动开始Phase1或全15,378固定basis Phase2。
+
+宏观004已于本实际第4主轮书面完成（macro-reviews/004-20261018.zh.md），
+SHA b36cf3d32cae2a232dea169f7c90af5948d93f38040b4c3577bcc5793e848fea。完整G/H只剩15378保守未解，旧Fseed为空域；先准备并
+另gate执行不改变点/核/FS的2417原affine必要关。负Delta停止固定两原FS
+统一模型，正Delta只过必要点，不自动Phase2/LP/Lean。回顾完成才4→0，
+本轮后续不再计轮；完整无条件目标/源码/3200s/双核/同步/提交要求均保留。
+
+宏观004后同一实际主轮（counter0不再增计）：I唯一2417点诊断及独审
+均通过，exactDelta=665241279628524601966249032000000>0，只过必要点。
+J唯一固定9row全H15378及1128原FS缓存已完整独审，1Lower/359有效
+belowtarget/3141负乘子/11877奇异，余15377。原Mi窗口势图K有9边
+严格负环，固定J有效界增强后的同环L仍负；两者均独审，停止这两个
+外图模型，未否定其他mixedA dual/basis或actualF。相关生产/独审清单
+以direction-state最新字段为准；不存在活数学job或新Lean运行。
+下一关改为原active FS components的max包络：保留lb和有效anchor独立
+量化支撑线，构造固定cell0/604 id/rev的9位置+68epigraph模型，先
+仅准备整数rows/可逆数值尺度/一次exact primal-dual重建/源runtime。
+新normals不再有旧det<=4界，必须full78平衡、正权与rawcost。下一
+实际轮0->1核准备再决定唯一LPgate；本轮未授权M数学执行/新anchors/
+核/阈值扫描/q/Lean。源码181589B余量及全3200s仍未知，完整目标不变。

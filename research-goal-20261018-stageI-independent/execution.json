@@ -1,0 +1,37 @@
+{
+  "schema": "I-one-independent-audit-raw-terminal-v1",
+  "command": {
+    "argv": [
+      "C:/Python314/python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "research-goal-20261018-stageI-independent/audit_point.py",
+      "--verify-authorized-fixed-I",
+      "--gate",
+      "research-goal-20261016/gates/stageI-independent-original-affine-20261018.json",
+      "--gate-sha256",
+      "9649ab6ebb763eb65069df224c204fe43e087e45e9986f0787d3a06bbe733f58"
+    ],
+    "cwd": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization"
+  },
+  "command_sha256": "f04a7985caf9fde7acb25d9a6afde6395da0835f13350a8ed99999f5f5295fa3",
+  "pid": 57492,
+  "tool_chunk": "182e2d",
+  "exit_code": 0,
+  "wall_seconds": 5.1294225,
+  "receipt_seconds": 3.1682429000211414,
+  "audit_calls": 1,
+  "automatic_retry": false,
+  "stdout_sha256": "2b0a47dfef7b0ce3c14abea20601d22a3dff8f5ee63480a28b7a79d1ce628d7b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_sha256": "dd30a95c8a5a55a4fedad10ade25ef7a4d9b1aee3ccb82a2ebbe21012989df50",
+  "receipt_sha256": "5dad6eb61c2807078cea3dc3b50d5036542ac0ba7fe3c61bde6dc6952bfff915",
+  "external_read_only_runtime": {
+    "path": "C:\\Python314\\python.exe",
+    "bytes": 106208,
+    "sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd",
+    "external_read_only_identity": true,
+    "copied": false
+  }
+}

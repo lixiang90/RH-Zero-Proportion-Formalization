@@ -2,13 +2,32 @@
 
 No new unconditional zero proportion is asserted by this directory.
 
-The [third macro review](macro-reviews/003-20261018.zh.md) updates the record
-to67.3587173310297…% and the human's strict increment to1/1,000,000. The
-new target is67.3588173310297…%. The main route now uses the new s1R source,
-its own kernel/tables and17/20 separation. The complete original-floor
-identity and fixed-threshold classification replays now pass independently;
-old kernel-specific tables and the123/128 pair payment cannot be imported
-as new-kernel evidence. Historic frozen packets retain their original scope.
+The [fourth macro review](macro-reviews/004-20261018.zh.md) has completed at
+the requested fourth main round. The record remains67.3587173310297…%, and
+the strict human target remains67.3588173310297…%, compared as exact rationals.
+The main route uses the current s1R source, its own tables and17/20 separation.
+Complete G/H geometry audits leave15,378 conservative residual cases. The
+earlier F pilot's entire Ordered domain is now proved Empty, so its Lower
+certificate supplies no evidence of energy gain on a nonempty residual.
+
+The new [fixed feasible-point diagnostic](../research-goal-20261018-stageI-original-affine-point/SPEC.zh.md)
+has completed one production run on the unchanged sample2417, cell0/604,
+id/rev. Its signed Delta is positive; this is a necessary-point result only,
+pending independent original-source reconstruction. The fixed nine-row-basis
+whole-residual family is only being prepared, with no new execution authority.
+The [cumulative-window route](../research-goal-20261018-window-potential-static/CONTRACT.zh.md)
+has a separately reviewed W9-to-ActualDefectEstimate n10 counting interface.
+Its original scalar-margin graph is already excluded by an independently
+verified [nine-edge negative cycle](../research-goal-20261018-window-potential-cycle-independent/SPEC.zh.md).
+This stops that scalar outer model, without asserting a physical low-energy
+cycle. The [joint-edge extension](../research-goal-20261018-window-potential-static/JOINT-EDGE-EXTENSION.zh.md)
+and [nonlinear residual formulas](../research-goal-20261018-nonlinear-remainder-static/NOTE.zh.md)
+remain static alternatives; neither has produced a cumulative floor.
+
+Original source size is1,818,411B, leaving181,589B before all new proofs and
+data. Full source size and the complete3200-second policy workflow remain
+unverified. No new Lean, Comparator or nanoda run is claimed by these packets.
+Historical frozen packets below retain their original mathematical scope.
 
 The [closed production baseline replay](../research-goal-20261018-record-baseline-replay/NOTE.zh.md)
 passes all48 roots,13,046 numeric leaves,595 reflection leaves,70 internal

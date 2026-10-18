@@ -2,35 +2,40 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
-The website now records **67.3587173310297…%** in the
+The website currently records **67.3587173310297…%** in the
 [s1R submission](https://www.riemannzeta.fun/submissions/critical-strip-exclusion-attempt-1).
-The latest requested gain is greater than1/1,000,000 in absolute proportion,
-so the current strict target is **67.3588173310297…%**.
-[Macro review003](research-goal-20261016/macro-reviews/003-20261018.zh.md)
-moves the overlapping-window research to that exact new source and its
-original17/20 separation. The [original-certificate production replay](research-goal-20261018-record-baseline-replay/NOTE.zh.md)
-now passes all48 roots,13,046 numeric leaves,595 reflection leaves,
-70 internal cut contracts and160 original WZ guards at the unchanged floor.
-An [independent full finite replay](research-goal-20261018-record-baseline-independent/NOTE.zh.md)
-agrees on every node, cursor and guard. The [fixed classification](research-goal-20261018-stageB-classification/NOTE.zh.md)
-closes11,859 numeric leaves and retains1,187 complete closed exception cells;
-its [independent replay](research-goal-20261018-stageB-independent/NOTE.zh.md) agrees on every row.
-The [DBM opportunity](research-goal-20261018-stageC-dbm/RESULT.zh.md) stopped
-after its second case gave an exact ordered overlap, independently checked
-against all153 constraints. Geometry alone therefore does not close the joint
-bound; this is not an actual energy counterexample.
+The requested gain is greater than 1/1,000,000 in absolute proportion,
+so the strict target is **67.3588173310297…%**. The current record and exact
+source were checked again on October 18. No new unconditional record or
+submission-ready proof is asserted.
 
-The [existing-point diagnostic](research-goal-20261018-fixed-joint-affine/RESULT.zh.md)
-and its independent review show that this first overlapping pair's original
-cell margins already pay the target. Retaining all original margins in a
-[quantitative model](research-goal-20261018-stageE-floor-dbm/RESULT.zh.md)
-closes766 pairs by payment and426 by strict cycles before an underpaid
-relaxed point appears. That point violates both ordering conditions, so the
-ordered model remains unresolved. The next [static LP contract](research-goal-20261018-stageF-static-review/NOTE.zh.md)
-retains both ordering rows and the two actual affine supports; no LP has run.
-A [product consumer](research-goal-20261018-product-consumer-static/NOTE.zh.md)
-could avoid copying579,013bytes of geometry, but full source/runtime budget
-remains unknown. No new joint floor or unconditional record has been proved.
+[Macro review004](research-goal-20261016/macro-reviews/004-20261018.zh.md)
+retains that source, its original 17/20 separation, full kernel verification,
+and the website's 2,000,000-byte / 3,200-second delivery requirements.
+The original witness replay and independent audit agree on all 48 roots,
+13,046 numeric leaves and 595 reflection leaves. Complete four-orientation
+classification covers 5,635,876 overlap cases; the subsequent ordered
+transport audit leaves 15,378 conservative unresolved cases. The old LP
+seed has an empty ordered domain and supplies no nonempty-domain gain.
+
+The [original-affine diagnostic](research-goal-20261018-stageI-original-affine-point/result.json)
+on a known nonempty overlap has a positive exact margin; its independent
+audit passes. This is one necessary point check, not a uniform lower bound.
+A [complete fixed-basis classification](research-goal-20261018-stageJ-fixed-basis-preparation/result.json)
+and independent audit check all 15,378 cases and all 1,128 original cell
+supports: 1 reaches the target, 359 give weaker valid bounds, 3,141 have
+negative multipliers and 11,877 have a singular chart. Thus 15,377 remain
+unclosed by this certificate family.
+
+A new cumulative-window potential principle has a paper counting bridge.
+However, exact nine-edge negative cycles independently refute both the
+original scalar outer graph and its fixed-basis augmentation. These
+obstructions stop those two models; they do not refute actual energy or
+other joint certificates. The next route retains the maximum of the original
+active component support lines, recovering information lost by their
+weighted mixture. Its fixed 9-position / 68-epigraph model is currently
+preparation only; no new solver, kernel or Lean run is authorized by this
+checkpoint. Complete source and runtime budgets remain unknown.
 
 A [common-shift integer rounding comparison](research-goal-20261017-common-rounding/NOTE.zh.md)
 now gives a new whole-domain necessary condition for actual24-mode global

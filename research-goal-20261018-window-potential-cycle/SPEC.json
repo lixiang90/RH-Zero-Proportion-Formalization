@@ -1,0 +1,36 @@
+{
+  "schema": "fixed-scalar-window-potential-negative-cycle-preparation-v2",
+  "meaning": "One complete H-underpaid graph load, canonical iterative DFS stops at first exact strictly negative cycle or completes DAG. Necessary model test only.",
+  "vertices": 2374,
+  "records": 15378,
+  "chart_order": [
+    "id/id",
+    "id/rev",
+    "rev/id",
+    "rev/rev"
+  ],
+  "source_vertex": "2*left+chart//2",
+  "target_vertex": "2*right+chart%2",
+  "weight": "Mleft+Mright-2*kappa*(Nc-N9)",
+  "star_and_paid_edges_not_searched": true,
+  "cycle_scope": "Refutes fixed scalar potential system P even if cycle physically unrealizable; not an actual energy or zeta counterexample.",
+  "DAG_scope": "No underpaid cycle only; mixed paid cycles/star constraints/q existence remain open.",
+  "limits": {
+    "elapsed_seconds": 60,
+    "closed_output_bytes": 8000000
+  },
+  "maximum_children": 1,
+  "retries": 0,
+  "graph_runs": 0,
+  "FS_point_kernel_matrix_optimizer_or_Lean_runs": 0,
+  "prior_I_math_result_not_a_graph_input": true,
+  "v1_preserved_unexecuted": true,
+  "v2_change": "Only decouple I independent receipt; separately reviewed exact three-line deletion.",
+  "v2_SHA256": "da234b34963e8b3c5dfca5cead78e28be2ee9873c6db702ebbe4a4147539d187",
+  "static_review_manifest": "research-goal-20261018-window-potential-static/independent-files.json",
+  "static_review_SHA256": "946191d1846ff1f3414d52d34b6cfa1aa351bc57aa88e3c0b090b7bcdfcb61ef",
+  "syntax_AST_tool_chunk": "e45c5e",
+  "independent_result_audit_required": true,
+  "source_and_runtime_budget_unproven": true,
+  "website_submission_ready": false
+}

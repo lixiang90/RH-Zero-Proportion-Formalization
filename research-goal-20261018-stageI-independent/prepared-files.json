@@ -1,0 +1,68 @@
+{
+  "schema": "I-independent-prepared-only-v1",
+  "files": [
+    {
+      "path": "research-goal-20261018-stageI-independent/audit_point.py",
+      "bytes": 16897,
+      "sha256": "dd30a95c8a5a55a4fedad10ade25ef7a4d9b1aee3ccb82a2ebbe21012989df50"
+    },
+    {
+      "path": "research-goal-20261018-stageI-independent/NOTE.zh.md",
+      "bytes": 1604,
+      "sha256": "a1d85d00b18a03989347283fa19c3a6fa0b906030d37f6a0caaac245c544987d"
+    },
+    {
+      "path": "research-goal-20261018-stageI-independent/preparation.json",
+      "bytes": 1971,
+      "sha256": "3d2a54b550bbd2475d44cdd82852e0623ed6c2af7072c7d3aea3ba132bd44366"
+    }
+  ],
+  "read_only_dependencies": [
+    {
+      "path": "research-goal-20261018-stageI-original-affine-point/files.json",
+      "bytes": 9592,
+      "sha256": "afaece4fee2e74d064258f689faff64d9732c53f8a412d0c71f6140d7653f482"
+    },
+    {
+      "path": "research-goal-20261018-stageI-static-contract/files.json",
+      "bytes": 3271,
+      "sha256": "f526477985915b2e26d9db1c81ecbcd246564ed7241a9724bc325fb7e0dfca76"
+    },
+    {
+      "path": "research-goal-20261018-record-baseline-replay/files.json",
+      "bytes": 7813,
+      "sha256": "03f3426e29ab7355ed76729dcaa3a3ba754154ae39ff5e9632bae2c57eff069f"
+    },
+    {
+      "path": "research-goal-20261018-record-baseline-replay/packing_parser_v3.py",
+      "bytes": 13370,
+      "sha256": "6ccb60ece1069521ace855a1f640365e3cad06a2e68033d9a40e657a3604219a"
+    },
+    {
+      "path": "research-goal-20261018-record-baseline-replay/record_math.py",
+      "bytes": 6737,
+      "sha256": "7150ff5a45ac3cdf2e360c1421361e20044b7d9f2a2928e2f3bee5ea5178e4d3"
+    },
+    {
+      "path": "research-goal-20261018-record-baseline-independent/audit-files.json",
+      "bytes": 2971,
+      "sha256": "2d2c8003ed6be6f74d0f53e8624cd631eb1c934415b22b5377a4f2d40c64791c"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/files.json",
+      "bytes": 15059,
+      "sha256": "3f9408f2cf1ceae12339456da034d9e8f175f828cf2d53a652339ee79eec89ad"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/first-unresolved-sample.json",
+      "bytes": 862,
+      "sha256": "a3349919ca3c07c71346a6a753396b8daa211c5e5492299cdaf300198fbf2689"
+    }
+  ],
+  "mathematical_audit_calls": 0,
+  "FS_extractions": 0,
+  "point_evaluations": 0,
+  "new_producer_imported": false,
+  "new_root_audit_gate_required": true,
+  "scope": "Only prepared source and AST. Fixed two-original-FS Fraction point review, no uniformfloor or actual energy claim."
+}
