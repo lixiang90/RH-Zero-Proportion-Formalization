@@ -2,6 +2,15 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
+The website now records **67.3587173310297…%** in the
+[s1R submission](https://www.riemannzeta.fun/submissions/critical-strip-exclusion-attempt-1).
+The latest requested gain is greater than1/1,000,000 in absolute proportion,
+so the current strict target is **67.3588173310297…%**.
+[Macro review003](research-goal-20261016/macro-reviews/003-20261018.zh.md)
+moves the overlapping-window research to that exact new source and its
+original17/20 separation. Complete original-certificate replay is the next
+gate; no new joint floor or unconditional record has been proved.
+
 A [common-shift integer rounding comparison](research-goal-20261017-common-rounding/NOTE.zh.md)
 now gives a new whole-domain necessary condition for actual24-mode global
 minima. Separate static reviews agree on its finite convex-combination
@@ -38,8 +47,7 @@ all 5,004 moment-box payments give the strict upper bound
 bridges, complete root coverage and the website source-size contract remain
 open. This is **not an unconditional zero-proportion record**.
 
-The website's [attempt-024](https://www.riemannzeta.fun/submissions/attempt-024)
-now proves **67.3581307708%**, exceeding this repository's completed October 15
+The website's current record exceeds this repository's completed October15
 bound below. **The old upload is no longer a record improvement.**
 
 The fixed ten-point candidate targets **67.3601930885588067…%**. Its exact

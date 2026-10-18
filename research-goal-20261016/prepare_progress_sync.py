@@ -24,7 +24,7 @@ def indexed_blobs(paths):
 def main():
     receipt=json.loads((HERE/'ordinary-verified-current.json').read_bytes())
     files=['.gitattributes','AGENTS.md','README.md','submission/goal-20261016/STATUS.zh.md']
-    names=['README.md','DIRECTION.zh.md','direction-state.json','macro-reviews/001-20261017.zh.md','macro-reviews/002-20261017.zh.md',
+    names=['README.md','DIRECTION.zh.md','direction-state.json','macro-reviews/001-20261017.zh.md','macro-reviews/002-20261017.zh.md','macro-reviews/003-20261018.zh.md',
       'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
       'window_interval_kernel.py','window_interval_kernel.json','window_jet_crosscheck.py','window_jet_crosscheck.json',
       'window_global_cover.py','window_lower_global_cover.py','window_make_lower_variant.py','window_make_lower_variant.json',
@@ -263,7 +263,11 @@ def main():
       ('research-goal-20261017-pressure-budget-static-review/review-files.json','d3357cd81df489bbe77ba680e5616d846e5ebf9b66cfe695340b76054f475ffb'),
       ('research-goal-20261017-gluing-joint-infimum/joint-infimum-files.json','03f27afd41379548da4e0374905190b26cb3f625b4c3012f600f07b4623d3877'),
       ('research-goal-20261017-gluing-separated-review/review-files.json','bc5b29003f0ef9f4e5b4b898419873f2dc2541894c37cecb500a0046b47d89fd'),
-      ('research-goal-20261017-gluing-exception-static-audit/files.json','0d1e6ad17c69b527238bcc4d563c91c76fe72e86123436728334ef1272eaff96')]:
+      ('research-goal-20261017-gluing-exception-static-audit/files.json','0d1e6ad17c69b527238bcc4d563c91c76fe72e86123436728334ef1272eaff96'),
+      ('research-goal-20261018-record-source-audit/source-audit-files.json','a4979eb961b87a14ba3dc7419066e102a2661f6289543d46d3728e6c15f731b8'),
+      ('research-goal-20261018-target-arithmetic/files.json','4fd1475357692e67d8be4a5afc633e6e966ff2965593225b7127f11630972414'),
+      ('research-goal-20261018-record-overlap-static/review-files.json','bedba14933f6c981fd27b9f42098b40549933ce26901d7e2407b69c8c9fde0ef'),
+      ('research-goal-20261018-record-packing-independent/packing-files.json','ade046ca2398cc3825d81a74aec1afa955b8957bf56dea8cd9cb8fd1c38cabc6')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -306,6 +310,8 @@ def main():
             rows+=pinned['read_only_reference_inputs']
         if name=='research-goal-20261017-gluing-exception-static-audit/files.json':
             rows+=pinned['read_only_references']
+        if name=='research-goal-20261018-target-arithmetic/files.json':
+            rows+=pinned['existing_read_only_input_references']
         if name=='research-goal-20261017-local-phase/local-phase-files.json':
             source_index=json.loads((ROOT/pinned['dependency_index']['path']).read_bytes())
             identity_rows=source_index['actual_identity_sources']+source_index['prior_work_reviewed']

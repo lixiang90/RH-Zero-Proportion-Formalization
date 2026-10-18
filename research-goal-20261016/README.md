@@ -2,6 +2,14 @@
 
 No new unconditional zero proportion is asserted by this directory.
 
+The [third macro review](macro-reviews/003-20261018.zh.md) updates the record
+to67.3587173310297…% and the human's strict increment to1/1,000,000. The
+new target is67.3588173310297…%. The main route now uses the new s1R source,
+its own kernel/tables and17/20 separation. Only a complete original-floor
+identity replay is authorized before a raised-threshold overlap audit;
+old kernel-specific tables and the123/128 pair payment cannot be imported
+as new-kernel evidence. Historic frozen packets retain their original scope.
+
 The current [global rounding comparison](../research-goal-20261017-common-rounding/NOTE.zh.md)
 uses one common shift to produce at most ten feasible integer configurations.
 It gives an actual-global-minimum necessary condition and needs no new

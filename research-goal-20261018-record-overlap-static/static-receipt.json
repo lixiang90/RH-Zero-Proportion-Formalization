@@ -1,0 +1,143 @@
+{
+  "schema": "new-record-fixed-overlap-static-review-v1",
+  "source": {
+    "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+    "bytes": 1818411,
+    "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+  },
+  "fixed_upstream_commit": "cfc7ce6113199b7d5f262812d81089778e84335c",
+  "source_identity_and_signatures_only_not_kernel_acceptance": true,
+  "profile_terms": 13,
+  "old_profile_terms_not_reused": true,
+  "new_c9": "893616123055294719/100000000000000000000",
+  "new_total_pressure_B9": "114027986251/25000000000000",
+  "new_window_floor_H": "3360645045884019172184136761695440236797/5000000000000000000000000000000000000000",
+  "record_ratio_recovered_from_source_parameters": "3337839448633819172184136761695440236797/4955319193847235264050000000000000000000",
+  "target_absolute_increment": "1/1000000",
+  "target_strict_ratio": "3337844403953013019419400811695440236797/4955319193847235264050000000000000000000",
+  "necessary_joint_floor_strict_gt": "2983242679388560753235984700110788669680256409505983575043/333784440395301301941940081169544023679700000000000000000000",
+  "necessary_increment_over_new_c9_strict_gt": "9822075325164325431833833366379949288961/6675688807906026038838801623390880473594000000",
+  "necessary_increment_hint": 1.4713201300713763e-06,
+  "fixed_opportunity_increment": "3/2000000",
+  "fixed_candidate_c": "893766123055294719/100000000000000000000",
+  "fixed_two_sublevel_threshold_t": "893916123055294719/100000000000000000000",
+  "fixed_t_scaled_integer": "893916123055294719",
+  "ratio_if_joint_floor_proven": "3337839448633819172184136761695440236797/4955311693847235264050000000000000000000",
+  "ratio_if_joint_floor_proven_percent_hint": 67.35881928029369,
+  "fixed_separation": "17/20",
+  "new_source_original_short_pair_floor": "1/64",
+  "existing_new_source_pair_payment_suffices_at_original_separation": true,
+  "new_kernel_short_pair_payment_at_123_over_128_proven_by_this_review": false,
+  "prefix_suffix_weights": {
+    "delete0": "1/2",
+    "delete9": "1/2"
+  },
+  "prefix_suffix_span_masses": [
+    "49999999999999/25000000000000",
+    "199999999999997/100000000000000",
+    "49999999999999/25000000000000",
+    "99999999999999/50000000000000",
+    "99999999999999/50000000000000",
+    "199999999999999/100000000000000",
+    "2",
+    "2",
+    "0"
+  ],
+  "prefix_suffix_pressure": "114027986251/25000000000000",
+  "new_root_unary_guard_with_separated_pressure": "1281311276308694719/100000000000000000000",
+  "new_root_tail_guards_with_separated_pressure": [
+    "6294737274623/500000000000000",
+    "12414321106397/1000000000000000",
+    "24565882693361/2000000000000000",
+    "6206890547249/500000000000000",
+    "6206890547249/500000000000000",
+    "24565882693361/2000000000000000",
+    "12414321106397/1000000000000000",
+    "6294737274623/500000000000000"
+  ],
+  "new_root_pre_guard_margin_checks_pass": true,
+  "expected_original_terminal_leaf_count_from_task": 13046,
+  "terminal_leaf_count_independently_replayed": false,
+  "nested_cut_states_require_original_full_identity_replay": true,
+  "source_anchors": {
+    "noncomputable def cAMn": [
+      132
+    ],
+    "noncomputable def vAM": [
+      149,
+      213,
+      214
+    ],
+    "noncomputable def cN :": [
+      10634
+    ],
+    "noncomputable def BS :": [
+      10638
+    ],
+    "noncomputable def TS :": [
+      10639
+    ],
+    "noncomputable def mcheckGX": [
+      10155
+    ],
+    "noncomputable def mleafP": [
+      10993
+    ],
+    "noncomputable def leafStep": [
+      11079
+    ],
+    "noncomputable def walkCutR": [
+      11169
+    ],
+    "noncomputable def COV :": [
+      12408
+    ],
+    "noncomputable def SMAX": [
+      12417
+    ],
+    "theorem cert_AM :": [
+      14584
+    ],
+    "theorem PC9QB6M_G_rev": [
+      14293
+    ],
+    "theorem kernel_square_ge": [
+      16181
+    ],
+    "theorem actual_dyadic {n : ℕ}": [
+      16834
+    ]
+  },
+  "website_source_cap_bytes": 2000000,
+  "new_source_bytes": 1818411,
+  "new_source_raw_remaining_bytes": 181589,
+  "existing_bridge_body_cost_references_only": [
+    {
+      "path": "GramDefect20261015/RefinedCounting.lean",
+      "bytes": 6818,
+      "sha256": "e756b01819f5063e1c9dba906b75e12c036e384156ff5734f566c2ea7c5d70cf"
+    },
+    {
+      "path": "StructuralResearch20261016/Coboundary.lean",
+      "bytes": 19992,
+      "sha256": "730fdccd5d8faba2765f5b1d77b5e7ff897328b92ac6bcb4f3d1fe876702041a"
+    },
+    {
+      "path": "StructuralResearch20261016/CoboundaryCounting.lean",
+      "bytes": 11551,
+      "sha256": "8933b6ae6bd5cb0b567a8e0e81b93235a1bb4ba863b2793dcd8177bb31a55a96"
+    }
+  ],
+  "existing_bridge_bodies_raw_bytes": 38361,
+  "new_source_plus_reference_bodies_raw_bytes": 1856772,
+  "raw_remaining_before_all_new_classification_and_joint_proof": 143228,
+  "actual_migrated_single_source_built": false,
+  "new_global_sublevel_cover_proven": false,
+  "new_global_joint_floor_proven": false,
+  "new_optimizer_calls": 0,
+  "new_actual_kernel_evaluations": 0,
+  "leaf_or_literal_payloads_decoded": 0,
+  "new_overlap_checks": 0,
+  "Lean_invocations": 0,
+  "website_submission_ready": false
+}

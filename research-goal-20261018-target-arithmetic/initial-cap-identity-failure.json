@@ -1,0 +1,9 @@
+{
+  "phase": "pure_arithmetic_initial_identity_assertion_failed",
+  "source": "research-goal-20261018-target-arithmetic/verify_initial_cap_identity_failure.py",
+  "source_sha256": "405b80796565b7f015d0264473fbe077cbf8317e7e31b73d02b927f8f1c22fd3",
+  "failed_assertion": "family cap ratio computed from parameter H equals old family-cap ratio",
+  "reason": "Old family-cap uses its formal_H_lower rounded down more coarsely than the long window_reweight_rational H. Inputs/thresholds/dual unchanged. No packet was written by this failed execution.",
+  "solver_calls": 0,
+  "correction": "Read original family-cap receipt formal_H_lower and B, and recompute the same old-family ratio from those values."
+}

@@ -1,0 +1,147 @@
+新网站纪录固定源码：静态身份、实际基线及复用接口
+
+原始文件：snapshot/Solution.lean，1,818,411 bytes，SHA256
+f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf。
+固定上游commit cfc7ce6113199b7d5f262812d81089778e84335c，来源为
+josusanmartin/riemann 的 critical-strip-exclusion-attempt-1/proof/Solution.lean。
+HTTP200字节获取收据在fetch-receipt.json。原始字节、copyright、归属和完整
+license/NOTICE均保留，没有换行归一化。web工具第一次cache miss、默认shell
+网络权限失败之后，授权的同一只读fetch脚本成功下载；未执行下载源码。
+
+状态边界：网站新纪录及验收由根代理报告，不是本包的本地Lean/Comparator/
+nanoda重放。本轮没有编译、优化、树/叶payload解码或新数值核计算。源码中
+保留的SOURCE ONLY/pending历史注释不决定当前网站状态；定理文本的存在也
+不构成本地验收。13,046叶保持网站报告数，未由本包独立确认。
+
+1. 实际核与解析常数
+
+AMW.cAMn（132–146行）有13个系数，j=0基项系数为1；基项函数是
+cos(sqrt(2)*t)，并非真正的常数函数。分母统一10^9，整数分子依次为
+1000000000,13474154,-15663835,4014071,6888777,-1266079,4677638,
+-6896515,3494966,-6098202,5362661,-626814,-251883。
+对j>=1，omega_j=2*pi*j；vAM(t)=Σ_{j=0}^{12}cAM(j)*cos(omega_j*t)。
+KfunAM(x)=积分[-1/2,1/2] vAM(t)*cos(2*pi*x*t)，
+kfunAM(x)=KfunAM(x)/KfunAM(0)，wfunAM(x)=kfunAM(x)^2（373–380行）。
+这是本源码归属所称s1R。它不同于本仓库旧Core的13系数，也不同于新24-mode核。
+旧Core的实际wfun/PT/LB/H定理不能直接当作此新核的证明。
+
+实际AMW.HW是1654行给出的超越数表达式，不等于一个被证明精确相等的有理数。
+HW_ge（1804行）证明所用有理下界
+ Hlo=6721290091768038344368273523390880473594/10^40。
+有限floor及压力精确为
+ c9=893616123055294719/10^20，
+ B=456111945004000000/10^20。
+最终16887–16898行直接给R=(Hlo-B)/(1-c9)，其有理数是
+3337839448633819172184136761695440236797/
+4955319193847235264050000000000000000000。
+静态Fraction检查此恒等式成立；不把Hlo称为实际HW的精确值。
+
+2. 可供joint prefix/suffix使用的完整实际基线
+
+RiemannFail.W9有9个点、8个gap，aW9（14324行）、bW9及W9定义来自本文件。
+static-inventory.json保存全部36个上三角系数、34正边、8个压力和原始TS/BS。
+共同分母SA=10^20；BS分子为
+[28195867368000000,50516979727000000,69185101351000000,80158024056000000,
+ 80158024056000000,69185101351000000,50516979727000000,28195867368000000]。
+其和正好是上述B。a、b均非负且反射对称；每个跨度容量<=2由W9_adm证明。
+
+记p_i=Σ_{r<i}g_r，使用本文件的实际w=wfunAM，则
+ F9(g)=Σ_{r=0}^7 b_r*g_r+Σ_{0<=i<j<=8}a_ij*w(p_j-p_i)。
+Fw_W9（14577行）把它等同PC9QB6M.G；cert_AM（14584行）声明
+ 对所有g:Fin8->Real，若每个g_r>=0，则c9<=F9(g)。
+这是整个非负域的pointwise下界，不是minimizer-only或某个sep cell下界。
+内部半域逃逸g7<g0由G_rev与PC9QB6M_cert_full（14293–14313行）消除。
+
+因此对h=(h0,...,h8)>=0可无歧义定义
+ Fprefix(h)=F9(h0,...,h7)，Fsuffix(h)=F9(h1,...,h8)，
+并对任何非负lambda、mu得到lambda*Fprefix+mu*Fsuffix>=(lambda+mu)*c9。
+新严格joint增益须额外证明重叠窗口极小值不能共同逼近，或得到更强的实际
+全域命题；基线本身不自动提供增益。所有核、压力和a必须用本包新定义。
+
+3. 检查器兼容性与不能直接替换的部分
+
+extract_static.py对旧GramDefect20261015/Core.lean做静态规范化比较：删除
+comments/whitespace及def前的noncomputable修饰后，以下13个完整声明syntax
+均相同：Cl, InCell, CovBy, Fg, Pg, MulOKg, mcheckGX, mcheckGX_sound,
+TVal, mtermTI, cuB, rootCl, cert_of。各声明范围、SHA和行号在inventory。
+特别mcheckGX仍显式接受Q/bs/TS/cN；其整数目标可按新的cN重新检查。
+但名字wfun在两份环境解析成不同的实际核，故这种syntax兼容不是kernel函数
+等同证明。旧LocalChecker导入旧Core时不能跨用新核解析定理或新表。
+本source的许多Nat定义标为noncomputable以省去unused executable code；
+它们仍透明供普通kernel reduction，不能默认是可直接调用的native发现器。
+
+source-specific St/toCl/mcheckP/mleafP/walkCut*固定为8gap和本W9/34term/cN。
+新10点/9gap结构不能把这些专用walk当泛型直接套用；可移植的是通用Cl/
+mcheckGX及soundness结构，或者保留完整baseline theorem后另证joint命题。
+提高cN后原finite等式不会自动仍成立；所有新有限义务须真实重新证明。
+
+4. Packing及nested证明接口（只读，不解码）
+
+前部ZeroForgePackedNat.decode64验证ASCII字母表、精确bit长、leading bits、
+每literal<=65536bits，macro只返回Lean.Syntax.mkNumLit普通Nat。没有生成
+数学axiom或用native Bool证明；本轮只计137处packed numeral、声明bit总数
+3,581,236及596,941个payload字符，未将任何payload转换为Nat/叶节点。
+除注释后sorry/axiom/native_decide/unsafe code-token扫描均为零；该扫描不是
+传递公理审计或kernel检查。
+
+有限数据含WD0..WD47共48个root streams，48个ready parent_cursor theorem，
+另有70个nested_cursor theorem。CutsOk（11150行）要求每条cut关联state的
+Covered证明；cutAt_ok/walkCut_ok/covered_of_walkCutR接回原soundness。
+ready*_covered、cutsOk_cons逐个构造子树覆盖，再由rcOfC给各root覆盖。
+这些不是旧的flat rcOf WD end清单；不能仅解析48个root cursor当作所有中间
+finite义务已重放。13046藏于payload，保留reported=true/locally_confirmed=false。
+新的mleafP_ok用227层zeroForge_forceR_cov将decoded values在证明中保持抽象，
+最后仍调用mcheckGX_sound及mtermTI/ydec_ok，不是放宽数值检查器。
+
+5. 计数链、源体积与后续复用边界
+
+OpethN.ActualDefect.actual_dyadic（16834行）对n/W/c/B泛型，要求W.Adm、
+0<c<=1/64、W.B=B及全域hCert；内部matching_defect_bound_n、actual close-pair
+界和kernel-limit接口接到simple-zero计数，再由N0simple<=N0star给distinct
+critical-line计数。actual_cumulative复用真实dyadic-to-cumulative桥。最终
+Opeth.AMFinal对n=9、上述W9/Hlo/B/c实例化，三条网站声明在16923–16935行。
+源文件完整声明了这些数学前提的证明；本轮不声称它们已本地重新验收。
+
+源码1,818,411B距2,000,000B剩181,589B。这取代此前旧1971160B的基线预算；
+新增joint证明/consumer及新wrapper的真正单文件体积仍须实测。原网页wrapper
+am_export_candidate_exact强制candidateKappa=此R；若目标提升，不能只append：
+须在新派生提交中替换该wrapper为新目标，保留原数学baseline及版权。
+ChallengeDeps/CandidateSpec为网站生成的可信目标依赖，不是任意本地替身。
+不改本包snapshot。网站报告接受不替代新派生文件的本地普通核、Comparator、
+Nano、资源和源码体积检查；现无新比例/新完整cover证明。
+
+6. 旧完整integer replay需适配的实际差异（只读，不实现/执行）
+
+已只读scripts/finite_margin_20261015.py及其review脚本。旧calc、printed
+mcheckP AST交叉核对、split/ydec、完整pwD/mokI与reachability检查可作为
+后续独立replay的基础；旧运行结果不能作为本source的重放收据。
+
+第一阶段A应只重放本source原始cN=893616123055294719，不提高threshold。
+旧脚本的OLD_CN/NEW_CN、main断言、最大可提高floor、旧root SMAX常量和旧
+固定统计断言必须改为从此source解析并核对，不能沿用旧accepted-source
+SHA或“仅替换两处cN”的candidate身份假设。BS/TS/PR/BND、TOP/BK、SIG、
+PT及所有packing参数也必须来自本次完整snapshot；保留完整PT high fields
+以重建pwD的合法区间，不能只检查数值calc使用的low96bits。
+
+旧WL parser只接hex；本source的137处zfNat64应先独立验证字母表、声明
+bit长、leading-bit规则、Nat精确还原与全部字面量身份，不能用错误默认0。
+旧COV regex终点是换行def SMAX，本source为noncomputable def SMAX，需
+修解析边界。旧rootrecords只匹配一行rcOf WD end；本source实际用rcOfC、
+CutsOk和nested ready cursor，故该regex会漏48个root及中间嵌套证明。
+
+高层walk必须逐项解析Cuts列表(position,state,end)，认证每个referenced
+子树在其明示state/fuel/startpos的原no-TM walkCut结束cursor；之后才能
+把它接入parent walkCutR。parent外层tm只收紧span bounds，不能在每个
+nested节点多加tm或丢失cutAt覆盖替换。须核所有nested cursor和48个parent
+cursor非零及精确end，含stream使用范围、leaf/farkas/reversal、fuel与全部
+数值/几何premises。不能把已证明cut当未知任意leaf而跳过其数值检查。
+
+旧_parse_printed_check还依赖mcheckP固定三行layout；应先绑定本source
+完整声明，再独立核printed arithmetic与compact formula。新mcheckP接口
+虽有tD/bD/R形参，其当前39509字符声明内这些名字各只出现于参数处；不能
+只因形参存在就新增导数表数值义务，也不能因此省略source中真正活动的
+mokI、mtermTI、MulOKg或walk guards。实际调用链须以源码/AST为准。
+
+这只是适配清单：本包未import/执行两个旧replay脚本，未生成适配实现，
+未解码137字面量或确认13046 leaves。阶段A完整原floor身份/数值重放与
+后续阶段B新joint exceptions严格分开；A成功也不自动给出任何比例改进。
