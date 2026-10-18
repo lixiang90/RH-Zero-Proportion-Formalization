@@ -342,7 +342,8 @@ def main():
       ('research-goal-20261019-tiny-check-delivery/files.json','f4eff94a23ae54430598710a17c1b40960997f624002ebb623a48e0363a4d6ff'),
       ('research-goal-20261019-native-preproduction-delivery/files.json','682053912ea4f6908c7907fab4941c00d47b7bc4e9d95ce7065df3183b34c6f7'),
       ('research-goal-20261019-final-accepted-delivery/files.json','d3a0f4fcc35af837dc722eb60a928375caa8de11f5034ae0b8d11ecdedf57e63'),
-      ('research-goal-20261019-final-verification-addendum-delivery/files.json','24e049644d3aeb3c474934a6039c73d47eff65d58da8037253152559ab4acacc')]:
+      ('research-goal-20261019-final-verification-addendum-delivery/files.json','24e049644d3aeb3c474934a6039c73d47eff65d58da8037253152559ab4acacc'),
+      ('research-goal-20261019-completion-audit/files.json','cec2cb33349a262cc6c47cf5680c0b9d9f263ce9c176a3065b8563b51624a4c9')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
