@@ -1,0 +1,61 @@
+{
+  "schema": "trusted-native-setup-result-lossless-byte-archive-v1",
+  "scope": "Frozen setup metadata and previous prebuild failure, not a candidate proof result",
+  "logical_large_metadata_files": [
+    {
+      "source_path": "tmp/current-s1r-tiny-20261018/native-tools-v2/installation.json",
+      "restore_path": "research-goal-20261019-native-tools-result/installation.json",
+      "bytes": 5886525,
+      "sha256": "2b636d4a943acfdd44bc14225c3128992c2df634320a6623f735b362e220e797",
+      "pieces": [
+        {
+          "path": "research-goal-20261019-native-tools-result/pieces/installation.json.part00",
+          "bytes": 3145728,
+          "sha256": "b57c2105d22da57c5dae121a0e7b459a68d2e2645b1c8cb840878fac16333f5f"
+        },
+        {
+          "path": "research-goal-20261019-native-tools-result/pieces/installation.json.part01",
+          "bytes": 2740797,
+          "sha256": "0f3faf962a102af050b0a47cc13bcb454fb2e8c46d951871755cedea6d231784"
+        }
+      ],
+      "split_join_byte_identity_verified": true
+    },
+    {
+      "source_path": "research-goal-20261019-native-tools-preparation-v2/v1-failure.json",
+      "restore_path": "research-goal-20261019-native-tools-preparation-v2/v1-failure.json",
+      "bytes": 5837651,
+      "sha256": "554d3e54b832dc6d664daf335a0114734a14743ead794de374dbe9d58577e77a",
+      "pieces": [
+        {
+          "path": "research-goal-20261019-native-tools-result/pieces/v1-failure.json.part00",
+          "bytes": 3145728,
+          "sha256": "8ea9f9cae14e7c02e472414d2b70ecbd5da2b77f9dfc79e74dcaef2549da5ee3"
+        },
+        {
+          "path": "research-goal-20261019-native-tools-result/pieces/v1-failure.json.part01",
+          "bytes": 2691923,
+          "sha256": "ee1185fb818f619dbe15731dae97ca0d9245bd12a782ef54d31788d93a4e414c"
+        }
+      ],
+      "split_join_byte_identity_verified": true
+    }
+  ],
+  "fresh_record_snapshot": {
+    "path": "research-goal-20261019-native-tools-result/fresh-record.json",
+    "bytes": 2429,
+    "sha256": "f03c572c86a9dd195eeb3742c570c4462b865c1c081b8112552469c7b3eb3510",
+    "original_path": "tmp/goal-20261016/macro006-native-preproduction-fresh-record.json"
+  },
+  "setup_receipt_metadata": {
+    "passed": true,
+    "proof_runs": 0,
+    "official_website_acceptance": false,
+    "user_oleans_compiled_or_reused": false,
+    "elapsed_setup_seconds": 58.42521931300001,
+    "all_source_and_SDK_checks_reported_unchanged": true
+  },
+  "receipt_artifact_pins_are_metadata_only": true,
+  "ELF_SDK_C_olean_files_copied": false,
+  "producer_or_proof_execution_by_archiver": false
+}

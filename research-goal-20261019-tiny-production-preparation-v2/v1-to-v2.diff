@@ -1,0 +1,261 @@
+--- interpreted-v1/run_production.py
++++ native-v2/run_production.py
+@@ -56,9 +56,9 @@
+         self.t0 = time.monotonic()
+         self.deadline = self.t0 + BUDGET
+         self.args = args
+-        self.work = Path('/var/tmp/rh-zero-20261015/tiny-production-v1')
+-        self.mirror = ROOT / 'tmp/current-s1r-tiny-20261018/production-v1'
+-        self.receipt = {'schema': 'tiny-cold-production-result-v2',
++        self.work = Path('/var/tmp/rh-zero-20261015/tiny-production-v2')
++        self.mirror = ROOT / 'tmp/current-s1r-tiny-20261018/production-v2'
++        self.receipt = {'schema': 'tiny-cold-production-result-v3',
+             'started_at_utc': datetime.now(timezone.utc).isoformat(),
+             'monotonic_t0': self.t0, 'budget_seconds': BUDGET,
+             'timer_scope': 'Before all pin checks and generation through final hashes and fsynced receipts',
+@@ -69,6 +69,8 @@
+         self.bound = {}
+         self.active = None
+         self.setup_done = False
++        self.native_resolutions = {}
++        self.native_binaries = {}
+ 
+     def remaining(self):
+         left = self.deadline - time.monotonic()
+@@ -89,6 +91,8 @@
+         self.bound[str(path)] = expected
+ 
+     def immutable(self):
++        for original, resolved in self.native_resolutions.items():
++            assert str(Path(original).resolve()) == resolved, 'A native runtime symlink changed'
+         for name, expected in self.bound.items():
+             assert self.sha(name) == expected, 'A bound input/artifact changed: ' + name
+ 
+@@ -183,7 +187,8 @@
+     def environment(self, paths):
+         return {'PATH': str(Path(self.lean).parent) + ':/usr/bin:/bin',
+                 'LEAN_PATH': ':'.join(map(str, paths)), 'HOME': '/var/tmp/rh-zero-20261015',
+-                'LANG': 'C.UTF-8', 'LC_ALL': 'C.UTF-8'}
++                'LANG': 'C.UTF-8', 'LC_ALL': 'C.UTF-8',
++                'LEAN_SYSROOT': str(Path(self.lean).parent.parent)}
+ 
+     def archive_blob(self, package, name):
+         archive = ROOT / 'tmp/setup-20261015' / (package + '.tar.gz')
+@@ -192,6 +197,88 @@
+                        and '/'.join(Path(m.name).parts[1:]) == name]
+             assert len(members) == 1, (package, name)
+             return stream.extractfile(members[0]).read()
++
++    def bind_native_tools(self, gate, config):
++        """Bind a root-confirmed successful preinstalled native setup under t0."""
++        selected = gate['trusted_native_tools']
++        assert selected['root_confirmed_setup_terminal_exit_code'] == 0
++        install_path = Path(selected['installation_path']).resolve()
++        native_root = install_path.parent
++        assert install_path.name == 'installation.json'
++        assert native_root.parent == Path('/var/tmp/rh-zero-20261015')
++        assert re.fullmatch(r'tiny-native-tools-v[0-9]+', native_root.name)
++        setup_prepared = (ROOT / selected['setup_prepared_path']).resolve()
++        assert setup_prepared.is_relative_to(ROOT) and setup_prepared.name == 'prepared-files.json'
++        self.bind(setup_prepared, selected['setup_prepared_sha256'])
++        self.bind(install_path, selected['installation_sha256'])
++        install = load(install_path)
++        assert install['schema'] == 'trusted-native-tool-installation-v1'
++        assert install['prepared_sha256'] == selected['setup_prepared_sha256']
++        assert install['passed'] is True and install['proof_runs'] == 0
++        assert install['automatic_retries'] == 0
++        assert install['complete_source_and_SDK_C_toolchain_unchanged'] is True
++        assert install['no_external_Lake_packages_or_network_fetch_configured'] is True
++        assert install['user_oleans_compiled_or_reused'] is False
++        assert install['official_website_acceptance'] is False
++        native_mirror = ROOT / 'tmp/current-s1r-tiny-20261018' / native_root.name.removeprefix('tiny-')
++        assert not (native_root / 'failure.json').exists() and not (native_mirror / 'failure.json').exists()
++        self.bind(native_mirror / 'installation.json', selected['installation_sha256'])
++        expected = {}
++        for package, names in {
++            'lean4export': ['Export.lean', 'Export/Parse.lean', 'Main.lean'],
++            'Comparator': ['Comparator.lean', 'Comparator/Axioms.lean', 'Comparator/Compare.lean',
++                           'Comparator/Util.lean', 'Main.lean']}.items():
++            for name in names:
++                dest = ('ExporterMain.lean' if package == 'lean4export' else 'ComparatorMain.lean') if name == 'Main.lean' else name
++                expected[dest] = hashlib.sha256(self.archive_blob(package, name)).hexdigest()
++        expected['CoreAudit.lean'] = '7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2'
++        assert set(install['source_provenance']) == set(expected)
++        for name, digest in expected.items():
++            assert install['source_provenance'][name]['source_sha256'] == digest
++        source_paths = {str(native_root / 'source' / p) for p in expected}
++        source_paths |= {str(native_root / 'lakefile.toml'), str(native_root / 'lean-toolchain')}
++        assert {r['path'] for r in install['source_pins']} == source_paths
++        for row in install['source_pins']:
++            path = Path(row['path'])
++            assert str(path.resolve()) == row['resolved_path']
++            assert path.stat().st_size == row['bytes']
++            self.bind(path, row['sha256'])
++            self.native_resolutions[str(path)] = row['resolved_path']
++        assert self.sha(native_root / 'lakefile.toml') == self.sha(ROOT / config['native_lakefile_template'])
++        assert (native_root / 'lean-toolchain').read_text().strip() == 'leanprover/lean4:v4.33.0-rc2'
++        assert set(install['native_executables']) == {'lean4export', 'coreaudit'}
++        self.native_binaries = {}
++        for name in ['lean4export', 'coreaudit']:
++            row = install['native_executables'][name]
++            path = native_root / '.lake/build/bin' / name
++            assert row['path'] == str(path) and str(path.resolve()) == row['resolved_path']
++            assert path.stat().st_size == row['bytes'] and os.access(path, os.X_OK)
++            with path.open('rb') as f:
++                assert f.read(4) == b'\x7fELF'
++            self.bind(path, row['sha256'])
++            self.native_resolutions[str(path)] = row['resolved_path']
++            self.native_binaries[name] = str(path)
++        runtime_paths = {r['path'] for r in install['native_runtime_closure_pins']}
++        assert set(self.native_binaries.values()) <= runtime_paths
++        for row in install['native_runtime_closure_pins']:
++            path = Path(row['path'])
++            assert str(path.resolve()) == row['resolved_path'] and path.stat().st_size == row['bytes']
++            self.bind(path, row['sha256'])
++            self.native_resolutions[str(path)] = row['resolved_path']
++        for cmd in install['commands']:
++            assert cmd['exit_code'] == 0
++        self.receipt['trusted_native_tools'] = {
++            'installation_path': str(install_path), 'installation_sha256': selected['installation_sha256'],
++            'setup_prepared_path': str(setup_prepared), 'setup_prepared_sha256': selected['setup_prepared_sha256'],
++            'native_executables': install['native_executables'],
++            'native_runtime_closure_pins': install['native_runtime_closure_pins'],
++            'source_provenance': install['source_provenance'],
++            'runtime_symlink_resolutions': self.native_resolutions,
++            'setup_was_prior_to_this_proof_timer': True,
++            'trusted_tools_recompiled_in_this_proof_attempt': False,
++            'user_oleans_reused': False}
++        self.receipt['tool_compiled_modules'] = []
++
+ 
+     def source(self, folder, relative, data):
+         target = folder / relative
+@@ -245,7 +332,7 @@
+         self.receipt['fresh_record_recheck'] = recheck
+         self.receipt['previous_failed_attempt_sha256'] = config['previous_failure_receipt_sha256']
+         self.receipt['deduplicated_production_source_prepared_sha256'] = config['production_source_prepared_sha256']
+-        self.receipt['local_nanoda_threads'] = 4
++        self.receipt['local_nanoda_threads'] = 0
+         self.receipt['locked_official_Comparator_default_nanoda_is_serial'] = True
+         self.receipt['official_runtime_equivalence_claimed'] = False
+         assert not self.work.exists() and not self.mirror.exists()
+@@ -261,6 +348,7 @@
+         self.bind(config['nanoda'], config['nanoda_sha256'])
+         self.bind(config['Windows_Python_Linux_path'], config['Windows_Python_sha256'])
+         self.bind(config['Windows_Python_DLL_Linux_path'], config['Windows_Python_DLL_sha256'])
++        self.bind_native_tools(gate, config)
+         runtime = load(ROOT / 'tmp/setup-20261015/runtime.json')
+         assert runtime['lean'] == self.lean
+         self.packages = runtime['lean_path'].split(':')
+@@ -317,42 +405,19 @@
+         paths = [self.work / 'lib', *self.packages]
+         self.receipt['compiled_modules'] = [self.compile(self.work, m, paths, 'ordinary-') for m in modules]
+         self.receipt['ordinary_single_file_lean_passed'] = True
+-        tools = self.work / 'tools'
+-        (tools / 'lib').mkdir(parents=True)
+-        for package, names in {
+-            'lean4export': ['Export.lean', 'Export/Parse.lean', 'Main.lean'],
+-            'Comparator': ['Comparator.lean', 'Comparator/Axioms.lean', 'Comparator/Compare.lean',
+-                           'Comparator/Util.lean', 'Main.lean']}.items():
+-            for name in names:
+-                dest = ('ExporterMain.lean' if package == 'lean4export' else 'ComparatorMain.lean') if name == 'Main.lean' else name
+-                self.source(tools / 'source', dest, self.archive_blob(package, name))
+-        self.source(tools / 'source', 'CoreAudit.lean', (ROOT / 'tools/ComparatorCoreAudit.lean').read_bytes())
+-        pending = {'.'.join(p.relative_to(tools / 'source').with_suffix('').parts): p
+-                   for p in (tools / 'source').rglob('*.lean')}
+-        assert set(pending) == {'Export', 'Export.Parse', 'ExporterMain', 'Comparator',
+-            'Comparator.Axioms', 'Comparator.Compare', 'Comparator.Util', 'ComparatorMain', 'CoreAudit'}
+-        order = []
+-        while pending:
+-            ready = [m for m, path in sorted(pending.items())
+-                     if not (set(re.findall(r'^import\s+(\S+)', path.read_text(encoding='utf-8'), re.M)) & pending.keys())]
+-            assert ready, 'Pinned trusted tool import cycle'
+-            order.extend(ready)
+-            for m in ready:
+-                del pending[m]
+-        toolpaths = [tools / 'lib', *paths]
+-        self.receipt['tool_compiled_modules'] = [self.compile(tools, m, toolpaths, 'tool-') for m in order]
+-        assert not any((tools / 'lib' / x).exists() for x in forbidden)
++        toolpaths = paths  # Native tools need no trusted-tool/user olean overlay.
+         self.immutable()
+         exports = {}
+         for label, module in [('challenge', 'Challenge.Candidate'), ('solution', 'Solution.Candidate')]:
+             target = self.work / (label + '.ndjson')
+-            exports[label] = self.run(label + '-export', self.lean_command('--run',
+-                tools / 'source/ExporterMain.lean', module, '--', *ROOTS, *PRIMITIVES),
++            exports[label] = self.run(label + '-export',
++                [self.native_binaries['lean4export'], module, '--', *ROOTS, *PRIMITIVES],
+                 env=self.environment(toolpaths), output=target)
+             self.bind(target, exports[label]['output_sha256'])
+         self.receipt['exports'] = exports
+-        self.run('comparator-default-kernel', self.lean_command('--run', tools / 'source/CoreAudit.lean',
+-            self.work / 'challenge.ndjson', self.work / 'solution.ndjson', *ROOTS), env=self.environment(toolpaths))
++        self.run('comparator-default-kernel',
++            [self.native_binaries['coreaudit'], str(self.work / 'challenge.ndjson'),
++             str(self.work / 'solution.ndjson'), *ROOTS], env=self.environment(toolpaths))
+         text = (self.work / 'logs/comparator-default-kernel.log').read_text(encoding='utf-8', errors='replace')
+         for sentence in ['Pinned Comparator statement, dependency and primitive comparison passed',
+                          'Pinned Comparator transitive axiom check passed', 'Lean default kernel replay passed']:
+@@ -361,7 +426,7 @@
+                              'default_kernel_replay_passed': True})
+         nano_config = {'use_stdin': True, 'permitted_axioms': ALLOWED,
+             'unpermitted_axiom_hard_error': True, 'nat_extension': True, 'string_extension': True,
+-            'num_threads': 4, 'unsafe_permit_all_axioms': False, 'print_success_message': True,
++            'num_threads': 0, 'unsafe_permit_all_axioms': False, 'print_success_message': True,
+             'print_axioms': True, 'pp_to_stdout': True}
+         write_new(self.work / 'nanoda-config.json', nano_config)
+         self.bind(self.work / 'nanoda-config.json', self.sha(self.work / 'nanoda-config.json'))
+--- interpreted-v1/windows_generate.py
++++ native-v2/windows_generate.py
+@@ -14,7 +14,7 @@
+ ROOT = Path(__file__).resolve().parents[1]
+ HERE = Path(__file__).resolve().parent
+ FLATTEN = ROOT / 'research-goal-20261019-tiny-flatten-preparation-v4'
+-MIRROR = ROOT / 'tmp/current-s1r-tiny-20261018/production-v1'
++MIRROR = ROOT / 'tmp/current-s1r-tiny-20261018/production-v2'
+ EXPECTED = '2b77159157e500b0177c3c2294860830a495248ce3e3b216a813524032509d72'
+ 
+ def main():
+--- interpreted-v1/freeze_static.py
++++ native-v2/freeze_static.py
+@@ -36,6 +36,12 @@
+     for name in ['run_production.py', 'windows_generate.py', 'freeze_static.py']:
+         ast.parse((HERE / name).read_text(encoding='utf-8'), filename=name)
+     depnames = {
++        'research-goal-20261019-tiny-production-preparation-v1/prepared-files.json',
++        'research-goal-20261019-tiny-production-preparation-v1/run_production.py',
++        'research-goal-20261019-native-tools-preparation/prepared-files.json',
++        'research-goal-20261019-native-tools-preparation/lakefile.toml.in',
++        'research-goal-20261019-native-verifier-source-audit/files.json',
++        'research-goal-20261019-native-verifier-source-audit/install-verifier-tools.sh',
+         'research-goal-20261018-tiny-production-preparation/prepared-files.json',
+         'research-goal-20261018-tiny-production-preparation/run_production.py',
+         'research-goal-20261019-tiny-dedup-source-preparation/prepared-files.json',
+@@ -85,12 +91,16 @@
+     fresh = load(ROOT / freshpath)
+     assert fresh['current']['exactRational'] == params['expected_current_record']
+     config = {
+-        'schema': 'tiny-production-configuration-v2',
++        'schema': 'tiny-production-configuration-v3',
+         'flatten_directory': FLATTEN.relative_to(ROOT).as_posix(),
+         'production_source_prepared_sha256': '98a9dfe125cfdb4febc24fb8666bb73228e4f27fcbac9fe66506c1c7720f99d6',
+         'previous_failure_receipt': 'tmp/current-s1r-tiny-20261018/production-v0/failure.json',
+         'previous_failure_receipt_sha256': '3dcf11c64bebda5b543a52edc43041664d314ddc9855a8330240843ccf875747',
+-        'local_nanoda_threads': 4,
++        'local_nanoda_threads': 0,
++        'native_lakefile_template': 'research-goal-20261019-native-tools-preparation/lakefile.toml.in',
++        'native_installation_and_setup_prepared_supplied_by_gate': True,
++        'preinstalled_trusted_native_tools_required': True,
++        'trusted_tools_recompiled_in_proof_attempt': False,
+         'locked_official_Comparator_default_nanoda_is_serial': True,
+         'official_runtime_equivalence_claimed': False,
+         'flatten_prepared_sha256': sha(FLATTEN / 'prepared-files.json'),
+@@ -131,7 +141,7 @@
+         'production_runs': 0, 'upload_ready': False, 'new_gate_required': True})
+     assert before == [row(ROOT / n) for n in sorted(depnames)]
+     owned = [row(p) for p in sorted(HERE.iterdir()) if p.is_file()]
+-    write('prepared-files.json', {'schema': 'tiny-cold-production-prepared-v2',
++    write('prepared-files.json', {'schema': 'tiny-cold-production-prepared-v3',
+         'scope': 'Static executable preparation only; not an execution gate or verification result',
+         'files': owned, 'dependencies': before, 'fresh_generation_required': True,
+         'all_bound_dependencies_unchanged': True, 'production_executions': 0,

@@ -1,0 +1,81 @@
+    def bind_native_tools(self, gate, config):
+        """Bind a root-confirmed successful preinstalled native setup under t0."""
+        selected = gate['trusted_native_tools']
+        assert selected['root_confirmed_setup_terminal_exit_code'] == 0
+        install_path = Path(selected['installation_path']).resolve()
+        native_root = install_path.parent
+        assert install_path.name == 'installation.json'
+        assert native_root.parent == Path('/var/tmp/rh-zero-20261015')
+        assert re.fullmatch(r'tiny-native-tools-v[0-9]+', native_root.name)
+        setup_prepared = (ROOT / selected['setup_prepared_path']).resolve()
+        assert setup_prepared.is_relative_to(ROOT) and setup_prepared.name == 'prepared-files.json'
+        self.bind(setup_prepared, selected['setup_prepared_sha256'])
+        self.bind(install_path, selected['installation_sha256'])
+        install = load(install_path)
+        assert install['schema'] == 'trusted-native-tool-installation-v1'
+        assert install['prepared_sha256'] == selected['setup_prepared_sha256']
+        assert install['passed'] is True and install['proof_runs'] == 0
+        assert install['automatic_retries'] == 0
+        assert install['complete_source_and_SDK_C_toolchain_unchanged'] is True
+        assert install['no_external_Lake_packages_or_network_fetch_configured'] is True
+        assert install['user_oleans_compiled_or_reused'] is False
+        assert install['official_website_acceptance'] is False
+        native_mirror = ROOT / 'tmp/current-s1r-tiny-20261018' / native_root.name.removeprefix('tiny-')
+        assert not (native_root / 'failure.json').exists() and not (native_mirror / 'failure.json').exists()
+        self.bind(native_mirror / 'installation.json', selected['installation_sha256'])
+        expected = {}
+        for package, names in {
+            'lean4export': ['Export.lean', 'Export/Parse.lean', 'Main.lean'],
+            'Comparator': ['Comparator.lean', 'Comparator/Axioms.lean', 'Comparator/Compare.lean',
+                           'Comparator/Util.lean', 'Main.lean']}.items():
+            for name in names:
+                dest = ('ExporterMain.lean' if package == 'lean4export' else 'ComparatorMain.lean') if name == 'Main.lean' else name
+                expected[dest] = hashlib.sha256(self.archive_blob(package, name)).hexdigest()
+        expected['CoreAudit.lean'] = '7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2'
+        assert set(install['source_provenance']) == set(expected)
+        for name, digest in expected.items():
+            assert install['source_provenance'][name]['source_sha256'] == digest
+        source_paths = {str(native_root / 'source' / p) for p in expected}
+        source_paths |= {str(native_root / 'lakefile.toml'), str(native_root / 'lean-toolchain')}
+        assert {r['path'] for r in install['source_pins']} == source_paths
+        for row in install['source_pins']:
+            path = Path(row['path'])
+            assert str(path.resolve()) == row['resolved_path']
+            assert path.stat().st_size == row['bytes']
+            self.bind(path, row['sha256'])
+            self.native_resolutions[str(path)] = row['resolved_path']
+        assert self.sha(native_root / 'lakefile.toml') == self.sha(ROOT / config['native_lakefile_template'])
+        assert (native_root / 'lean-toolchain').read_text().strip() == 'leanprover/lean4:v4.33.0-rc2'
+        assert set(install['native_executables']) == {'lean4export', 'coreaudit'}
+        self.native_binaries = {}
+        for name in ['lean4export', 'coreaudit']:
+            row = install['native_executables'][name]
+            path = native_root / '.lake/build/bin' / name
+            assert row['path'] == str(path) and str(path.resolve()) == row['resolved_path']
+            assert path.stat().st_size == row['bytes'] and os.access(path, os.X_OK)
+            with path.open('rb') as f:
+                assert f.read(4) == b'\x7fELF'
+            self.bind(path, row['sha256'])
+            self.native_resolutions[str(path)] = row['resolved_path']
+            self.native_binaries[name] = str(path)
+        runtime_paths = {r['path'] for r in install['native_runtime_closure_pins']}
+        assert set(self.native_binaries.values()) <= runtime_paths
+        for row in install['native_runtime_closure_pins']:
+            path = Path(row['path'])
+            assert str(path.resolve()) == row['resolved_path'] and path.stat().st_size == row['bytes']
+            self.bind(path, row['sha256'])
+            self.native_resolutions[str(path)] = row['resolved_path']
+        for cmd in install['commands']:
+            assert cmd['exit_code'] == 0
+        self.receipt['trusted_native_tools'] = {
+            'installation_path': str(install_path), 'installation_sha256': selected['installation_sha256'],
+            'setup_prepared_path': str(setup_prepared), 'setup_prepared_sha256': selected['setup_prepared_sha256'],
+            'native_executables': install['native_executables'],
+            'native_runtime_closure_pins': install['native_runtime_closure_pins'],
+            'source_provenance': install['source_provenance'],
+            'runtime_symlink_resolutions': self.native_resolutions,
+            'setup_was_prior_to_this_proof_timer': True,
+            'trusted_tools_recompiled_in_this_proof_attempt': False,
+            'user_oleans_reused': False}
+        self.receipt['tool_compiled_modules'] = []
+

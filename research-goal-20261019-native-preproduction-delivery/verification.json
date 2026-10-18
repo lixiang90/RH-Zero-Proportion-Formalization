@@ -1,0 +1,51 @@
+{
+  "schema": "native-preproduction-delivery-byte-audit-v1",
+  "internal_manifests": [
+    {
+      "path": "research-goal-20261019-native-tools-preparation-v2/prepared-files.json",
+      "bytes": 7208,
+      "sha256": "b7fd183217077da32688e8c23b399ac9f25713e79b107a13466b57fcf33caac2",
+      "pin_rows_verified": {
+        "files": 4,
+        "dependencies": 30,
+        "read_dependencies": 0
+      }
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v2/prepared-files.json",
+      "bytes": 19974,
+      "sha256": "f2ab9d281bf39769da08280f40d9369e9b9ffc2f51c57acccbb116999daa9d74",
+      "pin_rows_verified": {
+        "files": 12,
+        "dependencies": 88,
+        "read_dependencies": 0
+      }
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-v2-static-review/files.json",
+      "bytes": 21155,
+      "sha256": "b8e863226254bcd96d4e9c7414c0557e6ae0d92390397a7868315f561f333122",
+      "pin_rows_verified": {
+        "files": 3,
+        "dependencies": 0,
+        "read_dependencies": 104
+      }
+    }
+  ],
+  "pin_rows_verified": 241,
+  "unique_internal_pin_files_verified": 126,
+  "all_internal_pins_match": true,
+  "directory_partial_files_found": [],
+  "external_runtime_metadata": [
+    {
+      "path": "tmp/setup-20261015/lean-4.33.0-rc2-linux.tar.zst",
+      "bytes": 574905502,
+      "sha256": "48010c7d6264dc992574e9b0e09ece1f9c648e8f5106066b2cdb6834a6a60a6c",
+      "manifest": "research-goal-20261019-native-tools-preparation-v2/prepared-files.json",
+      "verification": "external SDK identity only, not reread or delivered"
+    }
+  ],
+  "archive_combined_hashes_and_split_join_verified": true,
+  "network_compiler_math_producer_runs": 0,
+  "old_frozen_files_modified": false
+}

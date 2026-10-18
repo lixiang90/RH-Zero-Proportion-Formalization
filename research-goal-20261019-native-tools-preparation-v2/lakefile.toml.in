@@ -1,0 +1,23 @@
+name = "TinyTrustedNativeTools"
+version = "0.1.0"
+defaultTargets = ["lean4export", "coreaudit"]
+
+[[lean_lib]]
+name = "Export"
+srcDir = "source"
+
+[[lean_lib]]
+name = "Comparator"
+srcDir = "source"
+
+[[lean_exe]]
+name = "lean4export"
+root = "ExporterMain"
+srcDir = "source"
+supportInterpreter = true
+
+[[lean_exe]]
+name = "coreaudit"
+root = "CoreAudit"
+srcDir = "source"
+supportInterpreter = false

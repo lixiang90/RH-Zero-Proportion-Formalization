@@ -5,7 +5,7 @@
     8
   ],
   "default_interval_main_rounds": 6,
-  "main_rounds_since_review": 1,
+  "main_rounds_since_review": 2,
   "last_review_number": 6,
   "last_review": "research-goal-20261016/macro-reviews/006-20261018.zh.md",
   "counter_reset_reason": "Major human objective update removes minimum gain; independently verified one-exception overlap opportunity changes complete-delivery route. Writtenmacro006 complete, same actualround1 reset1to0.",
@@ -13,7 +13,7 @@
   "subagent_messages_increment_counter": false,
   "within_round_user_steering_increments_counter": false,
   "main_route": "One-exception adjacent-window geometric incompatibility; preserve current W9 with summed-window boundary charge delta; prepare complete actual Lean source once, no high-target P execution.",
-  "next_gate": "Review and build pinned native trusted verifier tools, then validate native performance; preserve user-uploaded v3 source and failed3200s v0. Complete cloud/material delivery while official user job remains running.",
+  "next_gate": "Poll only native fullcold session84529 through terminal; preserve v3 user upload and both failed setup attempts. New source v4 is generated for this run; collect only after actual full PASS. Sync43 stable setup/static archive ready; root review collector; official website final result still pending.",
   "latest_completed_gate": {
     "name": "Fixed nonempty M original-component envelope exact Lower, independently rebuilt and verified",
     "producer_manifest": "research-goal-20261018-stageM-component-envelope-preparation/files.json",
@@ -102,8 +102,8 @@
     "checked_UTC": "2026-10-18",
     "source_commit": "cfc7ce6113199b7d5f262812d81089778e84335c",
     "source_SHA256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
-    "fresh_HTTP_checked_UTC": "2026-10-18T15:00:44.236999+00:00",
-    "fresh_HTTP_status": "HTTP200 Age0 MISS; unchanged exact R, candidate strictly greater; tmp/goal-20261016/macro006-precompile-fresh-record.json",
+    "fresh_HTTP_checked_UTC": "2026-10-18T17:24:11.183351+00:00",
+    "fresh_HTTP_status": "HTTP200 Age0 MISS; unchanged exact R, candidate strictly greater; tmp/goal-20261016/macro006-native-preproduction-fresh-record.json",
     "independent_fresh_checked_UTC": "2026-10-18T06:47:50.333190+00:00",
     "fresh_recheck_manifest": "research-goal-20261018-record-fresh-independent-1152/files.json",
     "fresh_recheck_SHA256": "16f8fb8d4adc3fdfcd0d1d4b4f58652e343a8cb385f5fdf3991cc9e06d59bf20",
@@ -801,11 +801,11 @@
     "explicit_pair_hypothesis_not_discharged": true
   },
   "latest_public_sync": {
-    "commit": "7515aeb6f7166028f9a360fc8a372e534847f99e",
-    "tree": "ebf483ff5ede31f68509fd82201d6dcdfd9fe63c",
-    "blobs": 5245,
+    "commit": "077ec26c1bf5b87961f4bba16bc9504a67665edd",
+    "tree": "be718b113ead4c536852a51400b0ba5b1423cefa",
+    "blobs": 5437,
     "full_local_public_difference_count": 0,
-    "receipt": "tmp/goal-20261016/sync41-tree-comparison.json"
+    "receipt": "tmp/goal-20261016/sync42-tree-comparison.json"
   },
   "tiny_development_execution": {
     "status": "terminal_exit1",
@@ -977,7 +977,8 @@
     "must_remain_immutable": true,
     "user_reported_status": "Verification running; Lean and both kernels are checking the frozen theorem contract.",
     "user_reported_display_digest": "sha256:23e3dd765aa27de76938e056f13d3e0f08d849d0e7c39c6f78c62e7640c0a10f",
-    "display_digest_meaning_not_yet_verified": true
+    "display_digest_meaning_not_yet_verified": false,
+    "display_digest_meaning": "Official combined manifest-plus-source digest, verified by pinned upstream implementation."
   },
   "production_dedup_prepared": {
     "manifest": "research-goal-20261019-tiny-dedup-source-preparation/prepared-files.json",
@@ -985,7 +986,8 @@
     "flatten_manifest": "research-goal-20261019-tiny-flatten-preparation-v4/prepared-files.json",
     "flatten_SHA256": "2b77159157e500b0177c3c2294860830a495248ce3e3b216a813524032509d72",
     "predicted_source_bytes": 1856430,
-    "Lean_run": false
+    "Lean_run": true,
+    "Lean_status": "Current unique fresh cold compilation running; not yet passed"
   },
   "official_nanoda_configuration_audit": {
     "pinned_Comparator_Main_omits_num_threads": true,
@@ -1045,5 +1047,27 @@
     "path": "submission/single-exception-overlap-20261019/files.json",
     "SHA256": "2c1fe58da1294dd1847415d519de7ebdfda600f28e9d5f324fd2579fb7515802",
     "scope": "User review fields and mathematical note, v3 same source; pending official acceptance and combined deadline"
+  },
+  "tiny_native_production_execution": {
+    "status": "running",
+    "sole_owner": "/root",
+    "exec_session": 84529,
+    "prepared_manifest": "research-goal-20261019-tiny-production-preparation-v2/prepared-files.json",
+    "prepared_SHA256": "f2ab9d281bf39769da08280f40d9369e9b9ffc2f51c57acccbb116999daa9d74",
+    "gate": "research-goal-20261016/gates/tiny-native-production-cold-v2-20261019.json",
+    "gate_SHA256": "3cd2bc378f815b53d5c31233d89662c090b04bcdabc489c115f3a4d66924631a",
+    "independent_static_review": "research-goal-20261019-tiny-production-v2-static-review/files.json",
+    "independent_static_review_SHA256": "b8e863226254bcd96d4e9c7414c0557e6ae0d92390397a7868315f561f333122",
+    "job": "/var/tmp/rh-zero-20261015/tiny-production-v2",
+    "single_monotonic_seconds": 3200,
+    "threads": 0,
+    "user_olean_reuse": false,
+    "generated_source_version": "v4 dedup, v3 upload unchanged",
+    "official_acceptance": false
+  },
+  "native_preproduction_delivery": {
+    "manifest": "research-goal-20261019-native-preproduction-delivery/files.json",
+    "SHA256": "682053912ea4f6908c7907fab4941c00d47b7bc4e9d95ce7065df3183b34c6f7",
+    "not_yet_synced": true
   }
 }

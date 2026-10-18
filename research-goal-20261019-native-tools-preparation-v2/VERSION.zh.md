@@ -1,0 +1,1 @@
+v1 session95411 terminal exit1：源码已原样复制，SDK/C 17641文件已pin，尚无编译器命令。SDK模块import的白名单误只列Lean，漏原可信源码实际使用的6个SDK子模块；v2明确列原8源rg完整imports的7个SDK模块（Lean及6子模块）。保持归档/9个可信源/所有数学检查不变；WORK和MIRROR分别明确改v2，保留原v1失败及其实际v0镜像。TOML全文hash保持。0自动重试。
