@@ -1,0 +1,69 @@
+{
+  "schema": "M-actual-Lean-phaseA-compiler-prepared-v1",
+  "files": [
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/compile_phaseA.py",
+      "bytes": 7604,
+      "sha256": "c6ed2b984185f4f609ae73fa8a2a3f8cb75761d3a91115a77aeb1a26ab747d80"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/required-compiler-gate.json",
+      "bytes": 305,
+      "sha256": "4ed130c0ce54c4230a0b449efd868faac597713dd2a0743b907b95b3351fcbbd"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/compiler-runtime-observation.json",
+      "bytes": 841,
+      "sha256": "557e1a8a1e64a27efe12107b366810f4aa29086be372cc78fbea76c0e136dd34"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/prepare_compiler.py",
+      "bytes": 2359,
+      "sha256": "42a8dd4f11e0a7c607838033ee1dbf93b9eaec05681fd0bf0bbaf22a31a89619"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA-prepared.json",
+      "bytes": 994,
+      "sha256": "203425eb09dc29b3e14d1ab4d25147a6676e29a98ce83886453003b6d7905ab2"
+    },
+    {
+      "path": "tmp/setup-20261015/runtime.json",
+      "bytes": 8589,
+      "sha256": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574"
+    }
+  ],
+  "initial_source_manifest": "research-goal-20261018-stageM-lean-implementation/phaseA-prepared.json",
+  "initial_sources_are_checked_at_execution": true,
+  "AST_parsed_without_import": true,
+  "Python_executable": {
+    "path": "C:\\Python314\\python.exe",
+    "bytes": 106208,
+    "sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd"
+  },
+  "Lean_runs": 0,
+  "separate_immutable_gate_required": true,
+  "command_template": [
+    "C:\\Python314\\python.exe",
+    "research-goal-20261018-stageM-lean-implementation/compile_phaseA.py",
+    "--gate",
+    "ROOT_SUPPLIED_GATE_PATH",
+    "--gate-sha256",
+    "ROOT_SUPPLIED_GATE_SHA256"
+  ],
+  "flags": [
+    "-j1",
+    "-M13500",
+    "--tstack=262144",
+    "-DrelaxedAutoImplicit=false",
+    "-DElab.async=false"
+  ],
+  "scope": [
+    "CurrentPrefix",
+    "QuantizedComponent",
+    "Sparse78"
+  ],
+  "repair_policy": "At most three separate syntax/API/tactic repair versions of the same mathematical theorems; no automatic repair/retry.",
+  "outputs": "tmp/current-s1r-M-20261018/lib; versioned immutable snapshots/logs/resources/receipts"
+}

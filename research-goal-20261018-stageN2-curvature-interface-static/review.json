@@ -1,0 +1,16 @@
+{
+  "schema": "N2-curvature-residual-independent-paper-interface-v1",
+  "static_review_complete": true,
+  "source_interval_curvature_values_not_computed": true,
+  "new_FS_points_kernel_matrix_LP_or_Lean_runs": 0,
+  "positive_curvature_transfer_and_uniform_payment_unproved_for_this_pair": true,
+  "critical_guards": [
+    "hull(original_anchor,joint_span_interval)",
+    "m_nonnegative_or_baseline_only",
+    "original_L0_and_quantized_derivative_payment_unchanged",
+    "full52_raw_dual_nonnegative_balance_cost",
+    "target_minus_dual_cost_not_primal_gap",
+    "exact_quadratic_stationarity_or_explicit_residual_payment"
+  ],
+  "scope": "Paper algebra and source interface only; no new numerical lower bound or actual exclusion."
+}

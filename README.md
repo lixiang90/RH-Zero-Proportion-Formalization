@@ -9,45 +9,29 @@ so the strict target is **67.3588173310297…%**. The current record and exact
 source were checked again on October 18. No new unconditional record or
 submission-ready proof is asserted.
 
-[Macro review004](research-goal-20261016/macro-reviews/004-20261018.zh.md)
-retains that source, its original 17/20 separation, full kernel verification,
-and the website's 2,000,000-byte / 3,200-second delivery requirements.
-The original witness replay and independent audit agree on all 48 roots,
-13,046 numeric leaves and 595 reflection leaves. Complete four-orientation
-classification covers 5,635,876 overlap cases; the subsequent ordered
-transport audit leaves 15,378 conservative unresolved cases. The old LP
-seed has an empty ordered domain and supplies no nonempty-domain gain.
+[Macro review005](research-goal-20261016/macro-reviews/005-20261018.zh.md)
+was triggered early by an independently verified exact low point in the
+shared-span component envelope. The model was stopped after 2,375 of
+15,378 residual cases. The point in cell278/665, rev/id satisfies all305
+original rows but lies below the target. It refutes this fixed lower-bound
+model as a uniform certificate; it is not a counterexample for actual energy.
+See the [independent audit](research-goal-20261018-stageN2-independent-below/independent-review.json).
 
-The [original-affine diagnostic](research-goal-20261018-stageI-original-affine-point/result.json)
-on a known nonempty overlap has a positive exact margin; its independent
-audit passes. This is one necessary point check, not a uniform lower bound.
-A [complete fixed-basis classification](research-goal-20261018-stageJ-fixed-basis-preparation/result.json)
-and independent audit check all 15,378 cases and all 1,128 original cell
-supports: 1 reaches the target, 359 give weaker valid bounds, 3,141 have
-negative multipliers and 11,877 have a singular chart. Thus 15,377 remain
-unclosed by this certificate family.
+The original interrupted run has a complete independent audit of all675
+published records, plus its separately retained676th record. The resumed
+run used no repeated old LP calls. Its new Lower candidates have not all
+received independent mathematical replay. The current route adds guarded
+quantitative curvature to existing raw dual certificates, retaining shared
+span and cycle constraints. Only fixed-case preparation is authorized; no
+new curvature values or uniform payment are claimed.
 
-The [original-component maximum envelope](research-goal-20261018-stageM-local-result/NOTE.zh.md)
-now has an independently verified exact local Lower on the known nonempty
-cell0/604, id/rev overlap. Both implementations agree on all 68 original FS
-terms, 279 model rows, 77 primal variables and the full 78-coordinate dual;
-exact primal and dual objectives coincide strictly above the target.
-This certifies the fixed polyhedral model. The actual-function Lean bridge,
-complete global coverage and the final zero-proportion theorem remain open.
-One discovery call and one independent audit ran; no new kernel or Lean run.
-
-A new cumulative-window potential principle has a paper counting bridge.
-However, exact nine-edge negative cycles independently refute both the
-original scalar outer graph and its fixed-basis augmentation. These
-obstructions stop those two models; they do not refute actual energy or
-other joint certificates. The next route retains the maximum of the original
-active component support lines, recovering information lost by their
-weighted mixture. The fixed 9-position / 68-epigraph opportunity has now passed the local
-exact audit described above. A normalized incidence/forest-flow certificate
-route now has an independently checked paper proof; an actual Lean bridge
-[plan](research-goal-20261018-stageM-actual-bridge-static/PLAN.zh.md) identifies
-the current source interfaces and outstanding finite guards. Complete source
-and runtime budgets remain unknown.
+The current analytic prefix and three actual-function quantized support
+lemmas have passed ordinary Lean; the three lemmas use only propext,
+Classical.choice and Quot.sound. The sparse dual consumer still has proof
+script errors, and no new global theorem, Comparator or nanoda result exists.
+[Execution evidence](research-goal-20261018-stageM-lean-implementation/phaseA1b-execution-files.json)
+retains every failed version. Full upload source size and the complete
+3,200-second verification workflow remain unverified.
 
 A [common-shift integer rounding comparison](research-goal-20261017-common-rounding/NOTE.zh.md)
 now gives a new whole-domain necessary condition for actual24-mode global

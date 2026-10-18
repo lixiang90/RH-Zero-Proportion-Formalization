@@ -1,0 +1,48 @@
+{
+  "independent_N_published_prefix_audits_authorized": 1,
+  "scope": "complete_published_N_prefix_with_separate_optional_retained_next_record",
+  "expected_H_remaining": 15378,
+  "expected_published_records": 675,
+  "all_published_records_mathematically_audited": true,
+  "audit_retained_next_record": true,
+  "expected_retained_records": 676,
+  "retained_next_G_index": 436241,
+  "new_solver_RREF_points_kernel_or_Lean_authorized": 0,
+  "automatic_retry_allowed": false,
+  "prepared_manifest_sha256": "6b39aebb2c0835d4a0183cae93d77554f971d63d5afca9377a0704fab5dfba8a",
+  "producer_manifest": {
+    "path": "research-goal-20261018-stageN-complete-component-preparation/files.json",
+    "sha256": "181473343e98152ab01e622b6346cd37516bb9724477ac26ade56e15dc9b7377"
+  },
+  "producer_endpoints": [
+    {
+      "path": "research-goal-20261018-stageN-complete-component-preparation/prefix.json",
+      "bytes": 1174,
+      "sha256": "c35f26459663918a17c15ce5bf607215c5ad7b681e070896298b1c3f92f1e117"
+    },
+    {
+      "path": "research-goal-20261018-stageN-complete-component-preparation/prefix.json.tmp",
+      "bytes": 1174,
+      "sha256": "aaf6a85734586c1e6645551caf4317cdd5a6bd6c4a177f261698ed9be1a2c7f4"
+    },
+    {
+      "path": "research-goal-20261018-stageN-complete-component-preparation/failure.json",
+      "bytes": 2098,
+      "sha256": "92741b0dd3bd2da7b1fbbf3efab418b93dfb6fba97da5bc0bcd8e0be29893a2c"
+    },
+    {
+      "path": "research-goal-20261018-stageN-complete-component-preparation/terminal.json",
+      "bytes": 45409,
+      "sha256": "45aeb98be100c14df52e057716e2472c93f96b2cfe31a397b5902d0db3b8939f"
+    }
+  ],
+  "resource_limits": {
+    "elapsed_seconds": 300,
+    "closed_output_bytes": 20000000
+  },
+  "execution_authorized_by_this_template": true,
+  "decision": "Authorize exactly one independent mathematical audit of all published675 and separately retained676 candidate, unchanged original history; no solver/reconstruction search/new kernels/Lean or automatic retry.",
+  "owner": "/root/joint_gluing_review",
+  "original_unexecuted_audit_name_shadowing_repair_only": true,
+  "main_rounds_since_review": 2
+}

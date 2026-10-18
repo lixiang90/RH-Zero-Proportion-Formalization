@@ -1,0 +1,37 @@
+{
+  "schema": "N2-single-child-launch-v1",
+  "parent_pid": 6844,
+  "command": {
+    "argv": [
+      "C:\\Python314\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-stageN2-pooled-component-resumption\\resume_once.py",
+      "--execute-authorized-same-model-N2",
+      "--gate",
+      "research-goal-20261016/gates/stageN2-same-model-resumption-20261018.json",
+      "--gate-sha256",
+      "286427f9f3c78f39fefbf7080d6ae13c1ec70494d548b1b0418c255dc5607f3d"
+    ],
+    "cwd": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization",
+    "thread_env_override": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1"
+    }
+  },
+  "command_sha256": "3c9ed8ff597717f49302cc1035d533068852024db672af12c28779cd12bc17a6",
+  "discover_source_sha256": "cafbe22148454a2c473be764a633f77eaea4ff7ed6fa863c8f06767e8a04e82c",
+  "launcher_sha256": "58b5da9083c49ee0e10c9020d0cf01375897a153527726cd6be0398de3deeb68",
+  "gate_path": "research-goal-20261016/gates/stageN2-same-model-resumption-20261018.json",
+  "gate_sha256": "286427f9f3c78f39fefbf7080d6ae13c1ec70494d548b1b0418c255dc5607f3d",
+  "maximum_child_launches": 1,
+  "hard_limits": {
+    "elapsed_seconds": 1800,
+    "closed_output_bytes": 160000000
+  }
+}

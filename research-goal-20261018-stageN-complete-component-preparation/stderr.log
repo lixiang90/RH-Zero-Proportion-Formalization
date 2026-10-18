@@ -1,0 +1,26 @@
+D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageN-complete-component-preparation\discover_complete.py:256: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  result=linprog(c,A_ub=A,b_ub=b,bounds=[(None,None)]*model['columns_count'],method=METHOD,options=OPTIONS)
+Traceback (most recent call last):
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageN-complete-component-preparation\discover_complete.py", line 313, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageN-complete-component-preparation\discover_complete.py", line 312, in main
+    execute(checked(args.gate),args.gate_sha256)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageN-complete-component-preparation\discover_complete.py", line 275, in execute
+    records.append(record);counts[outcome]+=1;committed+=1;publish()
+                                                           ~~~~~~~^^
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageN-complete-component-preparation\discover_complete.py", line 221, in publish
+    atomic(HERE/'prefix.json',{'schema':'N-durable-complete-record-prefix-v1','committed_records':committed,
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        'expected_records':EXPECTED,'counts':dict(counts),'linprog_calls_started':calls,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        'streams':{p.path.name:p.descriptor() for p in streams},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        'unprocessed_suffix_is_not_classified':True,'independent_math_replay_pending':True})
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageN-complete-component-preparation\discover_complete.py", line 67, in atomic
+    os.replace(tmp,p)
+    ~~~~~~~~~~^^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-stageN-complete-component-preparation\\prefix.json.tmp' -> 'D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-stageN-complete-component-preparation\\prefix.json'

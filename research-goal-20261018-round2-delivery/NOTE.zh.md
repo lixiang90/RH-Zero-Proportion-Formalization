@@ -1,0 +1,7 @@
+# 本轮证据交付包
+
+绑定宏观回顾005、网站实时纪录核对、原N基础设施失败、完整675+单列676独审、N2首Below停止及其原源独审，以及实际Lean前缀/三个量化支撑线引理的通过和其余失败日志。所有历史来源、失败和作用域均保留。不存在新无条件纪录或可提交proof。
+
+files.json只列已冻结的来源与字节身份。小型编译命令、原始日志、GNUtime和收据由tmp路径逐字节镜像到mirrors；restore_mirrors.py可按映射还原这些临时路径。当前工作站已有文件只核相等，不覆盖不同文件。编译产物olean、安装Python/库和机器运行时二进制不上传；其sha记录在external_verified_nonstaged_dependencies中，源码和生成/运行命令保留。
+
+这些研究证据包的大小不是最终网站单文件的大小；最终2000000B、总3200秒、Comparator和nanoda仍未验收。原514 proof+29 data统计暂作为历史基线，本轮单列CurrentPrefix普通PASS及PhaseA1 Quantized三根标准三公理PASS，Sparse78失败/B2未运行。

@@ -1,0 +1,31 @@
+{
+  "same_model_infrastructure_resumption_passes_authorized": 1,
+  "old_package_sha256": "181473343e98152ab01e622b6346cd37516bb9724477ac26ade56e15dc9b7377",
+  "old_published_records": 675,
+  "old_durable_candidate_records": 676,
+  "old_linprog_calls": 675,
+  "maximum_new_linprog_calls": 14701,
+  "maximum_total_linprog_calls": 15376,
+  "per_new_case_maximum_linprog_calls": 1,
+  "repeated_old_LP_calls_authorized": 0,
+  "same_pooled_model_helpers_required": true,
+  "stop_at_first_exact_Below": true,
+  "auxiliary_calls_math_support_precision_parameter_retries_authorized": 0,
+  "new_FS_anchors_kernel_points_or_Lean_authorized": 0,
+  "progress_protocol": "append_only_fsync_commit_chain_no_replace",
+  "target_c_numerator": "893766123055294719",
+  "denominator": "100000000000000000000",
+  "solver_method": "highs-ds",
+  "solver_options": {
+    "presolve": true,
+    "time_limit": 180.0,
+    "maxiter": 100000,
+    "primal_feasibility_tolerance": 1e-7,
+    "dual_feasibility_tolerance": 1e-7,
+    "threads": 1
+  },
+  "prepared_manifest_sha256": "ROOT_MUST_BIND_FINAL_PREPARED",
+  "resource_limits": {"elapsed_seconds": "ROOT_MUST_CHOOSE", "closed_output_bytes": "ROOT_MUST_CHOOSE"},
+  "work_limits": {"elapsed_seconds": "ROOT_MUST_CHOOSE_SMALLER", "closed_output_bytes": "ROOT_MUST_CHOOSE_SMALLER"},
+  "execution_authorized_by_this_template": false
+}

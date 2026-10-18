@@ -1,0 +1,29 @@
+{
+  "complete_component_discovery_passes_authorized": 1,
+  "physical_span_pooling": true,
+  "expected_H_remaining": 15378,
+  "explicit_deduction_indices": [2417, 5331088],
+  "per_case_maximum_linprog_calls": 1,
+  "maximum_linprog_calls": 15376,
+  "chart_order": ["id/id", "id/rev", "rev/id", "rev/rev"],
+  "index_formula": "((i*1187+j)*4+chart)",
+  "target_c_numerator": "893766123055294719",
+  "denominator": "100000000000000000000",
+  "solver_method": "highs-ds",
+  "solver_options": {
+    "presolve": true,
+    "time_limit": 180.0,
+    "maxiter": 100000,
+    "primal_feasibility_tolerance": 1e-7,
+    "dual_feasibility_tolerance": 1e-7,
+    "threads": 1
+  },
+  "auxiliary_calls_retries_new_FS_anchors_kernel_or_Lean_authorized": 0,
+  "stop_at_first_exact_Below": true,
+  "reflection_orbit_LP_reuse": false,
+  "native_same_S_max_E_pruning": true,
+  "prepared_manifest_sha256": "ROOT_MUST_BIND_FINAL_PREPARED_MANIFEST",
+  "resource_limits": {"elapsed_seconds": "ROOT_MUST_CHOOSE", "closed_output_bytes": "ROOT_MUST_CHOOSE"},
+  "work_limits": {"elapsed_seconds": "ROOT_MUST_CHOOSE_STRICTLY_SMALLER", "closed_output_bytes": "ROOT_MUST_CHOOSE_STRICTLY_SMALLER"},
+  "execution_authorized_by_this_template": false
+}

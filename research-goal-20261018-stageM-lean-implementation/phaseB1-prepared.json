@@ -1,0 +1,59 @@
+{
+  "schema": "M-local-phaseB1-uncompiled-API-correction-v1",
+  "prior_checkpoint_sha256": "0597f34452e93003369c37a9c3e215b550182feaea777c841777bfd1fc856450",
+  "original_sources_unchanged": [
+    {
+      "path": "StructuralS1RM20261018/LocalData.lean",
+      "bytes": 33840,
+      "sha256": "fa07a1e6a02b9404e6dedc4f5a0a078d87602d1dde2e682f89fc6b5a58ca2673"
+    },
+    {
+      "path": "StructuralS1RM20261018/LocalGeometry.lean",
+      "bytes": 45894,
+      "sha256": "2a87e802593a8b8c8a8bf786d9ad96dcdcd23dd4b7ceff8c9da02b0e4d782095"
+    },
+    {
+      "path": "StructuralS1RM20261018/LocalComponents.lean",
+      "bytes": 83122,
+      "sha256": "0c8dc1ef2bbd47179724234f76a7808adbd3b44e10bee8811f0402f5a28a0267"
+    },
+    {
+      "path": "StructuralS1RM20261018/LocalPair.lean",
+      "bytes": 10577,
+      "sha256": "2c46b95187129856af3714c127fa317f22e03ef39444254af228c6899fa3a4d9"
+    }
+  ],
+  "files": [
+    {
+      "path": "StructuralS1RM20261018/PhaseB1/LocalData.lean",
+      "bytes": 33851,
+      "sha256": "08de786dfcaf17b002323722be61ff1f999af9aafdf5f7ac86fb4e4ad5f2813d"
+    },
+    {
+      "path": "StructuralS1RM20261018/PhaseB1/LocalGeometry.lean",
+      "bytes": 45894,
+      "sha256": "2a87e802593a8b8c8a8bf786d9ad96dcdcd23dd4b7ceff8c9da02b0e4d782095"
+    },
+    {
+      "path": "StructuralS1RM20261018/PhaseB1/LocalComponents.lean",
+      "bytes": 83138,
+      "sha256": "9310691c3caf69ddf1fcda4d84f02898f47fc6271eb78e720e973171057dd254"
+    },
+    {
+      "path": "StructuralS1RM20261018/PhaseB1/LocalPair.lean",
+      "bytes": 10585,
+      "sha256": "73b14087cf347705405d9d51fff307d581e0441ebfb005dc08b6fe805369fd9c"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/prepare_phaseB1.py",
+      "bytes": 2625,
+      "sha256": "4ae54d112dbeb12dc65fef99ee1bd2943fc3ebac09138c05f898d469b287cc87"
+    }
+  ],
+  "change": "LocalData.checked uses decide_eq_true_eq.mpr; imports repointed to PhaseB1. Mathematical definitions and theorem statements unchanged.",
+  "theorem_namespace_unchanged": "StructuralS1RM20261018.LocalPair.actual_pair_lower",
+  "Lean_runs": 0,
+  "separate_compile_gate_required": true,
+  "global_cover_proved": false,
+  "phaseB1_source_bytes": 173468
+}

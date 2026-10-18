@@ -1,0 +1,48 @@
+{
+  "schema": "M-local-phaseB2-import-only-prepared-v1",
+  "files": [
+    {
+      "path": "StructuralS1RM20261018/PhaseB2/LocalData.lean",
+      "bytes": 33851,
+      "sha256": "08de786dfcaf17b002323722be61ff1f999af9aafdf5f7ac86fb4e4ad5f2813d"
+    },
+    {
+      "path": "StructuralS1RM20261018/PhaseB2/LocalGeometry.lean",
+      "bytes": 45902,
+      "sha256": "f6c9ac804922cc0c9c6031d348ebbd1f8825cac37cf88a78f4d373ce15310584"
+    },
+    {
+      "path": "StructuralS1RM20261018/PhaseB2/LocalComponents.lean",
+      "bytes": 83138,
+      "sha256": "3ced4fbbeabe45ec6aa8d070a5c8ebe5dccbcad14217b72b24306ed57f6d64d0"
+    },
+    {
+      "path": "StructuralS1RM20261018/PhaseB2/LocalPair.lean",
+      "bytes": 10585,
+      "sha256": "006a98971353fa02a331af28d99210a8b065b629ac70b737c38e87c575568597"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/prepare_phaseB2.py",
+      "bytes": 2058,
+      "sha256": "de4ead2ba438c8b0a68fe58e3d199657427f600af46d222ae160405382f0986b"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseB1-prepared.json",
+      "bytes": 2217,
+      "sha256": "8a48c0beea62afd99321b4c21a119ffdea100db3f13d9813e3e884fe6cd61ad4"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA1-prepared.json",
+      "bytes": 3469,
+      "sha256": "67ab88cbd1c007aabc95cb507898dc5a8c75f29b3a7f22d87140445a1c3a64e2"
+    }
+  ],
+  "change": "Imports only: PhaseB1 to PhaseB2, QuantizedComponent to PhaseA1; no mathematical statement/proof-body change.",
+  "phaseA1_must_pass_before_compiling": true,
+  "Lean_runs": 0,
+  "separate_compile_gate_required": true,
+  "global_cover_proved": false,
+  "source_bytes": 173476
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "M-concrete-local-actual-source-checkpoint-v1",
+  "files": [
+    {
+      "path": "StructuralS1RM20261018/LocalData.lean",
+      "bytes": 33840,
+      "sha256": "fa07a1e6a02b9404e6dedc4f5a0a078d87602d1dde2e682f89fc6b5a58ca2673"
+    },
+    {
+      "path": "StructuralS1RM20261018/LocalGeometry.lean",
+      "bytes": 45894,
+      "sha256": "2a87e802593a8b8c8a8bf786d9ad96dcdcd23dd4b7ceff8c9da02b0e4d782095"
+    },
+    {
+      "path": "StructuralS1RM20261018/LocalComponents.lean",
+      "bytes": 83122,
+      "sha256": "0c8dc1ef2bbd47179724234f76a7808adbd3b44e10bee8811f0402f5a28a0267"
+    },
+    {
+      "path": "StructuralS1RM20261018/LocalPair.lean",
+      "bytes": 10577,
+      "sha256": "2c46b95187129856af3714c127fa317f22e03ef39444254af228c6899fa3a4d9"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/generate_local_data.py",
+      "bytes": 8071,
+      "sha256": "db327ef3002fb6c114aaeb643897e936934a493068e53251e7c28dac0ae7d2aa"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/generate_local_pair.py",
+      "bytes": 9887,
+      "sha256": "18b8e91e84d26f32f470399dc7cb64634d97e857bf95fef5f9d9cbb1131b8489"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/prepare_local_sources.py",
+      "bytes": 2777,
+      "sha256": "ef875fef46f760f454b08e290850ba3e5ee4bcb541c7c922aa79cde90c40104f"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-goal-20261018-stageM-component-envelope-preparation/model.json",
+      "bytes": 106051,
+      "sha256": "9a47b54d54995fe8565b27c4268368f8779a2cbb9bc22b9fdbd09a7a4fc6d04a"
+    },
+    {
+      "path": "research-goal-20261018-stageM-component-envelope-preparation/certificate.json",
+      "bytes": 3695,
+      "sha256": "8b9d10c8553c0b70ff8937145028a9cdd6226587d264f4ffd064dae7ad841fb9"
+    },
+    {
+      "path": "research-goal-20261018-stageM-component-envelope-preparation/original-components.json",
+      "bytes": 41927,
+      "sha256": "b98985e9445ad9d61e33279bb5dfb41242b7b9fb609b5a3878d7409977a67f1e"
+    },
+    {
+      "path": "research-goal-20261018-stageM-component-envelope-preparation/files.json",
+      "bytes": 29727,
+      "sha256": "129c706dcab0aff47ef54a0f249e5d0a49e8f718476faaf453681e73858526d8"
+    },
+    {
+      "path": "research-goal-20261018-stageM-independent/audit-files.json",
+      "bytes": 36392,
+      "sha256": "2887e7527180ca2b77d7779cd5c25ada853d040e82d0380a125f7f821c907be4"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA-prepared.json",
+      "bytes": 994,
+      "sha256": "203425eb09dc29b3e14d1ab4d25147a6676e29a98ce83886453003b6d7905ab2"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/local-data-prepared.json",
+      "bytes": 1575,
+      "sha256": "a1235a6cbc87b39728965c054df2a6994b18be61d3abace1375c08e173ca3499"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/local-pair-prepared.json",
+      "bytes": 1366,
+      "sha256": "9016a76f348337abf8a9e06f9bd76cbb356f066cc404b70cd78d5a527c1d4b5c"
+    }
+  ],
+  "phaseB_Lean_runs": 0,
+  "source_AST_only": true,
+  "phaseA_compilation": "separately authorized and currently tracked by original handle",
+  "actual_local_theorem": "StructuralS1RM20261018.LocalPair.actual_pair_lower",
+  "premises": [
+    "literal original cell0 id",
+    "literal original cell604 reversed",
+    "all nine physical gaps >=17/20",
+    "both original true Ordered inequalities"
+  ],
+  "conclusion": "current s1R G(left)+G(suffix)>=2*893766123055294719/1e20",
+  "global_leaf_reachability_proved": false,
+  "global_product_cover_proved": false,
+  "new_kappa_proved": false,
+  "Nano_replayed": false,
+  "phaseB_source_bytes": 173433,
+  "full_accepted_baseline_bytes": 1818411,
+  "raw_baseline_plus_phaseB_and_generic_bytes": 1998681,
+  "size_scope": "Engineering sum only, not a standalone submission or runtime guarantee; source imports/closures/deduplication and global product proof are not composed.",
+  "frozen_source_policy": "No generator overwrites any existing source (exclusive create).",
+  "next_gate": "Separate root review and ordinary Lean gate required for all four local modules."
+}

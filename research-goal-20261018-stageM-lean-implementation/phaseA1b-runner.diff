@@ -1,0 +1,42 @@
+--- compile_phaseA1.py
++++ compile_phaseA1b.py
+@@ -2,6 +2,7 @@
+ import argparse
+ import json
+ import os
++import shutil
+ from pathlib import Path
+ import subprocess
+ import time
+@@ -16,8 +17,8 @@
+     gp=ROOT/ns.gate
+     assert sha(gp)==ns.gate_sha256
+     gate=json.loads(gp.read_text(encoding='utf-8'))
+-    manifest=HERE/'phaseA1-prepared.json'
+-    assert gate['authorized'] is True and gate['task']=='stageM-actual-Lean-phaseA1'
++    manifest=HERE/'phaseA1b-prepared.json'
++    assert gate['authorized'] is True and gate['task']=='stageM-actual-Lean-phaseA1b'
+     assert gate['prepared_manifest_sha256']==sha(manifest)
+     assert gate['automatic_repairs_or_retries']==0 and gate['repeat_CurrentPrefix'] is False
+     prep=json.loads(manifest.read_text(encoding='utf-8'))
+@@ -30,9 +31,19 @@
+     found=dict((x.split(maxsplit=1)[1].strip(),x.split()[0]) for x in pins.stdout.decode().splitlines())
+     assert found==PINS
+     runtime=json.loads((ROOT/'tmp/setup-20261015/runtime.json').read_text(encoding='utf-8'))
+-    job=ROOT/'tmp/current-s1r-M-20261018/phaseA1'
++    job=ROOT/'tmp/current-s1r-M-20261018/phaseA1b'
+     job.mkdir(parents=True,exist_ok=False)
+     lib=job/'lib';lib.mkdir()
++    # Lean selects a namespace root, not a per-module fallback across libraries.
++    # Populate this isolated namespace using the already validated ordinary olean.
++    for entry in prep['reused_local_olean_files']:
++        source=ROOT/entry['path']
++        assert sha(source)==entry['sha256']
++        destination=lib/entry['relative_module_path']
++        destination.parent.mkdir(parents=True,exist_ok=True)
++        assert not destination.exists()
++        shutil.copy2(source,destination)
++        assert sha(destination)==entry['sha256']
+     lib_linux=LINUX+'/'+lib.relative_to(ROOT).as_posix()
+     lp=':'.join([lib_linux,LINUX+'/tmp/current-s1r-M-20261018/lib',DEPENDENCY_LIB,runtime['lean_path']])
+     targets=['StructuralS1RM20261018/PhaseA1/QuantizedComponent','StructuralS1RM20261018/Sparse78']

@@ -1,0 +1,68 @@
+{
+  "complete_component_discovery_passes_authorized": 1,
+  "physical_span_pooling": true,
+  "expected_H_remaining": 15378,
+  "explicit_deduction_indices": [
+    2417,
+    5331088
+  ],
+  "per_case_maximum_linprog_calls": 1,
+  "maximum_linprog_calls": 15376,
+  "chart_order": [
+    "id/id",
+    "id/rev",
+    "rev/id",
+    "rev/rev"
+  ],
+  "index_formula": "((i*1187+j)*4+chart)",
+  "target_c_numerator": "893766123055294719",
+  "denominator": "100000000000000000000",
+  "solver_method": "highs-ds",
+  "solver_options": {
+    "presolve": true,
+    "time_limit": 180,
+    "maxiter": 100000,
+    "primal_feasibility_tolerance": 1e-7,
+    "dual_feasibility_tolerance": 1e-7,
+    "threads": 1
+  },
+  "auxiliary_calls_retries_new_FS_anchors_kernel_or_Lean_authorized": 0,
+  "stop_at_first_exact_Below": true,
+  "reflection_orbit_LP_reuse": false,
+  "native_same_S_max_E_pruning": true,
+  "prepared_manifest_sha256": "ce7fdca4ebbce2e82fb915c1f1a3892dec362bff5e4ff8e74ef73de8aa854bd7",
+  "resource_limits": {
+    "elapsed_seconds": 1800,
+    "closed_output_bytes": 160000000
+  },
+  "work_limits": {
+    "elapsed_seconds": 1740,
+    "closed_output_bytes": 150000000
+  },
+  "execution_authorized_by_this_template": true,
+  "schema": "root-complete-original-pooled-component-discovery-decision-v1",
+  "goal_status": "active",
+  "main_rounds_since_review": 2,
+  "owner": "/root/cover_compression_goal",
+  "maximum_child_launches": 1,
+  "decision_UTC": "2026-10-18T10:33:18.074Z",
+  "static_review_manifest": "research-goal-20261018-stageN-static-review/files.json",
+  "static_review_sha256": "1cfce252137aa979ad4aa0d2b5f1e5bc9091b1977fd5c36fc069cc1a38d36be2",
+  "pooled_math_manifest": "research-goal-20261018-pooled-component-static/files.json",
+  "pooled_math_sha256": "62f4ba187ed59aa8e10aee0e772cfcbb602ba86d07e6f634ad6c9630cd12ab5d",
+  "actual_source_sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+  "latest_record_receipt": "tmp/goal-20261016/round2-preN-fresh-record-raw.json",
+  "record_exact_numerator": "3337839448633819172184136761695440236797",
+  "record_exact_denominator": "4955319193847235264050000000000000000000",
+  "physical_groups_expected": 42,
+  "free_variables_expected": 51,
+  "full_raw_coordinates_expected": 52,
+  "mathematical_scope": "AlloriginalH15378 minus2explicit independentlyproveddeductions; oneLPmaximumforeach15376pendingcase. Samephysicalspan actualw shared; alloriginalcomponent provenance andfullraw primaldual checked. FirstexactBelow stopsandrefutesonlythisfixedpooledcomponentmodel; anyunprocessed/unresolvednotclosed.",
+  "no_automatic_restart_or_resume": true,
+  "no_new_kernel_anchors_or_thresholds": true,
+  "independent_producer_rebuild_audit_requires_separate_gate": true,
+  "ordinary_Lean_phaseA_separate_owner": "lean_cover_goal; noothercompilerlaunch",
+  "source_and_full_website_policy_budget_status": "Unknown. Discoveryresourcecap isnotwebsite3200sverificationevidence. FullsingleLean<=2000000B andglobalcover/counting/dual-kernels remainrequired.",
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false
+}

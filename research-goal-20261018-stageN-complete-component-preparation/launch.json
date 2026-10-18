@@ -1,0 +1,37 @@
+{
+  "schema": "N-single-child-launch-v1",
+  "parent_pid": 47764,
+  "command": {
+    "argv": [
+      "C:\\Python314\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-stageN-complete-component-preparation\\discover_complete.py",
+      "--execute-authorized-complete-N",
+      "--gate",
+      "research-goal-20261016/gates/stageN-complete-pooled-component-20261018.json",
+      "--gate-sha256",
+      "8bc67b572594e68af94a2f6ebac787942f7a061d7c7167bb8c8eb38ab5223d09"
+    ],
+    "cwd": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization",
+    "thread_env_override": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1"
+    }
+  },
+  "command_sha256": "928fbf1020872baea7ab049a49fc919377ef7a67c4d0bd1eb12ccb9060c7fa9e",
+  "discover_source_sha256": "0e00e7ae3dcf3ee6685e857c6110bef976bd299d8551cd489db9609a8f9f54aa",
+  "launcher_sha256": "53c120c516afc047ed69f83ba8a31bf37b4f05f91864526b25ed47ec57ad4978",
+  "gate_path": "research-goal-20261016/gates/stageN-complete-pooled-component-20261018.json",
+  "gate_sha256": "8bc67b572594e68af94a2f6ebac787942f7a061d7c7167bb8c8eb38ab5223d09",
+  "maximum_child_launches": 1,
+  "hard_limits": {
+    "elapsed_seconds": 1800,
+    "closed_output_bytes": 160000000
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tmp/current-s1r-M-20261018/v0/CurrentPrefix.resources.log",
+    "/usr/bin/prlimit",
+    "--stack=268435456:268435456",
+    "--",
+    "env",
+    "LEAN_PATH=/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tmp/current-s1r-M-20261018/lib:/var/tmp/rh-zero-20261015/record-verification/modular/lib:/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean",
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "-M13500",
+    "--tstack=262144",
+    "-DrelaxedAutoImplicit=false",
+    "-DElab.async=false",
+    "-R",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization",
+    "-o",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/tmp/current-s1r-M-20261018/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+    "/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization/StructuralS1RM20261018/CurrentPrefix.lean"
+  ]
+}

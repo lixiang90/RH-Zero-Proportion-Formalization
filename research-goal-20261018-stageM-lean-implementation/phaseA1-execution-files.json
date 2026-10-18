@@ -1,0 +1,93 @@
+{
+  "schema": "M-phaseA1-import-failure-execution-v1",
+  "actual_exec_session": 48921,
+  "exec_terminal_exit": 1,
+  "files": [
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1/QuantizedComponent.child.json",
+      "bytes": 55,
+      "sha256": "daa6303bdc3f67fb208957a9f47e36cbb998de51fcdaf57a52b8a8eca5f542d2"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1/QuantizedComponent.command.json",
+      "bytes": 2106,
+      "sha256": "b277f34f1d1c356e8965b87c29d1c6cf93bbe44abb98b78fa44e53ef729d5b13"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1/QuantizedComponent.log",
+      "bytes": 487,
+      "sha256": "e4188f2af94135c41b2a013d7807a4de083231acdf08011986b4e3d63b4c291e"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1/QuantizedComponent.receipt.json",
+      "bytes": 532,
+      "sha256": "8940203db0009663a5dbd9ea9412cf920188396ec1604bcde4aca98db1fe03fc"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1/QuantizedComponent.resources.log",
+      "bytes": 2490,
+      "sha256": "6b6634779dc0c7d8e06a46eec17315a11589a641be6d5c2b45e801c942e3f085"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1/started.json",
+      "bytes": 522,
+      "sha256": "68767cd776d3c812a0415614aae5bd88c85beaef9f573e5336a6a2b130938a6e"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1/terminal.json",
+      "bytes": 61,
+      "sha256": "923d20dc1ed49a42b472e477dd759b24692de1f819c9ba11272ba24f9b4572f7"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/freeze_phaseA1_execution.py",
+      "bytes": 2203,
+      "sha256": "b9a2a7866a9c4f464600fba696c3dea728303e655a741995e6ec9c16aa5aa8d7"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA1-prepared.json",
+      "bytes": 3469,
+      "sha256": "67ab88cbd1c007aabc95cb507898dc5a8c75f29b3a7f22d87140445a1c3a64e2"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA-v0-execution-files.json",
+      "bytes": 6516,
+      "sha256": "3e7d2c66480827dbd740b5814d80828eaaca84343b3345042dbca6c68af39b9d"
+    },
+    {
+      "path": "research-goal-20261016/gates/stageM-actual-Lean-phaseA1-20261018.json",
+      "bytes": 1138,
+      "sha256": "54c930ddebcf009a8f155c1bde1a9ab4f2104b686a67bb5f951c5eee1e2a14d2"
+    },
+    {
+      "path": "StructuralS1RM20261018/PhaseA1/QuantizedComponent.lean",
+      "bytes": 3170,
+      "sha256": "638357979ca3943b98ab21de45e3c8d47a29ac3bd886ff1195a34bb6cb8dcfb3"
+    }
+  ],
+  "prefix_metadata_only": {
+    "path": "tmp/current-s1r-M-20261018/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+    "bytes": 45890464,
+    "sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692"
+  },
+  "receipt": {
+    "module": "StructuralS1RM20261018/PhaseA1/QuantizedComponent",
+    "exit_code": 1,
+    "elapsed_seconds": 8.848866701126099,
+    "source_sha256": "638357979ca3943b98ab21de45e3c8d47a29ac3bd886ff1195a34bb6cb8dcfb3",
+    "source_unchanged": true,
+    "log_sha256": "e4188f2af94135c41b2a013d7807a4de083231acdf08011986b4e3d63b4c291e",
+    "resource_sha256": "6b6634779dc0c7d8e06a46eec17315a11589a641be6d5c2b45e801c942e3f085",
+    "olean_sha256": null,
+    "ordinary_compile_passed": false,
+    "Nano_replayed": false,
+    "global_cover_proved": false
+  },
+  "failure_stage": "CurrentPrefix import resolution before checking the repaired theorem",
+  "theorem_failure_claim": false,
+  "new_Lean_proof_PASS": false,
+  "Sparse78_run": false,
+  "automatic_retries": 0,
+  "diagnosed_minimal_fix": "Copy the already hash-verified CurrentPrefix.olean into the first isolated library under its same module path; no prefix recompilation."
+}

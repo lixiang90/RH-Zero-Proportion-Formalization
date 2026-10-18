@@ -1,0 +1,48 @@
+{
+  "independent_N2_fixed_Below_audits_authorized": 1,
+  "scope": "single_N2_exact_Below_1322606_source_math_plus_complete_commit_reference_metadata",
+  "fixed_G_index": 1322606,
+  "combined_committed_records": 2375,
+  "other_Lower_mathematical_replay_authorized": false,
+  "new_solver_RREF_point_kernel_Lean_authorized": 0,
+  "automatic_retry_allowed": false,
+  "prepared_manifest_sha256": "7f32897f87b7347bb9a6ea0430e14b9bd0cabea6ad3d1ee5d446c327ca42b994",
+  "producer_manifest": {
+    "path": "research-goal-20261018-stageN2-pooled-component-resumption/files.json",
+    "sha256": "327db7c23c63aeb0ad49236b59303d04fea93a9fcde524caa5998bcd3637369f"
+  },
+  "producer_endpoints": [
+    {
+      "path": "research-goal-20261018-stageN2-pooled-component-resumption/result.json",
+      "bytes": 94825,
+      "sha256": "b987fdbbd66fee7023c04ee07bdeceba2c009422d683112e738341db1c7cf88e"
+    },
+    {
+      "path": "research-goal-20261018-stageN2-pooled-component-resumption/terminal.json",
+      "bytes": 49598,
+      "sha256": "21d78a0f23147f29a169f7815e750f6d18938c4dfe7da6ecdb30d1ad61761ca6"
+    },
+    {
+      "path": "research-goal-20261018-stageN2-pooled-component-resumption/progress-commits.jsonl",
+      "bytes": 3678395,
+      "sha256": "48ed6d5b0fff0e0ef15671fbafa87f001e6a49b5d9494f8ba0be42970697c857"
+    },
+    {
+      "path": "research-goal-20261018-stageN2-pooled-component-resumption/recovery.json",
+      "bytes": 423,
+      "sha256": "98f5336cd7f3ab4f32185d3ce05144f89edbcd86aa6b1242b696bd469fae3890"
+    },
+    {
+      "path": "research-goal-20261018-stageN2-pooled-component-resumption/first-Below-readout.json",
+      "bytes": 5416,
+      "sha256": "3ade873c5f40f065876c8c1917aec528593171514d5dfd54a35ef16b24316324"
+    }
+  ],
+  "resource_limits": {
+    "elapsed_seconds": 300,
+    "closed_output_bytes": 20000000
+  },
+  "execution_authorized_by_this_template": true,
+  "owner": "/root/joint_gluing_review",
+  "decision": "One fixed Below independent original-source mathematical audit plus complete commit/reference metadata. No other Lower mathematical replay, new point, solver, RREF, kernel or Lean. Failure stops without retry."
+}

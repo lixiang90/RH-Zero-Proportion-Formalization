@@ -1,0 +1,32 @@
+{
+  "schema": "root-current-s1R-M-actual-Lean-phaseA-decision-v1",
+  "authorized": true,
+  "task": "stageM-actual-Lean-phaseA",
+  "prepared_manifest_sha256": "d7910affee491edd6d4899cc3e5da4198e183b60c2f131e2c19b749ade9873be",
+  "ordinary_Lean_only": true,
+  "max_same_theorem_repairs": 0,
+  "goal_status": "active",
+  "main_rounds_since_review": 2,
+  "owner": "/root/lean_cover_goal",
+  "fixed_modules": [
+    "StructuralS1RM20261018.CurrentPrefix",
+    "StructuralS1RM20261018.QuantizedComponent",
+    "StructuralS1RM20261018.Sparse78"
+  ],
+  "source_manifest_sha256": "203425eb09dc29b3e14d1ab4d25147a6676e29a98ce83886453003b6d7905ab2",
+  "initial_compile_passes_authorized": 1,
+  "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "flags": [
+    "-j1",
+    "-M13500",
+    "--tstack=262144",
+    "-DrelaxedAutoImplicit=false",
+    "-DElab.async=false"
+  ],
+  "resource_policy": "Single serial owner. Observe same live toolhandle; no restart on timeout. Report if a module exceeds1200s or outputs exceed20MB; root decides termination from actual PID evidence. No broader proofbatch.",
+  "source_preservation": "Original phaseA/checkpoints and source paths remain unchanged. On first error stop and report diagnostics; separate versioned-source repair gate may follow. No source overwrite or automatic retry.",
+  "scope": "Exact current s1R actual analytic/LB/PT prefix, quantized components to actualw, sparse78 generic certificate soundness. No fixedpair/globalfloor/record claim until actualconsumer compiled and independentkernels.",
+  "new_LP_FS_anchor_kernel_or_numeric_search_authorized": 0,
+  "N_full_classifier_execution_authorized": false,
+  "website_submission_ready": false
+}

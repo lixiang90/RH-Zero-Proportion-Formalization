@@ -1,0 +1,18 @@
+--- StructuralS1RM20261018/QuantizedComponent.lean
++++ StructuralS1RM20261018/PhaseA1/QuantizedComponent.lean
+@@ -50,8 +50,13 @@
+       (kappa : ℝ) * wfun s := by
+   have h := mul_le_mul_of_nonneg_left (ell_le ht hL0 s hs1 hs2)
+     (show (0 : ℝ) ≤ kappa by norm_num [kappa])
+-  convert h using 1 <;>
+-    simp only [ell, slope, intercept, dLo, dHi, kappa] <;> push_cast <;> ring
++  have he : (slope f p : ℝ) * (20 * 32768 * s) + (intercept f L0 p : ℝ) =
++      (kappa : ℝ) * ell f L0 p s := by
++    unfold slope intercept dLo dHi ell kappa
++    push_cast
++    ring
++  rw [he]
++  exact h
+ 
+ theorem scaled_constant {top : ℕ} {bk : ℕ → ℕ} (hlb : LBSound top bk)
+     (L U : ℕ) (s : ℝ) (hs1 : (L : ℝ) / SC ≤ s) (hs2 : s ≤ (U : ℝ) / SC) :

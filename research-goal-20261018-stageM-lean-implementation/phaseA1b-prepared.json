@@ -1,0 +1,113 @@
+{
+  "schema": "M-phaseA1b-import-layout-only-prepared-v1",
+  "files": [
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/compile_phaseA1b.py",
+      "bytes": 4752,
+      "sha256": "26e205163110e837a258e65b55fc30334bb932163726f6dabf346088ad21a3f4"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/prepare_phaseA1b.py",
+      "bytes": 4270,
+      "sha256": "4e468159ec7770a8dca5c1ce546799f8a9765c1a359173b5c81c1d50b5c0c512"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA1b-runner.diff",
+      "bytes": 2012,
+      "sha256": "52c8e5a01d1228e33b77b01a58179f572578e4a64534a174308849fca6b19a74"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA1b-import-inventory.json",
+      "bytes": 561,
+      "sha256": "48904712b0e456bb5852e210cbeb1dee7afaf83e879ae7efaf1a6c14cfe5aca2"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "StructuralS1RM20261018/QuantizedComponent.lean",
+      "bytes": 3065,
+      "sha256": "eded1014724685d8fd8d8e1d2b67c1b0d40b9c53ebdf21feac5ec158e1443c64"
+    },
+    {
+      "path": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "bytes": 935224,
+      "sha256": "ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21"
+    },
+    {
+      "path": "StructuralS1RM20261018/Sparse78.lean",
+      "bytes": 3772,
+      "sha256": "f75f35e3901c41198081362f54c08910ed49cab996d36eb56261991468b60b22"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+      "bytes": 45890464,
+      "sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/compile_phaseA.py",
+      "bytes": 7604,
+      "sha256": "c6ed2b984185f4f609ae73fa8a2a3f8cb75761d3a91115a77aeb1a26ab747d80"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/compiler-runtime-observation.json",
+      "bytes": 841,
+      "sha256": "557e1a8a1e64a27efe12107b366810f4aa29086be372cc78fbea76c0e136dd34"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA-v0-execution-files.json",
+      "bytes": 6516,
+      "sha256": "3e7d2c66480827dbd740b5814d80828eaaca84343b3345042dbca6c68af39b9d"
+    },
+    {
+      "path": "tmp/setup-20261015/runtime.json",
+      "bytes": 8589,
+      "sha256": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA1-prepared.json",
+      "bytes": 3469,
+      "sha256": "67ab88cbd1c007aabc95cb507898dc5a8c75f29b3a7f22d87140445a1c3a64e2"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA1-execution-files.json",
+      "bytes": 3705,
+      "sha256": "6f3b1d97af650e02c51155591b0066ffccc60ebd84e448513bf080f0b2cf8692"
+    },
+    {
+      "path": "StructuralS1RM20261018/PhaseA1/QuantizedComponent.lean",
+      "bytes": 3170,
+      "sha256": "638357979ca3943b98ab21de45e3c8d47a29ac3bd886ff1195a34bb6cb8dcfb3"
+    }
+  ],
+  "Python_executable": {
+    "path": "C:\\Python314\\python.exe",
+    "sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd"
+  },
+  "reused_prefix_olean_sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692",
+  "reused_local_olean_files": [
+    {
+      "path": "tmp/current-s1r-M-20261018/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+      "bytes": 45890464,
+      "sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692",
+      "relative_module_path": "StructuralS1RM20261018/CurrentPrefix.olean"
+    }
+  ],
+  "source_statements_and_proofs_changed": false,
+  "repeat_CurrentPrefix": false,
+  "targets": [
+    "StructuralS1RM20261018/PhaseA1/QuantizedComponent",
+    "StructuralS1RM20261018/Sparse78"
+  ],
+  "automatic_repairs_or_retries": 0,
+  "Lean_runs": 0,
+  "command_template": [
+    "C:\\Python314\\python.exe",
+    "research-goal-20261018-stageM-lean-implementation/compile_phaseA1b.py",
+    "--gate",
+    "ROOT_GATE_PATH",
+    "--gate-sha256",
+    "ROOT_GATE_SHA"
+  ],
+  "new_immutable_gate_required": true,
+  "B2_compile_authorized": false
+}
