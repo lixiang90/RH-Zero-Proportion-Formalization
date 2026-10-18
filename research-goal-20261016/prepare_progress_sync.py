@@ -340,7 +340,9 @@ def main():
       ('research-goal-20261018-macro006-core-delivery/files.json','db18ad5e2f1ea25d24c6d6e90752720ce934883d984fa44fda245e00e6983dc0'),
       ('research-goal-20261018-tiny-ordinary-delivery/files.json','8be1bca19d8b8e3222939fb4096f0daec9ff333790751073a702537641f6b582'),
       ('research-goal-20261019-tiny-check-delivery/files.json','f4eff94a23ae54430598710a17c1b40960997f624002ebb623a48e0363a4d6ff'),
-      ('research-goal-20261019-native-preproduction-delivery/files.json','682053912ea4f6908c7907fab4941c00d47b7bc4e9d95ce7065df3183b34c6f7')]:
+      ('research-goal-20261019-native-preproduction-delivery/files.json','682053912ea4f6908c7907fab4941c00d47b7bc4e9d95ce7065df3183b34c6f7'),
+      ('research-goal-20261019-final-accepted-delivery/files.json','d3a0f4fcc35af837dc722eb60a928375caa8de11f5034ae0b8d11ecdedf57e63'),
+      ('research-goal-20261019-final-verification-addendum-delivery/files.json','24e049644d3aeb3c474934a6039c73d47eff65d58da8037253152559ab4acacc')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -558,9 +560,17 @@ def main():
         try:raw.decode('utf8');binary=b'\0' in raw
         except UnicodeDecodeError:binary=True
         entries.append({'path':path,'sha':sha,'bytes':len(raw),'binary':binary})
+    accepted_status=ROOT/'submission/single-exception-overlap-accepted-20261019/acceptance-status.json'
+    official_accepted=False
+    if accepted_status.is_file():
+        accepted=json.loads(accepted_status.read_bytes())
+        official_accepted=(accepted['official_website_acceptance_confirmed'] is True
+                           and accepted['status']=='kernel-verified' and accepted['formalVerification'] is True)
+        assert accepted['source']['sha256']=='024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81'
     out={'base_commit':git('rev-parse','HEAD').decode().strip(),'tree_sha':git('write-tree').decode().strip(),
          'files':entries,'file_count':len(entries),'bytes':sum(x['bytes'] for x in entries),
-         'submission_ready':False,'new_unconditional_zero_proportion_proven':False}
+         'submission_ready':official_accepted,'new_unconditional_zero_proportion_proven':official_accepted,
+         'official_acceptance_confirmed':official_accepted}
     dest=ROOT/'tmp/goal-20261016/staged.json';dest.parent.mkdir(parents=True,exist_ok=True)
     dest.write_text(json.dumps(out,indent=2)+'\n',encoding='utf8')
     print(json.dumps({k:out[k] for k in ['base_commit','tree_sha','file_count','bytes']}))

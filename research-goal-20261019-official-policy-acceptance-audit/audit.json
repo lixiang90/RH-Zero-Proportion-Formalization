@@ -1,0 +1,123 @@
+{
+  "schema": "official-policy-and-accepted-runtime-evidence-audit-v1",
+  "audited_at_utc": "2026-10-18T18:08:50.141718+00:00",
+  "repository": "josusanmartin/riemann",
+  "accepted_source_commit": "6bc7f07fb939e066ac2923493d9a01cca553fe87",
+  "all_five_files_fetched_at_exact_same_commit": true,
+  "transport": "GitHub connector fetch_file base64; each Git blob SHA1 recomputed from raw decoded bytes",
+  "official_public_verification_artifacts_found": true,
+  "search_default_branch_ref_is_not_used_as_a_substitute_for_exact_commit_fetch": true,
+  "official_attestation": {
+    "schemaVersion": 1,
+    "submissionId": "lixiang90-single-exception-overlap-20261018",
+    "author": {
+      "github": "lixiang90",
+      "displayName": "Li Xiang"
+    },
+    "model": "GPT 6.1 Sol Ultra",
+    "harness": "Codex",
+    "score": {
+      "numerator": "3337839448633819172184136761695440236797",
+      "denominator": "4955319193827760237900000000000000000000"
+    },
+    "scoreDecimal": "0.673587173312944342020759392480",
+    "previousRecordId": "critical-strip-exclusion-attempt-1",
+    "upstreamCommit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "theoremNames": [
+      "candidate_strict_improvement",
+      "candidate_critical_line_bound",
+      "candidate_critical_line_bound_cumulative"
+    ],
+    "result": "kernel-verified",
+    "verifiedAt": "2026-10-18T17:50:12.033Z",
+    "challengeDigest": "41ac0577bcc7290ae482aea26ca35c3527a74c1682bf1df3bc3d61314a7ad068",
+    "verifierTemplateDigest": "1aa63a7f5e906c9b358a906221773da2beb9f53b16077b945ced99bb83e1367a",
+    "kernels": [
+      "lean",
+      "nanoda"
+    ],
+    "permittedAxioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ]
+  },
+  "official_log_confirms_ordinary_solution_build_and_both_kernels": true,
+  "ordinary_solution_build_lines": [
+    {
+      "line": 198,
+      "text": "⚠ [8839/8839] Built Solution.Candidate (1085s)"
+    }
+  ],
+  "official_kernel_success_lines": [
+    {
+      "line": 602,
+      "text": "Nanoda kernel accepts the solution"
+    },
+    {
+      "line": 604,
+      "text": "Lean default kernel accepts the solution"
+    },
+    {
+      "line": 605,
+      "text": "Your solution is okay!"
+    }
+  ],
+  "official_policy": {
+    "comparator_main_timeout_seconds": 3200,
+    "outer_E2B_full_job_timeout_seconds": 3240,
+    "TERM_then_kill_after_seconds": 15,
+    "inner_scope": "Comparator main launched via lake env; not an assertion that all outer job setup belongs to the inner 3200 seconds",
+    "full_mode_explicit": true,
+    "native_comparator_exporter_nanoda_paths_explicit": true,
+    "source_lines": {
+      "inner": [
+        {
+          "line": 94,
+          "text": "ulimit -f 8388608"
+        },
+        {
+          "line": 96,
+          "text": "exec timeout --signal=TERM --kill-after=15s 3200s \\"
+        },
+        {
+          "line": 97,
+          "text": "  /opt/riemann/tools/bin/lake env \"$1\" \"$2\""
+        }
+      ],
+      "outer": [
+        {
+          "line": 32,
+          "text": "timeout --signal=TERM --kill-after=15s 3240s \\"
+        },
+        {
+          "line": 44,
+          "text": "    COMPARATOR_BIN=/opt/riemann/tools/bin/comparator \\"
+        },
+        {
+          "line": 46,
+          "text": "    COMPARATOR_LEAN4EXPORT=/opt/riemann/tools/bin/lean4export \\"
+        },
+        {
+          "line": 47,
+          "text": "    COMPARATOR_NANODA=/opt/riemann/tools/bin/nanoda_bin \\"
+        },
+        {
+          "line": 49,
+          "text": "      \"$submission_dir\" --mode=full --artifact=\"$artifact_path\" \\"
+        }
+      ]
+    }
+  },
+  "elapsed_time_limits": {
+    "precise_total_elapsed_seconds_published_in_attestation": false,
+    "precise_total_elapsed_seconds_claimed": null,
+    "individual_Lake_build_times_are_not_total_pipeline_elapsed": true,
+    "policy_timeout_is_not_an_observed_stopwatch_measurement": true
+  },
+  "attestation_upstreamCommit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+  "upstream_ref_lookup_note": "Additional fetches of the attestation upstreamCommit in josusanmartin/riemann returned no-such-commit 404. It is not asserted to identify this repository pipeline revision. The five archived official files are independently pinned to the exact accepted-source commit above.",
+  "Challenge_template_sorry_warning_note": "The log warns about sorry in trusted Challenge.Candidate placeholders; this is the statement comparison template. The accepted Solution public theorems were built and accepted by both kernels, and the formal permitted-axiom list is the standard three.",
+  "source_scripts_executed": 0,
+  "compiler_generator_exporter_kernel_mathematics_or_website_submission_runs": 0
+}

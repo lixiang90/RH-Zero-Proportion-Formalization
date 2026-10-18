@@ -1,10 +1,10 @@
-最新状态（2026-10-19）：用户已取消百万分之一最低幅度；目标是严格超过网站最新纪录的非平凡无条件改进。最近新鲜读取仍给67.3587173310297…%。候选67.35871733129443…%已分别通过完整单文件Lean、Comparator、默认Lean核和独立nanoda；网站最终接受仍待确认。
+最新状态（2026-10-19）：官网已正式接受本次无条件改进，公开纪录晋级为67.35871733129443…%，作者Li Xiang/lixiang90，状态kernel-verified、formalVerification=true。它严格高于提交前67.3587173310297…%的纪录；当前网站R等于本候选是本次晋级，不再追赶自己。
 
 宏观回顾006的唯一例外相邻窗口路线已推进到实际Lean：Dev Core普通PASS656.094秒，完整Localization普通PASS170.435秒。包含13,046数值叶、70cuts、根外、反射及四朝向共享gap矛盾。
 
-候选约67.35871733129443…%，精确严格超过当前R。W9总窗计数与最终根计数函数的无条件dyadic/cumulative比例均已普通Lean通过，六个最终传递公理根仅标准三公理；此前同命题API失败版本和日志完整保留。不可变v3单文件位于 research-goal-20261018-tiny-flatten-preparation-v3/draft/Solution.lean，SHA256 024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81，用户已上传测试。
+比例的精确值为3337839448633819172184136761695440236797/4955319193827760237900000000000000000000。W9总窗计数与实际根计数函数的无条件dyadic/cumulative比例均已形式化，六个最终传递公理根仅标准三公理。官网公布的源码与用户v3单文件逐字节相同，1979280B，SHA256 024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81；官方提交和源码重算digest与用户23e3dd…完整一致。
 
-单文件实际1979280B。冷检v0在3200秒Nano阶段超时，保留失败；此前Lean、契约/原语/依赖、公理及默认内核均PASS。独立Nano诊断完整检查75371声明，用时427.389541876秒；这不等于统一3200秒通过。用户官网仅报告 Verification running 与组合digest23e3dd765aa27de76938e056f13d3e0f08d849d0e7c39c6f78c62e7640c0a10f，无最终结论。证据见 research-goal-20261019-tiny-kernel-evidence/checks.json。此前强切线/曲率路线作为备选冻结，不为旧最低幅度继续扩展。
+官方接受证据见 research-goal-20261019-record-accepted-independent-1753/accepted-files.json。官网按固定验证流程接受了原v3；公开记录没有披露实际耗时，不编造秒数。此前本地v0的3200秒超时、v3分别通过的内核诊断均保留；备用native-v4在官网接受后由root取消，非数学反例也非整轮PASS。最终材料位于 submission/single-exception-overlap-accepted-20261019；源码与最终云端材料的全树核对回执另存。
 
 以下为历史研究记录，其当时前提与范围保留。
 

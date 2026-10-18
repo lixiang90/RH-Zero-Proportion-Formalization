@@ -2,10 +2,10 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
-The latest fresh site and public-repository check still gives **67.3587173310297…%**.
-The user now requests any strict, nontrivial mathematical improvement; there is
-no minimum gain. The new unconditional bound has passed Lean and both kernels
-in separately completed checks. Website acceptance remains pending.
+The website has accepted **Li Xiang / lixiang90**'s unconditional bound
+**67.35871733129443…%**, improving the former **67.3587173310297…%** record.
+The [official record](https://github.com/josusanmartin/riemann/blob/6bc7f07fb939e066ac2923493d9a01cca553fe87/submissions/lixiang90-single-exception-overlap-20261018/submission.json)
+is `kernel-verified` with `formalVerification: true`.
 
 [Macro review006](research-goal-20261016/macro-reviews/006-20261018.zh.md)
 selects a smaller complete-delivery route. Replaying all13,046 audited leaf
@@ -14,7 +14,7 @@ four orientations, adjacent windows would force the same gap to be both
 at most34980/32768 and at least64168/32768, a strict contradiction.
 The [independent replay](research-goal-20261018-tiny-overlap-independent/independent-review.json)
 confirms the integer classification and exact score
-**67.35871733129443…%**, strictly above the fresh record.
+**67.35871733129443…%**, strictly above the pre-submission record.
 
 The strengthened coverage core and complete sublevel localization, including
 all70 cuts, root exterior, reflection and the adjacent-window contradiction,
@@ -27,7 +27,8 @@ retains the failed API versions and the successful Final-only repair. The
 [development Core](StructuralS1RTiny20261018/Dev/Core.lean) and
 [localization](StructuralS1RTiny20261018/Phase1/Localization.lean) preserve
 the audited exact data. The immutable [single-file proof](research-goal-20261018-tiny-flatten-preparation-v3/draft/Solution.lean)
-is 1,979,280 bytes and has been provided for the user's parallel website test.
+is 1,979,280 bytes and is byte-identical to the
+[officially accepted source](https://github.com/josusanmartin/riemann/blob/6bc7f07fb939e066ac2923493d9a01cca553fe87/submissions/lixiang90-single-exception-overlap-20261018/proof/Solution.lean).
 The final [root-counting
 theorems](StructuralS1RTiny20261018/Phase4/Final.lean) have no candidate-controlled
 analytic or local-floor hypotheses.
@@ -36,11 +37,18 @@ records successful single-file Lean compilation, Comparator contract and axiom
 checks, default Lean kernel replay, and a separate complete nanoda replay of
 75,371 declarations. The original combined run timed out at 3,200 seconds
 during nanoda; it is retained as a failure. A separate nanoda pass does not
-establish that combined deadline. The website currently reports verification
-running, with no final verdict supplied.
-Current [submission materials](submission/single-exception-overlap-20261019/README.zh.md)
-include the exact fraction, mathematical explanation, website fields and
-the pending verification status.
+establish that local combined deadline. Official acceptance of the actual
+uploaded v3 is now independently confirmed. Recomputing the published manifest
+and source gives the exact user job digest
+`23e3dd765aa27de76938e056f13d3e0f08d849d0e7c39c6f78c62e7640c0a10f`.
+[Official HTTP, source and digest evidence](research-goal-20261019-record-accepted-independent-1753/accepted-files.json)
+binds this result to that upload. The accepted record and submission metadata
+do not report a total elapsed time.
+The optional native-v4 attempt was stopped after v3 acceptance, with its
+[cancellation evidence](research-goal-20261019-native-v4-superseded/files.json) retained.
+Final [accepted materials](submission/single-exception-overlap-accepted-20261019/FINAL-STATUS.zh.md)
+preserve the exact source, fraction, mathematical explanation and official
+acceptance evidence. Earlier pending drafts remain historical snapshots.
 
 The earlier fixed curvature network has a successful independent exact
 replay, and quantitative CellA/strong-tangent analytic lemmas have passed

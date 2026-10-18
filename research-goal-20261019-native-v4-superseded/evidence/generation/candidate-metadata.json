@@ -1,0 +1,278 @@
+{
+  "schema": "tiny-source-draft-v1",
+  "upload_ready": false,
+  "score": {
+    "numerator": "3337839448633819172184136761695440236797",
+    "denominator": "4955319193827760237900000000000000000000"
+  },
+  "expected_current_record": {
+    "numerator": "3337839448633819172184136761695440236797",
+    "denominator": "4955319193847235264050000000000000000000"
+  },
+  "public_theorem_names": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "trusted_spec_template": {
+    "path": "research-20261016-w10-cert/website-snapshot/challenge/templates/CandidateSpec.lean.tmpl",
+    "sha256": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c",
+    "origin_url": "https://raw.githubusercontent.com/josusanmartin/riemann/9e6ca6615b9dbfec4a1d722995cff0ffe3abf9bb/challenge/templates/CandidateSpec.lean.tmpl"
+  },
+  "CURRENT_EXPRESSION_source": "Official current kernel-verified ledger exactExpression, not contributor-defined",
+  "template_parameters": {
+    "NUMERATOR": "score.numerator",
+    "DENOMINATOR": "score.denominator",
+    "CURRENT_EXPRESSION": "trusted currentRecord.exactExpression"
+  },
+  "trusted_CandidateSpec_written_or_modified": false,
+  "local_old_CandidateSpec_usable": false,
+  "fresh_official_template_check_completed": false,
+  "official_generation_or_submission_executed": false,
+  "scope": "Proposed exact score and unverified draft only; no accepted record claim",
+  "unclosed_gates": [
+    "four ordinary modules",
+    "actual flatten and independent source audit",
+    "fresh record/template/dependency pins and official CandidateSpec",
+    "single-source ordinary elaboration/axioms",
+    "export/Comparator/nanoda",
+    "full website time/memory/source/request limits",
+    "GitHub/final submission materials"
+  ],
+  "solution": "Solution.lean",
+  "solution_bytes": 1856430,
+  "solution_sha256": "85d0dc94ff9d8230854136b67be27b80517104133ad1ffba507ce7fe47413b50",
+  "prepared_manifest_sha256": "2b77159157e500b0177c3c2294860830a495248ce3e3b216a813524032509d72",
+  "source_modules": [
+    {
+      "path": "StructuralS1RTiny20261018/Production/Core.lean",
+      "sha256": "fd883f6f622fe1f837dd36205b449abd465b0196cb47e4400947391134755525",
+      "bytes": 1815476,
+      "retained_non_import_sha256": "ef7edf96aefadb7272d7b7e63adb03aea5f10ac1267c45485a31f13dfead7e84",
+      "retained_non_import_bytes": 1814620
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Localization.lean",
+      "sha256": "c7202d18effe9b05bf3b71f16a145d3e5eac91a8a895973f68647fc7f8c8580b",
+      "bytes": 12305,
+      "retained_non_import_sha256": "5bd782b33537c86b60a66d43c2b2a3f8d73f43603af9f71c69c19718fb82ee03",
+      "retained_non_import_bytes": 12256
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Counting.lean",
+      "sha256": "e3dd838595e0b2a01249f13959fd492e97a8289b33c62805ee06de4d7a0b195a",
+      "bytes": 21483,
+      "retained_non_import_sha256": "faa2f9e53dfac96352df32c82f786228d4209d5999a4a52c7fa58de7018cf746",
+      "retained_non_import_bytes": 21434
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Final.lean",
+      "sha256": "b45a6341fa22f454488fa1890b88bc45e100f2cdcafc4959b2094546050028d2",
+      "bytes": 4965,
+      "retained_non_import_sha256": "464ae6bc4bd8fb47199547b18dcb9bfe508049b7627d83398548966ad33b0aba",
+      "retained_non_import_bytes": 4855
+    }
+  ],
+  "body_segments": [
+    {
+      "module": "StructuralS1RTiny20261018.Production.Core",
+      "start": 1259,
+      "end": 1815879,
+      "non_import_sha256": "ef7edf96aefadb7272d7b7e63adb03aea5f10ac1267c45485a31f13dfead7e84"
+    },
+    {
+      "module": "StructuralS1RTiny20261018.Production.Localization",
+      "start": 1815960,
+      "end": 1828216,
+      "non_import_sha256": "5bd782b33537c86b60a66d43c2b2a3f8d73f43603af9f71c69c19718fb82ee03"
+    },
+    {
+      "module": "StructuralS1RTiny20261018.Production.Counting",
+      "start": 1828293,
+      "end": 1849727,
+      "non_import_sha256": "faa2f9e53dfac96352df32c82f786228d4209d5999a4a52c7fa58de7018cf746"
+    },
+    {
+      "module": "StructuralS1RTiny20261018.Production.Final",
+      "start": 1849801,
+      "end": 1854656,
+      "non_import_sha256": "464ae6bc4bd8fb47199547b18dcb9bfe508049b7627d83398548966ad33b0aba"
+    }
+  ],
+  "imports_moved": [
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "ChallengeDeps",
+      "import_line_sha256": "f29b0e129fe9f263703bc48e6f4048780883812eb2ea68543bb864f46e62dc75",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "ChallengeDeps.CandidateSpec",
+      "import_line_sha256": "06fd787000e8928d2f8d4c79bb9dc6897f9a4990ffb22f56558a49d7023d89d6",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib",
+      "import_line_sha256": "1015f8f4676a27ea63780b30cc916712232857097b2bdf635dc61cb949c107fb",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Algebra.BigOperators.Fin",
+      "import_line_sha256": "53384bbf6dbfb2d9fb4c79e329fe129d25d375943c3839d3c4042d8ee2fe1430",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Algebra.BigOperators.Intervals",
+      "import_line_sha256": "b000e589d48896ca81e5160bfc595b3e747cdda7d51afec6d8658f224abac5b4",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "import_line_sha256": "0c738cca7a7d7a3865081649e387889fe41a95526742def393ff58ed569f6bf6",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Analysis.Real.Pi.Bounds",
+      "import_line_sha256": "1451d0426fd8e603f6917132e988af16b8929796b5605397ea4572d0af40fcaa",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+      "import_line_sha256": "eb37b64f0137b336d9d4e36030391bb6e8f96e443a489a8e4e121bb2ffe7621c",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+      "import_line_sha256": "7b91a7b14607104682cfd272749b3665b2c58be84461237763f3a63cc19e013f",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+      "import_line_sha256": "1d902683c7d59e07b4cfd98682d98a7f9738364a7c3872728ad3b2bce40aebe3",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+      "import_line_sha256": "4eae2d64fb86656e603772693fedae9982c24b2f17e4ac87a4de3f0586e26ad8",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Data.Real.Basic",
+      "import_line_sha256": "b38b8ebbc4944f81503119f318a4bc9717b1ac15eb44fc7d77a2b5ef60571792",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Tactic.Linarith",
+      "import_line_sha256": "e62a9bd02f75536786ad770e9ebb770533b1b7762b76653441c5b5b6a13815d1",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Tactic.NormNum",
+      "import_line_sha256": "1cd924f16ec6ee38ef60f768d241ac4cf7f1d9ae6b9a70013e0d2bc53dac93e3",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Mathlib.Tactic.Ring",
+      "import_line_sha256": "045fcfc852f1eff4fbefc0688d68fe250525d1c3a5d00440e2b27ba7a1c1632e",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Zeta23.PrimeSideA.EndsE1",
+      "import_line_sha256": "02cec881de02bca98dad1499ca1f5a6e561af3e7beae2287522e1cef5cccf87b",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Zeta23.Taper.Norms",
+      "import_line_sha256": "d9cbfcb6cd19395d0369d8a1742640cdc5fcd7b9cdd91a2c9a38e2ed5734bac0",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Zeta23.ThmD.Concrete",
+      "import_line_sha256": "0cc6d89aae7fd8595c625dd87f8f76511dae1d46d3d3429b7023f16e45b7f570",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Zeta23.ThmD.Limit",
+      "import_line_sha256": "f07f4d49a7eeddefdc59c83e3d0a2ea043bf80870a53550474f674446013cb46",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Zeta23.ThmD.Mult",
+      "import_line_sha256": "3e21908976b419fc220ad15cbbb820f4b2c16710650c0086289b95c16697776f",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Zeta23.ThmD.Window",
+      "import_line_sha256": "7981e92b081b9855be11a7f2e3a319b7e60bc1ae0c13ec69da6336ad8469c9dd",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Zeta23.ThmD.WindowCore",
+      "import_line_sha256": "4ce8769bc3b92a09a3e9bbc49d77eae88aa443e8f6897d1e96cb2408b5db91f1",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Zeta23.ThmD.ZeroSideD",
+      "import_line_sha256": "0ba7ae2ce5a13156f2298e306d4d8d8e84b37045f0defabe6b9ec91a8ba1c882",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Core.lean",
+      "module": "Zeta23.ZeroSide.RankTraceMult",
+      "import_line_sha256": "90c8defc93e9982e0bb0c1ffb57e9b239055a1db0122726d60bbcad34f467f26",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Localization.lean",
+      "module": "StructuralS1RTiny20261018.Production.Core",
+      "import_line_sha256": "72c341b23917c4df4928e490d55821750bed555facbdcf141ee6a0f87237e7f9",
+      "internal": true
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Counting.lean",
+      "module": "StructuralS1RTiny20261018.Production.Core",
+      "import_line_sha256": "72c341b23917c4df4928e490d55821750bed555facbdcf141ee6a0f87237e7f9",
+      "internal": true
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Final.lean",
+      "module": "StructuralS1RTiny20261018.Production.Localization",
+      "import_line_sha256": "71912acbd2892db923ae717cfebe7c6360d73da62923451416fe5fde043862f7",
+      "internal": true
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Production/Final.lean",
+      "module": "StructuralS1RTiny20261018.Production.Counting",
+      "import_line_sha256": "ca720a7c3e73e4c3988b171fa883441c054b3838e7966935133b3a237e6702a7",
+      "internal": true
+    }
+  ],
+  "all_non_import_bytes_preserved": true,
+  "compiler_inputs_modified": false,
+  "production_runs": 0,
+  "Lean_runs": 0,
+  "Comparator_runs": 0,
+  "Nano_runs": 0
+}

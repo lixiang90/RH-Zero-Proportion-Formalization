@@ -1,0 +1,411 @@
+{
+  "schema": "independent-official-accepted-candidate-check-v1",
+  "checked_at_utc": "2026-10-18T17:54:28.806891+00:00",
+  "leaderboard_HTTP": {
+    "started_at_utc": "2026-10-18T17:54:27.064555+00:00",
+    "completed_at_utc": "2026-10-18T17:54:28.806891+00:00",
+    "request_url": "https://www.riemannzeta.fun/api/leaderboard?accepted1753=1792346067064549400",
+    "request_headers": {
+      "Cache-Control": "no-cache",
+      "Pragma": "no-cache",
+      "Accept-Encoding": "identity",
+      "User-Agent": "independent-accepted-record-check/1.0"
+    },
+    "final_url": "https://www.riemannzeta.fun/api/leaderboard?accepted1753=1792346067064549400",
+    "status": 200,
+    "response_headers": [
+      [
+        "Age",
+        "0"
+      ],
+      [
+        "Cache-Control",
+        "public, max-age=60"
+      ],
+      [
+        "Content-Type",
+        "application/json"
+      ],
+      [
+        "Cross-Origin-Opener-Policy",
+        "same-origin"
+      ],
+      [
+        "Cross-Origin-Resource-Policy",
+        "same-origin"
+      ],
+      [
+        "Date",
+        "Sun, 18 Oct 2026 17:54:28 GMT"
+      ],
+      [
+        "Origin-Agent-Cluster",
+        "?1"
+      ],
+      [
+        "Permissions-Policy",
+        "camera=(), microphone=(), geolocation=(), browsing-topics=()"
+      ],
+      [
+        "Referrer-Policy",
+        "strict-origin-when-cross-origin"
+      ],
+      [
+        "Server",
+        "Vercel"
+      ],
+      [
+        "Strict-Transport-Security",
+        "max-age=63072000; includeSubDomains; preload"
+      ],
+      [
+        "X-Content-Type-Options",
+        "nosniff"
+      ],
+      [
+        "X-Dns-Prefetch-Control",
+        "off"
+      ],
+      [
+        "X-Frame-Options",
+        "DENY"
+      ],
+      [
+        "X-Matched-Path",
+        "/api/leaderboard"
+      ],
+      [
+        "X-Permitted-Cross-Domain-Policies",
+        "none"
+      ],
+      [
+        "X-Vercel-Cache",
+        "MISS"
+      ],
+      [
+        "X-Vercel-Id",
+        "sfo1::iad1::gnvmg-1792346067929-e56a7f626236"
+      ],
+      [
+        "Connection",
+        "close"
+      ],
+      [
+        "Transfer-Encoding",
+        "chunked"
+      ]
+    ],
+    "body_bytes": 63383,
+    "body_sha256": "fd1ce570a638c370b26ac2afddf4dd2f9a46045270f7691140624e04f4ed4521"
+  },
+  "current_public_record": {
+    "id": "lixiang90-single-exception-overlap-20261018",
+    "track": "critical-line",
+    "date": "2026-10-18",
+    "author": "Li Xiang",
+    "github": "lixiang90",
+    "title": "Certified critical-line bound 0.673587173312944342020759392480",
+    "method": "Geometric exclusion of consecutive exceptional nine-gap windows",
+    "model": "GPT 6.1 Sol Ultra",
+    "harness": "Codex",
+    "scoreDecimal": "0.673587173312944342020759392480",
+    "scorePercent": "67.3587173312944342020759392480",
+    "exactRational": {
+      "numerator": "3337839448633819172184136761695440236797",
+      "denominator": "4955319193827760237900000000000000000000"
+    },
+    "exactExpression": "(3337839448633819172184136761695440236797 : ℝ) / 4955319193827760237900000000000000000000",
+    "status": "kernel-verified",
+    "formalVerification": true,
+    "independentReview": null,
+    "sourceUrl": "https://github.com/josusanmartin/riemann/blob/6bc7f07fb939e066ac2923493d9a01cca553fe87/submissions/lixiang90-single-exception-overlap-20261018/submission.json",
+    "proofUrl": "https://github.com/josusanmartin/riemann/blob/6bc7f07fb939e066ac2923493d9a01cca553fe87/submissions/lixiang90-single-exception-overlap-20261018/proof/Solution.lean",
+    "pullRequestUrl": null,
+    "summary": "Uses the accepted nine-gap Gram-defect certificate to localize every window below a higher threshold to one exceptional cell, including its reflected orientation. That cell forces the shared gap of consecutive exceptional windows into disjoint intervals in all four orientation combinations. This proves a stronger adjacent-window energy bound. Pairing consecutive windows gives a summed lower bound with one fixed boundary loss; the existing separation and matching argument then yields dyadic and cumulative bounds for distinct critical-line zeros. All original source attribution and licenses are retained. The complete unconditional bound has passed ordinary Lean with only the three permitted standard axioms. Full local cold statement comparison and independent-kernel verification are pending."
+  },
+  "public_exact_R": "3337839448633819172184136761695440236797/4955319193827760237900000000000000000000",
+  "candidate_exact_kappa": "3337839448633819172184136761695440236797/4955319193827760237900000000000000000000",
+  "public_record_equals_candidate": true,
+  "accepted_status": "kernel-verified",
+  "formalVerification": true,
+  "public_source_commit": "6bc7f07fb939e066ac2923493d9a01cca553fe87",
+  "accepted_source_HTTP": {
+    "started_at_utc": "2026-10-18T17:54:28.809886+00:00",
+    "completed_at_utc": "2026-10-18T17:54:31.687664+00:00",
+    "request_url": "https://raw.githubusercontent.com/josusanmartin/riemann/6bc7f07fb939e066ac2923493d9a01cca553fe87/submissions/lixiang90-single-exception-overlap-20261018/proof/Solution.lean",
+    "request_headers": {
+      "Cache-Control": "no-cache",
+      "Pragma": "no-cache",
+      "Accept-Encoding": "identity",
+      "User-Agent": "independent-accepted-record-check/1.0"
+    },
+    "final_url": "https://raw.githubusercontent.com/josusanmartin/riemann/6bc7f07fb939e066ac2923493d9a01cca553fe87/submissions/lixiang90-single-exception-overlap-20261018/proof/Solution.lean",
+    "status": 200,
+    "response_headers": [
+      [
+        "Connection",
+        "close"
+      ],
+      [
+        "Content-Length",
+        "1979280"
+      ],
+      [
+        "Cache-Control",
+        "max-age=300"
+      ],
+      [
+        "Content-Security-Policy",
+        "default-src 'none'; style-src 'unsafe-inline'; sandbox"
+      ],
+      [
+        "Content-Type",
+        "text/plain; charset=utf-8"
+      ],
+      [
+        "ETag",
+        "\"857eb6a4c79c5e6c8c6cc0f277ae8ffe9ba28449563cdfbf4f0df2dbd310df81\""
+      ],
+      [
+        "Strict-Transport-Security",
+        "max-age=31536000"
+      ],
+      [
+        "X-Content-Type-Options",
+        "nosniff"
+      ],
+      [
+        "X-Frame-Options",
+        "deny"
+      ],
+      [
+        "X-XSS-Protection",
+        "1; mode=block"
+      ],
+      [
+        "X-GitHub-Request-Id",
+        "D702:1FDE6D:59A1FA:7A77BD:6AD507D5"
+      ],
+      [
+        "x-github-edge-region",
+        "westus3"
+      ],
+      [
+        "Accept-Ranges",
+        "bytes"
+      ],
+      [
+        "Date",
+        "Sun, 18 Oct 2026 17:54:29 GMT"
+      ],
+      [
+        "Via",
+        "1.1 varnish"
+      ],
+      [
+        "X-Served-By",
+        "cache-bur-kbur8200036-BUR"
+      ],
+      [
+        "X-Cache",
+        "MISS"
+      ],
+      [
+        "X-Cache-Hits",
+        "0"
+      ],
+      [
+        "X-Timer",
+        "S1792346069.498322,VS0,VE166"
+      ],
+      [
+        "Vary",
+        "Authorization,Accept-Encoding"
+      ],
+      [
+        "Access-Control-Allow-Origin",
+        "*"
+      ],
+      [
+        "Cross-Origin-Resource-Policy",
+        "cross-origin"
+      ],
+      [
+        "X-Fastly-Request-ID",
+        "741e86287eaeda639d49f6ea5f2dc3f6b624a301"
+      ],
+      [
+        "Expires",
+        "Sun, 18 Oct 2026 17:59:29 GMT"
+      ],
+      [
+        "Source-Age",
+        "0"
+      ]
+    ],
+    "body_bytes": 1979280,
+    "body_sha256": "024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81"
+  },
+  "accepted_submission_HTTP": {
+    "started_at_utc": "2026-10-18T17:54:31.690413+00:00",
+    "completed_at_utc": "2026-10-18T17:54:32.730516+00:00",
+    "request_url": "https://raw.githubusercontent.com/josusanmartin/riemann/6bc7f07fb939e066ac2923493d9a01cca553fe87/submissions/lixiang90-single-exception-overlap-20261018/submission.json",
+    "request_headers": {
+      "Cache-Control": "no-cache",
+      "Pragma": "no-cache",
+      "Accept-Encoding": "identity",
+      "User-Agent": "independent-accepted-record-check/1.0"
+    },
+    "final_url": "https://raw.githubusercontent.com/josusanmartin/riemann/6bc7f07fb939e066ac2923493d9a01cca553fe87/submissions/lixiang90-single-exception-overlap-20261018/submission.json",
+    "status": 200,
+    "response_headers": [
+      [
+        "Connection",
+        "close"
+      ],
+      [
+        "Content-Length",
+        "1533"
+      ],
+      [
+        "Cache-Control",
+        "max-age=300"
+      ],
+      [
+        "Content-Security-Policy",
+        "default-src 'none'; style-src 'unsafe-inline'; sandbox"
+      ],
+      [
+        "Content-Type",
+        "text/plain; charset=utf-8"
+      ],
+      [
+        "ETag",
+        "\"1609af22a84129c3369680864669ca962ce1f9de2201e4df9afff2f62146b141\""
+      ],
+      [
+        "Strict-Transport-Security",
+        "max-age=31536000"
+      ],
+      [
+        "X-Content-Type-Options",
+        "nosniff"
+      ],
+      [
+        "X-Frame-Options",
+        "deny"
+      ],
+      [
+        "X-XSS-Protection",
+        "1; mode=block"
+      ],
+      [
+        "X-GitHub-Request-Id",
+        "3ED4:3625E6:5914D7:79F07D:6AD507D8"
+      ],
+      [
+        "x-github-edge-region",
+        "westus3"
+      ],
+      [
+        "Accept-Ranges",
+        "bytes"
+      ],
+      [
+        "Date",
+        "Sun, 18 Oct 2026 17:54:32 GMT"
+      ],
+      [
+        "Via",
+        "1.1 varnish"
+      ],
+      [
+        "X-Served-By",
+        "cache-bur-kbur8200130-BUR"
+      ],
+      [
+        "X-Cache",
+        "MISS"
+      ],
+      [
+        "X-Cache-Hits",
+        "0"
+      ],
+      [
+        "X-Timer",
+        "S1792346073.513483,VS0,VE109"
+      ],
+      [
+        "Vary",
+        "Authorization,Accept-Encoding"
+      ],
+      [
+        "Access-Control-Allow-Origin",
+        "*"
+      ],
+      [
+        "Cross-Origin-Resource-Policy",
+        "cross-origin"
+      ],
+      [
+        "X-Fastly-Request-ID",
+        "fefd50679667bf318eab50269bb6ad97ad71c0b2"
+      ],
+      [
+        "Expires",
+        "Sun, 18 Oct 2026 17:59:32 GMT"
+      ],
+      [
+        "Source-Age",
+        "0"
+      ]
+    ],
+    "body_bytes": 1533,
+    "body_sha256": "7b44f4ce8138381653826e3dfbffefc7b00d867072c400b265a358f656908f56"
+  },
+  "accepted_submission_metadata": {
+    "schemaVersion": 1,
+    "id": "lixiang90-single-exception-overlap-20261018",
+    "track": "critical-line",
+    "author": {
+      "github": "lixiang90",
+      "displayName": "Li Xiang"
+    },
+    "score": {
+      "numerator": "3337839448633819172184136761695440236797",
+      "denominator": "4955319193827760237900000000000000000000"
+    },
+    "proof": {
+      "solution": "proof/Solution.lean",
+      "theorem": "candidate_critical_line_bound",
+      "cumulativeTheorem": "candidate_critical_line_bound_cumulative",
+      "improvementTheorem": "candidate_strict_improvement"
+    },
+    "summary": "Uses the accepted nine-gap Gram-defect certificate to localize every window below a higher threshold to one exceptional cell, including its reflected orientation. That cell forces the shared gap of consecutive exceptional windows into disjoint intervals in all four orientation combinations. This proves a stronger adjacent-window energy bound. Pairing consecutive windows gives a summed lower bound with one fixed boundary loss; the existing separation and matching argument then yields dyadic and cumulative bounds for distinct critical-line zeros. All original source attribution and licenses are retained. The complete unconditional bound has passed ordinary Lean with only the three permitted standard axioms. Full local cold statement comparison and independent-kernel verification are pending.",
+    "method": "Geometric exclusion of consecutive exceptional nine-gap windows",
+    "model": "GPT 6.1 Sol Ultra",
+    "harness": "Codex",
+    "license": "Apache-2.0"
+  },
+  "local_uploaded_v3": {
+    "path": "research-goal-20261018-tiny-flatten-preparation-v3/draft/Solution.lean",
+    "bytes": 1979280,
+    "sha256": "024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81",
+    "UI_trimmed_bytes": 1979279,
+    "UI_trimmed_sha256": "7876f01cc50bc3d0b54e6f0770dfaa1802083df1e0ef35c47930dce22ed7028c"
+  },
+  "public_accepted_source": {
+    "bytes": 1979280,
+    "sha256": "024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81",
+    "UI_trimmed_bytes": 1979279,
+    "UI_trimmed_sha256": "7876f01cc50bc3d0b54e6f0770dfaa1802083df1e0ef35c47930dce22ed7028c"
+  },
+  "UI_normalization": "UTF-8 decode, ECMAScript String.trim whitespace/line-terminator set, UTF-8 encode",
+  "raw_source_byte_equal_to_uploaded_v3": true,
+  "UI_trimmed_source_byte_equal_to_uploaded_v3": true,
+  "this_candidate_promoted_to_public_record": true,
+  "do_not_chase_strictly_above_own_accepted_kappa": true,
+  "native_v4_source_used_for_identity": false,
+  "compiler_generator_solver_or_search_runs": 0,
+  "old_frozen_files_or_root_rounds_changed": false
+}
