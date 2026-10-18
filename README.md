@@ -12,11 +12,25 @@ original17/20 separation. The [original-certificate production replay](research-
 now passes all48 roots,13,046 numeric leaves,595 reflection leaves,
 70 internal cut contracts and160 original WZ guards at the unchanged floor.
 An [independent full finite replay](research-goal-20261018-record-baseline-independent/NOTE.zh.md)
-agrees on every node, cursor and guard. One fixed threshold classification
-is now [authorized](research-goal-20261016/gates/stageB-20261018.json) under the
-[complete separated-sublevel contract](research-goal-20261018-stageB-static-contract/PLAN.zh.md).
-Overlap scanning and new Lean runs remain unauthorized. No new joint floor
-or unconditional record has been proved.
+agrees on every node, cursor and guard. The [fixed classification](research-goal-20261018-stageB-classification/NOTE.zh.md)
+closes11,859 numeric leaves and retains1,187 complete closed exception cells;
+its [independent replay](research-goal-20261018-stageB-independent/NOTE.zh.md) agrees on every row.
+The [DBM opportunity](research-goal-20261018-stageC-dbm/RESULT.zh.md) stopped
+after its second case gave an exact ordered overlap, independently checked
+against all153 constraints. Geometry alone therefore does not close the joint
+bound; this is not an actual energy counterexample.
+
+The [existing-point diagnostic](research-goal-20261018-fixed-joint-affine/RESULT.zh.md)
+and its independent review show that this first overlapping pair's original
+cell margins already pay the target. Retaining all original margins in a
+[quantitative model](research-goal-20261018-stageE-floor-dbm/RESULT.zh.md)
+closes766 pairs by payment and426 by strict cycles before an underpaid
+relaxed point appears. That point violates both ordering conditions, so the
+ordered model remains unresolved. The next [static LP contract](research-goal-20261018-stageF-static-review/NOTE.zh.md)
+retains both ordering rows and the two actual affine supports; no LP has run.
+A [product consumer](research-goal-20261018-product-consumer-static/NOTE.zh.md)
+could avoid copying579,013bytes of geometry, but full source/runtime budget
+remains unknown. No new joint floor or unconditional record has been proved.
 
 A [common-shift integer rounding comparison](research-goal-20261017-common-rounding/NOTE.zh.md)
 now gives a new whole-domain necessary condition for actual24-mode global

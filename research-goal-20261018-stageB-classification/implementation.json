@@ -1,0 +1,23 @@
+{
+  "schema": "fixed-stageB-implementation-before-run-v1",
+  "classification_runs_at_preparation": 0,
+  "source_files": [
+    {
+      "path": "research-goal-20261018-stageB-classification/stageB_classify_once.py",
+      "bytes": 21276,
+      "sha256": "8bbeae57bd7939ddd85e06c7745b73cce7109ece2158294e02b3993b902ba087"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/run_once.py",
+      "bytes": 2583,
+      "sha256": "d0223d38519ce2f7e67c1bbd3dbc4aa49fcef29dca967a050611e5a8fc0de8e7"
+    }
+  ],
+  "command": [
+    "C:/Python314/python.exe",
+    "research-goal-20261018-stageB-classification/run_once.py",
+    "--launch-authorized-fixed-B"
+  ],
+  "authorized_gate_sha256": "1548e22dcd1446a7110cb3c2452a574d0edc323c3bb81b35591a1d0e93324273",
+  "preflight": "Python AST syntax parsed; independent metadata imports field confirmed integer0. No tree or classification executed."
+}

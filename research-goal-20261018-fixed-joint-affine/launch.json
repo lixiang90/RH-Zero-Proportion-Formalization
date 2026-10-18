@@ -1,0 +1,24 @@
+{
+  "schema": "fixed-two-FS-affine-single-launch-v1",
+  "parent_pid": 53224,
+  "command": {
+    "argv": [
+      "C:\\Python314\\python.exe",
+      "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-fixed-joint-affine\\evaluate_once.py",
+      "--execute-authorized-once",
+      "--gate",
+      "research-goal-20261016/gates/stageD-affine-point-20261018.json",
+      "--gate-sha256",
+      "4c1ba012a8fa5c42aeec686ac3836ac4e747061cd8cea5d97c30c44cd2bcd87e"
+    ],
+    "cwd": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization"
+  },
+  "command_sha256": "06f6260e394042b223875642a7130cb5c9ddbdca9bf7da92a29d619f929143bc",
+  "script_sha256": "55311de8fb0851368c2bd5684f6ddc1441b35313122bd31a739bfb9c3195bd76",
+  "launcher_sha256": "3443e1fe5c4c3350f08a53f99b905e08e0ccb9be61c42914cddac235b976d88e",
+  "maximum_child_launches": 1,
+  "limits": {
+    "seconds": 60,
+    "closed_output_bytes": 8000000
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "scope": "Static global logic of exact whole-cell margin payment followed by DBM only for underpaid pairs.",
+  "files": [
+    {
+      "path": "research-goal-20261018-stageE-static-review/NOTE.zh.md",
+      "bytes": 6946,
+      "sha256": "d63de16fd4db09571192c3f41dba9688c42d98dc3f645da9cc89ad20fa70c720"
+    },
+    {
+      "path": "research-goal-20261018-stageE-static-review/freeze_static.py",
+      "bytes": 1736,
+      "sha256": "73a497a2156a4d771d552cd6dbfbc0a775e3182fde2e69e879ae84f5b83399c2"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    },
+    {
+      "path": "research-goal-20261018-joint-affine-flow-proof/proof-files.json",
+      "bytes": 1157,
+      "sha256": "e3d61af4a46aed20eaee334af3f2c3c9c95e8ceb1c06027a7e22e0de349064eb"
+    },
+    {
+      "path": "research-goal-20261018-product-consumer-static/review-files.json",
+      "bytes": 1622,
+      "sha256": "3f8970a054ce7ebf894e913fd117837e4e7fb8c9fa6f2e12c54fe26f2ad9227b"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/files.json",
+      "bytes": 15059,
+      "sha256": "3f9408f2cf1ceae12339456da034d9e8f175f828cf2d53a652339ee79eec89ad"
+    },
+    {
+      "path": "research-goal-20261018-stageB-independent/audit-files.json",
+      "bytes": 16841,
+      "sha256": "e6458883bc7588a2302afe435c3b79a08c9236bb895ec3010655024c767d7288"
+    },
+    {
+      "path": "research-goal-20261018-stageD-independent/audit-files.json",
+      "bytes": 27107,
+      "sha256": "228105f6ff207a9f89f5bb4341af81f5b84568517063f5bd6d3bfb3f0afe5000"
+    }
+  ],
+  "model": "exact-Mi-not-Nat-floor",
+  "c9_numerator": "893616123055294719",
+  "tau_numerator": "893916123055294719",
+  "SA": "100000000000000000000",
+  "kappa": "335544320000000000",
+  "payment_test": "Mi+Mj >= kappa*(tauN-c9N)",
+  "expected_cells_each_side": 1187,
+  "expected_orientation_pairs": 5635876,
+  "E_runs": 0,
+  "margin_queries": 0,
+  "pair_scans": 0,
+  "kernel_queries": 0,
+  "optimizer_calls": 0,
+  "Lean_invocations": 0,
+  "E_gate_passed": false,
+  "joint_floor_Lean_proved": false,
+  "new_kappa_proved": false
+}

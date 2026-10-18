@@ -25,7 +25,10 @@ def main():
     receipt=json.loads((HERE/'ordinary-verified-current.json').read_bytes())
     files=['.gitattributes','AGENTS.md','README.md','submission/goal-20261016/STATUS.zh.md']
     names=['README.md','DIRECTION.zh.md','direction-state.json','macro-reviews/001-20261017.zh.md','macro-reviews/002-20261017.zh.md','macro-reviews/003-20261018.zh.md',
-      'gates/stageB-20261018.json','ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
+      'gates/stageB-20261018.json','gates/stageC-dbm-20261018.json',
+      'gates/stageD-affine-point-20261018.json',
+      'gates/stageE-margin-dbm-20261018.json',
+      'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
       'window_interval_kernel.py','window_interval_kernel.json','window_jet_crosscheck.py','window_jet_crosscheck.json',
       'window_global_cover.py','window_lower_global_cover.py','window_make_lower_variant.py','window_make_lower_variant.json',
       'window_minimizer_cover.py','window_correlated_minimizer_cover.py','window_make_correlated_variant.py','window_make_correlated_variant.json',
@@ -271,7 +274,23 @@ def main():
       ('research-goal-20261018-record-wz-static-addendum/addendum-files.json','8ebc8493025eb7e63c4fe3419c4e929ca34033bafda434fa79905b95dfb17af6'),
       ('research-goal-20261018-record-baseline-replay/files.json','03f3426e29ab7355ed76729dcaa3a3ba754154ae39ff5e9632bae2c57eff069f'),
       ('research-goal-20261018-stageB-static-contract/contract-files.json','b9d9315cd76e9be9d4c860fe1368d06433e8ccabdeb5740b0109140ffa8c17f8'),
-      ('research-goal-20261018-record-baseline-independent/audit-files.json','2d2c8003ed6be6f74d0f53e8624cd631eb1c934415b22b5377a4f2d40c64791c')]:
+      ('research-goal-20261018-record-baseline-independent/audit-files.json','2d2c8003ed6be6f74d0f53e8624cd631eb1c934415b22b5377a4f2d40c64791c'),
+      ('research-goal-20261018-stageB-classification/files.json','3f9408f2cf1ceae12339456da034d9e8f175f828cf2d53a652339ee79eec89ad'),
+      ('research-goal-20261018-product-consumer-static/review-files.json','3f8970a054ce7ebf894e913fd117837e4e7fb8c9fa6f2e12c54fe26f2ad9227b'),
+      ('research-goal-20261018-dbm-gate-static/review-files.json','eea2ca9d0165364f8178cd0106de91aa4050a0c5d5fd9a00330174460d980a27'),
+      ('research-goal-20261018-stageB-independent/audit-files.json','e6458883bc7588a2302afe435c3b79a08c9236bb895ec3010655024c767d7288'),
+      ('research-goal-20261018-stageC-dbm/files.json','31e29433295f301c663fc2077d071bae4dfb89b1514eaa694e878fd9f5c8aae0'),
+      ('research-goal-20261018-stageC-independent/audit-files.json','835389ce30ca1ffab2601105f1da51efc69e40b402fab64eedb1816bdb529a5b'),
+      ('research-goal-20261018-joint-affine-static/review-files.json','51220d528c3c7e7f3673dda216a462117c6def29f9cacb44d19fab41d0500637'),
+      ('research-goal-20261018-joint-affine-flow-proof/proof-files.json','e3d61af4a46aed20eaee334af3f2c3c9c95e8ceb1c06027a7e22e0de349064eb'),
+      ('research-goal-20261018-joint-transshipment-static/review-files.json','714eea6eba4c8805b242a89fb1c6f20194b8289cf9e84ca89a151b67e48d24fc'),
+      ('research-goal-20261018-fixed-joint-affine/files.json','683cbf5372fc5246d28a88fadab3dadf59bd758ed9e99458619f503cb30427c0'),
+      ('research-goal-20261018-stageD-independent/audit-files.json','228105f6ff207a9f89f5bb4341af81f5b84568517063f5bd6d3bfb3f0afe5000'),
+      ('research-goal-20261018-stageE-static-review/review-files.json','c04ea3c185d6d6e3ad05cbb99eeda8301f440a5651c12a6470bc9f261284697c'),
+      ('research-goal-20261018-stageE-independent/plan-files.json','4a33d80c7fb6ace9e589c1e9fd1a945f7d6a91608fdadf2ed30bf23c99166b0f'),
+      ('research-goal-20261018-stageE-floor-dbm/files.json','73b1cc1367b32cd769712370defef03288d625b4ab04c02df56ffe4b92b3b21a'),
+      ('research-goal-20261018-stageE-independent/audit-files.json','37a3817aa099a951e362887d0022739f7560569495167b0d3a8908ab6ce1e32b'),
+      ('research-goal-20261018-stageF-static-review/review-files.json','5647a5fc023dfe06a994f1de7464414b6c18918a161086bccf3ea2ec870c572d')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -318,6 +337,13 @@ def main():
             rows+=pinned['existing_read_only_input_references']
         if name=='research-goal-20261018-record-baseline-replay/files.json':
             rows+=pinned['read_only_existing_references']
+        if name in ['research-goal-20261018-stageB-classification/files.json',
+                    'research-goal-20261018-stageC-dbm/files.json',
+                    'research-goal-20261018-fixed-joint-affine/files.json',
+                    'research-goal-20261018-stageE-floor-dbm/files.json']:
+            rows+=pinned['read_only_dependencies']
+        if name=='research-goal-20261018-stageE-independent/plan-files.json':
+            rows+=pinned['dependency_manifests']
         if name=='research-goal-20261017-local-phase/local-phase-files.json':
             source_index=json.loads((ROOT/pinned['dependency_index']['path']).read_bytes())
             identity_rows=source_index['actual_identity_sources']+source_index['prior_work_reviewed']

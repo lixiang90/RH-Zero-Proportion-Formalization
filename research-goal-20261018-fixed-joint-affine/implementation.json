@@ -1,0 +1,27 @@
+{
+  "schema": "fixed-two-FS-affine-implementation-before-run-v1",
+  "arithmetic_runs_at_preparation": 0,
+  "source_files": [
+    {
+      "path": "research-goal-20261018-fixed-joint-affine/evaluate_once.py",
+      "bytes": 16434,
+      "sha256": "55311de8fb0851368c2bd5684f6ddc1441b35313122bd31a739bfb9c3195bd76"
+    },
+    {
+      "path": "research-goal-20261018-fixed-joint-affine/run_once.py",
+      "bytes": 3035,
+      "sha256": "3443e1fe5c4c3350f08a53f99b905e08e0ccb9be61c42914cddac235b976d88e"
+    }
+  ],
+  "syntax_preflight_only": true,
+  "flow_proof_addon_manifest_sha256": "e3d61af4a46aed20eaee334af3f2c3c9c95e8ceb1c06027a7e22e0de349064eb",
+  "command": [
+    "C:/Python314/python.exe",
+    "research-goal-20261018-fixed-joint-affine/run_once.py",
+    "--launch-authorized-once",
+    "--gate",
+    "research-goal-20261016/gates/stageD-affine-point-20261018.json",
+    "--gate-sha256",
+    "4c1ba012a8fa5c42aeec686ac3836ac4e747061cd8cea5d97c30c44cd2bcd87e"
+  ]
+}

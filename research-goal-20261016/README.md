@@ -5,8 +5,8 @@ No new unconditional zero proportion is asserted by this directory.
 The [third macro review](macro-reviews/003-20261018.zh.md) updates the record
 to67.3587173310297…% and the human's strict increment to1/1,000,000. The
 new target is67.3588173310297…%. The main route now uses the new s1R source,
-its own kernel/tables and17/20 separation. Only a complete original-floor
-identity replay is authorized before a raised-threshold overlap audit;
+its own kernel/tables and17/20 separation. The complete original-floor
+identity and fixed-threshold classification replays now pass independently;
 old kernel-specific tables and the123/128 pair payment cannot be imported
 as new-kernel evidence. Historic frozen packets retain their original scope.
 
@@ -14,10 +14,27 @@ The [closed production baseline replay](../research-goal-20261018-record-baselin
 passes all48 roots,13,046 numeric leaves,595 reflection leaves,70 internal
 cuts and160 original WZ guards without changing the floor. The [independent
 full finite replay](../research-goal-20261018-record-baseline-independent/NOTE.zh.md)
-agrees on all counts, the complete node trace and every WZ value. A [written
-decision](gates/stageB-20261018.json) now authorizes one fixed classification
-under the [StageB contract](../research-goal-20261018-stageB-static-contract/PLAN.zh.md).
-Overlap scanning and new Lean runs remain unauthorized.
+agrees on all counts, the complete node trace and every WZ value.
+
+The [fixed classification](../research-goal-20261018-stageB-classification/NOTE.zh.md)
+has now closed11,859 leaves at tau and retained1,187 closed exception cells,
+with all original node hashes and guards preserved. Its [independent review](../research-goal-20261018-stageB-independent/NOTE.zh.md)
+agrees on all rows. The [fixed DBM opportunity](../research-goal-20261018-stageC-dbm/RESULT.zh.md)
+stopped at case1 with an independently checked ordered overlap. Geometry-only
+exclusion is stopped; no actual energy counterexample was computed.
+Copying the geometry alone costs579,013bytes, so the static
+[product consumer](../research-goal-20261018-product-consumer-static/NOTE.zh.md)
+instead retains two original source states and a separate joint DBM. Neither
+that consumer's final source size nor its kernel runtime is established.
+The [existing-point diagnostic](../research-goal-20261018-fixed-joint-affine/RESULT.zh.md)
+passes independently; that pair's original cell margins already suffice.
+The [quantitative model](../research-goal-20261018-stageE-floor-dbm/RESULT.zh.md)
+then pays766 pairs and excludes426 by cycles, before an underpaid relaxed
+point violates both actual ordering conditions. Its complete1193-record
+prefix and witness pass [independent review](../research-goal-20261018-stageE-independent/NOTE.zh.md).
+This leaves the ordered intersection unresolved. The next [static contract](../research-goal-20261018-stageF-static-review/NOTE.zh.md)
+keeps both ordering rows and the actual combined affine objective; no LP,
+new kernel query, threshold scan or Lean batch has been authorized.
 
 The current [global rounding comparison](../research-goal-20261017-common-rounding/NOTE.zh.md)
 uses one common shift to produce at most ten feasible integer configurations.

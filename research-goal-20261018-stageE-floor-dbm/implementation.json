@@ -1,0 +1,31 @@
+{
+  "schema": "fixed-E-model-implementation-before-run-v1",
+  "model_runs_at_preparation": 0,
+  "syntax_and_schema_preflight_only": true,
+  "source_files": [
+    {
+      "path": "research-goal-20261018-stageE-floor-dbm/model_once.py",
+      "bytes": 15790,
+      "sha256": "ede426a3ec4781a1651790b9057bb8d16119bedeb6cb4d2bead854ef2e21c5df"
+    },
+    {
+      "path": "research-goal-20261018-stageE-floor-dbm/run_once.py",
+      "bytes": 3039,
+      "sha256": "a43646ca971a72145e26ce5f9d0dc10f02aadf4b2c47154ce4e7b7000daa8571"
+    },
+    {
+      "path": "research-goal-20261018-stageE-floor-dbm/replay_witnesses.py",
+      "bytes": 9416,
+      "sha256": "e2cf05da18acb8df2efc67bcf370d43eae5f6294d8d59b1ea8fc2d123e3ee1ff"
+    }
+  ],
+  "command": [
+    "C:/Python314/python.exe",
+    "research-goal-20261018-stageE-floor-dbm/run_once.py",
+    "--launch-authorized-fixed-model",
+    "--gate",
+    "research-goal-20261016/gates/stageE-margin-dbm-20261018.json",
+    "--gate-sha256",
+    "4c83f5f157c9dba302c712951f681394df4d15e703770eda64b420a124e0c3bf"
+  ]
+}

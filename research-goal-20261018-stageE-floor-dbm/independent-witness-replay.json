@@ -1,0 +1,26 @@
+{
+  "schema": "independent-E-scalar-cycle-potential-replay-v1",
+  "passed": true,
+  "model_sha256": "27476a63f4f705f292cecef20cd6af8dabeb389682319c22058a89ce37100ed1",
+  "script_sha256": "e2cf05da18acb8df2efc67bcf370d43eae5f6294d8d59b1ea8fc2d123e3ee1ff",
+  "cases_checked": 1193,
+  "counts": {
+    "original_scalar_floors_pay_target": 766,
+    "underpaid_shared_span_two_edge_conflict": 426,
+    "underpaid_feasible_case": 1
+  },
+  "payment_threshold": "100663296000000000000000000000000",
+  "strict_negative_cycles_verified": 426,
+  "underpaid_feasible_potential_verified": true,
+  "outcome": "underpaid_relaxed_DBM_feasible_ordered_violated",
+  "all_cases_covered": false,
+  "producer_modules_imported": 0,
+  "BF_or_optimizer_calls": 0,
+  "kernel_queries": 0,
+  "Lean_runs": 0,
+  "new_joint_floor_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "complete_source_and_runtime_budget": "unknown",
+  "seconds": 0.2802914000058081,
+  "scope": "Existing scalar floors or exact cycle/potential replay. No actual energy, FS or point evaluation. Not formal source/kernel acceptance."
+}
