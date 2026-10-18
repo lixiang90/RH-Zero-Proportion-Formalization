@@ -1,0 +1,1153 @@
+{
+  "schema": "tiny-production-configuration-v1",
+  "flatten_directory": "research-goal-20261018-tiny-flatten-preparation-v3",
+  "flatten_prepared_sha256": "8d866f77503210091280574f6a14fcead5461f07c156f383f1b67f78ee52ab32",
+  "latest_record_receipt": "tmp/goal-20261016/macro006-precompile-fresh-record.json",
+  "latest_record_receipt_sha256": "390d94779d5c21314fd13d284b544a04a74b2dac469ce1d12732a846cc23a010",
+  "current_record_ledger": "research-goal-20261018-record-fresh-independent-1152/main-records.body",
+  "score": {
+    "numerator": "3337839448633819172184136761695440236797",
+    "denominator": "4955319193827760237900000000000000000000"
+  },
+  "expected_current_record": {
+    "numerator": "3337839448633819172184136761695440236797",
+    "denominator": "4955319193847235264050000000000000000000"
+  },
+  "candidate_template": "research-20261016-w10-cert/website-snapshot/challenge/templates/CandidateSpec.lean.tmpl",
+  "challenge_template": "research-20261016-w10-cert/website-snapshot/challenge/templates/Challenge.Candidate.lean",
+  "lean": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+  "lean_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "lean_version": "Lean (version 4.33.0-rc2, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "nanoda": "/var/tmp/rh-zero-20261015/nanoda-target/release/nanoda_bin",
+  "nanoda_sha256": "0c8332aae13164943ebfed4f8f4ed969494d8e85edff9d774a70fd92ea9318c2",
+  "Windows_Python_Linux_path": "/mnt/c/Python314/python.exe",
+  "Windows_Python_sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd",
+  "Windows_Python_DLL_Linux_path": "/mnt/c/Python314/python314.dll",
+  "Windows_Python_DLL_sha256": "18310593c50ad109fc5c95db1fd5c92ecec9e1bfc66c976df9fc11dd62616d5a",
+  "Windows_helper_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-tiny-production-preparation\\windows_generate.py",
+  "external_dependency_cache_pins": [
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Auxiliary.lean",
+      "sha256": "8852b7ebc572ae4eda1f3c3e94f4cc072b1c744c2b71ae297bec3ebb74b00069"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/Auxiliary.olean",
+      "sha256": "1a3a67e2a518d8a78e60055ff16c9a2db1f5e90d0e42d3997a7134b2af807cc9"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Defs.lean",
+      "sha256": "216b34de76394522aea610c57d342f3dfe8aa1c3d9d6b2ec11509de92f1c6bb0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Defs.olean",
+      "sha256": "a3357d1aed8981005e09558d5a19930ea61e148b17ba5907d3408745aafba5b0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/EulerMaclaurin.lean",
+      "sha256": "0e2b201e2a99db8650c565f14c2d4c65ff54a59a29f81137a63a00f2d1776ab6"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/EulerMaclaurin.olean",
+      "sha256": "14382a9cd541682cdb97cbbcc1aa0e1fdd3562b666a1c4dc7d6940b5cfbe82b9"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "sha256": "b345f59bff825700221040fb575823d6902383ff1ab340b2ff849d8382460954"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/Mathlib/Analysis/SpecialFunctions/Log/Basic.olean",
+      "sha256": "a4479f90b3303d609a622f6805fb6c01a332734035242df079e3c9b28b3a5ee1"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Defs/Counting.lean",
+      "sha256": "0d403d6d4d3f4cdfa370b374376dede2d56fa79e1b0146d48ce8c4321496ee0d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Defs/Counting.olean",
+      "sha256": "a72dc0022166035fb8c8532187b6eb45c14ffc569be9da93e15d525008d18390"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Defs/Profile.lean",
+      "sha256": "fd0f4e10c04f6941ca400eaf3856e3ca4f9c8e8bc8577c996651bac33b763d69"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Defs/Profile.olean",
+      "sha256": "d1f4ca9dd39ea7ff83922fe57eafe19928f3e2363129c987deba395a659c0561"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Defs/LeafIntegrals.lean",
+      "sha256": "bce0a60cc5bb5a542cc32146ca2aceb6612718428d1e2afa64c53702c321abc6"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Defs/LeafIntegrals.olean",
+      "sha256": "46c59236a3c32e0203728d8c1b3937004a3881e776783e1842efef8d3c00b8fa"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Mertens.lean",
+      "sha256": "8df79fab65cdc6b9f28c4f2e5f39e0d8d284ac17ac4e06b3cb1f5d4cb8ae3be4"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/Mertens.olean",
+      "sha256": "96a46733b819b08d631958a74fc991f86b8cbf0326ca372e4a0e7829ae84fc37"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Rectangle.lean",
+      "sha256": "6cf1dfca9dd3bbe3db9c58acf135a5ea20669808418ad994ed27f67931ea53d9"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/Rectangle.olean",
+      "sha256": "987dbf31b5fc66beb13f68c9fafecf6a297e2be67077ae08c505e9d62f3a786f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Tactic/AdditiveCombination.lean",
+      "sha256": "0c59de0160092cc7eb521c09de7b9a35719d5a33b4fee0795bd312a5c9c3d200"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/Tactic/AdditiveCombination.olean",
+      "sha256": "72ad4c208ff054f796941eb98bcec033248098873881c53adf755f01874264be"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/ZetaConj.lean",
+      "sha256": "6160b5a4e5cbcc346a67f973a4ed7d68f535eb79d803c10882eef74a6c2b8fb5"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/ZetaConj.olean",
+      "sha256": "96e3cde980a668aece078f1535385a57cfc214d592ab48c7cf8c4d4cd38a1af3"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ExplicitFormula.lean",
+      "sha256": "f602f5ffe70f42eb5397b5128fc681f89cce7094a19b66e4de69ad4ed0cb8ae4"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ExplicitFormula.olean",
+      "sha256": "6686a170922cfaeca2608657a0c44af2f87a26fb75fb63748ebbc9dcd7b6c8f9"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Sobolev.lean",
+      "sha256": "e3f254f6e772ebf941f67b4ad978858b6355b00433a943a4e318c22425959062"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/Sobolev.olean",
+      "sha256": "8000d7f7b3843e37137565a08d80f794660e4dfe8269a721a8108062dee07618"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts.lean",
+      "sha256": "a93c29cf24e253f6f3b7af0fadf18cbc5fe9fe1a67c6e060322f425d2d677674"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/GammaFacts.olean",
+      "sha256": "f773c05ab47d6eccd65f9d1e81dbda658df1f0dce9e39296aa7881443761b74e"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Hypotheses.lean",
+      "sha256": "b64911caaf69328e0ca4fced1fd1f80fdca02d57bce390db34843b9849ccb4e2"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Hypotheses.olean",
+      "sha256": "1e1947103d78df329eded314957e22104e5499bc535ed6e3e9fdf4f6b71786cf"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/Fourier.lean",
+      "sha256": "8d53e47135861fd5afaa2ff273737e09353dc9ae0ba8b6875baa16f3a167b1bc"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/Fourier.olean",
+      "sha256": "fcc9d73744cb29528eccac6636d9d2bb48e1a4b02a96bba79672ac9bafa44021"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/Series.lean",
+      "sha256": "15a7ed9d63288e9630300898f9a1ed78fee3bf32c889f81cb5081d17d76a4f59"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/GammaFacts/Series.olean",
+      "sha256": "26f6d5d84220b8348f5f22fed941c09878441a1854007bce9010e64672412216"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Hypotheses/GzGp.lean",
+      "sha256": "b9c32b106e93af85179e3973db2c22e76918cca167959be9e2757fc0e07e7c2a"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Hypotheses/GzGp.olean",
+      "sha256": "39bdfdfbc6032fa3163c700f6e4f177a3685b6fd69247cbe899b6c264d302891"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/PosIndex.lean",
+      "sha256": "0e9147cbd62fe6b56991759d7cf30f27d5888d0fc3ceff874306edb455d5d2bf"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/LinAlg/PosIndex.olean",
+      "sha256": "6c61800e5290bf34bb6b2221abb684399f41e335cf2d94c28aafda260403d4ac"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/ResidueCalcOnRectangles.lean",
+      "sha256": "081d38aa0c5eec725a1582eea3bdf4e51d604f6c2ebb3c9729d91df3aa092956"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/ResidueCalcOnRectangles.olean",
+      "sha256": "5dd10bdcb197d22ff12fc2c4f032cb0b0cd3c019fa19f554010d966e799725d6"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Analytic/Stirling.lean",
+      "sha256": "db1638101a09faf22aac70ae379c3f37df5b7767e123bf4f6b6f2892d75d999d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Analytic/Stirling.olean",
+      "sha256": "c19adf74da5124038a2b5339f6f67e0523605e47c62169e426059a683bf01fe9"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/HermitianPosPart.lean",
+      "sha256": "a488f6a6132be89eab1b6d50ae6bcd61a4cde02e119891b18ce05d9cb9b70dba"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/LinAlg/HermitianPosPart.olean",
+      "sha256": "57f5c9f47e71873ba0af85d2af8fd066ad5fb2efbf0751e2b989518bd1f8f580"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Analytic/RectangleLogDeriv.lean",
+      "sha256": "6606f32e30fe5f7a5c0660e2c9ecb8bb041144e52b090fe880d2c0e4734f5755"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Analytic/RectangleLogDeriv.olean",
+      "sha256": "db48e19f33d7e95c79c336f6646c49b752cd21a26cac9f5986c5461c87e40289"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/Sylvester.lean",
+      "sha256": "771c4cf2318ea8b10fca7f8e49ad1c44245823a0d3378987501f6d185f07bc69"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/LinAlg/Sylvester.olean",
+      "sha256": "b185b97b5ed31d6d29b3ff38320c1a943b3c9c032bd89f3ab9955277ceb1f1ba"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/Inertia.lean",
+      "sha256": "bf8814f8e47994afef14757f2b26a7e702cc8c02c335b61667dd404b820e25be"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/LinAlg/Inertia.olean",
+      "sha256": "780341bc1040b7b4f8ed1af308d99be7dd692cd6480f40271205143ff4dacc93"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/Mu.lean",
+      "sha256": "71e4d99a73604b9e09009d897a0bbbaf5d3a950a470758f07738ccc67a171c97"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/GammaFacts/Mu.olean",
+      "sha256": "b186b446f4ee917464200f27b6bec66448bd697b2c00d5100b7884c2a14c32b2"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/VonNeumann.lean",
+      "sha256": "92c98919fef5f4dee319d466c1c95e45bb60d56b4808cbc5c5b33e98bb23fd1b"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/LinAlg/VonNeumann.olean",
+      "sha256": "2aadea7e4820a8a232b2196006a8ca846bda5d43b5d2a00e93ac3bc66308ed9f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Chebyshev.lean",
+      "sha256": "daa9a056ca00730d6318fc12f6587cb420c31b8c0426b3b851c993731e47c270"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Chebyshev.olean",
+      "sha256": "2830b8298bdc67484f8ef4fd0adad152bb08c82502f6e43eee7bee0293ceab10"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/RankTrace.lean",
+      "sha256": "07cac47a6ade4f27d2990669570ebebafcd055b714ab721de58b5d0fcec60560"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/LinAlg/RankTrace.olean",
+      "sha256": "b4b54e3e9259f8e6ff18e777c04c40d915411b01621769cd346225bf6a3c0d52"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg/Weyl.lean",
+      "sha256": "5f126ae63912edab0e037d171e2efc5c96f43e5a2b31406539debcb07cd341f2"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/LinAlg/Weyl.olean",
+      "sha256": "230f62b6e3c589ce9d9ee64b7e12db9f039790026364f3c359a46746d1c8ab18"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/StirlingVert.lean",
+      "sha256": "c982dc94e4193d2b3c69fd1f939b9055b6368332fd24d38bdf5bad37c487b661"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/GammaFacts/StirlingVert.olean",
+      "sha256": "69bfb956c23f979cfdb8951c15918f176e66a573388fe235605156f5f9d3bc3c"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/LinAlg.lean",
+      "sha256": "a08efc558bdaae67271c6ca0ef87847284237b1bf0c4409595ba72abec96805f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/LinAlg.olean",
+      "sha256": "76821a9e33d56eee9b5866e93298e17e8ff599db26ad0ee769fa530965ec6fb0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly/Inputs.lean",
+      "sha256": "4774543e7049159ac2bfd6de313a77edbc7222a5ea9cd1d98b3accc8568da273"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Assembly/Inputs.olean",
+      "sha256": "8c910a5e1639192d38cbb5e32972f132f95ad9b72e5176dd57754cb0eeab7a85"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV.lean",
+      "sha256": "203f1b47b1f8c5cb945d35225d8f0c80db05446668d99c2a8a56fa0130043a7a"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/MV.olean",
+      "sha256": "876f50ccc0916efa5b627bb6a090872451015993450509822eec3a260237edb8"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/EigenIdentity.lean",
+      "sha256": "e5fa5981760e91aaf277d9122bd63b71cd42004cb1a062cdfe3f82c0bebe3e36"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/MV/EigenIdentity.olean",
+      "sha256": "db29965f8fccb5127f743e8a3e367875d00de33e93513467d9de735707c1c77a"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/ZetaBounds.lean",
+      "sha256": "62ab370e278be47e7fbd03ab74b1442010da1fc17b9dec96ea952e9259bfcd06"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/ZetaBounds.olean",
+      "sha256": "8cebe68810fd1f9fc314aa57b2a3af409f53c7d80fb972bab362c0b540ed9be4"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Spacing.lean",
+      "sha256": "2a5ef294bdf97c606bdb01d60d90425b0580dbca8d0a7b6cf4f5c5bfb9858626"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/MV/Spacing.olean",
+      "sha256": "0f4b84375c08a63eaa42f43614fbfcf8728d80519ebc48184fab74a25fbe0437"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Poisson/PaperFT.lean",
+      "sha256": "a95d70cc4b994afd4d78bcbf71948a133e7212c2e0f18e775ffa1bc55dc38e93"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Poisson/PaperFT.olean",
+      "sha256": "938b4b3fa78a984018204aa7c3bed8aa7686fed5a6f7072a7e037f6e401a61b1"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ExplicitFormula/Bridge.lean",
+      "sha256": "0d25f1f01122a9997546afd4e4188d04631e1148e87adc79b8f9352c381b3fba"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ExplicitFormula/Bridge.olean",
+      "sha256": "4c13d3e02a76565faf6c8a09ff9c1f7b7ac7b475525860be4c21a67786f6e3c6"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Duality.lean",
+      "sha256": "5250202b9eda682e5b283c0eddb9c960025908c0e7abf78decccb1905b54862d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/MV/Duality.olean",
+      "sha256": "068832a39c614b0c72b5f696ecc1edede4e35f0809c81fe22080fe9722042aa0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Prelude/InstancePriorities.lean",
+      "sha256": "2c9d2ee602987da89bbbe621149fad2b4a2476699f60535706a12b2fe9833f8e"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Prelude/InstancePriorities.olean",
+      "sha256": "a8eb7de7a71633fea813390d64ed7e05b0e5f036c48536bebfb30c47880e36b6"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PiFacts.lean",
+      "sha256": "aa9fba24f9eb8583266fad5442de94fcdce2767be65d5cbe11a4960b744039f8"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PiFacts.olean",
+      "sha256": "b71cce999f41466a844ea5f9738e1fc800337e31ba64c58e96bd36b280fe0a02"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FromPNTPlus/StrongPNTPrefix.lean",
+      "sha256": "ce842f7e65f1764273f3ff331f4218a0ed94688f36e28c7e4b5bf1f05c5af180"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FromPNTPlus/StrongPNTPrefix.olean",
+      "sha256": "e976b6e13f4ccbda2dc7afd5ae7df0369e4d0714dd4ff4be984d897ec92c82d4"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Quadratic.lean",
+      "sha256": "ac0f2fbdde09b867649f3140703085b74041b06cca20ef736aedf5d310858f88"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/MV/Quadratic.olean",
+      "sha256": "9287727a57e0986dd6ec6583fc9de46ba45f4c62ade6194bf1596a1b78fe0526"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideTemp.lean",
+      "sha256": "143b8a1d2dd5ac52ccde472e53ee7a34d1794dd3c7992466f2b01236f72088cc"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideTemp.olean",
+      "sha256": "32b9464970f118b67eba579644dd70831d70dd610f9fdd01e3fd464d2099f048"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/Defs.lean",
+      "sha256": "52469c40079a6ff2075c59938e8bfe46e0c5af5726c77ad7f8e2f66b2b8db17e"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/Defs.olean",
+      "sha256": "72acb9447cb90c18d2540dc38aae056d8433aefe8376c1517485a11289946dc4"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Eigen.lean",
+      "sha256": "751cea17c7d08126f5a6a5edb9b9a4e84e89e11e407227d8d1b256f19b8316fa"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/MV/Eigen.olean",
+      "sha256": "ab35fa37cecb4cf88dc9d14c704719e5c4f844c6512c250e320893e98d93a63d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/MV/Final.lean",
+      "sha256": "d25c97590ba882c9acf73112a5e306b5885c9dca5bfa50d35f7d120993d0c941"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/MV/Final.olean",
+      "sha256": "045d5b767255844a9322243f9117b86b78775d6f37282e24a553650828f540ff"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/IntMu.lean",
+      "sha256": "1a5e17a5e2482f5119a8e0b0f00b738fe4eece35edba818094c4f92c35d0c5a7"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/GammaFacts/IntMu.olean",
+      "sha256": "3f28499a1387cc60a329f2fd971f1e4e4d89db6b8cbbfcef8b3bcf729c90e8d0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/GammaFacts/Complete.lean",
+      "sha256": "d43b2d4f3fa0c1d22210e1f671b875a88b09747247e67becbbc38f85f34f2fb0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/GammaFacts/Complete.olean",
+      "sha256": "a873a379b0ba225060b28291159661af88d943e3b8e5f2695e3fc4e440178b5e"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB.lean",
+      "sha256": "dacc44622988ac4b8973f5402b69eb95cfc8a5a489117eb4cad4fd525f274214"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideB.olean",
+      "sha256": "d79ab24a92afccb421ebbf0899161613f7b41da60432ec744195c98580cd87d5"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/CrossMuPCore.lean",
+      "sha256": "41139eba2832c4d77f3e307f86dc4ccccf4ffc04df870ef02d88750c0a2d859f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/CrossMuPCore.olean",
+      "sha256": "eb1d724849856c478fb8e263904a2b7deb8ee122d9915f3189b780ff237c5a02"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/BacklundDefs.lean",
+      "sha256": "83b7dcab714041eb8146a9b80f143ee7e6be7c742891074a638d7c2eaa4e1e95"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/BacklundDefs.olean",
+      "sha256": "6390e22be6c4c6eac26941dfe6655e67ba47cd454d72ad9d2fa5edb49a3ad929"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Halving.lean",
+      "sha256": "de1713457eee0763fdb1e02634939664d9ce000bb8e736f2c18b85425b7c5d30"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/Halving.olean",
+      "sha256": "6ddc2fb214eab5084de74c7fcc4bae95576e3e8177aa26882ab0617f03792e02"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Statement.lean",
+      "sha256": "3458af8531decf948319517543f731dcdc2c5a7de47e9339f9a443530e60d205"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Statement.olean",
+      "sha256": "fc3d84ed00e1fcc411b09d27f754a14b08b5030fdeeb1f7282a7e2fd86413632"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Statement/Seam.lean",
+      "sha256": "d16cbfbbfff2cfe3d4df0425957ae20fd1828d8faf39e70f11a2acd85b45c7e3"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Statement/Seam.olean",
+      "sha256": "fdea3ead4fa260e8a613c43647d9068feab9cd6d93de0b12f17672ec383fa11f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/Basic.lean",
+      "sha256": "06703868b1fc098ab900c7651ec7b3c17ce83c770cb896e0033694c7645edc1f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/Basic.olean",
+      "sha256": "277f39ad6f4898bf0e1e6b8dcb7ea48d9a885ee77016a2fb1fe507f1fb5424a1"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/ZetaGrowth.lean",
+      "sha256": "91a33dcf908921bfaa05ec64f4c20f40d83593228f956d945cd71c272a98ef44"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/ZetaGrowth.olean",
+      "sha256": "ba7acc18dca9ed0c757d9ccb8b31289783530c5c66606dd0e88cd0f35b7c13d8"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/PPKernel.lean",
+      "sha256": "afe6d56c4d153de6a812fa888a587d2cfe6f7904bbebb5497acff5cdadd48723"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideB/PPKernel.olean",
+      "sha256": "3c9a7f7635265d5a10ced6b734e7f58cc90757153a00b6bff975a555b56071dc"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/Basic.lean",
+      "sha256": "073496f8fa3fe6e7166c4dadbb65c42478bd38bf485c7106b26edc41120b7947"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Tail/Basic.olean",
+      "sha256": "d27183983bb16a7744a15423c50bd7ca240e273960d7ad0def451d13a34395de"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/Concrete.lean",
+      "sha256": "5e10180dd43ce19821d3522f9090478566c8369d0b54cb5f9804957d95b3565e"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideB/Concrete.olean",
+      "sha256": "8b38214ead13825e154c411549388f3c732dc6608fb213312ed70db9f086cfd4"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/CrossMuP.lean",
+      "sha256": "32f6b6e673080b8d3804c9f5840cdd5e744f8d6ad30f8b8af852cd5cdd4a7e7b"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/CrossMuP.olean",
+      "sha256": "9c3036b6a1d272e4292119db95451579c71799ccea296e5dc1804f3d5f8e70da"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/PPOffDiag.lean",
+      "sha256": "6f3c33c5798a53f13dc6026c67b9dc3c0b6be8847e79589f5aa272c1343e3a1e"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideB/PPOffDiag.olean",
+      "sha256": "d521c08c576c9e084a497be0bed976c53cd91f84de95bb8a918279327b61d7f0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsCore.lean",
+      "sha256": "70dfd12f92a3a3f51750c48e46717f5c2624083c93e997402b96cf537e843421"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/EndsCore.olean",
+      "sha256": "67da46ef23ca39d57759e0723d3582f784badc0b17246630d9c14d7c4a90c573"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/MuMu.lean",
+      "sha256": "883a8079e1bcfbeebafb1d2c67d70c30c7366596d78b5a349a17c49d4cd63784"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/MuMu.olean",
+      "sha256": "1e5446e55b6e2bb2f25eb0b8b65bd4a3c4b6aaf3437c18e1d30c49d272b05a1b"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/Count.lean",
+      "sha256": "737b90b4b51a1a68c0c36d924b06672b684cc8b144bd1511a569ebc2228b163d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Tail/Count.olean",
+      "sha256": "f9e22be346b06648942b606923e0a3e58397653508b7568d4d57e46f5ef084de"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/Grid.lean",
+      "sha256": "e00fa4129ec4df0b206c4b70f31c34e9998f6cb4745d3a212bb72d2833c538cf"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Tail/Grid.olean",
+      "sha256": "e94930915072118563785e6b84dd66fb7e0f7032cdd7ebb41c1abd71049d2ff7"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/RankOne.lean",
+      "sha256": "97e080ce5adcd2fa7715fc6ba5ab32ae153d9b967292650e64084afde5d2faba"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Tail/RankOne.olean",
+      "sha256": "77e1c0cbb3f9be97452c3277559ad1699b99dbc216018e650f9c4ab4ad4728c8"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsWeighted.lean",
+      "sha256": "712af4d3cf29a5e169ee53337edc796e738e82e90040a8ab2a3077cceebb7cad"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/EndsWeighted.olean",
+      "sha256": "00d1f627ac43fe410626b10208d4b1ed0b86c4157380f7b61a5ce8319338ad71"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/PP.lean",
+      "sha256": "3759e83b719726503eb16cfac801e11ab4a912c6b84ecea275cea71dc4b950dd"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideB/PP.olean",
+      "sha256": "bd631472a5df0b8885602dd63f170763f44217a8f7d5760820de2ead76e5729e"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Basic.lean",
+      "sha256": "4866d1950ca20bc632c00655e2611ef690fce0fb10efafb35614d77d7cbc972c"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Taper/Basic.olean",
+      "sha256": "fd6f78049e81bc6ec2f017940b8786a91c237b485bab00f4ba12e6b40ec8e21a"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail.lean",
+      "sha256": "3b189de1bec9e254e13b821d1596d430d47f115e1206b23f31a58d16656f1815"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Tail.olean",
+      "sha256": "90cca23df58f630f1a464ab492df805a93b14ccafe357584267261dede089418"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Strip.lean",
+      "sha256": "03bd8e55856a7a5e58a02ecf477db74d231e599e46858bc9cf8397462de2d04c"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Taper/Strip.olean",
+      "sha256": "01063d590898cd39ea7e818224cac4de012ca4c4a90d922c0a1d178db5e39dd1"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsE1.lean",
+      "sha256": "d5bf47890bb8e50a6b8f3ea5392d196285e22592a45b334c9132707509563cfb"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/EndsE1.olean",
+      "sha256": "62568b7b677f5e1f0736986e04c20450ef18ffcc1b34f0d448fcd3562bfb3468"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Norms.lean",
+      "sha256": "3593500eaec8f91f82f6958039526f6751aaa9dabe699fec1848f1aa11f3c599"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Taper/Norms.olean",
+      "sha256": "57bdd690dd6bf85c996ca59523e4f81f7cc0963730524660f4ba615c56a25c34"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsNu.lean",
+      "sha256": "d0b2b73d52f0c9d36f24646c5bc9447418e18793166c026f13570d991e0c4d15"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/EndsNu.olean",
+      "sha256": "fea4a40b6d390b120c05bfe3085a79c706ab9834488b804828e356c825ef6f87"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Fourier.lean",
+      "sha256": "712909d460cf675b2944d99768775f852a691e58f7f2ad71369d7c7dc1aaeed9"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Taper/Fourier.olean",
+      "sha256": "5f9d85e8f5d2ace4734c3086396400202ed617b0e861f03cdd8f8a5330be8088"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Decay.lean",
+      "sha256": "8645fa3e34345a4863882939ba5082f3353759613b1129aee8edb49e0066febb"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Taper/Decay.olean",
+      "sha256": "5f73a1a35245248a88ae119c7ee8ed9417d7dcf27f24e728c5fd4d23199ce683"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Functional.lean",
+      "sha256": "3fd7fd89639e936ffff88ee34643efb8291a9ef29422f8335192c2ef80ed7c3a"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/Functional.olean",
+      "sha256": "e84f5154b7c3dfa9bfda63d28fbe2028aa4b955f9e3347afe166ff244d470947"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper/Params.lean",
+      "sha256": "66519846d14eb0b370303ab728b4eee4cb332a5bea71f122592f89746c5a1465"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Taper/Params.olean",
+      "sha256": "0961ad8b72f4b668ad3bdc4ffe413c7ed0e8d8af9e421a4c0915fec9f287924d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/EndsE2.lean",
+      "sha256": "971fdaf7eed843761faeeede1816368c94f1fa3b75c7b23553197f124ded7b56"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/EndsE2.olean",
+      "sha256": "6c497210c77dbd9c11e2fce545ac3af1ac293f6244059a76b52d333eaa7b1204"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Poisson.lean",
+      "sha256": "0b73daec743724f14be6db73bbff74e0ba206869f9d76805a8c2f3456b849194"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Poisson.olean",
+      "sha256": "4928fd65567c7b47abd5b135f9c38e9fc7c442a7955e867d6f3c4b54235d9455"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/TracesBoundsE.lean",
+      "sha256": "4e44c73d585d13f594f3f09199e59660b742b46a1a446ccf004cadeb48692954"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/TracesBoundsE.olean",
+      "sha256": "d20f08652bc84c87b86eb6efb32a839b6716a51f8e9f36b192ecb2bc9d6668ac"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Taper.lean",
+      "sha256": "b4b91e74d3f9598a99183e3b73f88661483018fe5cee6b64f515003e21d9f209"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Taper.olean",
+      "sha256": "6497c6710954b726bcef263399a06af8d69b662d13261b8a30fd229305246889"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/Ends.lean",
+      "sha256": "c3aa6ec890bdc92a981a2f6367a5f3ad1132cc67fa1be35413d96710017c01bd"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/Ends.olean",
+      "sha256": "5db340a9e08aea028450d97aba3065991c2337204d03266c77eae556784737c2"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA/Bridge.lean",
+      "sha256": "9e42263a0b2a7b636a99f17df00075b849fd7f5248b41a5cc11a211f5218de75"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA/Bridge.olean",
+      "sha256": "29c01b15dd88d6e5c1fe5671038f9fe5f8c68e772ac9f92efeafb7b6fc3a4f4b"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Tail/Package.lean",
+      "sha256": "d295a377c91b90aaf71d447d0361e089bca8005b2b7fc5ee229a302a83029efb"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Tail/Package.olean",
+      "sha256": "d186f4807ec6626cdcaa588ab4ca5dcb7824f6234c4d8ad8d7758ade3d8cf798"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/PsiC.lean",
+      "sha256": "0101af29d084ff462842461655364f23f80e6dfebd34381be4b6b3c73fa20846"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/PsiC.olean",
+      "sha256": "ae1492268a098242a1549fc04f7a0ee4e61638721918514e368312a64df8c329"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Window.lean",
+      "sha256": "32c8c8817dae4d3de8c4dc245ed81bf58d5cd6f330368bc9faa4f4bda19679b8"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/Window.olean",
+      "sha256": "e66f83a677fd9475b44fd46ddd041e5c5ee7c43d71fb7cbb9fcd5a7bf1e425c2"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/WindowCore.lean",
+      "sha256": "0f61be8cd778caae29b108a57647865f1550d094e3e58f44d033d8a639b725bc"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/WindowCore.olean",
+      "sha256": "0a38777ef1c9019ce9bcd3f1334fa09c6365618021d412ad712bee46ff5fa557"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly.lean",
+      "sha256": "ff1c57696310e3b9cf0bb39ce7fcfc4f4c4ba654a605daa30b66c3c9b900e7cf"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Assembly.olean",
+      "sha256": "cf4fe40de59b57e9a2d074a75d76cc5ecae8fa38d9800c45c95a0eb79d47460d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly/Certificate.lean",
+      "sha256": "b8307fb1e879d8bf50c9afcc14ae9ed17ac7ea39a10d650704c0c64f5c5bb081"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Assembly/Certificate.olean",
+      "sha256": "d661ad2343bceb1efd7e062efca48df156a6a9c29698be454b6b28b4dd1d0bd1"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/WindowLocalHyps.lean",
+      "sha256": "205e020f24f001b0c7f8a6dfd6333608adc62f0e41d610e92f3e4acef4dda7b2"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/WindowLocalHyps.olean",
+      "sha256": "087caca0fe3517a2cc9213f90b7d552c3827ba222c183b5ed2d6b99bcdfec087"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly/CertificateC3.lean",
+      "sha256": "5e8e1482fa729d6b4843feb46e881e82aa2508bedd0e2f5ad85917934f19b7de"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Assembly/CertificateC3.olean",
+      "sha256": "bea06a8594552f11e854f183ddc00c06ff3bd8c2c75cce07eccab88aa08efea7"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/PP.lean",
+      "sha256": "0434fd4be7f87460a5300797f51d0a5297788562c5c637b69943c3407db0e908"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/PP.olean",
+      "sha256": "66e7d036170d0b2781163fbdbdd6d287c1f4dce070cc3119beb0f80b738a7759"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/AssemblyD.lean",
+      "sha256": "3d4e66cdb4c0f006e1ea33827791111957143e3b3766f4610acf5172ace42b26"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/AssemblyD.olean",
+      "sha256": "0fc8b23b4d4063c8fc75552b52b7aa90f3134d47d146b654a42e1387892b5d58"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/GammaRBracket.lean",
+      "sha256": "3b9d237b07e090f4f25cd11a2b54a74ae0fd561779511b55dd2763691d427c24"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/GammaRBracket.olean",
+      "sha256": "6b4e8425afa12f716514b490d1db245ab4bf810ba1ad5dc40f54b3187f9da15c"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/BridgeD.lean",
+      "sha256": "43b0468ac3e757322ba5c0684a0655641335c8a89b4f3a79b0e01f5b17c47847"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/BridgeD.olean",
+      "sha256": "00b5514e62131e5c53e2ee8604cfea3ed4520fb077ab7a9435bc0cacb1fde25b"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/XiLogDeriv.lean",
+      "sha256": "ff98bfa205ba351b510a68fdae02a695a4671091b5e3c33509e37412a4b1bd9f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/XiLogDeriv.olean",
+      "sha256": "f39087e2e1b875d0940bfe51b1ab31e14d10291cc417a89d44912e473ca75a60"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideA.lean",
+      "sha256": "2a9034d661f2133429bd51081e30ff93ff29539bc62fae560d95b210dd38cfe3"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideA.olean",
+      "sha256": "93731c608120ba5b113968e31e2c00c0d7d67a927e4692371dff611dcba2b92f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/Landau.lean",
+      "sha256": "f1f4ac5dffd80092c8e27481e3cd177b2c83937125130c16b1ee56d31c4d89fb"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/Landau.olean",
+      "sha256": "42621ee0348e31fee858c95675dc54d94961b3c114592c4d9cb4efb326dd2148"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/Traces.lean",
+      "sha256": "6aac050bf8306ad7439488366b9e88e6540822d9960404896a42321ac9cc5c3b"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideB/Traces.olean",
+      "sha256": "45757d66b094e390835df5940897b35e669b8f362542d10890352725198dc318"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/VerticalLine.lean",
+      "sha256": "2df131b682e2a2bcee51de18059c4e336a94fa5900f9e47399031a195bdcbfcf"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/VerticalLine.olean",
+      "sha256": "8fae825fb9c98c93d7ed2abcada0ddb7c087c5d2a965bcf68eafdf83669d42e6"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/PrimeSideB/Final.lean",
+      "sha256": "879226ec5632ac4f4430512b8535f801ad443423cf68450c0fbabec293831a90"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/PrimeSideB/Final.olean",
+      "sha256": "2afbadeefe6adc8e1e308b6e6fb0428cbdc5460ffeaa05f0fa38b618163f5f09"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZeroSide.lean",
+      "sha256": "42e54f8fc3f7ab29c402e3b4244a9be2214e8b17af2af9c88729c2678e4edb07"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ZeroSide.olean",
+      "sha256": "0880e581e273ee2e2a0bc826604436131e75d992cba3436e0c3a3931f2781ed3"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZetaReflect.lean",
+      "sha256": "ffd9ae4718636d898462b0d31625122f0064256b5910250a3e45f7298d75db63"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ZetaReflect.olean",
+      "sha256": "b41e145d3d3860f00b93de999a72a98bba48668362517763f2732cb5bf89587c"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Statement/SeamClosed.lean",
+      "sha256": "b2b03190fb3cf4520d273f8bdb9fc7a89939381c8aaff360e5845108b4d8b88d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Statement/SeamClosed.olean",
+      "sha256": "8141de584ee6b0a2be956d747b25c1419ed30de109c1cd2e38a4614315585498"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZeroSide/RankTraceMult.lean",
+      "sha256": "d58c03b0b8701f791fa47adab197382f0d468aaa946a9f37ead56d0193c74d71"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ZeroSide/RankTraceMult.olean",
+      "sha256": "e69fd1e9532dc994077df7163df82fdcf8f51198315f3620a465efa16496f9ca"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZeroSide/Final.lean",
+      "sha256": "b23c1704ff423577ae1e19badcca8f242af55d0f89c92d76c11dea0fc22693d5"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ZeroSide/Final.olean",
+      "sha256": "d300a62e318ec108f99610b30cf8deb7f79dbf8acfe7e8a6918fea63824cc8a3"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Defs.lean",
+      "sha256": "32662cdfc84f70be58210feaf6a7f8db3588565c74d52e030d1edb9ef32d8671"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/Defs.olean",
+      "sha256": "fdbeeb42eded067bcade13ec8fb2102d5f1f967b7d8170503629758995bb596c"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/CountByIntegral.lean",
+      "sha256": "2a3bb9d814f6e3edc26015f6a6363439b827080c0d62aa348af7cf9bf4af665e"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/CountByIntegral.olean",
+      "sha256": "319a455cd088de039952a085f6812a5b549d4c56c333472701c2f6bbe2476846"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Main.lean",
+      "sha256": "9ffe70b13e0695022bd155803190dbcb031845e748de4a0a59477e84e8242e50"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Main.olean",
+      "sha256": "3eccc38f486fa534ff949fe5552c94699b64a3d78dea1e30eb7c33622c2eaeba"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Fold.lean",
+      "sha256": "2f1ba3640d30c967327bb0aff86832bdb1d327fe9ee810ae40bd96c55e12131a"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/Fold.olean",
+      "sha256": "661c8d60db445d2b0368ea2720fb8a7da6f437c29efe62f4fd43e181985aedf7"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/NcountWindow.lean",
+      "sha256": "f8b4ff9a1577af9064de082d250a4433392578a96e235209214bdaaeffaf2482"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/NcountWindow.olean",
+      "sha256": "2da760942f004b80a608b1ed3459d78e51f6b305caf67b1e6388f7f4fdf1eeba"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/GammaSide.lean",
+      "sha256": "1c1b862f6645e0f9d16872bc25c8e4e986258777ce3b3a67d4da9f2aa3149573"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/GammaSide.olean",
+      "sha256": "7f32f5753a85c2d942f4f0ecb9a62c499f5aa3a595e15960fdb10ebf50302919"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ZeroSide/Mult.lean",
+      "sha256": "8b16d42b3cc096dfbe207c2174a73d11e302311b89c8c31a5a82c8b8aa7db57d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ZeroSide/Mult.olean",
+      "sha256": "20b5330cda992217bb22eb2db0c68607df1c710f311aac214a61b22b23e88845"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Assembly/SeamMult.lean",
+      "sha256": "578d12241b3d0de69905c59f29130d55148d55b33c5b8796659433f8225aaf8f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Assembly/SeamMult.olean",
+      "sha256": "b7035eceb2f6893621e7b5407d82c35f1ffd0b3708aa30ab181258c5a37913a3"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/LocalCount.lean",
+      "sha256": "f23b7b226a62a7622e09bd867136faf00567e2c14a1fc697cf83b5aa5f065b45"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/LocalCount.olean",
+      "sha256": "143532fa9567993924d47630d6b655e38d702619c3d85cec297b3839eeba8116"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Traces.lean",
+      "sha256": "d4474570c50100841d1ad13afeb544ae10821176a5da6cec827cadc7acb2f8cd"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/Traces.olean",
+      "sha256": "c2b202912f07de9f2e008064b6dbbabafe40d79a2ed1abe44b35052e058bb7d0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Concrete.lean",
+      "sha256": "598031d2f3f4e8365223119df64092145aa60a7e8ad834f4045a8b2ae1f92336"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/Concrete.olean",
+      "sha256": "a9fd68fa509baca8a71107566582dec6a0cef5c27380dd3878dca2a5d94adccf"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/ZeroSummability.lean",
+      "sha256": "1379d830367ec69855fc21d18c9fc5f69393d032e5ff878e779177cf14b8caf8"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/ZeroSummability.olean",
+      "sha256": "0ff98f6613654fa3bca0c9f71c3dad1f9f69d729a41224c2123663a60d5c100c"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Limit.lean",
+      "sha256": "3629361f65f89f0bc2635c2e3d94a88581b001e433f5e25ddffbcdd80c9842b0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/Limit.olean",
+      "sha256": "ea5b43bee75933c99ef50359908b0999cf7830368ffe6e7c821ff0a7066cdc5e"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/GoodHeights.lean",
+      "sha256": "24a22156d99341d701adb4a220bccd1682f8477fed95c27cc6e859f52eca9c3d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/GoodHeights.olean",
+      "sha256": "ab2c1278fe5210af5cc9e417c132590a0835ece4981f40fcd8df077b691ddd83"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/Contour.lean",
+      "sha256": "a3940e639287e7ce10ca73853000c2c61edf8a2ed4748974e331d6df0ac68a5d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/Contour.olean",
+      "sha256": "e67c31b90a6157feeb24c0376db110cb37bdf5df410d91584c86e604e140dbea"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/ZeroSumLimit.lean",
+      "sha256": "c7b260f4df56cb6e24cb606d80a62e86202ed95d92bfe4c732b3d913a1b859e5"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/ZeroSumLimit.olean",
+      "sha256": "c03f32302869da797eb72562482ac0c86abb8b0d0d3e30167374bcf77f3a5ee0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/ReZeroCount.lean",
+      "sha256": "7e37c415190d1dc2a30ed85d23ede62243aaaa164cb3930cb9c11632bc33bb05"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/ReZeroCount.olean",
+      "sha256": "a4852b792375ed849c3c7297039ad49d49d4384d00a5ba928782e7f384f2b3fc"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Backlund.lean",
+      "sha256": "64a52ae59879ba2bf46aabfad96d8e591f2e4cbc01b755a5d9d024d4229685ba"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/Backlund.olean",
+      "sha256": "d6db00857c7d1b2f4892ec8ab51a69f3df9ba5450ba0ffc97d5a2d8a638fd15d"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/FullLine.lean",
+      "sha256": "ae4bdd8b6fb5ad3f0b4bf0b951cd7d19802240f255b4d963d0ce96c8ed37e1a0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/FullLine.olean",
+      "sha256": "28608ef9b144ab17e8b8b5b3d12dc1b1640dd05822a740a2c37b53b307efcce5"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/Horizontal.lean",
+      "sha256": "60fa56485acfedf5d0ec0e9bf7f6cf6b42ca453432bcc3271ed25668ad606667"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/Horizontal.olean",
+      "sha256": "c1409e456b81e28ad8e80285accde3cfc2c3525ac0cc1247c7d061d516542ef9"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/FullLineAssembly.lean",
+      "sha256": "eaeb9735aa17afa42b3dd6c2e2e25fb5c725f7959c30e4cb46a3e7a9228ce81f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/FullLineAssembly.olean",
+      "sha256": "d62983000b3d1cc4f548f58cdbc847c9a477c816c97d4f626769c9f85045f7eb"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/MainTerm.lean",
+      "sha256": "e1e5eb11901595177457869b70d6d7dbb0a5c2c27ede33955efafec5f93c301f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/MainTerm.olean",
+      "sha256": "c628de8157a57642758c1e76b784e71ade73d64f5a07cf5053b11c3644fa5340"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/WeilEF/Main.lean",
+      "sha256": "c4899fd268f4219903430537dbd74fb0dd8750cb411fc90d69c3a01a5648dbb0"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/WeilEF/Main.olean",
+      "sha256": "aae7ad82f79298f7e827eb6b6cecf68a76677165ff4bd9de65f3b03583135015"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/RvM/Statement.lean",
+      "sha256": "3226fbc3de1b223a067d1d454c1e7400ac81c652dbbb58f494e42a6a583061f6"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/RvM/Statement.olean",
+      "sha256": "2ff0bcc535264bced5ebac1bb906237adbce91dfaf19d1adf0a715966fbf1bb2"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/Final.lean",
+      "sha256": "46ffcd80ca80b3d5021c08b9829ac1c03a371fee7cecbbc9eeb76fcc1fb1cae6"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Final.olean",
+      "sha256": "9b077bdfad3082ef1331e6a70452b80d109b056fd7135c6ea34f2f37a882b268"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/FinalMult.lean",
+      "sha256": "ce5f72526219ba85ade4aa870c71ca3f72e7e39f32e5b595a07798bd4fbf568c"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/FinalMult.olean",
+      "sha256": "17557495a01ad6e7e02a501888f3c2a2d62787dad7a34ee1ca8a919e10e63726"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/ParamsD.lean",
+      "sha256": "5294d988bcb3b2773715a3984c58f171e1d7c2adf2160fd4f198232275c74ce5"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/ParamsD.olean",
+      "sha256": "5ff4c23409abf25c426ee690726d1cef5726ac1aea99a933ffbfdc5b09ebc74f"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Endgame.lean",
+      "sha256": "69eb795d5002fe4a2764901d5867a4eb0b84750703888d8e87f7d975351c9b43"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/Endgame.olean",
+      "sha256": "5103cf094fd1ef437905341e3dcb0fa05156656eb128ca3dc031bdd666c96a91"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/ZeroSideD.lean",
+      "sha256": "0e58cdcae04edbe4b1d83415b0ebfab2ddd85e5829362453f75b08195e4d0e13"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/ZeroSideD.olean",
+      "sha256": "afd23edd2d328e9dc6cf6a2c400cf607f77f31ed09478e815202a165df0daf36"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Final.lean",
+      "sha256": "1f14ae1d267bb82fe43a38c9ea0db37211f46d8c78d71fa145902dd7dfbb612c"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/Final.olean",
+      "sha256": "b3c0ec5cb8abd44a058cfd6f52be6411ec58c27b55be306fba0c21be17f54101"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/Zeta23/ThmD/Mult.lean",
+      "sha256": "9dc42aea8d30092c70632bd6f1b229981b7cb8f3b32dfedc6c007d1e452495aa"
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/ThmD/Mult.olean",
+      "sha256": "08ef4eeeb7042f8e711592b5c503170fda69db8575b25c6c59e53199babbaf82"
+    }
+  ],
+  "cache_basis": "Runtime-named Mathlib cache plus completed source-bound Zeta23 dependency receipt; both proof replayers still required",
+  "user_oleans_reused": false,
+  "official_website_acceptance": false
+}

@@ -1,0 +1,22 @@
+{
+  "label": "tool-Comparator.Compare",
+  "command": [
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/lib/Comparator/Compare.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/lib/Comparator/Compare.ilean",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/source/Comparator/Compare.lean"
+  ],
+  "cwd": "/var/tmp/rh-zero-20261015/tiny-production-v0",
+  "timeout_seconds_remaining_from_total": 1965.7464847620001,
+  "started_monotonic": 1239.207281912,
+  "log": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/tool-Comparator.Compare.log",
+  "resources": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/tool-Comparator.Compare.resources.txt",
+  "pid": 5643
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "tiny-flatten-input-pins-v1",
+  "module_sha256": {
+    "StructuralS1RTiny20261018/Production/Core.lean": "fd883f6f622fe1f837dd36205b449abd465b0196cb47e4400947391134755525",
+    "StructuralS1RTiny20261018/Production/Localization.lean": "c7202d18effe9b05bf3b71f16a145d3e5eac91a8a895973f68647fc7f8c8580b",
+    "StructuralS1RTiny20261018/Production/Counting.lean": "e3dd838595e0b2a01249f13959fd492e97a8289b33c62805ee06de4d7a0b195a",
+    "StructuralS1RTiny20261018/Production/Final.lean": "b45a6341fa22f454488fa1890b88bc45e100f2cdcafc4959b2094546050028d2"
+  },
+  "external_imports": [
+    "ChallengeDeps",
+    "ChallengeDeps.CandidateSpec",
+    "Mathlib",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Intervals",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Analysis.Real.Pi.Bounds",
+    "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring",
+    "Zeta23.PrimeSideA.EndsE1",
+    "Zeta23.Taper.Norms",
+    "Zeta23.ThmD.Concrete",
+    "Zeta23.ThmD.Limit",
+    "Zeta23.ThmD.Mult",
+    "Zeta23.ThmD.Window",
+    "Zeta23.ThmD.WindowCore",
+    "Zeta23.ThmD.ZeroSideD",
+    "Zeta23.ZeroSide.RankTraceMult"
+  ],
+  "input_total_bytes": 1854229,
+  "internal_imports_removed": [
+    {
+      "path": "StructuralS1RTiny20261018/Production/Localization.lean",
+      "module": "StructuralS1RTiny20261018.Production.Core",
+      "bytes": 49
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Counting.lean",
+      "module": "StructuralS1RTiny20261018.Production.Core",
+      "bytes": 49
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Final.lean",
+      "module": "StructuralS1RTiny20261018.Production.Localization",
+      "bytes": 57
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Final.lean",
+      "module": "StructuralS1RTiny20261018.Production.Counting",
+      "bytes": 53
+    }
+  ]
+}

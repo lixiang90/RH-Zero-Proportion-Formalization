@@ -1,0 +1,797 @@
+{
+  "scope": "Read-only SDK/source/library metadata; no tool execution",
+  "source_files_found": [
+    "src/lean/lake/Lake/Config/LeanExeConfig.lean",
+    "src/lean/lake/Lake/Config/LeanExe.lean",
+    "src/lean/lake/Lake/Build/Common.lean",
+    "src/lean/lake/Lake/Build/Executable.lean",
+    "src/lean/Lean/Util/Path.lean"
+  ],
+  "excerpts": {
+    "src/lean/lake/Lake/Config/LeanExeConfig.lean": [
+      {
+        "line": 64,
+        "text": "  feature should only be enabled when necessary."
+      },
+      {
+        "line": 65,
+        "text": ""
+      },
+      {
+        "line": 66,
+        "text": "  Defaults to `false`."
+      },
+      {
+        "line": 67,
+        "text": "  -/"
+      },
+      {
+        "line": 68,
+        "text": "  supportInterpreter : Bool := false"
+      },
+      {
+        "line": 69,
+        "text": ""
+      },
+      {
+        "line": 70,
+        "text": "  /--"
+      },
+      {
+        "line": 71,
+        "text": "  The module facets to build and combine into the executable."
+      },
+      {
+        "line": 72,
+        "text": "  If `shouldExport` is true, the module facets should export any symbols"
+      },
+      {
+        "line": 73,
+        "text": "  a user may expect to lookup in the executable. For example, the Lean"
+      },
+      {
+        "line": 74,
+        "text": "  interpreter will use exported symbols in the executable. Thus, `shouldExport`"
+      },
+      {
+        "line": 75,
+        "text": "  will be `true` if `supportInterpreter := true`."
+      },
+      {
+        "line": 76,
+        "text": ""
+      },
+      {
+        "line": 77,
+        "text": "  Defaults to a singleton of `Module.oExportFacet` (if `shouldExport`) or"
+      },
+      {
+        "line": 78,
+        "text": "  `Module.oFacet`. That is, the  object file compiled from the Lean source,"
+      },
+      {
+        "line": 79,
+        "text": "  potentially with exported Lean symbols."
+      },
+      {
+        "line": 80,
+        "text": "  -/"
+      },
+      {
+        "line": 81,
+        "text": "  nativeFacets (shouldExport : Bool) : Array (ModuleFacet FilePath) :="
+      },
+      {
+        "line": 82,
+        "text": "    #[if shouldExport then Module.oExportFacet else Module.oFacet]"
+      },
+      {
+        "line": 83,
+        "text": ""
+      },
+      {
+        "line": 84,
+        "text": "deriving Inhabited"
+      },
+      {
+        "line": 85,
+        "text": ""
+      },
+      {
+        "line": 86,
+        "text": "namespace LeanExeConfig"
+      },
+      {
+        "line": 87,
+        "text": ""
+      }
+    ],
+    "src/lean/lake/Lake/Config/LeanExe.lean": [
+      {
+        "line": 71,
+        "text": "/-- The path to the executable in the package's `binDir`. -/"
+      },
+      {
+        "line": 72,
+        "text": "@[inline] public def file (self : LeanExe) : FilePath :="
+      },
+      {
+        "line": 73,
+        "text": "  self.pkg.binDir / self.fileName"
+      },
+      {
+        "line": 74,
+        "text": ""
+      },
+      {
+        "line": 75,
+        "text": "/-- The executable's `supportInterpreter` configuration. -/"
+      },
+      {
+        "line": 76,
+        "text": "@[inline] public def supportInterpreter (self : LeanExe) : Bool :="
+      },
+      {
+        "line": 77,
+        "text": "  self.config.supportInterpreter"
+      },
+      {
+        "line": 78,
+        "text": ""
+      },
+      {
+        "line": 79,
+        "text": "/--"
+      },
+      {
+        "line": 80,
+        "text": "Additional link arguments to pass `leanc` when linking the module root"
+      },
+      {
+        "line": 81,
+        "text": "into a binary executable. This excludes the arguments already present in"
+      },
+      {
+        "line": 82,
+        "text": "`self.root.linkArgs`."
+      },
+      {
+        "line": 83,
+        "text": ""
+      },
+      {
+        "line": 84,
+        "text": "If `supportInterpreter := true`, Lake adds `-rdynamic` on non-Windows"
+      },
+      {
+        "line": 85,
+        "text": "systems. On Windows, it links in a manifest for Unicode path support."
+      },
+      {
+        "line": 86,
+        "text": "-/"
+      },
+      {
+        "line": 87,
+        "text": "public def exeOnlyLinkArgs (self : LeanExe) : Array String :="
+      },
+      {
+        "line": 88,
+        "text": "  if System.Platform.isWindows then"
+      },
+      {
+        "line": 89,
+        "text": "    #[\"-Wl,--whole-archive\", \"-lleanmanifest\", \"-Wl,--no-whole-archive\"]"
+      },
+      {
+        "line": 90,
+        "text": "  else if self.config.supportInterpreter then"
+      },
+      {
+        "line": 91,
+        "text": "    #[\"-rdynamic\"]"
+      },
+      {
+        "line": 92,
+        "text": "  else"
+      },
+      {
+        "line": 93,
+        "text": "    #[]"
+      },
+      {
+        "line": 94,
+        "text": ""
+      },
+      {
+        "line": 95,
+        "text": "/--"
+      },
+      {
+        "line": 96,
+        "text": "The arguments to pass to `leanc` when linking the binary executable."
+      },
+      {
+        "line": 97,
+        "text": ""
+      },
+      {
+        "line": 98,
+        "text": "By default, the package's plus the executable's `moreLinkArgs`."
+      },
+      {
+        "line": 99,
+        "text": "If `supportInterpreter := true`, Lake adds `-rdynamic` on non-Windows"
+      },
+      {
+        "line": 100,
+        "text": "systems. On Windows, it links in a manifest for Unicode path support."
+      },
+      {
+        "line": 101,
+        "text": "-/"
+      },
+      {
+        "line": 102,
+        "text": "public def linkArgs (self : LeanExe) : Array String :="
+      },
+      {
+        "line": 103,
+        "text": "  self.exeOnlyLinkArgs ++ self.pkg.moreLinkArgs ++ self.config.moreLinkArgs"
+      },
+      {
+        "line": 104,
+        "text": ""
+      },
+      {
+        "line": 105,
+        "text": "/--"
+      },
+      {
+        "line": 106,
+        "text": "Whether the Lean shared library should be dynamically linked to the executable."
+      },
+      {
+        "line": 107,
+        "text": ""
+      },
+      {
+        "line": 108,
+        "text": "If `supportInterpreter := true`, Lean symbols must be visible to the"
+      },
+      {
+        "line": 109,
+        "text": "interpreter. On Windows, it is not possible to statically include these"
+      },
+      {
+        "line": 110,
+        "text": "symbols in the executable due to symbol limits, so Lake dynamically links to"
+      },
+      {
+        "line": 111,
+        "text": "the Lean shared library. Otherwise, Lean is linked statically."
+      },
+      {
+        "line": 112,
+        "text": "-/"
+      },
+      {
+        "line": 113,
+        "text": "@[inline] public def sharedLean (self : LeanExe) : Bool :="
+      },
+      {
+        "line": 114,
+        "text": "  strictAnd Platform.isWindows self.config.supportInterpreter"
+      },
+      {
+        "line": 115,
+        "text": ""
+      },
+      {
+        "line": 116,
+        "text": "/--"
+      },
+      {
+        "line": 117,
+        "text": "The arguments to weakly pass to `leanc` when linking the binary executable."
+      },
+      {
+        "line": 118,
+        "text": "That is, the package's `weakLinkArgs` plus the executable's  `weakLinkArgs`."
+      },
+      {
+        "line": 119,
+        "text": "-/"
+      },
+      {
+        "line": 120,
+        "text": "@[inline] public def weakLinkArgs (self : LeanExe) : Array String :="
+      },
+      {
+        "line": 121,
+        "text": "  self.pkg.weakLinkArgs ++ self.config.weakLinkArgs"
+      },
+      {
+        "line": 122,
+        "text": ""
+      },
+      {
+        "line": 123,
+        "text": "/-- Additional objects (e.g., `.o` files, static libraries) to link to the executable. -/"
+      },
+      {
+        "line": 124,
+        "text": "@[inline] public def moreLinkObjs (self : LeanExe) : TargetArray FilePath :="
+      },
+      {
+        "line": 125,
+        "text": "  self.config.moreLinkObjs"
+      },
+      {
+        "line": 126,
+        "text": ""
+      }
+    ],
+    "src/lean/lake/Lake/Build/Common.lean": [],
+    "src/lean/lake/Lake/Build/Executable.lean": [
+      {
+        "line": 21,
+        "text": ""
+      },
+      {
+        "line": 22,
+        "text": "def LeanExe.recBuildExe (self : LeanExe) : FetchM (Job FilePath) :="
+      },
+      {
+        "line": 23,
+        "text": "  withRegisterJob s!\"{self.name}:exe\" <| withCurrPackage self.pkg do"
+      },
+      {
+        "line": 24,
+        "text": "  let infoJob ←"
+      },
+      {
+        "line": 25,
+        "text": "    if self.supportInterpreter"
+      },
+      {
+        "line": 26,
+        "text": "    then self.root.linkInfoExport.fetch"
+      },
+      {
+        "line": 27,
+        "text": "    else self.root.linkInfoNoExport.fetch"
+      },
+      {
+        "line": 28,
+        "text": "  infoJob.mapM fun info => do"
+      },
+      {
+        "line": 29,
+        "text": "    let args := self.exeOnlyLinkArgs ++ info.args"
+      },
+      {
+        "line": 30,
+        "text": "    addPureTrace self.exeOnlyLinkArgs \"LeanExe.exeOnlyLinkArgs\""
+      },
+      {
+        "line": 31,
+        "text": "    buildLeanExeSync self.file info.objs info.libs args self.sharedLean"
+      },
+      {
+        "line": 32,
+        "text": ""
+      },
+      {
+        "line": 33,
+        "text": "/-- The facet configuration for the builtin `LeanExe.exeFacet`. -/"
+      },
+      {
+        "line": 34,
+        "text": "public def LeanExe.exeFacetConfig : LeanExeFacetConfig exeFacet :="
+      },
+      {
+        "line": 35,
+        "text": "  mkFacetJobConfig recBuildExe"
+      },
+      {
+        "line": 36,
+        "text": ""
+      },
+      {
+        "line": 37,
+        "text": "def LeanExe.recBuildDefault (lib : LeanExe) : FetchM (Job FilePath) :="
+      }
+    ],
+    "src/lean/Lean/Util/Path.lean": [
+      {
+        "line": 103,
+        "text": ""
+      },
+      {
+        "line": 104,
+        "text": "/--"
+      },
+      {
+        "line": 105,
+        "text": "Initialize Lean's search path given Lean's system root and an initial search path."
+      },
+      {
+        "line": 106,
+        "text": "The system root can be obtained via `getBuildDir` (for internal use) or"
+      },
+      {
+        "line": 107,
+        "text": "`findSysroot` (for external users). -/"
+      },
+      {
+        "line": 108,
+        "text": "def initSearchPath (leanSysroot : FilePath) (sp : SearchPath := ∅) : IO Unit := do"
+      },
+      {
+        "line": 109,
+        "text": "  let sp := sp ++ (← addSearchPathFromEnv (← getBuiltinSearchPath leanSysroot))"
+      },
+      {
+        "line": 110,
+        "text": "  searchPathRef.set sp"
+      },
+      {
+        "line": 111,
+        "text": ""
+      },
+      {
+        "line": 112,
+        "text": "@[export lean_init_search_path]"
+      },
+      {
+        "line": 113,
+        "text": "private def initSearchPathInternal : IO Unit := do"
+      },
+      {
+        "line": 114,
+        "text": "  initSearchPath (← getBuildDir)"
+      },
+      {
+        "line": 115,
+        "text": ""
+      },
+      {
+        "line": 116,
+        "text": "/-- Find the compiled `.olean` of a module in the `LEAN_PATH` search path. -/"
+      },
+      {
+        "line": 117,
+        "text": "partial def findOLean (mod : Name) : IO FilePath := do"
+      },
+      {
+        "line": 118,
+        "text": "  let sp ← searchPathRef.get"
+      },
+      {
+        "line": 119,
+        "text": "  if let some fname ← sp.findWithExt \"olean\" mod then"
+      },
+      {
+        "line": 171,
+        "text": "/--"
+      },
+      {
+        "line": 172,
+        "text": "  Find the system root of the given `lean` command"
+      },
+      {
+        "line": 173,
+        "text": "  by calling `lean --print-prefix` and returning the path it prints."
+      },
+      {
+        "line": 174,
+        "text": "  Defaults to trying the `lean` in `PATH`."
+      },
+      {
+        "line": 175,
+        "text": "  If set, the `LEAN_SYSROOT` environment variable takes precedence."
+      },
+      {
+        "line": 176,
+        "text": "  Note that the called `lean` binary might not be part of the system root,"
+      },
+      {
+        "line": 177,
+        "text": "  e.g. in the case of `elan`'s proxy binary."
+      },
+      {
+        "line": 178,
+        "text": "  Users internal to Lean should use `Lean.getBuildDir` instead."
+      },
+      {
+        "line": 179,
+        "text": "-/"
+      },
+      {
+        "line": 180,
+        "text": "def findSysroot (lean := \"lean\") : IO FilePath := do"
+      },
+      {
+        "line": 181,
+        "text": "  if let some root ← IO.getEnv \"LEAN_SYSROOT\" then"
+      },
+      {
+        "line": 182,
+        "text": "    return root"
+      },
+      {
+        "line": 183,
+        "text": "  let out ← IO.Process.run {"
+      },
+      {
+        "line": 184,
+        "text": "    cmd := lean"
+      },
+      {
+        "line": 185,
+        "text": "    args := #[\"--print-prefix\"]"
+      },
+      {
+        "line": 186,
+        "text": "  }"
+      },
+      {
+        "line": 187,
+        "text": "  return out.trimAscii.copy"
+      },
+      {
+        "line": 188,
+        "text": ""
+      },
+      {
+        "line": 189,
+        "text": "end Lean"
+      }
+    ]
+  },
+  "native_libraries": [
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/clang/22/lib/x86_64-unknown-linux-gnu/libclang_rt.builtins.a",
+      "bytes": 280740
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/glibc/ld-linux-x86.so",
+      "bytes": 174680
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/glibc/ld.so",
+      "bytes": 174680
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/glibc/libc.so",
+      "bytes": 1998936
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/glibc/libc_nonshared.a",
+      "bytes": 23508
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/glibc/libdl.so",
+      "bytes": 18528
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/glibc/libm.so",
+      "bytes": 1440248
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/glibc/libpthread.so",
+      "bytes": 137184
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/glibc/libpthread_nonshared.a",
+      "bytes": 1836
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/glibc/librt.so",
+      "bytes": 41696
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libInit.a",
+      "bytes": 26402524
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libInit_shared.so",
+      "bytes": 6232
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libLake.a",
+      "bytes": 20971052
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libLake_shared.so",
+      "bytes": 12311904
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libLean.a",
+      "bytes": 314349586
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libLeanChecker.a",
+      "bytes": 57358
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libLeanIR.a",
+      "bytes": 289538
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libLeanc.a",
+      "bytes": 41252
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libStd.a",
+      "bytes": 30451200
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libleancpp.a",
+      "bytes": 2343958
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libleanmanifest.a",
+      "bytes": 872
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libleanrt.a",
+      "bytes": 1156698
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libleanshared.so",
+      "bytes": 229196736
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libleanshared_1.so",
+      "bytes": 6232
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/lean/libleanshared_2.so",
+      "bytes": 6232
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libLLVM-22.so",
+      "bytes": 77258216
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libLLVM.so",
+      "bytes": 77258216
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libLLVM.so.22.1",
+      "bytes": 77258216
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libatomic.so",
+      "bytes": 26416
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libatomic.so.1",
+      "bytes": 26416
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libatomic.so.1.2.0",
+      "bytes": 26416
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libc++.a",
+      "bytes": 2452640
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libc++.so",
+      "bytes": 37
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libc++.so.1",
+      "bytes": 1337744
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libc++.so.1.0",
+      "bytes": 1337744
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libc++abi.a",
+      "bytes": 718702
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libc++abi.so",
+      "bytes": 408152
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libc++abi.so.1",
+      "bytes": 408152
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libc++abi.so.1.0",
+      "bytes": 408152
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libclang-cpp.so",
+      "bytes": 65075176
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libclang-cpp.so.22.1",
+      "bytes": 65075176
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libcrypto.a",
+      "bytes": 10990460
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libgcc_s.so",
+      "bytes": 132
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libgcc_s.so.1",
+      "bytes": 102664
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libgmp.a",
+      "bytes": 1526240
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libssl.a",
+      "bytes": 2031304
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libunwind.a",
+      "bytes": 137702
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libunwind.so",
+      "bytes": 69928
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libunwind.so.1",
+      "bytes": 69928
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libunwind.so.1.0",
+      "bytes": 69928
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libuv.a",
+      "bytes": 362414
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libz.so",
+      "bytes": 100640
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libz.so.1",
+      "bytes": 100640
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/lib/libz.so.1.2.11",
+      "bytes": 100640
+    }
+  ],
+  "sdk_executables": [
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+      "exists": true
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lake",
+      "exists": true
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/leanc",
+      "exists": true
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/clang",
+      "exists": true
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/ld.lld",
+      "exists": true
+    },
+    {
+      "path": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/llvm-ar",
+      "exists": true
+    }
+  ]
+}

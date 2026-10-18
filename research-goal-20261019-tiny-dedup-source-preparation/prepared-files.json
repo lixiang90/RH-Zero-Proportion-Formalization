@@ -1,0 +1,144 @@
+{
+  "schema": "tiny-dedup-equivalent-production-modules-prepared-v1",
+  "prepared_at_utc": "2026-10-18T16:52:36.688071+00:00",
+  "scope": "Four pure text module inputs only; full upload-source generator and all verification remain unexecuted",
+  "files": [
+    {
+      "path": "StructuralS1RTiny20261018/Production/Core.lean",
+      "bytes": 1815476,
+      "sha256": "fd883f6f622fe1f837dd36205b449abd465b0196cb47e4400947391134755525"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Localization.lean",
+      "bytes": 12305,
+      "sha256": "c7202d18effe9b05bf3b71f16a145d3e5eac91a8a895973f68647fc7f8c8580b"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Counting.lean",
+      "bytes": 21483,
+      "sha256": "e3dd838595e0b2a01249f13959fd492e97a8289b33c62805ee06de4d7a0b195a"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Final.lean",
+      "bytes": 4965,
+      "sha256": "b45a6341fa22f454488fa1890b88bc45e100f2cdcafc4959b2094546050028d2"
+    },
+    {
+      "path": "research-goal-20261019-tiny-dedup-source-preparation/prepare_sources.py",
+      "bytes": 7003,
+      "sha256": "da99f1027530d684aa8f505230f151608cf000b66e5f8d5a639563bdb0274102"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "StructuralS1RTiny20261018/Core.lean",
+      "bytes": 1821568,
+      "sha256": "9fbdf3f2dc62333b636d3b25dfb3bf2b15e3b8c628ece73d6ba1bc768fc5f1a6"
+    },
+    {
+      "path": "research-goal-20261019-tiny-dedup-static-review/report-files.json",
+      "bytes": 1551,
+      "sha256": "5e100daa5e14cf4445af8d88dd826a934a1f3e9f5bd5f6a03d83727006ef35eb"
+    },
+    {
+      "path": "research-goal-20261019-tiny-dedup-static-review/feasibility.json",
+      "bytes": 8104,
+      "sha256": "87e50f01c4d1fab910375c7e24038748264dea3c9f76c988b28da3dbfd0143e9"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/production-v0/failure.json",
+      "bytes": 48432,
+      "sha256": "3dcf11c64bebda5b543a52edc43041664d314ddc9855a8330240843ccf875747"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Core.lean",
+      "bytes": 1003097,
+      "sha256": "1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac"
+    },
+    {
+      "path": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "bytes": 935224,
+      "sha256": "ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase1/Localization.lean",
+      "bytes": 12298,
+      "sha256": "ad722eca53b43ff28ccfe9f66e338979ac05ff7088fe067dc395ea5e1c9cf758"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase2/Counting.lean",
+      "bytes": 21476,
+      "sha256": "2bda5c9df708b4568f8f08447894cb73a3c6ecb9d2c77be67e2eb46387be868e"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase4/Final.lean",
+      "bytes": 4957,
+      "sha256": "d477fd3181e0d4d5a3c89bcbcb987dd6cad00fbdde1946d01c26ac0c279489ed"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v3/official-wrapper.lean.txt",
+      "bytes": 1772,
+      "sha256": "1ca7db7be011c588ea34db1aecc0b091206278803ff8ae90799d1006dbd68a6e"
+    }
+  ],
+  "source_core_bytes": 1815476,
+  "source_modules_total_bytes": 1854229,
+  "namespace_family_mapping": {
+    "PC9QB6M": "PC9Tiny"
+  },
+  "canonical_kept_prefix_bytes": 1795281,
+  "canonical_full_license_trailer_bytes": 18791,
+  "canonical_two_retired_copyright_blocks_bytes_with_newlines": 1404,
+  "canonical_retired_code_removed_bytes": 6092,
+  "all_payloads_137_byte_identical": true,
+  "all_canonical_copyright_blocks_and_full_license_preserved": true,
+  "all_existing_Dev_strengthened_semantics_and_witnesses_retained": true,
+  "no_old_covered_assumption_substituted": true,
+  "client_import_only_changes": {
+    "Localization.lean": {
+      "prior": "StructuralS1RTiny20261018/Phase1/Localization.lean",
+      "old_import_lines": [
+        "import StructuralS1RTiny20261018.Dev.Core"
+      ],
+      "new_import_lines": [
+        "import StructuralS1RTiny20261018.Production.Core"
+      ],
+      "non_import_body_sha256": "5bd782b33537c86b60a66d43c2b2a3f8d73f43603af9f71c69c19718fb82ee03",
+      "all_non_import_bytes_unchanged": true
+    },
+    "Counting.lean": {
+      "prior": "StructuralS1RTiny20261018/Phase2/Counting.lean",
+      "old_import_lines": [
+        "import StructuralS1RTiny20261018.Dev.Core"
+      ],
+      "new_import_lines": [
+        "import StructuralS1RTiny20261018.Production.Core"
+      ],
+      "non_import_body_sha256": "faa2f9e53dfac96352df32c82f786228d4209d5999a4a52c7fa58de7018cf746",
+      "all_non_import_bytes_unchanged": true
+    },
+    "Final.lean": {
+      "prior": "StructuralS1RTiny20261018/Phase4/Final.lean",
+      "old_import_lines": [
+        "import StructuralS1RTiny20261018.Phase1.Localization",
+        "import StructuralS1RTiny20261018.Phase2.Counting"
+      ],
+      "new_import_lines": [
+        "import StructuralS1RTiny20261018.Production.Localization",
+        "import StructuralS1RTiny20261018.Production.Counting"
+      ],
+      "non_import_body_sha256": "464ae6bc4bd8fb47199547b18dcb9bfe508049b7627d83398548966ad33b0aba",
+      "all_non_import_bytes_unchanged": true
+    }
+  },
+  "trusted_constants_defined_or_modified": false,
+  "old_failure_preserved_and_not_accepted_as_complete": true,
+  "old_inputs_modified": false,
+  "candidate_flatten_generator_executions": 0,
+  "Lean_runs": 0,
+  "export_Comparator_nanoda_runs": 0,
+  "mathematical_evaluations": 0,
+  "network_requests": 0,
+  "future_fresh_3200s_gate_required": true,
+  "official_website_acceptance": false
+}

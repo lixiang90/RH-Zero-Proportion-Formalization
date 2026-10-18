@@ -1,0 +1,22 @@
+{
+  "label": "tool-Comparator.Axioms",
+  "command": [
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/lib/Comparator/Axioms.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/lib/Comparator/Axioms.ilean",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/source/Comparator/Axioms.lean"
+  ],
+  "cwd": "/var/tmp/rh-zero-20261015/tiny-production-v0",
+  "timeout_seconds_remaining_from_total": 1968.8080030980002,
+  "started_monotonic": 1236.145771931,
+  "log": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/tool-Comparator.Axioms.log",
+  "resources": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/tool-Comparator.Axioms.resources.txt",
+  "pid": 5618
+}

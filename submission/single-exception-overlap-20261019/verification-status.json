@@ -1,0 +1,42 @@
+{
+  "schema": "tiny-submission-fixed-status-snapshot-v1",
+  "source": {
+    "path": "research-goal-20261018-tiny-flatten-preparation-v3/draft/Solution.lean",
+    "bytes": 1979280,
+    "sha256": "024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81"
+  },
+  "ordinary_Lean": "PASS",
+  "Comparator_exact_statements_dependencies_primitives": "PASS",
+  "transitive_axiom_check": "PASS",
+  "Lean_default_kernel": "PASS",
+  "nanoda_separate_diagnostic": {
+    "status": "PASS",
+    "declarations": 75371,
+    "seconds": 427.389541876,
+    "threads": 4,
+    "export_sha256": "aaaddf3238e635b5bf861655f111a8066ad195f68685323d5ff64c9198b2a7fe",
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ]
+  },
+  "single_cold_3200_second_attempt": {
+    "status": "FAIL",
+    "failure_stage": "nanoda",
+    "total_elapsed_seconds": 3200.015159496,
+    "nanoda_remaining_seconds": 352.0973792110003,
+    "separate_diagnostic_does_not_reclassify_failed_attempt": true
+  },
+  "website": {
+    "status": "running",
+    "status_basis": "User report relayed by root; no network query in this preparation",
+    "reported_digest": "23e3dd765aa27de76938e056f13d3e0f08d849d0e7c39c6f78c62e7640c0a10f",
+    "digest_is_not_proof_source_sha256": true,
+    "final_result": null,
+    "official_acceptance_confirmed": false,
+    "website_accepted_record_claimed": false
+  },
+  "future_status_policy": "Save a new receipt; do not overwrite this frozen snapshot",
+  "compiler_network_collector_executions_in_this_preparation": 0
+}

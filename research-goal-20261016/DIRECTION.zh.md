@@ -575,3 +575,5 @@ Core/Loc的传递公理审计要等Final六根，当前不宣称新Lean全域/�
 2026-10-18 Macro006续：Dev Core已普通PASS（656.094秒），Phase1 Localization已普通PASS（170.435秒）。Counting首次编译在L117的let/cast归一化处失败，Final尚未运行；保留失败源码和日志，准备同命题Phase2修复。当前仍未宣称新的完整无条件比例已通过全部验证。
 
 2026-10-18 Macro006续：Phase2 Counting普通PASS55.149秒，Phase4 Final普通PASS57.016秒，六个最终传递公理根均只标准三公理。实际root计数函数的dyadic/cumulative无条件新比例已在Lean成立，尚未通过网站单源冷检与独立内核。15:51UTC新鲜网站API（Age0/MISS）精确R未变，候选严格更高。
+
+Macro006后同一实际round1：不可变v3单源1979280B，SHA024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81，已交用户并由用户上传。实际冷检86707在3200s Nano阶段超时，保留失败；此前单源Lean、Comparator契约/原语/依赖、公理及默认Lean核已PASS。独立诊断60196完整Nano PASS，75371声明/427.389541876s/标准三公理，不能冒称同一3200s通过。字节证据冻结64808 exit0，manifest3c2df155099cacfaa587e7b661bf78d932d73006594114d8cc5862c34c6853a8。用户官网仅报running与组合manifest-source digest23e3dd…，无最终结论。官方install源确认预装native comparator/lean4export，而本地v0用了lean --run解释驱动；先准备同源native可信工具，尚未测得速度差。新dedup文本独审通过，未编译。全目标未完成，下一关native工具review/setup、最终统一冷检及云端/提交材料交付，禁止覆写用户v3。

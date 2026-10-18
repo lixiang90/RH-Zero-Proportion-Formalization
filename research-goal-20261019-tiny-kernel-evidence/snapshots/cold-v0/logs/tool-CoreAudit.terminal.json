@@ -1,0 +1,24 @@
+{
+  "label": "tool-CoreAudit",
+  "command": [
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/lib/CoreAudit.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/lib/CoreAudit.ilean",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/source/CoreAudit.lean"
+  ],
+  "cwd": "/var/tmp/rh-zero-20261015/tiny-production-v0",
+  "timeout_seconds_remaining_from_total": 1960.1481678020002,
+  "started_monotonic": 1244.805608691,
+  "log": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/tool-CoreAudit.log",
+  "resources": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/tool-CoreAudit.resources.txt",
+  "pid": 5685,
+  "exit_code": 0,
+  "elapsed_seconds": 2.181289174999847
+}

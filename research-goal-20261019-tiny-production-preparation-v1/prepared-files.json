@@ -1,0 +1,479 @@
+{
+  "schema": "tiny-cold-production-prepared-v2",
+  "scope": "Static executable preparation only; not an execution gate or verification result",
+  "files": [
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/adapt_v1.py",
+      "bytes": 7019,
+      "sha256": "10bed885c7f03cf8d502c4cb94af2e0c2d7d2ca535bb3cf20cf48b6a8356b960"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/configuration.json",
+      "bytes": 58676,
+      "sha256": "8d1a1110080a64a0ab6a1aec8202030c638c2d775c6adec7dc3925a71c8f6034"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/freeze_static.py",
+      "bytes": 9179,
+      "sha256": "a9175d45e432215187114db03e7fb8297a95b2a4e77ea356dc3c9f0448490762"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/gate-template.json",
+      "bytes": 797,
+      "sha256": "56287bb8c95ace860d8d74f4f55a7dc5ad7e190bb00a1bc0b0b6545a98f6e671"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/prior-recipe-timings.json",
+      "bytes": 547,
+      "sha256": "2c129a9288d46fa5efd877e6731dfb2c6720d534d36b0333d0bed012029cf419"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/README.zh.md",
+      "bytes": 3263,
+      "sha256": "e037b84d08f5cc07866821a78d47da883e6e99edd0820ef22aa309da26811204"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/run_production.py",
+      "bytes": 23415,
+      "sha256": "4f6359383fa0e400c32ef8ddeaed626bcc1f32ca3ce4d75dae012a74a8ab818c"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/static-checks.json",
+      "bytes": 438,
+      "sha256": "a1719b31966eb25488c10c41cbbbd20affb75a84a3303b6bd967afdadb2ed44b"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/v0-to-v1.diff",
+      "bytes": 7851,
+      "sha256": "8f89d5eaad055781702c975a20d555e59da98a7d6f60ce074ae0559e64315021"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/version-delta.json",
+      "bytes": 888,
+      "sha256": "c34875f9fecd419e2013a5f2ca70c3bfcf764852253c1f58187ad40d70593c81"
+    },
+    {
+      "path": "research-goal-20261019-tiny-production-preparation-v1/windows_generate.py",
+      "bytes": 1527,
+      "sha256": "066690dac821861db0560a06377bf7df873207ac2b9a173cce730b55ecdc1f31"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "StructuralS1RTiny20261018/Production/Core.lean",
+      "bytes": 1815476,
+      "sha256": "fd883f6f622fe1f837dd36205b449abd465b0196cb47e4400947391134755525"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Counting.lean",
+      "bytes": 21483,
+      "sha256": "e3dd838595e0b2a01249f13959fd492e97a8289b33c62805ee06de4d7a0b195a"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Final.lean",
+      "bytes": 4965,
+      "sha256": "b45a6341fa22f454488fa1890b88bc45e100f2cdcafc4959b2094546050028d2"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Production/Localization.lean",
+      "bytes": 12305,
+      "sha256": "c7202d18effe9b05bf3b71f16a145d3e5eac91a8a895973f68647fc7f8c8580b"
+    },
+    {
+      "path": "lake-manifest.json",
+      "bytes": 3910,
+      "sha256": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1"
+    },
+    {
+      "path": "research-20261016-w10-cert/website-snapshot/challenge/templates/CandidateSpec.lean.tmpl",
+      "bytes": 343,
+      "sha256": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c"
+    },
+    {
+      "path": "research-20261016-w10-cert/website-snapshot/challenge/templates/Challenge.Candidate.lean",
+      "bytes": 812,
+      "sha256": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378"
+    },
+    {
+      "path": "research-20261016-w10-cert/website-snapshot/provenance.json",
+      "bytes": 2142,
+      "sha256": "ead00d83a6499a3ad66853351884ac09ee8311780d3e5a83a280972e5bae6244"
+    },
+    {
+      "path": "research-goal-20261016/gates/tiny-dev-ordinary-v0-20261018.json",
+      "bytes": 3383,
+      "sha256": "f135aeb338790abe91be9faf0e78877c677c0038feea8f60b5b0007067319ee6"
+    },
+    {
+      "path": "research-goal-20261016/gates/tiny-phase1-ordinary-20261018.json",
+      "bytes": 1489,
+      "sha256": "ef3a98a1adc36c9c9ce3fa69f6aa51a24dd6229d9c0162f414a73420baf419bb"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/policy-snapshot.json",
+      "bytes": 3992,
+      "sha256": "fe6f9e0362a5bf8fc940a2079632ce590aabf00be77c1572a12f6529a4d9fd2d"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/CONTRIBUTING.md",
+      "bytes": 6189,
+      "sha256": "be5d7f521646ad4c331f24cee93e97a05f8101454aa5afacab2306dc272a51f6"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/challenge/contract.json",
+      "bytes": 2523,
+      "sha256": "39e1b5a99889cf2c50865883d2007df949bcfced107c92917fe9cd3ab6441020"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/scripts/prepare-candidate.ts",
+      "bytes": 6078,
+      "sha256": "78c2e712b83e793ae86704c652e995f3c6e319dc42da68b7978a73999309149a"
+    },
+    {
+      "path": "research-goal-20261018-record-fresh-independent-1152/files.json",
+      "bytes": 5545,
+      "sha256": "16f8fb8d4adc3fdfcd0d1d4b4f58652e343a8cb385f5fdf3991cc9e06d59bf20"
+    },
+    {
+      "path": "research-goal-20261018-record-fresh-independent-1152/main-records.body",
+      "bytes": 64932,
+      "sha256": "aebedea4a75636692f35b2ab6dee1917da956fdfaeba2ef527080f67a48f479a"
+    },
+    {
+      "path": "research-goal-20261018-record-fresh-independent-1152/main-records.receipt.json",
+      "bytes": 2029,
+      "sha256": "b91ab9b5907977a8bc2f73dfd810b7ff180044f20226b706dede288fae82d2ad"
+    },
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v1/generate_draft.py",
+      "bytes": 7989,
+      "sha256": "ac4206a6f2a672ae2df268a56cb0ec5226034cd11e948e03b4b7f2dbae455a61"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v1/prepared-files.json",
+      "bytes": 7143,
+      "sha256": "17ef8ed6f5e19911ecee399ed5898a25808b7cd700300c766117860a2980a0f4"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v2/generate_draft.py",
+      "bytes": 7995,
+      "sha256": "60a704d4e50eb09c643a5936c7fe1b1a21749c867575ba6c005b4ba089e655cb"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v2/prepared-files.json",
+      "bytes": 7959,
+      "sha256": "9844ae7a2266a87f5aaa0e561befc5ebdb7aa00fefc82682bb2c3749f516956b"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v3/generate_draft.py",
+      "bytes": 7995,
+      "sha256": "c352d511b49a1ac9f2e9634605763cf621816b81b631d93a0973e38ebbcfcf0e"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v3/prepared-files.json",
+      "bytes": 8950,
+      "sha256": "8d866f77503210091280574f6a14fcead5461f07c156f383f1b67f78ee52ab32"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation/generate_draft.py",
+      "bytes": 7977,
+      "sha256": "ebbaabae61b1f8203745b06c01abfb62a9355ee2c15620ce6f825a130d4947e1"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation/prepared-files.json",
+      "bytes": 5712,
+      "sha256": "918b37786fb8c462169d270d0d011be69d5bf7e72f9144032f69dfa865fdd7af"
+    },
+    {
+      "path": "research-goal-20261018-tiny-localization-preparation/prepared-files.json",
+      "bytes": 2414,
+      "sha256": "bd842466cffb01ec870b7aaa8d9b416b9c566f8eb79b8a90733ab88d5f3002e8"
+    },
+    {
+      "path": "research-goal-20261018-tiny-production-plan/COMMANDS.txt",
+      "bytes": 6028,
+      "sha256": "a8666998aab0bbaa1ac01b193d2b782e26e608a39c7a920e7ca5965b8dddd385"
+    },
+    {
+      "path": "research-goal-20261018-tiny-production-plan/PRODUCTION-PLAN.zh.md",
+      "bytes": 7069,
+      "sha256": "045ca55888fbd8035d4c841fe12d198c382e3dd506e53ebd04156ab1a8b006fe"
+    },
+    {
+      "path": "research-goal-20261018-tiny-production-plan/files.json",
+      "bytes": 5889,
+      "sha256": "6125796a0989935ad723f6961f93891f07210be34fc5b4109c5eecc36dd08cfa"
+    },
+    {
+      "path": "research-goal-20261018-tiny-production-plan/tool-provenance.json",
+      "bytes": 12185,
+      "sha256": "299213f97fa40a02e0ebc6474dd030c27b10499c1d6fa3582f8424faba947650"
+    },
+    {
+      "path": "research-goal-20261018-tiny-production-preparation/prepared-files.json",
+      "bytes": 16039,
+      "sha256": "8de6adf94411254d8aef96e625faa1dc869069848049e99eab31e38a06e957c1"
+    },
+    {
+      "path": "research-goal-20261018-tiny-production-preparation/run_production.py",
+      "bytes": 22298,
+      "sha256": "ae0856b93076a60bddaf5f82bfc0cd694b2bb907f88ae9106796fabc33a082d0"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/compiler-prepared.json",
+      "bytes": 7425,
+      "sha256": "4533c2fedb5d6f891da5c496e34aec58ece146fe839121a29d5ea46014ff5071"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/dev-source-files.json",
+      "bytes": 3592,
+      "sha256": "6d166f1640d8ad175329ef9587eb6df1ebfd34e1363c15f40017094d5b74943e"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/phase1-prepared.json",
+      "bytes": 7143,
+      "sha256": "3127e3c803dfb0752d140384648d3439e7e5153f006f8b31b0799c2c9f322ebc"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/phase2-prepared.json",
+      "bytes": 7533,
+      "sha256": "7ec2f52d0137c9d07aeece5a83bae4fefb81ac8cd28a39e86d4278061e5f5f15"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/phase3-prepared.json",
+      "bytes": 7728,
+      "sha256": "73a0c2b6fb124fe363fd060908d66f3988ffac481627a80287b221d66a9a797f"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/phase4-prepared.json",
+      "bytes": 8709,
+      "sha256": "7b064e722a13b2809fb28dc58e26a0c204fdf53db7c92266476156ec115b0608"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/runtime-CandidateSpec.json",
+      "bytes": 542,
+      "sha256": "b6cba24f2402312d6dfdac002da59e5e29ed2ec367bf0e13297b19e0b560eca9"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/runtime-CandidateSpec.snapshot.lean",
+      "bytes": 463,
+      "sha256": "233d908bb36c4809c3ea79b7520796393a793198dc0d4923fc393d55cfd0eb35"
+    },
+    {
+      "path": "research-goal-20261019-nanoda-thread-static-review/REVIEW.zh.md",
+      "bytes": 2902,
+      "sha256": "fdbd9f93c18415d77d6b54513227c054fbcb7635a9dcd2ab9ef3b72104ae036a"
+    },
+    {
+      "path": "research-goal-20261019-nanoda-thread-static-review/files.json",
+      "bytes": 2759,
+      "sha256": "5cb2e2a92afb25ea2b2692000389b291af3773bf35ae4dc9e2b4375c8856c550"
+    },
+    {
+      "path": "research-goal-20261019-tiny-dedup-source-preparation/prepare_sources.py",
+      "bytes": 7003,
+      "sha256": "da99f1027530d684aa8f505230f151608cf000b66e5f8d5a639563bdb0274102"
+    },
+    {
+      "path": "research-goal-20261019-tiny-dedup-source-preparation/prepared-files.json",
+      "bytes": 5536,
+      "sha256": "98a9dfe125cfdb4febc24fb8666bb73228e4f27fcbac9fe66506c1c7720f99d6"
+    },
+    {
+      "path": "research-goal-20261019-tiny-dedup-static-review/report-files.json",
+      "bytes": 1551,
+      "sha256": "5e100daa5e14cf4445af8d88dd826a934a1f3e9f5bd5f6a03d83727006ef35eb"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/SPEC.zh.md",
+      "bytes": 2240,
+      "sha256": "9a363397d406d176ee24f392950d051e9719ae39a0ec36baea458c55721ac07c"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/adapt_v4.py",
+      "bytes": 6485,
+      "sha256": "9aa9a03c3b44c4480f4bae9dfe55ddd5a2f1ce90fb9c952a4f7962742a8e1dc4"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/candidate-parameters.json",
+      "bytes": 1840,
+      "sha256": "89cb0d7f96504d527be2c25f8ce8e971308c945db8282f353e58b8593dfa27d4"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/generate_draft.py",
+      "bytes": 7943,
+      "sha256": "2b3246b69f3e55de15e420ff72422e626d54271d2ec225c40667bc3062537561"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/input-pins.json",
+      "bytes": 2173,
+      "sha256": "68bbd09422c2f4642804677b31faf5332c391ef9d9a972ee540bb1396b28f9a6"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/official-wrapper.lean.txt",
+      "bytes": 1772,
+      "sha256": "1ca7db7be011c588ea34db1aecc0b091206278803ff8ae90799d1006dbd68a6e"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/preparation.json",
+      "bytes": 6568,
+      "sha256": "65277fd66ab1db3ece20a8932d2e1433ad643e229a3cddf8f4831942ed76610b"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/prepare_only.py",
+      "bytes": 11239,
+      "sha256": "acacf751960eb45244537550e577909aa21e2cf9fc56fe732808e93500549f05"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/prepared-files.json",
+      "bytes": 9799,
+      "sha256": "2b77159157e500b0177c3c2294860830a495248ce3e3b216a813524032509d72"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/v3-to-v4.diff",
+      "bytes": 14086,
+      "sha256": "46eb482da023ba088f7d4709560b35d28da224139be9541c1741574110d0950d"
+    },
+    {
+      "path": "research-goal-20261019-tiny-flatten-preparation-v4/version-delta.json",
+      "bytes": 500,
+      "sha256": "3d8d0d2b411e5835d9f413851aa0a959bcd31217bfe6959f2f8405b04f97450c"
+    },
+    {
+      "path": "scripts/verify_record_20261015.py",
+      "bytes": 25407,
+      "sha256": "f6e57b4f0e6829a83199e384272b24e192a43a9c8860b114e2a5a66cc3500f40"
+    },
+    {
+      "path": "scripts/verify_single_solution.py",
+      "bytes": 28328,
+      "sha256": "c880e18a1754465e46c8c125cc18eae61faa9fb0f6e37562349c9d23175e0ea9"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/phase4-v0/Final.receipt.json",
+      "bytes": 2075,
+      "sha256": "fa308e67520a18fe7838b50224fc86fdd5f9893a72bd0988d80386afd5e0d62a"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/phase4-v0/terminal.json",
+      "bytes": 421,
+      "sha256": "d8a28afd33d60e7c40282371baf16b4784d0422a5761e26b297ba491cbc89517"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/production-v0/failure.json",
+      "bytes": 48432,
+      "sha256": "3dcf11c64bebda5b543a52edc43041664d314ddc9855a8330240843ccf875747"
+    },
+    {
+      "path": "tmp/goal-20261016/macro006-precompile-fresh-record.json",
+      "bytes": 2429,
+      "sha256": "390d94779d5c21314fd13d284b544a04a74b2dac469ce1d12732a846cc23a010"
+    },
+    {
+      "path": "tmp/setup-20261015/Cli.tar.gz",
+      "bytes": 23873,
+      "sha256": "797dac801f503dd31432f3d10916d2a3d8c3375157538c4c848d4e1f03fbab0c"
+    },
+    {
+      "path": "tmp/setup-20261015/Comparator.tar.gz",
+      "bytes": 19617,
+      "sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e"
+    },
+    {
+      "path": "tmp/setup-20261015/LeanSearchClient.tar.gz",
+      "bytes": 13138,
+      "sha256": "8878f65cbda00577651e673252f5387490b004d585b3fba6188601a3a9e44ea0"
+    },
+    {
+      "path": "tmp/setup-20261015/Qq.tar.gz",
+      "bytes": 33017,
+      "sha256": "3988cd58caae5ce985a4def8bbbd068944af4fb623907ba8d71ece18409d88ad"
+    },
+    {
+      "path": "tmp/setup-20261015/Zeta23.tar.gz",
+      "bytes": 1283758,
+      "sha256": "6d49328a1b822637c1b035d30fd4c801b29c28bfcbd6cfcd772863bcbcb318a3"
+    },
+    {
+      "path": "tmp/setup-20261015/aesop.tar.gz",
+      "bytes": 208025,
+      "sha256": "e2a4aaf6a7fb25b838cc1eb816567af3f22568e68659b394aff8c24e0576e2a2"
+    },
+    {
+      "path": "tmp/setup-20261015/batteries.tar.gz",
+      "bytes": 364490,
+      "sha256": "2c75b373ffa5c849fa040c356cc4b31ea292bcb349d267c34132f29acae0f8d5"
+    },
+    {
+      "path": "tmp/setup-20261015/dependencies.json",
+      "bytes": 170022,
+      "sha256": "650a4ada83d1cc34fa681d2d3278b25e1ccbf929fde6fab9e08a625477ae0d7f"
+    },
+    {
+      "path": "tmp/setup-20261015/importGraph.tar.gz",
+      "bytes": 106355,
+      "sha256": "aee158b758ba8662562d274816fa2d26497f0d080b600d45ae6cfaae9b511bac"
+    },
+    {
+      "path": "tmp/setup-20261015/lean4export.tar.gz",
+      "bytes": 24998,
+      "sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003"
+    },
+    {
+      "path": "tmp/setup-20261015/mathlib.tar.gz",
+      "bytes": 23384070,
+      "sha256": "0d44640e4a47b76187c0d6d31800a2e8c05001629c75010cff4c21031f5fa8b3"
+    },
+    {
+      "path": "tmp/setup-20261015/nanoda.tar.gz",
+      "bytes": 87061,
+      "sha256": "f84eb185d4a5594aad18e4b8adbac636e3ace08b671d705dbd6acdbfb834eae6"
+    },
+    {
+      "path": "tmp/setup-20261015/plausible.tar.gz",
+      "bytes": 42962,
+      "sha256": "9243f1ae0774d4d26e8d9d6e598e9652c4ddbb1bfe4852b6fb44a48c7127121d"
+    },
+    {
+      "path": "tmp/setup-20261015/proofwidgets.tar.gz",
+      "bytes": 3895001,
+      "sha256": "0feca2665dd7cb2b17e4a8f1aa5c0ece735ddcc163d900f897552eb110f9cff0"
+    },
+    {
+      "path": "tmp/setup-20261015/runtime.json",
+      "bytes": 8589,
+      "sha256": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574"
+    },
+    {
+      "path": "tmp/setup-20261015/sources.json",
+      "bytes": 6660,
+      "sha256": "afb55e306f672306e3c507476b1b0899a0f9c6b4880ff7228cef4af1ac4ca84a"
+    },
+    {
+      "path": "tools/ComparatorCoreAudit.lean",
+      "bytes": 2032,
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    },
+    {
+      "path": "verification/gram-defect-20261015/lean/single/verification.json",
+      "bytes": 378158,
+      "sha256": "1c83b802aca9ed469b938f5e7a686912cf8acb46205e6b8f8cea615088fdabe4"
+    },
+    {
+      "path": "verification/gram-defect-20261015/setup/nanoda-build.json",
+      "bytes": 1978,
+      "sha256": "dd77c9251eb767785e2d2ae28a67320348aae7bb77aae6af9bc834b87c49dac1"
+    }
+  ],
+  "fresh_generation_required": true,
+  "all_bound_dependencies_unchanged": true,
+  "production_executions": 0,
+  "generator_executions": 0,
+  "total_budget_seconds": 3200,
+  "official_website_acceptance": false
+}

@@ -1,0 +1,22 @@
+{
+  "label": "tool-ExporterMain",
+  "command": [
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/lib/ExporterMain.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/lib/ExporterMain.ilean",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/source/ExporterMain.lean"
+  ],
+  "cwd": "/var/tmp/rh-zero-20261015/tiny-production-v0",
+  "timeout_seconds_remaining_from_total": 1967.8801497780003,
+  "started_monotonic": 1237.073622927,
+  "log": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/tool-ExporterMain.log",
+  "resources": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/tool-ExporterMain.resources.txt",
+  "pid": 5628
+}

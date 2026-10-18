@@ -1,0 +1,29 @@
+{
+  "schema": "official-native-verifier-source-audit-v1",
+  "retrieved_at_utc": "2026-10-18T17:02:05.700Z",
+  "repository": "josusanmartin/riemann",
+  "commit": "0c038980cbfaa3ee9fc539d751c32c454d85a319",
+  "files": [
+    {
+      "path": "research-goal-20261019-native-verifier-source-audit/install-verifier-tools.sh",
+      "bytes": 3101,
+      "sha256": "80abf99bac5109a209cef864c3077cab068005c75a00884bdee6ee4bb850561c",
+      "github_blob": "cad213501703e790a8aaf05cf4f1b67261e102c8",
+      "url": "https://github.com/josusanmartin/riemann/blob/0c038980cbfaa3ee9fc539d751c32c454d85a319/scripts/install-verifier-tools.sh"
+    },
+    {
+      "path": "research-goal-20261019-native-verifier-source-audit/run-comparator-sandbox.sh",
+      "bytes": 1493,
+      "sha256": "94ab3d6f3c05e2147e162e0bcea3ce68abf570ffe0736225302b040d7396df7b",
+      "github_blob": "2e8b1c7ed586349d3a2e1e03dc3b9c4693e1901f",
+      "url": "https://github.com/josusanmartin/riemann/blob/0c038980cbfaa3ee9fc539d751c32c454d85a319/scripts/run-comparator-sandbox.sh"
+    }
+  ],
+  "findings": {
+    "official_installer_builds_native_comparator_and_lean4export": true,
+    "local_v0_used_lean_run_source_drivers": true,
+    "same_mathematical_checker_scope_required": true,
+    "performance_difference_not_yet_measured": true
+  },
+  "official_acceptance_claimed": false
+}

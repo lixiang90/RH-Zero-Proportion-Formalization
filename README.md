@@ -4,7 +4,8 @@ Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
 The latest fresh site and public-repository check still gives **67.3587173310297…%**.
 The user now requests any strict, nontrivial mathematical improvement; there is
-no minimum gain. No new unconditional record or submission-ready proof is asserted.
+no minimum gain. The new unconditional bound has passed Lean and both kernels
+in separately completed checks. Website acceptance remains pending.
 
 [Macro review006](research-goal-20261016/macro-reviews/006-20261018.zh.md)
 selects a smaller complete-delivery route. Replaying all13,046 audited leaf
@@ -12,12 +13,12 @@ margins at a fixed lower threshold leaves only one exceptional cell. In all
 four orientations, adjacent windows would force the same gap to be both
 at most34980/32768 and at least64168/32768, a strict contradiction.
 The [independent replay](research-goal-20261018-tiny-overlap-independent/independent-review.json)
-confirms the integer classification and exact conditional score
+confirms the integer classification and exact score
 **67.35871733129443…%**, strictly above the fresh record.
 
 The strengthened coverage core and complete sublevel localization, including
 all70 cuts, root exterior, reflection and the adjacent-window contradiction,
-have now passed ordinary Lean. The planned counting bridge preserves the
+have now passed ordinary Lean. The counting bridge preserves the
 current W9 and pays a constant boundary charge; it does not require a new
 W10 ledger. The complete unconditional dyadic and cumulative zero-counting bounds now
 pass ordinary Lean. All six final transitive roots use only propext,
@@ -25,12 +26,21 @@ Classical.choice and Quot.sound. [Ordinary evidence](research-goal-20261018-tiny
 retains the failed API versions and the successful Final-only repair. The
 [development Core](StructuralS1RTiny20261018/Dev/Core.lean) and
 [localization](StructuralS1RTiny20261018/Phase1/Localization.lean) preserve
-the audited exact data. [Website materials](submission/tiny-overlap-20261018/README.zh.md)
-are drafts pending complete cold verification. The final [root-counting
+the audited exact data. The immutable [single-file proof](research-goal-20261018-tiny-flatten-preparation-v3/draft/Solution.lean)
+is 1,979,280 bytes and has been provided for the user's parallel website test.
+The final [root-counting
 theorems](StructuralS1RTiny20261018/Phase4/Final.lean) have no candidate-controlled
 analytic or local-floor hypotheses.
-Full Comparator, ordinary Lean, nanoda, a single file no larger than2MB,
-and the complete3,200-second verification workflow remain required.
+The [verification evidence](research-goal-20261019-tiny-kernel-evidence/checks.json)
+records successful single-file Lean compilation, Comparator contract and axiom
+checks, default Lean kernel replay, and a separate complete nanoda replay of
+75,371 declarations. The original combined run timed out at 3,200 seconds
+during nanoda; it is retained as a failure. A separate nanoda pass does not
+establish that combined deadline. The website currently reports verification
+running, with no final verdict supplied.
+Current [submission materials](submission/single-exception-overlap-20261019/README.zh.md)
+include the exact fraction, mathematical explanation, website fields and
+the pending verification status.
 
 The earlier fixed curvature network has a successful independent exact
 replay, and quantitative CellA/strong-tangent analytic lemmas have passed

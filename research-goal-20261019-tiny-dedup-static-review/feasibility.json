@@ -1,0 +1,215 @@
+{
+  "schema": "tiny-canonical-dedup-read-only-feasibility-v1",
+  "reviewed_at_utc": "2026-10-18T16:44:36.443335+00:00",
+  "candidate_sources_generated": 0,
+  "candidate_compilations": 0,
+  "new_math_evaluations": 0,
+  "network_requests": 0,
+  "existing_inputs_modified": false,
+  "conditional_use": "Only if the current cold attempt fails its total deadline; success makes implementation unnecessary",
+  "feasible_at_source_and_dependency_level": true,
+  "required_name_family_replacement": {
+    "from": "PC9QB6M",
+    "to": "PC9Tiny",
+    "same_utf8_length": true,
+    "identifier_family_tokens": [
+      "PC9QB6M",
+      "PC9QB6MData",
+      "PC9QB6M_G_rev",
+      "PC9QB6M_cert_full",
+      "PC9QB6M_half"
+    ],
+    "matches_inside_string_literals": 0
+  },
+  "identical_existing_Dev_proof_segments_after_name_replacement": {
+    "strengthened_concrete_checker_TinyGoal": true,
+    "COV_walk_payloads_and_cut_witnesses": true,
+    "reflection_actual_W9_counting_tail": true,
+    "full_license_trailer": true
+  },
+  "data_table_identity": {
+    "canonical_table_block_equals_prefix": true,
+    "proposed_actual_definitions_replace_existing_ten_aliases": true,
+    "alias_names": [
+      "TOP",
+      "BK",
+      "lbS",
+      "TOPD",
+      "BKD",
+      "lbD",
+      "REG",
+      "hR",
+      "PT",
+      "ptS"
+    ],
+    "raw_cover_payloads_137_byte_equal": true
+  },
+  "retirement": {
+    "cut_after": "end OpethN.Counting\nend\n",
+    "restore_original_license_from_marker": "ADDITIONAL THIRD-PARTY NOTICES AND LICENSE TEXTS",
+    "retired_legacy_tail_bytes": 7496,
+    "retired_tail_contains_copyright_or_license_notice": true,
+    "all_two_retired_copyright_blocks_retained_verbatim": true,
+    "retained_copyright_blocks_plus_newlines_bytes": 1404,
+    "removed_old_concrete_has_equivalent_retained_strengthened_code": true
+  },
+  "source_bytes": {
+    "current_prefix_plus_Dev_Core": 1938321,
+    "canonical_original": 1821568,
+    "canonical_retained": 1815476,
+    "raw_core_savings": 122845,
+    "client_inputs": [
+      {
+        "module": "StructuralS1RTiny20261018.Phase1.Localization",
+        "path": "StructuralS1RTiny20261018/Phase1/Localization.lean",
+        "bytes": 12298,
+        "imports_removed_bytes": 42,
+        "body_sha256": "5bd782b33537c86b60a66d43c2b2a3f8d73f43603af9f71c69c19718fb82ee03",
+        "body_preserved_without_changes": true
+      },
+      {
+        "module": "StructuralS1RTiny20261018.Phase2.Counting",
+        "path": "StructuralS1RTiny20261018/Phase2/Counting.lean",
+        "bytes": 21476,
+        "imports_removed_bytes": 42,
+        "body_sha256": "faa2f9e53dfac96352df32c82f786228d4209d5999a4a52c7fa58de7018cf746",
+        "body_preserved_without_changes": true
+      },
+      {
+        "module": "StructuralS1RTiny20261018.Phase4.Final",
+        "path": "StructuralS1RTiny20261018/Phase4/Final.lean",
+        "bytes": 4957,
+        "imports_removed_bytes": 102,
+        "body_sha256": "464ae6bc4bd8fb47199547b18dcb9bfe508049b7627d83398548966ad33b0aba",
+        "body_preserved_without_changes": true
+      }
+    ],
+    "proposed_four_input_total": 1854207,
+    "internal_client_import_bytes_removed": 186,
+    "current_five_input_flatten": 1979280,
+    "hypothetical_module_name_for_byte_accounting": "StructuralS1RTiny20261018.Production.Core",
+    "hypothetical_same_format_flatten_bytes": 1856418,
+    "hypothetical_flatten_savings": 122862,
+    "hypothetical_source_headroom_to_2000000": 143582,
+    "extra_production_notice_bytes_not_included": true
+  },
+  "external_imports": [
+    "ChallengeDeps",
+    "ChallengeDeps.CandidateSpec",
+    "Mathlib",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Intervals",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Analysis.Real.Pi.Bounds",
+    "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring",
+    "Zeta23.PrimeSideA.EndsE1",
+    "Zeta23.Taper.Norms",
+    "Zeta23.ThmD.Concrete",
+    "Zeta23.ThmD.Limit",
+    "Zeta23.ThmD.Mult",
+    "Zeta23.ThmD.Window",
+    "Zeta23.ThmD.WindowCore",
+    "Zeta23.ThmD.ZeroSideD",
+    "Zeta23.ZeroSide.RankTraceMult"
+  ],
+  "clients_keep_namespaces_statements_and_bodies": true,
+  "all_copyright_license_and_mathematical_payload_retention_required": true,
+  "performance_conclusions": {
+    "ordinary_elaboration_and_module_import_redundancy_removed": true,
+    "old_exporter_uses_requested_roots_transitive_dependency_closure": true,
+    "old_unused_PC9_checker_may_already_be_absent_from_export": true,
+    "Comparator_default_kernel_or_nanoda_runtime_reduction_proven": false,
+    "new_total_3200s_success_proven": false
+  },
+  "unproven_gates": [
+    "actual production-only generator and retention audit",
+    "whole new-source ordinary elaboration and permitted axioms",
+    "fresh public statements/dependencies/primitives comparison",
+    "Lean default kernel and nanoda replay",
+    "one complete 3200s attempt"
+  ],
+  "input_pins": [
+    {
+      "path": "StructuralS1RTiny20261018/Core.lean",
+      "bytes": 1821568,
+      "sha256": "9fbdf3f2dc62333b636d3b25dfb3bf2b15e3b8c628ece73d6ba1bc768fc5f1a6"
+    },
+    {
+      "path": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "bytes": 935224,
+      "sha256": "ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Core.lean",
+      "bytes": 1003097,
+      "sha256": "1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase1/Localization.lean",
+      "bytes": 12298,
+      "sha256": "ad722eca53b43ff28ccfe9f66e338979ac05ff7088fe067dc395ea5e1c9cf758"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase2/Counting.lean",
+      "bytes": 21476,
+      "sha256": "2bda5c9df708b4568f8f08447894cb73a3c6ecb9d2c77be67e2eb46387be868e"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase4/Final.lean",
+      "bytes": 4957,
+      "sha256": "d477fd3181e0d4d5a3c89bcbcb987dd6cad00fbdde1946d01c26ac0c279489ed"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v3/prepared-files.json",
+      "bytes": 8950,
+      "sha256": "8d866f77503210091280574f6a14fcead5461f07c156f383f1b67f78ee52ab32"
+    },
+    {
+      "path": "research-goal-20261018-tiny-production-preparation/prepared-files.json",
+      "bytes": 16039,
+      "sha256": "8de6adf94411254d8aef96e625faa1dc869069848049e99eab31e38a06e957c1"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v3/generate_draft.py",
+      "bytes": 7995,
+      "sha256": "c352d511b49a1ac9f2e9634605763cf621816b81b631d93a0973e38ebbcfcf0e"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v3/official-wrapper.lean.txt",
+      "bytes": 1772,
+      "sha256": "1ca7db7be011c588ea34db1aecc0b091206278803ff8ae90799d1006dbd68a6e"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation-v3/preparation.json",
+      "bytes": 6109,
+      "sha256": "4026ce6f7487186a14a0765455236937a95aaee5145e891f50779595fe270b7b"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/prepare_dev_sources.py",
+      "bytes": 8948,
+      "sha256": "f5f66c916c249e80dc0cd405640b6d1c1c44dd9af6ad60ad09562c5dfb0c7677"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/dev-source-files.json",
+      "bytes": 3592,
+      "sha256": "6d166f1640d8ad175329ef9587eb6df1ebfd34e1363c15f40017094d5b74943e"
+    },
+    {
+      "path": "tmp/setup-20261015/packages/lean4export/Export.lean",
+      "bytes": 15994,
+      "sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998"
+    },
+    {
+      "path": "tmp/setup-20261015/packages/lean4export/Main.lean",
+      "bytes": 751,
+      "sha256": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a"
+    }
+  ]
+}

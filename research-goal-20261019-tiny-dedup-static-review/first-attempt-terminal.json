@@ -1,0 +1,10 @@
+{
+  "exit_code": 1,
+  "script": "audit_static.py",
+  "script_sha256": "804aac5491a9f1c3914a749f04dfd1191e27c12ac3f99ad37df68b08b642455d",
+  "failed_assertion": "not re.search(r'Copyright|SPDX-License-Identifier|Authors?:|Apache License', retired)",
+  "meaning": "The legacy tail contains two copyright notices; a correct fallback must preserve them",
+  "candidate_source_generated": false,
+  "Lean_runs": 0,
+  "inputs_changed": false
+}

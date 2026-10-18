@@ -1,0 +1,24 @@
+{
+  "label": "comparator-default-kernel",
+  "command": [
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "--run",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/tools/source/CoreAudit.lean",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/challenge.ndjson",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/solution.ndjson",
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "cwd": "/var/tmp/rh-zero-20261015/tiny-production-v0",
+  "timeout_seconds_remaining_from_total": 1642.7594199920002,
+  "started_monotonic": 1562.194358284,
+  "log": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/comparator-default-kernel.log",
+  "resources": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/comparator-default-kernel.resources.txt",
+  "pid": 6954,
+  "exit_code": 0,
+  "elapsed_seconds": 1290.6502759740001
+}

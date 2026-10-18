@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/var/tmp/rh-zero-20261015/tiny-nanoda-diagnostic-v0/resources.txt",
+    "/var/tmp/rh-zero-20261015/nanoda-target/release/nanoda_bin",
+    "/var/tmp/rh-zero-20261015/tiny-nanoda-diagnostic-v0/config.json"
+  ],
+  "pid": 400,
+  "diagnostic_only": true,
+  "timeout_seconds": 1200,
+  "num_threads": 4,
+  "source_export_sha256": "aaaddf3238e635b5bf861655f111a8066ad195f68685323d5ff64c9198b2a7fe",
+  "previous_full3200s_attempt_passed": false,
+  "official_website_acceptance": false
+}

@@ -1,0 +1,22 @@
+{
+  "label": "ordinary-ChallengeDeps",
+  "command": [
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/lib/ChallengeDeps.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/lib/ChallengeDeps.ilean",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/source/ChallengeDeps.lean"
+  ],
+  "cwd": "/var/tmp/rh-zero-20261015/tiny-production-v0",
+  "timeout_seconds_remaining_from_total": 3197.7528821130004,
+  "started_monotonic": 7.200880914,
+  "log": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/ordinary-ChallengeDeps.log",
+  "resources": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/ordinary-ChallengeDeps.resources.txt",
+  "pid": 631
+}

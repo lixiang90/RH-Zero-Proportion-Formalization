@@ -1,0 +1,1 @@
+原v0 session37466实际exit1：Python3.10没有tomllib，失败在import，未建立工作目录或启动构建。v0源码/manifest/gate全部保留。v1只删除tomllib依赖，以已审TOML完整SHA256断言替代重复结构解析；lakefile逐字节不变，源码和所有检查不变。新独占native-tools-v1，仍需root新gate，0自动重试。

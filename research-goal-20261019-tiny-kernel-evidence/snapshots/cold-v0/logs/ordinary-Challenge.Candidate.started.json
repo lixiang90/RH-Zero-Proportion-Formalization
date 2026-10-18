@@ -1,0 +1,22 @@
+{
+  "label": "ordinary-Challenge.Candidate",
+  "command": [
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "-j1",
+    "--tstack=32768",
+    "-DrelaxedAutoImplicit=false",
+    "-R",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/source",
+    "-o",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/lib/Challenge/Candidate.olean",
+    "-i",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/lib/Challenge/Candidate.ilean",
+    "/var/tmp/rh-zero-20261015/tiny-production-v0/source/Challenge/Candidate.lean"
+  ],
+  "cwd": "/var/tmp/rh-zero-20261015/tiny-production-v0",
+  "timeout_seconds_remaining_from_total": 3153.934352347,
+  "started_monotonic": 51.019409747,
+  "log": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/ordinary-Challenge.Candidate.log",
+  "resources": "/var/tmp/rh-zero-20261015/tiny-production-v0/logs/ordinary-Challenge.Candidate.resources.txt",
+  "pid": 819
+}

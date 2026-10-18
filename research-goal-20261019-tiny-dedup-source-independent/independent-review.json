@@ -1,0 +1,201 @@
+{
+  "schema": "tiny-dedup-independent-byte-review-v1",
+  "passed": true,
+  "scope": "Pure source byte/text/AST identity; no theorem checking or runtime claim",
+  "canonical_to_production_inverse_exact": true,
+  "canonical_kept_prefix_bytes": 1795281,
+  "removed_retired_code_bytes": 6092,
+  "retained_retired_copyright_comments": 2,
+  "canonical_copyright_license_blocks_retained": 13,
+  "license_trailer_bytes": 18791,
+  "same_seven_byte_name_family_replacement": true,
+  "retired_declarations": [
+    [
+      "theorem",
+      "actual_defect_estimate"
+    ],
+    [
+      "theorem",
+      "actual_dyadic"
+    ],
+    [
+      "theorem",
+      "actual_cumulative"
+    ],
+    [
+      "theorem",
+      "actual_dyadic"
+    ],
+    [
+      "theorem",
+      "actual_cumulative"
+    ],
+    [
+      "theorem",
+      "am_export_candidate_exact"
+    ],
+    [
+      "theorem",
+      "candidate_strict_improvement"
+    ],
+    [
+      "theorem",
+      "candidate_critical_line_bound"
+    ],
+    [
+      "theorem",
+      "candidate_critical_line_bound_cumulative"
+    ]
+  ],
+  "independently_compared_Dev_segments": [
+    {
+      "name": "strengthened_concrete",
+      "bytes": 125087,
+      "sha256": "1c4ddc06f7adfefe83bbef293529dc8e0c57187c88d7586c5df4f64c338701c0"
+    },
+    {
+      "name": "COV_all_payload_cut_ready_and_walk",
+      "bytes": 734798,
+      "sha256": "688c435bf3421060a4ee1a05e241ae19347fcd279fb619f7b963cbe6bdd97eaa"
+    },
+    {
+      "name": "actual_reflection_W9_and_generic_counting",
+      "bytes": 122307,
+      "sha256": "4262680310a39e9aa5a23233e6018366b7531dd0449f2bdbd1505f431d0d7b62"
+    }
+  ],
+  "packed_payload_count": 137,
+  "all_packed_payload_bytes_identical": true,
+  "cursor_ready_matching_lines_count": 49,
+  "ten_table_definition_or_proof_names_retained": [
+    "TOP",
+    "BK",
+    "lbS",
+    "TOPD",
+    "BKD",
+    "lbD",
+    "REG",
+    "hR",
+    "PT",
+    "ptS"
+  ],
+  "client_import_only": [
+    {
+      "name": "Localization.lean",
+      "non_import_body_sha256": "5bd782b33537c86b60a66d43c2b2a3f8d73f43603af9f71c69c19718fb82ee03",
+      "old_imports": [
+        "import StructuralS1RTiny20261018.Dev.Core"
+      ],
+      "new_imports": [
+        "import StructuralS1RTiny20261018.Production.Core"
+      ]
+    },
+    {
+      "name": "Counting.lean",
+      "non_import_body_sha256": "faa2f9e53dfac96352df32c82f786228d4209d5999a4a52c7fa58de7018cf746",
+      "old_imports": [
+        "import StructuralS1RTiny20261018.Dev.Core"
+      ],
+      "new_imports": [
+        "import StructuralS1RTiny20261018.Production.Core"
+      ]
+    },
+    {
+      "name": "Final.lean",
+      "non_import_body_sha256": "464ae6bc4bd8fb47199547b18dcb9bfe508049b7627d83398548966ad33b0aba",
+      "old_imports": [
+        "import StructuralS1RTiny20261018.Phase1.Localization",
+        "import StructuralS1RTiny20261018.Phase2.Counting"
+      ],
+      "new_imports": [
+        "import StructuralS1RTiny20261018.Production.Localization",
+        "import StructuralS1RTiny20261018.Production.Counting"
+      ]
+    }
+  ],
+  "generator_AST_equal_modulo_MODULES": true,
+  "wrapper_identical": true,
+  "three_public_statements_match_official_template": true,
+  "candidate_parameters_identical": true,
+  "Final_literal_expressions": {
+    "tinyKappa": "3337839448633819172184136761695440236797 /\n    4955319193827760237900000000000000000000",
+    "baselineKappa": "3337839448633819172184136761695440236797 /\n    4955319193847235264050000000000000000000",
+    "pressure": "456111945004000000 / 100000000000000000000"
+  },
+  "Final_root_count_functions_unchanged": true,
+  "Final_actual_theorems_no_extra_premises_relative_passed_Phase4": true,
+  "predicted_solution_bytes": 1856430,
+  "predicted_headroom_bytes": 143570,
+  "external_import_count": 24,
+  "internal_import_count": 4,
+  "v3_upload_sha256_unchanged": "024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81",
+  "all_bound_source_hashes_start_end_equal": true,
+  "bound_inputs_sha256": {
+    "research-goal-20261019-tiny-dedup-source-preparation/prepared-files.json": "98a9dfe125cfdb4febc24fb8666bb73228e4f27fcbac9fe66506c1c7720f99d6",
+    "StructuralS1RTiny20261018/Production/Core.lean": "fd883f6f622fe1f837dd36205b449abd465b0196cb47e4400947391134755525",
+    "StructuralS1RTiny20261018/Production/Localization.lean": "c7202d18effe9b05bf3b71f16a145d3e5eac91a8a895973f68647fc7f8c8580b",
+    "StructuralS1RTiny20261018/Production/Counting.lean": "e3dd838595e0b2a01249f13959fd492e97a8289b33c62805ee06de4d7a0b195a",
+    "StructuralS1RTiny20261018/Production/Final.lean": "b45a6341fa22f454488fa1890b88bc45e100f2cdcafc4959b2094546050028d2",
+    "research-goal-20261019-tiny-dedup-source-preparation/prepare_sources.py": "da99f1027530d684aa8f505230f151608cf000b66e5f8d5a639563bdb0274102",
+    "StructuralS1RTiny20261018/Core.lean": "9fbdf3f2dc62333b636d3b25dfb3bf2b15e3b8c628ece73d6ba1bc768fc5f1a6",
+    "research-goal-20261019-tiny-dedup-static-review/report-files.json": "5e100daa5e14cf4445af8d88dd826a934a1f3e9f5bd5f6a03d83727006ef35eb",
+    "research-goal-20261019-tiny-dedup-static-review/feasibility.json": "87e50f01c4d1fab910375c7e24038748264dea3c9f76c988b28da3dbfd0143e9",
+    "tmp/current-s1r-tiny-20261018/production-v0/failure.json": "3dcf11c64bebda5b543a52edc43041664d314ddc9855a8330240843ccf875747",
+    "StructuralS1RTiny20261018/Dev/Core.lean": "1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac",
+    "StructuralS1RM20261018/CurrentPrefix.lean": "ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21",
+    "StructuralS1RTiny20261018/Phase1/Localization.lean": "ad722eca53b43ff28ccfe9f66e338979ac05ff7088fe067dc395ea5e1c9cf758",
+    "StructuralS1RTiny20261018/Phase2/Counting.lean": "2bda5c9df708b4568f8f08447894cb73a3c6ecb9d2c77be67e2eb46387be868e",
+    "StructuralS1RTiny20261018/Phase4/Final.lean": "d477fd3181e0d4d5a3c89bcbcb987dd6cad00fbdde1946d01c26ac0c279489ed",
+    "research-goal-20261018-tiny-flatten-preparation-v3/official-wrapper.lean.txt": "1ca7db7be011c588ea34db1aecc0b091206278803ff8ae90799d1006dbd68a6e",
+    "research-goal-20261019-tiny-flatten-preparation-v4/prepared-files.json": "2b77159157e500b0177c3c2294860830a495248ce3e3b216a813524032509d72",
+    "research-goal-20261019-tiny-flatten-preparation-v4/generate_draft.py": "2b3246b69f3e55de15e420ff72422e626d54271d2ec225c40667bc3062537561",
+    "research-goal-20261019-tiny-flatten-preparation-v4/prepare_only.py": "acacf751960eb45244537550e577909aa21e2cf9fc56fe732808e93500549f05",
+    "research-goal-20261019-tiny-flatten-preparation-v4/adapt_v4.py": "9aa9a03c3b44c4480f4bae9dfe55ddd5a2f1ce90fb9c952a4f7962742a8e1dc4",
+    "research-goal-20261019-tiny-flatten-preparation-v4/v3-to-v4.diff": "46eb482da023ba088f7d4709560b35d28da224139be9541c1741574110d0950d",
+    "research-goal-20261019-tiny-flatten-preparation-v4/version-delta.json": "3d8d0d2b411e5835d9f413851aa0a959bcd31217bfe6959f2f8405b04f97450c",
+    "research-goal-20261019-tiny-flatten-preparation-v4/official-wrapper.lean.txt": "1ca7db7be011c588ea34db1aecc0b091206278803ff8ae90799d1006dbd68a6e",
+    "research-goal-20261019-tiny-flatten-preparation-v4/SPEC.zh.md": "9a363397d406d176ee24f392950d051e9719ae39a0ec36baea458c55721ac07c",
+    "research-goal-20261019-tiny-flatten-preparation-v4/input-pins.json": "68bbd09422c2f4642804677b31faf5332c391ef9d9a972ee540bb1396b28f9a6",
+    "research-goal-20261019-tiny-flatten-preparation-v4/candidate-parameters.json": "89cb0d7f96504d527be2c25f8ce8e971308c945db8282f353e58b8593dfa27d4",
+    "research-goal-20261019-tiny-flatten-preparation-v4/preparation.json": "65277fd66ab1db3ece20a8932d2e1433ad643e229a3cddf8f4831942ed76610b",
+    "research-goal-20261018-tiny-flatten-preparation-v3/prepared-files.json": "8d866f77503210091280574f6a14fcead5461f07c156f383f1b67f78ee52ab32",
+    "research-goal-20261018-tiny-flatten-preparation-v3/generate_draft.py": "c352d511b49a1ac9f2e9634605763cf621816b81b631d93a0973e38ebbcfcf0e",
+    "research-goal-20261018-tiny-runtime-preparation/compiler-prepared.json": "4533c2fedb5d6f891da5c496e34aec58ece146fe839121a29d5ea46014ff5071",
+    "research-goal-20261018-tiny-runtime-preparation/phase1-prepared.json": "3127e3c803dfb0752d140384648d3439e7e5153f006f8b31b0799c2c9f322ebc",
+    "research-goal-20261018-tiny-runtime-preparation/phase2-prepared.json": "7ec2f52d0137c9d07aeece5a83bae4fefb81ac8cd28a39e86d4278061e5f5f15",
+    "research-goal-20261018-tiny-runtime-preparation/phase3-prepared.json": "73a0c2b6fb124fe363fd060908d66f3988ffac481627a80287b221d66a9a797f",
+    "research-goal-20261018-tiny-runtime-preparation/phase4-prepared.json": "7b064e722a13b2809fb28dc58e26a0c204fdf53db7c92266476156ec115b0608",
+    "tmp/current-s1r-tiny-20261018/phase4-v0/Final.receipt.json": "fa308e67520a18fe7838b50224fc86fdd5f9893a72bd0988d80386afd5e0d62a",
+    "tmp/current-s1r-tiny-20261018/phase4-v0/terminal.json": "d8a28afd33d60e7c40282371baf16b4784d0422a5761e26b297ba491cbc89517",
+    "research-goal-20261018-tiny-flatten-preparation-v2/prepared-files.json": "9844ae7a2266a87f5aaa0e561befc5ebdb7aa00fefc82682bb2c3749f516956b",
+    "research-goal-20261018-tiny-flatten-preparation-v2/generate_draft.py": "60a704d4e50eb09c643a5936c7fe1b1a21749c867575ba6c005b4ba089e655cb",
+    "research-goal-20261018-tiny-flatten-preparation-v1/prepared-files.json": "17ef8ed6f5e19911ecee399ed5898a25808b7cd700300c766117860a2980a0f4",
+    "research-goal-20261018-tiny-flatten-preparation-v1/generate_draft.py": "ac4206a6f2a672ae2df268a56cb0ec5226034cd11e948e03b4b7f2dbae455a61",
+    "research-goal-20261016/gates/tiny-phase1-ordinary-20261018.json": "ef3a98a1adc36c9c9ce3fa69f6aa51a24dd6229d9c0162f414a73420baf419bb",
+    "research-goal-20261018-tiny-flatten-preparation/prepared-files.json": "918b37786fb8c462169d270d0d011be69d5bf7e72f9144032f69dfa865fdd7af",
+    "research-goal-20261018-tiny-flatten-preparation/generate_draft.py": "ebbaabae61b1f8203745b06c01abfb62a9355ee2c15620ce6f825a130d4947e1",
+    "research-goal-20261018-tiny-runtime-preparation/dev-source-files.json": "6d166f1640d8ad175329ef9587eb6df1ebfd34e1363c15f40017094d5b74943e",
+    "research-goal-20261018-tiny-runtime-preparation/runtime-CandidateSpec.json": "b6cba24f2402312d6dfdac002da59e5e29ed2ec367bf0e13297b19e0b560eca9",
+    "research-goal-20261018-tiny-runtime-preparation/runtime-CandidateSpec.snapshot.lean": "233d908bb36c4809c3ea79b7520796393a793198dc0d4923fc393d55cfd0eb35",
+    "research-goal-20261018-tiny-localization-preparation/prepared-files.json": "bd842466cffb01ec870b7aaa8d9b416b9c566f8eb79b8a90733ab88d5f3002e8",
+    "research-goal-20261016/gates/tiny-dev-ordinary-v0-20261018.json": "f135aeb338790abe91be9faf0e78877c677c0038feea8f60b5b0007067319ee6",
+    "research-goal-20261018-record-source-audit/snapshot/Solution.lean": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+    "research-goal-20261017-w10-generator-policy/policy-snapshot.json": "fe6f9e0362a5bf8fc940a2079632ce590aabf00be77c1572a12f6529a4d9fd2d",
+    "research-goal-20261017-w10-generator-policy/snapshot/CONTRIBUTING.md": "be5d7f521646ad4c331f24cee93e97a05f8101454aa5afacab2306dc272a51f6",
+    "research-goal-20261017-w10-generator-policy/snapshot/challenge/contract.json": "39e1b5a99889cf2c50865883d2007df949bcfced107c92917fe9cd3ab6441020",
+    "research-goal-20261017-w10-generator-policy/snapshot/scripts/prepare-candidate.ts": "78c2e712b83e793ae86704c652e995f3c6e319dc42da68b7978a73999309149a",
+    "research-20261016-w10-cert/website-snapshot/provenance.json": "ead00d83a6499a3ad66853351884ac09ee8311780d3e5a83a280972e5bae6244",
+    "research-20261016-w10-cert/website-snapshot/challenge/templates/CandidateSpec.lean.tmpl": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c",
+    "research-20261016-w10-cert/website-snapshot/challenge/templates/Challenge.Candidate.lean": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378",
+    "research-goal-20261018-tiny-flatten-preparation-v3/candidate-parameters.json": "89cb0d7f96504d527be2c25f8ce8e971308c945db8282f353e58b8593dfa27d4",
+    "research-goal-20261018-tiny-flatten-preparation-v3/draft/Solution.lean": "024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81",
+    "research-goal-20261018-tiny-flatten-preparation-v3/draft/generation.json": "8334e3d8ed0734fd06ecd9ef3067d8903f04f63bc9537f421301d8a2c7d8366c"
+  },
+  "producer_modules_imported": 0,
+  "generator_executions": 0,
+  "Lean_runs": 0,
+  "mathematical_evaluations": 0,
+  "network_requests": 0,
+  "official_website_acceptance": false,
+  "total_3200s_success_inferred": false
+}

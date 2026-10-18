@@ -1,0 +1,297 @@
+{
+  "schema": "tiny-source-draft-v1",
+  "upload_ready": false,
+  "score": {
+    "numerator": "3337839448633819172184136761695440236797",
+    "denominator": "4955319193827760237900000000000000000000"
+  },
+  "expected_current_record": {
+    "numerator": "3337839448633819172184136761695440236797",
+    "denominator": "4955319193847235264050000000000000000000"
+  },
+  "public_theorem_names": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "trusted_spec_template": {
+    "path": "research-20261016-w10-cert/website-snapshot/challenge/templates/CandidateSpec.lean.tmpl",
+    "sha256": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c",
+    "origin_url": "https://raw.githubusercontent.com/josusanmartin/riemann/9e6ca6615b9dbfec4a1d722995cff0ffe3abf9bb/challenge/templates/CandidateSpec.lean.tmpl"
+  },
+  "CURRENT_EXPRESSION_source": "Official current kernel-verified ledger exactExpression, not contributor-defined",
+  "template_parameters": {
+    "NUMERATOR": "score.numerator",
+    "DENOMINATOR": "score.denominator",
+    "CURRENT_EXPRESSION": "trusted currentRecord.exactExpression"
+  },
+  "trusted_CandidateSpec_written_or_modified": false,
+  "local_old_CandidateSpec_usable": false,
+  "fresh_official_template_check_completed": false,
+  "official_generation_or_submission_executed": false,
+  "scope": "Proposed exact score and unverified draft only; no accepted record claim",
+  "unclosed_gates": [
+    "four ordinary modules",
+    "actual flatten and independent source audit",
+    "fresh record/template/dependency pins and official CandidateSpec",
+    "single-source ordinary elaboration/axioms",
+    "export/Comparator/nanoda",
+    "full website time/memory/source/request limits",
+    "GitHub/final submission materials"
+  ],
+  "solution": "Solution.lean",
+  "solution_bytes": 1979280,
+  "solution_sha256": "024902a7ef01ccba2a6c71e54682a31712417e5d3c0b4ead5f6f80ad25fd1a81",
+  "prepared_manifest_sha256": "8d866f77503210091280574f6a14fcead5461f07c156f383f1b67f78ee52ab32",
+  "source_modules": [
+    {
+      "path": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "sha256": "ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21",
+      "bytes": 935224,
+      "retained_non_import_sha256": "017187347d3b1b853be810b1bc1c61a8efa0177d7f54f8bcad4864b541faa2e0",
+      "retained_non_import_bytes": 934368
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Core.lean",
+      "sha256": "1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac",
+      "bytes": 1003097,
+      "retained_non_import_sha256": "84157196d4dbcf28932ae563a35fd4dda347e9cd851bacbbfc87cea52d43451b",
+      "retained_non_import_bytes": 1003053
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase1/Localization.lean",
+      "sha256": "ad722eca53b43ff28ccfe9f66e338979ac05ff7088fe067dc395ea5e1c9cf758",
+      "bytes": 12298,
+      "retained_non_import_sha256": "5bd782b33537c86b60a66d43c2b2a3f8d73f43603af9f71c69c19718fb82ee03",
+      "retained_non_import_bytes": 12256
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase2/Counting.lean",
+      "sha256": "2bda5c9df708b4568f8f08447894cb73a3c6ecb9d2c77be67e2eb46387be868e",
+      "bytes": 21476,
+      "retained_non_import_sha256": "faa2f9e53dfac96352df32c82f786228d4209d5999a4a52c7fa58de7018cf746",
+      "retained_non_import_bytes": 21434
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase4/Final.lean",
+      "sha256": "d477fd3181e0d4d5a3c89bcbcb987dd6cad00fbdde1946d01c26ac0c279489ed",
+      "bytes": 4957,
+      "retained_non_import_sha256": "464ae6bc4bd8fb47199547b18dcb9bfe508049b7627d83398548966ad33b0aba",
+      "retained_non_import_bytes": 4855
+    }
+  ],
+  "body_segments": [
+    {
+      "module": "StructuralS1RM20261018.CurrentPrefix",
+      "start": 1254,
+      "end": 935622,
+      "non_import_sha256": "017187347d3b1b853be810b1bc1c61a8efa0177d7f54f8bcad4864b541faa2e0"
+    },
+    {
+      "module": "StructuralS1RTiny20261018.Dev.Core",
+      "start": 935688,
+      "end": 1938741,
+      "non_import_sha256": "84157196d4dbcf28932ae563a35fd4dda347e9cd851bacbbfc87cea52d43451b"
+    },
+    {
+      "module": "StructuralS1RTiny20261018.Phase1.Localization",
+      "start": 1938818,
+      "end": 1951074,
+      "non_import_sha256": "5bd782b33537c86b60a66d43c2b2a3f8d73f43603af9f71c69c19718fb82ee03"
+    },
+    {
+      "module": "StructuralS1RTiny20261018.Phase2.Counting",
+      "start": 1951147,
+      "end": 1972581,
+      "non_import_sha256": "faa2f9e53dfac96352df32c82f786228d4209d5999a4a52c7fa58de7018cf746"
+    },
+    {
+      "module": "StructuralS1RTiny20261018.Phase4.Final",
+      "start": 1972651,
+      "end": 1977506,
+      "non_import_sha256": "464ae6bc4bd8fb47199547b18dcb9bfe508049b7627d83398548966ad33b0aba"
+    }
+  ],
+  "imports_moved": [
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "ChallengeDeps",
+      "import_line_sha256": "f29b0e129fe9f263703bc48e6f4048780883812eb2ea68543bb864f46e62dc75",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "ChallengeDeps.CandidateSpec",
+      "import_line_sha256": "06fd787000e8928d2f8d4c79bb9dc6897f9a4990ffb22f56558a49d7023d89d6",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib",
+      "import_line_sha256": "1015f8f4676a27ea63780b30cc916712232857097b2bdf635dc61cb949c107fb",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Algebra.BigOperators.Fin",
+      "import_line_sha256": "53384bbf6dbfb2d9fb4c79e329fe129d25d375943c3839d3c4042d8ee2fe1430",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Algebra.BigOperators.Intervals",
+      "import_line_sha256": "b000e589d48896ca81e5160bfc595b3e747cdda7d51afec6d8658f224abac5b4",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "import_line_sha256": "0c738cca7a7d7a3865081649e387889fe41a95526742def393ff58ed569f6bf6",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Analysis.Real.Pi.Bounds",
+      "import_line_sha256": "1451d0426fd8e603f6917132e988af16b8929796b5605397ea4572d0af40fcaa",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+      "import_line_sha256": "eb37b64f0137b336d9d4e36030391bb6e8f96e443a489a8e4e121bb2ffe7621c",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+      "import_line_sha256": "7b91a7b14607104682cfd272749b3665b2c58be84461237763f3a63cc19e013f",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+      "import_line_sha256": "1d902683c7d59e07b4cfd98682d98a7f9738364a7c3872728ad3b2bce40aebe3",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+      "import_line_sha256": "4eae2d64fb86656e603772693fedae9982c24b2f17e4ac87a4de3f0586e26ad8",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Data.Real.Basic",
+      "import_line_sha256": "b38b8ebbc4944f81503119f318a4bc9717b1ac15eb44fc7d77a2b5ef60571792",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Tactic.Linarith",
+      "import_line_sha256": "e62a9bd02f75536786ad770e9ebb770533b1b7762b76653441c5b5b6a13815d1",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Tactic.NormNum",
+      "import_line_sha256": "1cd924f16ec6ee38ef60f768d241ac4cf7f1d9ae6b9a70013e0d2bc53dac93e3",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Mathlib.Tactic.Ring",
+      "import_line_sha256": "045fcfc852f1eff4fbefc0688d68fe250525d1c3a5d00440e2b27ba7a1c1632e",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Zeta23.PrimeSideA.EndsE1",
+      "import_line_sha256": "02cec881de02bca98dad1499ca1f5a6e561af3e7beae2287522e1cef5cccf87b",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Zeta23.Taper.Norms",
+      "import_line_sha256": "d9cbfcb6cd19395d0369d8a1742640cdc5fcd7b9cdd91a2c9a38e2ed5734bac0",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Zeta23.ThmD.Concrete",
+      "import_line_sha256": "0cc6d89aae7fd8595c625dd87f8f76511dae1d46d3d3429b7023f16e45b7f570",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Zeta23.ThmD.Limit",
+      "import_line_sha256": "f07f4d49a7eeddefdc59c83e3d0a2ea043bf80870a53550474f674446013cb46",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Zeta23.ThmD.Mult",
+      "import_line_sha256": "3e21908976b419fc220ad15cbbb820f4b2c16710650c0086289b95c16697776f",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Zeta23.ThmD.Window",
+      "import_line_sha256": "7981e92b081b9855be11a7f2e3a319b7e60bc1ae0c13ec69da6336ad8469c9dd",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Zeta23.ThmD.WindowCore",
+      "import_line_sha256": "4ce8769bc3b92a09a3e9bbc49d77eae88aa443e8f6897d1e96cb2408b5db91f1",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Zeta23.ThmD.ZeroSideD",
+      "import_line_sha256": "0ba7ae2ce5a13156f2298e306d4d8d8e84b37045f0defabe6b9ec91a8ba1c882",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "module": "Zeta23.ZeroSide.RankTraceMult",
+      "import_line_sha256": "90c8defc93e9982e0bb0c1ffb57e9b239055a1db0122726d60bbcad34f467f26",
+      "internal": false
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Dev/Core.lean",
+      "module": "StructuralS1RM20261018.CurrentPrefix",
+      "import_line_sha256": "fe4d9d1c69ac2344304e77537fb8c9252d9facaa9c40dd37f059c127b0000278",
+      "internal": true
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Phase1/Localization.lean",
+      "module": "StructuralS1RTiny20261018.Dev.Core",
+      "import_line_sha256": "82c5159e1cdd27c3cc65950f513c065da884fdad2e7fbdab877a90b9574f3a1a",
+      "internal": true
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Phase2/Counting.lean",
+      "module": "StructuralS1RTiny20261018.Dev.Core",
+      "import_line_sha256": "82c5159e1cdd27c3cc65950f513c065da884fdad2e7fbdab877a90b9574f3a1a",
+      "internal": true
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Phase4/Final.lean",
+      "module": "StructuralS1RTiny20261018.Phase1.Localization",
+      "import_line_sha256": "fef3d73e49b7e1e24f11579ad25733b445b9c6cb672e95f623ad590d11c561b9",
+      "internal": true
+    },
+    {
+      "source": "StructuralS1RTiny20261018/Phase4/Final.lean",
+      "module": "StructuralS1RTiny20261018.Phase2.Counting",
+      "import_line_sha256": "3a26ae84326424f35d07a49d1825ecd6156590a584d7ede787a172cd42fc0c0d",
+      "internal": true
+    }
+  ],
+  "all_non_import_bytes_preserved": true,
+  "compiler_inputs_modified": false,
+  "production_runs": 0,
+  "Lean_runs": 0,
+  "Comparator_runs": 0,
+  "Nano_runs": 0
+}
