@@ -29,6 +29,7 @@ def main():
       'gates/stageD-affine-point-20261018.json',
       'gates/stageE-margin-dbm-20261018.json',
       'gates/stageF-exact-lp-20261018.json',
+      'gates/stageG-complete-classification-20261018.json',
       'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
       'window_interval_kernel.py','window_interval_kernel.json','window_jet_crosscheck.py','window_jet_crosscheck.json',
       'window_global_cover.py','window_lower_global_cover.py','window_make_lower_variant.py','window_make_lower_variant.json',
@@ -296,7 +297,11 @@ def main():
       ('research-goal-20261018-stageF-independent/audit-files.json','6c0dab6de2295e46b5570c1166e8e7d8a205139c5ae86358e541d007271b636b'),
       ('research-goal-20261018-record-recheck/files.json','6e17996df45fa99f0370d29f5405931160c5f30358767e5cf1b3b277c53b8327'),
       ('research-goal-20261018-joint-size-opportunity/files.json','d6d1ec081a26a27faef2cee07b7ce4efa7c96ff3d731f68b151c18f9019f9916'),
-      ('research-goal-20261018-global-delivery-static/contract-files.json','de2abe74665dfbf842f2c69f41ae87e8e0b268c7fd43a49d2b6843e9c940e021')]:
+      ('research-goal-20261018-global-delivery-static/contract-files.json','de2abe74665dfbf842f2c69f41ae87e8e0b268c7fd43a49d2b6843e9c940e021'),
+      ('research-goal-20261018-stageG-complete-classification/files.json','93d7b1af5248aac7867e81bed3f1866b5d9c844c622f0a0ca01f28db2656972b'),
+      ('research-goal-20261018-stageG-independent/audit-files.json','af09979447c2054f1daaa5a19e6abc59d04decee7752dfc53fe66c0643e30dc6'),
+      ('research-goal-20261018-ordered-transport-static/files.json','0bfa1f2db8858f7520360212266cef2bff8e63899017782f1c977ce352f9a7fa'),
+      ('research-goal-20261018-ordered-ray-fan-static/files.json','84a0089fa3c4b1e079ff17af22ae3ea43e0716872540689488030ff4f018f00b')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -305,6 +310,10 @@ def main():
             raw=Path(runtime['path']).read_bytes()
             assert len(raw)==runtime['bytes']
             assert hashlib.sha256(raw).hexdigest()==runtime['sha256_start']==runtime['sha256_end']
+        if 'external_read_only_runtime' in pinned:
+            runtime=pinned['external_read_only_runtime']
+            raw=Path(runtime['path']).read_bytes()
+            assert len(raw)==runtime['bytes'] and hashlib.sha256(raw).hexdigest()==runtime['sha256']
         for runtime in (pinned.get('runtime_dependency_files',[])
                         +pinned.get('runtime_dependency_not_staged_wholesale',[])):
             # Bind the measured local runtime without publishing its
@@ -353,7 +362,10 @@ def main():
                     'research-goal-20261018-fixed-joint-affine/files.json',
                     'research-goal-20261018-stageE-floor-dbm/files.json',
                     'research-goal-20261018-stageF-exact-lp/files.json',
-                    'research-goal-20261018-joint-size-opportunity/files.json']:
+                    'research-goal-20261018-joint-size-opportunity/files.json',
+                    'research-goal-20261018-stageG-complete-classification/files.json',
+                    'research-goal-20261018-ordered-transport-static/files.json',
+                    'research-goal-20261018-ordered-ray-fan-static/files.json']:
             rows+=pinned['read_only_dependencies']
         if name=='research-goal-20261018-stageE-independent/plan-files.json':
             rows+=pinned['dependency_manifests']

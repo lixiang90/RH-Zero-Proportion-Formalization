@@ -1,0 +1,99 @@
+{
+  "complete_classification_passes_authorized": 1,
+  "stageB_producer_manifest_sha256": "3f9408f2cf1ceae12339456da034d9e8f175f828cf2d53a652339ee79eec89ad",
+  "contract_manifest_sha256": "de2abe74665dfbf842f2c69f41ae87e8e0b268c7fd43a49d2b6843e9c940e021",
+  "stageB_independent_manifest_path": "research-goal-20261018-stageB-independent/audit-files.json",
+  "stageB_independent_manifest_sha256": "e6458883bc7588a2302afe435c3b79a08c9236bb895ec3010655024c767d7288",
+  "exception_count": 1187,
+  "chart_order": [
+    "id/id",
+    "id/rev",
+    "rev/id",
+    "rev/rev"
+  ],
+  "index_formula": "((i*1187+j)*4+chart)",
+  "total_cases": 5635876,
+  "c9_numerator": "893616123055294719",
+  "tau_numerator": "893916123055294719",
+  "c_numerator": "893766123055294719",
+  "denominator": "100000000000000000000",
+  "separation": "17/20",
+  "resource_limits": {
+    "elapsed_seconds": 300,
+    "closed_output_bytes": 20000000
+  },
+  "work_limits": {
+    "elapsed_seconds": 270,
+    "closed_output_bytes": 19000000
+  },
+  "commit_cases": 8192,
+  "known_F_index": 4768,
+  "schema": "root-one-complete-fixed-geometry-classification-v1",
+  "goal_status": "active",
+  "main_rounds_since_review": 3,
+  "macro_review": "research-goal-20261016/macro-reviews/003-20261018.zh.md",
+  "prepared_manifest_path": "research-goal-20261018-stageG-complete-classification/prepared-files.json",
+  "prepared_manifest_sha256": "8f7f6fb67182855977240e1b34de12935e8ebaf371b7352d763e3c94817b5043",
+  "prepared_source_files": [
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/classify_once.py",
+      "bytes": 19773,
+      "sha256": "d08e0c0e5e59f86407c6160f3752fe749021214ed695698d6aea8d44b2cbee98"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/run_once.py",
+      "bytes": 3394,
+      "sha256": "675f40b119cabddd0637c58fe2feed7440c432bebbe93371e0ee470139a8215d"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/replay_complete.py",
+      "bytes": 11006,
+      "sha256": "dbb755508e052099475ff6cd6969f45db51cc20722d7c5f24393080c759a92e7"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/SPEC.zh.md",
+      "bytes": 5407,
+      "sha256": "8d7e6c5f41f39570730a9a38b22a2febc3f657aeaa93433d8ff81456d44796a0"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/required-gate-fields.json",
+      "bytes": 1011,
+      "sha256": "b188f9b6cef726674bbfd53d17d1f63897549bdf425e5c29bdf3f9f9d5f4a7ca"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/preparation.json",
+      "bytes": 3015,
+      "sha256": "082eab32788f00148f5f097150881547d65ca1146ec1ea56e5b4ea9be95940c0"
+    }
+  ],
+  "stageB_producer_manifest_path": "research-goal-20261018-stageB-classification/files.json",
+  "contract_manifest_path": "research-goal-20261018-global-delivery-static/contract-files.json",
+  "source_sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+  "kappa": "335544320000000000",
+  "payment_threshold": "100663296000000000000000000000000",
+  "maximum_child_launches": 1,
+  "stop_at_first_unresolved": false,
+  "known_F_counted_as_G_closure": false,
+  "geometry_search": "Original153edge DBM only; exact scalarpayment, strict sharedspan disjointness, or source-indexed strict negativecycle; all other cases conservative unresolved.",
+  "classification_codes": {
+    "0": "paid",
+    "1": "strict_projection",
+    "2": "other_strict_cycle",
+    "3": "unresolved"
+  },
+  "status_format": "One byte per original i,j with chart0 at low2bits, chart1 bits2..3, chart2 bits4..5, chart3 bits6..7.",
+  "projection_format": "One byte 2*lexicographicSharedSpanId+direction; 0:P.lower>S.upper,1:S.lower>P.upper; strict only.",
+  "cycle_format": "One length byte1..10 then source153edge uint8 IDs; closed directed cycle and strict negative sum.",
+  "unresolved_semantics": "No exclusion certificate supplied; not a nonempty region claim, actual low energy point, or zero-proportion counterexample.",
+  "prefix_semantics": "Only fsynced committed frames published in atomic prefix count. Unprocessed suffix has no status. Complete requires all5635876cases, counts, hashchain and exact EOF.",
+  "timeout_policy": "Inconclusive published prefix only; no automatic retry or restart.",
+  "LP_calls_authorized": 0,
+  "new_FS_or_kernel_queries_authorized": false,
+  "new_transport_flow_search_authorized": false,
+  "Lean_runs_authorized": false,
+  "independent_every_claimed_closure_audit_required": true,
+  "whole_source_and_policy_runtime_budget": "unknown; research artifact is not submission source",
+  "new_global_joint_floor_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false
+}

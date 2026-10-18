@@ -434,3 +434,37 @@ Empty可用<=10行的positive circuit、primitive整数权1..4。
 这是减少单证书payload的结构，不能自动解决数百万case的源码/时间。
 下一关以该合同的完整paid/projection/cycle/unresolved分类为准，
 须另写固定输入、时间/输出gate，不再首个unresolved即停；现在未执行。
+
+宏观003后第3实际主轮已2→3，上一轮为实质进展。root在
+07:10:22Z重新读freshAPI(Age0/MISS)，精确R仍同；全部G准备
+代码和依赖pins核对、两个静态review后，书面决策
+gates/stageG-complete-classification-20261018.json，SHA1ff39dce…，
+只授权一次完整5635876case cheap分类，i→j→chart新顺序，
+不沿用E的orientation-major index。四类paid/strictprojection/
+153edge strictcycle/unresolved互斥；F4768仅注记。soft270s/19MB，
+hard300s/20MB，8192case durableprefix，未处理suffix不算通过。
+cover真实启动session61986/child15652/parent58832，只有owner
+轮询同一handle到terminal；G不求实际FS、核、LP或新transport。
+
+并行新纸面数学结构：Ordered-empty先可归约13比例、最多3x3
+transport(13合同SHA0bfa1f2d…)；再利用供需{x,y,x+y}的subset-sum
+fan，证明同向5ray、异向3ray即足够（新合同SHA84a0089f…）。
+保留最优primal/dual可行treebasis到cone边界；图须无负cycle且
+强连通、原两Order rhs0。只处理几何Empty，不推一般affine Lower。
+目前未枚举flow/plan、未执行H或Lean。先等G全域规模及独审再决策。
+
+同一第3主轮：G唯一child30.819s真实exit0，完整5,635,876case
+和688frames，paid2,108,692/projection3,507,051/othercycle295/
+unresolved19,838，生产包SHA93d7b1af…；内置replay在进入case循环
+之前因ROOT[path]拼写TypeError退出，原源/失败均保留，无修复重跑。
+外部独立实现唯一5.2077s exit0，逐全部claimedclosure、四流、
+EOF、bitmap/padding和哈希链重建均同，receiptSHA291f15a5…，
+不import生产模块、不BF或LP。Gscope现完整，仍有19,838保守未解，
+不是全域jointfloor。已知F Lower的index4768没有算入G几何closure。
+
+H只准备、不执行：对G未解全部index，同向5ray/异向3ray的整数
+供需总量分别2/4/2/4/2和2/4/2，故最多4单位、4!=24匹配。
+原153graph最短路上的负cost匹配加同chart两Order权，可直接给
+155row非负Farkas Empty；仅无负witness仍保守未解。无需一般LP
+或新FS/kernel；它不推一般affine Lower。H须独审G冻结并另root
+固定输入/资源gate后才能执行；目前没有H、Lean或全新核查询授权。

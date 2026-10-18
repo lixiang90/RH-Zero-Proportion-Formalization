@@ -37,8 +37,9 @@ now closes that fixed pair. Its sole exact solver call returned an infeasible
 primal, which the production guard rejected. Independent reconstruction of
 all 155 source rows and 68 original terms nevertheless verifies the unchanged
 raw dual as a valid nine-row lower certificate. No optimum is asserted and
-the original failure packet remains intact. All other pairs, actual global
-floor, new Lean bridge, final source size and complete kernel runtime remain open.
+the original failure packet remains intact. This pilot closes only its fixed
+pair; the actual global floor, new Lean bridge, final source size and complete
+kernel runtime remain open.
 The [complete margin-count audit](../research-goal-20261018-joint-size-opportunity/NOTE.zh.md)
 finds 2,108,692 scalar-paid cases and 3,527,184 underpaid cases across the four
 charts; it evaluates no geometry or new energy. The [fresh record recheck](../research-goal-20261018-record-recheck/NOTE.zh.md)
@@ -48,6 +49,21 @@ derives a bound of four for the original geometric matrix's square minors.
 This permits compact basis IDs for Lower certificates and small integer
 weights for Empty certificates, subject to exact checks. It does not close
 the remaining cases or establish a complete source or runtime budget.
+
+The [complete fixed geometry classification](../research-goal-20261018-stageG-independent/NOTE.zh.md)
+now passes an independent audit of all 5,635,876 cases: 2,108,692 scalar-paid,
+3,507,051 strict shared-span exclusions, 295 other negative cycles and 19,838
+conservative unresolved cases. Every claimed closure, frame, hashchain,
+bitmap and EOF was checked. The producer's built-in replay failed before
+reading cases due to a path typo; that history is preserved alongside the
+separate successful independent implementation. Sample 2417 satisfies both
+ordering conditions, so geometry alone cannot close the whole family.
+New [transport](../research-goal-20261018-ordered-transport-static/NOTE.zh.md)
+and [ray-fan](../research-goal-20261018-ordered-ray-fan-static/NOTE.zh.md)
+arguments reduce Ordered-empty detection to five same-orientation or three
+opposite-orientation rays, with at most four integer units per transport.
+These are paper derivations; the remaining energy bound and full formal
+verification are still open.
 
 The current [global rounding comparison](../research-goal-20261017-common-rounding/NOTE.zh.md)
 uses one common shift to produce at most ten feasible integer configurations.

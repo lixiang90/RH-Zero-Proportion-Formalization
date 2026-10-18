@@ -1,0 +1,24 @@
+{
+  "schema": "G-unchanged-failed-independent-replay-attempt-v1",
+  "command": {
+    "argv": [
+      "C:/Python314/python.exe",
+      "research-goal-20261018-stageG-complete-classification/replay_complete.py",
+      "--write-receipt"
+    ],
+    "cwd": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization"
+  },
+  "command_sha256": "e975ce4165542ddf0c85451fa240cf176b40c6e8b5ef4c868f0d965d2fb4c74f",
+  "tool_chunk": "59d4f2",
+  "exit_code": 1,
+  "wall_seconds": 1.8446292,
+  "replay_calls": 1,
+  "source_sha256": "dbb755508e052099475ff6cd6969f45db51cc20722d7c5f24393080c759a92e7",
+  "trace_sha256": "63fcce68c94b6bbabf1b128d792798d8c11c3dfe6e7733dc32bb1006b1ed6f6e",
+  "failed_stage": "Open committed proof stream handles; before frame/case verification",
+  "error": "TypeError: 'WindowsPath' object is not subscriptable at ROOT[s['path']]",
+  "certificate_receipt_written": false,
+  "source_repaired": false,
+  "automatic_retry": false,
+  "independent_complete_certificate_replay_passed": false
+}

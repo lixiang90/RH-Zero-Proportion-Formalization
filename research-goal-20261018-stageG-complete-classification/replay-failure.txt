@@ -1,0 +1,17 @@
+Command:
+C:/Python314/python.exe research-goal-20261018-stageG-complete-classification/replay_complete.py --write-receipt
+
+One authorized replay call, tool chunk 59d4f2, exit 1, wall 1.8446292 seconds.
+Traceback (most recent call last):
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageG-complete-classification\replay_complete.py", line 175, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageG-complete-classification\replay_complete.py", line 93, in main
+    handles={k:(ROOT[s['path']]).open('rb') for k,s in prefix['streams'].items()}
+                ~~~~^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not subscriptable
+
+No independent-complete-replay.json was written. This failed before the frame /
+case certificate loop. The failed replay source remains unchanged at its prepared
+hash dbb755508e052099475ff6cd6969f45db51cc20722d7c5f24393080c759a92e7.
+No repair, rerun, new scan, solver, kernel query, or Lean run was attempted.

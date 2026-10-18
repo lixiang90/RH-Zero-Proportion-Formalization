@@ -1,0 +1,84 @@
+{
+  "schema": "G-preparation-AST-only-v1",
+  "passed": true,
+  "scripts": [
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/classify_once.py",
+      "bytes": 19773,
+      "sha256": "d08e0c0e5e59f86407c6160f3752fe749021214ed695698d6aea8d44b2cbee98",
+      "AST_parse_passed": true,
+      "top_level_nodes": 53
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/run_once.py",
+      "bytes": 3394,
+      "sha256": "675f40b119cabddd0637c58fe2feed7440c432bebbe93371e0ee470139a8215d",
+      "AST_parse_passed": true,
+      "top_level_nodes": 15
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/replay_complete.py",
+      "bytes": 11006,
+      "sha256": "dbb755508e052099475ff6cd6969f45db51cc20722d7c5f24393080c759a92e7",
+      "AST_parse_passed": true,
+      "top_level_nodes": 30
+    }
+  ],
+  "read_only_dependencies": [
+    {
+      "path": "research-goal-20261018-stageB-classification/files.json",
+      "bytes": 15059,
+      "sha256": "3f9408f2cf1ceae12339456da034d9e8f175f828cf2d53a652339ee79eec89ad"
+    },
+    {
+      "path": "research-goal-20261018-stageB-independent/audit-files.json",
+      "bytes": 16841,
+      "sha256": "e6458883bc7588a2302afe435c3b79a08c9236bb895ec3010655024c767d7288"
+    },
+    {
+      "path": "research-goal-20261018-global-delivery-static/contract-files.json",
+      "bytes": 2406,
+      "sha256": "de2abe74665dfbf842f2c69f41ae87e8e0b268c7fd43a49d2b6843e9c940e021"
+    },
+    {
+      "path": "research-goal-20261018-stageC-dbm/scan_once.py",
+      "bytes": 17744,
+      "sha256": "323ca76957f6cd9055d09037f69af8abef5d1f9af0dfa1c2153254a3124a1522"
+    },
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    }
+  ],
+  "runtime": {
+    "path": "C:\\Python314\\python.exe",
+    "bytes": 106208,
+    "sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd",
+    "version": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "read_only_external_identity": true,
+    "copied": false
+  },
+  "command_template": {
+    "argv": [
+      "C:/Python314/python.exe",
+      "research-goal-20261018-stageG-complete-classification/run_once.py",
+      "--launch-authorized-complete-G",
+      "--gate",
+      "<ROOT_IMMUTABLE_GATE_RELATIVE_PATH>",
+      "--gate-sha256",
+      "<ROOT_GATE_SHA256>"
+    ],
+    "cwd": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization"
+  },
+  "command_template_sha256": "e5d6f5e55888980b97b05487af8c4abe48e29db32a6f2f8a3666a61608ef1c46",
+  "classification_runs": 0,
+  "inputs_calls": 0,
+  "producer_imports": 0,
+  "BF_calls": 0,
+  "LP_calls": 0,
+  "kernel_queries": 0,
+  "Lean_runs": 0,
+  "new_immutable_root_gate_required": true,
+  "scope": "AST parsing and read-only file identities only. No classification, proof replay, or mathematical computation executed."
+}
