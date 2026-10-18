@@ -335,7 +335,8 @@ def main():
       ('research-goal-20261018-stageM-actual-bridge-static/files.json','57ae12cffbdbf9ebba6a013698ac26ef5ae4e06e3006453cb63ea1af7a579597'),
       ('research-goal-20261018-component-flow-normalization-static/delivery-files.json','db80eb2822f2ed4aeb37e0b23c013f8e68d1a26802fc82018278d10395cbe7c4'),
       ('research-goal-20261018-component-flow-normalization-independent/audit-files.json','bcf78974d087ff0ba1d1d570261be9fa1fe41faed7a8fe7b414d480f3f208cbb'),
-      ('research-goal-20261018-round2-delivery/files.json','50150cc8d2210011d9ea69ea1651371c3bcc81039e2da2e0ced1b2e33aa8bd6f')]:
+      ('research-goal-20261018-round2-delivery/files.json','50150cc8d2210011d9ea69ea1651371c3bcc81039e2da2e0ced1b2e33aa8bd6f'),
+      ('research-goal-20261018-macro006-delivery/files.json','f40ccb7b98644bcbdeab167c3b78aed23ac507e8de77cdb14baa58a063bb4f7c')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())

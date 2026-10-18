@@ -1,0 +1,129 @@
+{
+  "schema": "O-current-s1R-actual-thin-bridges-prepared-v1",
+  "files": [
+    {
+      "path": "StructuralS1RO20261018/CellAQuantitative.lean",
+      "bytes": 2756,
+      "sha256": "5906e6a5bf00f06064e15abd7e5607dc0e1040fff7e23b15d09b4bbd5ed87fae"
+    },
+    {
+      "path": "StructuralS1RO20261018/StrongQuantized.lean",
+      "bytes": 5974,
+      "sha256": "8df384c850d119b5a9328d730506f3117df950d8bb17deea2d40d28a39812ab9"
+    },
+    {
+      "path": "research-goal-20261018-stageO-actual-bridges-preparation/INTERFACE.zh.md",
+      "bytes": 4889,
+      "sha256": "7739ff29781127421eb2eed9582c96bc8001f84e95636728c22ad005fdc097ca"
+    },
+    {
+      "path": "research-goal-20261018-stageO-actual-bridges-preparation/compile_bridges.py",
+      "bytes": 5622,
+      "sha256": "5803adecbd382a4f4ca03fa5f19d4c9604b8574c55ed497b1ad9795583c3894a"
+    },
+    {
+      "path": "research-goal-20261018-stageO-actual-bridges-preparation/prepare.py",
+      "bytes": 3806,
+      "sha256": "0fb4d5d9628d2691c7c7c1291abd702a08b71fdadb517a960416d464b760005c"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "bytes": 935224,
+      "sha256": "ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21"
+    },
+    {
+      "path": "StructuralS1RM20261018/PhaseA1/QuantizedComponent.lean",
+      "bytes": 3170,
+      "sha256": "638357979ca3943b98ab21de45e3c8d47a29ac3bd886ff1195a34bb6cb8dcfb3"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA-v0-execution-files.json",
+      "bytes": 6516,
+      "sha256": "3e7d2c66480827dbd740b5814d80828eaaca84343b3345042dbca6c68af39b9d"
+    },
+    {
+      "path": "research-goal-20261018-stageM-lean-implementation/phaseA1b-execution-files.json",
+      "bytes": 6327,
+      "sha256": "c0375e735813ba73a722ec2b5d726a5b95252d9d4f7d8d3eec73a3351f9b9c68"
+    },
+    {
+      "path": "research-goal-20261018-stageN2-curvature-interface-static/files.json",
+      "bytes": 1494,
+      "sha256": "849fba32fc08736e880d28888f0edc7579766afd419520294ab98767ffd67fba"
+    },
+    {
+      "path": "research-goal-20261018-stageO-fixed-curvature-preparation/files.json",
+      "bytes": 77725,
+      "sha256": "9eeb39270ad6853ee7ad3472c0446237ad21b64be0db442815e2566bfe97191b"
+    },
+    {
+      "path": "tmp/setup-20261015/runtime.json",
+      "bytes": 8589,
+      "sha256": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1b/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+      "bytes": 45890464,
+      "sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1b/lib/StructuralS1RM20261018/PhaseA1/QuantizedComponent.olean",
+      "bytes": 505168,
+      "sha256": "b3b098e0b4219ce2b2e400d9117bc6431121a3ff14ae7a8e400713288abf36b9"
+    }
+  ],
+  "reused_oleans": [
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1b/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+      "bytes": 45890464,
+      "sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692",
+      "relative_module_path": "StructuralS1RM20261018/CurrentPrefix.olean"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1b/lib/StructuralS1RM20261018/PhaseA1/QuantizedComponent.olean",
+      "bytes": 505168,
+      "sha256": "b3b098e0b4219ce2b2e400d9117bc6431121a3ff14ae7a8e400713288abf36b9",
+      "relative_module_path": "StructuralS1RM20261018/PhaseA1/QuantizedComponent.olean"
+    }
+  ],
+  "Python_executable": {
+    "path": "C:\\Python314\\python.exe",
+    "sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd"
+  },
+  "external_Linux_pins": {
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/lib/ChallengeDeps.olean": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/lib/ChallengeDeps/CandidateSpec.olean": "670b554a94297575edfeb26036162247539f2168c5f5c1ee657c65d305f3866b"
+  },
+  "Lean_runs": 0,
+  "Python_AST_only": true,
+  "actual_finite_data_generated": false,
+  "new_source_bytes": 8730,
+  "command_template": [
+    "C:\\Python314\\python.exe",
+    "research-goal-20261018-stageO-actual-bridges-preparation/compile_bridges.py",
+    "--gate",
+    "ROOT_GATE_PATH",
+    "--gate-sha256",
+    "ROOT_GATE_SHA"
+  ],
+  "target_order": [
+    "StructuralS1RO20261018/CellAQuantitative",
+    "StructuralS1RO20261018/StrongQuantized"
+  ],
+  "compile_flags": [
+    "-j1",
+    "-M13500",
+    "--tstack=262144",
+    "-DrelaxedAutoImplicit=false",
+    "-DElab.async=false"
+  ],
+  "new_isolated_lib": "tmp/current-s1r-O-20261018/lib",
+  "prefix_recompile": false,
+  "automatic_repairs_or_retries": 0,
+  "immutable_future_gate_required": true,
+  "fixed_pair_actual_floor_proved": false,
+  "global_floor_or_new_kappa_proved": false
+}

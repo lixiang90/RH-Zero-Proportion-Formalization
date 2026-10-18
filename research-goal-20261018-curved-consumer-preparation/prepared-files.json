@@ -1,0 +1,118 @@
+{
+  "schema": "generic-curved-finite-consumer-static-source-prepared-v1",
+  "files": [
+    {
+      "path": "StructuralS1RCurvedConsumer20261018/SparseDual.lean",
+      "bytes": 6739,
+      "sha256": "15ca82ba21fbe7454af73c6529ae564dfa760511512bfe79afd86fae0496492c"
+    },
+    {
+      "path": "StructuralS1RCurvedConsumer20261018/QuadraticNetwork.lean",
+      "bytes": 5459,
+      "sha256": "b65cdbdf0573ca7a4de37985a6d5983a39b473321d051506b7eee2f1eb07d6da"
+    },
+    {
+      "path": "research-goal-20261018-curved-consumer-preparation/NOTE.zh.md",
+      "bytes": 3891,
+      "sha256": "6d69090e586d2cd336fb8d435b60dcc95fbb081c451858638dd5a061a30bf4cf"
+    },
+    {
+      "path": "research-goal-20261018-curved-consumer-preparation/prepare_static.py",
+      "bytes": 2945,
+      "sha256": "f81f94e7b9d56d1189f021d828f1a4875162717d81955ce68fe6957541e93749"
+    }
+  ],
+  "read_only_dependencies": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1993,
+      "sha256": "28799a143fbc27684673e1976e0518ffe1898a5fc1e5577cbf1ef49661a69655"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 29,
+      "sha256": "0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 558,
+      "sha256": "c8b573df9958d67399c82ddc682197a9f1748913ad263d3a3ac5e6b9b32b2c37"
+    },
+    {
+      "path": "StructuralS1RM20261018/Sparse78.lean",
+      "bytes": 3772,
+      "sha256": "f75f35e3901c41198081362f54c08910ed49cab996d36eb56261991468b60b22"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1b/Sparse78.lean",
+      "bytes": 3772,
+      "sha256": "f75f35e3901c41198081362f54c08910ed49cab996d36eb56261991468b60b22"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1b/Sparse78.log",
+      "bytes": 2744,
+      "sha256": "ddd48b85bff5edc4b300ab1ce2792a5d7eba8393de0396e4596bcde3e317a04c"
+    },
+    {
+      "path": "tmp/setup-20261015/packages/mathlib/Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "bytes": 51600,
+      "sha256": "1305c143ee5528281992dc083faa3c881c2e7c0f3d09b127de4f58987182d1f2"
+    },
+    {
+      "path": "tmp/setup-20261015/packages/mathlib/Mathlib/Algebra/BigOperators/Ring/Finset.lean",
+      "bytes": 16305,
+      "sha256": "472cd5000412d8ec35c8b9ee919b2aeedbf0a830033a55009aad436595923809"
+    },
+    {
+      "path": "tmp/setup-20261015/packages/mathlib/Mathlib/Data/Int/Cast/Basic.lean",
+      "bytes": 4073,
+      "sha256": "f844c670a3e5f09565d6d3648e740f64aba02d5cf308aa0d81770ffd7499a9a2"
+    },
+    {
+      "path": "research-goal-20261018-stageO-independent/audit-files.json",
+      "bytes": 88529,
+      "sha256": "1720e8263e960db1fcd3b0089f5a858cb60e1b14cd2198707f25cc00fd1ed645"
+    },
+    {
+      "path": "research-goal-20261018-stageO-independent/independent-review.json",
+      "bytes": 116818,
+      "sha256": "97aa2c964580433ad73054cadc901f84982e12404d5d235cc8cf6e7f46969b56"
+    },
+    {
+      "path": "research-goal-20261018-stageO-fixed-curvature-preparation/files.json",
+      "bytes": 77725,
+      "sha256": "9eeb39270ad6853ee7ad3472c0446237ad21b64be0db442815e2566bfe97191b"
+    },
+    {
+      "path": "research-goal-20261018-stageO-fixed-curvature-preparation/curvature-packet.json",
+      "bytes": 164136,
+      "sha256": "a952a8bd239bddaa0c8d1f24b45a5096cb3a3b6ff19f067baaba46686eb11cbf"
+    },
+    {
+      "path": "research-goal-20261018-stageN2-curvature-interface-static/files.json",
+      "bytes": 1494,
+      "sha256": "849fba32fc08736e880d28888f0edc7579766afd419520294ab98767ffd67fba"
+    },
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    }
+  ],
+  "fully_qualified_axiom_print_roots": [
+    "StructuralS1RCurvedConsumer20261018.SparseDual.eval_eq_dot",
+    "StructuralS1RCurvedConsumer20261018.SparseDual.remainder_sound",
+    "StructuralS1RCurvedConsumer20261018.SparseDual.remainder_sound_of_check",
+    "StructuralS1RCurvedConsumer20261018.QuadraticNetwork.square_completion",
+    "StructuralS1RCurvedConsumer20261018.QuadraticNetwork.lower_of_stationary",
+    "StructuralS1RCurvedConsumer20261018.QuadraticNetwork.graph_lower_of_stationary"
+  ],
+  "compile_runs": 0,
+  "Lean_execution_runs": 0,
+  "new_case_data_generated": false,
+  "new_FS_curvature_matrix_LP_evaluations": 0,
+  "old_failure_sources_unchanged": true,
+  "proof_or_axioms_success_claimed": false,
+  "static_only": true,
+  "website_source_runtime_budget": "unknown"
+}

@@ -1,0 +1,46 @@
+{
+  "independent_fixed_O_audits_authorized": 1,
+  "scope": "fixed_O_1322606_23_original_CellA_49_anchor_rows_42_spans_saved_stationarity",
+  "fixed_G_index": 1322606,
+  "fixed_pair": [
+    278,
+    665
+  ],
+  "fixed_chart": "rev/id",
+  "maximum_original_CellA_evaluations": 23,
+  "positive_anchor_rows": 49,
+  "physical_spans": 42,
+  "new_linear_solve_LP_RREF_FS_anchor_kernel_Lean_authorized": 0,
+  "other_case_mathematical_replay_authorized": false,
+  "automatic_retry_allowed": false,
+  "prepared_manifest_sha256": "1a3778c64343e2930e94d7a4cd250b689b7b7285ed957c9c43b0d513e6cbc00c",
+  "producer_manifest": {
+    "path": "research-goal-20261018-stageO-fixed-curvature-preparation/files.json",
+    "sha256": "9eeb39270ad6853ee7ad3472c0446237ad21b64be0db442815e2566bfe97191b"
+  },
+  "producer_packet": {
+    "path": "research-goal-20261018-stageO-fixed-curvature-preparation/curvature-packet.json",
+    "sha256": "a952a8bd239bddaa0c8d1f24b45a5096cb3a3b6ff19f067baaba46686eb11cbf"
+  },
+  "producer_endpoints": [
+    {
+      "path": "research-goal-20261018-stageO-fixed-curvature-preparation/result.json",
+      "bytes": 104092,
+      "sha256": "13f8d0bac6674b367e0e3801562943edc1cc975b9a1aafbb542ccbf830bd0cec"
+    },
+    {
+      "path": "research-goal-20261018-stageO-fixed-curvature-preparation/terminal.json",
+      "bytes": 53515,
+      "sha256": "658741b19d10573f42f4316df5dde8d77b716a383d9dd0ec351812ea2954593b"
+    }
+  ],
+  "resource_limits": {
+    "elapsed_seconds": 300,
+    "closed_output_bytes": 20000000
+  },
+  "execution_authorized_by_this_template": true,
+  "owner": "/root/joint_gluing_review",
+  "one_child_no_retries": true,
+  "main_rounds_since_review": 1,
+  "decision": "One independent exact fixedO replay, sourceSZ-pair operations/23 cells/49 anchors/42 spans/305 rows/full52 and saved full10stationarity. No new linear solve or optimizer; producer remains immutable. No other cases or Lean."
+}

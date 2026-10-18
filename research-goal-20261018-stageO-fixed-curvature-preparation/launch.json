@@ -1,0 +1,37 @@
+{
+  "schema": "O-single-child-launch-v1",
+  "parent_pid": 25112,
+  "command": {
+    "argv": [
+      "C:\\Python314\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-stageO-fixed-curvature-preparation\\audit_once.py",
+      "--execute-authorized-fixed-curvature-O",
+      "--gate",
+      "research-goal-20261016/gates/stageO-fixed-original-curvature-20261018.json",
+      "--gate-sha256",
+      "f17cd64c0889038d7dad678a93960a276f585dda294d9cdd28d0edd03b69fa10"
+    ],
+    "cwd": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization",
+    "thread_env_override": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1"
+    }
+  },
+  "command_sha256": "f209b69a29a7b35771453006519dd88cba7cad49bc55782d66b46da84aeabbee",
+  "discover_source_sha256": "a60f06dd2bb81b4c9905b64e3f042a0435ff9d0728d4cc7cb5c4b0c107878756",
+  "launcher_sha256": "d7285c16f3dd6d7ca8553d2c5bb605688a69bc51f030611168f3b214d51918c5",
+  "gate_path": "research-goal-20261016/gates/stageO-fixed-original-curvature-20261018.json",
+  "gate_sha256": "f17cd64c0889038d7dad678a93960a276f585dda294d9cdd28d0edd03b69fa10",
+  "maximum_child_launches": 1,
+  "hard_limits": {
+    "elapsed_seconds": 300,
+    "closed_output_bytes": 20000000
+  }
+}

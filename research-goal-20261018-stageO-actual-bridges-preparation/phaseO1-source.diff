@@ -1,0 +1,45 @@
+--- StructuralS1RO20261018/StrongQuantized.lean
++++ StructuralS1RO20261018/PhaseO1/StrongQuantized.lean
+@@ -55,13 +55,20 @@
+     change HasDerivAt (fun y : ℝ => wfun y-(m/2)*(y-q)^2)
+       (w1 x-m*(x-q)) x
+     have hw := hasDerivAt_wfun x (kD_neg x).ne
+-    have hquad := (((hasDerivAt_id x).sub_const q).pow 2).const_mul (m/2)
+-    convert hw.sub hquad using 1 <;> ring
++    have hpow := ((hasDerivAt_id x).sub_const q).pow 2
++    have hquad := HasDerivAt.const_mul (m/2) hpow
++    change HasDerivAt (fun y : ℝ => (m/2)*(y-q)^2)
++      ((m/2)*((2 : ℝ)*(x-q)^(2-1)*1)) x at hquad
++    have hcoef : (m/2)*((2 : ℝ)*(x-q)^(2-1)*1) = m*(x-q) := by ring
++    rw [hcoef] at hquad
++    exact hw.sub hquad
+   have hd1 (x : ℝ) : HasDerivAt H1 (w2 x-m) x := by
+     change HasDerivAt (fun y : ℝ => w1 y-m*(y-q)) (w2 x-m) x
+     have hw := hasDerivAt_w1 x (kD_neg x).ne
+-    have hlin := ((hasDerivAt_id x).sub_const q).const_mul m
+-    convert hw.sub hlin using 1 <;> ring
++    have hlin := HasDerivAt.const_mul m ((hasDerivAt_id x).sub_const q)
++    change HasDerivAt (fun y : ℝ => m*(y-q)) (m*1) x at hlin
++    rw [mul_one] at hlin
++    exact hw.sub hlin
+   have hc : ConvexOn ℝ (uIcc q s) H :=
+     convexOn_of_hasDerivWithinAt2_nonneg (convex_uIcc q s)
+       (fun x _ => (hd x).continuousAt.continuousWithinAt)
+@@ -107,13 +114,14 @@
+     (hsecond : ∀ y ∈ Icc (min ((p : ℝ)/SC) a) (max ((p : ℝ)/SC) b), m ≤ w2 y)
+     (s : ℝ) (hs : s ∈ Icc a b)
+     (hs1 : (L : ℝ)/SC ≤ s) (hs2 : s ≤ (U : ℝ)/SC) :
+-    (slope f p : ℝ)*(20*32768*s) + (intercept f L0 p : ℝ) +
++    (StructuralS1RM20261018.QuantizedComponent.slope f p : ℝ)*(20*32768*s) + (StructuralS1RM20261018.QuantizedComponent.intercept f L0 p : ℝ) +
+       ((kappa : ℝ)*m/2)*(s-(p : ℝ)/SC)^2 ≤ (kappa : ℝ)*wfun s := by
+   have h := mul_le_mul_of_nonneg_left (ell_strong_hull ht hL0 hm hsecond s hs hs1 hs2)
+     (show (0 : ℝ) ≤ kappa by norm_num [kappa])
+-  have he : (slope f p : ℝ)*(20*32768*s)+(intercept f L0 p : ℝ) =
++  have he : (StructuralS1RM20261018.QuantizedComponent.slope f p : ℝ)*(20*32768*s)+(StructuralS1RM20261018.QuantizedComponent.intercept f L0 p : ℝ) =
+       (kappa : ℝ)*ell f L0 p s := by
+-    unfold slope intercept dLo dHi ell kappa
++    unfold StructuralS1RM20261018.QuantizedComponent.slope
++      StructuralS1RM20261018.QuantizedComponent.intercept dLo dHi ell kappa
+     push_cast
+     ring
+   calc

@@ -1,0 +1,167 @@
+{
+  "schema": "O-fixed-pair-two-explicit-source-format-byte-inventory-v1",
+  "fixed_G_index": 1322606,
+  "source_and_data_input_sha256": {
+    "research-goal-20261018-stageO-fixed-curvature-preparation/curvature-packet.json": "a952a8bd239bddaa0c8d1f24b45a5096cb3a3b6ff19f067baaba46686eb11cbf",
+    "research-goal-20261018-stageO-fixed-curvature-preparation/files.json": "9eeb39270ad6853ee7ad3472c0446237ad21b64be0db442815e2566bfe97191b",
+    "research-goal-20261018-stageN2-pooled-component-resumption/first-Below-readout.json": "3ade873c5f40f065876c8c1917aec528593171514d5dfd54a35ef16b24316324",
+    "research-goal-20261018-record-source-audit/snapshot/Solution.lean": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+  },
+  "original_record_member": {
+    "bytes": 3822,
+    "compressed_member_sha256": "0803e359cf093da298667858678264b49d55132882b77db2ef9ece5b26c137f8",
+    "decoded_sha256": "af622201091471f64581919851aaf6ae0abb3a9b563afa49ef74620633ab61e0",
+    "offset": 5653752,
+    "path": "research-goal-20261018-stageN2-pooled-component-resumption/case-records.jsonl.gz"
+  },
+  "literal_format": {
+    "source": {
+      "path": "research-goal-20261018-stageO-delivery-byte-inventory/LiteralOnePair.lean",
+      "bytes": 15950,
+      "sha256": "37193d7af0287cfc700c09aac663e9497fe1defab80e8f2ec6c6caa7d2827c70"
+    },
+    "section_bytes": [
+      {
+        "section": "header",
+        "utf8_bytes": 393
+      },
+      {
+        "section": "raw_dual_305",
+        "utf8_bytes": 4213
+      },
+      {
+        "section": "original_CellA_23_m",
+        "utf8_bytes": 2100
+      },
+      {
+        "section": "anchor_row_49_mapping",
+        "utf8_bytes": 1514
+      },
+      {
+        "section": "p_star_9_rationals",
+        "utf8_bytes": 7705
+      },
+      {
+        "section": "footer",
+        "utf8_bytes": 20
+      },
+      {
+        "section": "join_newlines",
+        "utf8_bytes": 5
+      }
+    ],
+    "raw_dual_rationals": 305,
+    "original_CellA_m_rationals": 23,
+    "anchor_mappings": 49,
+    "p_star_rationals": 9,
+    "integer_statistics_by_field": {
+      "raw_dual": {
+        "integer_numerator_or_denominator": {
+          "maximum_decimal_digits": 29,
+          "maximum_bit_length": 96
+        },
+        "denominator_only": {
+          "maximum_decimal_digits": 7,
+          "maximum_bit_length": 23
+        },
+        "rational_literal_count": 305,
+        "measurement_only_no_rational_reduction_or_evaluation": true
+      },
+      "cell_m": {
+        "integer_numerator_or_denominator": {
+          "maximum_decimal_digits": 30,
+          "maximum_bit_length": 99
+        },
+        "denominator_only": {
+          "maximum_decimal_digits": 30,
+          "maximum_bit_length": 99
+        },
+        "rational_literal_count": 23,
+        "measurement_only_no_rational_reduction_or_evaluation": true
+      },
+      "p_star": {
+        "integer_numerator_or_denominator": {
+          "maximum_decimal_digits": 424,
+          "maximum_bit_length": 1406
+        },
+        "denominator_only": {
+          "maximum_decimal_digits": 423,
+          "maximum_bit_length": 1403
+        },
+        "rational_literal_count": 9,
+        "measurement_only_no_rational_reduction_or_evaluation": true
+      }
+    },
+    "combined_integer_statistics": {
+      "integer_numerator_or_denominator": {
+        "maximum_decimal_digits": 424,
+        "maximum_bit_length": 1406
+      },
+      "denominator_only": {
+        "maximum_decimal_digits": 423,
+        "maximum_bit_length": 1403
+      },
+      "rational_literal_count": 337,
+      "measurement_only_no_rational_reduction_or_evaluation": true
+    }
+  },
+  "selector_format": {
+    "source": {
+      "path": "research-goal-20261018-stageO-delivery-byte-inventory/SelectorOnePair.lean",
+      "bytes": 1465,
+      "sha256": "0bf7115f1d41b227ba02efcbb0ffecdcdedfea386ba25a12c08244bf8abecba7"
+    },
+    "section_bytes": [
+      {
+        "section": "header",
+        "utf8_bytes": 337
+      },
+      {
+        "section": "group_base_row_42",
+        "utf8_bytes": 329
+      },
+      {
+        "section": "normalized_unknown_row_IDs",
+        "utf8_bytes": 104
+      },
+      {
+        "section": "positive_anchor_row_49_IDs",
+        "utf8_bytes": 383
+      },
+      {
+        "section": "original_REG_23_selectors",
+        "utf8_bytes": 285
+      },
+      {
+        "section": "footer",
+        "utf8_bytes": 22
+      },
+      {
+        "section": "join_newlines",
+        "utf8_bytes": 5
+      }
+    ],
+    "group_base_rows": 42,
+    "normalized_unknown_rows": 9,
+    "saved_normalized_rank_metadata": 9,
+    "positive_anchor_row_ids": 49,
+    "original_REG_cell_selectors": 23,
+    "reconstruction_contract_only_not_implemented_in_Lean": true,
+    "deterministic_required_steps": [
+      "decode_same_original_source_cells_FS_and_pooled_groups",
+      "normalize_selected_raw_columns_by_abs_delta_S_and_solve_fixed_support_with_free_unknowns0",
+      "restore_raw_mu_and_verify_all52_nonnegative_balance_cost",
+      "evaluate_original_REG_CellA_cells_and_verify_guards_quantitative_m",
+      "reconstruct_fixed_hulls_and_m_min_and_original_anchor_rows",
+      "form_same_nonnegative_c_and_exact_component_gauge_Laplace_solution",
+      "verify_full10_stationarity_and_uniform_payment_against_target"
+    ]
+  },
+  "proof_consumer_source_and_runtime_bytes_not_counted": true,
+  "Lean_parser_or_kernel_runs": 0,
+  "curvature_FS_matrix_solver_new_point_evaluations": 0,
+  "no_rounding_compression_parameter_search_or_alternate_format_trials": true,
+  "JSON_or_gzip_bytes_are_not_submission_source_bytes": true,
+  "one_pair_only_no_extrapolation_to_remaining_pairs": true,
+  "uploaded_merged_Lean_source_size_or_acceptance_proven": false
+}

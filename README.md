@@ -2,36 +2,35 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
-The website currently records **67.3587173310297…%** in the
-[s1R submission](https://www.riemannzeta.fun/submissions/critical-strip-exclusion-attempt-1).
-The requested gain is greater than 1/1,000,000 in absolute proportion,
-so the strict target is **67.3588173310297…%**. The current record and exact
-source were checked again on October 18. No new unconditional record or
-submission-ready proof is asserted.
+The latest fresh site and public-repository check still gives **67.3587173310297…%**.
+The user now requests any strict, nontrivial mathematical improvement; there is
+no minimum gain. No new unconditional record or submission-ready proof is asserted.
 
-[Macro review005](research-goal-20261016/macro-reviews/005-20261018.zh.md)
-was triggered early by an independently verified exact low point in the
-shared-span component envelope. The model was stopped after 2,375 of
-15,378 residual cases. The point in cell278/665, rev/id satisfies all305
-original rows but lies below the target. It refutes this fixed lower-bound
-model as a uniform certificate; it is not a counterexample for actual energy.
-See the [independent audit](research-goal-20261018-stageN2-independent-below/independent-review.json).
+[Macro review006](research-goal-20261016/macro-reviews/006-20261018.zh.md)
+selects a smaller complete-delivery route. Replaying all13,046 audited leaf
+margins at a fixed lower threshold leaves only one exceptional cell. In all
+four orientations, adjacent windows would force the same gap to be both
+at most34980/32768 and at least64168/32768, a strict contradiction.
+The [independent replay](research-goal-20261018-tiny-overlap-independent/independent-review.json)
+confirms the integer classification and exact conditional score
+**67.35871733129443…%**, strictly above the fresh record.
 
-The original interrupted run has a complete independent audit of all675
-published records, plus its separately retained676th record. The resumed
-run used no repeated old LP calls. Its new Lower candidates have not all
-received independent mathematical replay. The current route adds guarded
-quantitative curvature to existing raw dual certificates, retaining shared
-span and cycle constraints. Only fixed-case preparation is authorized; no
-new curvature values or uniform payment are claimed.
+Complete Lean sublevel coverage, all70 cuts, reflection and root exterior
+proofs remain to be established. The planned counting bridge preserves the
+current W9 and pays a constant boundary charge; it does not require a new
+W10 ledger. The prepared source is not yet a verified global proof.
+Full Comparator, ordinary Lean, nanoda, a single file no larger than2MB,
+and the complete3,200-second verification workflow remain required.
 
-The current analytic prefix and three actual-function quantized support
-lemmas have passed ordinary Lean; the three lemmas use only propext,
-Classical.choice and Quot.sound. The sparse dual consumer still has proof
-script errors, and no new global theorem, Comparator or nanoda result exists.
-[Execution evidence](research-goal-20261018-stageM-lean-implementation/phaseA1b-execution-files.json)
-retains every failed version. Full upload source size and the complete
-3,200-second verification workflow remain unverified.
+The earlier fixed curvature network has a successful independent exact
+replay, and quantitative CellA/strong-tangent analytic lemmas have passed
+ordinary Lean with only propext, Classical.choice and Quot.sound. This
+fixed-pair work is retained as a backup. The high-threshold P batch remains
+prepared and unexecuted; it is not required merely to satisfy the former
+minimum-gain constraint. [O1 execution evidence](research-goal-20261018-stageO-actual-bridges-preparation/phaseO1-execution-files.json)
+preserves the failed earlier version and the successful repair.
+
+The following paragraphs retain historical routes and their original scope.
 
 A [common-shift integer rounding comparison](research-goal-20261017-common-rounding/NOTE.zh.md)
 now gives a new whole-domain necessary condition for actual24-mode global

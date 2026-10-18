@@ -2,9 +2,9 @@
 
 ## 不变的目标
 
-优先消除 67.3628951339% 条件候选的前提；必要时降低比例或改变数学
-路线，最终得到高于网站当前纪录至少百万分之一的**无条件**改进。
-以本次核验的网站有理纪录 R 为准，验收目标为 κ>R+1/1000000。
+优先消除条件候选的前提；必要时降低比例或改变数学路线，最终得到
+严格高于网站当前纪录的非平凡**无条件**改进。用户于 2026-10-18
+取消百万分之一最低幅度：以新鲜核验的有理纪录 R 为准，目标为 κ>R。
 不得把模型加强、条件定理、局部排除或源码数量当作目标完成。
 
 完成还须有完整的实际函数到零点计数证明、规定公理范围内的 Lean
@@ -543,3 +543,21 @@ N独审新v1清单6b39aebb…root全部283项核0diff且逆文本比较仅3处�
 同一actualround2重要结果：N独审v1已真实32.146s PASS，audit-files4cd8af33…全部published675数学核完，674Lower+Mdeduction，另retained676/index436241也有效Lower（旧history不改）。N2唯一202.67s terminal0，按首exactBelow合同停在1322606（cell278/665 rev/id）；combined2375=2373Lower+1Mdeduction+1Below，新1699+旧675=2374次LP、重复0，剩13003未访问。包327db7c2…冻结，Below仍待ownA独审，不能算actualF反例。重大countermodel触发提前宏观005，先独审；固定原pooledcomponents全域路线已无法仅靠更好dual关闭。备选为原guarded曲率加既存rawdual，shared-span weightedvariance/整个span-incidence二次网络不兼容付款，当前只纸面，无新核/anchors/矩阵/求解授权。M v0prefix1248.099s PASS、quantized原证明失败；A1新恒等式尚未检查因isolatedlib namespace import先失败，原证据保留，仅准备新的runtime修复copy已PASS prefixolean，不重编prefix、不自动B2。
 
 重大独审Below触发提前书面macro005（research-goal-20261016/macro-reviews/005-20261018.zh.md，SHA 7395cd60d584f39daa5cfe13a7bd8db261058ff5b81f0b13a5a6ceef1eaed0c4），本actualround2至此2→0，review_number5；下一实际轮0→1，后续工具/压缩不增计。固定原component pooled模型因1322606有效低点停止；不是actualF反例。主线改为既有rawdual的guarded量化曲率支付及span-incidence二次cycle不兼容。下一只准备固定Below曲率机会审计，绑定原锚/hull/同核CellA与全部原guards，数学执行须另gate。没有新LP/核/锚/参数扫描/全剩余批次/额外Lean授权；当前A1b泛用薄桥编译可完成，B2不编。无条件新纪录及完整网站交付仍未完成。
+
+宏观005后本实际轮已0→1，上一轮独审Below/三个actual量化Lean引理/宏观005与sync38均为实质进展。11:19:57Z freshAPI HTTP200 Age0 MISS仍同R。O准备e6cfb733…全部370文件/runtime pins root核0diff；joint逐sourceCellA符号舍入/near-far/K0-2静审未见差异，leanowner确认raw系数/物理单位/hull/variance/Laplace十坐标驻点。新gate research-goal-20261016/gates/stageO-fixed-original-curvature-20261018.json SHA f17cd64c0889038d7dad678a93960a276f585dda294d9cdd28d0edd03b69fa10 只授权一次固定1322606原dual/原锚/原REG266单元上限曲率整数评价，两种预声明付款与一次exactLaplace，hard300s20MB/soft270s18MB，一child/no retry，不新细分/核锚/FS/LP/全域/Lean。无论结果如何仍需独立数值及actual薄桥，不把固定pair当全域。
+
+同一macro005+round1：O唯一session38623/parent25112/child47068真实terminal0，wrapper14.37s；包9eeb3927…冻结且root全部pins再核不变。49正μanchor全部由23原REGcell覆盖，物理pair能量缺口约1.165909710974e-6；逐span方差/clamp仅7.874693975256e-7不足，但共享incidence二次网络全10驻点残差0、9维，统一付款1.428722021287e-6，正余量2.628123103134e-7。只闭合固定1322606的conditionalactualpair数学接口，独立23CellA/49row重放与actual量化w2/strongTaylor Lean桥仍待完成；未新LP/anchors/细分/FS/Lean或扩全域。joint仅准备独审、leanowner仅准备两actual薄桥。counter1保持，不因这一局部正证书重置。
+
+同一round1：O独立SZ(p,n)实现7.1939s wrapper/6.6071s核验PASS，23CellA所有中间值/49原锚/42span/305raw行/full52/保存p*full10stationarity与最终严格付款一致；独审1720e826…、receipt97aa2c96…冻结，零新求解。固定literal数据实际15950B，selector1465B但重建器缺失，库存24aa8d6b…，不外推全域大小。actual两薄桥prepared ba1295be…共8730B，root核pins和数学后gate e8255788…唯一session63417编译；CellAQuantitative105.902s普通PASS/三根标准三axioms，StrongQuantized原handle在跑。为保全主目标，明确只授权P同源全剩余合同/代码准备：恢复2375既存项、旧2374次LP零重复，剩13003含Jdeduction，最多新13002LP/累计15376，原pooledBelow只加同O固定曲率规则，首不足/未解停止；现在无P数学执行。joint并行只准备通用SparseDual+QuadraticNetwork finite consumer，无编译或数据计算。
+
+2026-10-18 同一 actual round1 用户放宽目标，不再要求绝对比例增加
+1/1000000；所有数学非平凡、无条件、实际函数/全域/计数/双内核/
+单文件体积与生产3200s/同步/材料验收仍保留。旧幅度目标作为历史
+证据，不得继续支配选路。P高门槛全剩余准备5d5b1de6…冻结未执行。
+已审StageB的13046条余量中仅root11 pos27229最紧；其余次小余量
+允许更低tau只保留exception462。该cell两朝向的第二gap至多34980/Q，
+两朝向的第一gap至少64168/Q，因此相邻两窗不能同落此cell。
+目前是root元数据推导，待独立精确复核和原walk完整形式化；未成新纪录。
+StrongO1四根普通Lean已PASS，21d502b5…，64.847s，仅标准三公理；
+曲率固定pair成果保留备选，不因其通过自动编译通用消费者。
+本重大目标调整触发宏观006准备；书面完成前counter仍1，不重复增轮。

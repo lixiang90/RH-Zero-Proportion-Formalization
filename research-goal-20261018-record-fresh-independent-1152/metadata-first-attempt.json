@@ -1,0 +1,8 @@
+{
+  "stage": "public_HTTP_metadata_comparison",
+  "first_analysis_exit_code": 1,
+  "reason": "GitHub git/trees/main response sha is the resolved commitish identity 0c038980, not commit.commit.tree.sha 2a84b302; initial metadata assertion assumed the latter.",
+  "fix": "Require the observed response sha to equal the independently fetched main commit sha; raw HTTP evidence is unchanged.",
+  "proof_or_mathematical_experiment_repeated": false,
+  "network_requests_repeated": false
+}

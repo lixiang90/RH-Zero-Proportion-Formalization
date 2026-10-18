@@ -2,21 +2,20 @@
 
 No new unconditional zero proportion or submission-ready result is asserted.
 
-The [fifth macro review](macro-reviews/005-20261018.zh.md) was triggered early
-by the independently verified component-model Below1322606 (cell278/665,
-rev/id). All305 source rows pass at the exact low point. The fixed original
-component envelope is stopped; the actual energy floor remains open.
-The next route is guarded quantitative curvature with the existing raw dual,
-shared-span variance and exact quadratic cycle incompatibility. No curvature
-values or uniform payment have been computed.
+The [sixth macro review](macro-reviews/006-20261018.zh.md) incorporates the
+human update: any strict nontrivial unconditional improvement over the latest
+record is now sufficient. The fresh11:54UTC record remains67.3587173310297…%.
 
-The fresh October18 10:47UTC API record is67.3587173310297…%; the strict
-human target is67.3588173310297…%. The conditional joint-window candidate
-67.35881928029369…% still passes the magnitude comparison, while its global
-premise is unproved. Original source is1,818,411B and full2MB/3200s delivery
-remains unverified. Ordinary Lean has now checked the current analytic
-prefix and three quantized actual-function support lemmas; Sparse78 failed
-and all local-pair/global proofs, Comparator and nanoda remain open.
+The new route uses a unique exceptional leaf at a fixed smaller threshold.
+All13,046 saved margins and four orientation conflicts have independent exact
+replay. The conditional candidate is67.35871733129443…%, strictly above R.
+Complete actual Lean coverage, all cuts/root exterior/reflection and the
+current-W9 summed counting instantiation are still required. Source-size,
+Comparator, both kernels and the full3,200-second contract remain open.
+
+The fixed curvature network is independently verified and its quantitative
+CellA/strong-tangent analytic lemmas have passed ordinary Lean. The larger
+P batch remains prepared and unexecuted as a backup.
 
 Frozen historical packets below retain their own original scope.
 

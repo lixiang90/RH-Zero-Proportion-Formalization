@@ -1,0 +1,39 @@
+{
+  "schema": "single-exception-static-review-files-v1",
+  "files": [
+    {
+      "path": "research-goal-20261018-single-exception-static-review/NOTE.zh.md",
+      "bytes": 7674,
+      "sha256": "08e431f96bbc30ef1e2ee338af3fd13ff365202c6673214d32d896c80cfca934"
+    },
+    {
+      "path": "research-goal-20261018-single-exception-static-review/freeze_static.py",
+      "bytes": 3395,
+      "sha256": "8b9843ebfda809b6ea18df8420cb21eb64be82eb6a40bc40504f54357b6e6ac9"
+    },
+    {
+      "path": "research-goal-20261018-single-exception-static-review/static-review.json",
+      "bytes": 3356,
+      "sha256": "d883be196f0eaf273ccf90ca7181ebc91b4775f0741e1b1f0bcae96bcc06ea07"
+    }
+  ],
+  "read_only_dependencies": [
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/files.json",
+      "bytes": 15059,
+      "sha256": "3f9408f2cf1ceae12339456da034d9e8f175f828cf2d53a652339ee79eec89ad"
+    },
+    {
+      "path": "research-goal-20261018-stageB-independent/audit-files.json",
+      "bytes": 16841,
+      "sha256": "e6458883bc7588a2302afe435c3b79a08c9236bb895ec3010655024c767d7288"
+    }
+  ],
+  "mathematical_executions": 0,
+  "scope": "Static conditional proof-path review only; no new threshold classification or Lean run."
+}

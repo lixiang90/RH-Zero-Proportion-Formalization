@@ -1,0 +1,71 @@
+{
+  "schema": "fresh-independent-public-record-comparison-v1",
+  "passed": true,
+  "HTTP_receipts_UTC": {
+    "api": "2026-10-18T11:54:03.764713+00:00",
+    "homepage": "2026-10-18T11:54:02.482832+00:00",
+    "accepted-detail": "2026-10-18T11:54:02.275607+00:00",
+    "main-commit": "2026-10-18T11:54:00.864161+00:00",
+    "main-tree": "2026-10-18T11:54:01.219076+00:00",
+    "main-records": "2026-10-18T11:55:06.775523+00:00",
+    "main-contract": "2026-10-18T11:55:05.307577+00:00",
+    "evidence-contract": "2026-10-18T11:55:03.787725+00:00",
+    "main-submission": "2026-10-18T11:55:04.034769+00:00"
+  },
+  "website_api_HTTP": 200,
+  "website_api_Age": "0",
+  "website_api_cache": "MISS",
+  "highest_current_exact_rational": "3337839448633819172184136761695440236797/4955319193847235264050000000000000000000",
+  "highest_current_percent_display": "67.3587173310%",
+  "current_record_changed_vs_previous_R": false,
+  "current_record": {
+    "id": "critical-strip-exclusion-attempt-1",
+    "track": "critical-line",
+    "date": "2026-10-18",
+    "author": "\u304b\u3075\u3047- zkvoxels",
+    "github": "cafeai",
+    "title": "Certified critical-line bound 0.673587173310297059918152909095",
+    "method": "Exact s1R refinement with bounded nested kernel checks, omitted unused executable code, and ordinary numeral source packing.",
+    "model": "Codex GPT-6.1-Sol",
+    "harness": "Cafe Code",
+    "scoreDecimal": "0.673587173310297059918152909095",
+    "scorePercent": "67.3587173310297059918152909095",
+    "exactRational": {
+      "numerator": "3337839448633819172184136761695440236797",
+      "denominator": "4955319193847235264050000000000000000000"
+    },
+    "exactExpression": "(3337839448633819172184136761695440236797 : \u211d) / 4955319193847235264050000000000000000000",
+    "status": "kernel-verified",
+    "formalVerification": true,
+    "independentReview": null,
+    "sourceUrl": "https://github.com/josusanmartin/riemann/blob/cfc7ce6113199b7d5f262812d81089778e84335c/submissions/critical-strip-exclusion-attempt-1/submission.json",
+    "proofUrl": "https://github.com/josusanmartin/riemann/blob/cfc7ce6113199b7d5f262812d81089778e84335c/submissions/critical-strip-exclusion-attempt-1/proof/Solution.lean",
+    "pullRequestUrl": null,
+    "summary": "Refines the attributed s1R nine-point Gram certificate against all 13,046 ordinary leaves and the original global guards. Preserves the unconditional dyadic and cumulative counting bounds. Finite walk proofs use literal internal states and strictly earlier proved cuts to bound per-command kernel memory. Transparent source packing expands to ordinary Nat numerals."
+  },
+  "public_main_commit": "0c038980cbfaa3ee9fc539d751c32c454d85a319",
+  "public_main_commit_UTC": "2026-10-18T03:40:45Z",
+  "public_main_parent": "cfc7ce6113199b7d5f262812d81089778e84335c",
+  "main_commit_changed_files": [
+    "data/records.json"
+  ],
+  "main_exact_records_checked": 34,
+  "main_highest_id": "critical-strip-exclusion-attempt-1",
+  "source_proof_path": "submissions/critical-strip-exclusion-attempt-1/proof/Solution.lean",
+  "source_proof_git_blob": "7735df37ffb167a1dcd76c53d00ffd55e7d33fbe",
+  "source_snapshot": {
+    "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+    "bytes": 1818411,
+    "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+  },
+  "main_proof_blob_matches_frozen_source": true,
+  "main_vs_frozen_evidence_contract_identical": true,
+  "contract_sha256": "39e1b5a99889cf2c50865883d2007df949bcfced107c92917fe9cd3ab6441020",
+  "source_or_verification_protocol_changed_vs_frozen_evidence_commit": false,
+  "frozen_conditional_candidate_rational": "3337839448633819172184136761695440236797/4955311693847235264050000000000000000000",
+  "candidate_minus_current_exact": "10013518345901457516552410285086320710391/9822060459206743890128041216379949288961000000",
+  "candidate_strictly_exceeds_current": true,
+  "candidate_unconditional_Lean_or_global_proof_claimed": false,
+  "user_acceptance_now_strict_current_improvement_only": true,
+  "new_optimization_kernel_Lean_P_mathematics_executed": false
+}

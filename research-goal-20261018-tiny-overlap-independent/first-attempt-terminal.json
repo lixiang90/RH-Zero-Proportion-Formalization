@@ -1,0 +1,14 @@
+{
+  "exec_chunk": "67b4ce",
+  "exit_code": 1,
+  "elapsed_tool_seconds": 1.4797672,
+  "source": "audit_once.py",
+  "failure_line": 100,
+  "failure": "assert str(current)==fresh['highest_current_exact_rational'] and H/(1-c9)==current",
+  "reason": "The score uses (H-B9)/(1-c9); the first audit source omitted the existing pressure subtraction B9 in its final ratio identity.",
+  "previous_assertions_completed": "All 13046 original numeric margins, minimum and second minimum, unique e462, fixed debit, and all four chart shared-gap contradictions; no final review receipt was produced.",
+  "new_kernel_FS_LP_Lean_executions": 0,
+  "automatic_retry": false,
+  "mathematical_archive_replay_restarted": false,
+  "parent_notified_before_any_replay": true
+}

@@ -1,0 +1,32 @@
+--- compile_bridges.py
++++ compile_phaseO1.py
+@@ -35,8 +35,8 @@
+     ns=ap.parse_args();gatepath=ROOT/ns.gate
+     assert sha(gatepath)==ns.gate_sha256
+     gate=json.loads(gatepath.read_text(encoding='utf-8'))
+-    prepared=HERE/'prepared-files.json'
+-    assert gate['authorized'] is True and gate['task']=='stageO-current-s1R-thin-bridges'
++    prepared=HERE/'phaseO1-prepared.json'
++    assert gate['authorized'] is True and gate['task']=='stageO-current-s1R-strong-bridge-v1'
+     assert gate['prepared_manifest_sha256']==sha(prepared)
+     assert gate['fixed_case_data_or_Sparse_or_B2_authorized'] is False
+     assert gate['automatic_repairs_or_retries']==0
+@@ -51,15 +51,15 @@
+     h=subprocess.run(wsl('/usr/bin/sha256sum',*external),capture_output=True,check=True)
+     assert dict((x.split(maxsplit=1)[1].strip(),x.split()[0]) for x in h.stdout.decode().splitlines())==external
+     runtime=json.loads((ROOT/'tmp/setup-20261015/runtime.json').read_text(encoding='utf-8'))
+-    job=ROOT/'tmp/current-s1r-O-20261018/v0';job.mkdir(parents=True,exist_ok=False)
+-    lib=ROOT/'tmp/current-s1r-O-20261018/lib';lib.mkdir(parents=True,exist_ok=False)
++    job=ROOT/'tmp/current-s1r-O-20261018/phaseO1';job.mkdir(parents=True,exist_ok=False)
++    lib=job/'lib';lib.mkdir(parents=True,exist_ok=False)
+     for row in prep['reused_oleans']:
+         src=ROOT/row['path'];dst=lib/row['relative_module_path']
+         assert sha(src)==row['sha256'];dst.parent.mkdir(parents=True,exist_ok=True)
+         assert not dst.exists();shutil.copy2(src,dst);assert sha(dst)==row['sha256']
+     liblinux=LINUX+'/'+lib.relative_to(ROOT).as_posix()
+     path=':'.join([liblinux,'/var/tmp/rh-zero-20261015/record-verification/modular/lib',runtime['lean_path']])
+-    targets=['StructuralS1RO20261018/CellAQuantitative','StructuralS1RO20261018/StrongQuantized']
++    targets=['StructuralS1RO20261018/PhaseO1/StrongQuantized']
+     starts={name:sha(ROOT/(name+'.lean')) for name in targets}
+     for name in targets:(job/(name.split('/')[-1]+'.lean')).write_bytes((ROOT/(name+'.lean')).read_bytes())
+     write(job/'started.json',{'gate_sha256':ns.gate_sha256,'pid':os.getpid(),'source_sha256':starts,

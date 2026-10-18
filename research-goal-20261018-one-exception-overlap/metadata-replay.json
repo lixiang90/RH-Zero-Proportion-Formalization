@@ -1,0 +1,276 @@
+{
+  "schema": "single-exception-overlap-metadata-v1",
+  "checked_UTC": "2026-10-18T12:01:27.951121+00:00",
+  "inputs": [
+    {
+      "path": "research-goal-20261018-stageB-classification/numeric-classification.jsonl.gz",
+      "bytes": 2421338,
+      "sha256": "cad7880991a6fb319dc129290e71cc32970d205e45e84684c541d4e13822a74b"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/exception-cells.jsonl.gz",
+      "bytes": 458348,
+      "sha256": "180c27713c0473345fd0bb3c3373168a2d79f2e4bf518d5860e1c72cfa8a1ad0"
+    },
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    },
+    {
+      "path": "research-goal-20261018-record-overlap-static/static-receipt.json",
+      "bytes": 5288,
+      "sha256": "ee702274144aaa68de2fe083f1192c61e38cece5e0094f56e4db8fca778bb894"
+    }
+  ],
+  "rows": 13046,
+  "source_exception_cells": 1187,
+  "minimum": {
+    "end": 27674,
+    "kind": "exception",
+    "original_margin": "65385001396000000",
+    "path": "r000000000000000000001010000101000001001101001101001011110001011101000000011101101",
+    "position": 27229,
+    "root": 11,
+    "state_sha256": "0b6563afc076656cc2a2bee8fd7193964b2c99752d673e6fb6decfb24bea773a",
+    "tau_margin": "-100663295999999934614998604000000",
+    "witness": {
+      "WD": 11,
+      "consumed_payload_bits": 443,
+      "decoded_semantic_sha256": "f5e197e9fea10246aee293ce499047c377527a1a274e1a530a82efe7c3a673f2",
+      "original_leaf_position": 27229,
+      "original_rdw_block": 0,
+      "original_rdw_shift": 27229,
+      "packed_payload_sha256": "1efb3acbd9977bcf645ca5011a7fd601fab287280a71cc1aea44e766f52f25b8",
+      "payload_bit_position": 27231
+    }
+  },
+  "second_minimum": {
+    "end": 84642,
+    "kind": "exception",
+    "original_margin": "261389376341096919346000000",
+    "path": "r000000000000010001000101000000010",
+    "position": 84312,
+    "root": 37,
+    "state_sha256": "b0a3221c3fd71f15a1546ae5792bc7c9df7de6d48ecef17620e5e8e1c12430aa",
+    "tau_margin": "-100663034610623658903080654000000",
+    "witness": {
+      "WD": 37,
+      "consumed_payload_bits": 328,
+      "decoded_semantic_sha256": "66571d10fd5790e02792193d4b972e47a5518b083f4184f953cb36401fb3d69d",
+      "original_leaf_position": 84312,
+      "original_rdw_block": 2,
+      "original_rdw_shift": 18776,
+      "packed_payload_sha256": "15e522ab33f61b19ddbc5fc5a74067270f5bf0948d2f79d369e566a39c82c71b",
+      "payload_bit_position": 84314
+    }
+  },
+  "minimum_multiplicity": 1,
+  "delta_n": 389500523,
+  "delta": "389500523/100000000000000000000",
+  "c": "446808061722397621/50000000000000000000",
+  "tau": "178723224766859153/20000000000000000000",
+  "original_margin_debit": "261389376259358720000000000",
+  "exception_count": 1,
+  "all_other_leaf_debits_nonnegative": true,
+  "minimum_other_margin_after_debit": "81738199346000000",
+  "exception": {
+    "actual_low_energy_point_claimed": false,
+    "coordinate_scale": 32768,
+    "end": 27674,
+    "exception_id": 462,
+    "kind": "exception",
+    "nested_provenance": [
+      {
+        "end": 41627,
+        "fuel": 108,
+        "name": "ready11_0",
+        "start": 161,
+        "state": "ready11_0_state",
+        "state_sha256": "0e8450eea3c11508e8c4fd1aba96d0a8db4fcbe09e0793fb658d2ca3eca66f9a"
+      },
+      {
+        "end": 77277,
+        "fuel": 110,
+        "name": "ready11_1",
+        "start": 145,
+        "state": "ready11_1_state",
+        "state_sha256": "1d7c3262b99fe33c0b0b9b59dafb85f94e3f52f54414aa3ccdbe194979a399e8"
+      },
+      {
+        "end": 113479,
+        "fuel": 112,
+        "name": "ready11_2",
+        "start": 129,
+        "state": "ready11_2_state",
+        "state_sha256": "24875b51e1d98c35186c3c1b7c70511cd51bdcb9ef4f24dc82f5e359b3dbefdd"
+      }
+    ],
+    "omitted_orientation_condition": "h0 <= h7",
+    "original_cell_is_closed": true,
+    "original_margin": "65385001396000000",
+    "path": "r000000000000000000001010000101000001001101001101001011110001011101000000011101101",
+    "position": 27229,
+    "relaxed_orientation": true,
+    "root": 11,
+    "root_provenance": {
+      "end": 126943,
+      "fuel": 128,
+      "indices": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "start": 1
+    },
+    "separation": "17/20",
+    "state": {
+      "A": [
+        98157,
+        162444,
+        196636,
+        260667,
+        326501,
+        360965,
+        425426,
+        98276,
+        132468,
+        196499,
+        261542,
+        295317,
+        359778,
+        98479,
+        162510,
+        227553,
+        261277,
+        325738,
+        98223,
+        163266,
+        196990,
+        261451,
+        129074,
+        162798,
+        227259,
+        98767,
+        163228,
+        98185
+      ],
+      "B": [
+        100628,
+        165906,
+        200776,
+        264807,
+        331243,
+        364967,
+        429428,
+        100258,
+        135128,
+        199159,
+        265595,
+        299319,
+        363780,
+        100148,
+        164179,
+        230615,
+        264339,
+        328800,
+        99892,
+        166328,
+        200052,
+        264513,
+        131937,
+        165860,
+        230321,
+        101368,
+        166290,
+        101247
+      ],
+      "L": [
+        64168,
+        33989,
+        64287,
+        34192,
+        64031,
+        65043,
+        33724,
+        64461
+      ],
+      "M": 0,
+      "U": [
+        65648,
+        34980,
+        65278,
+        35097,
+        65033,
+        66904,
+        34464,
+        67523
+      ]
+    },
+    "state_sha256": "0b6563afc076656cc2a2bee8fd7193964b2c99752d673e6fb6decfb24bea773a",
+    "tau_margin": "-100663295999999934614998604000000",
+    "witness": {
+      "WD": 11,
+      "consumed_payload_bits": 443,
+      "decoded_semantic_sha256": "f5e197e9fea10246aee293ce499047c377527a1a274e1a530a82efe7c3a673f2",
+      "original_leaf_position": 27229,
+      "original_rdw_block": 0,
+      "original_rdw_shift": 27229,
+      "packed_payload_sha256": "1efb3acbd9977bcf645ca5011a7fd601fab287280a71cc1aea44e766f52f25b8",
+      "payload_bit_position": 27231
+    }
+  },
+  "four_orientation_conflicts": [
+    {
+      "prefix_reversed": false,
+      "suffix_reversed": false,
+      "shared_gap_upper_Q": 34980,
+      "shared_gap_lower_Q": 64168,
+      "strict_integer_difference": 29188
+    },
+    {
+      "prefix_reversed": false,
+      "suffix_reversed": true,
+      "shared_gap_upper_Q": 34980,
+      "shared_gap_lower_Q": 64461,
+      "strict_integer_difference": 29481
+    },
+    {
+      "prefix_reversed": true,
+      "suffix_reversed": false,
+      "shared_gap_upper_Q": 34464,
+      "shared_gap_lower_Q": 64168,
+      "strict_integer_difference": 29704
+    },
+    {
+      "prefix_reversed": true,
+      "suffix_reversed": true,
+      "shared_gap_upper_Q": 34464,
+      "shared_gap_lower_Q": 64461,
+      "strict_integer_difference": 29997
+    }
+  ],
+  "H": "3360645045884019172184136761695440236797/5000000000000000000000000000000000000000",
+  "B9": "114027986251/25000000000000",
+  "record_R": "3337839448633819172184136761695440236797/4955319193847235264050000000000000000000",
+  "conditional_candidate": "3337839448633819172184136761695440236797/4955319193827760237900000000000000000000",
+  "conditional_gain": "1300090210932904203053148320983900338947675344831/491103766256286172174056231801545946349900000000000000000000",
+  "strict_comparison_cross_product": "65004510546645210152657416049195016947383767241550000000000000000000",
+  "scope": "Exact reuse of audited numeric margins and cell bounds. No new actual kernel or coverage walk.",
+  "missing": [
+    "Lean raised sublevel localization including all cuts/reflections and root exterior",
+    "actual joint floor and summed counting instantiation",
+    "complete Comparator, ordinary Lean, nanoda and production size/time verification"
+  ],
+  "new_kernel_queries": 0,
+  "LP_calls": 0,
+  "Lean_runs": 0,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false,
+  "script_sha256": "06e1e2defa09ebd214dd88849df2175c05156f62fbc53ae7aa4de056546f1119"
+}
