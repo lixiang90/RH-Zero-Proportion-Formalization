@@ -27,15 +27,27 @@ supports: 1 reaches the target, 359 give weaker valid bounds, 3,141 have
 negative multipliers and 11,877 have a singular chart. Thus 15,377 remain
 unclosed by this certificate family.
 
+The [original-component maximum envelope](research-goal-20261018-stageM-local-result/NOTE.zh.md)
+now has an independently verified exact local Lower on the known nonempty
+cell0/604, id/rev overlap. Both implementations agree on all 68 original FS
+terms, 279 model rows, 77 primal variables and the full 78-coordinate dual;
+exact primal and dual objectives coincide strictly above the target.
+This certifies the fixed polyhedral model. The actual-function Lean bridge,
+complete global coverage and the final zero-proportion theorem remain open.
+One discovery call and one independent audit ran; no new kernel or Lean run.
+
 A new cumulative-window potential principle has a paper counting bridge.
 However, exact nine-edge negative cycles independently refute both the
 original scalar outer graph and its fixed-basis augmentation. These
 obstructions stop those two models; they do not refute actual energy or
 other joint certificates. The next route retains the maximum of the original
 active component support lines, recovering information lost by their
-weighted mixture. Its fixed 9-position / 68-epigraph model is currently
-preparation only; no new solver, kernel or Lean run is authorized by this
-checkpoint. Complete source and runtime budgets remain unknown.
+weighted mixture. The fixed 9-position / 68-epigraph opportunity has now passed the local
+exact audit described above. A normalized incidence/forest-flow certificate
+route now has an independently checked paper proof; an actual Lean bridge
+[plan](research-goal-20261018-stageM-actual-bridge-static/PLAN.zh.md) identifies
+the current source interfaces and outstanding finite guards. Complete source
+and runtime budgets remain unknown.
 
 A [common-shift integer rounding comparison](research-goal-20261017-common-rounding/NOTE.zh.md)
 now gives a new whole-domain necessary condition for actual24-mode global

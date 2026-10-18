@@ -1,3 +1,9 @@
+最新round1：原组件最大包络在固定非空cell0/604 id/rev交域得到
+独立精确Lower；279原约束、68原FS、77primal/full78dual以及目标相等
+均通过。仅1次LP+1次独审，无新kernel/Lean。它不是全域floor或ζ新纪录；
+actual Lean薄桥、完整覆盖、累计计数与最终源码/3200秒仍待完成。
+详见 research-goal-20261018-stageM-local-result/NOTE.zh.md。
+
 本轮最新状态：宏观回顾004已完成。I 的固定非空点原 affine 诊断和
 独审均通过，仅属必要点。J 完整 15,378 项及 1,128 个原 FS 缓存均
 独审，固定九行只关闭 1 项，余 15,377 项。两种窗口势外图均有独审

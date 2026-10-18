@@ -1,0 +1,66 @@
+{
+  "component_envelope_LP_passes_authorized": 1,
+  "primary_linprog_calls_authorized": 1,
+  "auxiliary_optimization_calls_authorized": 0,
+  "prepared_manifest_sha256": "b6cf0775e78fd7eb310a96393a43502584082b2824892244e15a9c13e2d04bbe",
+  "fixed_cells": [
+    0,
+    604
+  ],
+  "chart": "id/rev",
+  "sample_G_index": 2417,
+  "target_c_numerator": "893766123055294719",
+  "denominator": "100000000000000000000",
+  "solver_method": "highs-ds",
+  "solver_options": {
+    "presolve": true,
+    "time_limit": 180,
+    "maxiter": 100000,
+    "primal_feasibility_tolerance": 1e-7,
+    "dual_feasibility_tolerance": 1e-7,
+    "threads": 1
+  },
+  "resource_limits": {
+    "elapsed_seconds": 300,
+    "closed_output_bytes": 20000000
+  },
+  "work_limits": {
+    "elapsed_seconds": 270,
+    "closed_output_bytes": 19000000
+  },
+  "retry_or_precision_or_support_change_allowed": false,
+  "new_FS_anchors_kernel_points_or_Lean_authorized": 0,
+  "independent_checker_not_a_producer_mathematical_input": true,
+  "independent_exact_certificate_audit_requires_separate_authorization": true,
+  "schema": "root-fixed-original-component-envelope-decision-v1",
+  "goal_status": "active",
+  "main_rounds_since_review": 1,
+  "macro_review": "research-goal-20261016/macro-reviews/004-20261018.zh.md",
+  "decision_UTC": "2026-10-18T09:48:39.485Z",
+  "prepared_manifest": "research-goal-20261018-stageM-component-envelope-preparation/prepared-files.json",
+  "source_sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+  "fresh_record_receipt": "tmp/goal-20261016/round1-preM-fresh-record-raw.json",
+  "record_exact_numerator": "3337839448633819172184136761695440236797",
+  "record_exact_denominator": "4955319193847235264050000000000000000000",
+  "strict_user_increment": "1/1000000",
+  "maximum_child_launches": 1,
+  "owner": "/root/lean_cover_goal",
+  "model": "Max of original valid constant and positive-mass anchor quantized support components; unchanged original cell0/604,id/rev geometry and sample2417; 9 positions+68 epigraph variables, raw target4*kappa*cN, no objective constant",
+  "static_review": {
+    "root_and_joint_passed": true,
+    "reviewed_source_sha256": {
+      "envelope_model": "b10a53f0030bc7e17bf1cfe309fa6af3c792c78035ca943d1cda3ef6290ad0d7",
+      "discover_once": "db90f785ccc0efbcbfce29d0a7757ba93a87cef9e000717e725c43f66fb9954c"
+    },
+    "scope": "Signs/scales,68 mass elimination,all78 balance,primal scope,one-call logic; not numerical or formal proof"
+  },
+  "certificate_contract": {
+    "Lower": "Nonnegative exact raw weights, all78 balance and -sum(mu*rhs)>=4*kappa*cN. Valid dual accepted independently of primal.",
+    "Below": "Exact rational77point, all original closed rows, objective<target. Refutes component-only polyhedral model on fixed domain, not actual F.",
+    "other": "Retain all raw native/exact results, valid weaker bounds, failed reconstructions and failures. No retry, no new support or solver choice. Inconclusive is not model refutation."
+  },
+  "old_determinant_bound4_applicable": false,
+  "source_and_whole_policy_runtime_status": "181589B raw source headroom; complete new Lean consumer/source and full3200s runtime unknown",
+  "new_global_floor_or_unconditional_kappa_proven": false,
+  "website_submission_ready": false
+}

@@ -37,6 +37,8 @@ def main():
       'gates/stageJ-independent-complete-20261018.json',
       'gates/stageL-J-enhanced-fixed-cycle-20261018.json',
       'gates/stageL-independent-upgraded-cycle-20261018.json',
+      'gates/stageM-component-envelope-fixed-20261018.json',
+      'gates/stageM-independent-component-20261018.json',
       'gates/stageK-window-potential-cycle-20261018.json',
       'gates/stageK-independent-cycle-20261018.json',
       'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
@@ -324,7 +326,15 @@ def main():
       ('research-goal-20261018-stageJ-fixed-basis-preparation/files.json','90726f8987fd69820f70a63cc55c22f279a872263ced314fa41a452d4f1b09cd'),
       ('research-goal-20261018-stageJ-independent/audit-files.json','32de2e9381d1c103209c89b8f007d29815746a398c5c3d197f7762a727f55005'),
       ('research-goal-20261018-upgraded-cycle/files.json','38d82a7df7ec213cf478eb7f8e2144293767b6e236063a1a2caf5eb05d791bd5'),
-      ('research-goal-20261018-upgraded-cycle-independent/audit-files.json','ca36c252e5a72c92e2066e8c195d3ef464ac9fc57e089ce74a74d24401afd055')]:
+      ('research-goal-20261018-upgraded-cycle-independent/audit-files.json','ca36c252e5a72c92e2066e8c195d3ef464ac9fc57e089ce74a74d24401afd055'),
+      ('research-goal-20261018-stageM-component-envelope-preparation/prepared-files.json','b6cf0775e78fd7eb310a96393a43502584082b2824892244e15a9c13e2d04bbe'),
+      ('research-goal-20261018-stageM-component-envelope-preparation/files.json','129c706dcab0aff47ef54a0f249e5d0a49e8f718476faaf453681e73858526d8'),
+      ('research-goal-20261018-stageM-independent/prepared-files.json','23f0f7dd8bb9d28d3ca0352a2efd7c41a899cf3c752955c48c0b4a7b38c58a05'),
+      ('research-goal-20261018-stageM-independent/audit-files.json','2887e7527180ca2b77d7779cd5c25ada853d040e82d0380a125f7f821c907be4'),
+      ('research-goal-20261018-stageM-local-result/files.json','78355e0fdf0b12f4bc270e5a770bf0a74971a6c3931d88d4bed95fa9d165c949'),
+      ('research-goal-20261018-stageM-actual-bridge-static/files.json','57ae12cffbdbf9ebba6a013698ac26ef5ae4e06e3006453cb63ea1af7a579597'),
+      ('research-goal-20261018-component-flow-normalization-static/delivery-files.json','db80eb2822f2ed4aeb37e0b23c013f8e68d1a26802fc82018278d10395cbe7c4'),
+      ('research-goal-20261018-component-flow-normalization-independent/audit-files.json','bcf78974d087ff0ba1d1d570261be9fa1fe41faed7a8fe7b414d480f3f208cbb')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -342,6 +352,16 @@ def main():
             for extra in runtime.get('additional_files',[]):
                 raw=Path(extra['path']).read_bytes()
                 assert len(raw)==extra['bytes'] and hashlib.sha256(raw).hexdigest()==extra['sha256']
+        if 'external_runtime_identity_file' in pinned:
+            identity=pinned['external_runtime_identity_file']
+            raw=(ROOT/identity['path']).read_bytes()
+            assert len(raw)==identity['bytes'] and hashlib.sha256(raw).hexdigest()==identity['sha256']
+            for runtime in json.loads(raw)['files']:
+                external_raw=Path(runtime['path']).read_bytes()
+                assert len(external_raw)==runtime['bytes'] and hashlib.sha256(external_raw).hexdigest()==runtime['sha256']
+        for runtime in pinned.get('external_audit_runtime',[]):
+            raw=Path(runtime['path']).read_bytes()
+            assert len(raw)==runtime['bytes'] and hashlib.sha256(raw).hexdigest()==runtime['sha256']
         for runtime in (pinned.get('runtime_dependency_files',[])
                         +pinned.get('runtime_dependency_not_staged_wholesale',[])):
             # Bind the measured local runtime without publishing its
@@ -407,7 +427,15 @@ def main():
                     'research-goal-20261018-stageJ-fixed-basis-preparation/files.json',
                     'research-goal-20261018-stageJ-independent/audit-files.json',
                     'research-goal-20261018-upgraded-cycle/files.json',
-                    'research-goal-20261018-upgraded-cycle-independent/audit-files.json']:
+                    'research-goal-20261018-upgraded-cycle-independent/audit-files.json',
+                    'research-goal-20261018-stageM-component-envelope-preparation/prepared-files.json',
+                    'research-goal-20261018-stageM-component-envelope-preparation/files.json',
+                    'research-goal-20261018-stageM-independent/prepared-files.json',
+                    'research-goal-20261018-stageM-independent/audit-files.json',
+                    'research-goal-20261018-stageM-local-result/files.json',
+                    'research-goal-20261018-stageM-actual-bridge-static/files.json',
+                    'research-goal-20261018-component-flow-normalization-static/delivery-files.json',
+                    'research-goal-20261018-component-flow-normalization-independent/audit-files.json']:
             rows+=pinned['read_only_dependencies']
         if name=='research-goal-20261018-stageE-independent/plan-files.json':
             rows+=pinned['dependency_manifests']

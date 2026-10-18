@@ -1,0 +1,74 @@
+{
+  "schema": "M-independent-AST-only-preparation-v1",
+  "passed": true,
+  "script_sha256": "40f039013d14434206a101c5f0aca35d2b31174df94909c4aceda5867318f8e2",
+  "AST_parse_passed": true,
+  "mathematical_audit_calls": 0,
+  "FS_component_primal_dual_evaluations": 0,
+  "producer_modules_imported": 0,
+  "read_only_dependencies": [
+    {
+      "path": "research-goal-20261018-record-baseline-independent/replay_independent.py",
+      "bytes": 33965,
+      "sha256": "c3f46e2ce79aa38e637e19a146071243d76c6998ff4b7de9710de83614d62af9"
+    },
+    {
+      "path": "research-goal-20261018-record-baseline-independent/audit-files.json",
+      "bytes": 2971,
+      "sha256": "2d2c8003ed6be6f74d0f53e8624cd631eb1c934415b22b5377a4f2d40c64791c"
+    },
+    {
+      "path": "research-goal-20261018-record-packing-independent/decode_packing.py",
+      "bytes": 11045,
+      "sha256": "cb4ff303c97c1788086d00f33dc64ca4e93d0c3693bc479740bd302c6921f28b"
+    },
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/files.json",
+      "bytes": 15059,
+      "sha256": "3f9408f2cf1ceae12339456da034d9e8f175f828cf2d53a652339ee79eec89ad"
+    },
+    {
+      "path": "research-goal-20261018-record-baseline-replay/baseline-events.jsonl.gz",
+      "bytes": 1768841,
+      "sha256": "b924bf5ce93cde2e3044e8f9aa80cefb660a74c0c9d7161e2b09c017dc0fe5fc"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/first-unresolved-sample.json",
+      "bytes": 862,
+      "sha256": "a3349919ca3c07c71346a6a753396b8daa211c5e5492299cdaf300198fbf2689"
+    },
+    {
+      "path": "research-goal-20261018-stageM-component-envelope-preparation/prepared-files.json",
+      "bytes": 26373,
+      "sha256": "b6cf0775e78fd7eb310a96393a43502584082b2824892244e15a9c13e2d04bbe"
+    },
+    {
+      "path": "research-goal-20261018-stageM-component-envelope-preparation/files.json",
+      "bytes": 29727,
+      "sha256": "129c706dcab0aff47ef54a0f249e5d0a49e8f718476faaf453681e73858526d8"
+    }
+  ],
+  "external_audit_runtime": [
+    {
+      "path": "C:\\Python314\\python.exe",
+      "bytes": 106208,
+      "sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd",
+      "external_read_only": true,
+      "copied": false
+    },
+    {
+      "path": "C:\\Python314\\python314.dll",
+      "bytes": 6776544,
+      "sha256": "18310593c50ad109fc5c95db1fd5c92ecec9e1bfc66c976df9fc11dd62616d5a",
+      "external_read_only": true,
+      "copied": false
+    }
+  ],
+  "runtime_version": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+  "new_root_audit_gate_required": true
+}

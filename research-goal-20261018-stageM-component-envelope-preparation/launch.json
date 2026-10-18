@@ -1,0 +1,35 @@
+{
+  "schema": "M-one-child-launch-v1",
+  "command": {
+    "argv": [
+      "C:\\Python314\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-stageM-component-envelope-preparation\\discover_once.py",
+      "--execute-authorized-fixed-M",
+      "--gate",
+      "research-goal-20261016/gates/stageM-component-envelope-fixed-20261018.json",
+      "--gate-sha256",
+      "f9028f0f3efd28cd0bb3787dfb5de28e25b8be937d1ddf14e0686329af46e81a"
+    ],
+    "cwd": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization",
+    "thread_env_override": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1"
+    }
+  },
+  "command_sha256": "7440fc195e12052fca0c7258d612d72f1d4367e8021e2ecb1b855cede1190261",
+  "parent_pid": 52272,
+  "child_launches_authorized": 1,
+  "hard_limits": {
+    "elapsed_seconds": 300,
+    "closed_output_bytes": 20000000
+  },
+  "script_sha256": "db90f785ccc0efbcbfce29d0a7757ba93a87cef9e000717e725c43f66fb9954c",
+  "launcher_sha256": "41f891aa1990445c97529be927e2229204d5c90bc81d418f97d0b59e7319447d"
+}

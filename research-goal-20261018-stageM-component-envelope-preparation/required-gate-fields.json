@@ -1,0 +1,26 @@
+{
+  "component_envelope_LP_passes_authorized": 1,
+  "primary_linprog_calls_authorized": 1,
+  "auxiliary_optimization_calls_authorized": 0,
+  "prepared_manifest_sha256": "<ROOT_TO_BIND>",
+  "fixed_cells": [0, 604],
+  "chart": "id/rev",
+  "sample_G_index": 2417,
+  "target_c_numerator": "893766123055294719",
+  "denominator": "100000000000000000000",
+  "solver_method": "highs-ds",
+  "solver_options": {
+    "presolve": true,
+    "time_limit": 180.0,
+    "maxiter": 100000,
+    "primal_feasibility_tolerance": 1e-7,
+    "dual_feasibility_tolerance": 1e-7,
+    "threads": 1
+  },
+  "resource_limits": {"elapsed_seconds": 300, "closed_output_bytes": 20000000},
+  "work_limits": {"elapsed_seconds": 270, "closed_output_bytes": 19000000},
+  "retry_or_precision_or_support_change_allowed": false,
+  "new_FS_anchors_kernel_points_or_Lean_authorized": 0,
+  "independent_checker_not_a_producer_mathematical_input": true,
+  "independent_exact_certificate_audit_requires_separate_authorization": true
+}

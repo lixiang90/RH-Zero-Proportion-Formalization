@@ -523,3 +523,9 @@ belowtarget/3141负乘子/11877奇异，余15377。原Mi窗口势图K有9边
 新normals不再有旧det<=4界，必须full78平衡、正权与rawcost。下一
 实际轮0->1核准备再决定唯一LPgate；本轮未授权M数学执行/新anchors/
 核/阈值扫描/q/Lean。源码181589B余量及全3200s仍未知，完整目标不变。
+
+宏观004后本实际轮已0→1，前轮sync36及独审为实质进展。09:48:14Z freshAPI仍同精确R。M冻结准备b6cf0775…的9源/120依赖/20已装runtime全字节不变，root及joint静态审查符号/尺度/68质量消元/full78/primal范围无缺陷。书面gate research-goal-20261016/gates/stageM-component-envelope-fixed-20261018.json SHA f9028f0f3efd28cd0bb3787dfb5de28e25b8be937d1ddf14e0686329af46e81a 只授权一次固定cell0/604 id/rev的77变量component-max LP发现、0aux、soft270s19MB/hard300s20MB；实际原FS/guard/混合恒等式须执行中核验，新normals无det<=4界。Lower只过此pair，Below只否定component-only外模型；均须独审，无自动其他pair/核/阈值/Lean。
+
+同一实际round1：M唯一child57360/parent52272真实exit0，wrapper8.504552s，oneLP/0aux，producer终包129c706d…。原279row/68FS/77primal/full78dual均exact有效、目标相等且严格高于target。独立A parser重建的唯一audit PID19888 exit0/4.53294s，终包2887e752…、receipt13d73403…全部一致。只得固定非空2417的component模型Lower，不是actual函数最优值或全域/ζ纪录；无新Lean。新增纸面归一化：extra列ΔS*incidence，以γ=|ΔS|μ转成旧incidence+至多两Order，小minor界仅可用于归一化flow，raw权/成本仍可能大分母；完整raw非负/78balance/cost不能省略。准备actual薄lemma和全域交付方案，不自动更多数值关。
+
+归一化静态定理已冻结3b322277…，根部保全部前提wrapper db80eb28…，独立纸面审查bcf78974…通过：仅γ/geo小分母；raw成本/base质量/78balance仍须精确核，zeroΔS及重复normal/tie不能擅自合并。实际当前s1R Lean桥PLAN 57ae12cf…明确PTraw→pwD→actualPT/ivIn、原TVal/LBSound、literalcell+两Order+sep9、稀疏整数sum-dual及当前Fg_G/G_rev；没有生成或编译Lean。下一实际轮1→2先review单次actual局部formal关，同时准备完整H剩余的component-envelope每case至多1LP分类合同；不得改成反复任意seed。全域EOF/实际源码/3200s/双核/最终κ及提交仍未完成。本轮counter1不再增计，前轮和本轮均实质进展。
