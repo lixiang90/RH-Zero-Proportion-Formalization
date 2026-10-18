@@ -1,0 +1,126 @@
+{
+  "schema": "H-preparation-AST-and-hash-only-v1",
+  "passed": true,
+  "scripts": [
+    {
+      "path": "research-goal-20261018-stageH-ordered-transport/classify_once.py",
+      "bytes": 21102,
+      "sha256": "8e258392521850e80781a92a84226f1f603bae4141062962b8c7276a8c99cc70",
+      "AST_parse_passed": true,
+      "top_level_nodes": 59
+    },
+    {
+      "path": "research-goal-20261018-stageH-ordered-transport/run_once.py",
+      "bytes": 3360,
+      "sha256": "9414a7712b6e438a7bd9bef9c0cf77555f6175c2a71f91c91f9f7626a816721e",
+      "AST_parse_passed": true,
+      "top_level_nodes": 15
+    },
+    {
+      "path": "research-goal-20261018-stageH-ordered-transport/prepare_freeze.py",
+      "bytes": 3800,
+      "sha256": "a5b83e2f07e3abc5d98980991c3023bad85f2aed055fe75c1db8a15ce2175aef",
+      "AST_parse_passed": true,
+      "top_level_nodes": 14
+    }
+  ],
+  "read_only_dependencies": [
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/files.json",
+      "bytes": 15059,
+      "sha256": "3f9408f2cf1ceae12339456da034d9e8f175f828cf2d53a652339ee79eec89ad"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/classification.json",
+      "bytes": 80319,
+      "sha256": "5d24d22ba0649c11acd55af484ef3dd4d5a2aebe5d8ddb913c663a6a3500865b"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/exception-cells.jsonl.gz",
+      "bytes": 458348,
+      "sha256": "180c27713c0473345fd0bb3c3373168a2d79f2e4bf518d5860e1c72cfa8a1ad0"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/files.json",
+      "bytes": 24543,
+      "sha256": "93d7b1af5248aac7867e81bed3f1866b5d9c844c622f0a0ca01f28db2656972b"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/classification.json",
+      "bytes": 26794,
+      "sha256": "f2be52b6daedf040b1199fb4894199bd5a586240a273eda074cb6b2f7f80e329"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/prefix.json",
+      "bytes": 1474,
+      "sha256": "afaf3c0a3d33585164fabc4722cf04ecd34a0d48a6513b5a1a7e5d174a8322cf"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/unresolved.bitmap.bin",
+      "bytes": 704485,
+      "sha256": "fd103f69ee92c5a918ded4c8a06662642b7ef652398204957620f1105bd2a9b1"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/classification.2bit.bin",
+      "bytes": 1408969,
+      "sha256": "dd1ba64fb4202dd23a904830762b9a1ce23d83f0321ea5b2d12a8813d1b83c64"
+    },
+    {
+      "path": "research-goal-20261018-stageG-independent/audit-files.json",
+      "bytes": 25850,
+      "sha256": "af09979447c2054f1daaa5a19e6abc59d04decee7752dfc53fe66c0643e30dc6"
+    },
+    {
+      "path": "research-goal-20261018-stageG-independent/independent-review.json",
+      "bytes": 52154,
+      "sha256": "291f15a57642f8be1e0556671e41e5d4791d29380fb2fc057640c089976b5ce7"
+    },
+    {
+      "path": "research-goal-20261018-ordered-ray-fan-static/files.json",
+      "bytes": 1393,
+      "sha256": "84a0089fa3c4b1e079ff17af22ae3ea43e0716872540689488030ff4f018f00b"
+    },
+    {
+      "path": "research-goal-20261018-stageH-independent/audit_h.py",
+      "bytes": 17623,
+      "sha256": "45396edbb2ca0162451ebbb19ce00ed853818b7f59a4362af9b899a85d922ac9"
+    },
+    {
+      "path": "research-goal-20261018-stageH-independent/prepared-files.json",
+      "bytes": 2272,
+      "sha256": "379ddbe5d72a0bcdf8552a76976989fe644064138188476d51fdd8da8abf5e40"
+    }
+  ],
+  "external_read_only_runtime": {
+    "path": "C:\\Python314\\python.exe",
+    "bytes": 106208,
+    "sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd",
+    "version": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "read_only_external_identity": true,
+    "copied": false
+  },
+  "command_template": [
+    "C:\\Python314\\python.exe",
+    "research-goal-20261018-stageH-ordered-transport/run_once.py",
+    "--launch-authorized-H",
+    "--gate",
+    "<ROOT_IMMUTABLE_GATE_RELATIVE_PATH>",
+    "--gate-sha256",
+    "<ROOT_GATE_SHA256>"
+  ],
+  "command_template_sha256": "abf3a0364c7039a4a5f171e8ba44cd71d95b7d79fa7c488ae145a1d4dabddd87",
+  "classification_runs": 0,
+  "producer_imports": 0,
+  "inputs_calls": 0,
+  "Floyd_calls": 0,
+  "assignment_or_catalog_enumerations": 0,
+  "LP_calls": 0,
+  "kernel_FS_or_Lean_runs": 0,
+  "new_immutable_root_gate_required": true,
+  "scope": "Only AST and byte/hash checks. No runtime producer function or mathematical classification executed."
+}

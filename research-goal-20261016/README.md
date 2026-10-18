@@ -62,8 +62,22 @@ New [transport](../research-goal-20261018-ordered-transport-static/NOTE.zh.md)
 and [ray-fan](../research-goal-20261018-ordered-ray-fan-static/NOTE.zh.md)
 arguments reduce Ordered-empty detection to five same-orientation or three
 opposite-orientation rays, with at most four integer units per transport.
-These are paper derivations; the remaining energy bound and full formal
-verification are still open.
+The [complete ordered-transport classification](../research-goal-20261018-stageH-independent/NOTE.zh.md)
+has now verified 4,460 additional Empty certificates across all 19,838
+inputs, leaving 15,378 conservative unresolved cases. Each certificate was
+independently checked against all original 155-row definitions using exact
+nonnegative integer weights, full ten-coordinate balance and strict cost.
+No LP, new kernel values or Lean run was used. The earlier F seed pair,
+global index 4768, is among the Empty regions; its valid Lower certificate
+does not establish energy gain on a nonempty residual domain. Sample 2417
+remains feasible and unresolved. The remaining joint-energy bound and full
+formal verification are open; the next actual round starts with a macro
+review before any new arithmetic or solver run.
+The [next static contract](../research-goal-20261018-stageI-static-contract/CONTRACT.zh.md)
+specifies reflection-aware, point-free extraction of the two original affine
+supports. It first tests the unchanged feasible sample 2417 as a necessary
+condition for that fixed model. No such calculation or new solver is yet
+authorized; a successful point test would still require a whole-domain proof.
 
 The current [global rounding comparison](../research-goal-20261017-common-rounding/NOTE.zh.md)
 uses one common shift to produce at most ten feasible integer configurations.

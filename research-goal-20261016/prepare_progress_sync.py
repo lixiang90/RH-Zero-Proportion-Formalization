@@ -30,6 +30,7 @@ def main():
       'gates/stageE-margin-dbm-20261018.json',
       'gates/stageF-exact-lp-20261018.json',
       'gates/stageG-complete-classification-20261018.json',
+      'gates/stageH-ordered-transport-20261018.json',
       'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
       'window_interval_kernel.py','window_interval_kernel.json','window_jet_crosscheck.py','window_jet_crosscheck.json',
       'window_global_cover.py','window_lower_global_cover.py','window_make_lower_variant.py','window_make_lower_variant.json',
@@ -301,7 +302,10 @@ def main():
       ('research-goal-20261018-stageG-complete-classification/files.json','93d7b1af5248aac7867e81bed3f1866b5d9c844c622f0a0ca01f28db2656972b'),
       ('research-goal-20261018-stageG-independent/audit-files.json','af09979447c2054f1daaa5a19e6abc59d04decee7752dfc53fe66c0643e30dc6'),
       ('research-goal-20261018-ordered-transport-static/files.json','0bfa1f2db8858f7520360212266cef2bff8e63899017782f1c977ce352f9a7fa'),
-      ('research-goal-20261018-ordered-ray-fan-static/files.json','84a0089fa3c4b1e079ff17af22ae3ea43e0716872540689488030ff4f018f00b')]:
+      ('research-goal-20261018-ordered-ray-fan-static/files.json','84a0089fa3c4b1e079ff17af22ae3ea43e0716872540689488030ff4f018f00b'),
+      ('research-goal-20261018-stageH-ordered-transport/files.json','327562525e30d7b706777e71af003e51ca93a218ac7cfd9bfa0994abe56f8f8c'),
+      ('research-goal-20261018-stageH-independent/audit-files.json','a0018aa4ce33e4cb6cea2019739e857fa3a1b58cc8b48f001e17d651e1dcbb3a'),
+      ('research-goal-20261018-stageI-static-contract/files.json','f526477985915b2e26d9db1c81ecbcd246564ed7241a9724bc325fb7e0dfca76')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -365,7 +369,10 @@ def main():
                     'research-goal-20261018-joint-size-opportunity/files.json',
                     'research-goal-20261018-stageG-complete-classification/files.json',
                     'research-goal-20261018-ordered-transport-static/files.json',
-                    'research-goal-20261018-ordered-ray-fan-static/files.json']:
+                    'research-goal-20261018-ordered-ray-fan-static/files.json',
+                    'research-goal-20261018-stageH-ordered-transport/files.json',
+                    'research-goal-20261018-stageH-independent/audit-files.json',
+                    'research-goal-20261018-stageI-static-contract/files.json']:
             rows+=pinned['read_only_dependencies']
         if name=='research-goal-20261018-stageE-independent/plan-files.json':
             rows+=pinned['dependency_manifests']

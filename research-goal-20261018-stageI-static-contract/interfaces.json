@@ -1,0 +1,53 @@
+{
+  "schema": "stageI-original-FS-point-free-static-contract-v1",
+  "kind": "static interface and conditional stop contract; no executable producer",
+  "source_profile_sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+  "fixed_candidate_Nc": "893766123055294719",
+  "fixed_denominator_SA": "100000000000000000000",
+  "fixed_phase1_G_index": 2417,
+  "phase1_cells": {"prefix_exception_id":0,"suffix_exception_id":604,"chart":"id/rev"},
+  "phase1_point_source": "research-goal-20261018-stageG-complete-classification/first-unresolved-sample.json",
+  "phase1_point_source_sha256": "a3349919ca3c07c71346a6a753396b8daa211c5e5492299cdaf300198fbf2689",
+  "point_must_be_unchanged": true,
+  "extract_original_affine": {
+    "arguments": ["original_cell_id","original_model","original_trace"],
+    "returns": ["Cstar:Int","J:Vec8 Int","original_state_sha256","packed_payload_sha256","decoded_semantic_sha256","consumed_bits","original_term_components","guard_receipts"],
+    "takes_physical_point_or_chart": false,
+    "retains_original_FS_anchors_and_L_U_L0": true,
+    "original_nested_stream_navigation_required": true
+  },
+  "embed_affine": {
+    "arguments": ["point_free_original_affine","offset:0or1","reverse:Bool"],
+    "id_gap": "offset+r",
+    "reverse_gap": "offset+7-r",
+    "reverse_span": "(offset+8-j,offset+8-i)",
+    "returns": ["same_Cstar:Int","physicalJ:Vec9 Int"]
+  },
+  "joint_integer": {
+    "C": "2*(CstarLeft+CstarRight)",
+    "b": "divergence of embedded Jsum with b0=-J0,bv=J(v-1)-Jv,b9=J8",
+    "identity": "C+b.X=2*kappa*SA*(A_left+A_right)",
+    "target": "4*kappa*Nc",
+    "check_complete10_balance": true
+  },
+  "phase1_stop": "If the one frozen feasible point has exact C+b.X-target<0, stop this fixed two-original-affine-model family; no parameter/basis/point retry",
+  "phase1_failure_is_not_actual_energy_or_zeta_counterexample": true,
+  "phase2_only_after_new_explicit_gate": true,
+  "phase2_expected_H_remaining_records": 15378,
+  "phase2_original_F_seed_not_in_remaining": {"G_index":4768,"meaning":"Previously successful conditional Lower may be on an already Empty ordered intersection; no evidence of nonempty residual energy gain"},
+  "phase2_only_basis_rows": [9,29,36,74,84,110,130,153,154],
+  "phase2_rank_or_inverse_computed_now": false,
+  "phase2_chart_specific_fullrank_required": true,
+  "phase2_singular_chart_policy": "unsupported/unresolved, no alternate basis",
+  "phase2_integer_decoder": "dabs=abs(detB),n=-sign(detB)*adj(B^T)*b_reduced,mu=n/dabs",
+  "phase2_final_checks": ["n>=0","dabs*b+sum n*originalRowNormal=0 in all10 coordinates","dabs*C-sum n*originalRowRHS>=dabs*target"],
+  "phase2_output_can_reuse_original_FS_and_constant_basis_ID": true,
+  "macro_review_required_before_any_math_execution": true,
+  "next_macro_review": "004 before next actual round4 mathematics",
+  "node_Mi_product_is_delivery_compression_not_automatic_leaf_Mi_gain": true,
+  "new_FS_or_point_evaluations": 0,
+  "new_matrix_or_inverse_calculations": 0,
+  "LP_kernel_or_Lean_runs": 0,
+  "global_floor_or_new_kappa_proven": false,
+  "submission_ready": false
+}

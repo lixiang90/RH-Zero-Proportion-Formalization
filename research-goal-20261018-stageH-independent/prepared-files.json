@@ -1,0 +1,59 @@
+{
+  "schema": "H-independent-prepared-only-checker-v1",
+  "files": [
+    {
+      "path": "research-goal-20261018-stageH-independent/audit_h.py",
+      "bytes": 17623,
+      "sha256": "45396edbb2ca0162451ebbb19ce00ed853818b7f59a4362af9b899a85d922ac9"
+    },
+    {
+      "path": "research-goal-20261018-stageH-independent/SPEC.zh.md",
+      "bytes": 4307,
+      "sha256": "90f1a30adc4626ef8724e222b613e8cd0ceb37da6af1ecde010f6ad13dc6ff86"
+    },
+    {
+      "path": "research-goal-20261018-stageH-independent/preparation.json",
+      "bytes": 2490,
+      "sha256": "10b4d4b57b5b196684e932fb94cb464ea7f37c06586ab5d68e3a7aa636fe375c"
+    }
+  ],
+  "read_only_dependencies": [
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    },
+    {
+      "path": "research-goal-20261018-stageB-classification/files.json",
+      "bytes": 15059,
+      "sha256": "3f9408f2cf1ceae12339456da034d9e8f175f828cf2d53a652339ee79eec89ad"
+    },
+    {
+      "path": "research-goal-20261018-stageG-complete-classification/files.json",
+      "bytes": 24543,
+      "sha256": "93d7b1af5248aac7867e81bed3f1866b5d9c844c622f0a0ca01f28db2656972b"
+    },
+    {
+      "path": "research-goal-20261018-stageG-independent/audit-files.json",
+      "bytes": 25850,
+      "sha256": "af09979447c2054f1daaa5a19e6abc59d04decee7752dfc53fe66c0643e30dc6"
+    },
+    {
+      "path": "research-goal-20261018-stageG-independent/independent-review.json",
+      "bytes": 52154,
+      "sha256": "291f15a57642f8be1e0556671e41e5d4791d29380fb2fc057640c089976b5ce7"
+    }
+  ],
+  "external_read_only_runtime": {
+    "path": "C:\\Python314\\python.exe",
+    "bytes": 106208,
+    "sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd",
+    "version": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "read_only_external_identity": true,
+    "copied": false
+  },
+  "mathematical_audit_calls": 0,
+  "producer_imports": 0,
+  "new_immutable_root_gate_required": true,
+  "scope": "Independent original155row positive-integer Empty certificate audit prepared only; no result, discovery algorithm, complete floor or runtime claim."
+}
