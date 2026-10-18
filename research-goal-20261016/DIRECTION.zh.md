@@ -561,3 +561,9 @@ N独审新v1清单6b39aebb…root全部283项核0diff且逆文本比较仅3处�
 StrongO1四根普通Lean已PASS，21d502b5…，64.847s，仅标准三公理；
 曲率固定pair成果保留备选，不因其通过自动编译通用消费者。
 本重大目标调整触发宏观006准备；书面完成前counter仍1，不重复增轮。
+
+宏观006已书面完成，SHA7dacb03bef8fdbbb90fb6c95e5b843e55602c7dbd106b35be7c585160b704c76，重大目标变化和独审唯一例外触发本actualround1提前回顾，counter1→0。
+新主线为唯一例外相邻窗口不兼容与当前W9总窗边界delta计数；P高门槛和曲率通用编译保持备选未执行。
+新Core纯文本转换v0因末尾换行anchor失败未写源；版本化v1仅修该anchor后生成1821568B，原payload/decoder/flow/guards/全部137打包量/readycursor全文逆投影与f82源一致，独审ab50e6d0…通过。
+Core+Counting源1842991B，尚缺sep根外/反射/实际pair/finalwrapper及编译修复，不能算单源体积通过；新Core未普通Lean运行。Localization准备中，soleowner只设计缓存兼容编译，不自行开批次。
+sync39=2e0e4bd0e1b56b263dbf1bcc44a6ba30714eb9d7，完整5051 local/publicblob0diff，main/HEAD/origin相同；后续Core准备另checkpoint。下实际轮0→1，压缩/本轮工具不增计。

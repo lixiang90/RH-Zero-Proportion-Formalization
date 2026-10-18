@@ -1,0 +1,13 @@
+--- generate_core.py
++++ generate_core_v1.py
+@@ -122,8 +122,8 @@
+     step_proof_new = replace_once(step_proof_new, '  · intro g hg\n    right\n', '  · intro g hg\n    left\n    right\n')
+     text = replace_once(text, step_proof, step_proof_new)
+     cert_proof = block(text, 'theorem cert_of (cov ', '\nend AMW.Cert.PC9QB6M\n')
+-    cert_proof_new = replace_once(cert_proof, 'hwin W hW hrun\n',
+-        'hwin W hW (fun idx hi g hg => tiny_forget (hrun idx hi g hg))\n')
++    cert_proof_new = replace_once(cert_proof, 'hwin W hW hrun',
++        'hwin W hW (fun idx hi g hg => tiny_forget (hrun idx hi g hg))')
+     text = replace_once(text, cert_proof, cert_proof_new)
+     header = ('/- PREPARATION ONLY: deterministic tiny-exception Core variant.\n'
+         'Current s1R kernel, W9 and all payloads retained. Numeric leaves use one\n'

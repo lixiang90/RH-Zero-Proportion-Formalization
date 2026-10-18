@@ -1,0 +1,14 @@
+Transcription from completed exec tool chunk b3e514; exit_code=1.
+This is not an original redirected stderr file. The OS PID was not observed.
+
+Traceback (most recent call last):
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-tiny-core-preparation\generate_core.py", line 164, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-tiny-core-preparation\generate_core.py", line 125, in main
+    cert_proof_new = replace_once(cert_proof, 'hwin W hW hrun\n',
+        'hwin W hW (fun idx hi g hg => tiny_forget (hrun idx hi g hg))\n')
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-tiny-core-preparation\generate_core.py", line 26, in replace_once
+    assert text.count(old) == 1, ('unique_text_anchor', old[:120], text.count(old))
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('unique_text_anchor', 'hwin W hW hrun\n', 0)

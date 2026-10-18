@@ -1,0 +1,17 @@
+{
+  "schema": "tiny-Core-first-text-generation-terminal-v1",
+  "command": ["C:/Python314/python.exe", "-B", "-X", "utf8", "research-goal-20261018-tiny-core-preparation/generate_core.py", "--generate-once"],
+  "source_sha256": "75d9ea6aa8f3276fb9641ffa40cc5229e4cc55cce0006cc2e4456a10c8314ca0",
+  "tool_output_chunk_id": "b3e514",
+  "actual_exit_code": 1,
+  "reported_wall_time_seconds": 1.7663826999999999,
+  "PID_observed": false,
+  "terminal_output_preservation": "stderr transcription from the completed exec tool response, not an original redirected stderr file",
+  "failure_stage": "before Core/diff/generation file writes, cert_of text anchor",
+  "failure": "AssertionError: ('unique_text_anchor', 'hwin W hW hrun\\n', 0)",
+  "static_cause": "The sliced block excludes the leading newline of its end marker; replacement expected that excluded terminal newline.",
+  "Core_generated": false,
+  "math_leaf_kernel_LP_or_Lean_runs": 0,
+  "automatic_retry": false,
+  "frozen_generator_or_inputs_modified": false
+}

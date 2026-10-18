@@ -18,7 +18,7 @@ confirms the integer classification and exact conditional score
 Complete Lean sublevel coverage, all70 cuts, reflection and root exterior
 proofs remain to be established. The planned counting bridge preserves the
 current W9 and pays a constant boundary charge; it does not require a new
-W10 ledger. The prepared source is not yet a verified global proof.
+W10 ledger. The prepared source is not yet a verified global proof. The [Core variant](StructuralS1RTiny20261018/Core.lean) has been generated and independently checked as a text transformation; its new coverage semantics have not yet passed Lean.
 Full Comparator, ordinary Lean, nanoda, a single file no larger than2MB,
 and the complete3,200-second verification workflow remain required.
 

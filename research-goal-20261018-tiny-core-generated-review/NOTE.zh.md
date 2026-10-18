@@ -1,0 +1,13 @@
+# 实际 tiny Core 差异独立静审
+
+Core实际1,821,568B，SHA9fbdf3f2dc62333b636d3b25dfb3bf2b15e3b8c628ece73d6ba1bc768fc5f1a6。逐块静读实际Core.diff与generator-v1-fix.diff，另用自己的只读 inverse-text checker验证。该checker只处理字符串/字节、JSON literal与hash，不import/执行生成器，不解leaf/FS，不运行核、数学模型、P或Lean。
+
+v1生成器相对v0仅删除cert_of替换old/new锚点的两个转义换行，实际diff与文件全文一致。唯一73state literal逐字段等于独审E462。stEq/St_eq移动后原体不变；target分支比较的state literal与实际mleafP传入state literal完全相同。
+
+mcheckP加显式goalN后，除唯一cN→goalN外所有integer guards、算术与函数体和原源逐字节相同；mcheckP_ok只泛化该目标。mleafP的所有decoder、原guard、flow与end体，只增加goal转发。泛mleafP_target_ok结论为Pg goalN，wrapper才用tinyTarget_sound转固定TinyGoal。
+
+TinyGoal=Pgτ或(E462且Pgc9)；例外用完整St_eq给membership，非例外给Pgτ。split和cuts统一强化谓词；reflection的新增left/right恰进入Pgτ朝向支。旧farkas_cov泛P'与forceR lemma泛Prop，没有隐含旧Covered。cert_of在送原root_cover之前显式tiny_forget，保留全非负c9，未使用sep压力支付全非负域。
+
+通过文档化逆投影移除新定义、复位目标参数/转发/反射/忘却并移回stEq后，整个Core全文字节恰等于f82原源。因此所有其余数据、packed numerals、PT/REG/kernel/weights、cuts与数值cursor语句、baseline最终wrapper均无任何未列更改。这只是静态身份；48parent+70nested的新目标计算与强Covered proof还需真实Lean通过。
+
+无新axiom/sorry/admit/native_decide。首轮纯text锚失败及v1成功由生产包保留。根外sep定位、四朝向pair、W9 summed计数实例和最终导出尚未生成；baseline固钉old候选wrapper仍需替换。没有全域新纪录、编译/axioms/双核、2MB/3200秒或可提交结论。
