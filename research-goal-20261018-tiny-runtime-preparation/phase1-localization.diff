@@ -1,0 +1,36 @@
+--- frozen-v0/phase1-localization.diff
++++ phase1/phase1-localization.diff
+@@ -43,7 +43,7 @@
+     (f := fun n => (tA TS n : ℝ) * AMW.Cert.wfun (gsum g (tI TS n) (tJ TS n)))
+     (fun n _ => mul_nonneg (Nat.cast_nonneg _) (AMW.Cert.wfun_nonneg _))
+     (Finset.mem_range.mpr hn)
+-  exact add_le_add_left hs (pressure g)
++  simpa only [Fg, pressure, add_comm] using (add_le_add_left hs (pressure g))
+ 
+ theorem pressure_of_sep {g : ℕ → ℝ} (hg : ∀ r < 8, sep ≤ g r) :
+     sep * (∑ r ∈ range 8, (BS.getD r 0 : ℝ)) ≤ pressure g := by
+@@ -67,7 +67,8 @@
+       (mul_le_mul_of_nonneg_left (hg k hk8) (Nat.cast_nonneg (BS.getD k 0) : (0 : ℝ) ≤ _))
+   rw [pressure, ← Finset.add_sum_erase (range 8)
+     (fun k => (BS.getD k 0 : ℝ) * g k) (Finset.mem_range.mpr hr)]
+-  exact add_le_add_left hs _
++  simpa only [add_comm] using
++    (add_le_add_left hs ((BS.getD r 0 : ℝ) * g r))
+ 
+ /-- These are the exact same old-c9 finite checks appearing as anonymous
+ arguments of the accepted Data.cert. There is no raised coverChk/WZ query.
+@@ -140,8 +141,12 @@
+   choose! idx hidx using hbad
+   apply AMW.Cert.PC9TinyData.run idx (fun r hr => (hidx r hr).1) g
+   refine incell_root hPR (W := 1099511627776)
+-    (fun k hk => by simp [rootCl, List.getD_eq_getElem?_getD, hk])
+-    (fun k hk => by simp [rootCl, List.getD_eq_getElem?_getD, hk]) ?_ (fun r hr => ?_)
++    (fun k hk => by
++      have hkn : k < 28 := by simpa [PR] using hk
++      interval_cases k <;> rfl)
++    (fun k hk => by
++      have hkn : k < 28 := by simpa [PR] using hk
++      interval_cases k <;> rfl) ?_ (fun r hr => ?_)
+   · have h1 : ((sumR (rootCl 8 PR.length 1099511627776 COV idx).U 0 8 : ℕ) : ℝ) ≤
+         ((8 * KB : ℕ) : ℝ) := by
+       rw [sumR_eq, Nat.zero_add]; push_cast

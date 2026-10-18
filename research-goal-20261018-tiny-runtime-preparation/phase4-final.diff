@@ -1,0 +1,21 @@
+--- Phase3/Final.lean
++++ Phase4/Final.lean
+@@ -90,14 +90,16 @@
+       (tinyKappa - epsilon) * (_root_.Ncount T (2*T) : ℝ) ≤ _root_.N0star T (2*T) := by
+   have h := StructuralS1RTiny20261018.Counting.actual_dyadic_of_pair
+     RiemannFail.W9 RiemannFail.W9_adm hc hdelta hdeltac hc64 hB hbase hpair
+-  simpa only [ratio_exact] using h
++  rw [← ratio_exact]
++  exact h
+ 
+ theorem actual_cumulative :
+     ∀ epsilon > (0 : ℝ), ∃ T0 : ℝ, ∀ T ≥ T0,
+       (tinyKappa - epsilon) * (_root_.Ncount 0 T : ℝ) ≤ _root_.N0star 0 T := by
+   have h := StructuralS1RTiny20261018.Counting.actual_cumulative_of_pair
+     RiemannFail.W9 RiemannFail.W9_adm hc hdelta hdeltac hc64 hB hbase hpair
+-  simpa only [ratio_exact] using h
++  rw [← ratio_exact]
++  exact h
+ 
+ end StructuralS1RTiny20261018.Dev.Final
+ 

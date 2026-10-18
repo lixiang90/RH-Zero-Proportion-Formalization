@@ -1,0 +1,37 @@
+{
+  "authorized": true,
+  "task": "tiny-current-s1R-localization-phase1",
+  "prepared_manifest_sha256": "3127e3c803dfb0752d140384648d3439e7e5153f006f8b31b0799c2c9f322ebc",
+  "allowed_modules": [
+    "StructuralS1RTiny20261018/Phase1/Localization",
+    "StructuralS1RTiny20261018/Dev/Counting",
+    "StructuralS1RTiny20261018/Phase1/Final"
+  ],
+  "automatic_repairs_or_retries": 0,
+  "recompile_passed_prefix": false,
+  "recompile_passed_Core": false,
+  "manual_report_points_only": {
+    "seconds_per_module": 1200,
+    "log_bytes": 20000000
+  },
+  "no_automatic_timeout_or_logcap": true,
+  "memory_MB": 13500,
+  "jobs": 1,
+  "stack_bytes": 268435456,
+  "Nano_or_Comparator_authorized": false,
+  "sole_compiler_owner": "/root/lean_cover_goal",
+  "mathematical_statements_unchanged": true,
+  "v0_execution_frozen_manifest_SHA256": "9c424935ec0788e8519914959c10b4c7a931678b7fe62e830af032f89e0ab3cf",
+  "root_checked_files_and_dependencies": 20,
+  "root_checked_diff": "Only two add_comm proof reorderings and two finite k<28/rfl proofs; Final import-only; no new threshold or premise.",
+  "expected_Final_transitive_roots": [
+    "AMW.Cert.PC9TinyData.run",
+    "RiemannFail.cert_AM",
+    "StructuralS1RTiny20261018.Dev.Localization.pair_floor",
+    "StructuralS1RTiny20261018.Dev.Final.strict_improvement",
+    "StructuralS1RTiny20261018.Dev.Final.actual_dyadic",
+    "StructuralS1RTiny20261018.Dev.Final.actual_cumulative"
+  ],
+  "main_rounds_since_review": 0,
+  "last_review_number": 6
+}

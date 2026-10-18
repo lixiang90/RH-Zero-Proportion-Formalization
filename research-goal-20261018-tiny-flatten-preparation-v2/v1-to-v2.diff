@@ -1,0 +1,97 @@
+--- v1/generate_draft.py
++++ v2/generate_draft.py
+@@ -22,8 +22,8 @@
+     ('StructuralS1RM20261018.CurrentPrefix', 'StructuralS1RM20261018/CurrentPrefix.lean'),
+     ('StructuralS1RTiny20261018.Dev.Core', 'StructuralS1RTiny20261018/Dev/Core.lean'),
+     ('StructuralS1RTiny20261018.Phase1.Localization', 'StructuralS1RTiny20261018/Phase1/Localization.lean'),
+-    ('StructuralS1RTiny20261018.Dev.Counting', 'StructuralS1RTiny20261018/Dev/Counting.lean'),
+-    ('StructuralS1RTiny20261018.Phase1.Final', 'StructuralS1RTiny20261018/Phase1/Final.lean'),
++    ('StructuralS1RTiny20261018.Phase2.Counting', 'StructuralS1RTiny20261018/Phase2/Counting.lean'),
++    ('StructuralS1RTiny20261018.Phase3.Final', 'StructuralS1RTiny20261018/Phase3/Final.lean'),
+ )
+ IMPORT = re.compile(rb'import ([A-Za-z_][A-Za-z0-9_.]*)\r?\n?\Z')
+ HEADER = (
+--- v1/prepare_only.py
++++ v2/prepare_only.py
+@@ -12,13 +12,17 @@
+  'StructuralS1RM20261018/CurrentPrefix.lean': 'ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21',
+  'StructuralS1RTiny20261018/Dev/Core.lean': '1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac',
+  'StructuralS1RTiny20261018/Phase1/Localization.lean': 'ad722eca53b43ff28ccfe9f66e338979ac05ff7088fe067dc395ea5e1c9cf758',
+- 'StructuralS1RTiny20261018/Dev/Counting.lean': 'e1629a96ac6239ae0d216c608c99f6d929c779b8201f4835aa72b125b2923f87',
+- 'StructuralS1RTiny20261018/Phase1/Final.lean': 'f99f0bafbc724b657f7321cf262d3550711a9c303c18a93ac03c3b15104ec497',
++ 'StructuralS1RTiny20261018/Phase2/Counting.lean': '2bda5c9df708b4568f8f08447894cb73a3c6ecb9d2c77be67e2eb46387be868e',
++ 'StructuralS1RTiny20261018/Phase3/Final.lean': '356be48d1326022cc8148be1023d42a160a7562faa8c2f13af32ffb807de36ab',
+ }
+ MODULE_NAMES = [p[:-5].replace('/', '.') for p in MODULE_PINS]
+ DEPS = list(MODULE_PINS) + [
+  'research-goal-20261018-tiny-runtime-preparation/compiler-prepared.json',
+  'research-goal-20261018-tiny-runtime-preparation/phase1-prepared.json',
++ 'research-goal-20261018-tiny-runtime-preparation/phase2-prepared.json',
++ 'research-goal-20261018-tiny-runtime-preparation/phase3-prepared.json',
++ 'research-goal-20261018-tiny-flatten-preparation-v1/prepared-files.json',
++ 'research-goal-20261018-tiny-flatten-preparation-v1/generate_draft.py',
+  'research-goal-20261016/gates/tiny-phase1-ordinary-20261018.json',
+  'research-goal-20261018-tiny-flatten-preparation/prepared-files.json',
+  'research-goal-20261018-tiny-flatten-preparation/generate_draft.py',
+@@ -92,7 +96,7 @@
+         notice_counts.append({'path':name,'Copyright_mentions':text.count('Copyright'),
+                               'SPDX_mentions':text.count('SPDX-License-Identifier'),
+                               'license_case_insensitive_mentions':text.lower().count('license')})
+-    assert module_bytes == 1_976_894
++    assert module_bytes == 1_977_056
+     assert len(internal) == 5
+     assert imports[0]['module'] == 'ChallengeDeps'
+     assert imports[1]['module'] == 'ChallengeDeps.CandidateSpec'
+@@ -144,7 +148,7 @@
+                         'full website time/memory/source/request limits','GitHub/final submission materials']}
+     exclusive('candidate-parameters.json',params)
+     exclusive('preparation.json',{
+-      'schema':'tiny-flatten-static-preparation-v2','passed':True,
++      'schema':'tiny-flatten-static-preparation-v3','passed':True,
+       'AST_sources':['generate_draft.py','prepare_only.py'],
+       'source_input_bytes':module_bytes,'external_import_count':len(imports),
+       'internal_import_count':len(internal),'wrapper_bytes':len(wrapper),
+@@ -154,12 +158,12 @@
+       'generator_executions':0,'draft_exists':False,'Lean_runs':0,'Comparator_runs':0,
+       'Nano_runs':0,'mathematical_evaluations':0,'compiler_inputs_modified':False,
+       'upload_ready':False,'read_dependencies_sha256_before':{p:row(ROOT/p)['sha256'] for p in DEPS}})
+-    owned = ['generate_draft.py','prepare_only.py','adapt_v1.py','v0-to-v1.diff','version-delta.json','official-wrapper.lean.txt','SPEC.zh.md',
++    owned = ['generate_draft.py','prepare_only.py','adapt_v2.py','v1-to-v2.diff','version-delta.json','official-wrapper.lean.txt','SPEC.zh.md',
+              'input-pins.json','candidate-parameters.json','preparation.json']
+     readdeps = [row(ROOT/p) for p in DEPS]
+     runtime = Path(sys.executable)
+     exclusive('prepared-files.json',{
+-      'schema':'tiny-flatten-generator-prepared-v2', 'scope':'Static source preparation only',
++      'schema':'tiny-flatten-generator-prepared-v3', 'scope':'Static source preparation only',
+       'files':[row(HERE/p) for p in owned], 'read_dependencies':readdeps,
+       'external_runtime_identity':{'path':str(runtime),'bytes':runtime.stat().st_size,
+                                   'sha256':sha(runtime.read_bytes()),'version':sys.version},
+--- v1/SPEC.zh.md
++++ v2/SPEC.zh.md
+@@ -6,9 +6,9 @@
+ 
+ ## 输入和保持规则
+ 
+-固定顺序：CurrentPrefix、Dev.Core、Phase1.Localization、Dev.Counting、Phase1.Final。
++固定顺序：CurrentPrefix、Dev.Core、Phase1.Localization、Phase2.Counting、Phase3.Final。
+ 模块路径更新，Lean namespace 仍为 Dev.Localization/Dev.Final；wrapper 完全不变。
+-五个原始 UTF-8 文件合计 1,976,894 bytes。实际 SHA 和大小由 input-pins 及 prepared 绑定。
++五个原始 UTF-8 文件合计 1,977,056 bytes。实际 SHA 和大小由 input-pins 及 prepared 绑定。
+ 每个源仅移出完整的单模块 `import` 行：内部依赖由前面拼入的正文替代；其余所有
+ 第三方/可信 import 原字节、原顺序移到总文件头。所有非 import 字节（包括全部版权、
+ 许可全文、来源说明、数据、证明、section/end 和 option）逐段完全保留，输出记录 byte
+@@ -42,7 +42,7 @@
+ ## 未来文本生成命令（本 prepared 未运行）
+ 
+ ```
+-C:/Python314/python.exe -B -X utf8 research-goal-20261018-tiny-flatten-preparation-v1/generate_draft.py --generate-draft-once --prepared-sha256 <prepared-files.json的SHA256>
++C:/Python314/python.exe -B -X utf8 research-goal-20261018-tiny-flatten-preparation-v2/generate_draft.py --generate-draft-once --prepared-sha256 <prepared-files.json的SHA256>
+ ```
+ 
+ 仅允许独占新建本目录 draft/；若目录或任一输出已存在则拒绝覆盖。输出
+@@ -77,3 +77,5 @@
+ 同命题API修复源与Final import-only变化，非重新选择数学目标。普通模块编译仍由
+ soleowner负责；本包既不执行它，也不预判通过。即使新普通模块通过，本 prepared
+ 仍不自动授权生成。须由root审查后决定统一生产launcher的唯一执行。
++
++本 v2 仅绑定 Phase2.Counting 的 let/Nat cast 归一化和 Phase3.Final 的函数别名/根计数名修复。算法、wrapper、阈值、数学命题均保持；输入版本是已冻结准备，不代表 ordinary 通过。generator 仍须在统一生产 t0 之后执行一次。

@@ -1,0 +1,11 @@
+--- frozen/Counting.lean
++++ Dev/Counting.lean
+@@ -13,7 +13,7 @@
+ or old Core is imported. Current 17/20 separation and 1/64 pair payment are
+ used through the current Core's actual AM theorems.
+ -/
+-import StructuralS1RTiny20261018.Core
++import StructuralS1RTiny20261018.Dev.Core
+ 
+ set_option Elab.async false
+ set_option maxHeartbeats 0

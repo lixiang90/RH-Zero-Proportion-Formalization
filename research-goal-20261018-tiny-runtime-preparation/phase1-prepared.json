@@ -1,0 +1,177 @@
+{
+  "schema": "tiny-localization-same-theorem-API-repair-phase1-prepared-v1",
+  "files": [
+    {
+      "path": "StructuralS1RTiny20261018/Phase1/Localization.lean",
+      "bytes": 12298,
+      "sha256": "ad722eca53b43ff28ccfe9f66e338979ac05ff7088fe067dc395ea5e1c9cf758"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase1/Final.lean",
+      "bytes": 4848,
+      "sha256": "f99f0bafbc724b657f7321cf262d3550711a9c303c18a93ac03c3b15104ec497"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/compile_phase1.py",
+      "bytes": 7543,
+      "sha256": "9361e58404451305f29132d51c701a83629e6b5c7d53096bbcc1554099a8a6da"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/prepare_phase1.py",
+      "bytes": 6836,
+      "sha256": "ad7f6ec32be5488b2530debf560344fe7647b6652716d3ed85400ab36f0e6595"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/phase1-gate-template.json",
+      "bytes": 654,
+      "sha256": "d99670b4a1209ad31b461320981998974b479f3fa282b35c750972022e3a4a7a"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/phase1-localization.diff",
+      "bytes": 1778,
+      "sha256": "dfe24c464eaf8e2bd661c9559e9eae53976fdefa5a03b9aee9d6ab0c6ab5a076"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/phase1-final.diff",
+      "bytes": 415,
+      "sha256": "a2aee58d465651a5de365091387391757fc5b0e980452c2ce29b5a2497b7fec4"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/phase1-runner.diff",
+      "bytes": 3152,
+      "sha256": "c523e81e305b4c2302fcbc8f47d1e99feae908c457bb995f669f86f3bca4663d"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Localization.lean",
+      "bytes": 12136,
+      "sha256": "8d02de83edfced0a98a9b717a4b6c9de65d9ccc392d914084a59fda7b958f179"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Final.lean",
+      "bytes": 4845,
+      "sha256": "f4d398bc846415d6e428c07055ea799f2d70318aafeee69ab3a4864baf05b3de"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Counting.lean",
+      "bytes": 21427,
+      "sha256": "e1629a96ac6239ae0d216c608c99f6d929c779b8201f4835aa72b125b2923f87"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Core.lean",
+      "bytes": 1003097,
+      "sha256": "1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac"
+    },
+    {
+      "path": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "bytes": 935224,
+      "sha256": "ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/compiler-prepared.json",
+      "bytes": 7425,
+      "sha256": "4533c2fedb5d6f891da5c496e34aec58ece146fe839121a29d5ea46014ff5071"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/dev-v0-execution-files.json",
+      "bytes": 54231,
+      "sha256": "9c424935ec0788e8519914959c10b4c7a931678b7fe62e830af032f89e0ab3cf"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Core.receipt.json",
+      "bytes": 44084,
+      "sha256": "bb9c0e24828026750e1fb3a6edc9ab0350838bf7e7e6c77c8da529da45c173c0"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Localization.log",
+      "bytes": 4010,
+      "sha256": "69447ab071be48500d5d2ab4138b0b805ed71e1d6690f625937a24505a68049f"
+    },
+    {
+      "path": "tmp/setup-20261015/runtime.json",
+      "bytes": 8589,
+      "sha256": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574"
+    },
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1b/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+      "bytes": 45890464,
+      "sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/lib/StructuralS1RTiny20261018/Dev/Core.olean",
+      "bytes": 20499952,
+      "sha256": "1a892b6ed20f635d33cc93c3e642c950a7dc56a683d966979c70a345ea0c718a"
+    }
+  ],
+  "targets": [
+    {
+      "module": "StructuralS1RTiny20261018/Phase1/Localization",
+      "expected_printed_roots": []
+    },
+    {
+      "module": "StructuralS1RTiny20261018/Dev/Counting",
+      "expected_printed_roots": [
+        "StructuralS1RTiny20261018.Counting.sum_range_pair_lower",
+        "StructuralS1RTiny20261018.Counting.summed_of_pair",
+        "StructuralS1RTiny20261018.Counting.actual_defect_estimate_of_pair",
+        "StructuralS1RTiny20261018.Counting.actual_dyadic_of_pair",
+        "StructuralS1RTiny20261018.Counting.actual_cumulative_of_pair"
+      ]
+    },
+    {
+      "module": "StructuralS1RTiny20261018/Phase1/Final",
+      "expected_printed_roots": [
+        "AMW.Cert.PC9TinyData.run",
+        "RiemannFail.cert_AM",
+        "StructuralS1RTiny20261018.Dev.Localization.pair_floor",
+        "StructuralS1RTiny20261018.Dev.Final.strict_improvement",
+        "StructuralS1RTiny20261018.Dev.Final.actual_dyadic",
+        "StructuralS1RTiny20261018.Dev.Final.actual_cumulative"
+      ]
+    }
+  ],
+  "reused_oleans": [
+    {
+      "path": "tmp/current-s1r-M-20261018/phaseA1b/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+      "bytes": 45890464,
+      "sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692",
+      "relative_module_path": "StructuralS1RM20261018/CurrentPrefix.olean"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/lib/StructuralS1RTiny20261018/Dev/Core.olean",
+      "bytes": 20499952,
+      "sha256": "1a892b6ed20f635d33cc93c3e642c950a7dc56a683d966979c70a345ea0c718a",
+      "relative_module_path": "StructuralS1RTiny20261018/Dev/Core.olean"
+    }
+  ],
+  "Python_executable": {
+    "path": "C:\\Python314\\python.exe",
+    "sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd"
+  },
+  "external_Linux_pins": {
+    "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/lib/ChallengeDeps.olean": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/lib/ChallengeDeps/CandidateSpec.olean": "670b554a94297575edfeb26036162247539f2168c5f5c1ee657c65d305f3866b",
+    "/var/tmp/rh-zero-20261015/record-verification/modular/source/ChallengeDeps/CandidateSpec.lean": "233d908bb36c4809c3ea79b7520796393a793198dc0d4923fc393d55cfd0eb35"
+  },
+  "same_mathematical_statements": true,
+  "only_four_known_API_goals_repaired": true,
+  "model_constants_tree_and_numeric_witness_changes": false,
+  "original_Localization_and_Final_and_Core_unchanged": true,
+  "Counting_source_unchanged_and_previously_unrun": true,
+  "Core_or_prefix_recompiled": false,
+  "automatic_repairs_or_retries": 0,
+  "Lean_runs": 0,
+  "job_directory_absent": true,
+  "new_immutable_gate_required": true,
+  "uncropped_prefix_Core_counting_newLocalization_newFinal_bytes": 1976894,
+  "command_template": [
+    "C:/Python314/python.exe",
+    "research-goal-20261018-tiny-runtime-preparation/compile_phase1.py",
+    "--gate",
+    "ROOT_GATE",
+    "--gate-sha256",
+    "ROOT_SHA"
+  ]
+}

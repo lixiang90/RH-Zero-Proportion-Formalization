@@ -1,0 +1,42 @@
+{
+  "schema": "tiny-official-spec-request-v1",
+  "upload_ready": false,
+  "score": {
+    "numerator": "3337839448633819172184136761695440236797",
+    "denominator": "4955319193827760237900000000000000000000"
+  },
+  "expected_current_record": {
+    "numerator": "3337839448633819172184136761695440236797",
+    "denominator": "4955319193847235264050000000000000000000"
+  },
+  "public_theorem_names": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "trusted_spec_template": {
+    "path": "research-20261016-w10-cert/website-snapshot/challenge/templates/CandidateSpec.lean.tmpl",
+    "sha256": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c",
+    "origin_url": "https://raw.githubusercontent.com/josusanmartin/riemann/9e6ca6615b9dbfec4a1d722995cff0ffe3abf9bb/challenge/templates/CandidateSpec.lean.tmpl"
+  },
+  "CURRENT_EXPRESSION_source": "Official current kernel-verified ledger exactExpression, not contributor-defined",
+  "template_parameters": {
+    "NUMERATOR": "score.numerator",
+    "DENOMINATOR": "score.denominator",
+    "CURRENT_EXPRESSION": "trusted currentRecord.exactExpression"
+  },
+  "trusted_CandidateSpec_written_or_modified": false,
+  "local_old_CandidateSpec_usable": false,
+  "fresh_official_template_check_completed": false,
+  "official_generation_or_submission_executed": false,
+  "scope": "Proposed exact score and unverified draft only; no accepted record claim",
+  "unclosed_gates": [
+    "four ordinary modules",
+    "actual flatten and independent source audit",
+    "fresh record/template/dependency pins and official CandidateSpec",
+    "single-source ordinary elaboration/axioms",
+    "export/Comparator/nanoda",
+    "full website time/memory/source/request limits",
+    "GitHub/final submission materials"
+  ]
+}

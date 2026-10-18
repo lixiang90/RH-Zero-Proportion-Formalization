@@ -1,0 +1,12 @@
+--- frozen-phase1/phase2-counting.diff
++++ phase2/phase2-counting.diff
+@@ -114,7 +114,8 @@
+     dsimp [N]
+     rw [Nat.cast_sub (by omega : 8 ≤ m)]
+     norm_num
+-  simpa only [hcast] using hs
++  rw [hcast] at hs
++  simpa only [N, Y, Nat.reduceSub, Nat.cast_ofNat] using hs
+ 
+ section Payment
+ variable {ι : Type*} [Fintype ι] [DecidableEq ι]

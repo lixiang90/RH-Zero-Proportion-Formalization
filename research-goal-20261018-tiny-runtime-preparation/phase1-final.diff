@@ -1,0 +1,11 @@
+--- frozen-v0/phase1-final.diff
++++ phase1/phase1-final.diff
+@@ -4,7 +4,7 @@
+ runtime's older trusted CandidateSpec. No trusted constant is redefined.
+ Final website export requires a fresh trusted specification and Comparator.
+ -/
+-import StructuralS1RTiny20261018.Dev.Localization
++import StructuralS1RTiny20261018.Phase1.Localization
+ import StructuralS1RTiny20261018.Dev.Counting
+ 
+ set_option Elab.async false

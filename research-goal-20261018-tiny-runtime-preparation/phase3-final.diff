@@ -1,0 +1,41 @@
+--- Phase2/Final.lean
++++ Phase3/Final.lean
+@@ -65,11 +65,16 @@
+     2 * StructuralS1RTiny20261018.Dev.Localization.c ≤
+       Fw RiemannFail.W9 (StructuralS1RTiny20261018.Counting.leftGaps g) +
+       Fw RiemannFail.W9 (StructuralS1RTiny20261018.Counting.rightGaps g) := by
+-  simpa only [StructuralS1RTiny20261018.Counting.leftGaps,
+-    StructuralS1RTiny20261018.Counting.rightGaps,
+-    StructuralS1RTiny20261018.Dev.Localization.leftGaps,
+-    StructuralS1RTiny20261018.Dev.Localization.rightGaps] using
+-      StructuralS1RTiny20261018.Dev.Localization.pair_floor g hg
++  have hl : StructuralS1RTiny20261018.Counting.leftGaps g =
++      StructuralS1RTiny20261018.Dev.Localization.leftGaps g := by
++    funext r
++    rfl
++  have hr : StructuralS1RTiny20261018.Counting.rightGaps g =
++      StructuralS1RTiny20261018.Dev.Localization.rightGaps g := by
++    funext r
++    rfl
++  rw [hl, hr]
++  exact StructuralS1RTiny20261018.Dev.Localization.pair_floor g hg
+ 
+ private theorem ratio_exact :
+     StructuralS1RTiny20261018.Counting.ratio
+@@ -82,14 +87,14 @@
+ 
+ theorem actual_dyadic :
+     ∀ epsilon > (0 : ℝ), ∃ T0 : ℝ, ∀ T ≥ T0,
+-      (tinyKappa - epsilon) * (Ncount T (2*T) : ℝ) ≤ N0star T (2*T) := by
++      (tinyKappa - epsilon) * (_root_.Ncount T (2*T) : ℝ) ≤ _root_.N0star T (2*T) := by
+   have h := StructuralS1RTiny20261018.Counting.actual_dyadic_of_pair
+     RiemannFail.W9 RiemannFail.W9_adm hc hdelta hdeltac hc64 hB hbase hpair
+   simpa only [ratio_exact] using h
+ 
+ theorem actual_cumulative :
+     ∀ epsilon > (0 : ℝ), ∃ T0 : ℝ, ∀ T ≥ T0,
+-      (tinyKappa - epsilon) * (Ncount 0 T : ℝ) ≤ N0star 0 T := by
++      (tinyKappa - epsilon) * (_root_.Ncount 0 T : ℝ) ≤ _root_.N0star 0 T := by
+   have h := StructuralS1RTiny20261018.Counting.actual_cumulative_of_pair
+     RiemannFail.W9 RiemannFail.W9_adm hc hdelta hdeltac hc64 hB hbase hpair
+   simpa only [ratio_exact] using h

@@ -1,0 +1,59 @@
+NOT EXECUTED. Static command specification, not an authorized runnable pipeline.
+Source: scripts/verify_record_20261015.py + scripts/verify_single_solution.py
+and verification/gram-defect-20261015/lean/single/verification.json.
+
+1. After root gate and Dev terminal, start ONE monotonic total deadline BEFORE generation.
+   Windows generator command (repo cwd):
+C:/Python314/python.exe -B -X utf8 research-goal-20261018-tiny-flatten-preparation/generate_draft.py --generate-draft-once --prepared-sha256 918b37786fb8c462169d270d0d011be69d5bf7e72f9144032f69dfa865fdd7af
+
+2. Fresh staging is a necessary future reviewed step; no existing CandidateSpec is edited.
+   WORK=/var/tmp/rh-zero-20261015/tiny-production-v0 (must not already exist)
+   REPO=/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization
+   LEAN=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean
+   NANODA=/var/tmp/rh-zero-20261015/nanoda-target/release/nanoda_bin
+   PKG_PATH is EXACT runtime.json[lean_path], no project/dev root added.
+   PATH=/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin:/usr/bin:/bin
+   LEAN_PATH="$WORK/lib:$PKG_PATH"
+   Stage byte-identical Solution -> source/Solution/Candidate.lean.
+   From SHA-bound Zeta23 archive, stage comparator/ChallengeDeps.lean -> source/ChallengeDeps.lean.
+   From official CandidateSpec template + trusted ledger + tiny form p/q, stage NEW numeric spec.
+   Stage official Challenge.Candidate template -> source/Challenge/Candidate.lean.
+   Verify exact4-source overlay allowlist, empty fresh lib, all input hashes/UTF8/actual source bytes.
+
+3. Ordinary compile EXACT module/output mapping (one invocation each, binary env as above):
+env PATH="$PATH" LEAN_PATH="$LEAN_PATH" "$LEAN" -j1 --tstack=32768 -DrelaxedAutoImplicit=false -R "$WORK/source" -o "$WORK/lib/ChallengeDeps.olean" -i "$WORK/lib/ChallengeDeps.ilean" "$WORK/source/ChallengeDeps.lean"
+env PATH="$PATH" LEAN_PATH="$LEAN_PATH" "$LEAN" -j1 --tstack=32768 -DrelaxedAutoImplicit=false -R "$WORK/source" -o "$WORK/lib/ChallengeDeps/CandidateSpec.olean" -i "$WORK/lib/ChallengeDeps/CandidateSpec.ilean" "$WORK/source/ChallengeDeps/CandidateSpec.lean"
+env PATH="$PATH" LEAN_PATH="$LEAN_PATH" "$LEAN" -j1 --tstack=32768 -DrelaxedAutoImplicit=false -R "$WORK/source" -o "$WORK/lib/Challenge/Candidate.olean" -i "$WORK/lib/Challenge/Candidate.ilean" "$WORK/source/Challenge/Candidate.lean"
+env PATH="$PATH" LEAN_PATH="$LEAN_PATH" "$LEAN" -j1 --tstack=32768 -DrelaxedAutoImplicit=false -R "$WORK/source" -o "$WORK/lib/Solution/Candidate.olean" -i "$WORK/lib/Solution/Candidate.ilean" "$WORK/source/Solution/Candidate.lean"
+
+4. Prepare trusted tools only from pinned lean4export/Comparator archives, same code as old copy_tools.
+   lean4export: Export.lean, Export/Parse.lean, Main.lean->ExporterMain.lean.
+   Comparator: Comparator.lean, Comparator/{Axioms,Compare,Util}.lean, Main.lean->ComparatorMain.lean.
+   tools/ComparatorCoreAudit.lean -> $WORK/tools/source/CoreAudit.lean.
+   Compile imported tools in topological order by the SAME ordinary command, -R tools/source,
+   -o tools/lib/MODULE.olean; input/output SHA and compiler bound, all time included.
+   TOOL_PATH="$WORK/tools/lib:$WORK/lib:$PKG_PATH"; tools allowlist forbids any user/trusted-spec shadow.
+
+5. Export both modules with the exact root+primitive list (stdout is binary file, stderr separately):
+ROOTS=(candidate_strict_improvement candidate_critical_line_bound candidate_critical_line_bound_cumulative)
+PRIMITIVES=(Nat String String.mk Char Quot Quot.mk Quot.lift Quot.ind propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce)
+env PATH="$PATH" LEAN_PATH="$TOOL_PATH" "$LEAN" -j1 --tstack=32768 -DrelaxedAutoImplicit=false --run "$WORK/tools/source/ExporterMain.lean" Challenge.Candidate -- "${ROOTS[@]}" "${PRIMITIVES[@]}" > "$WORK/challenge.ndjson" 2> "$WORK/logs/challenge-export.log"
+env PATH="$PATH" LEAN_PATH="$TOOL_PATH" "$LEAN" -j1 --tstack=32768 -DrelaxedAutoImplicit=false --run "$WORK/tools/source/ExporterMain.lean" Solution.Candidate -- "${ROOTS[@]}" "${PRIMITIVES[@]}" > "$WORK/solution.ndjson" 2> "$WORK/logs/solution-export.log"
+
+6. Comparator core + Lean default-kernel replay (no landrun claim):
+env PATH="$PATH" LEAN_PATH="$TOOL_PATH" "$LEAN" -j1 --tstack=32768 -DrelaxedAutoImplicit=false --run "$WORK/tools/source/CoreAudit.lean" "$WORK/challenge.ndjson" "$WORK/solution.ndjson" "${ROOTS[@]}" > "$WORK/logs/comparator-default-kernel.log" 2>&1
+
+7. nanoda config JSON (num_threads=4 follows prior passed local recipe, not a claim of official thread policy):
+{"use_stdin":true,"permitted_axioms":["propext","Quot.sound","Classical.choice"],"unpermitted_axiom_hard_error":true,"nat_extension":true,"string_extension":true,"num_threads":4,"unsafe_permit_all_axioms":false,"print_success_message":true,"print_axioms":true,"pp_to_stdout":true}
+/usr/bin/time -v -o "$WORK/nanoda-resources.txt" "$NANODA" "$WORK/nanoda-config.json" < "$WORK/solution.ndjson" > "$WORK/logs/nanoda.log" 2>&1
+
+8. All commands above need remaining-deadline enforcement, terminal checks, bounded output,
+   SHA-before/after and a single-process-tree owner; these are NOT implemented by this text.
+   No --resume, --reuse-compiled, second candidate compilation, repair or retry in this attempt.
+   t_end-t0 <=3200s must cover generator+staging+all ordinary+tools+exports+Comparator+Nano+receipt.
+   A future launcher is separately prepared/reviewed/gated; these lines do not authorize execution.
+
+Official captured E2B entry (requires actual server tree/runtime and coordinates, NOT a local substitute):
+timeout --signal=TERM --kill-after=15s 3200s /opt/riemann/tools/bin/lake env "$COMPARATOR_BIN" comparator/config-candidate.json
+The outer run-verification-job.sh allows3240s, runs server verify-submission.mjs --mode=full,
+and binds trusted-records.json. Local CoreAudit and local timing cannot produce its attestation.

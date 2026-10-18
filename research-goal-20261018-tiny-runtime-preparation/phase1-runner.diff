@@ -1,0 +1,54 @@
+--- frozen-v0/phase1-runner.diff
++++ phase1/phase1-runner.diff
+@@ -1,4 +1,4 @@
+-"""One gated serial Tiny development compile; no dependency recompilation."""
++"""One gated Tiny Localization API-repair compile; reuse proved Core and prefix."""
+ import argparse
+ import hashlib
+ import json
+@@ -14,7 +14,7 @@
+ ROOT=Path(__file__).resolve().parents[1]
+ HERE=Path(__file__).resolve().parent
+ LINUX='/mnt/d/codex-build/Riemann-Zero/RH-Zero-Proportion-Formalization'
+-JOB=ROOT/'tmp/current-s1r-tiny-20261018/dev-v0'
++JOB=ROOT/'tmp/current-s1r-tiny-20261018/phase1-v0'
+ ALLOWED={'propext','Classical.choice','Quot.sound'}
+ 
+ 
+@@ -38,11 +38,12 @@
+     ns=ap.parse_args();gp=ROOT/ns.gate
+     assert sha(gp)==ns.gate_sha256
+     gate=json.loads(gp.read_text(encoding='utf-8'))
+-    prepared=HERE/'compiler-prepared.json'
+-    assert gate['authorized'] is True and gate['task']=='tiny-current-s1R-dev-ordinary-v0'
++    prepared=HERE/'phase1-prepared.json'
++    assert gate['authorized'] is True and gate['task']=='tiny-current-s1R-localization-phase1'
+     assert gate['prepared_manifest_sha256']==sha(prepared)
+     assert gate['automatic_repairs_or_retries']==0
+     assert gate['recompile_passed_prefix'] is False
++    assert gate['recompile_passed_Core'] is False
+     prep=json.loads(prepared.read_text(encoding='utf-8'))
+     assert gate['allowed_modules']==[x['module'] for x in prep['targets']]
+     for row in prep['files']+prep['dependencies']:
+@@ -71,7 +72,7 @@
+         for t in prep['targets']:
+             (JOB/(t['module'].split('/')[-1]+'.lean')).write_bytes((ROOT/(t['module']+'.lean')).read_bytes())
+         write(JOB/'started.json',{'gate_sha256':ns.gate_sha256,'pid':os.getpid(),'source_sha256':starts,
+-            'start_unix':time.time(),'prefix_recompiled':False,'reused_oleans':reused,
++            'start_unix':time.time(),'prefix_recompiled':False,'Core_recompiled':False,'reused_oleans':reused,
+             'automatic_repairs_or_retries':0,'report_points_only':{'seconds_per_module':1200,'log_bytes':20000000}})
+         passed=True;receipts=[]
+         for target in prep['targets']:
+@@ -110,9 +111,9 @@
+                 'source_sha256':starts[module],'olean_sha256':result['olean_sha256']}),flush=True)
+             if not ordinary or (expected and not audit):passed=False;break
+         write(JOB/'terminal.json',{'passed':passed,'finished_unix':time.time(),
+-            'completed_modules':len(receipts),'all_four_modules_completed':len(receipts)==4,
+-            'prefix_recompiled':False,'all_required_transitive_axiom_roots_audited':
+-                passed and len(receipts)==4 and receipts[-1]['axiom_audit_passed'] is True,
++            'completed_modules':len(receipts),'all_three_modules_completed':len(receipts)==3,
++            'prefix_recompiled':False,'Core_recompiled':False,'all_required_transitive_axiom_roots_audited':
++                passed and len(receipts)==3 and receipts[-1]['axiom_audit_passed'] is True,
+             'Nano_replayed':False,'trusted_tiny_CandidateSpec_prepared':False,
+             'official_Comparator_passed':False,'website_submission_ready':False})
+         return 0 if passed else 1

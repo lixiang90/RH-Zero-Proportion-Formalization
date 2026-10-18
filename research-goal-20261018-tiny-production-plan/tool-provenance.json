@@ -1,0 +1,261 @@
+{
+  "schema": "tiny-static-production-provenance-v1",
+  "prepared_at_utc": "2026-10-18T15:20:38.283610+00:00",
+  "scope": "Metadata-only inspection of existing recipes and receipts; no new verification run",
+  "runtime": {
+    "lean": "/var/tmp/rh-zero-20261015/lean-4.33.0-rc2-linux/bin/lean",
+    "lean_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "lean_version": "Lean (version 4.33.0-rc2, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "compiler_archive_sha256": "48010c7d6264dc992574e9b0e09ece1f9c648e8f5106066b2cdb6834a6a60a6c",
+    "package_root": "/var/tmp/rh-zero-20261015/.lake/packages",
+    "lean_path": "/var/tmp/rh-zero-20261015/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Qq/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/plausible/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Cli/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/importGraph/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/lean4export/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/nanoda/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/aesop/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/batteries/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Zeta23/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/Comparator/.lake/build/lib/lean:/var/tmp/rh-zero-20261015/.lake/packages/mathlib/.lake/build/lib/lean"
+  },
+  "pinned_archives": [
+    {
+      "name": "lean4export",
+      "repository": "leanprover/lean4export",
+      "commit": "b18d673bd29b476466a51a3be1012df2ed322b10",
+      "url": "https://codeload.github.com/leanprover/lean4export/tar.gz/b18d673bd29b476466a51a3be1012df2ed322b10",
+      "archive_sha256": "e1a22bb11b1fff7bcf36fd1546c11d36ca0a72601d81b08e65673469d54e0003",
+      "archive_bytes": 24998,
+      "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\lean4export"
+    },
+    {
+      "name": "nanoda",
+      "repository": "ammkrn/nanoda_lib",
+      "commit": "418320295890faed83a96fd97907b12a3b6728c2",
+      "url": "https://codeload.github.com/ammkrn/nanoda_lib/tar.gz/418320295890faed83a96fd97907b12a3b6728c2",
+      "archive_sha256": "f84eb185d4a5594aad18e4b8adbac636e3ace08b671d705dbd6acdbfb834eae6",
+      "archive_bytes": 87061,
+      "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\nanoda"
+    },
+    {
+      "name": "Zeta23",
+      "repository": "anthropics/zeta-23-lean",
+      "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+      "url": "https://codeload.github.com/anthropics/zeta-23-lean/tar.gz/3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+      "archive_sha256": "6d49328a1b822637c1b035d30fd4c801b29c28bfcbd6cfcd772863bcbcb318a3",
+      "archive_bytes": 1283758,
+      "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Zeta23"
+    },
+    {
+      "name": "Comparator",
+      "repository": "leanprover/comparator",
+      "commit": "273294467ce06429e6667ece7f5699f8678c9f4e",
+      "url": "https://codeload.github.com/leanprover/comparator/tar.gz/273294467ce06429e6667ece7f5699f8678c9f4e",
+      "archive_sha256": "73649fb6a9d4ff5efed8d5bc5b73f243398f9d95ac81a8dc24f6f51d513be94e",
+      "archive_bytes": 19617,
+      "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\Comparator"
+    },
+    {
+      "name": "mathlib",
+      "repository": "leanprover-community/mathlib4",
+      "commit": "51e6992efd06126df61a496bebf8f49482a4e129",
+      "url": "https://codeload.github.com/leanprover-community/mathlib4/tar.gz/51e6992efd06126df61a496bebf8f49482a4e129",
+      "archive_sha256": "0d44640e4a47b76187c0d6d31800a2e8c05001629c75010cff4c21031f5fa8b3",
+      "archive_bytes": 23384070,
+      "source_path": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\tmp\\setup-20261015\\packages\\mathlib"
+    }
+  ],
+  "nanoda_build_receipt": {
+    "command": [
+      "/var/tmp/rh-zero-20261015/rust/bin/cargo",
+      "build",
+      "--locked",
+      "--release",
+      "--bin",
+      "nanoda_bin"
+    ],
+    "working_directory": "/var/tmp/rh-zero-20261015/.lake/packages/nanoda",
+    "exit_code": 0,
+    "elapsed_seconds": 53.32683805400001,
+    "source_commit": "418320295890faed83a96fd97907b12a3b6728c2",
+    "rust_components": [
+      {
+        "component": "cargo",
+        "version": "1.85.1",
+        "url": "https://static.rust-lang.org/dist/cargo-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+        "sha256": "7373132c13e394755d15f01bda4374af59b4daef01b12a83cb3df3f3be38e289"
+      },
+      {
+        "component": "rustc",
+        "version": "1.85.1",
+        "url": "https://static.rust-lang.org/dist/rustc-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+        "sha256": "92a5c532b9e87912190128704e0d65825912e3b08a6ee9203c4068d6d1df62c4"
+      },
+      {
+        "component": "rust-std",
+        "version": "1.85.1",
+        "url": "https://static.rust-lang.org/dist/rust-std-1.85.1-x86_64-unknown-linux-gnu.tar.xz",
+        "sha256": "0aaeffba85359503f874315cd08e0ae8490275d14b41470d36d4fa57fd085916"
+      }
+    ],
+    "rustc_version": "rustc 1.85.1 (4eb161250 2025-03-15)",
+    "cargo_lock_sha256": "ba57464cc37afd903a12432b18db0d576afff60e04686322bfcebf8a4bc2848d",
+    "binary": "/var/tmp/rh-zero-20261015/nanoda-target/release/nanoda_bin",
+    "binary_sha256": "0c8332aae13164943ebfed4f8f4ed969494d8e85edff9d774a70fd92ea9318c2",
+    "log_sha256": "7466f3c2cc1b576773909d471e4e8af5db7298664015a4ece96608bfd8e7f7a9",
+    "log": "/var/tmp/rh-zero-20261015/nanoda-build.log",
+    "source_archive_sha256": "f84eb185d4a5594aad18e4b8adbac636e3ace08b671d705dbd6acdbfb834eae6",
+    "source_archive_url": "https://codeload.github.com/ammkrn/nanoda_lib/tar.gz/418320295890faed83a96fd97907b12a3b6728c2",
+    "build_command": [
+      "/var/tmp/rh-zero-20261015/rust/bin/cargo",
+      "build",
+      "--locked",
+      "--release",
+      "--bin",
+      "nanoda_bin"
+    ]
+  },
+  "prior_candidate_only": {
+    "receipt": "verification/gram-defect-20261015/lean/single/verification.json",
+    "results": {
+      "ordinary_single_file_lean_passed": true,
+      "statement_equality_proved": true,
+      "permitted_axioms_checked": true,
+      "default_kernel_replay_passed": true,
+      "independent_nanoda_passed": true,
+      "local_single_file_verified": true,
+      "official_website_acceptance": false,
+      "checked_declarations": 74925
+    },
+    "actual_pipeline": "scripts/verify_record_20261015.py adapts verify_single_solution.py from pinned archives",
+    "user_oleans_may_be_reused_for_tiny": false,
+    "tiny_result_inferred": false
+  },
+  "official_capture_commit": "cb97717d3ea82c45f19f2ce04c410440b6492aa6",
+  "generator_executed": false,
+  "lean_export_comparator_nanoda_executed": false,
+  "new_network_request": false,
+  "new_trusted_spec_written": false,
+  "new_runner_implemented": false,
+  "total_3200s_proven": false,
+  "official_acceptance": false,
+  "bound_dependencies": [
+    {
+      "path": "scripts/verify_record_20261015.py",
+      "bytes": 25407,
+      "sha256": "f6e57b4f0e6829a83199e384272b24e192a43a9c8860b114e2a5a66cc3500f40"
+    },
+    {
+      "path": "scripts/verify_single_solution.py",
+      "bytes": 28328,
+      "sha256": "c880e18a1754465e46c8c125cc18eae61faa9fb0f6e37562349c9d23175e0ea9"
+    },
+    {
+      "path": "tools/ComparatorCoreAudit.lean",
+      "bytes": 2032,
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    },
+    {
+      "path": "tmp/setup-20261015/runtime.json",
+      "bytes": 8589,
+      "sha256": "af23959d709ddab3286bef92eb7f2e05acbd418e2235dcd20714c18c09099574"
+    },
+    {
+      "path": "tmp/setup-20261015/sources.json",
+      "bytes": 6660,
+      "sha256": "afb55e306f672306e3c507476b1b0899a0f9c6b4880ff7228cef4af1ac4ca84a"
+    },
+    {
+      "path": "lake-manifest.json",
+      "bytes": 3910,
+      "sha256": "58973e92a874ce20d103d1786805ebf750d432433e8b68e63e48735329a804e1"
+    },
+    {
+      "path": "verification/gram-defect-20261015/setup/nanoda-build.json",
+      "bytes": 1978,
+      "sha256": "dd77c9251eb767785e2d2ae28a67320348aae7bb77aae6af9bc834b87c49dac1"
+    },
+    {
+      "path": "verification/gram-defect-20261015/lean/single/verification.json",
+      "bytes": 378158,
+      "sha256": "1c83b802aca9ed469b938f5e7a686912cf8acb46205e6b8f8cea615088fdabe4"
+    },
+    {
+      "path": "tmp/setup-20261015/packages/Zeta23/comparator/ChallengeDeps.lean",
+      "bytes": 6866,
+      "sha256": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/policy-snapshot.json",
+      "bytes": 3992,
+      "sha256": "fe6f9e0362a5bf8fc940a2079632ce590aabf00be77c1572a12f6529a4d9fd2d"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/challenge/contract.json",
+      "bytes": 2523,
+      "sha256": "39e1b5a99889cf2c50865883d2007df949bcfced107c92917fe9cd3ab6441020"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/CONTRIBUTING.md",
+      "bytes": 6189,
+      "sha256": "be5d7f521646ad4c331f24cee93e97a05f8101454aa5afacab2306dc272a51f6"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/scripts/prepare-candidate.ts",
+      "bytes": 6078,
+      "sha256": "78c2e712b83e793ae86704c652e995f3c6e319dc42da68b7978a73999309149a"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/scripts/verify-submission.ts",
+      "bytes": 12005,
+      "sha256": "6086eda89d70a509cf3235ce8d14ffb7d342febbc3b41275eb3851a0b5f8e1b1"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/scripts/run-comparator-e2b.sh",
+      "bytes": 2818,
+      "sha256": "86308ed0ed625524e8ed26f08dd8087d3046f5729da0d7e4d1cd5199a41dbde0"
+    },
+    {
+      "path": "research-goal-20261017-w10-generator-policy/snapshot/e2b/run-verification-job.sh",
+      "bytes": 2084,
+      "sha256": "4a072eebbbb1bf0e230f38755ea2f11b38a5e650e0986179dac17c973dd47aaa"
+    },
+    {
+      "path": "research-20261016-w10-cert/website-snapshot/provenance.json",
+      "bytes": 2142,
+      "sha256": "ead00d83a6499a3ad66853351884ac09ee8311780d3e5a83a280972e5bae6244"
+    },
+    {
+      "path": "research-20261016-w10-cert/website-snapshot/challenge/templates/CandidateSpec.lean.tmpl",
+      "bytes": 343,
+      "sha256": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c"
+    },
+    {
+      "path": "research-20261016-w10-cert/website-snapshot/challenge/templates/Challenge.Candidate.lean",
+      "bytes": 812,
+      "sha256": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation/prepared-files.json",
+      "bytes": 5712,
+      "sha256": "918b37786fb8c462169d270d0d011be69d5bf7e72f9144032f69dfa865fdd7af"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation/generate_draft.py",
+      "bytes": 7977,
+      "sha256": "ebbaabae61b1f8203745b06c01abfb62a9355ee2c15620ce6f825a130d4947e1"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation/candidate-parameters.json",
+      "bytes": 1840,
+      "sha256": "89cb0d7f96504d527be2c25f8ce8e971308c945db8282f353e58b8593dfa27d4"
+    },
+    {
+      "path": "research-goal-20261018-tiny-flatten-preparation/SPEC.zh.md",
+      "bytes": 4834,
+      "sha256": "c7ece6ac9be7df1114133ae7400def1b9cfe84c0ca8c1d28012d4e18fb61c352"
+    },
+    {
+      "path": "research-goal-20261018-tiny-dev-static-review/files.json",
+      "bytes": 2294,
+      "sha256": "0467e6825e9e310c5a0a2f74abcee1d2d60f0617f8dfc1bce022738fdc6b6b46"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/compiler-prepared.json",
+      "bytes": 7425,
+      "sha256": "4533c2fedb5d6f891da5c496e34aec58ece146fe839121a29d5ea46014ff5071"
+    }
+  ]
+}

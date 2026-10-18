@@ -15,10 +15,20 @@ The [independent replay](research-goal-20261018-tiny-overlap-independent/indepen
 confirms the integer classification and exact conditional score
 **67.35871733129443…%**, strictly above the fresh record.
 
-Complete Lean sublevel coverage, all70 cuts, reflection and root exterior
-proofs remain to be established. The planned counting bridge preserves the
+The strengthened coverage core and complete sublevel localization, including
+all70 cuts, root exterior, reflection and the adjacent-window contradiction,
+have now passed ordinary Lean. The planned counting bridge preserves the
 current W9 and pays a constant boundary charge; it does not require a new
-W10 ledger. The prepared source is not yet a verified global proof. The [Core variant](StructuralS1RTiny20261018/Core.lean) has been generated and independently checked as a text transformation; its new coverage semantics have not yet passed Lean.
+W10 ledger. The complete unconditional dyadic and cumulative zero-counting bounds now
+pass ordinary Lean. All six final transitive roots use only propext,
+Classical.choice and Quot.sound. [Ordinary evidence](research-goal-20261018-tiny-ordinary-result/ordinary-proof.json)
+retains the failed API versions and the successful Final-only repair. The
+[development Core](StructuralS1RTiny20261018/Dev/Core.lean) and
+[localization](StructuralS1RTiny20261018/Phase1/Localization.lean) preserve
+the audited exact data. [Website materials](submission/tiny-overlap-20261018/README.zh.md)
+are drafts pending complete cold verification. The final [root-counting
+theorems](StructuralS1RTiny20261018/Phase4/Final.lean) have no candidate-controlled
+analytic or local-floor hypotheses.
 Full Comparator, ordinary Lean, nanoda, a single file no larger than2MB,
 and the complete3,200-second verification workflow remain required.
 

@@ -1,0 +1,49 @@
+--- StructuralS1RTiny20261018/Localization.lean
++++ StructuralS1RTiny20261018/Dev/Localization.lean
+@@ -7,7 +7,7 @@
+ accepted source; only the separated pressure payments and target predicate
+ are changed. All original COV/state/FS/kernel data are imported unchanged.
+ -/
+-import StructuralS1RTiny20261018.Core
++import StructuralS1RTiny20261018.Dev.Core
+ 
+ set_option Elab.async false
+ set_option maxHeartbeats 0
+@@ -15,10 +15,10 @@
+ noncomputable section
+ open Finset
+ open AMW.Cert AMW.Cert.PCell
+-open AMW.Cert.PC9QB6M AMW.Cert.PC9QB6MData
++open AMW.Cert.PC9Tiny AMW.Cert.PC9TinyData
+ open Zeta23Ext.BridgeW
+ 
+-namespace StructuralS1RTiny20261018.Localization
++namespace StructuralS1RTiny20261018.Dev.Localization
+ 
+ def sep : ℝ := 17 / 20
+ def base : ℝ := (cN : ℝ) / SA
+@@ -138,7 +138,7 @@
+     · rw [List.getD_eq_getElem _ _ hi', hsi]; exact h2
+     · rw [List.getD_eq_getElem _ _ hi', hsi]; exact h3
+   choose! idx hidx using hbad
+-  apply AMW.Cert.PC9QB6MData.run idx (fun r hr => (hidx r hr).1) g
++  apply AMW.Cert.PC9TinyData.run idx (fun r hr => (hidx r hr).1) g
+   refine incell_root hPR (W := 1099511627776)
+     (fun k hk => by simp [rootCl, List.getD_eq_getElem?_getD, hk])
+     (fun k hk => by simp [rootCl, List.getD_eq_getElem?_getD, hk]) ?_ (fun r hr => ?_)
+@@ -189,7 +189,7 @@
+ theorem reverse_energy (g : Fin 8 → ℝ) :
+     Fw RiemannFail.W9 (reverse8 g) = Fw RiemannFail.W9 g := by
+   rw [RiemannFail.Fw_W9, RiemannFail.Fw_W9]
+-  simpa [reverse8] using AMW.Cert.PC9QB6M_G_rev (g 0) (g 1) (g 2) (g 3) (g 4) (g 5) (g 6) (g 7)
++  simpa [reverse8] using AMW.Cert.PC9Tiny_G_rev (g 0) (g 1) (g 2) (g 3) (g 4) (g 5) (g 6) (g 7)
+ 
+ theorem finite_ordered_exception (g : Fin 8 → ℝ) (hsep : ∀ r, sep ≤ g r)
+     (horder : g 0 ≤ g 7) (hlow : Fw RiemannFail.W9 g < tau) :
+@@ -260,5 +260,5 @@
+   have hc : (64168 : ℝ) / 32768 ≤ (34980 : ℝ) / 32768 := hrl.trans hlu
+   norm_num at hc
+ 
+-end StructuralS1RTiny20261018.Localization
++end StructuralS1RTiny20261018.Dev.Localization
+ end

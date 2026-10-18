@@ -1,0 +1,50 @@
+{
+  "schema": "tiny-localization-source-only-preparation-v1",
+  "canonical": {
+    "path": "StructuralS1RTiny20261018/Localization.lean",
+    "bytes": 12124,
+    "sha256": "1147fac9abfff8d2214d8222ac1f24eb7fa62cad2fac2b0a88cf14d3fffcc69c"
+  },
+  "development": {
+    "path": "StructuralS1RTiny20261018/Dev/Localization.lean",
+    "bytes": 12136,
+    "sha256": "8d02de83edfced0a98a9b717a4b6c9de65d9ccc392d914084a59fda7b958f179"
+  },
+  "mapping_diff": {
+    "path": "research-goal-20261018-tiny-localization-preparation/mapping.diff",
+    "bytes": 2017,
+    "sha256": "4017b7d955d507c5aceaf8b401d8e2dc9b506afc1cb0197e6737d78f482a3e6d"
+  },
+  "mappings": [
+    [
+      "import StructuralS1RTiny20261018.Core",
+      "import StructuralS1RTiny20261018.Dev.Core"
+    ],
+    [
+      "StructuralS1RTiny20261018.Localization",
+      "StructuralS1RTiny20261018.Dev.Localization"
+    ],
+    [
+      "PC9QB6M",
+      "PC9Tiny"
+    ]
+  ],
+  "inverse_mapping_byte_text_identity": true,
+  "no_Counting_import_or_cycle": true,
+  "original_Core_or_Counting_modified": false,
+  "original_c9_guards_have_actual_proof_source_not_assumed_from_floor": true,
+  "no_raised_coverChk_or_new_WZ_queries": true,
+  "proof_bodies_present_no_placeholders": true,
+  "Lean_parser_elaborator_kernel_or_numerical_runs": 0,
+  "development_Core_source_pinned_owner_final_package_pending": true,
+  "actual_pair_floor_typechecks_or_new_record_proven": false,
+  "still_unchecked": [
+    "finite pressure bounds",
+    "old hS/hcov proofs in new context",
+    "root_TinyGoal root geometry",
+    "Core new E fullwalk",
+    "actual Fw/G/reversal transfer",
+    "four-orientation endpoint contradiction",
+    "Counting final instance"
+  ]
+}

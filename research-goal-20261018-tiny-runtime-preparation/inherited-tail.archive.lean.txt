@@ -1,0 +1,134 @@
+noncomputable section
+open Filter Topology Zeta23
+open Zeta23Ext.Bridge Zeta23Ext.BridgeW
+open scoped BigOperators
+namespace OpethN.ActualDefect
+open Classical
+theorem actual_defect_estimate (Z : ZeroConfig) {n : ℕ} (hn : 2 ≤ n) (W : WCert n)
+    (hW : W.Adm) {c B : ℝ} (hc0 : 0 ≤ c) (hc64 : c ≤ 1 / 64) (hB : W.B = B)
+    (hCert : ∀ g : Fin (n - 1) → ℝ, (∀ i, 0 ≤ g i) → c ≤ Fw W g) :
+    OpethN.Counting.ActualDefectEstimate Z n c B := by
+  intro δ hδ
+  filter_upwards [Opeth.AMUniformKernel.kernel_limit_uniform Z δ hδ,
+    Opeth.AMSeparatedSpectrum.eventually_principal_eigenvalues_le_two Z,
+    eventually_L_pos] with T hclose hcap hL
+  have hx := xret_injective Z (mtParams T) T hL
+  have hspan : ∀ i j : retained Z (mtParams T) T,
+      xret Z (mtParams T) T i - xret Z (mtParams T) T j ≤
+        spanOf (xret Z (mtParams T) T) Finset.univ := by
+    intro i j
+    exact (le_abs_self _).trans
+      (abs_sub_le_spanOf (xret Z (mtParams T) T)
+        (Finset.mem_univ i) (Finset.mem_univ j))
+  have h := OpethN.matching_defect_bound_n hn hx
+    (gram_isHermitian Z (mtParams T) T) hc0 hc64
+    W hW hCert hδ.le (fun i j _ => hclose i j) hcap
+    (spanOf_nonneg (xret Z (mtParams T) T) Finset.univ) hspan
+  simpa only [Fintype.card_coe, hB, Dcirc] using h
+theorem actual_dyadic {n : ℕ} (hn : 2 ≤ n) (W : WCert n) (hW : W.Adm) {c B : ℝ}
+    (hc0 : 0 < c) (hc64 : c ≤ 1 / 64) (hB : W.B = B)
+    (hCert : ∀ g : Fin (n - 1) → ℝ, (∀ i, 0 ≤ g i) → c ≤ Fw W g) :
+    ∀ ε > (0 : ℝ), ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      ((6721290091768038344368273523390880473594 / 10000000000000000000000000000000000000000 - B) / (1 - c) - ε) * (Zeta23.Ncount T (2 * T) : ℝ) ≤
+        Zeta23.N0star T (2 * T) := by
+  have hB0 : 0 ≤ B := hB ▸ WCert.B_nonneg hW
+  have hdef := actual_defect_estimate zetaZeroConfig hn W hW hc0.le hc64 hB hCert
+  intro ε hε
+  obtain ⟨T₀, hT₀⟩ := eventually_atTop.mp
+    (OpethN.Counting.defect_to_dyadic zetaZeroConfig paperInputs_zeta hn hc0
+      (by linarith) hB0 hdef ε hε)
+  refine ⟨T₀, fun T hT => ?_⟩
+  have hs : ((6721290091768038344368273523390880473594 / 10000000000000000000000000000000000000000 - B) / (1 - c) - ε) * (Zeta23.Ncount T (2 * T) : ℝ) ≤
+      (Zeta23.N0simple T (2 * T) : ℝ) := by
+    simpa only [zetaZeroConfig_N, zetaZeroConfig_N0s] using hT₀ T hT
+  have hline : (Zeta23.N0simple T (2 * T) : ℝ) ≤ Zeta23.N0star T (2 * T) := by
+    exact_mod_cast AMW.N0simple_le_N0star' T (2 * T)
+  exact hs.trans hline
+theorem actual_cumulative {n : ℕ} (hn : 2 ≤ n) (W : WCert n) (hW : W.Adm) {c B : ℝ}
+    (hc0 : 0 < c) (hc64 : c ≤ 1 / 64) (hB : W.B = B)
+    (hCert : ∀ g : Fin (n - 1) → ℝ, (∀ i, 0 ≤ g i) → c ≤ Fw W g) :
+    ∀ ε > (0 : ℝ), ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      ((6721290091768038344368273523390880473594 / 10000000000000000000000000000000000000000 - B) / (1 - c) - ε) * (Zeta23.Ncount 0 T : ℝ) ≤
+        Zeta23.N0star 0 T :=
+  Zeta23.cumulative_of_dyadic Zeta23.zetaSeam Zeta23.paperInputs_zeta.RvM
+    (fun _ _ _ => Zeta23.N0star_add' Zeta23.zetaSeam) (actual_dyadic hn W hW hc0 hc64 hB hCert)
+end OpethN.ActualDefect
+end
+section
+/-
+Copyright (c) 2026 R. Arun Chandru. Released under Apache-2.0.
+R. Arun Chandru; arun.chandru@gmail.com
+
+Concrete composition of the attributed published AM certificate and the
+new same-operator full-defect transfer. Imported third-party copyright and
+license notices remain applicable. No local-certificate, matrix-bound,
+or defect-estimate hypothesis is left in the conclusions below.
+
+SOURCE ONLY: the complete source chain still requires compilation and the
+official Comparator, Lean, and nanoda checks. Not an accepted submission.
+-/
+noncomputable section
+open Zeta23
+open Zeta23Ext.BridgeW
+-- SWAP final instantiation: n, the certificate's W / W_adm / W_B / cert_AM, c, B, κ
+namespace Opeth.AMFinal
+theorem actual_dyadic :
+    ∀ ε > (0 : ℝ), ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      ((3337839448633819172184136761695440236797 / 4955319193847235264050000000000000000000 : ℝ) - ε) * (Zeta23.Ncount T (2 * T) : ℝ) ≤
+        Zeta23.N0star T (2 * T) := by
+  have h := OpethN.ActualDefect.actual_dyadic (by norm_num : 2 ≤ 9) RiemannFail.W9 RiemannFail.W9_adm
+    (by norm_num : (0 : ℝ) < 893616123055294719 / 100000000000000000000) (by norm_num) RiemannFail.W9_B RiemannFail.cert_AM
+  have e : ((6721290091768038344368273523390880473594 / 10000000000000000000000000000000000000000 - (456111945004000000 : ℝ) / 100000000000000000000) / (1 - (893616123055294719 : ℝ) / 100000000000000000000))
+      = 3337839448633819172184136761695440236797 / 4955319193847235264050000000000000000000 := by norm_num
+  simpa only [e] using h
+theorem actual_cumulative :
+    ∀ ε > (0 : ℝ), ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      ((3337839448633819172184136761695440236797 / 4955319193847235264050000000000000000000 : ℝ) - ε) * (Zeta23.Ncount 0 T : ℝ) ≤
+        Zeta23.N0star 0 T := by
+  have h := OpethN.ActualDefect.actual_cumulative (by norm_num : 2 ≤ 9) RiemannFail.W9 RiemannFail.W9_adm
+    (by norm_num : (0 : ℝ) < 893616123055294719 / 100000000000000000000) (by norm_num) RiemannFail.W9_B RiemannFail.cert_AM
+  have e : ((6721290091768038344368273523390880473594 / 10000000000000000000000000000000000000000 - (456111945004000000 : ℝ) / 100000000000000000000) / (1 - (893616123055294719 : ℝ) / 100000000000000000000))
+      = 3337839448633819172184136761695440236797 / 4955319193847235264050000000000000000000 := by norm_num
+  simpa only [e] using h
+end Opeth.AMFinal
+end
+section
+/-
+Copyright (c) 2026 R. Arun Chandru. Released under Apache-2.0.
+
+Separate challenge wrapper for the AM result 66812491/99194876.
+It does not change the locked original candidate or any imported proof.
+The downloaded official Solution.lean supplies the three statements below.
+ChallengeDeps.CandidateSpec must be generated by the trusted challenge
+preparation from the requested rational and the actual record snapshot;
+this file neither defines nor replaces either trusted constant.
+
+SOURCE ONLY: no compilation, Comparator, or nanoda acceptance is claimed.
+The local helper import must be flattened, with all required proof sources and
+attributions, into the final single-file submission before its size audit.
+The allowed axioms are only propext, Quot.sound, and Classical.choice;
+the print commands below request an audit, not evidence of a passed audit.
+-/
+noncomputable section
+-- SWAP κ literal in am_export_candidate_exact
+private theorem am_export_candidate_exact :
+    candidateKappa = (3337839448633819172184136761695440236797 / 4955319193847235264050000000000000000000 : ℝ) := by
+  norm_num [candidateKappa]
+theorem candidate_strict_improvement :
+    currentRecordKappa < candidateKappa := by
+  norm_num [currentRecordKappa, candidateKappa]
+theorem candidate_critical_line_bound :
+    ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      (candidateKappa - ε) * (Ncount T (2 * T) : ℝ) ≤ N0star T (2 * T) := by
+  rw [am_export_candidate_exact]
+  exact Opeth.AMFinal.actual_dyadic
+theorem candidate_critical_line_bound_cumulative :
+    ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      (candidateKappa - ε) * (Ncount 0 T : ℝ) ≤ N0star 0 T := by
+  rw [am_export_candidate_exact]
+  exact Opeth.AMFinal.actual_cumulative
+end
+#print axioms candidate_strict_improvement
+#print axioms candidate_critical_line_bound
+#print axioms candidate_critical_line_bound_cumulative
+end

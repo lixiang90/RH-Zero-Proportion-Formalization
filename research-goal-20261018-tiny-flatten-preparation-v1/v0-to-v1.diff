@@ -1,0 +1,116 @@
+--- v0/generate_draft.py
++++ v1/generate_draft.py
+@@ -21,9 +21,9 @@
+ MODULES = (
+     ('StructuralS1RM20261018.CurrentPrefix', 'StructuralS1RM20261018/CurrentPrefix.lean'),
+     ('StructuralS1RTiny20261018.Dev.Core', 'StructuralS1RTiny20261018/Dev/Core.lean'),
+-    ('StructuralS1RTiny20261018.Dev.Localization', 'StructuralS1RTiny20261018/Dev/Localization.lean'),
++    ('StructuralS1RTiny20261018.Phase1.Localization', 'StructuralS1RTiny20261018/Phase1/Localization.lean'),
+     ('StructuralS1RTiny20261018.Dev.Counting', 'StructuralS1RTiny20261018/Dev/Counting.lean'),
+-    ('StructuralS1RTiny20261018.Dev.Final', 'StructuralS1RTiny20261018/Dev/Final.lean'),
++    ('StructuralS1RTiny20261018.Phase1.Final', 'StructuralS1RTiny20261018/Phase1/Final.lean'),
+ )
+ IMPORT = re.compile(rb'import ([A-Za-z_][A-Za-z0-9_.]*)\r?\n?\Z')
+ HEADER = (
+--- v0/prepare_only.py
++++ v1/prepare_only.py
+@@ -11,13 +11,17 @@
+ MODULE_PINS = {
+  'StructuralS1RM20261018/CurrentPrefix.lean': 'ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21',
+  'StructuralS1RTiny20261018/Dev/Core.lean': '1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac',
+- 'StructuralS1RTiny20261018/Dev/Localization.lean': '8d02de83edfced0a98a9b717a4b6c9de65d9ccc392d914084a59fda7b958f179',
++ 'StructuralS1RTiny20261018/Phase1/Localization.lean': 'ad722eca53b43ff28ccfe9f66e338979ac05ff7088fe067dc395ea5e1c9cf758',
+  'StructuralS1RTiny20261018/Dev/Counting.lean': 'e1629a96ac6239ae0d216c608c99f6d929c779b8201f4835aa72b125b2923f87',
+- 'StructuralS1RTiny20261018/Dev/Final.lean': 'f4d398bc846415d6e428c07055ea799f2d70318aafeee69ab3a4864baf05b3de',
++ 'StructuralS1RTiny20261018/Phase1/Final.lean': 'f99f0bafbc724b657f7321cf262d3550711a9c303c18a93ac03c3b15104ec497',
+ }
+ MODULE_NAMES = [p[:-5].replace('/', '.') for p in MODULE_PINS]
+ DEPS = list(MODULE_PINS) + [
+  'research-goal-20261018-tiny-runtime-preparation/compiler-prepared.json',
++ 'research-goal-20261018-tiny-runtime-preparation/phase1-prepared.json',
++ 'research-goal-20261016/gates/tiny-phase1-ordinary-20261018.json',
++ 'research-goal-20261018-tiny-flatten-preparation/prepared-files.json',
++ 'research-goal-20261018-tiny-flatten-preparation/generate_draft.py',
+  'research-goal-20261018-tiny-runtime-preparation/dev-source-files.json',
+  'research-goal-20261018-tiny-runtime-preparation/runtime-CandidateSpec.json',
+  'research-goal-20261018-tiny-runtime-preparation/runtime-CandidateSpec.snapshot.lean',
+@@ -88,7 +92,7 @@
+         notice_counts.append({'path':name,'Copyright_mentions':text.count('Copyright'),
+                               'SPDX_mentions':text.count('SPDX-License-Identifier'),
+                               'license_case_insensitive_mentions':text.lower().count('license')})
+-    assert module_bytes == 1_976_729
++    assert module_bytes == 1_976_894
+     assert len(internal) == 5
+     assert imports[0]['module'] == 'ChallengeDeps'
+     assert imports[1]['module'] == 'ChallengeDeps.CandidateSpec'
+@@ -140,7 +144,7 @@
+                         'full website time/memory/source/request limits','GitHub/final submission materials']}
+     exclusive('candidate-parameters.json',params)
+     exclusive('preparation.json',{
+-      'schema':'tiny-flatten-static-preparation-v1','passed':True,
++      'schema':'tiny-flatten-static-preparation-v2','passed':True,
+       'AST_sources':['generate_draft.py','prepare_only.py'],
+       'source_input_bytes':module_bytes,'external_import_count':len(imports),
+       'internal_import_count':len(internal),'wrapper_bytes':len(wrapper),
+@@ -150,12 +154,12 @@
+       'generator_executions':0,'draft_exists':False,'Lean_runs':0,'Comparator_runs':0,
+       'Nano_runs':0,'mathematical_evaluations':0,'compiler_inputs_modified':False,
+       'upload_ready':False,'read_dependencies_sha256_before':{p:row(ROOT/p)['sha256'] for p in DEPS}})
+-    owned = ['generate_draft.py','prepare_only.py','official-wrapper.lean.txt','SPEC.zh.md',
++    owned = ['generate_draft.py','prepare_only.py','adapt_v1.py','v0-to-v1.diff','version-delta.json','official-wrapper.lean.txt','SPEC.zh.md',
+              'input-pins.json','candidate-parameters.json','preparation.json']
+     readdeps = [row(ROOT/p) for p in DEPS]
+     runtime = Path(sys.executable)
+     exclusive('prepared-files.json',{
+-      'schema':'tiny-flatten-generator-prepared-v1', 'scope':'Static source preparation only',
++      'schema':'tiny-flatten-generator-prepared-v2', 'scope':'Static source preparation only',
+       'files':[row(HERE/p) for p in owned], 'read_dependencies':readdeps,
+       'external_runtime_identity':{'path':str(runtime),'bytes':runtime.stat().st_size,
+                                   'sha256':sha(runtime.read_bytes()),'version':sys.version},
+--- v0/SPEC.zh.md
++++ v1/SPEC.zh.md
+@@ -6,8 +6,9 @@
+ 
+ ## 输入和保持规则
+ 
+-固定顺序：CurrentPrefix、Dev.Core、Dev.Localization、Dev.Counting、Dev.Final。
+-五个原始 UTF-8 文件合计 1,976,729 bytes。实际 SHA 和大小由 input-pins 及 prepared 绑定。
++固定顺序：CurrentPrefix、Dev.Core、Phase1.Localization、Dev.Counting、Phase1.Final。
++模块路径更新，Lean namespace 仍为 Dev.Localization/Dev.Final；wrapper 完全不变。
++五个原始 UTF-8 文件合计 1,976,894 bytes。实际 SHA 和大小由 input-pins 及 prepared 绑定。
+ 每个源仅移出完整的单模块 `import` 行：内部依赖由前面拼入的正文替代；其余所有
+ 第三方/可信 import 原字节、原顺序移到总文件头。所有非 import 字节（包括全部版权、
+ 许可全文、来源说明、数据、证明、section/end 和 option）逐段完全保留，输出记录 byte
+@@ -41,7 +42,7 @@
+ ## 未来文本生成命令（本 prepared 未运行）
+ 
+ ```
+-C:/Python314/python.exe -B -X utf8 research-goal-20261018-tiny-flatten-preparation/generate_draft.py --generate-draft-once --prepared-sha256 <prepared-files.json的SHA256>
++C:/Python314/python.exe -B -X utf8 research-goal-20261018-tiny-flatten-preparation-v1/generate_draft.py --generate-draft-once --prepared-sha256 <prepared-files.json的SHA256>
+ ```
+ 
+ 仅允许独占新建本目录 draft/；若目录或任一输出已存在则拒绝覆盖。输出
+@@ -58,11 +59,21 @@
+ 4. 最终单源在新可信规格下完整 ordinary elaboration，所有有限检查及三个 theorem
+    无额外前提，公理仅 propext、Quot.sound、Classical.choice。
+ 5. 单源 export、Comparator 精确 statement、公理闭包与独立 nanoda 全部实际通过。
+-6. 网站全流程 3200s Comparator/3240s job、8GiB 及部署限制内的真实资源证明；模块
+-   cache 成功或源文本小不等于此门通过。
++6. 网站全流程 Comparator 3200s / job 3240s 与部署限制内的真实资源证明。
++   捕获的 8GiB 来自 `ulimit -f` 文件大小限制，不能解释成 RAM 上限；实际内存限制
++   另待部署合同确认。模块 cache 成功或源文本小不等于此门通过。未来 soleowner
++   统一 launcher 的总 t0 必须在调用本 generator 之前，纯文本生成时间同样计入
++   3200s，不先单独生成再重新起表。
+ 7. 最终源小于等于 2,000,000 UTF-8 bytes，网络提交 JSON 不超过其独立上限；完整
+    GitHub 同步、来源/许可证、提交元数据与用户最终交付。没有任何上传授权由本包产生。
+ 
+ 源码预算只按实际 UTF-8 bytes，不以 gzip/JSON 或 olean 尺寸替代。metadata-only
+ preparation 给静态精确预测；实际生成后的真实字节及验证仍需核。任何未来失败都要
+ 留原版本/原退出证据，不把 prepared、模块数量或条件结果称为无条件新纪录。
++
++## 版本与停止线
++
++旧 v0 prepared918b377…/generator ebbaaba… 保留且未执行。v1仅绑定正式授权的
++同命题API修复源与Final import-only变化，非重新选择数学目标。普通模块编译仍由
++soleowner负责；本包既不执行它，也不预判通过。即使新普通模块通过，本 prepared
++仍不自动授权生成。须由root审查后决定统一生产launcher的唯一执行。

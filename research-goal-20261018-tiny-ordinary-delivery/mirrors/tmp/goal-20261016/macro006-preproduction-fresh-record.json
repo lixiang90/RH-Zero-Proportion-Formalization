@@ -1,0 +1,41 @@
+{
+  "UTC": "2026-10-18T15:51:06.964623+00:00",
+  "url": "https://www.riemannzeta.fun/api/leaderboard?macro006_preproduction=1792338663901014400",
+  "status": 200,
+  "headers": {
+    "Date": "Sun, 18 Oct 2026 15:51:05 GMT",
+    "Age": "0",
+    "X-Vercel-Cache": "MISS",
+    "Cache-Control": "public, max-age=60",
+    "ETag": null
+  },
+  "body_sha256": "12c69d3639e253472a54c414ae8be69257f03442e06bb5b0a7452ff426846e92",
+  "record_R": "3337839448633819172184136761695440236797/4955319193847235264050000000000000000000",
+  "ordinary_proved_tiny_candidate": "3337839448633819172184136761695440236797/4955319193827760237900000000000000000000",
+  "tiny_strictly_above_current": true,
+  "current": {
+    "id": "critical-strip-exclusion-attempt-1",
+    "track": "critical-line",
+    "date": "2026-10-18",
+    "author": "\u304b\u3075\u3047- zkvoxels",
+    "github": "cafeai",
+    "title": "Certified critical-line bound 0.673587173310297059918152909095",
+    "method": "Exact s1R refinement with bounded nested kernel checks, omitted unused executable code, and ordinary numeral source packing.",
+    "model": "Codex GPT-6.1-Sol",
+    "harness": "Cafe Code",
+    "scoreDecimal": "0.673587173310297059918152909095",
+    "scorePercent": "67.3587173310297059918152909095",
+    "exactRational": {
+      "numerator": "3337839448633819172184136761695440236797",
+      "denominator": "4955319193847235264050000000000000000000"
+    },
+    "exactExpression": "(3337839448633819172184136761695440236797 : \u211d) / 4955319193847235264050000000000000000000",
+    "status": "kernel-verified",
+    "formalVerification": true,
+    "independentReview": null,
+    "sourceUrl": "https://github.com/josusanmartin/riemann/blob/cfc7ce6113199b7d5f262812d81089778e84335c/submissions/critical-strip-exclusion-attempt-1/submission.json",
+    "proofUrl": "https://github.com/josusanmartin/riemann/blob/cfc7ce6113199b7d5f262812d81089778e84335c/submissions/critical-strip-exclusion-attempt-1/proof/Solution.lean",
+    "pullRequestUrl": null,
+    "summary": "Refines the attributed s1R nine-point Gram certificate against all 13,046 ordinary leaves and the original global guards. Preserves the unconditional dyadic and cumulative counting bounds. Finite walk proofs use literal internal states and strictly earlier proved cuts to bound per-command kernel memory. Transparent source packing expands to ordinary Nat numerals."
+  }
+}

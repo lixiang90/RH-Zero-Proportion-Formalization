@@ -1,0 +1,80 @@
+{
+  "schema": "tiny-flatten-static-preparation-v2",
+  "passed": true,
+  "AST_sources": [
+    "generate_draft.py",
+    "prepare_only.py"
+  ],
+  "source_input_bytes": 1976894,
+  "external_import_count": 24,
+  "internal_import_count": 5,
+  "wrapper_bytes": 1772,
+  "predicted_solution_bytes": 1979122,
+  "predicted_headroom_bytes": 20878,
+  "notice_inventory": [
+    {
+      "path": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "Copyright_mentions": 2,
+      "SPDX_mentions": 2,
+      "license_case_insensitive_mentions": 2
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Core.lean",
+      "Copyright_mentions": 15,
+      "SPDX_mentions": 1,
+      "license_case_insensitive_mentions": 71
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase1/Localization.lean",
+      "Copyright_mentions": 0,
+      "SPDX_mentions": 1,
+      "license_case_insensitive_mentions": 1
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Counting.lean",
+      "Copyright_mentions": 0,
+      "SPDX_mentions": 1,
+      "license_case_insensitive_mentions": 2
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Phase1/Final.lean",
+      "Copyright_mentions": 0,
+      "SPDX_mentions": 1,
+      "license_case_insensitive_mentions": 1
+    }
+  ],
+  "three_wrapper_statements_whitespace_normalized_equal_official_template": true,
+  "generator_executions": 0,
+  "draft_exists": false,
+  "Lean_runs": 0,
+  "Comparator_runs": 0,
+  "Nano_runs": 0,
+  "mathematical_evaluations": 0,
+  "compiler_inputs_modified": false,
+  "upload_ready": false,
+  "read_dependencies_sha256_before": {
+    "StructuralS1RM20261018/CurrentPrefix.lean": "ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21",
+    "StructuralS1RTiny20261018/Dev/Core.lean": "1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac",
+    "StructuralS1RTiny20261018/Phase1/Localization.lean": "ad722eca53b43ff28ccfe9f66e338979ac05ff7088fe067dc395ea5e1c9cf758",
+    "StructuralS1RTiny20261018/Dev/Counting.lean": "e1629a96ac6239ae0d216c608c99f6d929c779b8201f4835aa72b125b2923f87",
+    "StructuralS1RTiny20261018/Phase1/Final.lean": "f99f0bafbc724b657f7321cf262d3550711a9c303c18a93ac03c3b15104ec497",
+    "research-goal-20261018-tiny-runtime-preparation/compiler-prepared.json": "4533c2fedb5d6f891da5c496e34aec58ece146fe839121a29d5ea46014ff5071",
+    "research-goal-20261018-tiny-runtime-preparation/phase1-prepared.json": "3127e3c803dfb0752d140384648d3439e7e5153f006f8b31b0799c2c9f322ebc",
+    "research-goal-20261016/gates/tiny-phase1-ordinary-20261018.json": "ef3a98a1adc36c9c9ce3fa69f6aa51a24dd6229d9c0162f414a73420baf419bb",
+    "research-goal-20261018-tiny-flatten-preparation/prepared-files.json": "918b37786fb8c462169d270d0d011be69d5bf7e72f9144032f69dfa865fdd7af",
+    "research-goal-20261018-tiny-flatten-preparation/generate_draft.py": "ebbaabae61b1f8203745b06c01abfb62a9355ee2c15620ce6f825a130d4947e1",
+    "research-goal-20261018-tiny-runtime-preparation/dev-source-files.json": "6d166f1640d8ad175329ef9587eb6df1ebfd34e1363c15f40017094d5b74943e",
+    "research-goal-20261018-tiny-runtime-preparation/runtime-CandidateSpec.json": "b6cba24f2402312d6dfdac002da59e5e29ed2ec367bf0e13297b19e0b560eca9",
+    "research-goal-20261018-tiny-runtime-preparation/runtime-CandidateSpec.snapshot.lean": "233d908bb36c4809c3ea79b7520796393a793198dc0d4923fc393d55cfd0eb35",
+    "research-goal-20261018-tiny-localization-preparation/prepared-files.json": "bd842466cffb01ec870b7aaa8d9b416b9c566f8eb79b8a90733ab88d5f3002e8",
+    "research-goal-20261016/gates/tiny-dev-ordinary-v0-20261018.json": "f135aeb338790abe91be9faf0e78877c677c0038feea8f60b5b0007067319ee6",
+    "research-goal-20261018-record-source-audit/snapshot/Solution.lean": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+    "research-goal-20261017-w10-generator-policy/policy-snapshot.json": "fe6f9e0362a5bf8fc940a2079632ce590aabf00be77c1572a12f6529a4d9fd2d",
+    "research-goal-20261017-w10-generator-policy/snapshot/CONTRIBUTING.md": "be5d7f521646ad4c331f24cee93e97a05f8101454aa5afacab2306dc272a51f6",
+    "research-goal-20261017-w10-generator-policy/snapshot/challenge/contract.json": "39e1b5a99889cf2c50865883d2007df949bcfced107c92917fe9cd3ab6441020",
+    "research-goal-20261017-w10-generator-policy/snapshot/scripts/prepare-candidate.ts": "78c2e712b83e793ae86704c652e995f3c6e319dc42da68b7978a73999309149a",
+    "research-20261016-w10-cert/website-snapshot/provenance.json": "ead00d83a6499a3ad66853351884ac09ee8311780d3e5a83a280972e5bae6244",
+    "research-20261016-w10-cert/website-snapshot/challenge/templates/CandidateSpec.lean.tmpl": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c",
+    "research-20261016-w10-cert/website-snapshot/challenge/templates/Challenge.Candidate.lean": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378"
+  }
+}

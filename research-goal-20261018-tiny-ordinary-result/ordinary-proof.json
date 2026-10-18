@@ -1,0 +1,146 @@
+{
+  "schema": "tiny-full-unconditional-ordinary-proof-result-v1",
+  "phases": [
+    {
+      "phase": 2,
+      "actual_exec_session": 3699,
+      "exit_code": 1,
+      "terminal": {
+        "passed": false,
+        "finished_unix": 1792338069.6123786,
+        "completed_modules": 2,
+        "all_two_modules_completed": true,
+        "prefix_recompiled": false,
+        "Core_recompiled": false,
+        "Localization_recompiled": false,
+        "all_required_transitive_axiom_roots_audited": false,
+        "Nano_replayed": false,
+        "trusted_tiny_CandidateSpec_prepared": false,
+        "official_Comparator_passed": false,
+        "website_submission_ready": false
+      }
+    },
+    {
+      "phase": 3,
+      "actual_exec_session": 62021,
+      "exit_code": 1,
+      "terminal": {
+        "passed": false,
+        "finished_unix": 1792338374.7097516,
+        "completed_modules": 1,
+        "all_one_module_completed": true,
+        "prefix_recompiled": false,
+        "Core_recompiled": false,
+        "Localization_recompiled": false,
+        "all_required_transitive_axiom_roots_audited": false,
+        "Nano_replayed": false,
+        "trusted_tiny_CandidateSpec_prepared": false,
+        "official_Comparator_passed": false,
+        "website_submission_ready": false
+      }
+    },
+    {
+      "phase": 4,
+      "actual_exec_session": 95032,
+      "exit_code": 0,
+      "terminal": {
+        "passed": true,
+        "finished_unix": 1792338550.5090606,
+        "completed_modules": 1,
+        "all_one_module_completed": true,
+        "prefix_recompiled": false,
+        "Core_recompiled": false,
+        "Localization_recompiled": false,
+        "all_required_transitive_axiom_roots_audited": true,
+        "Nano_replayed": false,
+        "trusted_tiny_CandidateSpec_prepared": false,
+        "official_Comparator_passed": false,
+        "website_submission_ready": false
+      }
+    }
+  ],
+  "final_receipt": {
+    "module": "StructuralS1RTiny20261018/Phase4/Final",
+    "exit_code": 0,
+    "elapsed_seconds": 57.0162718296051,
+    "source_sha256": "d477fd3181e0d4d5a3c89bcbcb987dd6cad00fbdde1946d01c26ac0c279489ed",
+    "source_unchanged": true,
+    "log_sha256": "0852642d18fb0adc532fef277529a55898d27aecc21d1b23ef01bff9e37977d0",
+    "resource_sha256": "3714f4c51a247f5b41773281a6381b0d5762a59b37e6ab46dbbdb56b7d304790",
+    "printed_roots": [
+      {
+        "root": "AMW.Cert.PC9TinyData.run",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "RiemannFail.cert_AM",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "StructuralS1RTiny20261018.Dev.Localization.pair_floor",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "StructuralS1RTiny20261018.Dev.Final.strict_improvement",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "StructuralS1RTiny20261018.Dev.Final.actual_dyadic",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "StructuralS1RTiny20261018.Dev.Final.actual_cumulative",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "expected_printed_roots": [
+      "AMW.Cert.PC9TinyData.run",
+      "RiemannFail.cert_AM",
+      "StructuralS1RTiny20261018.Dev.Localization.pair_floor",
+      "StructuralS1RTiny20261018.Dev.Final.strict_improvement",
+      "StructuralS1RTiny20261018.Dev.Final.actual_dyadic",
+      "StructuralS1RTiny20261018.Dev.Final.actual_cumulative"
+    ],
+    "olean_sha256": "6fa99fa220b6d30d82b1703da37c42abac9773abc20355acacc237c8c16c0c31",
+    "ordinary_compile_passed": true,
+    "axiom_audit_passed": true,
+    "axiom_audit_deferred_to_Final_transitive_roots": false,
+    "Nano_replayed": false,
+    "official_Comparator_passed": false,
+    "website_submission_ready": false
+  },
+  "full_actual_root_counting_dyadic_and_cumulative_bound_proved": true,
+  "hypotheses_remaining_in_final_bound": false,
+  "all_six_transitive_roots_only_standard_three_axioms": true,
+  "mathematical_constants_or_models_changed_by_API_repairs": false,
+  "previous_failed_sources_and_logs_preserved": true,
+  "cold_single_file_verified": false,
+  "Comparator_passed": false,
+  "nanoda_passed": false,
+  "website_submission_ready": false,
+  "official_website_acceptance": false
+}

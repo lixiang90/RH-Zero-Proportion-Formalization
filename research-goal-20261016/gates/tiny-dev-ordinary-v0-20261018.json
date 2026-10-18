@@ -1,0 +1,77 @@
+{
+  "task": "tiny-current-s1R-dev-ordinary-v0",
+  "authorized": true,
+  "prepared_manifest_sha256": "4533c2fedb5d6f891da5c496e34aec58ece146fe839121a29d5ea46014ff5071",
+  "allowed_modules": [
+    "StructuralS1RTiny20261018/Dev/Core",
+    "StructuralS1RTiny20261018/Dev/Localization",
+    "StructuralS1RTiny20261018/Dev/Counting",
+    "StructuralS1RTiny20261018/Dev/Final"
+  ],
+  "automatic_repairs_or_retries": 0,
+  "recompile_passed_prefix": false,
+  "sole_compiler_owner": "/root/lean_cover_goal",
+  "ordinary_Lean_only": true,
+  "nanoda_or_official_Comparator_authorized": false,
+  "source_changes_during_execution_authorized": false,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "expected_printed_roots": [
+    {
+      "module": "StructuralS1RTiny20261018/Dev/Core",
+      "roots": []
+    },
+    {
+      "module": "StructuralS1RTiny20261018/Dev/Localization",
+      "roots": []
+    },
+    {
+      "module": "StructuralS1RTiny20261018/Dev/Counting",
+      "roots": [
+        "StructuralS1RTiny20261018.Counting.sum_range_pair_lower",
+        "StructuralS1RTiny20261018.Counting.summed_of_pair",
+        "StructuralS1RTiny20261018.Counting.actual_defect_estimate_of_pair",
+        "StructuralS1RTiny20261018.Counting.actual_dyadic_of_pair",
+        "StructuralS1RTiny20261018.Counting.actual_cumulative_of_pair"
+      ]
+    },
+    {
+      "module": "StructuralS1RTiny20261018/Dev/Final",
+      "roots": [
+        "AMW.Cert.PC9TinyData.run",
+        "RiemannFail.cert_AM",
+        "StructuralS1RTiny20261018.Dev.Localization.pair_floor",
+        "StructuralS1RTiny20261018.Dev.Final.strict_improvement",
+        "StructuralS1RTiny20261018.Dev.Final.actual_dyadic",
+        "StructuralS1RTiny20261018.Dev.Final.actual_cumulative"
+      ]
+    }
+  ],
+  "Core_Localization_axiom_status_deferred_until_Final_transitive_audit": true,
+  "reused_prefix_olean_sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692",
+  "resources": {
+    "threads": 1,
+    "maxMemoryMiB": 13500,
+    "stackBytes": 268435456
+  },
+  "manual_report_only": {
+    "elapsed_seconds_per_module": 1200,
+    "log_bytes": 20000000
+  },
+  "automatic_timeout_or_output_cap_enforced": false,
+  "fresh_record_receipt": "tmp/goal-20261016/macro006-precompile-fresh-record.json",
+  "fresh_record_checked_UTC": "2026-10-18T15:00:44.236999+00:00",
+  "fresh_record_unchanged": true,
+  "independent_original_Core_text_review": "ab50e6d0799b4502cbd44edf276bdf96c566844bdd4e27dab88bfaed1e08e79b",
+  "independent_tiny_arithmetic_and_all_four_geometry": "8ed9bde1457ff61cffa65901dc01564d0775fd6a1e04805796d16469b8b17373",
+  "new_Dev_mapping_and_Localization_independent_review_in_progress": true,
+  "root_complete_Loc_Final_math_static_review_no_extra_floor_premise": true,
+  "uncropped_source_byte_inventory": 1976729,
+  "actual_flatten_and_complete_3200s_not_verified": true,
+  "decision": "Run one fixed serial ordinary validation of all four sources. Root checked every22 pin and actual Localization/Final proof scope; previous independent canonical Core projection and pairing arithmetic passed. New Dev mapping independent static receipt remains in progress and must be resolved before any deliverable claim. Any compile or axiom error stops; no automatic repair/retry or new mathematical computation.",
+  "main_rounds_since_review": 0,
+  "last_review_number": 6
+}

@@ -1,0 +1,76 @@
+{
+  "module": "StructuralS1RTiny20261018/Phase3/Final",
+  "exit_code": 1,
+  "elapsed_seconds": 61.42695140838623,
+  "source_sha256": "356be48d1326022cc8148be1023d42a160a7562faa8c2f13af32ffb807de36ab",
+  "source_unchanged": true,
+  "log_sha256": "f8b554e987925da6203de1f2537e40ad83e69b4290bdb1f960182b8fca923027",
+  "resource_sha256": "aa056f0d30655629c32a1b8efd305291bae5222be412034a04d26a6b14873ec7",
+  "printed_roots": [
+    {
+      "root": "AMW.Cert.PC9TinyData.run",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "RiemannFail.cert_AM",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "StructuralS1RTiny20261018.Dev.Localization.pair_floor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "StructuralS1RTiny20261018.Dev.Final.strict_improvement",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "StructuralS1RTiny20261018.Dev.Final.actual_dyadic",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "root": "StructuralS1RTiny20261018.Dev.Final.actual_cumulative",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "expected_printed_roots": [
+    "AMW.Cert.PC9TinyData.run",
+    "RiemannFail.cert_AM",
+    "StructuralS1RTiny20261018.Dev.Localization.pair_floor",
+    "StructuralS1RTiny20261018.Dev.Final.strict_improvement",
+    "StructuralS1RTiny20261018.Dev.Final.actual_dyadic",
+    "StructuralS1RTiny20261018.Dev.Final.actual_cumulative"
+  ],
+  "olean_sha256": null,
+  "ordinary_compile_passed": false,
+  "axiom_audit_passed": false,
+  "axiom_audit_deferred_to_Final_transitive_roots": false,
+  "Nano_replayed": false,
+  "official_Comparator_passed": false,
+  "website_submission_ready": false
+}

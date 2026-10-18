@@ -1,0 +1,2382 @@
+{
+  "schema": "tiny-dev-v0-ordinary-execution-v1",
+  "actual_exec_session": 36511,
+  "exec_terminal_exit": 1,
+  "files": [
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Core.child.json",
+      "bytes": 55,
+      "sha256": "59ea536b2854d8ae8f00e0ae665fd1e77909a2484bbb70ec1b93f9742bc4bf40"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Core.command.json",
+      "bytes": 1972,
+      "sha256": "77b99a72cf26ad30b480e9f24683e349d357266cf9cc934bc84bb9f60c15d478"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Core.lean",
+      "bytes": 1003097,
+      "sha256": "1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Core.log",
+      "bytes": 1569938,
+      "sha256": "25ad8648116d0ee5dea8955e7c94daecb2e894cee4500ee9d548cd6a05f52f54"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Core.receipt.json",
+      "bytes": 44084,
+      "sha256": "bb9c0e24828026750e1fb3a6edc9ab0350838bf7e7e6c77c8da529da45c173c0"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Core.resources.log",
+      "bytes": 2341,
+      "sha256": "aa1e32fc148d4f4b403d8f5c8eb4fba0ea1c47dc0e272080697b2be941ff0b4a"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Counting.lean",
+      "bytes": 21427,
+      "sha256": "e1629a96ac6239ae0d216c608c99f6d929c779b8201f4835aa72b125b2923f87"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Final.lean",
+      "bytes": 4845,
+      "sha256": "f4d398bc846415d6e428c07055ea799f2d70318aafeee69ab3a4864baf05b3de"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Localization.child.json",
+      "bytes": 54,
+      "sha256": "5bfb846db47a460d4fc872a77013b7189e137b7cd6ea7a17ae3c20ffe14623ed"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Localization.command.json",
+      "bytes": 1996,
+      "sha256": "5338d2e2fd42940de022b7600725dde95f51ba48948ebf0026482f5d99003118"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Localization.lean",
+      "bytes": 12136,
+      "sha256": "8d02de83edfced0a98a9b717a4b6c9de65d9ccc392d914084a59fda7b958f179"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Localization.log",
+      "bytes": 4010,
+      "sha256": "69447ab071be48500d5d2ab4138b0b805ed71e1d6690f625937a24505a68049f"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Localization.receipt.json",
+      "bytes": 712,
+      "sha256": "85928cb5e7fa8ec7bff51ae6906f51004ff3f475eb89f685bd3190aa4b4196e5"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/Localization.resources.log",
+      "bytes": 2388,
+      "sha256": "edc2e5a3a58417906518bb846a4b7d4b387675f6012a1275bf4b53aaf8ed9f20"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/started.json",
+      "bytes": 1098,
+      "sha256": "7c685d29c0d03c4920ee3e6d4c40603720ddeef5058d324bf7fa48d64bff4cea"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/terminal.json",
+      "bytes": 362,
+      "sha256": "282450388cd387ed4edce9cf8c1e1313cf7108b6220f28801cd6f14c870d70c9"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/freeze_dev_v0.py",
+      "bytes": 3194,
+      "sha256": "3fdf195768b054c5c52ca496a62653b6dbcdecd15c9a372fa6cd686d3306f0fa"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/compiler-prepared.json",
+      "bytes": 7425,
+      "sha256": "4533c2fedb5d6f891da5c496e34aec58ece146fe839121a29d5ea46014ff5071"
+    },
+    {
+      "path": "research-goal-20261016/gates/tiny-dev-ordinary-v0-20261018.json",
+      "bytes": 3383,
+      "sha256": "f135aeb338790abe91be9faf0e78877c677c0038feea8f60b5b0007067319ee6"
+    }
+  ],
+  "compiled_and_reused_oleans_metadata_only": [
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/lib/StructuralS1RTiny20261018/Dev/Core.olean",
+      "bytes": 20499952,
+      "sha256": "1a892b6ed20f635d33cc93c3e642c950a7dc56a683d966979c70a345ea0c718a"
+    },
+    {
+      "path": "tmp/current-s1r-tiny-20261018/dev-v0/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+      "bytes": 45890464,
+      "sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692"
+    }
+  ],
+  "ordinary_passed_but_axioms_pending_module": {
+    "module": "StructuralS1RTiny20261018/Dev/Core",
+    "exit_code": 0,
+    "elapsed_seconds": 656.0939841270447,
+    "source_sha256": "1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac",
+    "source_unchanged": true,
+    "log_sha256": "25ad8648116d0ee5dea8955e7c94daecb2e894cee4500ee9d548cd6a05f52f54",
+    "resource_sha256": "aa1e32fc148d4f4b403d8f5c8eb4fba0ea1c47dc0e272080697b2be941ff0b4a",
+    "printed_roots": [
+      {
+        "root": "AMW.Cert.PC9TinyData.ready0_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc0",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready1_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready1_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready1_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready1_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc1",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready2_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready2_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready2_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready2_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready2_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready2_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready2_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc2",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready3_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready3_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready3_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready3_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready3_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready3_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready3_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc3",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready4_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc4",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_3_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_3_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_cuts4_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_4_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_4_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_cuts5_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready5_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc5",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready6_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready6_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready6_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready6_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready6_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready6_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready6_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc6",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready7_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready7_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready7_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready7_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready7_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready7_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready7_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc7",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready8_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready8_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready8_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready8_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready8_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready8_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready8_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc8",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_3_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_3_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_cuts4_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready9_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc9",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_3_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_3_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_cuts4_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_4_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_4_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_cuts5_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready10_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc10",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready11_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc11",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready12_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready12_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready12_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready12_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready12_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready12_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready12_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc12",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready13_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready13_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready13_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready13_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready13_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready13_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready13_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc13",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready14_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready14_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready14_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready14_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready14_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready14_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready14_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc14",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready15_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc15",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready16_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc16",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready17_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc17",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready18_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc18",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready19_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc19",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready20_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc20",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready21_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc21",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready22_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc22",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready23_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc23",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready24_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc24",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready25_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc25",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready26_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc26",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready27_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc27",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready28_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc28",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready29_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc29",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready30_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc30",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready31_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc31",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready32_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready32_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready32_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready32_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc32",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready33_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc33",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_3_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_3_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_cuts4_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_4_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_4_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_cuts5_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready34_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc34",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready35_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready35_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready35_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready35_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready35_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready35_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready35_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc35",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready36_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc36",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready37_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc37",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready38_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc38",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready39_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready39_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready39_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready39_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc39",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready40_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready40_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready40_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready40_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready40_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready40_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready40_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc40",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_2_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_2_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_cuts3_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready41_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc41",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready42_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready42_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready42_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready42_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready42_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready42_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready42_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc42",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready43_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready43_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready43_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready43_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready43_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready43_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready43_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc43",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready44_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready44_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready44_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready44_1_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready44_1_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready44_cuts2_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready44_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc44",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready45_0_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready45_0_covered",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready45_cuts1_ok",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready45_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc45",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready46_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc46",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.ready47_parent_cursor",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "root": "AMW.Cert.PC9TinyData.rc47",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "expected_printed_roots": [],
+    "olean_sha256": "1a892b6ed20f635d33cc93c3e642c950a7dc56a683d966979c70a345ea0c718a",
+    "ordinary_compile_passed": true,
+    "axiom_audit_passed": null,
+    "axiom_audit_deferred_to_Final_transitive_roots": true,
+    "Nano_replayed": false,
+    "official_Comparator_passed": false,
+    "website_submission_ready": false
+  },
+  "failed_module": {
+    "module": "StructuralS1RTiny20261018/Dev/Localization",
+    "exit_code": 1,
+    "elapsed_seconds": 27.72025966644287,
+    "source_sha256": "8d02de83edfced0a98a9b717a4b6c9de65d9ccc392d914084a59fda7b958f179",
+    "source_unchanged": true,
+    "log_sha256": "69447ab071be48500d5d2ab4138b0b805ed71e1d6690f625937a24505a68049f",
+    "resource_sha256": "edc2e5a3a58417906518bb846a4b7d4b387675f6012a1275bf4b53aaf8ed9f20",
+    "printed_roots": [],
+    "expected_printed_roots": [],
+    "olean_sha256": null,
+    "ordinary_compile_passed": false,
+    "axiom_audit_passed": null,
+    "axiom_audit_deferred_to_Final_transitive_roots": true,
+    "Nano_replayed": false,
+    "official_Comparator_passed": false,
+    "website_submission_ready": false
+  },
+  "unrun_modules": [
+    "StructuralS1RTiny20261018/Dev/Counting",
+    "StructuralS1RTiny20261018/Dev/Final"
+  ],
+  "max_RSS_KiB": {
+    "Core": 7845616,
+    "Localization": 6862732
+  },
+  "prefix_recompiled": false,
+  "automatic_repairs_or_retries": 0,
+  "all_four_modules_passed": false,
+  "all_transitive_axiom_roots_audited": false,
+  "tiny_pair_floor_proved": false,
+  "tiny_dyadic_or_cumulative_proved": false,
+  "Nano_or_Comparator_passed": false,
+  "website_submission_ready": false,
+  "failure_scope": "Four Localization API/simplification goals; original source unchanged, no automatic repair."
+}

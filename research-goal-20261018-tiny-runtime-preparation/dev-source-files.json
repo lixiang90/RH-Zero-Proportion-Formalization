@@ -1,0 +1,101 @@
+{
+  "schema": "tiny-current-prefix-reuse-dev-source-preparation-v1",
+  "files": [
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Core.lean",
+      "bytes": 1003097,
+      "sha256": "1e144c848b39c85277af45c590cb0e54e93b2f098d44f5eb40bcb2e1b8d216ac"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Dev/Counting.lean",
+      "bytes": 21427,
+      "sha256": "e1629a96ac6239ae0d216c608c99f6d929c779b8201f4835aa72b125b2923f87"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/inherited-tail.archive.lean.txt",
+      "bytes": 7496,
+      "sha256": "3c302ece1537b15cbeb7d80ee8cdecebe561f816eb1307ad704738819f6618d6"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/DevCore.diff",
+      "bytes": 841086,
+      "sha256": "85df4c0ac9a4b4c71086cd4fc166f13372bd10c6263f61f9cae1f5db48d70683"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/DevCounting.diff",
+      "bytes": 340,
+      "sha256": "610ec3db5cca89c1a81ce83563b0aa69811c3f02368f5bcb9d915960848cda21"
+    },
+    {
+      "path": "research-goal-20261018-tiny-runtime-preparation/prepare_dev_sources.py",
+      "bytes": 8948,
+      "sha256": "f5f66c916c249e80dc0cd405640b6d1c1c44dd9af6ad60ad09562c5dfb0c7677"
+    }
+  ],
+  "read_dependencies": [
+    {
+      "path": "StructuralS1RTiny20261018/Core.lean",
+      "bytes": 1821568,
+      "sha256": "9fbdf3f2dc62333b636d3b25dfb3bf2b15e3b8c628ece73d6ba1bc768fc5f1a6"
+    },
+    {
+      "path": "StructuralS1RM20261018/CurrentPrefix.lean",
+      "bytes": 935224,
+      "sha256": "ea8e01118d19158ba8313504910645ad467ea86eb2ea65a897859ae98101df21"
+    },
+    {
+      "path": "StructuralS1RTiny20261018/Counting.lean",
+      "bytes": 21423,
+      "sha256": "ddb73bed77f0c63f8e60e4549cfbf21eb8fb50f1e229bc647eb1393081bedb78"
+    },
+    {
+      "path": "research-goal-20261018-tiny-core-preparation/prepared-files.json",
+      "bytes": 4244,
+      "sha256": "fda610f6156cb81b3582c5b919d7d2841422f24d8067d3f1097b5a197e54b3e9"
+    },
+    {
+      "path": "research-goal-20261018-tiny-counting-preparation/prepared-files.json",
+      "bytes": 2217,
+      "sha256": "36d9ac75c35009cdf0a4280dddabb408a9dfa3ebd4f8de75e9850d256a2aa67b"
+    }
+  ],
+  "reused_olean_metadata_only": {
+    "path": "tmp/current-s1r-M-20261018/phaseA1b/lib/StructuralS1RM20261018/CurrentPrefix.olean",
+    "bytes": 45890464,
+    "sha256": "8a67fa6cd8dbf293b802471bf39fb2cc160130a263191ce1c854d16fc35db692"
+  },
+  "new_concrete_namespace": "AMW.Cert.PC9Tiny",
+  "new_data_namespace": "AMW.Cert.PC9TinyData",
+  "aliased_original_data": [
+    "TOP",
+    "BK",
+    "lbS",
+    "TOPD",
+    "BKD",
+    "lbD",
+    "REG",
+    "hR",
+    "PT",
+    "ptS"
+  ],
+  "table_block_byte_identical_to_proved_prefix": true,
+  "raw_packed_payloads_137_byte_identical": true,
+  "all_new_TinyGoal_numeric_leaf_walk_and_cut_proofs_reelaborated": true,
+  "reelaboration_claim_is_future_obligation_not_completed": true,
+  "old_covered_or_CovK_not_used_as_new_E_proof": true,
+  "retained_through": "end OpethN.Counting",
+  "legacy_AMFinal_and_public_wrappers_compiled": false,
+  "imported_prefix_bytes": 935224,
+  "new_concrete_bytes": 125113,
+  "new_data_alias_bytes": 850,
+  "new_cov_and_walk_data_bytes": 734802,
+  "actual_counting_tail_bytes": 122348,
+  "license_trailer_bytes": 18791,
+  "devCore_bytes": 1003097,
+  "devCounting_bytes": 21427,
+  "uncropped_flatten_prefix_plus_devCore_plus_devCounting_bytes": 1959748,
+  "uncropped_remaining_2MB_before_Localization_and_final_wrapper": 40252,
+  "Lean_runs": 0,
+  "new_math_evaluations": 0,
+  "future_gate_required": true
+}
