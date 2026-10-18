@@ -12,10 +12,12 @@ as new-kernel evidence. Historic frozen packets retain their original scope.
 
 The [closed production baseline replay](../research-goal-20261018-record-baseline-replay/NOTE.zh.md)
 passes all48 roots,13,046 numeric leaves,595 reflection leaves,70 internal
-cuts and160 original WZ guards without changing the floor. Independent full
-mathematical review remains pending. The [StageB contract](../research-goal-20261018-stageB-static-contract/PLAN.zh.md)
-fixes one threshold, closed exception coverage and all four orientations;
-neither classification nor overlap scanning has run.
+cuts and160 original WZ guards without changing the floor. The [independent
+full finite replay](../research-goal-20261018-record-baseline-independent/NOTE.zh.md)
+agrees on all counts, the complete node trace and every WZ value. A [written
+decision](gates/stageB-20261018.json) now authorizes one fixed classification
+under the [StageB contract](../research-goal-20261018-stageB-static-contract/PLAN.zh.md).
+Overlap scanning and new Lean runs remain unauthorized.
 
 The current [global rounding comparison](../research-goal-20261017-common-rounding/NOTE.zh.md)
 uses one common shift to produce at most ten feasible integer configurations.

@@ -11,9 +11,12 @@ moves the overlapping-window research to that exact new source and its
 original17/20 separation. The [original-certificate production replay](research-goal-20261018-record-baseline-replay/NOTE.zh.md)
 now passes all48 roots,13,046 numeric leaves,595 reflection leaves,
 70 internal cut contracts and160 original WZ guards at the unchanged floor.
-Independent full mathematical review is pending. The [fixed next-stage contract](research-goal-20261018-stageB-static-contract/PLAN.zh.md)
-specifies complete separated sublevel coverage and four overlap orientations;
-it has not been executed. No new joint floor or unconditional record has been proved.
+An [independent full finite replay](research-goal-20261018-record-baseline-independent/NOTE.zh.md)
+agrees on every node, cursor and guard. One fixed threshold classification
+is now [authorized](research-goal-20261016/gates/stageB-20261018.json) under the
+[complete separated-sublevel contract](research-goal-20261018-stageB-static-contract/PLAN.zh.md).
+Overlap scanning and new Lean runs remain unauthorized. No new joint floor
+or unconditional record has been proved.
 
 A [common-shift integer rounding comparison](research-goal-20261017-common-rounding/NOTE.zh.md)
 now gives a new whole-domain necessary condition for actual24-mode global

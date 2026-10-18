@@ -1,0 +1,41 @@
+{
+  "schema": "root-fixed-stageB-classification-decision-v1",
+  "goal_status": "active",
+  "macro_review": "research-goal-20261016/macro-reviews/003-20261018.zh.md",
+  "main_rounds_since_review": 0,
+  "same_main_round_not_a_new_round": true,
+  "source_SHA256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+  "stageA_producer_manifest_SHA256": "03f3426e29ab7355ed76729dcaa3a3ba754154ae39ff5e9632bae2c57eff069f",
+  "stageA_independent_manifest_SHA256": "2d2c8003ed6be6f74d0f53e8624cd631eb1c934415b22b5377a4f2d40c64791c",
+  "stageA_full_finite_replay_and_independent_review_passed": true,
+  "stageA_is_not_new_Lean_or_new_floor_acceptance": true,
+  "static_contract_SHA256": "b9d9315cd76e9be9d4c860fe1368d06433e8ccabdeb5740b0109140ffa8c17f8",
+  "authorized_action": "One fixed complete original-witness classification at tau on all original roots/leaves, preserving arbitrary separated sublevel coverage and source provenance. No automatic overlap scan.",
+  "domain": "Every h_r >= 17/20 with F9(h) < tau; not a minimizer restriction and not a claim that every low-energy window is separated.",
+  "tau_numerator": "893916123055294719",
+  "denominator": "100000000000000000000",
+  "delta_numerator": "300000000000000",
+  "SLOPE": "335544320000000000",
+  "threshold_margin_identity": "M_tau = M_original - SLOPE * delta_numerator, exactly once; source AST identity must be checked.",
+  "classification_passes_authorized": 1,
+  "original_tree_or_witness_changes_authorized": false,
+  "pair_scans_authorized": false,
+  "new_kernel_queries_authorized": false,
+  "new_optimizer_or_parameter_scan_authorized": false,
+  "Lean_runs_authorized": false,
+  "resource_limits": {
+    "elapsed_seconds": 180,
+    "closed_output_bytes": 32000000
+  },
+  "source_budget_rule": "Report actual baseline bytes and actual output encoding sizes. New formal consumer, whole flattened source and kernel runtime remain unknown unless measured; an unknown or failed complete budget forbids proceeding to proof batches and does not make this research classification a compliant upload.",
+  "stops": [
+    "Input, all-node trace, counts, source AST threshold identity or cursor mismatch",
+    "Any raised-threshold root-outside payment failure",
+    "Any omitted terminal, reflection used as energy payment, changed witness or new query",
+    "Resource limit exceeded"
+  ],
+  "after_execution": "Freeze results and independently audit classification/closed geometry before deciding whether a separately authorized full four-orientation DBM opportunity scan is warranted. Preserve failed attempts; do not retry a different threshold.",
+  "new_joint_floor_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false
+}

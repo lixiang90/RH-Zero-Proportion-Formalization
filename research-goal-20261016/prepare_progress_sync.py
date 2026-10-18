@@ -25,7 +25,7 @@ def main():
     receipt=json.loads((HERE/'ordinary-verified-current.json').read_bytes())
     files=['.gitattributes','AGENTS.md','README.md','submission/goal-20261016/STATUS.zh.md']
     names=['README.md','DIRECTION.zh.md','direction-state.json','macro-reviews/001-20261017.zh.md','macro-reviews/002-20261017.zh.md','macro-reviews/003-20261018.zh.md',
-      'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
+      'gates/stageB-20261018.json','ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
       'window_interval_kernel.py','window_interval_kernel.json','window_jet_crosscheck.py','window_jet_crosscheck.json',
       'window_global_cover.py','window_lower_global_cover.py','window_make_lower_variant.py','window_make_lower_variant.json',
       'window_minimizer_cover.py','window_correlated_minimizer_cover.py','window_make_correlated_variant.py','window_make_correlated_variant.json',
@@ -270,7 +270,8 @@ def main():
       ('research-goal-20261018-record-packing-independent/packing-files.json','ade046ca2398cc3825d81a74aec1afa955b8957bf56dea8cd9cb8fd1c38cabc6'),
       ('research-goal-20261018-record-wz-static-addendum/addendum-files.json','8ebc8493025eb7e63c4fe3419c4e929ca34033bafda434fa79905b95dfb17af6'),
       ('research-goal-20261018-record-baseline-replay/files.json','03f3426e29ab7355ed76729dcaa3a3ba754154ae39ff5e9632bae2c57eff069f'),
-      ('research-goal-20261018-stageB-static-contract/contract-files.json','b9d9315cd76e9be9d4c860fe1368d06433e8ccabdeb5740b0109140ffa8c17f8')]:
+      ('research-goal-20261018-stageB-static-contract/contract-files.json','b9d9315cd76e9be9d4c860fe1368d06433e8ccabdeb5740b0109140ffa8c17f8'),
+      ('research-goal-20261018-record-baseline-independent/audit-files.json','2d2c8003ed6be6f74d0f53e8624cd631eb1c934415b22b5377a4f2d40c64791c')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
