@@ -1,0 +1,20 @@
+{
+  "schema": "fixed-size-audit-before-run-v1",
+  "audit_executions_at_preparation": 0,
+  "syntax_preflight_only": true,
+  "source_files": [
+    {
+      "path": "research-goal-20261018-joint-size-opportunity/audit_once.py",
+      "sha256": "b645ef59ff64750b03274efe856bec237ce3ba23c7d0806cf40d736d439ae814"
+    },
+    {
+      "path": "research-goal-20261018-joint-size-opportunity/run_once.py",
+      "sha256": "410bbc4260b2ce2b3e163b6aafd3a2049ef5c96df308f62f2d1e23d078ecf06f"
+    }
+  ],
+  "command": [
+    "C:/Python314/python.exe",
+    "research-goal-20261018-joint-size-opportunity/run_once.py",
+    "--launch-authorized-size-audit"
+  ]
+}

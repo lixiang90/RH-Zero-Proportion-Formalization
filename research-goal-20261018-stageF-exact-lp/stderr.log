@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageF-exact-lp\solve_fixed_once.py", line 319, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageF-exact-lp\solve_fixed_once.py", line 317, in main
+    solve((ROOT/args.gate).resolve(),args.gate_sha256)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageF-exact-lp\solve_fixed_once.py", line 266, in solve
+    stage='validate_primary_primal_dual';certificate,checks=validate_primary(raw,packet)
+                                                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\codex-build\Riemann-Zero\RH-Zero-Proportion-Formalization\research-goal-20261018-stageF-exact-lp\solve_fixed_once.py", line 182, in validate_primary
+    assert all(dot(r['coefficients'],point)<=r['rhs'] for r in rows)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

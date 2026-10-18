@@ -1,0 +1,26 @@
+{
+  "schema": "fixed-F-single-child-launch-v1",
+  "command": {
+    "argv": [
+      "C:\\Python314\\python.exe",
+      "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-stageF-exact-lp\\solve_fixed_once.py",
+      "--execute-authorized-fixed-F",
+      "--gate",
+      "research-goal-20261016/gates/stageF-exact-lp-20261018.json",
+      "--gate-sha256",
+      "02015ab778511ce8ae424e488ce95ee28f4e34990e96aa5db8c0f4608c76a90d"
+    ],
+    "cwd": "D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization"
+  },
+  "command_sha256": "f9f54c466f584b5e0bcc72ab691620ee810da85fa52fb15ccc6812ac5eea1072",
+  "parent_pid": 57748,
+  "script_sha256": "b3b1125cbae80c2bb5c5860b85bf51b8f8b14f8a9775c90fd024a15cab88340f",
+  "launcher_sha256": "a396851c10984c08abfaa0436c20d3de87a8048c1db90c6c690507f418319844",
+  "primary_calls_authorized": 1,
+  "conditional_auxiliary_calls_authorized": 1,
+  "maximum_child_launches": 1,
+  "resource_limits": {
+    "elapsed_seconds": 300,
+    "closed_output_bytes": 20000000
+  }
+}

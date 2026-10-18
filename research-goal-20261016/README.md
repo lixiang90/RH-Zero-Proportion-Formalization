@@ -32,9 +32,22 @@ The [quantitative model](../research-goal-20261018-stageE-floor-dbm/RESULT.zh.md
 then pays766 pairs and excludes426 by cycles, before an underpaid relaxed
 point violates both actual ordering conditions. Its complete1193-record
 prefix and witness pass [independent review](../research-goal-20261018-stageE-independent/NOTE.zh.md).
-This leaves the ordered intersection unresolved. The next [static contract](../research-goal-20261018-stageF-static-review/NOTE.zh.md)
-keeps both ordering rows and the actual combined affine objective; no LP,
-new kernel query, threshold scan or Lean batch has been authorized.
+The [ordered-affine pilot](../research-goal-20261018-stageF-independent/NOTE.zh.md)
+now closes that fixed pair. Its sole exact solver call returned an infeasible
+primal, which the production guard rejected. Independent reconstruction of
+all 155 source rows and 68 original terms nevertheless verifies the unchanged
+raw dual as a valid nine-row lower certificate. No optimum is asserted and
+the original failure packet remains intact. All other pairs, actual global
+floor, new Lean bridge, final source size and complete kernel runtime remain open.
+The [complete margin-count audit](../research-goal-20261018-joint-size-opportunity/NOTE.zh.md)
+finds 2,108,692 scalar-paid cases and 3,527,184 underpaid cases across the four
+charts; it evaluates no geometry or new energy. The [fresh record recheck](../research-goal-20261018-record-recheck/NOTE.zh.md)
+confirms the same record and exact source identity through 06:47:50 UTC.
+The [global delivery contract](../research-goal-20261018-global-delivery-static/CONTRACT.zh.md)
+derives a bound of four for the original geometric matrix's square minors.
+This permits compact basis IDs for Lower certificates and small integer
+weights for Empty certificates, subject to exact checks. It does not close
+the remaining cases or establish a complete source or runtime budget.
 
 The current [global rounding comparison](../research-goal-20261017-common-rounding/NOTE.zh.md)
 uses one common shift to produce at most ten feasible integer configurations.

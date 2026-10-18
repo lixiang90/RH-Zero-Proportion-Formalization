@@ -1,0 +1,13 @@
+{
+  "scope": "Metadata parser failure, not a mathematical or verification failure",
+  "attempt": 1,
+  "script_sha256_before_fix": "ee591cbf7e90916ad8dc5749191875380f6e75a055c212ecc23dfa306b1aebc5",
+  "exit_code": 1,
+  "error": "TypeError: 'NoneType' object is not subscriptable while ranking a legacy kernel-verified entry with exactRational=null",
+  "receipt_written": false,
+  "large_Lean_source_downloaded": false,
+  "fix": "Use last kernel-verified record as upstream getCurrentRecord does, additionally compare all explicitly rational entries; retain nullable legacy count",
+  "second_attempt_same_task_metadata_only": true,
+  "Lean_invocations": 0,
+  "LP_calls": 0
+}

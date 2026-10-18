@@ -3,8 +3,8 @@
 ## 不变的目标
 
 优先消除 67.3628951339% 条件候选的前提；必要时降低比例或改变数学
-路线，最终得到高于网站当前纪录至少十万分之一的**无条件**改进。
-以本次核验的网站有理纪录 R 为准，验收目标为 κ>R+1/100000。
+路线，最终得到高于网站当前纪录至少百万分之一的**无条件**改进。
+以本次核验的网站有理纪录 R 为准，验收目标为 κ>R+1/1000000。
 不得把模型加强、条件定理、局部排除或源码数量当作目标完成。
 
 完成还须有完整的实际函数到零点计数证明、规定公理范围内的 Lean
@@ -402,3 +402,35 @@ empty 要严格 Farkas，lower 要 exact signed dual，below 要 155行
 root 已只读确认现有 Sympy1.14.0/SciPy1.18.1/NumPy2.5.2；未安装
 软件或调用求解器。下轮需先书面限定唯一 case、call数/时间/输出及
 独立证书合同，再决定是否执行。计数仍为 1，下一实际主轮 1→2。
+
+宏观003后第2实际主轮（计数已1→2，轮内用户提示与压缩不再增计）：
+2026-10-18T06:42:52Z 新鲜HTTP响应200/Age0/MISS仍为67.3587173310%，
+精确R未变；按当前百万分之一目标，严格K为67.3588173310…%。
+root逐一验证F准备代码、E生产/独审、static和本地runtime身份后，
+书面gates/stageF-exact-lp-20261018.json（SHA02015ab7…）
+只授权固定pair1/5、id/id的155行原FS仿射问题。一次primary exact
+LP；仅其InfeasibleLPError时可一次同域严格Farkas辅助LP，
+300s/20MB/onechild，不换模型、阈值、求解器或重试。证书仍须
+独立从原源与原FS重建，不能只审生产model；没有Lean或全对批次。
+
+同一第2主轮中，F唯一primary运行4.688s后因primal38条违例被guard
+拒绝，未触发辅助调用、未修改或重试。原失败生产包SHAae644077…
+保留。独立重建68个原FS terms与155行、C/b/target全部相同；同次
+原raw dual全非负、完整十坐标平衡且超过target的整数余量为
+1930287266556575787714099564000000，故另包给有效9行Lower，
+独审SHA6c0dab6d…；它只关闭pair1/5、id/id，不声称LP最优或全域floor。
+固定Mi规模审计SHA d6d1ec08…以两种整数算法完整计数：四朝向
+2,108,692 scalar-paid、3,527,184 underpaid，总5,635,876；没有求
+任何新几何、FS或能量。由此不应直接生成数百万份大整数dual payload。
+下一步先完整固定几何机会分类和证书结构/交付预算审查；新solver、
+全pair扫描、Lean批次仍未授权。当前counter保持2，不因成功局部证书重置。
+
+本轮全域交付静态合同SHAde2abe74…另经独立纸面交叉核验：原155行
+仅incidence与两条incidence差，因此所有square minors绝对值<=4。
+Lower若明确核满秩9行basis，可从原整数b重建B转置*mu=-b，
+只存rowIDs再完整核非负/十坐标balance/cost；不能称Lower权重<=4。
+Empty可用<=10行的positive circuit、primitive整数权1..4。
+保持原normal归一化；新增能量行或其他sidecondition须重审。
+这是减少单证书payload的结构，不能自动解决数百万case的源码/时间。
+下一关以该合同的完整paid/projection/cycle/unresolved分类为准，
+须另写固定输入、时间/输出gate，不再首个unresolved即停；现在未执行。

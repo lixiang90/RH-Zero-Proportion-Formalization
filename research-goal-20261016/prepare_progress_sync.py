@@ -28,6 +28,7 @@ def main():
       'gates/stageB-20261018.json','gates/stageC-dbm-20261018.json',
       'gates/stageD-affine-point-20261018.json',
       'gates/stageE-margin-dbm-20261018.json',
+      'gates/stageF-exact-lp-20261018.json',
       'ordinary-verified-current.json','seal_ordinary_progress.py','prepare_progress_sync.py',
       'window_interval_kernel.py','window_interval_kernel.json','window_jet_crosscheck.py','window_jet_crosscheck.json',
       'window_global_cover.py','window_lower_global_cover.py','window_make_lower_variant.py','window_make_lower_variant.json',
@@ -290,10 +291,20 @@ def main():
       ('research-goal-20261018-stageE-independent/plan-files.json','4a33d80c7fb6ace9e589c1e9fd1a945f7d6a91608fdadf2ed30bf23c99166b0f'),
       ('research-goal-20261018-stageE-floor-dbm/files.json','73b1cc1367b32cd769712370defef03288d625b4ab04c02df56ffe4b92b3b21a'),
       ('research-goal-20261018-stageE-independent/audit-files.json','37a3817aa099a951e362887d0022739f7560569495167b0d3a8908ab6ce1e32b'),
-      ('research-goal-20261018-stageF-static-review/review-files.json','5647a5fc023dfe06a994f1de7464414b6c18918a161086bccf3ea2ec870c572d')]:
+      ('research-goal-20261018-stageF-static-review/review-files.json','5647a5fc023dfe06a994f1de7464414b6c18918a161086bccf3ea2ec870c572d'),
+      ('research-goal-20261018-stageF-exact-lp/files.json','ae64407781ef18022c7729523b645426bfa080fd44ad428d6b537ad4f8e0da24'),
+      ('research-goal-20261018-stageF-independent/audit-files.json','6c0dab6de2295e46b5570c1166e8e7d8a205139c5ae86358e541d007271b636b'),
+      ('research-goal-20261018-record-recheck/files.json','6e17996df45fa99f0370d29f5405931160c5f30358767e5cf1b3b277c53b8327'),
+      ('research-goal-20261018-joint-size-opportunity/files.json','d6d1ec081a26a27faef2cee07b7ce4efa7c96ff3d731f68b151c18f9019f9916'),
+      ('research-goal-20261018-global-delivery-static/contract-files.json','de2abe74665dfbf842f2c69f41ae87e8e0b268c7fd43a49d2b6843e9c940e021')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
+        if 'external_read_only_runtime_identity' in pinned:
+            runtime=pinned['external_read_only_runtime_identity']
+            raw=Path(runtime['path']).read_bytes()
+            assert len(raw)==runtime['bytes']
+            assert hashlib.sha256(raw).hexdigest()==runtime['sha256_start']==runtime['sha256_end']
         for runtime in (pinned.get('runtime_dependency_files',[])
                         +pinned.get('runtime_dependency_not_staged_wholesale',[])):
             # Bind the measured local runtime without publishing its
@@ -340,7 +351,9 @@ def main():
         if name in ['research-goal-20261018-stageB-classification/files.json',
                     'research-goal-20261018-stageC-dbm/files.json',
                     'research-goal-20261018-fixed-joint-affine/files.json',
-                    'research-goal-20261018-stageE-floor-dbm/files.json']:
+                    'research-goal-20261018-stageE-floor-dbm/files.json',
+                    'research-goal-20261018-stageF-exact-lp/files.json',
+                    'research-goal-20261018-joint-size-opportunity/files.json']:
             rows+=pinned['read_only_dependencies']
         if name=='research-goal-20261018-stageE-independent/plan-files.json':
             rows+=pinned['dependency_manifests']
