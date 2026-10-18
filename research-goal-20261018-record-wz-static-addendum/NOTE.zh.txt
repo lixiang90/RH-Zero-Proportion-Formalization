@@ -1,0 +1,69 @@
+新纪录原floor true-COV/WZ 静态依赖闭包对照
+日期：2026-10-18。只读源码；无Lean、solver、叶解码或WZ数值查询。
+
+1. 输入和范围
+
+新source是commit cfc7ce6113199b7d5f262812d81089778e84335c的完整
+Solution.lean，本地raw SHA f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf。
+旧source是scripts/finite_margin_20261015.py默认读取的
+formal/upstream/ajp88-reweighted-nine-point.lean，不把旧Core改版或旧重放
+收据当作新source身份。新旧source、旧Python脚本及静态helper SHA列于comparison。
+旧Python模块未import/执行；其IV/cell_wz/cover_thresholds只通过ast读取。
+
+2. 逐定义静态结果
+
+compare_static.py实际执行，按源码声明边界完整提取101个声明；只删除
+comments、whitespace及def前noncomputable，不做代数简化、不重命名变量。
+98个normalized SHA相等，具体旧/新行号与文本SHA均在comparison.json。
+唯CE、CJ、CellA.FA不同；这三者用旧12个系数绝对值到新12值的同一映射
+逐数字token替换后，完整声明normalized SHA精确相同。没有别的结构差异。
+
+被对照的闭包包括SZ signed-Nat表示与fl/ce、IV端点四角乘法与mulc/divp，
+DZ/SC/π上下界/ERRD、10/11阶sin/cos和sinc多项式，farJ/farAcc的整数
+分母与符号，CellA定位/side/ok、FA(实际WZ只取n=0)、nearOn/S0/B0、
+K0→KA→KAn，CellN key→LN/UN→A→okC→WZ，KB/SC/SW，以及coverChk、
+badOf和coverChk_sound。不是仅凭相同函数名判断。
+
+新profile的cAMn[1..12]分别是：
+13474154,-15663835,4014071,6888777,-1266079,4677638,
+-6896515,3494966,-6098202,5362661,-626814,-251883。
+统一denominator=1e9。cAMn[0]=1e9，base函数仍cos(sqrt(2)*t)。
+新CJ的Bool是cAMn[j]<0；新CE的Bool是(cAMn[j]<0) xor odd(j)。
+新FA内联12项已逐项核等于新CE，不能只换CE而留下旧内联FA或旧CJ。
+
+共享常数完全相同：DZ=1e15，SC=32768，DZ2=5e14，E20=1e20，
+PLN=314159265358979323846，PUN=314159265358979323847，ERRD=2262000，
+E9=1e9，GAM0/1=1654998581400000/1654998603600000；
+RHOC endpoints=1088464550157349/1088464557864635，
+SIGC endpoints=346469027075676/346469029528983。
+KB/SC/SW及全部精确原始声明另列comparison，生产器仍应从新source解析。
+
+3. 旧Python整数模型的实际对应与限制
+
+Python IV用有符号整数端点；SZ.fl是实值向下整除、SZ.ce是向上整除，
+故对应Python //及ceildiv，包括负端点。IV.mul四角极值、mulc正系数
+分支、divp正分母符号分支与源码同。CellA.n=0的farJ三种情形分别是
+active 1/(2(x+j))、右侧x/(x²-j²)、左侧x/(j²-x²)，CE处理符号；
+Python最终才除E9与源码Acc先累计再divn一致。nearOn的额外B0由CJ定符号。
+CI/SI、半整数象限分支、NI、E0/E1、K0及KAn平方的floor也相同。
+这是读源码逐式对照，并非本包运行了一个新的WZ等式证明或查询。
+
+显式区别：旧cell_wz在CellA.ok不满足时assert；源码CellN.WZ会返回0。
+参数化replay必须检查每个query的LN<=UN、TUZ<=DZ、side几何、E0>0；
+要么严格检查后继续，要么忠实返回0再执行coverChk，不能绕过guard。
+本包没有评价任何query，故不声称这些guards已通过。
+
+cover_thresholds也有旧硬编码ADJ/SMAX；新replay必须读新source的
+BS/TS/ADJ/SMAX/COV/cN。对每个true条目coverChk要求cN*SW<=aAdj*WZ，
+等价于cN<=floor(aAdj*WZ/SW)，不需要重采核点。另核全部条目连续
+a=pos、a<=b、b<KB及最终S<=pos；large/small的cN*SC<=BS*SMAX、
+4*cN<=aAdj同样不能省。false条目仍由已独立重放的root/cursor树负责。
+
+4. 结论和未完成项
+
+结论仅为：从已冻结新source取所有新字面常数后，旧cell_wz的精确整数
+结构可用于原COV有限查询；不需要新kernel anchor或数值分析方法。
+旧硬编码profile绝不可调用，旧true-COV PASS也不可继承。
+新true-COV的完整实际整数replay、原floor baseline身份及后续kernel
+复验是独立任务。本addendum不填补尚未执行的数值gap，不提高cN，
+不授权阶段B新joint exceptions，不构成新零点比例证明。

@@ -1,0 +1,84 @@
+{
+  "schema": "new-record-original-floor-StageA-production-summary-v1",
+  "producer_stage_A_complete": true,
+  "independent_full_mathematical_review_pending": true,
+  "source_sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+  "unchanged_original_cN": 893616123055294719,
+  "objective_scale": 100000000000000000000,
+  "packing_count": 137,
+  "all137_canonical_inverses_and_independent_decoder_match": true,
+  "complete_root_count": 48,
+  "all_original_root_end_cursors_equal": true,
+  "derived_counts": {
+    "nodes": 27234,
+    "branches": 13593,
+    "terminal_leaves": 13641,
+    "numeric_leaves": 13046,
+    "reflection_leaves": 595,
+    "farkas_leaves": 0,
+    "direct_AST_comparisons": 13046,
+    "active_mokI_checks": 189987,
+    "term_decode_checks": 443564
+  },
+  "minimum_original_integer_margin": 65385001396000000,
+  "minimum_root": 11,
+  "minimum_position": 27229,
+  "all_active_mokI_checks_passed": true,
+  "all_numeric_compact_vs_printed_AST_equal": true,
+  "ready_contract_counts": {
+    "cutwalk_state_equalities": 27304,
+    "parent_cursor_checks": 48,
+    "nested_cursor_checks": 70,
+    "cut_hits": 70
+  },
+  "root_outside_guards": {
+    "COV_true_WZ_guards": 160,
+    "total_guard_and_topology_rows": 190,
+    "pressure_tails": 8,
+    "small_gap_payments": 8,
+    "minimum_WZ_guard_integer_margin": 24036010866362157838000000,
+    "previous_baseline_receipt_WZ_gap_discharged_by": "root-wz-replay.json"
+  },
+  "metadata_correction": {
+    "unchanged_v3_WD_identity_count": 2,
+    "correct_original_WD_dict_identity_count": 48,
+    "reason": "Later cursor loop reused local wd name as a string. Original48-dict assertion passed before local shadowing; current summary independently rechecks raw WD declarations. No numerical model change or walk rerun."
+  },
+  "extra_source_schema_checks": {
+    "TSok": true,
+    "PRok": true,
+    "SLok": true,
+    "ADJ": true
+  },
+  "real_executions": {
+    "packing_parser_attempts": 3,
+    "packing_attempts1_2_failures_preserved": true,
+    "preparation_stdout_encoding_failure_preserved": true,
+    "whole_math_passes": 1,
+    "math_pid": 33820,
+    "math_seconds": 27.862107599998126,
+    "math_peak_working_set_bytes": 87904256,
+    "WZ_existing_queries_passes": 1,
+    "WZ_pid": 58296,
+    "WZ_seconds": 2.6995206999999937,
+    "all_producer_processes_terminal": true
+  },
+  "fixed_receipts": {
+    "packing-parser-v3.json": "1866495139e45f9249040aea9eb6d3e369db183c50291ee06f08314001ab0a23",
+    "packing-crosscheck.json": "0b3505643f9f3e58e5b8e1a00fb7ab0733f9fa659364c3fc6a73f3f48ff071cb",
+    "baseline-replay.json": "dc7ac89b992d182d97b52e7c9236852f5df4a5b6a77aab6ab0c095593ca93871",
+    "root-wz-replay.json": "12ba3f1cc7abde44b054ab3eb326444f69cb62ecadb108981bf35574660ace20",
+    "trace-integrity.json": "90290016608d5e592821cc251607a595afd25d301f698159ed7040abfe600e2a"
+  },
+  "analytic_scope": "Existing source proofs supply actual LB/PT/WZ analytic soundness; Python replays original finite arguments and active guards only. No Lean/Comparator/nanoda execution by this package.",
+  "new_threshold_classification": false,
+  "exception_pair_scan": false,
+  "new_kernel_queries": 0,
+  "solver_calls": 0,
+  "Lean_runs": 0,
+  "new_floor_proven": false,
+  "new_unconditional_zero_proportion_proven": false,
+  "website_submission_ready": false,
+  "StageB_authorized_by_this_receipt": false,
+  "mutable_governance_dependency": false
+}

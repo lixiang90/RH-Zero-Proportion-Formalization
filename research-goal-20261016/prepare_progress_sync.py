@@ -267,7 +267,10 @@ def main():
       ('research-goal-20261018-record-source-audit/source-audit-files.json','a4979eb961b87a14ba3dc7419066e102a2661f6289543d46d3728e6c15f731b8'),
       ('research-goal-20261018-target-arithmetic/files.json','4fd1475357692e67d8be4a5afc633e6e966ff2965593225b7127f11630972414'),
       ('research-goal-20261018-record-overlap-static/review-files.json','bedba14933f6c981fd27b9f42098b40549933ce26901d7e2407b69c8c9fde0ef'),
-      ('research-goal-20261018-record-packing-independent/packing-files.json','ade046ca2398cc3825d81a74aec1afa955b8957bf56dea8cd9cb8fd1c38cabc6')]:
+      ('research-goal-20261018-record-packing-independent/packing-files.json','ade046ca2398cc3825d81a74aec1afa955b8957bf56dea8cd9cb8fd1c38cabc6'),
+      ('research-goal-20261018-record-wz-static-addendum/addendum-files.json','8ebc8493025eb7e63c4fe3419c4e929ca34033bafda434fa79905b95dfb17af6'),
+      ('research-goal-20261018-record-baseline-replay/files.json','03f3426e29ab7355ed76729dcaa3a3ba754154ae39ff5e9632bae2c57eff069f'),
+      ('research-goal-20261018-stageB-static-contract/contract-files.json','b9d9315cd76e9be9d4c860fe1368d06433e8ccabdeb5740b0109140ffa8c17f8')]:
         manifest=ROOT/name if '/' in name else HERE/name
         assert hashlib.sha256(manifest.read_bytes()).hexdigest()==digest
         pinned=json.loads(manifest.read_bytes())
@@ -312,6 +315,8 @@ def main():
             rows+=pinned['read_only_references']
         if name=='research-goal-20261018-target-arithmetic/files.json':
             rows+=pinned['existing_read_only_input_references']
+        if name=='research-goal-20261018-record-baseline-replay/files.json':
+            rows+=pinned['read_only_existing_references']
         if name=='research-goal-20261017-local-phase/local-phase-files.json':
             source_index=json.loads((ROOT/pinned['dependency_index']['path']).read_bytes())
             identity_rows=source_index['actual_identity_sources']+source_index['prior_work_reviewed']

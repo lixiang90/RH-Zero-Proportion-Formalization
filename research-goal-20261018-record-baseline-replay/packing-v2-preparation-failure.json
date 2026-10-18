@@ -1,0 +1,7 @@
+{
+  "stage": "preparation_only_before_v2_script_created",
+  "error": "GBK stdout inspection of independent Unicode state signature raised UnicodeEncodeError before file creation; later launch failed with missing script.",
+  "v2_parser_executed_in_failed_setup": false,
+  "mathematical_leaves_checked": 0,
+  "corrective_action": "Separate UTF8 file creation from optional metadata stdout; preserve v1 source and failure unchanged."
+}

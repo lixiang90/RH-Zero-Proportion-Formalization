@@ -1,0 +1,10 @@
+{
+  "pid": 47132,
+  "script_sha256": "2524a7c4bd1ce63cd580a8b72494d320b6f465515b146d3b1d87ec5995ba1c53",
+  "source_sha256_start": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+  "stage": "packing_parser_failed",
+  "passed": false,
+  "error": "AssertionError(('bcut', 0))",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-record-baseline-replay\\packing_parser_v2.py\", line 253, in main\n    m=load_model();record.update(summary(m),passed=True,stage='packing_parser_complete',seconds=time.monotonic()-started)\n  File \"D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-record-baseline-replay\\packing_parser_v2.py\", line 225, in load_model\n    assert len(matches)==1,(name,len(matches))\n           ^^^^^^^^^^^^^^^\nAssertionError: ('bcut', 0)\n",
+  "seconds": 2.246761599992169
+}

@@ -1,0 +1,63 @@
+{
+  "scope": "Static contract only, not an implemented or run Stage B classifier.",
+  "files": [
+    {
+      "path": "research-goal-20261018-stageB-static-contract/PLAN.zh.md",
+      "bytes": 8985,
+      "sha256": "1c66414b3c13ed8910a4db8b6c7fc389a3ebdc92868d98488957e1b12308f0ba"
+    },
+    {
+      "path": "research-goal-20261018-stageB-static-contract/freeze_contract.py",
+      "bytes": 1837,
+      "sha256": "b74846d9897cb8dc8d50e9595059463272f97975f1e0fe76d06ed624d3abcf58"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "research-goal-20261018-record-source-audit/source-audit-files.json",
+      "bytes": 2800,
+      "sha256": "a4979eb961b87a14ba3dc7419066e102a2661f6289543d46d3728e6c15f731b8"
+    },
+    {
+      "path": "research-goal-20261018-record-source-audit/snapshot/Solution.lean",
+      "bytes": 1818411,
+      "sha256": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf"
+    },
+    {
+      "path": "research-goal-20261018-record-source-audit/static-inventory.json",
+      "bytes": 26326,
+      "sha256": "d5cffc8f2eda397a703061439cd78058b4a38e37afff153a69d0a455bce77f44"
+    },
+    {
+      "path": "research-goal-20261018-record-overlap-static/review-files.json",
+      "bytes": 2014,
+      "sha256": "bedba14933f6c981fd27b9f42098b40549933ce26901d7e2407b69c8c9fde0ef"
+    },
+    {
+      "path": "research-goal-20261018-record-overlap-static/static-receipt.json",
+      "bytes": 5288,
+      "sha256": "ee702274144aaa68de2fe083f1192c61e38cece5e0094f56e4db8fca778bb894"
+    },
+    {
+      "path": "research-goal-20261018-record-wz-static-addendum/addendum-files.json",
+      "bytes": 2208,
+      "sha256": "8ebc8493025eb7e63c4fe3419c4e929ca34033bafda434fa79905b95dfb17af6"
+    }
+  ],
+  "tau_numerator": "893916123055294719",
+  "denominator": "100000000000000000000",
+  "separation": "17/20",
+  "numeric_witness_count_expected": 13046,
+  "reflection_count_expected": 595,
+  "domain": "all arbitrary separated windows h>=17/20, F9(h)<tau; no minimizer assumption",
+  "classifications_run": 0,
+  "new_threshold_queries": 0,
+  "pair_scans": 0,
+  "Lean_invocations": 0,
+  "kernel_sampling_calls": 0,
+  "solver_calls": 0,
+  "exceptions_already_complete": false,
+  "joint_floor_proved": false,
+  "new_kappa_proved": false,
+  "future_execution_requires_separately_frozen_StageA_complete_replay": true
+}

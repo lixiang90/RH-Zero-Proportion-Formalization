@@ -1,0 +1,10 @@
+{
+  "pid": 43368,
+  "script_sha256": "29b3d377f7192eb3d59f988c1a9887f9f53d9838f8c52dab7d6c5f01f4048cc5",
+  "source_sha256_start": "f82a4914100fb0a39dfff98ed17ed6647a9a36bb8138d0b922b9cb4a10a736cf",
+  "stage": "packing_parser_failed",
+  "passed": false,
+  "error": "AssertionError(('expression_unparsed', ['j', '18', '(', 'dpk', 'j', '17', 'BK_17', ')', '(', 'dpk', 'j', '18', 'BK_18', ')']))",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-record-baseline-replay\\packing_parser.py\", line 252, in main\n    m=load_model();record.update(summary(m),passed=True,stage='packing_parser_complete',seconds=time.monotonic()-started)\n  File \"D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-record-baseline-replay\\packing_parser.py\", line 169, in load_model\n    dispatch_defs[name]=lean_expr(expr)\n                        ~~~~~~~~~^^^^^^\n  File \"D:\\codex-build\\Riemann-Zero\\RH-Zero-Proportion-Formalization\\research-goal-20261018-record-baseline-replay\\packing_parser.py\", line 82, in lean_expr\n    assert pos == len(tokens), ('expression_unparsed',tokens[pos:])\n           ^^^^^^^^^^^^^^^^^^\nAssertionError: ('expression_unparsed', ['j', '18', '(', 'dpk', 'j', '17', 'BK_17', ')', '(', 'dpk', 'j', '18', 'BK_18', ')'])\n",
+  "seconds": 1.2301275000208989
+}
