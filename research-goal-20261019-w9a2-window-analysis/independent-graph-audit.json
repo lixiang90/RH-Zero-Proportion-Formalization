@@ -1,0 +1,4411 @@
+{
+  "scope": "Independent exact audit of first 7 leaf geometry with Bellman-Ford (196 cases), Kahn DAG analysis, rational average bound and exterior pressure arithmetic. No LP/Lean/kernel calculation. Existing 24-leaf graph checked only on its five cycle witnesses.",
+  "passed": true,
+  "input_sha256": {
+    "research-goal-20261019-w9a2-record/official/proof/Solution.lean": "241068ee5abab772ea1aba7533ec33b9140df7dc1728aeb4c61bfb648fe195c7",
+    "research-goal-20261019-w9a2-certificate-analysis/numeric-leaves-sorted.jsonl.gz": "f2acd938535e00216de3585c85e7c06d9ac213698088a2dc7374005a335a94ae",
+    "research-goal-20261019-w9a2-certificate-analysis/baseline-replay.json": "a36441559cd2460edb31bc3e312f9379e4fc55c803d79bf8686bee017206e5c6",
+    "research-goal-20261019-w9a2-certificate-analysis/geometry-audit.json": "7d860bb023594ecc4dc84308435acbdcdeb5da7d8d81991220045955575b9c67"
+  },
+  "physical_scale": 32768,
+  "first7_pair_orientation_checks": 196,
+  "excluded": 189,
+  "retained_edges": [
+    [
+      1,
+      10
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      11,
+      0
+    ],
+    [
+      11,
+      2
+    ]
+  ],
+  "topological_order": [
+    1,
+    3,
+    6,
+    7,
+    9,
+    11,
+    12,
+    13,
+    10,
+    4,
+    0,
+    2,
+    5,
+    8
+  ],
+  "rank": {
+    "0": 2,
+    "1": 1,
+    "2": 2,
+    "3": 1,
+    "4": 2,
+    "5": 3,
+    "6": 1,
+    "7": 1,
+    "8": 4,
+    "9": 1,
+    "10": 2,
+    "11": 1,
+    "12": 1,
+    "13": 1
+  },
+  "longest_bad_run_vertices": 4,
+  "longest_path": [
+    9,
+    4,
+    5,
+    8
+  ],
+  "rows": [
+    {
+      "source": 0,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          34240
+        ],
+        "suffix": [
+          56768,
+          73376
+        ],
+        "negative_cycle_sum": -22528
+      }
+    },
+    {
+      "source": 0,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          34240
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -31008
+      }
+    },
+    {
+      "source": 0,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          34240
+        ],
+        "suffix": [
+          63916,
+          65808
+        ],
+        "negative_cycle_sum": -29676
+      }
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          34240
+        ],
+        "suffix": [
+          61008,
+          65248
+        ],
+        "negative_cycle_sum": -26768
+      }
+    },
+    {
+      "source": 0,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          71520
+        ],
+        "suffix": [
+          98299,
+          98959
+        ],
+        "negative_cycle_sum": -26779
+      }
+    },
+    {
+      "source": 0,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          34240
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -30067
+      }
+    },
+    {
+      "source": 0,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          6
+        ],
+        "prefix": [
+          218769,
+          236608
+        ],
+        "suffix": [
+          239920,
+          284287
+        ],
+        "negative_cycle_sum": -3312
+      }
+    },
+    {
+      "source": 0,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          114497,
+          136768
+        ],
+        "suffix": [
+          83841,
+          110937
+        ],
+        "negative_cycle_sum": -3560
+      }
+    },
+    {
+      "source": 0,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          114497,
+          136768
+        ],
+        "suffix": [
+          162126,
+          164464
+        ],
+        "negative_cycle_sum": -25358
+      }
+    },
+    {
+      "source": 0,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          34240
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -30176
+      }
+    },
+    {
+      "source": 0,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          71520
+        ],
+        "suffix": [
+          97455,
+          99350
+        ],
+        "negative_cycle_sum": -25935
+      }
+    },
+    {
+      "source": 0,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          71520
+        ],
+        "suffix": [
+          96257,
+          98446
+        ],
+        "negative_cycle_sum": -24737
+      }
+    },
+    {
+      "source": 0,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          71520
+        ],
+        "suffix": [
+          97436,
+          105176
+        ],
+        "negative_cycle_sum": -25916
+      }
+    },
+    {
+      "source": 0,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          71520
+        ],
+        "suffix": [
+          98457,
+          100387
+        ],
+        "negative_cycle_sum": -26937
+      }
+    },
+    {
+      "source": 1,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          31504,
+          34464
+        ],
+        "suffix": [
+          56768,
+          73376
+        ],
+        "negative_cycle_sum": -22304
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          31504,
+          34464
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -30784
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          31504,
+          34464
+        ],
+        "suffix": [
+          63916,
+          65808
+        ],
+        "negative_cycle_sum": -29452
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          31504,
+          34464
+        ],
+        "suffix": [
+          61008,
+          65248
+        ],
+        "negative_cycle_sum": -26544
+      }
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          186704,
+          206016
+        ],
+        "suffix": [
+          165877,
+          167467
+        ],
+        "negative_cycle_sum": -19237
+      }
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          31504,
+          34464
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -29843
+      }
+    },
+    {
+      "source": 1,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          90965,
+          108192
+        ],
+        "suffix": [
+          54657,
+          89664
+        ],
+        "negative_cycle_sum": -1301
+      }
+    },
+    {
+      "source": 1,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          90965,
+          108192
+        ],
+        "suffix": [
+          54657,
+          80228
+        ],
+        "negative_cycle_sum": -10737
+      }
+    },
+    {
+      "source": 1,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          90965,
+          108192
+        ],
+        "suffix": [
+          66700,
+          69038
+        ],
+        "negative_cycle_sum": -21927
+      }
+    },
+    {
+      "source": 1,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          31504,
+          34464
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -29952
+      }
+    },
+    {
+      "source": 1,
+      "target": 10,
+      "feasible": true,
+      "feasible_integer_positions": [
+        0,
+        65248,
+        98496,
+        162703,
+        196947,
+        261538,
+        295730,
+        329970,
+        393056,
+        426304
+      ],
+      "direct_exclusion": null
+    },
+    {
+      "source": 1,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          186704,
+          206016
+        ],
+        "suffix": [
+          164766,
+          166955
+        ],
+        "negative_cycle_sum": -19749
+      }
+    },
+    {
+      "source": 1,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          7
+        ],
+        "prefix": [
+          250273,
+          270880
+        ],
+        "suffix": [
+          293278,
+          302881
+        ],
+        "negative_cycle_sum": -22398
+      }
+    },
+    {
+      "source": 1,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          127873,
+          140768
+        ],
+        "suffix": [
+          162645,
+          165635
+        ],
+        "negative_cycle_sum": -21877
+      }
+    },
+    {
+      "source": 2,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33528,
+          34240
+        ],
+        "suffix": [
+          56768,
+          73376
+        ],
+        "negative_cycle_sum": -22528
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33528,
+          34240
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -31008
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33528,
+          34240
+        ],
+        "suffix": [
+          63916,
+          65808
+        ],
+        "negative_cycle_sum": -29676
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33528,
+          34240
+        ],
+        "suffix": [
+          61008,
+          65248
+        ],
+        "negative_cycle_sum": -26768
+      }
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67262,
+          68324
+        ],
+        "suffix": [
+          98299,
+          98959
+        ],
+        "negative_cycle_sum": -29975
+      }
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33528,
+          34240
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -30067
+      }
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          6
+        ],
+        "prefix": [
+          229796,
+          232952
+        ],
+        "suffix": [
+          239920,
+          284287
+        ],
+        "negative_cycle_sum": -6968
+      }
+    },
+    {
+      "source": 2,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          131450,
+          133572
+        ],
+        "suffix": [
+          83841,
+          110937
+        ],
+        "negative_cycle_sum": -20513
+      }
+    },
+    {
+      "source": 2,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          131450,
+          133572
+        ],
+        "suffix": [
+          162126,
+          164464
+        ],
+        "negative_cycle_sum": -28554
+      }
+    },
+    {
+      "source": 2,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33528,
+          34240
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -30176
+      }
+    },
+    {
+      "source": 2,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67262,
+          68324
+        ],
+        "suffix": [
+          97455,
+          99350
+        ],
+        "negative_cycle_sum": -29131
+      }
+    },
+    {
+      "source": 2,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67262,
+          68324
+        ],
+        "suffix": [
+          96257,
+          98446
+        ],
+        "negative_cycle_sum": -27933
+      }
+    },
+    {
+      "source": 2,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67262,
+          68324
+        ],
+        "suffix": [
+          97436,
+          105176
+        ],
+        "negative_cycle_sum": -29112
+      }
+    },
+    {
+      "source": 2,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67262,
+          68324
+        ],
+        "suffix": [
+          98457,
+          100387
+        ],
+        "negative_cycle_sum": -30133
+      }
+    },
+    {
+      "source": 3,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          32984,
+          34464
+        ],
+        "suffix": [
+          56768,
+          73376
+        ],
+        "negative_cycle_sum": -22304
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          32984,
+          34464
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -30784
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          32984,
+          34464
+        ],
+        "suffix": [
+          63916,
+          65808
+        ],
+        "negative_cycle_sum": -29452
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          32984,
+          34464
+        ],
+        "suffix": [
+          61008,
+          65248
+        ],
+        "negative_cycle_sum": -26544
+      }
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          195518,
+          197962
+        ],
+        "suffix": [
+          165877,
+          167467
+        ],
+        "negative_cycle_sum": -28051
+      }
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          32984,
+          34464
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -29843
+      }
+    },
+    {
+      "source": 3,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          97138,
+          99582
+        ],
+        "suffix": [
+          54657,
+          89664
+        ],
+        "negative_cycle_sum": -7474
+      }
+    },
+    {
+      "source": 3,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          97138,
+          99582
+        ],
+        "suffix": [
+          54657,
+          80228
+        ],
+        "negative_cycle_sum": -16910
+      }
+    },
+    {
+      "source": 3,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          97138,
+          99582
+        ],
+        "suffix": [
+          66700,
+          69038
+        ],
+        "negative_cycle_sum": -28100
+      }
+    },
+    {
+      "source": 3,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          32984,
+          34464
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -29952
+      }
+    },
+    {
+      "source": 3,
+      "target": 10,
+      "feasible": true,
+      "feasible_integer_positions": [
+        0,
+        64762,
+        98010,
+        162217,
+        196461,
+        261052,
+        294831,
+        328654,
+        392570,
+        425818
+      ],
+      "direct_exclusion": null
+    },
+    {
+      "source": 3,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          195518,
+          197962
+        ],
+        "suffix": [
+          164766,
+          166955
+        ],
+        "negative_cycle_sum": -28563
+      }
+    },
+    {
+      "source": 3,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          7
+        ],
+        "prefix": [
+          262780,
+          265936
+        ],
+        "suffix": [
+          293278,
+          302881
+        ],
+        "negative_cycle_sum": -27342
+      }
+    },
+    {
+      "source": 3,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          131330,
+          133774
+        ],
+        "suffix": [
+          162645,
+          165635
+        ],
+        "negative_cycle_sum": -28871
+      }
+    },
+    {
+      "source": 4,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          227703,
+          229870
+        ],
+        "suffix": [
+          171265,
+          206942
+        ],
+        "negative_cycle_sum": -20761
+      }
+    },
+    {
+      "source": 4,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64391,
+          64819
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -429
+      }
+    },
+    {
+      "source": 4,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          227703,
+          229870
+        ],
+        "suffix": [
+          195366,
+          199380
+        ],
+        "negative_cycle_sum": -28323
+      }
+    },
+    {
+      "source": 4,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          131969,
+          133327
+        ],
+        "suffix": [
+          158146,
+          164830
+        ],
+        "negative_cycle_sum": -24819
+      }
+    },
+    {
+      "source": 4,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64391,
+          64819
+        ],
+        "suffix": [
+          33480,
+          34140
+        ],
+        "negative_cycle_sum": -30251
+      }
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "feasible": true,
+      "feasible_integer_positions": [
+        0,
+        33908,
+        98299,
+        132132,
+        166010,
+        261611,
+        295489,
+        329322,
+        394141,
+        427621
+      ],
+      "direct_exclusion": null
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64391,
+          64819
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -14663
+      }
+    },
+    {
+      "source": 4,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64391,
+          64819
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -14663
+      }
+    },
+    {
+      "source": 4,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64391,
+          64819
+        ],
+        "suffix": [
+          32460,
+          34798
+        ],
+        "negative_cycle_sum": -29593
+      }
+    },
+    {
+      "source": 4,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          131969,
+          133327
+        ],
+        "suffix": [
+          162347,
+          165863
+        ],
+        "negative_cycle_sum": -29020
+      }
+    },
+    {
+      "source": 4,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64391,
+          64819
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -30251
+      }
+    },
+    {
+      "source": 4,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64391,
+          64819
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -30251
+      }
+    },
+    {
+      "source": 4,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64391,
+          64819
+        ],
+        "suffix": [
+          33248,
+          40384
+        ],
+        "negative_cycle_sum": -24007
+      }
+    },
+    {
+      "source": 4,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64391,
+          64819
+        ],
+        "suffix": [
+          33776,
+          34734
+        ],
+        "negative_cycle_sum": -29657
+      }
+    },
+    {
+      "source": 5,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33603,
+          34464
+        ],
+        "suffix": [
+          56768,
+          73376
+        ],
+        "negative_cycle_sum": -22304
+      }
+    },
+    {
+      "source": 5,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33603,
+          34464
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -30784
+      }
+    },
+    {
+      "source": 5,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33603,
+          34464
+        ],
+        "suffix": [
+          63916,
+          65808
+        ],
+        "negative_cycle_sum": -29452
+      }
+    },
+    {
+      "source": 5,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33603,
+          34464
+        ],
+        "suffix": [
+          61008,
+          65248
+        ],
+        "negative_cycle_sum": -26544
+      }
+    },
+    {
+      "source": 5,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67481,
+          69192
+        ],
+        "suffix": [
+          98299,
+          98959
+        ],
+        "negative_cycle_sum": -29107
+      }
+    },
+    {
+      "source": 5,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33603,
+          34464
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -29843
+      }
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          162293,
+          165367
+        ],
+        "suffix": [
+          114249,
+          157091
+        ],
+        "negative_cycle_sum": -5202
+      }
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          162293,
+          165367
+        ],
+        "suffix": [
+          83841,
+          110937
+        ],
+        "negative_cycle_sum": -51356
+      }
+    },
+    {
+      "source": 5,
+      "target": 8,
+      "feasible": true,
+      "feasible_integer_positions": [
+        0,
+        64307,
+        97910,
+        132150,
+        227576,
+        261636,
+        295623,
+        360198,
+        393922,
+        458338
+      ],
+      "direct_exclusion": null
+    },
+    {
+      "source": 5,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33603,
+          34464
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -29952
+      }
+    },
+    {
+      "source": 5,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67481,
+          69192
+        ],
+        "suffix": [
+          97455,
+          99350
+        ],
+        "negative_cycle_sum": -28263
+      }
+    },
+    {
+      "source": 5,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67481,
+          69192
+        ],
+        "suffix": [
+          96257,
+          98446
+        ],
+        "negative_cycle_sum": -27065
+      }
+    },
+    {
+      "source": 5,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67481,
+          69192
+        ],
+        "suffix": [
+          97436,
+          105176
+        ],
+        "negative_cycle_sum": -28244
+      }
+    },
+    {
+      "source": 5,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          67481,
+          69192
+        ],
+        "suffix": [
+          98457,
+          100387
+        ],
+        "negative_cycle_sum": -29265
+      }
+    },
+    {
+      "source": 6,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          39936
+        ],
+        "suffix": [
+          56768,
+          73376
+        ],
+        "negative_cycle_sum": -16832
+      }
+    },
+    {
+      "source": 6,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          39936
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -25312
+      }
+    },
+    {
+      "source": 6,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          39936
+        ],
+        "suffix": [
+          63916,
+          65808
+        ],
+        "negative_cycle_sum": -23980
+      }
+    },
+    {
+      "source": 6,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          39936
+        ],
+        "suffix": [
+          61008,
+          65248
+        ],
+        "negative_cycle_sum": -21072
+      }
+    },
+    {
+      "source": 6,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          207463,
+          244864
+        ],
+        "suffix": [
+          165877,
+          167467
+        ],
+        "negative_cycle_sum": -39996
+      }
+    },
+    {
+      "source": 6,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          39936
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -24371
+      }
+    },
+    {
+      "source": 6,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          207463,
+          244864
+        ],
+        "suffix": [
+          143915,
+          188288
+        ],
+        "negative_cycle_sum": -19175
+      }
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          81792,
+          108894
+        ],
+        "suffix": [
+          54657,
+          80228
+        ],
+        "negative_cycle_sum": -1564
+      }
+    },
+    {
+      "source": 6,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          81792,
+          108894
+        ],
+        "suffix": [
+          66700,
+          69038
+        ],
+        "negative_cycle_sum": -12754
+      }
+    },
+    {
+      "source": 6,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          39936
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -24480
+      }
+    },
+    {
+      "source": 6,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          207463,
+          244864
+        ],
+        "suffix": [
+          194993,
+          197182
+        ],
+        "negative_cycle_sum": -10281
+      }
+    },
+    {
+      "source": 6,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          207463,
+          244864
+        ],
+        "suffix": [
+          164766,
+          166955
+        ],
+        "negative_cycle_sum": -40508
+      }
+    },
+    {
+      "source": 6,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          207463,
+          244864
+        ],
+        "suffix": [
+          195405,
+          203278
+        ],
+        "negative_cycle_sum": -4185
+      }
+    },
+    {
+      "source": 6,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          111458,
+          138560
+        ],
+        "suffix": [
+          162645,
+          165635
+        ],
+        "negative_cycle_sum": -24085
+      }
+    },
+    {
+      "source": 7,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          54116
+        ],
+        "suffix": [
+          56768,
+          73376
+        ],
+        "negative_cycle_sum": -2652
+      }
+    },
+    {
+      "source": 7,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          54116
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -11132
+      }
+    },
+    {
+      "source": 7,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          54116
+        ],
+        "suffix": [
+          63916,
+          65808
+        ],
+        "negative_cycle_sum": -9800
+      }
+    },
+    {
+      "source": 7,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          54116
+        ],
+        "suffix": [
+          61008,
+          65248
+        ],
+        "negative_cycle_sum": -6892
+      }
+    },
+    {
+      "source": 7,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          84825
+        ],
+        "suffix": [
+          98299,
+          98959
+        ],
+        "negative_cycle_sum": -13474
+      }
+    },
+    {
+      "source": 7,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          54116
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -10191
+      }
+    },
+    {
+      "source": 7,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          2,
+          4
+        ],
+        "prefix": [
+          119168,
+          151681
+        ],
+        "suffix": [
+          81792,
+          108894
+        ],
+        "negative_cycle_sum": -10274
+      }
+    },
+    {
+      "source": 7,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          147713,
+          180830
+        ],
+        "suffix": [
+          83841,
+          110937
+        ],
+        "negative_cycle_sum": -36776
+      }
+    },
+    {
+      "source": 7,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          6
+        ],
+        "prefix": [
+          236875,
+          283522
+        ],
+        "suffix": [
+          229788,
+          232879
+        ],
+        "negative_cycle_sum": -3996
+      }
+    },
+    {
+      "source": 7,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          28545,
+          54116
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -10300
+      }
+    },
+    {
+      "source": 7,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          84825
+        ],
+        "suffix": [
+          97455,
+          99350
+        ],
+        "negative_cycle_sum": -12630
+      }
+    },
+    {
+      "source": 7,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          84825
+        ],
+        "suffix": [
+          96257,
+          98446
+        ],
+        "negative_cycle_sum": -11432
+      }
+    },
+    {
+      "source": 7,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          84825
+        ],
+        "suffix": [
+          97436,
+          105176
+        ],
+        "negative_cycle_sum": -12611
+      }
+    },
+    {
+      "source": 7,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          57729,
+          84825
+        ],
+        "suffix": [
+          98457,
+          100387
+        ],
+        "negative_cycle_sum": -13632
+      }
+    },
+    {
+      "source": 8,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          34240,
+          34596
+        ],
+        "suffix": [
+          56768,
+          73376
+        ],
+        "negative_cycle_sum": -22172
+      }
+    },
+    {
+      "source": 8,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          34240,
+          34596
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -30652
+      }
+    },
+    {
+      "source": 8,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          34240,
+          34596
+        ],
+        "suffix": [
+          63916,
+          65808
+        ],
+        "negative_cycle_sum": -29320
+      }
+    },
+    {
+      "source": 8,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          34240,
+          34596
+        ],
+        "suffix": [
+          61008,
+          65248
+        ],
+        "negative_cycle_sum": -26412
+      }
+    },
+    {
+      "source": 8,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          34240,
+          34596
+        ],
+        "suffix": [
+          33480,
+          34140
+        ],
+        "negative_cycle_sum": -100
+      }
+    },
+    {
+      "source": 8,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          34240,
+          34596
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -29711
+      }
+    },
+    {
+      "source": 8,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          129666,
+          130775
+        ],
+        "suffix": [
+          54657,
+          89664
+        ],
+        "negative_cycle_sum": -40002
+      }
+    },
+    {
+      "source": 8,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          129666,
+          130775
+        ],
+        "suffix": [
+          54657,
+          80228
+        ],
+        "negative_cycle_sum": -49438
+      }
+    },
+    {
+      "source": 8,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          129666,
+          130775
+        ],
+        "suffix": [
+          66700,
+          69038
+        ],
+        "negative_cycle_sum": -60628
+      }
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          34240,
+          34596
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -29820
+      }
+    },
+    {
+      "source": 8,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          34240,
+          34596
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -100
+      }
+    },
+    {
+      "source": 8,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          34240,
+          34596
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -100
+      }
+    },
+    {
+      "source": 8,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          129666,
+          130775
+        ],
+        "suffix": [
+          97436,
+          105176
+        ],
+        "negative_cycle_sum": -24490
+      }
+    },
+    {
+      "source": 8,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          129666,
+          130775
+        ],
+        "suffix": [
+          98457,
+          100387
+        ],
+        "negative_cycle_sum": -29279
+      }
+    },
+    {
+      "source": 9,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33724,
+          34464
+        ],
+        "suffix": [
+          56768,
+          73376
+        ],
+        "negative_cycle_sum": -22304
+      }
+    },
+    {
+      "source": 9,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33724,
+          34464
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -30784
+      }
+    },
+    {
+      "source": 9,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33724,
+          34464
+        ],
+        "suffix": [
+          63916,
+          65808
+        ],
+        "negative_cycle_sum": -29452
+      }
+    },
+    {
+      "source": 9,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33724,
+          34464
+        ],
+        "suffix": [
+          61008,
+          65248
+        ],
+        "negative_cycle_sum": -26544
+      }
+    },
+    {
+      "source": 9,
+      "target": 4,
+      "feasible": true,
+      "feasible_integer_positions": [
+        0,
+        64416,
+        98485,
+        162876,
+        196786,
+        230762,
+        326188,
+        360428,
+        394031,
+        458338
+      ],
+      "direct_exclusion": null
+    },
+    {
+      "source": 9,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33724,
+          34464
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -29843
+      }
+    },
+    {
+      "source": 9,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          97931,
+          99584
+        ],
+        "suffix": [
+          54657,
+          89664
+        ],
+        "negative_cycle_sum": -8267
+      }
+    },
+    {
+      "source": 9,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          97931,
+          99584
+        ],
+        "suffix": [
+          54657,
+          80228
+        ],
+        "negative_cycle_sum": -17703
+      }
+    },
+    {
+      "source": 9,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          97931,
+          99584
+        ],
+        "suffix": [
+          66700,
+          69038
+        ],
+        "negative_cycle_sum": -28893
+      }
+    },
+    {
+      "source": 9,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          33724,
+          34464
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -29952
+      }
+    },
+    {
+      "source": 9,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          166346,
+          167329
+        ],
+        "suffix": [
+          194993,
+          197182
+        ],
+        "negative_cycle_sum": -27664
+      }
+    },
+    {
+      "source": 9,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          6
+        ],
+        "prefix": [
+          261772,
+          263508
+        ],
+        "suffix": [
+          229357,
+          231841
+        ],
+        "negative_cycle_sum": -29931
+      }
+    },
+    {
+      "source": 9,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          5
+        ],
+        "prefix": [
+          166346,
+          167329
+        ],
+        "suffix": [
+          195405,
+          203278
+        ],
+        "negative_cycle_sum": -28076
+      }
+    },
+    {
+      "source": 9,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          132286,
+          133269
+        ],
+        "suffix": [
+          162645,
+          165635
+        ],
+        "negative_cycle_sum": -29376
+      }
+    },
+    {
+      "source": 10,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          161745,
+          163042
+        ],
+        "suffix": [
+          114497,
+          144896
+        ],
+        "negative_cycle_sum": -16849
+      }
+    },
+    {
+      "source": 10,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64207,
+          65210
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -38
+      }
+    },
+    {
+      "source": 10,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          161745,
+          163042
+        ],
+        "suffix": [
+          131178,
+          134132
+        ],
+        "negative_cycle_sum": -27613
+      }
+    },
+    {
+      "source": 10,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          6
+        ],
+        "prefix": [
+          230254,
+          231551
+        ],
+        "suffix": [
+          258438,
+          263210
+        ],
+        "negative_cycle_sum": -26887
+      }
+    },
+    {
+      "source": 10,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64207,
+          65210
+        ],
+        "suffix": [
+          33480,
+          34140
+        ],
+        "negative_cycle_sum": -30067
+      }
+    },
+    {
+      "source": 10,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          161745,
+          163042
+        ],
+        "suffix": [
+          131788,
+          133940
+        ],
+        "negative_cycle_sum": -27805
+      }
+    },
+    {
+      "source": 10,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64207,
+          65210
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -14479
+      }
+    },
+    {
+      "source": 10,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64207,
+          65210
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -14479
+      }
+    },
+    {
+      "source": 10,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64207,
+          65210
+        ],
+        "suffix": [
+          32460,
+          34798
+        ],
+        "negative_cycle_sum": -29409
+      }
+    },
+    {
+      "source": 10,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          7
+        ],
+        "prefix": [
+          294560,
+          295857
+        ],
+        "suffix": [
+          326188,
+          329787
+        ],
+        "negative_cycle_sum": -30331
+      }
+    },
+    {
+      "source": 10,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64207,
+          65210
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -30067
+      }
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64207,
+          65210
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -30067
+      }
+    },
+    {
+      "source": 10,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64207,
+          65210
+        ],
+        "suffix": [
+          33248,
+          40384
+        ],
+        "negative_cycle_sum": -23823
+      }
+    },
+    {
+      "source": 10,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64207,
+          65210
+        ],
+        "suffix": [
+          33776,
+          34734
+        ],
+        "negative_cycle_sum": -29473
+      }
+    },
+    {
+      "source": 11,
+      "target": 0,
+      "feasible": true,
+      "feasible_integer_positions": [
+        0,
+        33248,
+        97554,
+        131794,
+        165986,
+        230369,
+        263601,
+        327808,
+        361056,
+        426304
+      ],
+      "direct_exclusion": null
+    },
+    {
+      "source": 11,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          65248,
+          73728
+        ],
+        "negative_cycle_sum": -942
+      }
+    },
+    {
+      "source": 11,
+      "target": 2,
+      "feasible": true,
+      "feasible_integer_positions": [
+        0,
+        33248,
+        97554,
+        131794,
+        165878,
+        230521,
+        264713,
+        328920,
+        363060,
+        425818
+      ],
+      "direct_exclusion": null
+    },
+    {
+      "source": 11,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          131518,
+          132815
+        ],
+        "suffix": [
+          158146,
+          164830
+        ],
+        "negative_cycle_sum": -25331
+      }
+    },
+    {
+      "source": 11,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          33480,
+          34140
+        ],
+        "negative_cycle_sum": -28869
+      }
+    },
+    {
+      "source": 11,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          64307,
+          65279
+        ],
+        "negative_cycle_sum": -1
+      }
+    },
+    {
+      "source": 11,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -13281
+      }
+    },
+    {
+      "source": 11,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -13281
+      }
+    },
+    {
+      "source": 11,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          32460,
+          34798
+        ],
+        "negative_cycle_sum": -28211
+      }
+    },
+    {
+      "source": 11,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          64416,
+          66279
+        ],
+        "negative_cycle_sum": -110
+      }
+    },
+    {
+      "source": 11,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -28869
+      }
+    },
+    {
+      "source": 11,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -28869
+      }
+    },
+    {
+      "source": 11,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          33248,
+          40384
+        ],
+        "negative_cycle_sum": -22625
+      }
+    },
+    {
+      "source": 11,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          63009,
+          64306
+        ],
+        "suffix": [
+          33776,
+          34734
+        ],
+        "negative_cycle_sum": -28275
+      }
+    },
+    {
+      "source": 12,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          162157,
+          164750
+        ],
+        "suffix": [
+          114497,
+          144896
+        ],
+        "negative_cycle_sum": -17261
+      }
+    },
+    {
+      "source": 12,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          7
+        ],
+        "prefix": [
+          324711,
+          330006
+        ],
+        "suffix": [
+          286976,
+          301888
+        ],
+        "negative_cycle_sum": -22823
+      }
+    },
+    {
+      "source": 12,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          162157,
+          164750
+        ],
+        "suffix": [
+          131178,
+          134132
+        ],
+        "negative_cycle_sum": -28025
+      }
+    },
+    {
+      "source": 12,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          7
+        ],
+        "prefix": [
+          324711,
+          330006
+        ],
+        "suffix": [
+          292522,
+          296944
+        ],
+        "negative_cycle_sum": -27767
+      }
+    },
+    {
+      "source": 12,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64188,
+          65248
+        ],
+        "suffix": [
+          33480,
+          34140
+        ],
+        "negative_cycle_sum": -30048
+      }
+    },
+    {
+      "source": 12,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          4
+        ],
+        "prefix": [
+          162157,
+          164750
+        ],
+        "suffix": [
+          131788,
+          133940
+        ],
+        "negative_cycle_sum": -28217
+      }
+    },
+    {
+      "source": 12,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64188,
+          65248
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -14460
+      }
+    },
+    {
+      "source": 12,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64188,
+          65248
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -14460
+      }
+    },
+    {
+      "source": 12,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64188,
+          65248
+        ],
+        "suffix": [
+          32460,
+          34798
+        ],
+        "negative_cycle_sum": -29390
+      }
+    },
+    {
+      "source": 12,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          6
+        ],
+        "prefix": [
+          260030,
+          264353
+        ],
+        "suffix": [
+          230762,
+          233608
+        ],
+        "negative_cycle_sum": -26422
+      }
+    },
+    {
+      "source": 12,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64188,
+          65248
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -30048
+      }
+    },
+    {
+      "source": 12,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64188,
+          65248
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -30048
+      }
+    },
+    {
+      "source": 12,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64188,
+          65248
+        ],
+        "suffix": [
+          33248,
+          40384
+        ],
+        "negative_cycle_sum": -23804
+      }
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64188,
+          65248
+        ],
+        "suffix": [
+          33776,
+          34734
+        ],
+        "negative_cycle_sum": -29454
+      }
+    },
+    {
+      "source": 13,
+      "target": 0,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          128869,
+          130901
+        ],
+        "suffix": [
+          85313,
+          107616
+        ],
+        "negative_cycle_sum": -21253
+      }
+    },
+    {
+      "source": 13,
+      "target": 1,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          128869,
+          130901
+        ],
+        "suffix": [
+          96752,
+          108192
+        ],
+        "negative_cycle_sum": -20677
+      }
+    },
+    {
+      "source": 13,
+      "target": 2,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          128869,
+          130901
+        ],
+        "suffix": [
+          97444,
+          100048
+        ],
+        "negative_cycle_sum": -28821
+      }
+    },
+    {
+      "source": 13,
+      "target": 3,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          128869,
+          130901
+        ],
+        "suffix": [
+          93992,
+          99712
+        ],
+        "negative_cycle_sum": -29157
+      }
+    },
+    {
+      "source": 13,
+      "target": 4,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64681,
+          65653
+        ],
+        "suffix": [
+          33480,
+          34140
+        ],
+        "negative_cycle_sum": -30541
+      }
+    },
+    {
+      "source": 13,
+      "target": 5,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          128869,
+          130901
+        ],
+        "suffix": [
+          97910,
+          99743
+        ],
+        "negative_cycle_sum": -29126
+      }
+    },
+    {
+      "source": 13,
+      "target": 6,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64681,
+          65653
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -14953
+      }
+    },
+    {
+      "source": 13,
+      "target": 7,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64681,
+          65653
+        ],
+        "suffix": [
+          26112,
+          49728
+        ],
+        "negative_cycle_sum": -14953
+      }
+    },
+    {
+      "source": 13,
+      "target": 8,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64681,
+          65653
+        ],
+        "suffix": [
+          32460,
+          34798
+        ],
+        "negative_cycle_sum": -29883
+      }
+    },
+    {
+      "source": 13,
+      "target": 9,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          3
+        ],
+        "prefix": [
+          128869,
+          130901
+        ],
+        "suffix": [
+          98140,
+          100743
+        ],
+        "negative_cycle_sum": -28126
+      }
+    },
+    {
+      "source": 13,
+      "target": 10,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64681,
+          65653
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -30541
+      }
+    },
+    {
+      "source": 13,
+      "target": 11,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64681,
+          65653
+        ],
+        "suffix": [
+          33248,
+          34140
+        ],
+        "negative_cycle_sum": -30541
+      }
+    },
+    {
+      "source": 13,
+      "target": 12,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64681,
+          65653
+        ],
+        "suffix": [
+          33248,
+          40384
+        ],
+        "negative_cycle_sum": -24297
+      }
+    },
+    {
+      "source": 13,
+      "target": 13,
+      "feasible": false,
+      "feasible_integer_positions": null,
+      "direct_exclusion": {
+        "span": [
+          1,
+          2
+        ],
+        "prefix": [
+          64681,
+          65653
+        ],
+        "suffix": [
+          33776,
+          34734
+        ],
+        "negative_cycle_sum": -29947
+      }
+    }
+  ],
+  "average_candidate": {
+    "q": 121390593524,
+    "tau": {
+      "fraction": "893029151313702349/100000000000000000000",
+      "decimal": "0.00893029151313702349"
+    },
+    "delta_good": {
+      "fraction": "30347648381/25000000000000000000",
+      "decimal": "1.21390593524E-9"
+    },
+    "average_floor": {
+      "fraction": "4465145271006137649/500000000000000000000",
+      "decimal": "0.008930290542012275298"
+    },
+    "finite_sum_statement": "sum_i F_i >= N*(c0+q/(5*SA))-4*q/(5*SA), provided global separated localization of low windows into the seven reflected cells is formalized.",
+    "candidate_K_if_formalized": {
+      "fraction": "3337881639516708570682858853672166187793/4955348547289938623510000000000000000000",
+      "decimal": "0.673591697468421956618241538172554363744243088238077536245892"
+    },
+    "gain_proportion_if_formalized": {
+      "fraction": "101296858333448866477532485555095630113739178413133/613886980778595802382028744938924458155312500000000000000000",
+      "decimal": "1.65008969900247070165615156533686499312352932078085723775217E-10"
+    },
+    "gain_percentage_points_if_formalized": {
+      "fraction": "101296858333448866477532485555095630113739178413133/6138869807785958023820287449389244581553125000000000000000",
+      "decimal": "1.65008969900247070165615156533686499312352932078085723775217E-8"
+    },
+    "new_unconditional_record_proven": false,
+    "new_Lean_theorem": false
+  },
+  "exterior_separated_paper_lemma": {
+    "separation": "17/20",
+    "source_coverChk_sound_lines": "9397-9435",
+    "true_WZ_extra_pressure": {
+      "fraction": "773061225733/200000000000000",
+      "decimal": "0.003865306128665"
+    },
+    "tail_cases": [
+      {
+        "gap": 0,
+        "tail_baseline_payment_unscaled": {
+          "fraction": "228615431660315859375/256",
+          "decimal": "893029029923108825.68359375"
+        },
+        "other_pressure_uplift": {
+          "fraction": "1814044139753/500000000000000",
+          "decimal": "0.003628088279506"
+        }
+      },
+      {
+        "gap": 1,
+        "tail_baseline_payment_unscaled": {
+          "fraction": "909048071195500000",
+          "decimal": "909048071195500000"
+        },
+        "other_pressure_uplift": {
+          "fraction": "428748416751/125000000000000",
+          "decimal": "0.003429987334008"
+        }
+      },
+      {
+        "gap": 2,
+        "tail_baseline_payment_unscaled": {
+          "fraction": "896688794261000000",
+          "decimal": "896688794261000000"
+        },
+        "other_pressure_uplift": {
+          "fraction": "6558019218681/2000000000000000",
+          "decimal": "0.0032790096093405"
+        }
+      },
+      {
+        "gap": 3,
+        "tail_baseline_payment_unscaled": {
+          "fraction": "911638689848000000",
+          "decimal": "911638689848000000"
+        },
+        "other_pressure_uplift": {
+          "fraction": "3191486227473/1000000000000000",
+          "decimal": "0.003191486227473"
+        }
+      },
+      {
+        "gap": 4,
+        "tail_baseline_payment_unscaled": {
+          "fraction": "911638689848000000",
+          "decimal": "911638689848000000"
+        },
+        "other_pressure_uplift": {
+          "fraction": "3191486227473/1000000000000000",
+          "decimal": "0.003191486227473"
+        }
+      },
+      {
+        "gap": 5,
+        "tail_baseline_payment_unscaled": {
+          "fraction": "896688794261000000",
+          "decimal": "896688794261000000"
+        },
+        "other_pressure_uplift": {
+          "fraction": "6558019218681/2000000000000000",
+          "decimal": "0.0032790096093405"
+        }
+      },
+      {
+        "gap": 6,
+        "tail_baseline_payment_unscaled": {
+          "fraction": "909048071195500000",
+          "decimal": "909048071195500000"
+        },
+        "other_pressure_uplift": {
+          "fraction": "428748416751/125000000000000",
+          "decimal": "0.003429987334008"
+        }
+      },
+      {
+        "gap": 7,
+        "tail_baseline_payment_unscaled": {
+          "fraction": "228615431660315859375/256",
+          "decimal": "893029029923108825.68359375"
+        },
+        "other_pressure_uplift": {
+          "fraction": "1814044139753/500000000000000",
+          "decimal": "0.003628088279506"
+        }
+      }
+    ],
+    "minimum_tail_extra_pressure": {
+      "fraction": "3191486227473/1000000000000000",
+      "decimal": "0.003191486227473"
+    },
+    "small_gap_case": "g<=1/2 is impossible when g>=17/20.",
+    "scope": "Exact arithmetic and paper consequence of existing coverChk_sound and pressure nonnegativity. true-WZ tables retain official Lean soundness dependency; no new global localization Lean proof or new-kernel replay performed."
+  },
+  "existing24cycle_audit": {
+    "cycle": [
+      10,
+      14,
+      11,
+      19,
+      18,
+      10
+    ],
+    "witnesses": [
+      {
+        "source": 10,
+        "target": 14,
+        "witness": [
+          0,
+          34140,
+          98920,
+          132982,
+          197182,
+          231374,
+          265566,
+          329872,
+          364012,
+          429217
+        ],
+        "all_144_constraints_checked": true
+      },
+      {
+        "source": 14,
+        "target": 11,
+        "witness": [
+          0,
+          64780,
+          98920,
+          163226,
+          197418,
+          231610,
+          296351,
+          330445,
+          394652,
+          428792
+        ],
+        "all_144_constraints_checked": true
+      },
+      {
+        "source": 11,
+        "target": 19,
+        "witness": [
+          0,
+          34140,
+          98446,
+          132763,
+          166951,
+          230917,
+          264893,
+          329100,
+          363240,
+          397274
+        ],
+        "all_144_constraints_checked": true
+      },
+      {
+        "source": 19,
+        "target": 18,
+        "witness": [
+          0,
+          65578,
+          99302,
+          132830,
+          196907,
+          230883,
+          294960,
+          329200,
+          363234,
+          427790
+        ],
+        "all_144_constraints_checked": true
+      },
+      {
+        "source": 18,
+        "target": 10,
+        "witness": [
+          0,
+          34034,
+          68174,
+          132679,
+          166923,
+          231216,
+          265300,
+          299123,
+          363134,
+          397274
+        ],
+        "all_144_constraints_checked": true
+      }
+    ],
+    "meaning": "Only a cycle in the pairwise outer box graph. The independent ten-point witnesses do not prove a single periodic physical sequence or low-energy counterexample."
+  }
+}

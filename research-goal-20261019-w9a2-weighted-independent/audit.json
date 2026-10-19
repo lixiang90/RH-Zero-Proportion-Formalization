@@ -1,0 +1,933 @@
+{
+  "passed": true,
+  "scope": "Direct verification of frozen 49-vertex/134-edge rational potential certificate. No Karp repeat, no LP, no geometry rerun, no kernel evaluation, no Lean or new unconditional record.",
+  "input_sha256_before": {
+    "research-goal-20261019-w9a2-weighted-graph/weighted-graph.json": "7748d5a35b33931dfc66a83d089ca6ad7f9f707fdbb59af75c0a3c2a7cfa3414",
+    "research-goal-20261019-w9a2-certificate-analysis/geometry-audit.json": "7d860bb023594ecc4dc84308435acbdcdeb5da7d8d81991220045955575b9c67",
+    "research-goal-20261019-w9a2-certificate-analysis/numeric-leaves-sorted.jsonl.gz": "f2acd938535e00216de3585c85e7c06d9ac213698088a2dc7374005a335a94ae",
+    "research-goal-20261019-w9a2-record/official/proof/Solution.lean": "241068ee5abab772ea1aba7533ec33b9140df7dc1728aeb4c61bfb648fe195c7"
+  },
+  "input_sha256_after": {
+    "research-goal-20261019-w9a2-weighted-graph/weighted-graph.json": "7748d5a35b33931dfc66a83d089ca6ad7f9f707fdbb59af75c0a3c2a7cfa3414",
+    "research-goal-20261019-w9a2-certificate-analysis/geometry-audit.json": "7d860bb023594ecc4dc84308435acbdcdeb5da7d8d81991220045955575b9c67",
+    "research-goal-20261019-w9a2-certificate-analysis/numeric-leaves-sorted.jsonl.gz": "f2acd938535e00216de3585c85e7c06d9ac213698088a2dc7374005a335a94ae",
+    "research-goal-20261019-w9a2-record/official/proof/Solution.lean": "241068ee5abab772ea1aba7533ec33b9140df7dc1728aeb4c61bfb648fe195c7"
+  },
+  "input_identity_unchanged": true,
+  "vertices": 49,
+  "edges": 134,
+  "bad_edges": 37,
+  "complete_G_links_checked": true,
+  "numeric_leaf_count": 11794,
+  "bad_leaf_count": 24,
+  "all_49_source_costs_checked": true,
+  "costs": [
+    12638501,
+    12638501,
+    12739397,
+    12739397,
+    12776350,
+    12776350,
+    12893326,
+    12893326,
+    13637321,
+    13637321,
+    13734031,
+    13734031,
+    13781830,
+    13781830,
+    121390593524,
+    121390593524,
+    192129366775,
+    192129366775,
+    250484838570,
+    250484838570,
+    265453806080,
+    265453806080,
+    380598201950,
+    380598201950,
+    393062824419,
+    393062824419,
+    439727321655,
+    439727321655,
+    481742360239,
+    481742360239,
+    524597733122,
+    524597733122,
+    560453404818,
+    560453404818,
+    587098913641,
+    587098913641,
+    599413154315,
+    599413154315,
+    623361329333,
+    623361329333,
+    656866170127,
+    656866170127,
+    723180799754,
+    723180799754,
+    783349429541,
+    783349429541,
+    817785857206,
+    817785857206,
+    1000000000000
+  ],
+  "all_134_potential_inequalities_checked": true,
+  "checked_edges": [
+    {
+      "from": 1,
+      "to": 10,
+      "cost": 12638501,
+      "scaled_slack": 0
+    },
+    {
+      "from": 3,
+      "to": 10,
+      "cost": 12739397,
+      "scaled_slack": 504480
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "cost": 12776350,
+      "scaled_slack": 0
+    },
+    {
+      "from": 5,
+      "to": 8,
+      "cost": 12776350,
+      "scaled_slack": 0
+    },
+    {
+      "from": 5,
+      "to": 30,
+      "cost": 12776350,
+      "scaled_slack": 0
+    },
+    {
+      "from": 9,
+      "to": 4,
+      "cost": 13637321,
+      "scaled_slack": 0
+    },
+    {
+      "from": 10,
+      "to": 14,
+      "cost": 13734031,
+      "scaled_slack": 0
+    },
+    {
+      "from": 10,
+      "to": 15,
+      "cost": 13734031,
+      "scaled_slack": 0
+    },
+    {
+      "from": 10,
+      "to": 39,
+      "cost": 13734031,
+      "scaled_slack": 0
+    },
+    {
+      "from": 10,
+      "to": 43,
+      "cost": 13734031,
+      "scaled_slack": 0
+    },
+    {
+      "from": 11,
+      "to": 0,
+      "cost": 13734031,
+      "scaled_slack": 0
+    },
+    {
+      "from": 11,
+      "to": 2,
+      "cost": 13734031,
+      "scaled_slack": 0
+    },
+    {
+      "from": 11,
+      "to": 19,
+      "cost": 13734031,
+      "scaled_slack": 0
+    },
+    {
+      "from": 11,
+      "to": 25,
+      "cost": 13734031,
+      "scaled_slack": 0
+    },
+    {
+      "from": 12,
+      "to": 21,
+      "cost": 13781830,
+      "scaled_slack": 0
+    },
+    {
+      "from": 12,
+      "to": 23,
+      "cost": 13781830,
+      "scaled_slack": 0
+    },
+    {
+      "from": 12,
+      "to": 36,
+      "cost": 13781830,
+      "scaled_slack": 0
+    },
+    {
+      "from": 12,
+      "to": 46,
+      "cost": 13781830,
+      "scaled_slack": 0
+    },
+    {
+      "from": 14,
+      "to": 11,
+      "cost": 121390593524,
+      "scaled_slack": 0
+    },
+    {
+      "from": 15,
+      "to": 11,
+      "cost": 121390593524,
+      "scaled_slack": 0
+    },
+    {
+      "from": 18,
+      "to": 10,
+      "cost": 250484838570,
+      "scaled_slack": 0
+    },
+    {
+      "from": 19,
+      "to": 18,
+      "cost": 250484838570,
+      "scaled_slack": 0
+    },
+    {
+      "from": 20,
+      "to": 13,
+      "cost": 265453806080,
+      "scaled_slack": 704881291674
+    },
+    {
+      "from": 22,
+      "to": 13,
+      "cost": 380598201950,
+      "scaled_slack": 1280603271024
+    },
+    {
+      "from": 24,
+      "to": 10,
+      "cost": 393062824419,
+      "scaled_slack": 1965250929590
+    },
+    {
+      "from": 27,
+      "to": 44,
+      "cost": 439727321655,
+      "scaled_slack": 1576248869549
+    },
+    {
+      "from": 29,
+      "to": 44,
+      "cost": 481742360239,
+      "scaled_slack": 1786324062469
+    },
+    {
+      "from": 31,
+      "to": 4,
+      "cost": 524597733122,
+      "scaled_slack": 2622920479005
+    },
+    {
+      "from": 34,
+      "to": 44,
+      "cost": 587098913641,
+      "scaled_slack": 2313106829479
+    },
+    {
+      "from": 37,
+      "to": 13,
+      "cost": 599413154315,
+      "scaled_slack": 2374678032849
+    },
+    {
+      "from": 38,
+      "to": 11,
+      "cost": 623361329333,
+      "scaled_slack": 3754497293837
+    },
+    {
+      "from": 40,
+      "to": 41,
+      "cost": 656866170127,
+      "scaled_slack": 2661943111909
+    },
+    {
+      "from": 42,
+      "to": 11,
+      "cost": 723180799754,
+      "scaled_slack": 4253594645942
+    },
+    {
+      "from": 45,
+      "to": 26,
+      "cost": 783349429541,
+      "scaled_slack": 3294359408979
+    },
+    {
+      "from": 45,
+      "to": 28,
+      "cost": 783349429541,
+      "scaled_slack": 3294359408979
+    },
+    {
+      "from": 45,
+      "to": 35,
+      "cost": 783349429541,
+      "scaled_slack": 3294359408979
+    },
+    {
+      "from": 47,
+      "to": 13,
+      "cost": 817785857206,
+      "scaled_slack": 3466541547304
+    },
+    {
+      "from": 0,
+      "to": 48,
+      "cost": 12638501,
+      "scaled_slack": 0
+    },
+    {
+      "from": 1,
+      "to": 48,
+      "cost": 12638501,
+      "scaled_slack": 1882397454469
+    },
+    {
+      "from": 2,
+      "to": 48,
+      "cost": 12739397,
+      "scaled_slack": 504480
+    },
+    {
+      "from": 3,
+      "to": 48,
+      "cost": 12739397,
+      "scaled_slack": 1882397958949
+    },
+    {
+      "from": 4,
+      "to": 48,
+      "cost": 12776350,
+      "scaled_slack": 1260078591593
+    },
+    {
+      "from": 5,
+      "to": 48,
+      "cost": 12776350,
+      "scaled_slack": 637754734617
+    },
+    {
+      "from": 6,
+      "to": 48,
+      "cost": 12893326,
+      "scaled_slack": 1882398728594
+    },
+    {
+      "from": 7,
+      "to": 48,
+      "cost": 12893326,
+      "scaled_slack": 1882398728594
+    },
+    {
+      "from": 8,
+      "to": 48,
+      "cost": 13637321,
+      "scaled_slack": 15435182496
+    },
+    {
+      "from": 9,
+      "to": 48,
+      "cost": 13637321,
+      "scaled_slack": 1882402448569
+    },
+    {
+      "from": 10,
+      "to": 48,
+      "cost": 13734031,
+      "scaled_slack": 1260078385898
+    },
+    {
+      "from": 11,
+      "to": 48,
+      "cost": 13734031,
+      "scaled_slack": 622324546221
+    },
+    {
+      "from": 12,
+      "to": 48,
+      "cost": 13781830,
+      "scaled_slack": 1882403171114
+    },
+    {
+      "from": 13,
+      "to": 48,
+      "cost": 13781830,
+      "scaled_slack": 1882403171114
+    },
+    {
+      "from": 14,
+      "to": 48,
+      "cost": 121390593524,
+      "scaled_slack": 1244643614792
+    },
+    {
+      "from": 15,
+      "to": 48,
+      "cost": 121390593524,
+      "scaled_slack": 1244643614792
+    },
+    {
+      "from": 16,
+      "to": 48,
+      "cost": 192129366775,
+      "scaled_slack": 2842981095839
+    },
+    {
+      "from": 17,
+      "to": 48,
+      "cost": 192129366775,
+      "scaled_slack": 2842981095839
+    },
+    {
+      "from": 18,
+      "to": 48,
+      "cost": 250484838570,
+      "scaled_slack": 1882397454469
+    },
+    {
+      "from": 19,
+      "to": 48,
+      "cost": 250484838570,
+      "scaled_slack": 1252361000345
+    },
+    {
+      "from": 20,
+      "to": 48,
+      "cost": 265453806080,
+      "scaled_slack": 3209603292364
+    },
+    {
+      "from": 21,
+      "to": 48,
+      "cost": 265453806080,
+      "scaled_slack": 2587284462788
+    },
+    {
+      "from": 22,
+      "to": 48,
+      "cost": 380598201950,
+      "scaled_slack": 3785325271714
+    },
+    {
+      "from": 23,
+      "to": 48,
+      "cost": 380598201950,
+      "scaled_slack": 3163006442138
+    },
+    {
+      "from": 24,
+      "to": 48,
+      "cost": 393062824419,
+      "scaled_slack": 3847648384059
+    },
+    {
+      "from": 25,
+      "to": 48,
+      "cost": 393062824419,
+      "scaled_slack": 1965250929590
+    },
+    {
+      "from": 26,
+      "to": 48,
+      "cost": 439727321655,
+      "scaled_slack": 4080970870239
+    },
+    {
+      "from": 27,
+      "to": 48,
+      "cost": 439727321655,
+      "scaled_slack": 4080970870239
+    },
+    {
+      "from": 28,
+      "to": 48,
+      "cost": 481742360239,
+      "scaled_slack": 4291046063159
+    },
+    {
+      "from": 29,
+      "to": 48,
+      "cost": 481742360239,
+      "scaled_slack": 4291046063159
+    },
+    {
+      "from": 30,
+      "to": 48,
+      "cost": 524597733122,
+      "scaled_slack": 2638355661501
+    },
+    {
+      "from": 31,
+      "to": 48,
+      "cost": 524597733122,
+      "scaled_slack": 4505322927574
+    },
+    {
+      "from": 32,
+      "to": 48,
+      "cost": 560453404818,
+      "scaled_slack": 4684601286054
+    },
+    {
+      "from": 33,
+      "to": 48,
+      "cost": 560453404818,
+      "scaled_slack": 4684601286054
+    },
+    {
+      "from": 34,
+      "to": 48,
+      "cost": 587098913641,
+      "scaled_slack": 4817828830169
+    },
+    {
+      "from": 35,
+      "to": 48,
+      "cost": 587098913641,
+      "scaled_slack": 4817828830169
+    },
+    {
+      "from": 36,
+      "to": 48,
+      "cost": 599413154315,
+      "scaled_slack": 4257081203963
+    },
+    {
+      "from": 37,
+      "to": 48,
+      "cost": 599413154315,
+      "scaled_slack": 4879400033539
+    },
+    {
+      "from": 38,
+      "to": 48,
+      "cost": 623361329333,
+      "scaled_slack": 4999140908629
+    },
+    {
+      "from": 39,
+      "to": 48,
+      "cost": 623361329333,
+      "scaled_slack": 3754497293837
+    },
+    {
+      "from": 40,
+      "to": 48,
+      "cost": 656866170127,
+      "scaled_slack": 5166665112599
+    },
+    {
+      "from": 41,
+      "to": 48,
+      "cost": 656866170127,
+      "scaled_slack": 5166665112599
+    },
+    {
+      "from": 42,
+      "to": 48,
+      "cost": 723180799754,
+      "scaled_slack": 5498238260734
+    },
+    {
+      "from": 43,
+      "to": 48,
+      "cost": 723180799754,
+      "scaled_slack": 4253594645942
+    },
+    {
+      "from": 44,
+      "to": 48,
+      "cost": 783349429541,
+      "scaled_slack": 5799081409669
+    },
+    {
+      "from": 45,
+      "to": 48,
+      "cost": 783349429541,
+      "scaled_slack": 5799081409669
+    },
+    {
+      "from": 46,
+      "to": 48,
+      "cost": 817785857206,
+      "scaled_slack": 5348944718418
+    },
+    {
+      "from": 47,
+      "to": 48,
+      "cost": 817785857206,
+      "scaled_slack": 5971263547994
+    },
+    {
+      "from": 48,
+      "to": 0,
+      "cost": 1000000000000,
+      "scaled_slack": 3755287715053
+    },
+    {
+      "from": 48,
+      "to": 1,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 2,
+      "cost": 1000000000000,
+      "scaled_slack": 3755287715053
+    },
+    {
+      "from": 48,
+      "to": 3,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 4,
+      "cost": 1000000000000,
+      "scaled_slack": 2495209812705
+    },
+    {
+      "from": 48,
+      "to": 5,
+      "cost": 1000000000000,
+      "scaled_slack": 3117533669681
+    },
+    {
+      "from": 48,
+      "to": 6,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 7,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 8,
+      "cost": 1000000000000,
+      "scaled_slack": 3739857526657
+    },
+    {
+      "from": 48,
+      "to": 9,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 10,
+      "cost": 1000000000000,
+      "scaled_slack": 2495214806805
+    },
+    {
+      "from": 48,
+      "to": 11,
+      "cost": 1000000000000,
+      "scaled_slack": 3132968646482
+    },
+    {
+      "from": 48,
+      "to": 12,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 13,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 14,
+      "cost": 1000000000000,
+      "scaled_slack": 3117533875376
+    },
+    {
+      "from": 48,
+      "to": 15,
+      "cost": 1000000000000,
+      "scaled_slack": 3117533875376
+    },
+    {
+      "from": 48,
+      "to": 16,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 17,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 18,
+      "cost": 1000000000000,
+      "scaled_slack": 3125251260929
+    },
+    {
+      "from": 48,
+      "to": 19,
+      "cost": 1000000000000,
+      "scaled_slack": 3755287715053
+    },
+    {
+      "from": 48,
+      "to": 20,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 21,
+      "cost": 1000000000000,
+      "scaled_slack": 2495209090160
+    },
+    {
+      "from": 48,
+      "to": 22,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 23,
+      "cost": 1000000000000,
+      "scaled_slack": 2495209090160
+    },
+    {
+      "from": 48,
+      "to": 24,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 25,
+      "cost": 1000000000000,
+      "scaled_slack": 3755287715053
+    },
+    {
+      "from": 48,
+      "to": 26,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 27,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 28,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 29,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 30,
+      "cost": 1000000000000,
+      "scaled_slack": 3739857526657
+    },
+    {
+      "from": 48,
+      "to": 31,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 32,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 33,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 34,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 35,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 36,
+      "cost": 1000000000000,
+      "scaled_slack": 2495209090160
+    },
+    {
+      "from": 48,
+      "to": 37,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 38,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 39,
+      "cost": 1000000000000,
+      "scaled_slack": 3117533875376
+    },
+    {
+      "from": 48,
+      "to": 40,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 41,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 42,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 43,
+      "cost": 1000000000000,
+      "scaled_slack": 3117533875376
+    },
+    {
+      "from": 48,
+      "to": 44,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 45,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 46,
+      "cost": 1000000000000,
+      "scaled_slack": 2495209090160
+    },
+    {
+      "from": 48,
+      "to": 47,
+      "cost": 1000000000000,
+      "scaled_slack": 1872890260584
+    },
+    {
+      "from": 48,
+      "to": 48,
+      "cost": 1000000000000,
+      "scaled_slack": 4377612261274
+    }
+  ],
+  "mu_CN_units": {
+    "fraction": "622387738726/5",
+    "decimal": "124477547745.2"
+  },
+  "potential_oscillation_CN_units": {
+    "fraction": "500944400138",
+    "decimal": "500944400138"
+  },
+  "attaining_cycle": [
+    10,
+    14,
+    11,
+    19,
+    18,
+    10
+  ],
+  "attaining_cycle_cost": 622387738726,
+  "attaining_cycle_mean": {
+    "fraction": "622387738726/5",
+    "decimal": "124477547745.2"
+  },
+  "fixed_outer_graph_optimality": "Every cycle average >= mu by summing the potential inequalities. The supplied five-edge cycle attains mu; no discovery algorithm is needed to verify optimality of this fixed outer graph.",
+  "conditional_average_floor": {
+    "fraction": "4465145772003282851/500000000000000000000",
+    "decimal": "0.008930291544006565702"
+  },
+  "conditional_K": {
+    "fraction": "3337881639516708570682858853672166187793/4955348542279967171490000000000000000000",
+    "decimal": "0.6735916981494386693360498318075570233203079554790536494675462733205678"
+  },
+  "conditional_percentage": {
+    "fraction": "3337881639516708570682858853672166187793/49553485422799671714900000000000000000",
+    "decimal": "67.35916981494386693360498318075570233203079554790536494675462733205678"
+  },
+  "conditional_gain_proportion": {
+    "fraction": "1038728302876918865400824029813024017473280567285859/1227773960315883866623407213750193231501875000000000000000000",
+    "decimal": "8.460256826180553638006178161097513665533290452997400836581543094750506E-10"
+  },
+  "conditional_gain_percentage_points": {
+    "fraction": "1038728302876918865400824029813024017473280567285859/12277739603158838666234072137501932315018750000000000000000",
+    "decimal": "8.460256826180553638006178161097513665533290452997400836581543094750506E-8"
+  },
+  "finite_sum_consequence": "For any N-edge label path, sum source costs >= N*mu - oscillation(p). Thus, after global quantitative localization is formalized, sum F_i >= N*(c0+mu/SA)-500944400138/SA.",
+  "boundary_loss_F_units": {
+    "fraction": "250472200069/50000000000000000000",
+    "decimal": "5.00944400138E-9"
+  },
+  "good_exterior_pressure_exceeds_threshold": true,
+  "scope_limit": "The 37 bad edges are taken from the frozen geometry graph. Their completeness and the full source-walk quantitative localization/reflection/exterior/actual-zeta counting still need Lean integration. An attaining outer-graph cycle need not be one physically periodic low-energy configuration.",
+  "new_unconditional_record_proven": false,
+  "new_Lean_theorem": false
+}
