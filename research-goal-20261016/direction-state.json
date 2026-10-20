@@ -6,14 +6,14 @@
   ],
   "default_interval_main_rounds": 6,
   "main_rounds_since_review": 0,
-  "last_review_number": 10,
-  "last_review": "research-goal-20261016/macro-reviews/010-20261020.zh.md",
-  "counter_reset_reason": "Written macro010 completed in the first actual post-v7-failure resource diagnostic round. New fixed v8 and one resource-only compiler gate selected; no tool/agent/compaction increment.",
+  "last_review_number": 11,
+  "last_review": "research-goal-20261016/macro-reviews/011-20261020.zh.md",
+  "counter_reset_reason": "Written macro011 completed after the first actual post-v8-failure static diagnostic round. Exact Windows COW/source evidence distinguishes commit from RSS; new fixed measurement gate selected. No extra tool/agent/compaction round.",
   "compaction_resets_counter": false,
   "subagent_messages_increment_counter": false,
   "within_round_user_steering_increments_counter": false,
-  "main_route": "Fixed v8 adds explicit noncomputable only to PTT_0..7/PTT/PT, preserving every other raw source byte. One new-source compiler resource gate with olean/ilean/C output must be reviewed and frozen before execution; official full acceptance remains required.",
-  "next_gate": "Wait for original resource session72573 / parent54132 / child12924 actual terminal. Bind real child exit, three outputs, peak counters, exact input pins and real root outer exit before declaring compiler-resource PASS. No restart on observation timeout; no exporter/CoreAudit/nanoda. Official Linux full-chain acceptance still required.",
+  "main_route": "Same frozen v8 mathematics/source. Correct the Windows resource observation to 7GiB PeakWorkingSetSize, preserving -M6500 and3200s; report process commit separately. The prior commit-threshold failure stays failed.",
+  "next_gate": "Independently review preparation-v3, then root freezes one new single-use v8-resource-v2 gate and observes actual compiler/outer exits and all three outputs. No separate old mathematical/export/Nano replay. Only after actual resource PASS, fresh record and exact GitHub source sync may one authorized v8 official submission proceed.",
   "latest_completed_gate": {
     "name": "Official acceptance of the exact user-uploaded v3 source",
     "evidence": "research-goal-20261019-record-accepted-independent-1753/accepted-files.json",
@@ -53,7 +53,7 @@
     "uniform_defect_lower_bound_proven": false
   },
   "new_optimization_family_authorized": false,
-  "optimization_scope": "Fixed mathematics and all proof/data bodies remain frozen. Only ten proof-only data codegen modifiers and one new v8 resource compilation selected. No numerical/checker/codec family, automatic retry or limit increase.",
+  "optimization_scope": "No new source/math/checker/numerical family or parameter scans. Fixed v8, one justified metric-corrected resource measurement; original v1 stays failed and its namespace is not reused.",
   "new_unconditional_zero_proportion_proven": false,
   "website_submission_ready": false,
   "previous_goal_turn_classification": "progress",
@@ -381,7 +381,7 @@
   },
   "planned_next_macro_review_round": 6,
   "planned_early_review_reason": "Review from round4 if progress becomes bookkeeping or evidence redirects; default6, never later8. A major counterexample or promising new certificate can trigger an immediate review.",
-  "last_review_SHA256": "979a3a33f9ecee2716284c7cdd6e9301ebc1b4ca0ea7e456809289eada7c249c",
+  "last_review_SHA256": "9b12107dcb046c6aa624667c5cf81641e61ec23f5a867dc33c3d42af6c496411",
   "cumulative_window_potential": {
     "static_contract": "research-goal-20261018-window-potential-static/CONTRACT.zh.md",
     "independent_static_manifest": "research-goal-20261018-window-potential-static/independent-files.json",
@@ -631,7 +631,7 @@
     "runtime_fix_preparation_only": true,
     "prefix_recompile_authorized": false
   },
-  "last_review_sha256": "979a3a33f9ecee2716284c7cdd6e9301ebc1b4ca0ea7e456809289eada7c249c",
+  "last_review_sha256": "9b12107dcb046c6aa624667c5cf81641e61ec23f5a867dc33c3d42af6c496411",
   "curvature_route": {
     "static_manifest_sha256": "849fba32fc08736e880d28888f0edc7579766afd419520294ab98767ffd67fba",
     "preparation_authorized": true,
@@ -1366,7 +1366,7 @@
     "production_3200_passed": false,
     "independent_kernels_passed": false
   },
-  "last_review_path": "research-goal-20261016/macro-reviews/008-20261020.zh.md",
+  "last_review_path": "research-goal-20261016/macro-reviews/011-20261020.zh.md",
   "v7_delivery_route": {
     "source": "research-goal-20261020-w9a2-delivery/draft-v7/Solution.lean",
     "source_sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6",
@@ -1409,11 +1409,55 @@
     "compiler_resource_run_passed": false,
     "official_acceptance": false,
     "goal_complete": false,
-    "compiler_resource_run_status": "running",
+    "compiler_resource_run_status": "failed_resource_limit",
     "original_outer_session_id": 72573,
     "parent_pid": 54132,
     "child_pid": 12924,
-    "actual_outer_exit_code": null,
-    "gate_sha256": "66a73d9996a332c5c8762cd24d25108fd96fcf3cc909b7ec7287bf90d2ee6f1c"
+    "actual_outer_exit_code": 1,
+    "gate_sha256": "66a73d9996a332c5c8762cd24d25108fd96fcf3cc909b7ec7287bf90d2ee6f1c",
+    "actual_child_exit_code": 1,
+    "actual_elapsed_seconds": 663.2340000000004,
+    "max_observed_PeakWorkingSetSize": 375066624,
+    "max_observed_PeakPagefileUsage": 7728263168
+  },
+  "resource_diagnostic_round_v8": {
+    "started_UTC": "2026-10-20T14:08:08Z",
+    "review": 10,
+    "counter_transition": [
+      0,
+      1
+    ],
+    "reason": "Actual v8 resource failure changes the diagnostic route; previous single compile gate ended.",
+    "compiler_retry_authorized": false
+  },
+  "resource_rss_metric_review": {
+    "review": 11,
+    "review_sha256": "9b12107dcb046c6aa624667c5cf81641e61ec23f5a867dc33c3d42af6c496411",
+    "evidence": [
+      {
+        "path": "research-goal-20261020-w9a2-v8-resource-failure-v1/files.json",
+        "sha256": "8317a845b841313d4042ae0664a9d38039e96fe05adedee868355636a13a0cf1",
+        "files_checked": 11
+      },
+      {
+        "path": "research-goal-20261020-w9a2-v8-stack-static-review/files.json",
+        "sha256": "b50f02b52b1f40ffd7df5f408596137b2cc16511169c0cd2a52b08e06f6c4121",
+        "files_checked": 8
+      },
+      {
+        "path": "research-goal-20261020-w9a2-v8-import-memory-static-independent/files.json",
+        "sha256": "c3db7c1c33ec2fcb6639680032a002f37534dab26076a759d02283b8d0a2e3c7",
+        "files_checked": 9
+      }
+    ],
+    "old_gate_reclassified_as_pass": false,
+    "observed_peak_stop_metric": "PeakWorkingSetSize",
+    "observed_peak_stop_bytes": 7516192768,
+    "process_commit_diagnostic_only": true,
+    "compiler_memory_MiB": 6500,
+    "total_budget_seconds": 3200,
+    "compiler_execution_started": false,
+    "fullchain_equivalence_claimed": false,
+    "goal_complete": false
   }
 }

@@ -1,0 +1,54 @@
+{
+  "schema": "w9a2-v8-import-memory-observation-summary-v1",
+  "memory_journal": {
+    "path": "tmp/w9a2-20261020/v8-resource-v1/memory.jsonl",
+    "bytes": 5263,
+    "sha256": "5ff3ab599bec4eaf74cba1cffdb789aacb243c69dbea9f1da9c89757f42c01c3"
+  },
+  "sample_count": 24,
+  "live_sample_count": 23,
+  "after_wait_sample_count": 1,
+  "child_pid": 12924,
+  "first_live_sample": {
+    "elapsed_seconds": 1.2180000000007567,
+    "child_pid": 12924,
+    "PeakWorkingSetSize": 3280896,
+    "WorkingSetSize": 3280896,
+    "PeakPagefileUsage": 540672,
+    "PagefileUsage": 540672,
+    "PrivateUsage": 540672,
+    "final_after_wait": false
+  },
+  "last_live_sample": {
+    "elapsed_seconds": 663.0,
+    "child_pid": 12924,
+    "PeakWorkingSetSize": 375062528,
+    "WorkingSetSize": 375062528,
+    "PeakPagefileUsage": 7728250880,
+    "PagefileUsage": 7728250880,
+    "PrivateUsage": 7728250880,
+    "final_after_wait": false
+  },
+  "after_wait_sample": {
+    "elapsed_seconds": 663.1870000000017,
+    "child_pid": 12924,
+    "PeakWorkingSetSize": 375066624,
+    "WorkingSetSize": 8355840,
+    "PeakPagefileUsage": 7728263168,
+    "PagefileUsage": 8409088,
+    "PrivateUsage": 8409088,
+    "final_after_wait": true
+  },
+  "peak_working_set_bytes": 375066624,
+  "peak_commit_bytes": 7728263168,
+  "live_commit_monotone_in_saved_samples": true,
+  "monotonicity_scope": "Only the 23 saved live samples; not a continuous sample or phase trace.",
+  "available_olean_part_bytes_in_sdk_and_declared_package_overlays": 7460811000,
+  "available_olean_part_rows_in_sdk_and_declared_package_overlays": 33154,
+  "inventory_scope": "Available artifact metadata only; excludes duplicate original-package rows and tool-overlay. It is not measured actual imports/mappings, does not include runtime heap/stack/images, and is not a memory lower bound.",
+  "actual_import_phase_proven": false,
+  "actual_mapped_module_set_measured": false,
+  "cow_share_of_observed_commit_measured": false,
+  "proof_execution_count": 0,
+  "new_runtime_probe_count": 0
+}

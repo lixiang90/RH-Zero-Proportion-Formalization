@@ -1,0 +1,26 @@
+{
+  "schema": "actual-v8-resource-failure-root-observation-v1",
+  "original_outer_session_id": 72573,
+  "actual_original_outer_exit_code": 1,
+  "actual_tool_chunk": "912386",
+  "parent_pid": 54132,
+  "child_pid": 12924,
+  "actual_child_wait_exit_code": 1,
+  "terminal_sha256": "b9e50233b9a50ecd9dd14945e2cce321d70d70ef05fec62fd6bcb4a1a001a162",
+  "actual_elapsed_seconds": 663.2340000000004,
+  "actual_finished_at_UTC": "2026-10-20T14:06:48.923738+00:00",
+  "resource_limit_exceeded": true,
+  "budget_expired": false,
+  "PeakWorkingSetSize": 375066624,
+  "PeakPagefileUsage": 7728263168,
+  "cause": "Own runner stopped its retained child on the predeclared 7GiB peak-process-commit threshold. This is not an independent Lean mathematical rejection, OS OOM, or official verdict.",
+  "separate_process_lookups": {
+    "unprivileged_GetProcess_failed_tool_chunk": "75ff8a",
+    "escalated_after_terminal_lookup_tool_chunk": "3b8b37",
+    "escalated_query_returned_no_matching_parent_or_child": true
+  },
+  "compiler_resource_gate_passed": false,
+  "official_submission_performed": false,
+  "automatic_retry_performed": false,
+  "goal_status": "active"
+}

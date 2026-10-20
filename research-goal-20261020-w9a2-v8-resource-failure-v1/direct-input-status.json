@@ -1,0 +1,65 @@
+{
+  "schema": "w9a2-v8-failed-resource-current-direct-input-status-v1",
+  "scope": "Post-failure current checks of four direct files only; no compiler/process query/runtime-tree audit",
+  "observed_at_UTC": "2026-10-20T14:12:27.920280+00:00",
+  "direct_files_before_archive": [
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v8/Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+      "role": "frozen_v8_source",
+      "initial_expected_sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+      "current_matches_initial_expected": true
+    },
+    {
+      "path": "tmp/w9a2-20261020/v8-resource-v1/source/Solution/Candidate.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+      "role": "fresh_source_copy",
+      "initial_expected_sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+      "current_matches_initial_expected": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-resource-preparation-v2/run_resource.py",
+      "bytes": 21830,
+      "sha256": "0f9b38cbe7e1591048431975f66613803e7131b95fa7bc8ddeb848b6de09b662",
+      "role": "actual_runner",
+      "initial_expected_sha256": "0f9b38cbe7e1591048431975f66613803e7131b95fa7bc8ddeb848b6de09b662",
+      "current_matches_initial_expected": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-resource-gate-v1/gate.json",
+      "bytes": 4726,
+      "sha256": "66a73d9996a332c5c8762cd24d25108fd96fcf3cc909b7ec7287bf90d2ee6f1c",
+      "role": "actual_gate",
+      "initial_expected_sha256": "66a73d9996a332c5c8762cd24d25108fd96fcf3cc909b7ec7287bf90d2ee6f1c",
+      "current_matches_initial_expected": true
+    }
+  ],
+  "direct_files_unchanged_during_archive": true,
+  "initial_source_runner_gate_pins_match_current_bytes": true,
+  "all_large_source_library_and_output_files_left_in_original_locations": true,
+  "compiler_output_current_state": [
+    {
+      "path": "tmp/w9a2-20261020/v8-resource-v1/output/Solution/Candidate.olean",
+      "exists": false,
+      "bytes": null
+    },
+    {
+      "path": "tmp/w9a2-20261020/v8-resource-v1/output/Solution/Candidate.ilean",
+      "exists": false,
+      "bytes": null
+    },
+    {
+      "path": "tmp/w9a2-20261020/v8-resource-v1/output/Solution/Candidate.c",
+      "exists": false,
+      "bytes": null
+    }
+  ],
+  "actual_original_outer_exit_code": 1,
+  "actual_child_exit_code": 1,
+  "actual_parent_pid": 54132,
+  "actual_child_pid": 12924,
+  "runner_success_path_all_immutable_recheck_completed": false,
+  "clarification": "The failed compiler path skipped its success-only immutable loop. This archive records a later direct-file status, not a successful runner/full-runtime postflight."
+}

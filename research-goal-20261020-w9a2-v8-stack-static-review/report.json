@@ -1,0 +1,195 @@
+{
+  "schema": "w9a2-v8-stack-static-review-v1",
+  "scope": "Only exact-pin GitHub primary-source reads, Microsoft documentation reads via browser, and static local PE/log metadata. No Lean/compiler/version/kernel/probe/API execution, no source/gate/counter changes.",
+  "Lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "actual_closed_resource_receipt": {
+    "actual_child_exit_code": 1,
+    "elapsed_seconds": 663.2340000000004,
+    "samples": 24,
+    "max_observed_PeakWorkingSetSize": 375066624,
+    "max_observed_PeakPagefileUsage": 7728263168,
+    "resource_limit_exceeded": true,
+    "compiler_resource_gate_passed": false,
+    "thread_count_measured": false
+  },
+  "static_PE_defaults": {
+    "method": "Static byte parsing only, no image load or native/API call",
+    "PE_offset": 120,
+    "optional_header_offset": 144,
+    "machine": 34404,
+    "SizeOfStackReserve": 104857600,
+    "SizeOfStackCommit": 4096
+  },
+  "argument": {
+    "value_KiB": 262144,
+    "Shell_source_lines_1based": [
+      329,
+      337
+    ],
+    "rounding_formula": "(argument / 4 * 4) * 1024 bytes, then runtime adds stack buffer",
+    "requested_bytes_before_buffer": 268435456,
+    "thread_header_default_buffer_bytes": 131072,
+    "configured_lthread_reserve_before_OS_rounding": 268566528
+  },
+  "primary_findings": [
+    {
+      "source": "src/runtime/thread.cpp",
+      "lines_1based": [
+        21,
+        27,
+        68,
+        77,
+        92,
+        100
+      ],
+      "finding": "64-bit source fallback stack size is1GiB unless build macro overridden. The setter adds128KiB buffer. Windows lthread calls CreateThread with STACK_SIZE_PARAM_IS_A_RESERVATION, deliberately making this size reserve rather than initial commit."
+    },
+    {
+      "source": "src/runtime/thread.h",
+      "lines_1based": [
+        12,
+        14
+      ],
+      "finding": "Fallback LEAN_STACK_BUFFER_SPACE=128*1024 bytes."
+    },
+    {
+      "source": "src/util/shell.cpp",
+      "lines_1based": [
+        305,
+        343
+      ],
+      "finding": "Environment stack setting is applied before CLI parsing and overridden by --tstack. After options, shell constructs task manager and runs shell main inside run_with_thread_stack."
+    },
+    {
+      "source": "src/runtime/object.cpp",
+      "lines_1based": [
+        679,
+        684,
+        748,
+        795,
+        929,
+        950
+      ],
+      "finding": "Standard and dedicated workers use lthread. -j1 sets the standard-worker budget, not a measured total thread count; blocked in-pool Task.get can temporarily increase that budget and dedicated-priority work has separate workers."
+    },
+    {
+      "source": "src/CMakeLists.txt",
+      "lines_1based": [
+        170,
+        180
+      ],
+      "finding": "Windows build sets executable linker stack reserve100MiB. Actual executable PE independently records reserve100MiB and initial stack commit4KiB."
+    }
+  ],
+  "Microsoft_primary_sources": [
+    {
+      "URL": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread",
+      "finding": "With STACK_SIZE_PARAM_IS_A_RESERVATION, dwStackSize specifies reserve; without it, it specifies commit."
+    },
+    {
+      "URL": "https://learn.microsoft.com/en-us/windows/win32/procthread/thread-stack-size",
+      "finding": "With reservation flag, initial commit comes from executable header; additional reserved pages are committed as needed. Committed but unreferenced pages need not be resident."
+    }
+  ],
+  "conclusion": "Source contradicts the simple claim that every thread initially commits256MiB from --tstack. The actual executable default initial commit is4KiB; the large argument reserves address space. Deep actual stack use can still commit touched pages, but thread count and stack commitment were not measured. The7.7GB process commit cannot be quantitatively attributed to stacks from these records.",
+  "unresolved": [
+    "Actual process thread count over time",
+    "Per-thread committed-stack pages and high-water marks",
+    "Exact attribution between mappings/heaps/stacks",
+    "Whether other platform/runtime mechanisms dominate the commit-to-RSS gap"
+  ],
+  "stop_boundary": "No retry, higher cap, smaller stack flag, new source or new enabled gate is proposed or executed here. The failed run is not a mathematical rejection, official OOM or candidate PASS. v8 materials remain parked.",
+  "local_input_hashes_before_after_identical": true,
+  "local_inputs": [
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Shell.lean",
+      "bytes": 22984,
+      "sha256": "4f584ae4d4cc859f39cdbb550df8e09417d1fd8e95046829ef821c2c95e2f940"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.exe",
+      "bytes": 83456,
+      "sha256": "bc137e6662c48eedf2cdf167fb176080e18a15f57e248d214df0cb3939248683"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\v8-resource-v1\\terminal.json",
+      "bytes": 11829,
+      "sha256": "b9e50233b9a50ecd9dd14945e2cce321d70d70ef05fec62fd6bcb4a1a001a162"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\v8-resource-v1\\memory.jsonl",
+      "bytes": 5263,
+      "sha256": "5ff3ab599bec4eaf74cba1cffdb789aacb243c69dbea9f1da9c89757f42c01c3"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-gate-v1\\gate.json",
+      "bytes": 4726,
+      "sha256": "66a73d9996a332c5c8762cd24d25108fd96fcf3cc909b7ec7287bf90d2ee6f1c"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    }
+  ],
+  "primary_files": [
+    {
+      "path": "primary/src/runtime/thread.cpp",
+      "URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/runtime/thread.cpp",
+      "effective_URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/runtime/thread.cpp",
+      "bytes": 6902,
+      "sha256": "64c2d8cf7488e0054848a2599e61eaa6deb97007859feea3b43f55f3561d8173",
+      "status": 200,
+      "ETag": "\"223292fe40128daf35e97ed1f5a39306be299720eb92dfe3e945b94ef7f53750\"",
+      "Date": "Tue, 20 Oct 2026 14:15:24 GMT",
+      "retrieved_at_UTC": "2026-10-20T14:15:23.688638+00:00"
+    },
+    {
+      "path": "primary/src/runtime/thread.h",
+      "URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/runtime/thread.h",
+      "effective_URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/runtime/thread.h",
+      "bytes": 9879,
+      "sha256": "b96540b10258e4ca1d9012f8a6a33da520fdf2089a3af8f3965d52728e2929a9",
+      "status": 200,
+      "ETag": "\"42419e3856591fe6a2e39c5d7edb30cb3fa8cd88ae58d3c4da586c5775f0f731\"",
+      "Date": "Tue, 20 Oct 2026 14:15:25 GMT",
+      "retrieved_at_UTC": "2026-10-20T14:15:25.047254+00:00"
+    },
+    {
+      "path": "primary/src/runtime/object.cpp",
+      "URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/runtime/object.cpp",
+      "effective_URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/runtime/object.cpp",
+      "bytes": 98307,
+      "sha256": "3ee30c566fb07497ef11524a4d9abe2f34dc5b0aa20b525a880918a34c925afe",
+      "status": 200,
+      "ETag": "\"6eab57abe0b0ff02562cf8d9c5260eed3afe76b95a9cb7bd047640c26d84e8e7\"",
+      "Date": "Tue, 20 Oct 2026 14:15:27 GMT",
+      "retrieved_at_UTC": "2026-10-20T14:15:27.340919+00:00"
+    },
+    {
+      "path": "primary/src/util/shell.cpp",
+      "URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/util/shell.cpp",
+      "effective_URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/util/shell.cpp",
+      "bytes": 12425,
+      "sha256": "502eaa752396cdff5bb448833a63be54cbbcbb3d36881eb10e235c04c64c0832",
+      "status": 200,
+      "ETag": "\"b1d61c901af59c6b8c6e42ab6697296ff24a2a748046d1de1bba1ebd51c54aee\"",
+      "Date": "Tue, 20 Oct 2026 14:15:32 GMT",
+      "retrieved_at_UTC": "2026-10-20T14:15:32.242251+00:00"
+    },
+    {
+      "path": "primary/src/CMakeLists.txt",
+      "URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/CMakeLists.txt",
+      "effective_URL": "https://raw.githubusercontent.com/leanprover/lean4/d8b18978322de05a8f3dba51ef03cf5461676c17/src/CMakeLists.txt",
+      "bytes": 44531,
+      "sha256": "4f3d9507575462804d0823af6dc204195570004cb027b51b4476d8cf1ff4d3d5",
+      "status": 200,
+      "ETag": "\"668ff33b81a59a7d9b87d35d4157eb927f3c16e6b1b7895873e65c3eeb12bd93\"",
+      "Date": "Tue, 20 Oct 2026 14:15:35 GMT",
+      "retrieved_at_UTC": "2026-10-20T14:15:35.716601+00:00"
+    }
+  ],
+  "proof_execution_count": 0,
+  "native_API_or_probe_count": 0,
+  "source_mutation_count": 0
+}
