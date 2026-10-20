@@ -1,0 +1,68 @@
+{
+  "schema": "w9a2-root-interrupted-replay-observation-v1",
+  "sole_owner": "/root",
+  "observed_at_utc": "2026-10-20T11:03:34Z",
+  "original_exec_session_id": 83153,
+  "original_parent_pid": 15012,
+  "original_monotonic_t0": 15521.156,
+  "original_actual_outer_exit_code": null,
+  "last_live_original_tool_result": {
+    "chunk_id": "545232",
+    "wall_time_seconds": 50.0042708,
+    "session_id": 83153,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "lost_handle_observation": {
+    "tool": "functions.write_stdin through functions.exec",
+    "input_session_id": 83153,
+    "actual_tool_error": "write_stdin failed: Unknown process id 83153",
+    "original_process_exit_code_observed": false
+  },
+  "fresh_parent_process_lookup": {
+    "command": "Get-Process -Id 15012 -ErrorAction Stop | Select-Object Id,ProcessName,StartTime,Path",
+    "sandbox_permissions": "require_escalated",
+    "actual_tool_result": {
+      "chunk_id": "bc3d07",
+      "wall_time_seconds": 0.2480777,
+      "exit_code": 1,
+      "original_token_count": 55,
+      "output": "Get-Process: \r\nLine |\r\n   2 |  Get-Process -Id 15012 -ErrorAction Stop | Select-Object Id,ProcessNam …\r\n     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n     | Cannot find a process with the process identifier 15012.\r\n"
+    }
+  },
+  "fresh_nanoda_launcher_lookup": {
+    "command": "Get-Process -Id 49016 -ErrorAction Stop | Select-Object Id,ProcessName,StartTime,Path",
+    "sandbox_permissions": "require_escalated",
+    "actual_tool_result": {
+      "chunk_id": "42637d",
+      "wall_time_seconds": 0.1904561,
+      "exit_code": 1,
+      "original_token_count": 55,
+      "output": "Get-Process: \r\nLine |\r\n   2 |  Get-Process -Id 49016 -ErrorAction Stop | Select-Object Id,ProcessNam …\r\n     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n     | Cannot find a process with the process identifier 49016.\r\n"
+    }
+  },
+  "fresh_owned_linux_process_lookup": {
+    "command": "C:/Windows/System32/wsl.exe --distribution Ubuntu --exec /bin/ps -p 13 -o pid,ppid,pgid,stat,etimes,comm,args",
+    "sandbox_permissions": "require_escalated",
+    "actual_tool_result": {
+      "chunk_id": "ccf91e",
+      "wall_time_seconds": 0.4175721,
+      "exit_code": 1,
+      "original_token_count": 27,
+      "output": "your 131072x1 screen size is bogus. expect trouble\n  PID  PPID  PGID STAT ELAPSED COMMAND         COMMAND\n"
+    }
+  },
+  "interpretation": {
+    "original_work_still_live": false,
+    "original_outer_exit_unknown": true,
+    "original_replay_complete": false,
+    "original_replay_timeout_observed": false,
+    "closed_Comparator_and_default_Lean_stage_passed": true,
+    "nanoda_result": "unknown-interrupted-without-terminal",
+    "mathematical_replay_verified": false,
+    "cold_full_3200s_passed": false,
+    "official_website_acceptance": false,
+    "submitted": false,
+    "process_lookup_exit_codes_are_not_original_process_exit_codes": true
+  }
+}

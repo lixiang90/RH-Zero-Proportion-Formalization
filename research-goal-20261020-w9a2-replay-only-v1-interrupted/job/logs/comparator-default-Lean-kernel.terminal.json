@@ -1,0 +1,25 @@
+{
+  "label": "comparator-default-Lean-kernel",
+  "argv": [
+    "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.exe",
+    "-j1",
+    "-M13500",
+    "--tstack=262144",
+    "--run",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tools\\ComparatorCoreAudit.lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\challenge.ndjson",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\solution.ndjson",
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "cwd": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\replay-only-v1",
+  "started_monotonic": 15539.031,
+  "remaining_total_budget_seconds": 3182.125000000002,
+  "log": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\replay-only-v1\\logs\\comparator-default-Lean-kernel.log",
+  "wsl_nanoda": false,
+  "pid": 51040,
+  "exit_code": 0,
+  "elapsed_seconds": 1092.9839999999986,
+  "log_sha256": "81db9ec271ac403039be1756dd00873c9bdb6d67a5a28c834fe69a65aa6b6146"
+}

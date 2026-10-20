@@ -1,0 +1,23 @@
+{
+  "label": "serial-nanoda",
+  "argv": [
+    "C:\\Windows\\System32\\wsl.exe",
+    "--distribution",
+    "Ubuntu",
+    "--exec",
+    "/usr/bin/setsid",
+    "--wait",
+    "/bin/sh",
+    "-c",
+    "umask 077; printf \"%s\\n\" \"$$\" > \"$1\"; exec \"$2\" \"$3\"",
+    "owned-w9a2-replay-nanoda",
+    "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/w9a2-20261020/replay-only-v1/nanoda-owned-pgid.txt",
+    "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin",
+    "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/w9a2-20261020/replay-only-v1/nanoda-config.json"
+  ],
+  "cwd": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\replay-only-v1",
+  "started_monotonic": 16632.156,
+  "remaining_total_budget_seconds": 2089.0000000000036,
+  "log": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\replay-only-v1\\logs\\serial-nanoda.log",
+  "wsl_nanoda": true
+}

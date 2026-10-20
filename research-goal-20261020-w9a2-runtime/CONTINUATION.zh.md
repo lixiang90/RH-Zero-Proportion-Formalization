@@ -1,6 +1,12 @@
 # 当前方向：宏观008，同一实际主轮内完成新证据回顾
 
+最新人类steering已覆盖下方本地Nano恢复计划：不再重复核查，直接提交尝试。用户当场确认永久加密存档/Apache-2.0公开后，root已实际上传prepared-v6/proof/Solution.lean并点击一次竞争提交。官网DOM与截图显示Verification running，实际proofDigest=e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1，源码计数1830052B，署名Li Xiang。browser tab1/iab2已markHandoff，若JS重置先恢复原tab，不能再点击Submit或重复上传。继续等待同一官网任务；不再执行旧数学collector或新Nano/冷编译。实际观察见official-submission/browser-observation-v1.json。
+
+原83153句柄丢失且parent15012/launcher49016/WSL13鲜核均不存在，无最终收据，原outerexit保持null/unknown，不是exit1或TimeoutExpired；CoreAudit闭合stage0/1092.984s仍有效，Nano结果未知。中断封存research-goal-20261020-w9a2-replay-only-v1-interrupted/files.json SHAceea3f0163839710098dfb4ce9c480f72321bc43bb6b19835ffa759598e98a4d。下方“仍活动”的进程说明已成为历史。官网最终接受、固定公开源/manifest/attestation/log/record和GitHub最终同步仍待，goal active；counter仍0/review8。
+
 当前权威是 research-goal-20261016/macro-reviews/008-20261020.zh.md（SHAce010248…），review=8/counter=0。a517完整单文件普通Lean与exports通过；原fullchain-v2真实总限时失败，独立数学重放及官网固定3200实际接受仍待。下一步仅在新明确gate下复用原精确exports补两重放，按人类既有授权提交Li Xiang，不重开数值或冷编译家族。
+
+最新实际阶段：replay-only-v1 原 session83153/PID15012/t0=15521.156 仍活动。CoreAudit child51040 已真实 exit0/1092.984s，三条 Comparator comparison/transitive axioms/default Lean replay 消息完整，日志 SHA81db9ec271ac403039be1756dd00873c9bdb6d67a5a28c834fe69a65aa6b6146；formal_owner 独审核同。当前 serial-nanoda 正在原新3200秒预算中执行。必须等待原父句柄真实终态；尚不能宣称数学双内核、新整轮收据或官网接受。原 cold3200 仍为失败。证据 collector 准备及独审已实际 push 到 c1cd25d，仅是准备检查点。
 
 以下为此前宏观007后第1实际轮的历史过程；旧下一动作由宏观008覆盖，不能据历史counter=1再次增加计数。
 

@@ -1,0 +1,5 @@
+本包是原83153/PID15012数学重放中断的纯文件封存。最后原工具句柄曾存活，goal continuation后write_stdin返回Unknown process id；root新的提权只读查询确认Windows parent15012/launcher49016和WSL ownedPID13不存在。原进程退出状态没有被原句柄观察，必须记null/unknown，不能把查询命令的exit1当原进程exit1，更不能认定TimeoutExpired。
+
+CoreAudit子进程51040有完整terminal exit0，1092.984秒，原日志SHA81db9e…含全部三条完成消息，因此Comparator statement/dependency/primitive、传递公理及默认Lean kernel这一已关闭阶段真实通过。Nano已启动，但仅有started/child/空log，无terminal/Checked完成消息；其结果未知且不记通过，也不是观察到的数学拒绝。
+
+缺failure、terminal、mathematical-replay、deadline收据，完整数学重放、独立3200完成、原cold3200、官网接受均未通过。根真实查询raw在root-observations.json，原work当前全部10个小文件逐字复制在job，前后bytes/SHA一致；不触源码、旧work/gate/runner/collector或轮次计数，不跑任何proof/compiler/runtime/network。

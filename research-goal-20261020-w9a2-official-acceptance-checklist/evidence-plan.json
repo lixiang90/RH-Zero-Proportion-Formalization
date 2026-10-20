@@ -1,0 +1,69 @@
+{
+  "schema": "w9a2-minimal-official-acceptance-evidence-plan-v1",
+  "scope": "Read-only existing materials and fixed historical official-source snapshots; no live website or private job queried.",
+  "expected": {
+    "submissionId": "lixiang90-w9a2-weighted-potential-20261020",
+    "author": {"github": "lixiang90", "displayName": "Li Xiang"},
+    "source_bytes": 1830052,
+    "source_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+    "score": {
+      "numerator": "3337881639516708570682858853672166187793",
+      "denominator": "4955348542279967171490000000000000000000"
+    },
+    "predicted_proofDigest_only": "e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1",
+    "public_theorems": ["candidate_strict_improvement", "candidate_critical_line_bound", "candidate_critical_line_bound_cumulative"]
+  },
+  "actual_future_evidence": {
+    "admission_or_status_response": null,
+    "observed_wire_source_sha256": null,
+    "observed_job_proofDigest": null,
+    "official_attestation": null,
+    "official_verifier_log": null,
+    "actual_promotion_status": null,
+    "evidence_commit": null,
+    "promotion_or_later_observed_ledger_commit": null,
+    "published_record": null,
+    "four_public_raw_files": null,
+    "recomputed_public_bundle_digest": null
+  },
+  "minimum_logical_links": [
+    "actual wire source and actual admitted job/digest",
+    "same job result and complete official Lean/nanoda attestation/log",
+    "actual durable promotion and official fixed-commit record entry",
+    "same evidence-commit raw manifest/source/attestation/log with recomputed bundle digest matching actual job"
+  ],
+  "status_distinctions": {
+    "queued_or_running": "No completed proof acceptance",
+    "verified": "Formal verification verdict, may lack durable promotion",
+    "verified_awaiting_configuration": "Proof accepted but publication unavailable",
+    "verified_superseded": "Proof accepted against an older record but not promoted",
+    "promoted_or_already_promoted": "Durable publication status; independently read public ledger and exact evidence",
+    "kernel_verified_record_and_exact_bundle": "Public official acceptance identity after the remaining crosschecks"
+  },
+  "digest_distinctions": {
+    "source_sha256": "Raw Solution.lean only",
+    "proofDigest": "SHA256(labelled raw submission.json and labelled raw Solution.lean)",
+    "challengeDigest": "Trusted challenge material",
+    "verifierTemplateDigest": "Trusted verifier template"
+  },
+  "snapshot_boundaries": {
+    "official_source_snapshot_commit": "1135c0386310a0a038004d3b0fe64d0237e47dce",
+    "snapshot_proves_current_server_deployment_commit": false,
+    "previous_accepted_evidence_commit": "6bc7f07fb939e066ac2923493d9a01cca553fe87",
+    "previous_policy_inner_limit_seconds": 3200,
+    "previous_policy_outer_limit_seconds": 3240,
+    "precise_new_official_elapsed_known": false
+  },
+  "operational_GET_warning": "Captured /api/submissions/status is authenticated and may start/finalize/promote an existing admitted job; it is not a passive public read endpoint. It was not called here.",
+  "public_passive_entrypoints": [
+    "https://www.riemannzeta.fun/api/leaderboard",
+    "https://www.riemannzeta.fun/submissions/<actual-id>",
+    "https://raw.githubusercontent.com/josusanmartin/riemann/<evidence-commit>/submissions/<actual-id>/<public-file>",
+    "https://raw.githubusercontent.com/josusanmartin/riemann/<promotion-or-later-fixed-commit>/data/records.json"
+  ],
+  "submitted_or_accepted_by_this_report": false,
+  "network_requests": 0,
+  "proof_or_compiler_or_mathematical_trials": 0,
+  "frozen_files_modified": false,
+  "main_round_counter_modified": false
+}

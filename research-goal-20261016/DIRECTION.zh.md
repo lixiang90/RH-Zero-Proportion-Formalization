@@ -1,5 +1,7 @@
 # 研究方向与宏观回顾
 
+2026-10-20最新人类指令覆盖宏观008中“提交前补完本地Nano”的动作：用户明确接受一个内核已通过而Nano意外中断的已知状态，要求不再重复核查、直接提交网站，并当场同意永久加密存档及通过后Apache-2.0永久公开。root已向官网实际提交同一a517/1830052B源码、署名Li Xiang；页面显示Verification running，实际组合proofDigest为e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1。当前仅等待同一官网任务，不启动本地恢复/重复检查。原cold超时和本地Nano中断仍保留，官网接受、公开证据及最终GitHub同步未完成，goal保持active。实际观察见research-goal-20261020-w9a2-official-submission/browser-observation-v1.json；中断封存清单ceea3f0163839710098dfb4ce9c480f72321bc43bb6b19835ffa759598e98a4d。本指令属于同一实际研究轮内用户steering，不增加或重置counter（review8/counter0）。
+
 当前有效入口：宏观008（macro-reviews/008-20261020.zh.md），已在原实际主轮内因新证据完成回顾，counter=0、review=8。当前W9A2改进goal保持active；旧accepted目标的完成状态仅属历史目标。主线为a517完整单文件的精确既有exports数学重放，随后官网固定3200秒实际验收；原cold-v2仍是超时失败，不重开数学优化族。
 
 ## 不变的目标
