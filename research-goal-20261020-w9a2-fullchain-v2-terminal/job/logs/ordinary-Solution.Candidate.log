@@ -1,0 +1,93 @@
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:2057:30: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:2141:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:2920:55: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:6521:19: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:6980:15: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:8097:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:8601:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:9493:1: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:9510:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v2\source\Solution\Candidate.lean:16428:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'StructuralW9A220261020.Counting.sum_range_coboundary_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Counting.summed_of_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Counting.actual_defect_estimate_effective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StructuralW9A220261020.Counting.actual_dyadic_of_summed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Counting.actual_cumulative_of_summed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Localization.located_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Graph.edge_from_locations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Graph.edge_potential' depends on axioms: [propext, Quot.sound]
+'StructuralW9A220261020.Final.actual_summed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Final.strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Final.actual_dyadic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Final.actual_cumulative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'candidate_strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'candidate_critical_line_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'candidate_critical_line_bound_cumulative' depends on axioms: [propext, Classical.choice, Quot.sound]

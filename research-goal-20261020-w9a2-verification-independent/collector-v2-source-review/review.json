@@ -1,0 +1,93 @@
+{
+  "scope": "Pure static source/diff/schema/pin review; collector and production helpers NOT executed. No current/future production PASS claimed.",
+  "collector_source_sha256": "476580051c5e65325f2d8b1a4db5b301458dbf4a2d24487842a40595f6adb5db",
+  "prepared_manifest_sha256": "9b4e33f45eba5ed8e13dc95b61e40b29b0ec24566f81ce5935eece3d101ea608",
+  "replacement_rules": 15,
+  "bytes_added": 12,
+  "forward_and_reverse_exact": true,
+  "exact_diff_matches": true,
+  "old_reviewed_logic_unchanged": true,
+  "prepared_v6_13_file_schema_compatible": true,
+  "expected_wire_v6_two_file_schema_compatible": true,
+  "old_v1_identity_rejected_by_new_pinned_work_source_gate_role_session_pid_t0": true,
+  "required_outer_session": 68962,
+  "required_parent_pid": 49320,
+  "required_monotonic_t0": 11264.218,
+  "three_fsynced_receipts_and_nine_stage_checks_preserved": true,
+  "serial_Nano_config_wait_log_checks_preserved": true,
+  "actual_outer_exit0_and_terminal_SHA_still_required": true,
+  "all_input_bytes_unchanged": true,
+  "collector_runs": 0,
+  "compiler_export_kernel_runs": 0,
+  "production_passed_claimed": false,
+  "official_website_acceptance": false,
+  "submitted": false,
+  "independent_checker_note": "An initial read-only check assumed a relative gate work_directory and stopped before any report output. The actual gate is absolute; the collector already uses path(...).resolve(), and the corrected independent check compares resolved identities.",
+  "input_files": [
+    {
+      "path": "research-goal-20261020-w9a2-local-verified-v2-preparation/files.json",
+      "bytes": 1037,
+      "sha256": "9b4e33f45eba5ed8e13dc95b61e40b29b0ec24566f81ce5935eece3d101ea608"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-local-verified-v2-preparation/collect_local_verified.py",
+      "bytes": 22336,
+      "sha256": "476580051c5e65325f2d8b1a4db5b301458dbf4a2d24487842a40595f6adb5db"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-local-verified-v2-preparation/exact-source-diff.patch",
+      "bytes": 9561,
+      "sha256": "073b2b0843a7bbc99864c2703660e9f7dfb118049355e93c6710148162400e11"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-local-verified-v2-preparation/preparation.json",
+      "bytes": 4428,
+      "sha256": "ee8a695eabaa74cb42f378c7c52ecd9513a1e26109337f70a6ad5e6c8e2b49e5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-local-verified-v2-preparation/prepare_collector_v2.py",
+      "bytes": 6072,
+      "sha256": "52afea1b74f69faf983dbc20718f8609d928928bba934124505a4ad9cb040306"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-local-verified-v2-preparation/README.zh.md",
+      "bytes": 2229,
+      "sha256": "ad5945544ad7b67a86febed05699e7a2f74663f584ca7056f63d03ed3faa6498"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-local-verified-preparation/collect_local_verified.py",
+      "bytes": 22324,
+      "sha256": "01b3aa701f79c0b0b6db898dc52bc6159980208a59ebe9a9351f1e5e8e1d9144"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared-v6/files.json",
+      "bytes": 2380,
+      "sha256": "55c28b9f90515324f40144822d9e84b301fe9001ec1a03e8df2bf1350159522f"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-expected-wire-v6/files.json",
+      "bytes": 640,
+      "sha256": "f81666062165a2a1e60bd59b88cedcc237e72bebe9faca0f183b021fec636851"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared-v6/proof/Solution.lean",
+      "bytes": 1830052,
+      "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-expected-wire-v6/expected-server-submission.json",
+      "bytes": 1340,
+      "sha256": "e9aace57386e2bbf5ef9db3ad4bb8585db7173b315141b13bee6b1646bd00ec2"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/started.json",
+      "bytes": 204,
+      "sha256": "c9a930633290ef6e66de67d5f8c65b8a0069de2b912977297a7ceb8814de0192"
+    },
+    {
+      "path": "research-goal-20261016/gates/w9a2-fullchain-v2-20261020.json",
+      "bytes": 21290,
+      "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+    }
+  ]
+}

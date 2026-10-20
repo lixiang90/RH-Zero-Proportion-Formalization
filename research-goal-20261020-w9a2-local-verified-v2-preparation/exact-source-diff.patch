@@ -1,0 +1,110 @@
+--- frozen-v1/collect_local_verified.py
++++ prepared-v2/collect_local_verified.py
+@@ -1,6 +1,6 @@
+ """Future receipt-only collector. PREPARED, NOT RUN.
+ 
+-Refuses until root pins the original fullchain-v1 handle's actual exit0.
++Refuses until root pins the original fullchain-v2 handle's actual exit0.
+ Never imports a runner, invokes subprocess/network, or evaluates Lean.
+ """
+ from __future__ import annotations
+@@ -15,17 +15,17 @@
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ HERE = Path(__file__).resolve().parent
+-WORK = ROOT / "tmp/w9a2-20261020/fullchain-v1"
+-PREPARED = ROOT / "submission/w9a2-weighted-potential-20261020-prepared"
+-WIRE = ROOT / "submission/w9a2-weighted-potential-20261020-expected-wire"
+-DESTINATION = ROOT / "submission/w9a2-weighted-potential-20261020-local-verified"
+-SOURCE_SHA = "650ad1762ee36ba1ddf5f6a027900b20f0f85ba087ac099fd2c99a54eaf6ae13"
++WORK = ROOT / "tmp/w9a2-20261020/fullchain-v2"
++PREPARED = ROOT / "submission/w9a2-weighted-potential-20261020-prepared-v6"
++WIRE = ROOT / "submission/w9a2-weighted-potential-20261020-expected-wire-v6"
++DESTINATION = ROOT / "submission/w9a2-weighted-potential-20261020-local-verified-v2"
++SOURCE_SHA = "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+ RUNNER_SHA = "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+-GATE_SHA = "e6ae96f6b1d9f971217975eb13e6c0a9a37b219e8d695c4437e89d470db691a8"
+-PREPARED_SHA = "980fb14e136c86fa66294dec2e00c177cd195919a7a7f472352b38fa836c1849"
++GATE_SHA = "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
++PREPARED_SHA = "55c28b9f90515324f40144822d9e84b301fe9001ec1a03e8df2bf1350159522f"
+ EXPECTED_MANIFEST_SHA = "e9aace57386e2bbf5ef9db3ad4bb8585db7173b315141b13bee6b1646bd00ec2"
+-WIRE_MANIFEST_SHA = "0809d39a37ef2130b502fe6278915d083dee17245292de72b11b16507e1e5960"
+-EXPECTED_PROOF_DIGEST = "bc1358811491f5fad09f4661f5930bfbe2e4d389c67b661efb17cb81bbadeebb"
++WIRE_MANIFEST_SHA = "f81666062165a2a1e60bd59b88cedcc237e72bebe9faca0f183b021fec636851"
++EXPECTED_PROOF_DIGEST = "e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1"
+ ALLOWED = {"propext", "Quot.sound", "Classical.choice"}
+ TARGETS = {"candidate_strict_improvement", "candidate_critical_line_bound", "candidate_critical_line_bound_cumulative"}
+ LABELS = ["compiler-version", "ordinary-ChallengeDeps", "ordinary-ChallengeDeps.CandidateSpec",
+@@ -133,12 +133,12 @@
+     require(str(path(__file__)) in pins.rows, "Collector source is not pinned")
+     prepared = pins.manifest(PREPARED, PREPARED_SHA)
+     require(len(prepared["files"]) == 13, "Prepared 13-file scope changed")
+-    source = pins.current(PREPARED / "proof/Solution.lean", SOURCE_SHA, 1830001)
+-    actual_source = pins.current(WORK / "source/Solution/Candidate.lean", SOURCE_SHA, 1830001)
+-    require(source.read_bytes() == actual_source.read_bytes(), "Production source is not exact frozen650")
++    source = pins.current(PREPARED / "proof/Solution.lean", SOURCE_SHA, 1830052)
++    actual_source = pins.current(WORK / "source/Solution/Candidate.lean", SOURCE_SHA, 1830052)
++    require(source.read_bytes() == actual_source.read_bytes(), "Production source is not exact frozena517")
+     require(not (WORK / "failure.json").exists(), "Failure receipt is present")
+     start_path = pins.current(WORK / "started.json"); started = load(start_path)
+-    require(started["pid"] == 48644 and started["monotonic_t0"] == 8988.234 and
++    require(started["pid"] == 49320 and started["monotonic_t0"] == 11264.218 and
+         started["gate_sha256"] == GATE_SHA and started["budget_seconds"] == 3200 and
+         started["platform"] == "windows-native-wsl-nanoda", "Wrong original production start")
+     verify_path = pins.current(WORK / "verification.json"); verify = load(verify_path)
+@@ -160,7 +160,7 @@
+         path(gate["work_directory"]) == WORK.resolve(), "Production contract/gate changed")
+     require(verify["automatic_repairs"] == verify["automatic_retries"] == 0 and
+         verify["cached_user_oleans_used"] is False and verify["complete_source_and_bound_artifacts_unchanged"] is True and
+-        verify["source_freshly_regenerated_inside_budget"] is True and verify["source_bytes"] == 1830001 and
++        verify["source_freshly_regenerated_inside_budget"] is True and verify["source_bytes"] == 1830052 and
+         verify["source_sha256"] == SOURCE_SHA and verify["trusted_spec_generated_from_exact_checked_rationals"] is True and
+         verify["fresh_record_checked_at_start"] is True, "Fresh exact source/spec or no-reuse checks are missing")
+     for name in ["ordinary_single_file_passed", "Comparator_statement_dependency_primitive_passed",
+@@ -180,7 +180,7 @@
+         "Local receipt claims an official result")
+     observation_path = pins.current(args.outer_observation, args.outer_observation_sha256); outer = load(observation_path)
+     require(outer["schema"] == "w9a2-root-terminal-observation-v1" and outer["sole_owner"] == "/root" and
+-        outer["role"] == "fullchain-v1" and outer["exec_session_id"] == 68653 and outer["parent_pid"] == 48644 and
++        outer["role"] == "fullchain-v2" and outer["exec_session_id"] == 68962 and outer["parent_pid"] == 49320 and
+         zero(outer["actual_exit_code"]) and outer["observed_scope"] == "completed-outer-parent-handle" and
+         outer["observation_source"] in ["functions.exec_command", "functions.write_stdin"], "Wrong actual root outer-handle observation")
+     require(pins.row(outer["runner"]) == runner_path and outer["runner"]["sha256"] == RUNNER_SHA and
+@@ -189,7 +189,7 @@
+         require(pins.row(outer["gate"]) == gate_path, "Outer gate pin differs")
+     raw_path = pins.row(outer["raw_tool_terminal"]); raw = load(raw_path)
+     require(zero(raw.get("exit_code")) and isinstance(raw.get("output"), str) and
+-        raw.get("session_id") in [None, 68653], "Actual outer tool exit/output is missing")
++        raw.get("session_id") in [None, 68962], "Actual outer tool exit/output is missing")
+     completions = []
+     for line in raw["output"].splitlines():
+         try:
+@@ -220,7 +220,7 @@
+     owned_evidence = [start_path, verify_path, deadline_path, terminal_path, observation_path, raw_path,
+         gate_path, runner_path, pins.current(WORK / "generation.json"), pins.current(WORK / "nanoda-config.json")]
+     generation = load(WORK / "generation.json")
+-    require(generation["source_bytes"] == 1830001 and generation["source_sha256"] == SOURCE_SHA and
++    require(generation["source_bytes"] == 1830052 and generation["source_sha256"] == SOURCE_SHA and
+         generation["fresh_source_generation"] is True and generation["cached_user_oleans"] is False,
+         "Actual fresh generation receipt changed")
+     last_end = started["monotonic_t0"]
+@@ -293,7 +293,7 @@
+         relative = ("production/" + item.relative_to(WORK).as_posix()) if item.is_relative_to(WORK) else ("external/" + str(index) + "-" + item.name)
+         copy_pinned("evidence/" + relative, item, pins)
+     addendum = {"schema": "w9a2-actual-local-verification-addendum-v1", "created_at_utc": datetime.now(timezone.utc).isoformat(),
+-        "source_sha256": SOURCE_SHA, "source_bytes": 1830001, "original_session": 68653, "original_parent_pid": 48644,
++        "source_sha256": SOURCE_SHA, "source_bytes": 1830052, "original_session": 68962, "original_parent_pid": 49320,
+         "runner_sha256": RUNNER_SHA, "gate_sha256": GATE_SHA, "original_monotonic_t0": started["monotonic_t0"],
+         "actual_outer_exit_code": 0, "full_single_3200s_production_passed": True,
+         "total_elapsed_through_all_fsynced_receipts_seconds": elapsed[-1], "ordinary_single_file_passed": True,
+@@ -309,8 +309,8 @@
+         "submitted": False, "official_website_acceptance": False, "official_job_id": None,
+         "proof_compiler_export_kernel_network_runs_by_collector": 0}
+     write("local-verification-addendum.json", dump(addendum))
+-    write("LOCAL-VERIFICATION.zh.md", ("本包仅在原始生产父句柄实际退出0后生成。根会话68653/PID48644及三份fsync收据、同一monotonic时钟3200秒内完成、所有普通Lean/Comparator/defaultLean/serialNano通过都须由collector逐项核验。\n\n"
+-        "原prepared的13文件逐字复制，包含当时仍待production的历史verification-status；最新本地状态以local-verification-addendum.json为准。源码650/1830001字节、署名和许可证未改。expected-wire为预测服务端manifest（model=null），UI模型仍空。\n\n"
++    write("LOCAL-VERIFICATION.zh.md", ("本包仅在原始生产父句柄实际退出0后生成。根会话68962/PID49320及三份fsync收据、同一monotonic时钟3200秒内完成、所有普通Lean/Comparator/defaultLean/serialNano通过都须由collector逐项核验。\n\n"
++        "原prepared的13文件逐字复制，包含当时仍待production的历史verification-status；最新本地状态以local-verification-addendum.json为准。源码a517/1830052字节、署名和许可证未改。expected-wire为预测服务端manifest（model=null），UI模型仍空。\n\n"
+         "此包没有官网上传或接受结果：submitted与official_website_acceptance仍false。后续官网结果须另建有hash连接的addendum，不修改本包和源码。大型export/olean/SDK/cache不重复存档，保留实际生产位置及收据绑定。\n").encode())
+     local_files = [{"path": item.relative_to(DESTINATION).as_posix(), "bytes": item.stat().st_size, "sha256": sha(item)}
+         for item in sorted(DESTINATION.rglob("*")) if item.is_file()]

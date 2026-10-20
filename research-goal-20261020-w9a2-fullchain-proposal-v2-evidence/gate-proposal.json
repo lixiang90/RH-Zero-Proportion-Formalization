@@ -1,0 +1,453 @@
+{
+  "schema": "w9a2-fullchain-gate-v1",
+  "allow_verification_execution": false,
+  "proposal_only": true,
+  "sole_owner": "/root",
+  "platform": "windows-native-wsl-nanoda",
+  "total_budget_seconds": 3200,
+  "automatic_retries": 0,
+  "automatic_repairs": 0,
+  "cached_user_oleans": false,
+  "runner_sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8",
+  "prepared_manifest": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-proposal-v2\\bound-inputs-manifest.json",
+    "sha256": "ee8eee744aa4a548becd88ba653faf8897e1a03d07d16ed10d3c93d04428b0c3"
+  },
+  "work_directory": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2",
+  "frozen_draft": {
+    "directory": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v6",
+    "manifest_sha256": "5bba5e728410d748a347b1ad864b56a147f2dc54db263f9be2a62dc892bfbd87",
+    "solution_bytes": 1830052,
+    "solution_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+  },
+  "score": {
+    "numerator": "3337881639516708570682858853672166187793",
+    "denominator": "4955348542279967171490000000000000000000"
+  },
+  "expected_current_record": {
+    "numerator": "3337881639516708570682858853672166187793",
+    "denominator": "4955348548503844558750000000000000000000"
+  },
+  "fresh_record": {
+    "receipt_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime\\before-production-v2\\leaderboard-receipt.json",
+    "receipt_sha256": "d3756f05fa30eecf7163e70d7117c3b6cb675ec6e30d0709a17726c3d83b41af",
+    "body_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime\\before-production-v2\\leaderboard.json",
+    "body_sha256": "c774017da684e8721342c256967c96c8f285647893b27253c36ff867922937e6",
+    "maximum_age_seconds": 900
+  },
+  "trusted_inputs": {
+    "ChallengeDeps": {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v6\\trusted\\ChallengeDeps.lean",
+      "sha256": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd"
+    },
+    "CandidateSpec_template": {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v6\\frozen-inputs\\CandidateSpec.lean.tmpl",
+      "sha256": "0e85c8c6b123eec25597fb1e838c632214d3aeb0f2ed8e40ab2890df3ece807c"
+    },
+    "Challenge_template": {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v6\\frozen-inputs\\Challenge.Candidate.lean",
+      "sha256": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378"
+    }
+  },
+  "runtime": {
+    "root_confirmed_setup_terminal_exit_code": 0,
+    "root_reviewed_complete_runtime_closure": false,
+    "closure_manifest": {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\closure.json",
+      "sha256": "4d295c059a87faad191c34d1c221bbb744f04f98e226c4a5d0d08f3c01c2d67a"
+    },
+    "python_controller": {
+      "path": "C:\\Python312\\python.exe",
+      "resolved_path": "C:\\Python312\\python.exe",
+      "bytes": 103704,
+      "sha256": "5aba6ec903f2e0e946459f98dc45c8129d3f22187f5adac00713d733191d3a3f",
+      "role": "Python-controller",
+      "version": "3.12.5 (tags/v3.12.5:ff3bc82, Aug  6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)]"
+    },
+    "lean": {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin/lean.exe",
+      "sha256": "bc137e6662c48eedf2cdf167fb176080e18a15f57e248d214df0cb3939248683",
+      "version": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)"
+    },
+    "lean_sysroot": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2",
+    "controlled_path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin;C:\\Windows\\System32;C:\\Windows",
+    "native_exporter": {
+      "path": "tmp/lean4export/.lake/build/bin/lean4export.exe",
+      "sha256": "bc718c9ff717b36827799e8edbc86028edaf86bdd26931ce7a8882fd3fbb67d9"
+    },
+    "coreaudit": {
+      "mode": "interpreted",
+      "source_path": "tools/ComparatorCoreAudit.lean",
+      "binary": null
+    },
+    "package_root": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay",
+    "package_libs": [
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\LeanSearchClient\\.lake\\build\\lib\\lean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Qq\\.lake\\build\\lib\\lean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\plausible\\.lake\\build\\lib\\lean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Cli\\.lake\\build\\lib\\lean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\importGraph\\.lake\\build\\lib\\lean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\proofwidgets\\.lake\\build\\lib\\lean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\aesop\\.lake\\build\\lib\\lean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\batteries\\.lake\\build\\lib\\lean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Zeta23\\.lake\\build\\lib\\lean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\mathlib\\.lake\\build\\lib\\lean"
+    ],
+    "interpreted_tool_libs": [
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\tool-overlay"
+    ],
+    "wsl_distribution": "Ubuntu",
+    "wsl_executable": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "resolved_path": "C:\\Windows\\System32\\wsl.exe",
+      "bytes": 274432,
+      "sha256": "fcd08205b608b5c4831e0dcb1801dd274436cd2c8420815f18ae58a085891a18",
+      "role": "wsl_executable"
+    },
+    "taskkill_executable": {
+      "path": "C:\\Windows\\System32\\taskkill.exe",
+      "resolved_path": "C:\\Windows\\System32\\taskkill.exe",
+      "bytes": 118784,
+      "sha256": "1249717315fc8f4d2df17d5db9da0444795fdb9fb83dfb1f763c3f39282244f7",
+      "role": "taskkill_executable"
+    },
+    "nanoda": {
+      "host_binary": {
+        "path": "tmp/kernel-tools/nanoda-target/release/nanoda_bin",
+        "sha256": "b19804767cb72bf5a317fcfc20e8af7eafdfba789dd6b24bddee2574379ff35a"
+      },
+      "execution_path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin",
+      "resolved_execution_path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin"
+    }
+  },
+  "development_preflight": {
+    "scope": "Exact per-module development PASS chain only; no production olean imports",
+    "ordinary_stages": [
+      {
+        "job": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v0",
+        "gate_sha256": "3960ea16d3ef7b2bf7d91453e95ec77aa143aee295ca655df0a45c01661d0533",
+        "actual_parent_exit_code": 1,
+        "modules_completed": 2,
+        "whole_stage_passed": false,
+        "actual_session_id": 68239,
+        "rejected_failed_module_diagnostics": [
+          {
+            "module": "StructuralW9A220261020.Core",
+            "source_sha256": "b2f536448f48a50d3994cbccf7b3bd94ea54f388664d98e120c112130794ff1e",
+            "observed_axioms": {},
+            "accepted_as_proof": false
+          }
+        ]
+      },
+      {
+        "job": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v1",
+        "gate_sha256": "92def59e80c77b461e3cc301bff748f65e44d53b4c031d745098b156882a3bc5",
+        "actual_parent_exit_code": 1,
+        "modules_completed": 2,
+        "whole_stage_passed": false,
+        "actual_session_id": 93720,
+        "rejected_failed_module_diagnostics": [
+          {
+            "module": "StructuralW9A220261020.Graph",
+            "source_sha256": "a2e4f4fcc8068a245aafaff56363060ffcf4e06e1fccb63d57a999cfb68f0783",
+            "observed_axioms": {},
+            "accepted_as_proof": false
+          }
+        ]
+      },
+      {
+        "job": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v2",
+        "gate_sha256": "59062ce669fcfc8e8a18e3367688f3f9e7d0eb8e9e1120fdbc2ab12f3ff57dac",
+        "actual_parent_exit_code": 1,
+        "modules_completed": 1,
+        "whole_stage_passed": false,
+        "actual_session_id": 42867,
+        "rejected_failed_module_diagnostics": [
+          {
+            "module": "StructuralW9A220261020.Graph",
+            "source_sha256": "9877394187460ee686e31561fe8f1ccb5015eb29fa2b7f5c2565071351add00c",
+            "observed_axioms": {},
+            "accepted_as_proof": false
+          }
+        ]
+      },
+      {
+        "job": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v3",
+        "gate_sha256": "8c890760d99414bccf6357571e85b1c1857e192d58af8fa41c9232ada6fcdde1",
+        "actual_parent_exit_code": 1,
+        "modules_completed": 2,
+        "whole_stage_passed": false,
+        "actual_session_id": 46495,
+        "rejected_failed_module_diagnostics": [
+          {
+            "module": "StructuralW9A220261020.Localization",
+            "source_sha256": "95138259450a504e9db184baa3b1e3b5cd1bdb8e11c8990d4b20a94cc7643a2d",
+            "observed_axioms": {},
+            "accepted_as_proof": false
+          }
+        ]
+      },
+      {
+        "job": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v4",
+        "gate_sha256": "9ed847edf10614f5bada1791551ed2874771add9b5532d57bb8acfb365047ac4",
+        "actual_parent_exit_code": 1,
+        "modules_completed": 3,
+        "whole_stage_passed": false,
+        "actual_session_id": 90216,
+        "rejected_failed_module_diagnostics": [
+          {
+            "module": "StructuralW9A220261020.Final",
+            "source_sha256": "9f9cb13f409ac82ddb1a00ca99d27c98921633b999b82da38cdbd00ea21f5c85",
+            "observed_axioms": {
+              "StructuralW9A220261020.Localization.located_state": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "StructuralW9A220261020.Graph.edge_from_locations": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "StructuralW9A220261020.Graph.edge_potential": [
+                "propext",
+                "Quot.sound"
+              ],
+              "StructuralW9A220261020.Final.actual_summed": [
+                "propext",
+                "sorryAx",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "StructuralW9A220261020.Final.strict_improvement": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "StructuralW9A220261020.Final.actual_dyadic": [
+                "propext",
+                "sorryAx",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "StructuralW9A220261020.Final.actual_cumulative": [
+                "propext",
+                "sorryAx",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "accepted_as_proof": false
+          }
+        ]
+      },
+      {
+        "job": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v5",
+        "gate_sha256": "5a928e8066bd0c8a1bb3cd9e28028b9c995dd40728eed3e72612f9ca8f086d0e",
+        "actual_parent_exit_code": 0,
+        "modules_completed": 1,
+        "whole_stage_passed": true,
+        "actual_session_id": 1250,
+        "rejected_failed_module_diagnostics": []
+      },
+      {
+        "job": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v6",
+        "gate_sha256": "4d345220fded550071869f407f264045f686ded71d7fbdac8c0d4c66c921701d",
+        "actual_parent_exit_code": 0,
+        "modules_completed": 2,
+        "whole_stage_passed": true,
+        "actual_session_id": 51666,
+        "rejected_failed_module_diagnostics": []
+      }
+    ],
+    "selected_modules": [
+      {
+        "module": "StructuralW9A220261020.Prefix",
+        "stage_index": 0,
+        "passed": true,
+        "source_sha256": "bfd774658f3f855596a5453f86f4d98fbc884ca651b3e595d68f70b9553f5b3c",
+        "observed_axioms": {},
+        "receipt": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v0\\StructuralW9A220261020_Prefix.receipt.json",
+        "olean_sha256": "e9bbc282004e9c95ed69c608a2a3ebff6e399425b662c71edcc2e90705d05bfd"
+      },
+      {
+        "module": "StructuralW9A220261020.Core",
+        "stage_index": 1,
+        "passed": true,
+        "source_sha256": "26e23c7fc4fbae33bdfff446901eaeb0f22f0f08fe13fa4e326541565a25279f",
+        "observed_axioms": {},
+        "receipt": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v1\\StructuralW9A220261020_Core.receipt.json",
+        "olean_sha256": "4e24ca2145281fb866d4b24f4db11da74aa87cb4728796fc856e5e4f0ab3fc07"
+      },
+      {
+        "module": "StructuralW9A220261020.Graph",
+        "stage_index": 3,
+        "passed": true,
+        "source_sha256": "2e259252f7fa993954bd52c4a6d6ec58594116a500a576910d6fa671d6521966",
+        "observed_axioms": {},
+        "receipt": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v3\\StructuralW9A220261020_Graph.receipt.json",
+        "olean_sha256": "9bfb52462f64be80158c143ac110fa2b0b23ca8c8577f37ea067280875ab4e0e"
+      },
+      {
+        "module": "StructuralW9A220261020.Localization",
+        "stage_index": 4,
+        "passed": true,
+        "source_sha256": "f4d32498996dd5f2781cdac1b17531c02757467dc62fae4e5b88d7d675842fd4",
+        "observed_axioms": {},
+        "receipt": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v4\\StructuralW9A220261020_Localization.receipt.json",
+        "olean_sha256": "2870323379cea6b2d04deaef60fbce8e8d9f18e42ebb7f71ea34cac91e96dc8c"
+      },
+      {
+        "module": "StructuralW9A220261020.Counting",
+        "stage_index": 6,
+        "passed": true,
+        "source_sha256": "502aa125cfe2566cdbddc3ede296f17dc58ad63a4a750cb6502b24a237b9050a",
+        "observed_axioms": {
+          "StructuralW9A220261020.Counting.sum_range_coboundary_lower": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Counting.summed_of_state": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Counting.actual_defect_estimate_effective": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Counting.actual_dyadic_of_summed": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Counting.actual_cumulative_of_summed": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        "receipt": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v6\\StructuralW9A220261020_Counting.receipt.json",
+        "olean_sha256": "4258d846ee51da6add015602cb74ac7b6e8dadaf37afefdf7c4b0f9659312191"
+      },
+      {
+        "module": "StructuralW9A220261020.Final",
+        "stage_index": 6,
+        "passed": true,
+        "source_sha256": "ea99cc00802c2b3170a9b0c39b1f8b383e69f7c1ab76de851b9cd193c4353cf9",
+        "observed_axioms": {
+          "StructuralW9A220261020.Localization.located_state": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Graph.edge_from_locations": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Graph.edge_potential": [
+            "propext",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Final.actual_summed": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Final.strict_improvement": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Final.actual_dyadic": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "StructuralW9A220261020.Final.actual_cumulative": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        "receipt": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v6\\StructuralW9A220261020_Final.receipt.json",
+        "olean_sha256": "eb6fc42bb68fc1a89e5686d40a670466caaddf9ffa9c0524ef94c12434a3f65c"
+      }
+    ],
+    "observed_printed_axioms": {
+      "StructuralW9A220261020.Counting.sum_range_coboundary_lower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Counting.summed_of_state": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Counting.actual_defect_estimate_effective": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Counting.actual_dyadic_of_summed": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Counting.actual_cumulative_of_summed": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Localization.located_state": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Graph.edge_from_locations": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Graph.edge_potential": [
+        "propext",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Final.actual_summed": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Final.strict_improvement": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Final.actual_dyadic": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "StructuralW9A220261020.Final.actual_cumulative": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "prior_trusted_ChallengeDeps_ordinary_pass": true,
+    "production_cached_user_oleans": false
+  },
+  "remaining_before_separate_root_authorization": [
+    "Root reviews exact disabled proposal, all evidence, current process ownership and runtime OS trust boundary.",
+    "Root writes a NEW gate with allow_verification_execution true, proposal_only false and runtime.root_reviewed_complete_runtime_closure true.",
+    "Root computes the new gate SHA and launches only the unchanged frozen runner with its own real outer process handle.",
+    "All production compilation/export/Comparator/default Lean/serial Nano and three receipts remain required inside one 3200s deadline."
+  ],
+  "proof_compiler_export_kernel_runs_by_assembler": 0,
+  "preflight_source_body_generated_or_copied": false,
+  "production_candidate_oleans_reused": false
+}

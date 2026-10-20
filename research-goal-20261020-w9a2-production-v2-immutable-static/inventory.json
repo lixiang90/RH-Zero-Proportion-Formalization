@@ -1,0 +1,78 @@
+{
+  "schema": "w9a2-production-v2-immutable-static-metadata-v1",
+  "scope": "Existing frozen runner/manifests and completed stage receipts only; no profiling, process query, proof, compiler, SDK API, project helper or runtime data rehash.",
+  "production_parent_session_reported_by_root": 68962,
+  "production_pid_reported_by_root": 49320,
+  "production_final_result": "not assessed; original parent handle remains authoritative",
+  "runner": {
+    "path": "research-goal-20261020-w9a2-verification-preparation-v1/run_verification.py",
+    "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+  },
+  "runtime_closure": {
+    "path": "tmp/w9a2-20261020/trusted-runtime-closure-v5/closure.json",
+    "sha256_from_authorized_gate_not_rehashed_here": "4d295c059a87faad191c34d1c221bbb744f04f98e226c4a5d0d08f3c01c2d67a",
+    "rows": 171231,
+    "unique_path_count": 171231,
+    "unique_resolved_path_count": 171231,
+    "declared_bytes": 15815618680,
+    "rows_with_different_alias_and_resolved_path": 13982,
+    "rows_at_most_4096_bytes": 92327,
+    "buckets": {
+      "original_lake_packages": {"files": 104772, "bytes": 6196044799},
+      "clean_package_overlay": {"files": 43549, "bytes": 6090328304},
+      "installed_sdk_alias": {"files": 13951, "bytes": 2404331570},
+      "mathlib_ltar_cache": {"files": 8681, "bytes": 442921878},
+      "official_sdk_archive": {"files": 1, "bytes": 583407758},
+      "clean_tool_overlay": {"files": 5, "bytes": 2952824},
+      "original_comparator": {"files": 13, "bytes": 3009970},
+      "python312": {"files": 151, "bytes": 16772362},
+      "runtime_setup_evidence": {"files": 3, "bytes": 15848763},
+      "windows_system_boundary": {"files": 35, "bytes": 41125200},
+      "wsl_unc": {"files": 17, "bytes": 6427980},
+      "other": {"files": 53, "bytes": 12447272}
+    },
+    "role_counts_of_repeated_library_data": {
+      "source-bound-cached-data": {"files": 43549, "bytes": 6090328304},
+      "source-bound-clean-trusted-library-overlay": {"files": 43549, "bytes": 6090328304}
+    }
+  },
+  "reconstructed_state_at_post_export_immutable": {
+    "method": "Union of paths bound by fixed source control flow, declared existing manifest rows, and stat sizes of the small fresh production file set; no access to parent process memory.",
+    "bound_count": 171535,
+    "bytes": 17147323293,
+    "resolutions_count": 171235,
+    "extra_bound_count_over_runtime_closure": 304,
+    "extra_bound_bytes_over_runtime_closure": 1331704613,
+    "new_resolution_paths_relative_to_workspace": [
+      "research-goal-20261020-w9a2-delivery/draft-v6/frozen-inputs/CandidateSpec.lean.tmpl",
+      "research-goal-20261020-w9a2-delivery/draft-v6/frozen-inputs/Challenge.Candidate.lean",
+      "research-goal-20261020-w9a2-delivery/draft-v6/trusted/ChallengeDeps.lean",
+      "tmp/w9a2-20261020/trusted-runtime-closure-v5/read-only-setup-receipt.json"
+    ]
+  },
+  "timing_from_existing_receipts": {
+    "solution_native_export_started_monotonic": 13018.531,
+    "solution_native_export_elapsed_seconds": 53.95299999999952,
+    "solution_export_process_end_estimate_monotonic": 13072.484,
+    "comparator_started_monotonic": 13780.734,
+    "process_end_to_comparator_gap_seconds": 708.25,
+    "ordinary_solution_process_end_to_challenge_export_gap_seconds": 139.95299999999952,
+    "qualification": "The process-end to next-stage gaps include run() post-wait hashing, binding, terminal receipt fsync and adjacent code as well as immutable(); no per-file or per-loop timer isolates those costs."
+  },
+  "static_findings": [
+    "Between completed exports and Comparator startup the runner calls immutable(), constructs the command/environment and calls run(); it does not parse NDJSON or run another compiler in that gap.",
+    "immutable() first rehashes every bound path, then resolves every recorded path. Each SHA pass opens every file, checks remaining() per 1 MiB and at file completion, and uses SHA256.",
+    "Python 3.12 Path.resolve(strict=False) calls ntpath.realpath and then stat. Normal existing unprefixed Windows paths in this implementation usually call _getfinalpathname twice; fallback/error branches may differ. For 171235 paths, the normal branch therefore represents about 513705 metadata API calls, not a measured runtime count.",
+    "The closure records 43549 original cached-data files and 43549 clean overlay copies, each totaling 6090328304 bytes. Both path sets are bound and rehashed; their combined 12180656608 bytes are about 77 percent of runtime-closure declared bytes.",
+    "Only 17 closure paths use WSL UNC, totaling 6427980 bytes. Neither small count/size nor earlier successful checks prove their current latency. No file or UNC path can be identified as the bottleneck from these receipts.",
+    "The resolutions loop has no per-iteration remaining() call; subsequent run()/write operations do check the deadline. finish() calls the same full immutable() again after both replay stages. No final duration or outcome is inferred from the earlier gap."
+  ],
+  "not_established": [
+    "Time separately spent in SHA reads, file open/close, filesystem resolution, antivirus, memory/page-cache pressure, or WSL UNC.",
+    "A particular blocked file or Windows/WSL process state.",
+    "Comparator, Nano, final complete receipt, overall deadline compliance or final parent exit."
+  ],
+  "read_only_observation_chunks": ["0958e8", "325b8f", "61b6be"],
+  "proof_runs": 0,
+  "frozen_files_modified": false
+}

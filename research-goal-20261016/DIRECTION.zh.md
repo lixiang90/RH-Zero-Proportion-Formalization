@@ -1,6 +1,6 @@
 # 研究方向与宏观回顾
 
-当前有效入口：宏观007（macro-reviews/007-20261019.zh.md），本实际研究轮counter=1。当前W9A2继续改进goal保持active；下文旧accepted目标的完成状态仅属历史目标。本轮主线固定49状态加权证书的完整形式化与验收，不启动新的优化族。
+当前有效入口：宏观008（macro-reviews/008-20261020.zh.md），已在原实际主轮内因新证据完成回顾，counter=0、review=8。当前W9A2改进goal保持active；旧accepted目标的完成状态仅属历史目标。主线为a517完整单文件的精确既有exports数学重放，随后官网固定3200秒实际验收；原cold-v2仍是超时失败，不重开数学优化族。
 
 ## 不变的目标
 
@@ -640,3 +640,12 @@ Macro006后actual主轮2（1→2）：上一轮sync42/原生安装/新全cold启
 
 
 同一macro007+round1实际ordinary-v6原session51666 terminal exit0：Counting PASS 29.062s, Final PASS 25.937s。完整日志/命令/收据与root实际退出attestation已封research-goal-20261020-w9a2-ordinary-v6-terminal。下一proof关：Frozen draft-v6 source identity then new v2 fullchain all-pin proposal and one cold3200s verification attempt。未自动重试，counter保持1，完整验收与官网提交尚未发生。
+
+
+同一macro007+round1：Counting三限定名修复仅+51B；ordinary-v6原session51666/PID50232实际exit0，Count29.062s及Final25.937s、十二roots均标准三公理。新flat-v6为1830052B/SHAa517df6a…，独立逐字节复核PASS。全来源preflight原49850/PID34720实际exit0，disabled proposal0befcb5c…；最新09:21:25Z官网R不变。root新gate3ebcc3b7…授权唯一fullchain-v2原session68962/PID49320，t0=11264.218，统一3200秒，不复用candidate olean，不自动重试。旧v1失败保全，v2尚无terminal/PASS；修复checkpoint52ce7f0已正常push，完整GitHub末态审计与官网接受仍待。counter=1/review7不变。
+
+
+同一macro007+round1：fullchain-v2原session68962/PID49320实际exit1，3200.578秒，TimeoutExpired中止CoreAudit（仅余683.390秒）；没有Comparator/default replay完成收据，也没有Nano。a517/1830052B单文件普通Lean实际PASS1150.328秒，全部15roots仅标准三公理；两native exports实际PASS266.594/53.953秒，原源/导出对象/olean均保留，完整小收据与SHA封fullchain-v2-terminal。未提交官网、未称数学拒绝或全链通过。17万runtime文件重复来源复核构成显著额外成本；下一步须书面宏观008审定复用已验导出补独立重放，并以官网固定3200接受作为最终整轮验收。此处尚未重置counter=1/review7，未自动重试。
+
+
+当前权威方向更新为宏观008（macro-reviews/008-20261020.zh.md），已依据真实单文件PASS/3200超时写完回顾后才将counter从1归零，review=8；这是原实际主轮内新证据触发的回顾，不新增研究轮。下一关为明确新gate下复用a517原exports补数学重放，绝不称原cold3200PASS；全部数学核验后按既有人类授权提交Li Xiang，官网固定3200实际接受仍是完成门。停止原样冷跑与新优化族；完整目标/失败证据/数值源均保留。

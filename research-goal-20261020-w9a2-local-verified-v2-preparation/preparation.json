@@ -1,0 +1,128 @@
+{
+  "scope": "Only fixed source/path/process pins substituted from reviewed frozen collector; new collector never executed",
+  "old_manifest": {
+    "path": "research-goal-20261020-w9a2-local-verified-preparation/files.json",
+    "bytes": 712,
+    "sha256": "11d3d3cfd692b2d458aca855704cf078990c9320b4cd82c8083a3186cf9e69ca"
+  },
+  "old_source": {
+    "path": "research-goal-20261020-w9a2-local-verified-preparation/collect_local_verified.py",
+    "bytes": 22324,
+    "sha256": "01b3aa701f79c0b0b6db898dc52bc6159980208a59ebe9a9351f1e5e8e1d9144"
+  },
+  "new_source": {
+    "path": "research-goal-20261020-w9a2-local-verified-v2-preparation/collect_local_verified.py",
+    "bytes": 22336,
+    "sha256": "476580051c5e65325f2d8b1a4db5b301458dbf4a2d24487842a40595f6adb5db"
+  },
+  "replacement_rules": [
+    {
+      "old": "submission/w9a2-weighted-potential-20261020-prepared",
+      "new": "submission/w9a2-weighted-potential-20261020-prepared-v6",
+      "replacement_count": 1
+    },
+    {
+      "old": "submission/w9a2-weighted-potential-20261020-expected-wire",
+      "new": "submission/w9a2-weighted-potential-20261020-expected-wire-v6",
+      "replacement_count": 1
+    },
+    {
+      "old": "submission/w9a2-weighted-potential-20261020-local-verified",
+      "new": "submission/w9a2-weighted-potential-20261020-local-verified-v2",
+      "replacement_count": 1
+    },
+    {
+      "old": "650ad1762ee36ba1ddf5f6a027900b20f0f85ba087ac099fd2c99a54eaf6ae13",
+      "new": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+      "replacement_count": 1
+    },
+    {
+      "old": "e6ae96f6b1d9f971217975eb13e6c0a9a37b219e8d695c4437e89d470db691a8",
+      "new": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd",
+      "replacement_count": 1
+    },
+    {
+      "old": "980fb14e136c86fa66294dec2e00c177cd195919a7a7f472352b38fa836c1849",
+      "new": "55c28b9f90515324f40144822d9e84b301fe9001ec1a03e8df2bf1350159522f",
+      "replacement_count": 1
+    },
+    {
+      "old": "0809d39a37ef2130b502fe6278915d083dee17245292de72b11b16507e1e5960",
+      "new": "f81666062165a2a1e60bd59b88cedcc237e72bebe9faca0f183b021fec636851",
+      "replacement_count": 1
+    },
+    {
+      "old": "bc1358811491f5fad09f4661f5930bfbe2e4d389c67b661efb17cb81bbadeebb",
+      "new": "e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1",
+      "replacement_count": 1
+    },
+    {
+      "old": "fullchain-v1",
+      "new": "fullchain-v2",
+      "replacement_count": 3
+    },
+    {
+      "old": "68653",
+      "new": "68962",
+      "replacement_count": 4
+    },
+    {
+      "old": "48644",
+      "new": "49320",
+      "replacement_count": 4
+    },
+    {
+      "old": "8988.234",
+      "new": "11264.218",
+      "replacement_count": 1
+    },
+    {
+      "old": "1830001",
+      "new": "1830052",
+      "replacement_count": 6
+    },
+    {
+      "old": "frozen650",
+      "new": "frozena517",
+      "replacement_count": 1
+    },
+    {
+      "old": "源码650",
+      "new": "源码a517",
+      "replacement_count": 1
+    }
+  ],
+  "forward_and_reverse_exact": true,
+  "actual_original_started_metadata": {
+    "path": "tmp/w9a2-20261020/fullchain-v2/started.json",
+    "bytes": 204,
+    "sha256": "c9a930633290ef6e66de67d5f8c65b8a0069de2b912977297a7ceb8814de0192"
+  },
+  "actual_execution_gate": {
+    "path": "research-goal-20261016/gates/w9a2-fullchain-v2-20261020.json",
+    "bytes": 21290,
+    "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+  },
+  "new_prepared_manifest": {
+    "path": "submission/w9a2-weighted-potential-20261020-prepared-v6/files.json",
+    "bytes": 2380,
+    "sha256": "55c28b9f90515324f40144822d9e84b301fe9001ec1a03e8df2bf1350159522f"
+  },
+  "new_wire_manifest": {
+    "path": "submission/w9a2-weighted-potential-20261020-expected-wire-v6/files.json",
+    "bytes": 640,
+    "sha256": "f81666062165a2a1e60bd59b88cedcc237e72bebe9faca0f183b021fec636851"
+  },
+  "new_source_file": {
+    "path": "submission/w9a2-weighted-potential-20261020-prepared-v6/proof/Solution.lean",
+    "bytes": 1830052,
+    "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+  },
+  "original_session": 68962,
+  "original_parent_pid": 49320,
+  "old_failed_v1_accepted_by_new_collector": false,
+  "collector_executed": false,
+  "future_destination_created": false,
+  "production_result_claimed": false,
+  "proof_compiler_export_kernel_or_runtime_assembler_runs": 0
+}
