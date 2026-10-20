@@ -1,0 +1,26 @@
+--- resource-preparation-v3/run_resource.py
++++ v9-resource-preparation-v1/run_resource.py
+@@ -1 +1 @@
+-"""One authorized v8 Windows compiler/C-generation resource measurement; no replay or retries.
++"""One authorized v9 Windows compiler/C-generation resource measurement; no replay or retries.
+@@ -20 +20 @@
+-FIXED_WORK = ROOT / "tmp/w9a2-20261020/v8-resource-v2"
++FIXED_WORK = ROOT / "tmp/w9a2-20261021/v9-resource-v1"
+@@ -87 +87 @@
+-        self.receipt = {"schema": "w9a2-v8-compiler-resource-terminal-v2",
++        self.receipt = {"schema": "w9a2-v9-compiler-resource-terminal-v1",
+@@ -88 +88 @@
+-            "scope": "One v8 source compiler run with C generation and own-child memory counters; no exporter/kernel/replay/fullchain",
++            "scope": "One v9 source compiler run with C generation and own-child memory counters; no exporter/kernel/replay/fullchain",
+@@ -138 +138 @@
+-        require(gate.get("schema") == "w9a2-v8-resource-gate-v2", "Wrong gate schema")
++        require(gate.get("schema") == "w9a2-v9-resource-gate-v1", "Wrong gate schema")
+@@ -141 +141 @@
+-        require(gate.get("sole_owner") == "/root" and gate.get("candidate_version") == "v8", "Wrong owner/version")
++        require(gate.get("sole_owner") == "/root" and gate.get("candidate_version") == "v9", "Wrong owner/version")
+@@ -178 +178 @@
+-        require(source.name == "Solution.lean" and source.parent.name == "draft-v8", "Fixed v8 source is required")
++        require(source.name == "Solution.lean" and source.parent.name == "draft-v9", "Fixed v9 source is required")
+@@ -203 +203 @@
+-        require(gate["source"]["sha256"] != baseline["frozen_draft"]["solution_sha256"], "Old source cannot be measured as v8")
++        require(gate["source"]["sha256"] != baseline["frozen_draft"]["solution_sha256"], "Old source cannot be measured as v9")

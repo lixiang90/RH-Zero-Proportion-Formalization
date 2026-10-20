@@ -1,0 +1,85 @@
+{
+  "schema": "w9a2-v9-resource-gate-v1",
+  "allow_compiler_execution": true,
+  "proposal_only": false,
+  "sole_owner": "/root",
+  "candidate_version": "v9",
+  "runner_sha256": "068691fce39ed54eb05179c1307fed7b1a68ba5ff1e9570a5c52228e21f445fa",
+  "work_directory": "tmp/w9a2-20261021/v9-resource-v1",
+  "total_budget_seconds": 3200,
+  "automatic_retries": 0,
+  "automatic_repairs": 0,
+  "observed_peak_stop_bytes": 7516192768,
+  "metric": "PeakWorkingSetSize",
+  "commit_diagnostic_only": true,
+  "macro_review_011": {
+    "path": "research-goal-20261016/macro-reviews/011-20261020.zh.md",
+    "sha256": "9b12107dcb046c6aa624667c5cf81641e61ec23f5a867dc33c3d42af6c496411"
+  },
+  "import_memory_static_independent": {
+    "path": "research-goal-20261020-w9a2-v8-import-memory-static-independent/files.json",
+    "sha256": "c3db7c1c33ec2fcb6639680032a002f37534dab26076a759d02283b8d0a2e3c7"
+  },
+  "root_authorized_narrow_historical_cache_reuse": true,
+  "fresh_full_runtime_closure_audit_claimed": false,
+  "source": {
+    "path": "research-goal-20261021-w9a2-delivery/draft-v9/Solution.lean",
+    "bytes": 1861120,
+    "sha256": "7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99"
+  },
+  "frozen_source_manifest": {
+    "path": "research-goal-20261021-w9a2-delivery/draft-v9/files.json",
+    "sha256": "d5cb77b9915dc7437a66a5739acd57093f0ed6acc6f0643e995f415169f2a454"
+  },
+  "independent_static_source_review": {
+    "path": "research-goal-20261021-w9a2-v9-projection-independent-formal/files.json",
+    "sha256": "a8decadae614e60759a27512fe7987e609737cf6fd569c4f8910babda5c9d62e"
+  },
+  "root_ownership_observation": {
+    "path": "research-goal-20261021-w9a2-v9-resource-gate-v1/ownership.json",
+    "sha256": "5b3cad5b0d98cbd3ced1b1c6c568cea77673ee6cdf66b5d6b5b439f3618d9078"
+  },
+  "compiler_flags_fixed_in_runner": [
+    "-j1",
+    "-M6500",
+    "--tstack=262144",
+    "-DrelaxedAutoImplicit=false",
+    "-DElab.async=false",
+    "-R fresh-source-directory",
+    "-o fresh-Candidate.olean",
+    "-i fresh-Candidate.ilean",
+    "-c fresh-Candidate.c",
+    "--json"
+  ],
+  "historical_runtime_gate_reference": {
+    "path": "research-goal-20261016/gates/w9a2-fullchain-v2-20261020.json",
+    "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+  },
+  "historical_runtime_closure_reference_not_reaudited": {
+    "path": "tmp/w9a2-20261020/trusted-runtime-closure-v5/closure.json",
+    "sha256": "4d295c059a87faad191c34d1c221bbb744f04f98e226c4a5d0d08f3c01c2d67a"
+  },
+  "scope": "Disabled fresh v9 resource-observation proposal. Root must first receive completed v9 body review, then freeze a NEW enabled gate with exact source/runner/review and current W9A2 ownership. No run or PASS is inherited from v8; macro011/import-memory pins retain only the historical RSS-metric justification.",
+  "official_setup_used": false,
+  "equivalent_to_official_Linux_8GB_cgroup": false,
+  "exporter_or_kernel_or_replay_execution_authorized": false,
+  "fullchain_pass_claimed": false,
+  "additional_independent_source_review": {
+    "path": "research-goal-20261021-w9a2-v9-projection-independent-math/files.json",
+    "sha256": "1d947e8904c888b9806478d14c3462d511cfb0d84b38630e1cd0b3ba99995d57"
+  },
+  "independent_runner_review": {
+    "path": "research-goal-20261021-w9a2-v9-resource-runner-independent/files.json",
+    "sha256": "ee09488ed9c6ae2c7eb37e94b16a589cf31a3703d5a51c3d5b3a2c1c6db33e8f"
+  },
+  "root_resource_decision": {
+    "path": "research-goal-20261021-w9a2-v9-resource-gate-v1/DECISION.zh.md",
+    "sha256": "18dd4d86bb0916bb1e867d20c74e1daff29c27fd7041c992b287c4ca7f0815d3"
+  },
+  "current_macro_review": 13,
+  "current_main_rounds_since_review": 1,
+  "source_checkpoint_commit_prefix": "8840d43",
+  "source_checkpoint_actual_push_exit_code": 0,
+  "authorized_UTC": "2026-10-20T16:36:54.556254+00:00",
+  "max_compiler_invocations": 1
+}

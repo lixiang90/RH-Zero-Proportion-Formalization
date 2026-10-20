@@ -1,0 +1,15 @@
+# v9 唯一新变体资源构建关
+
+宏观013后第1实际主轮保持counter1/review13；本关不增加或重置轮数。主线仍是完整无条件K、实际dyadic/cumulative证明、规定公理、官网双核/2MB/原3200秒整轮接受、公开promotion和精确GitHub同步。编译资源结果不满足这些最终门。
+
+root选择仅对新v9进行一次资源构建。固定源1861120B/SHA7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99，source commit8840d43已实际push0。两份独立完整byte projection（a8decadae614e60759a27512fe7987e609737cf6fd569c4f8910babda5c9d62e、1d947e8904c888b9806478d14c3462d511cfb0d84b38630e1cd0b3ba99995d57）确认仅2267处14B modifier，其余源字节完全等原v8。完整2257def/5abbrev/5instance编译入口的削减及保留decoder runtime边界有独立SDK证据；这提供新变体测试理由，不是资源收益或失败根因证明。
+
+此前人类要求不再重复旧证明核查、直接提交尝试；v6/v7/v8官网三次实际尝试都已终态失败，当前已观察额度0直到00:00UTC。本次不重开旧源检查/成功collector，而是在额度未恢复期间测一次已实质改变编译工作集合的新源；不追加Comparator/export/Nano重放，也不把本地PASS强加为人类新批准条件。新编译自身照常由Lean检查全部proof，不绕过kernel或公理政策。
+
+采用冻结new runner068691fce39ed54eb05179c1307fed7b1a68ba5ff1e9570a5c52228e21f445fa，仅相对旧d47d九span身份/schema/fresh路径修改。新独占tmp/w9a2-20261021/v9-resource-v1；-j1 -M6500 --tstack=262144 -DrelaxedAutoImplicit=false -DElab.async=false，fresh -o/-i/-c --json，统一3200秒。PeakWorkingSetSize观察门7GiB，process commit仅诊断；不增cap。保留原实际Popen/child wait、only-own-child终止、最后peak查询、三个新非空输出及前后不可变pins。
+
+本地范围为Windows新源Lean/C emission资源，不是官方Linux8GB cgroup/--setup、系统C编译、完整双核或原3200秒全流水线。复用历史可信cache只按固定Lean/Python、两可信ChallengeDeps源/olean/真实收据及10个clean package路径；不递归重核17GB runtime、不复用任何旧Candidate输出，不冒称新全闭包审计。
+
+须先完成新runner独立窄审，root再以实际当前W9A2-only进程观察填新的ownership并冻结enabled gate；禁用模板不能执行。root是唯一owner，只调用一次新句柄，不自动repair/retry、不改数值/核/阈值/checker/codec/InfoTree。旧v8两次本地与三次官网失败、export name-budget失败均按原范围保留。
+
+仅原实际outer0、child0、deadline/RSS观察满足、三个新输出及直接输入hash均满足时，才记新v9资源门通过。内部return意向、活进程、warning、输出片段或模板都不能替代终态。如果失败/终态未知，保留原句柄及实际日志，不增加资源或原样重启；新源实现是否足够仍由新证据决定。官网额度与R<K须在任何后续提交边界鲜核，Li Xiang与同目的/同存档及Apache-2.0条款的既有授权不变；最终只有官方完整接受和公开证据能完成goal。

@@ -1,0 +1,94 @@
+{
+  "schema": "w9a2-v9-resource-runner-exact-text-diff-v1",
+  "base_runner_path": "research-goal-20261020-w9a2-v8-resource-preparation-v3/run_resource.py",
+  "base_runner_bytes": 22785,
+  "base_runner_sha256": "d47d98607df23d7711176116ce62fa13d85925f5c634af1175cc74ef7b3ad880",
+  "new_runner_bytes": 22785,
+  "new_runner_sha256": "068691fce39ed54eb05179c1307fed7b1a68ba5ff1e9570a5c52228e21f445fa",
+  "replacement_count": 9,
+  "raw_reverse_projection_equals_base": true,
+  "logic_limits_argv_cache_ownership_cleanup_unchanged": true,
+  "spans": [
+    {
+      "old_char_offset": 3,
+      "old_byte_offset": 3,
+      "old": "One authorized v8 Windows compiler/C-generation resource measurement",
+      "new": "One authorized v9 Windows compiler/C-generation resource measurement",
+      "old_bytes": 68,
+      "new_bytes": 68,
+      "new_char_offset": 3
+    },
+    {
+      "old_char_offset": 568,
+      "old_byte_offset": 568,
+      "old": "tmp/w9a2-20261020/v8-resource-v2",
+      "new": "tmp/w9a2-20261021/v9-resource-v1",
+      "old_bytes": 32,
+      "new_bytes": 32,
+      "new_char_offset": 568
+    },
+    {
+      "old_char_offset": 2991,
+      "old_byte_offset": 2991,
+      "old": "w9a2-v8-compiler-resource-terminal-v2",
+      "new": "w9a2-v9-compiler-resource-terminal-v1",
+      "old_bytes": 37,
+      "new_bytes": 37,
+      "new_char_offset": 2991
+    },
+    {
+      "old_char_offset": 3053,
+      "old_byte_offset": 3053,
+      "old": "One v8 source compiler run with C generation",
+      "new": "One v9 source compiler run with C generation",
+      "old_bytes": 44,
+      "new_bytes": 44,
+      "new_char_offset": 3053
+    },
+    {
+      "old_char_offset": 5831,
+      "old_byte_offset": 5831,
+      "old": "w9a2-v8-resource-gate-v2",
+      "new": "w9a2-v9-resource-gate-v1",
+      "old_bytes": 24,
+      "new_bytes": 24,
+      "new_char_offset": 5831
+    },
+    {
+      "old_char_offset": 6102,
+      "old_byte_offset": 6102,
+      "old": "gate.get(\"candidate_version\") == \"v8\"",
+      "new": "gate.get(\"candidate_version\") == \"v9\"",
+      "old_bytes": 37,
+      "new_bytes": 37,
+      "new_char_offset": 6102
+    },
+    {
+      "old_char_offset": 9330,
+      "old_byte_offset": 9330,
+      "old": "source.parent.name == \"draft-v8\"",
+      "new": "source.parent.name == \"draft-v9\"",
+      "old_bytes": 32,
+      "new_bytes": 32,
+      "new_char_offset": 9330
+    },
+    {
+      "old_char_offset": 9365,
+      "old_byte_offset": 9365,
+      "old": "Fixed v8 source is required",
+      "new": "Fixed v9 source is required",
+      "old_bytes": 27,
+      "new_bytes": 27,
+      "new_char_offset": 9365
+    },
+    {
+      "old_char_offset": 11483,
+      "old_byte_offset": 11483,
+      "old": "Old source cannot be measured as v8",
+      "new": "Old source cannot be measured as v9",
+      "old_bytes": 35,
+      "new_bytes": 35,
+      "new_char_offset": 11483
+    }
+  ]
+}
