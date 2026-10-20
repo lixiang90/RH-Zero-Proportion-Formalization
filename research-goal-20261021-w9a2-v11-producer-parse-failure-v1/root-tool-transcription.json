@@ -1,0 +1,41 @@
+{
+  "schema": "root-transcribed-v11-producer-parse-failure-v1",
+  "provenance": "Root-reported actual original tool result summary; not an original-handle observation made by this archiver or a raw tool-payload download",
+  "root_reported_original_tool_chunk": "584896",
+  "root_reported_actual_original_outer_exit_code": 1,
+  "root_reported_wall_seconds": 0.4730801,
+  "root_provided_output_transcription": "File .../prepare_targeted_v11.py line234, m=unique(rb\"^noncomputable def v10_r\"+str(n).encode()+b\"_s\"+str(index).encode()+rb\" : St := ⟨([0-9, ]+)⟩\\r?$\",source); SyntaxError: bytes can only contain ASCII literal characters.",
+  "error_phase": "Python parsing, before producer body execution",
+  "error_line_root_reported": 234,
+  "error_type_root_reported": "SyntaxError",
+  "error_message_root_reported": "bytes can only contain ASCII literal characters",
+  "root_reports_producer_body_import_PINS_geometry_started_or_failure_receipts_did_not_run": true,
+  "independent_file_observation": {
+    "original_producer_directory_contains_only_three_frozen_files": true,
+    "original_files": [
+      {
+        "path": "research-goal-20261021-w9a2-targeted-proof-preparation-v1/pre-execution-files.json",
+        "bytes": 902,
+        "sha256": "e1eb91b3f9eb4325e6e2d22cc82ae34a13947d98d8e61edca249053aacdfa75c"
+      },
+      {
+        "path": "research-goal-20261021-w9a2-targeted-proof-preparation-v1/prepare_targeted_v11.py",
+        "bytes": 24978,
+        "sha256": "f78375a32387ba5b6d5372c40f424d740483c374a051a62e2c35355fd21b8fb7"
+      },
+      {
+        "path": "research-goal-20261021-w9a2-targeted-proof-preparation-v1/README.zh.md",
+        "bytes": 2608,
+        "sha256": "b428fb3d6322003f3b4ca1f0c34f2208bea5437699a9083b3acca043198652eb"
+      }
+    ],
+    "pre_execution_manifest_members_match": true,
+    "draft_v11_path": "research-goal-20261021-w9a2-delivery/draft-v11",
+    "draft_v11_exists": false,
+    "no_other_files_or_subdirectories_in_original_OUT": true
+  },
+  "producer_retried_by_archiver": false,
+  "script_import_or_AST_or_source_execution_performed": false,
+  "Lean_compiler_kernel_decoder_network_Git_state_actions": 0,
+  "proof_result_claimed": false
+}

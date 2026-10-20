@@ -1,0 +1,50 @@
+{
+  "schema": "v11-independent-archive-topology-selection-v1",
+  "all_archive_lines_framing": 24504,
+  "retained_two_root_nodes": 1992,
+  "selection": [
+    {
+      "root": 37,
+      "target": 1,
+      "total": 290,
+      "candidates_checked": 604,
+      "chosen": {
+        "pos": 185,
+        "end": 142950,
+        "numeric": 483,
+        "remaining_numeric": 136,
+        "outside_remaining_numeric": 154,
+        "score": 154,
+        "contained_old_cut_positions": [
+          620,
+          110366
+        ]
+      },
+      "fuel": 105,
+      "state_hash": "689d86f27daab24dda4a323cbb26492f421790ded3e8503f7b36f6f898b7f709"
+    },
+    {
+      "root": 43,
+      "target": 169,
+      "total": 249,
+      "candidates_checked": 498,
+      "chosen": {
+        "pos": 23071,
+        "end": 53837,
+        "numeric": 110,
+        "remaining_numeric": 110,
+        "outside_remaining_numeric": 139,
+        "score": 139,
+        "contained_old_cut_positions": []
+      },
+      "fuel": 101,
+      "state_hash": "33e90b965fbaabfda46e73cb94d0728b4fc1a149a5c7cd58611762186410c4cf"
+    }
+  ],
+  "selected_and_target_state_arrays_hash_match_original_archive": true,
+  "geometry_recomputed": false,
+  "WL_or_leaf_energy_or_margin_recomputed": false,
+  "Lean_or_producer_executed": false,
+  "audit_only_correction": "First audit stack tuple expression appended 1 instead of incrementing depth, so fuel check stopped. Replaced audit stack with named pos/depth fields; source/producer untouched.",
+  "prior_audit_tool_chunk": "29f3db"
+}

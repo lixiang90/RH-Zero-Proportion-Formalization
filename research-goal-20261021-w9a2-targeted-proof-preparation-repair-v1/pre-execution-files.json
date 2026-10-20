@@ -1,0 +1,44 @@
+{
+  "schema": "targeted-v11-pre-execution-files-v1",
+  "scope": "Preparation frozen; execution requires root authorization",
+  "execution_authorized": false,
+  "producer_executed": false,
+  "script_imported_or_AST_parsed": false,
+  "macro014_sha256": "2c2c95cd40ef75493d74e0cc4e4d9bb03032e8911c7adfb4b041f672469329f4",
+  "destination": "research-goal-20261021-w9a2-delivery/draft-v11",
+  "budget_seconds": 30,
+  "source_cap_bytes": 2000000,
+  "metadata_cap_bytes": 2000000,
+  "total_output_cap_bytes": 4000000,
+  "maximum_future_executions": 1,
+  "Lean_compiler_kernel_export_decoder_calls": 0,
+  "repair": {
+    "scope": "One explicitly authorized syntax-only byte span; all other original script bytes identical",
+    "original_script_path": "research-goal-20261021-w9a2-targeted-proof-preparation-v1/prepare_targeted_v11.py",
+    "original_script_bytes": 24978,
+    "original_script_sha256": "f78375a32387ba5b6d5372c40f424d740483c374a051a62e2c35355fd21b8fb7",
+    "original_pre_execution_manifest_sha256": "e1eb91b3f9eb4325e6e2d22cc82ae34a13947d98d8e61edca249053aacdfa75c",
+    "reported_original_tool_chunk": "584896",
+    "reported_original_exit_code": 1,
+    "reported_failure": "SyntaxError before program body; no new source/metadata",
+    "utf8_byte_offset": 13279,
+    "old_span_bytes": 33,
+    "new_span_bytes": 48,
+    "old_span": "rb\" : St := ⟨([0-9, ]+)⟩\\r?$\"",
+    "new_span": "r\" : St := ⟨([0-9, ]+)⟩\\r?$\".encode(\"utf-8\")",
+    "exact_reverse_projection_to_original": true,
+    "algorithm_or_numeric_or_source_rule_changed": false
+  },
+  "files": [
+    {
+      "path": "prepare_targeted_v11.py",
+      "bytes": 24993,
+      "sha256": "21146ef340be7de8dd1a3bd4debe1fbcc098610bf0a381e2ddca0d15b2b2b8ec"
+    },
+    {
+      "path": "README.zh.md",
+      "bytes": 1636,
+      "sha256": "7401c936bf5b22e964b51f37db8cfcdbc3c365251f997ca22ed82f128efdaa29"
+    }
+  ]
+}

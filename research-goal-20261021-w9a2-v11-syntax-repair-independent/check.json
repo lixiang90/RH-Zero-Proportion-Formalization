@@ -1,0 +1,52 @@
+{
+  "schema": "v11-syntax-one-span-independent-static-review-v1",
+  "result": "PASS_STATIC_ONE_SPAN_REPAIR",
+  "source_bytes": 24993,
+  "source_sha256": "21146ef340be7de8dd1a3bd4debe1fbcc098610bf0a381e2ddca0d15b2b2b8ec",
+  "old_source_sha256": "f78375a32387ba5b6d5372c40f424d740483c374a051a62e2c35355fd21b8fb7",
+  "offset": 13279,
+  "old_bytes": 33,
+  "new_bytes": 48,
+  "all_other_script_bytes_exact": true,
+  "repair_OUT_exact_three_frozen_files": true,
+  "pins": [
+    {
+      "path": "research-goal-20261021-w9a2-targeted-proof-preparation-repair-v1/prepare_targeted_v11.py",
+      "bytes": 24993,
+      "sha256": "21146ef340be7de8dd1a3bd4debe1fbcc098610bf0a381e2ddca0d15b2b2b8ec"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-targeted-proof-preparation-repair-v1/README.zh.md",
+      "bytes": 1636,
+      "sha256": "7401c936bf5b22e964b51f37db8cfcdbc3c365251f997ca22ed82f128efdaa29"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-targeted-proof-preparation-repair-v1/pre-execution-files.json",
+      "bytes": 1935,
+      "sha256": "be9c97fa2a1e5f86bedf41fc6eaea0ef6592344cbf782842c9934807d802a9aa"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-v11-syntax-repair-decision/DECISION.zh.md",
+      "bytes": 1784,
+      "sha256": "243360567e50a4f7685569dfff577d0e0566eb1963b0eeae35458fa6094a2348"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-v11-syntax-check/ast-only.json",
+      "bytes": 512,
+      "sha256": "76a66aa9f6f5a756b2ab812df2288647be76d5f7065a307cd2deea514f92dba7"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-v11-producer-static-independent/files.json",
+      "bytes": 287,
+      "sha256": "057e5d2e17e5d35aea55f1a51683ff37a0076b7817cd3f84c56281c1bd04bd0e"
+    }
+  ],
+  "root_reported_AST_only_tool": "59f4ec",
+  "root_reported_AST_outer_exit": 0,
+  "root_reported_AST_wall_seconds": 0.4630138,
+  "AST_parsed_by_reviewer": false,
+  "old_or_new_module_imported_or_executed_by_reviewer": false,
+  "metadata_source_or_Lean_execution_by_reviewer": false,
+  "original_failed_static_report_and_original_script_preserved": true,
+  "current_source_metadata_or_resource_PASS": false
+}

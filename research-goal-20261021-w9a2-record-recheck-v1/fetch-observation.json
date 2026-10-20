@@ -1,0 +1,21 @@
+{
+  "schema": "one-public-official-GitHub-records-fetch-v1",
+  "scope": "One public official repository file for planning only; not an eventual upload freshness check",
+  "url": "https://api.github.com/repos/josusanmartin/riemann/contents/data/records.json?ref=main",
+  "method": "GET",
+  "maximum_attempts": 1,
+  "redirects_enabled": false,
+  "Authorization_header_sent": false,
+  "default_credentials_used": false,
+  "timeout_seconds": 30,
+  "max_HTTP_response_bytes": 2097152,
+  "started_at_UTC": "2026-10-20T18:05:49.7063205Z",
+  "request_attempted": true,
+  "success": false,
+  "failure": "System.Management.Automation.RuntimeException: You cannot call a method on a null-valued expression.\r\n   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)\r\n   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)\r\n   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)\r\n   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)",
+  "private_website_API_or_owner_or_quota_or_submit_actions": 0,
+  "http_status": 200,
+  "http_reason": "OK",
+  "elapsed_seconds": 1.2736426,
+  "finished_at_UTC": "2026-10-20T18:05:50.9849945Z"
+}

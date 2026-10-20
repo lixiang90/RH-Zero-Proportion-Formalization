@@ -1,0 +1,33 @@
+{
+  "schema": "v11-independent-audit-actual-tool-observation-v1",
+  "scope": "Reviewing agent actual exec_command results; metadata audit only, not producer/proof execution",
+  "independent_complete_source_projection_review_count": 1,
+  "events": [
+    {
+      "tool_chunk": "29f3db",
+      "actual_exit_code": 1,
+      "actual_wall_seconds": 0.9587945,
+      "scope": "First archive topology audit stopped at its own depth/fuel bookkeeping check; original source/producer unchanged"
+    },
+    {
+      "tool_chunk": "1bf71f",
+      "actual_exit_code": 0,
+      "actual_wall_seconds": 1.0842486,
+      "scope": "Corrected named depth fields; same topology metadata candidates/statehash check complete"
+    },
+    {
+      "tool_chunk": "7970ca",
+      "actual_exit_code": 0,
+      "actual_wall_seconds": 2.0590191,
+      "scope": "Six independently reconstructed source templates, full forward and inverse raw bytes, manifests, types, packed and CRLF complete"
+    },
+    {
+      "tool_chunk": "d21009",
+      "actual_exit_code": 0,
+      "actual_wall_seconds": 0.6076624,
+      "scope": "Field order, input pins, report and original four-member review manifest sealed"
+    }
+  ],
+  "producer_or_Lean_execution_by_reviewer": 0,
+  "original_four_member_files_json_sha256": "9754b6269bc0553f9acb3e5e02557bc341e60b407236ec3043665f2b82794da0"
+}

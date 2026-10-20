@@ -1,0 +1,56 @@
+{
+  "schema": "w9a2-v11-producer-independent-static-review-v1",
+  "result": "PASS_STATIC_WITH_EXTERNAL_ACTUAL_TERMINAL_CONDITION",
+  "pins": [
+    {
+      "path": "research-goal-20261021-w9a2-targeted-proof-preparation-v1/prepare_targeted_v11.py",
+      "bytes": 24978,
+      "sha256": "f78375a32387ba5b6d5372c40f424d740483c374a051a62e2c35355fd21b8fb7"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-targeted-proof-preparation-v1/README.zh.md",
+      "bytes": 2608,
+      "sha256": "b428fb3d6322003f3b4ca1f0c34f2208bea5437699a9083b3acca043198652eb"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-targeted-proof-preparation-v1/pre-execution-files.json",
+      "bytes": 902,
+      "sha256": "e1eb91b3f9eb4325e6e2d22cc82ae34a13947d98d8e61edca249053aacdfa75c"
+    },
+    {
+      "path": "research-goal-20261016/macro-reviews/014-20261021.zh.md",
+      "bytes": 8780,
+      "sha256": "2c2c95cd40ef75493d74e0cc4e4d9bb03032e8911c7adfb4b041f672469329f4"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-delivery/draft-v10/Solution.lean",
+      "bytes": 1914823,
+      "sha256": "86e3f46c90648f98d540d01edd45268d89504b45f7fb9d5d8e53d8582d41e14d"
+    }
+  ],
+  "producer_executed": false,
+  "Python_import_AST_compile_or_help_run": false,
+  "Lean_compiler_kernel_decoder_numeric_execution": false,
+  "producer_repaired_by_reviewer": false,
+  "fixed_residual_targets": [
+    "root37 pos1 total290, old cuts620/110366",
+    "root43 pos169 total249, no old cuts"
+  ],
+  "fixed_selection": "one proper descendant; skip old-cut interiors including own root; subtract whole contained cuts; reject partial overlap; minimize(max(inside,total-inside),position); require both strict decreases",
+  "Graph_rows": 98,
+  "Graph_explicit_bullets": 98,
+  "source_edits": 6,
+  "source_cap": 2000000,
+  "metadata_cap": 2000000,
+  "total_cap": 4000000,
+  "budget_seconds": 30,
+  "external_acceptance_required": [
+    "root separately authorizes immutable pins outside producer OUT",
+    "original actual outer exit0",
+    "actual tool total wall<=30 seconds, including finalization/print",
+    "final outputs current hashes/caps agree and no failure receipt",
+    "new generated source receives actual raw projection review before Lean gate"
+  ],
+  "new_source_or_metadata_generated_by_reviewer": false,
+  "mathematical_or_resource_PASS": false
+}

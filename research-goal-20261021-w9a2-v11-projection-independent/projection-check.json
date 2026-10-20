@@ -1,0 +1,57 @@
+{
+  "schema": "v11-independent-complete-raw-six-template-projection-v1",
+  "result": "PASS_STATIC_FULL_RAW_AND_TARGET_TEMPLATES",
+  "source_bytes": 1945173,
+  "source_sha256": "a267dd84df81d59e308b220f3b8374fc4c0cc32bea6eaa35db04d846e2b07893",
+  "old_source_sha256": "86e3f46c90648f98d540d01edd45268d89504b45f7fb9d5d8e53d8582d41e14d",
+  "forward_reconstruction_exact": true,
+  "raw_inverse_exact": true,
+  "six_templates": [
+    {
+      "label": "r37 helper+parent target",
+      "old_bytes": 157,
+      "new_bytes": 1230,
+      "new_sha256": "6416589f6a80e9827ab5b5ce5fda24c0f40dde8450d991a48d491afe642659a0"
+    },
+    {
+      "label": "rc37 same Covered proof composition",
+      "old_bytes": 121,
+      "new_bytes": 121,
+      "new_sha256": "f49cdb7f7282aba1378b3cb68e53464b9a8269217e2ddd7326b188d57040701f"
+    },
+    {
+      "label": "r43 helper+explicit changed internal cursor type",
+      "old_bytes": 118,
+      "new_bytes": 1178,
+      "new_sha256": "9918bf6f92bc99272efebbe6de3d24cbfcb7bd4316891dc94aa6bff5788340e2"
+    },
+    {
+      "label": "r43 same Covered type consumes new CutsOk",
+      "old_bytes": 146,
+      "new_bytes": 151,
+      "new_sha256": "cb1d2cbc3aa2e006acc85096e389deb7a49e9e9b5878d13bfcc6a4b16c3eae3e"
+    },
+    {
+      "label": "Graph.edge_potential",
+      "old_bytes": 141,
+      "new_bytes": 10690,
+      "new_sha256": "7e3225df2d1c91bb0423ceeef190459ef33a0bac0cde8f73a48f46d67cd7c532"
+    },
+    {
+      "label": "Graph.exclusion_checked",
+      "old_bytes": 242,
+      "new_bytes": 17905,
+      "new_sha256": "5dc9f93616c9f9e1fe742e7545886d2f31ba517c4805c6d0e5321c3a2d6c1898"
+    }
+  ],
+  "all_other_bytes_data_K_public3_preserved": true,
+  "original_Graph_and_Covered_types_preserved": true,
+  "r43_e0_intentionally_cut_aware_not_old_emptycuts_equality": true,
+  "Graph_rows": 98,
+  "Graph_explicit_bullets": 98,
+  "new_hints": 2,
+  "packed_literals_exact": 135,
+  "CRLF": 221,
+  "complete_Lean_kernel_or_resource_PASS": false,
+  "producer_import_AST_or_execution_by_reviewer": false
+}

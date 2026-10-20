@@ -1,0 +1,7 @@
+本包只封存一次新v11 producer在Python解析阶段的实际未完成结果。Root报告原工具584896 actual outer exit1、wall0.4730801秒；第234行bytes正则字面量直接含Unicode角括号，Python报告SyntaxError: bytes can only contain ASCII literal characters。root-tool-transcription.json按root提供的摘要转录，不假称封存代理观察原句柄或下载原工具raw payload。
+
+解析失败发生在producer执行前；没有body/import/PINS/geometry运行或producer自身started/failure收据。这不是Lean、kernel、数学、资源门或源码大小检查的拒绝结果，也没有生成新的v11 proof。没有对算法作成功或失败的数学判断。
+
+独立只读元数据核对确认：原research-goal-20261021-w9a2-targeted-proof-preparation-v1仍恰有pre-execution-files.json、prepare_targeted_v11.py、README.zh.md三个冻结文件，无其它文件或子目录；pre-execution内两项size/SHA均匹配。原script24978B/SHAf78375a32387ba5b6d5372c40f424d740483c374a051a62e2c35355fd21b8fb7保持不变，draft-v11目录不存在。原目录未写入或修改。
+
+本次没有retry、AST解析、import、执行producer或旧脚本，也没有Lean/compiler/decoder/kernel、网络、Git、proof或state/counter动作。任何窄语法修复和下一次metadata执行须由root另行授权，不从本封存自动开始。
