@@ -1,0 +1,161 @@
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:2057:30: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:2141:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:2920:55: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:6521:19: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:6980:15: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:8097:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:8601:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:9493:1: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:9510:3: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:16428:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:16765:10: error: Ambiguous term
+  wfun
+Possible interpretations:
+  Zeta23Ext.Bridge.wfun (((image x univ).orderEmbOfFin hS) r.1 - ((image x univ).orderEmbOfFin hS) r.2) : ℝ
+  
+  AMW.Cert.wfun (((image x univ).orderEmbOfFin hS) r.1 - ((image x univ).orderEmbOfFin hS) r.2) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:16785:18: error: Ambiguous term
+  wfun
+Possible interpretations:
+  Zeta23Ext.Bridge.wfun (sortedExt y (i + ↑b) - sortedExt y (i + ↑a)) : ℝ
+  
+  AMW.Cert.wfun (sortedExt y (i + ↑b) - sortedExt y (i + ↑a)) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:16812:10: error: Ambiguous term
+  wfun
+Possible interpretations:
+  Zeta23Ext.Bridge.wfun (((image x univ).orderEmbOfFin hS) r.1 - ((image x univ).orderEmbOfFin hS) r.2) : ℝ
+  
+  AMW.Cert.wfun (((image x univ).orderEmbOfFin hS) r.1 - ((image x univ).orderEmbOfFin hS) r.2) : ℝ
+E:\codex-build\RH-Zero-Proportion-Formalization\tmp\w9a2-20261020\fullchain-v1\source\Solution\Candidate.lean:16842:4: error: linarith failed to find a contradiction
+case pos
+ι : Type u_1
+inst✝¹ : Fintype ι
+inst✝ : DecidableEq ι
+n : ℕ
+hn : 2 ≤ n
+x : ι → ℝ
+hx : Function.Injective x
+G : Matrix ι ι ℂ
+hG : G.IsHermitian
+c C sep : ℝ
+hc : 0 ≤ c
+hC : 0 ≤ C
+W : WCert n
+hW : W.Adm
+hCert : SeparatedSummedCertificate W c C sep
+hsep : ∀ (i j : ι), i ≠ j → sep ≤ |x i - x j|
+δ : ℝ
+hδ : 0 ≤ δ
+hclose : ∀ (i j : ι), i ≠ j → ‖G i j - ↑(kfun (x i - x j))‖ ≤ δ
+hcap : ∀ (i : ι), hG.eigenvalues i ≤ 2
+R : ℝ
+hR : 0 ≤ R
+hspan : ∀ (i j : ι), x i - x j ≤ R
+m : ℕ := Fintype.card ι
+hcard : Fintype.card ι = m
+hS : #(image x univ) = m
+hm : n ≤ m
+he :
+  c * (↑m - ↑(n - 1)) - C ≤
+    (∑ r, if r.1 ≠ r.2 ∧ ↑r.1 ≤ ↑r.2 + (n - 1) ∧ ↑r.2 ≤ ↑r.1 + (n - 1) then sorry else 0) + blkPress W.b x univ
+hb :
+  (∑ r,
+      if r.1 ≠ r.2 ∧ ↑r.1 ≤ ↑r.2 + (n - 1) ∧ ↑r.2 ≤ ↑r.1 + (n - 1) then
+        Zeta23Ext.Bridge.wfun (((image x univ).orderEmbOfFin hS) r.1 - ((image x univ).orderEmbOfFin hS) r.2)
+      else 0) ≤
+    offDiagSqOn G univ + 4 * ↑(n - 1) * δ * ↑m
+hp : blkPress W.b x univ ≤ W.B * R
+hd : offDiagSqOn G univ ≤ defect hG
+a✝ : defect hG < (c - 4 * ↑(n - 1) * δ) * ↑m - W.B * R - ↑(n - 1) * c - C
+⊢ False
+failed
+'StructuralW9A220261020.Counting.sum_range_coboundary_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Counting.summed_of_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Counting.actual_defect_estimate_effective' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'StructuralW9A220261020.Counting.actual_dyadic_of_summed' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'StructuralW9A220261020.Counting.actual_cumulative_of_summed' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'StructuralW9A220261020.Localization.located_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Graph.edge_from_locations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Graph.edge_potential' depends on axioms: [propext, Quot.sound]
+'StructuralW9A220261020.Final.actual_summed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Final.strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Final.actual_dyadic' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Final.actual_cumulative' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'candidate_strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'candidate_critical_line_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'candidate_critical_line_bound_cumulative' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

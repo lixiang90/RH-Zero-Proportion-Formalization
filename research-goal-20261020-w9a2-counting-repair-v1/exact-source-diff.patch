@@ -1,0 +1,29 @@
+--- v0/Counting.lean
++++ repair-v1/Counting.lean
+@@ -155,7 +155,7 @@
+       (∑ r : Fin m × Fin m,
+         if r.1 ≠ r.2 ∧ (r.1 : ℕ) ≤ (r.2 : ℕ) + (n - 1) ∧
+           (r.2 : ℕ) ≤ (r.1 : ℕ) + (n - 1) then
+-          wfun ((univ.image x).orderEmbOfFin hS r.1 -
++          Zeta23Ext.Bridge.wfun ((univ.image x).orderEmbOfFin hS r.1 -
+             (univ.image x).orderEmbOfFin hS r.2) else 0)
+         + blkPress W.b x univ := by
+   classical
+@@ -175,7 +175,7 @@
+   have hquad := window_pairs_le_band hn hm W hW x hx hS
+   change (∑ i ∈ range (m - (n - 1)), ∑ a : Fin n, ∑ b : Fin n,
+       if (a : ℕ) < (b : ℕ) then
+-        W.a a b * wfun (sortedExt y (i + b) - sortedExt y (i + a)) else 0) ≤ _ at hquad
++        W.a a b * Zeta23Ext.Bridge.wfun (sortedExt y (i + b) - sortedExt y (i + a)) else 0) ≤ _ at hquad
+   linarith
+ 
+ theorem sorted_separated {x : ι → ℝ} {m : ℕ} (hS : (univ.image x).card = m)
+@@ -202,7 +202,7 @@
+       (∑ r : Fin m × Fin m,
+         if r.1 ≠ r.2 ∧ (r.1 : ℕ) ≤ (r.2 : ℕ) + (n - 1) ∧
+           (r.2 : ℕ) ≤ (r.1 : ℕ) + (n - 1) then
+-          wfun ((univ.image x).orderEmbOfFin hS r.1 -
++          Zeta23Ext.Bridge.wfun ((univ.image x).orderEmbOfFin hS r.1 -
+             (univ.image x).orderEmbOfFin hS r.2) else 0)
+         + blkPress W.b x univ :=
+   block_energy_band_of_sum hn W hW hm x hx hS

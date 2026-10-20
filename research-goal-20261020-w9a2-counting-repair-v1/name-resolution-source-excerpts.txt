@@ -1,0 +1,247 @@
+--- Core:3465-3475 ---
+3465: noncomputable section
+3466: set_option linter.unusedSectionVars false
+3467: open Matrix Finset RHLinalg Filter
+3468: open scoped ComplexOrder BigOperators
+3469: open Zeta23 Zeta23.ZeroSide Zeta23.ThmD Zeta23Ext.StableRankTrace
+3470: namespace Zeta23Ext.Bridge
+3471: def Kfun (x : ℝ) : ℝ := AMW.KfunAM x
+3472: def kfun (x : ℝ) : ℝ := Kfun x / Kfun 0
+3473: def wfun (x : ℝ) : ℝ := kfun x ^ 2
+3474: def ptsN (n : ℕ) (g : Fin (n - 1) → ℝ) (i : Fin n) : ℝ :=
+3475:  ∑ j : Fin (n - 1), if (j : ℕ) < (i : ℕ) then g j else 0
+
+--- Core:5050-5080 ---
+5050: open Finset
+5051: open scoped BigOperators
+5052: namespace Zeta23Ext.BridgeW
+5053: open Zeta23Ext.Bridge
+5054: structure WCert (n : ℕ) where
+5055:  a : Fin n → Fin n → ℝ
+5056:  b : Fin (n - 1) → ℝ
+5057: variable {n : ℕ}
+5058: def Fw (W : WCert n) (g : Fin (n - 1) → ℝ) : ℝ :=
+5059:  ∑ r, W.b r * g r
+5060:    + ∑ i : Fin n, ∑ j : Fin n,
+5061:        if (i : ℕ) < (j : ℕ) then W.a i j * wfun (ptsN n g j - ptsN n g i) else 0
+5062: def WCert.B (W : WCert n) : ℝ := ∑ r, W.b r
+5063: def WCert.spanMass (W : WCert n) (s : ℕ) : ℝ :=
+5064:  ∑ i : Fin n, ∑ j : Fin n,
+5065:    if (i : ℕ) < (j : ℕ) ∧ (j : ℕ) - (i : ℕ) = s then W.a i j else 0
+5066: structure WCert.Adm (W : WCert n) : Prop where
+5067:  a_nonneg : ∀ i j, 0 ≤ W.a i j
+5068:  b_nonneg : ∀ r, 0 ≤ W.b r
+5069:  capacity : ∀ s : ℕ, W.spanMass s ≤ 2
+5070: lemma WCert.B_nonneg {W : WCert n} (hW : W.Adm) : 0 ≤ W.B :=
+5071:  sum_nonneg fun r _ => hW.b_nonneg r
+5072: lemma Fw_windowGaps (W : WCert n) (Y : ℕ → ℝ) (i : ℕ) :
+5073:    Fw W (windowGaps n Y i)
+5074:      = ∑ r : Fin (n - 1), W.b r * (Y (i + ((r : ℕ) + 1)) - Y (i + r))
+5075:        + ∑ a : Fin n, ∑ b : Fin n,
+5076:            if (a : ℕ) < (b : ℕ) then W.a a b * wfun (Y (i + b) - Y (i + a)) else 0 := by
+5077:  unfold Fw
+5078:  have hq : (∑ a : Fin n, ∑ b : Fin n,
+5079:        if (a : ℕ) < (b : ℕ) then
+5080:          W.a a b * wfun (ptsN n (windowGaps n Y i) b - ptsN n (windowGaps n Y i) a) else 0)
+
+--- Core:5150-5168 ---
+5150: noncomputable section
+5151: set_option linter.unusedSectionVars false
+5152: open Matrix Finset RHLinalg
+5153: open scoped ComplexOrder BigOperators
+5154: namespace Zeta23Ext.BridgeW
+5155: open Zeta23Ext.Bridge
+5156: variable {ι : Type*} [Fintype ι] [DecidableEq ι]
+5157: lemma window_pairs_le_band {n m : ℕ} (hn : 2 ≤ n) (hm : n ≤ m) (W : WCert n) (hW : W.Adm)
+5158:    (x : ι → ℝ) (hx : Function.Injective x) (hS : (univ.image x).card = m) :
+5159:    ∑ i ∈ range (m - (n - 1)), ∑ a : Fin n, ∑ b : Fin n,
+5160:        (if (a : ℕ) < (b : ℕ) then
+5161:          W.a a b * wfun (sortedExt ((univ.image x).orderEmbOfFin hS) (i + b)
+5162:                - sortedExt ((univ.image x).orderEmbOfFin hS) (i + a))
+5163:        else 0)
+5164:      ≤ ∑ r : Fin m × Fin m, (if r.1 ≠ r.2 ∧ (r.1 : ℕ) ≤ (r.2 : ℕ) + (n - 1) ∧ (r.2 : ℕ) ≤ (r.1 : ℕ) + (n - 1)
+5165:          then wfun ((univ.image x).orderEmbOfFin hS r.1 - (univ.image x).orderEmbOfFin hS r.2) else 0) := by
+5166:  classical
+5167:  set y : Fin m → ℝ := ⇑((univ.image x).orderEmbOfFin hS) with hydef
+5168:  set Y := sortedExt y with hYdef
+
+--- Core:7596-7608 ---
+7596: end AMW.G
+7597: end
+7598: noncomputable section
+7599: namespace AMW.Cert
+7600: def SC : ℕ := 32768
+7601: def KB : ℕ := 1048576
+7602: def SW : ℕ := 10000000000000
+7603: def U1 : ℕ := 1000000000
+7604: def KU1 : ℕ := 2000000000
+7605: def wfun (x : ℝ) : ℝ := AMW.wfunAM x
+7606: def w1 (x : ℝ) : ℝ := AMW.w1AM x
+7607: def w2 (x : ℝ) : ℝ := AMW.w2AM x
+7608: def kD (_ : ℝ) : ℝ := -1
+
+--- Core:13170-13178 ---
+13170: end
+13171: noncomputable section
+13172: namespace RiemannFail
+13173: open Filter
+13174: open Zeta23 Zeta23Ext.Bridge Zeta23Ext.BridgeW AMW
+13175: private theorem sum_univ_nine' {M : Type*} [AddCommMonoid M] (f : Fin 9 → M) :
+13176:     ∑ i, f i = f 0 + f 1 + f 2 + f 3 + f 4 + f 5 + f 6 + f 7 + f 8 := by
+13177:   rw [Fin.sum_univ_castSucc, Fin.sum_univ_eight]; rfl
+13178: def aW9 : Fin 9 → Fin 9 → ℝ
+
+--- Core:13428-13432 ---
+13428:   show ∑ i : Fin 8, f i = f 0 + f 1 + f 2 + f 3 + f 4 + f 5 + f 6 + f 7
+13429:   exact Fin.sum_univ_eight f
+13430: theorem cert_wfun_eq (x : ℝ) : AMW.Cert.wfun x = wfun x := rfl
+13431: theorem Fw_W9 (g : Fin (9 - 1) → ℝ) :
+13432:     Fw W9 g = AMW.Cert.PC9QB6M.G (g 0) (g 1) (g 2) (g 3) (g 4) (g 5) (g 6) (g 7) := by
+
+--- Core:15316-15334 ---
+15316:   exact h1.trans h2
+15317: section Sparse
+15318: variable {ι : Type*} [Fintype ι] [DecidableEq ι]
+15319: theorem band_close_n (n : ℕ) {x : ι → ℝ} (hx : Function.Injective x)
+15320:     {m : ℕ} (hS : (univ.image x).card = m) (hcard : Fintype.card ι = m)
+15321:     (G : Matrix ι ι ℂ) {δ : ℝ} (hδ : 0 ≤ δ)
+15322:     (hclose : ∀ i j, i ≠ j →
+15323:       ‖G i j - (kfun (x i - x j) : ℂ)‖ ≤ δ) :
+15324:     (∑ r : Fin m × Fin m,
+15325:       if r.1 ≠ r.2 ∧ (r.1 : ℕ) ≤ (r.2 : ℕ) + (n - 1) ∧
+15326:           (r.2 : ℕ) ≤ (r.1 : ℕ) + (n - 1) then
+15327:         wfun ((univ.image x).orderEmbOfFin hS r.1 -
+15328:           (univ.image x).orderEmbOfFin hS r.2) else 0)
+15329:       ≤ offDiagSqOn G univ + 4 * ((n - 1 : ℕ) : ℝ) * δ * m := by
+15330:   classical
+15331:   set e := Equiv.ofBijective _ (sRank_bijective hx hS hcard) with he
+15332:   set R : ι → ℕ := fun i => (sRank x hS i : ℕ) with hR
+15333:   set C : ι → ι → Prop := fun i j =>
+15334:     i ≠ j ∧ R i ≤ R j + (n - 1) ∧ R j ≤ R i + (n - 1) with hC
+
+--- Graph:10-19 ---
+10: set_option maxHeartbeats 0
+11: set_option maxRecDepth 65536
+12: 
+13: noncomputable section
+14: open Finset
+15: open AMW.Cert AMW.Cert.Pyr AMW.Cert.PCell AMW.Cert.PC9QB6M
+16: 
+17: namespace StructuralW9A220261020.Graph
+18: 
+19: abbrev State := Fin 49
+
+--- Graph:218-222 ---
+218:   · have hstrict : (upper v (i-1) (j-1) : ℝ)/SC < (lower u i j : ℝ)/SC :=
+219:       div_lt_div_of_pos_right (by exact_mod_cast hc) SC_pos
+220:     linarith [hl.1, hr.2]
+221: 
+222: end StructuralW9A220261020.Graph
+
+--- Localization:10-21 ---
+10: set_option Elab.async false
+11: set_option maxHeartbeats 0
+12: noncomputable section
+13: open Finset
+14: open AMW.Cert AMW.Cert.PCell
+15: open AMW.Cert.PC9QB6M AMW.Cert.PC9QB6MData
+16: open Zeta23Ext.BridgeW
+17: open StructuralW9A220261020.Graph
+18: 
+19: namespace StructuralW9A220261020.Localization
+20: def sep : ℝ := 17 / 20
+21: def base : ℝ := (cN : ℝ) / SA
+
+--- Localization:286-291 ---
+286:   have he : dagThreshold = base + (qDagIncrement : ℝ) / SA := by
+287:     simp only [dagThreshold, base, Nat.cast_add, add_div]
+288:   rw [he] at hlow
+289:   linarith
+290: 
+291: end StructuralW9A220261020.Localization
+
+--- Counting-before:18-26 ---
+18: set_option maxHeartbeats 0
+19: 
+20: noncomputable section
+21: open Matrix Finset RHLinalg Filter Topology
+22: open scoped ComplexOrder BigOperators
+23: open Zeta23Ext.StableRankTrace Zeta23Ext.Bridge Zeta23Ext.BridgeW
+24: 
+25: namespace StructuralW9A220261020.Counting
+26: 
+
+--- Counting-before:144-182 ---
+144: section Payment
+145: variable {ι : Type*} [Fintype ι] [DecidableEq ι]
+146: 
+147: theorem block_energy_band_of_sum {c C : ℝ} {n : ℕ} (hn : 2 ≤ n)
+148:     (W : WCert n) (hW : W.Adm)
+149:     {m : ℕ} (hm : n ≤ m) (x : ι → ℝ) (hx : Function.Injective x)
+150:     (hS : (univ.image x).card = m)
+151:     (hSum : c * ((m : ℝ) - ((n - 1 : ℕ) : ℝ)) - C ≤
+152:       ∑ i ∈ range (m - (n - 1)), Fw W
+153:         (windowGaps n (sortedExt ((univ.image x).orderEmbOfFin hS)) i)) :
+154:     c * ((m : ℝ) - ((n - 1 : ℕ) : ℝ)) - C ≤
+155:       (∑ r : Fin m × Fin m,
+156:         if r.1 ≠ r.2 ∧ (r.1 : ℕ) ≤ (r.2 : ℕ) + (n - 1) ∧
+157:           (r.2 : ℕ) ≤ (r.1 : ℕ) + (n - 1) then
+158:           wfun ((univ.image x).orderEmbOfFin hS r.1 -
+159:             (univ.image x).orderEmbOfFin hS r.2) else 0)
+160:         + blkPress W.b x univ := by
+161:   classical
+162:   let y : Fin m → ℝ := ⇑((univ.image x).orderEmbOfFin hS)
+163:   have hsum := hSum
+164:   simp_rw [Fw_windowGaps] at hsum
+165:   rw [sum_add_distrib] at hsum
+166:   have hlin :
+167:       (∑ i ∈ range (m - (n - 1)), ∑ r : Fin (n - 1),
+168:         W.b r * (sortedExt y (i + ((r : ℕ) + 1)) - sortedExt y (i + r))) =
+169:         blkPress W.b x univ := by
+170:     rw [sum_comm]
+171:     unfold blkPress
+172:     rw [hS]
+173:     refine sum_congr rfl fun r _ => ?_
+174:     rw [← mul_sum, sum_gap_shift, sortedOn_eq hS, sortedOn_eq hS]
+175:   have hquad := window_pairs_le_band hn hm W hW x hx hS
+176:   change (∑ i ∈ range (m - (n - 1)), ∑ a : Fin n, ∑ b : Fin n,
+177:       if (a : ℕ) < (b : ℕ) then
+178:         W.a a b * wfun (sortedExt y (i + b) - sortedExt y (i + a)) else 0) ≤ _ at hquad
+179:   linarith
+180: 
+181: theorem sorted_separated {x : ι → ℝ} {m : ℕ} (hS : (univ.image x).card = m)
+182:     {sep : ℝ} (hsep : ∀ i j, i ≠ j → sep ≤ |x i - x j|) :
+
+--- Counting-before:193-210 ---
+193:   rw [← ha, ← hb]
+194:   exact hsep a b hab
+195: 
+196: theorem block_energy_band_separated {c C sep : ℝ} {n : ℕ} (hn : 2 ≤ n)
+197:     (W : WCert n) (hW : W.Adm) (hCert : SeparatedSummedCertificate W c C sep)
+198:     {m : ℕ} (hm : n ≤ m) (x : ι → ℝ) (hx : Function.Injective x)
+199:     (hS : (univ.image x).card = m)
+200:     (hsep : ∀ i j, i ≠ j → sep ≤ |x i - x j|) :
+201:     c * ((m : ℝ) - ((n - 1 : ℕ) : ℝ)) - C ≤
+202:       (∑ r : Fin m × Fin m,
+203:         if r.1 ≠ r.2 ∧ (r.1 : ℕ) ≤ (r.2 : ℕ) + (n - 1) ∧
+204:           (r.2 : ℕ) ≤ (r.1 : ℕ) + (n - 1) then
+205:           wfun ((univ.image x).orderEmbOfFin hS r.1 -
+206:             (univ.image x).orderEmbOfFin hS r.2) else 0)
+207:         + blkPress W.b x univ :=
+208:   block_energy_band_of_sum hn W hW hm x hx hS
+209:     (hCert hm _ ((univ.image x).orderEmbOfFin hS).strictMono (sorted_separated hS hsep))
+210: 
+
+--- Counting-before:230-241 ---
+230:     have hb := OpethN.band_close_n n hx hS hcard G hδ hclose
+231:     have hp := OpethN.pressure_le_n hm hS W hW.b_nonneg hspan
+232:     have hd := Opeth.AMSparseDefect.offdiag_le_defect_of_spectrum_le_two hG hcap
+233:     change (c - 4 * ((n - 1 : ℕ) : ℝ) * δ) * (m : ℝ) - W.B * R
+234:       - ((n - 1 : ℕ) : ℝ) * c - C ≤ defect hG
+235:     nlinarith only [he, hb, hp, hd]
+236:   · have hmk : (m : ℝ) ≤ ((n - 1 : ℕ) : ℝ) := by
+237:       exact_mod_cast (by omega : m ≤ n - 1)
+238:     have hcm := mul_le_mul_of_nonneg_left hmk hc
+239:     have hbr : 0 ≤ W.B * R := mul_nonneg (WCert.B_nonneg hW) hR
+240:     have hdm : 0 ≤ 4 * ((n - 1 : ℕ) : ℝ) * δ * (m : ℝ) := by positivity
+241:     have hd := Opeth.AMSparseDefect.defect_nonneg hG

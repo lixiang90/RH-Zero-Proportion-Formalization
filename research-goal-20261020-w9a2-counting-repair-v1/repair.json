@@ -1,0 +1,90 @@
+{
+  "scope": "Same-symbol name-resolution repair only; no mathematical premise, theorem, data, tactic or threshold change",
+  "compiler_runs": 0,
+  "exporter_runs": 0,
+  "kernel_runs": 0,
+  "numerical_walk_runs": 0,
+  "old_counting": {
+    "bytes": 21555,
+    "sha256": "163fbaae81c9afd492cdfd5c66dd2848f1d1e03ac0af6ae3774a7cc619c631d5"
+  },
+  "new_counting": {
+    "bytes": 21606,
+    "sha256": "502aa125cfe2566cdbddc3ede296f17dc58ad63a4a750cb6502b24a237b9050a"
+  },
+  "replacement": {
+    "from_token": "wfun",
+    "to_token": "Zeta23Ext.Bridge.wfun",
+    "occurrences": 3,
+    "module_lines": [
+      158,
+      178,
+      205
+    ],
+    "flat_v5_lines": [
+      16765,
+      16785,
+      16812
+    ],
+    "bytes_added": 51
+  },
+  "old_flat": {
+    "bytes": 1830001,
+    "sha256": "650ad1762ee36ba1ddf5f6a027900b20f0f85ba087ac099fd2c99a54eaf6ae13"
+  },
+  "in_memory_projected_flat": {
+    "bytes": 1830052,
+    "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+    "source_file_written": false
+  },
+  "checks": {
+    "exact_forward_projection": true,
+    "exact_reverse_projection": true,
+    "line_count_unchanged": true,
+    "integer_literals_unchanged": true,
+    "all_bytes_outside_three_qualifications_unchanged": true,
+    "flat_prefix_suffix_unchanged": true
+  },
+  "affected_declarations": [
+    "block_energy_band_of_sum statement",
+    "block_energy_band_of_sum proof change command",
+    "block_energy_band_separated statement"
+  ],
+  "intended_symbol": "Zeta23Ext.Bridge.wfun, as already fixed in Fw_windowGaps/window_pairs_le_band/OpethN.band_close_n",
+  "scope_cause": "Graph anonymous noncomputable section has no explicit closing end at EOF; its open AMW.Cert remains active under textual concatenation, whereas importing Graph does not export open commands. Localization closes only its own nested section.",
+  "downstream_linarith": "line16842 receives a he expression containing failed-elaboration sorry placeholder at energy sum, while hb contains Bridge.wfun; no tactic changed",
+  "actual_failure": {
+    "parent_session": 68653,
+    "parent_pid": 48644,
+    "parent_exit_code": 1,
+    "timeout": false,
+    "candidate_pid": 6020,
+    "candidate_exit_code": 1,
+    "candidate_elapsed_seconds": 1091.1720000000005,
+    "log_sha256": "e02e5ca0b3fa36045f28831eb7553cdd61e829345af9100d330771880f4f2224",
+    "all_four_error_locations": [
+      {
+        "line": 16765,
+        "column": 10
+      },
+      {
+        "line": 16785,
+        "column": 18
+      },
+      {
+        "line": 16812,
+        "column": 10
+      },
+      {
+        "line": 16842,
+        "column": 4
+      }
+    ],
+    "failed_sorryAx_output_accepted_as_proof": false
+  },
+  "new_source_ordinary_passed": false,
+  "new_source_single_file_passed": false,
+  "new_source_independent_kernels_passed": false,
+  "official_website_acceptance": false,
+  "submitted": false
+}

@@ -1,0 +1,97 @@
+{
+  "scope": "Independent static name-resolution/source/algebra review; not flat Lean PASS",
+  "compiler_runs": 0,
+  "proof_runs": 0,
+  "source": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v1\\source\\Solution\\Candidate.lean",
+    "bytes": 1830001,
+    "sha256": "650ad1762ee36ba1ddf5f6a027900b20f0f85ba087ac099fd2c99a54eaf6ae13"
+  },
+  "log": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v1\\logs\\ordinary-Solution.Candidate.log",
+    "bytes": 8770,
+    "sha256": "e02e5ca0b3fa36045f28831eb7553cdd61e829345af9100d330771880f4f2224"
+  },
+  "Counting_flat_lines": [
+    16608,
+    17068
+  ],
+  "exact_errors": [
+    {
+      "line": 16765,
+      "column": 10,
+      "message": "Ambiguous term"
+    },
+    {
+      "line": 16785,
+      "column": 18,
+      "message": "Ambiguous term"
+    },
+    {
+      "line": 16812,
+      "column": 10,
+      "message": "Ambiguous term"
+    },
+    {
+      "line": 16842,
+      "column": 4,
+      "message": "linarith failed to find a contradiction"
+    }
+  ],
+  "bare_wfun_lines": [
+    16765,
+    16785,
+    16812
+  ],
+  "correct_qualified_name": "Zeta23Ext.Bridge.wfun",
+  "kernel_aliases_definitionally_equal": true,
+  "existing_rfl_theorem": "RiemannFail.cert_wfun_eq",
+  "linarith_failure_is_downstream_of_ambiguous_he_sum": true,
+  "restored_shared_band_sum_linear_certificate": {
+    "cm": -1,
+    "ck": 1,
+    "C": 1,
+    "A": 1,
+    "BR": 1,
+    "F": 1
+  },
+  "lexical_scope_scan_errors": [],
+  "active_Cert_opens_at_first_wfun": [
+    {
+      "name": "AMW.Cert",
+      "line": 16104
+    },
+    {
+      "name": "AMW.Cert.Pyr",
+      "line": 16104
+    },
+    {
+      "name": "AMW.Cert.PCell",
+      "line": 16104
+    },
+    {
+      "name": "AMW.Cert.PC9QB6M",
+      "line": 16104
+    }
+  ],
+  "active_Bridge_opens_at_first_wfun": [
+    {
+      "name": "Zeta23Ext.Bridge",
+      "line": 16630
+    }
+  ],
+  "text_declared_open_namespace_collision_candidates": {
+    "wfun": {
+      "candidates": [
+        "AMW.Cert.wfun",
+        "Zeta23Ext.Bridge.wfun"
+      ],
+      "lines": [
+        16765,
+        16785,
+        16812
+      ]
+    }
+  },
+  "limitation": "Lexical collision inventory covers declarations in this frozen flat source, not all imported library overloads or a substitute for Lean elaboration"
+}

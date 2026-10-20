@@ -634,3 +634,9 @@ Macro006后actual主轮2（1→2）：上一轮sync42/原生安装/新全cold启
 
 
 同一macro007+round1：metadata-only fullgate-v1 preflight原session85244实际exit0；全部来源all-pin不变、6实际PASS模块与12标准roots已完整绑定，disabled proposal SHAea5b5868ddb9f003478de5cce55d2b940b4dd69f065733168fb82c2b748c022c。root审定后重新GET08:43:40Z最新R（200/Age0/MISS，同旧R），写新gate e6ae96f6b1d9f971217975eb13e6c0a9a37b219e8d695c4437e89d470db691a8。唯一生产fullchain-v1原session68653/PID48644已实际启动，整个3200s包含所有pins/source generation/四模块冷编译/导出/Comparator/default Lean/serial Nano/三fsync收据；不复用candidate olean、不重试、不并行另一证明批次。尚无terminal/PASS，counter=1不变。
+
+
+同一macro007+round1：fullchain-v1原session68653/PID48644已实际terminal exit1，整链1226.172秒、Candidate编译1091.172秒，非timeout。三处wfun因flat中AMW.Cert与Zeta23Ext.Bridge同时可见而歧义，随后linarith失败；失败声明的sorryAx诊断全部拒绝。未运行Comparator/default-kernel replay/nanoda，未提交官网。原始父退出、源、日志和全部收据封存fullchain-v1-terminal。下一关仅作versioned Counting限定名修复与独立审查，明确新gate后再验证，旧证书与旧attempt不改；counter=1、review=7不变。
+
+
+同一macro007+round1实际ordinary-v6原session51666 terminal exit0：Counting PASS 29.062s, Final PASS 25.937s。完整日志/命令/收据与root实际退出attestation已封research-goal-20261020-w9a2-ordinary-v6-terminal。下一proof关：Frozen draft-v6 source identity then new v2 fullchain all-pin proposal and one cold3200s verification attempt。未自动重试，counter保持1，完整验收与官网提交尚未发生。

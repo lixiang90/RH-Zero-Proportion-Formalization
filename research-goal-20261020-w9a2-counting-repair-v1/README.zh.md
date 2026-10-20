@@ -1,0 +1,9 @@
+本包只对 Counting 的三个未限定名称作显式限定：158、178、205 行的 wfun 改为 Zeta23Ext.Bridge.wfun，共增加51字节，行数不变。对应旧flat-v5的16765、16785、16812行。两个位于原定理陈述，一个位于原有change证明命令；它们都显式指向原独立模块编译时已经使用的同一个Bridge.wfun，定理的数学命题与证明步骤不变。
+
+Core内 Fw_windowGaps、window_pairs_le_band、OpethN.band_close_n 的相关能量和均用 Zeta23Ext.Bridge.wfun。Counting模块自身显式open该Bridge；模块化导入不会继承Graph的open命令。Graph的anonymous noncomputable section却只有namespace结束、没有显式section结束，文本flatten后其open AMW.Cert延续至后面的Counting；Localization仅关闭自己的内层section，不能清除Graph外层open。因此单文件中出现Bridge.wfun与AMW.Cert.wfun两个候选。Core另有RiemannFail.cert_wfun_eq的rfl等式，但此修复不添加或调用新等式，也不改函数定义。
+
+正式生产原父session68653/PID48644实际exit1，非timeout；Candidate子PID6020实际exit1/1091.172秒。唯一三项名称歧义后，16842行linarith收到的he求和已含failed-elaboration sorry占位，而hb是Bridge.wfun求和，故属于同源下游失败。此处不改linarith或任何付款/望远镜证明。所有failed sorryAx输出都被拒绝，没有当成证明。
+
+原Counting、flat-v5/650、其他四模块、旧数值证书与完整真实失败archive全部保全。本包给出唯一前向替换及逐字逆投影；所有数字literal与三项名称之外的字节不变。repair.json中的新flat SHA仅为内存投影，没有在此写新flat源码；新flat由delivery独立生成复核。
+
+这是源码与证据准备，不是编译成功声明。本包没有运行Lean、exporter、kernel或数值walk。新Counting模块普通编译、新flat生产单文件及独立双核仍待root后续明确gate；官网未提交、未接受。全部manifest路径相对本包根。

@@ -1,0 +1,56 @@
+{
+  "scope": "Future receipt-only helper prepared and AST parsed; collector has never been executed",
+  "helper": {
+    "path": "research-goal-20261020-w9a2-local-verified-preparation/collect_local_verified.py",
+    "bytes": 22324,
+    "sha256": "01b3aa701f79c0b0b6db898dc52bc6159980208a59ebe9a9351f1e5e8e1d9144"
+  },
+  "input_pins": [
+    {
+      "path": "research-goal-20261020-w9a2-local-verified-preparation/collect_local_verified.py",
+      "bytes": 22324,
+      "sha256": "01b3aa701f79c0b0b6db898dc52bc6159980208a59ebe9a9351f1e5e8e1d9144"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-local-verified-preparation/README.zh.md",
+      "bytes": 2254,
+      "sha256": "2d01271de78bae0439bbf91e058a13532007cbc13eea5cf970c77cacfdfde272"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/run_verification.py",
+      "bytes": 36665,
+      "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v1/started.json",
+      "bytes": 203,
+      "sha256": "c003ee68b8f8cd408dfeff1ebcb80e6bfb9dafa3f2ae8fdbe9890d1d9a3b3f32"
+    },
+    {
+      "path": "research-goal-20261016/gates/w9a2-fullchain-v1-20261020.json",
+      "bytes": 20877,
+      "sha256": "e6ae96f6b1d9f971217975eb13e6c0a9a37b219e8d695c4437e89d470db691a8"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/files.json",
+      "bytes": 2338,
+      "sha256": "980fb14e136c86fa66294dec2e00c177cd195919a7a7f472352b38fa836c1849"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-expected-wire/files.json",
+      "bytes": 401,
+      "sha256": "0809d39a37ef2130b502fe6278915d083dee17245292de72b11b16507e1e5960"
+    }
+  ],
+  "expected_original_session": 68653,
+  "expected_original_parent_pid": 48644,
+  "same_clock_original_t0": 8988.234,
+  "future_destination": "submission/w9a2-weighted-potential-20261020-local-verified",
+  "future_requires_real_outer_exit0_and_full_receipt_chain": true,
+  "independent_static_reviewer": "/root/formal_owner",
+  "independent_static_review_scope": "Read runner92cc run/ordinary/proof_replays/finish, collector and actual started metadata; no definite compatibility blocker found; no current production PASS claimed",
+  "helper_executed": false,
+  "destination_created": false,
+  "production_result_claimed": false,
+  "proof_compiler_export_kernel_or_assembler_runs": 0
+}

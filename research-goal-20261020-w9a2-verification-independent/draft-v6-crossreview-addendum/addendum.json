@@ -1,0 +1,27 @@
+{
+  "scope": "Read-only outer manifest checks and exact wording clarification; no helper/compiler/proof execution",
+  "prior_review_manifest_sha256": "ff15b7199df0abc9a3101085db6abb78f92d5c7a855e066aa0abaa9a786cadb4",
+  "outer_manifests": [
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6-prepared-files.json",
+      "sha256": "ed0fb693e1596c0844f98faea87adef5611ff32b2d1ccc3756c2ff2b10430bd5",
+      "files": 21,
+      "all_hashes_passed": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-submission-materials-v6-preparation/prepared-files.json",
+      "sha256": "cf0de050a0d8c47b05bd5a722f9a062e08705e3c6efa69d8dd3e93a3662a3ed0",
+      "files": 4,
+      "all_hashes_passed": true
+    }
+  ],
+  "clarification": "In the prior review, the field named all_five_bodies_and_other_four_modules_unchanged means all five v6 body segments match their respective frozen v6 sources and the four modules other than Counting are byte-identical to v5. Counting itself changes by the stated three qualifications (+51 bytes); it is not byte-identical to v5. The exact forward/reverse projection and every retained-body SHA check remain valid.",
+  "all_five_v6_body_segments_match_frozen_sources": true,
+  "other_four_modules_byte_identical_to_v5": true,
+  "counting_changes_only_three_explicit_qualifications": true,
+  "counting_bytes_added": 51,
+  "prior_frozen_report_not_modified": true,
+  "fullchain_v2_passed": false,
+  "official_website_acceptance": false,
+  "submitted": false
+}
