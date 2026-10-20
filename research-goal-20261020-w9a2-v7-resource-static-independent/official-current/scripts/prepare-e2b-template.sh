@@ -1,0 +1,138 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repository_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+contract_path="$repository_root/challenge/contract.json"
+zeta_dir="$repository_root/zeta23"
+tools_dir="$repository_root/tools"
+mathlib_cache_dir="/tmp/riemann-mathlib-cache"
+mathlib_cache_patch="$repository_root/e2b/mathlib-cache-bounded-disk.patch"
+build_toolchains_dir="$HOME/.riemann-build-toolchains"
+
+mapfile -t trusted_upstream < <(
+  node -e '
+    const fs = require("node:fs");
+    const contract = JSON.parse(fs.readFileSync(process.argv[1], "utf8"));
+    console.log(contract.trustedUpstream.repository);
+    console.log(contract.trustedUpstream.commit);
+    console.log(contract.trustedUpstream.leanToolchain);
+    console.log(contract.trustedUpstream.mathlibCommit);
+  ' "$contract_path"
+)
+if [[ "${#trusted_upstream[@]}" -ne 4 ]]; then
+  printf 'Unable to read the trusted upstream pins.\n' >&2
+  exit 1
+fi
+
+upstream_repository="${trusted_upstream[0]}"
+upstream_commit="${trusted_upstream[1]}"
+lean_toolchain="${trusted_upstream[2]}"
+mathlib_commit="${trusted_upstream[3]}"
+
+"$repository_root/scripts/install-lean-toolchain.sh"
+export PATH="$HOME/.elan/bin:$PATH"
+elan toolchain install "$lean_toolchain"
+
+RIEMANN_BUILD_TOOLCHAINS_DIR="$build_toolchains_dir" \
+  "$repository_root/scripts/install-native-build-toolchains.sh"
+export CARGO_HOME="$build_toolchains_dir/cargo"
+export RUSTUP_HOME="$build_toolchains_dir/rustup"
+export GOPATH="$build_toolchains_dir/gopath"
+export GOCACHE="$build_toolchains_dir/go-cache"
+export PATH="$build_toolchains_dir/go/bin:$CARGO_HOME/bin:$PATH"
+
+git clone --quiet --filter=blob:none --no-checkout \
+  "https://github.com/$upstream_repository.git" "$zeta_dir"
+git -C "$zeta_dir" checkout --quiet --detach "$upstream_commit"
+if [[ "$(git -C "$zeta_dir" rev-parse HEAD)" != "$upstream_commit" ]]; then
+  printf 'Pinned Zeta23 checkout verification failed.\n' >&2
+  exit 1
+fi
+if [[ "$(tr -d '\r\n' < "$zeta_dir/lean-toolchain")" != "$lean_toolchain" ]]; then
+  printf 'Pinned Lean toolchain verification failed.\n' >&2
+  exit 1
+fi
+actual_mathlib="$({
+  node -e '
+    const fs = require("node:fs");
+    const manifest = JSON.parse(fs.readFileSync(process.argv[1], "utf8"));
+    process.stdout.write(manifest.packages.find((item) => item.name === "mathlib")?.rev ?? "");
+  ' "$zeta_dir/lake-manifest.json"
+})"
+if [[ "$actual_mathlib" != "$mathlib_commit" ]]; then
+  printf 'Pinned Mathlib checkout verification failed.\n' >&2
+  exit 1
+fi
+
+"$repository_root/scripts/install-verifier-tools.sh" "$tools_dir"
+
+runtime_tools_dir="$tools_dir/bin"
+mkdir -p "$runtime_tools_dir"
+install -m 0755 "$tools_dir/comparator/.lake/build/bin/comparator" \
+  "$runtime_tools_dir/comparator"
+install -m 0755 \
+  "$tools_dir/comparator/.lake/packages/lean4export/.lake/build/bin/lean4export" \
+  "$runtime_tools_dir/lean4export"
+install -m 0755 "$tools_dir/landrun/landrun" "$runtime_tools_dir/landrun"
+install -m 0755 "$tools_dir/nanoda/target/release/nanoda_bin" \
+  "$runtime_tools_dir/nanoda_bin"
+rm -rf "$tools_dir/comparator" "$tools_dir/landrun" "$tools_dir/nanoda"
+chmod -R u+w "$build_toolchains_dir"
+rm -rf "$build_toolchains_dir"
+
+(
+  cd "$zeta_dir"
+  # Build the pinned cache utility once so Lake materializes the dependency
+  # checkout. The temporary source patch then keeps downloaded archives from
+  # filling E2B's small tmpfs while the full cache is being decompressed.
+  lake exe cache --help >/dev/null
+  mathlib_dir="$zeta_dir/.lake/packages/mathlib"
+  git -C "$mathlib_dir" apply --check "$mathlib_cache_patch"
+  git -C "$mathlib_dir" apply "$mathlib_cache_patch"
+  restore_mathlib_cache_source() {
+    git -C "$mathlib_dir" apply --reverse "$mathlib_cache_patch"
+  }
+  trap restore_mathlib_cache_source EXIT
+
+  # Build the patched cache executable while native compilation support still
+  # exists, then reduce the Lean installation to the elaboration/kernel runtime
+  # needed by submitted proofs before the large Mathlib cache is hydrated.
+  lake build cache
+  lean_binary="$(elan which lean)"
+  lean_toolchain_dir="$(cd -- "$(dirname -- "$lean_binary")/.." && pwd -P)"
+  "$repository_root/scripts/prune-lean-runtime.sh" "$lean_toolchain_dir"
+
+  cache_status=0
+  MATHLIB_CACHE_DIR="$mathlib_cache_dir" lake exe cache get || cache_status=$?
+  df -h / /tmp
+  if [[ "$cache_status" -ne 0 ]]; then
+    exit "$cache_status"
+  fi
+  MATHLIB_CACHE_DIR="$mathlib_cache_dir" lake exe cache clean!
+
+  restore_mathlib_cache_source
+  trap - EXIT
+  git -C "$mathlib_dir" diff --exit-code -- Cache/Requests.lean
+  # The cache utility and its native products are build-only. Removing them
+  # before the Zeta build leaves headroom for Lean's module setup metadata.
+  rm -rf \
+    "$mathlib_dir/.lake/build/bin/cache" \
+    "$mathlib_dir/.lake/build/lib/lean/Cache" \
+    "$mathlib_dir/.lake/build/ir/Cache"
+
+  # Materialize the pinned Zeta module traces once, then replace only outputs
+  # unused by verification with zero-byte sentinels. Their trusted cache hashes
+  # keep subsequent candidate builds from trying to rebuild the formal library.
+  real_lake="$(elan which lake)"
+  RIEMANN_SETUP_PRUNE_GRACE_SECONDS=2 \
+    "$repository_root/scripts/run-lake-build-bounded-disk.sh" \
+      "$zeta_dir" "$real_lake" build +Zeta23:olean
+  "$repository_root/scripts/prune-lake-build-runtime.sh" "$zeta_dir" Zeta23
+  lake env lean Zeta23/Unconditional.lean
+  df -h / /tmp
+
+  install -m 0755 "$repository_root/scripts/lake-runtime-wrapper.sh" \
+    "$runtime_tools_dir/lake"
+)
+
+printf 'Pinned E2B verifier assets prepared.\n'

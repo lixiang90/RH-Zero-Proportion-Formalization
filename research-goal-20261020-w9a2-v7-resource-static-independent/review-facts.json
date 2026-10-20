@@ -1,0 +1,81 @@
+{
+  "schema": "w9a2-v7-resource-static-independent-v1",
+  "reviewed_at_utc": "2026-10-20T13:37:07Z",
+  "official_repository_ref": "1135c0386310a0a038004d3b0fe64d0237e47dce",
+  "official_primary_file_count": 12,
+  "all_captured_files_match_git_blob_sha1": true,
+  "repository_config": {
+    "cpuCount": 4,
+    "memoryMB": 8192,
+    "sandbox_lifetime_seconds": 3600,
+    "outer_timeout_seconds": 3240,
+    "comparator_timeout_seconds": 3200,
+    "kill_after_seconds": 15
+  },
+  "actual_instance_cpu_memory_limits_attested": false,
+  "actual_official_v7": {
+    "source_sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6",
+    "step_reported_seconds": 1014,
+    "lean_exit_code": 137,
+    "outer_bash_exit_code": 1,
+    "trace": "trace: .> LEAN_PATH=/opt/riemann/zeta23/.lake/packages/Cli/.lake/build/lib/lean:/opt/riemann/zeta23/.lake/packages/batteries/.lake/build/lib/lean:/opt/riemann/zeta23/.lake/packages/Qq/.lake/build/lib/lean:/opt/riemann/zeta23/.lake/packages/aesop/.lake/build/lib/lean:/opt/riemann/zeta23/.lake/packages/proofwidgets/.lake/build/lib/lean:/opt/riemann/zeta23/.lake/packages/importGraph/.lake/build/lib/lean:/opt/riemann/zeta23/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/opt/riemann/zeta23/.lake/packages/plausible/.lake/build/lib/lean:/opt/riemann/zeta23/.lake/packages/mathlib/.lake/build/lib/lean:/home/riemann/tmp/riemann-verifier-tgbAhm/zeta23/.lake/build/lib/lean /home/riemann/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin/lean /home/riemann/tmp/riemann-verifier-tgbAhm/zeta23/comparator/Solution/Candidate.lean -o /home/riemann/tmp/riemann-verifier-tgbAhm/zeta23/.lake/build/lib/lean/Solution/Candidate.olean -i /home/riemann/tmp/riemann-verifier-tgbAhm/zeta23/.lake/build/lib/lean/Solution/Candidate.ilean -c /home/riemann/tmp/riemann-verifier-tgbAhm/zeta23/.lake/build/ir/Solution/Candidate.c --setup /home/riemann/tmp/riemann-verifier-tgbAhm/zeta23/.lake/build/ir/Solution/Candidate.setup.json --json",
+    "solution_export_or_kernel_success_evidence": false,
+    "oom_diagnosed": false,
+    "fatal_source_type_error_diagnosed": false,
+    "memory_peak_receipt_present": false
+  },
+  "existing_local_v6": {
+    "source_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+    "argv": [
+      "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.exe",
+      "-j1",
+      "-M13500",
+      "--tstack=262144",
+      "-DrelaxedAutoImplicit=false",
+      "-DElab.async=false",
+      "-R",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\source",
+      "-o",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\lib\\Solution\\Candidate.olean",
+      "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\source\\Solution\\Candidate.lean"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 1150.3280000000013,
+    "same_source_as_v7": false,
+    "same_runtime_path_as_official": false,
+    "memory_usage_measured_by_this_receipt": false
+  },
+  "negative_memory_receipt_search_scope": {
+    "roots": [
+      "research-goal-20261020-*",
+      "tmp/w9a2-20261020"
+    ],
+    "extensions": [
+      ".json",
+      ".md",
+      ".log"
+    ],
+    "patterns": [
+      "RSS",
+      "WorkingSet",
+      "PeakWorkingSet",
+      "peak_memory",
+      "memory_peak",
+      "VmHWM",
+      "Maximum resident"
+    ],
+    "result": "No exact W9A2 ordinary peak metrics found; Linux preparation CONTRACT mentions intended RSS observation. Historical/packed data and conversation-only observations not exhausted."
+  },
+  "safe_inferences": [
+    "Official and local execution paths differ; local 1150.328 seconds is not an official resource-matched benchmark.",
+    "-c requests an additional post-frontend C emission path; the log does not locate the kill within it.",
+    "137 is compatible with SIGKILL; absent OOM/cgroup/peak data it does not identify the reason.",
+    "Default hardware thread count does not demonstrate parallel large proofs or parallel code generation."
+  ],
+  "minimum_candidate_review_direction": "Root-selected explicit noncomputable modifiers on PTT_0..7/PTT/PT; exact consumer closure and source proposal are owned by formal_owner. No performance improvement is certified here.",
+  "proof_execution_count": 0,
+  "compiler_export_kernel_or_solver_runs": 0,
+  "source_mutation_count": 0,
+  "main_round_counter_modified": false,
+  "official_acceptance": false
+}

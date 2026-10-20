@@ -1,0 +1,28 @@
+{
+  "schema": "macro010-current-benchmark-exact-observation-v1",
+  "observed_UTC": "2026-10-20 13:39:56 UTC",
+  "source": "https://github.com/josusanmartin/riemann/blob/main/data/records.json",
+  "ledger_git_blob_sha": "6f0e457cfc200238626c230ef731f5d7ebb0a3a1",
+  "total_records": 40,
+  "exact_rational_kernel_verified_records_compared": 36,
+  "missing_exact_records": [
+    {
+      "id": "anthropic-2026-montgomery-taylor",
+      "scoreDecimal": "0.672500703679411645734379790803"
+    }
+  ],
+  "maximum_exact_record": {
+    "id": "ajp88-w9a2-window-nine-point",
+    "exactRational": {
+      "numerator": "3337881639516708570682858853672166187793",
+      "denominator": "4955348548503844558750000000000000000000"
+    }
+  },
+  "candidate": {
+    "numerator": "3337881639516708570682858853672166187793",
+    "denominator": "4955348542279967171490000000000000000000"
+  },
+  "strictly_greater_than_all_exact_compared": true,
+  "our_v7_in_ledger": false,
+  "scope": "36 rational records compared exactly; one old record without an exact fraction is not included in that arithmetic claim. Not evidence of acceptance of our candidate."
+}
