@@ -1,0 +1,193 @@
+{
+  "schema": "independent-attempt-v8-materials-review-v1",
+  "result": "PASS_METADATA_ONLY",
+  "manifest_members_verified": 15,
+  "expected_wire_members_verified": 2,
+  "source_bytes": 1829382,
+  "source_sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+  "server_bytes": 1343,
+  "server_sha256": "d88b70050b2a1e1a69d2e1044bcc6a3d1a75c56ab8342f8559f77fe9b270362a",
+  "independently_recomputed_bundle_digest": "fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4",
+  "summary_characters_and_UTF16_units": 605,
+  "author": {
+    "github": "lixiang90",
+    "displayName": "Li Xiang"
+  },
+  "model": null,
+  "harness": "Codex",
+  "score": {
+    "numerator": "3337881639516708570682858853672166187793",
+    "denominator": "4955348542279967171490000000000000000000"
+  },
+  "CRLF_count": 221,
+  "source_normalization_applied": false,
+  "source_equal_frozen_draft_v8": true,
+  "two_actual_local_failures_disclosed_and_bound": true,
+  "corrected_parent_child_roles_verified": true,
+  "corrected_attribution_verified": true,
+  "macro012_bound": {
+    "path": "research-goal-20261016/macro-reviews/012-20261020.zh.md",
+    "bytes": 6325,
+    "sha256": "fb7516e57e8fe56802d16b088178c29215d10161a10060a1e007e2b7a9274347"
+  },
+  "all_success_flags_remain_false_or_unknown": true,
+  "all_inputs_unchanged_after_review": true,
+  "scope": "Only Python standard-library byte hashes, JSON structure and string arithmetic. No author generator imported/executed, no Lean/compiler/kernel/export/API/network/process/UI or large runtime tree read. This is a predicted wire and prepared state, not an observed submission or acceptance.",
+  "inputs": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\files.json",
+      "bytes": 2791,
+      "sha256": "9d1778957268433a646104108620bfcef2ac999b8630cf378da5d27683e883fa"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\ATTRIBUTION.zh.md",
+      "bytes": 1698,
+      "sha256": "0728f0a005a03a4a2fae36bae697227622fdefc28a77958abd5c5f3692dca157"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\evidence-references.json",
+      "bytes": 6979,
+      "sha256": "16345385c9724de28271f315ce668707b4bb5b541b685894812612c913000ae1"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\expected-wire.json",
+      "bytes": 834,
+      "sha256": "16793053e9e8db6573bcae177a0ea73afcb8f07be1cfd02053c5597220e326e4"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\LICENSE",
+      "bytes": 11558,
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\mathematical-source-check.json",
+      "bytes": 1924,
+      "sha256": "a60262fc0824a9461fdcdcb96a524f41610f46bbdbf41e7db1550ce41addf21e"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\MATHEMATICS.zh.md",
+      "bytes": 3448,
+      "sha256": "0a4303e0801a032a4231507cde41a92ffb15751308d2c9afef8ba6b6bc6e0f38"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\official-attempt-basis.json",
+      "bytes": 3421,
+      "sha256": "9cc236d5702c60df60a29eae99fe86120ca640ad94ca7a7d2971c15ce4c97309"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\proof\\Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\proof\\Solution.manifest.json",
+      "bytes": 249,
+      "sha256": "cad5ecdb9e0110ed5da37bb18a997f37258a8425c10e4dcf747b25011d64578f"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\provenance.json",
+      "bytes": 812,
+      "sha256": "e62df6aac055a79185b64de2b3d69ab8f101f25be1cc12b7603e3645a4956131"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\README.zh.md",
+      "bytes": 1023,
+      "sha256": "30dd6bd944e0f45672f43f961668a484571242b72712fcb7e3ef6389e5569655"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\source-wire-policy.json",
+      "bytes": 1234,
+      "sha256": "95c0aa3ecb39515126b57d18a69326abd5be9b282a7cd515c9d1bc92c5a75070"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\submission.draft.json",
+      "bytes": 1343,
+      "sha256": "d88b70050b2a1e1a69d2e1044bcc6a3d1a75c56ab8342f8559f77fe9b270362a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\verification-status.json",
+      "bytes": 3972,
+      "sha256": "f0a1115e456c31c984efa8924e67a5640c6b3f388aecb86da5e765a9eff279f0"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-attempt-v8\\website-fields.draft.json",
+      "bytes": 1908,
+      "sha256": "71cea4e47d47b0c82ff8203b93a430cc082693fed4541e4167dc966bb514661b"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-expected-wire-v8\\files.json",
+      "bytes": 662,
+      "sha256": "7be638eb265f940efaecd305d4a0a8db9d4fedc4cd4c640d974939979eadad25"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-expected-wire-v8\\expected-server-submission.json",
+      "bytes": 1343,
+      "sha256": "d88b70050b2a1e1a69d2e1044bcc6a3d1a75c56ab8342f8559f77fe9b270362a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\submission\\w9a2-weighted-potential-20261020-expected-wire-v8\\prediction.json",
+      "bytes": 1008,
+      "sha256": "076680d4ecdc31c72c112a945c35cdc862aec26a3901ad30702956aeee3e9112"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-source-normalization-review\\files.json",
+      "bytes": 54060,
+      "sha256": "4209625bb670f556ccabbf3b46a31deed8a67178951d4a8524be551406ec3432"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-source-normalization-review\\source\\src\\lib\\challenge.ts",
+      "bytes": 8761,
+      "sha256": "847d503e9a0427d2bfe1fd0c8d92d31b42ade54bdeb98a6b8e29f1894284f53e"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-source-normalization-review\\source\\src\\lib\\direct-submission.ts",
+      "bytes": 2678,
+      "sha256": "f2f213cfaff53b59e9327477b58038449048ffc493aaad723dbaad462728ec60"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\macro-reviews\\012-20261020.zh.md",
+      "bytes": 6325,
+      "sha256": "fb7516e57e8fe56802d16b088178c29215d10161a10060a1e007e2b7a9274347"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-failure-v1\\files.json",
+      "bytes": 1883,
+      "sha256": "8317a845b841313d4042ae0664a9d38039e96fe05adedee868355636a13a0cf1"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-failure-v1\\root-outer-observation.json",
+      "bytes": 1151,
+      "sha256": "895bf9106d5f5616fde5206b6fe816d943390d91761c32fb7917c33ef041efc0"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-failure-v1\\job\\terminal.json",
+      "bytes": 11829,
+      "sha256": "b9e50233b9a50ecd9dd14945e2cce321d70d70ef05fec62fd6bcb4a1a001a162"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-failure-v2\\files.json",
+      "bytes": 1822,
+      "sha256": "31913deddce2ab5ebd5d4efd27d80102c64a54423334095489f13f7589ab2942"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-failure-v2\\root-outer-observation.json",
+      "bytes": 1805,
+      "sha256": "82c7538d33548c471e37e391f14578b54c55961b6adcb9af146b3a46b1356402"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-failure-v2\\job\\terminal.json",
+      "bytes": 12404,
+      "sha256": "ea2ce9874d86e26804a471fc1c59d28f07c1fb0fecf67a1b574d3e965217bd49"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-failure-v2\\job\\stderr.log",
+      "bytes": 196,
+      "sha256": "48bc2200174632932b9ea98fd0a0c30e6dc353ce535531045f1c7efc7b79940a"
+    }
+  ]
+}
