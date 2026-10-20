@@ -1,0 +1,56 @@
+{
+  "scope": "Read-only filesystem and source inspection; no Linux install, download, extraction, compiler or kernel execution",
+  "authoritative_Linux_recovery_contract_owned_elsewhere": "research-goal-20261020-w9a2-linux-setup",
+  "old_runtime_receipt": "verification/gram-defect-20261015/setup/runtime.json",
+  "compiler_archive": {
+    "filename": "lean-4.33.0-rc2-linux.tar.zst",
+    "bytes": 574905502,
+    "sha256": "48010c7d6264dc992574e9b0e09ece1f9c648e8f5106066b2cdb6834a6a60a6c",
+    "old_lean_ELF_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "version": "Lean 4.33.0-rc2, commit d8b18978322de05a8f3dba51ef03cf5461676c17",
+    "local_archive_at_old_repository_relative_path_exists": false,
+    "local_old_sources_json_exists": false,
+    "old_script_for_authoritative_release_digest": "scripts/setup_record_20261015/fetch_compiler.py"
+  },
+  "current_Windows_cache_scan": {
+    "path": "C:/Users/A/.cache/mathlib",
+    "ltar_count": 100911,
+    "ltar_bytes": 4847868628,
+    "Mathlib_current_olean_count": 8313,
+    "Mathlib_current_olean_bytes": 1825406224,
+    "Zeta23_current_olean_count": 142,
+    "Zeta23_current_olean_bytes": 120734520,
+    "Batteries_current_olean_count": 192,
+    "Batteries_current_olean_bytes": 30863152,
+    "Aesop_current_olean_count": 132,
+    "Aesop_current_olean_bytes": 17601248,
+    "proof_scope": "Only existence/count/byte totals; not all cache hash matches, native runtime compatibility or import success"
+  },
+  "cross_platform_cache_evidence": {
+    "hashing_source": ".lake/packages/mathlib/Cache/Hashing.lean",
+    "hash_inputs": ["rootHashGeneration", "lakefile.lean", "lean-toolchain", "lake-manifest.json", "module relative path", "CRLF-normalized module content", "transitive import hashes"],
+    "target_platform_is_not_an_explicit_cache_hash_input": true,
+    "payload_source": ".lake/packages/mathlib/Cache/IO.lean",
+    "payload_may_include": ["olean", "olean.server", "olean.private", "ilean", "ir.sig", "ir", "c", "trace", "hash"],
+    "inference": "The source-bound ltar cache offers a Linux reconstruction path without recompiling Mathlib; an actual same-version Linux trusted import is still required",
+    "native_Windows_DLLs_reusable_on_Linux": false,
+    "all_cached_user_proofs_excluded": true
+  },
+  "historical_cost_not_a_new_ETA": {
+    "dependencies_140_receipt": "verification/gram-defect-20261015/setup/dependencies.json",
+    "dependencies_140_sum_module_seconds": 1750.305,
+    "dependencies_135_receipt": "verification/gram-defect-20261015/setup/dependencies-finalmult-135.json",
+    "dependencies_135_sum_module_seconds": 1656.710,
+    "maximum_recorded_module_seconds": 85.041,
+    "historical_mathlib_cache_seconds": 384.432830101,
+    "parallel_schedule_cannot_be_inferred_from_sum": true
+  },
+  "old_script_changes_required_before_any_use": [
+    "Use new exclusive setup/runtime directories; do not overwrite old receipts",
+    "Replace old /mnt/c/Users/ip/.cache/mathlib with the verified current cache path",
+    "Select only cache entries whose hashes match pinned source modules; do not blindly copy 100911 entries",
+    "Extract/cache/unpack and source compilation on a new WSL ext4 directory to avoid repeated NTFS metadata access",
+    "Keep setup trusted dependencies and tools separate from candidate compilation and its single 3200 second budget",
+    "Require a fresh root gate before download, extraction, installation or compiler execution"
+  ]
+}

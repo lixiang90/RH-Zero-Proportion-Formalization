@@ -1,0 +1,84 @@
+{
+  "authorized": true,
+  "task": "w9a2-ordinary-source-pinned",
+  "scope": "Trusted ChallengeDeps definitions only; relocated Windows package setup. No candidate proof or final kernel claim.",
+  "automatic_repairs_or_retries": 0,
+  "runner_sha256": "09b7478efdc8ed380df82b7e04329cd783e347230b46ff283014e20a36822c62",
+  "lean": {
+    "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.exe",
+    "sha256": "bc137e6662c48eedf2cdf167fb176080e18a15f57e248d214df0cb3939248683",
+    "version": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)"
+  },
+  "source_files": [
+    {
+      "path": "research-goal-20261020-w9a2-runtime/compile_frozen.py",
+      "sha256": "09b7478efdc8ed380df82b7e04329cd783e347230b46ff283014e20a36822c62"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-runtime/trusted/ChallengeDeps.lean",
+      "sha256": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd"
+    }
+  ],
+  "packages": [
+    {
+      "path": ".lake/packages/LeanSearchClient",
+      "commit": "f5c090429dff3cf66cb65562526c9ea6e8edfbcb"
+    },
+    {
+      "path": ".lake/packages/Qq",
+      "commit": "ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33"
+    },
+    {
+      "path": ".lake/packages/plausible",
+      "commit": "123d15766ba49356c02ebad2a4462dfe12d79899"
+    },
+    {
+      "path": ".lake/packages/Cli",
+      "commit": "1319485273bf87833fa472afbcefdedecb16b45f"
+    },
+    {
+      "path": ".lake/packages/importGraph",
+      "commit": "bb3469a87774349fe01898d8bf2fc6a1ce6411ca"
+    },
+    {
+      "path": ".lake/packages/proofwidgets",
+      "commit": "222c58dad7706a6e7cae46c0edd65ea881d3ee27"
+    },
+    {
+      "path": ".lake/packages/aesop",
+      "commit": "7db8190085343afde2f5d2cdcc9bac719b6ec02c"
+    },
+    {
+      "path": ".lake/packages/batteries",
+      "commit": "76e1c118b0700b4ceafe99532e887d6431625e1a"
+    },
+    {
+      "path": ".lake/packages/Zeta23",
+      "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510"
+    },
+    {
+      "path": ".lake/packages/mathlib",
+      "commit": "51e6992efd06126df61a496bebf8f49482a4e129"
+    }
+  ],
+  "package_libs": [
+    ".lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    ".lake/packages/Qq/.lake/build/lib/lean",
+    ".lake/packages/plausible/.lake/build/lib/lean",
+    ".lake/packages/importGraph/.lake/build/lib/lean",
+    ".lake/packages/proofwidgets/.lake/build/lib/lean",
+    ".lake/packages/aesop/.lake/build/lib/lean",
+    ".lake/packages/batteries/.lake/build/lib/lean",
+    ".lake/packages/Zeta23/.lake/build/lib/lean",
+    ".lake/packages/mathlib/.lake/build/lib/lean"
+  ],
+  "work_directory": "tmp/w9a2-20261020/trusted-v0",
+  "targets": [
+    {
+      "module": "ChallengeDeps",
+      "source": "research-goal-20261020-w9a2-runtime/trusted/ChallengeDeps.lean",
+      "source_root": "research-goal-20261020-w9a2-runtime/trusted",
+      "printed_roots": []
+    }
+  ]
+}

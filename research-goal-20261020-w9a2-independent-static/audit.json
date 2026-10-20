@@ -1,0 +1,116 @@
+{
+  "status": "PASS_INDEPENDENT_STATIC_ARITHMETIC_AND_TEXT_SCOPE_ONLY",
+  "not_a_Lean_or_kernel_receipt": true,
+  "inputs_before_and_after_identical": true,
+  "inputs": {
+    "StructuralW9A220261020/Core.lean": {
+      "bytes": 1770071,
+      "sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6"
+    },
+    "StructuralW9A220261020/Graph.lean": {
+      "bytes": 17334,
+      "sha256": "a2e4f4fcc8068a245aafaff56363060ffcf4e06e1fccb63d57a999cfb68f0783"
+    },
+    "StructuralW9A220261020/Localization.lean": {
+      "bytes": 13294,
+      "sha256": "95138259450a504e9db184baa3b1e3b5cd1bdb8e11c8990d4b20a94cc7643a2d"
+    },
+    "StructuralW9A220261020/Counting.lean": {
+      "bytes": 21555,
+      "sha256": "163fbaae81c9afd492cdfd5c66dd2848f1d1e03ac0af6ae3774a7cc619c631d5"
+    },
+    "StructuralW9A220261020/Final.lean": {
+      "bytes": 5512,
+      "sha256": "9f9cb13f409ac82ddb1a00ca99d27c98921633b999b82da38cdbd00ea21f5c85"
+    },
+    "research-goal-20261019-w9a2-record/official/proof/Solution.lean": {
+      "bytes": 1754387,
+      "sha256": "241068ee5abab772ea1aba7533ec33b9140df7dc1728aeb4c61bfb648fe195c7"
+    },
+    "research-goal-20261019-w9a2-record/transport/research-goal-20261019-w9a2-certificate-analysis--geometry-audit.json.gzip.part000": {
+      "bytes": 515810,
+      "sha256": "246fe70875c04fdbd3ce6078d22519fc2660325cf7da30ba16284b890060f5ef"
+    },
+    "research-goal-20261019-w9a2-weighted-graph/weighted-graph.json": {
+      "bytes": 32802,
+      "sha256": "7748d5a35b33931dfc66a83d089ca6ad7f9f707fdbb59af75c0a3c2a7cfa3414"
+    },
+    "research-goal-20261020-w9a2-transitions/extracted-witnesses.json": {
+      "bytes": 642122,
+      "sha256": "7cc6d11fb2c79dc4a99269b1fbbc5a076a4e395a7e28b3db02dcb550b6671446"
+    },
+    "research-goal-20261020-w9a2-runtime/trusted/ChallengeDeps.lean": {
+      "bytes": 6866,
+      "sha256": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd"
+    },
+    ".lake/packages/Zeta23/Zeta23/Statement.lean": {
+      "bytes": 10665,
+      "sha256": "c9fc4b6ff37bce9e93c33f2f3ae53b45bea47fb89818a57a4db522bf340d6679"
+    },
+    "StructuralS1RTiny20261018/Production/Counting.lean": {
+      "bytes": 21483,
+      "sha256": "e3dd838595e0b2a01249f13959fd492e97a8289b33c62805ee06de4d7a0b195a"
+    },
+    "StructuralS1RTiny20261018/Production/Final.lean": {
+      "bytes": 4965,
+      "sha256": "b45a6341fa22f454488fa1890b88bc45e100f2cdcafc4959b2094546050028d2"
+    },
+    "research-goal-20261016/macro-reviews/007-20261019.zh.md": {
+      "bytes": 5495,
+      "sha256": "b32068580187e96a802262290470758b2d72b777d02b8090039bcad6ab9b1a8f"
+    }
+  },
+  "literal_checks": {
+    "states": 24,
+    "oriented_bad_states": 48,
+    "all_states": 49,
+    "state_fields_each": 73,
+    "original_state_and_margin_identity": true,
+    "reversal_symbolic_span_identities": 36,
+    "shared_symbolic_span_identities": 28,
+    "strict_closed_interval_exclusions": 2267,
+    "minimum_integer_strict_difference": 1,
+    "retained_bad_edges": 37,
+    "all_edges": 134,
+    "potential_inequalities": 134,
+    "minimum_scaled_potential_slack": 0,
+    "potential_minimum": 0,
+    "potential_maximum": 2504722000690
+  },
+  "exact_constants": {
+    "SA": "100000000000000000000",
+    "base": "35721161196924353/4000000000000000000",
+    "increment": "311193869363/250000000000000000000",
+    "c": "4465145772003282851/500000000000000000000",
+    "boundary": "250472200069/50000000000000000000",
+    "H": "3360618734391208570682858853672166187793/5000000000000000000000000000000000000000",
+    "B": "45474189749/10000000000000",
+    "baseline": "3337881639516708570682858853672166187793/4955348548503844558750000000000000000000",
+    "candidate": "3337881639516708570682858853672166187793/4955348542279967171490000000000000000000",
+    "strict_gain": "1038728302876918865400824029813024017473280567285859/1227773960315883866623407213750193231501875000000000000000000"
+  },
+  "unmodified_generic_payment_segment_sha256": "421c93f7c9c2fc679547017a1a19043855725efa026722fe073aada433af83e0",
+  "matching_charge": "C occurs only in z=none separated remainder; no C in pair blocks",
+  "effective_actual_defect_parameter": 10,
+  "root_and_Zeta23_counting_definition_lines_equal": {
+    "IsNontrivialZero": "def IsNontrivialZero (ρ : ℂ) : Prop := riemannZeta ρ = 0 ∧ 0 < ρ.re ∧ ρ.re < 1",
+    "zeroMult": "def zeroMult (ρ : ℂ) : ℕ := (analyticOrderAt riemannZeta ρ).toNat",
+    "zerosIn": "def zerosIn (T₁ T₂ : ℝ) : Set ℂ := {ρ | IsNontrivialZero ρ ∧ T₁ < ρ.im ∧ ρ.im ≤ T₂}",
+    "Ncount": "def Ncount (T₁ T₂ : ℝ) : ℕ := ∑ᶠ ρ ∈ zerosIn T₁ T₂, zeroMult ρ",
+    "N0star": "def N0star (T₁ T₂ : ℝ) : ℕ := (zerosIn T₁ T₂ ∩ {ρ | ρ.re = 1 / 2}).ncard"
+  },
+  "definite_math_or_elaboration_issue_found_by_static_review": false,
+  "unexecuted_obligations": [
+    "ordinary Lean elaboration and new quantitative finite checks of all original 48 roots",
+    "ordinary Lean checking of actual localization, all transition proofs, finite sums and final roots",
+    "transitive axiom roots restricted to the three allowed standard axioms",
+    "whole final flattened source, trusted fresh CandidateSpec and Comparator contract",
+    "independent Lean/nanoda kernels and production total time limit",
+    "latest-record comparison, GitHub byte equality and submission materials"
+  ],
+  "compiler_runs": 0,
+  "solver_or_optimizer_runs": 0,
+  "new_kernel_evaluations": 0,
+  "new_geometry_searches": 0,
+  "main_counter_modified": false
+}

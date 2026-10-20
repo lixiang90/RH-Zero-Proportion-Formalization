@@ -1,0 +1,156 @@
+{
+  "scope": "Existing file bytes only. No execution, DLL closure audit, compatibility test or install.",
+  "lean_version_from_prior_root_gate": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "binaries": [
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\lean.exe",
+      "exists": true,
+      "bytes": 83456,
+      "sha256": "bc137e6662c48eedf2cdf167fb176080e18a15f57e248d214df0cb3939248683",
+      "file_header_hex": "4d5a7800010000000400000000000000"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\.lake\\build\\bin\\lean4export.exe",
+      "exists": true,
+      "bytes": 329728,
+      "sha256": "bc718c9ff717b36827799e8edbc86028edaf86bdd26931ce7a8882fd3fbb67d9",
+      "file_header_hex": "4d5a7800010000000400000000000000"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\Comparator\\.lake\\build\\bin\\comparator.exe",
+      "exists": true,
+      "bytes": 108072448,
+      "sha256": "a28e383e7e0040ea121230665b1f7762b6a6c67d68c468720f403a1e66b649c0",
+      "file_header_hex": "4d5a7800010000000400000000000000"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\kernel-tools\\nanoda-target\\release\\nanoda_bin",
+      "exists": true,
+      "bytes": 1312680,
+      "sha256": "b19804767cb72bf5a317fcfc20e8af7eafdfba789dd6b24bddee2574379ff35a",
+      "file_header_hex": "7f454c46020101000000000000000000"
+    }
+  ],
+  "trusted_tool_sources": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tools\\ComparatorCoreAudit.lean",
+      "exists": true,
+      "bytes": 2032,
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+      "file_header_hex": "2f2d0a4c6f63616c20636f7265206175"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\Comparator\\Comparator.lean",
+      "exists": true,
+      "bytes": 211,
+      "sha256": "3becb55ec42f66fd9a57ea6edeb1e3eaaffccc98498d584730c4d632758924cb",
+      "file_header_hex": "2f2d0d0a436f70797269676874202863"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\Comparator\\Comparator\\Axioms.lean",
+      "exists": true,
+      "bytes": 2461,
+      "sha256": "09fd2bd68775bc500e55d9ff5ab6dc9c4c57d11ab33d7a87eb76a0d365cd7ac4",
+      "file_header_hex": "2f2d0d0a436f70797269676874202863"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\Comparator\\Comparator\\Compare.lean",
+      "exists": true,
+      "bytes": 4199,
+      "sha256": "e5dfe4f040c21ab5defb4d27b6f229e581c6dabafc30d7adb07c872196914a62",
+      "file_header_hex": "2f2d0d0a436f70797269676874202863"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\Comparator\\Comparator\\Util.lean",
+      "exists": true,
+      "bytes": 816,
+      "sha256": "a3c7f05b027fef1b5a25a9bd26cd31998c2835583e029fc15970dad257d5137b",
+      "file_header_hex": "2f2d0d0a436f70797269676874202863"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\Comparator\\Main.lean",
+      "exists": true,
+      "bytes": 11258,
+      "sha256": "daca4ccb38b2dc7356ee4b47667980b290c3f27f970800723309e4d074f0c5be",
+      "file_header_hex": "2f2d0d0a436f70797269676874202863"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\Export.lean",
+      "exists": true,
+      "bytes": 16432,
+      "sha256": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f",
+      "file_header_hex": "696d706f7274204c65616e0d0a696d70"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\Export\\Parse.lean",
+      "exists": true,
+      "bytes": 21000,
+      "sha256": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9",
+      "file_header_hex": "2f2d0d0a436f70797269676874202863"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\Main.lean",
+      "exists": true,
+      "bytes": 769,
+      "sha256": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5",
+      "file_header_hex": "696d706f7274204578706f72740d0a6f"
+    }
+  ],
+  "dependency_packages_from_root_gate": [
+    {
+      "path": ".lake/packages/LeanSearchClient",
+      "commit": "f5c090429dff3cf66cb65562526c9ea6e8edfbcb"
+    },
+    {
+      "path": ".lake/packages/Qq",
+      "commit": "ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33"
+    },
+    {
+      "path": ".lake/packages/plausible",
+      "commit": "123d15766ba49356c02ebad2a4462dfe12d79899"
+    },
+    {
+      "path": ".lake/packages/Cli",
+      "commit": "1319485273bf87833fa472afbcefdedecb16b45f"
+    },
+    {
+      "path": ".lake/packages/importGraph",
+      "commit": "bb3469a87774349fe01898d8bf2fc6a1ce6411ca"
+    },
+    {
+      "path": ".lake/packages/proofwidgets",
+      "commit": "222c58dad7706a6e7cae46c0edd65ea881d3ee27"
+    },
+    {
+      "path": ".lake/packages/aesop",
+      "commit": "7db8190085343afde2f5d2cdcc9bac719b6ec02c"
+    },
+    {
+      "path": ".lake/packages/batteries",
+      "commit": "76e1c118b0700b4ceafe99532e887d6431625e1a"
+    },
+    {
+      "path": ".lake/packages/Zeta23",
+      "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510"
+    },
+    {
+      "path": ".lake/packages/mathlib",
+      "commit": "51e6992efd06126df61a496bebf8f49482a4e129"
+    }
+  ],
+  "package_libs_from_root_gate": [
+    ".lake/packages/LeanSearchClient/.lake/build/lib/lean",
+    ".lake/packages/Qq/.lake/build/lib/lean",
+    ".lake/packages/plausible/.lake/build/lib/lean",
+    ".lake/packages/importGraph/.lake/build/lib/lean",
+    ".lake/packages/proofwidgets/.lake/build/lib/lean",
+    ".lake/packages/aesop/.lake/build/lib/lean",
+    ".lake/packages/batteries/.lake/build/lib/lean",
+    ".lake/packages/Zeta23/.lake/build/lib/lean",
+    ".lake/packages/mathlib/.lake/build/lib/lean"
+  ],
+  "full_dynamic_runtime_closure_bound": false,
+  "native_CoreAudit_installed_in_current_environment": false,
+  "old_Linux_runtime_reusable": false,
+  "Windows_export_and_WSL_nanoda_path_prepared_only": true
+}

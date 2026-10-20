@@ -1,0 +1,34 @@
+{
+  "status": "PASS_STATIC_ARITHMETIC_AND_SOURCE_IDENTITY_NOT_LEAN",
+  "scope": "Checks exact current-source H/B/c0, frozen weighted arithmetic, copy identity of the accepted generic bridge, and absence of admitted new declarations. It does not prove or compile actual localization, graph transitions, or counting.",
+  "base": "35721161196924353/4000000000000000000",
+  "increment": "311193869363/250000000000000000000",
+  "c": "4465145772003282851/500000000000000000000",
+  "potential_boundary": "250472200069/50000000000000000000",
+  "H": "3360618734391208570682858853672166187793/5000000000000000000000000000000000000000",
+  "B": "45474189749/10000000000000",
+  "candidate": "3337881639516708570682858853672166187793/4955348542279967171490000000000000000000",
+  "frozen_baseline": "3337881639516708570682858853672166187793/4955348548503844558750000000000000000000",
+  "gain": "1038728302876918865400824029813024017473280567285859/1227773960315883866623407213750193231501875000000000000000000",
+  "potential_boundary_below_c": true,
+  "current_close_pair_payment_suffices": true,
+  "unchanged_generic_bridge_sha256": "421c93f7c9c2fc679547017a1a19043855725efa026722fe073aada433af83e0",
+  "source_sha256": "241068ee5abab772ea1aba7533ec33b9140df7dc1728aeb4c61bfb648fe195c7",
+  "weighted_graph_sha256": "7748d5a35b33931dfc66a83d089ca6ad7f9f707fdbb59af75c0a3c2a7cfa3414",
+  "compiler_runs": 0,
+  "solver_runs": 0,
+  "independent_kernel_runs": 0,
+  "actual_unconditional_result_verified": false,
+  "files": [
+    {
+      "path": "research-goal-20261020-w9a2-counting/Counting.lean",
+      "bytes": 21555,
+      "sha256": "163fbaae81c9afd492cdfd5c66dd2848f1d1e03ac0af6ae3774a7cc619c631d5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-counting/Final.lean",
+      "bytes": 5512,
+      "sha256": "9f9cb13f409ac82ddb1a00ca99d27c98921633b999b82da38cdbd00ea21f5c85"
+    }
+  ]
+}

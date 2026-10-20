@@ -1,0 +1,45 @@
+{
+  "status": "PASS_STATIC_DEVELOPMENT_SPLIT_ONLY_NOT_COMPILED",
+  "full_source_unchanged_sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6",
+  "split_before_full_source_line": 10613,
+  "private_decl_suffix_token_uses": {
+    "digit64": 0,
+    "hasDerivAt_left'": 0,
+    "hasDerivAt_right'": 0,
+    "err_scale": 0,
+    "one_le_pi": 0
+  },
+  "open_scopes_at_boundary": [
+    {
+      "line": 6661,
+      "command": "section"
+    }
+  ],
+  "open_namespaces_at_boundary": [],
+  "unexported_ambient_options_recreated_in_suffix": {
+    "Elab.async": "false",
+    "linter.all": "false"
+  },
+  "other_unexported_ambient_commands": [],
+  "suffix_prologue": "import StructuralW9A220261020.Prefix\nset_option Elab.async false\nset_option linter.all false\n",
+  "prefix_added_closing_command": "end -- development split closes the original anonymous section\n",
+  "inverse_merge_byte_equal": true,
+  "inverse_merge_sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6",
+  "prefix_public_constants_and_syntax_imported_by_original_names": true,
+  "caveat": "The original unnamed section is explicitly closed only in the development Prefix; suffix resets module-local option scope and explicitly recreates the only two active options. There are no active open/open scoped/variable/local commands at the original cut. Actual import/elaboration still requires the root frozen ordinary gate. No production verification or timing claim.",
+  "artifacts": [
+    {
+      "path": "research-goal-20261020-w9a2-formal-static-review/development-split/StructuralW9A220261020/Prefix.lean",
+      "bytes": 584999,
+      "sha256": "bfd774658f3f855596a5453f86f4d98fbc884ca651b3e595d68f70b9553f5b3c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-formal-static-review/development-split/StructuralW9A220261020/Core.lean",
+      "bytes": 1185228,
+      "sha256": "b2f536448f48a50d3994cbccf7b3bd94ea54f388664d98e120c112130794ff1e"
+    }
+  ],
+  "added_development_bytes": 156,
+  "compiler_runs": 0,
+  "candidate_mutations": 0
+}

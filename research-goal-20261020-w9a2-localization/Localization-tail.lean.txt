@@ -1,0 +1,75 @@
+theorem located_good (g : Fin 8 → ℝ) (hgood : goodThreshold ≤ Fw RiemannFail.W9 g) :
+    ∃ v : Fin 49, StateAt g v ∧ base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  refine ⟨⟨48, by norm_num⟩, ?_, ?_⟩
+  · simp [StateAt]
+  · simpa [base, goodThreshold, qGoodTarget, cost, Nat.cast_add, add_div] using hgood
+
+theorem located_id (g : Fin 8 → ℝ) (k : ℕ) (hk : k < 24)
+    (hc : InCell 8 PR (qCell k) (natGaps g))
+    (hb : ((cN + qCost k : ℕ) : ℝ) / SA ≤ Fw RiemannFail.W9 g) :
+    ∃ v : Fin 49, StateAt g v ∧ base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  let v : Fin 49 := ⟨2 * k, by omega⟩
+  have hv : v.val < 48 := by dsimp [v]; omega
+  have hd : v.val / 2 = k := by dsimp [v]; omega
+  have hm : ¬v.val % 2 = 1 := by dsimp [v]; omega
+  refine ⟨v, ?_, ?_⟩
+  · simpa only [StateAt, hv, hd, hm, ↓reduceIte] using hc
+  · have hcost : (cost v : ℝ) = (qCost k : ℝ) := by simp [cost, hv, hd]
+    rw [hcost]
+    simpa only [Nat.cast_add, add_div, base] using hb
+
+theorem located_rev (g : Fin 8 → ℝ) (k : ℕ) (hk : k < 24)
+    (hc : InCell 8 PR (qCell k) (natGaps (reverse8 g)))
+    (hb : ((cN + qCost k : ℕ) : ℝ) / SA ≤ Fw RiemannFail.W9 g) :
+    ∃ v : Fin 49, StateAt g v ∧ base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  let v : Fin 49 := ⟨2 * k + 1, by omega⟩
+  have hv : v.val < 48 := by dsimp [v]; omega
+  have hd : v.val / 2 = k := by dsimp [v]; omega
+  have hm : v.val % 2 = 1 := by dsimp [v]; omega
+  refine ⟨v, ?_, ?_⟩
+  · simpa only [StateAt, hv, hd, hm, ↓reduceIte] using hc
+  · have hcost : (cost v : ℝ) = (qCost k : ℝ) := by simp [cost, hv, hd]
+    rw [hcost]
+    simpa only [Nat.cast_add, add_div, base] using hb
+
+/-- Complete actual-kernel location and quantitative cost on every separated
+window. The good state includes all root-exterior branches. -/
+theorem located_state (g : Fin 8 → ℝ) (hsep : ∀ r, (17 : ℝ) / 20 ≤ g r) :
+    ∃ v : Fin 49, StateAt g v ∧ base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  have hs : ∀ r, sep ≤ g r := by simpa only [sep] using hsep
+  by_cases ho : g 0 ≤ g 7
+  · rcases finite_ordered_quant g hs ho with h | ⟨k, hk, hc, hb⟩
+    · exact located_good g h
+    · exact located_id g k hk hc hb
+  · have hsr : ∀ r, sep ≤ reverse8 g r := fun r => hs _
+    have hor : reverse8 g 0 ≤ reverse8 g 7 := by
+      simpa only [reverse8] using (le_of_lt (lt_of_not_ge ho))
+    rcases finite_ordered_quant (reverse8 g) hsr hor with h | ⟨k, hk, hc, hb⟩
+    · rw [reverse_energy] at h
+      exact located_good g h
+    · rw [reverse_energy] at hb
+      exact located_rev g k hk hc hb
+
+/-- The same quantitative walk also supports the first-seven DAG threshold;
+there is no second walk, kernel table, or threshold search. -/
+theorem dag_cost_of_late (v : Fin 49) (hv : 14 ≤ v.val) :
+    (qDagIncrement : ℝ) ≤ (cost v : ℝ) := by
+  fin_cases v <;> norm_num [cost, qCost, qGoodIncrement, qDagIncrement] at *
+
+theorem low_DAG_state (g : Fin 8 → ℝ) (hsep : ∀ r, (17 : ℝ) / 20 ≤ g r)
+    (hlow : Fw RiemannFail.W9 g < dagThreshold) :
+    ∃ v : Fin 49, v.val < 14 ∧ StateAt g v ∧
+      base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  obtain ⟨v, hv, hb⟩ := located_state g hsep
+  refine ⟨v, ?_, hv, hb⟩
+  by_contra hn
+  have hc := dag_cost_of_late v (by omega)
+  have hp : (0 : ℝ) < SA := by norm_num [SA]
+  have hq := div_le_div_of_nonneg_right hc hp.le
+  have he : dagThreshold = base + (qDagIncrement : ℝ) / SA := by
+    simp only [dagThreshold, base, Nat.cast_add, add_div]
+  rw [he] at hlow
+  linarith
+
+end StructuralW9A220261020.Localization
+end

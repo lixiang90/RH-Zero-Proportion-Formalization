@@ -1,0 +1,291 @@
+/- SPDX-License-Identifier: Apache-2.0
+Preparation only. W9A2 actual-kernel quantitative localization, including
+all original separated root-exterior branches and reflected orientations.
+The symbolic root argument derives from the attributed accepted root_cover.
+No new numerical payload, anchor, guard or kernel evaluation is introduced.
+No compiler or kernel has checked this generated file yet.
+-/
+import StructuralW9A220261020.Graph
+
+set_option Elab.async false
+set_option maxHeartbeats 0
+noncomputable section
+open Finset
+open AMW.Cert AMW.Cert.PCell
+open AMW.Cert.PC9QB6M AMW.Cert.PC9QB6MData
+open Zeta23Ext.BridgeW
+open StructuralW9A220261020.Graph
+
+namespace StructuralW9A220261020.Localization
+def sep : ℝ := 17 / 20
+def base : ℝ := (cN : ℝ) / SA
+def goodThreshold : ℝ := (qGoodTarget : ℝ) / SA
+def dagThreshold : ℝ := ((cN + qDagIncrement : ℕ) : ℝ) / SA
+
+def pressure (g : ℕ → ℝ) : ℝ :=
+  ∑ r ∈ range 8, (BS.getD r 0 : ℝ) * g r
+
+theorem Fg_ge_full_pressure (g : ℕ → ℝ) :
+    pressure g ≤ Fg 8 BS TS g := by
+  have hn : 0 ≤ ∑ n ∈ range TS.length,
+      (tA TS n : ℝ) * AMW.Cert.wfun (gsum g (tI TS n) (tJ TS n)) := by
+    exact Finset.sum_nonneg fun n _ => mul_nonneg (Nat.cast_nonneg _) (AMW.Cert.wfun_nonneg _)
+  exact le_add_of_nonneg_right hn
+
+theorem Fg_ge_term_add_pressure (g : ℕ → ℝ) {n : ℕ} (hn : n < TS.length) :
+    pressure g + (tA TS n : ℝ) * AMW.Cert.wfun (gsum g (tI TS n) (tJ TS n))
+      ≤ Fg 8 BS TS g := by
+  have hs := Finset.single_le_sum
+    (f := fun n => (tA TS n : ℝ) * AMW.Cert.wfun (gsum g (tI TS n) (tJ TS n)))
+    (fun n _ => mul_nonneg (Nat.cast_nonneg _) (AMW.Cert.wfun_nonneg _))
+    (Finset.mem_range.mpr hn)
+  simpa only [Fg, pressure, add_comm] using (add_le_add_left hs (pressure g))
+
+theorem pressure_of_sep {g : ℕ → ℝ} (hg : ∀ r < 8, sep ≤ g r) :
+    sep * (∑ r ∈ range 8, (BS.getD r 0 : ℝ)) ≤ pressure g := by
+  rw [Finset.mul_sum]
+  apply Finset.sum_le_sum
+  intro r hr
+  simpa only [mul_comm] using
+    (mul_le_mul_of_nonneg_left (hg r (Finset.mem_range.mp hr)) (Nat.cast_nonneg (BS.getD r 0) : (0 : ℝ) ≤ _))
+
+theorem pressure_rest_of_sep {g : ℕ → ℝ} (hg : ∀ k < 8, sep ≤ g k)
+    {r : ℕ} (hr : r < 8) :
+    (BS.getD r 0 : ℝ) * g r + sep * (∑ k ∈ (range 8).erase r, (BS.getD k 0 : ℝ))
+      ≤ pressure g := by
+  have hs : sep * (∑ k ∈ (range 8).erase r, (BS.getD k 0 : ℝ)) ≤
+      ∑ k ∈ (range 8).erase r, (BS.getD k 0 : ℝ) * g k := by
+    rw [Finset.mul_sum]
+    apply Finset.sum_le_sum
+    intro k hk
+    have hk8 := Finset.mem_range.mp (Finset.mem_of_mem_erase hk)
+    simpa only [mul_comm] using
+      (mul_le_mul_of_nonneg_left (hg k hk8) (Nat.cast_nonneg (BS.getD k 0) : (0 : ℝ) ≤ _))
+  rw [pressure, ← Finset.add_sum_erase (range 8)
+    (fun k => (BS.getD k 0 : ℝ) * g k) (Finset.mem_range.mpr hr)]
+  simpa only [add_comm] using
+    (add_le_add_left hs ((BS.getD r 0 : ℝ) * g r))
+
+/-- These are the exact same old-c9 finite checks appearing as anonymous
+arguments of the accepted Data.cert. There is no raised coverChk/WZ query.
+They may later be shared with that theorem to avoid duplicate proof work. -/
+theorem original_hS : ∀ r < 8, cN * SC ≤ BS.getD r 0 * SMAX r := by
+  decide
+
+theorem original_hcov : ∀ r < 8,
+    coverChk cN (tA TS (ADJ.getD r 0)) (SC / 2) (SMAX r) (COV.getD r []) = true := by
+  decide +kernel
+
+theorem flagged_pressure_budget :
+    (qGoodTarget : ℝ) ≤ (cN : ℝ) + sep * (∑ r ∈ range 8, (BS.getD r 0 : ℝ)) := by
+  norm_num [qGoodTarget, qGoodIncrement, cN, sep, BS, Finset.sum_range_succ]
+
+theorem tail_pressure_budget (r : ℕ) (hr : r < 8) :
+    (qGoodTarget : ℝ) ≤ (cN : ℝ) + sep * (∑ k ∈ (range 8).erase r, (BS.getD k 0 : ℝ)) := by
+  interval_cases r <;>
+    norm_num [qGoodTarget, qGoodIncrement, cN, sep, BS, Finset.sum_range_succ]
+
+/-- Separated root localization keeps the old root geometry and COV. The
+additional pressure pays the new target outside the roots. -/
+theorem root_QuantGoal (g : ℕ → ℝ) (hsep : ∀ r < 8, sep ≤ g r) : QuantGoal g := by
+  classical
+  have hg : ∀ r < 8, 0 ≤ g r := fun r hr => le_trans (by norm_num [sep]) (hsep r hr)
+  have hSC : (0 : ℝ) < SC := by norm_num [SC]
+  by_cases hgood : (qGoodTarget : ℝ) ≤ Fg 8 BS TS g
+  · exact Or.inl (Or.inl hgood)
+  have hbad : ∀ r < 8, ∃ i, i < (badOf (COV.getD r [])).length ∧
+      (((badOf (COV.getD r [])).getD i (0, 0)).1 : ℝ) / SC ≤ g r ∧
+      g r ≤ (((badOf (COV.getD r [])).getD i (0, 0)).2 : ℝ) / SC ∧
+      ((badOf (COV.getD r [])).getD i (0, 0)).2 < KB := by
+    intro r hr
+    obtain ⟨hn, hi, hj⟩ := hADJ r hr
+    have hsr : gsum g (tI TS (ADJ.getD r 0)) (tJ TS (ADJ.getD r 0)) = g r := by
+      rw [hi, hj, gsum]; simp
+    by_cases hcut : (SMAX r : ℝ) / SC ≤ g r
+    · exfalso
+      have hq := (Nat.cast_le (α := ℝ)).mpr (original_hS r hr)
+      push_cast at hq
+      have hbase : (cN : ℝ) ≤ (BS.getD r 0 : ℝ) * g r := by
+        have hl : (cN : ℝ) ≤ (BS.getD r 0 : ℝ) * ((SMAX r : ℝ) / SC) := by
+          rw [mul_div_assoc', le_div_iff₀ hSC]; linarith
+        exact hl.trans (mul_le_mul_of_nonneg_left hcut (Nat.cast_nonneg _))
+      have hp := (pressure_rest_of_sep hsep hr).trans (Fg_ge_full_pressure g)
+      have hb := tail_pressure_budget r hr
+      exact hgood (by linarith)
+    push_neg at hcut
+    rcases le_total (g r) (((SC / 2 : ℕ) : ℝ) / SC) with hw | hw
+    · exfalso
+      have hh : ((SC / 2 : ℕ) : ℝ) / SC = 1 / 2 := by norm_num [SC]
+      rw [hh] at hw
+      have hs := hsep r hr
+      norm_num [sep] at hs
+      linarith
+    rcases coverChk_sound cN (tA TS (ADJ.getD r 0)) (COV.getD r [])
+        (SC / 2) (SMAX r) (original_hcov r hr) (g r) hw hcut with
+      hclear | ⟨s, hs, he, h1, h2, h3⟩
+    · exfalso
+      have ht := Fg_ge_term_add_pressure g hn
+      rw [hsr] at ht
+      have hp := pressure_of_sep hsep
+      have hb := flagged_pressure_budget
+      exact hgood (by linarith)
+    obtain ⟨i, hi', hsi⟩ := List.mem_iff_getElem.mp (badOf_mem hs he)
+    refine ⟨i, hi', ?_, ?_, ?_⟩
+    · rw [List.getD_eq_getElem _ _ hi', hsi]; exact h1
+    · rw [List.getD_eq_getElem _ _ hi', hsi]; exact h2
+    · rw [List.getD_eq_getElem _ _ hi', hsi]; exact h3
+  choose! idx hidx using hbad
+  apply AMW.Cert.PC9QB6MData.run idx (fun r hr => (hidx r hr).1) g
+  refine incell_root hPR (W := 1099511627776)
+    (fun k hk => by
+      have hkn : k < 28 := by simpa [PR] using hk
+      interval_cases k <;> rfl)
+    (fun k hk => by
+      have hkn : k < 28 := by simpa [PR] using hk
+      interval_cases k <;> rfl) ?_ (fun r hr => ?_)
+  · have h1 : ((sumR (rootCl 8 PR.length 1099511627776 COV idx).U 0 8 : ℕ) : ℝ) ≤
+        ((8 * KB : ℕ) : ℝ) := by
+      rw [sumR_eq, Nat.zero_add]; push_cast
+      calc
+        ∑ r ∈ Finset.Ico 0 8,
+            (((rootCl 8 PR.length 1099511627776 COV idx).U.getD r 0 : ℕ) : ℝ)
+            ≤ ∑ r ∈ Finset.Ico 0 8, (KB : ℝ) := by
+              apply Finset.sum_le_sum
+              intro r hr
+              have hr' : r < 8 := (Finset.mem_Ico.mp hr).2
+              simp only [rootCl]
+              rw [getD_map_range _ hr']
+              exact_mod_cast (hidx r hr').2.2.2.le
+        _ = (8 : ℝ) * KB := by simp
+    exact (by exact_mod_cast h1 : sumR _ 0 8 ≤ 8 * KB).trans (by decide)
+  · simp only [rootCl]
+    rw [getD_map_range _ hr, getD_map_range _ hr]
+    exact ⟨(hidx r hr).2.1, (hidx r hr).2.2.1⟩
+
+theorem ordered_quant (g : ℕ → ℝ) (hsep : ∀ r < 8, sep ≤ g r)
+    (horder : g 0 ≤ g 7) :
+    (qGoodTarget : ℝ) ≤ Fg 8 BS TS g ∨
+      ∃ k, k < 24 ∧ InCell 8 PR (qCell k) g ∧
+        ((cN + qCost k : ℕ) : ℝ) ≤ Fg 8 BS TS g := by
+  rcases root_QuantGoal g hsep with h | ⟨k, hk, hc, h⟩
+  · rcases h with h | h
+    · exact Or.inl h
+    · exact False.elim ((not_lt_of_ge horder) h)
+  · rcases h with h | h
+    · exact Or.inr ⟨k, hk, hc, h⟩
+    · exact False.elim ((not_lt_of_ge horder) h)
+
+theorem natGaps_apply (g : Fin 8 → ℝ) {r : ℕ} (hr : r < 8) :
+    natGaps g r = g ⟨r, hr⟩ := by
+  interval_cases r <;> rfl
+
+theorem scaled_energy (g : Fin 8 → ℝ) :
+    Fg 8 BS TS (natGaps g) = (SA : ℝ) * Fw RiemannFail.W9 g := by
+  rw [RiemannFail.Fw_W9]
+  exact Fg_G (g 0) (g 1) (g 2) (g 3) (g 4) (g 5) (g 6) (g 7)
+
+theorem reverse_energy (g : Fin 8 → ℝ) :
+    Fw RiemannFail.W9 (reverse8 g) = Fw RiemannFail.W9 g := by
+  rw [RiemannFail.Fw_W9, RiemannFail.Fw_W9]
+  simpa [reverse8] using AMW.Cert.PC9QB6M_G_rev
+    (g 0) (g 1) (g 2) (g 3) (g 4) (g 5) (g 6) (g 7)
+
+theorem finite_ordered_quant (g : Fin 8 → ℝ) (hsep : ∀ r, sep ≤ g r)
+    (horder : g 0 ≤ g 7) :
+    goodThreshold ≤ Fw RiemannFail.W9 g ∨
+      ∃ k, k < 24 ∧ InCell 8 PR (qCell k) (natGaps g) ∧
+        ((cN + qCost k : ℕ) : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  have hsep' : ∀ r < 8, sep ≤ natGaps g r := by
+    intro r hr
+    rw [natGaps_apply g hr]
+    exact hsep _
+  have horder' : natGaps g 0 ≤ natGaps g 7 := by simpa [natGaps] using horder
+  have hSA : (0 : ℝ) < SA := by norm_num [SA]
+  rcases ordered_quant (natGaps g) hsep' horder' with h | ⟨k, hk, hc, h⟩
+  · left
+    rw [scaled_energy] at h
+    exact (div_le_iff₀ hSA).2 (by simpa only [mul_comm] using h)
+  · right
+    refine ⟨k, hk, hc, ?_⟩
+    rw [scaled_energy] at h
+    exact (div_le_iff₀ hSA).2 (by simpa only [mul_comm] using h)
+
+theorem base_floor (g : Fin 8 → ℝ) (hg : ∀ r, 0 ≤ g r) :
+    base ≤ Fw RiemannFail.W9 g := by
+  simpa [base, cN, SA] using RiemannFail.cert_AM g hg
+
+theorem located_good (g : Fin 8 → ℝ) (hgood : goodThreshold ≤ Fw RiemannFail.W9 g) :
+    ∃ v : Fin 49, StateAt g v ∧ base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  refine ⟨⟨48, by norm_num⟩, ?_, ?_⟩
+  · simp [StateAt]
+  · simpa [base, goodThreshold, qGoodTarget, cost, Nat.cast_add, add_div] using hgood
+
+theorem located_id (g : Fin 8 → ℝ) (k : ℕ) (hk : k < 24)
+    (hc : InCell 8 PR (qCell k) (natGaps g))
+    (hb : ((cN + qCost k : ℕ) : ℝ) / SA ≤ Fw RiemannFail.W9 g) :
+    ∃ v : Fin 49, StateAt g v ∧ base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  let v : Fin 49 := ⟨2 * k, by omega⟩
+  have hv : v.val < 48 := by dsimp [v]; omega
+  have hd : v.val / 2 = k := by dsimp [v]; omega
+  have hm : ¬v.val % 2 = 1 := by dsimp [v]; omega
+  refine ⟨v, ?_, ?_⟩
+  · simpa only [StateAt, hv, hd, hm, ↓reduceIte] using hc
+  · have hcost : (cost v : ℝ) = (qCost k : ℝ) := by simp [cost, hv, hd]
+    rw [hcost]
+    simpa only [Nat.cast_add, add_div, base] using hb
+
+theorem located_rev (g : Fin 8 → ℝ) (k : ℕ) (hk : k < 24)
+    (hc : InCell 8 PR (qCell k) (natGaps (reverse8 g)))
+    (hb : ((cN + qCost k : ℕ) : ℝ) / SA ≤ Fw RiemannFail.W9 g) :
+    ∃ v : Fin 49, StateAt g v ∧ base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  let v : Fin 49 := ⟨2 * k + 1, by omega⟩
+  have hv : v.val < 48 := by dsimp [v]; omega
+  have hd : v.val / 2 = k := by dsimp [v]; omega
+  have hm : v.val % 2 = 1 := by dsimp [v]; omega
+  refine ⟨v, ?_, ?_⟩
+  · simpa only [StateAt, hv, hd, hm, ↓reduceIte] using hc
+  · have hcost : (cost v : ℝ) = (qCost k : ℝ) := by simp [cost, hv, hd]
+    rw [hcost]
+    simpa only [Nat.cast_add, add_div, base] using hb
+
+/-- Complete actual-kernel location and quantitative cost on every separated
+window. The good state includes all root-exterior branches. -/
+theorem located_state (g : Fin 8 → ℝ) (hsep : ∀ r, (17 : ℝ) / 20 ≤ g r) :
+    ∃ v : Fin 49, StateAt g v ∧ base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  have hs : ∀ r, sep ≤ g r := by simpa only [sep] using hsep
+  by_cases ho : g 0 ≤ g 7
+  · rcases finite_ordered_quant g hs ho with h | ⟨k, hk, hc, hb⟩
+    · exact located_good g h
+    · exact located_id g k hk hc hb
+  · have hsr : ∀ r, sep ≤ reverse8 g r := fun r => hs _
+    have hor : reverse8 g 0 ≤ reverse8 g 7 := by
+      simpa only [reverse8] using (le_of_lt (lt_of_not_ge ho))
+    rcases finite_ordered_quant (reverse8 g) hsr hor with h | ⟨k, hk, hc, hb⟩
+    · rw [reverse_energy] at h
+      exact located_good g h
+    · rw [reverse_energy] at hb
+      exact located_rev g k hk hc hb
+
+/-- The same quantitative walk also supports the first-seven DAG threshold;
+there is no second walk, kernel table, or threshold search. -/
+theorem dag_cost_of_late (v : Fin 49) (hv : 14 ≤ v.val) :
+    (qDagIncrement : ℝ) ≤ (cost v : ℝ) := by
+  fin_cases v <;> norm_num [cost, qCost, qGoodIncrement, qDagIncrement] at *
+
+theorem low_DAG_state (g : Fin 8 → ℝ) (hsep : ∀ r, (17 : ℝ) / 20 ≤ g r)
+    (hlow : Fw RiemannFail.W9 g < dagThreshold) :
+    ∃ v : Fin 49, v.val < 14 ∧ StateAt g v ∧
+      base + (cost v : ℝ) / SA ≤ Fw RiemannFail.W9 g := by
+  obtain ⟨v, hv, hb⟩ := located_state g hsep
+  refine ⟨v, ?_, hv, hb⟩
+  by_contra hn
+  have hc := dag_cost_of_late v (by omega)
+  have hp : (0 : ℝ) < SA := by norm_num [SA]
+  have hq := div_le_div_of_nonneg_right hc hp.le
+  have he : dagThreshold = base + (qDagIncrement : ℝ) / SA := by
+    simp only [dagThreshold, base, Nat.cast_add, add_div]
+  rw [he] at hlow
+  linarith
+
+end StructuralW9A220261020.Localization
+end
