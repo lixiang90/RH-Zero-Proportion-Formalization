@@ -1,0 +1,40 @@
+{
+  "schema": "v10-kernel-checkpoints-static-formal-v1",
+  "scope": "Finite completed-log/source/SDK and archived-topology diagnosis; no new proof source, Lean execution or broad re-audit",
+  "source": {
+    "path": "research-goal-20261021-w9a2-delivery/draft-v10/Solution.lean",
+    "bytes": 1914823,
+    "sha256": "86e3f46c90648f98d540d01edd45268d89504b45f7fb9d5d8e53d8582d41e14d"
+  },
+  "reported_actual_build": {"outer_exit": 1, "elapsed_seconds": 711.703, "aborted": false, "proof_resource_PASS": false},
+  "actual_error_declarations": [
+    {"line":13611,"declaration":"AMW.Cert.PC9QB6MData.v10_r37_parent","proof":"decide +kernel","kind":"kernel memory; elaborator reduction explicitly succeeded","root":37,"residual_numeric":290},
+    {"line":13793,"declaration":"AMW.Cert.PC9QB6MData.v10_r43_e0","proof":"decide +kernel","kind":"kernel memory; elaborator reduction explicitly succeeded","root":43,"pos":169,"fuel":107,"end":70606,"numeric":249},
+    {"line":16954,"declaration":"StructuralW9A220261020.Graph.edge_potential","proof":"decide","kind":"kernel memory","domain":"Fin49 x Fin49"},
+    {"line":17030,"declaration":"StructuralW9A220261020.Graph.exclusion_checked","proof":"decide","kind":"kernel memory","domain":"Fin49 x Fin49"}
+  ],
+  "negative_topology": [
+    {"root":37,"pos":1,"children":[{"pos":9,"end":177008,"fuel":127,"numeric":636,"nodes":1317,"height":83,"state_sha256":"98075b4da68ec7ab55c5a97de339236e61465093e610cec8516ee70b7ea11116"},{"pos":177008,"end":177164,"fuel":127,"numeric":1,"nodes":1,"height":1,"state_sha256":"ab6e8569a1ff1f2c97900936788cd381f30eddc35811ad8848a2ac045b6e7036"}],"heavy_child_residual_after_current_cuts":289},
+    {"root":43,"pos":169,"children":[{"pos":177,"end":70388,"fuel":106,"numeric":248,"nodes":497,"height":22,"state_sha256":"9dad2ef453c759e3b8dde68f259f47032e7e4041785f23e656c7b5e9855e1705"},{"pos":70388,"end":70606,"fuel":106,"numeric":1,"nodes":1,"height":1,"state_sha256":"99a8b3cecd77cf5a1d409b5b62f3f4260ad5b0720b58412cade543900464b130"}]}
+  ],
+  "known_local_composition": {"root":37,"original_cut":620,"direct_parent":612,"depth":31,"fuel":97,"end":92097,"axis":7,"cut":82336,"mode":0,"normalized_M0_state_sha256":"98b96ae6a543ff2bff8df39d1c004513d42c6232ec4e89eb52a47d6ad8f5dfb9","numeric":299,"existing_contained_cut_numeric":256,"ancestor_residual_numeric":43,"new_root_residual_if_only_this_promotion":247,"actual_Lean_state_equality_checked":false,"new_kernel_proof_available":false},
+  "unfinished_fixed_candidates": {
+    "root37_second_cut_110366_direct_parent":null,
+    "root37_two_cut_LCA":null,
+    "root37_two_direct_parent_promotion_residual":null,
+    "root43_first_split_with_both_children_numeric_gt1":null,
+    "root43_next_heavy_pos177_child_positions":[185,53837],
+    "root43_next_heavy_child_counts_states_fuels_ends":null,
+    "reason":"Root ordered sealing without additional archive queries or executions; unknown fields are not inferred."
+  },
+  "proposed_route": "Only a future separately authorized finite compositional Covered repair. Existing checker/soundness, fixed branch ancestry, no threshold/cut-size family. r43 Covered replacement does not establish the original raw e0 equality; remove its now-unneeded internal declaration or supply a real equality-composition proof.",
+  "root_latest_tentative_route_logical_feasibility": {
+    "rule_not_executed": "One proper descendant closest to half the residual numeric mass, r37 excluding its existing two cuts and r43 raw; tie earliest pos.",
+    "exact_selected_pos_state_cursor": null,
+    "CutsOk_requires_disjointness": false,
+    "composition": "Prove new Covered using only oldCutsOk, then cutsOk_cons newCovered oldCutsOk for newhint::oldcuts. Existing covered child and ancestor hints may overlap; no cyclic dependency on the new root.",
+    "resource_or_provenance_claim": false
+  },
+  "limits": ["The memory cause is not quantitatively localized by these checkpoint diagnostics.","Graph row factorization is separately proposed and not solved by the walk repair.","A failed whole Candidate containing placeholders must not be reused as a trusted development cache.","No source/gate/counter/Git changes; final unconditional/dual-kernel/official goal remains open."],
+  "execution_scope": {"Lean_compiler_kernel_export_decoder_numeric_model":0,"source_generation":0,"new_runtime_gate":0,"static_metadata_read_and_report_sealing_only":true}
+}

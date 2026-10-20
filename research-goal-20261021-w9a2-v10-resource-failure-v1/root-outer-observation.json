@@ -1,0 +1,104 @@
+{
+  "schema": "root-transcribed-v10-resource-failure-v1",
+  "provenance": "Root-provided actual original terminal summary, not an original-handle observation made by this archiver; own small files independently copied and hashed",
+  "root_summary_verbatim": "v10 sole full resource actual terminal arrived. Archive small completed records in fresh research-goal-20261021-w9a2-v10-resource-failure-v1 using old v9 failure archive format. Work tmp/w9a2-20261021/v10-resource-v1, terminal SHA6a4f47836286ed5e3dd5c1c2e6f92dbb693df1f7100ba0c64851cee3fd006253. Original root tool b5f2ab session52977 actual outer1 child1 (do NOT infer stderr abort): elapsed711.703, stdout.jsonl8379 SHA1d681ad8ce6cea19a7bdf97b4e873af7047427d49e66d4032c15bc5184b5c1ea, stderr empty, 4 JSON errors at13611/13793 decide kernel excessive memory;16954/17030 kernel excessive memory. RSS6815944704 commit11880390656, ownstop/timeoutfalse. Root metadata read mistakenly tried stdout.log then corrected92eeef; not compiler failure.",
+  "root_reported_original_session": 52977,
+  "root_reported_actual_terminal_tool": "write_stdin",
+  "root_reported_actual_terminal_tool_chunk": "b5f2ab",
+  "root_reported_actual_original_outer_exit_code": 1,
+  "actual_child_exit_code_from_terminal": 1,
+  "parent_pid_from_existing_terminal": 51828,
+  "child_pid_from_existing_terminal": 3292,
+  "terminal_sha256": "6a4f47836286ed5e3dd5c1c2e6f92dbb693df1f7100ba0c64851cee3fd006253",
+  "terminal_elapsed_seconds": 711.7030000000013,
+  "max_observed_PeakWorkingSetSize": 6815944704,
+  "max_observed_PeakPagefileUsage_diagnostic_only": 11880390656,
+  "memory_samples_from_terminal": 25,
+  "runner_RSS_stop": false,
+  "runner_timeout": false,
+  "stderr_bytes": 0,
+  "stdout_bytes": 8379,
+  "stdout_JSON_errors": [
+    {
+      "line": 13611,
+      "column": 2,
+      "message": "Tactic `decide` failed. The elaborator is able to reduce the `Decidable` instance, but the kernel fails with:\n\n  (kernel) excessive memory consumption detected"
+    },
+    {
+      "line": 13793,
+      "column": 2,
+      "message": "Tactic `decide` failed. The elaborator is able to reduce the `Decidable` instance, but the kernel fails with:\n\n  (kernel) excessive memory consumption detected"
+    },
+    {
+      "line": 16954,
+      "column": 8,
+      "message": "(kernel) excessive memory consumption detected"
+    },
+    {
+      "line": 17030,
+      "column": 8,
+      "message": "(kernel) excessive memory consumption detected"
+    }
+  ],
+  "stdout_warning_count": 10,
+  "stdout_information_count": 1,
+  "source_pin_from_existing_terminal_not_fresh_source_audit": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-delivery\\draft-v10\\Solution.lean",
+    "bytes": 1914823,
+    "sha256": "86e3f46c90648f98d540d01edd45268d89504b45f7fb9d5d8e53d8582d41e14d"
+  },
+  "gate_pin_from_existing_terminal_not_fresh_gate_audit": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-v10-resource-gate-v1\\resource-gate.json",
+    "bytes": 4175,
+    "sha256": "96847d97642be0c1a6c56c6191275f157c6907af659f7902ca1c8b2d0e8ee0ba"
+  },
+  "resource_compiler_passed": false,
+  "single_file_completed": false,
+  "independent_kernel_passed": false,
+  "official_passed": false,
+  "confirmed_OS_OOM_claimed": false,
+  "mathematical_counterexample_claimed": false,
+  "stderr_abort_claimed": false,
+  "root_followup_metadata_read_scope": "The root first tried stdout.log and then read stdout.jsonl with tool92eeef; this metadata filename mistake is separate from the compiler result",
+  "frozen_DRAFT_pending_startup_snapshots_modified": false,
+  "copies": [
+    {
+      "original_path": "tmp/w9a2-20261021/v10-resource-v1/started.json",
+      "archive_path": "work/started.json",
+      "bytes": 11008,
+      "sha256": "85c945752686b7110bf983fe910871abfa0edca2ce80861f54604e105f2d22a1"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v10-resource-v1/child.json",
+      "archive_path": "work/child.json",
+      "bytes": 995,
+      "sha256": "838e7577e919b715df53a4a0a80d4045424657b3717e2bfe482f516fc5996165"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v10-resource-v1/terminal.json",
+      "archive_path": "work/terminal.json",
+      "bytes": 12429,
+      "sha256": "6a4f47836286ed5e3dd5c1c2e6f92dbb693df1f7100ba0c64851cee3fd006253"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v10-resource-v1/memory.jsonl",
+      "archive_path": "work/memory.jsonl",
+      "bytes": 5616,
+      "sha256": "9d910a7eb80a580b95eeb415184ab594bcadb205cc67d409a45e62df39e91b36"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v10-resource-v1/stdout.jsonl",
+      "archive_path": "work/stdout.jsonl",
+      "bytes": 8379,
+      "sha256": "1d681ad8ce6cea19a7bdf97b4e873af7047427d49e66d4032c15bc5184b5c1ea"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v10-resource-v1/stderr.log",
+      "archive_path": "work/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "archiver_Lean_compiler_process_network_UI_Git_actions": 0,
+  "proof_DRAFT_state_counter_modified": false
+}

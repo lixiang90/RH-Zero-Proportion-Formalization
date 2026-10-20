@@ -1,0 +1,5 @@
+本包仅为DRAFT-v10：lixiang90-w9a2-weighted-potential-v10-20261021，Li Xiang/lixiang90，source 1914823B / 86e3f46c90648f98d540d01edd45268d89504b45f7fb9d5d8e53d8582d41e14d，221处CRLF。原始字节复制冻结draft-v10，保留署名/许可；model=null（UI空）、harness Codex、精确K、method和605字符summary同v9。
+
+准备结构为22个根/51个cut提示/73个新游标声明；producer反投影与唯一完整独立v10静态投影报告不代表proof PASS。rc10六游标开发pilot的实际PASS只针对缓存加强Core的单独模块。完整资源状态仅是root提供的启动快照（outer52977、parent51828、child3292），本生成不读活工作目录或进程，终态未知。所有完整新验证flags false/unknown，未submitted、未ready、未accepted、未promoted。
+
+PREDICTED server/source组合digest：3ddf93ecffa442366ec71eb3c494a5aed3551a4ea49d15e179d04e985536ca5c。它不是官网实际proofDigest或job回执。历史v6/v7/v8与v9失败/中断完整保全，public raw同步只证明该固定commit单文件相同；没有全树审或新证明验收。材料生成未运行Lean、数值、compiler、独立kernel、网络、UI或Git，未接受/更新法律条款；actual exit0仅表示metadata生成。未来结果另立addendum。
