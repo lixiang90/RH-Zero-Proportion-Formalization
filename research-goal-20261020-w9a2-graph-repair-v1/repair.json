@@ -1,0 +1,277 @@
+{
+  "status": "PREPARED_PROOF_ONLY_REPAIR_NOT_COMPILED",
+  "prepared_at_utc": "2026-10-20T07:23:46.627125+00:00",
+  "failure": {
+    "gate_sha256": "92def59e80c77b461e3cc301bff748f65e44d53b4c031d745098b156882a3bc5",
+    "parent_session": 93720,
+    "root_observed_parent_exit_code": 1,
+    "module": "StructuralW9A220261020.Graph",
+    "exit_code": 1,
+    "elapsed_seconds": 64.25,
+    "log_sha256": "84d5043523b3c7a534bcddc40e0f1af34c54e934b2c2cb4ef046d68345c6353f",
+    "sole_error": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\StructuralW9A220261020\\Graph.lean:148:70: error: unsolved goals",
+    "diagnostic": "Reflected Fin.mk literal indices remain syntactically distinct from finite numerals when ring atomizes g applications."
+  },
+  "change": {
+    "theorem": "StructuralW9A220261020.Graph.reverse_span",
+    "source_line": 151,
+    "old_line": "  all_goals norm_num [gsum_range, natGaps, reverse8, Finset.sum_range_succ] <;> ring",
+    "new_line": "  all_goals norm_num [gsum_range, natGaps, reverse8, Finset.sum_range_succ] <;> simp only [Fin.reduceFinMk] <;> ring",
+    "byte_delta": 32,
+    "scope": "Insert a separate simp only [Fin.reduceFinMk] after the unchanged norm_num and before the unchanged ring."
+  },
+  "reason_separate_simp_required": "NormNum.getSimpContext retains ctx but discards elabSimpArgs simprocs; its methods invoke preDefault/postDefault with empty simproc arrays. A separate simp invocation runs the existing builtin Fin reduction explicitly.",
+  "original_source": {
+    "bytes": 17334,
+    "sha256": "a2e4f4fcc8068a245aafaff56363060ffcf4e06e1fccb63d57a999cfb68f0783"
+  },
+  "repaired_source": {
+    "path": "StructuralW9A220261020/Graph.lean",
+    "bytes": 17366,
+    "sha256": "9877394187460ee686e31561fe8f1ccb5015eb29fa2b7f5c2565071351add00c"
+  },
+  "forward_projection_exact": true,
+  "reverse_projection_exact": true,
+  "theorem_statement_unchanged": true,
+  "theorem_statement_sha256": "aba995dc81580e0d46a0dd8cb6838ba02b9a32df26be98a5727af99ee65b588e",
+  "all_bytes_outside_single_proof_line_unchanged": true,
+  "definitions_literals_134_edges_2267_exclusions_StateAt_roots_costs_threshold_changes": 0,
+  "previous_Core_ordinary_pass": {
+    "module": "StructuralW9A220261020.Core",
+    "exit_code": 0,
+    "elapsed_seconds": 588.8589999999999,
+    "source_sha256": "26e23c7fc4fbae33bdfff446901eaeb0f22f0f08fe13fa4e326541565a25279f",
+    "source_unchanged": true,
+    "log_sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164",
+    "olean_sha256": "4e24ca2145281fb866d4b24f4db11da74aa87cb4728796fc856e5e4f0ab3fc07",
+    "expected_roots": [],
+    "observed_axioms": {},
+    "axiom_audit_passed": null,
+    "ordinary_compile_passed": true,
+    "Comparator_passed": false,
+    "independent_kernel_passed": false,
+    "website_submission_ready": false
+  },
+  "source_inputs_before": [
+    {
+      "path": "StructuralW9A220261020/Graph.lean",
+      "bytes": 17334,
+      "sha256": "a2e4f4fcc8068a245aafaff56363060ffcf4e06e1fccb63d57a999cfb68f0783"
+    },
+    {
+      "path": "StructuralW9A220261020/Core.lean",
+      "bytes": 1770071,
+      "sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6"
+    },
+    {
+      "path": "StructuralW9A220261020/Localization.lean",
+      "bytes": 13294,
+      "sha256": "95138259450a504e9db184baa3b1e3b5cd1bdb8e11c8990d4b20a94cc7643a2d"
+    },
+    {
+      "path": "StructuralW9A220261020/Counting.lean",
+      "bytes": 21555,
+      "sha256": "163fbaae81c9afd492cdfd5c66dd2848f1d1e03ac0af6ae3774a7cc619c631d5"
+    },
+    {
+      "path": "StructuralW9A220261020/Final.lean",
+      "bytes": 5512,
+      "sha256": "9f9cb13f409ac82ddb1a00ca99d27c98921633b999b82da38cdbd00ea21f5c85"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-core-repair-v1/development-split/StructuralW9A220261020/Core.lean",
+      "bytes": 1185248,
+      "sha256": "26e23c7fc4fbae33bdfff446901eaeb0f22f0f08fe13fa4e326541565a25279f"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/files.json",
+      "bytes": 2174,
+      "sha256": "272ddcae631c5380a46581e409300dbc0d27ad68f2562a951896ea6fd16660cc"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/started.json",
+      "bytes": 325,
+      "sha256": "064f0cf02e7381cd1ea325224ab475e813088bf0b7fc0d342dabed0f85cc677e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/terminal.json",
+      "bytes": 107,
+      "sha256": "6ad9a2c1b9db65d43b3456e1c8ece3bf49b137946226ff39be2d94ffac3a0012"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Core.command.json",
+      "bytes": 1691,
+      "sha256": "3d0c7154e5496e1d36259cc2cd5b8cf0957a2d516d717c0971c9beeb3769750d"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Core.child.json",
+      "bytes": 54,
+      "sha256": "425e56b37f466b4ab7dc26d00a13f1866dd39f4b8ff9a5f1149f3b4f4b295dce"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Core.log",
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Core.receipt.json",
+      "bytes": 608,
+      "sha256": "0635242661e771752e8ed3ced3a6258e1de38848981d240b7be688a9fcf57723"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Graph.command.json",
+      "bytes": 1567,
+      "sha256": "ce204223f6d75d60ad84724a9aa4dc99dedd479480890b6445002b621f8ce0d5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Graph.child.json",
+      "bytes": 53,
+      "sha256": "d13d4a8aed20d3906324edb1fd17e457d81f3a5bd2b8d1d8f9433adeb4b2235e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Graph.log",
+      "bytes": 15290,
+      "sha256": "84d5043523b3c7a534bcddc40e0f1af34c54e934b2c2cb4ef046d68345c6353f"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Graph.receipt.json",
+      "bytes": 536,
+      "sha256": "c3b670e852201405a164d0b6461f3e9334e732336a3e0f79e4ce87ba15940f78"
+    },
+    {
+      "path": "tmp/lean-toolchain/src/lean/Lean/Meta/Tactic/Simp/BuiltinSimprocs/Fin.lean",
+      "bytes": 8573,
+      "sha256": "6e22f4a410ec146af6481c30693c141c4f9d120db24e5d2bc5a1e6a873915bdc"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Tactic/NormNum/Core.lean",
+      "bytes": 16229,
+      "sha256": "60010da4c961753d1895171471f7816ca40dd71c1444462f9f66264213fb76da"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/CategoryTheory/ComposableArrows/Basic.lean",
+      "bytes": 43835,
+      "sha256": "78d33e3279db82f98b4082b49b446911f49fd246120a55f162a9ec2791798c51"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean",
+      "bytes": 7965,
+      "sha256": "f2242f08dad6f6a0c1f097b3491e7f1cdea7576c1933ea6d68fa905babedf725"
+    }
+  ],
+  "source_inputs_after": [
+    {
+      "path": "StructuralW9A220261020/Graph.lean",
+      "bytes": 17334,
+      "sha256": "a2e4f4fcc8068a245aafaff56363060ffcf4e06e1fccb63d57a999cfb68f0783"
+    },
+    {
+      "path": "StructuralW9A220261020/Core.lean",
+      "bytes": 1770071,
+      "sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6"
+    },
+    {
+      "path": "StructuralW9A220261020/Localization.lean",
+      "bytes": 13294,
+      "sha256": "95138259450a504e9db184baa3b1e3b5cd1bdb8e11c8990d4b20a94cc7643a2d"
+    },
+    {
+      "path": "StructuralW9A220261020/Counting.lean",
+      "bytes": 21555,
+      "sha256": "163fbaae81c9afd492cdfd5c66dd2848f1d1e03ac0af6ae3774a7cc619c631d5"
+    },
+    {
+      "path": "StructuralW9A220261020/Final.lean",
+      "bytes": 5512,
+      "sha256": "9f9cb13f409ac82ddb1a00ca99d27c98921633b999b82da38cdbd00ea21f5c85"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-core-repair-v1/development-split/StructuralW9A220261020/Core.lean",
+      "bytes": 1185248,
+      "sha256": "26e23c7fc4fbae33bdfff446901eaeb0f22f0f08fe13fa4e326541565a25279f"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/files.json",
+      "bytes": 2174,
+      "sha256": "272ddcae631c5380a46581e409300dbc0d27ad68f2562a951896ea6fd16660cc"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/started.json",
+      "bytes": 325,
+      "sha256": "064f0cf02e7381cd1ea325224ab475e813088bf0b7fc0d342dabed0f85cc677e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/terminal.json",
+      "bytes": 107,
+      "sha256": "6ad9a2c1b9db65d43b3456e1c8ece3bf49b137946226ff39be2d94ffac3a0012"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Core.command.json",
+      "bytes": 1691,
+      "sha256": "3d0c7154e5496e1d36259cc2cd5b8cf0957a2d516d717c0971c9beeb3769750d"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Core.child.json",
+      "bytes": 54,
+      "sha256": "425e56b37f466b4ab7dc26d00a13f1866dd39f4b8ff9a5f1149f3b4f4b295dce"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Core.log",
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Core.receipt.json",
+      "bytes": 608,
+      "sha256": "0635242661e771752e8ed3ced3a6258e1de38848981d240b7be688a9fcf57723"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Graph.command.json",
+      "bytes": 1567,
+      "sha256": "ce204223f6d75d60ad84724a9aa4dc99dedd479480890b6445002b621f8ce0d5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Graph.child.json",
+      "bytes": 53,
+      "sha256": "d13d4a8aed20d3906324edb1fd17e457d81f3a5bd2b8d1d8f9433adeb4b2235e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Graph.log",
+      "bytes": 15290,
+      "sha256": "84d5043523b3c7a534bcddc40e0f1af34c54e934b2c2cb4ef046d68345c6353f"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-ordinary-v1-terminal/StructuralW9A220261020_Graph.receipt.json",
+      "bytes": 536,
+      "sha256": "c3b670e852201405a164d0b6461f3e9334e732336a3e0f79e4ce87ba15940f78"
+    },
+    {
+      "path": "tmp/lean-toolchain/src/lean/Lean/Meta/Tactic/Simp/BuiltinSimprocs/Fin.lean",
+      "bytes": 8573,
+      "sha256": "6e22f4a410ec146af6481c30693c141c4f9d120db24e5d2bc5a1e6a873915bdc"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Tactic/NormNum/Core.lean",
+      "bytes": 16229,
+      "sha256": "60010da4c961753d1895171471f7816ca40dd71c1444462f9f66264213fb76da"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/CategoryTheory/ComposableArrows/Basic.lean",
+      "bytes": 43835,
+      "sha256": "78d33e3279db82f98b4082b49b446911f49fd246120a55f162a9ec2791798c51"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean",
+      "bytes": 7965,
+      "sha256": "f2242f08dad6f6a0c1f097b3491e7f1cdea7576c1933ea6d68fa905babedf725"
+    }
+  ],
+  "original_inputs_unchanged": true,
+  "compiler_export_kernel_search_runs": 0,
+  "main_round_counter_changed": false,
+  "ordinary_pass_claimed_for_repaired_Graph": false,
+  "Comparator_passed": false,
+  "independent_kernel_passed": false,
+  "website_submission_ready": false,
+  "requires_new_root_frozen_gate_before_compile": true
+}

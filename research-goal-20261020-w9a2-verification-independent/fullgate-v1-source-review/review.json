@@ -1,0 +1,134 @@
+{
+  "scope": "Independent static disabled-gate assembler authority/preflight review only",
+  "status": "PASS_STATIC_NO_ASSEMBLER_EXECUTION",
+  "old_manifest_rows": 5,
+  "new_manifest_rows": 7,
+  "assembler_sha256": "588c1812de91886e5fdfd14f44d3f75485f11ab06e552553b18968a747c1899c",
+  "exact_supplied_diff_matches_actual_source_diff": true,
+  "changed_function_names_only": [
+    "printed_axioms",
+    "ordinary_preflight"
+  ],
+  "all_other_function_and_module_AST_identical": true,
+  "old_frozen_package_preserved": true,
+  "input_count": 26,
+  "input_before_after_identical": true,
+  "inputs": {
+    "research-goal-20261020-w9a2-fullchain-gate-preparation/prepared-files.json": {
+      "bytes": 902,
+      "sha256": "cd24cfac979fb6bbb572903c4de02b84f172107dbbd88e5da8f961f7cbd3b89e"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation/assemble_gate.py": {
+      "bytes": 37508,
+      "sha256": "5ac8d7040eb48615fece34db7b4997c1fa2898ab23bda3f1f794f2e072a30242"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation/README.zh.md": {
+      "bytes": 6913,
+      "sha256": "1c3802bf2dd2bb1f96a60fe13f1257d9ffd9b9b11aa1b99b540764881d9061f0"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation/request-template.json": {
+      "bytes": 5132,
+      "sha256": "8b434dd48a4955613c35b1d888c8eca09308f59ee9a78f624a72d908c5912858"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation/root-terminal-observation-template.json": {
+      "bytes": 1452,
+      "sha256": "3f93285d7be5953f4e2febf17a9a13956e7a851cee38df2d7578697425f1ac55"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation/static-review.json": {
+      "bytes": 599,
+      "sha256": "ae1177451b73a07e93d268dcc2038a0da80986e000c55600ab45347b32f950c8"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/prepared-files.json": {
+      "bytes": 1238,
+      "sha256": "e16ef51b40b0ed7618857095330724061801ae4cc364ce3a0622c7c0bec90da3"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/assemble_gate.py": {
+      "bytes": 37929,
+      "sha256": "588c1812de91886e5fdfd14f44d3f75485f11ab06e552553b18968a747c1899c"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/exact-source-diff.patch": {
+      "bytes": 2845,
+      "sha256": "ab4acff9d715e0e411e08b64a6cfbd0bf5de18151f21f8f6d7cde0fc3fe8a074"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/previous-package.json": {
+      "bytes": 478,
+      "sha256": "09fea0c6d2bb797d456f49dde359c3a56e29f073e579aad63915aca9a37b087a"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/README.zh.md": {
+      "bytes": 7527,
+      "sha256": "c318c726042a374bf0e51a2d60c9ed11b202fa83efbc1e1f760b2570c86ea595"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/request-template.json": {
+      "bytes": 5132,
+      "sha256": "8b434dd48a4955613c35b1d888c8eca09308f59ee9a78f624a72d908c5912858"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/root-terminal-observation-template.json": {
+      "bytes": 1452,
+      "sha256": "3f93285d7be5953f4e2febf17a9a13956e7a851cee38df2d7578697425f1ac55"
+    },
+    "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/static-review.json": {
+      "bytes": 628,
+      "sha256": "a8a860e1a3ca70fdaa30fadba3a56147efabc6d5d83e58a43f8f9e946f7de50e"
+    },
+    "research-goal-20261020-w9a2-verification-preparation-v1/prepared-files.json": {
+      "bytes": 1560,
+      "sha256": "3dc697cd99c9a38730b4e32cef02fd1f780f74ffeaa1512e6e52500d9e6e3e53"
+    },
+    "research-goal-20261020-w9a2-verification-preparation-v1/gate-template.json": {
+      "bytes": 4731,
+      "sha256": "c15be224804bd55d51277ebf559082b4bad72b6f4ece0c619669b94fac1a8cda"
+    },
+    "research-goal-20261020-w9a2-verification-preparation-v1/README.zh.md": {
+      "bytes": 6377,
+      "sha256": "f66f332713185e7f93803826831a5bb414863cbe3ba3a75b7052ba8f02d3bd24"
+    },
+    "research-goal-20261020-w9a2-verification-preparation-v1/run_verification.py": {
+      "bytes": 36665,
+      "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+    },
+    "research-goal-20261020-w9a2-verification-preparation-v1/runtime-closure-template.json": {
+      "bytes": 2140,
+      "sha256": "dbfce8174441d7734575d7e6e4e3d6b6fceb1059f0185e42e307af087bad2753"
+    },
+    "research-goal-20261020-w9a2-verification-preparation-v1/static-audit.json": {
+      "bytes": 715,
+      "sha256": "4bd62156c6bfae881bf3642caf49e53419056bedf3499bfbab3aafd1852bdb00"
+    },
+    "research-goal-20261020-w9a2-verification-preparation-v1/v0-to-v1-runner.diff": {
+      "bytes": 695,
+      "sha256": "157affbf34b59b42119766b12d5e08c2a867fd6d54876c4f2fcbce8c43882cef"
+    },
+    "research-goal-20261020-w9a2-verification-preparation-v1/version-delta.json": {
+      "bytes": 869,
+      "sha256": "08fdabe6458c39ceca8b76131b9de41a4df34b5a43b7051a6430c97fa2ff1cf6"
+    },
+    "research-goal-20261020-w9a2-verification-independent/formal-completion/files.json": {
+      "bytes": 571,
+      "sha256": "2db147ef0e6d26efece5645544e385c7d7d4106145cea4c2a92581222c9cb90e"
+    },
+    "research-goal-20261020-w9a2-verification-independent/formal-completion/audit.py": {
+      "bytes": 12811,
+      "sha256": "72043ab0cda522d6710f1b4d46fecec08b86ffb05c7f046eac803d2da997883e"
+    },
+    "research-goal-20261020-w9a2-verification-independent/formal-completion/review.json": {
+      "bytes": 47071,
+      "sha256": "86703894b2debecdc91c91798e421296cc8043528a4b45eb2fc3061b9d4a68dc"
+    },
+    "research-goal-20261020-w9a2-verification-independent/formal-completion/REVIEW.zh.md": {
+      "bytes": 2417,
+      "sha256": "76030033751a8455784ec3e00e81a857465977a4ea4e7573c25256ff317e7c73"
+    }
+  },
+  "resolved_blocker": "Historical failed Final sorryAx placeholders can be parsed and retained as rejected diagnostics, while all real PASS and selected proof roots remain restricted to ALLOWED.",
+  "authority_boundary": "Produces only a disabled proposal. Root must separately review exact artifacts and authorize a new execution gate. JSON external-handle attestations remain an explicit root trust boundary.",
+  "preflight_scope": "Per-source exact actual module PASS chain, source/olean/command/log/root matching, earlier PASS-only reused artifact paths, real whole-parent exits and fresh record; no cold production proof reused.",
+  "runtime_scope": "Actual completed setup/parent exit0, source-bound closure with pinned executables and clean data/tool overlays; closure.files rebound by unchanged runner setup_runtime.",
+  "production_contract": "Frozen runner unchanged: fresh source/spec/four ordinary compiles, two native exports, locked CoreAudit statement/deps/primitives/default Lean, serial Nano, unified 3200s and fsynced three receipts remain required.",
+  "documentation_correction": "README copied example still names original preparation directory; use research-goal-20261020-w9a2-fullchain-gate-preparation-v1/assemble_gate.py with manifest e16ef51b40b0ed7618857095330724061801ae4cc364ce3a0622c7c0bec90da3.",
+  "remaining_known_deterministic_code_blockers": [],
+  "assembler_executions_by_reviewer": 0,
+  "compiler_export_kernel_runs_by_reviewer": 0,
+  "round_counter_changes": 0,
+  "actual_fullchain_proposal_assembled_by_this_report": false,
+  "production_verification_accepted": false
+}

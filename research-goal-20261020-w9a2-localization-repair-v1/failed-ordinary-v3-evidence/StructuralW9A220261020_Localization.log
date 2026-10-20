@@ -1,0 +1,13 @@
+E:\codex-build\RH-Zero-Proportion-Formalization\StructuralW9A220261020\Localization.lean:115:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+E:\codex-build\RH-Zero-Proportion-Formalization\StructuralW9A220261020\Localization.lean:262:6: error: Type mismatch: After simplification, term
+  le_of_lt (lt_of_not_ge ho)
+ has type
+  @LE.le ℝ Real.linearOrder.toLE (g 7) (g 0)
+but is expected to have type
+  @LE.le ℝ Real.instLE (g ⟨7 - ↑0, ⋯⟩) (g ⟨7 - ↑7, ⋯⟩)

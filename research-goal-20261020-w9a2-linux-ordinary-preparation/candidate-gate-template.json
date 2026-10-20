@@ -1,0 +1,90 @@
+{
+  "authorized": false,
+  "proposal_only": true,
+  "task": "w9a2-linux-ordinary-source-pinned",
+  "automatic_repairs_or_retries": 0,
+  "max_parallel_compilers": 1,
+  "runner_sha256": "13ced50d6ff0c4f3021fb2cfe5a88b3ff74d15035524b22d07a3c9b0b322f8cd",
+  "runtime_manifest": "/var/tmp/rh-zero-w9a2-20261020/runtime-v0/runtime.json",
+  "runtime_manifest_sha256": null,
+  "runtime_mirror_manifest_sha256": null,
+  "root_confirmed_original_windows_handle_terminal": false,
+  "windows_terminal_evidence": {
+    "path": null,
+    "sha256": null
+  },
+  "hard_seconds_per_target": 7200,
+  "hard_seconds_per_batch": 28800,
+  "requires_runtime_freezer": "make_gate.py only creates unauthorized proposals after actual runtime and Windows terminal evidence; root must review and create a NEW authorized gate.",
+  "stage": "candidate",
+  "targets": [
+    {
+      "module": "StructuralW9A220261020.Prefix",
+      "source": "research-goal-20261020-w9a2-formal-static-review/development-split/StructuralW9A220261020/Prefix.lean",
+      "source_root": "research-goal-20261020-w9a2-formal-static-review/development-split",
+      "printed_roots": []
+    },
+    {
+      "module": "StructuralW9A220261020.Core",
+      "source": "research-goal-20261020-w9a2-formal-static-review/development-split/StructuralW9A220261020/Core.lean",
+      "source_root": "research-goal-20261020-w9a2-formal-static-review/development-split",
+      "printed_roots": []
+    },
+    {
+      "module": "StructuralW9A220261020.Graph",
+      "source": "StructuralW9A220261020/Graph.lean",
+      "source_root": ".",
+      "printed_roots": []
+    },
+    {
+      "module": "StructuralW9A220261020.Localization",
+      "source": "StructuralW9A220261020/Localization.lean",
+      "source_root": ".",
+      "printed_roots": []
+    },
+    {
+      "module": "StructuralW9A220261020.Counting",
+      "source": "StructuralW9A220261020/Counting.lean",
+      "source_root": ".",
+      "printed_roots": [
+        "StructuralW9A220261020.Counting.sum_range_coboundary_lower",
+        "StructuralW9A220261020.Counting.summed_of_state",
+        "StructuralW9A220261020.Counting.actual_defect_estimate_effective",
+        "StructuralW9A220261020.Counting.actual_dyadic_of_summed",
+        "StructuralW9A220261020.Counting.actual_cumulative_of_summed"
+      ]
+    },
+    {
+      "module": "StructuralW9A220261020.Final",
+      "source": "StructuralW9A220261020/Final.lean",
+      "source_root": ".",
+      "printed_roots": [
+        "StructuralW9A220261020.Localization.located_state",
+        "StructuralW9A220261020.Graph.edge_from_locations",
+        "StructuralW9A220261020.Graph.edge_potential",
+        "StructuralW9A220261020.Final.actual_summed",
+        "StructuralW9A220261020.Final.strict_improvement",
+        "StructuralW9A220261020.Final.actual_dyadic",
+        "StructuralW9A220261020.Final.actual_cumulative"
+      ]
+    }
+  ],
+  "trusted_terminal": {
+    "path": null,
+    "sha256": null
+  },
+  "trusted_module_receipt": {
+    "path": null,
+    "sha256": null
+  },
+  "trusted_source_sha256": "98338cbd7e5f2ab8780c3ddf3797b7154f2d987f0eae54581fc4d87efbe761e5",
+  "reused_oleans": [
+    {
+      "path": "/var/tmp/rh-zero-w9a2-20261020/dev/trusted-v0/lib/ChallengeDeps.olean",
+      "module_path": "ChallengeDeps.olean",
+      "sha256": null
+    }
+  ],
+  "work_directory": "/var/tmp/rh-zero-w9a2-20261020/dev/ordinary-v0",
+  "metadata_mirror": "tmp/w9a2-20261020/linux-ordinary-v0"
+}

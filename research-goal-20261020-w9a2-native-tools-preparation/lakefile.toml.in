@@ -1,0 +1,32 @@
+name = "W9A2TrustedNativeTools"
+version = "0.1.0"
+defaultTargets = ["lean4export", "coreaudit", "comparator"]
+
+[[lean_lib]]
+name = "Export"
+srcDir = "source"
+
+[[lean_lib]]
+name = "Comparator"
+srcDir = "source"
+
+[[lean_exe]]
+name = "lean4export"
+root = "ExporterMain"
+srcDir = "source"
+supportInterpreter = true
+moreLeanArgs = ["-j1", "-DrelaxedAutoImplicit=false", "-DElab.async=false"]
+
+[[lean_exe]]
+name = "coreaudit"
+root = "CoreAudit"
+srcDir = "source"
+supportInterpreter = false
+moreLeanArgs = ["-j1", "-DrelaxedAutoImplicit=false", "-DElab.async=false"]
+
+[[lean_exe]]
+name = "comparator"
+root = "ComparatorMain"
+srcDir = "source"
+supportInterpreter = false
+moreLeanArgs = ["-j1", "-DrelaxedAutoImplicit=false", "-DElab.async=false"]

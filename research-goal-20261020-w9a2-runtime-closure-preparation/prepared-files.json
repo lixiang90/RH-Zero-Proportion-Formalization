@@ -1,0 +1,119 @@
+{
+  "schema": "w9a2-runtime-closure-preparation-v1",
+  "scope": "Read-only process module paths, file/hash/API-set/ELF loader metadata and scripts; no compiler/export/kernel/nanoda main/install invocation.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 66,
+      "sha256": "7d2ce470cc605b737df13a0c0a17d31a75b03dcec7734478dc9c029bd6f0ede1"
+    },
+    {
+      "path": "build_incomplete_manifest.py",
+      "bytes": 5262,
+      "sha256": "072656039842350c383fb2faa9cd8b1db45ca8265f362cd1e88d2d83a341f66d"
+    },
+    {
+      "path": "capture_loaded_modules.ps1",
+      "bytes": 768,
+      "sha256": "b125b11a96f2b80696ea27209cfd41b6c2fc427a6edad30b39bc25ac6083e2c8"
+    },
+    {
+      "path": "evidence/compiler19056-loaded-modules.json",
+      "bytes": 6139,
+      "sha256": "1c6dc0e72655de035123a5628dcc2fe1814a9e5a1cbbc0e0ff67174cc24a953a"
+    },
+    {
+      "path": "evidence/controller-loaded-paths.json",
+      "bytes": 1026,
+      "sha256": "e22b6401868afa11138c3df273ad609704a9ba80ede92a75299fdedcda10b749"
+    },
+    {
+      "path": "evidence/nanoda-ELF-dynamic.txt",
+      "bytes": 1533,
+      "sha256": "9c2e560b1b1dd3d4dcf7bf70e2dd82454c98dfff6ffe15d7b9ada7b1118c3d18"
+    },
+    {
+      "path": "evidence/nanoda-ELF-program-headers.txt",
+      "bytes": 2697,
+      "sha256": "45631f6b85325fef625e5460cd4bbdd566e2f5820df9f4056f7f537fce482b06"
+    },
+    {
+      "path": "evidence/WSL-ELF-loader-resolution.json",
+      "bytes": 8912,
+      "sha256": "6c9f53d515adc89655c5f96401711e3bcaefb1f44ae9eb72601947fee3526d04"
+    },
+    {
+      "path": "inspect_runtime.py",
+      "bytes": 12581,
+      "sha256": "f34d33aff0631002690c160c4fb8abf5001b6b70ca3f51f06804e7e4d40255cf"
+    },
+    {
+      "path": "inspect_wsl_loader.py",
+      "bytes": 2098,
+      "sha256": "48f6664c62ef20e82d7b26359b3323e1c75c7643f396374cb05a2434cb058538"
+    },
+    {
+      "path": "PE-import-review-v0.json.gz",
+      "bytes": 203513,
+      "sha256": "ca191ddd6474747f1e6521c9850d2cd7308f29af8b38744c4a3bda27e89bfb8b"
+    },
+    {
+      "path": "PE-import-review-v1.json.gz",
+      "bytes": 275979,
+      "sha256": "39dcae6a2449791be3a4ffb6690a9293dde13834190f4f6820fae461f96d9dea"
+    },
+    {
+      "path": "README.zh.md",
+      "bytes": 4980,
+      "sha256": "77aa72d8d92e4ee2cdfd74d4a2c697097946a5c1e87b11c6934431a8ac16ba84"
+    },
+    {
+      "path": "restore_review_evidence.py",
+      "bytes": 1324,
+      "sha256": "058a63ac817fd59631016fdba7d7d54dbe33d13de51c936285c69851d4f8fe9f"
+    },
+    {
+      "path": "review-v0/runtime-file-inventory.json",
+      "bytes": 108427,
+      "sha256": "0ec2528fde06b1afc93e522403ff1b3e7348662ee6db43b6f82b43a2b89bee08"
+    },
+    {
+      "path": "review-v1/runtime-file-inventory.json",
+      "bytes": 120128,
+      "sha256": "89639d3dc14f60082628c1c8f1c9fad8037fb699f4eb98c591b28e105ff2c190"
+    },
+    {
+      "path": "runtime-closure-CANDIDATE-INCOMPLETE.json",
+      "bytes": 130998,
+      "sha256": "dc1614c477bea555892f0b5277a11f6516c045d989e7a2541a5260a8ec161679"
+    },
+    {
+      "path": "transport-files.json",
+      "bytes": 849,
+      "sha256": "a4496f5898701c49cc413ca54a637ec1ea7bf5e6b3634cb83248786707a1dc7a"
+    }
+  ],
+  "reconstructible_raw_outputs": [
+    {
+      "raw_path": "review-v0/PE-import-review.json",
+      "raw_bytes": 7119872,
+      "raw_sha256": "81856f2eb2a45c843ec07453ec958ba63eba4499c70f1dc4b0a605d5d3f08bf2",
+      "transport": "PE-import-review-v0.json.gz",
+      "transport_bytes": 203513,
+      "transport_sha256": "ca191ddd6474747f1e6521c9850d2cd7308f29af8b38744c4a3bda27e89bfb8b"
+    },
+    {
+      "raw_path": "review-v1/PE-import-review.json",
+      "raw_bytes": 11801820,
+      "raw_sha256": "8667e8bb75067c6b8dee7702712d34dbe9c8d69519587a6d5136411064134955",
+      "transport": "PE-import-review-v1.json.gz",
+      "transport_bytes": 275979,
+      "transport_sha256": "39dcae6a2449791be3a4ffb6690a9293dde13834190f4f6820fae461f96d9dea"
+    }
+  ],
+  "complete_source_bound_runtime_closure_verified": false,
+  "all_candidate_proof_runs": 0,
+  "previous_v1_runner_and_draft_byte_unchanged": true,
+  "large_cache_hashing_not_run_while_root_compiler_active": true,
+  "upload_ready": false
+}

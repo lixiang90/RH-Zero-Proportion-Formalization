@@ -1,0 +1,65 @@
+{
+  "scope": "Read-only type/hash semantics; no SDK API or compiler execution",
+  "root_reported_original_exec_session": 66541,
+  "actual_assembler_pid": 44480,
+  "actual_exit_code": 1,
+  "root_cause": "Package.id? is Option String, not Option Name; v3 inserted one extra Name.mix1723",
+  "correct_formula": "mix(1723,mix(SDK.string_hash(Zeta23),13))",
+  "Module_name_semantics_unchanged": true,
+  "inspected_trace_example": {
+    "path": ".lake/packages/Zeta23/.lake/build/lib/lean/Zeta23/Defs.trace",
+    "bytes": 4647,
+    "sha256": "f9e13c28858eddaacc251c9d7d6e802aa490ffaa7fdd7aeca163e9f6d65d94f6",
+    "actual_Package_id_leaf": [
+      "Package.id?: (some Zeta23)",
+      "31803ca4013655a1"
+    ]
+  },
+  "SDK_source_evidence": [
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\lake\\Lake\\Config\\Package.lean",
+      "bytes": 16802,
+      "sha256": "d9a6a2e5b31a745616f1f174cbc3ebd20af3aca1cdf71692ec2308bdcbe5c876"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Setup.lean",
+      "bytes": 7655,
+      "sha256": "eff05a30636e084ecf7c52e4019a1f5497d48b5b023b73f0e979abde91d419a5"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Init\\Data\\Hashable.lean",
+      "bytes": 1701,
+      "sha256": "a5fe715f39a513e7ffddf210a0ef17bcf4fb6c2fbe294ffac254a3824167dacd"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Init\\Prelude.lean",
+      "bytes": 235820,
+      "sha256": "56de5780adc4358372fa9cfac270a70f2d03fd4f213a373aea4365483b31a544"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\lake\\Lake\\Build\\Trace.lean",
+      "bytes": 13320,
+      "sha256": "ae8987432fdb2f722971c7dfa10096e138dfc9f244a75aeb5e7abbd2cbd94bff"
+    }
+  ],
+  "actual_prior_receipts": [
+    {
+      "path": "tmp/w9a2-20261020/trusted-runtime-closure-v3/started.json",
+      "bytes": 1112,
+      "sha256": "8a364fe947c3127fb6c35753311e2413a0b0e953115bc02a028ff5a2f0c70e02"
+    },
+    {
+      "path": "tmp/w9a2-20261020/trusted-runtime-closure-v3/terminal.json",
+      "bytes": 1161,
+      "sha256": "c8b9a7c12c9c5a0abda0cea7afecee2541d7c6e792b3f0a2a3c5fdb80b637b81"
+    },
+    {
+      "path": "tmp/w9a2-20261020/trusted-runtime-closure-v3/official-sdk-check.json",
+      "bytes": 6446457,
+      "sha256": "94e6691b32060442a87162acc9ec94d711e69c5231f876e42935db1880f00029"
+    }
+  ],
+  "SDK_hash_API_calls_by_this_preparation": 0,
+  "compiler_runs": 0,
+  "proof_runs": 0
+}

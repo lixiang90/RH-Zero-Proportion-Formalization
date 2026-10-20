@@ -1,0 +1,49 @@
+
+Elf file type is DYN (Position-Independent Executable file)
+Entry point 0x34f00
+There are 12 program headers, starting at offset 64
+
+Program Headers:
+  Type           Offset             VirtAddr           PhysAddr
+                 FileSiz            MemSiz              Flags  Align
+  PHDR           0x0000000000000040 0x0000000000000040 0x0000000000000040
+                 0x00000000000002a0 0x00000000000002a0  R      0x8
+  INTERP         0x00000000000002e0 0x00000000000002e0 0x00000000000002e0
+                 0x000000000000001c 0x000000000000001c  R      0x1
+      [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]
+  LOAD           0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000033ef4 0x0000000000033ef4  R      0x1000
+  LOAD           0x0000000000033f00 0x0000000000034f00 0x0000000000034f00
+                 0x00000000000d14b0 0x00000000000d14b0  R E    0x1000
+  LOAD           0x00000000001053b0 0x00000000001073b0 0x00000000001073b0
+                 0x0000000000006358 0x0000000000006c50  RW     0x1000
+  LOAD           0x000000000010b708 0x000000000010e708 0x000000000010e708
+                 0x0000000000000a20 0x0000000000000af8  RW     0x1000
+  TLS            0x00000000001053b0 0x00000000001073b0 0x00000000001073b0
+                 0x0000000000000020 0x0000000000000068  R      0x8
+  DYNAMIC        0x000000000010b2b0 0x000000000010d2b0 0x000000000010d2b0
+                 0x00000000000001c0 0x00000000000001c0  RW     0x8
+  GNU_RELRO      0x00000000001053b0 0x00000000001073b0 0x00000000001073b0
+                 0x0000000000006358 0x0000000000006c50  R      0x1
+  GNU_EH_FRAME   0x0000000000022418 0x0000000000022418 0x0000000000022418
+                 0x0000000000002584 0x0000000000002584  R      0x4
+  GNU_STACK      0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000000 0x0000000000000000  RW     0x0
+  NOTE           0x00000000000002fc 0x00000000000002fc 0x00000000000002fc
+                 0x0000000000000044 0x0000000000000044  R      0x4
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     
+   01     .interp 
+   02     .interp .note.ABI-tag .note.gnu.build-id .dynsym .gnu.version .gnu.version_r .gnu.hash .dynstr .rela.dyn .rela.plt .rodata .gcc_except_table .eh_frame_hdr .eh_frame 
+   03     .text .init .fini .plt 
+   04     .tdata .fini_array .init_array .data.rel.ro .dynamic .got .got.plt .relro_padding 
+   05     .tm_clone_table .data .bss 
+   06     .tdata .tbss 
+   07     .dynamic 
+   08     .tdata .fini_array .init_array .data.rel.ro .dynamic .got .got.plt .relro_padding 
+   09     .eh_frame_hdr 
+   10     
+   11     .note.ABI-tag .note.gnu.build-id 
+

@@ -1,0 +1,19 @@
+--- canonical-v0/StructuralW9A220261020/Final.lean
++++ final-repair-v1/StructuralW9A220261020/Final.lean
+@@ -66,10 +66,12 @@
+       AMW.Cert.PC9QB6M.cN, AMW.Cert.PC9QB6M.SA, Nat.cast_ofNat] using hf
+   · intro g _ s t hs ht
+     apply StructuralW9A220261020.Graph.edge_from_locations g s t
+-    · simpa only [StructuralW9A220261020.Counting.leftGaps,
+-        StructuralW9A220261020.Graph.leftGaps] using hs
+-    · simpa only [StructuralW9A220261020.Counting.rightGaps,
+-        StructuralW9A220261020.Graph.rightGaps] using ht
++    · change StructuralW9A220261020.Graph.StateAt
++        (StructuralW9A220261020.Counting.leftGaps g) s
++      exact hs
++    · change StructuralW9A220261020.Graph.StateAt
++        (StructuralW9A220261020.Counting.rightGaps g) t
++      exact ht
+   · exact StructuralW9A220261020.Graph.all_to_good
+   · intro s t he
+     have hi : (622387738726 : ℝ) +

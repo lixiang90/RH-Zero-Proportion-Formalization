@@ -1,0 +1,280 @@
+{
+  "scope": "Current Python312 process loader metadata after exact v1 stdlib imports; no verifier module or proof/tool main run.",
+  "captured_at_utc": "2026-10-20T07:10:11.395204+00:00",
+  "python": "C:\\Python312\\python.exe",
+  "sys_version": "3.12.5 (tags/v3.12.5:ff3bc82, Aug  6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)]",
+  "runner_sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8",
+  "instrumentation": "ctypes plus Kernel32 K32EnumProcessModules/GetModuleFileNameW metadata APIs only",
+  "instrumentation_baseline_paths": [
+    "C:\\Python312\\python.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\Python312\\python312.dll",
+    "C:\\Python312\\VCRUNTIME140.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\SYSTEM32\\VERSION.dll",
+    "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+    "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+    "C:\\Python312\\python3.DLL",
+    "C:\\Python312\\DLLs\\_ctypes.pyd",
+    "C:\\WINDOWS\\System32\\ole32.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\Python312\\DLLs\\libffi-8.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\System32\\OLEAUT32.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL"
+  ],
+  "all_actual_loaded_modules_with_instrumentation": [
+    {
+      "path": "C:\\Python312\\python.exe",
+      "resolved_path": "C:\\Python312\\python.exe",
+      "bytes": 103704,
+      "sha256": "5aba6ec903f2e0e946459f98dc45c8129d3f22187f5adac00713d733191d3a3f",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+      "resolved_path": "C:\\Windows\\System32\\ntdll.dll",
+      "bytes": 2558392,
+      "sha256": "651ac9041af8e6b5ebd331d53163244c0a27d36d1433f0f15cac1f28c5f2e82c",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+      "resolved_path": "C:\\Windows\\System32\\kernel32.dll",
+      "bytes": 861992,
+      "sha256": "e132eba4166256e2f414b91fe7d5386590bc5ea8626aee5af9c9738383cf2ae1",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+      "resolved_path": "C:\\Windows\\System32\\KernelBase.dll",
+      "bytes": 4254784,
+      "sha256": "5c29b73622ce0976e1ada566f31f2197ba0f8beaea89c3ec033366126172c3d0",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\ucrtbase.dll",
+      "resolved_path": "C:\\Windows\\System32\\ucrtbase.dll",
+      "bytes": 1399656,
+      "sha256": "dedb7611e1abc1ff3852dcac3d4c93a048d729e25b061973b9969f22698f14ca",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\Python312\\python312.dll",
+      "resolved_path": "C:\\Python312\\python312.dll",
+      "bytes": 6927640,
+      "sha256": "8ad53c67c2b4db4387d5f72ee2a3ca80c40af444b22bf41a6cfda2225a27bb93",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\Python312\\VCRUNTIME140.dll",
+      "resolved_path": "C:\\Python312\\vcruntime140.dll",
+      "bytes": 119192,
+      "sha256": "4d292623516f65c80482081e62d5dadb759dc16e851de5db24c3cbb57b87db83",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\WS2_32.dll",
+      "resolved_path": "C:\\Windows\\System32\\ws2_32.dll",
+      "bytes": 553608,
+      "sha256": "b123b00c46c415d7baeaada58c29c3e6920895db836ee4c0cfee49d738af60ad",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\RPCRT4.dll",
+      "resolved_path": "C:\\Windows\\System32\\rpcrt4.dll",
+      "bytes": 1182976,
+      "sha256": "c060f02c11fb19c9c8a30b5077a87cdb17d4be40f08070a539ec73eb53402775",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+      "resolved_path": "C:\\Windows\\System32\\advapi32.dll",
+      "bytes": 795272,
+      "sha256": "b864e1468a01a44f1901e03c05c1029e71655dd9abddd6d840bcfff5e7227d44",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\msvcrt.dll",
+      "resolved_path": "C:\\Windows\\System32\\msvcrt.dll",
+      "bytes": 716104,
+      "sha256": "fc1447db4e4814cbcb002179a8003a41f383fc417879f628727043cab8c25093",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\sechost.dll",
+      "resolved_path": "C:\\Windows\\System32\\sechost.dll",
+      "bytes": 716104,
+      "sha256": "b4a345ad9af0635f50e27eea8ae0ff37255dca90e6d5991bdbc4806fb02aaa72",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll",
+      "resolved_path": "C:\\Windows\\System32\\version.dll",
+      "bytes": 55192,
+      "sha256": "cea99f212af557a9613150c5509631403ed0f05f5d9a06ac42039bd59b40e39a",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+      "resolved_path": "C:\\Windows\\System32\\bcrypt.dll",
+      "bytes": 195128,
+      "sha256": "d0fc7863d7b034da33f34dc82b96a8604572598a217668a43fc9eca3a8e2a8e1",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+      "resolved_path": "C:\\Windows\\System32\\bcryptprimitives.dll",
+      "bytes": 732800,
+      "sha256": "f0dba794068893c9616b0b54bef1be8f904be89eb2cb09b575d3d7fb1b5000f8",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\Python312\\python3.DLL",
+      "resolved_path": "C:\\Python312\\python3.dll",
+      "bytes": 68376,
+      "sha256": "29f173e0147390a99f541ba0c0231fdd7dfbca84d0e2e561ef352bf1ec72f5db",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\Python312\\DLLs\\_ctypes.pyd",
+      "resolved_path": "C:\\Python312\\DLLs\\_ctypes.pyd",
+      "bytes": 125208,
+      "sha256": "8978972cf341ccd0edf8435d63909a739df7ef29ec7dd57ed5cab64b342891f0",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\ole32.dll",
+      "resolved_path": "C:\\Windows\\System32\\ole32.dll",
+      "bytes": 1720576,
+      "sha256": "1053ffb858cddbe29eaaa6a5b0836b88c7cd11fbd58605288600e507c06db443",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\msvcp_win.dll",
+      "resolved_path": "C:\\Windows\\System32\\msvcp_win.dll",
+      "bytes": 657784,
+      "sha256": "b9dacd83201e59bb74e5282d8f0dcc8c428525409b4bc458a39eb8d2a9373a9a",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\GDI32.dll",
+      "resolved_path": "C:\\Windows\\System32\\gdi32.dll",
+      "bytes": 187456,
+      "sha256": "772c73e294a4c5f5e0d4146288af95287a85c074d3aee3fa9f320dc010d7dbfe",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\Python312\\DLLs\\libffi-8.dll",
+      "resolved_path": "C:\\Python312\\DLLs\\libffi-8.dll",
+      "bytes": 39696,
+      "sha256": "eff52743773eb550fcc6ce3efc37c85724502233b6b002a35496d828bd7b280a",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\win32u.dll",
+      "resolved_path": "C:\\Windows\\System32\\win32u.dll",
+      "bytes": 182632,
+      "sha256": "d46a695db805e808efa63d1095ce3e1b6be9c0155dad405d444530efc1ed0362",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\gdi32full.dll",
+      "resolved_path": "C:\\Windows\\System32\\gdi32full.dll",
+      "bytes": 1245368,
+      "sha256": "52de3e02898e9c0e243d08d5c51d54871e9bce90de883eff7df29a30fc8aeac9",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\USER32.dll",
+      "resolved_path": "C:\\Windows\\System32\\user32.dll",
+      "bytes": 1974768,
+      "sha256": "f285937030bcb325cad39ee5be4818f6666241229adeadea4ff1ae469dfd7ef3",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\combase.dll",
+      "resolved_path": "C:\\Windows\\System32\\combase.dll",
+      "bytes": 3783712,
+      "sha256": "087f72ecc0c979a3b784ab319285ab64d053dfc0c274df5b28fd40cf204a234f",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll",
+      "resolved_path": "C:\\Windows\\System32\\oleaut32.dll",
+      "bytes": 916120,
+      "sha256": "e3fcdbbf040fd1e3c3504876cf060ac3908c134ac81b3d0c57f0f735769280ea",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\WINDOWS\\System32\\IMM32.DLL",
+      "resolved_path": "C:\\Windows\\System32\\imm32.dll",
+      "bytes": 212288,
+      "sha256": "7e45f12c1c555e2407c5ca082bd925b34655278fde4dbfac53a0468cc1e77411",
+      "already_loaded_by_instrumentation_baseline": true
+    },
+    {
+      "path": "C:\\Python312\\DLLs\\_decimal.pyd",
+      "resolved_path": "C:\\Python312\\DLLs\\_decimal.pyd",
+      "bytes": 257304,
+      "sha256": "95b9850e6fb335b235589dd1348e007507c6b28e332c9abb111f2a0035c358e5",
+      "already_loaded_by_instrumentation_baseline": false
+    },
+    {
+      "path": "C:\\Python312\\DLLs\\_hashlib.pyd",
+      "resolved_path": "C:\\Python312\\DLLs\\_hashlib.pyd",
+      "bytes": 66328,
+      "sha256": "f95ec2562a3c70fb1a6e44d72f4223ce3c7a0f0038159d09dce629f59591d5aa",
+      "already_loaded_by_instrumentation_baseline": false
+    },
+    {
+      "path": "C:\\Python312\\DLLs\\libcrypto-3.dll",
+      "resolved_path": "C:\\Python312\\DLLs\\libcrypto-3.dll",
+      "bytes": 5191960,
+      "sha256": "05fe080eab7fc535c51e10c1bd76a2f3e6217f9c91a25034774588881c3f99de",
+      "already_loaded_by_instrumentation_baseline": false
+    }
+  ],
+  "new_actual_modules_after_frozen_stdlib_imports": [
+    {
+      "path": "C:\\Python312\\DLLs\\_decimal.pyd",
+      "resolved_path": "C:\\Python312\\DLLs\\_decimal.pyd",
+      "bytes": 257304,
+      "sha256": "95b9850e6fb335b235589dd1348e007507c6b28e332c9abb111f2a0035c358e5",
+      "already_loaded_by_instrumentation_baseline": false
+    },
+    {
+      "path": "C:\\Python312\\DLLs\\_hashlib.pyd",
+      "resolved_path": "C:\\Python312\\DLLs\\_hashlib.pyd",
+      "bytes": 66328,
+      "sha256": "f95ec2562a3c70fb1a6e44d72f4223ce3c7a0f0038159d09dce629f59591d5aa",
+      "already_loaded_by_instrumentation_baseline": false
+    },
+    {
+      "path": "C:\\Python312\\DLLs\\libcrypto-3.dll",
+      "resolved_path": "C:\\Python312\\DLLs\\libcrypto-3.dll",
+      "bytes": 5191960,
+      "sha256": "05fe080eab7fc535c51e10c1bd76a2f3e6217f9c91a25034774588881c3f99de",
+      "already_loaded_by_instrumentation_baseline": false
+    }
+  ],
+  "native_extension_paths_including_ctypes_instrumentation": [
+    "C:\\Python312\\DLLs\\_ctypes.pyd",
+    "C:\\Python312\\DLLs\\_decimal.pyd",
+    "C:\\Python312\\DLLs\\_hashlib.pyd"
+  ],
+  "instrumentation_modules_are_not_claimed_as_frozen_runner_requirements": true,
+  "complete_runtime_approved": false,
+  "compiler_export_kernel_runs": 0
+}

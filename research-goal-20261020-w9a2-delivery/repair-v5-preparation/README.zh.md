@@ -1,0 +1,7 @@
+本包独立逐字审核已封Final端点proof修复，并从frozen draft-v4生成NEW draft-v5，保全所有旧draft/canonical/manifest。没有compiler、exporter、kernel、solver或下载，也未改主研究轮计数。
+
+Final修复包manifest SHA `c9a946281b01f9f8d1159345a475a831eacc92fea7e9e1ca7bf13a1332f525e8` 的20项bytes/SHA独立核同。新Final为5,519B，SHA `ea99cc00802c2b3170a9b0c39b1f8b383e69f7c1ab76de851b9cd193c4353cf9`。仅actual_summed中两端点旧simpa span改为显式Graph.StateAt(Counting.left/rightGaps g)s/t，再exact原hs/ht，共+7B/+2line。单span正反逐字回投，actual_summed type及修改区外全部字节不变；四个公开Final type与左右投影定义另有静态核对。没有数学定义、数值、quotient/cost/pressure/boundary/threshold变化。
+
+Core、Graph、Localization、Counting、整个public wrapper与全部trusted输入均逐字从draft-v4读入。三个wrapper types仍等旧版，去除空白后等captured official。新Solution为1,830,001B，SHA `650ad1762ee36ba1ddf5f6a027900b20f0f85ba087ac099fd2c99a54eaf6ae13`；源码余量169,999B。draft-v5/files.json SHA `497f905f1742380a38c8f5c93ac293d9a0d67717ea5e89e43067751631fe1527`（18项）。v4flat↔v5flat仅相同端点proof span的+7B变化。
+
+旧Final实际ordinary失败及其sorryAx错误恢复占位审计必须继续rejected；不会从失败收据推断命题成立。此前PASS的Loc、Count、Graph、Core、Prefix只供开发证据。修复后Final ordinary尚需root真实gate；production仍须fresh source/lib、零用户olean复用、原3200秒/Comparator/双内核/真实外层exit0及三收据完整链。官网作者固定Li Xiang，验证后由root实际提交；本包不声明已完成验证、提交或接受。

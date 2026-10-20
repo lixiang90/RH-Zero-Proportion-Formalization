@@ -1,0 +1,76 @@
+{
+  "scope": "Frozen byte sources, not compilation evidence",
+  "repair_manifest": {
+    "path": "research-goal-20261020-w9a2-core-repair-v1/files.json",
+    "bytes": 2998,
+    "sha256": "9aafa909450a60295a0864982d8f3f596217fba54c8e04eeeb3a21eede8f5114"
+  },
+  "previous_draft_manifest": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v0/files.json",
+    "bytes": 2661,
+    "sha256": "71dce9f3714334dd1f525f037f18ee1c6a4ba25a2b3ac9838df49cc6934879f7"
+  },
+  "module_inputs": [
+    {
+      "logical_path": "StructuralW9A220261020/Core.lean",
+      "actual_input": {
+        "path": "research-goal-20261020-w9a2-core-repair-v1/canonical-full/StructuralW9A220261020/Core.lean",
+        "bytes": 1770091,
+        "sha256": "c2af225175f9a5ab14d2ba2612714a21e0613f66107a1d75b9d47bf1c77ba02a"
+      }
+    },
+    {
+      "logical_path": "StructuralW9A220261020/Graph.lean",
+      "actual_input": {
+        "path": "research-goal-20261020-w9a2-delivery/draft-v0/frozen-inputs/StructuralW9A220261020/Graph.lean",
+        "bytes": 17334,
+        "sha256": "a2e4f4fcc8068a245aafaff56363060ffcf4e06e1fccb63d57a999cfb68f0783"
+      }
+    },
+    {
+      "logical_path": "StructuralW9A220261020/Localization.lean",
+      "actual_input": {
+        "path": "research-goal-20261020-w9a2-delivery/draft-v0/frozen-inputs/StructuralW9A220261020/Localization.lean",
+        "bytes": 13294,
+        "sha256": "95138259450a504e9db184baa3b1e3b5cd1bdb8e11c8990d4b20a94cc7643a2d"
+      }
+    },
+    {
+      "logical_path": "StructuralW9A220261020/Counting.lean",
+      "actual_input": {
+        "path": "research-goal-20261020-w9a2-delivery/draft-v0/frozen-inputs/StructuralW9A220261020/Counting.lean",
+        "bytes": 21555,
+        "sha256": "163fbaae81c9afd492cdfd5c66dd2848f1d1e03ac0af6ae3774a7cc619c631d5"
+      }
+    },
+    {
+      "logical_path": "StructuralW9A220261020/Final.lean",
+      "actual_input": {
+        "path": "research-goal-20261020-w9a2-delivery/draft-v0/frozen-inputs/StructuralW9A220261020/Final.lean",
+        "bytes": 5512,
+        "sha256": "9f9cb13f409ac82ddb1a00ca99d27c98921633b999b82da38cdbd00ea21f5c85"
+      }
+    }
+  ],
+  "wrapper": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v0/frozen-inputs/public-wrapper.lean.txt",
+    "bytes": 1667,
+    "sha256": "4813d6c2cdb05a78a6d0ed1135458c849e735ac4ab86c36c78d830fb0980e5d1"
+  },
+  "header_generator": {
+    "path": "research-goal-20261020-w9a2-delivery/freeze_text.py",
+    "bytes": 9479,
+    "sha256": "29c104265710c24f861925a07adeacc65e0793f37e5e571511d1464cbf217907"
+  },
+  "frozen_verification_runner": {
+    "path": "research-goal-20261020-w9a2-verification-preparation-v1/run_verification.py",
+    "bytes": 36665,
+    "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+  },
+  "sdk_Bool_source": {
+    "path": "tmp/lean-toolchain/src/lean/Init/Data/Bool.lean",
+    "bytes": 27233,
+    "sha256": "ee68370968bd91b779b2f2063bad8701bd5f455b32ea8d503a5234dc3a3cb10a"
+  },
+  "record_freshness_at_future_execution_must_be_rechecked": true
+}

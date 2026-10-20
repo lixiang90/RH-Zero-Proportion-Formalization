@@ -1,0 +1,11 @@
+--- draft-v2/Solution.lean
++++ draft-v3/Solution.lean
+@@ -16237,7 +16237,7 @@
+     gsum (natGaps (reverse8 g)) i j = gsum (natGaps g) (8-j) (8-i) := by
+   have hi : i ≤ 7 := by omega
+   interval_cases i <;> interval_cases j <;> try omega
+-  all_goals norm_num [gsum_range, natGaps, reverse8, Finset.sum_range_succ] <;> simp only [Fin.reduceFinMk] <;> ring
++  all_goals norm_num [gsum_range, natGaps, reverse8, Finset.sum_range_succ] <;> (try simp only [Fin.reduceFinMk]) <;> ring
+ 
+ theorem located_span {g : Fin 8 → ℝ} {v : State}
+     (hv : v.val < 48) (h : StateAt g v) {i j : ℕ} (hij : i < j) (hj : j ≤ 8) :

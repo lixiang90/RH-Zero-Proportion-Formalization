@@ -1,0 +1,8 @@
+{
+  "exit_code": 1,
+  "assembler_pid": 12340,
+  "proof_runs": 0,
+  "at_utc": "2026-10-20T08:09:26.291126+00:00",
+  "error": "",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v4\\assemble.py\", line 497, in main\n    a=Assembler(gate,out);a.gate_path=gate_path;a.run()\n                                                ^^^^^^^\n  File \"E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v4\\assemble.py\", line 421, in run\n    self.outputs(module)\n  File \"E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v4\\assemble.py\", line 259, in outputs\n    self.legacy_trace(module,trace)\n  File \"E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v4\\assemble.py\", line 211, in legacy_trace\n    n=self.nodes[module];assert n['owner']=='Zeta23' and not n['is_module']\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

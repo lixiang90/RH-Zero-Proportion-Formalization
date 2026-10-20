@@ -1,0 +1,383 @@
+{
+  "schema": "w9a2-verification-independent-static-v1",
+  "status": "PASS_STATIC_AFTER_VERSIONED_FIX_NOT_EXECUTED",
+  "captured_at_utc": "2026-10-20T06:40:59.064915+00:00",
+  "scope": "Read-only source, JSON, AST, finite source-diff and before/after byte hashes; no verifier module imported, no compiler/exporter/Comparator/kernel/nanoda run.",
+  "versions": [
+    {
+      "version": "research-goal-20261020-w9a2-verification-preparation",
+      "manifest_sha256": "d3fe63a5bfb293d2bd860bb8549575723cf791cec20ad03213e69a7f4f0852ff",
+      "pinned_file_count": 5,
+      "all_manifest_rows_matched": true
+    },
+    {
+      "version": "research-goal-20261020-w9a2-verification-preparation-v1",
+      "manifest_sha256": "3dc697cd99c9a38730b4e32cef02fd1f780f74ffeaa1512e6e52500d9e6e3e53",
+      "pinned_file_count": 7,
+      "all_manifest_rows_matched": true
+    }
+  ],
+  "runner_v0_sha256": "42932741b4759dff17df3df3ddf2d4e6a5a1d32461dc5859aaf558c1f5b22022",
+  "runner_v1_sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8",
+  "only_runner_change": "Insert --wait immediately after /usr/bin/setsid in the Windows nanoda argv.",
+  "independently_recreated_diff_equals_delivery_diff": true,
+  "diff_sha256": "157affbf34b59b42119766b12d5e08c2a867fd6d54876c4f2fcbce8c43882cef",
+  "original_CoreAudit_sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+  "eight_pinned_tool_sources": [
+    {
+      "logical_name": "Comparator/Comparator.lean",
+      "canonical_LF_sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23"
+    },
+    {
+      "logical_name": "Comparator/Comparator/Axioms.lean",
+      "canonical_LF_sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125"
+    },
+    {
+      "logical_name": "Comparator/Comparator/Compare.lean",
+      "canonical_LF_sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd"
+    },
+    {
+      "logical_name": "Comparator/Comparator/Util.lean",
+      "canonical_LF_sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88"
+    },
+    {
+      "logical_name": "Comparator/Main.lean",
+      "canonical_LF_sha256": "d6474f7ac49cf7a1c2f24aff6ac2bcc97a4a00aa37b969f225c6e688c434d0b4"
+    },
+    {
+      "logical_name": "lean4export/Export.lean",
+      "canonical_LF_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998"
+    },
+    {
+      "logical_name": "lean4export/Export/Parse.lean",
+      "canonical_LF_sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286"
+    },
+    {
+      "logical_name": "lean4export/Main.lean",
+      "canonical_LF_sha256": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a"
+    }
+  ],
+  "budget_seconds_literal": 3200.0,
+  "public_roots_literal": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "allowed_axioms_literal": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "gate_template_execution_enabled": false,
+  "runtime_closure_template_verified": false,
+  "input_before": [
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/prepared-files.json",
+      "bytes": 1119,
+      "sha256": "d3fe63a5bfb293d2bd860bb8549575723cf791cec20ad03213e69a7f4f0852ff"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/gate-template.json",
+      "bytes": 4728,
+      "sha256": "1d3f3adfb52fae328e328830d1733434e7c94c9fa5313cca4d370b013dfcba87"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/README.zh.md",
+      "bytes": 5890,
+      "sha256": "8e7bb7334ee090e996694ef05119760efc2a85cde2894db32c0aaa6713903254"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/run_verification.py",
+      "bytes": 36656,
+      "sha256": "42932741b4759dff17df3df3ddf2d4e6a5a1d32461dc5859aaf558c1f5b22022"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/runtime-closure-template.json",
+      "bytes": 2140,
+      "sha256": "dbfce8174441d7734575d7e6e4e3d6b6fceb1059f0185e42e307af087bad2753"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/static-audit.json",
+      "bytes": 676,
+      "sha256": "e25c2f398e5919763f7ea379bf674d3b3f5f7749cc8f3d910b2486a5bfb7072c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/prepared-files.json",
+      "bytes": 1560,
+      "sha256": "3dc697cd99c9a38730b4e32cef02fd1f780f74ffeaa1512e6e52500d9e6e3e53"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/gate-template.json",
+      "bytes": 4731,
+      "sha256": "c15be224804bd55d51277ebf559082b4bad72b6f4ece0c619669b94fac1a8cda"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/README.zh.md",
+      "bytes": 6377,
+      "sha256": "f66f332713185e7f93803826831a5bb414863cbe3ba3a75b7052ba8f02d3bd24"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/run_verification.py",
+      "bytes": 36665,
+      "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/runtime-closure-template.json",
+      "bytes": 2140,
+      "sha256": "dbfce8174441d7734575d7e6e4e3d6b6fceb1059f0185e42e307af087bad2753"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/static-audit.json",
+      "bytes": 715,
+      "sha256": "4bd62156c6bfae881bf3642caf49e53419056bedf3499bfbab3aafd1852bdb00"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/v0-to-v1-runner.diff",
+      "bytes": 695,
+      "sha256": "157affbf34b59b42119766b12d5e08c2a867fd6d54876c4f2fcbce8c43882cef"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/version-delta.json",
+      "bytes": 869,
+      "sha256": "08fdabe6458c39ceca8b76131b9de41a4df34b5a43b7051a6430c97fa2ff1cf6"
+    },
+    {
+      "path": "tools/ComparatorCoreAudit.lean",
+      "bytes": 2032,
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    },
+    {
+      "path": "tmp/Comparator/Comparator.lean",
+      "bytes": 211,
+      "sha256": "3becb55ec42f66fd9a57ea6edeb1e3eaaffccc98498d584730c4d632758924cb"
+    },
+    {
+      "path": "tmp/Comparator/Comparator/Axioms.lean",
+      "bytes": 2461,
+      "sha256": "09fd2bd68775bc500e55d9ff5ab6dc9c4c57d11ab33d7a87eb76a0d365cd7ac4"
+    },
+    {
+      "path": "tmp/Comparator/Comparator/Compare.lean",
+      "bytes": 4199,
+      "sha256": "e5dfe4f040c21ab5defb4d27b6f229e581c6dabafc30d7adb07c872196914a62"
+    },
+    {
+      "path": "tmp/Comparator/Comparator/Util.lean",
+      "bytes": 816,
+      "sha256": "a3c7f05b027fef1b5a25a9bd26cd31998c2835583e029fc15970dad257d5137b"
+    },
+    {
+      "path": "tmp/Comparator/Main.lean",
+      "bytes": 11258,
+      "sha256": "daca4ccb38b2dc7356ee4b47667980b290c3f27f970800723309e4d074f0c5be"
+    },
+    {
+      "path": "tmp/lean4export/Export.lean",
+      "bytes": 16432,
+      "sha256": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f"
+    },
+    {
+      "path": "tmp/lean4export/Export/Parse.lean",
+      "bytes": 21000,
+      "sha256": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9"
+    },
+    {
+      "path": "tmp/lean4export/Main.lean",
+      "bytes": 769,
+      "sha256": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5"
+    },
+    {
+      "path": "tmp/nanoda/src/main.rs",
+      "bytes": 2596,
+      "sha256": "a51b46e995b103127fc5c886d0f7d265ae6b8692a355ff0b6efce085df697b42"
+    },
+    {
+      "path": "tmp/nanoda/src/tc.rs",
+      "bytes": 57973,
+      "sha256": "904007dc9f5ad1645db5edb8ec7f26bda6bd1a1c94a87ea6792ba648735b1166"
+    },
+    {
+      "path": "tmp/nanoda/src/util.rs",
+      "bytes": 42336,
+      "sha256": "42758ea5ad752aff4a859fb7482d96f941106a7bc6076b85f389e61cee2d8c19"
+    },
+    {
+      "path": "scripts/verify_single_solution.py",
+      "bytes": 28328,
+      "sha256": "c880e18a1754465e46c8c125cc18eae61faa9fb0f6e37562349c9d23175e0ea9"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v0/files.json",
+      "bytes": 2661,
+      "sha256": "71dce9f3714334dd1f525f037f18ee1c6a4ba25a2b3ac9838df49cc6934879f7"
+    },
+    {
+      "path": "StructuralW9A220261020/Core.lean",
+      "bytes": 1770071,
+      "sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6"
+    }
+  ],
+  "input_after": [
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/prepared-files.json",
+      "bytes": 1119,
+      "sha256": "d3fe63a5bfb293d2bd860bb8549575723cf791cec20ad03213e69a7f4f0852ff"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/gate-template.json",
+      "bytes": 4728,
+      "sha256": "1d3f3adfb52fae328e328830d1733434e7c94c9fa5313cca4d370b013dfcba87"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/README.zh.md",
+      "bytes": 5890,
+      "sha256": "8e7bb7334ee090e996694ef05119760efc2a85cde2894db32c0aaa6713903254"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/run_verification.py",
+      "bytes": 36656,
+      "sha256": "42932741b4759dff17df3df3ddf2d4e6a5a1d32461dc5859aaf558c1f5b22022"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/runtime-closure-template.json",
+      "bytes": 2140,
+      "sha256": "dbfce8174441d7734575d7e6e4e3d6b6fceb1059f0185e42e307af087bad2753"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation/static-audit.json",
+      "bytes": 676,
+      "sha256": "e25c2f398e5919763f7ea379bf674d3b3f5f7749cc8f3d910b2486a5bfb7072c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/prepared-files.json",
+      "bytes": 1560,
+      "sha256": "3dc697cd99c9a38730b4e32cef02fd1f780f74ffeaa1512e6e52500d9e6e3e53"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/gate-template.json",
+      "bytes": 4731,
+      "sha256": "c15be224804bd55d51277ebf559082b4bad72b6f4ece0c619669b94fac1a8cda"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/README.zh.md",
+      "bytes": 6377,
+      "sha256": "f66f332713185e7f93803826831a5bb414863cbe3ba3a75b7052ba8f02d3bd24"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/run_verification.py",
+      "bytes": 36665,
+      "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/runtime-closure-template.json",
+      "bytes": 2140,
+      "sha256": "dbfce8174441d7734575d7e6e4e3d6b6fceb1059f0185e42e307af087bad2753"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/static-audit.json",
+      "bytes": 715,
+      "sha256": "4bd62156c6bfae881bf3642caf49e53419056bedf3499bfbab3aafd1852bdb00"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/v0-to-v1-runner.diff",
+      "bytes": 695,
+      "sha256": "157affbf34b59b42119766b12d5e08c2a867fd6d54876c4f2fcbce8c43882cef"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/version-delta.json",
+      "bytes": 869,
+      "sha256": "08fdabe6458c39ceca8b76131b9de41a4df34b5a43b7051a6430c97fa2ff1cf6"
+    },
+    {
+      "path": "tools/ComparatorCoreAudit.lean",
+      "bytes": 2032,
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    },
+    {
+      "path": "tmp/Comparator/Comparator.lean",
+      "bytes": 211,
+      "sha256": "3becb55ec42f66fd9a57ea6edeb1e3eaaffccc98498d584730c4d632758924cb"
+    },
+    {
+      "path": "tmp/Comparator/Comparator/Axioms.lean",
+      "bytes": 2461,
+      "sha256": "09fd2bd68775bc500e55d9ff5ab6dc9c4c57d11ab33d7a87eb76a0d365cd7ac4"
+    },
+    {
+      "path": "tmp/Comparator/Comparator/Compare.lean",
+      "bytes": 4199,
+      "sha256": "e5dfe4f040c21ab5defb4d27b6f229e581c6dabafc30d7adb07c872196914a62"
+    },
+    {
+      "path": "tmp/Comparator/Comparator/Util.lean",
+      "bytes": 816,
+      "sha256": "a3c7f05b027fef1b5a25a9bd26cd31998c2835583e029fc15970dad257d5137b"
+    },
+    {
+      "path": "tmp/Comparator/Main.lean",
+      "bytes": 11258,
+      "sha256": "daca4ccb38b2dc7356ee4b47667980b290c3f27f970800723309e4d074f0c5be"
+    },
+    {
+      "path": "tmp/lean4export/Export.lean",
+      "bytes": 16432,
+      "sha256": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f"
+    },
+    {
+      "path": "tmp/lean4export/Export/Parse.lean",
+      "bytes": 21000,
+      "sha256": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9"
+    },
+    {
+      "path": "tmp/lean4export/Main.lean",
+      "bytes": 769,
+      "sha256": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5"
+    },
+    {
+      "path": "tmp/nanoda/src/main.rs",
+      "bytes": 2596,
+      "sha256": "a51b46e995b103127fc5c886d0f7d265ae6b8692a355ff0b6efce085df697b42"
+    },
+    {
+      "path": "tmp/nanoda/src/tc.rs",
+      "bytes": 57973,
+      "sha256": "904007dc9f5ad1645db5edb8ec7f26bda6bd1a1c94a87ea6792ba648735b1166"
+    },
+    {
+      "path": "tmp/nanoda/src/util.rs",
+      "bytes": 42336,
+      "sha256": "42758ea5ad752aff4a859fb7482d96f941106a7bc6076b85f389e61cee2d8c19"
+    },
+    {
+      "path": "scripts/verify_single_solution.py",
+      "bytes": 28328,
+      "sha256": "c880e18a1754465e46c8c125cc18eae61faa9fb0f6e37562349c9d23175e0ea9"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v0/files.json",
+      "bytes": 2661,
+      "sha256": "71dce9f3714334dd1f525f037f18ee1c6a4ba25a2b3ac9838df49cc6934879f7"
+    },
+    {
+      "path": "StructuralW9A220261020/Core.lean",
+      "bytes": 1770071,
+      "sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6"
+    }
+  ],
+  "input_bytes_unchanged": true,
+  "reviewer_executions": {
+    "runner": 0,
+    "compiler": 0,
+    "exporter": 0,
+    "Comparator": 0,
+    "default_Lean_replay": 0,
+    "nanoda": 0
+  },
+  "candidate_source_mutations": 0,
+  "main_round_counter_changed": false,
+  "runtime_Dll_Elf_closure_actually_audited": false,
+  "ordinary_or_fullchain_success_claimed": false,
+  "website_or_GitHub_acceptance_claimed": false,
+  "setsid_primary_source": "https://raw.githubusercontent.com/util-linux/util-linux/master/sys-utils/setsid.c",
+  "setsid_source_scope": "Lines 92-107: when setsid forks, --wait is needed to propagate the child exit status. This audit does not attest the actual installed WSL utility build."
+}

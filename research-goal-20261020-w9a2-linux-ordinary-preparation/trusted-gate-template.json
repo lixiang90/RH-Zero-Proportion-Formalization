@@ -1,0 +1,38 @@
+{
+  "authorized": false,
+  "proposal_only": true,
+  "task": "w9a2-linux-ordinary-source-pinned",
+  "automatic_repairs_or_retries": 0,
+  "max_parallel_compilers": 1,
+  "runner_sha256": "13ced50d6ff0c4f3021fb2cfe5a88b3ff74d15035524b22d07a3c9b0b322f8cd",
+  "runtime_manifest": "/var/tmp/rh-zero-w9a2-20261020/runtime-v0/runtime.json",
+  "runtime_manifest_sha256": null,
+  "runtime_mirror_manifest_sha256": null,
+  "root_confirmed_original_windows_handle_terminal": false,
+  "windows_terminal_evidence": {
+    "path": null,
+    "sha256": null
+  },
+  "hard_seconds_per_target": 7200,
+  "hard_seconds_per_batch": 28800,
+  "requires_runtime_freezer": "make_gate.py only creates unauthorized proposals after actual runtime and Windows terminal evidence; root must review and create a NEW authorized gate.",
+  "stage": "trusted",
+  "targets": [
+    {
+      "module": "TrustedImport",
+      "source": "research-goal-20261020-w9a2-linux-setup/TrustedImport.lean",
+      "printed_roots": []
+    },
+    {
+      "module": "ChallengeDeps",
+      "source": "research-goal-20261020-w9a2-linux-ordinary-preparation/trusted-source/ChallengeDeps.lean",
+      "printed_roots": [
+        "Ncount",
+        "N0star",
+        "cMT"
+      ]
+    }
+  ],
+  "work_directory": "/var/tmp/rh-zero-w9a2-20261020/dev/trusted-v0",
+  "metadata_mirror": "tmp/w9a2-20261020/linux-trusted-v0"
+}

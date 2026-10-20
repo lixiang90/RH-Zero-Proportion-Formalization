@@ -1,0 +1,25 @@
+{
+  "status": "PASS_PYTHON_AST_AND_SOURCE_AUDIT_MAP_ONLY",
+  "python_modules_parsed": [
+    "run.py",
+    "make_gate.py"
+  ],
+  "actual_candidate_targets": 6,
+  "candidate_axiom_roots": 12,
+  "trusted_axiom_roots": [
+    "Ncount",
+    "N0star",
+    "cMT"
+  ],
+  "trusted_original_prefix_identical": true,
+  "compiler_invocations": 0,
+  "kernel_or_solver_invocations": 0,
+  "prepared_gate_templates_authorized": false,
+  "pure_axiom_log_parser_cases": {
+    "standard_three": "accept",
+    "no_axioms": "accept",
+    "sorryAx": "reject",
+    "missing_root": "reject",
+    "unexpected_root": "reject"
+  }
+}

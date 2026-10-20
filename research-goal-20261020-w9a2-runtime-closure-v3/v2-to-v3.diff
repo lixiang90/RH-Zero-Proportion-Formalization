@@ -1,0 +1,55 @@
+--- v2/assemble.py
++++ v3/assemble.py
+@@ -146,6 +146,30 @@
+                     'lake/Lake/Build/Trace.lean','lake/Lake/Build/Module.lean']:
+             self.sdk_members.add('src/lean/'+rel)
+         wanted=set(self.sdk_members);seen=set();rows=[]
++        previous=self.gate.get('reuse_previous_sdk_archive_check')
++        if previous is not None:
++            assert self.gate['previous_sdk_archive_component_accepted'] is True
++            prior_path=check(previous);prior=load(prior_path)
++            self.pin(prior_path,'actual-prior-complete-SDK-archive-member-check')
++            assert prior['archive_sha256']==ARCHIVE_SHA and prior['all_selected_members_identical'] is True
++            for row in prior['selected_members']:
++                p=absolute(row['path']);rel=p.relative_to(SDK).as_posix()
++                assert rel not in seen and rel in wanted
++                check(row);seen.add(rel)
++                # Current bytes/resolved paths were just rechecked against the
++                # exact actual archive PASS receipt. Avoid a redundant read.
++                key=str(p).casefold()
++                if key in self.files:assert self.files[key]['sha256']==row['sha256']
++                else:self.files[key]={**row,'role':'revalidated-official-SDK-identical-archive-member'}
++                rows.append(self.files[key])
++            assert seen==wanted, 'Current SDK member selection differs from prior actual check'
++            write(self.output/'official-sdk-check.json',dict(archive_sha256=ARCHIVE_SHA,
++              selected_members=rows,all_selected_members_identical=True,compiler_main_runs=0,
++              reuse_method='Actual prior archive-member equality receipt plus current SHA/size/resolved-path revalidation of every selected member and archive',
++              previous_actual_archive_check=identity(prior_path,'prior-actual-SDK-archive-PASS')))
++            self.pin(self.output/'official-sdk-check.json','actual-SDK-byte-check')
++            self.sdk_verified=True;note('official-sdk-revalidation-PASS',selected_members=len(rows))
++            return
+         with ARCHIVE.open('rb') as compressed:
+             with zstandard.ZstdDecompressor().stream_reader(compressed) as stream:
+                 with tarfile.open(fileobj=stream,mode='r|') as tar:
+--- v2/cache_binding.py
++++ v3/cache_binding.py
+@@ -39,7 +39,9 @@
+     def __init__(self, sdk):
+         assert os.name == 'nt' and ctypes.sizeof(ctypes.c_void_p) == 8
+         self.directory = os.add_dll_directory(str(Path(sdk) / 'bin'))
+-        self.dll = ctypes.CDLL(str(Path(sdk) / 'bin/libleanshared.dll'))
++        # Exact PE file export scan of all nine officially verified SDK DLLs
++        # places both C exports directly (not forwarded) in libInit_shared.dll.
++        self.dll = ctypes.CDLL(str(Path(sdk) / 'bin/libInit_shared.dll'))
+         self.dll.lean_byte_array_hash.argtypes = [ctypes.c_void_p]
+         self.dll.lean_byte_array_hash.restype = ctypes.c_uint64
+         self.dll.lean_string_hash.argtypes = [ctypes.c_void_p]
+@@ -51,7 +53,7 @@
+         length = kernel.GetModuleFileNameW(self.dll._handle, path, len(path))
+         assert 0 < length < len(path)
+         self.loaded_path = Path(path.value)
+-        assert self.loaded_path.resolve() == (Path(sdk) / 'bin/libleanshared.dll').resolve()
++        assert self.loaded_path.resolve() == (Path(sdk) / 'bin/libInit_shared.dll').resolve()
+ 
+     def bytes(self, raw):
+         # lean.h: lean_object (8B), size_t size/capacity, scalar data.

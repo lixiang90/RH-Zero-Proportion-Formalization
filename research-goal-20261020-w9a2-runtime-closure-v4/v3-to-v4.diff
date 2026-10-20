@@ -1,0 +1,13 @@
+--- v3/assemble.py
++++ v4/assemble.py
+@@ -234,7 +234,9 @@
+             for part in name.split('.'):h=mix(h,self.sdk_hash.string(part))
+             return h
+         assert inputs[6]==['Module.name: '+module,f'{mix(1723,name_hash(module)):016x}']
+-        assert inputs[7]==['Package.id?: (some Zeta23)',f'{mix(1723,mix(name_hash("Zeta23"),13)):016x}']
++        # Lake.Package.id? : Option Lean.PkgId, and Lean.PkgId is String.
++        # Package.origName.toString is hashed here, not the Name itself.
++        assert inputs[7]==['Package.id?: (some Zeta23)',f'{mix(1723,mix(self.sdk_hash.string("Zeta23"),13)):016x}']
+         assert inputs[8]==['Module.leanArgs: #[]','00000000000006bb']
+         def node_hash(node):
+             assert isinstance(node,list) and len(node)==2 and isinstance(node[0],str)

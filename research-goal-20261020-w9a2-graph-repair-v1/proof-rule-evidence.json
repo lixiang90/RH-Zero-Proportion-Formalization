@@ -1,0 +1,37 @@
+{
+  "scope": "Static source evidence only; no proof execution",
+  "sources": [
+    {
+      "path": "tmp/lean-toolchain/src/lean/Lean/Meta/Tactic/Simp/BuiltinSimprocs/Fin.lean",
+      "bytes": 8573,
+      "sha256": "6e22f4a410ec146af6481c30693c141c4f9d120db24e5d2bc5a1e6a873915bdc",
+      "first_line": 102,
+      "last_line": 110,
+      "exact_excerpt": "builtin_dsimproc [simp, seval] reduceFinMk (Fin.mk _ _)  := fun e => do\n  let_expr Fin.mk n v _ ← e | return .continue\n  let some n ← evalNat n |>.run | return .continue\n  let some v ← getNatValue? v | return .continue\n  if h : n ≠ 0 then\n    have : NeZero n := ⟨h⟩\n    return .done <| toExpr (Fin.ofNat n v)\n  else\n    return .continue\n"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Tactic/NormNum/Core.lean",
+      "bytes": 16229,
+      "sha256": "60010da4c961753d1895171471f7816ca40dd71c1444462f9f66264213fb76da",
+      "first_line": 215,
+      "last_line": 249,
+      "exact_excerpt": "    return .done (← eval e post)\n  catch _ =>\n    return .continue\n\n/-- A `Methods` implementation which calls `norm_num`. -/\ndef methods (useSimp := true) : Simp.Methods :=\n  if useSimp then {\n    pre := Simp.preDefault #[] >> tryNormNum\n    post := Simp.postDefault #[] >> tryNormNum (post := true)\n    discharge? := Simp.dischargeGround\n  } else {\n    pre := tryNormNum\n    post := tryNormNum (post := true)\n    discharge? := Simp.dischargeGround\n  }\n\n/-- Traverses the given expression using simp and normalises any numbers it finds. -/\ndef deriveSimp (ctx : Simp.Context) (useSimp := true) (e : Expr) : MetaM Simp.Result :=\n  (·.1) <$> Simp.main e ctx (methods := methods useSimp)\n\n/-- A discharger which calls `norm_num`, for use in downstream tactics populating `Simp.Methods`. -/\ndef discharge (useSimp := true) (e : Expr) : SimpM (Option Expr) := do\n  (← deriveSimp (← readThe Simp.Context) useSimp e).ofTrue\n\nopen Tactic in\n/-- Constructs a simp context from the simp argument syntax. -/\ndef getSimpContext (cfg args : Syntax) (simpOnly := false) : TacticM Simp.Context := do\n  let { config, userConfig } ← elabSimpConfigCore cfg\n  let simpTheorems ←\n    if simpOnly then simpOnlyBuiltins.foldlM (·.addConst ·) {} else getSimpTheorems\n  let { ctx, .. } ←\n    elabSimpArgs args[0] (eraseLocal := false) (kind := .simp) (simprocs := {})\n      (← Simp.mkContext config (simpTheorems := #[simpTheorems])\n        (congrTheorems := ← getSimpCongrTheorems) (userConfig := userConfig))\n  return ctx\n"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/CategoryTheory/ComposableArrows/Basic.lean",
+      "bytes": 43835,
+      "sha256": "78d33e3279db82f98b4082b49b446911f49fd246120a55f162a9ec2791798c51",
+      "first_line": 47,
+      "last_line": 59,
+      "exact_excerpt": "/-!\nNew `simprocs` that run even in `dsimp` have caused breakages in this file.\n\n(e.g. `dsimp` can now simplify `2 + 3` to `5`)\n\nFor now, we just turn off the offending simprocs in this file.\n\n*However*, hopefully it is possible to refactor the material here so that no disabling of\nsimprocs is needed.\n\nSee issue https://github.com/leanprover-community/mathlib4/issues/27382.\n-/\nattribute [-simp] Fin.reduceFinMk\n"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean",
+      "bytes": 7965,
+      "sha256": "f2242f08dad6f6a0c1f097b3491e7f1cdea7576c1933ea6d68fa905babedf725",
+      "first_line": 85,
+      "last_line": 89,
+      "exact_excerpt": "lemma isHomogeneous_addSubMap (i : Fin 3) : (addSubMap W i).IsHomogeneous 2 := by\n  simp only [addSubMap]\n  fin_cases i <;>\n    simp only [Fin.isValue, Fin.mk_one, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val,\n      Matrix.cons_val_one, Matrix.cons_val_zero]\n"
+    }
+  ]
+}

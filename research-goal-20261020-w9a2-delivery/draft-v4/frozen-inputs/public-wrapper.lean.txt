@@ -1,0 +1,39 @@
+/-
+SPDX-License-Identifier: Apache-2.0
+W9A2 finite-state export wrapper. The exact public statements match the
+captured official Challenge.Candidate template. CandidateSpec is a separately
+generated trusted input; no score or record constant is defined in this file.
+Preparation is not evidence of successful compilation or kernel verification.
+-/
+noncomputable section
+
+private theorem w9a2_export_candidate_identity :
+    candidateKappa = StructuralW9A220261020.Final.weightedKappa := by
+  norm_num [candidateKappa, StructuralW9A220261020.Final.weightedKappa]
+
+private theorem w9a2_export_record_identity :
+    currentRecordKappa = StructuralW9A220261020.Final.baselineKappa := by
+  norm_num [currentRecordKappa, StructuralW9A220261020.Final.baselineKappa]
+
+theorem candidate_strict_improvement :
+    currentRecordKappa < candidateKappa := by
+  rw [w9a2_export_record_identity, w9a2_export_candidate_identity]
+  exact StructuralW9A220261020.Final.strict_improvement
+
+theorem candidate_critical_line_bound :
+    ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      (candidateKappa - ε) * (Ncount T (2 * T) : ℝ) ≤ N0star T (2 * T) := by
+  rw [w9a2_export_candidate_identity]
+  exact StructuralW9A220261020.Final.actual_dyadic
+
+theorem candidate_critical_line_bound_cumulative :
+    ∀ ε > 0, ∃ T₀ : ℝ, ∀ T ≥ T₀,
+      (candidateKappa - ε) * (Ncount 0 T : ℝ) ≤ N0star 0 T := by
+  rw [w9a2_export_candidate_identity]
+  exact StructuralW9A220261020.Final.actual_cumulative
+
+end
+set_option pp.fullNames true
+#print axioms candidate_strict_improvement
+#print axioms candidate_critical_line_bound
+#print axioms candidate_critical_line_bound_cumulative

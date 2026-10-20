@@ -1,0 +1,352 @@
+{
+  "schema": "w9a2-text-delivery-v1",
+  "upload_ready": false,
+  "scope": "Text preparation only; no Lean/export/Comparator/kernel/optimizer execution",
+  "score": {
+    "numerator": "3337881639516708570682858853672166187793",
+    "denominator": "4955348542279967171490000000000000000000"
+  },
+  "score_percent_display_only": "67.359169814943866933604983180755702332030795547905364946754627332",
+  "increment_percentage_points_display_only": "8.4602568261805536380061781610975136655332904529974008365815430948E-8",
+  "current_record": {
+    "id": "ajp88-w9a2-window-nine-point",
+    "track": "critical-line",
+    "date": "2026-10-19",
+    "author": "ajp88",
+    "github": "ajp88",
+    "title": "Certified critical-line bound 0.673591697303412986717994468006",
+    "method": "Window W9A2 (tuned for n = 9) with a regenerated, exactly refitted nine-point Gram-defect certificate on master-of-puppets5’s file",
+    "model": "Claude",
+    "harness": "Claude Code",
+    "scoreDecimal": "0.673591697303412986717994468006",
+    "scorePercent": "67.3591697303412986717994468006",
+    "exactRational": {
+      "numerator": "3337881639516708570682858853672166187793",
+      "denominator": "4955348548503844558750000000000000000000"
+    },
+    "exactExpression": "(3337881639516708570682858853672166187793 : ℝ) / 4955348548503844558750000000000000000000",
+    "status": "kernel-verified",
+    "formalVerification": true,
+    "independentReview": null,
+    "sourceUrl": "https://github.com/josusanmartin/riemann/blob/4889ee768b6b4d9d2aedd5de8445adb151768fd8/submissions/ajp88-w9a2-window-nine-point/submission.json",
+    "proofUrl": "https://github.com/josusanmartin/riemann/blob/4889ee768b6b4d9d2aedd5de8445adb151768fd8/submissions/ajp88-w9a2-window-nine-point/proof/Solution.lean",
+    "pullRequestUrl": null,
+    "summary": "Replaces the window by W9A2, a 13-term profile tuned for the nine-point certificate (cAMn and every window table, numeral and H literal regenerated and kernel-checked in-file), and regenerates the nine-point certificate on it: 11,794 checked leaves, weights refitted at 1e-14 resolution and the floor set to the largest value every guard allows. Keeps attempt-021/master-of-puppets5’s checker PC9QB6M and counting chain, and attempt-016’s window code. Walk literals are packed with the zfNat64 block from critical-strip-exclusion-attempt-1 (Zero Forge / @zkvoxels), reproduced unmodified with attribution. Only propext, Classical.choice and Quot.sound."
+  },
+  "fresh_record_receipt_utc": "2026-10-20T05:09:17.709661+00:00",
+  "record_freshness_at_future_execution_must_be_rechecked": true,
+  "solution_bytes": 1829955,
+  "solution_sha256": "8928832f3503d39ad6786ae26a394299779d3a53b7c590e7ca7df793ae7614f3",
+  "website_source_limit_bytes": 2000000,
+  "source_slack_bytes": 170045,
+  "source_modules": [
+    {
+      "module": "StructuralW9A220261020.Core",
+      "path": "StructuralW9A220261020/Core.lean",
+      "bytes": 1770091,
+      "sha256": "c2af225175f9a5ab14d2ba2612714a21e0613f66107a1d75b9d47bf1c77ba02a",
+      "retained_non_import_bytes": 1769270,
+      "retained_non_import_sha256": "ae219ec7383d1c6b0e7250bedd5e2dd8aa3c2f76e68724e9f24b60ac66261286"
+    },
+    {
+      "module": "StructuralW9A220261020.Graph",
+      "path": "StructuralW9A220261020/Graph.lean",
+      "bytes": 17334,
+      "sha256": "a2e4f4fcc8068a245aafaff56363060ffcf4e06e1fccb63d57a999cfb68f0783",
+      "retained_non_import_bytes": 17298,
+      "retained_non_import_sha256": "a3e0c2d71ece9cc707dfc4cde4e203fc6e72c472fd7bda421db85ada2b79b1cd"
+    },
+    {
+      "module": "StructuralW9A220261020.Localization",
+      "path": "StructuralW9A220261020/Localization.lean",
+      "bytes": 13294,
+      "sha256": "95138259450a504e9db184baa3b1e3b5cd1bdb8e11c8990d4b20a94cc7643a2d",
+      "retained_non_import_bytes": 13258,
+      "retained_non_import_sha256": "ea0af3a6efcb74e493b2b233e9e6bd2730598073e3899fb0bb9c07dadec563fe"
+    },
+    {
+      "module": "StructuralW9A220261020.Counting",
+      "path": "StructuralW9A220261020/Counting.lean",
+      "bytes": 21555,
+      "sha256": "163fbaae81c9afd492cdfd5c66dd2848f1d1e03ac0af6ae3774a7cc619c631d5",
+      "retained_non_import_bytes": 21520,
+      "retained_non_import_sha256": "a6bb095fd6b7a63a0634597408f86f8c764935a88c3d0efe87315ab73777fe06"
+    },
+    {
+      "module": "StructuralW9A220261020.Final",
+      "path": "StructuralW9A220261020/Final.lean",
+      "bytes": 5512,
+      "sha256": "9f9cb13f409ac82ddb1a00ca99d27c98921633b999b82da38cdbd00ea21f5c85",
+      "retained_non_import_bytes": 5430,
+      "retained_non_import_sha256": "efcd8b9617630716fc06b8aaacc4b5aa6fc5babb0327b37c392189e131b7b7d7"
+    }
+  ],
+  "body_segments": [
+    {
+      "module": "StructuralW9A220261020.Core",
+      "start": 1260,
+      "end": 1770530,
+      "retained_non_import_sha256": "ae219ec7383d1c6b0e7250bedd5e2dd8aa3c2f76e68724e9f24b60ac66261286"
+    },
+    {
+      "module": "StructuralW9A220261020.Graph",
+      "start": 1770590,
+      "end": 1787888,
+      "retained_non_import_sha256": "a3e0c2d71ece9cc707dfc4cde4e203fc6e72c472fd7bda421db85ada2b79b1cd"
+    },
+    {
+      "module": "StructuralW9A220261020.Localization",
+      "start": 1787955,
+      "end": 1801213,
+      "retained_non_import_sha256": "ea0af3a6efcb74e493b2b233e9e6bd2730598073e3899fb0bb9c07dadec563fe"
+    },
+    {
+      "module": "StructuralW9A220261020.Counting",
+      "start": 1801276,
+      "end": 1822796,
+      "retained_non_import_sha256": "a6bb095fd6b7a63a0634597408f86f8c764935a88c3d0efe87315ab73777fe06"
+    },
+    {
+      "module": "StructuralW9A220261020.Final",
+      "start": 1822856,
+      "end": 1828286,
+      "retained_non_import_sha256": "efcd8b9617630716fc06b8aaacc4b5aa6fc5babb0327b37c392189e131b7b7d7"
+    }
+  ],
+  "import_lines_moved": [
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "ChallengeDeps",
+      "internal": false,
+      "removed_line_bytes": 21,
+      "removed_line_sha256": "f29b0e129fe9f263703bc48e6f4048780883812eb2ea68543bb864f46e62dc75"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib",
+      "internal": false,
+      "removed_line_bytes": 15,
+      "removed_line_sha256": "1015f8f4676a27ea63780b30cc916712232857097b2bdf635dc61cb949c107fb"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Algebra.BigOperators.Fin",
+      "internal": false,
+      "removed_line_bytes": 40,
+      "removed_line_sha256": "53384bbf6dbfb2d9fb4c79e329fe129d25d375943c3839d3c4042d8ee2fe1430"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Algebra.BigOperators.Intervals",
+      "internal": false,
+      "removed_line_bytes": 46,
+      "removed_line_sha256": "b000e589d48896ca81e5160bfc595b3e747cdda7d51afec6d8658f224abac5b4"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "internal": false,
+      "removed_line_bytes": 55,
+      "removed_line_sha256": "0c738cca7a7d7a3865081649e387889fe41a95526742def393ff58ed569f6bf6"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Analysis.Real.Pi.Bounds",
+      "internal": false,
+      "removed_line_bytes": 39,
+      "removed_line_sha256": "1451d0426fd8e603f6917132e988af16b8929796b5605397ea4572d0af40fcaa"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+      "internal": false,
+      "removed_line_bytes": 57,
+      "removed_line_sha256": "eb37b64f0137b336d9d4e36030391bb6e8f96e443a489a8e4e121bb2ffe7621c"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+      "internal": false,
+      "removed_line_bytes": 50,
+      "removed_line_sha256": "7b91a7b14607104682cfd272749b3665b2c58be84461237763f3a63cc19e013f"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+      "internal": false,
+      "removed_line_bytes": 62,
+      "removed_line_sha256": "1d902683c7d59e07b4cfd98682d98a7f9738364a7c3872728ad3b2bce40aebe3"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+      "internal": false,
+      "removed_line_bytes": 60,
+      "removed_line_sha256": "4eae2d64fb86656e603772693fedae9982c24b2f17e4ac87a4de3f0586e26ad8"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Data.Real.Basic",
+      "internal": false,
+      "removed_line_bytes": 31,
+      "removed_line_sha256": "b38b8ebbc4944f81503119f318a4bc9717b1ac15eb44fc7d77a2b5ef60571792"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Tactic.Linarith",
+      "internal": false,
+      "removed_line_bytes": 31,
+      "removed_line_sha256": "e62a9bd02f75536786ad770e9ebb770533b1b7762b76653441c5b5b6a13815d1"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Tactic.NormNum",
+      "internal": false,
+      "removed_line_bytes": 30,
+      "removed_line_sha256": "1cd924f16ec6ee38ef60f768d241ac4cf7f1d9ae6b9a70013e0d2bc53dac93e3"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Mathlib.Tactic.Ring",
+      "internal": false,
+      "removed_line_bytes": 27,
+      "removed_line_sha256": "045fcfc852f1eff4fbefc0688d68fe250525d1c3a5d00440e2b27ba7a1c1632e"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Zeta23.PrimeSideA.EndsE1",
+      "internal": false,
+      "removed_line_bytes": 32,
+      "removed_line_sha256": "02cec881de02bca98dad1499ca1f5a6e561af3e7beae2287522e1cef5cccf87b"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Zeta23.Taper.Norms",
+      "internal": false,
+      "removed_line_bytes": 26,
+      "removed_line_sha256": "d9cbfcb6cd19395d0369d8a1742640cdc5fcd7b9cdd91a2c9a38e2ed5734bac0"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Zeta23.ThmD.Concrete",
+      "internal": false,
+      "removed_line_bytes": 28,
+      "removed_line_sha256": "0cc6d89aae7fd8595c625dd87f8f76511dae1d46d3d3429b7023f16e45b7f570"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Zeta23.ThmD.Limit",
+      "internal": false,
+      "removed_line_bytes": 25,
+      "removed_line_sha256": "f07f4d49a7eeddefdc59c83e3d0a2ea043bf80870a53550474f674446013cb46"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Zeta23.ThmD.Mult",
+      "internal": false,
+      "removed_line_bytes": 24,
+      "removed_line_sha256": "3e21908976b419fc220ad15cbbb820f4b2c16710650c0086289b95c16697776f"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Zeta23.ThmD.Window",
+      "internal": false,
+      "removed_line_bytes": 26,
+      "removed_line_sha256": "7981e92b081b9855be11a7f2e3a319b7e60bc1ae0c13ec69da6336ad8469c9dd"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Zeta23.ThmD.WindowCore",
+      "internal": false,
+      "removed_line_bytes": 30,
+      "removed_line_sha256": "4ce8769bc3b92a09a3e9bbc49d77eae88aa443e8f6897d1e96cb2408b5db91f1"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Zeta23.ThmD.ZeroSideD",
+      "internal": false,
+      "removed_line_bytes": 29,
+      "removed_line_sha256": "0ba7ae2ce5a13156f2298e306d4d8d8e84b37045f0defabe6b9ec91a8ba1c882"
+    },
+    {
+      "source": "StructuralW9A220261020/Core.lean",
+      "import": "Zeta23.ZeroSide.RankTraceMult",
+      "internal": false,
+      "removed_line_bytes": 37,
+      "removed_line_sha256": "90c8defc93e9982e0bb0c1ffb57e9b239055a1db0122726d60bbcad34f467f26"
+    },
+    {
+      "source": "StructuralW9A220261020/Graph.lean",
+      "import": "StructuralW9A220261020.Core",
+      "internal": true,
+      "removed_line_bytes": 36,
+      "removed_line_sha256": "64ce29fe8208a80b0471a13a5af61c40950e608ac35a1aebeddb942419e568a0"
+    },
+    {
+      "source": "StructuralW9A220261020/Localization.lean",
+      "import": "StructuralW9A220261020.Graph",
+      "internal": true,
+      "removed_line_bytes": 36,
+      "removed_line_sha256": "9eece1233ca7cff53ecef669794446176924aae63018ac7802bc75a62501dda5"
+    },
+    {
+      "source": "StructuralW9A220261020/Counting.lean",
+      "import": "StructuralW9A220261020.Core",
+      "internal": true,
+      "removed_line_bytes": 35,
+      "removed_line_sha256": "fff4d318d643e8d8bb576b26062a9b8f2e5473047dd44b3484f7b5de5c7870ee"
+    },
+    {
+      "source": "StructuralW9A220261020/Final.lean",
+      "import": "StructuralW9A220261020.Localization",
+      "internal": true,
+      "removed_line_bytes": 43,
+      "removed_line_sha256": "d926b3e8c160cfcfd305c1d85380df774382ce1a72ffbaa74ad68c3ce3956fee"
+    },
+    {
+      "source": "StructuralW9A220261020/Final.lean",
+      "import": "StructuralW9A220261020.Counting",
+      "internal": true,
+      "removed_line_bytes": 39,
+      "removed_line_sha256": "321db44e957fdd336f94bbe31ada1ec90d97ada7cc4f705e04c80741684b4b72"
+    }
+  ],
+  "external_import_lines_preserved": [
+    "import ChallengeDeps",
+    "import Mathlib",
+    "import Mathlib.Algebra.BigOperators.Fin",
+    "import Mathlib.Algebra.BigOperators.Intervals",
+    "import Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "import Mathlib.Analysis.Real.Pi.Bounds",
+    "import Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+    "import Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "import Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+    "import Mathlib.Analysis.SpecialFunctions.Trigonometric.Sinc",
+    "import Mathlib.Data.Real.Basic",
+    "import Mathlib.Tactic.Linarith",
+    "import Mathlib.Tactic.NormNum",
+    "import Mathlib.Tactic.Ring",
+    "import Zeta23.PrimeSideA.EndsE1",
+    "import Zeta23.Taper.Norms",
+    "import Zeta23.ThmD.Concrete",
+    "import Zeta23.ThmD.Limit",
+    "import Zeta23.ThmD.Mult",
+    "import Zeta23.ThmD.Window",
+    "import Zeta23.ThmD.WindowCore",
+    "import Zeta23.ThmD.ZeroSideD",
+    "import Zeta23.ZeroSide.RankTraceMult"
+  ],
+  "additional_trusted_import": "ChallengeDeps.CandidateSpec",
+  "all_non_import_bytes_preserved": true,
+  "public_roots": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "all_non_text_proof_runs": 0,
+  "complete_3200s_passed": false,
+  "official_accepted": false,
+  "source_revision": "draft-v1-one-existing-Bool-simp-rule",
+  "repair_manifest_sha256": "9aafa909450a60295a0864982d8f3f596217fba54c8e04eeeb3a21eede8f5114",
+  "previous_draft_manifest_sha256": "71dce9f3714334dd1f525f037f18ee1c6a4ba25a2b3ac9838df49cc6934879f7"
+}

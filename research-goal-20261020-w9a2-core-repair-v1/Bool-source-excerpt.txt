@@ -1,0 +1,10 @@
+
+/-! ### eq/beq/bne -/
+
+/--
+These two rules follow trivially by simp, but are needed to avoid non-termination
+in false_eq and true_eq.
+-/
+@[simp] theorem false_eq_true : (false = true) = False := by simp
+@[simp] theorem true_eq_false : (true = false) = False := by simp
+

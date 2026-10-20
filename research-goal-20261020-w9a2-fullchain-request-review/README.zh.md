@@ -1,0 +1,9 @@
+本目录仅独立只读审核冻结request-proposal及其引用。没有import/执行gate assembler、compiler、exporter、kernel、runtime setup或网络API，也未修改原36fc request包、任何proof/gate/runtime文件。audit_paths.py只读并hash文件，将结果写入本NEW报告目录。
+
+共完成431个展开pin检查，186个不同输入在扫描前后hash完全一致。唯一已填path/hash不符为ordinary_stages[1].gate.path：原写w9a2-ordinary-v1-20261020.json，期望SHA92def59e…实际唯一对应w9a2-ordinary-v1b-20261020.json。仅在审查脚本内存中使用该同SHA唯一文件继续扫描；原proposal未改。其余已填直接pair、各stage gate内source/reused_olean/lean pins、archive manifest全部文件、最终draft-v5及完整Solution hash均匹配，没有找到第二处同类笔误。
+
+六个stage的封存started/terminal副本与实际job逐字相同，started.gate_sha对应正确gate；root记录session/actual exit与各internal terminal相符。选中Prefix0/Core1/Graph3/Loc4/Count4/Final5均为真实PASS且source精确等最终draft（Core使用已独审完整源c2af…对应开发split26e2…），olean/log/保存source均核同。Count五根和Final七根合计十二根独立从日志解析，全部为标准公理子集。此处审计的是root已保存的外层退出证据与文件桥，不声称本审查自己观察了原工具handle，也不把失败批次升级整批PASS。
+
+runtime更新属于待填路线，不属于hash笔误：原proposal的runtime-v2 runner276107… path/hash本身仍匹配，但该次setup已失败，不能用于新闭包PASS。root的NEW filledrequest应选实际完成版本；当前预期v3 runner为research-goal-20261020-w9a2-runtime-closure-v3/assemble.py，SHA cc7ca38250d42c74ef25f3d68dabc536d75e3f2c8557fda482375005b29ddaa3，对应prospective closure-v3路径。其完整closure SHA、真实外层exit0/setup observation与新freshRecord仍须root完成后填写；本次没有读取活跃setup输出或改动v3。logical setup role仍为trusted-runtime-closure-v1。
+
+proposal/work目录当前均不存在，可供未来exclusive创建；若root实际执行前已有目录，必须选NEW路径。原request SHA02ec0bc3…、原prepared manifest SHA36fc71d7…均前后不变。完整检查为review.json，186项输入身份为input-pins.json。只读审查不等production、双内核、3200秒或官网接受。

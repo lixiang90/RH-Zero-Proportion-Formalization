@@ -1,0 +1,8 @@
+{
+  "exit_code": 1,
+  "assembler_pid": 44480,
+  "proof_runs": 0,
+  "at_utc": "2026-10-20T08:01:32.995956+00:00",
+  "error": "",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v3\\assemble.py\", line 495, in main\n    a=Assembler(gate,out);a.gate_path=gate_path;a.run()\n                                                ^^^^^^^\n  File \"E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v3\\assemble.py\", line 419, in run\n    self.outputs(module)\n  File \"E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v3\\assemble.py\", line 257, in outputs\n    self.legacy_trace(module,trace)\n  File \"E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v3\\assemble.py\", line 237, in legacy_trace\n    assert inputs[7]==['Package.id?: (some Zeta23)',f'{mix(1723,mix(name_hash(\"Zeta23\"),13)):016x}']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

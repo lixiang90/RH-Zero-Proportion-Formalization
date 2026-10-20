@@ -1,0 +1,28 @@
+{
+  "schema": "w9a2-root-terminal-observation-v1",
+  "sole_owner": "/root",
+  "role": "ROOT_MUST_SELECT_EXACT_candidate-ordinary-vN_OR_trusted-runtime-closure-v1",
+  "exec_session_id": null,
+  "parent_pid": null,
+  "actual_exit_code": null,
+  "observed_scope": "completed-outer-parent-handle",
+  "observation_source": "ROOT_MUST_SELECT_functions.write_stdin_OR_functions.exec_command",
+  "observed_at_utc": "ROOT_MUST_SUPPLY_ACTUAL_OBSERVATION_TIME",
+  "raw_tool_terminal": {
+    "path": "ROOT_MUST_PRESERVE_ORIGINAL_EXTERNAL_HANDLE_TOOL_RESULT.json",
+    "sha256": "ROOT_MUST_PIN"
+  },
+  "runner": {
+    "path": "ROOT_MUST_PIN_THE_ACTUAL_PARENT_RUNNER",
+    "sha256": "ROOT_MUST_PIN"
+  },
+  "completion_receipt": {
+    "path": "ROOT_MUST_PIN_THE_ACTUAL_COMPLETED_INTERNAL_RECEIPT",
+    "sha256": "ROOT_MUST_PIN"
+  },
+  "gate": {
+    "path": "research-goal-20261016/gates/w9a2-ordinary-v1-20261020.json",
+    "sha256": "92def59e80c77b461e3cc301bff748f65e44d53b4c031d745098b156882a3bc5"
+  },
+  "trust_boundary": "Only root may preserve and attest the external tool result; a runner cannot attest its own future exit. Null fields intentionally make this template unusable. An ordinary role requires the original whole-parent session/PID/exact gate/actual terminal; failed stages must preserve actual exit1 and may contribute only exact earlier PASS module outputs. The setup role requires actual exit0, assembler PID/source and trusted_setup_receipt."
+}

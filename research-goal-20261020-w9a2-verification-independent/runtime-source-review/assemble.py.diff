@@ -1,0 +1,64 @@
+--- archive-pre-review-v0/assemble.py
++++ revision2/assemble.py
+@@ -243,6 +243,8 @@
+         self.pin(cp,'historical-actual-core-audit-cache-provenance')
+         assert c['compiler']==self.gate['lean_version'] and c['exit_code']==0
+         assert c['local_comparator_core_passed'] and c['source_unchanged_during_check']
++        assert c['comparator_commit']==base['tool_commits']['Comparator']
++        assert c['exporter_commit']==base['tool_commits']['lean4export']
+         overlay=self.output/'tool-overlay';overlay.mkdir()
+         five=['Comparator','Comparator.Axioms','Comparator.Compare','Comparator.Util','Export.Parse']
+         rows=[]
+@@ -272,7 +274,14 @@
+             p=Path(row['path']);owner,rel=row['logical_name'].split('/',1)
+             raw=canonical_git_blob(p,rel,tooltrees[owner])
+             assert digest(raw.replace(b'\r\n',b'\n'))==expected[row['logical_name']]
+-            assert sha(p)==c['input_sha256'][p.relative_to(ROOT).as_posix()]
++            # Historical CoreAudit pinned its nested exporter checkout. Its
++            # bytes equal this top-level native exporter source at the same
++            # fixed commit; preserve that actual receipt path in the bridge.
++            receipt_path=(ROOT/'tmp/Comparator/.lake/packages/lean4export'/rel
++                          if owner=='lean4export' else p)
++            receipt_rel=receipt_path.relative_to(ROOT).as_posix()
++            assert sha(p)==sha(receipt_path)==c['input_sha256'][receipt_rel]
++            self.pin(receipt_path,'actual-historical-tool-source-path')
+             out=self.pin(p,'pinned-trusted-tool-source');out={**out,'logical_name':row['logical_name']};sources.append(out)
+         # Nested Parse is source-identical to fixed exporter source, not merely
+         # a same-named arbitrary olean selected through search-path accident.
+@@ -284,6 +293,7 @@
+         old=ROOT/'verification/gram-defect-single-20261014/independent-kernel.json';oldr=load(old)
+         self.pin(old,'source-to-identical-Nano-and-exporter-provenance')
+         nano=oldr['tool_provenance']['nanoda_binary'];assert nano['sha256']==sha(paths['nanoda_binary'])
++        assert nano['pin']==base['tool_commits']['nanoda']
+         tree=git_tree(ROOT/'tmp/nanoda',base['tool_commits']['nanoda'])
+         cargo=ROOT/'tmp/nanoda/Cargo.toml';raw=canonical_git_blob(cargo,'Cargo.toml',tree)
+         assert digest(raw)==nano['cargo_git_blob_content_sha256'];self.pin(cargo,'Nano-pinned-Cargo-source')
+@@ -307,6 +317,8 @@
+         pycap=load(HERE/'controller-stdlib-loaded-modules.json');self.pin(HERE/'controller-stdlib-loaded-modules.json','actual-Python-extension-loader-observation')
+         assert pycap['runner_sha256']==RUNNER_SHA and pycap['python'].casefold()==sys.executable.casefold()
+         assert pycap['sys_version']==sys.version
++        for row in pycap['all_actual_loaded_modules_with_instrumentation']:
++            self.bind(row,'current-matching-actual-Python-loaded-module')
+         # Exact imported Python library files (including actual bytecode cache
+         # when present) are installed-controller trusted data, pinned here.
+         for module in tuple(sys.modules.values()):
+@@ -355,6 +367,11 @@
+         for owner,rev in base['package_source_revisions'].items():
+             package=ROOT/'.lake/packages'/owner;self.packages[owner]=package
+             self.trees[owner]=git_tree(package,rev)
++            # Bind the selected fixed package configuration as well as source
++            # leaves. In particular Zeta's legacy trace options correspond to
++            # this exact lakefile.toml, not a mutable same-HEAD config.
++            for rel in ['lakefile.toml','lakefile.lean','lean-toolchain','lake-manifest.json']:
++                if rel in self.trees[owner]:self.canonical(package/rel,owner)
+         for rootrow in self.gate['candidate_import_source_files']:
+             p=check(rootrow);self.pin(p,'candidate-source-imports-only-never-compiled')
+             for module in imports(p.read_bytes()):
+@@ -432,6 +449,7 @@
+ 
+ 
+ def main():
++    if not __debug__:raise RuntimeError('Python optimization disables validation assertions; refusing setup')
+     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--gate',required=True)
+     args=ap.parse_args();gate_path=absolute(args.gate);gate=load(gate_path)
+     assert os.name=='nt' and gate['schema']=='w9a2-metadata-runtime-closure-gate-v1'

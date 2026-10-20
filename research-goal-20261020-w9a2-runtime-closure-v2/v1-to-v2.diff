@@ -1,0 +1,16 @@
+--- v1-550762bc-source-only
++++ v2-sdk-lake-source-search
+@@ -97,8 +97,11 @@
+         for owner,package in self.packages.items():
+             p=package/rel
+             if p.is_file():found.append((p,owner))
+-        p=SDK/'src/lean'/rel
+-        if p.is_file():found.append((p,'SDK'))
++        # Official archive keeps Lake sources below src/lean/lake even though
++        # their modules/data are Lake.* / lib/lean/Lake.* respectively.
++        for source_root in [SDK/'src/lean',SDK/'src/lean/lake']:
++            p=source_root/rel
++            if p.is_file():found.append((p,'SDK'))
+         assert len(found)==1, 'Ambiguous/missing source '+module+': '+str(found)
+         return found[0]
+     def canonical(self,path,owner):

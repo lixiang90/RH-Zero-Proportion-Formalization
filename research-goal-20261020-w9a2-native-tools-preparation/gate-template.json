@@ -1,0 +1,29 @@
+{
+  "allow_trusted_native_tools_setup": false,
+  "all_previous_compiler_handles_terminal_by_root": false,
+  "sole_owner": "/root",
+  "automatic_retries": 0,
+  "setup_timeout_seconds": 7200,
+  "runner_sha256": "ROOT_MUST_FILL",
+  "prepared_sha256": "ROOT_MUST_FILL",
+  "work_directory": "tmp/w9a2-20261020/windows-trusted-native-v0",
+  "SDK_root": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2",
+  "powershell": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+  "wsl": "C:/Windows/System32/wsl.exe",
+  "wsl_distribution": "Ubuntu",
+  "taskkill": "C:/Windows/System32/taskkill.exe",
+  "root_terminal_evidence": {
+    "path": "ROOT_MUST_SUPPLY_ALL_PRIOR_COMPILER_HANDLES_REAL_TERMINAL_EVIDENCE.json",
+    "sha256": "ROOT_MUST_FILL"
+  },
+  "observed_Lean_modules": {
+    "path": "research-goal-20261020-w9a2-runtime-closure-preparation/evidence/compiler19056-loaded-modules.json",
+    "sha256": "ROOT_MUST_FILL_AND_REVIEW_SCOPE"
+  },
+  "required_before_authorization": [
+    "All old Windows/Linux compiler and proof handles truly terminal; current Core compile must not be interrupted by this setup",
+    "Root decides the existing same-hash native binaries plus historical source/SDK provenance do not already suffice",
+    "Independent review of fixed nine sources, SDK input binding, debugger initial-breakpoint protocol and no-user-proof scope",
+    "New root gate only, no automatic retry or cache/dependency optimization family"
+  ]
+}

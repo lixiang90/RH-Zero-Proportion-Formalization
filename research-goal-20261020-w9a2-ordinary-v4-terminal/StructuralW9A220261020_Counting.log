@@ -1,0 +1,19 @@
+E:\codex-build\RH-Zero-Proportion-Formalization\StructuralW9A220261020\Counting.lean:181:0: warning: automatically included section variable(s) unused in theorem `StructuralW9A220261020.Counting.sorted_separated`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\codex-build\RH-Zero-Proportion-Formalization\StructuralW9A220261020\Counting.lean:252:0: warning: automatically included section variable(s) unused in theorem `StructuralW9A220261020.Counting.block_remainder_bound_separated`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'StructuralW9A220261020.Counting.sum_range_coboundary_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Counting.summed_of_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Counting.actual_defect_estimate_effective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StructuralW9A220261020.Counting.actual_dyadic_of_summed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StructuralW9A220261020.Counting.actual_cumulative_of_summed' depends on axioms: [propext, Classical.choice, Quot.sound]

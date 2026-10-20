@@ -1,0 +1,184 @@
+{
+  "scope": "ELF loader --list metadata only; no target main, compiler, export or kernel replay executed",
+  "inspections": [
+    {
+      "executable_file_inspected": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin",
+      "loader_list_exit_code": 0,
+      "stdout": "\tlinux-vdso.so.1 (0x00007ffd43f5a000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007fabcf96c000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fabcf743000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007fabcfab1000)\n",
+      "stderr": "",
+      "main_executed": false
+    },
+    {
+      "executable_file_inspected": "/lib64/ld-linux-x86-64.so.2",
+      "loader_list_exit_code": 0,
+      "stdout": "\tstatically linked\n",
+      "stderr": "",
+      "main_executed": false
+    },
+    {
+      "executable_file_inspected": "/usr/bin/setsid",
+      "loader_list_exit_code": 0,
+      "stdout": "\tlinux-vdso.so.1 (0x00007fff503d4000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007eff0c13e000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007eff0c37c000)\n",
+      "stderr": "",
+      "main_executed": false
+    },
+    {
+      "executable_file_inspected": "/bin/sh",
+      "loader_list_exit_code": 0,
+      "stdout": "\tlinux-vdso.so.1 (0x00007ffd9cdbc000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f4a7b5ac000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007f4a7b807000)\n",
+      "stderr": "",
+      "main_executed": false
+    },
+    {
+      "executable_file_inspected": "/bin/kill",
+      "loader_list_exit_code": 0,
+      "stdout": "\tlinux-vdso.so.1 (0x00007ffe56d10000)\n\tlibprocps.so.8 => /lib/x86_64-linux-gnu/libprocps.so.8 (0x00007efdc865f000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007efdc8436000)\n\tlibsystemd.so.0 => /lib/x86_64-linux-gnu/libsystemd.so.0 (0x00007efdc836f000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007efdc86b0000)\n\tliblzma.so.5 => /lib/x86_64-linux-gnu/liblzma.so.5 (0x00007efdc8344000)\n\tlibzstd.so.1 => /lib/x86_64-linux-gnu/libzstd.so.1 (0x00007efdc8275000)\n\tliblz4.so.1 => /lib/x86_64-linux-gnu/liblz4.so.1 (0x00007efdc8253000)\n\tlibcap.so.2 => /lib/x86_64-linux-gnu/libcap.so.2 (0x00007efdc8248000)\n\tlibgcrypt.so.20 => /lib/x86_64-linux-gnu/libgcrypt.so.20 (0x00007efdc810a000)\n\tlibgpg-error.so.0 => /lib/x86_64-linux-gnu/libgpg-error.so.0 (0x00007efdc80e4000)\n",
+      "stderr": "",
+      "main_executed": false
+    },
+    {
+      "executable_file_inspected": "/usr/bin/readlink",
+      "loader_list_exit_code": 0,
+      "stdout": "\tlinux-vdso.so.1 (0x00007ffdc95d3000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f67bc271000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007f67bc4b5000)\n",
+      "stderr": "",
+      "main_executed": false
+    },
+    {
+      "executable_file_inspected": "/usr/bin/env",
+      "loader_list_exit_code": 0,
+      "stdout": "\tlinux-vdso.so.1 (0x00007ffc687b8000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fe65aabf000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007fe65ad04000)\n",
+      "stderr": "",
+      "main_executed": false
+    }
+  ],
+  "files": [
+    {
+      "path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin",
+      "resolved_path": "/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin",
+      "bytes": 1312680,
+      "sha256": "b19804767cb72bf5a317fcfc20e8af7eafdfba789dd6b24bddee2574379ff35a",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/mnt/e/codex-build/RH-Zero-Proportion-Formalization/tmp/kernel-tools/nanoda-target/release/nanoda_bin"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+      "bytes": 146000,
+      "sha256": "1785fc8cd9a2ba72f773b0b60b20e58ff79bf30ce2fd8e241c8b31303dcea17e",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/libgcc_s.so.1"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/libc.so.6",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+      "bytes": 2220400,
+      "sha256": "c53819710b163d3f1d2541778590d58d3ef31cb0ed75adcbe059faac68c1e72d",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/libc.so.6"
+    },
+    {
+      "path": "/lib64/ld-linux-x86-64.so.2",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+      "bytes": 240936,
+      "sha256": "9eb34cb2da3ae2a9398cc09b3cd2d069563ec40d9858cb711af15cd23fa80abf",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+    },
+    {
+      "path": "/usr/bin/setsid",
+      "resolved_path": "/usr/bin/setsid",
+      "bytes": 14720,
+      "sha256": "1439325b5ba2aabc9f826fb1e179a7690b78df2ac4df333ea9fe552453620cc1",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/bin/setsid"
+    },
+    {
+      "path": "/bin/sh",
+      "resolved_path": "/usr/bin/dash",
+      "bytes": 125688,
+      "sha256": "4f291296e89b784cd35479fca606f228126e3641f5bcaee68dee36583d7c9483",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/bin/dash"
+    },
+    {
+      "path": "/bin/kill",
+      "resolved_path": "/usr/bin/kill",
+      "bytes": 30952,
+      "sha256": "e2a3f290c68098d83c8b7e0b725bf4e38c7d61a18e01d11157ec831cee504bc3",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/bin/kill"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/libprocps.so.8",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libprocps.so.8.0.3",
+      "bytes": 80080,
+      "sha256": "bf4d5b641d9ee1a1a901d8d13d50a93f312d1594088a3e7ba31b587d203e108d",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/libprocps.so.8.0.3"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/libsystemd.so.0",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libsystemd.so.0.32.0",
+      "bytes": 807936,
+      "sha256": "3127e696409dd066973c1c90f35ca1cad4e9f2f71595d1f3abb3e7e721d2fe0d",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/libsystemd.so.0.32.0"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/liblzma.so.5",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5",
+      "bytes": 170456,
+      "sha256": "493cb401ab4aa3bba611ca464d12996afb3b327940d29476f535f999e167439b",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/libzstd.so.1",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8",
+      "bytes": 841808,
+      "sha256": "5df4f4df42d76270bb6981fabc7c1fdccd8ad28a23d84d67f73203fb3f537667",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/liblz4.so.1",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/liblz4.so.1.9.3",
+      "bytes": 125152,
+      "sha256": "65f47a3dc2cec5f938379b7b625f0621657bf1254551895d22462c6a204cbad8",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/liblz4.so.1.9.3"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/libcap.so.2",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libcap.so.2.44",
+      "bytes": 39024,
+      "sha256": "a87681f705c09fc97f23db4dccc0c9a0fd34cf73698251361d8c6ccbf26efe75",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/libcap.so.2.44"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/libgcrypt.so.20",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libgcrypt.so.20.3.4",
+      "bytes": 1296312,
+      "sha256": "7ff6ae38b83fd19beb283fa784d845d0614a0ee92917dab950846bdb14cce4f3",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/libgcrypt.so.20.3.4"
+    },
+    {
+      "path": "/lib/x86_64-linux-gnu/libgpg-error.so.0",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libgpg-error.so.0.32.1",
+      "bytes": 149760,
+      "sha256": "ed682e103b671d628ef11f19f8a5b772b8d2501ba26e4b80c055331a4c4d8dfc",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/lib/x86_64-linux-gnu/libgpg-error.so.0.32.1"
+    },
+    {
+      "path": "/usr/bin/readlink",
+      "resolved_path": "/usr/bin/readlink",
+      "bytes": 39336,
+      "sha256": "f6da8c9d4619cbfe63a480d516b62463b32da2e1d285a301ead8c7b97d776483",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/bin/readlink"
+    },
+    {
+      "path": "/usr/bin/env",
+      "resolved_path": "/usr/bin/env",
+      "bytes": 43976,
+      "sha256": "85036540673319c6c2f54233fd2b9e45a8a71246b51cc96c4e6ab8ee6c419eb0",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/usr/bin/env"
+    },
+    {
+      "path": "/etc/ld.so.cache",
+      "resolved_path": "/etc/ld.so.cache",
+      "bytes": 55444,
+      "sha256": "cef81aeb3a47d53404106183bcb1bddc8089c9382bfcd3225f0a9e9edb7acd6d",
+      "Windows_read_path": "//wsl.localhost/Ubuntu/etc/ld.so.cache"
+    }
+  ],
+  "complete_runtime_approved": false
+}
+

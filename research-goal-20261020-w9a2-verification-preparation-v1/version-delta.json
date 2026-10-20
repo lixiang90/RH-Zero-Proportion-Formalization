@@ -1,0 +1,17 @@
+{
+  "schema": "w9a2-verification-version-delta-v1",
+  "scope": "Unique execution fix: setsid --wait propagates real nanoda child exit; no proof execution.",
+  "previous_prepared_manifest_sha256": "d3fe63a5bfb293d2bd860bb8549575723cf791cec20ad03213e69a7f4f0852ff",
+  "previous_runner_sha256": "42932741b4759dff17df3df3ddf2d4e6a5a1d32461dc5859aaf558c1f5b22022",
+  "runner_sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8",
+  "only_runner_change": "Insert --wait immediately after /usr/bin/setsid in the Windows serial-nanoda argv.",
+  "other_changes": [
+    "Versioned gate prepared-manifest path",
+    "README explains fork/wait/child-exit gap",
+    "New exact diff/static audit/version metadata/manifest"
+  ],
+  "candidate_source_unchanged": true,
+  "CoreAudit_source_unchanged": true,
+  "runner_executions": 0,
+  "proof_tool_executions": 0
+}

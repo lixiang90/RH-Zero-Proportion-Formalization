@@ -1,0 +1,134 @@
+{
+  "scope": "Actual pure file PE export-table scan of every officially byte-verified SDK bin DLL",
+  "SDK_archive_check": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v2\\official-sdk-check.json",
+    "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v2\\official-sdk-check.json",
+    "bytes": 6352754,
+    "sha256": "f052fabe7dad7ba4962056ffdbed4a1c63c7061b4abffcf51a304da1db49e373"
+  },
+  "PE_parser": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-preparation\\inspect_runtime.py",
+    "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-preparation\\inspect_runtime.py",
+    "bytes": 12581,
+    "sha256": "f34d33aff0631002690c160c4fb8abf5001b6b70ca3f51f06804e7e4d40255cf"
+  },
+  "scan_source": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v3\\scan_sdk_exports.py",
+    "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-runtime-closure-v3\\scan_sdk_exports.py",
+    "bytes": 3090,
+    "sha256": "148742313fdbd03ebc637e7d79e4d68433ae893ccd3680ea74ac5677de0f50cb"
+  },
+  "target_symbols": [
+    "lean_byte_array_hash",
+    "lean_string_hash"
+  ],
+  "DLLs": [
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\libc++.dll",
+      "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\libc++.dll",
+      "bytes": 1659392,
+      "sha256": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4",
+      "PE_machine": 34404,
+      "named_export_count": 2584,
+      "sorted_export_names_sha256": "e6b488a50d20b6077efe625a8079dc5a1af20b01151994076e99f1fbcd856da0",
+      "selected_exact_exports": []
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\libclang-cpp.dll",
+      "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\libclang-cpp.dll",
+      "bytes": 71108608,
+      "sha256": "1b32dd58335db4a984237e1fd1993cfd0f0fa413b5d10957290703eb03377ca4",
+      "PE_machine": 34404,
+      "named_export_count": 40158,
+      "sorted_export_names_sha256": "61acb64cf79772f967f2fcec99c100dc2fe3a99ac0c09c9dbfc5d47bd12fe25f",
+      "selected_exact_exports": []
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\libInit_shared.dll",
+      "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\libInit_shared.dll",
+      "bytes": 27901952,
+      "sha256": "48908cc6032b08b69a1b071b64d05660bb452b066fdf4094f0e7d8102db068ce",
+      "PE_machine": 34404,
+      "named_export_count": 47233,
+      "sorted_export_names_sha256": "a4e1f531a8800bf4fb4636a40cbf278e7f06c16b2ea48d1a59f9693032020ccd",
+      "selected_exact_exports": [
+        {
+          "name": "lean_byte_array_hash",
+          "ordinal": 44430,
+          "function_RVA": 12851216,
+          "forwarder": null
+        },
+        {
+          "name": "lean_string_hash",
+          "ordinal": 44720,
+          "function_RVA": 12849136,
+          "forwarder": null
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\libLake_shared.dll",
+      "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\libLake_shared.dll",
+      "bytes": 10956288,
+      "sha256": "1974bdd01e952fe9420d6975c158b504f1fe13a6da7e3c511e9ea21dbf9a3e4d",
+      "PE_machine": 34404,
+      "named_export_count": 13678,
+      "sorted_export_names_sha256": "3da30d6fb2fa4852deb7dabac4eb1310cd0cdca7eb5e52543fa8c59eabd48723",
+      "selected_exact_exports": []
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\libleanshared.dll",
+      "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\libleanshared.dll",
+      "bytes": 69306880,
+      "sha256": "f1c703e1fb2d8d48c33d187cf521969556d82af25abc57bafcecb6783c7fcc66",
+      "PE_machine": 34404,
+      "named_export_count": 62832,
+      "sorted_export_names_sha256": "0ca2590f69cb2c346201afdb0b84c62e4f9a0dfc63b2139111d07f4e3c84ba7d",
+      "selected_exact_exports": []
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\libleanshared_1.dll",
+      "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\libleanshared_1.dll",
+      "bytes": 51915776,
+      "sha256": "a88be92d9d735c6c3d5491cd9d35499800dfb84c2c6ce6249a4f93a90a9cb80b",
+      "PE_machine": 34404,
+      "named_export_count": 60935,
+      "sorted_export_names_sha256": "521ad8385352f9ac05e103aeb4ef004a0e96269da129e74dcf3b4c62b3415b39",
+      "selected_exact_exports": []
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\libleanshared_2.dll",
+      "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\libleanshared_2.dll",
+      "bytes": 57494016,
+      "sha256": "de84030f887595c184fb60391f1c853774a16bf78b3d53e114d3f40f00934d41",
+      "PE_machine": 34404,
+      "named_export_count": 52409,
+      "sorted_export_names_sha256": "14020645aa2ec7c63221a429a418f82c5b5473c911acef14c09b0ec673c0665a",
+      "selected_exact_exports": []
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\libLLVM-22.dll",
+      "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\libLLVM-22.dll",
+      "bytes": 90563584,
+      "sha256": "beaba61b3176e06fc0c4bf87e8bfae094a2405d01fa8e03d78029471555445d2",
+      "PE_machine": 34404,
+      "named_export_count": 44728,
+      "sorted_export_names_sha256": "7ec22def4203d4e33dbf78961ad6e1fab6f6c00883a2e4760239ece974c7a0fb",
+      "selected_exact_exports": []
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin\\zlib1.dll",
+      "resolved_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\zlib1.dll",
+      "bytes": 131072,
+      "sha256": "94dd0a72d4da79e25294a91d1edf902d76eade7512d9218609a5fe43e3a7397a",
+      "PE_machine": 34404,
+      "named_export_count": 99,
+      "sorted_export_names_sha256": "1027ac42491c4b9828ff4fdb63a2b40d9dfc23a09320fa714e6093bfba37fce3",
+      "selected_exact_exports": []
+    }
+  ],
+  "DLL_loads": 0,
+  "SDK_hash_API_calls": 0,
+  "compiler_runs": 0,
+  "proof_runs": 0
+}

@@ -1,0 +1,44 @@
+{
+  "scope": "Independent byte-only delivery review; no semantic/proof execution",
+  "repair_manifest_rows_verified": 16,
+  "previous_draft_manifest_rows_verified": 18,
+  "theorem": "StructuralW9A220261020.Localization.located_state",
+  "theorem_statement_sha256": "ccf226f0871671e86876b6111e550328991ff23e9d065f7c11e48e6a04675670",
+  "same_theorem_statement": true,
+  "changed_Localization_line": 262,
+  "byte_delta": 1,
+  "old_line": "      simpa only [reverse8] using (le_of_lt (lt_of_not_ge ho))",
+  "new_line": "      change g 7 ≤ g 0\n      exact le_of_lt (lt_of_not_ge ho)",
+  "Localization_forward_and_reverse_projection_exact": true,
+  "all_bytes_outside_single_proof_line_unchanged": true,
+  "all_definitions_data_exterior_reflection_coverage_StateAt_cost_threshold_bytes_unchanged": true,
+  "four_other_modules_and_whole_wrapper_from_frozen_draft_v3_byte_identical": true,
+  "single_file_forward_and_reverse_projection_exact": true,
+  "public_statement_types": [
+    {
+      "name": "candidate_strict_improvement",
+      "type_sha256": "1ebcd77a625bcf1751d5cb3e20d5f0c71370ee68d09b1ca9b8e28656cfeae7f6",
+      "unchanged_and_official_mod_whitespace": true
+    },
+    {
+      "name": "candidate_critical_line_bound",
+      "type_sha256": "79c2edb3d9035512726ec945c2735918af6d05ebabef16d466348e7ad0686329",
+      "unchanged_and_official_mod_whitespace": true
+    },
+    {
+      "name": "candidate_critical_line_bound_cumulative",
+      "type_sha256": "33cbd630395e1c50bb101e806fe90161c384a478cb8d9478a6a7b1d71e4d6b98",
+      "unchanged_and_official_mod_whitespace": true
+    }
+  ],
+  "trusted_inputs_byte_identical_to_frozen_draft_v3": true,
+  "canonical_Localization_v0_unchanged": true,
+  "all_previous_drafts_and_manifests_preserved": true,
+  "proof_compiler_export_kernel_search_runs": 0,
+  "ordinary_Localization_pass_claimed": false,
+  "Comparator_passed": false,
+  "independent_kernels_passed": false,
+  "complete_3200s_passed": false,
+  "official_accepted": false,
+  "main_round_counter_changed": false
+}

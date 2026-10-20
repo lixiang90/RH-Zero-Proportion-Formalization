@@ -1,0 +1,87 @@
+{
+  "schema": "w9a2-native-tools-setup-preparation-v1",
+  "scope": "Backup trusted nine-source Windows setup scripts only. Existing same-hash provenance reuse should be reviewed first; no compiler/export/kernel/loader-probe/install execution.",
+  "files": [
+    {
+      "path": "build_native_once.py",
+      "bytes": 14119,
+      "sha256": "07905d0450fd4d11084eac0d5793afa0d779d315d984d422f788bd1090c964b0"
+    },
+    {
+      "path": "gate-template.json",
+      "bytes": 1466,
+      "sha256": "12d524e54d8b3c1caae2ecf89d4e69dcbe4b24319ba89986d1e07c2927d54318"
+    },
+    {
+      "path": "lakefile.toml.in",
+      "bytes": 739,
+      "sha256": "6c598a592d7fb2e6fa6ba9498e60f39a418fd9f462c9a85e953510cbfd51d5b3"
+    },
+    {
+      "path": "probe_before_main.py",
+      "bytes": 6733,
+      "sha256": "fa3ed7ef6080841ad8852b8b4587c2784e23ca3773f64db4aa426c90a45d8f36"
+    },
+    {
+      "path": "README.zh.md",
+      "bytes": 4399,
+      "sha256": "f4c2038acc0740453059d3fad78637ffe88d71bfa83e754432071817646fec1f"
+    },
+    {
+      "path": "source-pins.json",
+      "bytes": 3342,
+      "sha256": "0e5a8b41c4417ef01db32f0efbc74d03416404d39601d1a0c50c4f91cb1fffbd"
+    },
+    {
+      "path": "sources/Comparator/Axioms.lean",
+      "bytes": 2389,
+      "sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125"
+    },
+    {
+      "path": "sources/Comparator/Compare.lean",
+      "bytes": 4089,
+      "sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd"
+    },
+    {
+      "path": "sources/Comparator/Util.lean",
+      "bytes": 788,
+      "sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88"
+    },
+    {
+      "path": "sources/Comparator.lean",
+      "bytes": 204,
+      "sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23"
+    },
+    {
+      "path": "sources/ComparatorMain.lean",
+      "bytes": 10931,
+      "sha256": "d6474f7ac49cf7a1c2f24aff6ac2bcc97a4a00aa37b969f225c6e688c434d0b4"
+    },
+    {
+      "path": "sources/CoreAudit.lean",
+      "bytes": 2032,
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    },
+    {
+      "path": "sources/Export/Parse.lean",
+      "bytes": 20491,
+      "sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286"
+    },
+    {
+      "path": "sources/Export.lean",
+      "bytes": 15994,
+      "sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998"
+    },
+    {
+      "path": "sources/ExporterMain.lean",
+      "bytes": 751,
+      "sha256": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a"
+    }
+  ],
+  "backup_only": true,
+  "executed": false,
+  "proof_runs": 0,
+  "native_tools_built": false,
+  "complete_runtime_approved": false,
+  "unified_3200s_passed": false
+}

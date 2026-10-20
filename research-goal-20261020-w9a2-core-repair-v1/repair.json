@@ -1,0 +1,183 @@
+{
+  "status": "PREPARED_PROOF_ONLY_REPAIR_NOT_COMPILED",
+  "prepared_at_utc": "2026-10-20T07:05:43.469680+00:00",
+  "failure": {
+    "gate_sha256": "3960ea16d3ef7b2bf7d91453e95ec77aa143aee295ca655df0a45c01661d0533",
+    "module": "StructuralW9A220261020.Core",
+    "exit_code": 1,
+    "elapsed_seconds": 644.6099999999999,
+    "log_sha256": "db0d88a8a2bc407caa915490512c7312de78b2ad6be7f8b31479af51c3380461",
+    "diagnostic": "At split Core line143:6, simp only leaves the Bool coercion condition false = true unreduced in qTargetFrom_sound."
+  },
+  "change": {
+    "theorem": "AMW.Cert.PC9QB6M.qTargetFrom_sound",
+    "full_source_line": 10752,
+    "development_source_line": 143,
+    "old_line": "      simpa only [qTargetFrom, hs, ↓reduceIte] using h",
+    "new_line": "      simpa only [qTargetFrom, hs, Bool.false_eq_true, ↓reduceIte] using h",
+    "scope": "Add only the existing Init.Data.Bool.false_eq_true simp theorem, retaining the identical theorem statement and all definitions/data."
+  },
+  "canonical_full_v0_unchanged_sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6",
+  "development_split_v0_unchanged_sha256": "b2f536448f48a50d3994cbccf7b3bd94ea54f388664d98e120c112130794ff1e",
+  "prefix_v0_unchanged_sha256": "bfd774658f3f855596a5453f86f4d98fbc884ca651b3e595d68f70b9553f5b3c",
+  "prefix_previous_ordinary_pass": {
+    "module": "StructuralW9A220261020.Prefix",
+    "exit_code": 0,
+    "elapsed_seconds": 436.328,
+    "source_sha256": "bfd774658f3f855596a5453f86f4d98fbc884ca651b3e595d68f70b9553f5b3c",
+    "source_unchanged": true,
+    "log_sha256": "80ff615cf3f693086bc5622d527cad22cd78e2d307643b97ecfab24fe8196bf6",
+    "olean_sha256": "e9bbc282004e9c95ed69c608a2a3ebff6e399425b662c71edcc2e90705d05bfd",
+    "expected_roots": [],
+    "observed_axioms": {},
+    "axiom_audit_passed": null,
+    "ordinary_compile_passed": true,
+    "Comparator_passed": false,
+    "independent_kernel_passed": false,
+    "website_submission_ready": false
+  },
+  "new_artifacts": [
+    {
+      "path": "research-goal-20261020-w9a2-core-repair-v1/canonical-full/StructuralW9A220261020/Core.lean",
+      "bytes": 1770091,
+      "sha256": "c2af225175f9a5ab14d2ba2612714a21e0613f66107a1d75b9d47bf1c77ba02a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-core-repair-v1/development-split/StructuralW9A220261020/Core.lean",
+      "bytes": 1185248,
+      "sha256": "26e23c7fc4fbae33bdfff446901eaeb0f22f0f08fe13fa4e326541565a25279f"
+    }
+  ],
+  "exact_projections": {
+    "full_v0_to_v1_only_single_line": true,
+    "split_v0_to_v1_only_single_line": true,
+    "full_v1_reverse_projection_equals_v0": true,
+    "split_v1_reverse_projection_equals_v0": true,
+    "old_prefix_plus_new_suffix_equals_new_full_bytes": true,
+    "new_full_source_sha256": "c2af225175f9a5ab14d2ba2612714a21e0613f66107a1d75b9d47bf1c77ba02a",
+    "new_split_source_sha256": "26e23c7fc4fbae33bdfff446901eaeb0f22f0f08fe13fa4e326541565a25279f"
+  },
+  "theorem_statement_unchanged": true,
+  "entire_Data_namespace_byte_identical": true,
+  "threshold_cost_state_potential_payload_guard_cursor_changes": 0,
+  "source_inputs_before": [
+    {
+      "path": "StructuralW9A220261020/Core.lean",
+      "bytes": 1770071,
+      "sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-formal-static-review/development-split/StructuralW9A220261020/Core.lean",
+      "bytes": 1185228,
+      "sha256": "b2f536448f48a50d3994cbccf7b3bd94ea54f388664d98e120c112130794ff1e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-formal-static-review/development-split/StructuralW9A220261020/Prefix.lean",
+      "bytes": 584999,
+      "sha256": "bfd774658f3f855596a5453f86f4d98fbc884ca651b3e595d68f70b9553f5b3c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-formal-static-review/split-audit.json",
+      "bytes": 2047,
+      "sha256": "4269908c06fc3faf6dc6c60fde25018cd7fd0a818878dea03243163c9afb5b90"
+    },
+    {
+      "path": "tmp/lean-toolchain/src/lean/Init/Data/Bool.lean",
+      "bytes": 27233,
+      "sha256": "ee68370968bd91b779b2f2063bad8701bd5f455b32ea8d503a5234dc3a3cb10a"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/started.json",
+      "bytes": 325,
+      "sha256": "8ee4c1da94b808dff26f09b9127f98ee498e9bd67c588fc252331091ffabf4d8"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/terminal.json",
+      "bytes": 108,
+      "sha256": "b8c2c7571a4ad774932299159d1d5d3408b9b42a63a3b8308f6b67aa3b519d7e"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/StructuralW9A220261020_Prefix.receipt.json",
+      "bytes": 600,
+      "sha256": "0d38fee2a86a74ea24a7edac4476273b5003a3343cd00e579e6e3e315f012cc3"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/StructuralW9A220261020_Core.log",
+      "bytes": 653,
+      "sha256": "db0d88a8a2bc407caa915490512c7312de78b2ad6be7f8b31479af51c3380461"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/StructuralW9A220261020_Core.receipt.json",
+      "bytes": 547,
+      "sha256": "bf5d0b86114580ae1e3f34237f018b9c17e55b2d104e7c8a8fc6268d6a01376b"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/StructuralW9A220261020_Core.command.json",
+      "bytes": 1703,
+      "sha256": "4ff04df8dd071160a6e4006d32e8bdf1d3507c463b97d25783544aba1ab4f4c5"
+    }
+  ],
+  "source_inputs_after": [
+    {
+      "path": "StructuralW9A220261020/Core.lean",
+      "bytes": 1770071,
+      "sha256": "c5180e8cb9d219bec5cf29e4d65e0cfc304f4d40a12ad6d52332603e115fccd6"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-formal-static-review/development-split/StructuralW9A220261020/Core.lean",
+      "bytes": 1185228,
+      "sha256": "b2f536448f48a50d3994cbccf7b3bd94ea54f388664d98e120c112130794ff1e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-formal-static-review/development-split/StructuralW9A220261020/Prefix.lean",
+      "bytes": 584999,
+      "sha256": "bfd774658f3f855596a5453f86f4d98fbc884ca651b3e595d68f70b9553f5b3c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-formal-static-review/split-audit.json",
+      "bytes": 2047,
+      "sha256": "4269908c06fc3faf6dc6c60fde25018cd7fd0a818878dea03243163c9afb5b90"
+    },
+    {
+      "path": "tmp/lean-toolchain/src/lean/Init/Data/Bool.lean",
+      "bytes": 27233,
+      "sha256": "ee68370968bd91b779b2f2063bad8701bd5f455b32ea8d503a5234dc3a3cb10a"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/started.json",
+      "bytes": 325,
+      "sha256": "8ee4c1da94b808dff26f09b9127f98ee498e9bd67c588fc252331091ffabf4d8"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/terminal.json",
+      "bytes": 108,
+      "sha256": "b8c2c7571a4ad774932299159d1d5d3408b9b42a63a3b8308f6b67aa3b519d7e"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/StructuralW9A220261020_Prefix.receipt.json",
+      "bytes": 600,
+      "sha256": "0d38fee2a86a74ea24a7edac4476273b5003a3343cd00e579e6e3e315f012cc3"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/StructuralW9A220261020_Core.log",
+      "bytes": 653,
+      "sha256": "db0d88a8a2bc407caa915490512c7312de78b2ad6be7f8b31479af51c3380461"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/StructuralW9A220261020_Core.receipt.json",
+      "bytes": 547,
+      "sha256": "bf5d0b86114580ae1e3f34237f018b9c17e55b2d104e7c8a8fc6268d6a01376b"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/StructuralW9A220261020_Core.command.json",
+      "bytes": 1703,
+      "sha256": "4ff04df8dd071160a6e4006d32e8bdf1d3507c463b97d25783544aba1ab4f4c5"
+    }
+  ],
+  "original_inputs_unchanged": true,
+  "compiler_export_kernel_search_runs": 0,
+  "main_round_counter_changed": false,
+  "ordinary_pass_claimed_for_v1": false,
+  "finite_rc_pass_claimed_from_error_log": false,
+  "requires_new_root_frozen_gate_before_compile": true
+}

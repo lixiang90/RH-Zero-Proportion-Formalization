@@ -1,0 +1,44 @@
+{
+  "schema": "w9a2-trusted-runtime-closure-v1",
+  "complete_source_bound_runtime_closure_verified": false,
+  "user_proofs_compiled_or_reused_in_setup": false,
+  "official_runtime_equivalence_claimed": false,
+  "coreaudit_source_sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2",
+  "tool_commits": {
+    "Comparator": "273294467ce06429e6667ece7f5699f8678c9f4e",
+    "lean4export": "b18d673bd29b476466a51a3be1012df2ed322b10",
+    "nanoda": "418320295890faed83a96fd97907b12a3b6728c2"
+  },
+  "package_source_revisions": {
+    "mathlib": "51e6992efd06126df61a496bebf8f49482a4e129",
+    "Zeta23": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510"
+  },
+  "trusted_setup_receipt": {
+    "path": "ROOT_MUST_SUPPLY_ACTUAL_SOURCE_BOUND_SETUP_RECEIPT.json",
+    "sha256": "ROOT_MUST_FILL"
+  },
+  "trusted_tool_sources": [],
+  "trusted_tool_source_entry_additional_field": {
+    "logical_name": "Comparator/Comparator.lean OR OTHER_EXACT_NAME_FROM_RUNNER_TOOL_SOURCE_LF_SHA"
+  },
+  "candidate_package_libs": [],
+  "interpreted_tool_libs": [],
+  "files": [],
+  "required_file_entry_shape": {
+    "path": "ABSOLUTE_PATH_TO_ACTUAL_FILE",
+    "resolved_path": "ABSOLUTE_PATH_AFTER_SYMLINK_RESOLUTION",
+    "bytes": 0,
+    "sha256": "ROOT_MUST_FILL",
+    "role": "compiler/native-tool/dynamic-runtime/source-bound-trusted-cache/tool-source"
+  },
+  "required_scope_before_marking_verified": [
+    "Actual Lean/SDK version and source-bound package commits and imported cache closure",
+    "Native exporter build provenance from fixed lean4export commit b18d673bd29b476466a51a3be1012df2ed322b10",
+    "Original Comparator sources at 273294467ce06429e6667ece7f5699f8678c9f4e",
+    "Unchanged CoreAudit source and interpreted modules or independent native build provenance",
+    "Complete current Windows native PE DLL/loader closure and controlled search paths",
+    "Nanoda source/build provenance at 418320295890faed83a96fd97907b12a3b6728c2 and actual WSL ELF closure",
+    "No candidate or other user proof modules compiled or imported in trusted setup",
+    "Real trusted-setup handle terminal exit0 independently observed by root"
+  ]
+}

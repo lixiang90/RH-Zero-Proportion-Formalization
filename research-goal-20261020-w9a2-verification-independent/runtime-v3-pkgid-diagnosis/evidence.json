@@ -1,0 +1,57 @@
+{
+  "scope": "Independent static type-directed diagnosis of actual runtime v3 Package.id? failure",
+  "sources": [
+    {
+      "path": "tmp/lean-toolchain/src/lean/Lean/Setup.lean",
+      "bytes": 7655,
+      "sha256": "eff05a30636e084ecf7c52e4019a1f5497d48b5b023b73f0e979abde91d419a5",
+      "first_line": 180,
+      "last_line": 192,
+      "exact_excerpt": "The type of module package identifiers.\n\nThis is a {name}`String` that is used to disambiguate native symbol prefixes between\ndifferent packages (and different versions of the same package).\n-/\nabbrev PkgId := String\n\n/-- A module's setup information as described by a JSON file. -/\nstructure ModuleSetup where\n  /-- The name of the module. -/\n  name : Name\n  /-- The package to which the module belongs (if any). -/\n  package? : Option PkgId := none\n"
+    },
+    {
+      "path": "tmp/lean-toolchain/src/lean/lake/Lake/Config/Package.lean",
+      "bytes": 16802,
+      "sha256": "d9a6a2e5b31a745616f1f174cbc3ebd20af3aca1cdf71692ec2308bdcbe5c876",
+      "first_line": 159,
+      "last_line": 161,
+      "exact_excerpt": "/-- The identifier passed to Lean to disambiguate the package's native symbols. -/\npublic def id? (self : Package) : Option PkgId :=\n  if self.bootstrap then none else some <| self.origName.toString (escape := false)\n"
+    },
+    {
+      "path": "tmp/lean-toolchain/src/lean/Init/Data/Hashable.lean",
+      "bytes": 1701,
+      "sha256": "a5fe715f39a513e7ffddf210a0ef17bcf4fb6c2fbe294ffac254a3824167dacd",
+      "first_line": 32,
+      "last_line": 35,
+      "exact_excerpt": "instance [Hashable α] : Hashable (Option α) where\n  hash\n    | none   => 11\n    | some a => mixHash (hash a) 13\n"
+    },
+    {
+      "path": "tmp/lean-toolchain/src/lean/lake/Lake/Build/Trace.lean",
+      "bytes": 13320,
+      "sha256": "ae8987432fdb2f722971c7dfa10096e138dfc9f244a75aeb5e7abbd2cbd94bff",
+      "first_line": 168,
+      "last_line": 170,
+      "exact_excerpt": "/-- Hash of a value using its `Hashable` instance. -/\n@[inline] public def ofHashable [Hashable α] (a : α) : Hash :=\n  mix nil <| mk <| hash a -- same as Name.mkSimple\n"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-runtime-closure-v3/assemble.py",
+      "bytes": 32093,
+      "sha256": "cc7ca38250d42c74ef25f3d68dabc536d75e3f2c8557fda482375005b29ddaa3",
+      "first_line": 232,
+      "last_line": 237,
+      "exact_excerpt": "        def name_hash(name):\n            h=1723\n            for part in name.split('.'):h=mix(h,self.sdk_hash.string(part))\n            return h\n        assert inputs[6]==['Module.name: '+module,f'{mix(1723,name_hash(module)):016x}']\n        assert inputs[7]==['Package.id?: (some Zeta23)',f'{mix(1723,mix(name_hash(\"Zeta23\"),13)):016x}']\n"
+    }
+  ],
+  "input_before_after_identical": true,
+  "diagnosis": "Package.id? is Option PkgId, and PkgId is String, while Module.name is Name. The old package-name expression incorrectly inserted Name.anonymous mixing before Option.some hashing.",
+  "old_expression": "mix(1723, mix(name_hash(\"Zeta23\"), 13))",
+  "correct_expression": "mix(1723, mix(self.sdk_hash.string(\"Zeta23\"), 13))",
+  "Module_name_hash_change_required": false,
+  "trace_or_cached_data_change_required": false,
+  "supersedes_prior_review_specific_claim": "runtime-source-review legacy Package.id? formula endorsement only; the prior review assumed Option Name and missed Lean.PkgId := String.",
+  "runtime_v3_files_modified": false,
+  "actual_SDK_hash_calls_by_reviewer": 0,
+  "compiler_export_kernel_or_assembler_runs_by_reviewer": 0,
+  "corrected_formula_actual_runtime_control_pass_claimed": false,
+  "round_counter_changes": 0
+}

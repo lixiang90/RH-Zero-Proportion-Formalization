@@ -1,0 +1,40 @@
+--- frozen-v0/assemble_gate.py
++++ prepared-v1/assemble_gate.py
+@@ -184,7 +184,6 @@
+         re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", text, re.S)]
+     pairs += [(name, []) for name in re.findall(r"'([^']+)' does not depend on any axioms", text)]
+     require(len(pairs) == len(dict(pairs)), 'Duplicate printed axiom roots')
+-    require(all(set(values) <= ALLOWED for _, values in pairs), 'Unexpected printed axiom')
+     return dict(pairs)
+ 
+ 
+@@ -314,13 +313,15 @@
+             observed = printed_axioms(log.read_text(encoding='utf-8', errors='strict'))
+             if passed:
+                 require(integer_zero(receipt['exit_code']) and receipt['source_unchanged'] is True and
++                        all(set(values) <= ALLOWED for values in observed.values()) and
+                         set(observed) == set(expected_roots[module]) and receipt['observed_axioms'] == observed and
+                         (receipt['axiom_audit_passed'] is True if expected_roots[module]
+                          else receipt['axiom_audit_passed'] is None), 'Passing module/log/axiom audit failed')
+                 bind.bind(output, receipt['olean_sha256'])
+                 passed_outputs[str(output.resolve())] = (receipt['olean_sha256'], module.replace('.', '/') + '.olean')
+             else:
+-                require(not terminal['passed'] and position == count - 1, 'A failure was bypassed within a stage')
++                require(not terminal['passed'] and position == count - 1 and
++                        receipt['observed_axioms'] == observed, 'A failure was bypassed or its diagnostic axioms changed')
+                 if receipt.get('olean_sha256') is not None:
+                     bind.bind(output, receipt['olean_sha256'])
+             results[(index, module)] = {'passed': passed, 'source_sha256': source_sha,
+@@ -331,7 +332,11 @@
+                 'A failed stage was misrepresented as complete')
+         stage_records.append({'job': str(job), 'gate_sha256': sha(gate_path), 'actual_parent_exit_code': expected_exit,
+             'modules_completed': count, 'whole_stage_passed': terminal['passed'],
+-            'actual_session_id': outer['exec_session_id']})
++            'actual_session_id': outer['exec_session_id'],
++            'rejected_failed_module_diagnostics': [
++                {'module': module, 'source_sha256': result['source_sha256'],
++                 'observed_axioms': result['observed_axioms'], 'accepted_as_proof': False}
++                for (stage_index, module), result in results.items() if stage_index == index and not result['passed']]})
+     selected = request['selected_development_modules']
+     require(len(selected) == 6 and {r['module'] for r in selected} == {prefix_module, *MODULES},
+             'Select exactly Prefix/Core/Graph/Localization/Counting/Final PASS provenance')

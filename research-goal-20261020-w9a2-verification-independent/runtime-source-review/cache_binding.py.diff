@@ -1,0 +1,12 @@
+--- archive-pre-review-v0/cache_binding.py
++++ revision2/cache_binding.py
+@@ -139,7 +139,8 @@
+     while True:
+         start = pos; public = kw('public'); meta = kw('meta')
+         if not kw('import'):
+-            assert not (public or meta), 'Unsupported header modifier'
++            # Atomic import parser rolls back before a legal body command,
++            # e.g. `public section` or `public meta section`.
+             pos = start; break
+         all_import = kw('all')
+         assert is_module or not (public or meta or all_import)

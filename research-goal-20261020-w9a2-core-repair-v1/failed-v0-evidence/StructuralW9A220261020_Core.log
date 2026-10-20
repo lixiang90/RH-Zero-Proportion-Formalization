@@ -1,0 +1,12 @@
+E:\codex-build\RH-Zero-Proportion-Formalization\research-goal-20261020-w9a2-formal-static-review\development-split\StructuralW9A220261020\Core.lean:143:6: error: Type mismatch: After simplification, term
+  h
+ has type
+  Pg (if false = true then cN + qCost k else qTargetFrom ks s) 8 BS TS g
+but is expected to have type
+  Pg (qTargetFrom ks s) 8 BS TS g
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.

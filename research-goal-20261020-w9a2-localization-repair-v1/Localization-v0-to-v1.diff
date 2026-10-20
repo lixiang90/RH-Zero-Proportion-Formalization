@@ -1,0 +1,12 @@
+--- canonical-v0/StructuralW9A220261020/Localization.lean
++++ localization-repair-v1/StructuralW9A220261020/Localization.lean
+@@ -259,7 +259,8 @@
+     · exact located_id g k hk hc hb
+   · have hsr : ∀ r, sep ≤ reverse8 g r := fun r => hs _
+     have hor : reverse8 g 0 ≤ reverse8 g 7 := by
+-      simpa only [reverse8] using (le_of_lt (lt_of_not_ge ho))
++      change g 7 ≤ g 0
++      exact le_of_lt (lt_of_not_ge ho)
+     rcases finite_ordered_quant (reverse8 g) hsr hor with h | ⟨k, hk, hc, hb⟩
+     · rw [reverse_energy] at h
+       exact located_good g h

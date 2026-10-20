@@ -58,3 +58,42 @@ delivery正在准备全计时验收runner，仍不可执行。
 标准三公理、默认Lean内核与串行nanoda、统一3200秒或真实官网正式接受、
 届时严格改进、GitHub全树及源材料一致。现在这些尚未通过，goal保持active。
 不启动新LP、核/锚/阈值/图搜索或大幅优化族，不覆盖旧accepted proof。
+
+
+最新运行更新覆盖以上旧进程状态：trusted81112已真实exit0/1193.406s；candidate唯一session68239，Prefix真实PASS436.328s/olean e9bbc282…，当前Core child33124。普通gate3960ea16…已冻结执行，不能重启或再开compiler。GitHub检查点eaded0c已经同步，完整5715blob0diff/两public源码同；尚不表示final proof成功。固定归档下载55718仍live，Linux setup未执行mirror或compiler。fresh R为06:37:40Z，counter仍1。
+
+
+同一macro007+round1：candidate68239真实terminal exit1；Prefix普通PASS436.328s，Core644.610s因qTargetFrom_sound中的if false=true未化简而失败，日志未报finite-check失败。原源码、命令、日志、receipt保存在research-goal-20261020-w9a2-ordinary-v0-terminal。只准备另版同命题proof-only修复并复用已PASS同SHA Prefix；没有自动重试、数学数据修改或新优化。Linux固定归档55718真实exit0，574905502B/SHA48010c7d…完整校验通过；尚未mirror或编译。counter仍1，最终无条件比例/单源/Comparator/独核/3200s/官网接受未完成。
+
+
+最新唯一候选：ordinary-v1b gate92def59e…，session93720/Core40944。v1入口因全局Lean计数包含无关4.32.2用户任务而在候选和job创建前拒绝；另版runner633039e6…只排除同一固定4.33工具链，其他编译与数学步骤不变。Core修复仅加Bool.false_eq_true，完整manifest9aafa909…；旧v0保全。flatv1为1829955B/SHA8928832f…，未经完整验收。官网页仍同R但浏览器未登录。direction-state旧actual_goal=true与remaining=[]现已明确只保留于旧accepted证据；当前goal=false/remaining完整列出，review007哈希字段纠正一致，不增轮或重置。
+
+
+同一macro007+round1：修复Core实际PASS588.859s/olean4e24ca21…；同一session93720在Graph64.250s真实terminal exit1。唯一error为reverse_span的Fin构造器/数字记号未统一，未报告有限图核算false。全部v1命令/日志/收据/终端保全ordinary-v1-terminal。只准备同命题Graph证明归一化修复，后续开发复用已PASS同SHA Prefix/Core；未自动重试、未改数学数据。counter仍1，最终全域比例/完整验收仍未完成。
+
+
+同一macro007+round1收到用户明确指示：已登录，完成验证后直接提交官网，姓名Li Xiang。这已授权最终合格源码提交，无需再确认；实际提交与正式接受仍未发生。Graph repair a7a9b909…仅reverse_span证明行增加独立Fin.reduceFinMk化简+32B，gate59062ce6…/唯一session42867 child1604已运行Graph→Localization→Counting→Final，开发只复用已PASS的同SHA Prefix/Core。count仍1，轮内用户steering不增轮。
+
+
+同一macro007+round1实际ordinary-v3原session46495 terminal exit1：Graph PASS 66.812s, Localization exit1 16.875s。完整日志/命令/收据与root实际退出attestation已封research-goal-20261020-w9a2-ordinary-v3-terminal。下一proof关：Same-theorem Localization reflection Fin-index normalization repair, reuse exact passing Graph/Core/Prefix, then Localization/Counting/Final。未自动重试，counter保持1，完整验收与官网提交尚未发生。
+
+
+同一macro007+round1实际ordinary-v4原session90216 terminal exit1：Counting PASS 21.313s, Final exit1 18.5s, Localization PASS 28.157s。完整日志/命令/收据与root实际退出attestation已封research-goal-20261020-w9a2-ordinary-v4-terminal。下一proof关：Same-definition final left/right window bridge proof repair, reuse exact passing Localization/Counting/Graph/Core/Prefix; then Final transitive axiom audit。未自动重试，counter保持1，完整验收与官网提交尚未发生。
+
+
+同一macro007+round1实际ordinary-v5原session1250 terminal exit0：Final PASS 12.657s。完整日志/命令/收据与root实际退出attestation已封research-goal-20261020-w9a2-ordinary-v5-terminal。下一proof关：Exact draft-v5 single-file fresh compilation and Comparator/default Lean/serial nanoda replay within one3200s timer; then authorized official submission as Li Xiang。未自动重试，counter保持1，完整验收与官网提交尚未发生。
+
+
+同一macro007+round1数学关实际完成：Final单模块原session1250真实exit0/12.657s，七个传递审计root均仅标准三公理，无sorryAx。此前Counting五个root同样通过。故固定49状态加权certificate的actual ζ无条件dyadic/cumulative严格新比例已在普通Lean成立；这是开发复用精确PASS依赖的结果，尚非单源cold或全链预算通过。新flatv5为1830001B/SHA650ad176…；准确单源/Comparator/defaultkernel/Nano/统一3200s/最新R/GitHub/官网接受仍待。runtime setup44009正查官方SDK archive13938成员，0compiler/proof，活目录v2禁止修改。用户已明确授权验证后提交Li Xiang；浏览器实见@lixiang90登录且3/3上传额度。counter保持1。
+
+
+最新基础设施状态覆盖旧44009：metadata v3唯一原session66541，gate78a00b36…，v3所有源码/输入冻结不可改。已actual重核13951SDK成员，通过并推进source-cache5500+；不是compiler/proof。v2原44009已真实exit1：SDK archive组件PASS后错误DLL缺lean_byte_array_hash，0hash calls，whole setup非PASS。v3纯PE扫描定位libInit_shared.dll的两个direct C符号，已另版修复且当前执行。全部模块数学已普通Lean证明，最终flatv5 1830001B/SHA650ad176…；完整生产与官网仍待。用户已授权验证后直接提交Li Xiang，浏览器实见@lixiang90登录/3slots。counter仍1。
+
+
+同一macro007+round1：metadata-only runtime v3 原session66541实际exit1，PID44480，proof_runs=0；已核对10000个source-cache模块后，Zeta23 Package.id?: Option String被检查器误按Name散列，元数据断言失败。原v3与SDK组件收据、原句柄退出均冻结；完整runtime、生产单文件和双内核均未因此PASS。仅准备新版本最小类型修复，数学源码与counter=1保持不变。
+
+
+同一macro007+round1：root已审v4唯一Package.id?: Option String修复、独立类型依据和冻结清单，授权gate b1f228ffc5fb8bb60a9aa85740522266613895f8b1e46292cc1e18b2f5866fb8；实际metadata-only session89749/PID12340于08:07UTC开始。v4所有文件冻结至原句柄terminal及all-pin复核；proof_runs=0，未预认setup或完整证明验收PASS，counter=1。
+
+
+同一macro007+round1：runtime-v4 original89749/PID12340实际exit1，String字段修复通过后，检查器把至少一个现代Zeta模块误送入legacy-only trace路径。全部输入/失败收据冻结；proof_runs=0。下一步先全量静审所有Zeta现代/legacy trace与剩余tail前提，确认完整修复再授权新metadata版本；数学源码、证明与counter=1不变。

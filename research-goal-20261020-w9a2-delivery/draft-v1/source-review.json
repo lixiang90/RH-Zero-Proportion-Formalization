@@ -1,0 +1,49 @@
+{
+  "scope": "Independent delivery byte review only; no semantic execution",
+  "repair_manifest_14_rows_verified": true,
+  "v0_manifest_15_rows_verified": true,
+  "canonical_v0_unchanged": true,
+  "full_v0_to_v1_only_single_line": true,
+  "changed_full_line": 10752,
+  "old_line": "      simpa only [qTargetFrom, hs, ↓reduceIte] using h",
+  "new_line": "      simpa only [qTargetFrom, hs, Bool.false_eq_true, ↓reduceIte] using h",
+  "byte_delta": 20,
+  "theorem": "AMW.Cert.PC9QB6M.qTargetFrom_sound",
+  "theorem_statement_unchanged_sha256": "f2f6557c7607595fccfd1b02c771d4dcf470a9c0080944b1bcc5d03c307dddfd",
+  "entire_Data_namespace_unchanged_bytes": 897178,
+  "entire_Data_namespace_unchanged_sha256": "db9b6a6cca25728ac33a5d9c19504e498e681d1ac422f31c4977a90c2a04e3c2",
+  "all_other_full_Core_bytes_equal_by_reversible_projection": true,
+  "all_walk_payload_cost_threshold_guard_cursor_bytes_unchanged": true,
+  "exact_old_prefix_plus_new_suffix_equals_new_full": true,
+  "four_companion_modules_byte_identical_to_frozen_v0": true,
+  "wrapper_entire_bytes_identical_to_frozen_v0": true,
+  "public_statement_types": [
+    {
+      "name": "candidate_strict_improvement",
+      "unchanged_wrapper_type_sha256": "1ebcd77a625bcf1751d5cb3e20d5f0c71370ee68d09b1ca9b8e28656cfeae7f6",
+      "official_type_equal_after_whitespace_normalization": true
+    },
+    {
+      "name": "candidate_critical_line_bound",
+      "unchanged_wrapper_type_sha256": "79c2edb3d9035512726ec945c2735918af6d05ebabef16d466348e7ad0686329",
+      "official_type_equal_after_whitespace_normalization": true
+    },
+    {
+      "name": "candidate_critical_line_bound_cumulative",
+      "unchanged_wrapper_type_sha256": "33cbd630395e1c50bb101e806fe90161c384a478cb8d9478a6a7b1d71e4d6b98",
+      "official_type_equal_after_whitespace_normalization": true
+    }
+  ],
+  "all_import_moves_identical_to_v0": true,
+  "single_file_reverse_projection_equals_exact_v0": true,
+  "all_non_import_bytes_preserved": true,
+  "trusted_template_spec_challenge_dependencies_byte_identical_to_frozen_v0": true,
+  "ordinary_compile_passed": false,
+  "comparator_passed": false,
+  "default_kernel_passed": false,
+  "nanoda_passed": false,
+  "complete_3200s_passed": false,
+  "official_accepted": false,
+  "proof_compiler_export_kernel_search_runs": 0,
+  "main_round_counter_changed": false
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "w9a2-verification-prepared-v1",
+  "scope": "Versioned setsid --wait fix; complete full-chain contract preserved. No runner, compiler, export, kernel, installation or network action executed.",
+  "previous_prepared_manifest_sha256": "d3fe63a5bfb293d2bd860bb8549575723cf791cec20ad03213e69a7f4f0852ff",
+  "files": [
+    {
+      "path": "gate-template.json",
+      "bytes": 4731,
+      "sha256": "c15be224804bd55d51277ebf559082b4bad72b6f4ece0c619669b94fac1a8cda"
+    },
+    {
+      "path": "README.zh.md",
+      "bytes": 6377,
+      "sha256": "f66f332713185e7f93803826831a5bb414863cbe3ba3a75b7052ba8f02d3bd24"
+    },
+    {
+      "path": "run_verification.py",
+      "bytes": 36665,
+      "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+    },
+    {
+      "path": "runtime-closure-template.json",
+      "bytes": 2140,
+      "sha256": "dbfce8174441d7734575d7e6e4e3d6b6fceb1059f0185e42e307af087bad2753"
+    },
+    {
+      "path": "static-audit.json",
+      "bytes": 715,
+      "sha256": "4bd62156c6bfae881bf3642caf49e53419056bedf3499bfbab3aafd1852bdb00"
+    },
+    {
+      "path": "v0-to-v1-runner.diff",
+      "bytes": 695,
+      "sha256": "157affbf34b59b42119766b12d5e08c2a867fd6d54876c4f2fcbce8c43882cef"
+    },
+    {
+      "path": "version-delta.json",
+      "bytes": 869,
+      "sha256": "08fdabe6458c39ceca8b76131b9de41a4df34b5a43b7051a6430c97fa2ff1cf6"
+    }
+  ],
+  "root_must_supply_complete_runtime_closure": true,
+  "unified_3200s_passed": false,
+  "official_website_acceptance": false,
+  "upload_ready": false
+}

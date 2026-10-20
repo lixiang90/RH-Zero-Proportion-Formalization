@@ -1,0 +1,11 @@
+--- draft-v0/Solution.lean
++++ draft-v1/Solution.lean
+@@ -10760,7 +10760,7 @@
+       · simpa only [qCell, St_eq hs] using hg
+       · simpa only [qTargetFrom, hs, Bool.true_eq, ↓reduceIte] using h
+     · apply ih (fun j hj => hks j (List.mem_cons_of_mem k hj))
+-      simpa only [qTargetFrom, hs, ↓reduceIte] using h
++      simpa only [qTargetFrom, hs, Bool.false_eq_true, ↓reduceIte] using h
+ theorem qTarget_sound {s : St} {g : ℕ → ℝ}
+     (hg : InCell 8 PR (toCl s) g) (h : Pg (qTarget s) 8 BS TS g) : QuantGoal g :=
+   qTargetFrom_sound _ (fun _ hk => List.mem_range.mp hk) hg h
