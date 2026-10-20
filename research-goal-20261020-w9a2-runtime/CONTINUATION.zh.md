@@ -1,5 +1,7 @@
 # 当前方向：宏观008，同一实际主轮内完成新证据回顾
 
+2026-10-20T11:40:58Z任务恢复新证据：当前IAB browser2/tab2（原tab1已不可用，空inventory后恢复新tab2），已经markHandoff。官网/api/submissions/active的可见JSON实际返回running、queuePosition0、同一submissionId和e764摘要；未提取/保存signed token，临时API页已关闭。主页面详情暂提示status unavailable并自动重试，header running本身不能证明kernel计算；owner队列仍active。刷新后的空表单、0B与默认author=lixiang90不是已提交payload，不得据此重传或改署名；实际提交仍a517/1830052B/Li Xiang/e764。官方ledger blob6f0e457cfc200238626c230ef731f5d7ebb0a3a1的40项未含本次ID，attestation路径404，均不等于拒绝。当前观察见research-goal-20261020-w9a2-official-submission-followup-v1/observation.json。每个turn结束前须再次markHandoff，不能沿用上turn的mark。
+
 最新人类steering已覆盖下方本地Nano恢复计划：不再重复核查，直接提交尝试。用户当场确认永久加密存档/Apache-2.0公开后，root已实际上传prepared-v6/proof/Solution.lean并点击一次竞争提交。官网DOM与截图显示Verification running，实际proofDigest=e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1，源码计数1830052B，署名Li Xiang。browser tab1/iab2已markHandoff，若JS重置先恢复原tab，不能再点击Submit或重复上传。继续等待同一官网任务；不再执行旧数学collector或新Nano/冷编译。实际观察见official-submission/browser-observation-v1.json。
 
 原83153句柄丢失且parent15012/launcher49016/WSL13鲜核均不存在，无最终收据，原outerexit保持null/unknown，不是exit1或TimeoutExpired；CoreAudit闭合stage0/1092.984s仍有效，Nano结果未知。中断封存research-goal-20261020-w9a2-replay-only-v1-interrupted/files.json SHAceea3f0163839710098dfb4ce9c480f72321bc43bb6b19835ffa759598e98a4d。下方“仍活动”的进程说明已成为历史。官网最终接受、固定公开源/manifest/attestation/log/record和GitHub最终同步仍待，goal active；counter仍0/review8。
