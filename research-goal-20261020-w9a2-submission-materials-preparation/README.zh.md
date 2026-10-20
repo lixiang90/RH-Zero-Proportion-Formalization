@@ -1,0 +1,9 @@
+这是W9A2 weighted-potential候选的冻结提交材料，作者Li Xiang，已认证GitHub身份按root报告为lixiang90，拟id为lixiang90-w9a2-weighted-potential-20261020。用户已授权完成验证后提交；本包没有执行上传或提交。
+
+proof/Solution.lean逐字复制draft-v5，为1,830,001B，SHA256 `650ad1762ee36ba1ddf5f6a027900b20f0f85ba087ac099fd2c99a54eaf6ae13`，距离2,000,000B上限余169,999B。没有删署名、许可、原数值payload或证明，不做换行/编码/尾空白规范化。submission.draft.json沿用仓库已接受材料的schemaVersion1格式；website-fields.draft.json列可见表单值、精确p/q和不超过1000字符的摘要。harness为Codex，具体当前model未经独立核实，留空。
+
+完整模块Lean开发证明及12个标准公理根已实际通过，具体原receipt与独立审查索引见evidence-references.json。完整fresh单文件ordinary、Comparator/default Lean replay、独立serial nanoda、统一3200秒production和官网接受均未由本包确认，见verification-status.json。upload_ready与submitted保持false，没有虚构job、耗时或接受commit。
+
+root以后取得实际完整production/官网结果时，另加hash-linked addendum及其清单，引用本files.json和源650ad176…；不要改proof/Solution.lean字节或把旧开发收据当新production收据。若官网当前UI沿用旧接受材料中的String.trim策略，末尾1个LF可能被移除；UI-normalization-preview.json仅记录这一历史策略下的预览hash，当前UI政策与实际官网源码仍须实测核对。这里没有写出另一个规范化候选文件。
+
+MATHEMATICS.zh.md仅解释实际Final/Counting源中的精确势函数与计数传递；mathematical-source-check.json列精确常数和rational identity静态核对。嵌入的全部原始attribution/license/NOTICE保持不变，另有ATTRIBUTION.zh.md与逐字复制的项目LICENSE。本材料不会将准备阶段误写为官方接受。

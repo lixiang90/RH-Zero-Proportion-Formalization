@@ -1,0 +1,116 @@
+{
+  "scope": "Read-only final check of frozen prepared submission materials; no proof, compiler, export, kernel, or network call",
+  "prepared_material_manifest": {
+    "path": "submission/w9a2-weighted-potential-20261020-prepared/files.json",
+    "bytes": 2338,
+    "sha256": "980fb14e136c86fa66294dec2e00c177cd195919a7a7f472352b38fa836c1849"
+  },
+  "checked_material_files": [
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/ATTRIBUTION.zh.md",
+      "bytes": 1385,
+      "sha256": "135f9ec421c31efd218c501faf600f78075c6ac0bf5ee8208db2eddb0af9bf74"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/evidence-references.json",
+      "bytes": 5727,
+      "sha256": "14c5298e7f442cd0e08f03f84f96ebcc1694289115cceba513b06a89b37b806c"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/LICENSE",
+      "bytes": 11558,
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/mathematical-source-check.json",
+      "bytes": 2380,
+      "sha256": "6f36f3386f2869b286b3178995812e9822e3230262b80c96e31a079abc3cf133"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/MATHEMATICS.zh.md",
+      "bytes": 3108,
+      "sha256": "431960c16ca11bd42da1c0f3b7c9994ab3438859346fc4763de512bada2559b7"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/proof/Solution.lean",
+      "bytes": 1830001,
+      "sha256": "650ad1762ee36ba1ddf5f6a027900b20f0f85ba087ac099fd2c99a54eaf6ae13"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/proof/Solution.manifest.json",
+      "bytes": 249,
+      "sha256": "d6032e5510e1b6e42920566e569f94d5a33611737bb4bd7d6ea19d5a60604741"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/provenance.json",
+      "bytes": 1313,
+      "sha256": "af3b2acdc2509117d74c6ba34a017735f0789dd3c233db6a328e7a33520ea6f9"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/README.zh.md",
+      "bytes": 1984,
+      "sha256": "72f21dfb357395a84851d91c4ceeaacf5903d202dfc16f6d847ff81f35ee1998"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/submission.draft.json",
+      "bytes": 1338,
+      "sha256": "b7f741501216171d817273e03e1a9bbb9cd380659f67676593c9ebea5a5511a5"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/UI-normalization-preview.json",
+      "bytes": 938,
+      "sha256": "23129dd1855c28efa50c9ba8f3d16dc47414f087822c40169b32646499b8ae59"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/verification-status.json",
+      "bytes": 2958,
+      "sha256": "6a4c811129ff799426f28080a3431b3becd818378480eb4a8a3263eb82c813e8"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared/website-fields.draft.json",
+      "bytes": 1879,
+      "sha256": "890bc67c250bd01857c5ab9f73442f5b42da050fc04f8204b512bc7b04e8885c"
+    }
+  ],
+  "exact_draft_v5_source": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v5/Solution.lean",
+    "bytes": 1830001,
+    "sha256": "650ad1762ee36ba1ddf5f6a027900b20f0f85ba087ac099fd2c99a54eaf6ae13"
+  },
+  "all_source_bytes_equal": true,
+  "public_display_name": "Li Xiang",
+  "GitHub_login": "lixiang90",
+  "model_field": "",
+  "wire_model_value_if_official_form_is_used": null,
+  "harness": "Codex",
+  "summary_characters": 605,
+  "important_draft_manifest_scope": "submission.draft.json is preparatory metadata, not the server-generated official manifest. Its empty model is a blank UI placeholder; the actual client maps this to JSON null, and the server regenerates its manifest. Use website-fields.draft.json for UI fields; do not upload submission.draft.json as an official manifest.",
+  "current_wire_policy_manifest": {
+    "path": "research-goal-20261020-w9a2-source-normalization-review/files.json",
+    "bytes": 54060,
+    "sha256": "4209625bb670f556ccabbf3b46a31deed8a67178951d4a8524be551406ec3432"
+  },
+  "current_wire_policy_report": {
+    "path": "research-goal-20261020-w9a2-source-normalization-review/review.json",
+    "bytes": 8942,
+    "sha256": "486c19c8a609acf09ab104edad85cca5a19f143df7e9000b9f085c3280be2a7d"
+  },
+  "normalization_preview_scope_correction": "The frozen material's historical_policy_reference describes a historical parallel comparison preview. Current deployed client sends raw solution state; current main server does not trim it. Do not apply trim or newline normalization to source650 on this evidence.",
+  "source_wire_policy": "Upload the exact file and avoid editing it in the textarea; verify actual wire source bytes/SHA and labelled manifest+source digest. Raw source contains 221 CRLF and one terminal LF.",
+  "ordinary_modular_12_roots_passed": true,
+  "single_file_dual_kernel_3200s_official_pending": true,
+  "pending_flags": {
+    "single_file_ordinary_compile_passed": false,
+    "Comparator_statement_dependency_primitive_passed": false,
+    "Comparator_transitive_axioms_passed": false,
+    "default_Lean_kernel_replay_passed": false,
+    "independent_serial_nanoda_passed": false,
+    "complete_single_3200s_production_passed": false,
+    "official_website_acceptance_confirmed": false,
+    "upload_ready": false,
+    "submitted": false
+  },
+  "future_results": "Root must add a separate hash-linked production/official addendum. Never change frozen Solution.lean or relabel pending flags in this package.",
+  "frozen_submission_files_modified": false,
+  "proof_compiler_export_kernel_network_calls": 0
+}

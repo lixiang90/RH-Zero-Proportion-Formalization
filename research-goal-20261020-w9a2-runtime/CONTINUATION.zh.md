@@ -97,3 +97,12 @@ delivery正在准备全计时验收runner，仍不可执行。
 
 
 同一macro007+round1：runtime-v4 original89749/PID12340实际exit1，String字段修复通过后，检查器把至少一个现代Zeta模块误送入legacy-only trace路径。全部输入/失败收据冻结；proof_runs=0。下一步先全量静审所有Zeta现代/legacy trace与剩余tail前提，确认完整修复再授权新metadata版本；数学源码、证明与counter=1不变。
+
+
+同一macro007+round1：140个Zeta完整trace及8821非SDK依赖的两份独立静态算术审查已通过；v5完整代码与冻结清单已由root复核，授权gate f7b311f7e78697f776844e2ad462cc4ed33163dbbf2eb786dca92f59bb0380f1。metadata-only original session35077/PID40712于08:23UTC开始；proof_runs=0，v5全字节保持冻结至实际terminal与all-pin重核，尚未预认PASS，counter=1。
+
+
+同一macro007+round1：metadata-only v5原session35077/PID40712已由root实际观察terminal exit0；全部11144模块source/cache来源、13951 SDK成员、干净overlay、五tool olean、native工具及WSL依赖完整核验成功。冻结v5准备清单当前SHA全同。原句柄raw结果、setup receipt/closure与无损运输已封runtime-v5-terminal；这不是candidate单文件、Comparator/双核或3200s验收。下一关为新鲜R与完整来源all-pin preflight后，唯一冷生产全链；counter=1不变。
+
+
+同一macro007+round1：metadata-only fullgate-v1 preflight原session85244实际exit0；全部来源all-pin不变、6实际PASS模块与12标准roots已完整绑定，disabled proposal SHAea5b5868ddb9f003478de5cce55d2b940b4dd69f065733168fb82c2b748c022c。root审定后重新GET08:43:40Z最新R（200/Age0/MISS，同旧R），写新gate e6ae96f6b1d9f971217975eb13e6c0a9a37b219e8d695c4437e89d470db691a8。唯一生产fullchain-v1原session68653/PID48644已实际启动，整个3200s包含所有pins/source generation/四模块冷编译/导出/Comparator/default Lean/serial Nano/三fsync收据；不复用candidate olean、不重试、不并行另一证明批次。尚无terminal/PASS，counter=1不变。

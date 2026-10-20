@@ -1,0 +1,339 @@
+import { getSession } from "@/auth";
+import { killE2BSandbox, readE2BVerification } from "@/lib/e2b-verifier";
+import {
+  describePromotionError,
+  isGitHubPromotionConfigured,
+  UnpublishableResultError,
+} from "@/lib/github-promotion";
+import {
+  assertE2BResultMatchesJob,
+  promoteE2BResult,
+} from "@/lib/submission-finalization";
+import {
+  advanceVerificationQueue,
+  assertQueueJobMatches,
+  ensureQueuedJobRunning,
+  VerifierOccupiedByFlowTestError,
+} from "@/lib/queue-orchestration";
+import { readQueuedE2BJobMetadata } from "@/lib/e2b-queue";
+import {
+  verifySubmissionJob,
+  type SubmissionJobToken,
+} from "@/lib/submission-jobs";
+import {
+  inspectVerificationJob,
+  type QueueCompletionReceipt,
+  type QueuedVerificationJob,
+} from "@/lib/submission-queue";
+import { describeVerifierRejection } from "@/lib/verifier-feedback";
+import { readVerifierLog } from "@/lib/submission-archive-store";
+
+export const runtime = "nodejs";
+export const maxDuration = 60;
+
+function noStore(status: number, body: object): Response {
+  return Response.json(body, {
+    status,
+    headers: { "Cache-Control": "no-store" },
+  });
+}
+
+// The sandbox (and its live log) is gone once a verdict is recorded; return
+// the retained encrypted copy instead. Callers have already checked that the
+// signed-in user owns this job. A missing or unreadable log never hides the
+// verdict itself.
+async function retainedLog(receipt: QueueCompletionReceipt): Promise<string | undefined> {
+  if (!receipt.logArchived) return undefined;
+  try {
+    const retained = await readVerifierLog(receipt.jobId, receipt.proofDigest);
+    if (!retained) return undefined;
+    return retained.omittedBytes > 0
+      ? `[${retained.omittedBytes} earlier bytes of this log were not retained]\n${retained.log}`
+      : retained.log;
+  } catch (error) {
+    console.error("Unable to read a retained verifier log", error);
+    return undefined;
+  }
+}
+
+async function completedReceiptResponse(
+  submissionId: string,
+  expectedDigest: string,
+  receipt: QueueCompletionReceipt,
+): Promise<Response> {
+  if (receipt.proofDigest !== expectedDigest) {
+    throw new Error(
+      "The durable queue receipt does not match the verification job",
+    );
+  }
+  const log = await retainedLog(receipt);
+  if (receipt.outcome === "rejected") {
+    const feedback =
+      receipt.feedback ??
+      describeVerifierRejection(
+        "",
+        receipt.message ?? "The formal verifier rejected this candidate.",
+      );
+    return noStore(200, {
+      status: "rejected",
+      submissionId,
+      proofDigest: receipt.proofDigest,
+      completedAt: receipt.completedAt,
+      message: feedback.detail,
+      feedback,
+      ...(log === undefined ? {} : { log }),
+    });
+  }
+  return noStore(200, {
+    status: "verified",
+    submissionId,
+    proofDigest: receipt.proofDigest,
+    completedAt: receipt.completedAt,
+    ...(log === undefined ? {} : { log }),
+    promotion:
+      receipt.outcome === "superseded"
+        ? {
+            status: "superseded",
+            message:
+              receipt.message ??
+              "Another verified record landed before this result was published.",
+          }
+        : {
+            status: receipt.promotionStatus,
+            evidenceUrl: receipt.evidenceUrl,
+          },
+  });
+}
+
+// Admin recovery restages a proof under a new job and sandbox, keeping the old
+// job ID as an alias. Follow the alias only when the new sandbox's metadata
+// proves it is the same submitter's same proof.
+async function recoveredJobCoordinates(
+  job: SubmissionJobToken,
+  queued: QueuedVerificationJob,
+): Promise<SubmissionJobToken> {
+  const metadata = await readQueuedE2BJobMetadata(queued.sandboxId);
+  assertQueueJobMatches(queued, metadata);
+  if (
+    metadata.github.toLowerCase() !== job.github.toLowerCase() ||
+    metadata.submissionId !== job.submissionId ||
+    metadata.proofDigest !== job.proofDigest
+  ) {
+    throw new Error("The recovered verification job does not match this handle");
+  }
+  return {
+    ...job,
+    sandboxId: metadata.sandboxId,
+    jobId: metadata.jobId,
+    baseCommitSha: metadata.baseCommitSha,
+    previousRecordId: metadata.previousRecordId,
+    issuedAt: metadata.issuedAt,
+  };
+}
+
+export async function GET(request: Request): Promise<Response> {
+  const session = await getSession(request);
+  const github = session?.user.githubLogin;
+  if (!github) {
+    return noStore(401, {
+      error: "authentication_required",
+      message: "Sign in with GitHub to inspect this verification job.",
+    });
+  }
+  const secret = process.env.AUTH_SECRET;
+  if (!secret) {
+    return noStore(503, { error: "job_signing_unavailable" });
+  }
+
+  const token = new URL(request.url).searchParams.get("job");
+  if (!token) {
+    return noStore(400, {
+      error: "job_required",
+      message: "A signed verification job handle is required.",
+    });
+  }
+
+  try {
+    let job = verifySubmissionJob(token, secret);
+    if (job.github.toLowerCase() !== github.toLowerCase()) {
+      return noStore(403, {
+        error: "job_owner_mismatch",
+        message: "This verification job belongs to another GitHub account.",
+      });
+    }
+    const queue = await inspectVerificationJob(job.jobId);
+    if (
+      (queue.status === "active" || queue.status === "queued") &&
+      queue.job.jobId !== job.jobId
+    ) {
+      job = await recoveredJobCoordinates(job, queue.job);
+    }
+    if (queue.status === "completed") {
+      return await completedReceiptResponse(
+        job.submissionId,
+        job.proofDigest,
+        queue.receipt,
+      );
+    }
+    if (queue.status === "queued") {
+      assertQueueJobMatches(queue.job, job);
+      return noStore(200, {
+        status: "queued",
+        submissionId: job.submissionId,
+        proofDigest: job.proofDigest,
+        queuePosition: queue.position,
+      });
+    }
+    if (queue.status === "missing") {
+      return noStore(410, {
+        error: "job_not_admitted",
+        message:
+          "This signed verifier job is not present in the durable admission queue.",
+      });
+    }
+    assertQueueJobMatches(queue.job, job);
+    let runnerState;
+    try {
+      runnerState = await ensureQueuedJobRunning(queue.job);
+    } catch (error) {
+      if (error instanceof VerifierOccupiedByFlowTestError) {
+        return noStore(200, {
+          status: "queued",
+          submissionId: job.submissionId,
+          proofDigest: job.proofDigest,
+          queuePosition: 0,
+          message:
+            "An operator smoke replay is finishing before this proof starts.",
+        });
+      }
+      throw error;
+    }
+    if (runnerState === "running") {
+      return noStore(200, {
+        status: "running",
+        submissionId: job.submissionId,
+        proofDigest: job.proofDigest,
+      });
+    }
+    const result = await readE2BVerification(job.sandboxId, job.jobId);
+    if (!result) {
+      return noStore(200, {
+        status: "running",
+        submissionId: job.submissionId,
+        proofDigest: job.proofDigest,
+      });
+    }
+    assertE2BResultMatchesJob(job, result);
+    if (result.status === "rejected") {
+      const feedback = describeVerifierRejection(result.log, result.message);
+      await advanceVerificationQueue(job.jobId, {
+        outcome: "rejected",
+        promotionStatus: null,
+        message: feedback.detail,
+        feedback,
+        evidenceUrl: null,
+        completedAt: result.completedAt,
+      }, result.log);
+      await killE2BSandbox(job.sandboxId).catch(() => undefined);
+      return noStore(200, {
+        ...result,
+        message: feedback.detail,
+        feedback,
+      });
+    }
+    if (!isGitHubPromotionConfigured()) {
+      return noStore(200, {
+        ...result,
+        promotion: {
+          status: "awaiting-configuration",
+          message:
+            "The proof passed, but durable publication is not configured.",
+        },
+      });
+    }
+    try {
+      const promotion = await promoteE2BResult(job, result);
+      await advanceVerificationQueue(job.jobId, {
+        outcome: "promoted",
+        promotionStatus: promotion.status,
+        message: null,
+        evidenceUrl: promotion.evidenceUrl,
+        completedAt: result.completedAt,
+      }, result.log);
+      await killE2BSandbox(job.sandboxId).catch(() => undefined);
+      return noStore(200, { ...result, promotion });
+    } catch (error) {
+      if (error instanceof UnpublishableResultError) {
+        const message = describePromotionError(error);
+        await advanceVerificationQueue(job.jobId, {
+          outcome: "superseded",
+          promotionStatus: null,
+          message,
+          evidenceUrl: null,
+          completedAt: result.completedAt,
+        }, result.log);
+        await killE2BSandbox(job.sandboxId).catch(() => undefined);
+        return noStore(200, {
+          ...result,
+          promotion: {
+            status: "superseded",
+            message,
+          },
+        });
+      }
+      throw error;
+    }
+  } catch (error) {
+    const { SandboxNotFoundError } = await import("e2b");
+    if (error instanceof SandboxNotFoundError) {
+      const feedback = describeVerifierRejection(
+        "",
+        "The isolated verifier expired before producing a result.",
+      );
+      try {
+        const job = verifySubmissionJob(token, secret);
+        const queue = await inspectVerificationJob(job.jobId);
+        // A concurrent poll/webhook may have finalized and removed E2B
+        // between our initial queue read and sandbox connection. The durable
+        // verdict wins; do not tell a successfully judged user it expired.
+        if (queue.status === "completed") {
+          return await completedReceiptResponse(job.submissionId, job.proofDigest, queue.receipt);
+        }
+        if (queue.status === "active") {
+          // queue.job.jobId differs from the handle's after admin recovery.
+          const completion = await advanceVerificationQueue(queue.job.jobId, {
+            outcome: "rejected",
+            promotionStatus: null,
+            message: feedback.detail,
+            feedback,
+            evidenceUrl: null,
+          });
+          if (completion.receipt) {
+            return await completedReceiptResponse(job.submissionId, job.proofDigest, completion.receipt);
+          }
+        }
+      } catch (queueError) {
+        console.error("Unable to advance an expired queue job", queueError);
+        return noStore(503, {
+          error: "queue_reconciliation_unavailable",
+          message: "The durable verdict is temporarily unavailable. Keep this job handle and retry shortly.",
+        });
+      }
+      return noStore(410, {
+        error: "job_expired",
+        message: feedback.detail,
+        feedback,
+      });
+    }
+    const message =
+      error instanceof Error ? error.message : "Invalid verification job.";
+    if (message.includes("token") || message.includes("signature")) {
+      return noStore(400, { error: "invalid_job", message });
+    }
+    console.error("Unable to read E2B verification", error);
+    return noStore(502, {
+      error: "verifier_status_failed",
+      message: "The isolated verifier status is temporarily unavailable.",
+    });
+  }
+}

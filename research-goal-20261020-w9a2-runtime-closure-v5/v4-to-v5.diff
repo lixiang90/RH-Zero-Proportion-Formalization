@@ -1,0 +1,199 @@
+--- v4/assemble.py
++++ v5/assemble.py
+@@ -27,7 +27,7 @@
+ import time
+ 
+ from cache_binding import (SDKHash, CacheSourceHash, canonical_git_blob, git_tree,
+-                           imports, header, mix, flatten_values, verify_outputs)
++                           imports, header, header_info, TraceHashGraph, mix, flatten_values, verify_outputs)
+ 
+ HERE = Path(__file__).resolve().parent
+ ROOT = HERE.parent
+@@ -118,7 +118,7 @@
+         assert module not in self.active, 'Import cycle '+module
+         self.active.add(module)
+         source,owner=self.find(module);raw=self.canonical(source,owner)
+-        is_module,deps,prelude=header(raw)
++        is_module,details,prelude=header_info(raw);deps=[imp['module'] for imp in details]
+         # ParseImportsFast inserts both ordinary and meta Init when not prelude.
+         # One physical Init closure is sufficient; source import duplicates are
+         # retained for Lake hashes, where SDK modules are ignored by findModules.
+@@ -128,7 +128,7 @@
+         else:base=self.packages[owner]/'.lake/build/lib/lean'/Path(*module.split('.'))
+         assert base.with_suffix('.olean').is_file(), 'Missing cached '+module
+         self.nodes[module]=dict(source=source,owner=owner,base=base,raw=raw,
+-                                imports=deps,is_module=is_module)
++                                imports=deps,import_details=details,is_module=is_module)
+         if len(self.nodes)%500==0:note('source-import-closure',modules=len(self.nodes))
+         if owner=='SDK':
+             suffixes=['olean','olean.server','olean.private','ir','ir.sig']
+@@ -190,37 +190,16 @@
+         self.pin(self.output/'official-sdk-check.json','actual-SDK-byte-check')
+         self.sdk_verified=True
+         note('official-sdk-archive-PASS',selected_members=len(rows))
+-    def legacy_all_art_hash(self,module):
+-        n=self.nodes[module];h=1723
+-        if 'all_art_hash' in n:return n['all_art_hash']
+-        order=['olean','olean.server','olean.private','ir.sig','ir'] if n['is_module'] else ['olean']
+-        for suffix in order:
+-            p=n['base'].with_suffix('.'+suffix)
+-            h=mix(h,int(self.sdk_hash.lake_bytes(p.read_bytes()),16))
+-        n['all_art_hash']=h
+-        return h
+-    def legacy_trans_hash(self,module):
+-        n=self.nodes[module]
+-        if 'legacy_trans' in n:return n['legacy_trans']
+-        h=1723
+-        for dep in n['imports']:
+-            if self.nodes[dep]['owner']=='SDK':continue
+-            h=mix(h,self.legacy_trans_hash(dep));h=mix(h,self.legacy_all_art_hash(dep))
+-        n['legacy_trans']=h;return h
+-    def legacy_trace(self,module,trace):
+-        n=self.nodes[module];assert n['owner']=='Zeta23' and not n['is_module']
++    def zeta_trace(self,module,trace):
++        n=self.nodes[module];assert n['owner']=='Zeta23'
+         inputs=trace['inputs'];assert len(inputs)==9
+         # Full fixed package configuration, rather than accepting arbitrary
+         # trace captions. Source, all imports, SDK/options/name leaves checked.
+         deps=inputs[0];assert deps[0]=='deps'
+         extra,imps=deps[1]
+         assert extra==['Zeta23/Zeta23:extraDep',[['@Zeta23:extraDep','00000000000006bb']]]
+-        expected=[]
+-        for dep in n['imports']:
+-            if self.nodes[dep]['owner']=='SDK':continue
+-            expected += [[dep+' transitive imports (legacy)',f'{self.legacy_trans_hash(dep):016x}'],
+-                         [dep+':importAllArts',f'{self.legacy_all_art_hash(dep):016x}']]
+-        assert imps==['imports',expected], 'Legacy import trace mismatch: '+module
++        expected=self.traces.import_inputs(module)
++        assert imps==['imports',expected if expected else '00000000000006bb'], 'Zeta complete import trace mismatch: '+module
+         assert inputs[1]==['libs',[[s,'00000000000006bb'] for s in
+           ['import dynlibs','package external libraries','module dynlibs','module plugins']]]
+         assert inputs[2]==['Lean 4.33.0, commit '+SDK_COMMIT,'3eca9d16ab6c877d']
+@@ -228,7 +207,8 @@
+         assert inputs[3][1]==self.sdk_hash.lake_text(n['source'].read_bytes())
+         opts=['-DrelaxedAutoImplicit=false','-Dpp.unicode.fun=true']
+         assert inputs[4]==['options',[[s,f'{mix(1723,self.sdk_hash.string(s)):016x}'] for s in opts]]
+-        assert inputs[5]==['isModule: false',f'{mix(1723,13):016x}']
++        assert inputs[5]==['isModule: '+str(n['is_module']).lower(),
++                           f'{mix(1723,11 if n["is_module"] else 13):016x}']
+         def name_hash(name):
+             h=1723
+             for part in name.split('.'):h=mix(h,self.sdk_hash.string(part))
+@@ -247,16 +227,19 @@
+             return h
+         dep_hash=1723
+         for node in inputs:dep_hash=mix(dep_hash,node_hash(node))
+-        assert trace['depHash']==f'{dep_hash:016x}', 'Legacy complete depHash '+module
++        assert trace['depHash']==f'{dep_hash:016x}', 'Zeta complete depHash '+module
+     def outputs(self,module):
+         n=self.nodes[module]
+         if n['owner']=='SDK':return
+         base=n['base'];trace=load(base.with_suffix('.trace'))
+         assert trace['outputs'].get('m',False)==n['is_module'], module
+         data=verify_outputs(trace,base,self.sdk_hash,self.pin)
++        # These sidecars and their corresponding data bytes were just checked
++        # by verify_outputs. The shared graph performs pure hash arithmetic.
++        n['output_hashes']={p.name.split('.',1)[1]:int(Path(str(p)+'.hash').read_text(encoding='utf-8').strip(),16)
++                            for p in data}
+         if n['owner']=='Zeta23':
+-            # Exact inputs are validated separately below with list length 9.
+-            self.legacy_trace(module,trace)
++            self.zeta_trace(module,trace)
+         else:
+             source_hash=self.cache.module(module)
+             ltar=Path(self.gate['mathlib_cache_directory'])/(f'{source_hash:016x}.ltar')
+@@ -415,6 +398,7 @@
+         self.sdk_hash=SDKHash(SDK)
+         self.pin(self.sdk_hash.loaded_path,'actual-borrowed-hash-DLL-loaded-path')
+         self.cache=CacheSourceHash(self.sdk_hash,self.packages['mathlib'],self.find,self.canonical)
++        self.traces=TraceHashGraph(self.nodes)
+         for rel in ['lakefile.lean','lean-toolchain','lake-manifest.json','Cache/Hashing.lean','Cache/IO.lean']:
+             p=self.packages['mathlib']/rel;self.canonical(p,'mathlib')
+         for index,module in enumerate(list(self.nodes)):
+--- v4/cache_binding.py
++++ v5/cache_binding.py
+@@ -107,7 +107,7 @@
+     return header(raw)[1]
+ 
+ 
+-def header(raw):
++def header_info(raw):
+     """Exact supported prefix of ParseImportsFast; fail on escaped identifiers.
+ 
+     Multiline imports work. Import order and duplicates are retained. Doc
+@@ -148,10 +148,74 @@
+         assert is_module or not (public or meta or all_import)
+         match = re.match(r'[A-Za-z_][A-Za-z_0-9]*(?:\.[A-Za-z_][A-Za-z_0-9]*)*', text[pos:])
+         assert match, 'Unsupported module identifier'
+-        result.append(match.group()); pos += len(match.group())
++        result.append(dict(module=match.group(),is_exported=public or not is_module,
++                           is_meta=meta,import_all=all_import)); pos += len(match.group())
+         assert pos == len(text) or text[pos].isspace() or text.startswith(('--', '/-'), pos), 'Unsupported module identifier tail'
+         ws()
+     return is_module, result, prelude
++
++
++def header(raw):
++    is_module, details, prelude = header_info(raw)
++    return is_module, [imp['module'] for imp in details], prelude
++
++
++class TraceHashGraph:
++    """Lake ModuleImportInfo/ModuleExportInfo arithmetic, no SDK calls.
++
++    nodes contain pinned source header flags and verified output_hashes. SDK
++    imports have no Lake package Module and are ignored just as findModules.
++    """
++    def __init__(self,nodes):
++        self.nodes=nodes;self.art_memo={};self.trans_memo={};self.active=set()
++
++    def artifact(self,module,mode):
++        key=(module,mode)
++        if key in self.art_memo:return self.art_memo[key]
++        node=self.nodes[module];assert node['owner']!='SDK'
++        suffixes=['olean']
++        if node['is_module']:
++            if mode=='meta':suffixes=['olean','ir.sig','ir']
++            elif mode=='all':suffixes=['olean','olean.server','olean.private','ir.sig','ir']
++        assert mode in ['public','meta','all']
++        h=1723
++        for suffix in suffixes:h=mix(h,node['output_hashes'][suffix])
++        self.art_memo[key]=h;return h
++
++    def transitive(self,module,kind):
++        key=(module,kind)
++        if key in self.trans_memo:return self.trans_memo[key]
++        assert key not in self.active;self.active.add(key)
++        h=1723
++        for imp in self.nodes[module]['import_details']:
++            dep=imp['module']
++            if self.nodes[dep]['owner']=='SDK':continue
++            if kind=='legacy':child,arts='legacy','all'
++            elif kind=='meta':child,arts='meta','meta'
++            elif kind=='all':
++                if imp['import_all']:child,arts='all','all'
++                elif imp['is_meta']:child,arts='meta','meta'
++                else:child,arts='public','public'
++            else:
++                assert kind=='public'
++                if not imp['is_exported']:continue
++                child=arts='meta' if imp['is_meta'] else 'public'
++            h=mix(h,self.transitive(dep,child));h=mix(h,self.artifact(dep,arts))
++        self.active.remove(key);self.trans_memo[key]=h;return h
++
++    def import_inputs(self,module):
++        node=self.nodes[module];result=[]
++        for imp in node['import_details']:
++            dep=imp['module']
++            if self.nodes[dep]['owner']=='SDK':continue
++            if not node['is_module']:kind,arts='legacy','all'
++            elif imp['import_all']:kind,arts='all','all'
++            elif imp['is_meta']:kind,arts='meta','meta'
++            else:kind,arts='public','public'
++            art_caption={'all':':importAllArts','meta':':importArts (meta)','public':':importArts'}[arts]
++            result += [[dep+' transitive imports ('+kind+')',f'{self.transitive(dep,kind):016x}'],
++                       [dep+art_caption,f'{self.artifact(dep,arts):016x}']]
++        return result
+ 
+ 
+ def git_tree(package, expected):

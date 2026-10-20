@@ -1,0 +1,693 @@
+{
+  "scope": "Read-only current public-main source snapshot; no website submission or code execution",
+  "commit_sha": "1135c0386310a0a038004d3b0fe64d0237e47dce",
+  "tree_sha": "c18c2275ce5758d8450d099c0b902d9c43deab0c",
+  "head_after_sha": "1135c0386310a0a038004d3b0fe64d0237e47dce",
+  "HEAD_stable_during_capture": true,
+  "sources": [
+    {
+      "path": "CONTRIBUTING.md",
+      "git_blob_sha1": "d29e26c50075d4f0237d7661ed88c933e2b89940",
+      "sha256": "be5d7f521646ad4c331f24cee93e97a05f8101454aa5afacab2306dc272a51f6",
+      "bytes": 6189,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/CONTRIBUTING.md"
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha1": "1be194ea004dfc11c08521f67f0daab73b8f883c",
+      "sha256": "0e5680a37bfb1c6db41d8cf401396a281ac4c832648d172668f15a21f20e4fbc",
+      "bytes": 9483,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/README.md"
+    },
+    {
+      "path": "src/app/admin/submissions/page.tsx",
+      "git_blob_sha1": "98d9e0fd8bbbfa0b505cfc69a1dc5d2fb904c0f4",
+      "sha256": "8016a5ac29bfe8db8cfff5211bcdce2981b41f376ddcd23f42ae53589dc28fe7",
+      "bytes": 4579,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/admin/submissions/page.tsx"
+    },
+    {
+      "path": "src/app/api/admin/e2b-recover/route.ts",
+      "git_blob_sha1": "43b2109bfc7c2b9c0145961f439fa03f40df2b73",
+      "sha256": "7188a4dc87e7eaa43197ac26174527a20b159da3df8757e65ddeba9bae3b9c19",
+      "bytes": 4481,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/admin/e2b-recover/route.ts"
+    },
+    {
+      "path": "src/app/api/admin/e2b-template/route.ts",
+      "git_blob_sha1": "30cbba3800bbf01389499e48985c0f5d7d321e60",
+      "sha256": "565c15db6830e6051cd588f5cbc85fd19bea5d64fbd223921388149395d55dce",
+      "bytes": 29891,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/admin/e2b-template/route.ts"
+    },
+    {
+      "path": "src/app/api/admin/submission-archive/[jobId]/route.test.ts",
+      "git_blob_sha1": "ebecf77d444813883e6af17724ad4a177eaad052",
+      "sha256": "bf5989aeb6bda9cf88e57e7ad7b6991548e51bfc37b5d51e95e10dd2f6da4dae",
+      "bytes": 2580,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/admin/submission-archive/[jobId]/route.test.ts"
+    },
+    {
+      "path": "src/app/api/admin/submission-archive/[jobId]/route.ts",
+      "git_blob_sha1": "1281b0696f254218804b6ff51e87888e6527d9a6",
+      "sha256": "318a0414a82f65a79ba29f5fae790bd9fb4514a261c7eca0abb0bdb83bdf3c82",
+      "bytes": 2651,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/admin/submission-archive/[jobId]/route.ts"
+    },
+    {
+      "path": "src/app/api/auth/[...nextauth]/route.ts",
+      "git_blob_sha1": "71dc78bccffd4060bc10013af777f03d847039d9",
+      "sha256": "04ca9394ea8fcffd671a378dca60fab107ebac45743dfb7ecc2ed6c5c0e4a6e2",
+      "bytes": 496,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/auth/[...nextauth]/route.ts"
+    },
+    {
+      "path": "src/app/api/e2b/sweep/route.ts",
+      "git_blob_sha1": "dd88a7cc3b99e70d31922434563b99ce296ac5f8",
+      "sha256": "6bcc56e079287da4c8a785371cd4c5f2bc049abc58109bc1076c4bc68b301ddd",
+      "bytes": 5675,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/e2b/sweep/route.ts"
+    },
+    {
+      "path": "src/app/api/e2b/webhook/route.ts",
+      "git_blob_sha1": "510be191d67dc15f593ac55b3f88bc00ebbfa0c3",
+      "sha256": "d0fede7c72d7381e2969aa04b29adb3656e97667b0a91a94e398eb2e50e63457",
+      "bytes": 5974,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/e2b/webhook/route.ts"
+    },
+    {
+      "path": "src/app/api/health/route.ts",
+      "git_blob_sha1": "71a51f8bde1a0664bc6c08df9fae1f2376c2c865",
+      "sha256": "21ca82d9fedc6e8e6f31ffa03cf19fb83fcd359b1c9df6c6733950007c9ae308",
+      "bytes": 2706,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/health/route.ts"
+    },
+    {
+      "path": "src/app/api/leaderboard/route.ts",
+      "git_blob_sha1": "592759f7f3e8c8cc087ebf423104d71ddebaf958",
+      "sha256": "852927fd66e8b3edb9b6d029d949a6dcfd8720a94d383030d05e13a71f46cbb5",
+      "bytes": 469,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/leaderboard/route.ts"
+    },
+    {
+      "path": "src/app/api/submissions/active/route.ts",
+      "git_blob_sha1": "8e38afc3fc1e2bf976d13df759da9db6c5fd3d07",
+      "sha256": "f1b071c296ad50a4639fd518ab44af7af0f2fbc86489be49d4c84e4e55ccf2ce",
+      "bytes": 2420,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/submissions/active/route.ts"
+    },
+    {
+      "path": "src/app/api/submissions/flow-test/route.ts",
+      "git_blob_sha1": "22f49efcc6b0c307ac852f2acec1e73a345e6c5c",
+      "sha256": "b029c834837f83895297ed48751e7f178d9c3b6ce4cbe4be4ac4fa6b0a948988",
+      "bytes": 5143,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/submissions/flow-test/route.ts"
+    },
+    {
+      "path": "src/app/api/submissions/flow-test/status/route.ts",
+      "git_blob_sha1": "ef36d4f8c780fc8617175a541148a44b957073c3",
+      "sha256": "7a48522c1f0b913369c072007d3c914cccf0d4f1b862e499501b0edc73f739c7",
+      "bytes": 10483,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/submissions/flow-test/status/route.ts"
+    },
+    {
+      "path": "src/app/api/submissions/route.test.ts",
+      "git_blob_sha1": "7b78f3c0c56310d167cb6782324de644626f2dd0",
+      "sha256": "a50ef9b3967b9912c9cc18a6cca2bfb35b4a89665a835bc2485e1e886656b788",
+      "bytes": 5735,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/submissions/route.test.ts"
+    },
+    {
+      "path": "src/app/api/submissions/route.ts",
+      "git_blob_sha1": "e4a9306b1b36ec3c38aa651031f258a0d2dec897",
+      "sha256": "43b8cb97a8dd1fcd7e5eb16af5c11b6811533986151fb5919bdbd40b48fa3b5f",
+      "bytes": 8302,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/submissions/route.ts"
+    },
+    {
+      "path": "src/app/api/submissions/status/route.ts",
+      "git_blob_sha1": "7c89deeba3dc880a98a7e7bdae85f09b8ee27a8a",
+      "sha256": "6ffd937a4fb2f34bcbbfe4586dc1e21a892207b6fbe96dbec2290f0b564bbf9b",
+      "bytes": 11155,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/api/submissions/status/route.ts"
+    },
+    {
+      "path": "src/app/challenge/page.tsx",
+      "git_blob_sha1": "95418ba910d93ec9c9ad22e8a40800a7ebb7fb72",
+      "sha256": "37ef2a599d976f1989f541ceccc7fad14885dfee3c058933815bb4cfb5f22cc6",
+      "bytes": 7170,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/challenge/page.tsx"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "git_blob_sha1": "35eb33d2c4432a4618cec7154dc267d6d9b14967",
+      "sha256": "70ab56e2bac55e26110b8f78993bd3ebfded038daacc17eb237d4802296c17ad",
+      "bytes": 2295,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/layout.tsx"
+    },
+    {
+      "path": "src/app/manifest.ts",
+      "git_blob_sha1": "fc7c32018d96159f557ba939d5bd9f007763d113",
+      "sha256": "fa4695a2831aa1fc898bf09bf140e7773d12a8c65ed666f7aed44694690dfc8b",
+      "bytes": 532,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/manifest.ts"
+    },
+    {
+      "path": "src/app/methodology/page.tsx",
+      "git_blob_sha1": "b9159aec789ee0dbb0a42f34d98a7fb6bc379183",
+      "sha256": "87a360534469c90f46de118ad54f8f396b9140e42b96736e84d2c67d979d16b1",
+      "bytes": 6291,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/methodology/page.tsx"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "git_blob_sha1": "496a878e5bb53b2becc79d97271b9d3e0eab624f",
+      "sha256": "7dc38349e97cfa372bc0a369e9dcd4fa306793007ea68017baacf75b42fef408",
+      "bytes": 503,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/not-found.tsx"
+    },
+    {
+      "path": "src/app/opengraph-image.tsx",
+      "git_blob_sha1": "6c6ce7a9900f26a5d8d77362747834fbc116c432",
+      "sha256": "d9b026696ca60ada1efa544d35950f3ede05408ee29d1e5404e11834b90d5426",
+      "bytes": 3009,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/opengraph-image.tsx"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "git_blob_sha1": "b66570f9570aaed0d2f80f3a76cb30ebe4789c4c",
+      "sha256": "54ec37a41a0ce54461f907c425877e75b5e9435d4022cf2b546c496bad99a121",
+      "bytes": 8728,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/page.tsx"
+    },
+    {
+      "path": "src/app/robots.ts",
+      "git_blob_sha1": "4c39f0ecdfe94f5f58673d7f0beea19040cb2cc5",
+      "sha256": "10758c356bdcac5c0b7b086544b55d4d5cbfece15a892c3959778ee04a3ebe54",
+      "bytes": 228,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/robots.ts"
+    },
+    {
+      "path": "src/app/signin/page.tsx",
+      "git_blob_sha1": "636bfa4d54699b1cd48e9383489ef09590f3d276",
+      "sha256": "8417ec85417d79ec8cb8bc4ca5f87b8e242f351377e1889d45d79d11fbff10eb",
+      "bytes": 3250,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/signin/page.tsx"
+    },
+    {
+      "path": "src/app/sitemap.ts",
+      "git_blob_sha1": "1495c15cca24f03e9fc8f388c5b69212041c1a17",
+      "sha256": "6582a7a8e1c2ab74610f3082a89345a550e9ed12c847fb4b4fdc3721a920aa7b",
+      "bytes": 472,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/sitemap.ts"
+    },
+    {
+      "path": "src/app/submissions/[id]/page.tsx",
+      "git_blob_sha1": "b875aa761d87bebd0c2630c4dd8bb384c9f85a27",
+      "sha256": "6ca13d44e28ff5c840b2f5f606136d32e18badb9ef0cbd8bbc121102086bf8af",
+      "bytes": 4891,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/submissions/[id]/page.tsx"
+    },
+    {
+      "path": "src/app/submissions/page.tsx",
+      "git_blob_sha1": "0bb2b613ce12227a0fb71100dc687b1c3f38fb72",
+      "sha256": "3182bf4425d7cdd044cc44d8bf4e5d7dd3d44fb47b96f506eb3fc48921afd7ca",
+      "bytes": 2733,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/submissions/page.tsx"
+    },
+    {
+      "path": "src/app/submit/page.tsx",
+      "git_blob_sha1": "108ff5a0145a0ec148e1f446c2c0768ba8810845",
+      "sha256": "53c4220c78c4c214a6177581687d050e93646b9526f1ea4ef7430ddc45bc0ef1",
+      "bytes": 10842,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/submit/page.tsx"
+    },
+    {
+      "path": "src/app/templates/FlowTest.lean/route.test.ts",
+      "git_blob_sha1": "08c6c8498b391066048743580e65cae715ef21ac",
+      "sha256": "e6938d05ed46fc9d038221cfe380891e4b5176f1a156e207d8602735c49f3526",
+      "bytes": 481,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/templates/FlowTest.lean/route.test.ts"
+    },
+    {
+      "path": "src/app/templates/FlowTest.lean/route.ts",
+      "git_blob_sha1": "e676b6c6233395cd8f89b6d2d818c3ecd5909954",
+      "sha256": "5fdedd6f896adab6686fc374f384c45d92dd8835c0721258e617130a0f031485",
+      "bytes": 452,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/templates/FlowTest.lean/route.ts"
+    },
+    {
+      "path": "src/app/templates/Solution.lean/route.test.ts",
+      "git_blob_sha1": "a5d65d3a5e0d99b78f37e3b8c46ad258b94e2966",
+      "sha256": "23b122d73655024b3e9387a0e824440171b6c20ce0d75e08b4df19affb3379c0",
+      "bytes": 673,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/templates/Solution.lean/route.test.ts"
+    },
+    {
+      "path": "src/app/templates/Solution.lean/route.ts",
+      "git_blob_sha1": "e07bad8b72ee5663be185e72aba6cf3f19154077",
+      "sha256": "bb9aeedea763c7726d980f203e3c31a331db3b73a96cf264a102b2491ea8bdf0",
+      "bytes": 463,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/templates/Solution.lean/route.ts"
+    },
+    {
+      "path": "src/app/twitter-image.tsx",
+      "git_blob_sha1": "8f726ce33286dc6733d02456fab8c381a09fd115",
+      "sha256": "fd96b2acb8f5acde6a1f221417dbb64729db617efc8e0dcca30f011ceac2505d",
+      "bytes": 69,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/app/twitter-image.tsx"
+    },
+    {
+      "path": "src/auth.ts",
+      "git_blob_sha1": "04ae325fee1c6e183610df2361c0a1662b8030e6",
+      "sha256": "524587443412705d3a1058649eb9eb172369dfee92c7371ce7c9edf64e3e9484",
+      "bytes": 1950,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/auth.ts"
+    },
+    {
+      "path": "src/components/bound-chart.tsx",
+      "git_blob_sha1": "07f2a23c94de2b247076cb5c314a9986de3dc474",
+      "sha256": "0cce24c0bb29263eee0e0bd22d73b76bb6ea19323d8aaae2b2caa559ac652ab3",
+      "bytes": 11344,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/bound-chart.tsx"
+    },
+    {
+      "path": "src/components/brand-mark.tsx",
+      "git_blob_sha1": "c5366d725b63bfee47740bd00ff6db3a92dfa8d1",
+      "sha256": "c39cd88f1a74631856e8539822234cdf696d3e546162d0c00f6a362f3281b4f0",
+      "bytes": 569,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/brand-mark.tsx"
+    },
+    {
+      "path": "src/components/code-block.tsx",
+      "git_blob_sha1": "9af024f6d5bc91f56ab5fa60353980419eec227c",
+      "sha256": "a7907a909cce2e5fe4cbaa34784562a576790662a870b516575e6609ef1d7b8c",
+      "bytes": 249,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/code-block.tsx"
+    },
+    {
+      "path": "src/components/direct-submission-form.tsx",
+      "git_blob_sha1": "580a8d9c39100e5405fdfa86471bc3cff1891e98",
+      "sha256": "930c919292ad04f1432fdbf22eaf13039179565e05aac21a096d9be8cbf1d0c2",
+      "bytes": 19941,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/direct-submission-form.tsx"
+    },
+    {
+      "path": "src/components/flow-test-panel.tsx",
+      "git_blob_sha1": "94072cb427c624e264a5bf54d72cc72462a2adbb",
+      "sha256": "9f6ecc4b3e5a7aa68dc54763ea6fe2ac5095f8145d6d44e4e51d7fb77a045cd4",
+      "bytes": 10692,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/flow-test-panel.tsx"
+    },
+    {
+      "path": "src/components/format.ts",
+      "git_blob_sha1": "f2c6eeeaa8736039d80f3d91469c5f97372cad46",
+      "sha256": "a53aa0a0d7b113ef826d568fa70e279e39a5db2d9bea457a1cd5d0f3a83f7836",
+      "bytes": 461,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/format.ts"
+    },
+    {
+      "path": "src/components/leaderboard.tsx",
+      "git_blob_sha1": "93739bd77fa4141dfd99381d373c6e03529dbbba",
+      "sha256": "ce79b3b9fbdc77dfb30dd34fc5db109f3e5e9eca33c476e3f74116049074ba63",
+      "bytes": 3451,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/leaderboard.tsx"
+    },
+    {
+      "path": "src/components/mobile-menu.tsx",
+      "git_blob_sha1": "03f4640b5afb39f2adcb46d07e1b1c09d1f54dbc",
+      "sha256": "e4f09f1b61bbd0e90e07a0d9f26938b65d7166def34e7aad43d2e84fcc0c2066",
+      "bytes": 2039,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/mobile-menu.tsx"
+    },
+    {
+      "path": "src/components/site-footer.tsx",
+      "git_blob_sha1": "367b0d797fe30d1da6710ede349e606d40d915fe",
+      "sha256": "b865e7db862b23c6d8e00b3a2ce61596ff5d8310734e4bc3595264c3f1204aa9",
+      "bytes": 1998,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/site-footer.tsx"
+    },
+    {
+      "path": "src/components/site-header.tsx",
+      "git_blob_sha1": "5a262fdb111a7cce9408d1a3b97ca5941adae37c",
+      "sha256": "0d7948ce76319e88c4bdebf34e9b28eb43ed06779d1bd723725c5f37abb67e91",
+      "bytes": 2175,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/site-header.tsx"
+    },
+    {
+      "path": "src/components/site-notice.tsx",
+      "git_blob_sha1": "0089f94b1ffbb9edf551f444f4437d3be2a859d1",
+      "sha256": "48afe0c5ba8e95f6e026c44be9a1d47ccd983b170612ab381c5bd9e6774e8218",
+      "bytes": 369,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/site-notice.tsx"
+    },
+    {
+      "path": "src/components/verification-pipeline.tsx",
+      "git_blob_sha1": "dd6be03b398a7ec750732fc663eb43e2c80346a5",
+      "sha256": "f3a576f750d20a93b8715b240edf61a4ec7b01f7ee5416ed9de912e4e8213140",
+      "bytes": 1839,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/verification-pipeline.tsx"
+    },
+    {
+      "path": "src/components/zeta-field.tsx",
+      "git_blob_sha1": "51ee56d7b8f05e881733386743d9afb69eff7dd2",
+      "sha256": "c540b0b6ce04c26cac2b758fa201c6e888ce931f73f3450246a0016ca397bf7c",
+      "bytes": 1671,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/components/zeta-field.tsx"
+    },
+    {
+      "path": "src/lib/attestation.ts",
+      "git_blob_sha1": "277f2c678bf21f8583dea95e6ff30d6c48ccb58b",
+      "sha256": "7823135a4fb9eb3e668e2aa6c934692c422b12f1f2939e5ab2923a752734e16d",
+      "bytes": 2311,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/attestation.ts"
+    },
+    {
+      "path": "src/lib/auth-actions.ts",
+      "git_blob_sha1": "5abab3bb8d710b075fa0da5f877ef15e31d3bfef",
+      "sha256": "686489e8eb93c37f94d0c5729b020e6215fb8f882db90683f35ff5aac3e391ac",
+      "bytes": 271,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/auth-actions.ts"
+    },
+    {
+      "path": "src/lib/challenge.test.ts",
+      "git_blob_sha1": "c89d5aaed443f8e43bdf2e2f954349be042c7294",
+      "sha256": "776e8862af842d835ee2f0c3b97d6c19f10339d6309589253f4d862bc569dd3e",
+      "bytes": 3156,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/challenge.test.ts"
+    },
+    {
+      "path": "src/lib/challenge.ts",
+      "git_blob_sha1": "6b680261b99852e0a61d678e0280fcbc2e657c8e",
+      "sha256": "847d503e9a0427d2bfe1fd0c8d92d31b42ade54bdeb98a6b8e29f1894284f53e",
+      "bytes": 8761,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/challenge.ts"
+    },
+    {
+      "path": "src/lib/direct-submission.test.ts",
+      "git_blob_sha1": "9b16c96db99bc94a15393940ca182c7084468150",
+      "sha256": "d4f7c4d9762fcbe87d64a59474a6a774fd65770765cc47ebbab378a297cc7064",
+      "bytes": 3379,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/direct-submission.test.ts"
+    },
+    {
+      "path": "src/lib/direct-submission.ts",
+      "git_blob_sha1": "d0e267f64b960fb68ddcb6696d811bc22c2a58a5",
+      "sha256": "f2f213cfaff53b59e9327477b58038449048ffc493aaad723dbaad462728ec60",
+      "bytes": 2678,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/direct-submission.ts"
+    },
+    {
+      "path": "src/lib/e2b-config.ts",
+      "git_blob_sha1": "d4463798cacd920b46576976c697e5209a979872",
+      "sha256": "c04b39452678914d79d636ffe60e13d6bb957ea8a2fb460c202772aba33ffcad",
+      "bytes": 521,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/e2b-config.ts"
+    },
+    {
+      "path": "src/lib/e2b-flow-test.ts",
+      "git_blob_sha1": "dd73d62d6952365473c192d89ad39d0612a1cb27",
+      "sha256": "2d2b27faa92ed11cea993ba90b171383a298ff2229cacc62e6427e92c5b2e00f",
+      "bytes": 6060,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/e2b-flow-test.ts"
+    },
+    {
+      "path": "src/lib/e2b-queue.test.ts",
+      "git_blob_sha1": "e998f910ef3153ee70f564f7901d191a5d92fe51",
+      "sha256": "702fa09e7c9ada8e08aaaefdec7b41724961aaff2713c108f6fd87cb68ba6925",
+      "bytes": 3399,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/e2b-queue.test.ts"
+    },
+    {
+      "path": "src/lib/e2b-queue.ts",
+      "git_blob_sha1": "797e9acba14147bc93d1ffdfaf417fe0ba6bedd2",
+      "sha256": "c06af1f826e3e5e6412f46c21cc73a7d5798c079048c97b729c6039d99362900",
+      "bytes": 13147,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/e2b-queue.ts"
+    },
+    {
+      "path": "src/lib/e2b-verifier.ts",
+      "git_blob_sha1": "d24479b119d7dab79ea8d1bc9b852ae663e532f3",
+      "sha256": "9e91d984bba12615a77b5b897294945a7b7961e8aa90b17b13a478d2ce11483a",
+      "bytes": 11477,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/e2b-verifier.ts"
+    },
+    {
+      "path": "src/lib/e2b-webhooks.test.ts",
+      "git_blob_sha1": "bfe43662fff33a30b07b335306d823b6f44c1a0c",
+      "sha256": "b916a8c4bd7b470a37b39f75f26a3bb2a9fc863bd44cd5c1b33683d59146aac3",
+      "bytes": 1047,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/e2b-webhooks.test.ts"
+    },
+    {
+      "path": "src/lib/e2b-webhooks.ts",
+      "git_blob_sha1": "1d055eb0d56661b50a89c62a7b242c39eefaaf8a",
+      "sha256": "6f72c632077825ce2a3e0a5c9b051fb0b0bd72497e79b4f5c19ff5bcdca502ec",
+      "bytes": 4385,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/e2b-webhooks.ts"
+    },
+    {
+      "path": "src/lib/e2b-workspace-compat.ts",
+      "git_blob_sha1": "7c502a212dedd717a32776ca229283b71ed92fb4",
+      "sha256": "eb856216edecbe10be43ba00e149398a84a64133e1870f41bc4a11cc4e304bb6",
+      "bytes": 1816,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/e2b-workspace-compat.ts"
+    },
+    {
+      "path": "src/lib/flow-test-attestation.test.ts",
+      "git_blob_sha1": "ff10c9389a0de738e365bfd529f931d98088680b",
+      "sha256": "dcad87f8f483fc9bb10316a4f4273ff79ad1560307499e73e4d406b118a3b4d6",
+      "bytes": 2555,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/flow-test-attestation.test.ts"
+    },
+    {
+      "path": "src/lib/flow-test-attestation.ts",
+      "git_blob_sha1": "1a6ed4211e11e2bb408ff435d3677320b0aa55e9",
+      "sha256": "7e504eb2ef80fa48653803b0f500e19f17c1cd6bfdef698b500225bc975b32b8",
+      "bytes": 1329,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/flow-test-attestation.ts"
+    },
+    {
+      "path": "src/lib/flow-test-server.ts",
+      "git_blob_sha1": "78c25f5319b6e95ab038df2a3de3d9b5c415398c",
+      "sha256": "4bcb614177c0c8096f4f7dbb2ec9c833189739ca2509567fe9083c08e9a0f358",
+      "bytes": 960,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/flow-test-server.ts"
+    },
+    {
+      "path": "src/lib/flow-test.test.ts",
+      "git_blob_sha1": "4152698b27ae3e56c8f97789a991293d89b23418",
+      "sha256": "12c91198897412bd1e515635158b00fd2d7b8c47c2d9bbd2d95045fed9bf955e",
+      "bytes": 1672,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/flow-test.test.ts"
+    },
+    {
+      "path": "src/lib/flow-test.ts",
+      "git_blob_sha1": "9204e8768bb7a12383d763b87a5b888166c12e74",
+      "sha256": "aa9f4b243543fdcb08fd87358640f1ff9083685fbb1be22b8e95cda2305cc00e",
+      "bytes": 2843,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/flow-test.ts"
+    },
+    {
+      "path": "src/lib/github-api-identity.test.ts",
+      "git_blob_sha1": "1af118300e423747cfbcb5cb9d0ff5ee53cbfaf0",
+      "sha256": "9050a6024719f62885db93ee236e31ab5e270b08a5aeb53c1c0ee44104fbe8c1",
+      "bytes": 1503,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/github-api-identity.test.ts"
+    },
+    {
+      "path": "src/lib/github-api-identity.ts",
+      "git_blob_sha1": "9da249fb2e2d0ef1b697daf36e8333a225bc8ef9",
+      "sha256": "1e49f0a90234e4bb395859a63694f897ab9a260b229471245e5f316faf01dbb9",
+      "bytes": 1246,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/github-api-identity.ts"
+    },
+    {
+      "path": "src/lib/github-promotion.test.ts",
+      "git_blob_sha1": "d941677c09d9e9ad134e9a25bd72163e09521d2e",
+      "sha256": "bed126bb168bd6018aaa6faacf6c25c9f6dc72d028bcd1ecdd45c02255aa5b48",
+      "bytes": 14235,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/github-promotion.test.ts"
+    },
+    {
+      "path": "src/lib/github-promotion.ts",
+      "git_blob_sha1": "c1ab1384656dc5763750259c09338a6e7dfd2c39",
+      "sha256": "36f421e7fa0c963c0820115df3ec0538f6f181004c5f08caba86229553b8bf0a",
+      "bytes": 20808,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/github-promotion.ts"
+    },
+    {
+      "path": "src/lib/queue-boundary-routes.test.ts",
+      "git_blob_sha1": "8870764cfd04e384fa15c8695c3dca0bd0420e59",
+      "sha256": "19afe06f7f47d3367cc6f01a22e0ed088bcf7490974e7a6507f3aef44334630d",
+      "bytes": 12220,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/queue-boundary-routes.test.ts"
+    },
+    {
+      "path": "src/lib/queue-orchestration.test.ts",
+      "git_blob_sha1": "e9c15ead2c3eeec9e58f78f6eaaaacabe16d65a6",
+      "sha256": "46c3f10df6dce938e2104fe4a16a8367c55b2a697606856b1426313e521c6dc8",
+      "bytes": 6249,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/queue-orchestration.test.ts"
+    },
+    {
+      "path": "src/lib/queue-orchestration.ts",
+      "git_blob_sha1": "8a9e0799151ab83c8a1a542acc4072f143b2ca0d",
+      "sha256": "83e43b4b523ba61d4017295babfaab16707d4c676a34ea32acdb7137c6dacabc",
+      "bytes": 5574,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/queue-orchestration.ts"
+    },
+    {
+      "path": "src/lib/record-times.ts",
+      "git_blob_sha1": "a15225e58a1be9be012739a9346b59c8efcf6947",
+      "sha256": "08de078f43ec590835c1ff8934b09f212fe8fc41de4b7094101aab66896c8aaf",
+      "bytes": 1866,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/record-times.ts"
+    },
+    {
+      "path": "src/lib/records.ts",
+      "git_blob_sha1": "f48063dd62cad6d226709f5d7164f2c7c0b05bbb",
+      "sha256": "1fab4d48cac4e67dadc8f529034c05bcb4b5c908f7fb1527cd13de9edbb740c7",
+      "bytes": 997,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/records.ts"
+    },
+    {
+      "path": "src/lib/recovery-route.test.ts",
+      "git_blob_sha1": "ced57e61851882fd19cb794b6dcf502393094f5e",
+      "sha256": "26487a6eea01ffbb59904778d9e205249e754bca225f93296e39cca7312fc797",
+      "bytes": 3467,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/recovery-route.test.ts"
+    },
+    {
+      "path": "src/lib/request-json.test.ts",
+      "git_blob_sha1": "4ba3924a553911b0adb1a3eccc44678b298a5c4c",
+      "sha256": "480cdcaf31a7798bf2b514d61fa30636b35fb658b8cc9911bc9592e2e90e31c9",
+      "bytes": 1525,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/request-json.test.ts"
+    },
+    {
+      "path": "src/lib/request-json.ts",
+      "git_blob_sha1": "025ae6986ed6e03770d4dbd8538bc27ecc8c5586",
+      "sha256": "4342faa3f4b4e83017dac9843cff52a15e12bc3e77461cd36b05f023a58bea78",
+      "bytes": 1383,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/request-json.ts"
+    },
+    {
+      "path": "src/lib/site.ts",
+      "git_blob_sha1": "ae034202e2607022547807a3e4cfbcfb27f3d4ea",
+      "sha256": "67aed6bde49e00a1a0755935f6b9d96f331fbb98c9fe6f9df0c6c3362341175a",
+      "bytes": 270,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/site.ts"
+    },
+    {
+      "path": "src/lib/submission-archive-store.test.ts",
+      "git_blob_sha1": "8dd683a3d1f6fbcb0a2fdc3cec14b06d12594d11",
+      "sha256": "72302203d673d80381416ed090b884b54e94ab549f630f6f24b210abe1cacbf2",
+      "bytes": 4136,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-archive-store.test.ts"
+    },
+    {
+      "path": "src/lib/submission-archive-store.ts",
+      "git_blob_sha1": "87389b3a1d043fd5bd18a51b43d64cd5a8b16648",
+      "sha256": "c7129444a1030ae24a7ed94a43bdf71e4c32bcb998035cbdd41b83ec349234b3",
+      "bytes": 7618,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-archive-store.ts"
+    },
+    {
+      "path": "src/lib/submission-archive.test.ts",
+      "git_blob_sha1": "abfe3629a458e0842465606f4f0481dae1cf8467",
+      "sha256": "e16b336ea8ced81da06ebc86038cef009ec6d318e555aeadd223823ceda9b019",
+      "bytes": 6371,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-archive.test.ts"
+    },
+    {
+      "path": "src/lib/submission-archive.ts",
+      "git_blob_sha1": "c908354084c1fa03b8b695c970ad7c2931a17907",
+      "sha256": "328eb75c90598fe64a67884f760692b003da0c270c7de3c6111e08805f260956",
+      "bytes": 12355,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-archive.ts"
+    },
+    {
+      "path": "src/lib/submission-finalization.ts",
+      "git_blob_sha1": "50fecc39516887f165312f4afc156262d6a83231",
+      "sha256": "ae4c80bf2988762908eff0341251275efa0048910edb9b004a67db5e3bf28eba",
+      "bytes": 1514,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-finalization.ts"
+    },
+    {
+      "path": "src/lib/submission-jobs.test.ts",
+      "git_blob_sha1": "139a45bdbc919f7a8ad0e8012a69bbb9547f005f",
+      "sha256": "bbc118f5638065bc34e1f9a1321691fd7cd432c4748111e4075546b1baf54bc8",
+      "bytes": 1060,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-jobs.test.ts"
+    },
+    {
+      "path": "src/lib/submission-jobs.ts",
+      "git_blob_sha1": "64f2e379c86760a72d797051ea5fd1b1a189fc7f",
+      "sha256": "a04140be1482e1edfcb74028c8f39157b762c080908b4b9dfb1014b26aa392e3",
+      "bytes": 3019,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-jobs.ts"
+    },
+    {
+      "path": "src/lib/submission-queue.test.ts",
+      "git_blob_sha1": "d2cc56fdec87c7849af26f7a729df010402e83f1",
+      "sha256": "3461d864225924e226e773172b34ba069afb95c28d1c0c86b158c127bc51a19f",
+      "bytes": 26919,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-queue.test.ts"
+    },
+    {
+      "path": "src/lib/submission-queue.ts",
+      "git_blob_sha1": "5fed28eb8906df92ce9d1f030706e730c507552e",
+      "sha256": "4637a0521abb1053a7917e6a5d81f0676fc220d6b1b38993276c791a27d2137f",
+      "bytes": 31422,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-queue.ts"
+    },
+    {
+      "path": "src/lib/submission-starter.test.ts",
+      "git_blob_sha1": "e1f914bd6e98cef105430cf5bb0ef3b668661d66",
+      "sha256": "328cb9c982af723582bddf8a8e144ae7afc4f5bccb3598011a2e66b9a2819287",
+      "bytes": 1224,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-starter.test.ts"
+    },
+    {
+      "path": "src/lib/submission-starter.ts",
+      "git_blob_sha1": "3ad2e632433664a3ed89ab778814be511218bffa",
+      "sha256": "96324073810b8439f630b3d2ee997265c15c7b7160685c1242875bf6cb28e1ff",
+      "bytes": 1737,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/submission-starter.ts"
+    },
+    {
+      "path": "src/lib/verifier-feedback.test.ts",
+      "git_blob_sha1": "24b891906ea398e9cc80f8ed7cabf68be1f3b416",
+      "sha256": "f22e511e0c7e1c71935a0dbed426555a9076dfb3d25316caf7859cb5344ef261",
+      "bytes": 3223,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/verifier-feedback.test.ts"
+    },
+    {
+      "path": "src/lib/verifier-feedback.ts",
+      "git_blob_sha1": "1a861bdf6893285bcc7f7bd45dcd70ab02f2cbc8",
+      "sha256": "a08c793ea5c8c8ee23b76128df06d5429aa94b45e44bab28d0e97e74c2981173",
+      "bytes": 12956,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/verifier-feedback.ts"
+    },
+    {
+      "path": "src/lib/verifier-readiness.test.ts",
+      "git_blob_sha1": "025a5dc3828d4c37f38b5f8736d2721aa5a86c51",
+      "sha256": "179cc15af188bf965c2585ffe4506f4d0e8581b65341b9463140931f3e1d8d4c",
+      "bytes": 660,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/verifier-readiness.test.ts"
+    },
+    {
+      "path": "src/lib/verifier-readiness.ts",
+      "git_blob_sha1": "29404f508035737383e5e7ef050b37a03f510a6d",
+      "sha256": "53d6c84b232152e01c30815ba817f5c285025daf987fadc2d3f7d1867e825a66",
+      "bytes": 2616,
+      "immutable_source_url": "https://raw.githubusercontent.com/josusanmartin/riemann/1135c0386310a0a038004d3b0fe64d0237e47dce/src/lib/verifier-readiness.ts"
+    }
+  ],
+  "source_files_captured": 97,
+  "HTTP_methods": [
+    "GET"
+  ],
+  "proof_or_website_write_calls": 0
+}

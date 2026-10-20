@@ -1,0 +1,236 @@
+import { ZodError } from "zod";
+import { VerifierTemplateMismatchError } from "@/lib/verifier-readiness";
+import { getSession } from "@/auth";
+import { records } from "@/lib/records";
+import { prepareDirectSubmission } from "@/lib/direct-submission";
+import { stageE2BVerification } from "@/lib/e2b-queue";
+import { killE2BSandbox } from "@/lib/e2b-verifier";
+import { isE2BConfigured } from "@/lib/e2b-config";
+import {
+  ensureE2BWebhook,
+  isE2BWebhookConfigured,
+} from "@/lib/e2b-webhooks";
+import { isGitHubPromotionConfigured } from "@/lib/github-promotion";
+import {
+  applyInitialQueueTransition,
+} from "@/lib/queue-orchestration";
+import { getCurrentRecord } from "@/lib/records";
+import { signSubmissionJob } from "@/lib/submission-jobs";
+import { readBoundedJson, RequestBodyTooLargeError } from "@/lib/request-json";
+import {
+  DailySubmissionLimitError,
+  enqueueVerificationJob,
+  getDailySubmissionUsage,
+  isSubmissionQueueConfigured,
+  QueueCommitUncertainError,
+  SubmissionAlreadyQueuedError,
+  SubmissionQueueFullError,
+} from "@/lib/submission-queue";
+
+export const runtime = "nodejs";
+
+// ensureE2BWebhook lists and re-PATCHes the project-wide webhook (secret
+// included). Doing that on every upload adds two E2B calls to admission and
+// races concurrent uploads, so repeat it at most every half hour per warm
+// instance. Failures are not remembered, so the next upload retries.
+const WEBHOOK_REFRESH_MS = 30 * 60 * 1_000;
+let webhookEnsuredAt = 0;
+
+async function ensureE2BWebhookRecently(): Promise<void> {
+  if (Date.now() - webhookEnsuredAt < WEBHOOK_REFRESH_MS) return;
+  await ensureE2BWebhook();
+  webhookEnsuredAt = Date.now();
+}
+// Staging may itself spend 60s uploading a maximum-size source, followed by
+// several durable Git API writes. Do not terminate admission halfway through.
+export const maxDuration = 300;
+
+function noStore(status: number, body: object): Response {
+  return Response.json(body, {
+    status,
+    headers: { "Cache-Control": "no-store" },
+  });
+}
+
+export async function POST(request: Request): Promise<Response> {
+  // Operator switch for verifier upgrades: refuse new uploads before any
+  // worker or daily slot is touched. In-flight proofs are unaffected.
+  if (process.env.SUBMISSIONS_PAUSED === "1") {
+    return noStore(503, {
+      error: "submissions_paused",
+      message:
+        process.env.SITE_NOTICE?.trim() ||
+        "Submissions are briefly paused for verifier maintenance. No daily slot was used; please try again shortly.",
+    });
+  }
+  const session = await getSession(request);
+  const github = session?.user.githubLogin;
+  if (!github) {
+    return noStore(401, {
+      error: "authentication_required",
+      message: "Sign in with GitHub before submitting a formal proof.",
+    });
+  }
+  if (!isE2BConfigured()) {
+    return noStore(503, {
+      error: "verifier_unavailable",
+      message: "The E2B verifier is not configured for this deployment.",
+    });
+  }
+  if (
+    !isGitHubPromotionConfigured() ||
+    !isE2BWebhookConfigured() ||
+    !isSubmissionQueueConfigured()
+  ) {
+    return noStore(503, {
+      error: "automation_unavailable",
+      message:
+        "Automatic evidence publication is not configured for this deployment.",
+    });
+  }
+
+  try {
+    const currentRecord = getCurrentRecord();
+    const prepared = prepareDirectSubmission(
+      await readBoundedJson(request),
+      github,
+      currentRecord,
+    );
+    if (records.some((record) => record.id === prepared.submission.id)) {
+      return noStore(409, {
+        error: "submission_exists",
+        message: "That submission identifier is already part of the public record.",
+      });
+    }
+    const dailyUsage = await getDailySubmissionUsage(github);
+    if (dailyUsage.used >= dailyUsage.limit) {
+      return noStore(429, {
+        error: "daily_submission_limit",
+        message: `Each GitHub account may submit at most ${dailyUsage.limit} proofs per UTC day.`,
+        dailyUsed: dailyUsage.used,
+        dailyLimit: dailyUsage.limit,
+        retryAt: dailyUsage.retryAt,
+      });
+    }
+
+    const baseCommitSha =
+      process.env.VERCEL_GIT_COMMIT_SHA ?? process.env.RIEMANN_BASE_COMMIT_SHA;
+    if (!baseCommitSha || !/^[0-9a-f]{40}$/.test(baseCommitSha)) {
+      return noStore(503, {
+        error: "deployment_identity_unavailable",
+        message: "The verifier cannot bind this upload to an immutable deployment.",
+      });
+    }
+    const secret = process.env.AUTH_SECRET;
+    if (!secret) {
+      return noStore(503, {
+        error: "job_signing_unavailable",
+        message: "Submission job signing is unavailable.",
+      });
+    }
+
+    await ensureE2BWebhookRecently();
+    const issuedAt = Date.now();
+    const job = await stageE2BVerification({
+      ...prepared,
+      recordsSnapshot: `${JSON.stringify(records, null, 2)}\n`,
+      baseCommitSha,
+      previousRecordId: currentRecord.id,
+      issuedAt,
+    });
+    let admission;
+    try {
+      admission = await enqueueVerificationJob(
+        {
+          ...job,
+          proofDigest: prepared.proofDigest,
+          submissionId: prepared.submission.id,
+        },
+        github,
+        { manifest: prepared.manifest, solution: prepared.solution },
+      );
+    } catch (error) {
+      if (!(error instanceof QueueCommitUncertainError)) {
+        await killE2BSandbox(job.sandboxId).catch(() => undefined);
+      }
+      throw error;
+    }
+
+    let verificationRunning = false;
+    try {
+      verificationRunning = await applyInitialQueueTransition(admission);
+    } catch (error) {
+      // Admission is already durable. Status polling and the cron backstop can
+      // safely retry this idempotent transition without losing the upload.
+      console.error("Unable to apply the initial E2B queue state", error);
+    }
+    const jobToken = signSubmissionJob(
+      {
+        schemaVersion: 1,
+        sandboxId: job.sandboxId,
+        jobId: job.jobId,
+        submissionId: prepared.submission.id,
+        github,
+        proofDigest: prepared.proofDigest,
+        baseCommitSha,
+        previousRecordId: currentRecord.id,
+        issuedAt,
+        expiresAt: issuedAt + 7 * 24 * 60 * 60 * 1_000,
+      },
+      secret,
+    );
+
+    return noStore(202, {
+      status: verificationRunning ? "running" : "queued",
+      submissionId: prepared.submission.id,
+      proofDigest: prepared.proofDigest,
+      jobToken,
+      queuePosition: verificationRunning ? 0 : admission.position,
+      dailyUsed: admission.dailyUsed,
+      dailyLimit: admission.dailyLimit,
+    });
+  } catch (error) {
+    if (error instanceof VerifierTemplateMismatchError) {
+      return noStore(503, { error: "verifier_template_stale", message: error.message });
+    }
+    if (error instanceof RequestBodyTooLargeError) {
+      return noStore(413, { error: "submission_too_large", message: error.message });
+    }
+    if (error instanceof QueueCommitUncertainError) {
+      return noStore(503, { error: "queue_admission_uncertain", message: error.message });
+    }
+    if (error instanceof DailySubmissionLimitError) {
+      return noStore(429, {
+        error: "daily_submission_limit",
+        message: error.message,
+        dailyLimit: error.limit,
+        retryAt: error.retryAt,
+      });
+    }
+    if (error instanceof SubmissionQueueFullError) {
+      return noStore(503, { error: "verification_queue_full", message: error.message });
+    }
+    if (error instanceof SubmissionAlreadyQueuedError) {
+      return noStore(409, { error: "submission_already_queued", message: error.message });
+    }
+    if (error instanceof ZodError || error instanceof SyntaxError) {
+      return noStore(400, {
+        error: "invalid_submission",
+        message: "The submission fields do not match the formal input schema.",
+      });
+    }
+    const message = error instanceof Error ? error.message : "Verification could not start.";
+    if (
+      message.includes("strictly exceed") ||
+      message.includes("cannot exceed one") ||
+      message.includes("2 MB")
+    ) {
+      return noStore(400, { error: "invalid_submission", message });
+    }
+    console.error("Unable to start E2B verification", error);
+    return noStore(502, {
+      error: "verifier_start_failed",
+      message: "The isolated verifier could not be started. Please retry shortly.",
+    });
+  }
+}

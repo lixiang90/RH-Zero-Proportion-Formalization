@@ -1,0 +1,71 @@
+import { getSession } from "@/auth";
+import {
+  isSubmissionArchiveMaintainer,
+  readSubmissionArchive,
+  readVerifierLog,
+} from "@/lib/submission-archive-store";
+
+export const runtime = "nodejs";
+export const maxDuration = 60;
+export const dynamic = "force-dynamic";
+
+type RouteContext = { params: Promise<{ jobId: string }> };
+
+function json(status: number, body: object): Response {
+  return Response.json(body, {
+    status,
+    headers: { "Cache-Control": "private, no-store, max-age=0" },
+  });
+}
+
+export async function GET(
+  request: Request,
+  { params }: RouteContext,
+): Promise<Response> {
+  const session = await getSession(request);
+  if (!isSubmissionArchiveMaintainer(session?.user.githubLogin)) {
+    return json(404, { error: "not_found" });
+  }
+
+  try {
+    // ?log=1 returns the retained verifier log instead of the source.
+    if (new URL(request.url).searchParams.get("log") === "1") {
+      const retained = await readVerifierLog((await params).jobId, null);
+      if (!retained) return json(404, { error: "log_not_found" });
+      return new Response(retained.log, {
+        status: 200,
+        headers: {
+          "Cache-Control": "private, no-store, max-age=0",
+          "Content-Security-Policy": "default-src 'none'; sandbox",
+          "Content-Type": "text/plain; charset=utf-8",
+          "X-Content-Type-Options": "nosniff",
+          "X-Riemann-Proof-Digest": retained.proofDigest,
+          "X-Riemann-Log-Omitted-Bytes": String(retained.omittedBytes),
+          "X-Robots-Tag": "noindex, nofollow, noarchive",
+        },
+      });
+    }
+    const archived = await readSubmissionArchive((await params).jobId);
+    if (!archived) return json(404, { error: "archive_not_found" });
+    const download = new URL(request.url).searchParams.get("download") === "1";
+    const filename = `${archived.summary.submission.id}-Solution.lean`;
+    return new Response(archived.payload.solution, {
+      status: 200,
+      headers: {
+        "Cache-Control": "private, no-store, max-age=0",
+        "Content-Disposition": `${download ? "attachment" : "inline"}; filename="${filename}"`,
+        "Content-Security-Policy": "default-src 'none'; sandbox",
+        "Content-Type": "text/plain; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Riemann-Proof-Digest": archived.payload.proofDigest,
+        "X-Robots-Tag": "noindex, nofollow, noarchive",
+      },
+    });
+  } catch (error) {
+    console.error("Unable to decrypt the requested submission archive", error);
+    return json(502, {
+      error: "archive_unavailable",
+      message: "The encrypted source archive could not be read.",
+    });
+  }
+}

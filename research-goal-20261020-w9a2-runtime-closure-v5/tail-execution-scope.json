@@ -1,0 +1,20 @@
+{
+  "scope": "Exact audit execution scope; no fabricated tail PASS",
+  "own_default_sandbox_tail_process_exit_code": 1,
+  "own_failure": "PermissionError WinError65 on first WSL UNC file, after all preceding tool/source/native/Python/application-PE assertions completed",
+  "own_tool_chunk": "1a1a87",
+  "own_escalated_single_file_exit_code": 0,
+  "own_escalated_single_file_tool_chunk": "9b0668",
+  "root_reported_escalated_WSL_file_check": {
+    "exit_code": 0,
+    "files_checked": 17,
+    "SHA_matches": 17,
+    "tool_chunk": "4f3122",
+    "reported_runtime_seconds": 0.334,
+    "SDK_hash_API_calls": 0,
+    "proof_runs": 0
+  },
+  "required_execution_permission": "Root metadata setup and fullrunner require_escalated as already planned; keep all UNC checks intact",
+  "own_SDK_hash_API_calls": 0,
+  "own_compiler_runs": 0
+}

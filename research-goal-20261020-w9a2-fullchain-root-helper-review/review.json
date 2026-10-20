@@ -1,0 +1,80 @@
+{
+  "scope": "Static source/AST and existing frozen pins only; helper/fullgate/runtime assembler/proof were not executed",
+  "definite_blockers_found": [],
+  "result": "PASS_STATIC_INTERFACE_WITH_ACTUAL_EVIDENCE_STILL_PENDING",
+  "helper": {
+    "path": "research-goal-20261020-w9a2-runtime/prepare_fullchain_request.py",
+    "bytes": 3117,
+    "sha256": "bc7e07aa413b8571768f49d1f94f5637c6fe4673d180a3b15e3f3aa99795bb7a"
+  },
+  "input_pins": [
+    {
+      "path": "research-goal-20261020-w9a2-runtime/prepare_fullchain_request.py",
+      "bytes": 3117,
+      "sha256": "bc7e07aa413b8571768f49d1f94f5637c6fe4673d180a3b15e3f3aa99795bb7a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/assemble_gate.py",
+      "bytes": 37929,
+      "sha256": "588c1812de91886e5fdfd14f44d3f75485f11ab06e552553b18968a747c1899c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-gate-preparation-v1/prepared-files.json",
+      "bytes": 1238,
+      "sha256": "e16ef51b40b0ed7618857095330724061801ae4cc364ce3a0622c7c0bec90da3"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-request-preparation/request-proposal.json",
+      "bytes": 6083,
+      "sha256": "02ec0bc362f17cd5f6a7fe53516f4d20306770bc1f20d4b31958b5fd66f88ff9"
+    },
+    {
+      "path": "research-goal-20261016/gates/w9a2-ordinary-v1b-20261020.json",
+      "bytes": 12112,
+      "sha256": "92def59e80c77b461e3cc301bff748f65e44d53b4c031d745098b156882a3bc5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v5/candidate-parameters.json",
+      "bytes": 14897,
+      "sha256": "3ff25c999774e2ad7f2f47bd404105dec1011067247e74e8cf02ab749578bcc5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v5/Solution.lean",
+      "bytes": 1830001,
+      "sha256": "650ad1762ee36ba1ddf5f6a027900b20f0f85ba087ac099fd2c99a54eaf6ae13"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v5/files.json",
+      "bytes": 3124,
+      "sha256": "497f905f1742380a38c8f5c93ac293d9a0d67717ea5e89e43067751631fe1527"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-runtime-closure-v5/assemble.py",
+      "bytes": 31695,
+      "sha256": "b284373e8e7856ba2541f2f2e1ab9801b51ea78e5754165f55256b066743c36e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/run_verification.py",
+      "bytes": 36665,
+      "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+    }
+  ],
+  "checks": [
+    "v1b gate path matches fixed 92def SHA; other explicit ordinary stages and selected source-bound passes remain frozen template fields",
+    "draft-v5 plan/manifest/source pin match 497f/650/1830001; helper copies no proof body and actual fullgate rechecks manifest, score and module sources",
+    "runtime/outer arguments replace obsolete prototype closure paths; actual runner row is taken from root outer evidence",
+    "helper requires internal terminal and external raw exit0 plus same parent PID; fullgate separately requires exact integer exit0, root owner/protocol role, raw output, actual runner SHA and closure trusted_setup_receipt identity",
+    "protocol role stays trusted-runtime-closure-v1 across v5 directory version; completion_receipt must name the actual read-only-setup-receipt.json, never only terminal.json or SDK subreceipt",
+    "fresh receipt/body rows and 900s age field match fullgate; fullgate enforces HTTPS official API/raw200/hash/size/age/exact baseline+strict improvement and rechecks age after immutable inputs audit",
+    "helper writes only a new request; frozen fullgate produces a disabled proposal requiring separate root authorization before production"
+  ],
+  "evidence_limits": [
+    "Runtime v5 is still active at review; no output, receipt, outer exit or closure completion from that live process was evaluated or upgraded.",
+    "No future filled request or fresh HTTP receipt existed in this review scope; their actual values must pass frozen fullgate.",
+    "Static compatibility is not production or official verification evidence."
+  ],
+  "all_before_after_pins_equal": true,
+  "helper_or_fullgate_runs": 0,
+  "runtime_assembler_runs": 0,
+  "compiler_export_kernel_runs": 0
+}

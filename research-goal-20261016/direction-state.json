@@ -1248,7 +1248,7 @@
     "fresh_R_UTC": "2026-10-20T06:37:40.013602+00:00",
     "ordinary_session_terminal_exit_code": 0,
     "Core_ordinary_failed_seconds": 644.6099999999999,
-    "next_proof_gate": "After actual v4 setup exit0 and all-pin review, one production cold single-file/Comparator/default Lean/serial nanoda check under3200s.",
+    "next_proof_gate": "Wait original session68653 only: complete cold production/Comparator/default Lean/serial Nano/all receipts within3200s; no parallel or replacement proof batch.",
     "previous_ordinary_failure_preserved": "research-goal-20261020-w9a2-ordinary-v0-terminal",
     "repair_manifest": "research-goal-20261020-w9a2-core-repair-v1/files.json",
     "repair_manifest_SHA256": "9aafa909450a60295a0864982d8f3f596217fba54c8e04eeeb3a21eede8f5114",
@@ -1285,10 +1285,10 @@
       "proof_runs": 0,
       "complete_runtime_passed": false
     },
-    "runtime_setup_session": 89749,
-    "runtime_setup_pid": 12340,
-    "runtime_setup_version": 4,
-    "runtime_setup_terminal_exit_code": 1,
+    "runtime_setup_session": 35077,
+    "runtime_setup_pid": 40712,
+    "runtime_setup_version": 5,
+    "runtime_setup_terminal_exit_code": 0,
     "runtime_setup_scope": "metadata-only source/cache closure; zero compiler/proof main runs",
     "runtime_closure_v4_terminal": {
       "session": 89749,
@@ -1296,7 +1296,16 @@
       "evidence": "research-goal-20261020-w9a2-runtime-v4-terminal",
       "failure": "Modern Zeta module was incorrectly routed to legacy-only trace validator",
       "proof_runs": 0
-    }
+    },
+    "runtime_setup_evidence": "research-goal-20261020-w9a2-runtime-v5-terminal",
+    "runtime_setup_source_bound_complete": true,
+    "production_fullchain_passed": false,
+    "production_session": 68653,
+    "production_pid": 48644,
+    "production_version": 1,
+    "production_gate_sha256": "e6ae96f6b1d9f971217975eb13e6c0a9a37b219e8d695c4437e89d470db691a8",
+    "production_started_at_utc": "2026-10-20T08:43:50.796043+00:00",
+    "production_terminal_exit_code": null
   },
   "website_submission_authorization": {
     "source": "Direct human steering within the same research round",
