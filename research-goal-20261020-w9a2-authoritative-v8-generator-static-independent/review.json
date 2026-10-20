@@ -1,0 +1,39 @@
+{
+  "schema": "w9a2-authoritative-v8-generator-independent-static-review-v1",
+  "result": "PASS_STATIC_WITH_EXPLICIT_ROOT_ALL_TERMINAL_RECORDS_UNIQUENESS_CHECK",
+  "generator_manifest_sha256": "afa2c6fa4a4834d6bd05fd58de13a6403ff49c91a4d727bc773ea991363ab9b2",
+  "generator_sha256": "b22bf7b388f777693743094188734c4b98c60293036035affa1384a3da420038",
+  "generator_lines_read": 345,
+  "all_four_manifest_members_bytes_and_hash_match": true,
+  "disabled_proposal_cannot_generate": true,
+  "actual_outer0_child0_printed_receipt_and_same_clock_required": true,
+  "three_fresh_nonempty_artifacts_full_hash_required": true,
+  "source_and_wire_unchanged_by_design": true,
+  "old_DRAFT_and_v1_failure_preserved_by_design": true,
+  "compiler_only_status_does_not_assert_independent_kernels_or_official_acceptance": true,
+  "normal_fixed_runner_protocol_known_definite_blocker": null,
+  "uniqueness_limit": {
+    "code_lines": "159-167",
+    "generator_checks": "Exactly one JSON record whose terminal_sha256 matches the selected terminal pin.",
+    "generator_does_not_check": "Total count of all terminal_sha256-bearing JSON records in raw.output.",
+    "root_explicit_additional_future_check": "Preserve unmodified actual original93095 raw; count all terminal_sha256-bearing JSON records, require exactly one, bind it to actual terminal path/hash and child0/resourcePASS.",
+    "root_decision": "No new generator version. Requirement is fulfilled by future actual outer archive evidence, never presumed by this static review.",
+    "actual_future_raw_examined_here": false
+  },
+  "input_pins": [
+    {"path":"research-goal-20261020-w9a2-submission-authoritative-v8/files.json","bytes":1094,"sha256":"afa2c6fa4a4834d6bd05fd58de13a6403ff49c91a4d727bc773ea991363ab9b2"},
+    {"path":"research-goal-20261020-w9a2-submission-authoritative-v8/prepare_ready_v8.py","bytes":24573,"sha256":"b22bf7b388f777693743094188734c4b98c60293036035affa1384a3da420038"},
+    {"path":"research-goal-20261020-w9a2-submission-authoritative-v8/gate-template.json","bytes":1544,"sha256":"40008406fadc07e7d992f1884bb29fe241648fd32ef7ea0e96f82258d78d7147"},
+    {"path":"research-goal-20261020-w9a2-submission-authoritative-v8/root-resource-success-observation.template.json","bytes":984,"sha256":"8519f84584ca71144b4d63cd4bf50ef6cb23b5dbecaf9d33a8d665934da7fdc7"},
+    {"path":"research-goal-20261020-w9a2-submission-authoritative-v8/README.zh.md","bytes":2995,"sha256":"4b9b5db928b064ff15a547da265dd8c628c80abef62d151094ede6dc078a922a"},
+    {"path":"research-goal-20261020-w9a2-v8-resource-preparation-v3/run_resource.py","bytes":22785,"sha256":"d47d98607df23d7711176116ce62fa13d85925f5c634af1175cc74ef7b3ad880"},
+    {"path":"research-goal-20261020-w9a2-v8-resource-preparation-v3/root-outer-observation.template.json","bytes":822,"sha256":"947ae4cbd300ed0e06d993f3e4dd6f7e45123943e150d842f48fe717edfa8581"}
+  ],
+  "python_AST_generator_Lean_exporter_kernel_solver_runs": 0,
+  "live_v8_resource_v2_work_or_output_reads": 0,
+  "process_API_network_UI_calls": 0,
+  "new_submission_or_ready_package_created": false,
+  "frozen_sources_metadata_or_counter_modified": false,
+  "current_resource_PASS_claimed": false,
+  "material_generation_or_submission_authorized_by_this_review": false
+}
