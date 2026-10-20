@@ -1,0 +1,28 @@
+{
+  "schema": "root-v8-resource-run-actual-start-v1",
+  "provenance": "Original exec tool returned a running session and a real own-child memory sample; started/child files corroborate the process identity.",
+  "outer_original_session_id": 72573,
+  "outer_start_tool_chunk": "84e6a3",
+  "actual_outer_exit_code": null,
+  "actual_status": "running_at_start_observation",
+  "parent_pid": 54132,
+  "child_pid": 12924,
+  "monotonic_t0": 27703.125,
+  "compiler_monotonic_started": 27704.296,
+  "started_at_UTC": "2026-10-20T13:55:45.678274+00:00",
+  "gate_sha256": "66a73d9996a332c5c8762cd24d25108fd96fcf3cc909b7ec7287bf90d2ee6f1c",
+  "source_sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+  "gate_checkpoint_commit_prefix": "973bbd0",
+  "gate_checkpoint_actual_push_exit_code": 0,
+  "gate_push_tool_chunk": "20dc0f",
+  "first_actual_sample": {
+    "elapsed_s": 1.218,
+    "child_pid": 12924,
+    "peak_RSS_MiB": 3.13,
+    "peak_commit_MiB": 0.52,
+    "final": false
+  },
+  "compiler_resource_gate_passed": false,
+  "fullchain_or_official_acceptance": false,
+  "scope": "One new v8 ordinary compiler/C-generation resource run. Await the same original outer handle; no exporter/CoreAudit/nanoda or old-source repeat."
+}
