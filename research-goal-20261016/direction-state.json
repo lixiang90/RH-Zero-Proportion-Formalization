@@ -5,15 +5,15 @@
     8
   ],
   "default_interval_main_rounds": 6,
-  "main_rounds_since_review": 0,
+  "main_rounds_since_review": 1,
   "last_review_number": 9,
   "last_review": "research-goal-20261016/macro-reviews/009-20261020.zh.md",
   "counter_reset_reason": "Macro009 completed within the first actual diagnostic round: terminal official timeout and fixed minimal v7 source-cost diagnosis reviewed. No compaction/tool/agent round increment.",
   "compaction_resets_counter": false,
   "subagent_messages_increment_counter": false,
   "within_round_user_steering_increments_counter": false,
-  "main_route": "Exact proof-preserving v7 was actually submitted once. The official UI reports Verification running and actual bundle digest 1f28020dcda27176a97f8c48e9c9d3f9dc00107ce904f1a1f6706b1f43309771, matching the prediction. Wait for this same official job; preserve v6 timeout and all frozen inputs.",
-  "next_gate": "Observe this exact official v7 job to actual terminal result. Acceptance requires both-kernel attestation, matching bundle, promotion/ledger status and fixed public evidence; running or upload alone cannot complete the goal. No unchanged resubmission, local compiler/export/kernel or new optimization family.",
+  "main_route": "Official v7 terminated: Building Solution.Candidate (1014s), Lean exit137, outer build/bash1. The UI lean-elaboration-failed and line2057 refer to a warning, not an observed source type error. Diagnose proof-production resource pressure while preserving the complete mathematical candidate.",
+  "next_gate": "One static resource diagnosis using actual v7 logs, pinned SDK and fixed official runtime source. No unchanged submission or local compiler/export/kernel/solver run. Distinguish proven SIGKILL-style exit from unconfirmed OOM cause; select one concrete proof-preserving resource change for written review before execution.",
   "latest_completed_gate": {
     "name": "Official acceptance of the exact user-uploaded v3 source",
     "evidence": "research-goal-20261019-record-accepted-independent-1753/accepted-files.json",
@@ -53,10 +53,10 @@
     "uniform_defect_lower_bound_proven": false
   },
   "new_optimization_family_authorized": false,
-  "optimization_scope": "Fixed W9A2 mathematics and 49-state graph frozen. Only v7 delivery-cost changes selected in macro009. No unchanged submission, new numerical family, automatic A/B or repeated local verification.",
+  "optimization_scope": "W9A2 mathematics, numeric packets and 49-state graph remain frozen. V7 has a real terminal resource-related failure, not a mathematical verdict. Static diagnosis only; no automatic further upload or compiler family.",
   "new_unconditional_zero_proportion_proven": false,
   "website_submission_ready": false,
-  "previous_goal_turn_classification": "progress",
+  "previous_goal_turn_classification": "verified_wait",
   "previous_opportunity_gate": {
     "name": "Independent full W10 support-domain opportunity audit",
     "producer_manifest": "research-goal-20261017-w10-slice-opportunity/opportunity-files.json",
@@ -1372,7 +1372,7 @@
     "source_sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6",
     "source_bytes": 1829242,
     "local_Lean_or_kernel_run": false,
-    "official_result": "running",
+    "official_result": "failed",
     "goal_complete": false,
     "actual_official_proofDigest": "1f28020dcda27176a97f8c48e9c9d3f9dc00107ce904f1a1f6706b1f43309771",
     "actual_submit_clicks": 1,
@@ -1382,6 +1382,21 @@
     "actual_push_exit_code": 0,
     "fixed_commit_public_source_equal": true,
     "official_acceptance": false,
-    "official_kernels_complete": false
+    "official_kernels_complete": false,
+    "official_diagnosis_code": "lean-elaboration-failed",
+    "actual_build_stage_seconds": 1014,
+    "actual_Lean_exit_code": 137,
+    "actual_outer_bash_exit_code": 1,
+    "OOM_confirmed": false
+  },
+  "resource_diagnostic_round": {
+    "started_UTC": "2026-10-20T13:29:31Z",
+    "review": 9,
+    "counter_transition": [
+      0,
+      1
+    ],
+    "new_numerical_family": false,
+    "local_proof_execution": false
   }
 }

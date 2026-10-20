@@ -1,0 +1,133 @@
+{
+  "schema": "w9a2-v7-official-terminal-failure-observation-v1",
+  "provenance": "Root read and expanded actual official terminal UI through CUA, transcribed full visible result and technical log, and saved the actual screenshot. User separately supplied a pasted log. Packager performed only small-file archival; no API log was downloaded by packager.",
+  "submission_id": "lixiang90-w9a2-weighted-potential-v7-20261020",
+  "source_identity_from_frozen_submission": {
+    "bytes": 1829242,
+    "sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6",
+    "source_rehashed_by_archive_step": false
+  },
+  "actual_UI_proofDigest": "1f28020dcda27176a97f8c48e9c9d3f9dc00107ce904f1a1f6706b1f43309771",
+  "root_reported_current_active_observation": {
+    "observed_at_UTC": "2026-10-20T13:27:00.826Z",
+    "status": "none",
+    "scope": "Root reported current-active query; not a service job start or terminal timestamp"
+  },
+  "official_UI_terminal_title": "Lean could not elaborate the proof",
+  "official_UI_failure_code": "lean-elaboration-failed",
+  "official_UI_location": "SOLUTION.LEAN:2057:30",
+  "official_UI_explanation_is_recorded_as_UI_classification_not_confirmed_root_cause": true,
+  "actual_visible_technical_log": {
+    "Solution_build_step_reported_seconds": 1014,
+    "Solution_warning_locations": [
+      {
+        "line": 2057,
+        "column": 30
+      },
+      {
+        "line": 2141,
+        "column": 3
+      },
+      {
+        "line": 2920,
+        "column": 55
+      },
+      {
+        "line": 6521,
+        "column": 19
+      },
+      {
+        "line": 6980,
+        "column": 15
+      },
+      {
+        "line": 8097,
+        "column": 3
+      },
+      {
+        "line": 8601,
+        "column": 3
+      }
+    ],
+    "Solution_warning_type": "Seven push_neg deprecation warnings",
+    "Lean_exit_code": 137,
+    "build_failed": true,
+    "bash_exit_code": 1,
+    "Node_version": "v22.23.3",
+    "Challenge_build_success_lines": [
+      {
+        "target": "ChallengeDeps",
+        "reported_seconds": 134
+      },
+      {
+        "target": "ChallengeDeps.CandidateSpec",
+        "reported_seconds": 4.3
+      },
+      {
+        "target": "Challenge.Candidate",
+        "reported_seconds": 5.2
+      }
+    ],
+    "Challenge_export_marker_present": true,
+    "Challenge_sorry_warning_scope": "Expected challenge template declarations, not evidence of sorry in the user source",
+    "successful_Solution_build_observed": false,
+    "Solution_export_completion_observed": false,
+    "kernel_completion_observed": false
+  },
+  "cause_assessment": {
+    "confirmed_OOM": false,
+    "confirmed_termination_signal": null,
+    "confirmed_mathematical_error": false,
+    "actual_termination_cause": null,
+    "confirmed_slow_declaration": null,
+    "UI_2057_30_is_first_visible_deprecation_warning_not_proven_cause": true,
+    "Replayed_dependency_messages_do_not_establish_new_compilation": true
+  },
+  "official_acceptance_confirmed": false,
+  "independent_dual_kernel_completion_confirmed": false,
+  "record_promotion_confirmed": false,
+  "server_job_id": null,
+  "server_job_created_at": null,
+  "server_job_finished_at": null,
+  "prior_first_submission_timeout_source_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+  "prior_first_submission_timeout_archive": {
+    "path": "research-goal-20261020-w9a2-official-timeout-v1/files.json",
+    "bytes": 1257,
+    "sha256": "e9c2443548b40091b5bd319b065c2e65b08e2e384dc40f93c966a85aba337efd"
+  },
+  "prior_v7_running_observation_archive": {
+    "path": "research-goal-20261020-w9a2-v7-official-submission/files.json",
+    "bytes": 829,
+    "sha256": "d72525d2c1bc1caecbe8aa7420deb1f03b886747b5b60e6c6bad0e55bec4c01c"
+  },
+  "evidence_files": [
+    {
+      "path": "research-goal-20261020-w9a2-v7-official-failure-v1/full-visible-result.txt",
+      "bytes": 19832,
+      "sha256": "6b0612ec581a87b33d37606d6be3c0c2e4ed0d0683f0f7946100a676073b60a7"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v7-official-failure-v1/technical-log.dom.txt",
+      "bytes": 19003,
+      "sha256": "408e148be012895626a2a870f8d5fe462ad8a16c29aa1e28ece9f1b93f5f261f"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v7-official-failure-v1/technical-log.user-paste.txt",
+      "bytes": 19267,
+      "sha256": "89f4968446b106e94746b9e5f8221d0754d7ee6e8644da640cbe344ab8a46e7f"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v7-official-failure-v1/log-provenance.json",
+      "bytes": 1858,
+      "sha256": "b43ce96cdb091086411bfbbffd6fe928718b47138a3f138e6ec747bd9a9276b7"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v7-official-failure-v1/terminal-result.png",
+      "bytes": 89384,
+      "sha256": "65e71fd2a52deb773dd16ff9c3ddfaf5d67dced4fa972a9d2bab04b120d52e9e"
+    }
+  ],
+  "old_sources_materials_receipts_retained_unchanged": true,
+  "new_UI_network_proof_compiler_export_kernel_Git_calls": 0,
+  "direction_state_or_counter_modified": false
+}
