@@ -1,0 +1,7 @@
+本目录只保存新RSS资源门v8-resource-v2的启动观察。parent35104、compiler child5564来自实际started.json/child.json；两小收据raw复制保留。root报告原exec session93095、tool5318e4捕获时返回running及初始elapsed0.5s/RSS18.68MiB/commit35.36MiB采样。这个running只适用于原捕获时刻，不是之后仍active的断言。
+
+gate为bcf095c4b96c79e9be3b9552e862fd16f3f3827a475a6ff34a5ed082786d51a4，metric为PeakWorkingSetSize，commit仅诊断。root报告gate checkpoint7ddd0ca已push0；归档者没有网络或Git复核。started_at_UTC字段按原literal保留其+08:00 offset，不另造服务端或终态时间。
+
+原outer/child退出码与terminal均未知，resource/C生成完成未观察，PASS=false。未查询进程/API/CIM，不读取terminal是否存在、memory/stdout/stderr等活输出或源码，不轮询。不运行Python、Lean、runner、UI或网络。后续状态必须另接实际原outer终态，不得从此启动快照推定成功。
+
+本档不修改旧失败、旧prepared材料、源、方向state或counter；Windows测量仍不是官方Linux cgroup/wholepipeline验收，未授权网站提交或内核重放。

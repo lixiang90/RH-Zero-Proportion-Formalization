@@ -1,0 +1,62 @@
+{
+  "schema": "w9a2-v8-RSS-resource-v2-start-observation-v1",
+  "scope": "Actual startup receipt snapshot only; root original tool reported running at capture. No claim of current liveness, terminal status or PASS.",
+  "provenance": "Read only two permitted small actual started.json/child.json receipts; root task message supplied original exec session and initial returned sample. No process/API/UI query or live output access.",
+  "original_outer_exec_session": 93095,
+  "initial_root_tool_chunk": "5318e4",
+  "original_outer_status_at_reported_capture": "running",
+  "actual_original_outer_exit_code": null,
+  "actual_parent_pid": 35104,
+  "actual_compiler_child_pid": 5564,
+  "actual_child_wait_exit_code": null,
+  "work_directory": "tmp/w9a2-20261020/v8-resource-v2",
+  "started_at_UTC_field_literal_from_receipt": "2026-10-20T22:24:51.753311+08:00",
+  "monotonic_t0": 29449.203,
+  "child_monotonic_started": 29449.656,
+  "metric": "PeakWorkingSetSize",
+  "commit_diagnostic_only": true,
+  "observed_peak_stop_bytes": 7516192768,
+  "gate_from_startup_receipt": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-gate-v2\\gate.json",
+    "bytes": 5160,
+    "sha256": "bcf095c4b96c79e9be3b9552e862fd16f3f3827a475a6ff34a5ed082786d51a4"
+  },
+  "runner_sha256_reported_by_root": "d47d98607df23d7711176116ce62fa13d85925f5c634af1175cc74ef7b3ad880",
+  "runner_or_source_rehashed_by_archiver": false,
+  "root_reported_initial_sample": {
+    "elapsed_seconds": 0.5,
+    "RSS_MiB_as_reported": 18.68,
+    "commit_MiB_as_reported": 35.36,
+    "sample_not_independently_queried": true
+  },
+  "root_reported_gate_checkpoint": {
+    "commit_prefix": "7ddd0ca",
+    "push_exit_code": 0,
+    "network_or_Git_rechecked_by_archiver": false
+  },
+  "copied_startup_receipts": [
+    {
+      "original": "tmp/w9a2-20261020/v8-resource-v2/started.json",
+      "archived": "started.json",
+      "bytes": 10973,
+      "sha256": "429cb672b9044128b6a7efa21d46322b3bc94250b374148e899f79da8c4cc8cd",
+      "raw_copy": true
+    },
+    {
+      "original": "tmp/w9a2-20261020/v8-resource-v2/child.json",
+      "archived": "child.json",
+      "bytes": 991,
+      "sha256": "f9b734ea4f2f43833ddf2e639aefc4afbb2278bc171882691ab93ab94c150dba",
+      "raw_copy": true
+    }
+  ],
+  "terminal_presence_checked": false,
+  "terminal_receipt": null,
+  "compiler_resource_gate_passed": false,
+  "compiler_C_generation_completion_observed": false,
+  "official_accepted": false,
+  "live_memory_stdout_stderr_output_source_files_read": false,
+  "Python_Lean_runner_process_API_CIM_UI_network_Git_executions": 0,
+  "source_or_old_archive_or_direction_state_counter_modified": false,
+  "future_results_require_separate_actual_terminal_observation": true
+}

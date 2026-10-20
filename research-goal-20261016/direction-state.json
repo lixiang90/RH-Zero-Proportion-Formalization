@@ -1456,8 +1456,22 @@
     "process_commit_diagnostic_only": true,
     "compiler_memory_MiB": 6500,
     "total_budget_seconds": 3200,
-    "compiler_execution_started": false,
+    "compiler_execution_started": true,
     "fullchain_equivalence_claimed": false,
     "goal_complete": false
+  },
+  "v8_RSS_resource_route": {
+    "gate_sha256": "bcf095c4b96c79e9be3b9552e862fd16f3f3827a475a6ff34a5ed082786d51a4",
+    "original_outer_session_id": 93095,
+    "actual_start_tool_chunk": "5318e4",
+    "parent_pid": 35104,
+    "child_pid": 5564,
+    "monotonic_t0": 29449.203,
+    "started_at_UTC": "2026-10-20T14:24:51.753311+00:00",
+    "status": "running_at_start_observation",
+    "actual_outer_exit_code": null,
+    "passed": false,
+    "old_v1_stays_failed": true,
+    "official_submission_performed": false
   }
 }
