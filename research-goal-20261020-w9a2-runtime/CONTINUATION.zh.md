@@ -127,3 +127,6 @@ delivery正在准备全计时验收runner，仍不可执行。
 
 
 当前权威方向更新为宏观008（macro-reviews/008-20261020.zh.md），已依据真实单文件PASS/3200超时写完回顾后才将counter从1归零，review=8；这是原实际主轮内新证据触发的回顾，不新增研究轮。下一关为明确新gate下复用a517原exports补数学重放，绝不称原cold3200PASS；全部数学核验后按既有人类授权提交Li Xiang，官网固定3200实际接受仍是完成门。停止原样冷跑与新优化族；完整目标/失败证据/数值源均保留。
+
+
+宏观008内继续同一实际轮：Root全文及两份独立静审d555/f904/0837通过后，只改proposal两个授权bool写新gate587b70dc…，原replay-only-v1实际session83153/PID15012、t0=15521.156已启动。只复用原精确exports做数学重放，0候选编译/0export，trusted lean--run如实单列；新独立3200时钟不改变原cold-v2失败，所有code/source/runtime frozen。原controller仍待实际终态，未预称数学或官网PASS；counter0/review8不变。

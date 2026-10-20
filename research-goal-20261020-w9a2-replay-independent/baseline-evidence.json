@@ -1,0 +1,84 @@
+{
+  "schema": "w9a2-replay-independent-baseline-v1",
+  "observed_at_utc": "2026-10-20T10:26:30.150217+00:00",
+  "status": "baseline evidence checked; new replay runner not yet reviewed",
+  "macro": {
+    "path": "research-goal-20261016\\macro-reviews\\008-20261020.zh.md",
+    "bytes": 5954,
+    "sha256": "ce01024835d4a4bebfaa9abe1f238246f3099d0f999088825edb8a48c56d1be3"
+  },
+  "failed_archive_manifest": {
+    "path": "research-goal-20261020-w9a2-fullchain-v2-terminal\\files.json",
+    "bytes": 7345,
+    "sha256": "ae3eb7e1a907199639e3d054750c263315e303215a633cdb4c2eec96e10e5169"
+  },
+  "failed_archive_checked_small_rows": 41,
+  "failed_archive_mismatches": [],
+  "outer_raw": {
+    "path": "research-goal-20261020-w9a2-fullchain-v2-terminal\\original-parent-exit.json",
+    "bytes": 2460,
+    "sha256": "455e6a570ee7b08245e167533696aa2f012c91338367ad5198b53c91f9649a25"
+  },
+  "outer_attestation": {
+    "path": "research-goal-20261020-w9a2-fullchain-v2-terminal\\root-parent-exit-attestation.json",
+    "bytes": 922,
+    "sha256": "76bd6105be7356e71bfe1b1ffe79824199b1e6a6f45967009b4cd47f80bdeac5"
+  },
+  "actual_source_scope": {
+    "source_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+    "source_bytes": 1830052,
+    "ordinary_single_file_passed": true,
+    "ordinary_printed_root_count": 15,
+    "all_ordinary_printed_roots_standard_three": true,
+    "source_and_export_origin": "failed original fullchain-v2 source generation/ordinary/export receipts; retained large objects not reread by this auditor"
+  },
+  "original_fullchain_result": {
+    "parent_session": 68962,
+    "parent_pid": 49320,
+    "actual_outer_exit_code": 1,
+    "error_type": "TimeoutExpired",
+    "elapsed_seconds": 3200.5779999999995,
+    "cold_fullchain_3200_passed": false,
+    "Comparator_complete": false,
+    "default_Lean_replay_complete": false,
+    "Nano_started": false,
+    "mathematical_rejection_observed": false
+  },
+  "CoreAudit": {
+    "source": {
+      "path": "tools\\ComparatorCoreAudit.lean",
+      "bytes": 2032,
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    },
+    "imports": [
+      "Lean",
+      "Comparator",
+      "Export.Parse"
+    ],
+    "trusted_tool_olean_import_closure": [
+      "Comparator",
+      "Comparator.Axioms",
+      "Comparator.Compare",
+      "Comparator.Util",
+      "Export.Parse"
+    ],
+    "candidate_olean_import_required": false,
+    "public_targets": [
+      "candidate_strict_improvement",
+      "candidate_critical_line_bound",
+      "candidate_critical_line_bound_cumulative"
+    ],
+    "checks_in_fixed_source": [
+      "Comparator.compareAt challenge solution (theoremNames ++ allowed) #[] primitive",
+      "Comparator.checkAxioms solution theoremNames #[] allowed",
+      "Lean.mkEmptyEnvironment then replay solution.constMap minus Quot.mk/Quot.lift/Quot.ind"
+    ],
+    "execution_mode": "interpreted trusted Lean --run; one actual Lean process is expected, distinct from zero candidate compilations/exporter invocations"
+  },
+  "authoritative_next_scope": "Exact already generated exports, separately gated full Comparator/default Lean + original strict serial Nano; never upgrade original cold failure. Official fixed3200 acceptance remains required.",
+  "audit_proof_runs": 0,
+  "audit_SDK_API_calls": 0,
+  "project_helpers_executed": 0,
+  "main_counter_changed": false,
+  "frozen_files_modified": false
+}

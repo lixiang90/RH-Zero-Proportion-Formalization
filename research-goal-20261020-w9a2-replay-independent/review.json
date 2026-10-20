@@ -1,0 +1,74 @@
+{
+  "schema": "w9a2-replay-only-independent-static-review-v1",
+  "result": "PASS_STATIC",
+  "actual_replay_or_proof_result": "not run by this auditor; not established",
+  "reviewed_runner_sha256": "f9048bc8bb320a895894df4aaf2d82a6b1e5b79b4da05600fb9184330237791c",
+  "reviewed_preparation_manifest_sha256": "d5552f25ba8b77332ff275b931b529d5e771456663950da90fc6a69348622ade",
+  "reviewed_disabled_gate_sha256": "0837b097c391e7ebe65137e83b6087eb706121d9d2d4ffd97284855da83b0d40",
+  "four_prepared_file_byte_or_hash_mismatches": [],
+  "runner_before_and_after_review_sha256_equal": true,
+  "gate_disabled": true,
+  "runtime_fields_exact_original_gate_subset": true,
+  "source_actual_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+  "frozen_source_actual_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+  "source_bytes": 1830052,
+  "independently_recomputed_metadata_selection": {
+    "files": 14194,
+    "declared_bytes": 2473438841,
+    "SDK_files": 13951,
+    "SDK_declared_bytes": 2404331570,
+    "tool_overlay_oleans": 5,
+    "UNC_files": 17,
+    "forbidden_Candidate_Mathlib_Zeta_or_package_overlay_paths": [],
+    "large_selected_runtime_and_exports_rehashed_by_auditor": false,
+    "scope": "Metadata membership and static code only. The gated runner must perform actual selected-byte and export SHA checks before and after its replay. Full prior source-cache provenance is reused, not recomputed."
+  },
+  "same_CoreAudit_source_and_all_checks_preserved": true,
+  "CoreAudit_imports_only_SDK_and_five_trusted_tool_modules": true,
+  "Nano_config_independently_AST_compared_to_original_equal": true,
+  "Nano_config": {
+    "use_stdin": true,
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "unpermitted_axiom_hard_error": true,
+    "nat_extension": true,
+    "string_extension": true,
+    "num_threads": 0,
+    "unsafe_permit_all_axioms": false,
+    "print_success_message": true,
+    "print_axioms": true,
+    "pp_to_stdout": true
+  },
+  "planned_process_scope": {
+    "candidate_ordinary_compiler_calls": 0,
+    "native_exporter_calls": 0,
+    "trusted_CoreAudit_Lean_run_calls": 1,
+    "serial_Nano_calls_after_CoreAudit_pass": 1,
+    "CoreAudit_exit0_and_three_messages_required": true,
+    "Nano_exit0_positive_full_count_and_standard_axioms_required": true,
+    "new_actual_parent_exit0_still_required": true
+  },
+  "work_parent_current_canonical": "E:/codex-build/RH-Zero-Proportion-Formalization/tmp/w9a2-20261020",
+  "work_parent_current_inside_repo_tmp": true,
+  "work_leaf_existed_at_review": false,
+  "known_current_blockers": [],
+  "nonblocking_scope_clarifications": [
+    "Old closure JSON is parsed once; it is additionally hashed before and after. README wording is not a claim of only one filesystem read.",
+    "Work path code uses lexical absolute checks; current fixed parent canonical location was independently checked within repo/tmp."
+  ],
+  "unchanged_completion_boundaries": {
+    "original_cold_full_3200s_passed": false,
+    "official_website_acceptance": false,
+    "submitted": false,
+    "Goal_completion_established": false
+  },
+  "auditor_actions": {
+    "runner_executions": 0,
+    "project_helper_executions": 0,
+    "proof_or_compiler_or_exporter_or_Nano_executions": 0,
+    "SDK_API_calls": 0,
+    "process_queries": 0,
+    "main_counter_changes": 0,
+    "frozen_file_changes": 0
+  },
+  "read_only_metadata_observation_chunk": "4b5d46"
+}

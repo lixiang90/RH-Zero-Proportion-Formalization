@@ -1,0 +1,13 @@
+这是宏观008的后续提交addendum方案，不是数学重放或官网接受收据。不执行collector、Lean、exporter、kernel、上传或提交，不修改任何既有材料与源码。
+
+固定继续使用draft-v6原文件：1,830,052字节，SHA256 a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26。public author Li Xiang、harness Codex、model UI空/预期server null、原精确p/q和605字符summary不变；预期组合digest仍e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1。该digest目前仍只是预测。
+
+已发生事实分别记录：原68962/PID49320真实exit1，TimeoutExpired，总3200.578秒，完整本地冷3200验收失败；同源普通单文件Lean实际exit0/1150.328秒及两个原生export实际exit0。CoreAudit没有完成，Nano未开始。归档ae3eb7e1…、原始源和导出对象继续保全。旧collector-v2只接受全cold成功，永远不能执行来升级这次失败。
+
+未来数学重放实际成功后，应另建小型addendum并复制其真实收据、日志、外层exit0观察及相关输入hash，绑定同一a517、原两export和原CoreAudit/defaultLean/serialNano。它可以把“对应数学检查实际通过”记为true，但必须同时保留local_cold_fullchain_3200_passed=false；replay-only自己的独立计时不能与原冷检拼接成同一轮限时成功。解释模式CoreAudit有一个可信Lean --run进程，不能写成“没有Lean调用”或“零数学检查进程”。不要重写prepared-v6/expected-wire-v6，而是用新addendum引用它们的manifest。
+
+提交前root再取最新官方精确R并确认K>R；数学重放的原父句柄实际exit0、所有相关输入前后SHA一致及全部CoreAudit/defaultLean/Nano审计通过后，按已有人类授权上传同一a517源码。核对真实wire源码和官网组合digest。上传、排队、running均不能把official_accepted设为true。
+
+只有官网固定完整3200秒流程实际接受，并且公开manifest/source/实际attestation/log与本候选匹配后，才在另一个official addendum记accepted=true与实际job/commit/URL，并以该接受结果满足宏观008路线的整轮限时门。原local_cold_fullchain_3200_passed仍false，不虚构官网公开资料未提供的总elapsed。随后完成GitHub源码、材料、原失败和新实际结果的最终一致审计。
+
+addendum-template.json所有未来结果默认false，证据对象均null，不能直接当成实际已验证包发布。实际收集合同须在新的replay-only包schema冻结且原父句柄真实结束后再由root明确执行；本方案不给任何运行或上传工具开门。

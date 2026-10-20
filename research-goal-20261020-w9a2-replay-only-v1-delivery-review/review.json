@@ -1,0 +1,309 @@
+{
+  "scope": "Static source/AST, immutable small-source/archive hash and runtime-selection metadata review only",
+  "result": "PASS_STATIC_NO_DEFINITE_BLOCKER_FOUND",
+  "runner": {
+    "path": "research-goal-20261020-w9a2-replay-only-v1/run_replay.py",
+    "bytes": 17898,
+    "sha256": "f9048bc8bb320a895894df4aaf2d82a6b1e5b79b4da05600fb9184330237791c"
+  },
+  "preparation_manifest": {
+    "path": "research-goal-20261020-w9a2-replay-only-v1/files.json",
+    "bytes": 818,
+    "sha256": "d5552f25ba8b77332ff275b931b529d5e771456663950da90fc6a69348622ade"
+  },
+  "gate_proposal": {
+    "path": "research-goal-20261020-w9a2-replay-only-v1/gate-proposal.json",
+    "bytes": 4659,
+    "sha256": "0837b097c391e7ebe65137e83b6087eb706121d9d2d4ffd97284855da83b0d40"
+  },
+  "sdk_metadata_selection_count": 13951,
+  "total_runtime_metadata_selection_count": 14194,
+  "five_interpreted_modules_include_nested_Parse": true,
+  "old_actual_timeout_archive_rows_hash_verified": 41,
+  "all_source_before_after_pins_equal": true,
+  "source_input_pins": [
+    {
+      "path": "research-goal-20261020-w9a2-replay-only-v1/files.json",
+      "bytes": 818,
+      "sha256": "d5552f25ba8b77332ff275b931b529d5e771456663950da90fc6a69348622ade"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-replay-only-v1/run_replay.py",
+      "bytes": 17898,
+      "sha256": "f9048bc8bb320a895894df4aaf2d82a6b1e5b79b4da05600fb9184330237791c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-replay-only-v1/gate-proposal.json",
+      "bytes": 4659,
+      "sha256": "0837b097c391e7ebe65137e83b6087eb706121d9d2d4ffd97284855da83b0d40"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-replay-only-v1/README.zh.md",
+      "bytes": 3153,
+      "sha256": "72f2b147c9d61b56ebef09dae548c22e44212a7a28d5dfbd95e4a550055c8055"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-replay-only-v1/static-preparation.json",
+      "bytes": 1376,
+      "sha256": "88eb214bec6cca4b29586db5eca34b9fc5d5a1a8c848ff3b7e2b490cf8478853"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-verification-preparation-v1/run_verification.py",
+      "bytes": 36665,
+      "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+    }
+  ],
+  "additional_small_input_pins": [
+    {
+      "path": "research-goal-20261016/gates/w9a2-fullchain-v2-20261020.json",
+      "bytes": 21290,
+      "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/files.json",
+      "bytes": 7345,
+      "sha256": "ae3eb7e1a907199639e3d054750c263315e303215a633cdb4c2eec96e10e5169"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/source/Solution/Candidate.lean",
+      "bytes": 1830052,
+      "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+    },
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared-v6/proof/Solution.lean",
+      "bytes": 1830052,
+      "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+    },
+    {
+      "path": "tools/ComparatorCoreAudit.lean",
+      "bytes": 2032,
+      "sha256": "7e88e84d1d35d5f3115c97a574cc64dd089ef713ef6f9bccb2303fbd41e07ff2"
+    },
+    {
+      "path": "tmp/w9a2-20261020/trusted-runtime-closure-v5/closure.json",
+      "bytes": 89698028,
+      "sha256": "4d295c059a87faad191c34d1c221bbb744f04f98e226c4a5d0d08f3c01c2d67a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/failure.json",
+      "bytes": 25021,
+      "sha256": "a0b8f9d0b3a5cd77a0d74114fd7cb259024773bc60cc7d56a7f62b93961cbccd"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/generation.json",
+      "bytes": 244,
+      "sha256": "8e2352d579aca432c72292ce1ddbfa08241697792739c9c78a68c8c05f1bef7c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/challenge-native-export.child.json",
+      "bytes": 769,
+      "sha256": "a770e1bd18d8a920922ac9805df1f7daf833cec1fded46b3357f9c6f4417443a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/challenge-native-export.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/challenge-native-export.started.json",
+      "bytes": 1131,
+      "sha256": "c2a057dd38a87926f4c86f9e2d450d18e98702ac1ec2a685d2e4532f7ebfbaf5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/challenge-native-export.terminal.json",
+      "bytes": 1523,
+      "sha256": "fd4047320778ad649fbb32acd5865ea351f9c3604fa542ec6a4f54dd10add996"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/comparator-default-Lean-kernel.child.json",
+      "bytes": 612,
+      "sha256": "87e5195a7154fed6352e761a68a5724ad5940f1afdc1ac8e0519deeb5fed75e6"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/comparator-default-Lean-kernel.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/comparator-default-Lean-kernel.started.json",
+      "bytes": 987,
+      "sha256": "94d4c231bb1d4cdb8fa42d18a4648e316cf990c0bc2f72e90b10bb39e2d4bc2d"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/compiler-version.child.json",
+      "bytes": 139,
+      "sha256": "f79e7dbb60aeb7408710b681f769122eb84b99075d9b3166f56384ad4df6900a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/compiler-version.log",
+      "bytes": 108,
+      "sha256": "79518dda68bc3c4a1d8669c197b30574f76e97149518a00d07b96465045d6dfc"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/compiler-version.started.json",
+      "bytes": 486,
+      "sha256": "ee5878d08ea9ea2bb9250206cf2e0c729a3efd7d39a01e423b5b59bcdfa679b0"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/compiler-version.terminal.json",
+      "bytes": 646,
+      "sha256": "b6997aee3e6035d53a1d2e49c161f264ce95b07767ff270b518ec14cf53b4181"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-Challenge.Candidate.child.json",
+      "bytes": 600,
+      "sha256": "494df8b27494c34dd16ba5e9e63d452fc8eeadc31f657fb8716209f1a24ce4d3"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-Challenge.Candidate.log",
+      "bytes": 452,
+      "sha256": "54845378aa42316911f53df6e49f615cd5684a906f2c100a40d9e630c7141e05"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-Challenge.Candidate.started.json",
+      "bytes": 971,
+      "sha256": "85270564b448e911c9d6d6abcb587e0e276539ddff95ed39008917c78233721a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-Challenge.Candidate.terminal.json",
+      "bytes": 1129,
+      "sha256": "a550e8d66b7f7a44a3951d997e48c9bb269e3472ddfb6aa792da07024e130622"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-ChallengeDeps.CandidateSpec.child.json",
+      "bytes": 617,
+      "sha256": "d697257836b0efd3a5c9ceec6da8950249f124ea0ce82a44b87aac6694d43117"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-ChallengeDeps.CandidateSpec.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-ChallengeDeps.CandidateSpec.started.json",
+      "bytes": 1005,
+      "sha256": "dd542a436e62295c69187774c361fdee3a81e51fee1f86c2c228804e8ff7a478"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-ChallengeDeps.CandidateSpec.terminal.json",
+      "bytes": 1164,
+      "sha256": "6fcbe7e22f2b1e648abe07838ae8f319afaff621924d1cec4f8afd341d2f0cf2"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-ChallengeDeps.child.json",
+      "bytes": 587,
+      "sha256": "6b4479fd1ad4c4105ff249bc6c54af126a5260aa2a2fef8fcfa0a59b45104e2b"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-ChallengeDeps.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-ChallengeDeps.started.json",
+      "bytes": 935,
+      "sha256": "d979dc06c581a2e12a830ab96c88be1bd2844b5f95d7c5804d73201fbbb807d7"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-ChallengeDeps.terminal.json",
+      "bytes": 1080,
+      "sha256": "205f89abe20f187ae73cfeff222940f3082b62386dc70d83f1772947da20bac0"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-Solution.Candidate.child.json",
+      "bytes": 599,
+      "sha256": "963d6a854979dbddd5e752678273e9c99c67d914e87088e2ff68eccb5c3ccab5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-Solution.Candidate.log",
+      "bytes": 6155,
+      "sha256": "7cb99a34db0c0fa46b5af2be34675365945289678663f97d0fc6b87021dceeef"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-Solution.Candidate.started.json",
+      "bytes": 969,
+      "sha256": "c6b3ec77f8909f2cd9b24ae589751e79931b1b91adade1eee837070a05149f8a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/ordinary-Solution.Candidate.terminal.json",
+      "bytes": 1128,
+      "sha256": "43a45c88cc6ada2d9a642ad212c05bcb869ba5862bcffcf204df98d3d0c49523"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/solution-native-export.child.json",
+      "bytes": 768,
+      "sha256": "a90acfb63173794211c0ce8d49f500ffa865d6f0b5b687c0ac43d53e5e7b78ec"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/solution-native-export.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/solution-native-export.started.json",
+      "bytes": 1118,
+      "sha256": "7ea6d13a7b2185e9d21f72c6ecfe308c839f13429086c0f97a95c6d4f4f26525"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/logs/solution-native-export.terminal.json",
+      "bytes": 1508,
+      "sha256": "0ebc6e9ae632ee12d4e481954577007f3953d287f149682e7e975a62fca1a8d2"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/source/Challenge/Candidate.lean",
+      "bytes": 812,
+      "sha256": "e77513b7751460054be21697d06b5ffff142d109b65b131e392aa568ccf22378"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/source/ChallengeDeps/CandidateSpec.lean",
+      "bytes": 464,
+      "sha256": "a503e0611337561cdc82e96129045c19d7146ddbd66f03876c18d10554ea9f2c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/source/ChallengeDeps.lean",
+      "bytes": 6866,
+      "sha256": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/source/Solution/Candidate.lean",
+      "bytes": 1830052,
+      "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/job/started.json",
+      "bytes": 204,
+      "sha256": "c9a930633290ef6e66de67d5f8c65b8a0069de2b912977297a7ceb8814de0192"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/original-parent-exit.json",
+      "bytes": 2460,
+      "sha256": "455e6a570ee7b08245e167533696aa2f012c91338367ad5198b53c91f9649a25"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/retained-binary-and-export-artifacts.json",
+      "bytes": 1542,
+      "sha256": "54d606a321c2e8973b5d06f99b808ef40052329450debda966d9cb057f5f5607"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/root-parent-exit-attestation.json",
+      "bytes": 922,
+      "sha256": "76bd6105be7356e71bfe1b1ffe79824199b1e6a6f45967009b4cd47f80bdeac5"
+    }
+  ],
+  "reviewed_contracts": [
+    "Typed disabled proposal; enabled gate can differ only in two authorization booleans; new exclusive work and sole root owner",
+    "Original exact source and both real exit0 exports bound to archived original actual exit1 TimeoutExpired; 15 ordinary roots retained",
+    "SDK plus direct loader/Python/tool/Nano byte pins verified inside future timer, without package cache imports or candidate recompilation/export",
+    "Only old92cc run/cleanup/IO/environment/deadline methods reused; original fullPASS execute/ordinary/proof_replays/finish never invoked",
+    "Sequential unchanged CoreAudit 3messages and actual exit0, then serial Nano --wait/config/actual successful declaration count and permitted axioms",
+    "One new monotonic3200 deadline spans bootstrap, pins, both mathematical replays, posthashes and three fsynced receipts; original-handle actual exit0 still required",
+    "Cold3200 remains false in new success/failure receipts; separate mathematical replay and official acceptance scopes remain distinct"
+  ],
+  "limits": [
+    "No runner, legacy module, metadata assembler, compiler, exporter, kernel or collector was imported/executed.",
+    "Current SDK/large-export bytes were not independently rehashed in this static review; future runner performs those bound checks before and after replay.",
+    "Sole proof-process ownership is a root authorization precondition; runner uses exclusive work and owned process cleanup, not a global process lock.",
+    "No mathematical replay, local cold PASS or official result is claimed."
+  ],
+  "proof_or_runner_or_collector_runs": 0
+}

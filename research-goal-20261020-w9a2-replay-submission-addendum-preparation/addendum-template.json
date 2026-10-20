@@ -1,0 +1,69 @@
+{
+  "schema": "w9a2-staged-mathematical-replay-route-addendum-template-v1",
+  "scope": "Future addendum plan only; no replay result or website submission is claimed",
+  "source": {
+    "path": "submission/w9a2-weighted-potential-20261020-prepared-v6/proof/Solution.lean",
+    "bytes": 1830052,
+    "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+  },
+  "unchanged_prepared_manifest_sha256": "55c28b9f90515324f40144822d9e84b301fe9001ec1a03e8df2bf1350159522f",
+  "unchanged_expected_wire_manifest_sha256": "f81666062165a2a1e60bd59b88cedcc237e72bebe9faca0f183b021fec636851",
+  "expected_job_proofDigest": "e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1",
+  "original_cold_attempt": {
+    "session": 68962,
+    "parent_pid": 49320,
+    "actual_parent_exit_code": 1,
+    "failure_type": "TimeoutExpired",
+    "elapsed_at_failure_seconds": 3200.5779999999995,
+    "archive_manifest_sha256": "ae3eb7e1a907199639e3d054750c263315e303215a633cdb4c2eec96e10e5169",
+    "ordinary_single_file_Lean_passed": true,
+    "ordinary_single_file_Lean_elapsed_seconds": 1150.3280000000013,
+    "ordinary_single_file_olean_sha256": "18a4553ca9f15ec3020b22825856710851f96d5800b3f9aa0ecd01a1c4d3abd4",
+    "two_native_exports_passed": true,
+    "Comparator_completed": false,
+    "default_Lean_replay_completed": false,
+    "nanoda_started": false,
+    "local_cold_fullchain_3200_passed": false,
+    "failure_preserved_and_never_relabelled": true
+  },
+  "reused_exports": {
+    "challenge": {
+      "bytes": 349332110,
+      "sha256": "a292e2fc44e0b69bcfaad53175bbeb1cda71b14b1edaab4bb779160f949bc6d0"
+    },
+    "solution": {
+      "bytes": 677296932,
+      "sha256": "1cc0f929919e0d4f58d947223c75a82450df57da11a9fe43fd93a90d8c8433d7"
+    }
+  },
+  "future_replay": {
+    "gate": null,
+    "source_and_exports_before_after_unchanged": false,
+    "CoreAudit_statement_dependency_primitive_passed": false,
+    "CoreAudit_transitive_axioms_passed": false,
+    "default_Lean_kernel_replay_passed": false,
+    "serial_nanoda_passed": false,
+    "actual_original_parent_exit0": false,
+    "actual_outer_observation": null,
+    "completion_receipts_and_logs": null,
+    "separate_budget_seconds": 3200,
+    "separate_complete_budget_passed": false,
+    "trusted_interpreted_Lean_run_must_be_disclosed": true,
+    "does_not_convert_original_cold_attempt_to_PASS": true
+  },
+  "future_official": {
+    "fresh_exact_R_receipt": null,
+    "candidate_strictly_above_fresh_R": false,
+    "submitted": false,
+    "actual_job_id": null,
+    "actual_observed_proofDigest": null,
+    "official_fixed_full_3200s_accepted": false,
+    "official_acceptance_commit": null,
+    "public_manifest_source_attestation_log_matched": false,
+    "official_total_elapsed_seconds": null,
+    "final_GitHub_source_and_materials_audit_passed": false
+  },
+  "local_cold_fullchain_3200_passed": false,
+  "goal_completed": false,
+  "proof_compiler_export_kernel_network_or_collector_calls_by_this_preparation": 0
+}
