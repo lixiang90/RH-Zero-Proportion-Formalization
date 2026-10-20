@@ -1,0 +1,11 @@
+本目录封存RSS-only资源门的真实失败。原exec session93095通过原write_stdin工具chunk4bb34b实际返回outer1；parent35104、Lean child5564。root-outer-observation.json保留root原工具结果与唯一末terminalSHA，未改写。job/仅复制started、child、terminal、memory、stdout、stderr六个小文件。
+
+terminal SHA256为ea2ce9874d86e26804a471fc1c59d28f07c1fb0fecf67a1b574d3e965217bd49，实际elapsed1364.203秒，child退出3221226505（0xC0000409）。runner resource_limit=false、timeout=false，资源门及编译/C生成完成均为false。stderr原始196字节明确为uncaught lean::memory_exception：excessive memory consumption detected at 'interpreter'。这是本次可观察的Lean内存异常，不是已确认OS OOM、数学拒绝、官网判决或3200秒timeout；不从该标签推断具体慢声明或源码错误。
+
+47个资源记录保存PeakWorkingSetSize峰6851174400B、PeakPagefileUsage峰11888607232B。commit仍仅作诊断，RSS runner阈值未触发。stdout为4096字节的截断warning输出（root描述为七warning），stderr196字节；二者raw保留，不从截断日志断言后续语义。三个预期输出的实际存在/size见direct-input-status.json，不复制或执行输出。
+
+direct-input-status.json只记录失败后冻结source、fresh source、实际runner和gate的当前直接hash与初始pin比较，封包前后复核；不重审runtime/SDK/package大树，不将失败runner跳过的成功路径复核说成已完成。原parent同clock完成上界未另测，root观察保留null；本档不据terminal时长声称任何预算内成功。
+
+权威ready生成条件为false，未执行prepare_ready_v8.py，未产ready包或提交v8。旧启动running、旧DRAFT pending是过去时刻快照，保持原哈希；v1 commit-stop失败及其parent54132/child12924角色也不改写或翻PASS。源码、旧包、state及counter全部保全。
+
+本次仅纯文件归档、直接hash及输出存在检查，没有新compiler、runner、Python、API、进程查询、UI、网络、Git、数学或Nano重放。归档完成即停止，不自动重试、提限或选择新证明路线。

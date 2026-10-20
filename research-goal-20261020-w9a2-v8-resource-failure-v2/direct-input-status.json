@@ -1,0 +1,58 @@
+{
+  "schema": "w9a2-v8-RSS-resource-v2-failure-current-direct-input-status-v1",
+  "scope": "Post-terminal direct source/freshsource/runner/gate hashes and exact three output existence only; no runtime-tree audit or process query",
+  "direct_files": [
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v8/Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+      "role": "frozen_v8_source",
+      "initial_expected_sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+      "current_matches_initial_expected": true
+    },
+    {
+      "path": "tmp/w9a2-20261020/v8-resource-v2/source/Solution/Candidate.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+      "role": "fresh_source_copy",
+      "initial_expected_sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+      "current_matches_initial_expected": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-resource-preparation-v3/run_resource.py",
+      "bytes": 22785,
+      "sha256": "d47d98607df23d7711176116ce62fa13d85925f5c634af1175cc74ef7b3ad880",
+      "role": "actual_runner",
+      "initial_expected_sha256": "d47d98607df23d7711176116ce62fa13d85925f5c634af1175cc74ef7b3ad880",
+      "current_matches_initial_expected": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-resource-gate-v2/gate.json",
+      "bytes": 5160,
+      "sha256": "bcf095c4b96c79e9be3b9552e862fd16f3f3827a475a6ff34a5ed082786d51a4",
+      "role": "actual_gate",
+      "initial_expected_sha256": "bcf095c4b96c79e9be3b9552e862fd16f3f3827a475a6ff34a5ed082786d51a4",
+      "current_matches_initial_expected": true
+    }
+  ],
+  "direct_files_unchanged_during_archive": true,
+  "compiler_output_current_state": [
+    {
+      "path": "tmp/w9a2-20261020/v8-resource-v2/output/Solution/Candidate.olean",
+      "exists": false,
+      "bytes": null
+    },
+    {
+      "path": "tmp/w9a2-20261020/v8-resource-v2/output/Solution/Candidate.ilean",
+      "exists": false,
+      "bytes": null
+    },
+    {
+      "path": "tmp/w9a2-20261020/v8-resource-v2/output/Solution/Candidate.c",
+      "exists": false,
+      "bytes": null
+    }
+  ],
+  "success_path_full_immutable_recheck_completed": false,
+  "clarification": "The failure path did not execute success-only final pin checks. This archive records later directly observed unchanged input files, not compiler PASS."
+}

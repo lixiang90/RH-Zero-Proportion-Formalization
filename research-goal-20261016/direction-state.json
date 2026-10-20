@@ -5,15 +5,15 @@
     8
   ],
   "default_interval_main_rounds": 6,
-  "main_rounds_since_review": 0,
+  "main_rounds_since_review": 1,
   "last_review_number": 11,
   "last_review": "research-goal-20261016/macro-reviews/011-20261020.zh.md",
   "counter_reset_reason": "Written macro011 completed after the first actual post-v8-failure static diagnostic round. Exact Windows COW/source evidence distinguishes commit from RSS; new fixed measurement gate selected. No extra tool/agent/compaction round.",
   "compaction_resets_counter": false,
   "subagent_messages_increment_counter": false,
   "within_round_user_steering_increments_counter": false,
-  "main_route": "Same frozen v8 mathematics/source. Correct the Windows resource observation to 7GiB PeakWorkingSetSize, preserving -M6500 and3200s; report process commit separately. The prior commit-threshold failure stays failed.",
-  "next_gate": "Independently review preparation-v3, then root freezes one new single-use v8-resource-v2 gate and observes actual compiler/outer exits and all three outputs. No separate old mathematical/export/Nano replay. Only after actual resource PASS, fresh record and exact GitHub source sync may one authorized v8 official submission proceed.",
+  "main_route": "The metric-corrected v8 run ended in an actual Lean interpreter memory_exception, outer1/child0xC0000409 after1364.203s, RSSpeak6533.79MiB. Preserve failure; neither old nor new resource gate passed. Do not submit v8 or run the ready generator.",
+  "next_gate": "Static same-pin diagnosis of interpreter memory checking, native/setup versus interpreted paths, and a proof-preserving way to reduce retained InfoTrees/snapshots. No compiler retry, memory/time increase, new numerical/checker family, source change or official upload before a written review selects a justified concrete gate.",
   "latest_completed_gate": {
     "name": "Official acceptance of the exact user-uploaded v3 source",
     "evidence": "research-goal-20261019-record-accepted-independent-1753/accepted-files.json",
@@ -1468,10 +1468,27 @@
     "child_pid": 5564,
     "monotonic_t0": 29449.203,
     "started_at_UTC": "2026-10-20T14:24:51.753311+00:00",
-    "status": "running_at_start_observation",
-    "actual_outer_exit_code": null,
+    "status": "failed_Lean_interpreter_memory_exception",
+    "actual_outer_exit_code": 1,
     "passed": false,
     "old_v1_stays_failed": true,
-    "official_submission_performed": false
+    "official_submission_performed": false,
+    "actual_child_exit_code": 3221226505,
+    "actual_elapsed_seconds": 1364.2029999999977,
+    "terminal_sha256": "ea2ce9874d86e26804a471fc1c59d28f07c1fb0fecf67a1b574d3e965217bd49",
+    "max_observed_PeakWorkingSetSize": 6851174400,
+    "max_observed_PeakPagefileUsage": 11888607232,
+    "runner_RSS_stop_triggered": false,
+    "timeout": false
+  },
+  "resource_diagnostic_round_v8_RSS_failure": {
+    "review": 11,
+    "counter_transition": [
+      0,
+      1
+    ],
+    "started_UTC": "2026-10-20T14:47:35.967007+00:00",
+    "reason": "Actual original93095 returned1 with explicit interpreter memory_exception; new diagnostic route, not a tool/agent/compaction round.",
+    "compiler_retry_authorized": false
   }
 }

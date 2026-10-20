@@ -1,0 +1,25 @@
+{
+  "schema": "w9a2-v8-resource-root-outer-observation-v1",
+  "role": "v8-resource-v2",
+  "original_tool_session": 93095,
+  "parent_pid": 35104,
+  "child_pid": 5564,
+  "runner_sha256": "d47d98607df23d7711176116ce62fa13d85925f5c634af1175cc74ef7b3ad880",
+  "gate_sha256": "bcf095c4b96c79e9be3b9552e862fd16f3f3827a475a6ff34a5ed082786d51a4",
+  "actual_original_handle_result": {
+    "chunk_id": "4bb34b",
+    "wall_time_seconds": 0.000008,
+    "exit_code": 1,
+    "original_token_count": 136,
+    "output": "{\"elapsed_s\": 1353.25, \"child_pid\": 5564, \"peak_RSS_MiB\": 6533.79, \"peak_commit_MiB\": 11337.86, \"final\": false}\r\n{\"elapsed_s\": 1364.093, \"child_pid\": 5564, \"peak_RSS_MiB\": 6533.79, \"peak_commit_MiB\": 11337.86, \"final\": true}\r\n{\"terminal\": \"E:\\\\codex-build\\\\RH-Zero-Proportion-Formalization\\\\tmp\\\\w9a2-20261020\\\\v8-resource-v2\\\\terminal.json\", \"terminal_sha256\": \"ea2ce9874d86e26804a471fc1c59d28f07c1fb0fecf67a1b574d3e965217bd49\", \"parent_exit_code_to_return\": 1, \"actual_child_exit_code\": 3221226505, \"compiler_resource_gate_passed\": false}\r\n"
+  },
+  "actual_original_parent_exit_code": 1,
+  "actual_same_clock_parent_completion_elapsed_seconds": null,
+  "printed_terminal_sha256_from_original_tool_result": "ea2ce9874d86e26804a471fc1c59d28f07c1fb0fecf67a1b574d3e965217bd49",
+  "all_original_terminal_sha_records_count": 1,
+  "terminal_receipt": {
+    "path": "tmp/w9a2-20261020/v8-resource-v2/terminal.json",
+    "sha256": "ea2ce9874d86e26804a471fc1c59d28f07c1fb0fecf67a1b574d3e965217bd49"
+  },
+  "scope": "Original outer handle actually returned1. Child memory exception; no resource PASS and no authoritative ready-material generation. Parent completion same-clock upper-bound was not separately measured; no within-budget success is claimed."
+}
