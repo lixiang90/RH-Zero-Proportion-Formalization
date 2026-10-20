@@ -12,8 +12,8 @@
   "compaction_resets_counter": false,
   "subagent_messages_increment_counter": false,
   "within_round_user_steering_increments_counter": false,
-  "main_route": "Preserve all local failures. Under the human instruction to stop repeating checks and submit an attempt, prepare honest fixed-v8 attempt materials and use the original official8GB/3200s full-kernel pipeline once. No more local full proof replay or raised local limits.",
-  "next_gate": "Independently review attempt-v8 materials, fresh UI login/quota/no-active-job and currentR<K, exact public source sync; freeze delivery gate, upload fixed v8 as Li Xiang once, then observe the same actual official job. Official acceptance is unknown.",
+  "main_route": "The fixed v8 was actually submitted once as Li Xiang. UI Verification running and actual proofDigest fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4 exactly match the predicted bundle. Wait only for this official job; local failures stay failed.",
+  "next_gate": "Observe the same official job to a real terminal result, preserve screenshot/logs/digest and actual kernel/promotion evidence. Do not click Submit again or run any local proof/checker family. On acceptance verify public ledger/fixed official source and complete Git synchronization; on failure preserve actual result and review without unchanged resubmission.",
   "latest_completed_gate": {
     "name": "Official acceptance of the exact user-uploaded v3 source",
     "evidence": "research-goal-20261019-record-accepted-independent-1753/accepted-files.json",
@@ -1347,7 +1347,16 @@
     "current_browser_tab_id": "2",
     "actual_proofDigest": "e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1",
     "actual_observation": "research-goal-20261020-w9a2-official-submission/browser-observation-v1.json",
-    "official_website_acceptance": false
+    "official_website_acceptance": false,
+    "latest_submission": {
+      "submission_id": "lixiang90-w9a2-weighted-potential-v8-20261020",
+      "author": "Li Xiang",
+      "status": "Verification running",
+      "proofDigest": "fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4",
+      "official_acceptance": false,
+      "official_kernels_complete": false,
+      "goal_complete": false
+    }
   },
   "current_formal_candidate": {
     "R": "3337881639516708570682858853672166187793/4955348542279967171490000000000000000000",
@@ -1516,9 +1525,26 @@
     "local_resource_pass": false,
     "old_ready_generator_permitted": false,
     "full_local_replay_permitted": false,
-    "status": "attempt_materials_pending",
-    "submitted": false,
+    "status": "official_verification_running",
+    "submitted": true,
     "official_acceptance": false,
+    "goal_complete": false,
+    "actual_submit_clicks": 1,
+    "actual_proofDigest": "fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4",
+    "submitted_as": "Li Xiang",
+    "submission_id": "lixiang90-w9a2-weighted-potential-v8-20261020",
+    "browser_observation": "research-goal-20261020-w9a2-v8-official-submission/browser-observation.json",
+    "source_delivery_commit_prefix": "294e58f",
+    "actual_source_delivery_push_exit_code": 0,
+    "official_kernels_complete": false
+  },
+  "current_official_submission": {
+    "submission_id": "lixiang90-w9a2-weighted-potential-v8-20261020",
+    "author": "Li Xiang",
+    "status": "Verification running",
+    "proofDigest": "fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4",
+    "official_acceptance": false,
+    "official_kernels_complete": false,
     "goal_complete": false
   }
 }

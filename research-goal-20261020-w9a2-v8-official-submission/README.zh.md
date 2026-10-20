@@ -1,0 +1,9 @@
+本目录封存root保存的三份v8实际提交观察：browser-observation.json、submission-running-visible.txt及真实CUA截图submission-running.png。原文件逐字保留；封包者只核size/SHA256，没有重新读取网站、调用API或检查源码。
+
+root报告CUA提交点击时间为2026-10-20 15:15:25.431 UTC，主UI显示“Verification running”，实际proofDigest为fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4，与预期精确匹配。署名Li Xiang，ID为lixiang90-w9a2-weighted-potential-v8-20261020。点击时间是root工具观察时间，不是已知服务端job创建/开始时间；本档不补造job ID、signed handle或API下载记录。
+
+这里只确认已提交及捕获时网页显示验证中，未观察到官网终态、双核完成或接受，不称刷新纪录已经完成。两次本地失败、旧DRAFT/attempt快照及其false标志继续保全；没有将本地资源、数学或fullpipeline状态提升为PASS。
+
+root另报告gate摘要9ca18d1ccf895d0b748e44dbc0746652ef3e51fa8450bb968ccacb2e615d4d7f和checkpoint294e58f已push0；本小包未另核gate、远程源码或全树。后续同一官网任务的实际结果应另立观察，不改本包三份原始文件。
+
+本次只有小文件size/hash、README与manifest写入，没有复制大源码、UI/API/进程/Lean操作、新proposal或再次Submit；root state、路线和review12/counter0由root管理，封包者不修改。
