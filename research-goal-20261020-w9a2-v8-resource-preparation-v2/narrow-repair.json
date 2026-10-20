@@ -1,0 +1,28 @@
+{
+  "schema": "w9a2-v8-resource-v2-narrow-repair-v1",
+  "scope": "Text-only narrow repair authorized by root; no runner/AST/compiler/version probe/network execution",
+  "old_manifest_sha256": "8bc3c83af29405e6a87b2fcd2d1cc8f91a2b19487fc2758f2d6e02c578fdc6b5",
+  "old_runner_sha256": "7dce67f3c161ae2792cff38b5e3465a29b7fa07a0f97babdc179471df49d3283",
+  "new_runner_sha256": "0f9b38cbe7e1591048431975f66613803e7131b95fa7bc8ddeb848b6de09b662",
+  "edits": [
+    "Remember exact runner source pin for finish recheck",
+    "Restrict current process ownership to this W9A2 workspace/Lean4.33 pipeline only"
+  ],
+  "exact_reverse_projection_to_old_runner": true,
+  "old_v1_files_unchanged": true,
+  "source_threshold_budget_argv_cleanup_work_directory_unchanged": true,
+  "gate_still_disabled": true,
+  "runner_pin_still_null_in_template": true,
+  "rootownership_still_unfilled": true,
+  "v1_and_v2_runner_executions": 0,
+  "AST_or_import_execution_count": 0,
+  "compiler_export_kernel_network_calls": 0,
+  "root_reported_CIM": {
+    "observed_UTC": "2026-10-20T13:48:43.9201079Z",
+    "all_lean_process_count": 4,
+    "this_W9A2_workspace_Lean433_count": 0,
+    "otherLeanCount": 4,
+    "provenance": "Parent root task message; this package did not query processes",
+    "current_machine_wide_exclusivity_claimed": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "w9a2-v8-resource-historical-small-pins-v1",
+  "scope": "Small-file hashes collected read-only during preparation; no runner/import/compiler/version/kernel execution and no complete runtime data re-audit",
+  "prior_fullchain_parent_outcome": "Actual original 68962/PID49320 exited1 due total3200 deadline during CoreAudit. Trusted ordinary substeps had actual child exit0. No wholechain success is inherited.",
+  "files": [
+    {
+      "path": "research-goal-20261016/gates/w9a2-fullchain-v2-20261020.json",
+      "bytes": 21290,
+      "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/lib/ChallengeDeps.olean",
+      "bytes": 43896,
+      "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/lib/ChallengeDeps/CandidateSpec.olean",
+      "bytes": 11184,
+      "sha256": "ccff101655371a13baf9d0d9ee6c97201db56493ef8011d3c46e6c4aeb5c037b"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/source/ChallengeDeps.lean",
+      "bytes": 6866,
+      "sha256": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/source/ChallengeDeps/CandidateSpec.lean",
+      "bytes": 464,
+      "sha256": "a503e0611337561cdc82e96129045c19d7146ddbd66f03876c18d10554ea9f2c"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/logs/ordinary-ChallengeDeps.terminal.json",
+      "bytes": 1080,
+      "sha256": "205f89abe20f187ae73cfeff222940f3082b62386dc70d83f1772947da20bac0"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/logs/ordinary-ChallengeDeps.CandidateSpec.terminal.json",
+      "bytes": 1164,
+      "sha256": "6fcbe7e22f2b1e648abe07838ae8f319afaff621924d1cec4f8afd341d2f0cf2"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/logs/ordinary-Solution.Candidate.terminal.json",
+      "bytes": 1128,
+      "sha256": "43a45c88cc6ada2d9a642ad212c05bcb869ba5862bcffcf204df98d3d0c49523",
+      "scope": "Historical ordinary source a517 compiler PASS only; no Candidate artifact reuse and no v8 validation"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-fullchain-v2-terminal/root-parent-exit-attestation.json",
+      "bytes": 922,
+      "sha256": "76bd6105be7356e71bfe1b1ffe79824199b1e6a6f45967009b4cd47f80bdeac5"
+    }
+  ],
+  "runtime_closure_reference_not_read_or_rehashed": {
+    "path": "tmp/w9a2-20261020/trusted-runtime-closure-v5/closure.json",
+    "sha256": "4d295c059a87faad191c34d1c221bbb744f04f98e226c4a5d0d08f3c01c2d67a",
+    "source_of_reference": "Exact prior fullchain-v2 gate runtime.closure_manifest"
+  },
+  "Lean_version_from_historical_gate_not_probed": "Lean 4.33.0-rc2 x86_64-w64-windows-gnu d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "fresh_runtime_closure_audit": false,
+  "candidate_compiler_runs": 0,
+  "exporter_runs": 0,
+  "kernel_runs": 0,
+  "v8_resource_measurement_performed": false
+}

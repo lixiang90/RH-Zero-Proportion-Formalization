@@ -1,0 +1,104 @@
+{
+  "schema": "w9a2-v8-resource-gate-v1",
+  "allow_compiler_execution": true,
+  "proposal_only": false,
+  "sole_owner": "/root",
+  "candidate_version": "v8",
+  "runner_sha256": "0f9b38cbe7e1591048431975f66613803e7131b95fa7bc8ddeb848b6de09b662",
+  "work_directory": "tmp/w9a2-20261020/v8-resource-v1",
+  "total_budget_seconds": 3200,
+  "automatic_retries": 0,
+  "automatic_repairs": 0,
+  "observed_peak_stop_bytes": 7516192768,
+  "root_authorized_narrow_historical_cache_reuse": true,
+  "fresh_full_runtime_closure_audit_claimed": false,
+  "source": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v8/Solution.lean",
+    "bytes": 1829382,
+    "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+  },
+  "frozen_source_manifest": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v8/files.json",
+    "sha256": "7f449697314ee04088f1874a6cfdd609c02bb322995feb1197406133ded2a776"
+  },
+  "independent_static_source_review": {
+    "path": "research-goal-20261020-w9a2-v8-independent-static/files.json",
+    "sha256": "dc3adb86ab1c16e4b0ba39135c924c9a01e390b98b8e909dd318bd24d27ceacf"
+  },
+  "root_ownership_observation": {
+    "path": "research-goal-20261020-w9a2-v8-resource-gate-v1/root-ownership-observation.json",
+    "bytes": 578,
+    "sha256": "747905ecd1a655a2c4f3927e091c25c0de18bfb669155d1e514171e78dbe53a8"
+  },
+  "compiler_flags_fixed_in_runner": [
+    "-j1",
+    "-M6500",
+    "--tstack=262144",
+    "-DrelaxedAutoImplicit=false",
+    "-DElab.async=false",
+    "-R fresh-source-directory",
+    "-o fresh-Candidate.olean",
+    "-i fresh-Candidate.ilean",
+    "-c fresh-Candidate.c",
+    "--json"
+  ],
+  "historical_runtime_gate_reference": {
+    "path": "research-goal-20261016/gates/w9a2-fullchain-v2-20261020.json",
+    "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+  },
+  "historical_runtime_closure_reference_not_reaudited": {
+    "path": "tmp/w9a2-20261020/trusted-runtime-closure-v5/closure.json",
+    "sha256": "4d295c059a87faad191c34d1c221bbb744f04f98e226c4a5d0d08f3c01c2d67a"
+  },
+  "scope": "Disabled resource-observation proposal. Root must freeze a NEW enabled gate, bind exact v8 source/runner/review and current process ownership, then independently observe the original outer handle. No compiler, version probe, exporter or kernel has been run by preparer.",
+  "official_setup_used": false,
+  "equivalent_to_official_Linux_8GB_cgroup": false,
+  "exporter_or_kernel_or_replay_execution_authorized": false,
+  "fullchain_pass_claimed": false,
+  "root_review_evidence": [
+    {
+      "path": "research-goal-20261016/macro-reviews/010-20261020.zh.md",
+      "bytes": 7545,
+      "sha256": "979a3a33f9ecee2716284c7cdd6e9301ebc1b4ca0ea7e456809289eada7c249c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v8/files.json",
+      "bytes": 1027,
+      "sha256": "7f449697314ee04088f1874a6cfdd609c02bb322995feb1197406133ded2a776"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-independent-static/files.json",
+      "bytes": 2653,
+      "sha256": "dc3adb86ab1c16e4b0ba39135c924c9a01e390b98b8e909dd318bd24d27ceacf"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-resource-preparation/files.json",
+      "bytes": 1224,
+      "sha256": "8bc3c83af29405e6a87b2fcd2d1cc8f91a2b19487fc2758f2d6e02c578fdc6b5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-resource-preparation-v2/files.json",
+      "bytes": 1551,
+      "sha256": "787a7c690834f6bece9070a7ddb61ae14ce4fe3bf8f221ed891953033753d2e5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-resource-runner-static-review/files.json",
+      "bytes": 279,
+      "sha256": "fb49dc193ca7bb6b516331c10312c399cebf307af0f670eedcf1266f3c4628c8"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-resource-runner-v2-static-review/files.json",
+      "bytes": 290,
+      "sha256": "c76abc0c45c2305772b14a71c479e09001755b197cfe2f9e7af6828cf78a3ea5"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-monitor-api-observation/files.json",
+      "bytes": 529,
+      "sha256": "d377745478dcd442193f74cfc02e83e0e798ee644155e4ff7df76211b35ed48b"
+    }
+  ],
+  "resource_gate_scope_clarification": "Ordinary Lean elaboration includes inherent kernel type checking. This gate runs no separate Comparator/CoreAudit/default-kernel replay, exporter or nanoda. Its Windows own-child resource bounds do not establish Linux whole-pipeline equivalence.",
+  "v2_necessary_repairs": "Exact runner hash remembered and rechecked after compilation; process ownership explicitly concerns this W9A2/Lean4.33 pipeline, with other Lean processes counted and preserved.",
+  "source_checkpoint_commit_prefix": "f2b6d83",
+  "new_numerical_family": false
+}

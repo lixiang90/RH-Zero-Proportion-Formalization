@@ -1,0 +1,41 @@
+{
+  "schema": "w9a2-v8-resource-runner-ownership-addendum-v1",
+  "scope": "Supplement to frozen original static review; read-only reasoning, no process query or execution by reviewer",
+  "original_review_manifest": {
+    "path": "files.json",
+    "sha256": "fb49dc193ca7bb6b516331c10312c399cebf307af0f670eedcf1266f3c4628c8"
+  },
+  "overall_original_runner_result": "BLOCKED_TWO_NARROW_FIXES_PENDING_VERSIONED_REVISION",
+  "finding_B1": "Original runner7dce checks self SHA only at preflight, omits runner from final immutable rehash; add exactly the self.file_pin(...remember=True) in NEW revision.",
+  "finding_B2": {
+    "original_runner_lines_1based": [
+      147,
+      148,
+      149,
+      150
+    ],
+    "original_condition": "ownership.no_other_proof_compiler_processes must be true",
+    "root_reported_actual_observation": {
+      "observed_at_UTC": "2026-10-20T13:48:43.9201079Z",
+      "actual_CIM_lean_exe_count": 4,
+      "W9A2_workspace_Lean433_pipeline_matches": 0,
+      "other_Lean_count": 4,
+      "provenance": "Actual escalated CIM result reported directly by root; this reviewer did not re-query processes."
+    },
+    "problem": "The global no-other-proof/compiler assertion cannot honestly be set true for that observation. Original condition does not express authorized W9A2-only exclusivity.",
+    "required_new_revision": {
+      "no_other_W9A2_compiler_processes": true,
+      "scope": "this W9A2 workspace/Lean4.33 pipeline only",
+      "otherLeanCount": 4,
+      "preserve_actual_process_observation": true,
+      "do_not_stop_unrelated_Lean": true
+    },
+    "measurement_scope": "Peak memory refers only to retained ownchild compiler; no claim of whole-machine isolation, no effect on unrelated Lean processes."
+  },
+  "execution_authorized": false,
+  "runner_execution_count": 0,
+  "AST_or_import_execution_count": 0,
+  "compiler_export_kernel_count": 0,
+  "counter_modified": false,
+  "original_frozen_review_and_runner_unchanged": true
+}

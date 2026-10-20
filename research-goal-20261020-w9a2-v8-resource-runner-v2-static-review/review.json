@@ -1,0 +1,106 @@
+{
+  "schema": "w9a2-v8-resource-runner-v2-incremental-static-review-v1",
+  "result": "PASS_STATIC",
+  "scope": "Incremental source-only review and small-file hash/JSON checks; no runner/import/AST/--help/version/Lean/compiler/export/kernel/API/network execution by reviewer.",
+  "old_runner_sha256": "7dce67f3c161ae2792cff38b5e3465a29b7fa07a0f97babdc179471df49d3283",
+  "new_runner_sha256": "0f9b38cbe7e1591048431975f66613803e7131b95fa7bc8ddeb848b6de09b662",
+  "prepared_manifest_sha256": "787a7c690834f6bece9070a7ddb61ae14ce4fe3bf8f221ed891953033753d2e5",
+  "exact_forward_and_reverse_two_edit_projection": true,
+  "only_two_runner_edits": true,
+  "B1_fixed": "Runner now self.file_pin(...remember=True) in preflight; existing finish immutable loop rehashes same runner before success.",
+  "B2_fixed": "Ownership requires no_other_W9A2_compiler_processes=true and exactscope this W9A2 workspace/Lean4.33 pipeline only. New template unfilled false/null; root historical OtherLean4 truth is preserved in narrow repair provenance. No unrelated process kill path added.",
+  "source_budget_threshold_argv_cleanup_work_directory_unchanged": true,
+  "three_fresh_outputs_and_own_handle_memory_behavior_unchanged": true,
+  "disabled_gate_byte_identical_to_v1": true,
+  "runner_pin_in_template_remains_null": true,
+  "historical_runtime_small_reuse_scope_unchanged": true,
+  "v1_all_files_unchanged": true,
+  "root_external_exit_and_total_time_still_required": true,
+  "Win32_probe_scope": "Root separately reports actual parent0/child0 and afterwait counters for a small non-Lean probe. This review does not execute/query that probe, does not treat it as v8 compiler/resource PASS, and does not infer memory sufficiency.",
+  "execution_authorized": false,
+  "candidate_resource_passed": false,
+  "proof_execution_count": 0,
+  "input_hashes_before_after_identical": true,
+  "inputs": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\files.json",
+      "bytes": 1224,
+      "sha256": "8bc3c83af29405e6a87b2fcd2d1cc8f91a2b19487fc2758f2d6e02c578fdc6b5"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\gate-template.json",
+      "bytes": 2315,
+      "sha256": "6a1ea67909b3de7f58281ebc56e7740c8f00d4fb9035a69d8595a3f4c5729f6a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\historical-evidence-pins.json",
+      "bytes": 2995,
+      "sha256": "8f980dc6a32d06a612fc799450e182ccb2352a56fe60a68bb2318198d691dcfc"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\README.zh.md",
+      "bytes": 3972,
+      "sha256": "4e80319ca438d7975ece1365642374dd4fe16f02606e917ca6d024df0ab28755"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\root-outer-observation.template.json",
+      "bytes": 822,
+      "sha256": "c5541b777a20ffe7558d4153bcbb810ff31d5da6b188bac332d7ef4b102fdf85"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\root-ownership-observation.template.json",
+      "bytes": 355,
+      "sha256": "e3e7bb24cd81d35005b6f05ee8851b8767057eb2de48e45be87b8f79f1335c4d"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\run_resource.py",
+      "bytes": 21628,
+      "sha256": "7dce67f3c161ae2792cff38b5e3465a29b7fa07a0f97babdc179471df49d3283"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\files.json",
+      "bytes": 1551,
+      "sha256": "787a7c690834f6bece9070a7ddb61ae14ce4fe3bf8f221ed891953033753d2e5"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\exact-runner-diff.patch",
+      "bytes": 1848,
+      "sha256": "c0133a09668c0c29232c8559ff7755ca55372de683bf546c664cd9221a69e3ec"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\gate-template.json",
+      "bytes": 2315,
+      "sha256": "6a1ea67909b3de7f58281ebc56e7740c8f00d4fb9035a69d8595a3f4c5729f6a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\historical-evidence-pins.json",
+      "bytes": 2995,
+      "sha256": "8f980dc6a32d06a612fc799450e182ccb2352a56fe60a68bb2318198d691dcfc"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\narrow-repair.json",
+      "bytes": 1321,
+      "sha256": "95cc893eccd18e55aab6d1e181a1510e3334c3c2bd6a578d4950652e7ff2f3ad"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\README.zh.md",
+      "bytes": 4797,
+      "sha256": "5066cf4b0c78649f10a7f559c66c7075d94b6eb0aa003b24187890584f408681"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\root-outer-observation.template.json",
+      "bytes": 822,
+      "sha256": "c5541b777a20ffe7558d4153bcbb810ff31d5da6b188bac332d7ef4b102fdf85"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\root-ownership-observation.template.json",
+      "bytes": 543,
+      "sha256": "580ba662415cc3dd25eb933543d9c06aaf47da62a2358bd8e2c306c973d078ce"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\run_resource.py",
+      "bytes": 21830,
+      "sha256": "0f9b38cbe7e1591048431975f66613803e7131b95fa7bc8ddeb848b6de09b662"
+    }
+  ]
+}

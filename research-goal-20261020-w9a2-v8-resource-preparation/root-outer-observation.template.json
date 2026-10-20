@@ -1,0 +1,17 @@
+{
+  "schema": "w9a2-v8-resource-root-outer-observation-v1",
+  "role": "v8-resource-v1",
+  "original_tool_session": null,
+  "parent_pid": null,
+  "runner_sha256": null,
+  "gate_sha256": null,
+  "actual_original_handle_result": null,
+  "actual_original_parent_exit_code": null,
+  "actual_same_clock_parent_completion_elapsed_seconds": null,
+  "printed_terminal_sha256_from_original_tool_result": null,
+  "terminal_receipt": {
+    "path": "tmp/w9a2-20261020/v8-resource-v1/terminal.json",
+    "sha256": null
+  },
+  "scope": "Template only. Root must preserve the actual original outer handle result, bind parent PID/gate/runner/printed terminal SHA, and require real outer0 plus same-clock total<=3200. The runner only records its code to return; it cannot observe its own completed parent exit. No actual run is claimed."
+}

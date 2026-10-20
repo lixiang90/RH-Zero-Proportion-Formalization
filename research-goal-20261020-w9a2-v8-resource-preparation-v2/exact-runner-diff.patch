@@ -1,0 +1,23 @@
+--- v1/run_resource.py
++++ v2/run_resource.py
+@@ -139,6 +139,7 @@
+                 "Disabled proposal is not execution authorization")
+         require(gate.get("sole_owner") == "/root" and gate.get("candidate_version") == "v8", "Wrong owner/version")
+         require(gate.get("runner_sha256") == sha(Path(__file__).read_bytes()), "Runner pin missing or changed")
++        self.file_pin(Path(__file__).resolve(), gate["runner_sha256"], remember=True)
+         require(gate.get("total_budget_seconds") == 3200 and gate.get("automatic_retries") == 0
+                 and gate.get("automatic_repairs") == 0, "Fixed resource limits changed")
+         require(gate.get("observed_peak_stop_bytes") == PEAK_LIMIT_BYTES, "Peak resource threshold changed")
+@@ -147,8 +148,10 @@
+         require(workspace_path(gate["work_directory"]) == FIXED_WORK.resolve(), "Wrong exclusive work directory")
+         ownership_path = self.pinned_row(gate["root_ownership_observation"])
+         ownership = json.loads(ownership_path.read_bytes())
+-        require(ownership.get("no_other_proof_compiler_processes") is True and ownership.get("sole_owner") == "/root",
+-                "Root must first confirm current process exclusivity")
++        require(ownership.get("no_other_W9A2_compiler_processes") is True
++                and ownership.get("scope") == "this W9A2 workspace/Lean4.33 pipeline only"
++                and ownership.get("sole_owner") == "/root",
++                "Root must first confirm current W9A2-only process exclusivity")
+         observed = datetime.fromisoformat(ownership["observed_at_UTC"].replace("Z", "+00:00"))
+         require(0 <= (datetime.now(timezone.utc) - observed).total_seconds() <= 300, "Root ownership observation is stale")
+         require(not FIXED_WORK.exists(), "Exclusive work directory already exists; no retry/reuse")

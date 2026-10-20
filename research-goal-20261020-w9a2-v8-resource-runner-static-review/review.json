@@ -1,0 +1,163 @@
+{
+  "schema": "w9a2-v8-resource-runner-static-review-v1",
+  "result": "BLOCKED_ONE_NARROW_INTEGRITY_GAP",
+  "scope": "Read-only source inspection, JSON reading and small-file hashing. No runner/import/--help/AST/version/Lean/compiler/export/kernel/network execution. No frozen input or counter modified.",
+  "reviewed_runner_sha256": "7dce67f3c161ae2792cff38b5e3465a29b7fa07a0f97babdc179471df49d3283",
+  "reviewed_disabled_gate_sha256": "6a1ea67909b3de7f58281ebc56e7740c8f00d4fb9035a69d8595a3f4c5729f6a",
+  "macro010_sha256": "979a3a33f9ecee2716284c7cdd6e9301ebc1b4ca0ea7e456809289eada7c249c",
+  "blocking_finding": {
+    "id": "B1",
+    "lines_1based": [
+      141,
+      312,
+      313
+    ],
+    "problem": "Runner self hash is checked once in preflight against gate.runner_sha256, but the runner file is never added to self.immutable. finish only rehashes self.immutable, so an on-disk runner change after preflight is not rejected, despite the macro010 direct-input before/after hash contract.",
+    "minimal_versioned_fix": "Keep original package frozen. In a NEW runner revision, after the existing self-hash equality, call self.file_pin(Path(__file__).resolve(), gate['runner_sha256'], remember=True). Re-freeze runner/manifest/gate SHA; no logic or source changes required.",
+    "scope": "This is an evidence/integrity contract gap, not proof of an actual mutation or wrong compiled result."
+  },
+  "checks": {
+    "retained_handle": "Popen is retained on self.proc; memory() casts int(proc._handle) into wintypes.HANDLE with argtypes [HANDLE,c_void_p,DWORD] and BOOL restype. DWORD header plus9 c_size_t counters match 64-bit Windows PROCESS_MEMORY_COUNTERS_EX layout. No OpenProcess-by-PID or name enumeration.",
+    "kill": "stop_owned_child only calls this Popen.poll/kill/wait. No taskkill, process-name kill, tree kill or stale numeric PID handle reopen. Risk of tool forcibly terminating its parent is not converted into a successful receipt.",
+    "memory": "Initial,30s and after-wait samples query cumulative PeakWorkingSetSize/PeakPagefileUsage. >=7GiB sets resource_limited and prevents success even if child0. Final query failure leaves final_memory_observed false and fails closed. Sampling is not a hard cgroup cap.",
+    "deadline": "One t0/deadline before preflight covers direct hashes/copies/compile/output hashes/final immutable checks/evidence hashes. Cleanup may exceed deadline only on failure. Internal elapsed precedes terminal serialization/fsync; README and outer template correctly require root actual original outer0 plus same-clock total<=3200, so internal success alone is insufficient.",
+    "source_and_gate": "Disabled template pins v8 5424212b.../1829382, draft manifest7f4496 and independent reviewdc3adb; root must create a NEW enabled gate with exact runnerSHA/current exclusive ownership record. GateSHA and root ownership recent<=300s are checked. A gate proposal is not execution authorization.",
+    "fresh_artifacts": "Fixed work path and permanent owner marker are exclusive. Source is byte-copied into new source/Solution/Candidate.lean, three outputs use new output/Solution/Candidate.{olean,ilean,c} and must be nonempty after actual child wait0. There is no automatic retry or repair.",
+    "old_Candidate_exclusion": "Only new trusted-lib plus exact10 prior package-overlay paths enter LEAN_PATH; old fullchain-v2/lib and new output directory are not included. Package paths are checked against old Candidate/trusted paths. Prior Candidate artifact is neither copied nor imported.",
+    "trusted_reuse": "Only ChallengeDeps/CandidateSpec exact source+terminal+olean SHA are reused; both small artifacts copied to new trusted-lib. Lean/Python exe hashes are checked. Original SDK/DLL/package closure is historical trusted reuse, expressly authorized by a new gate, not a new17GB audit.",
+    "execution_scope": "One native Lean process with fixed-j1/-M6500/-o/-i/-c/--json, no --setup and no claim to official Linux8GB cgroup equivalence. No exporter/CoreAudit/Nano stage exists.",
+    "receipts": "started.json,child.json,memory journal/logs and terminal are exclusive writes with flush/fsync. stdout prints terminal SHA. Actual child exit is from retained wait; parent exit field is expressly an intent, externally observed exit remains null. Root original handle is required independently."
+  },
+  "nonblocking_requirements": [
+    "Root must enforce actual outer0 and same-clock total<=3200 after terminal fsync/printing; do not accept internal compiler_resource_gate_passed alone.",
+    "Root should retain enabled gate, current process ownership observation and original tool terminal result; this static review does not enable execution.",
+    "Remaining code/body/Windows APIs have not been dynamically tested; this is source review only."
+  ],
+  "inputs_before": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\files.json",
+      "bytes": 1224,
+      "sha256": "8bc3c83af29405e6a87b2fcd2d1cc8f91a2b19487fc2758f2d6e02c578fdc6b5"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\gate-template.json",
+      "bytes": 2315,
+      "sha256": "6a1ea67909b3de7f58281ebc56e7740c8f00d4fb9035a69d8595a3f4c5729f6a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\historical-evidence-pins.json",
+      "bytes": 2995,
+      "sha256": "8f980dc6a32d06a612fc799450e182ccb2352a56fe60a68bb2318198d691dcfc"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\README.zh.md",
+      "bytes": 3972,
+      "sha256": "4e80319ca438d7975ece1365642374dd4fe16f02606e917ca6d024df0ab28755"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\root-outer-observation.template.json",
+      "bytes": 822,
+      "sha256": "c5541b777a20ffe7558d4153bcbb810ff31d5da6b188bac332d7ef4b102fdf85"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\root-ownership-observation.template.json",
+      "bytes": 355,
+      "sha256": "e3e7bb24cd81d35005b6f05ee8851b8767057eb2de48e45be87b8f79f1335c4d"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\run_resource.py",
+      "bytes": 21628,
+      "sha256": "7dce67f3c161ae2792cff38b5e3465a29b7fa07a0f97babdc179471df49d3283"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\macro-reviews\\010-20261020.zh.md",
+      "bytes": 7545,
+      "sha256": "979a3a33f9ecee2716284c7cdd6e9301ebc1b4ca0ea7e456809289eada7c249c"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\gates\\w9a2-fullchain-v2-20261020.json",
+      "bytes": 21290,
+      "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\files.json",
+      "bytes": 1027,
+      "sha256": "7f449697314ee04088f1874a6cfdd609c02bb322995feb1197406133ded2a776"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-independent-static\\files.json",
+      "bytes": 2653,
+      "sha256": "dc3adb86ab1c16e4b0ba39135c924c9a01e390b98b8e909dd318bd24d27ceacf"
+    }
+  ],
+  "proof_execution_count": 0,
+  "network_requests": 0,
+  "input_hashes_before_after_identical": true,
+  "inputs_after": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\files.json",
+      "bytes": 1224,
+      "sha256": "8bc3c83af29405e6a87b2fcd2d1cc8f91a2b19487fc2758f2d6e02c578fdc6b5"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\gate-template.json",
+      "bytes": 2315,
+      "sha256": "6a1ea67909b3de7f58281ebc56e7740c8f00d4fb9035a69d8595a3f4c5729f6a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\historical-evidence-pins.json",
+      "bytes": 2995,
+      "sha256": "8f980dc6a32d06a612fc799450e182ccb2352a56fe60a68bb2318198d691dcfc"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\README.zh.md",
+      "bytes": 3972,
+      "sha256": "4e80319ca438d7975ece1365642374dd4fe16f02606e917ca6d024df0ab28755"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\root-outer-observation.template.json",
+      "bytes": 822,
+      "sha256": "c5541b777a20ffe7558d4153bcbb810ff31d5da6b188bac332d7ef4b102fdf85"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\root-ownership-observation.template.json",
+      "bytes": 355,
+      "sha256": "e3e7bb24cd81d35005b6f05ee8851b8767057eb2de48e45be87b8f79f1335c4d"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation\\run_resource.py",
+      "bytes": 21628,
+      "sha256": "7dce67f3c161ae2792cff38b5e3465a29b7fa07a0f97babdc179471df49d3283"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\macro-reviews\\010-20261020.zh.md",
+      "bytes": 7545,
+      "sha256": "979a3a33f9ecee2716284c7cdd6e9301ebc1b4ca0ea7e456809289eada7c249c"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\gates\\w9a2-fullchain-v2-20261020.json",
+      "bytes": 21290,
+      "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\files.json",
+      "bytes": 1027,
+      "sha256": "7f449697314ee04088f1874a6cfdd609c02bb322995feb1197406133ded2a776"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-independent-static\\files.json",
+      "bytes": 2653,
+      "sha256": "dc3adb86ab1c16e4b0ba39135c924c9a01e390b98b8e909dd318bd24d27ceacf"
+    }
+  ]
+}
