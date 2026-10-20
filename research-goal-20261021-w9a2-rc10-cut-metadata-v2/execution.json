@@ -1,0 +1,80 @@
+{
+  "schema": "rc10-frontier-metadata-script-completion-v2",
+  "metadata_only_completed": true,
+  "elapsed_seconds": 0.1559999999954016,
+  "budget_seconds": 30,
+  "max_output_bytes": 2000000,
+  "root10_event_limit": 2500,
+  "attempts": 1,
+  "automatic_retries": 0,
+  "input_pins_unchanged": true,
+  "proof_PASS": false,
+  "selected_counts": [
+    {
+      "role": "root",
+      "pos": 1,
+      "nodes": 1895,
+      "numeric_leaves": 906,
+      "reflection_leaves": 42,
+      "farkas_leaves": 0,
+      "branches": 947,
+      "height": 72,
+      "end": 270277
+    },
+    {
+      "role": "cut_0",
+      "pos": 406,
+      "nodes": 471,
+      "numeric_leaves": 224,
+      "reflection_leaves": 12,
+      "farkas_leaves": 0,
+      "branches": 235,
+      "height": 56,
+      "end": 75052
+    },
+    {
+      "role": "cut_1",
+      "pos": 75052,
+      "nodes": 155,
+      "numeric_leaves": 75,
+      "reflection_leaves": 3,
+      "farkas_leaves": 0,
+      "branches": 77,
+      "height": 24,
+      "end": 97737
+    },
+    {
+      "role": "cut_2",
+      "pos": 97737,
+      "nodes": 503,
+      "numeric_leaves": 236,
+      "reflection_leaves": 16,
+      "farkas_leaves": 0,
+      "branches": 251,
+      "height": 55,
+      "end": 167809
+    },
+    {
+      "role": "cut_3",
+      "pos": 175794,
+      "nodes": 401,
+      "numeric_leaves": 196,
+      "reflection_leaves": 5,
+      "farkas_leaves": 0,
+      "branches": 200,
+      "height": 55,
+      "end": 234493
+    },
+    {
+      "role": "cut_4",
+      "pos": 234493,
+      "nodes": 189,
+      "numeric_leaves": 90,
+      "reflection_leaves": 5,
+      "farkas_leaves": 0,
+      "branches": 94,
+      "height": 27,
+      "end": 258792
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "rc10-five-cut-small-metadata-independent-check-v1",
+  "result": "PASS_METADATA_AND_STATIC_SCOPE",
+  "source_sha256": "7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99",
+  "packet_sha256": "211b8b2ebf8e2a1ccfc3e22ef9ab658acb80cf86a977d072cec50cb9f7e663a4",
+  "checks": [
+    {
+      "role": "root",
+      "pos": 1,
+      "end": 270277,
+      "depth": 0,
+      "fuel": 128,
+      "numeric": 906,
+      "state_sha256": "3c9674d4d639ca5004b387f1ab28f4176afd33287ee74f8a1fbc2a557eebdde6"
+    },
+    {
+      "role": "cut_0",
+      "pos": 406,
+      "end": 75052,
+      "depth": 16,
+      "fuel": 112,
+      "numeric": 224,
+      "state_sha256": "ff404e9088549940b44beab12b432c2d79907614c53e9958bcfdd3f7ca675580"
+    },
+    {
+      "role": "cut_1",
+      "pos": 75052,
+      "end": 97737,
+      "depth": 16,
+      "fuel": 112,
+      "numeric": 75,
+      "state_sha256": "ca2ce65f34c2efdbcadfe1d9c9a9ba1f6549aea99e0e85603dc2a828fe147288"
+    },
+    {
+      "role": "cut_2",
+      "pos": 97737,
+      "end": 167809,
+      "depth": 14,
+      "fuel": 114,
+      "numeric": 236,
+      "state_sha256": "dbfdc1917b622ea6e4de8cc351e55e643d49803ab5d94c363997a1079e911c94"
+    },
+    {
+      "role": "cut_3",
+      "pos": 175794,
+      "end": 234493,
+      "depth": 14,
+      "fuel": 114,
+      "numeric": 196,
+      "state_sha256": "7601bba44c0f8b11d935d4df233c3f617521c825239832a9aa7ada16716f32fa"
+    },
+    {
+      "role": "cut_4",
+      "pos": 234493,
+      "end": 258792,
+      "depth": 14,
+      "fuel": 114,
+      "numeric": 90,
+      "state_sha256": "77d3a4f8fe69d992008d6656e7258c2ad66e34a3db99854bb6322d2162d26b29"
+    }
+  ],
+  "frontier_members": 20,
+  "frontier_numeric": 906,
+  "selected_numeric": 821,
+  "parent_numeric": 85,
+  "St_fields": 73,
+  "M": 0,
+  "source_BAD_PR_root_state_equal": true,
+  "all_six_canonical_hashes_match": true,
+  "producer_executed_by_reviewer": false,
+  "archive_streamed_by_reviewer": false,
+  "all1895_geometry_hashes_claim_scope": "Frozen actual producer receipt and statically read producer, not independent replay",
+  "Lean_stEq_checked": false,
+  "proof_resource_PASS": false
+}

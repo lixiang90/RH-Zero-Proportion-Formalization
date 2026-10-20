@@ -1,0 +1,27 @@
+{
+  "schema": "w9a2-rc10-cut-static-review-v1",
+  "result": "CONDITIONAL_STATIC_RECIPE",
+  "source_sha256": "7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99",
+  "source_bytes": 1861120,
+  "single_pilot": "rc10 two immediate child raw-walkCut checks; CutsOk; parent walkCutR and rcOfC",
+  "old_70_cuts_transferable": false,
+  "exact_child_states_produced": false,
+  "proof_or_lean_run": false,
+  "source_modified": false,
+  "runtime_hotspot_or_resource_improvement_proved": false,
+  "required_new_data": [
+    "exact normalized parent and two child 73-Nat states",
+    "current immediate-child cursors and ends",
+    "all rc10 event-state hashes checked using exact archive canonical format",
+    "child structural sizes and balance"
+  ],
+  "hard_stop": [
+    "metadata mismatch or missing state/cursor",
+    "extreme immediate-child imbalance",
+    "new source block exceeds 8192 bytes or total source reaches 2000000 bytes",
+    "child or parent original decide +kernel fails",
+    "dependency on prior whole rc10 proof",
+    "no actual terminal or repeated memory failure"
+  ],
+  "next_authority": "Root decision/gate only; reviewer did not execute or prepare the source"
+}

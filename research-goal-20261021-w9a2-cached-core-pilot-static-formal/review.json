@@ -1,0 +1,195 @@
+{
+  "schema": "cached-strengthened-Core-pilot-static-v1",
+  "result": "STATICALLY_FEASIBLE_AS_EXPLICIT_TRUSTED_DEPENDENCY_NOT_EXECUTED",
+  "exact_import": "import StructuralW9A220261020.Core",
+  "module_names": [
+    "StructuralW9A220261020.Prefix",
+    "StructuralW9A220261020.Core"
+  ],
+  "old_Core_PASS": {
+    "module": "StructuralW9A220261020.Core",
+    "exit_code": 0,
+    "elapsed_seconds": 588.8589999999999,
+    "source_sha256": "26e23c7fc4fbae33bdfff446901eaeb0f22f0f08fe13fa4e326541565a25279f",
+    "source_unchanged": true,
+    "log_sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164",
+    "olean_sha256": "4e24ca2145281fb866d4b24f4db11da74aa87cb4728796fc856e5e4f0ab3fc07",
+    "expected_roots": [],
+    "observed_axioms": {},
+    "axiom_audit_passed": null,
+    "ordinary_compile_passed": true,
+    "Comparator_passed": false,
+    "independent_kernel_passed": false,
+    "website_submission_ready": false
+  },
+  "old_Prefix_PASS": {
+    "module": "StructuralW9A220261020.Prefix",
+    "exit_code": 0,
+    "elapsed_seconds": 436.328,
+    "source_sha256": "bfd774658f3f855596a5453f86f4d98fbc884ca651b3e595d68f70b9553f5b3c",
+    "source_unchanged": true,
+    "log_sha256": "80ff615cf3f693086bc5622d527cad22cd78e2d307643b97ecfab24fe8196bf6",
+    "olean_sha256": "e9bbc282004e9c95ed69c608a2a3ebff6e399425b662c71edcc2e90705d05bfd",
+    "expected_roots": [],
+    "observed_axioms": {},
+    "axiom_audit_passed": null,
+    "ordinary_compile_passed": true,
+    "Comparator_passed": false,
+    "independent_kernel_passed": false,
+    "website_submission_ready": false
+  },
+  "ordinary_v5_reuse_gate": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\gates\\w9a2-ordinary-v5-20261020.json",
+    "sha256": "5a928e8066bd0c8a1bb3cd9e28028b9c995dd40728eed3e72612f9ca8f086d0e",
+    "declared_sha256_in_started": "5a928e8066bd0c8a1bb3cd9e28028b9c995dd40728eed3e72612f9ca8f086d0e"
+  },
+  "retained_artifact_descriptors": [
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/lib/StructuralW9A220261020/Prefix.olean",
+      "sha256": "e9bbc282004e9c95ed69c608a2a3ebff6e399425b662c71edcc2e90705d05bfd",
+      "module_path": "StructuralW9A220261020/Prefix.olean",
+      "absolute_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v0\\lib\\StructuralW9A220261020\\Prefix.olean",
+      "current_stat_bytes": 39261904,
+      "current_olean_bytes_read_or_hashed": false,
+      "identity_scope": "SHA is original PASS receipt+ordinary-v5 reuse gate, not recomputed by this static review"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v1/lib/StructuralW9A220261020/Core.olean",
+      "sha256": "4e24ca2145281fb866d4b24f4db11da74aa87cb4728796fc856e5e4f0ab3fc07",
+      "module_path": "StructuralW9A220261020/Core.olean",
+      "absolute_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v1\\lib\\StructuralW9A220261020\\Core.olean",
+      "current_stat_bytes": 45826856,
+      "current_olean_bytes_read_or_hashed": false,
+      "identity_scope": "SHA is original PASS receipt+ordinary-v5 reuse gate, not recomputed by this static review"
+    },
+    {
+      "absolute_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v5\\lib\\StructuralW9A220261020\\Core.olean",
+      "current_stat_bytes": 45826856,
+      "role": "ordinary-v5 copied overlay file; original source artifact pin remains above",
+      "current_olean_bytes_read_or_hashed": false
+    },
+    {
+      "absolute_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\candidate-ordinary-v5\\lib\\StructuralW9A220261020\\Prefix.olean",
+      "current_stat_bytes": 39261904,
+      "role": "ordinary-v5 copied overlay file; original source artifact pin remains above",
+      "current_olean_bytes_read_or_hashed": false
+    }
+  ],
+  "source_identity": {
+    "canonical_full_sha256": "c2af225175f9a5ab14d2ba2612714a21e0613f66107a1d75b9d47bf1c77ba02a",
+    "compiled_split_source_sha256": "26e23c7fc4fbae33bdfff446901eaeb0f22f0f08fe13fa4e326541565a25279f",
+    "Prefix_source_sha256": "bfd774658f3f855596a5453f86f4d98fbc884ca651b3e595d68f70b9553f5b3c",
+    "canonical_suffix_after_SWAP_exactly_split_suffix": true,
+    "v9_flat_Core_extraction": {
+      "start_byte": 1260,
+      "end_before_one_framing_LF": 1801946,
+      "bytes": 1800686
+    },
+    "comparison_rule": "Remove only import lines and standalone#print axioms lines, and explicit noncomputable before def/abbrev/instance keywords; remove exactly one flat framing LF. All remaining original body/statement/data/comment/scope bytes equal.",
+    "normalized_Core_bytes": 1769228,
+    "normalized_Core_sha256": "1492948f5b8d36c3fcec3abb056b33817fdf9f1ae6563011da68133ae22b88ec",
+    "current_math_body_matches_old_strengthened_Core": true,
+    "not_same_full_source_SHA_or_compilation_metadata": true
+  },
+  "pilot_API": {
+    "QuantGoal": {
+      "line_in_v9": 10733,
+      "header": "noncomputable def QuantGoal (g : ℕ → ℝ) : Prop :="
+    },
+    "Covered": {
+      "line_in_v9": 10736,
+      "header": "noncomputable abbrev Covered : Cl → Prop := CovBy 8 PR QuantGoal"
+    },
+    "CutsOk": {
+      "line_in_v9": 11244,
+      "header": "noncomputable def CutsOk (cuts : List (ℕ × St × ℕ)) : Prop := ∀ c ∈ cuts, Covered (toCl c.2.1)"
+    },
+    "walkCutR": {
+      "line_in_v9": 11263,
+      "header": "noncomputable def walkCutR (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ)"
+    },
+    "rcOfC": {
+      "line_in_v9": 12709,
+      "header": "theorem rcOfC {i0 i1 i2 i3 i4 i5 i6 i7 : ℕ} (wb : ℕ → ℕ) (cuts : List (ℕ × St × ℕ)) (hc : CutsOk cuts) (e : ℕ)"
+    },
+    "WD10": {
+      "line_in_v9": 12831,
+      "header": "noncomputable def WD10 : ℕ → ℕ := rdw WL10"
+    },
+    "rc10": {
+      "line_in_v9": 12832,
+      "header": "theorem rc10 : Covered (RC 0 0 1 0 1 0 0 0) := rcOf WD10 270277 (by decide +kernel) (by decide)"
+    }
+  },
+  "pilot_required_goal_scope": {
+    "namespace_data": "AMW.Cert.PC9QB6MData",
+    "namespace_generic": "AMW.Cert.PC9QB6M",
+    "root": "RC 0 0 1 0 1 0 0 0",
+    "word_stream": "WD10 = rdw WL10",
+    "end_cursor": 270277,
+    "desired_parent_equation": "U (walkCutR TOP BK TOPD BKD PT REG WD10 cuts 128 1) (ofCl (RC 0 0 1 0 1 0 0 0) 0) = 270277",
+    "desired_final_proposition": "Covered (RC 0 0 1 0 1 0 0 0)",
+    "new_proof_obligations": "Concrete child raw walks/current exact cut states and cursors, CutsOk cuts and the parent cut equation; then rcOfC with270277 !=0. No old f82a cut data/end235228 may be imported as current evidence."
+  },
+  "no_tautological_pilot": "Imported Core already contains rc10 and run/run8. A new pilot must not simply exact those existing coverage proofs or derive child coverage from the old whole proof. Use the existing generic cut soundness theorems and exact data, then independently check the new child equations and parent factorization. A future dependency audit must distinguish this new proof from reuse of old rc10/run.",
+  "trusted_dependency_scope": "Reuse exact already checked module artifacts and matching SDK/package versions from the frozen ordinary-v5 gate/known trusted dependencies. Import loads their existing checked declarations; it is not a new elaboration or independent replay of all old proofs. Current2 olean SHA checks and setup belong to a later explicit root-owned gate; none was performed here.",
+  "resource_scope": "A new pilot can avoid rebuilding old Core and aim only at fresh child/cut proofs. Imports still load Prefix/Core and matching Mathlib/Zeta dependencies; import memory and pilot reduction costs are unmeasured. Even a successful pilot would not establish whole single-file v9/resource/official3200 or independent-kernel acceptance.",
+  "no_execution": {
+    "Lean": 0,
+    "compiler": 0,
+    "kernel": 0,
+    "exporter": 0,
+    "decoder": 0,
+    "new_source_generation": 0,
+    "library_tree_rehash": 0,
+    "olean_full_hash": 0,
+    "Git_or_counter_changes": 0
+  },
+  "inputs_before_after_equal": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\gates\\w9a2-ordinary-v5-20261020.json",
+      "bytes": 18004,
+      "sha256": "5a928e8066bd0c8a1bb3cd9e28028b9c995dd40728eed3e72612f9ca8f086d0e"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-ordinary-v1-terminal\\StructuralW9A220261020_Core.receipt.json",
+      "bytes": 608,
+      "sha256": "0635242661e771752e8ed3ced3a6258e1de38848981d240b7be688a9fcf57723"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-ordinary-v1-terminal\\StructuralW9A220261020_Core.command.json",
+      "bytes": 1691,
+      "sha256": "3d0c7154e5496e1d36259cc2cd5b8cf0957a2d516d717c0971c9beeb3769750d"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-ordinary-v0-terminal\\StructuralW9A220261020_Prefix.receipt.json",
+      "bytes": 600,
+      "sha256": "0d38fee2a86a74ea24a7edac4476273b5003a3343cd00e579e6e3e315f012cc3"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-ordinary-v1-terminal\\StructuralW9A220261020_Core.log",
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-core-repair-v1\\canonical-full\\StructuralW9A220261020\\Core.lean",
+      "bytes": 1770091,
+      "sha256": "c2af225175f9a5ab14d2ba2612714a21e0613f66107a1d75b9d47bf1c77ba02a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-core-repair-v1\\development-split\\StructuralW9A220261020\\Core.lean",
+      "bytes": 1185248,
+      "sha256": "26e23c7fc4fbae33bdfff446901eaeb0f22f0f08fe13fa4e326541565a25279f"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-formal-static-review\\development-split\\StructuralW9A220261020\\Prefix.lean",
+      "bytes": 584999,
+      "sha256": "bfd774658f3f855596a5453f86f4d98fbc884ca651b3e595d68f70b9553f5b3c"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-delivery\\draft-v9\\Solution.lean",
+      "bytes": 1861120,
+      "sha256": "7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99"
+    }
+  ]
+}

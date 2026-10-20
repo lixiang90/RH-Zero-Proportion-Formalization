@@ -1,0 +1,122 @@
+{
+  "schema": "rc10-five-cut-new-proof-pilot-v1",
+  "allow_execution": true,
+  "sole_owner": "/root",
+  "budget_seconds": 3200,
+  "M_MiB": 6500,
+  "RSS_stop_bytes": 7516192768,
+  "automatic_retries": 0,
+  "runner_sha256": "8930b82e18db1964ace3a43cb5f6ad474d081ba5b4c5a69ef4969491f2cdf49b",
+  "source": {
+    "path": "research-goal-20261021-w9a2-rc10-five-cut-pilot-preparation-v1/Pilot.lean",
+    "bytes": 5095,
+    "sha256": "eaa299bb1a6f5b7e6f65851ead6ee0e0d8ac85f941ac1e16f2bba53200bdd0b6"
+  },
+  "direct_inputs": [
+    {
+      "path": "research-goal-20261021-w9a2-rc10-proof-plan/DECISION.zh.md",
+      "bytes": 5233,
+      "sha256": "1170d74216a8de7196b5f6040a66cf041145fb151783d3a82dd77c9560c8d60f"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-rc10-proof-plan/ownership.json",
+      "bytes": 293,
+      "sha256": "90685254c8259509568703cb6ab3e6132e12710a04c6469870e9bb160b1beb13"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-rc10-five-cut-independent-v1/pilot-source-review-files.json",
+      "bytes": 435,
+      "sha256": "5fbe61039074f969837d5f1f85e10cf905d60456300aceef7c5b186f51d2da48"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-rc10-five-cut-independent-v1/files.json",
+      "bytes": 295,
+      "sha256": "21c7d4918e61ab70a35b627179a64dff21185dbf4d8746e4fce5862ea0159a48"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-rc10-cut-metadata-v2/files.json",
+      "bytes": 1296,
+      "sha256": "6fccb81eab262452bbecb559a6a40313499d442f862822116bc522ff2dfd9c9f"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-rc10-cut-metadata-v2/packet.json",
+      "bytes": 32064,
+      "sha256": "211b8b2ebf8e2a1ccfc3e22ef9ab658acb80cf86a977d072cec50cb9f7e663a4"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-rc10-five-cut-pilot-preparation-v1/files.json",
+      "bytes": 753,
+      "sha256": "a7fbcbe87438d0876c787622a43cc253f375525b86001f44f1d202ca0f46aae8"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-cached-core-pilot-static-formal/files.json",
+      "bytes": 508,
+      "sha256": "4f6a7eaa17cefbc870df5c8437c9bde6794b24a0be9635c22727267322075363"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-delivery/draft-v9/Solution.lean",
+      "bytes": 1861120,
+      "sha256": "7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99"
+    },
+    {
+      "path": "research-goal-20261016/gates/w9a2-fullchain-v2-20261020.json",
+      "bytes": 21290,
+      "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+    }
+  ],
+  "cached_modules": [
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/lib/ChallengeDeps.olean",
+      "module_path": "ChallengeDeps.olean",
+      "bytes": 43896,
+      "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/lib/ChallengeDeps/CandidateSpec.olean",
+      "module_path": "ChallengeDeps/CandidateSpec.olean",
+      "bytes": 11184,
+      "sha256": "ccff101655371a13baf9d0d9ee6c97201db56493ef8011d3c46e6c4aeb5c037b"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/lib/StructuralW9A220261020/Prefix.olean",
+      "module_path": "StructuralW9A220261020/Prefix.olean",
+      "bytes": 39261904,
+      "sha256": "e9bbc282004e9c95ed69c608a2a3ebff6e399425b662c71edcc2e90705d05bfd"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v1/lib/StructuralW9A220261020/Core.olean",
+      "module_path": "StructuralW9A220261020/Core.olean",
+      "bytes": 45826856,
+      "sha256": "4e24ca2145281fb866d4b24f4db11da74aa87cb4728796fc856e5e4f0ab3fc07"
+    }
+  ],
+  "lean": {
+    "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin/lean.exe",
+    "sha256": "bc137e6662c48eedf2cdf167fb176080e18a15f57e248d214df0cb3939248683",
+    "version": "Lean (version 4.33.0-rc2, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)"
+  },
+  "python": {
+    "path": "C:/Python312/python.exe",
+    "sha256": "5aba6ec903f2e0e946459f98dc45c8129d3f22187f5adac00713d733191d3a3f"
+  },
+  "sdk_root": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2",
+  "sdk_bin": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin",
+  "historical_package_libs": [
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\LeanSearchClient\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Qq\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\plausible\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Cli\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\importGraph\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\proofwidgets\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\aesop\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\batteries\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Zeta23\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\mathlib\\.lake\\build\\lib\\lean"
+  ],
+  "historical_runtime_closure_not_reaudited": "4d295c059a87faad191c34d1c221bbb744f04f98e226c4a5d0d08f3c01c2d67a",
+  "ordinary_new_proof_only": true,
+  "single_file_resource_pass": false,
+  "official_acceptance": false,
+  "source_static_review_transcribed_scope": "PASS_STATIC, not Lean PASS; independent_math complete new source review and delivery corrected runner review",
+  "root_fresh_ownership_observation": "2026-10-20T17:15:24.7220447Z"
+}

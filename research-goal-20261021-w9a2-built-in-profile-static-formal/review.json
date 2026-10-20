@@ -1,0 +1,39 @@
+{
+  "schema": "same-pin-built-in-profile-static-formal-v1",
+  "status": "FINITE_STATIC_LOOKUP_ONLY",
+  "Lean_pin": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "documented_option": {
+    "name": "--profile / profiler=true",
+    "Shell_help_line": 178,
+    "Shell_parser_lines": [405, 406],
+    "Profile_option_lines": [16, 25],
+    "profiler_threshold_default_ms": 100,
+    "native_profile_interface_lines": [36, 56],
+    "claim": "Built-in print/accumulate component and declaration elaboration/typechecking times; separate from structured trace.profiler",
+    "not_claimed": "No guarantee of before-start current declaration output, final flush after uncaught memory exception, exact failing declaration, lower memory or absence of profiler bookkeeping"
+  },
+  "rejected_as_reliable_start_progress": {
+    "trace.Elab.command": "Full syntax message is constructed by withTraceNode after action; command finally converts traces to messages and snapshots report them. Not an immediate small name-only start stream.",
+    "trace.Elab.definition.header/value": "Name-only messages use the same completed trace mechanism; cannot promise visibility of active/fatally terminated body.",
+    "trace.Elab.definition.body": "Prints entire type/value; retains or formats large payloads.",
+    "trace.profiler.output/serve": "Explicitly retain/export structured trace data; not a no-retention logging path."
+  },
+  "cmdlineSnapshots_only_confirmation": {
+    "per_command_option_effective": true,
+    "false_reduces_retention": false,
+    "Language_lines": [648, 652, 686, 689, 763],
+    "previous_stopped_route_not_reopened": true
+  },
+  "decide_cache_only_confirmation": {
+    "Decide_lines": [75, 118],
+    "AuxLemma_lines": [43, 78],
+    "safe_memory_reduction_by_removing_kernel_flag_established": false,
+    "proofs_or_roots_changed": false
+  },
+  "parked_dead_consumer_audit_regenerated": false,
+  "new_source_or_enabled_gate_created": false,
+  "diagnostic_repeat_authorized_or_executed": false,
+  "native_time_task_implementation_or_flush_probed": false,
+  "compiler_kernel_export_Lean_AST_import_API_network_process_Git_calls": 0,
+  "scope": "Only installed exact-pin SDK source reads. No further old export scan/closure, data family, memory cap change, proof source rewrite, unsafe metadata hook or success claim."
+}

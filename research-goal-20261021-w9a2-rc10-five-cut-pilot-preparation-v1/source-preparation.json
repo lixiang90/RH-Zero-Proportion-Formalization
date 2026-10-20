@@ -1,0 +1,108 @@
+{
+  "schema": "rc10-five-cut-pilot-source-preparation-v1",
+  "scope": "Source preparation only; not elaborated, compiled, kernel-checked, exported or resource-validated.",
+  "source": {
+    "path": "Pilot.lean",
+    "bytes": 5095,
+    "sha256": "eaa299bb1a6f5b7e6f65851ead6ee0e0d8ac85f941ac1e16f2bba53200bdd0b6",
+    "limit_bytes": 8192
+  },
+  "input_packet": {
+    "path": "research-goal-20261021-w9a2-rc10-cut-metadata-v2/packet.json",
+    "bytes": 32064,
+    "sha256": "211b8b2ebf8e2a1ccfc3e22ef9ab658acb80cf86a977d072cec50cb9f7e663a4"
+  },
+  "frozen_v9": {
+    "path": "research-goal-20261021-w9a2-delivery/draft-v9/Solution.lean",
+    "bytes": 1861120,
+    "sha256": "7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99"
+  },
+  "namespace": "AMW.Cert.PC9QB6MData",
+  "cached_import": "StructuralW9A220261020.Core",
+  "cached_Core_recorded_olean_sha256": "4e24ca2145281fb866d4b24f4db11da74aa87cb4728796fc856e5e4f0ab3fc07",
+  "cached_module_scope": "Existing development dependency with matching mathematical checker/data; not a new independent replay or final single-file resource result.",
+  "cuts": [
+    {
+      "name": "v10_s0",
+      "pos": 406,
+      "end": 75052,
+      "fuel": 112,
+      "fields": 73,
+      "M": 0,
+      "numeric_leaves": 224
+    },
+    {
+      "name": "v10_s1",
+      "pos": 75052,
+      "end": 97737,
+      "fuel": 112,
+      "fields": 73,
+      "M": 0,
+      "numeric_leaves": 75
+    },
+    {
+      "name": "v10_s2",
+      "pos": 97737,
+      "end": 167809,
+      "fuel": 114,
+      "fields": 73,
+      "M": 0,
+      "numeric_leaves": 236
+    },
+    {
+      "name": "v10_s3",
+      "pos": 175794,
+      "end": 234493,
+      "fuel": 114,
+      "fields": 73,
+      "M": 0,
+      "numeric_leaves": 196
+    },
+    {
+      "name": "v10_s4",
+      "pos": 234493,
+      "end": 258792,
+      "fuel": 114,
+      "fields": 73,
+      "M": 0,
+      "numeric_leaves": 90
+    }
+  ],
+  "parent": {
+    "fuel": 128,
+    "pos": 1,
+    "end": 270277,
+    "indices": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "wrapper": "walkCutR",
+    "remaining_numeric_leaves": 85
+  },
+  "children": {
+    "wrapper": "raw walkCut",
+    "cuts": [],
+    "cursor_lemmas": 5,
+    "covered_lemmas": 5
+  },
+  "proof_obligations": "Five raw child cursor equalities and the complete parent cut traversal remain new decide +kernel obligations. Full actual St matching and residual85 are checked only if the parent proof passes.",
+  "borrowed_old_rc10_or_run": false,
+  "kernel_decide_lemmas": 6,
+  "source_integration": {
+    "fragment": "integration-fragment.lean.txt",
+    "placement": "Inside existing AMW.Cert.PC9QB6MData namespace immediately before original rc10; replace only its proof body by v10_rc10. Not performed.",
+    "original_rc10_line_utf8": "theorem rc10 : Covered (RC 0 0 1 0 1 0 0 0) := rcOf WD10 270277 (by decide +kernel) (by decide)\n",
+    "replacement_line_utf8": "theorem rc10 : Covered (RC 0 0 1 0 1 0 0 0) := v10_rc10\n",
+    "estimated_full_source_bytes": 1865917,
+    "max_full_source_bytes_exclusive": 2000000
+  },
+  "Lean_compiler_kernel_export_decoder_execution_count": 0,
+  "original_v9_modified": false,
+  "validated": false
+}

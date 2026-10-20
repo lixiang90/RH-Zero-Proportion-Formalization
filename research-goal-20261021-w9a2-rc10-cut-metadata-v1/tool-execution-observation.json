@@ -1,0 +1,50 @@
+{
+  "schema": "rc10-metadata-original-tool-execution-observation-v1",
+  "scope": "Actual standalone metadata script exit only; no proof/Lean/compiler/decoder/numerical model execution",
+  "actual_tool_chunk_id": "820954",
+  "actual_tool_exit_code": 0,
+  "actual_tool_wall_seconds": 0.393222,
+  "actual_command": [
+    "C:/Python312/python.exe",
+    "research-goal-20261021-w9a2-rc10-cut-metadata-v1/extract_rc10.py"
+  ],
+  "script_elapsed_seconds_reported": 0.10900000000401633,
+  "actual_stdout_selected_counts": [
+    {
+      "role": "root",
+      "pos": 1,
+      "nodes": 1895,
+      "numeric_leaves": 906,
+      "reflection_leaves": 42,
+      "farkas_leaves": 0,
+      "branches": 947,
+      "height": 72,
+      "end": 270277
+    },
+    {
+      "role": "left",
+      "pos": 9,
+      "nodes": 1893,
+      "numeric_leaves": 905,
+      "reflection_leaves": 42,
+      "farkas_leaves": 0,
+      "branches": 946,
+      "height": 71,
+      "end": 270121
+    },
+    {
+      "role": "right",
+      "pos": 270121,
+      "nodes": 1,
+      "numeric_leaves": 1,
+      "reflection_leaves": 0,
+      "farkas_leaves": 0,
+      "branches": 0,
+      "height": 1,
+      "end": 270277
+    }
+  ],
+  "original_tool_handle_not_reused": true,
+  "proof_PASS": false,
+  "no_additional_frontier_selected": true
+}
