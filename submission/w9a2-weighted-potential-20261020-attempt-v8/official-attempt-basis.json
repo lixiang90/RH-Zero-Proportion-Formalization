@@ -1,0 +1,76 @@
+{
+  "schema": "w9a2-official-attempt-v8-basis-v1",
+  "basis": "human-authorized official attempt with known local failures; no local PASS",
+  "macro012": {
+    "path": "research-goal-20261016/macro-reviews/012-20261020.zh.md",
+    "bytes": 6325,
+    "sha256": "fb7516e57e8fe56802d16b088178c29215d10161a10060a1e007e2b7a9274347"
+  },
+  "DRAFT_independent_review": {
+    "path": "research-goal-20261020-w9a2-v8-materials-static-independent/files.json",
+    "bytes": 8289,
+    "sha256": "36338e03f7b4244bfab594498d1e97bba076b484fdb0fcb3f42827860edb4ff2"
+  },
+  "authorization_source": "Human previously instructed not to repeat checks and to submit an attempt; root reconciled known local failures and selected the official attempt in macro012",
+  "selected_action": "Try fixed v8 in the official unmodified 8GB/3200-second complete verifier after separate root UI action",
+  "local_failures": {
+    "v1": {
+      "manifest": {
+        "path": "research-goal-20261020-w9a2-v8-resource-failure-v1/files.json",
+        "bytes": 1883,
+        "sha256": "8317a845b841313d4042ae0664a9d38039e96fe05adedee868355636a13a0cf1"
+      },
+      "root_outer": {
+        "path": "research-goal-20261020-w9a2-v8-resource-failure-v1/root-outer-observation.json",
+        "bytes": 1151,
+        "sha256": "895bf9106d5f5616fde5206b6fe816d943390d91761c32fb7917c33ef041efc0"
+      },
+      "terminal": {
+        "path": "research-goal-20261020-w9a2-v8-resource-failure-v1/job/terminal.json",
+        "bytes": 11829,
+        "sha256": "b9e50233b9a50ecd9dd14945e2cce321d70d70ef05fec62fd6bcb4a1a001a162"
+      },
+      "original_outer_session": 72573,
+      "parent_pid": 54132,
+      "child_pid": 12924,
+      "actual_outer_exit_code": 1,
+      "actual_child_exit_code": 1,
+      "result": "Own runner stopped at old peak-commit threshold; not OS OOM or mathematics rejection"
+    },
+    "v2": {
+      "manifest": {
+        "path": "research-goal-20261020-w9a2-v8-resource-failure-v2/files.json",
+        "bytes": 1822,
+        "sha256": "31913deddce2ab5ebd5d4efd27d80102c64a54423334095489f13f7589ab2942"
+      },
+      "root_outer": {
+        "path": "research-goal-20261020-w9a2-v8-resource-failure-v2/root-outer-observation.json",
+        "bytes": 1805,
+        "sha256": "82c7538d33548c471e37e391f14578b54c55961b6adcb9af146b3a46b1356402"
+      },
+      "terminal": {
+        "path": "research-goal-20261020-w9a2-v8-resource-failure-v2/job/terminal.json",
+        "bytes": 12404,
+        "sha256": "ea2ce9874d86e26804a471fc1c59d28f07c1fb0fecf67a1b574d3e965217bd49"
+      },
+      "stderr": {
+        "path": "research-goal-20261020-w9a2-v8-resource-failure-v2/job/stderr.log",
+        "bytes": 196,
+        "sha256": "48bc2200174632932b9ea98fd0a0c30e6dc353ce535531045f1c7efc7b79940a"
+      },
+      "original_outer_session": 93095,
+      "parent_pid": 35104,
+      "child_pid": 5564,
+      "actual_outer_exit_code": 1,
+      "actual_child_exit_code": 3221226505,
+      "actual_child_exit_hex": "0xC0000409",
+      "result": "Lean memory_exception at interpreter under local -M6500; no RSS-runner stop or timeout; OS OOM/math rejection not confirmed"
+    }
+  },
+  "local_resource_PASS_claimed": false,
+  "local_math_fullchain_PASS_claimed": false,
+  "local_repeat_or_memory_limit_raise_performed": false,
+  "old_ready_generator_called": false,
+  "InfoTree_or_proof_source_modified": false,
+  "official_submission_performed_by_generator": false
+}

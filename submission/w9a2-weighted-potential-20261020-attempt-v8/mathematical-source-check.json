@@ -1,0 +1,43 @@
+{
+  "schema": "w9a2-v8-inherited-mathematical-description-v1",
+  "scope": "Inherited mathematical description only; v7-to-v8 static byte review does not verify v8 mathematics",
+  "values_from_historical_v6": {
+    "base": "35721161196924353/4000000000000000000",
+    "mu_integer_cost_units": "622387738726/5",
+    "increment": "311193869363/250000000000000000000",
+    "c": "4465145772003282851/500000000000000000000",
+    "boundary_C": "250472200069/50000000000000000000",
+    "pressure_B": "45474189749/10000000000000",
+    "H": "3360618734391208570682858853672166187793/5000000000000000000000000000000000000000",
+    "kappa": "3337881639516708570682858853672166187793/4955348542279967171490000000000000000000",
+    "exceptional_cells": 24,
+    "oriented_exceptional_states": 48,
+    "good_states": 1,
+    "leaf_to_leaf_edges": 37,
+    "good_related_edges": 97,
+    "total_edges": 134,
+    "strict_shared_span_exclusions": 2267,
+    "potential_min": "0",
+    "potential_max_integer": "2504722000690",
+    "integer_edge_certificate": "622387738726 + potential(v) - potential(u) <= 5 * cost(u)",
+    "summed_energy": "c*N - C <= sum E_i",
+    "finite_matching_bound_n9": "(c-32*delta)*m - B*R - 8*c - C <= defect",
+    "effective_counting_boundary_parameter": 10
+  },
+  "historical_description": {
+    "path": "submission/w9a2-weighted-potential-20261020-prepared-v7/mathematical-source-check.json",
+    "bytes": 1922,
+    "sha256": "25c6d97720b5356108f402e84eb7af63a4821d3baaeb158a88ad9ad2687b4dcb"
+  },
+  "global_optimality_claimed": false,
+  "v8_source": {
+    "path": "proof/Solution.lean",
+    "bytes": 1829382,
+    "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+    "copied_without_normalization": true,
+    "website_source_limit_bytes": 2000000,
+    "source_slack_bytes": 170618
+  },
+  "v8_mathematical_verification_performed": false,
+  "exact_ratio_identity_rechecked_for_v8": false
+}
