@@ -1,0 +1,121 @@
+{
+  "schema": "w9a2-v11-resource-gate-v1",
+  "allow_compiler_execution": true,
+  "proposal_only": false,
+  "sole_owner": "/root",
+  "candidate_version": "v11",
+  "runner_sha256": "837e24301601a715006bd7b0dcfa9db869385dcb960bbd6624e5931e2eedf75a",
+  "work_directory": "tmp/w9a2-20261021/v11-resource-v1",
+  "total_budget_seconds": 3200,
+  "automatic_retries": 0,
+  "automatic_repairs": 0,
+  "observed_peak_stop_bytes": 7516192768,
+  "metric": "PeakWorkingSetSize",
+  "commit_diagnostic_only": true,
+  "macro_review_011": {
+    "path": "research-goal-20261016/macro-reviews/011-20261020.zh.md",
+    "sha256": "9b12107dcb046c6aa624667c5cf81641e61ec23f5a867dc33c3d42af6c496411"
+  },
+  "import_memory_static_independent": {
+    "path": "research-goal-20261020-w9a2-v8-import-memory-static-independent/files.json",
+    "sha256": "c3db7c1c33ec2fcb6639680032a002f37534dab26076a759d02283b8d0a2e3c7"
+  },
+  "root_authorized_narrow_historical_cache_reuse": true,
+  "fresh_full_runtime_closure_audit_claimed": false,
+  "source": {
+    "path": "research-goal-20261021-w9a2-delivery/draft-v11/Solution.lean",
+    "bytes": 1945173,
+    "sha256": "a267dd84df81d59e308b220f3b8374fc4c0cc32bea6eaa35db04d846e2b07893"
+  },
+  "frozen_source_manifest": {
+    "path": "research-goal-20261021-w9a2-delivery/draft-v11/files.json",
+    "bytes": 422,
+    "sha256": "af6993f5ad3ea281db0b737e52bcc58a8b8670c7be03972ddec8caa94f55246e"
+  },
+  "independent_static_source_review": {
+    "path": "research-goal-20261021-w9a2-v11-projection-independent/files.json",
+    "bytes": 592,
+    "sha256": "9754b6269bc0553f9acb3e5e02557bc341e60b407236ec3043665f2b82794da0"
+  },
+  "root_ownership_observation": {
+    "path": "research-goal-20261021-w9a2-v11-resource-gate-v1/ownership-fresh.json",
+    "bytes": 311,
+    "sha256": "4a319ccbd77bc28d4cf924c5f5774889153e54ccd26086a1438b413f140f4a4b"
+  },
+  "compiler_flags_fixed_in_runner": [
+    "-j1",
+    "-M6500",
+    "--tstack=262144",
+    "-DrelaxedAutoImplicit=false",
+    "-DElab.async=false",
+    "-R fresh-source-directory",
+    "-o fresh-Candidate.olean",
+    "-i fresh-Candidate.ilean",
+    "-c fresh-Candidate.c",
+    "--json"
+  ],
+  "historical_runtime_gate_reference": {
+    "path": "research-goal-20261016/gates/w9a2-fullchain-v2-20261020.json",
+    "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+  },
+  "historical_runtime_closure_reference_not_reaudited": {
+    "path": "tmp/w9a2-20261020/trusted-runtime-closure-v5/closure.json",
+    "sha256": "4d295c059a87faad191c34d1c221bbb744f04f98e226c4a5d0d08f3c01c2d67a"
+  },
+  "scope": "One root-authorized complete changed v11 source compiler/resource build; exact same caps, no cached user Core/Candidate, no extra exporter/Comparator/nanoda. Ordinary Lean naturally kernel-checks the new source. Not official Linux/fullchain equivalence or acceptance.",
+  "official_setup_used": false,
+  "equivalent_to_official_Linux_8GB_cgroup": false,
+  "exporter_or_kernel_or_replay_execution_authorized": false,
+  "fullchain_pass_claimed": false,
+  "root_resource_decision": {
+    "path": "research-goal-20261021-w9a2-v11-resource-gate-v1/DECISION.zh.md",
+    "bytes": 3009,
+    "sha256": "e69ccb38d9e18f53a756f17ed62855e1ae675c7d92bf54350f39d9a33f5f234f"
+  },
+  "current_macro_review": 14,
+  "current_main_rounds_since_review": 1,
+  "source_checkpoint_commit_prefix": "0d67d299ba7f30b0aa32af6efc6b504a9f5371b0",
+  "source_checkpoint_actual_push_exit_code": 0,
+  "authorized_UTC": "2026-10-20T18:24:33.541945+00:00",
+  "max_compiler_invocations": 1,
+  "public_source_identity_observation": {
+    "path": "research-goal-20261021-w9a2-v11-public-source-sync-v1/files.json",
+    "bytes": 302,
+    "sha256": "fa7641a0b8316a286ef40ed73ac194379693c86a04ac84bd3ec8a0e408d740c8"
+  },
+  "runner_preparation_manifest": {
+    "path": "research-goal-20261021-w9a2-v11-resource-preparation-v1/files.json",
+    "bytes": 995,
+    "sha256": "eb3235884f932077daddccb51645227d6468056bfc53501eae0b1b685ef42875"
+  },
+  "runner_static_delta_review_scope": "Delivery and root independently checked9 v10->v11 identity spans; inverse exactly restores frozen b3221eab v10 runner; all remaining bytes same.",
+  "full_new_source_math_checked_by_compiler": false,
+  "source_checkpoint_actual_push_tool": "d4f83c",
+  "independent_review_completion_observation": {
+    "path": "research-goal-20261021-w9a2-v11-projection-independent/completion-files.json",
+    "bytes": 888,
+    "sha256": "8e776939e8e84fee7c7a0203e6f1083beeb8ced8046a09133d6e6fe13e07127a"
+  },
+  "author_targeted_source_review": {
+    "path": "research-goal-20261021-w9a2-v11-targeted-formal/files.json",
+    "bytes": 622,
+    "sha256": "6f0103af76f32df6b78691ddf828ee118f509a387b6121b80db6136277ffc15a"
+  },
+  "current_macro_review_evidence": {
+    "path": "research-goal-20261016/macro-reviews/014-20261021.zh.md",
+    "bytes": 8780,
+    "sha256": "2c2c95cd40ef75493d74e0cc4e4d9bb03032e8911c7adfb4b041f672469329f4"
+  },
+  "v11_delta_proof_changes": {
+    "new_child_cursor_proofs": 2,
+    "changed_existing_cursor_targets": 2,
+    "new_Graph_fixed_u_rows": 98,
+    "new_Graph_original_theorem_cases": 98
+  },
+  "rejected_prior_ownership_observation": {
+    "path": "research-goal-20261021-w9a2-v11-resource-gate-v1/ownership-invalid-observation.json",
+    "bytes": 575,
+    "sha256": "77efacaa6204ee41025385656ae4d240653b100d4b5c532e6d2afefa6d59bbb3"
+  },
+  "root_ownership_actual_tool": "20bbcf"
+}

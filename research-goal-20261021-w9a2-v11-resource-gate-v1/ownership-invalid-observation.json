@@ -1,0 +1,11 @@
+{
+  "scope": "Invalid prior observation; never use it as an execution gate",
+  "root_tool_chunk": "c4be05",
+  "actual_tool_outer_exit_code": 0,
+  "actual_CIM_query_succeeded": false,
+  "displayed_error": "无法从客户端中访问 CIM 资源。",
+  "incorrectly_written_observation": "ownership.json",
+  "fields_claiming_query_succeeded_or_matching_zero_are_invalid": true,
+  "compiler_started": false,
+  "correction": "Require a separate successful elevated CIM query with nonempty total process enumeration before matching and writing ownership-fresh.json."
+}
