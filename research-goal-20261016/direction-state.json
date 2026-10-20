@@ -5,15 +5,15 @@
     8
   ],
   "default_interval_main_rounds": 6,
-  "main_rounds_since_review": 0,
+  "main_rounds_since_review": 1,
   "last_review_number": 12,
   "last_review": "research-goal-20261016/macro-reviews/012-20261020.zh.md",
   "counter_reset_reason": "Written macro012 completed in the first post93095-failure diagnostic round. Finite interpreter/InfoTree evidence closed; fixed v8 goes to official attempt under existing human authorization. No new tool/agent/compaction round.",
   "compaction_resets_counter": false,
   "subagent_messages_increment_counter": false,
   "within_round_user_steering_increments_counter": false,
-  "main_route": "The fixed v8 was actually submitted once as Li Xiang. UI Verification running and actual proofDigest fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4 exactly match the predicted bundle. Wait only for this official job; local failures stay failed.",
-  "next_gate": "Observe the same official job to a real terminal result, preserve screenshot/logs/digest and actual kernel/promotion evidence. Do not click Submit again or run any local proof/checker family. On acceptance verify public ledger/fixed official source and complete Git synchronization; on failure preserve actual result and review without unchanged resubmission.",
+  "main_route": "The third official attempt v8 actually failed at Solution.Candidate after939s with Lean137/bash1. Preserve this result and choose a finite source/export cost diagnostic before any changed-source execution. No unchanged resubmission; quota0.",
+  "next_gate": "Seal actual official failure evidence, then review one bounded read-only structural audit of the already-frozen v6 export and fixed v8 source. No new compiler/kernel/proof replay, cap increase, source mutation or numerical family before evidence-based route review.",
   "latest_completed_gate": {
     "name": "Official acceptance of the exact user-uploaded v3 source",
     "evidence": "research-goal-20261019-record-accepted-independent-1753/accepted-files.json",
@@ -53,10 +53,10 @@
     "uniform_defect_lower_bound_proven": false
   },
   "new_optimization_family_authorized": false,
-  "optimization_scope": "All mathematics and source frozen. No InfoTree false directive/hook/wrapper, new compiler batch, new data/checker/numerical family or parameter increase.",
+  "optimization_scope": "Proof/numerical packets frozen. Read-only source/export cost diagnosis only; no InfoTree directive/hook/wrapper, compiler batch, unchanged upload, new data/checker/codec/numerical family or cap increase.",
   "new_unconditional_zero_proportion_proven": false,
   "website_submission_ready": false,
-  "previous_goal_turn_classification": "verified_wait",
+  "previous_goal_turn_classification": "progress_official_failure_archive_and_finite_static_cost_diagnosis",
   "previous_opportunity_gate": {
     "name": "Independent full W10 support-domain opportunity audit",
     "producer_manifest": "research-goal-20261017-w10-slice-opportunity/opportunity-files.json",
@@ -1351,11 +1351,17 @@
     "latest_submission": {
       "submission_id": "lixiang90-w9a2-weighted-potential-v8-20261020",
       "author": "Li Xiang",
-      "status": "Verification running",
+      "status": "failed",
       "proofDigest": "fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4",
       "official_acceptance": false,
       "official_kernels_complete": false,
-      "goal_complete": false
+      "goal_complete": false,
+      "official_diagnosis_code": "lean-elaboration-failed",
+      "actual_Lean_exit_code": 137,
+      "actual_build_stage_seconds": 939,
+      "actual_bash_exit_code": 1,
+      "OOM_confirmed": false,
+      "observation": "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json"
     }
   },
   "current_formal_candidate": {
@@ -1525,7 +1531,7 @@
     "local_resource_pass": false,
     "old_ready_generator_permitted": false,
     "full_local_replay_permitted": false,
-    "status": "official_verification_running",
+    "status": "official_failed_Lean137",
     "submitted": true,
     "official_acceptance": false,
     "goal_complete": false,
@@ -1536,23 +1542,52 @@
     "browser_observation": "research-goal-20261020-w9a2-v8-official-submission/browser-observation.json",
     "source_delivery_commit_prefix": "294e58f",
     "actual_source_delivery_push_exit_code": 0,
-    "official_kernels_complete": false
+    "official_kernels_complete": false,
+    "actual_Lean_exit_code": 137,
+    "actual_build_stage_seconds": 939,
+    "actual_bash_exit_code": 1,
+    "OOM_confirmed": false,
+    "failure_observation": "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json",
+    "failure_manifest": "research-goal-20261020-w9a2-v8-official-failure-v1/files.json",
+    "failure_manifest_sha256": "3d535af53e4129662714ebabbb6a27d5b743ca2483a63712f503433258a78900"
   },
   "current_official_submission": {
     "submission_id": "lixiang90-w9a2-weighted-potential-v8-20261020",
     "author": "Li Xiang",
-    "status": "Verification running",
+    "status": "failed",
     "proofDigest": "fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4",
     "official_acceptance": false,
     "official_kernels_complete": false,
-    "goal_complete": false
+    "goal_complete": false,
+    "official_diagnosis_code": "lean-elaboration-failed",
+    "actual_Lean_exit_code": 137,
+    "actual_build_stage_seconds": 939,
+    "actual_bash_exit_code": 1,
+    "OOM_confirmed": false,
+    "observation": "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json"
   },
   "latest_official_owner_observation": {
-    "observed_UTC": "2026-10-20T15:26:51.310Z",
-    "proofDigest": "fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4",
-    "queuePosition": 0,
-    "status": "running",
-    "submissionId": "lixiang90-w9a2-weighted-potential-v8-20261020"
+    "observed_UTC": "2026-10-20T15:40:11.565Z",
+    "status": "none",
+    "private_handle_available": false,
+    "scope": "Root transcription, not preserved raw API response; terminal DOM is archived separately."
   },
-  "latest_goal_wait_scope": "Previous turn made progress by actually submitting fixed v8 and synchronizing its receipt. This turn re-polled the same actual owner job twice; live running/queue0 with exact same ID/digest. No research round added and no source/proof run."
+  "latest_goal_wait_scope": "The verified wait ended with actual owner none at15:40:11.565Z and recovered authenticated terminal failure. This is one new diagnostic main round after macro012; tool calls, compaction and agents do not increment it.",
+  "current_daily_submission_quota": {
+    "remaining": 0,
+    "limit": 3,
+    "reset_UTC": "2026-10-21T00:00:00Z",
+    "evidence": "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json"
+  },
+  "resource_diagnostic_round_v8_official_failure": {
+    "started_UTC": "2026-10-20T15:54:57.188492+00:00",
+    "review": 12,
+    "counter_transition": [
+      0,
+      1
+    ],
+    "reason": "Actual official v8 terminal failure ends prior wait and changes cost-diagnostic route.",
+    "new_compiler_execution_authorized": false,
+    "new_source_variant_created": false
+  }
 }
