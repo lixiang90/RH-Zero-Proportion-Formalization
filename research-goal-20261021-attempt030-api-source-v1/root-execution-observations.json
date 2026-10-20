@@ -1,0 +1,56 @@
+{
+  "schema": "root-transcribed-attempt030-API-retrieval-execution-v1",
+  "provenance": "Root-provided actual original tool summaries, not original-handle observations by this archiver or raw tool payload downloads",
+  "fixed_commit": "94954faf2713ae9628d6fbca0ae24fe64370507c",
+  "prior_raw_host_failure": {
+    "manifest_path": "research-goal-20261021-attempt030-upstream-source-v1/files.json",
+    "manifest_sha256": "748768abbba637e66b379c27fc44cdd0714ec18c6173c64e0dff97919571ed27",
+    "scope": "Preserved raw.githubusercontent.com pre-request10054; explicit API alternative was separately selected by root, not an automatic retry"
+  },
+  "root_reported_executions": [
+    {
+      "actual_original_tool_chunk": "91cdd4",
+      "actual_outer_exit_code": 1,
+      "actual_tool_wall_seconds": 1.879247,
+      "helper_receipt_elapsed_seconds": 1.735000000000582,
+      "receipt": "receipt.json",
+      "outcome": "Two fixed-ref Contents API HTTP200 responses; submission body decoded successfully; source metadata encoding none caused expected-base64 AssertionError, preserved complete=false",
+      "HTTP_GET_calls": 2
+    },
+    {
+      "actual_original_tool_chunk": "28752b",
+      "actual_outer_exit_code": 0,
+      "actual_tool_wall_seconds": 2.2889714,
+      "helper_receipt_elapsed_seconds": 2.139999999999418,
+      "receipt": "blob-receipt.json",
+      "outcome": "Explicit follow-up of observed git_url, one Git Blob HTTP200, source decoded and Git blob identity assertion passed",
+      "HTTP_GET_calls": 1
+    }
+  ],
+  "public_API_HTTP_GET_calls_from_existing_receipts": 3,
+  "automatic_network_retry_by_archiver": false,
+  "first_API_failure_receipt_rewritten": false,
+  "source": {
+    "path": "Solution.lean",
+    "bytes": 1798336,
+    "sha256": "c2f3b3d0d1e2d0a3fab63320092b0ac10aace2d501376431bb08e487ae673ad7",
+    "git_blob_sha1_from_existing_receipt": "c6fd5f56c248f880f733008c96e659fc1dd1b4a2",
+    "archive_identity_hash_passes": 1
+  },
+  "submission": {
+    "path": "submission.json",
+    "bytes": 1535,
+    "sha256": "4f48e649b393a929cea178ac22b9498f7b38c39bd11d28db46faac9e6daf9394",
+    "git_blob_sha1_from_existing_receipt": "dae6407aca380ef02c24db049ff0c3f926c3abb6"
+  },
+  "blob_API_base64_envelope": {
+    "path": "Solution.lean.blob.raw.json",
+    "bytes": 2478002,
+    "sha256": "bc7bc3e39aafa208b0439b4601eeaaa09953eac1adf65187dbf5d0f3934e9036",
+    "scope": "Saved API response wrapper, distinct from decoded source length"
+  },
+  "source_notice_static_read_scope": "Only received metadata and limited attribution text were read; Samuel Lavery notice and agent-team credit present; no proof transformation, decoder or compilation",
+  "source_or_kernel_or_official_PASS_established_by_archiver": false,
+  "archiver_network_Lean_decoder_proof_Git_state_actions": 0,
+  "all_original_members_preserved": true
+}

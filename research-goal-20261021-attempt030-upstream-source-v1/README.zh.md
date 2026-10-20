@@ -1,0 +1,9 @@
+此包是固定attempt-030公开源码读取的一次未完成尝试，不是源码已取得或已审查。
+
+目标commit94954faf2713ae9628d6fbca0ae24fe64370507c，计划仅对raw.githubusercontent.com上的submissions/attempt-030/submission.json与proof/Solution.lean各GET一次，共用30秒，source≤2,000,000B、全部metadata≤100,000B，无redirect、自动retry或认证。这里只执行新的retrieve.py，不调用任何下载来的代码、旧脚本、Lean、数值decoder、Git或状态工具。
+
+实际原exec工具5a7d2d outer exit1，tool wall0.493774秒，helper whole_elapsed0.35899999999674037秒。第一URL在HTTPS connect阶段抛ConnectionResetError/WinError10054（远程主机强迫关闭了一个现有的连接），HTTP status=null，尚未调用connection.request发送GET，未接收任何HTTP响应body。预先xb创建并fsync的submission.json为0B/SHAe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855；它是明确的空失败占位文件，不能当作上游JSON内容。
+
+依stop-on-failure约束，第二个proof/Solution.lean URL未尝试，未创建source文件，没有源码字节数/源码SHA/attribution或submission字段结论。retrieval-observation.json保存实际阶段、零字节hash、异常和unknown HTTP状态；execution-observation.json记录本代理实际看到的外层exit1，不冒充root其它句柄或上游attestation。此结果只说明该次直接HTTPS连接失败，不推断公开仓库、记录或数学的状态。
+
+没有第二次连接/GET、fallback、浏览器、私有网站API、quota、owner、提交、proof/source变换、数值解码、Lean、compiler、Git或状态计数动作。全部已有source/DRAFT和其它失败包保持不变；后续若要另法读取必须由root另定，不从本失败自动重试。

@@ -1,0 +1,28 @@
+{
+  "schema": "new-H33-arithmetic-probe-run-v1",
+  "scope": "Only new floor inequality, ratio identity and exact strict improvement. No upstream certificate/full proof/exporter/independent kernels/site acceptance.",
+  "source_bytes": 7742,
+  "source_sha256": "7676d7d7b69a80fefd71b7f9900ed38ce360d874be43f616320059c1f368c047",
+  "command": [
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\lean.exe",
+    "-j1",
+    "-M6500",
+    "--tstack=262144",
+    "-DrelaxedAutoImplicit=false",
+    "-DElab.async=false",
+    "-o",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-hw33-arithmetic-run-v1\\FloorProbe.olean",
+    "-i",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-hw33-arithmetic-run-v1\\FloorProbe.ilean",
+    "-c",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-hw33-arithmetic-run-v1\\FloorProbe.c",
+    "--json",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-hw33-arithmetic-run-v1\\FloorProbe.lean"
+  ],
+  "LEAN_PATH": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Qq\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\plausible\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Cli\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\importGraph\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\proofwidgets\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\aesop\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\batteries\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Zeta23\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\mathlib\\.lake\\build\\lib\\lean",
+  "runtime_reuse": "Historical package overlays only, no new recursive audit and no cached user Core/Candidate or trusted Challenge imported",
+  "timeout_seconds": 120,
+  "automatic_retries": 0,
+  "full_source_passed": false,
+  "official_accepted": false
+}

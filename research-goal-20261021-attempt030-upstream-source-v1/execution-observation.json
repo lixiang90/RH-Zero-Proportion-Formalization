@@ -1,0 +1,20 @@
+{
+  "schema": "attempt030-direct-retrieval-actual-exec-observation-v1",
+  "provenance": "Actual exec_command result observed by this retrieval agent, not root compiler handle evidence or upstream server attestation",
+  "actual_tool_chunk": "5a7d2d",
+  "actual_outer_exit_code": 1,
+  "actual_tool_wall_seconds": 0.493774,
+  "helper_reported_whole_elapsed_seconds": 0.35899999999674037,
+  "exception_type": "ConnectionResetError",
+  "exception_message": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。",
+  "failed_phase": "First URL HTTPS connect, before connection.request GET call",
+  "first_URL_attempted": "https://raw.githubusercontent.com/josusanmartin/riemann/94954faf2713ae9628d6fbca0ae24fe64370507c/submissions/attempt-030/submission.json",
+  "first_URL_HTTP_status": null,
+  "HTTP_GET_request_calls": 0,
+  "first_URL_body_bytes_saved": 0,
+  "second_URL_attempted": false,
+  "automatic_retry_or_fallback": false,
+  "source_obtained_or_attribution_read": false,
+  "private_website_API_or_quota_or_submit_actions": 0,
+  "Lean_decoder_source_transform_Git_state_actions": 0
+}

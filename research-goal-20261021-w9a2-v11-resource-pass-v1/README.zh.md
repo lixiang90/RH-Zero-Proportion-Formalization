@@ -1,0 +1,15 @@
+本包封存固定v11完整单文件的一次Windows普通Lean编译/C生成资源门通过，仅收集已结束运行的小记录，不运行任何proof工具。Root报告原session95883、write_stdin工具5c72e8实际outer exit0；现有terminal为parent30160、child18408、actual child exit0。root-outer-observation.json明确原outer0来自root提供的实际工具摘要转录，不是封存代理再次观察原句柄或原工具raw payload下载。
+
+terminal.json SHA256为01d7cf8d6c3e551ce6c034f37544a949d22c0d8fa135f1475780a4c39eb06ec5。开始2026-10-20T18:25:26.080595Z，完成18:46:14.361473Z；terminal elapsed1248.25秒，不与末次memory sample1248.109000000004秒混淆。43次采样，final query=true；peak RSS6977216512B（约6653.99MiB）、peak process commit11865882624B（仅诊断），timeout=false、own RSS stop=false。实际峰RSS超过-M6500的6500MiB数值，但低于7GiB own-child RSS停止阈值7516192768B；Lean的-M参数不是OS硬RSS上限，不能用此数值声称官网Linux cgroup等价。
+
+stdout.jsonl6741B/SHAa0db7f5f29c7d1a1556421dacf63c0ef86ef6edb13023e9c4f4245ab908a5ed4，逐行解析为10条warning、1条information、0条error；stderr.log为空。普通Lean检查没有被关闭；本资源门完成-o/-i/-c三产物，但没有运行额外exporter、Comparator、default-Lean重放或nanoda，也没有在本封存重新审计传递公理。
+
+三个NEW输出各只直接散列一次，现有terminal与root报告均核同：
+
+- Candidate.olean：69437256B，SHA010a13d558507874ca056a71ccef560dd432ffc24b6e23407b37404186d466a1。
+- Candidate.ilean：3447761B，SHA19a612e25e8a236826d3035f18bb86799ff7283ff1b74d3a1cc633db139a8a4e。
+- Candidate.c：132381B，SHA3ec0a527101fcd0793b5c150000476c1537394f3fc1df9c6f66c077b754f3235。
+
+output-pin-report.json只保存这些新输出的身份和单次散列范围；不复制70MB binary、源或闭包，不散列旧proof/SDK/runtime大树。六个小文件started/child/terminal/memory/stdout/stderr原样复制至work/，原件及副本末次size/SHA均核对。source与gate仅引用现有terminal中的1945173B/a267dd84…及47bcd237…pin，不冒称新的源码或完整runtime审计。
+
+此PASS限同一单次3200秒预算内的Windows普通Lean/C生成资源门，可信缓存只按原门使用ChallengeDeps和CandidateSpec，未导入旧用户Core/Candidate。它不代表全3200秒双核pipeline、官网原--setup/Linux8GB资源配置、官方接受、公开promotion或完整goal完成。DRAFT-v11原false/unknown和pending启动快照保持历史原字节，未来状态须另封addendum，不回写旧包。没有新compiler、进程查询、网站、网络、Git、state或counter动作。

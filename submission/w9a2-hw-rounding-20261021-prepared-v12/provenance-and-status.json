@@ -1,0 +1,117 @@
+{
+  "schema": "hw33-v12-source-provenance-and-DRAFT-status-v1",
+  "prepared_at_UTC": "2026-10-20T19:06:23.421472+00:00",
+  "source": {
+    "path": "proof/Solution.lean",
+    "bytes": 1799144,
+    "sha256": "a3b0ee880a647539e4bdb65a31e693de5b8e2e5ad085ec46ebbd031319a848cb",
+    "CRLF_count": 0,
+    "bare_CR_count": 0,
+    "final_LF": false,
+    "copied_without_normalization": true,
+    "source_limit_bytes": 2000000,
+    "source_slack_bytes": 200856
+  },
+  "submission_id": "lixiang90-w9a2-hw-rounding-v12-20261021",
+  "author": {
+    "github": "lixiang90",
+    "displayName": "Li Xiang"
+  },
+  "model": null,
+  "harness": "Codex",
+  "score": {
+    "numerator": "10937570556368350644414459367124615168",
+    "denominator": "16237684365380724838807895177884765625"
+  },
+  "change_scope": {
+    "baseline_commit": "94954faf2713ae9628d6fbca0ae24fe64370507c",
+    "baseline_source_sha256": "c2f3b3d0d1e2d0a3fab63320092b0ac10aace2d501376431bb08e487ae673ad7",
+    "raw_spans": 25,
+    "added_notice_bytes": 762,
+    "producer_asserted_exact_inverse": true,
+    "old_H": "16803093671956042853415617930793/25000000000000000000000000000000",
+    "new_H": "672123746878241714136624717231727/1000000000000000000000000000000000",
+    "producer_reported_strict_gain": "114688/16237684365380724838807895177884765625",
+    "same_upstream_certificate_c_B_and_trigonometric_bounds": true,
+    "proof_verification_claimed_by_byte_projection": false
+  },
+  "source_producer_root_reported_tool": "fbd69c",
+  "source_producer_root_reported_outer_exit_code": 0,
+  "source_producer_scope": "Source generation only, not Lean verification",
+  "input_pins": [
+    {
+      "path": "research-goal-20261021-hw33-delivery/draft-v12/Solution.lean",
+      "bytes": 1799144,
+      "sha256": "a3b0ee880a647539e4bdb65a31e693de5b8e2e5ad085ec46ebbd031319a848cb"
+    },
+    {
+      "path": "research-goal-20261021-hw33-delivery/draft-v12/files.json",
+      "bytes": 363,
+      "sha256": "7d1825014a602b4eaaaa4350061fe1edb10f0b99d06115645d8df0dcdc6006c6"
+    },
+    {
+      "path": "research-goal-20261021-hw33-delivery/draft-v12/projection.json",
+      "bytes": 6758,
+      "sha256": "eb9f9e50c04eecc1267d68559c90e810639a224affadfa68c85f503bfc2d347d"
+    },
+    {
+      "path": "research-goal-20261021-attempt030-api-source-v1/submission.json",
+      "bytes": 1535,
+      "sha256": "4f48e649b393a929cea178ac22b9498f7b38c39bd11d28db46faac9e6daf9394"
+    },
+    {
+      "path": "research-goal-20261021-attempt030-api-source-v1/files.json",
+      "bytes": 2523,
+      "sha256": "98155577b3aab79337ff77c49cec8f912e3513714a6b07e8188de6194725c1d9"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-source-normalization-review/files.json",
+      "bytes": 54060,
+      "sha256": "4209625bb670f556ccabbf3b46a31deed8a67178951d4a8524be551406ec3432"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11558,
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    }
+  ],
+  "wire_policy": {
+    "basis": "Previously captured official server JSON normalization; exact actual upstream manifest fixture round-tripped before metadata replacement",
+    "captured_policy_manifest": {
+      "path": "research-goal-20261020-w9a2-source-normalization-review/files.json",
+      "bytes": 54060,
+      "sha256": "4209625bb670f556ccabbf3b46a31deed8a67178951d4a8524be551406ec3432"
+    },
+    "source_transformations_applied": false,
+    "proof_file_upload_preserves_raw_bytes": true,
+    "blank_UI_model_maps_to_server_null": true,
+    "expected_digest_is_PREDICTED_not_observed": true,
+    "server_manifest_bytes": 1314,
+    "server_manifest_sha256": "b456026703f4e26408d040dab27188632416293f53938cc4661782036d64154c",
+    "PREDICTED_proofDigest": "c0c3df2ca61fc0a55fb6a66d5ce865e803b8d9d67a0f2d22655f13b5a08ca1db"
+  },
+  "validation_status": {
+    "whole_v12_ordinary_Lean_passed": false,
+    "whole_v12_compiler_resource_gate_passed": false,
+    "whole_v12_independent_kernel_passed": false,
+    "Comparator_passed": false,
+    "default_Lean_replay_passed": false,
+    "serial_nanoda_passed": false,
+    "full_single_3200s_pipeline_passed": false,
+    "official_result_observed": false,
+    "official_accepted": false,
+    "public_promotion_confirmed": false,
+    "upload_ready": false,
+    "submitted": false,
+    "arithmetic_probe_receipt": null,
+    "arithmetic_probe_scope": "A future new arithmetic-only probe cannot verify the whole v12 source",
+    "whole_v12_result": null,
+    "independent_complete_projection_review_receipt": null,
+    "independent_complete_projection_review_status": "not incorporated in this frozen metadata snapshot",
+    "official_job": null,
+    "future_results_require_separate_addendum": true
+  },
+  "legal_agreement_or_archive_consent_updated": false,
+  "website_network_Git_state_or_Lean_actions": 0,
+  "old_sources_and_materials_modified": false
+}

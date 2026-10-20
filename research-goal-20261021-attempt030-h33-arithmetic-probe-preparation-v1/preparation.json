@@ -1,0 +1,61 @@
+{
+  "schema": "unexecuted-H33-arithmetic-probe-preparation-v1",
+  "upstream": {
+    "path": "research-goal-20261021-attempt030-api-source-v1/Solution.lean",
+    "bytes": 1798336,
+    "sha256": "c2f3b3d0d1e2d0a3fab63320092b0ac10aace2d501376431bb08e487ae673ad7"
+  },
+  "copied_raw_blocks": {
+    "top_notices": {
+      "start_byte": 0,
+      "end_byte_exclusive": 5628,
+      "bytes": 5628,
+      "sha256": "788037d8bf7446f6f266b28e3280b1eb29754dbeb9a35272f0302b004572488f"
+    },
+    "cAMn_and_cAM": {
+      "start_byte": 18731,
+      "end_byte_exclusive": 19033,
+      "bytes": 302,
+      "sha256": "7fb0dd424d773fb863ce81e77b7351af84c45f4a1af491ed3aaf0afc0aecfeac"
+    },
+    "dAM": {
+      "start_byte": 84896,
+      "end_byte_exclusive": 84943,
+      "bytes": 47,
+      "sha256": "471e6bc88dfece4b2bb192016cf3c3d32332cb7032cc465b76b4cd599daa8176"
+    },
+    "PAMhi": {
+      "start_byte": 108898,
+      "end_byte_exclusive": 109053,
+      "bytes": 155,
+      "sha256": "600a54d50ee1e9d0f4f82c45290299ec36f0bb8d5b95578298053351d672a3ec"
+    },
+    "floor_numeric_before_single_target_change": {
+      "start_byte": 110021,
+      "end_byte_exclusive": 110425,
+      "bytes": 404,
+      "sha256": "9da8d3f56cbe41f11117b10e08d5826598c85784036698e48b53ee304af8800e"
+    }
+  },
+  "sole_theorem_change": {
+    "old": "67212374687824171413662471723172 / 10 ^ 32",
+    "new": "672123746878241714136624717231727 / 10 ^ 33",
+    "count": 1
+  },
+  "proof_body_unchanged": true,
+  "declared_imports_are_subset_of_upstream": true,
+  "imports": [
+    "Mathlib",
+    "Mathlib.Tactic.NormNum"
+  ],
+  "no_cached_candidate_or_core_import": true,
+  "Lean_execution_count": 0,
+  "AST_execution_count": 0,
+  "kernel_execution_count": 0,
+  "probe_resource_or_proof_PASS": false,
+  "source": {
+    "path": "FloorProbe.lean",
+    "bytes": 7051,
+    "sha256": "859573fd99f1c2302efbcc716304f7b9248e1c0ba0f2eea09805d78fa7d7f03e"
+  }
+}

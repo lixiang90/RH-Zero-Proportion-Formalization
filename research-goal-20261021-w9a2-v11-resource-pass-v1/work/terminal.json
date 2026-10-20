@@ -1,0 +1,206 @@
+{
+  "schema": "w9a2-v11-compiler-resource-terminal-v1",
+  "scope": "One v11 source compiler run with C generation and own-child memory counters; no exporter/kernel/replay/fullchain",
+  "started_at_UTC": "2026-10-20T18:25:26.080595+00:00",
+  "parent_pid": 30160,
+  "parent_argv": [
+    "research-goal-20261021-w9a2-v11-resource-preparation-v1/run_resource.py",
+    "--gate",
+    "research-goal-20261021-w9a2-v11-resource-gate-v1/resource-gate.json",
+    "--gate-sha256",
+    "47bcd237065069103ae9e21069976710f9b99430a896a4515664bda576cf2f60"
+  ],
+  "monotonic_t0": 43882.609,
+  "total_budget_seconds": 3200,
+  "automatic_retries": 0,
+  "automatic_repairs": 0,
+  "metric": "PeakWorkingSetSize",
+  "commit_diagnostic_only": true,
+  "source_discovery_or_repair_performed": false,
+  "cached_user_Candidate_imported": false,
+  "fresh_full_runtime_closure_audit_performed": false,
+  "equivalent_to_official_Linux_8GB_cgroup": false,
+  "official_setup_used": false,
+  "official_command_difference": "This Windows diagnostic uses existing trusted import libraries and cached CandidateSpec, without official --setup. It does not emulate official Linux resource containment or the whole pipeline.",
+  "actual_parent_exit_code_observed_externally": null,
+  "actual_parent_exit_requires_original_root_tool_observation": true,
+  "official_accepted": false,
+  "independent_kernel_passed": false,
+  "fullchain_passed": false,
+  "metric_change_evidence": {
+    "macro_review_011": {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\macro-reviews\\011-20261020.zh.md",
+      "bytes": 7117,
+      "sha256": "9b12107dcb046c6aa624667c5cf81641e61ec23f5a867dc33c3d42af6c496411"
+    },
+    "import_memory_static_independent": {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-import-memory-static-independent\\files.json",
+      "bytes": 5026,
+      "sha256": "c3db7c1c33ec2fcb6639680032a002f37534dab26076a759d02283b8d0a2e3c7"
+    }
+  },
+  "gate": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-v11-resource-gate-v1\\resource-gate.json",
+    "bytes": 5543,
+    "sha256": "47bcd237065069103ae9e21069976710f9b99430a896a4515664bda576cf2f60"
+  },
+  "source": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-delivery\\draft-v11\\Solution.lean",
+    "bytes": 1945173,
+    "sha256": "a267dd84df81d59e308b220f3b8374fc4c0cc32bea6eaa35db04d846e2b07893"
+  },
+  "reused_trusted_modules": [
+    {
+      "module": "ChallengeDeps",
+      "relative": "ChallengeDeps.olean",
+      "source": {
+        "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\source\\ChallengeDeps.lean",
+        "bytes": 6866,
+        "sha256": "f05666d0745edbf2dac6ce2a4de675abd1bba3c336fe24aebb80f27d1365ebbd"
+      },
+      "prior_actual_terminal": {
+        "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\logs\\ordinary-ChallengeDeps.terminal.json",
+        "bytes": 1080,
+        "sha256": "205f89abe20f187ae73cfeff222940f3082b62386dc70d83f1772947da20bac0"
+      },
+      "artifact": {
+        "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\lib\\ChallengeDeps.olean",
+        "bytes": 43896,
+        "sha256": "a9127aa6c9a70793124b7b08c16baac0b205c4d717a44a313de812534aa01542"
+      }
+    },
+    {
+      "module": "ChallengeDeps.CandidateSpec",
+      "relative": "ChallengeDeps/CandidateSpec.olean",
+      "source": {
+        "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\source\\ChallengeDeps\\CandidateSpec.lean",
+        "bytes": 464,
+        "sha256": "a503e0611337561cdc82e96129045c19d7146ddbd66f03876c18d10554ea9f2c"
+      },
+      "prior_actual_terminal": {
+        "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\logs\\ordinary-ChallengeDeps.CandidateSpec.terminal.json",
+        "bytes": 1164,
+        "sha256": "6fcbe7e22f2b1e648abe07838ae8f319afaff621924d1cec4f8afd341d2f0cf2"
+      },
+      "artifact": {
+        "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\lib\\ChallengeDeps\\CandidateSpec.olean",
+        "bytes": 11184,
+        "sha256": "ccff101655371a13baf9d0d9ee6c97201db56493ef8011d3c46e6c4aeb5c037b"
+      }
+    }
+  ],
+  "historical_runtime_closure_reference_not_reaudited": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\closure.json",
+    "sha256": "4d295c059a87faad191c34d1c221bbb744f04f98e226c4a5d0d08f3c01c2d67a"
+  },
+  "historical_runtime_gate": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\gates\\w9a2-fullchain-v2-20261020.json",
+    "bytes": 21290,
+    "sha256": "3ebcc3b75ee2a75775281a2a0e9321f7610baddcab5965fcf002fd51e2d763fd"
+  },
+  "package_libs_reused_without_recursive_data_rehash": [
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\LeanSearchClient\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Qq\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\plausible\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Cli\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\importGraph\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\proofwidgets\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\aesop\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\batteries\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Zeta23\\.lake\\build\\lib\\lean",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\mathlib\\.lake\\build\\lib\\lean"
+  ],
+  "runtime_reuse_scope": "Pinned Lean/Python executables, two pinned trusted source/olean/actual-terminal records, and the exact historical clean package-overlay paths. The SDK, DLL closure and package data trees are historical trust; no fresh complete closure audit or cross-platform evidence is claimed.",
+  "fresh_source_copy": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\source\\Solution\\Candidate.lean",
+    "bytes": 1945173,
+    "sha256": "a267dd84df81d59e308b220f3b8374fc4c0cc32bea6eaa35db04d846e2b07893"
+  },
+  "compiler_argv": [
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean-toolchain\\bin\\lean.exe",
+    "-j1",
+    "-M6500",
+    "--tstack=262144",
+    "-DrelaxedAutoImplicit=false",
+    "-DElab.async=false",
+    "-R",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\source",
+    "-o",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\output\\Solution\\Candidate.olean",
+    "-i",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\output\\Solution\\Candidate.ilean",
+    "-c",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\output\\Solution\\Candidate.c",
+    "--json",
+    "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\source\\Solution\\Candidate.lean"
+  ],
+  "compiler_environment": {
+    "PATH": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\bin;C:\\Windows\\System32;C:\\Windows",
+    "LEAN_PATH": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\trusted-lib;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\LeanSearchClient\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Qq\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\plausible\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Cli\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\importGraph\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\proofwidgets\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\aesop\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\batteries\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\Zeta23\\.lake\\build\\lib\\lean;E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\trusted-runtime-closure-v5\\package-overlay\\mathlib\\.lake\\build\\lib\\lean",
+    "LEAN_SYSROOT": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2",
+    "HOME": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\home",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "LEAN_ABORT_ON_PANIC": "1",
+    "SYSTEMROOT": "C:\\WINDOWS",
+    "WINDIR": "C:\\WINDOWS",
+    "TEMP": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\temporary",
+    "TMP": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\temporary",
+    "USERPROFILE": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\home"
+  },
+  "compiler_start_elapsed_seconds": 0.26600000000325963,
+  "memory_units": "bytes; PeakWorkingSetSize is peak resident working set and the sole stop metric; PeakPagefileUsage is diagnostic-only peak process commit; PrivateUsage is diagnostic-only current private commit. These are not host/system memory measurements.",
+  "sampling_period_seconds": 30,
+  "compiler_memory_flag_MiB": 6500,
+  "observed_peak_stop_bytes": 7516192768,
+  "memory_flag_is_not_a_hard_OS_RSS_limit": true,
+  "child_pid": 18408,
+  "child_started_UTC": "2026-10-20T18:25:26.364786+00:00",
+  "actual_child_exit_code": 0,
+  "output_artifacts": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\output\\Solution\\Candidate.olean",
+      "bytes": 69437256,
+      "sha256": "010a13d558507874ca056a71ccef560dd432ffc24b6e23407b37404186d466a1"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\output\\Solution\\Candidate.ilean",
+      "bytes": 3447761,
+      "sha256": "19a612e25e8a236826d3035f18bb86799ff7283ff1b74d3a1cc633db139a8a4e"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\output\\Solution\\Candidate.c",
+      "bytes": 132381,
+      "sha256": "3ec0a527101fcd0793b5c150000476c1537394f3fc1df9c6f66c077b754f3235"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\stdout.jsonl",
+      "bytes": 6741,
+      "sha256": "a0db7f5f29c7d1a1556421dacf63c0ef86ef6edb13023e9c4f4245ab908a5ed4"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261021\\v11-resource-v1\\memory.jsonl",
+      "bytes": 9669,
+      "sha256": "d2a91ce24ce21363b1c12bfb239007d6ed964e0f077e64b8d6af76b7f1049334"
+    }
+  ],
+  "failure": null,
+  "budget_expired_and_owned_child_terminated": false,
+  "resource_limit_exceeded": false,
+  "elapsed_seconds": 1248.25,
+  "resource_sample_count": 43,
+  "final_memory_query_succeeded": true,
+  "max_observed_PeakWorkingSetSize": 6977216512,
+  "max_observed_PeakPagefileUsage": 11865882624,
+  "candidate_compile_and_C_generation_completed": true,
+  "compiler_resource_gate_passed": true,
+  "parent_exit_code_to_return_not_external_observation": 0,
+  "finished_at_UTC": "2026-10-20T18:46:14.361473+00:00"
+}

@@ -1,0 +1,253 @@
+{
+  "schema": "fixed-public-upstream-source-api-v1",
+  "ref": "94954faf2713ae9628d6fbca0ae24fe64370507c",
+  "alternative_reason": "Raw host connection reset before request; separate explicit root-selected API read, not automatic retry",
+  "retry_count": 0,
+  "authenticated": false,
+  "files": [
+    {
+      "url": "https://api.github.com/repos/josusanmartin/riemann/contents/submissions/attempt-030/submission.json?ref=94954faf2713ae9628d6fbca0ae24fe64370507c",
+      "GET_calls": 1,
+      "status": 200,
+      "headers": [
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Access-Control-Expose-Headers",
+          "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning"
+        ],
+        [
+          "Cache-Control",
+          "public, max-age=60, s-maxage=60"
+        ],
+        [
+          "Content-Length",
+          "3273"
+        ],
+        [
+          "Content-Security-Policy",
+          "default-src 'none'"
+        ],
+        [
+          "Content-Type",
+          "application/json; charset=utf-8"
+        ],
+        [
+          "Date",
+          "Tue, 20 Oct 2026 18:56:38 GMT"
+        ],
+        [
+          "ETag",
+          "\"dae6407aca380ef02c24db049ff0c3f926c3abb6\""
+        ],
+        [
+          "Last-Modified",
+          "Tue, 20 Oct 2026 17:32:08 GMT"
+        ],
+        [
+          "Referrer-Policy",
+          "origin-when-cross-origin, strict-origin-when-cross-origin"
+        ],
+        [
+          "Strict-Transport-Security",
+          "max-age=31536000; includeSubdomains; preload"
+        ],
+        [
+          "Vary",
+          "Accept, Accept-Encoding, Accept, X-Requested-With"
+        ],
+        [
+          "X-Content-Type-Options",
+          "nosniff"
+        ],
+        [
+          "X-Frame-Options",
+          "deny"
+        ],
+        [
+          "x-github-api-version-selected",
+          "2022-11-28"
+        ],
+        [
+          "X-GitHub-Media-Type",
+          "github.v3; format=json"
+        ],
+        [
+          "X-XSS-Protection",
+          "0"
+        ],
+        [
+          "Server",
+          "github.com"
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "X-RateLimit-Limit",
+          "60"
+        ],
+        [
+          "X-RateLimit-Remaining",
+          "59"
+        ],
+        [
+          "X-RateLimit-Used",
+          "1"
+        ],
+        [
+          "X-RateLimit-Resource",
+          "core"
+        ],
+        [
+          "X-RateLimit-Reset",
+          "1792526198"
+        ],
+        [
+          "X-GitHub-Request-Id",
+          "B9CA:2553ED:17378F:188695:6AD7B966"
+        ],
+        [
+          "x-github-edge-region",
+          "westus3"
+        ],
+        [
+          "connection",
+          "close"
+        ]
+      ],
+      "raw_bytes": 3273,
+      "raw_sha256": "567f6024514c5dd9f23f4afbc136cbfda3fed4f54ed739b92af0dd4531e5847a",
+      "decoded_bytes": 1535,
+      "decoded_sha256": "4f48e649b393a929cea178ac22b9498f7b38c39bd11d28db46faac9e6daf9394",
+      "git_blob_sha1": "dae6407aca380ef02c24db049ff0c3f926c3abb6"
+    },
+    {
+      "url": "https://api.github.com/repos/josusanmartin/riemann/contents/submissions/attempt-030/proof/Solution.lean?ref=94954faf2713ae9628d6fbca0ae24fe64370507c",
+      "GET_calls": 1,
+      "status": 200,
+      "headers": [
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Access-Control-Expose-Headers",
+          "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning"
+        ],
+        [
+          "Cache-Control",
+          "public, max-age=60, s-maxage=60"
+        ],
+        [
+          "Content-Length",
+          "1178"
+        ],
+        [
+          "Content-Security-Policy",
+          "default-src 'none'"
+        ],
+        [
+          "Content-Type",
+          "application/json; charset=utf-8"
+        ],
+        [
+          "Date",
+          "Tue, 20 Oct 2026 18:56:39 GMT"
+        ],
+        [
+          "ETag",
+          "\"c6fd5f56c248f880f733008c96e659fc1dd1b4a2\""
+        ],
+        [
+          "Last-Modified",
+          "Tue, 20 Oct 2026 17:32:08 GMT"
+        ],
+        [
+          "Referrer-Policy",
+          "origin-when-cross-origin, strict-origin-when-cross-origin"
+        ],
+        [
+          "Strict-Transport-Security",
+          "max-age=31536000; includeSubdomains; preload"
+        ],
+        [
+          "Vary",
+          "Accept, Accept-Encoding, Accept, X-Requested-With"
+        ],
+        [
+          "X-Content-Type-Options",
+          "nosniff"
+        ],
+        [
+          "X-Frame-Options",
+          "deny"
+        ],
+        [
+          "x-github-api-version-selected",
+          "2022-11-28"
+        ],
+        [
+          "X-GitHub-Media-Type",
+          "github.v3; format=json"
+        ],
+        [
+          "X-XSS-Protection",
+          "0"
+        ],
+        [
+          "Server",
+          "github.com"
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "X-RateLimit-Limit",
+          "60"
+        ],
+        [
+          "X-RateLimit-Remaining",
+          "58"
+        ],
+        [
+          "X-RateLimit-Used",
+          "2"
+        ],
+        [
+          "X-RateLimit-Resource",
+          "core"
+        ],
+        [
+          "X-RateLimit-Reset",
+          "1792526198"
+        ],
+        [
+          "X-GitHub-Request-Id",
+          "B9D2:18473A:16E8A8:18378F:6AD7B967"
+        ],
+        [
+          "x-github-edge-region",
+          "westus3"
+        ],
+        [
+          "connection",
+          "close"
+        ]
+      ],
+      "raw_bytes": 1178,
+      "raw_sha256": "5a206383252ce4abaa22a703956679b5be4e68f8bf850dadbe8b7089b1ccb7cb"
+    }
+  ],
+  "proof_executed": false,
+  "complete": false,
+  "error": {
+    "type": "AssertionError",
+    "message": ""
+  },
+  "elapsed_seconds": 1.735000000000582
+}

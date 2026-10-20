@@ -1,0 +1,50 @@
+{
+  "schema": "fresh-public-records-exact-comparison-v1",
+  "validation_scope": "Nonempty records list, unique ids, known track/status, boolean formalVerification, and positive exactRational fractions; not a full Zod record/date validation",
+  "selection_rule": "critical-line filter; last kernel-verified in original array order, otherwise last published; NOT decimal/date sorting",
+  "record_count": 41,
+  "critical_line_count": 41,
+  "critical_line_kernel_verified_count": 38,
+  "critical_line_kernel_verified_exact_count": 37,
+  "critical_line_kernel_verified_missing_exact": [
+    {
+      "index": 3,
+      "id": "anthropic-2026-montgomery-taylor",
+      "status": "kernel-verified"
+    }
+  ],
+  "current": {
+    "index": 40,
+    "id": "attempt-030",
+    "status": "kernel-verified",
+    "exactRational": {
+      "numerator": "2187514111273670128882891873424900096",
+      "denominator": "3247536873076144967761579035576953125"
+    },
+    "normalized_fraction": {
+      "numerator": "2187514111273670128882891873424900096",
+      "denominator": "3247536873076144967761579035576953125"
+    },
+    "K_strictly_greater": false
+  },
+  "K": {
+    "numerator": "3337881639516708570682858853672166187793",
+    "denominator": "4955348542279967171490000000000000000000"
+  },
+  "max_critical_line_kernel_verified_exact": {
+    "fraction": {
+      "numerator": "2187514111273670128882891873424900096",
+      "denominator": "3247536873076144967761579035576953125"
+    },
+    "record_ids": [
+      "attempt-030"
+    ]
+  },
+  "K_strictly_greater_than_all_critical_line_kernel_verified_exact": false,
+  "exact_comparison_gate_passed": false,
+  "all_kernel_verified_critical_records_compared_exactly": false,
+  "missing_exact_current_record": false,
+  "missing_exact_entries_are_unknown_not_inferred_from_decimals": true,
+  "full_record_superiority_claimed": false,
+  "official_submission_or_acceptance_or_quota_checked": false
+}

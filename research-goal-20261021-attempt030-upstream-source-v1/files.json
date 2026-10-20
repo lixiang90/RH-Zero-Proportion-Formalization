@@ -1,0 +1,39 @@
+{
+  "schema": "attempt030-upstream-retrieval-incomplete-files-v1",
+  "scope": "One failed first-URL HTTPS connection before GET; empty metadata placeholder only, second source URL not attempted, no source facts",
+  "actual_tool_chunk": "5a7d2d",
+  "actual_outer_exit_code": 1,
+  "HTTP_GET_request_calls": 0,
+  "second_URL_attempted": false,
+  "retried": false,
+  "source_obtained": false,
+  "metadata_cap_bytes": 100000,
+  "metadata_bytes_before_manifest": null,
+  "files": [
+    {
+      "path": "execution-observation.json",
+      "bytes": 1102,
+      "sha256": "8abf2932c476301e101dbade9232f53c223d162bb2851753cd5c361c0b6356ff"
+    },
+    {
+      "path": "README.zh.md",
+      "bytes": 1816,
+      "sha256": "699c80f0377c1b228ef29df679b5cdb4fd64d8e15be96d9df22e3c85cedebbff"
+    },
+    {
+      "path": "retrieval-observation.json",
+      "bytes": 1678,
+      "sha256": "34ec2bed2535bce5e4bad67937de7519cd299cc79d92c65f639195470364a2e2"
+    },
+    {
+      "path": "retrieve.py",
+      "bytes": 6770,
+      "sha256": "316bfb1046441f8b41fa5d50cfa755a64620c2aaf7e7baa344b7b0f68c2e00a2"
+    },
+    {
+      "path": "submission.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

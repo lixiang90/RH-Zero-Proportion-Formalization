@@ -1,0 +1,84 @@
+{
+  "schema": "root-transcribed-v11-resource-pass-v1",
+  "provenance": "Root-provided actual original terminal summary, not an original-handle observation by this archiver or raw tool payload download",
+  "root_summary_verbatim": "v11 ACTUAL RESOURCE PASS arrived originalsession95883 tool5c72e8 actualouter0 child0. Completedwork tmp/w9a2-20261021/v11-resource-v1 terminal SHA01d7cf8d6c3e551ce6c034f37544a949d22c0d8fa135f1475780a4c39eb06ec5, elapsed1248.25 (NOT finalsample1248.109), started18:25:26.080595 finished18:46:14.361473Z, parent30160 child18408; RSS6977216512/commit11865882624,43samples/finalquerytrue/timeoutfalse/ownstopfalse. stdout10warning+1info 0error/stderr0. Freshoutputs olean69437256/010a13d558507874ca056a71ccef560dd432ffc24b6e23407b37404186d466a1; ilean3447761/19a612e25e8a236826d3035f18bb86799ff7283ff1b74d3a1cc633db139a8a4e; C132381/3ec0a527101fcd0793b5c150000476c1537394f3fc1df9c6f66c077b754f3235.",
+  "root_reported_original_session": 95883,
+  "root_reported_actual_terminal_tool_chunk": "5c72e8",
+  "root_reported_actual_original_outer_exit_code": 0,
+  "actual_child_exit_code_from_terminal": 0,
+  "parent_pid_from_terminal": 30160,
+  "child_pid_from_terminal": 18408,
+  "started_at_UTC_from_terminal": "2026-10-20T18:25:26.080595+00:00",
+  "finished_at_UTC_from_terminal": "2026-10-20T18:46:14.361473+00:00",
+  "terminal_elapsed_seconds": 1248.25,
+  "last_memory_sample_elapsed_seconds": 1248.109000000004,
+  "terminal_sha256": "01d7cf8d6c3e551ce6c034f37544a949d22c0d8fa135f1475780a4c39eb06ec5",
+  "max_observed_PeakWorkingSetSize": 6977216512,
+  "max_observed_PeakPagefileUsage_diagnostic_only": 11865882624,
+  "sample_count": 43,
+  "final_memory_query_succeeded": true,
+  "runner_RSS_stop": false,
+  "runner_timeout": false,
+  "stdout_warning_count": 10,
+  "stdout_information_count": 1,
+  "stdout_error_count": 0,
+  "stderr_bytes": 0,
+  "source_pin_from_existing_terminal_not_fresh_source_hash": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-delivery\\draft-v11\\Solution.lean",
+    "bytes": 1945173,
+    "sha256": "a267dd84df81d59e308b220f3b8374fc4c0cc32bea6eaa35db04d846e2b07893"
+  },
+  "gate_pin_from_existing_terminal_not_fresh_gate_hash": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-v11-resource-gate-v1\\resource-gate.json",
+    "bytes": 5543,
+    "sha256": "47bcd237065069103ae9e21069976710f9b99430a896a4515664bda576cf2f60"
+  },
+  "compiler_and_C_generation_resource_gate_passed": true,
+  "normal_Lean_kernel_typechecking_not_disabled": true,
+  "additional_independent_kernel_replay_passed": false,
+  "full_3200s_pipeline_passed": false,
+  "official_Linux_equivalence_claimed": false,
+  "official_acceptance_passed": false,
+  "fresh_runtime_closure_audit_claimed": false,
+  "frozen_DRAFT_false_unknown_startup_snapshots_modified": false,
+  "copies": [
+    {
+      "original_path": "tmp/w9a2-20261021/v11-resource-v1/started.json",
+      "archive_path": "work/started.json",
+      "bytes": 11009,
+      "sha256": "336dd32526feeee7cbba769a5ea6b3c6648d09d032c20af690f3812764ea6584"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v11-resource-v1/child.json",
+      "archive_path": "work/child.json",
+      "bytes": 996,
+      "sha256": "3e30a2a874de23f58bb745224e6cb74b3a115703f7089dcf0e7b2a51c0108920"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v11-resource-v1/terminal.json",
+      "archive_path": "work/terminal.json",
+      "bytes": 13170,
+      "sha256": "01d7cf8d6c3e551ce6c034f37544a949d22c0d8fa135f1475780a4c39eb06ec5"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v11-resource-v1/memory.jsonl",
+      "archive_path": "work/memory.jsonl",
+      "bytes": 9669,
+      "sha256": "d2a91ce24ce21363b1c12bfb239007d6ed964e0f077e64b8d6af76b7f1049334"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v11-resource-v1/stdout.jsonl",
+      "archive_path": "work/stdout.jsonl",
+      "bytes": 6741,
+      "sha256": "a0db7f5f29c7d1a1556421dacf63c0ef86ef6edb13023e9c4f4245ab908a5ed4"
+    },
+    {
+      "original_path": "tmp/w9a2-20261021/v11-resource-v1/stderr.log",
+      "archive_path": "work/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "new_outputs_only_hash_report": "output-pin-report.json",
+  "archiver_Lean_compiler_process_network_UI_Git_state_counter_actions": 0
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "unexecuted-H33-three-arithmetic-probe-preparation-v2",
+  "predecessor_source": {
+    "path": "research-goal-20261021-attempt030-h33-arithmetic-probe-preparation-v1/FloorProbe.lean",
+    "bytes": 7051,
+    "sha256": "859573fd99f1c2302efbcc716304f7b9248e1c0ba0f2eea09805d78fa7d7f03e"
+  },
+  "predecessor_manifest": {
+    "path": "research-goal-20261021-attempt030-h33-arithmetic-probe-preparation-v1/files.json",
+    "bytes": 520,
+    "sha256": "fc2988c0d700fcb7baf14df440e746438b056f00e3edf1a311aa65d8c2c2bad6"
+  },
+  "upstream_original_source": {
+    "path": "research-goal-20261021-attempt030-api-source-v1/Solution.lean",
+    "bytes": 1798336,
+    "sha256": "c2f3b3d0d1e2d0a3fab63320092b0ac10aace2d501376431bb08e487ae673ad7"
+  },
+  "single_insertion": {
+    "byte_offset": 7037,
+    "inserted_bytes": 583,
+    "inserted_sha256": "5635bef307c01da87e680be272467177f99ad51584db1d013dde3292a9c3f77c",
+    "inserted_text": "theorem h33_ratio_exact :\r\n    (((672123746878241714136624717231727 : ℝ) / 10 ^ 33\r\n      - 38146515192197939200000000000 / 8388608000000000000000000000000)\r\n      / (1 - 74913604925068882530357668923 / 8388608000000000000000000000000))\r\n      = 10937570556368350644414459367124615168 / 16237684365380724838807895177884765625 := by\r\n  norm_num\r\n\r\ntheorem h33_strict_improvement :\r\n    (2187514111273670128882891873424900096 / 3247536873076144967761579035576953125 : ℝ)\r\n      < 10937570556368350644414459367124615168 / 16237684365380724838807895177884765625 := by\r\n  norm_num\r\n\r\n"
+  },
+  "reverse_projection_exact_v1": true,
+  "proof_obligations": [
+    "AMW.floor_numeric",
+    "AMW.h33_ratio_exact",
+    "AMW.h33_strict_improvement"
+  ],
+  "Lean_runs": 0,
+  "AST_runs": 0,
+  "kernel_runs": 0,
+  "resource_PASS": false,
+  "source": {
+    "path": "FloorProbe.lean",
+    "bytes": 7634,
+    "sha256": "2750bae9e75c3b0c030057a90b92fb7cea0d84399112fbba701561d30dc5dbc8"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "schema": "one-get-public-record-read-receipt-v1",
+  "url": "https://api.github.com/repos/josusanmartin/riemann/contents/data/records.json?ref=main&_codex_nonce=1792522138972925900",
+  "scope": "Public main records retrieval and scoped exact comparisons only; no private website auth/quota/submit/proof",
+  "started_local_epoch_ns": 1792522138972925900,
+  "elapsed_seconds_before_receipt": 1.0319999999992433,
+  "budget_seconds": 30,
+  "GET_request_call_count": 1,
+  "automatic_retries": 0,
+  "redirects_followed": 0,
+  "HTTP_status": 200,
+  "HTTP_headers_plain_strings": [
+    [
+      "Access-Control-Allow-Origin",
+      "*"
+    ],
+    [
+      "Access-Control-Expose-Headers",
+      "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning"
+    ],
+    [
+      "Cache-Control",
+      "public, max-age=60, s-maxage=60"
+    ],
+    [
+      "Content-Length",
+      "98637"
+    ],
+    [
+      "Content-Security-Policy",
+      "default-src 'none'"
+    ],
+    [
+      "Content-Type",
+      "application/json; charset=utf-8"
+    ],
+    [
+      "Date",
+      "Tue, 20 Oct 2026 18:48:59 GMT"
+    ],
+    [
+      "ETag",
+      "\"69894c773516bc52f579e867e87fdaf0c4bcce76\""
+    ],
+    [
+      "Last-Modified",
+      "Tue, 20 Oct 2026 17:32:08 GMT"
+    ],
+    [
+      "Referrer-Policy",
+      "origin-when-cross-origin, strict-origin-when-cross-origin"
+    ],
+    [
+      "Strict-Transport-Security",
+      "max-age=31536000; includeSubdomains; preload"
+    ],
+    [
+      "Vary",
+      "Accept, Accept-Encoding, Accept, X-Requested-With"
+    ],
+    [
+      "X-Content-Type-Options",
+      "nosniff"
+    ],
+    [
+      "X-Frame-Options",
+      "deny"
+    ],
+    [
+      "x-github-api-version-selected",
+      "2022-11-28"
+    ],
+    [
+      "X-GitHub-Media-Type",
+      "github.v3; format=json"
+    ],
+    [
+      "X-XSS-Protection",
+      "0"
+    ],
+    [
+      "Server",
+      "github.com"
+    ],
+    [
+      "Accept-Ranges",
+      "bytes"
+    ],
+    [
+      "X-RateLimit-Limit",
+      "60"
+    ],
+    [
+      "X-RateLimit-Remaining",
+      "59"
+    ],
+    [
+      "X-RateLimit-Used",
+      "1"
+    ],
+    [
+      "X-RateLimit-Resource",
+      "core"
+    ],
+    [
+      "X-RateLimit-Reset",
+      "1792525739"
+    ],
+    [
+      "X-GitHub-Request-Id",
+      "632C:240B1B:2218FD:34492F:6AD7B79B"
+    ],
+    [
+      "x-github-edge-region",
+      "southeastasia"
+    ]
+  ],
+  "HTTP_Date_header_raw": "Tue, 20 Oct 2026 18:48:59 GMT",
+  "HTTP_Date_header_present": true,
+  "HTTP_Date_was_parsed": false,
+  "raw_body": {
+    "path": "response.raw.json",
+    "bytes_saved": 98637,
+    "sha256_saved_bytes": "cf42027c09aea627a9cb3add5c67dbd594a174134eabf4a8f6adcf947830d0c6",
+    "complete": true,
+    "truncated_at_2MB": false,
+    "saved_before_response_JSON_or_Date_conversion": true
+  },
+  "API_blob_sha1": "69894c773516bc52f579e867e87fdaf0c4bcce76",
+  "calculated_decoded_blob_sha1": "69894c773516bc52f579e867e87fdaf0c4bcce76",
+  "decoded_file": {
+    "path": "records.decoded.json",
+    "bytes": 70978,
+    "sha256": "8f5cf6e7d7e950b94bb64e5e6fd141ff55d819b844a443f23e6053e09cbc5582",
+    "git_blob_sha1": "69894c773516bc52f579e867e87fdaf0c4bcce76"
+  },
+  "analysis_file": {
+    "path": "analysis.json",
+    "bytes": 1919,
+    "sha256": "2e5cf9093cfee1f77e8642dd8d5718efa836edb41921101d0ff6cf73754f79c4"
+  },
+  "captured_records_selection_rule_source": {
+    "path": "research-goal-20261020-w9a2-source-normalization-review/source/src/lib/records.ts",
+    "sha256": "1fab4d48cac4e67dadc8f529034c05bcb4b5c908f7fb1527cd13de9edbb740c7",
+    "captured_commit": "1135c0386310a0a038004d3b0fe64d0237e47dce",
+    "fresh_source_rules_retrieved": false
+  },
+  "prepared_input_pins": [
+    {
+      "path": "research-goal-20261021-w9a2-record-read-preparation-v1/read_public_records.py",
+      "bytes": 17364,
+      "sha256": "ab7d72c479f481b08adcf7885fbcc252bd9fe551c5a34742459c7bbc080c82fd"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-record-read-preparation-v1/README.zh.md",
+      "bytes": 3117,
+      "sha256": "be006f14d16329931842ad77c3c8fec36537a2db9cc14f9f082534c632479aa8"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-record-read-preparation-v1/pre-execution-files.json",
+      "bytes": 1647,
+      "sha256": "1f746a04d45a123ada3b9e54b978c448c0dca1c924e99644e018719956390a6c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-source-normalization-review/source/src/lib/records.ts",
+      "bytes": 997,
+      "sha256": "1fab4d48cac4e67dadc8f529034c05bcb4b5c908f7fb1527cd13de9edbb740c7"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-source-normalization-review/source/src/lib/challenge.ts",
+      "bytes": 8761,
+      "sha256": "847d503e9a0427d2bfe1fd0c8d92d31b42ade54bdeb98a6b8e29f1894284f53e"
+    }
+  ],
+  "exact_comparison_gate_passed": false,
+  "receipt_is_not_actual_outer_exit_evidence": true,
+  "adoption_requires_actual_outer_exit0_and_whole_elapsed_at_most30": true,
+  "missing_exact_entries_remain_unknown": true,
+  "full_record_superiority_claimed": false,
+  "new_R_claimed_without_validated_body": false,
+  "official_quota_or_auth_or_submission_or_acceptance_observed": false,
+  "error": {
+    "type": "ValueError",
+    "message": "K does not strictly exceed current exact and every available critical-line kernel-verified exact record, or current exact is unknown"
+  }
+}

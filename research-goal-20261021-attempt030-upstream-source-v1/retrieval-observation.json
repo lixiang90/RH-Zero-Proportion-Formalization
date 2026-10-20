@@ -1,0 +1,41 @@
+{
+  "schema": "two-fixed-upstream-raw-retrieval-v1",
+  "commit": "94954faf2713ae9628d6fbca0ae24fe64370507c",
+  "scope": "Exact anonymous public source retrieval only; no proof validation, source transform or numerical decoder",
+  "maximum_GET_calls": 2,
+  "one_call_per_fixed_URL": true,
+  "redirects_followed": 0,
+  "automatic_retries": 0,
+  "authorization_or_user_credentials_sent": false,
+  "shared_budget_seconds": 30,
+  "source_cap_bytes": 2000000,
+  "all_metadata_cap_bytes": 100000,
+  "raw_bodies_flushed_and_fsynced_before_any_source_or_submission_JSON_analysis": true,
+  "Date_headers_are_plain_strings_not_parsed": true,
+  "requests": [
+    {
+      "url": "https://raw.githubusercontent.com/josusanmartin/riemann/94954faf2713ae9628d6fbca0ae24fe64370507c/submissions/attempt-030/submission.json",
+      "method": "GET",
+      "file": "submission.json",
+      "body_limit_bytes": 61230,
+      "GET_request_calls": 0,
+      "started_at_UTC": "2026-10-20T18:55:12.796635+00:00",
+      "HTTP_status": null,
+      "headers_plain_strings": [],
+      "Date_header_plain_string": "",
+      "body_complete": false,
+      "body_truncated": false,
+      "bytes_saved": 0,
+      "sha256_saved_bytes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finished_at_UTC": "2026-10-20T18:55:13.114326+00:00"
+    }
+  ],
+  "success_before_receipt": false,
+  "failure": {
+    "type": "ConnectionResetError",
+    "message": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。"
+  },
+  "elapsed_seconds_before_receipt": 0.3279999999940628,
+  "receipt_is_not_actual_outer_exit_evidence": true,
+  "Lean_decoder_source_transform_state_Git_calls": 0
+}
