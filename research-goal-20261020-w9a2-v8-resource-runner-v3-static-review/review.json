@@ -1,0 +1,155 @@
+{
+  "schema": "w9a2-v8-resource-v3-incremental-static-review-v1",
+  "result": "PASS_STATIC",
+  "scope": "Raw file inspection, JSON reading, SHA verification and independent8span byte projections only. No author runner/import/AST/Lean/version/API/CIM/kernel/network execution.",
+  "old_runner_sha256": "0f9b38cbe7e1591048431975f66613803e7131b95fa7bc8ddeb848b6de09b662",
+  "new_runner_sha256": "d47d98607df23d7711176116ce62fa13d85925f5c634af1175cc74ef7b3ad880",
+  "prepared_manifest_sha256": "788f3233744e90e0c87a696eeff1c2b0651d14e8c7d2395eae01a020788789f7",
+  "disabled_gate_sha256": "0e351b9754e2f33cf54d068d8005410058a61dcdf516113cabe9d39e09f1aac8",
+  "independent_exact_8span_forward_and_reverse": true,
+  "all_runner_bytes_outside_spans_unchanged": true,
+  "changes": {
+    "new_exclusive_namespace": "tmp/w9a2-20261020/v8-resource-v2",
+    "new_gate_and_terminal_schemas": "gatev2 and terminalv2",
+    "sole_stop_metric": "PeakWorkingSetSize>=7GiB",
+    "commit_diagnostic_only": true,
+    "commit_counters_still_recorded": true,
+    "macro011_and_import_report": "required exact paths and gate SHA, pinned_row remembers both for existing final immutable rehash",
+    "previous_self_afterpin_and_W9A2_scope_fixes_preserved": true
+  },
+  "unchanged": {
+    "source": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b/1829382",
+    "total_seconds": 3200,
+    "RSS_stop_bytes": 7516192768,
+    "M_flag_MiB": 6500,
+    "j_flag": 1,
+    "tstack_KiB": 262144,
+    "fresh_o_i_c_and_json": true,
+    "no_official_setup": true,
+    "own_retained_process_handle_kill_and_finalquery": true,
+    "trusted_two_small_copy_and_historical_package_scope": true,
+    "source_runner_gate_directpins_finalcheck": true,
+    "no_retry_repair_or_export_kernel": true
+  },
+  "gate_default_disabled_and_runner_pin_null": true,
+  "root_new_enabled_gate_and_ownership_still_required": true,
+  "actual_outer0_same_clock_total_le3200_still_required": true,
+  "not_an_official_Linux_cgroup_or_fullchain_result": true,
+  "old_commit_stopped_failure_not_reclassified": true,
+  "v8_resource_result_not_observed_by_reviewer": true,
+  "input_hashes_before_after_identical": true,
+  "inputs": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\files.json",
+      "bytes": 1551,
+      "sha256": "787a7c690834f6bece9070a7ddb61ae14ce4fe3bf8f221ed891953033753d2e5"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\exact-runner-diff.patch",
+      "bytes": 1848,
+      "sha256": "c0133a09668c0c29232c8559ff7755ca55372de683bf546c664cd9221a69e3ec"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\gate-template.json",
+      "bytes": 2315,
+      "sha256": "6a1ea67909b3de7f58281ebc56e7740c8f00d4fb9035a69d8595a3f4c5729f6a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\historical-evidence-pins.json",
+      "bytes": 2995,
+      "sha256": "8f980dc6a32d06a612fc799450e182ccb2352a56fe60a68bb2318198d691dcfc"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\narrow-repair.json",
+      "bytes": 1321,
+      "sha256": "95cc893eccd18e55aab6d1e181a1510e3334c3c2bd6a578d4950652e7ff2f3ad"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\README.zh.md",
+      "bytes": 4797,
+      "sha256": "5066cf4b0c78649f10a7f559c66c7075d94b6eb0aa003b24187890584f408681"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\root-outer-observation.template.json",
+      "bytes": 822,
+      "sha256": "c5541b777a20ffe7558d4153bcbb810ff31d5da6b188bac332d7ef4b102fdf85"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\root-ownership-observation.template.json",
+      "bytes": 543,
+      "sha256": "580ba662415cc3dd25eb933543d9c06aaf47da62a2358bd8e2c306c973d078ce"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v2\\run_resource.py",
+      "bytes": 21830,
+      "sha256": "0f9b38cbe7e1591048431975f66613803e7131b95fa7bc8ddeb848b6de09b662"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\files.json",
+      "bytes": 1765,
+      "sha256": "788f3233744e90e0c87a696eeff1c2b0651d14e8c7d2395eae01a020788789f7"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\exact-runner-diff.json",
+      "bytes": 4577,
+      "sha256": "349a1aed2d2a80bf5637751b2fa30cba18e8e8ba01e12e19ed9feaaecafc2e8d"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\exact-runner-diff.patch",
+      "bytes": 2515,
+      "sha256": "bf36bb4d4cbfe7d75a51488aa77c7af4d2510b41fe1127255452cf27d6c01331"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\gate-template.json",
+      "bytes": 2780,
+      "sha256": "0e351b9754e2f33cf54d068d8005410058a61dcdf516113cabe9d39e09f1aac8"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\historical-evidence-pins.json",
+      "bytes": 2995,
+      "sha256": "8f980dc6a32d06a612fc799450e182ccb2352a56fe60a68bb2318198d691dcfc"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\preparation-scope.json",
+      "bytes": 1004,
+      "sha256": "6453f9952ea908deb4a646c90694488d56cf62baaa8cd3cc2dbc5393159b199a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\README.zh.md",
+      "bytes": 3475,
+      "sha256": "23a67a18be4451fb50fc93142145e710ab3ff39a12f817bb6182aa930a8782f0"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\root-outer-observation.template.json",
+      "bytes": 822,
+      "sha256": "947ae4cbd300ed0e06d993f3e4dd6f7e45123943e150d842f48fe717edfa8581"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\root-ownership-observation.template.json",
+      "bytes": 543,
+      "sha256": "580ba662415cc3dd25eb933543d9c06aaf47da62a2358bd8e2c306c973d078ce"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-preparation-v3\\run_resource.py",
+      "bytes": 22785,
+      "sha256": "d47d98607df23d7711176116ce62fa13d85925f5c634af1175cc74ef7b3ad880"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261016\\macro-reviews\\011-20261020.zh.md",
+      "bytes": 7117,
+      "sha256": "9b12107dcb046c6aa624667c5cf81641e61ec23f5a867dc33c3d42af6c496411"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-import-memory-static-independent\\files.json",
+      "bytes": 5026,
+      "sha256": "c3db7c1c33ec2fcb6639680032a002f37534dab26076a759d02283b8d0a2e3c7"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    }
+  ],
+  "proof_execution_count": 0,
+  "execution_authorized": false
+}

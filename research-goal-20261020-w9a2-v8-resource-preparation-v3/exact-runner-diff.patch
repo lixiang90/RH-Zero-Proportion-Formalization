@@ -1,0 +1,33 @@
+--- resource-preparation-v2/run_resource.py
++++ resource-preparation-v3/run_resource.py
+@@ -20,1 +20,1 @@
+-FIXED_WORK = ROOT / "tmp/w9a2-20261020/v8-resource-v1"
++FIXED_WORK = ROOT / "tmp/w9a2-20261020/v8-resource-v2"
+@@ -87,1 +87,1 @@
+-        self.receipt = {"schema": "w9a2-v8-compiler-resource-terminal-v1",
++        self.receipt = {"schema": "w9a2-v8-compiler-resource-terminal-v2",
+@@ -91,0 +92,1 @@
++            "metric": "PeakWorkingSetSize", "commit_diagnostic_only": True,
+@@ -137,1 +138,1 @@
+-        require(gate.get("schema") == "w9a2-v8-resource-gate-v1", "Wrong gate schema")
++        require(gate.get("schema") == "w9a2-v8-resource-gate-v2", "Wrong gate schema")
+@@ -145,0 +147,10 @@
++        require(gate.get("metric") == "PeakWorkingSetSize" and gate.get("commit_diagnostic_only") is True,
++                "Only peak working-set RSS may trigger the resource stop; commit is diagnostic")
++        review_011 = self.pinned_row(gate["macro_review_011"])
++        import_review = self.pinned_row(gate["import_memory_static_independent"])
++        require(review_011 == (ROOT / "research-goal-20261016/macro-reviews/011-20261020.zh.md").resolve(),
++                "Exact macro011 evidence path required")
++        require(import_review == (ROOT / "research-goal-20261020-w9a2-v8-import-memory-static-independent/files.json").resolve(),
++                "Exact independent import-memory evidence path required")
++        self.receipt["metric_change_evidence"] = {"macro_review_011": self.file_pin(review_011),
++            "import_memory_static_independent": self.file_pin(import_review)}
+@@ -234,1 +245,1 @@
+-        if row["PeakWorkingSetSize"] >= PEAK_LIMIT_BYTES or row["PeakPagefileUsage"] >= PEAK_LIMIT_BYTES:
++        if row["PeakWorkingSetSize"] >= PEAK_LIMIT_BYTES:
+@@ -236,1 +247,1 @@
+-            raise RuntimeError("resource_limit: owned child peak RSS or peak process commit reached 7 GiB")
++            raise RuntimeError("resource_limit: owned child peak RSS reached 7 GiB")
+@@ -262,1 +273,1 @@
+-            "memory_units": "bytes; PeakWorkingSetSize is peak resident working set; PeakPagefileUsage is peak process commit; PrivateUsage is current private commit. These are not host/system memory measurements.",
++            "memory_units": "bytes; PeakWorkingSetSize is peak resident working set and the sole stop metric; PeakPagefileUsage is diagnostic-only peak process commit; PrivateUsage is diagnostic-only current private commit. These are not host/system memory measurements.",

@@ -1,0 +1,77 @@
+{
+  "schema": "w9a2-resource-v2-to-v3-exact-raw-diff-v1",
+  "scope": "Static UTF8 byte edits only; no Python/AST/runner/compiler/API/CIM execution",
+  "offset_convention": "zero-based UTF8 bytes, exclusive end",
+  "old_runner_sha256": "0f9b38cbe7e1591048431975f66613803e7131b95fa7bc8ddeb848b6de09b662",
+  "old_runner_bytes": 21830,
+  "new_runner_sha256": "d47d98607df23d7711176116ce62fa13d85925f5c634af1175cc74ef7b3ad880",
+  "new_runner_bytes": 22785,
+  "edits": [
+    {
+      "old_start_byte": 547,
+      "old_end_byte_exclusive": 602,
+      "new_start_byte": 547,
+      "new_end_byte_exclusive": 602,
+      "old_utf8": "FIXED_WORK = ROOT / \"tmp/w9a2-20261020/v8-resource-v1\"\n",
+      "replacement_utf8": "FIXED_WORK = ROOT / \"tmp/w9a2-20261020/v8-resource-v2\"\n"
+    },
+    {
+      "old_start_byte": 2956,
+      "old_end_byte_exclusive": 3031,
+      "new_start_byte": 2956,
+      "new_end_byte_exclusive": 3031,
+      "old_utf8": "        self.receipt = {\"schema\": \"w9a2-v8-compiler-resource-terminal-v1\",\n",
+      "replacement_utf8": "        self.receipt = {\"schema\": \"w9a2-v8-compiler-resource-terminal-v2\",\n"
+    },
+    {
+      "old_start_byte": 3383,
+      "old_end_byte_exclusive": 3383,
+      "new_start_byte": 3383,
+      "new_end_byte_exclusive": 3459,
+      "old_utf8": "",
+      "replacement_utf8": "            \"metric\": \"PeakWorkingSetSize\", \"commit_diagnostic_only\": True,\n"
+    },
+    {
+      "old_start_byte": 5716,
+      "old_end_byte_exclusive": 5803,
+      "new_start_byte": 5792,
+      "new_end_byte_exclusive": 5879,
+      "old_utf8": "        require(gate.get(\"schema\") == \"w9a2-v8-resource-gate-v1\", \"Wrong gate schema\")\n",
+      "replacement_utf8": "        require(gate.get(\"schema\") == \"w9a2-v8-resource-gate-v2\", \"Wrong gate schema\")\n"
+    },
+    {
+      "old_start_byte": 6580,
+      "old_end_byte_exclusive": 6580,
+      "new_start_byte": 6656,
+      "new_end_byte_exclusive": 7549,
+      "old_utf8": "",
+      "replacement_utf8": "        require(gate.get(\"metric\") == \"PeakWorkingSetSize\" and gate.get(\"commit_diagnostic_only\") is True,\n                \"Only peak working-set RSS may trigger the resource stop; commit is diagnostic\")\n        review_011 = self.pinned_row(gate[\"macro_review_011\"])\n        import_review = self.pinned_row(gate[\"import_memory_static_independent\"])\n        require(review_011 == (ROOT / \"research-goal-20261016/macro-reviews/011-20261020.zh.md\").resolve(),\n                \"Exact macro011 evidence path required\")\n        require(import_review == (ROOT / \"research-goal-20261020-w9a2-v8-import-memory-static-independent/files.json\").resolve(),\n                \"Exact independent import-memory evidence path required\")\n        self.receipt[\"metric_change_evidence\"] = {\"macro_review_011\": self.file_pin(review_011),\n            \"import_memory_static_independent\": self.file_pin(import_review)}\n"
+    },
+    {
+      "old_start_byte": 13532,
+      "old_end_byte_exclusive": 13638,
+      "new_start_byte": 14501,
+      "new_end_byte_exclusive": 14559,
+      "old_utf8": "        if row[\"PeakWorkingSetSize\"] >= PEAK_LIMIT_BYTES or row[\"PeakPagefileUsage\"] >= PEAK_LIMIT_BYTES:\n",
+      "replacement_utf8": "        if row[\"PeakWorkingSetSize\"] >= PEAK_LIMIT_BYTES:\n"
+    },
+    {
+      "old_start_byte": 13679,
+      "old_end_byte_exclusive": 13787,
+      "new_start_byte": 14600,
+      "new_end_byte_exclusive": 14685,
+      "old_utf8": "            raise RuntimeError(\"resource_limit: owned child peak RSS or peak process commit reached 7 GiB\")\n",
+      "replacement_utf8": "            raise RuntimeError(\"resource_limit: owned child peak RSS reached 7 GiB\")\n"
+    },
+    {
+      "old_start_byte": 15462,
+      "old_end_byte_exclusive": 15678,
+      "new_start_byte": 16360,
+      "new_end_byte_exclusive": 16633,
+      "old_utf8": "            \"memory_units\": \"bytes; PeakWorkingSetSize is peak resident working set; PeakPagefileUsage is peak process commit; PrivateUsage is current private commit. These are not host/system memory measurements.\",\n",
+      "replacement_utf8": "            \"memory_units\": \"bytes; PeakWorkingSetSize is peak resident working set and the sole stop metric; PeakPagefileUsage is diagnostic-only peak process commit; PrivateUsage is diagnostic-only current private commit. These are not host/system memory measurements.\",\n"
+    }
+  ],
+  "reverse_projection_exact": true,
+  "unchanged_bytes_outside_spans": true
+}
