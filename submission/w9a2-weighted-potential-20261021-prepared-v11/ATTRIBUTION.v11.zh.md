@@ -1,0 +1,7 @@
+当前proof/Solution.lean是冻结draft-v11的原始字节副本：1945173B，SHA256 a267dd84df81d59e308b220f3b8374fc4c0cc32bea6eaa35db04d846e2b07893，221处CRLF。当前拟用ID为lixiang90-w9a2-weighted-potential-v11-20261021，署名Li Xiang/GitHub lixiang90，model=null（UI空）、harness Codex；用户既有同一目的/条款授权不在本生成器重新接受或修改。
+
+当前许可证LICENSE沿用完整v10材料的原始Apache-2.0文件。historical-v10中的ATTRIBUTION、MATHEMATICS和mathematical-source-check三个文件全部原字节保留，其draft-v10来源、pid、旧source字段和pending措辞仅为历史范围，不能读作v11身份或v11已验证。当前v11身份/范围以本addendum、provenance及verification-status为准。源码中ajp88、master-of-puppets5/R. Arun Chandru、Samuel Lavery、Kristian Muri Knausgaard、Yuhang Shi、Zero Forge/@zkvoxels等原notice、署名和适用条款均随raw source保留，未改署为当前作者。
+
+v11在固定v10上新增98个固定u、仍量化所有v的Graph行引理及对应组合，另为r37/r43两个实际失败游走加入两个有界proper-descendant hint，保持原公开命题、数学数据和比例。此为source-contract及静态投影的准备范围；完整独立反投影只有一份9754b626，completion8e776939说明同一审查完成，author6f0103不是第二份独立审查。静态反投影、旧rc10 cached-Core开发pilot和所有旧成功/失败均不代替新v11普通Lean检查或独立核。
+
+完整v11资源构建只引用root给出的历史启动快照：outer95883、parent30160、child18408、t0=43882.609，root启动工具652b70。本生成器从不查询live work、进程或终态；即使将来生成时root任务已结束，本DRAFT所有v11实际proof/resource/双核/full3200/官网/ready/submitted标志仍为false/unknown。未来实际结果另封addendum，不回写旧包；本材料不构成上传或法律确认。

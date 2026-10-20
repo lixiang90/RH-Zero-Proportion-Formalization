@@ -1,0 +1,13 @@
+有限静态审查结论：PASS_STATIC_SCOPE，未发现确定的正常路径阻断。本报告不执行、import、AST解析或mock被审脚本，不读取当前records、不联网，也不核查活进程、工作日志、Lean、Git或状态计数。
+
+完整静读read_public_records.py，17364B/SHAab7d72c479f481b08adcf7885fbcc252bd9fe551c5a34742459c7bbc080c82fd；pre-execution-files.json1647B/SHA1f746a04d45a123ada3b9e54b978c448c0dca1c924e99644e018719956390a6c；README3117B/SHAbe006f14d16329931842ad77c3c8fec36537a2db9cc14f9f082534c632479aa8。准备清单false状态保持原样。Root报告的36fc27 AST-only成功仅按已有ast-only.json引用，不是本代理重复执行或网络成功证据。
+
+本地primary语义：records.ts第13–24行先按track过滤，再取原array最后一条kernel-verified；没有才取最后published。脚本第78–136行一致，不误用日期、小数排序或Fraction最大值作为current。challenge.ts第3–16、22–26、54–59、73–100行对应三个track、四个status、非空list、id规则、explicit-null exactRational、boolean formalVerification和≤200位positive canonical整数。脚本只实现所需字段及唯一id/JSON-key检查，并明确不冒充完整Zod/date/extra-field验证。
+
+请求和文件边界：固定public api.github.com GET main/data/records.json加nonce，直连http.client，不读取认证信息或浏览器凭据，不跟随redirect；仅一处request，auto_open=0且显式connect，没有重试循环。simple leaf限定固定workspace prefix；已有leaf或symlink拒绝，不删除覆盖。raw文件先xb创建；每个read1前设置remaining socket timeout；保留最多2,000,000B，超限标记truncated并拒绝采纳。raw finally flush/fsync在response/API/records JSON解析之前；Date始终只是header plain string，不做日期对象转换，避免前次PowerShell Date.Value错误。即使DNS、TLS、HTTP或内容失败，尽可能保留已写raw及错误receipt，不能将空/部分raw作为record事实。
+
+身份和比较边界：完整HTTP200才解析，contents须type=file/path=data/records.json/encoding=base64；strict base64规范回编码、整数size、decoded≤2MB和git blob SHA1（blob+十进制字节数+NUL+decoded）相符后才保存decoded records。只用Fraction和正整数字符串解析，不做浮点或decimal推断。当前值必须有exact且K严格超过它，同时超过全部可用的critical-line kernel-verified exact才使限定比较门通过；最大exact的并列id与缺失exact完整index/id清单分别报告。无kernel记录时当前published仍单独比较；其它缺exact条目保持unknown，full_record_superiority_claimed永远false。比较失败、schema/base64/hash错误或超时不能被采纳为正门。
+
+外层收据与限制：analysis可能在后续pin或时限检查前落盘，因此任何analysis/receipt里的正字段都不是独立完成证据。代码末次复核准备文件与两个captured primary pins，检查30秒采纳时限；receipt声明必须另有root原outer actual exit0及整个调用wall≤30秒。写receipt后再次测finished并决定实际退出码，避免晚落盘跨期被正收据掩盖。README正确声明DNS、OS fsync及print不保证硬实时；此处审的是≤30秒采纳边界，不声称强制wallclock supervisor。HTTP body≤2MB、decoded≤2MB、analysis≤256KB；标准HTTP headers和最终小receipt没有额外独立硬cap，不扩大为任意外部输入的全资源保证。
+
+本地规则是固定commit1135c0386310a0a038004d3b0fe64d0237e47dce的已捕获源码，不是对当前部署规则的鲜核。此静审没有获得实际HTTP响应、actual blob、新R、当前missing-exact行数、K>当前R、额度、网站验收或提交事实。未来是否执行仍由root另行授权；若执行，实际raw/body/receipt/原退出和wallclock才构成该次限定观察。

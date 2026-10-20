@@ -1,0 +1,9 @@
+# 一次 v11 草稿材料生成
+
+Root现授权一次metadata-only执行：prepare_materials_v11.py22973B/SHA93592ea44b7d0ddd7f6ac0bb139fc2356f0cfef621db8166f665cbab9a5bb0e0，准备manifest73df6b3da67fbb208f96b6c8514b16a79b89fb5e162709060ce4c2038405d9ff；全部四准备成员及manifest保持冻结。root13ebf3的单次AST-only实际outer0，独审25669ba330382eec7edf93337cdb8403b6d4f6631cd2871e7852457e46d7f10f未见确定阻断。
+
+只创建fresh prepared-v11/expected-wire-v11的14+2草稿成员及清单，原始1945173B/a267/221CRLF直接复制；姓名Li Xiang、model null、Codex、同K/summary/method/Apache字段固定。保持历史数学/归属原件与当前v11 addendum范围准确。全部新v11实际proof/resource/dual/3200/site/ready/submitted保持false或unknown；95883/PID只是root历史启动转录，不查询正在运行的compiler、work或终态。
+
+30秒总采纳门、source2MB/metadata2MB/total4MB、全部plans与直接pins在写入前核对、fresh/xb、前后pins和raw回读不变。只有原实际outer0及实际工具总wall≤30才采纳。失败封存停止，不自动补写、修复或重试。无Lean、旧证明重放、数值、网络、UI、Git或实际提交；预测bundle不是actual proofDigest。生成后再独审实际包字节。
+
+本任务与root原session95883的一次完整v11资源构建并行，绝不改变其来源/句柄/预算。counter1/review14保持，完整目标active。

@@ -1,0 +1,57 @@
+{
+  "schema": "w9a2-v10-inherited-mathematical-description-v1",
+  "scope": "Historical formula description only; no numerical or proof replay for v10",
+  "values_from_historical_v6": {
+    "base": "35721161196924353/4000000000000000000",
+    "mu_integer_cost_units": "622387738726/5",
+    "increment": "311193869363/250000000000000000000",
+    "c": "4465145772003282851/500000000000000000000",
+    "boundary_C": "250472200069/50000000000000000000",
+    "pressure_B": "45474189749/10000000000000",
+    "H": "3360618734391208570682858853672166187793/5000000000000000000000000000000000000000",
+    "kappa": "3337881639516708570682858853672166187793/4955348542279967171490000000000000000000",
+    "exceptional_cells": 24,
+    "oriented_exceptional_states": 48,
+    "good_states": 1,
+    "leaf_to_leaf_edges": 37,
+    "good_related_edges": 97,
+    "total_edges": 134,
+    "strict_shared_span_exclusions": 2267,
+    "potential_min": "0",
+    "potential_max_integer": "2504722000690",
+    "integer_edge_certificate": "622387738726 + potential(v) - potential(u) <= 5 * cost(u)",
+    "summed_energy": "c*N - C <= sum E_i",
+    "finite_matching_bound_n9": "(c-32*delta)*m - B*R - 8*c - C <= defect",
+    "effective_counting_boundary_parameter": 10
+  },
+  "v10_source": {
+    "path": "proof/Solution.lean",
+    "bytes": 1914823,
+    "sha256": "86e3f46c90648f98d540d01edd45268d89504b45f7fb9d5d8e53d8582d41e14d",
+    "copied_without_normalization": true,
+    "website_source_limit_bytes": 2000000,
+    "source_slack_bytes": 85177
+  },
+  "prepared_structural_summary": {
+    "changed_roots": 22,
+    "unchanged_roots": 26,
+    "selected_hints": 51,
+    "max_selected_numeric": 256,
+    "max_parent_remaining_numeric": 290,
+    "selected_numeric_total": 8424,
+    "changed_parent_remaining_numeric_total": 1804,
+    "new_cursor_kernel_lemmas": 73,
+    "source_bytes": 1914823,
+    "source_sha256": "86e3f46c90648f98d540d01edd45268d89504b45f7fb9d5d8e53d8582d41e14d",
+    "source_delta_bytes": 53703
+  },
+  "complete_v10_independent_static_review": {
+    "path": "research-goal-20261021-w9a2-v10-projection-independent-math/files.json",
+    "bytes": 441,
+    "sha256": "b517317d9b6ea6b3aad954247805988b6e76eb5a0fd1c6709ea7b1de8101968f"
+  },
+  "complete_v10_independent_static_review_count": 1,
+  "global_optimality_claimed": false,
+  "v10_mathematical_verification_performed": false,
+  "exact_ratio_identity_rechecked_for_v10": false
+}
