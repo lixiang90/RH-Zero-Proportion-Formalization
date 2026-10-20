@@ -1,0 +1,37 @@
+--- frozen-v1/read_public_records.py
++++ prepared-v12/read_public_records.py
+@@ -1,4 +1,4 @@
+-"""FUTURE one-GET public records read. Prepared only; no execution authorized here."""
++"""FUTURE K33/v12 one-GET public records read. Prepared only; no execution authorized here."""
+ from pathlib import Path
+ from fractions import Fraction
+ import argparse
+@@ -14,14 +14,16 @@
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ HERE = Path(__file__).resolve().parent
+-OUTPUT_PREFIX = ROOT / "research-goal-20261021-w9a2-record-read-output"
++OUTPUT_PREFIX = ROOT / "research-goal-20261021-w9a2-record-read-v12-output"
+ HOST = "api.github.com"
+ API_PATH = "/repos/josusanmartin/riemann/contents/data/records.json?ref=main"
+ BODY_LIMIT = 2_000_000
+ ANALYSIS_LIMIT = 256_000
+ TIMEOUT_SECONDS = 30
+-K = Fraction(3337881639516708570682858853672166187793,
+-             4955348542279967171490000000000000000000)
++K = Fraction(10937570556368350644414459367124615168,
++             16237684365380724838807895177884765625)
++NOT_BEFORE_UTC = "2026-10-21T00:00:00Z"
++NOT_BEFORE_EPOCH_NS = 1792540800000000000
+ RULE_PATH = "research-goal-20261020-w9a2-source-normalization-review/source/src/lib/records.ts"
+ RULE_SHA = "1fab4d48cac4e67dadc8f529034c05bcb4b5c908f7fb1527cd13de9edbb740c7"
+ SCHEMA_PATH = "research-goal-20261020-w9a2-source-normalization-review/source/src/lib/challenge.ts"
+@@ -162,6 +164,8 @@
+ def main():
+     t0 = time.monotonic()
+     started_epoch_ns = time.time_ns()
++    require(started_epoch_ns >= NOT_BEFORE_EPOCH_NS,
++            "K33/v12 public-record read is disabled before " + NOT_BEFORE_UTC)
+     parser = argparse.ArgumentParser(description="One public GitHub GET; preserve raw response before parsing")
+     parser.add_argument("--output", required=True, help="New simple leaf name under the fixed workspace output prefix")
+     args = parser.parse_args()

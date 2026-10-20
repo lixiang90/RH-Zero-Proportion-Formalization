@@ -1,0 +1,54 @@
+{
+  "schema": "four-raw-span-K33-reader-projection-v1",
+  "predecessor": {
+    "path": "research-goal-20261021-w9a2-record-read-preparation-v1/read_public_records.py",
+    "bytes": 17364,
+    "sha256": "ab7d72c479f481b08adcf7885fbcc252bd9fe551c5a34742459c7bbc080c82fd"
+  },
+  "source": {
+    "path": "research-goal-20261021-w9a2-record-read-preparation-v12/read_public_records.py",
+    "bytes": 17586,
+    "sha256": "bba3de0afe9309cad0d4e1fcdf6c1797a0bef553763b9f8ff47cca5b8be98440"
+  },
+  "edit_count": 4,
+  "edits": [
+    {
+      "old_byte_offset": 0,
+      "old_bytes": 86,
+      "new_bytes": 94,
+      "old_text": "\"\"\"FUTURE one-GET public records read. Prepared only; no execution authorized here.\"\"\"",
+      "new_text": "\"\"\"FUTURE K33/v12 one-GET public records read. Prepared only; no execution authorized here.\"\"\"",
+      "new_byte_offset": 0
+    },
+    {
+      "old_byte_offset": 356,
+      "old_bytes": 71,
+      "new_bytes": 75,
+      "old_text": "OUTPUT_PREFIX = ROOT / \"research-goal-20261021-w9a2-record-read-output\"",
+      "new_text": "OUTPUT_PREFIX = ROOT / \"research-goal-20261021-w9a2-record-read-v12-output\"",
+      "new_byte_offset": 364
+    },
+    {
+      "old_byte_offset": 599,
+      "old_bytes": 109,
+      "new_bytes": 187,
+      "old_text": "K = Fraction(3337881639516708570682858853672166187793,\n             4955348542279967171490000000000000000000)",
+      "new_text": "K = Fraction(10937570556368350644414459367124615168,\n             16237684365380724838807895177884765625)\nNOT_BEFORE_UTC = \"2026-10-21T00:00:00Z\"\nNOT_BEFORE_EPOCH_NS = 1792540800000000000",
+      "new_byte_offset": 611
+    },
+    {
+      "old_byte_offset": 7493,
+      "old_bytes": 74,
+      "new_bytes": 206,
+      "old_text": "    started_epoch_ns = time.time_ns()\n    parser = argparse.ArgumentParser",
+      "new_text": "    started_epoch_ns = time.time_ns()\n    require(started_epoch_ns >= NOT_BEFORE_EPOCH_NS,\n            \"K33/v12 public-record read is disabled before \" + NOT_BEFORE_UTC)\n    parser = argparse.ArgumentParser",
+      "new_byte_offset": 7583
+    }
+  ],
+  "forward_projection_exact": true,
+  "reverse_projection_exact_predecessor": true,
+  "all_other_bytes_preserved": true,
+  "guard_precedes_CLI_pins_output_and_GET": true,
+  "prepared_pins_HERE_and_two_file_allowlist_unchanged": true,
+  "network_and_validation_logic_otherwise_unchanged": true
+}

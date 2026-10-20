@@ -1,0 +1,46 @@
+{
+  "schema": "public-record-read-pre-execution-files-v12",
+  "scope": "Code preparation only; future one-GET execution requires root authorization after not-before guard",
+  "execution_authorized": false,
+  "helper_executed": false,
+  "helper_imported": false,
+  "helper_AST_parsed_only": true,
+  "module_body_executed": false,
+  "fixed_URL": "https://api.github.com/repos/josusanmartin/riemann/contents/data/records.json?ref=main",
+  "maximum_GET_calls": 1,
+  "automatic_retries": 0,
+  "follow_redirects": false,
+  "body_limit_bytes": 2000000,
+  "analysis_limit_bytes": 256000,
+  "timeout_seconds": 30,
+  "HTTP_Date_is_plain_string_not_parsed": true,
+  "raw_response_saved_before_response_JSON_parsing": true,
+  "output_prefix": "research-goal-20261021-w9a2-record-read-v12-output",
+  "not_before_UTC": "2026-10-21T00:00:00Z",
+  "not_before_epoch_ns": 1792540800000000000,
+  "not_before_is_local_clock_guard_not_quota_evidence": true,
+  "K": {
+    "numerator": "10937570556368350644414459367124615168",
+    "denominator": "16237684365380724838807895177884765625"
+  },
+  "captured_local_rules": {
+    "records_ts_sha256": "1fab4d48cac4e67dadc8f529034c05bcb4b5c908f7fb1527cd13de9edbb740c7",
+    "challenge_ts_sha256": "847d503e9a0427d2bfe1fd0c8d92d31b42ade54bdeb98a6b8e29f1894284f53e",
+    "commit": "1135c0386310a0a038004d3b0fe64d0237e47dce",
+    "fresh_runtime_rules_claimed": false
+  },
+  "no_network_or_private_website_auth_quota_submit_performed": true,
+  "Lean_compiler_kernel_export_decoder_Git_calls": 0,
+  "files": [
+    {
+      "path": "read_public_records.py",
+      "bytes": 17586,
+      "sha256": "bba3de0afe9309cad0d4e1fcdf6c1797a0bef553763b9f8ff47cca5b8be98440"
+    },
+    {
+      "path": "README.zh.md",
+      "bytes": 3181,
+      "sha256": "8768fc1193b74cd3d1b9b8ca2784a0e406587fff39e6f507a85cd6e186efe6dc"
+    }
+  ]
+}
