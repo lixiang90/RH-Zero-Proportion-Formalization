@@ -1,0 +1,39 @@
+{
+  "schema": "root-original-export-structural-scan-terminal-observation-v1",
+  "provenance": "Transcription of actual original tool results supplied by /root; no independent execution and no fabricated raw response body",
+  "original_exec_session": 53230,
+  "actual_start_tool_chunk": "852b38",
+  "actual_terminal_write_stdin_tool_chunk": "008e11",
+  "actual_original_outer_exit_code": 1,
+  "printed_outer_elapsed_seconds_rounded": 20.563,
+  "printed_child_exit_code": 1,
+  "printed_timeout": false,
+  "gate_sha256_prefix_reported_by_root": "2ff0b997",
+  "complete_gate_sha256_not_supplied_in_this_transcription": true,
+  "outer_observation": {
+    "path": "outer-observation.json",
+    "bytes": 1042,
+    "sha256": "7a6d13982bc98cea1cd073136ad8293abd56960b36d754907e513e7b8d3a1581"
+  },
+  "child_result": {
+    "path": "scan/result.json",
+    "bytes": 278,
+    "sha256": "28cce2cfb00d00330d0618563e67918810c8f8eb9d944b7cb699658228d184a5",
+    "complete": false,
+    "success": false,
+    "error_type": "ValueError",
+    "error": "Name-table budget exceeded",
+    "elapsed_seconds": 20.42199999999866,
+    "observed_peak_RSS_bytes": 56147968
+  },
+  "attempt_count_reported_by_root": 1,
+  "complete_input_hash_and_bytes_available": false,
+  "complete_ranking_available": false,
+  "input_fully_read": null,
+  "mathematical_validation": false,
+  "compiler_or_kernel_invocations": 0,
+  "export_invocations": 0,
+  "fullchain_or_official_acceptance": false,
+  "retry_or_cap_increase_performed": false,
+  "state_or_counter_modified_by_archiver": false
+}

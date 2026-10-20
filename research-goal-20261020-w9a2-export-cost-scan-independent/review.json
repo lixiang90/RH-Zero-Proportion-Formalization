@@ -1,0 +1,102 @@
+{
+  "schema": "w9a2-export-cost-scan-independent-v1",
+  "scope": "Only frozen16KiB runner and closed small result/outer/stdout/stderr read. No large NDJSON input, full hash, stream, API/process/network/Lean/compiler/kernel/export/solver call. No change to source/receipt/state/counter/Git; no v2 proposal.",
+  "result": "FAILED_PREPARATORY_STRUCTURE_SCAN_NO_COMPLETE_DATA",
+  "actual_small_receipt": {
+    "child_exit_code": 1,
+    "outer_elapsed_seconds": 20.56300000000192,
+    "timeout": false,
+    "inner_elapsed_seconds": 20.42199999999866,
+    "observed_peak_RSS_bytes": 56147968,
+    "observed_peak_RSS_MiB": 53.546875,
+    "error_type": "ValueError",
+    "error": "Name-table budget exceeded",
+    "complete": false
+  },
+  "parent_original_tool_observation": {
+    "scope": "Reported directly by root in task; raw original tool result was not supplied as an extra local file for this review",
+    "session": 53230,
+    "terminal_tool_chunk": "008e11",
+    "actual_original_outer_exit_code_reported": 1
+  },
+  "static_diagnosis": [
+    {
+      "runner_lines_1based": [
+        16,
+        102,
+        162,
+        166
+      ],
+      "fact": "Every in/name record resolves its full parent prefix plus dot and suffix into a new Python string. The accumulated name_bytes estimate starts with list/empty-string sizes and adds sys.getsizeof(resolved)+16 for each candidate name. The32MiB NAME_CAP check throws before appending the name that would exceed the estimate."
+    },
+    {
+      "runner_lines_1based": [
+        87,
+        96,
+        164,
+        166
+      ],
+      "fact": "This is an independent accounting budget for expanded-name retention, not the256MiB observed-RSS stop and not the120s deadline. It is an estimate with a16B per-name allowance, not an exact allocator/heap measurement. It includes the name whose estimate causes failure even though that name has not yet been appended."
+    },
+    {
+      "runner_lines_1based": [
+        148,
+        166
+      ],
+      "fact": "The name table is maintained for all names encountered in the dependency-closed export, before any declaration's known-namespace/origin classification. Repeated full prefixes are stored in separate resolved strings. The error therefore reflects this scanner representation's fixed capacity being exhausted."
+    },
+    {
+      "runner_lines_1based": [
+        228,
+        257,
+        263,
+        268
+      ],
+      "fact": "The exception bypassed EOF/full SHA comparison and successful global/segment/root output. The failure handler only serialized the error, elapsed and sampled peak RSS. It did not preserve the terminating name, byte offset, number of names, partial counters or rankings."
+    }
+  ],
+  "positive_support": "Only that this particular name-expanding metadata scanner hit its predeclared32MiB name-accounting budget after about20s, with observed own RSS53.55MiB and a real child nonzero. No rescanning is authorized by this report.",
+  "not_supported": [
+    "A completed input byte count or freshly verified677MB SHA",
+    "Any complete/partial declaration, expression, type/value, literal or segment ranking",
+    "Which declaration/name/namespace caused the stop",
+    "That candidate-local rather than imported names dominate",
+    "Lean/compiler interpreter RSS, retained InfoTrees, an OOM diagnosis or the v8 official Lean137 cause",
+    "A need or permission to increase a limit, rescan, change data structures, proof source or mathematical route"
+  ],
+  "success_flags": {
+    "scan_complete": false,
+    "mathematical_validation": false,
+    "compiler_or_kernel_execution_by_this_review": false,
+    "official_acceptance": false
+  },
+  "README_availability": "No scan README was present at first read. Per task, review did not wait for one or claim to have reviewed a later file.",
+  "inputs": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-export-cost-plan-formal\\run_stream.py",
+      "bytes": 16495,
+      "sha256": "643c444d659d280f13068d2cde597acd467900e8b0264258363c1e9efcedc122"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-export-cost-scan-v1\\scan\\result.json",
+      "bytes": 278,
+      "sha256": "28cce2cfb00d00330d0618563e67918810c8f8eb9d944b7cb699658228d184a5"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-export-cost-scan-v1\\outer-observation.json",
+      "bytes": 1042,
+      "sha256": "7a6d13982bc98cea1cd073136ad8293abd56960b36d754907e513e7b8d3a1581"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-export-cost-scan-v1\\stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-export-cost-scan-v1\\stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "input_hashes_before_after_equal": true
+}

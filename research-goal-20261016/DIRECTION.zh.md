@@ -1,6 +1,8 @@
+宏观013唯一既有export结构scan已真实未完成终态：原session53230，terminal008e11实际outer1/child1，20.563秒、非timeout。ValueError Name-table budget exceeded，own peakRSS56147968B；触发的是32MiB展开名称表估算门，不是256MiB全进程RSS，也不是Lean或官方OOM。没有全输入SHA/bytes/完整排名，不可冒充成功或v8热点。按已定停止条件封存，不增cap、不自动重扫、不新编译/证明重验；review13/counter0保持同一轮内执行终态。官网v8失败、quota0/重置00:00UTC及完整无条件/双核/公开/Git目标均保持，goal active。
+
 # 当前研究方向（宏观013，2026-10-21北京时间）
 
-权威回顾：[013-20261021.zh.md](macro-reviews/013-20261021.zh.md)。书面回顾已完成，review13 / main_rounds_since_review=0。本次唯一主轮由官网v8真实失败触发；工具、代理、压缩、用户轮内steering及日期变化不增计数。旧方向与更早试验结论见macro-reviews/及Git历史；本文件只保留当前有效入口，旧continuation不得覆盖此选择。
+权威回顾：[013-20261021.zh.md](macro-reviews/013-20261021.zh.md)。书面回顾已完成，review13 / main_rounds_since_review=0。本次唯一主轮由官网v8真实失败触发；工具、代理、压缩、用户轮内steering及日期变化不增计数。旧方向与更早试验结论见macro-reviews/及Git历史；本文件顶部列当前有效入口，后部逐字保留旧方向历史；旧continuation不得覆盖当前选择。
 
 ## 完整人类目标
 
