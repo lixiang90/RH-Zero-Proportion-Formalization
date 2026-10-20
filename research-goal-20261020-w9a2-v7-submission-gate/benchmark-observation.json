@@ -1,0 +1,30 @@
+{
+  "schema": "w9a2-pre-v7-benchmark-observation-v1",
+  "observed_UTC": "2026-10-20T12:44:51Z",
+  "source": "GitHub connector default branch data/records.json",
+  "source_url": "https://github.com/josusanmartin/riemann/blob/main/data/records.json",
+  "ledger_git_blob_sha": "6f0e457cfc200238626c230ef731f5d7ebb0a3a1",
+  "total_records": 40,
+  "critical_line_kernel_verified_records": 37,
+  "exact_rational_records_compared": 36,
+  "missing_exact": [
+    {
+      "id": "anthropic-2026-montgomery-taylor",
+      "scoreDecimal": "0.672500703679411645734379790803"
+    }
+  ],
+  "maximum_exact_record": {
+    "id": "ajp88-w9a2-window-nine-point",
+    "exactRational": {
+      "numerator": "3337881639516708570682858853672166187793",
+      "denominator": "4955348548503844558750000000000000000000"
+    }
+  },
+  "candidate": {
+    "numerator": "3337881639516708570682858853672166187793",
+    "denominator": "4955348542279967171490000000000000000000"
+  },
+  "strict_greater_than_every_compared_exact_record": true,
+  "own_first_job_in_public_ledger": false,
+  "scope": "Exact comparison covers 36 rational records, not the one old record without exactRational. Current website displayed formal record agrees. No official acceptance for our first timed-out job."
+}

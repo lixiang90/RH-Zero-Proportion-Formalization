@@ -1,0 +1,308 @@
+{
+  "schema": "w9a2-v7-independent-byte-review-v1",
+  "result": "PASS_STATIC_BYTE_PROJECTION",
+  "old": {
+    "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+    "bytes": 1830052,
+    "lf": 17233,
+    "crlf": 221,
+    "bare_cr": 0,
+    "final_lf": true
+  },
+  "new": {
+    "sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6",
+    "bytes": 1829242,
+    "lf": 17218,
+    "crlf": 221,
+    "bare_cr": 0,
+    "final_lf": true
+  },
+  "edits": [
+    {
+      "kind": "modifier",
+      "name": "mcheckP",
+      "old_offset": 661652,
+      "old_line": 11087,
+      "new_offset": 661652,
+      "new_line": 11087,
+      "removed_bytes": 0,
+      "inserted_bytes": 14
+    },
+    {
+      "kind": "modifier",
+      "name": "mleafP",
+      "old_offset": 703595,
+      "old_line": 11095,
+      "new_offset": 703609,
+      "new_line": 11095,
+      "removed_bytes": 0,
+      "inserted_bytes": 14
+    },
+    {
+      "kind": "modifier",
+      "name": "leafStep",
+      "old_offset": 712646,
+      "old_line": 11178,
+      "new_offset": 712674,
+      "new_line": 11178,
+      "removed_bytes": 0,
+      "inserted_bytes": 14
+    },
+    {
+      "kind": "modifier",
+      "name": "node",
+      "old_offset": 716208,
+      "old_line": 11208,
+      "new_offset": 716250,
+      "new_line": 11208,
+      "removed_bytes": 0,
+      "inserted_bytes": 14
+    },
+    {
+      "kind": "modifier",
+      "name": "walkC",
+      "old_offset": 716623,
+      "old_line": 11212,
+      "new_offset": 716679,
+      "new_line": 11212,
+      "removed_bytes": 0,
+      "inserted_bytes": 14
+    },
+    {
+      "kind": "modifier",
+      "name": "walk",
+      "old_offset": 716897,
+      "old_line": 11214,
+      "new_offset": 716967,
+      "new_line": 11214,
+      "removed_bytes": 0,
+      "inserted_bytes": 14
+    },
+    {
+      "kind": "modifier",
+      "name": "walkCut",
+      "old_offset": 720967,
+      "old_line": 11260,
+      "new_offset": 721051,
+      "new_line": 11260,
+      "removed_bytes": 0,
+      "inserted_bytes": 14
+    },
+    {
+      "kind": "modifier",
+      "name": "walkCutR",
+      "old_offset": 721297,
+      "old_line": 11263,
+      "new_offset": 721395,
+      "new_line": 11263,
+      "removed_bytes": 0,
+      "inserted_bytes": 14
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Counting.sum_range_coboundary_lower",
+      "old_offset": 1822524,
+      "old_line": 17061,
+      "new_offset": 1822636,
+      "new_line": 17061,
+      "removed_bytes": 73,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Counting.summed_of_state",
+      "old_offset": 1822597,
+      "old_line": 17062,
+      "new_offset": 1822636,
+      "new_line": 17061,
+      "removed_bytes": 62,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Counting.actual_defect_estimate_effective",
+      "old_offset": 1822659,
+      "old_line": 17063,
+      "new_offset": 1822636,
+      "new_line": 17061,
+      "removed_bytes": 79,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Counting.actual_dyadic_of_summed",
+      "old_offset": 1822738,
+      "old_line": 17064,
+      "new_offset": 1822636,
+      "new_line": 17061,
+      "removed_bytes": 70,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Counting.actual_cumulative_of_summed",
+      "old_offset": 1822808,
+      "old_line": 17065,
+      "new_offset": 1822636,
+      "new_line": 17061,
+      "removed_bytes": 74,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Localization.located_state",
+      "old_offset": 1827957,
+      "old_line": 17185,
+      "new_offset": 1827711,
+      "new_line": 17180,
+      "removed_bytes": 64,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Graph.edge_from_locations",
+      "old_offset": 1828021,
+      "old_line": 17186,
+      "new_offset": 1827711,
+      "new_line": 17180,
+      "removed_bytes": 63,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Graph.edge_potential",
+      "old_offset": 1828084,
+      "old_line": 17187,
+      "new_offset": 1827711,
+      "new_line": 17180,
+      "removed_bytes": 58,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Final.actual_summed",
+      "old_offset": 1828142,
+      "old_line": 17188,
+      "new_offset": 1827711,
+      "new_line": 17180,
+      "removed_bytes": 57,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Final.strict_improvement",
+      "old_offset": 1828199,
+      "old_line": 17189,
+      "new_offset": 1827711,
+      "new_line": 17180,
+      "removed_bytes": 62,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Final.actual_dyadic",
+      "old_offset": 1828261,
+      "old_line": 17190,
+      "new_offset": 1827711,
+      "new_line": 17180,
+      "removed_bytes": 57,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "StructuralW9A220261020.Final.actual_cumulative",
+      "old_offset": 1828318,
+      "old_line": 17191,
+      "new_offset": 1827711,
+      "new_line": 17180,
+      "removed_bytes": 61,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "candidate_strict_improvement",
+      "old_offset": 1829910,
+      "old_line": 17231,
+      "new_offset": 1829242,
+      "new_line": 17219,
+      "removed_bytes": 43,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "candidate_critical_line_bound",
+      "old_offset": 1829953,
+      "old_line": 17232,
+      "new_offset": 1829242,
+      "new_line": 17219,
+      "removed_bytes": 44,
+      "inserted_bytes": 0
+    },
+    {
+      "kind": "diagnostic",
+      "name": "candidate_critical_line_bound_cumulative",
+      "old_offset": 1829997,
+      "old_line": 17233,
+      "new_offset": 1829242,
+      "new_line": 17219,
+      "removed_bytes": 55,
+      "inserted_bytes": 0
+    }
+  ],
+  "exact_authorized_edit_count": 23,
+  "all_other_bytes_preserved": true,
+  "reverse_projection_equals_old": true,
+  "rc0_through_rc47_source_lines_unchanged": true,
+  "input_hashes_unchanged": true,
+  "input_pins": [
+    {
+      "path": "submission/w9a2-weighted-potential-20261020-prepared-v6/proof/Solution.lean",
+      "bytes": 1830052,
+      "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/Solution.lean",
+      "bytes": 1829242,
+      "sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/files.json",
+      "bytes": 1195,
+      "sha256": "08844b98778d5197ad39cd6afe0c796f94e1808f04f17a348f18c8f2bd4efab1"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/derive_v7.py",
+      "bytes": 11442,
+      "sha256": "02c0627e03bb3eff21689394eef2780675c476928ccb576e49762d4aec569918"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/derive_v7.initial-before-output.py",
+      "bytes": 10984,
+      "sha256": "586215ff0f1ba550c752e2cb624c1bafc67e056f1a0e082b80cf2c49cb5b67a0"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/edits.json",
+      "bytes": 13128,
+      "sha256": "7f749271f40a96350e4904c3c8c450ea16145f1a9123a4af8bb9ced6441a2e22"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/projection.json",
+      "bytes": 10059,
+      "sha256": "07872d628c19f96fc5fb171cb2dff18dad2990900ce04aaea4c0bccf154fcd7e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/exact-source-diff.patch",
+      "bytes": 3911,
+      "sha256": "ed803e5ec34c63d366fd489210520f5c6db70e9ad1baa96cdcf92988cf381ca8"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/README.txt",
+      "bytes": 917,
+      "sha256": "65c3e50726a7cab617543f964260d25baf51df384fbfeb6e88fa87f646d1c6a7"
+    }
+  ],
+  "proof_execution_count": 0,
+  "new_source_compiled_exported_or_kernel_checked": false,
+  "official_acceptance": false,
+  "scope": "Frozen source bytes and seven-row package manifest only; no derivation script imported or executed. All other mathematical declarations, proofs, numeric data and the parked dead consumers are preserved by byte identity."
+}

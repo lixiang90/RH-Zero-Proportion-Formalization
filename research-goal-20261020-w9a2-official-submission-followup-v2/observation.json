@@ -1,0 +1,46 @@
+{
+  "schema": "w9a2-root-official-status-error-observation-v1",
+  "sole_owner": "/root",
+  "recorded_at_utc": "2026-10-20T11:48:19Z",
+  "submissionId": "lixiang90-w9a2-weighted-potential-20261020",
+  "proofDigest": "e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1",
+  "authenticated_owner_recovery": {
+    "same_submission_and_digest": true,
+    "status": "running",
+    "error": null,
+    "message": null
+  },
+  "official_status_response": {
+    "error": "verifier_status_failed",
+    "message": "The isolated verifier status is temporarily unavailable.",
+    "status": null,
+    "promotionStatus": null,
+    "evidenceUrl": null,
+    "http_status_not_separately_observed": true
+  },
+  "method": {
+    "interface": "Documented same-origin browser navigation, visible JSON DOM",
+    "same_owner_job_handle_used_in_memory_only_for_normal_official_status_flow": true,
+    "signed_handle_not_logged_or_saved": true,
+    "temporary_status_page_closed": true,
+    "main_submit_tab_id": "2",
+    "main_submit_tab_marked_handoff": true,
+    "new_submission_or_local_proof_runs": 0
+  },
+  "scope": {
+    "original_submission_preserved": true,
+    "official_kernel_verdict": "unknown",
+    "official_website_acceptance": false,
+    "official_mathematical_rejection_observed": false,
+    "status_lookup_error_is_not_a_terminal_verdict": true,
+    "goal_complete": false
+  },
+  "next_action": "Wait for this same official job or status service recovery; no duplicate upload and no local repeated checks. Reassess the external service after the fixed full-job time window.",
+  "time_window_note": {
+    "first_recorded_running_observation_utc": "2026-10-20T11:16:40Z",
+    "pinned_pipeline_inner_limit_seconds": 3200,
+    "pinned_pipeline_outer_limit_seconds": 3240,
+    "reassess_no_earlier_than_utc": "2026-10-20T12:12:00Z",
+    "this_is_not_an_observed_job_start_or_actual_server_deadline": true
+  }
+}

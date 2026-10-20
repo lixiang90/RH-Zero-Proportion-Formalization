@@ -1,0 +1,182 @@
+{
+  "schema": "w9a2-v7-independent-static-source-review-v1",
+  "scope": "Independent source byte preservation and frozen-input identity only; no mathematical validation of v7",
+  "independent_derivation_matches": true,
+  "independent_reverse_projection_matches": true,
+  "source": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v7/Solution.lean",
+    "bytes": 1829242,
+    "sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6"
+  },
+  "old_source": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v6/Solution.lean",
+    "bytes": 1830052,
+    "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+  },
+  "modifier_insertions": [
+    {
+      "old_line": 11087,
+      "name": "mcheckP"
+    },
+    {
+      "old_line": 11095,
+      "name": "mleafP"
+    },
+    {
+      "old_line": 11178,
+      "name": "leafStep"
+    },
+    {
+      "old_line": 11208,
+      "name": "node"
+    },
+    {
+      "old_line": 11212,
+      "name": "walkC"
+    },
+    {
+      "old_line": 11214,
+      "name": "walk"
+    },
+    {
+      "old_line": 11260,
+      "name": "walkCut"
+    },
+    {
+      "old_line": 11263,
+      "name": "walkCutR"
+    }
+  ],
+  "removed_diagnostics": [
+    {
+      "old_line": 17061,
+      "bytes": 73,
+      "sha256": "26ac3a949677ec0b23190ef68b580fbb12d744e3c27266e4ce5cee7d31707ef1"
+    },
+    {
+      "old_line": 17062,
+      "bytes": 62,
+      "sha256": "5e6017894cecaad55284fa02fc9bf83c5a6102000d5d36a3fe455ed25b5e988d"
+    },
+    {
+      "old_line": 17063,
+      "bytes": 79,
+      "sha256": "50b5b50ec964a61f8ad2861e28a2588c536cd03a1a8915be816672ceaa32fccb"
+    },
+    {
+      "old_line": 17064,
+      "bytes": 70,
+      "sha256": "2c570ca0b95fa1c62c8302141d6bf6eaa0b66cf7bcc92b4a911d95857633e2cb"
+    },
+    {
+      "old_line": 17065,
+      "bytes": 74,
+      "sha256": "7b4165a0075b01a178caab1cbbbdca7b0d511f67c9f81aa877af76ae7dce623e"
+    },
+    {
+      "old_line": 17185,
+      "bytes": 64,
+      "sha256": "79871b706db0a37c2b918621cff8392cdc70fa6e93a69ff9b173cf25f57c677f"
+    },
+    {
+      "old_line": 17186,
+      "bytes": 63,
+      "sha256": "53cd4d3b978692604bc2f88ac5fee9f25e50568eb304e0c5dd856af91add6256"
+    },
+    {
+      "old_line": 17187,
+      "bytes": 58,
+      "sha256": "6cef745789c7318a549b9d4766135fe58f39a51c9dad64b9dbd306ea1fc8bb97"
+    },
+    {
+      "old_line": 17188,
+      "bytes": 57,
+      "sha256": "026c25a3891b1740363d2bb0725ad481b7c4176bafb544670bd5482383278b92"
+    },
+    {
+      "old_line": 17189,
+      "bytes": 62,
+      "sha256": "bc1316c3ec5809511293f01337d9101161adcc90d5d2407412c7afaad4484eea"
+    },
+    {
+      "old_line": 17190,
+      "bytes": 57,
+      "sha256": "629d3f254ea065e8cc0a9919c5e23e3ce41f187f373cb4d982d927bda21852e8"
+    },
+    {
+      "old_line": 17191,
+      "bytes": 61,
+      "sha256": "2bbe5cae8082afa44b3450e0cd3e6401c0705ddc678e32daa76abf0312ac8283"
+    },
+    {
+      "old_line": 17231,
+      "bytes": 43,
+      "sha256": "f1549469eddd577b3568cb67d40f6a837cf3bbb24e3b0dc964dde3128941eda2"
+    },
+    {
+      "old_line": 17232,
+      "bytes": 44,
+      "sha256": "b2f4edfbdb3838e3dfdf6b93604030d9d968b91f263e4e6c459b7e4c106acf2b"
+    },
+    {
+      "old_line": 17233,
+      "bytes": 55,
+      "sha256": "d34f6dcb2b2fad244bcc8591979525ed6e360c23f7b7d198cdb9a0280a65b06c"
+    }
+  ],
+  "all_other_bytes_preserved": true,
+  "total_byte_delta": -810,
+  "attributions_licenses_proof_bodies_data_and_theorem_types_preserved_by_byte_identity": true,
+  "v7_local_Lean_passed": false,
+  "v7_export_passed": false,
+  "v7_kernel_passed": false,
+  "v7_official_result_observed": false,
+  "proof_compiler_export_kernel_network_calls": 0,
+  "inputs": [
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6/Solution.lean",
+      "bytes": 1830052,
+      "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/files.json",
+      "bytes": 1195,
+      "sha256": "08844b98778d5197ad39cd6afe0c796f94e1808f04f17a348f18c8f2bd4efab1"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/Solution.lean",
+      "bytes": 1829242,
+      "sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/derive_v7.py",
+      "bytes": 11442,
+      "sha256": "02c0627e03bb3eff21689394eef2780675c476928ccb576e49762d4aec569918"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/derive_v7.initial-before-output.py",
+      "bytes": 10984,
+      "sha256": "586215ff0f1ba550c752e2cb624c1bafc67e056f1a0e082b80cf2c49cb5b67a0"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/edits.json",
+      "bytes": 13128,
+      "sha256": "7f749271f40a96350e4904c3c8c450ea16145f1a9123a4af8bb9ced6441a2e22"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/projection.json",
+      "bytes": 10059,
+      "sha256": "07872d628c19f96fc5fb171cb2dff18dad2990900ce04aaea4c0bccf154fcd7e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/exact-source-diff.patch",
+      "bytes": 3911,
+      "sha256": "ed803e5ec34c63d366fd489210520f5c6db70e9ad1baa96cdcf92988cf381ca8"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v7/README.txt",
+      "bytes": 917,
+      "sha256": "65c3e50726a7cab617543f964260d25baf51df384fbfeb6e88fa87f646d1c6a7"
+    }
+  ]
+}

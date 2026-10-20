@@ -1,0 +1,5 @@
+本包为新ID lixiang90-w9a2-weighted-potential-v7-20261020 的v7提交材料快照。源码1829242字节，SHA256 dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6，逐字复制冻结draft-v7，不做换行或尾空白规范化。署名Li Xiang、GitHub lixiang90，精确分数/summary/method/Apache2许可与v6相同；AI model=null（UI留空），harness Codex。
+
+新ID符合既有冻结官网80字符/小写字母数字连字符规范；未查询当前服务或ID可用性。源码独审仅证明8处noncomputable与15行诊断删除以外字节保留。全部v7验证标志false/unknown：未运行v7本地Lean/exporter/kernel；本次由官网唯一验证，尚未观察提交或结果。旧v6数学开发与单文件Lean通过、cold3200超时、Nano中断和首投官网超时分别归档，均不验证v7。
+
+本包upload_ready/submitted/official_acceptance均为false。预期wire摘要位于独立expected-wire-v7包，仅是本地文本预测。后续实际结果另立hash-linked addendum，不修改本包或Solution字节。

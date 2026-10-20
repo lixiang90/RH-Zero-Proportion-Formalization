@@ -1,0 +1,44 @@
+--- draft-v6/Solution.lean
++++ draft-v7/Solution.lean
+@@ -11087 +11087 @@
+-def mcheckP (goalN : ℕ) (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (f : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (s : St)
++noncomputable def mcheckP (goalN : ℕ) (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (f : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (s : St)
+@@ -11095 +11095 @@
+-def mleafP (goalN : ℕ) (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (w : ℕ) (s : St) : ℕ :=
++noncomputable def mleafP (goalN : ℕ) (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (w : ℕ) (s : St) : ℕ :=
+@@ -11178 +11178 @@
+-def leafStep (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (pos w : ℕ) : ST :=
++noncomputable def leafStep (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (pos w : ℕ) : ST :=
+@@ -11208 +11208 @@
+-def node (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ) (ih : WF) (pos : ℕ) : ST :=
++noncomputable def node (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ) (ih : WF) (pos : ℕ) : ST :=
+@@ -11212 +11212 @@
+-def walkC (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ) (fuel : ℕ) : WF :=
++noncomputable def walkC (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ) (fuel : ℕ) : WF :=
+@@ -11214 +11214 @@
+-def walk (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ) (fuel : ℕ) : WF :=
++noncomputable def walk (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ) (fuel : ℕ) : WF :=
+@@ -11260 +11260 @@
+-def walkCut (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ)
++noncomputable def walkCut (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ)
+@@ -11263 +11263 @@
+-def walkCutR (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ)
++noncomputable def walkCutR (top : ℕ) (bk : ℕ → ℕ) (tD : ℕ) (bD : ℕ → ℕ) (pb : ℕ → ℕ) (R : ℕ × ℕ × List (List ℕ)) (bits : ℕ → ℕ)
+@@ -17061,5 +17060,0 @@
+-#print axioms StructuralW9A220261020.Counting.sum_range_coboundary_lower
+-#print axioms StructuralW9A220261020.Counting.summed_of_state
+-#print axioms StructuralW9A220261020.Counting.actual_defect_estimate_effective
+-#print axioms StructuralW9A220261020.Counting.actual_dyadic_of_summed
+-#print axioms StructuralW9A220261020.Counting.actual_cumulative_of_summed
+@@ -17185,7 +17179,0 @@
+-#print axioms StructuralW9A220261020.Localization.located_state
+-#print axioms StructuralW9A220261020.Graph.edge_from_locations
+-#print axioms StructuralW9A220261020.Graph.edge_potential
+-#print axioms StructuralW9A220261020.Final.actual_summed
+-#print axioms StructuralW9A220261020.Final.strict_improvement
+-#print axioms StructuralW9A220261020.Final.actual_dyadic
+-#print axioms StructuralW9A220261020.Final.actual_cumulative
+@@ -17231,3 +17218,0 @@
+-#print axioms candidate_strict_improvement
+-#print axioms candidate_critical_line_bound
+-#print axioms candidate_critical_line_bound_cumulative

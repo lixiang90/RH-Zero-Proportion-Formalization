@@ -1,0 +1,17 @@
+{
+  "schema": "root-v7-static-gate-execution-observation-v1",
+  "scope": "Actual returned static Python process results only; no compiler/export/kernel run",
+  "route_selection_actual_exit_code": 0,
+  "route_selection_tool_chunk": "4bac01",
+  "first_gate_attempt_actual_exit_code": 1,
+  "first_gate_attempt_tool_chunk": "69d831",
+  "first_gate_attempt_reason": "One input manifest uses repository-relative file paths; the first reader prepended its directory twice. Failed before writing gate.json. Corrected only path-origin handling.",
+  "corrected_gate_actual_exit_code": 0,
+  "corrected_gate_tool_chunk": "06eede",
+  "gate_sha256": "c6738d1b99164d73f33a28108a63d3b92bbb442ab144267145e3d5f16603a6e8",
+  "checked_manifests": 9,
+  "source_sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6",
+  "expected_bundle_digest": "1f28020dcda27176a97f8c48e9c9d3f9dc00107ce904f1a1f6706b1f43309771",
+  "proof_execution": false,
+  "official_submission_observed_here": false
+}

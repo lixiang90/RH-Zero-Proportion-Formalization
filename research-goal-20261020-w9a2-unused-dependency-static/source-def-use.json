@@ -1,0 +1,404 @@
+{
+  "scope": "Lexical source references; no Lean name elaboration. All selected are ordinary theorem/def declarations. Existing root-export absence is a separate complementary check.",
+  "source_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+  "source_bytes": 1830052,
+  "parsed_declarations": 3516,
+  "scope_stack_at_end": [
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ],
+    [
+      "section",
+      ""
+    ]
+  ],
+  "scope_errors": [],
+  "candidates": [
+    {
+      "name": "AMW.Cert.PC9QB6M.cert_of",
+      "kind": "theorem",
+      "line": 11281,
+      "end_line": 11286,
+      "offset": 722928,
+      "bytes": 638,
+      "incoming": [
+        {
+          "caller": "AMW.Cert.PC9QB6MData.cert",
+          "token": "cert_of",
+          "line": 13153
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "AMW.Cert.PC9QB6M.quant_forget",
+      "kind": "theorem",
+      "line": 10737,
+      "end_line": 10750,
+      "offset": 611438,
+      "bytes": 520,
+      "incoming": [
+        {
+          "caller": "AMW.Cert.PC9QB6M.cert_of",
+          "token": "quant_forget",
+          "line": 11286
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "AMW.Cert.PC9QB6MData.cert",
+      "kind": "theorem",
+      "line": 13152,
+      "end_line": 13153,
+      "offset": 1625005,
+      "bytes": 175,
+      "incoming": [
+        {
+          "caller": "AMW.Cert.PC9QB6M_half",
+          "token": "PC9QB6MData.cert",
+          "line": 13164
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "AMW.Cert.PC9QB6M_cert_full",
+      "kind": "theorem",
+      "line": 13170,
+      "end_line": 13179,
+      "offset": 1625986,
+      "bytes": 645,
+      "incoming": [
+        {
+          "caller": "RiemannFail.cert_AM",
+          "token": "AMW.Cert.PC9QB6M_cert_full",
+          "line": 13452
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "AMW.Cert.PC9QB6M_half",
+      "kind": "theorem",
+      "line": 13160,
+      "end_line": 13169,
+      "offset": 1625410,
+      "bytes": 576,
+      "incoming": [
+        {
+          "caller": "AMW.Cert.PC9QB6M_cert_full",
+          "token": "PC9QB6M_half",
+          "line": 13174
+        },
+        {
+          "caller": "AMW.Cert.PC9QB6M_cert_full",
+          "token": "PC9QB6M_half",
+          "line": 13177
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "AMW.Cert.PCell.root_cover",
+      "kind": "theorem",
+      "line": 9480,
+      "end_line": 9542,
+      "offset": 518195,
+      "bytes": 3936,
+      "incoming": [
+        {
+          "caller": "AMW.Cert.PC9QB6M.cert_of",
+          "token": "root_cover",
+          "line": 11286
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "Opeth.AMFinal.actual_cumulative",
+      "kind": "theorem",
+      "line": 15755,
+      "end_line": 15763,
+      "offset": 1750898,
+      "bytes": 819,
+      "incoming": [],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "Opeth.AMFinal.actual_dyadic",
+      "kind": "theorem",
+      "line": 15746,
+      "end_line": 15754,
+      "offset": 1750075,
+      "bytes": 823,
+      "incoming": [],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "OpethN.ActualDefect.actual_cumulative",
+      "kind": "theorem",
+      "line": 15718,
+      "end_line": 15725,
+      "offset": 1748704,
+      "bytes": 627,
+      "incoming": [
+        {
+          "caller": "Opeth.AMFinal.actual_cumulative",
+          "token": "OpethN.ActualDefect.actual_cumulative",
+          "line": 15759
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "OpethN.ActualDefect.actual_defect_estimate",
+      "kind": "theorem",
+      "line": 15678,
+      "end_line": 15698,
+      "offset": 1746323,
+      "bytes": 1133,
+      "incoming": [
+        {
+          "caller": "OpethN.ActualDefect.actual_dyadic",
+          "token": "actual_defect_estimate",
+          "line": 15706
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "OpethN.ActualDefect.actual_dyadic",
+      "kind": "theorem",
+      "line": 15699,
+      "end_line": 15717,
+      "offset": 1747456,
+      "bytes": 1248,
+      "incoming": [
+        {
+          "caller": "OpethN.ActualDefect.actual_cumulative",
+          "token": "actual_dyadic",
+          "line": 15725
+        },
+        {
+          "caller": "Opeth.AMFinal.actual_dyadic",
+          "token": "OpethN.ActualDefect.actual_dyadic",
+          "line": 15750
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "OpethN.block_remainder_bound_n",
+      "kind": "theorem",
+      "line": 15466,
+      "end_line": 15486,
+      "offset": 1735616,
+      "bytes": 1213,
+      "incoming": [
+        {
+          "caller": "OpethN.matching_defect_bound_n",
+          "token": "block_remainder_bound_n",
+          "line": 15526
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "OpethN.matching_defect_bound_n",
+      "kind": "theorem",
+      "line": 15491,
+      "end_line": 15576,
+      "offset": 1736928,
+      "bytes": 4228,
+      "incoming": [
+        {
+          "caller": "OpethN.ActualDefect.actual_defect_estimate",
+          "token": "OpethN.matching_defect_bound_n",
+          "line": 15694
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "OpethN.remainder_bound_n",
+      "kind": "theorem",
+      "line": 15431,
+      "end_line": 15465,
+      "offset": 1733626,
+      "bytes": 1990,
+      "incoming": [
+        {
+          "caller": "OpethN.block_remainder_bound_n",
+          "token": "remainder_bound_n",
+          "line": 15484
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "RiemannFail.cert_AM",
+      "kind": "theorem",
+      "line": 13449,
+      "end_line": 13455,
+      "offset": 1642737,
+      "bytes": 391,
+      "incoming": [
+        {
+          "caller": "Opeth.AMFinal.actual_dyadic",
+          "token": "RiemannFail.cert_AM",
+          "line": 15751
+        },
+        {
+          "caller": "Opeth.AMFinal.actual_cumulative",
+          "token": "RiemannFail.cert_AM",
+          "line": 15760
+        },
+        {
+          "caller": "StructuralW9A220261020.Localization.base_floor",
+          "token": "RiemannFail.cert_AM",
+          "line": 16528
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "StructuralW9A220261020.Localization.base_floor",
+      "kind": "theorem",
+      "line": 16526,
+      "end_line": 16529,
+      "offset": 1797414,
+      "bytes": 159,
+      "incoming": [],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "StructuralW9A220261020.Localization.dagThreshold",
+      "kind": "def",
+      "line": 16336,
+      "end_line": 16337,
+      "offset": 1788771,
+      "bytes": 67,
+      "incoming": [
+        {
+          "caller": "StructuralW9A220261020.Localization.low_DAG_state",
+          "token": "dagThreshold",
+          "line": 16590
+        },
+        {
+          "caller": "StructuralW9A220261020.Localization.low_DAG_state",
+          "token": "dagThreshold",
+          "line": 16599
+        },
+        {
+          "caller": "StructuralW9A220261020.Localization.low_DAG_state",
+          "token": "dagThreshold",
+          "line": 16600
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "StructuralW9A220261020.Localization.dag_cost_of_late",
+      "kind": "theorem",
+      "line": 16585,
+      "end_line": 16588,
+      "offset": 1800386,
+      "bytes": 189,
+      "incoming": [
+        {
+          "caller": "StructuralW9A220261020.Localization.low_DAG_state",
+          "token": "dag_cost_of_late",
+          "line": 16596
+        }
+      ],
+      "incoming_outside_selected": []
+    },
+    {
+      "name": "StructuralW9A220261020.Localization.low_DAG_state",
+      "kind": "theorem",
+      "line": 16589,
+      "end_line": 16603,
+      "offset": 1800575,
+      "bytes": 633,
+      "incoming": [],
+      "incoming_outside_selected": []
+    }
+  ],
+  "total_candidate_declaration_bytes": 20010,
+  "uncertain_selected_leaf_tokens": [],
+  "compiler_or_proof_or_source_edits": 0
+}

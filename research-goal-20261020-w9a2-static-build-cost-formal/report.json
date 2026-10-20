@@ -1,0 +1,119 @@
+{
+  "schema": "w9a2-static-build-cost-formal-v1",
+  "scope": "Read-only source and existing receipts. No Lean/compiler/export/kernel/solver/network/profiling run; no proof source or counter changed.",
+  "source": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v6/Solution.lean",
+    "bytes": 1830052,
+    "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+  },
+  "official": {
+    "log_sha256": "afa3214401dc51b2d5785f6666ffca3867552e1999b404525003b14ba15c691c",
+    "observed": "ChallengeDeps 135s, Spec 4.4s, Challenge.Candidate 5.9s passed; challenge export began/completed before Building Solution.Candidate. Thereafter cached Replayed Zeta messages, final bash exit124. No Built Solution.Candidate, solution export, or kernel completion.",
+    "unsupported": "Last Replayed Zeta23.MV.Spacing is not a measured hotspot. Log does not identify a candidate declaration, distinguish elaboration from IR/native code generation, or prove a mathematical error."
+  },
+  "existing_timing": {
+    "Prefix": 436.328,
+    "Core": 588.859,
+    "Graph": 66.812,
+    "Localization": 28.157,
+    "Counting": 29.062,
+    "Final": 25.937,
+    "whole_flat_ordinary": 1150.328,
+    "limit": "Separate developer-module timings include different import/cache/I/O costs. They are coarse concentration evidence, not a source profiler or speedup guarantee."
+  },
+  "reflection": {
+    "rc_theorems": 48,
+    "zfNat64_WL_literals": 135,
+    "kernel_decide_occurrences": 72,
+    "root_check": "Covered now means quantitative QuantGoal. rc0..rc47 each call rcOf and check one root with decide +kernel. Localization.root_QuantGoal reuses Data.run, not a second whole walk.",
+    "packing": "zfNat64 macro lines120-125 returns Syntax.mkNumLit; proof receives closed Nat numerals. Kernel does not run base64 decode.",
+    "access": "rdw line11207 selects one WLk chunk with quotient32768, right-shift and mask; WL/BK/BKD selectors are balanced dsel/dpk functions, not one global linear List.get over all roots.",
+    "sharing": "Table soundness lemmas are named and reused. Each rc has a different closed walk equality. No explicit cross-root result memo/cut is used. Kernel internal cache behavior is not measured here.",
+    "cost_candidates": [
+      "qTargetFrom scans List.range24 with up to73 state-field comparisons per candidate state; it is evaluated in numeric leaves. Actual short-circuit cost not measured.",
+      "mleafP has34 dec4F term decoders and42 ydec steps per numeric leaf; mcheckP definition is39543UTF8 bytes including header.",
+      "PTrD uses balanced block selection by x/1024; ptlD scans a list within a selected block using x%1024. No global linear-list claim.",
+      "node has repeated bits pos expressions. Runtime reduction cache and sharing are not measured."
+    ],
+    "decide": "SDK Decide.lean104-118: +kernel calls mkAuxLemma with type-indexed per-module cache. It already avoids the ordinary decide elaborator/kernel double reduction and can reuse identical propositions. No native_decide substitution proposed."
+  },
+  "patch_proposal": {
+    "status": "STATIC_PROPOSAL_ONLY_NOT_IMPLEMENTED",
+    "name": "Suppress unnecessary executable code generation for proof-only checker closure",
+    "namespace": "AMW.Cert.PC9QB6M",
+    "names": [
+      "mcheckP",
+      "mleafP",
+      "leafStep",
+      "node",
+      "walkC",
+      "walk",
+      "walkCut",
+      "walkCutR"
+    ],
+    "change": "Prefix each of these eight def declarations with noncomputable; preserve all binder/type/body bytes and every theorem/data packet.",
+    "extra_source_bytes": 112,
+    "dependency": "mcheckP <- mleafP <- leafStep <- node <- walkC/walk and node <- walkCut/walkCutR. Include callers to avoid later unsuccessful code-generation attempts.",
+    "sdk_evidence": "PreDefinition/Basic.lean134-140: code generated iff not theorem and not declaration modifier noncomputable; section controls logErrors only. Lines186-191 build the same kernel defnDecl; 217-223 add noncomputable environment tag and conditionally call compiler.",
+    "preserve": "Kernel bodies, reducibility hints, mathematical propositions, targets, states, cost/potential/graph data and all48 decide+kernel walks. No extra axiom/oracle or removal of numerical checks.",
+    "exclude": "ZeroForgePackedNat.digit64/decode64 and macro implementation must remain executable. Current candidate has no active native_decide, +native, #eval, evalExpr, evalConst or unsafe invocation consuming checker runtime code.",
+    "limits": "Not claimed to be the measured bottleneck or sufficient for official3200. No new execution authorized. Separate dead-consumer pruning is being independently assessed; this proposal should not require changing checker algorithms."
+  },
+  "inputs_before": [
+    {
+      "path": "C:/Users/A/.codex/attachments/6f8800e5-d40f-40a3-a9ae-39670ab22e84/已粘贴的文本.txt",
+      "bytes": 15356,
+      "sha256": "afa3214401dc51b2d5785f6666ffca3867552e1999b404525003b14ba15c691c"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6/Solution.lean",
+      "bytes": 1830052,
+      "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/PreDefinition/Basic.lean",
+      "bytes": 15394,
+      "sha256": "46a2876ccbe1efc4cc491dc24658fea5e972544a64da888334fe2ffcc9c1a5c7"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/Tactic/Decide.lean",
+      "bytes": 9135,
+      "sha256": "99e84ce67778157e77d7261aa25b64ed72da16e9d1f60031cf2aa26f5ea6ee68"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v0/StructuralW9A220261020_Prefix.receipt.json",
+      "bytes": 600,
+      "sha256": "0d38fee2a86a74ea24a7edac4476273b5003a3343cd00e579e6e3e315f012cc3"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v1/StructuralW9A220261020_Core.receipt.json",
+      "bytes": 608,
+      "sha256": "0635242661e771752e8ed3ced3a6258e1de38848981d240b7be688a9fcf57723"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v3/StructuralW9A220261020_Graph.receipt.json",
+      "bytes": 608,
+      "sha256": "c87aa43ce216a90441a94014821d3c9d974ab7a07bdad84a40c24b3b9f12270f"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v4/StructuralW9A220261020_Localization.receipt.json",
+      "bytes": 617,
+      "sha256": "1fbc8a00416624c02c87fff7bc52c1ca2ffbe12aa0eeb3f6dcd71b54faadb3f3"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v6/StructuralW9A220261020_Counting.receipt.json",
+      "bytes": 1618,
+      "sha256": "6776024005e5f79abd6651da49ed28f5abd62b4e39fc7bd19968080fec1ef54e"
+    },
+    {
+      "path": "tmp/w9a2-20261020/candidate-ordinary-v6/StructuralW9A220261020_Final.receipt.json",
+      "bytes": 1831,
+      "sha256": "410ea3263f263ea83ae301d890fe984061e47420ae90efc9e09a2db2cde77da3"
+    },
+    {
+      "path": "tmp/w9a2-20261020/fullchain-v2/logs/ordinary-Solution.Candidate.terminal.json",
+      "bytes": 1128,
+      "sha256": "43a45c88cc6ada2d9a642ad212c05bcb869ba5862bcffcf204df98d3d0c49523"
+    }
+  ]
+}

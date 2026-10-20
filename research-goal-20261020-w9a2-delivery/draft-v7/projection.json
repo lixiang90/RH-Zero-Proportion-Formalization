@@ -1,0 +1,288 @@
+{
+  "schema": "w9a2-static-v7-projection-v1",
+  "scope": "Static byte derivation only; no compiler/exporter/kernel execution",
+  "old_source": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v6/Solution.lean",
+    "bytes": 1830052,
+    "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+  },
+  "new_source": {
+    "path": "Solution.lean",
+    "bytes": 1829242,
+    "sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6"
+  },
+  "modifier_insertions": 8,
+  "modifier_bytes_added": 112,
+  "diagnostic_lines_removed": 15,
+  "diagnostic_bytes_removed": 922,
+  "total_byte_delta": -810,
+  "forward_exact": true,
+  "reverse_exact": true,
+  "reverse_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+  "all_other_bytes_identical": true,
+  "unchanged_segments": [
+    {
+      "old_start_byte": 0,
+      "old_end_byte_exclusive": 661652,
+      "new_start_byte": 0,
+      "new_end_byte_exclusive": 661652,
+      "bytes": 661652,
+      "sha256": "5054ea616df5cf994eddfff8802e73701725771b4d48b62ba0d1174dcf394c61"
+    },
+    {
+      "old_start_byte": 661663,
+      "old_end_byte_exclusive": 703595,
+      "new_start_byte": 661677,
+      "new_end_byte_exclusive": 703609,
+      "bytes": 41932,
+      "sha256": "b37097cf72f6435ea5118a0e8c023e81bfb25395ff57060dc614e47eff46a224"
+    },
+    {
+      "old_start_byte": 703605,
+      "old_end_byte_exclusive": 712646,
+      "new_start_byte": 703633,
+      "new_end_byte_exclusive": 712674,
+      "bytes": 9041,
+      "sha256": "4dd58320d85f87969e900c2566145ef0b4dfa2c2a41be5c0a886817e40843b74"
+    },
+    {
+      "old_start_byte": 712658,
+      "old_end_byte_exclusive": 716208,
+      "new_start_byte": 712700,
+      "new_end_byte_exclusive": 716250,
+      "bytes": 3550,
+      "sha256": "3803fc88ced60cbf71dc71b8ceed77916e2b7cf852f28f4e7f7c3bc360e2b27e"
+    },
+    {
+      "old_start_byte": 716216,
+      "old_end_byte_exclusive": 716623,
+      "new_start_byte": 716272,
+      "new_end_byte_exclusive": 716679,
+      "bytes": 407,
+      "sha256": "b76fa49d6a8e582dc3afa0d4ee20e9b8634e143f9daf0546e4e9a7db91b2ec68"
+    },
+    {
+      "old_start_byte": 716632,
+      "old_end_byte_exclusive": 716897,
+      "new_start_byte": 716702,
+      "new_end_byte_exclusive": 716967,
+      "bytes": 265,
+      "sha256": "871f20de48ea191a89a0b0ac8335c2e1324de2a935083b719820ff4629b487bf"
+    },
+    {
+      "old_start_byte": 716905,
+      "old_end_byte_exclusive": 720967,
+      "new_start_byte": 716989,
+      "new_end_byte_exclusive": 721051,
+      "bytes": 4062,
+      "sha256": "7379f994aa5791fa440e02a10d532259fd27dffa64e038dc60fbfc96848f57f8"
+    },
+    {
+      "old_start_byte": 720978,
+      "old_end_byte_exclusive": 721297,
+      "new_start_byte": 721076,
+      "new_end_byte_exclusive": 721395,
+      "bytes": 319,
+      "sha256": "92f62ddefe5c8ac3ea14b6804012f70ca07a17b53222fd209e38ef0a64ae7f3c"
+    },
+    {
+      "old_start_byte": 721309,
+      "old_end_byte_exclusive": 1822524,
+      "new_start_byte": 721421,
+      "new_end_byte_exclusive": 1822636,
+      "bytes": 1101215,
+      "sha256": "24871b82318f81a695fc7dbb70c0a93fcde36052c2b431aa6c39cf5f99c9c1b5"
+    },
+    {
+      "old_start_byte": 1822597,
+      "old_end_byte_exclusive": 1822597,
+      "new_start_byte": 1822636,
+      "new_end_byte_exclusive": 1822636,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1822659,
+      "old_end_byte_exclusive": 1822659,
+      "new_start_byte": 1822636,
+      "new_end_byte_exclusive": 1822636,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1822738,
+      "old_end_byte_exclusive": 1822738,
+      "new_start_byte": 1822636,
+      "new_end_byte_exclusive": 1822636,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1822808,
+      "old_end_byte_exclusive": 1822808,
+      "new_start_byte": 1822636,
+      "new_end_byte_exclusive": 1822636,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1822882,
+      "old_end_byte_exclusive": 1827957,
+      "new_start_byte": 1822636,
+      "new_end_byte_exclusive": 1827711,
+      "bytes": 5075,
+      "sha256": "87ecf2a99956e6cb74c484ba120da83281777376fdfdcd077029ed9042cc4e03"
+    },
+    {
+      "old_start_byte": 1828021,
+      "old_end_byte_exclusive": 1828021,
+      "new_start_byte": 1827711,
+      "new_end_byte_exclusive": 1827711,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1828084,
+      "old_end_byte_exclusive": 1828084,
+      "new_start_byte": 1827711,
+      "new_end_byte_exclusive": 1827711,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1828142,
+      "old_end_byte_exclusive": 1828142,
+      "new_start_byte": 1827711,
+      "new_end_byte_exclusive": 1827711,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1828199,
+      "old_end_byte_exclusive": 1828199,
+      "new_start_byte": 1827711,
+      "new_end_byte_exclusive": 1827711,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1828261,
+      "old_end_byte_exclusive": 1828261,
+      "new_start_byte": 1827711,
+      "new_end_byte_exclusive": 1827711,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1828318,
+      "old_end_byte_exclusive": 1828318,
+      "new_start_byte": 1827711,
+      "new_end_byte_exclusive": 1827711,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1828379,
+      "old_end_byte_exclusive": 1829910,
+      "new_start_byte": 1827711,
+      "new_end_byte_exclusive": 1829242,
+      "bytes": 1531,
+      "sha256": "d201f9103aaa18b47731504dd975d35affa684f857edfef17a3737b03818021d"
+    },
+    {
+      "old_start_byte": 1829953,
+      "old_end_byte_exclusive": 1829953,
+      "new_start_byte": 1829242,
+      "new_end_byte_exclusive": 1829242,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1829997,
+      "old_end_byte_exclusive": 1829997,
+      "new_start_byte": 1829242,
+      "new_end_byte_exclusive": 1829242,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old_start_byte": 1830052,
+      "old_end_byte_exclusive": 1830052,
+      "new_start_byte": 1829242,
+      "new_end_byte_exclusive": 1829242,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_crlf_count_old": 221,
+  "source_crlf_count_new": 221,
+  "single_final_lf_preserved": true,
+  "invariants": {
+    "48_quantitative_root_theorem_lines": {
+      "count": 48,
+      "old_equals_new": true,
+      "ordered_lines_sha256": "5cea836d335308c49342105a201c9e95c94c07814db616b9c7ce64e61991ab14"
+    },
+    "135_packed_numeral_definition_lines": {
+      "count": 135,
+      "old_equals_new": true,
+      "ordered_lines_sha256": "5b66c6745ea3aea25b05b5a5ca6292c11dc5454eb2e864fa69519744ad4114b2"
+    },
+    "three_public_theorem_declaration_lines": {
+      "count": 3,
+      "old_equals_new": true,
+      "ordered_lines_sha256": "84e29af80d81b121bd658fca6a5eca09c263a70828865611be400d8765eb9121"
+    }
+  },
+  "frozen_inputs_before_after_identical": true,
+  "frozen_inputs": [
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6/Solution.lean",
+      "bytes": 1830052,
+      "sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6/files.json",
+      "bytes": 3125,
+      "sha256": "5bba5e728410d748a347b1ad864b56a147f2dc54db263f9be2a62dc892bfbd87"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6/frozen-inputs/StructuralW9A220261020/Core.lean",
+      "bytes": 1770091,
+      "sha256": "c2af225175f9a5ab14d2ba2612714a21e0613f66107a1d75b9d47bf1c77ba02a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6/frozen-inputs/StructuralW9A220261020/Graph.lean",
+      "bytes": 17372,
+      "sha256": "2e259252f7fa993954bd52c4a6d6ec58594116a500a576910d6fa671d6521966"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6/frozen-inputs/StructuralW9A220261020/Localization.lean",
+      "bytes": 13295,
+      "sha256": "f4d32498996dd5f2781cdac1b17531c02757467dc62fae4e5b88d7d675842fd4"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6/frozen-inputs/StructuralW9A220261020/Counting.lean",
+      "bytes": 21606,
+      "sha256": "502aa125cfe2566cdbddc3ede296f17dc58ad63a4a750cb6502b24a237b9050a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v6/frozen-inputs/StructuralW9A220261020/Final.lean",
+      "bytes": 5519,
+      "sha256": "ea99cc00802c2b3170a9b0c39b1f8b383e69f7c1ab76de851b9cd193c4353cf9"
+    }
+  ],
+  "candidate_compiler_runs": 0,
+  "exporter_runs": 0,
+  "kernel_runs": 0,
+  "new_source_ordinary_pass": false,
+  "new_source_independent_kernel_pass": false,
+  "new_source_official_acceptance": false,
+  "counter_modified": false,
+  "preparation_attempt": {
+    "initial_exit_code": 1,
+    "source_outputs_written": 0,
+    "reason": "Initial invariant regex counted 136 WL definitions, including one unpacked hexadecimal definition; corrected invariant explicitly counts the135 zfNat64 lines. No derivation edit changed.",
+    "initial_generator_preserved": "derive_v7.initial-before-output.py"
+  }
+}

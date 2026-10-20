@@ -1,4 +1,8 @@
+当前权威为宏观009（research-goal-20261016/macro-reviews/009-20261020.zh.md，SHA 01eee267729dca524c5fa4ea07b8565ecf3185cf31323d395aee72e9509412ff），review9/counter0。官网首投a517/e764已经实际terminal timeout，冻结完整用户日志和失败收据；不再等待或原样重投。本轮静态诊断已结束：固定v7只加8个显式noncomputable并删15条独立#print axioms，其他源字节、证明与数值包全部保留。新源1829242B/SHA dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6。下一关是独审23处raw projection、新提交包/预期wire与root gate、精确GitHub同步，再由官网唯一一次完整执行验证新源。遵照人类不重复本地核查指令，不启动compiler/export/CoreAudit/Nano或旧collector。无测量加速或3200秒保证；双内核/实际官网接受/公开promotion证据仍待，完整无条件目标与全部验收门保留，goal active。
+
 # 研究方向与宏观回顾
+
+12:27:43Z正式新证据覆盖下方等待状态：官网首投a517/e764已实际显示Verification timed out / verification-timeout。用户提供完整技术日志最后可见阶段为Building Solution.Candidate，末尾bash124，没有Built Solution/solution export/kernel完成记录；不能把最后Replayed缓存消息当作耗时模块，也不能把Challenge对照模板的sorry警告当作提交源码漏洞。现启动宏观008后第1实际诊断轮（counter0→1），只静态分析固定源码的构建成本和依赖复用，保持全部原数学/数值包、a517源和失败收据冻结；不原样重投、不重复本地验证、不新增数值优化族。完整无条件目标、双内核、2MB/整轮时限、GitHub一致和最终材料门均保留，goal active。证据入口research-goal-20261020-w9a2-official-timeout-v1/root-browser-verdict.json；待成本诊断证据后再书面选择后续降成本门。
 
 2026-10-20最新人类指令覆盖宏观008中“提交前补完本地Nano”的动作：用户明确接受一个内核已通过而Nano意外中断的已知状态，要求不再重复核查、直接提交网站，并当场同意永久加密存档及通过后Apache-2.0永久公开。root已向官网实际提交同一a517/1830052B源码、署名Li Xiang；页面显示Verification running，实际组合proofDigest为e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1。当前仅等待同一官网任务，不启动本地恢复/重复检查。原cold超时和本地Nano中断仍保留，官网接受、公开证据及最终GitHub同步未完成，goal保持active。实际观察见research-goal-20261020-w9a2-official-submission/browser-observation-v1.json；中断封存清单ceea3f0163839710098dfb4ce9c480f72321bc43bb6b19835ffa759598e98a4d。本指令属于同一实际研究轮内用户steering，不增加或重置counter（review8/counter0）。
 
