@@ -1,3 +1,40 @@
+# 当前研究方向（宏观013，2026-10-21北京时间）
+
+权威回顾：[013-20261021.zh.md](macro-reviews/013-20261021.zh.md)。书面回顾已完成，review13 / main_rounds_since_review=0。本次唯一主轮由官网v8真实失败触发；工具、代理、压缩、用户轮内steering及日期变化不增计数。旧方向与更早试验结论见macro-reviews/及Git历史；本文件只保留当前有效入口，旧continuation不得覆盖此选择。
+
+## 完整人类目标
+
+继续刷新 https://www.riemannzeta.fun/ 的无条件实际临界线零点比例，严格大于届时鲜核纪录R。人类已取消百万分之一最低幅度。完整实际函数全域证明、规定公理、Comparator/default Lean及独立nanoda、≤2,000,000B单文件、官网原资源/3200秒完整接受、公开promotion/ledger和精确GitHub同步均不可省。数值、条件命题、静态审计、构建、上传或checkpoint都不是完成。
+
+固定K=3337881639516708570682858853672166187793/4955348542279967171490000000000000000000，约67.35916981494386693%。49态/134边精确势，完整17/20实际窗口定位，望远镜仅一次边界损失，接实际dyadic/cumulative零点计数。最后提交前15:12:40Z观察R仍为ajp88-w9a2-window-nine-point同分子/分母4955348548503844558750000000000000000000，K严格更高；将来新投仍须鲜核，不能把旧观察冒充当前记录。
+
+## 当前真实终态
+
+v8第三投ID lixiang90-w9a2-weighted-potential-v8-20261020，Li Xiang，source1829382B/SHA5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b，actual bundle fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4。Solution.Candidate939秒后Lean137/bash1；无Solution完成/export/双核/接受。2057:30仅首条warning，不定位typeerror；无RSS/OOM事件不能确诊OOM。日志/截图封存research-goal-20261020-w9a2-v8-official-failure-v1/files.json（3d535af5…），已真实push commit3635d31。当前已观察quota剩余0/3，2026-10-21 00:00UTC（北京时间08:00）重置；不再等待该任务，不原样重投。
+
+旧v6普通Lean成功使用-M13500且仅-o，不是官网8GB基准；原cold3200失败、Nano意外中断、v8两次本地资源失败保持失败。v7/v8仅18处新增noncomputable保留全部kernel body，不能据1014→939秒声称加速。完整无条件官网验收和公开新纪录尚未实现，goal active。
+
+## 唯一下一关
+
+先独审corrected root outer，再由root冻结gate，仅一次扫描既有v6 solution.ndjson 677296932B/SHA1cc0f929919e0d4f58d947223c75a82450df57da11a9fe43fd93a90d8c8433d7。只读JSON、一次forward并同时hash，无全challenge、无DAG闭包。120秒总预算/child115秒timeout，own RSS每50ms观察256MiB软门、names32MiB、单行1MiB、总输出2MiB；不声称OS硬实时/硬分配限制。必须原外层真实0、完整SHA/bytes和收尾时间均满足才能采纳统计。
+
+只统计旧v6序列段/tag/字面量/声明名及公开根索引。段不是所有权、精确证明大小或新声明差集，更不是v8时间/内存/OOM定位。若schema/资源/身份失败，封存未完成结果，不自动提高cap或重扫。若完成，按具体结构对应回源码，另选下一实现关；没有足够证据则明确未知。
+
+320个WL/WD proof-only数据/selector的族外可见引用仅48根定理，这是有限词法证据。它还不是热点，也未授权新增modifier家族。宏decode64有真实runtime消费者，不可禁编译。
+
+## 停止条件、授权与节奏
+
+停止原样上传、旧full Lean/export/kernel replay或success collector、任何自动增资源/重试；停止数值核/阈值/图/精度/solver/codec/checker新家族。InfoTree裸关闭及Lean hook/wrapper方向仍因panic风险停止；本次Python文件扫描外层不属该族。冻结proof源、数值包、receipts及hash不改。
+
+任何新提交须有证据支持的改变源码、鲜核R<K/额度/无活任务、材料及公开Git逐字一致。沿用人类“不要重复核查、直接提交尝试”、Li Xiang及“同意并提交”的同目的/同存档与Apache-2.0条款授权；这不削弱实际官网完整验收门。
+
+默认六主轮回顾，四轮起可提前，最迟八轮；重大新证据可即时回顾。只在书面回顾完成后重置counter，保留review编号、证据及continuation链接。子代理只报告精确范围，不因前任务结束自动开新家族/编译。当前状态详见direction-state.json，最新书面回顾优先于所有旧continuation。
+
+
+---
+
+<!-- Earlier authoritative direction history preserved verbatim below. Current entry and latest macro review govern. -->
+
 官网v8第三投已真实终态失败，覆盖下方running：固定source5424212b…/1829382B，actual bundle fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4。Solution.Candidate939秒后Lean137/bash1，未有Solution完成/export/双内核或接受；UI2057:30仍仅首条warning，不定位typeerror，无RSS/OOM事件不确诊OOM。实际owner15:40:11.565Z none；恢复页面quota0/3，2026-10-21 00:00UTC重置。原始DOM完整日志、观察与截图在research-goal-20261020-w9a2-v8-official-failure-v1冻结。宏观012后开始第1实际静成本诊断轮counter0→1：先封存，再评估既有v6导出的单次只读结构统计及v8源执行路径；不重放证明、不加限额、不原样重投、不自动新modifier/hook/codec族。全部无条件证明、官方双核/3200秒接受/公开promotion与Git目标保持，goal active。
 
 官网v8已真实提交一次：IDlixiang90-w9a2-weighted-potential-v8-20261020，Li Xiang，主UI Verification running，actualproofDigestfb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4与预测完全一致。click15:15:25.431Z；原始UI/实际截图已保存research-goal-20261020-w9a2-v8-official-submission。294e58f已实际push0；源5424212b…/1829382B与固定publicraw一致。当前只等待这一个官网任务，不再次Submit、不重放local数学/编译；两local失败保留。官方双核/正式接受/公开promotion/最终Git同步仍待，goal active；同一macro012交付等待，counter0/review12不增加。

@@ -1,0 +1,689 @@
+{
+  "schema": "w9a2-v8-static-source-cost-inventory-v1",
+  "scope": "Source-text structure only; no payload decode, Lean AST, reduction, compilation or cost lower bound",
+  "source": {
+    "path": "research-goal-20261020-w9a2-delivery/draft-v8/Solution.lean",
+    "bytes": 1829382,
+    "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+  },
+  "packed_WL_definition_count": 135,
+  "packed_payload_ASCII_characters": 579704,
+  "largest_packed_payload_ASCII_characters": 5542,
+  "root_rc_count": 48,
+  "root_rcOf_count": 48,
+  "root_rcOfC_count": 0,
+  "kernel_decide_syntax_count": 72,
+  "kernel_decide_syntax_sites": [
+    {
+      "line": 2991,
+      "declaration": "pvCheck_AM"
+    },
+    {
+      "line": 9005,
+      "declaration": "winOk_all"
+    },
+    {
+      "line": 12364,
+      "declaration": "top_ok"
+    },
+    {
+      "line": 12365,
+      "declaration": "blk_0"
+    },
+    {
+      "line": 12366,
+      "declaration": "blk_1"
+    },
+    {
+      "line": 12367,
+      "declaration": "blk_2"
+    },
+    {
+      "line": 12368,
+      "declaration": "blk_3"
+    },
+    {
+      "line": 12369,
+      "declaration": "blk_4"
+    },
+    {
+      "line": 12663,
+      "declaration": "topD_ok"
+    },
+    {
+      "line": 12664,
+      "declaration": "dblk_0"
+    },
+    {
+      "line": 12665,
+      "declaration": "dblk_1"
+    },
+    {
+      "line": 12666,
+      "declaration": "dblk_2"
+    },
+    {
+      "line": 12667,
+      "declaration": "dblk_3"
+    },
+    {
+      "line": 12673,
+      "declaration": "hR"
+    },
+    {
+      "line": 12675,
+      "declaration": "PTT_0_ok"
+    },
+    {
+      "line": 12677,
+      "declaration": "PTT_1_ok"
+    },
+    {
+      "line": 12679,
+      "declaration": "PTT_2_ok"
+    },
+    {
+      "line": 12681,
+      "declaration": "PTT_3_ok"
+    },
+    {
+      "line": 12683,
+      "declaration": "PTT_4_ok"
+    },
+    {
+      "line": 12685,
+      "declaration": "PTT_5_ok"
+    },
+    {
+      "line": 12687,
+      "declaration": "PTT_6_ok"
+    },
+    {
+      "line": 12689,
+      "declaration": "PTT_7_ok"
+    },
+    {
+      "line": 12716,
+      "declaration": "rc0"
+    },
+    {
+      "line": 12722,
+      "declaration": "rc1"
+    },
+    {
+      "line": 12732,
+      "declaration": "rc2"
+    },
+    {
+      "line": 12742,
+      "declaration": "rc3"
+    },
+    {
+      "line": 12754,
+      "declaration": "rc4"
+    },
+    {
+      "line": 12770,
+      "declaration": "rc5"
+    },
+    {
+      "line": 12780,
+      "declaration": "rc6"
+    },
+    {
+      "line": 12786,
+      "declaration": "rc7"
+    },
+    {
+      "line": 12796,
+      "declaration": "rc8"
+    },
+    {
+      "line": 12812,
+      "declaration": "rc9"
+    },
+    {
+      "line": 12832,
+      "declaration": "rc10"
+    },
+    {
+      "line": 12844,
+      "declaration": "rc11"
+    },
+    {
+      "line": 12854,
+      "declaration": "rc12"
+    },
+    {
+      "line": 12864,
+      "declaration": "rc13"
+    },
+    {
+      "line": 12872,
+      "declaration": "rc14"
+    },
+    {
+      "line": 12876,
+      "declaration": "rc15"
+    },
+    {
+      "line": 12880,
+      "declaration": "rc16"
+    },
+    {
+      "line": 12884,
+      "declaration": "rc17"
+    },
+    {
+      "line": 12888,
+      "declaration": "rc18"
+    },
+    {
+      "line": 12892,
+      "declaration": "rc19"
+    },
+    {
+      "line": 12896,
+      "declaration": "rc20"
+    },
+    {
+      "line": 12900,
+      "declaration": "rc21"
+    },
+    {
+      "line": 12904,
+      "declaration": "rc22"
+    },
+    {
+      "line": 12908,
+      "declaration": "rc23"
+    },
+    {
+      "line": 12912,
+      "declaration": "rc24"
+    },
+    {
+      "line": 12916,
+      "declaration": "rc25"
+    },
+    {
+      "line": 12920,
+      "declaration": "rc26"
+    },
+    {
+      "line": 12924,
+      "declaration": "rc27"
+    },
+    {
+      "line": 12928,
+      "declaration": "rc28"
+    },
+    {
+      "line": 12932,
+      "declaration": "rc29"
+    },
+    {
+      "line": 12936,
+      "declaration": "rc30"
+    },
+    {
+      "line": 12940,
+      "declaration": "rc31"
+    },
+    {
+      "line": 12946,
+      "declaration": "rc32"
+    },
+    {
+      "line": 12956,
+      "declaration": "rc33"
+    },
+    {
+      "line": 12972,
+      "declaration": "rc34"
+    },
+    {
+      "line": 12980,
+      "declaration": "rc35"
+    },
+    {
+      "line": 12992,
+      "declaration": "rc36"
+    },
+    {
+      "line": 13006,
+      "declaration": "rc37"
+    },
+    {
+      "line": 13016,
+      "declaration": "rc38"
+    },
+    {
+      "line": 13022,
+      "declaration": "rc39"
+    },
+    {
+      "line": 13030,
+      "declaration": "rc40"
+    },
+    {
+      "line": 13040,
+      "declaration": "rc41"
+    },
+    {
+      "line": 13050,
+      "declaration": "rc42"
+    },
+    {
+      "line": 13058,
+      "declaration": "rc43"
+    },
+    {
+      "line": 13066,
+      "declaration": "rc44"
+    },
+    {
+      "line": 13072,
+      "declaration": "rc45"
+    },
+    {
+      "line": 13076,
+      "declaration": "rc46"
+    },
+    {
+      "line": 13080,
+      "declaration": "rc47"
+    },
+    {
+      "line": 13153,
+      "declaration": ""
+    },
+    {
+      "line": 16390,
+      "declaration": ""
+    }
+  ],
+  "explicit_noncomputable_def_names": [
+    "mcheckP",
+    "mleafP",
+    "leafStep",
+    "node",
+    "walkC",
+    "walk",
+    "walkCut",
+    "walkCutR",
+    "PTT_0",
+    "PTT_1",
+    "PTT_2",
+    "PTT_3",
+    "PTT_4",
+    "PTT_5",
+    "PTT_6",
+    "PTT_7",
+    "PTT",
+    "PT",
+    "FMaj",
+    "FMajC",
+    "quadForm"
+  ],
+  "WL_WD_family": {
+    "total_plain_definitions": 320,
+    "numerals": 136,
+    "packed_numerals": 135,
+    "unpacked_numeral": "WL31_0",
+    "balanced_helpers": 88,
+    "root_selectors": 48,
+    "WD": 48,
+    "outside_family_line_count": 48,
+    "outside_family_references": [
+      {
+        "line": 12716,
+        "declaration": "rc0",
+        "references": [
+          "WD0"
+        ]
+      },
+      {
+        "line": 12722,
+        "declaration": "rc1",
+        "references": [
+          "WD1"
+        ]
+      },
+      {
+        "line": 12732,
+        "declaration": "rc2",
+        "references": [
+          "WD2"
+        ]
+      },
+      {
+        "line": 12742,
+        "declaration": "rc3",
+        "references": [
+          "WD3"
+        ]
+      },
+      {
+        "line": 12754,
+        "declaration": "rc4",
+        "references": [
+          "WD4"
+        ]
+      },
+      {
+        "line": 12770,
+        "declaration": "rc5",
+        "references": [
+          "WD5"
+        ]
+      },
+      {
+        "line": 12780,
+        "declaration": "rc6",
+        "references": [
+          "WD6"
+        ]
+      },
+      {
+        "line": 12786,
+        "declaration": "rc7",
+        "references": [
+          "WD7"
+        ]
+      },
+      {
+        "line": 12796,
+        "declaration": "rc8",
+        "references": [
+          "WD8"
+        ]
+      },
+      {
+        "line": 12812,
+        "declaration": "rc9",
+        "references": [
+          "WD9"
+        ]
+      },
+      {
+        "line": 12832,
+        "declaration": "rc10",
+        "references": [
+          "WD10"
+        ]
+      },
+      {
+        "line": 12844,
+        "declaration": "rc11",
+        "references": [
+          "WD11"
+        ]
+      },
+      {
+        "line": 12854,
+        "declaration": "rc12",
+        "references": [
+          "WD12"
+        ]
+      },
+      {
+        "line": 12864,
+        "declaration": "rc13",
+        "references": [
+          "WD13"
+        ]
+      },
+      {
+        "line": 12872,
+        "declaration": "rc14",
+        "references": [
+          "WD14"
+        ]
+      },
+      {
+        "line": 12876,
+        "declaration": "rc15",
+        "references": [
+          "WD15"
+        ]
+      },
+      {
+        "line": 12880,
+        "declaration": "rc16",
+        "references": [
+          "WD16"
+        ]
+      },
+      {
+        "line": 12884,
+        "declaration": "rc17",
+        "references": [
+          "WD17"
+        ]
+      },
+      {
+        "line": 12888,
+        "declaration": "rc18",
+        "references": [
+          "WD18"
+        ]
+      },
+      {
+        "line": 12892,
+        "declaration": "rc19",
+        "references": [
+          "WD19"
+        ]
+      },
+      {
+        "line": 12896,
+        "declaration": "rc20",
+        "references": [
+          "WD20"
+        ]
+      },
+      {
+        "line": 12900,
+        "declaration": "rc21",
+        "references": [
+          "WD21"
+        ]
+      },
+      {
+        "line": 12904,
+        "declaration": "rc22",
+        "references": [
+          "WD22"
+        ]
+      },
+      {
+        "line": 12908,
+        "declaration": "rc23",
+        "references": [
+          "WD23"
+        ]
+      },
+      {
+        "line": 12912,
+        "declaration": "rc24",
+        "references": [
+          "WD24"
+        ]
+      },
+      {
+        "line": 12916,
+        "declaration": "rc25",
+        "references": [
+          "WD25"
+        ]
+      },
+      {
+        "line": 12920,
+        "declaration": "rc26",
+        "references": [
+          "WD26"
+        ]
+      },
+      {
+        "line": 12924,
+        "declaration": "rc27",
+        "references": [
+          "WD27"
+        ]
+      },
+      {
+        "line": 12928,
+        "declaration": "rc28",
+        "references": [
+          "WD28"
+        ]
+      },
+      {
+        "line": 12932,
+        "declaration": "rc29",
+        "references": [
+          "WD29"
+        ]
+      },
+      {
+        "line": 12936,
+        "declaration": "rc30",
+        "references": [
+          "WD30"
+        ]
+      },
+      {
+        "line": 12940,
+        "declaration": "rc31",
+        "references": [
+          "WD31"
+        ]
+      },
+      {
+        "line": 12946,
+        "declaration": "rc32",
+        "references": [
+          "WD32"
+        ]
+      },
+      {
+        "line": 12956,
+        "declaration": "rc33",
+        "references": [
+          "WD33"
+        ]
+      },
+      {
+        "line": 12972,
+        "declaration": "rc34",
+        "references": [
+          "WD34"
+        ]
+      },
+      {
+        "line": 12980,
+        "declaration": "rc35",
+        "references": [
+          "WD35"
+        ]
+      },
+      {
+        "line": 12992,
+        "declaration": "rc36",
+        "references": [
+          "WD36"
+        ]
+      },
+      {
+        "line": 13006,
+        "declaration": "rc37",
+        "references": [
+          "WD37"
+        ]
+      },
+      {
+        "line": 13016,
+        "declaration": "rc38",
+        "references": [
+          "WD38"
+        ]
+      },
+      {
+        "line": 13022,
+        "declaration": "rc39",
+        "references": [
+          "WD39"
+        ]
+      },
+      {
+        "line": 13030,
+        "declaration": "rc40",
+        "references": [
+          "WD40"
+        ]
+      },
+      {
+        "line": 13040,
+        "declaration": "rc41",
+        "references": [
+          "WD41"
+        ]
+      },
+      {
+        "line": 13050,
+        "declaration": "rc42",
+        "references": [
+          "WD42"
+        ]
+      },
+      {
+        "line": 13058,
+        "declaration": "rc43",
+        "references": [
+          "WD43"
+        ]
+      },
+      {
+        "line": 13066,
+        "declaration": "rc44",
+        "references": [
+          "WD44"
+        ]
+      },
+      {
+        "line": 13072,
+        "declaration": "rc45",
+        "references": [
+          "WD45"
+        ]
+      },
+      {
+        "line": 13076,
+        "declaration": "rc46",
+        "references": [
+          "WD46"
+        ]
+      },
+      {
+        "line": 13080,
+        "declaration": "rc47",
+        "references": [
+          "WD47"
+        ]
+      }
+    ],
+    "scope": "Unquoted line-based references. This supports a proof-only source caller boundary; no new modifier patch or dynamic/native-call verification."
+  },
+  "actual_official": {
+    "Solution_build_seconds": 939,
+    "Lean_exit_code": 137,
+    "bash_exit_code": 1,
+    "OOM_confirmed": false,
+    "Solution_export_or_dual_kernels_completed": false
+  },
+  "proof_execution_count": 0,
+  "payload_decode_count": 0,
+  "source_or_state_mutation_count": 0,
+  "performance_or_root_cause_claimed": false
+}

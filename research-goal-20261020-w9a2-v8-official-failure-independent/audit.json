@@ -1,0 +1,280 @@
+{
+  "schema": "w9a2-v8-official-failure-independent-narrow-audit-v1",
+  "reviewed_commit": "3635d319550a1f3994eabc93328ac36c09302305",
+  "scope": "Small archived evidence and commit-state expression only; no source/runtime/math/kernel/network/UI/remote re-audit",
+  "result": "ARCHIVE_PINS_PASS_STATE_CLARIFICATION_REQUIRED",
+  "metadata_parser": "PowerShell ConvertFrom-Json -AsHashtable -DateKind String preserves distinct case keys and literal timestamps",
+  "manifests": [
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/files.json",
+      "bytes": 1077,
+      "sha256": "3d535af53e4129662714ebabbb6a27d5b743ca2483a63712f503433258a78900",
+      "rows": 5,
+      "all_rows_match": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-followup-v1/files.json",
+      "bytes": 538,
+      "sha256": "5b441ae91bae67e4ab78fb7735e3f99798b2f03a553066ddcdfaa2b6b066b1a4",
+      "rows": 3,
+      "all_rows_match": true
+    }
+  ],
+  "members": [
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/full-visible-result.txt",
+      "bytes": 19831,
+      "sha256": "df0c3cf13c740d73f0b6d052ea7afdca5658731c9dfc4ac6677a2e0d907c06b3",
+      "matches_manifest": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json",
+      "bytes": 1167,
+      "sha256": "04d6a1e31764f3d1c55bf86a90baac4f16465ea47517be6da131ddb70d36f7de",
+      "matches_manifest": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/README.zh.md",
+      "bytes": 2704,
+      "sha256": "0b7c87a26418c54c47aeb3f66bf3611e86ea6060af1fbb13ee7c90a0aaa31c9f",
+      "matches_manifest": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/technical-log.dom.txt",
+      "bytes": 19001,
+      "sha256": "89317ba7cde2eda97f72125ced654514a57962529849410233134d473d4f3dcc",
+      "matches_manifest": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/terminal-result.png",
+      "bytes": 90806,
+      "sha256": "e0eb32803a53dca80e57e46bfc6e4efebfbe51666a81298f39fde04aae50b145",
+      "matches_manifest": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-followup-v1/COMPLETION-EVIDENCE-MAP.zh.md",
+      "bytes": 2947,
+      "sha256": "560d2d146e6238b550c2ff6976f914eabc5227ca0c72d7df25aca5f90ac5d692",
+      "matches_manifest": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-followup-v1/README.zh.md",
+      "bytes": 659,
+      "sha256": "b8940607dbbb33c927d30af76acae0e2ba3dfab7e48921d6a65fd21dc1293d30",
+      "matches_manifest": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-followup-v1/owner-active-observations.jsonl",
+      "bytes": 768,
+      "sha256": "2860bc0dc0eef1892933089f6c6086dbcf06723c12fa64d9c07cf6245e49d204",
+      "matches_manifest": true
+    }
+  ],
+  "inputs": [
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/files.json",
+      "bytes": 1077,
+      "sha256": "3d535af53e4129662714ebabbb6a27d5b743ca2483a63712f503433258a78900",
+      "commit_blob_sha1": "f7d62383c63e10fe700bffa5a96dccb60310c041",
+      "worktree_blob_sha1": "f7d62383c63e10fe700bffa5a96dccb60310c041",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/full-visible-result.txt",
+      "bytes": 19831,
+      "sha256": "df0c3cf13c740d73f0b6d052ea7afdca5658731c9dfc4ac6677a2e0d907c06b3",
+      "commit_blob_sha1": "d894283df2004a8896e95714feaeb6f62a68d9ce",
+      "worktree_blob_sha1": "d894283df2004a8896e95714feaeb6f62a68d9ce",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json",
+      "bytes": 1167,
+      "sha256": "04d6a1e31764f3d1c55bf86a90baac4f16465ea47517be6da131ddb70d36f7de",
+      "commit_blob_sha1": "b0254062c342511f0628a83b272ddd4611cdc94b",
+      "worktree_blob_sha1": "b0254062c342511f0628a83b272ddd4611cdc94b",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/README.zh.md",
+      "bytes": 2704,
+      "sha256": "0b7c87a26418c54c47aeb3f66bf3611e86ea6060af1fbb13ee7c90a0aaa31c9f",
+      "commit_blob_sha1": "b0e110e96b3ac51131c0d447152e739f016ef811",
+      "worktree_blob_sha1": "b0e110e96b3ac51131c0d447152e739f016ef811",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/technical-log.dom.txt",
+      "bytes": 19001,
+      "sha256": "89317ba7cde2eda97f72125ced654514a57962529849410233134d473d4f3dcc",
+      "commit_blob_sha1": "ea52b4afba7edc052e005c814a92f4512b583578",
+      "worktree_blob_sha1": "ea52b4afba7edc052e005c814a92f4512b583578",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-failure-v1/terminal-result.png",
+      "bytes": 90806,
+      "sha256": "e0eb32803a53dca80e57e46bfc6e4efebfbe51666a81298f39fde04aae50b145",
+      "commit_blob_sha1": "648f8fa80204028ab68c9f7d4bcefdc5ce11d716",
+      "worktree_blob_sha1": "648f8fa80204028ab68c9f7d4bcefdc5ce11d716",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-followup-v1/files.json",
+      "bytes": 538,
+      "sha256": "5b441ae91bae67e4ab78fb7735e3f99798b2f03a553066ddcdfaa2b6b066b1a4",
+      "commit_blob_sha1": "047588e07611babcc27ca4c7091b8428341e9773",
+      "worktree_blob_sha1": "047588e07611babcc27ca4c7091b8428341e9773",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-followup-v1/COMPLETION-EVIDENCE-MAP.zh.md",
+      "bytes": 2947,
+      "sha256": "560d2d146e6238b550c2ff6976f914eabc5227ca0c72d7df25aca5f90ac5d692",
+      "commit_blob_sha1": "a37fdda0cb2c2880fce03c5a74da0718396a8854",
+      "worktree_blob_sha1": "a37fdda0cb2c2880fce03c5a74da0718396a8854",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-followup-v1/README.zh.md",
+      "bytes": 659,
+      "sha256": "b8940607dbbb33c927d30af76acae0e2ba3dfab7e48921d6a65fd21dc1293d30",
+      "commit_blob_sha1": "7f31a846556602415c01d79db524b2f1396516e7",
+      "worktree_blob_sha1": "7f31a846556602415c01d79db524b2f1396516e7",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-official-followup-v1/owner-active-observations.jsonl",
+      "bytes": 768,
+      "sha256": "2860bc0dc0eef1892933089f6c6086dbcf06723c12fa64d9c07cf6245e49d204",
+      "commit_blob_sha1": "2d93992cf05fa0b8cd968967e4881e491f3b99c5",
+      "worktree_blob_sha1": "2d93992cf05fa0b8cd968967e4881e491f3b99c5",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261016/DIRECTION.zh.md",
+      "bytes": 78302,
+      "sha256": "c529ef63ec49def7dcced4a3437defc9c0793f6838f23eeb8d93ee3b8ee8a94d",
+      "commit_blob_sha1": "25d26ff51cd7066bba959cc0ceeba2283748b683",
+      "worktree_blob_sha1": "25d26ff51cd7066bba959cc0ceeba2283748b683",
+      "worktree_matches_commit": true
+    },
+    {
+      "path": "research-goal-20261016/direction-state.json",
+      "bytes": 88413,
+      "sha256": "5115364599a6cb7674968a95d9298ba967f44b8f8250c41b7c40683d963d30a0",
+      "commit_blob_sha1": "55989aff25c5cbe9e819050b788762161fcd7718",
+      "worktree_blob_sha1": "d3fef908e4b980dc20582bc2c8a757b41bbbbdd3",
+      "worktree_matches_commit": false
+    },
+    {
+      "path": "research-goal-20261020-w9a2-runtime/CONTINUATION.zh.md",
+      "bytes": 29816,
+      "sha256": "6c4180e04875298015536e0642fe9b6841c6518e5512b1a5a5de7c54b06a0816",
+      "commit_blob_sha1": "410d2bb9ecc81c05df01f35fea261ad15486fa88",
+      "worktree_blob_sha1": "410d2bb9ecc81c05df01f35fea261ad15486fa88",
+      "worktree_matches_commit": true
+    }
+  ],
+  "frozen_inputs_rechecked_unchanged": [
+    "research-goal-20261020-w9a2-v8-official-failure-v1/files.json",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/full-visible-result.txt",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/README.zh.md",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/technical-log.dom.txt",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/terminal-result.png",
+    "research-goal-20261020-w9a2-v8-official-followup-v1/files.json",
+    "research-goal-20261020-w9a2-v8-official-followup-v1/COMPLETION-EVIDENCE-MAP.zh.md",
+    "research-goal-20261020-w9a2-v8-official-followup-v1/README.zh.md",
+    "research-goal-20261020-w9a2-v8-official-followup-v1/owner-active-observations.jsonl"
+  ],
+  "commit_changed_paths": [
+    "research-goal-20261016/DIRECTION.zh.md",
+    "research-goal-20261016/direction-state.json",
+    "research-goal-20261020-w9a2-runtime/CONTINUATION.zh.md",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/README.zh.md",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/files.json",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/full-visible-result.txt",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/technical-log.dom.txt",
+    "research-goal-20261020-w9a2-v8-official-failure-v1/terminal-result.png",
+    "research-goal-20261020-w9a2-v8-official-followup-v1/README.zh.md",
+    "research-goal-20261020-w9a2-v8-official-followup-v1/files.json",
+    "research-goal-20261020-w9a2-v8-official-followup-v1/owner-active-observations.jsonl"
+  ],
+  "followup_preexisting_member": "COMPLETION-EVIDENCE-MAP.zh.md exists at the reviewed commit but was not a changed path in this commit",
+  "state_at_reviewed_commit": {
+    "main_rounds_since_review": 1,
+    "last_review_number": 12,
+    "main_route": "The third official attempt v8 actually failed at Solution.Candidate after939s with Lean137/bash1. Preserve this result and choose a finite source/export cost diagnostic before any changed-source execution. No unchanged resubmission; quota0.",
+    "next_gate": "Seal actual official failure evidence, then review one bounded read-only structural audit of the already-frozen v6 export and fixed v8 source. No new compiler/kernel/proof replay, cap increase, source mutation or numerical family before evidence-based route review.",
+    "current_official_submission": {
+      "submission_id": "lixiang90-w9a2-weighted-potential-v8-20261020",
+      "author": "Li Xiang",
+      "status": "failed",
+      "proofDigest": "fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4",
+      "official_acceptance": false,
+      "official_kernels_complete": false,
+      "goal_complete": false,
+      "official_diagnosis_code": "lean-elaboration-failed",
+      "actual_Lean_exit_code": 137,
+      "actual_build_stage_seconds": 939,
+      "actual_bash_exit_code": 1,
+      "OOM_confirmed": false,
+      "observation": "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json"
+    },
+    "latest_official_owner_observation": {
+      "observed_UTC": "2026-10-20T15:40:11.565Z",
+      "status": "none",
+      "private_handle_available": false,
+      "scope": "Root transcription, not preserved raw API response; terminal DOM is archived separately."
+    },
+    "current_daily_submission_quota": {
+      "remaining": 0,
+      "limit": 3,
+      "reset_UTC": "2026-10-21T00:00:00Z",
+      "evidence": "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json"
+    },
+    "direction_first_paragraph": "官网v8第三投已真实终态失败，覆盖下方running：固定source5424212b…/1829382B，actual bundle fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4。Solution.Candidate939秒后Lean137/bash1，未有Solution完成/export/双内核或接受；UI2057:30仍仅首条warning，不定位typeerror，无RSS/OOM事件不确诊OOM。实际owner15:40:11.565Z none；恢复页面quota0/3，2026-10-21 00:00UTC重置。原始DOM完整日志、观察与截图在research-goal-20261020-w9a2-v8-official-failure-v1冻结。宏观012后开始第1实际静成本诊断轮counter0→1：先封存，再评估既有v6导出的单次只读结构统计及v8源执行路径；不重放证明、不加限额、不原样重投、不自动新modifier/hook/codec族。全部无条件证明、官方双核/3200秒接受/公开promotion与Git目标保持，goal active。",
+    "continuation_first_paragraph": "官网v8第三投已真实终态失败，覆盖下方running：固定source5424212b…/1829382B，actual bundle fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4。Solution.Candidate939秒后Lean137/bash1，未有Solution完成/export/双内核或接受；UI2057:30仍仅首条warning，不定位typeerror，无RSS/OOM事件不确诊OOM。实际owner15:40:11.565Z none；恢复页面quota0/3，2026-10-21 00:00UTC重置。原始DOM完整日志、观察与截图在research-goal-20261020-w9a2-v8-official-failure-v1冻结。宏观012后开始第1实际静成本诊断轮counter0→1：先封存，再评估既有v6导出的单次只读结构统计及v8源执行路径；不重放证明、不加限额、不原样重投、不自动新modifier/hook/codec族。全部无条件证明、官方双核/3200秒接受/公开promotion与Git目标保持，goal active。"
+  },
+  "journal": {
+    "rows": 4,
+    "first_three_running_queue0_same_identity": true,
+    "last_row": {
+      "observed_UTC": "2026-10-20T15:40:11.565Z",
+      "status": "none",
+      "private_handle_available": false
+    },
+    "last_row_provenance": "Root transcription; not preserved raw private API response; explicitly scoped by README and failure observation"
+  },
+  "finding": {
+    "code": "historical_first_submission_scope_ambiguous",
+    "status": "reported_to_root_pending_separate_state_clarification",
+    "object": "website_submission_authorization",
+    "old_actual_website_state": "Verification timed out",
+    "old_latest_owner_API_state": "running; queuePosition0; same submissionId and proofDigest",
+    "old_details_poll_state": "Official status JSON returns verifier_status_failed: The isolated verifier status is temporarily unavailable. Owner active recovery still returns same job running; no terminal verdict.",
+    "old_actual_proofDigest": "e76462f687d4e95d7f9f2ebb558bd5d2d5452814f01e54fd657856dbb12157d1",
+    "latest_submission": {
+      "submission_id": "lixiang90-w9a2-weighted-potential-v8-20261020",
+      "author": "Li Xiang",
+      "status": "failed",
+      "proofDigest": "fb457eecc550ce09bee528294dfff90137631c08e95fa26ffba1e99ec4e11bd4",
+      "official_acceptance": false,
+      "official_kernels_complete": false,
+      "goal_complete": false,
+      "official_diagnosis_code": "lean-elaboration-failed",
+      "actual_Lean_exit_code": 137,
+      "actual_build_stage_seconds": 939,
+      "actual_bash_exit_code": 1,
+      "OOM_confirmed": false,
+      "observation": "research-goal-20261020-w9a2-v8-official-failure-v1/observation.json"
+    },
+    "does_not_invalidate_failure_evidence": true
+  },
+  "proof_runs": 0,
+  "source_runtime_rehashes": 0,
+  "network_UI_process_queries": 0,
+  "proof_state_counter_mutations": 0
+}

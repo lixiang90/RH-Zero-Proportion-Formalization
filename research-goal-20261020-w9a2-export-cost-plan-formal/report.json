@@ -1,0 +1,334 @@
+{
+  "schema": "w9a2-export-cost-static-plan-evidence-v1",
+  "scope": "Preparation only; each large export read at most first5 complete lines per preparation invocation, no full-file hash/stream. Initial metadata preparation stopped on raw CRLF source SHA mismatch; its first5-line files and script are preserved. Corrected preparation uses frozen canonical LF source and records exact byte bridge, without modifying old receipts. No Lean/compiler/kernel/export/probe/API/network/process/UI/state/counter/Git action.",
+  "exports": [
+    {
+      "role": "challenge",
+      "absolute_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\challenge.ndjson",
+      "current_stat_bytes": 349332110,
+      "historically_recorded_full_file_sha256": "a292e2fc44e0b69bcfaad53175bbeb1cda71b14b1edaab4bb779160f949bc6d0",
+      "full_file_sha256_recomputed_this_preparation": false,
+      "original_terminal": {
+        "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\logs\\challenge-native-export.terminal.json",
+        "bytes": 1523,
+        "sha256": "fd4047320778ad649fbb32acd5865ea351f9c3604fa542ec6a4f54dd10add996",
+        "exit_code": 0,
+        "elapsed_seconds": 266.59399999999914,
+        "argv": [
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\.lake\\build\\bin\\lean4export.exe",
+          "Challenge.Candidate",
+          "--",
+          "candidate_strict_improvement",
+          "candidate_critical_line_bound",
+          "candidate_critical_line_bound_cumulative",
+          "Nat",
+          "String",
+          "String.mk",
+          "Char",
+          "Quot",
+          "Quot.mk",
+          "Quot.lift",
+          "Quot.ind",
+          "propext",
+          "Quot.sound",
+          "Classical.choice",
+          "Nat.add",
+          "Nat.sub",
+          "Nat.mul",
+          "Nat.pow",
+          "Nat.gcd",
+          "Nat.div",
+          "Nat.mod",
+          "Nat.beq",
+          "Nat.ble",
+          "Nat.land",
+          "Nat.lor",
+          "Nat.xor",
+          "Nat.shiftLeft",
+          "Nat.shiftRight",
+          "String.ofList",
+          "Char.ofNat",
+          "List",
+          "eagerReduce"
+        ]
+      },
+      "prefix_only": {
+        "lines": 5,
+        "bytes": 303,
+        "sha256": "664fbdde10b52a707c74f5df38e705e9cc6dd0a34141c5cd44b3d5ecf458c3ab",
+        "decoded": [
+          {
+            "meta": {
+              "exporter": {
+                "name": "lean4export",
+                "version": "3.1.0"
+              },
+              "format": {
+                "version": "3.1.0"
+              },
+              "lean": {
+                "githash": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+                "version": "4.33.0-rc2"
+              }
+            }
+          },
+          {
+            "in": 1,
+            "str": {
+              "pre": 0,
+              "str": "LT"
+            }
+          },
+          {
+            "in": 2,
+            "str": {
+              "pre": 0,
+              "str": "u"
+            }
+          },
+          {
+            "il": 1,
+            "param": 2
+          },
+          {
+            "in": 3,
+            "str": {
+              "pre": 0,
+              "str": "α"
+            }
+          }
+        ]
+      },
+      "stat_size_and_mtime_unchanged_while_prefix_read": true
+    },
+    {
+      "role": "solution",
+      "absolute_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\solution.ndjson",
+      "current_stat_bytes": 677296932,
+      "historically_recorded_full_file_sha256": "1cc0f929919e0d4f58d947223c75a82450df57da11a9fe43fd93a90d8c8433d7",
+      "full_file_sha256_recomputed_this_preparation": false,
+      "original_terminal": {
+        "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\logs\\solution-native-export.terminal.json",
+        "bytes": 1508,
+        "sha256": "0ebc6e9ae632ee12d4e481954577007f3953d287f149682e7e975a62fca1a8d2",
+        "exit_code": 0,
+        "elapsed_seconds": 53.95299999999952,
+        "argv": [
+          "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\.lake\\build\\bin\\lean4export.exe",
+          "Solution.Candidate",
+          "--",
+          "candidate_strict_improvement",
+          "candidate_critical_line_bound",
+          "candidate_critical_line_bound_cumulative",
+          "Nat",
+          "String",
+          "String.mk",
+          "Char",
+          "Quot",
+          "Quot.mk",
+          "Quot.lift",
+          "Quot.ind",
+          "propext",
+          "Quot.sound",
+          "Classical.choice",
+          "Nat.add",
+          "Nat.sub",
+          "Nat.mul",
+          "Nat.pow",
+          "Nat.gcd",
+          "Nat.div",
+          "Nat.mod",
+          "Nat.beq",
+          "Nat.ble",
+          "Nat.land",
+          "Nat.lor",
+          "Nat.xor",
+          "Nat.shiftLeft",
+          "Nat.shiftRight",
+          "String.ofList",
+          "Char.ofNat",
+          "List",
+          "eagerReduce"
+        ]
+      },
+      "prefix_only": {
+        "lines": 5,
+        "bytes": 303,
+        "sha256": "664fbdde10b52a707c74f5df38e705e9cc6dd0a34141c5cd44b3d5ecf458c3ab",
+        "decoded": [
+          {
+            "meta": {
+              "exporter": {
+                "name": "lean4export",
+                "version": "3.1.0"
+              },
+              "format": {
+                "version": "3.1.0"
+              },
+              "lean": {
+                "githash": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+                "version": "4.33.0-rc2"
+              }
+            }
+          },
+          {
+            "in": 1,
+            "str": {
+              "pre": 0,
+              "str": "LT"
+            }
+          },
+          {
+            "in": 2,
+            "str": {
+              "pre": 0,
+              "str": "u"
+            }
+          },
+          {
+            "il": 1,
+            "param": 2
+          },
+          {
+            "in": 3,
+            "str": {
+              "pre": 0,
+              "str": "α"
+            }
+          }
+        ]
+      },
+      "stat_size_and_mtime_unchanged_while_prefix_read": true
+    }
+  ],
+  "historical_v6_generation": {
+    "source_bytes": 1830052,
+    "source_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+    "fresh_source_generation": true,
+    "cached_user_oleans": false,
+    "generation_elapsed_from_total_start": 137.39099999999962
+  },
+  "historical_ordinary_exit_code": 0,
+  "metadata_header": {
+    "meta": {
+      "exporter": {
+        "name": "lean4export",
+        "version": "3.1.0"
+      },
+      "format": {
+        "version": "3.1.0"
+      },
+      "lean": {
+        "githash": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "version": "4.33.0-rc2"
+      }
+    }
+  },
+  "exporter_source_pins_match_frozen_92cc": true,
+  "source_CRLF_bridges": [
+    {
+      "checkout_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\Export.lean",
+      "raw_sha256": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f",
+      "canonical_LF_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998",
+      "exact_CRLF_to_LF_bridge": true
+    },
+    {
+      "checkout_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\Main.lean",
+      "raw_sha256": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5",
+      "canonical_LF_sha256": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a",
+      "exact_CRLF_to_LF_bridge": true
+    },
+    {
+      "checkout_path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\Export\\Parse.lean",
+      "raw_sha256": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9",
+      "canonical_LF_sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286",
+      "exact_CRLF_to_LF_bridge": true
+    }
+  ],
+  "initial_metadata_failure": {
+    "exit_code": 1,
+    "tool_chunk": "282d43",
+    "reason": "Raw checkout exporter source CRLF bytes do not equal canonical LF pins; stopped before fullstream/plan sealing",
+    "mathematical_or_runtime_execution": false
+  },
+  "small_inputs_before_after_unchanged": true,
+  "small_inputs": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-fullchain-v2-terminal\\retained-binary-and-export-artifacts.json",
+      "bytes": 1542,
+      "sha256": "54d606a321c2e8973b5d06f99b808ef40052329450debda966d9cb057f5f5607"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-fullchain-v2-terminal\\job\\generation.json",
+      "bytes": 244,
+      "sha256": "8e2352d579aca432c72292ce1ddbfa08241697792739c9c78a68c8c05f1bef7c"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-fullchain-v2-terminal\\job\\logs\\ordinary-Solution.Candidate.terminal.json",
+      "bytes": 1128,
+      "sha256": "43a45c88cc6ada2d9a642ad212c05bcb869ba5862bcffcf204df98d3d0c49523"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-fullchain-v2-terminal\\files.json",
+      "bytes": 7345,
+      "sha256": "ae3eb7e1a907199639e3d054750c263315e303215a633cdb4c2eec96e10e5169"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\logs\\challenge-native-export.terminal.json",
+      "bytes": 1523,
+      "sha256": "fd4047320778ad649fbb32acd5865ea351f9c3604fa542ec6a4f54dd10add996"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-fullchain-v2-terminal\\job\\logs\\challenge-native-export.terminal.json",
+      "bytes": 1523,
+      "sha256": "fd4047320778ad649fbb32acd5865ea351f9c3604fa542ec6a4f54dd10add996"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\logs\\solution-native-export.terminal.json",
+      "bytes": 1508,
+      "sha256": "0ebc6e9ae632ee12d4e481954577007f3953d287f149682e7e975a62fca1a8d2"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-fullchain-v2-terminal\\job\\logs\\solution-native-export.terminal.json",
+      "bytes": 1508,
+      "sha256": "0ebc6e9ae632ee12d4e481954577007f3953d287f149682e7e975a62fca1a8d2"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-native-tools-preparation\\sources\\Export.lean",
+      "bytes": 15994,
+      "sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\Export.lean",
+      "bytes": 16432,
+      "sha256": "f3e9de94b5ee42fe4fdc4d4ccec8b8609f33c07042aaea8119333d5d2fc6352f"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-native-tools-preparation\\sources\\ExporterMain.lean",
+      "bytes": 751,
+      "sha256": "bd8e350903f1382b25fe767f9086dd9882000f01085f7046ea06545e7848842a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\Main.lean",
+      "bytes": 769,
+      "sha256": "d0d7d0afff9fb3caf763e622e2b34576dd81d2514e7132c827f7d2342a9957b5"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-native-tools-preparation\\sources\\Export\\Parse.lean",
+      "bytes": 20491,
+      "sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\lean4export\\Export\\Parse.lean",
+      "bytes": 21000,
+      "sha256": "a15c9724c7ebf24a797b68e5be164b8c77b25ec0e8e40bcf3ea78dd7831b89c9"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-verification-preparation-v1\\run_verification.py",
+      "bytes": 36665,
+      "sha256": "92cc8dcf3e3c46e76490ba7bfe8d93bc10e331131eaab3b4c3ae500f80ac66a8"
+    }
+  ],
+  "full_streams_performed": 0,
+  "mathematical_or_runtime_claim": false
+}

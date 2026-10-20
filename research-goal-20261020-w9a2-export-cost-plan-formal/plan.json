@@ -1,0 +1,61 @@
+{
+  "schema": "w9a2-v6-export-structural-cost-plan-v1",
+  "status": "PREPARATION_ONLY_NOT_EXECUTED",
+  "scope": "One proposed inert NDJSON structural scan, no Lean/kernel/export/compiler/solver. Strictly only the historical solution export may be fully streamed; challenge is not fully read.",
+  "input": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\fullchain-v2\\solution.ndjson",
+    "expected_bytes": 677296932,
+    "expected_sha256": "1cc0f929919e0d4f58d947223c75a82450df57da11a9fe43fd93a90d8c8433d7",
+    "historical_source_sha256": "a517df6aebde6d136f8b83e06c8be10b3413b8430390f52bd47f04e06f0dce26",
+    "historical_source_bytes": 1830052
+  },
+  "limits": {
+    "complete_export_streams": 1,
+    "input_to_stream": "solution.ndjson only, one forward pass; no seek/backtracking/retry",
+    "wall_clock_seconds_including_setup_finalization": 120,
+    "process_memory_cap_bytes": 268435456,
+    "retained_name_table_cap_bytes": 33554432,
+    "maximum_input_line_bytes": 1048576,
+    "maximum_aggregate_output_bytes": 2097152,
+    "maximum_ranked_declaration_rows": 100
+  },
+  "input_binding": "Stat size before/after; verify all677296932 bytes and SHA1cc0... while consuming that same one pass. Check header and node/reference ordering. Any mismatch, cap, malformed line, allocation failure or deadline produces incomplete/failed audit, no complete ranking and no automatic retry.",
+  "algorithm": [
+    "Pin small receipts/exporter source and the selected known-v6 source/namespace classification list; do not import author code. Start120s deadline before setup.",
+    "Open only solution once, binary; read bounded lines and increment SHA256/byte offset from those exact bytes. Parse one JSON object at a time; discard it after updating bounded counters. Do not recreate Lean Expr values.",
+    "Maintain compact bounded parent/index/name-component storage only for resolving declaration and const names. Stop failclosed if32MiB retained-name storage,1MiB line or256MiB whole-process budget would be exceeded; exact actual enforcement must be independently specified before any execution.",
+    "Count record kinds and exact line bytes globally. For expressions count ie records by constructor, natVal decimal characters, strVal UTF8 bytes, const occurrences and ie maximum. Count declaration rows by kind and retain root ids type/value/recursor rhs without expanding them.",
+    "Maintain a single current sequential segment from the byte immediately after the previous declaration record to the end of the current declaration record. At each declaration record emit/update top100 by segment bytes, expression count, natVal digits and declaration-line bytes; reset segment counters. Treat an inductive block as one record/group, not separate emitted constructor records.",
+    "Label a declaration known-v6-local namespace/name match or origin_unresolved using an already reviewed explicit list, retaining private-name caveats. This is not an exact solution-minus-challenge set. No full challenge read is authorized by this plan.",
+    "At EOF compare bytes/SHA with original receipt, stat metadata and limits; output bounded summary/top rows with completion/failure flags and self-contained metric definitions. Output total≤2MiB. Do not output or modify an export/proof/runtime input."
+  ],
+  "metric_definitions": {
+    "declaration_record_bytes": "Exact UTF8 NDJSON line bytes for a def/thm/opaque/axiom/quot/inductive record, including LF. Type/value are expression indices, not serialized inline trees.",
+    "sequential_segment_bytes": "Reproducible byte interval after prior declaration LF through current declaration LF; includes emitted names/levels/new expression nodes and current declaration row. It is first-emission serialization accounting, not ownership of every referenced node.",
+    "segment_expression_records": "Number of emitted ie rows in that interval. Shared nodes already emitted earlier add zero here; nested dependency declarations reset boundaries and can receive serialization first encountered by a later root.",
+    "natVal_decimal_characters": "Exact exported decimal digit length of literal natVal strings. This can expose packed integer magnitude/serialization cost; it does not measure original zfNat64 payload length or decoding time.",
+    "type_and_value_roots": "Precisely named root indices from each declaration. Without storing/traversing the expression graph, no exact type-versus-value reachable-node size is claimed.",
+    "new_declarations": "Only known-local-name/namespace candidates with origin caveat. Exact new-vs-challenge declaration set is unavailable under one-solution-stream scope."
+  },
+  "DAG_feasibility": {
+    "format_supports_exact_graph": true,
+    "within_fixed_budget_guaranteed": false,
+    "reason": "ie records carry backward child indices, so a full compact child table plus per-root visited bitsets could compute unique root reachability in principle. Node count and repeated root closures are unmeasured: table space O(E), traversal time O(sum of root-reachable DAG sizes), not O(E) across all declarations. Python full objects or unrestricted memo sets can exceed256MiB. A memoized sum of child costs double-counts shared DAG nodes and must not be called exact DAG size. No exact per-root traversal is included in this bounded plan.",
+    "selected_safe_scope": "Only streaming global/per-segment structural counts and explicit type/value root ids. No type/value proof-size claim."
+  },
+  "what_it_can_support": [
+    "Locate old-v6 declarations associated with large first-emission serialization segments",
+    "Rank old-v6 literal decimal bulk and emitted expression-constructor counts",
+    "Separate literal-heavy definitions from declaration records with large type/value root references for further static review",
+    "Verify the same historical export bytes during a single scan if it completes within limits"
+  ],
+  "what_it_cannot_support": [
+    "v8 elaboration time, peak RSS, killed phase, OOM attribution or particular failing declaration",
+    "Runtime call counts, decoder allocation, Meta/kernel reduction cost, retained InfoTrees, compiler IR or emitted C costs",
+    "Unused/dead declarations outside the selected exported root dependency closure",
+    "An exact solution-minus-challenge diff without a challenge index/second full input pass",
+    "Exact unique per-declaration type/value DAG size under this bounded default",
+    "Any mathematical validation, source rewrite, successful compile or official acceptance"
+  ],
+  "next_authorization": "run_stream.py is prepared but unexecuted under the parent's later preparation-only authorization. Its reviewed invocation is the only future one-stream path; no fullstream, AST/import or --help test was run here. This plan creates no enabled gate and changes no proof/state/counter/Git."
+}

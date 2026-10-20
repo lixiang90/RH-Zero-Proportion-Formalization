@@ -1,0 +1,46 @@
+{
+  "schema": "w9a2-export-cost-runner-static-review-v1",
+  "result": "CONDITIONALLY_ACCEPTABLE_ONE_READ_ONLY_INVOCATION",
+  "inputs": [
+    {
+      "path": "research-goal-20261020-w9a2-export-cost-plan-formal/run_stream.py",
+      "bytes": 16495,
+      "sha256": "643c444d659d280f13068d2cde597acd467900e8b0264258363c1e9efcedc122"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-export-cost-plan-formal/files.json",
+      "bytes": 1442,
+      "sha256": "f0abcf27b3f7fc494d040a45c426b5f81ff03e42419898dc34de31aa78345f7f"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-export-cost-plan-formal/plan.json",
+      "bytes": 6882,
+      "sha256": "efa0ce05283f78364f4963747cc93764000a8e57c2872e1443fe3d8af9519198"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-export-cost-plan-formal/RUNNER.zh.md",
+      "bytes": 2502,
+      "sha256": "a06e78c6257cbc679eefa26574b2d8d7104e2a936112cb582e39f64f1779819a"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-export-cost-gate-v1/run_once.py",
+      "bytes": 3728,
+      "sha256": "b7813883b577490b157d7570de79b8c52c8d30a04cbb47d12cea58974c3a83c5"
+    }
+  ],
+  "single_fixed_solution_input": true,
+  "single_forward_export_pass": true,
+  "DAG_or_Lean_execution_present": false,
+  "output_new_directory_exclusive": true,
+  "RSS_limit_is_observed_soft_not_hard_OS": true,
+  "result_complete_alone_is_insufficient": true,
+  "outer_115_second_subprocess_timeout_present": true,
+  "root_original_handle_actual_exit0_required": true,
+  "root_whole_invocation_same_clock_elapsed_less_than_120_required": true,
+  "normal_nonoptimized_Python_required": true,
+  "actual_runner_or_wrapper_execution_by_reviewer": false,
+  "import_AST_help_fullstream_proof_API_process_network_actions_by_reviewer": 0,
+  "mathematical_or_performance_PASS_claimed": false,
+  "frozen_runner_modified": false,
+  "scope": "Complete code read and five direct input size/SHA pins only; no executable or full export was run/read. Conditional resource/result acceptance, not a hard allocator guarantee or mathematical validation."
+}

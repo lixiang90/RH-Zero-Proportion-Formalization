@@ -1,0 +1,25 @@
+# bounded export runner 小静审
+
+结论：条件性可执行一次。已完整静读冻结 `run_stream.py`（16495B，SHA643c444d659d280f13068d2cde597acd467900e8b0264258363c1e9efcedc122）及小plan/RUNNER说明；当前准备清单SHAf0abcf27b3f7fc494d040a45c426b5f81ff03e42419898dc34de31aa78345f7f相符。没有执行、import、AST解析、--help、fullstream、Lean、API、进程查询或网络操作；没有修改原包。本报告不证明实际扫描成功、数学通过或性能改善。
+
+输入固定为旧v6的solution.ndjson，677296932B/SHA1cc0f929919e0d4f58d947223c75a82450df57da11a9fe43fd93a90d8c8433d7。仅一次binary open及forward readline；没有seek、重试、challenge输入、完整表达式DAG或proof求值。哈希和字节计数使用同一遍原始行，完整成功须满足EOF全部bytes/SHA、前后size/mtime、固定metadata、索引顺序/引用和runner字节不变。self pin来自root显式传入的SHA；`--authorize-once`默认关闭，不等于一个持久化全局单次令牌，实际只调用一次仍由root控制。
+
+LINE_CAP为1MiB，最多先读1MiB+1字节哨兵，超长或无末尾LF即拒绝；逐行JSON仅作数据解析，不求值。保留名称表按sys.getsizeof+每项16B估算，限32MiB，单resolved name限4096 UTF8B。它不是精确分配器/整个RSS硬界；字符串连接、JSON临时对象和public_rows仍由进程RSS软观察覆盖，public_rows本身没有强制仅三项的数量guard。两个rank表各最多100行，表达式只存计数/根索引，不存边图。未知格式或资源/API错误不产生可采纳的完整成功。
+
+输出目录必须是workspace内尚不存在的新目录，mkdir及result.json的xb排他写使原输入和旧目录不被覆盖；只有result.json写入该目录。每次receipt先编码并检查2MiB，再锁定写盘、flush/fsync。2MiB约束针对result.json原始字节，少量stdout、外层观察收据不计入该文件界。失败可能留下新目录或部分文件；同路径再次运行会拒绝，不能据此自动重试。输入只流读一次；最终重读的是runner和至多2MiB的result，不是export。
+
+## 必须保留的终态边界
+
+1. watcher每50ms读自身Windows GetCurrentProcess的current/peak working set，超限或超过deadline后先写失败receipt，才os._exit。若主线程正持有output_lock或磁盘阻塞，watcher会等；GIL和采样也不是OS硬分配限制。因此不能声称硬120秒或硬256MiB内存保证。
+2. 主线程最终资源检查发生在结果编码、fsync、再次读取结果hash及print之前。仅return0意图或result.elapsed不足以证明含finalization的总耗时<120秒。
+3. 成功receipt写出后，watcher可能尝试同名xb并因FileExists转为os._exit(3)；写盘途中异常也可能留下部分/complete=true文件而真实进程非0。必须拒绝任何非0、timeout、缺失/截断/解析失败或身份不符结果，不能把complete字段或print独自当作成功。
+
+随后只读一次root准备的 `run_once.py`，SHA4969e65ca86b09c628ca3507844bda4a93dc567b9b914d1d0bca52edc097b33b。它先核runner SHA并mkdir固定fresh OUTER作为单次marker；直接subprocess.run仅启动该runner，stdin关闭、捕获stdout/stderr，timeout为剩余115秒。TimeoutExpired路径由subprocess.run杀死并等待自己的直子进程。实际child0、无timeout、完整result.success/complete、固定bytes/SHA及observed RSS<256MiB同时满足才把结构结果设为complete；最终文件输出总和检查2MiB。没有compiler或kernel调用。
+
+此外层仍有两个必须保留的条件：其elapsed在读取/解析result及写stdout、stderr、outer-observation、print之前取值，故这个字段也不包括全部finalization；且权限/selfpin/aggregate guards使用assert，执行解释器必须非优化模式（不含-O，不受PYTHONOPTIMIZE开启优化）。115秒child预算留余量，但不能逻辑保证磁盘收尾总在5秒内。
+
+因此条件性可接受一次只读调用：root原工具handle须实际exit0，并用包住整个run_once调用的同clock实际总elapsed<120补上最终收尾界；不能只采纳其内部elapsed。还须正常非优化解释器、完整result/outer receipt、固定输入bytes/SHA和runner pin一致。timeout/非0/总时限不符即整次不完整，保留输出为失败证据且不自动重试。两个脚本均未执行；这不是对未来外层终态或环境已满足的陈述。不要求修改冻结643c runner。
+
+结果即使成功也只表示旧v6序列化结构统计：sequential segment是前一声明之后到当前声明行的首次输出区间，共享节点可能属于更早区间；namespace match不是精确新声明集合。它不测v8 elaboration/RSS、C/IR、宏解码耗时、每根唯一DAG大小或137原因，也不提供数学或官网通过。
+
+审查封存后停止，不创建enabled gate，不执行扫描，不提出新runner版本。

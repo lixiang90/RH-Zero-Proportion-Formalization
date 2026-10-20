@@ -1,0 +1,22 @@
+{
+  "schema": "w9a2-export-cost-outer-two-edit-static-supplement-v1",
+  "result": "PASS_STATIC_NARROW_DELTA",
+  "prior_review_manifest_sha256_preserved": "76648a0602f53d96109a7bb47a469c4decdc81082101f564def5cdb3c1e383e1",
+  "new_outer_path": "research-goal-20261020-w9a2-export-cost-gate-v1/run_once.py",
+  "new_outer_bytes": 3728,
+  "new_outer_sha256": "b7813883b577490b157d7570de79b8c52c8d30a04cbb47d12cea58974c3a83c5",
+  "runner_sha256_unchanged": "643c444d659d280f13068d2cde597acd467900e8b0264258363c1e9efcedc122",
+  "two_changes": [
+    "At main start, explicitly raise on sys.flags.optimize before assertion guards or directory/process actions.",
+    "After result parsing, file writes and flushed print, return0 only if observed_success and monotonic-started<120; includes a descriptive comment."
+  ],
+  "reverse_projection_old_sha256": "4969e65ca86b09c628ca3507844bda4a93dc567b9b914d1d0bca52edc097b33b",
+  "reverse_projection_matches_old_exact_bytes": true,
+  "all_other_outer_bytes_preserved": true,
+  "assessment": "These edits close the two identified normal-path acceptance gaps within the measured main interval. The internal receipt elapsed remains an earlier observation and cannot substitute for actual outer exit0. No further process-startup or post-return OS-cleanup hard-time guarantee is claimed. Own RSS remains sampled soft observation, and historical structural success is not mathematics, profiling or official acceptance.",
+  "root_original_handle_actual_exit0_still_required": true,
+  "normal_single_invocation_static_acceptable": true,
+  "Python_import_AST_help_stream_proof_API_process_network_execution_by_reviewer": 0,
+  "old_76648_review_or_runner_modified_by_reviewer": false,
+  "scope": "Only full small new source read, current direct SHA checks, and in-memory reverse text projection of two edits using PowerShell; no wrapper or runner execution."
+}
