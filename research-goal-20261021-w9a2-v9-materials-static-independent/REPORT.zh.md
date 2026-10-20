@@ -1,0 +1,15 @@
+# DRAFT-v9 材料独立静审
+
+结论：PASS_STATIC_DRAFT_MATERIALS，未发现本次冻结材料的确定一致性问题；不是可上传、资源通过、数学验证或官网接受。
+
+prepared-v9清单d3738ae22b53e3f2966885721d3fb6c3c44016528307d4cef02e72916bb15d8d的13成员，以及expected-wire-v9清单b2d35fe03c8132852dd42af24ba22e95d44125ac7640ace8487c317efdbd518a的2成员，当前size/SHA全部相符。proof/Solution.lean为1861120B/SHA7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99，直接bytewise比较等于冻结draft-v9原文件，没有归一化或重新生成。原LICENSE与prepared-v8逐字节相同（11558B/SHA1eb85fc9…），ATTRIBUTION首句准确标draft-v9及7552身份；旧版本继承、源码notices与静态审查范围表述清楚。
+
+两个server JSON逐byte相同，1343B/SHA585adf65bcbd9f401a8a7f19ae9aada99249cbd5afd1d7c80201d5fe5a73debc。把新ID换回旧v8 ID后，完整原始JSON字节与已冻v8 server相同，故除ID外的字段保持：Li Xiang/lixiang90、model=null（UI空）、Codex、原method、精确K、605 UTF16 units的原ASCII summary、三个theorem名称、Apache-2.0。
+
+新ID为lixiang90-w9a2-weighted-potential-v9-20261021。没有查询ID可用性或当前网站。独立按精确原始字节重算 SHA256(`submission.json`+NUL+server JSON+`proof/Solution.lean`+NUL+proof)，得到2cd096edb028658cdec3adcf8aee33ca761347e8390181b07d0f9355e0e0ea46，与prediction一致。它明确只为沿用已捕获协议的PREDICTED值，不是实际官网proofDigest或新部署协议观察。
+
+另核18个直接证据引用文件的当前size/SHA，全部相符；其中完整projection、formal a8decada…与math 1d947e89…静态审查、v6 cold3200失败/Nano中断/首投timeout、v7和v8官网失败及v8两次本地失败均按原范围保留。没有递归重审这些历史包或重做数学。
+
+原23402、parent32660/child54436仅来自root-resource-start-report冻结转录，材料明确限定为启动时快照，terminal和实际外层exit仍unknown。本审查没有读取活work、查询进程、日志或新终态；不能把该快照理解为本审查时仍活跃。所有ordinary/resource/Comparator/默认内核/Nano/双核/full3200/official/promotion/upload_ready/submitted标志仍false或unknown，数学说明也明确只是历史内容与静态投影。未来实际结果必须新建hash-linked addendum，不能覆盖本DRAFT或用旧成功验收v9。
+
+本审查只用PowerShell/.NET文件读取、JSON数据解析、hash和byte比较，未执行generator/Python/AST、Lean、decoder、数值/数学检查、UI、网络、Git、进程或提交，未改proof/state/counter或旧材料。没有审查生成器源码/其实际外层终态，也没有赋予提交授权；此处只验收已存在的冻结DRAFT材料。封存即停止。

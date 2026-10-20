@@ -1,0 +1,83 @@
+{
+  "schema": "root-transcribed-v9-resource-failure-observation-v1",
+  "provenance": "Verbatim summary supplied by /root plus separately read own-work small receipts; archiver did not observe, poll or recover the original tool handle",
+  "root_summary_verbatim": "ROOT observed actual original session23402 terminal via write_stdin tool8f7a7d: actual outer exit1, elapsed final583.593s, child54436 actual3221226505, terminalSHA6e222b92535c3beb51c8103ea4e6bef0d1e88956882e9b5d5dfe34ce9ed9e579, peakRSS6512.88MiB,commit11362.65MiB.",
+  "original_outer_session": 23402,
+  "root_reported_actual_terminal_tool": "write_stdin",
+  "root_reported_actual_terminal_tool_chunk": "8f7a7d",
+  "root_reported_actual_original_outer_exit_code": 1,
+  "root_reported_final_sample_elapsed_seconds": 583.593,
+  "root_reported_parent_pid": 32660,
+  "root_reported_child_pid": 54436,
+  "root_reported_actual_child_exit_code": 3221226505,
+  "root_reported_terminal_sha256": "6e222b92535c3beb51c8103ea4e6bef0d1e88956882e9b5d5dfe34ce9ed9e579",
+  "root_reported_peak_RSS_MiB_rounded": 6512.88,
+  "root_reported_peak_commit_MiB_rounded": 11362.65,
+  "raw_original_tool_response_saved_by_archiver": false,
+  "own_work_terminal_elapsed_seconds": 583.6710000000021,
+  "own_work_terminal_peak_RSS_bytes": 6829252608,
+  "own_work_terminal_peak_commit_bytes": 11914600448,
+  "own_work_resource_sample_count": 21,
+  "own_work_terminal_compiler_resource_gate_passed": false,
+  "own_work_terminal_timeout": false,
+  "own_work_terminal_runner_RSS_limit_exceeded": false,
+  "source_pin_from_existing_terminal_not_fresh_source_audit": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-delivery\\draft-v9\\Solution.lean",
+    "bytes": 1861120,
+    "sha256": "7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99"
+  },
+  "gate_pin_from_existing_terminal_not_fresh_gate_audit": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-v9-resource-gate-v1\\resource-gate.json",
+    "bytes": 3881,
+    "sha256": "d2b275d90a1b814f5d6045abc57ccd2b1ae4b7178e573b4c997a06248fcb4ce9"
+  },
+  "stderr_scope": "Actual stderr reports lean::memory_exception at interpreter; does not identify a declaration, prove OS/cgroup OOM, or refute the mathematical theorem",
+  "official_PASS": false,
+  "extra_independent_kernel_or_fullchain_PASS": false,
+  "archive_small_file_copies": [
+    {
+      "name": "started.json",
+      "original_path": "tmp/w9a2-20261021/v9-resource-v1/started.json",
+      "archive_path": "work/started.json",
+      "bytes": 10992,
+      "sha256": "e265ef94243d248cb15910ca393ce71611f95ff3a49deb38d29b2535c55913e5"
+    },
+    {
+      "name": "child.json",
+      "original_path": "tmp/w9a2-20261021/v9-resource-v1/child.json",
+      "archive_path": "work/child.json",
+      "bytes": 992,
+      "sha256": "57a95255fe755e81f9fb5287e871e05a7758726de5b7ffae6f7c28a7a2e7280b"
+    },
+    {
+      "name": "terminal.json",
+      "original_path": "tmp/w9a2-20261021/v9-resource-v1/terminal.json",
+      "archive_path": "work/terminal.json",
+      "bytes": 12422,
+      "sha256": "6e222b92535c3beb51c8103ea4e6bef0d1e88956882e9b5d5dfe34ce9ed9e579"
+    },
+    {
+      "name": "memory.jsonl",
+      "original_path": "tmp/w9a2-20261021/v9-resource-v1/memory.jsonl",
+      "archive_path": "work/memory.jsonl",
+      "bytes": 4719,
+      "sha256": "3f03585834967b32ec053e4703d673e10eeb16c4090a432a24144473947c57af"
+    },
+    {
+      "name": "stdout.jsonl",
+      "original_path": "tmp/w9a2-20261021/v9-resource-v1/stdout.jsonl",
+      "archive_path": "work/stdout.jsonl",
+      "bytes": 4096,
+      "sha256": "c5323199c271b79e927b6dd1a231ec0711649293deb76a17cbdd549f0dab6be4"
+    },
+    {
+      "name": "stderr.log",
+      "original_path": "tmp/w9a2-20261021/v9-resource-v1/stderr.log",
+      "archive_path": "work/stderr.log",
+      "bytes": 196,
+      "sha256": "48bc2200174632932b9ea98fd0a0c30e6dc353ce535531045f1c7efc7b79940a"
+    }
+  ],
+  "new_proof_compiler_export_kernel_network_UI_Git_process_queries": 0,
+  "frozen_DRAFT_or_source_state_counter_changes": 0
+}

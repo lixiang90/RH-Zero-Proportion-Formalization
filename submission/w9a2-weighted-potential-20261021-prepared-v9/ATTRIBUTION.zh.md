@@ -1,0 +1,7 @@
+proof/Solution.lean是冻结draft-v9原始字节的完整副本（1861120字节，SHA256 7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99）。继承draft-v5→v6的wfun全名修复、v6→v7与v7→v8的已冻结代码生成修饰符/诊断删行版本；v8→v9的完整字节投影及两份独立静态审查分别链接在evidence-references.json。本材料不重写proof、数据或嵌入的署名、版权、LICENSE与NOTICE，也不将静态投影视作新编译/内核通过。
+
+本候选沿用ajp88的已接受W9A2窗口/数值证书，原官方完整源SHA为241068ee5abab772ea1aba7533ec33b9140df7dc1728aeb4c61bfb648fe195c7。其checker和计数链保留master-of-puppets5/R. Arun Chandru贡献及原署名；源中还明确归功于Samuel Lavery、Kristian Muri Knausgård、Yuhang Shi，以及Zero Forge / @zkvoxels（GitHub cafeai）的zfNat64文字打包。完整祖先信息以源码内实际notices为准，这份简表不取代它们。
+
+当前UI作者按用户授权填写Li Xiang，GitHub为lixiang90。材料metadata沿用Apache-2.0标识，附项目LICENSE原字节；源码内另存的第三方MIT条款、Knausgard目录NOTICE、Anthropic和其他依赖贡献者notices继续原样附在完整源码中。没有将其改署为当前作者或删除适用文本。
+
+当前改进为保留同一W9A2数值payload、kernel、guard、拓扑和游标的quantitative localization与带权势函数求和传递；完整walk会检查各状态相关自然数target。普通开发期间的proof-only归一化修复、原失败记录及单独PASS模块均在证据索引中保留。本材料未导入旧candidate proof的kernel data，也未以任何静态数值审计代替Lean或独立内核验证。
