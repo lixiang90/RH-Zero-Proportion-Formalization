@@ -12,8 +12,8 @@
   "compaction_resets_counter": false,
   "subagent_messages_increment_counter": false,
   "within_round_user_steering_increments_counter": false,
-  "main_route": "Fixed proof-preserving v7: add 8 explicit noncomputable modifiers and remove 15 independent diagnostic print commands. Preserve every proof body, all data and all 48 root checks. Submit this changed source once to the official complete verifier under the existing human authorization.",
-  "next_gate": "Independent exact 23-edit byte projection; prepared-v7 and expected-wire-v7; root-frozen official submission gate; exact user GitHub push and fixed-commit byte check; one official v7 upload, then actual official full-chain acceptance/promotion evidence. No local compiler/export/kernel/old collector rerun.",
+  "main_route": "Exact proof-preserving v7 was actually submitted once. The official UI reports Verification running and actual bundle digest 1f28020dcda27176a97f8c48e9c9d3f9dc00107ce904f1a1f6706b1f43309771, matching the prediction. Wait for this same official job; preserve v6 timeout and all frozen inputs.",
+  "next_gate": "Observe this exact official v7 job to actual terminal result. Acceptance requires both-kernel attestation, matching bundle, promotion/ledger status and fixed public evidence; running or upload alone cannot complete the goal. No unchanged resubmission, local compiler/export/kernel or new optimization family.",
   "latest_completed_gate": {
     "name": "Official acceptance of the exact user-uploaded v3 source",
     "evidence": "research-goal-20261019-record-accepted-independent-1753/accepted-files.json",
@@ -1372,7 +1372,16 @@
     "source_sha256": "dae01f6844642d7f9ee8180616c1f57aefc18ab8616bc8a4a46a14bf8e9fefc6",
     "source_bytes": 1829242,
     "local_Lean_or_kernel_run": false,
-    "official_result": "not-yet-submitted",
-    "goal_complete": false
+    "official_result": "running",
+    "goal_complete": false,
+    "actual_official_proofDigest": "1f28020dcda27176a97f8c48e9c9d3f9dc00107ce904f1a1f6706b1f43309771",
+    "actual_submit_clicks": 1,
+    "submitted_as": "Li Xiang",
+    "submission_id": "lixiang90-w9a2-weighted-potential-v7-20261020",
+    "source_checkpoint_commit": "cb7558bc2944358366b5aac4d187f3b3ee5a637c",
+    "actual_push_exit_code": 0,
+    "fixed_commit_public_source_equal": true,
+    "official_acceptance": false,
+    "official_kernels_complete": false
   }
 }
