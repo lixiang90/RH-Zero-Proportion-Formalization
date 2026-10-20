@@ -1,0 +1,46 @@
+{
+  "schema": "w9a2-v8-infotree-finite-static-review-v1",
+  "result": "NO_SAFE_EXISTING_GLOBAL_SOURCE_SWITCH_ESTABLISHED_BARE_FALSE_ROUTE_STOPPED",
+  "sdk_ref": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "public_API": {
+    "name": "Lean.Elab.enableInfoTree",
+    "argument": "Bool, default true",
+    "type": "[MonadInfoTree m] -> Bool -> m Unit",
+    "effect": "Only replace InfoState.enabled",
+    "syntax_record_only_not_written_as_Lean_source": "run_cmd Lean.Elab.enableInfoTree false",
+    "run_cmd_expected_type": "Lean.Elab.Command.CommandElabM Unit",
+    "header_initializes_enabled_true": true,
+    "per_command_reset_preserves_existing_flag": true,
+    "flag_is_not_in_section_namespace_Scope": true,
+    "arbitrary_later_user_elaborator_reenable_behavior_audited": false
+  },
+  "bare_false_obstacle": {
+    "frontend_read": "Lean/Language/Lean.lean:697-698 infoSt.trees[0]!",
+    "disabled_recording": "Lean/Elab/InfoTree/Main.lean:222-228,283-313",
+    "per_command_empty_reset": "Lean/Elab/Command.lean:642-643",
+    "empty_tree_filler": "None in InfoState.substituteLazy",
+    "runtime_risk": "getElem! out-of-bounds panic; comparator build sets LEAN_ABORT_ON_PANIC=1",
+    "actual_smoke_or_panic_execution_observed": false
+  },
+  "local_API": {
+    "name": "Lean.Elab.withEnableInfoTree",
+    "scope": "Given action only; finally restores saved flag",
+    "global_wrapper_or_hook_designed": false
+  },
+  "registered_global_enabled_user_option_found_in_traced_SDK_chain": false,
+  "cmdlineSnapshots_is_an_InfoTree_disable_option": false,
+  "trace_Elab_info_is_a_collection_disable_option": false,
+  "ilean_flag_enables_initial_InfoTree_collection": false,
+  "ilean_extra_final_reference_traversal_and_JSON_output": true,
+  "memory_savings_measured_or_guaranteed": false,
+  "current_interpreter_failure_attributed_to_InfoTree": false,
+  "saved_contract_explicit_InfoTree_or_run_cmd_text_ban_found": false,
+  "saved_contract_scope": "Previously captured primary source only; no new remote/current-deployment query.",
+  "root_direction": "Finite negative conclusion sufficient; stop bare InfoTree=false, do not search new hook/wrapper families, do not run tiny smoke.",
+  "Lean_source_or_candidate_or_generator_written": false,
+  "Lean_compiler_kernel_exporter_solver_or_probe_runs": 0,
+  "process_API_network_calls": 0,
+  "old_failure_upgraded_to_PASS": false,
+  "resource_limits_or_counter_modified": false,
+  "new_source_selected_or_validation_disabled": false
+}

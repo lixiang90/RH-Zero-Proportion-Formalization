@@ -1,0 +1,13 @@
+# v8 interpreter 内存失败：静态结论
+
+原93095为实际失败：Lean在解释器通用检查点抛出memory_exception，不是本次runner主动停或超时。标签不能定位声明，更不能归因48条rc证书。
+
+固定pin源码的调用链是ir_interpreter.cpp627–670 → interrupt.cpp108–114 → memory.cpp145–157：进程总内存限额、每线程默认200次轮询；不是该解释器独占内存统计。Windows非jemalloc分支先查峰RSS再查当前RSS，jemalloc分支优先条件仍保留。
+
+--setup确能加载依赖动态库、插件、限定importArts并覆盖选项；官网setup文件实际内容未留存，所以只能认定本地与官网路径不等价，不能保证setup节省资源。prefer_native源码默认已true，不能凭再设true产生不存在的native代码。
+
+zfNat64的135处WL调用确会运行本地宏/decoder；宏返回普通Nat numeral，后续kernel不重新解码。48个decide+kernel走mkAuxLemma/kernel而非nativeEqTrue，Localization复用同run，没有第二套完整叶检查。v8的18个显式noncomputable改动保留kernel定义；10个PTT/PT定义没有宏运行consumer的闭包证据仍有效。
+
+目前没有足以单凭interpreter标签选定的新资源削减补丁。不能把decoder改noncomputable、删除rc或改native证明。另一个独立InfoTree/snapshot静审若给出安全元数据减负，须按其自己的证据审定。本包没有运行Lean、compiler、kernel、export、API或probe，没有改冻结source/gate/counter。
+
+完整精确路径、SDK行号、135处宏/48条rc静态清单及输入前后hash见report.json。此报告不声称资源门、官网或目标完成。

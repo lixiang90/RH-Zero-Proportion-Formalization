@@ -1,0 +1,1232 @@
+{
+  "schema": "w9a2-v8-interpreter-static-formal-v1",
+  "scope": "Only inert exact-pin primary source GETs and static local source/log/JSON reads. No Lean/compiler/version/kernel/exporter/solver/native API/probe run; no frozen source/gate/counter changes.",
+  "Lean_pin": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "actual_failure": {
+    "actual_child_exit_code": 3221226505,
+    "elapsed_seconds": 1364.2029999999977,
+    "resource_limit_exceeded": false,
+    "budget_expired_and_owned_child_terminated": false,
+    "max_observed_PeakWorkingSetSize": 6851174400,
+    "max_observed_PeakPagefileUsage": 11888607232,
+    "compiler_resource_gate_passed": false
+  },
+  "interpretation": [
+    {
+      "source": "primary/src/library/ir_interpreter.cpp",
+      "lines": [
+        627,
+        670
+      ],
+      "fact": "IR eval_body entry and its self-tail-call loop call lean::check_system(\"interpreter\"). Only stack_space_exception gets an interpreter stacktrace here; a memory_exception carries no declaration stacktrace from this wrapper."
+    },
+    {
+      "source": "primary/src/runtime/interrupt.cpp",
+      "lines": [
+        108,
+        114
+      ],
+      "fact": "check_system calls check_stack and check_memory. do_check_interrupted defaults false, so this site does not add a heartbeat or interruption check."
+    },
+    {
+      "source": "primary/src/runtime/memory.cpp",
+      "lines": [
+        14,
+        18,
+        42,
+        109,
+        157
+      ],
+      "fact": "g_max_memory is process-global; the polling counter is per-thread. Every200 check calls by the default macro, peak first short-circuits below the cap, then current nonzero memory at or above the cap throws. Windows non-jemalloc branch reads process PeakWorkingSetSize/WorkingSetSize. HAS_JEMALLOC branch takes precedence and measures allocator stats instead; this review does not probe the binary build configuration."
+    },
+    {
+      "fact": "The component string names the check site, not the allocator, phase, declaration, or owner of all retained memory. Native and interpreted meta work, imports, environment/InfoTrees, IR/codegen and other live memory may coexist. The observed exception establishes Lean's own memory-limit rejection at an interpreter check point, not an OS OOM diagnosis."
+    }
+  ],
+  "setup_difference": [
+    {
+      "source": "Lean/Elab/Frontend.lean",
+      "lines": [
+        294,
+        313
+      ],
+      "fact": "With setup, load each setup.dynlib, append setup.plugins, use setup.importArts, setup.package/name/isModule and merge setup.options over CLI defaults. Without setup, use parsed imports/module flag and CLI mainModuleName/options/plugins. Thus the local resource run is not an execution-path equivalent of the website."
+    },
+    {
+      "source": "lake/Lake/Build/Module.lean",
+      "lines": [
+        149,
+        163,
+        196,
+        222,
+        550,
+        609,
+        635,
+        646
+      ],
+      "fact": "Lake selects precompiled import libraries/plugins when configured, computes dependencies, and puts their paths and import artifacts/options into ModuleSetup. It need not have nonempty extra dynlibs for every project."
+    },
+    {
+      "source": "primary/src/library/ir_interpreter.cpp",
+      "lines": [
+        55,
+        57,
+        325,
+        362,
+        429,
+        442,
+        829,
+        873,
+        1046,
+        1048,
+        1216,
+        1219
+      ],
+      "fact": "The source default interpreter.prefer_native is true. The interpreter searches loaded modules for native symbols when allowed, otherwise retains IR fallback. --setup can make imported native code available; enabling prefer_native again cannot create unavailable native code. Same-file fresh macro code is not made native by merely emitting that file's future C source."
+    },
+    {
+      "fact": "The actual website Candidate.setup.json contents and actual loaded symbol/module set were not captured in the provided failure log. No claim that its dynlibs/plugins are nonempty, that it avoids the observed local path, or that setup alone guarantees lower memory is supported."
+    }
+  ],
+  "real_consumers": {
+    "macro": {
+      "source_lines": [
+        69,
+        125
+      ],
+      "decoding_definitions": [
+        "ZeroForgePackedNat.digit64",
+        "ZeroForgePackedNat.decode64"
+      ],
+      "packed_WL_calls": [
+        {
+          "name": "WL0_0",
+          "line": 12713,
+          "bits": 20043,
+          "payload_characters": 3341
+        },
+        {
+          "name": "WL1_0",
+          "line": 12717,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL1_1",
+          "line": 12718,
+          "bits": 21371,
+          "payload_characters": 3562
+        },
+        {
+          "name": "WL2_0",
+          "line": 12723,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL2_1",
+          "line": 12724,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL2_2",
+          "line": 12725,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL2_3",
+          "line": 12726,
+          "bits": 17897,
+          "payload_characters": 2983
+        },
+        {
+          "name": "WL3_0",
+          "line": 12733,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL3_1",
+          "line": 12734,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL3_2",
+          "line": 12735,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL3_3",
+          "line": 12736,
+          "bits": 21300,
+          "payload_characters": 3550
+        },
+        {
+          "name": "WL4_0",
+          "line": 12743,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL4_1",
+          "line": 12744,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL4_2",
+          "line": 12745,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL4_3",
+          "line": 12746,
+          "bits": 33245,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL4_4",
+          "line": 12747,
+          "bits": 20459,
+          "payload_characters": 3410
+        },
+        {
+          "name": "WL5_0",
+          "line": 12755,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL5_1",
+          "line": 12756,
+          "bits": 33245,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL5_2",
+          "line": 12757,
+          "bits": 33243,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL5_3",
+          "line": 12758,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL5_4",
+          "line": 12759,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL5_5",
+          "line": 12760,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL5_6",
+          "line": 12761,
+          "bits": 10113,
+          "payload_characters": 1686
+        },
+        {
+          "name": "WL6_0",
+          "line": 12771,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL6_1",
+          "line": 12772,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL6_2",
+          "line": 12773,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL6_3",
+          "line": 12774,
+          "bits": 3587,
+          "payload_characters": 598
+        },
+        {
+          "name": "WL7_0",
+          "line": 12781,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL7_1",
+          "line": 12782,
+          "bits": 29905,
+          "payload_characters": 4985
+        },
+        {
+          "name": "WL8_0",
+          "line": 12787,
+          "bits": 33244,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL8_1",
+          "line": 12788,
+          "bits": 33245,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL8_2",
+          "line": 12789,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL8_3",
+          "line": 12790,
+          "bits": 25096,
+          "payload_characters": 4183
+        },
+        {
+          "name": "WL9_0",
+          "line": 12797,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL9_1",
+          "line": 12798,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL9_2",
+          "line": 12799,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL9_3",
+          "line": 12800,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL9_4",
+          "line": 12801,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL9_5",
+          "line": 12802,
+          "bits": 33243,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL9_6",
+          "line": 12803,
+          "bits": 9176,
+          "payload_characters": 1530
+        },
+        {
+          "name": "WL10_0",
+          "line": 12813,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL10_1",
+          "line": 12814,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL10_2",
+          "line": 12815,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL10_3",
+          "line": 12816,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL10_4",
+          "line": 12817,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL10_5",
+          "line": 12818,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL10_6",
+          "line": 12819,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL10_7",
+          "line": 12820,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL10_8",
+          "line": 12821,
+          "bits": 8124,
+          "payload_characters": 1354
+        },
+        {
+          "name": "WL11_0",
+          "line": 12833,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL11_1",
+          "line": 12834,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL11_2",
+          "line": 12835,
+          "bits": 33243,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL11_3",
+          "line": 12836,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL11_4",
+          "line": 12837,
+          "bits": 3965,
+          "payload_characters": 661
+        },
+        {
+          "name": "WL12_0",
+          "line": 12845,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL12_1",
+          "line": 12846,
+          "bits": 33244,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL12_2",
+          "line": 12847,
+          "bits": 33230,
+          "payload_characters": 5539
+        },
+        {
+          "name": "WL12_3",
+          "line": 12848,
+          "bits": 21325,
+          "payload_characters": 3555
+        },
+        {
+          "name": "WL13_0",
+          "line": 12855,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL13_1",
+          "line": 12856,
+          "bits": 33244,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL13_2",
+          "line": 12857,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL13_3",
+          "line": 12858,
+          "bits": 16686,
+          "payload_characters": 2781
+        },
+        {
+          "name": "WL14_0",
+          "line": 12865,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL14_1",
+          "line": 12866,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL14_2",
+          "line": 12867,
+          "bits": 9144,
+          "payload_characters": 1524
+        },
+        {
+          "name": "WL15_0",
+          "line": 12873,
+          "bits": 23404,
+          "payload_characters": 3901
+        },
+        {
+          "name": "WL16_0",
+          "line": 12877,
+          "bits": 500,
+          "payload_characters": 84
+        },
+        {
+          "name": "WL17_0",
+          "line": 12881,
+          "bits": 425,
+          "payload_characters": 71
+        },
+        {
+          "name": "WL18_0",
+          "line": 12885,
+          "bits": 394,
+          "payload_characters": 66
+        },
+        {
+          "name": "WL19_0",
+          "line": 12889,
+          "bits": 380,
+          "payload_characters": 64
+        },
+        {
+          "name": "WL20_0",
+          "line": 12893,
+          "bits": 394,
+          "payload_characters": 66
+        },
+        {
+          "name": "WL21_0",
+          "line": 12897,
+          "bits": 394,
+          "payload_characters": 66
+        },
+        {
+          "name": "WL22_0",
+          "line": 12901,
+          "bits": 394,
+          "payload_characters": 66
+        },
+        {
+          "name": "WL23_0",
+          "line": 12905,
+          "bits": 182,
+          "payload_characters": 31
+        },
+        {
+          "name": "WL24_0",
+          "line": 12909,
+          "bits": 865,
+          "payload_characters": 145
+        },
+        {
+          "name": "WL25_0",
+          "line": 12913,
+          "bits": 196,
+          "payload_characters": 33
+        },
+        {
+          "name": "WL26_0",
+          "line": 12917,
+          "bits": 1073,
+          "payload_characters": 179
+        },
+        {
+          "name": "WL27_0",
+          "line": 12921,
+          "bits": 182,
+          "payload_characters": 31
+        },
+        {
+          "name": "WL28_0",
+          "line": 12925,
+          "bits": 370,
+          "payload_characters": 62
+        },
+        {
+          "name": "WL29_0",
+          "line": 12929,
+          "bits": 182,
+          "payload_characters": 31
+        },
+        {
+          "name": "WL30_0",
+          "line": 12933,
+          "bits": 182,
+          "payload_characters": 31
+        },
+        {
+          "name": "WL32_0",
+          "line": 12941,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL32_1",
+          "line": 12942,
+          "bits": 23176,
+          "payload_characters": 3863
+        },
+        {
+          "name": "WL33_0",
+          "line": 12947,
+          "bits": 33236,
+          "payload_characters": 5540
+        },
+        {
+          "name": "WL33_1",
+          "line": 12948,
+          "bits": 33245,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL33_2",
+          "line": 12949,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL33_3",
+          "line": 12950,
+          "bits": 22427,
+          "payload_characters": 3738
+        },
+        {
+          "name": "WL34_0",
+          "line": 12957,
+          "bits": 33240,
+          "payload_characters": 5540
+        },
+        {
+          "name": "WL34_1",
+          "line": 12958,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL34_2",
+          "line": 12959,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL34_3",
+          "line": 12960,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL34_4",
+          "line": 12961,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL34_5",
+          "line": 12962,
+          "bits": 33232,
+          "payload_characters": 5539
+        },
+        {
+          "name": "WL34_6",
+          "line": 12963,
+          "bits": 5460,
+          "payload_characters": 910
+        },
+        {
+          "name": "WL35_0",
+          "line": 12973,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL35_1",
+          "line": 12974,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL35_2",
+          "line": 12975,
+          "bits": 11972,
+          "payload_characters": 1996
+        },
+        {
+          "name": "WL36_0",
+          "line": 12981,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL36_1",
+          "line": 12982,
+          "bits": 33232,
+          "payload_characters": 5539
+        },
+        {
+          "name": "WL36_2",
+          "line": 12983,
+          "bits": 33244,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL36_3",
+          "line": 12984,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL36_4",
+          "line": 12985,
+          "bits": 29923,
+          "payload_characters": 4988
+        },
+        {
+          "name": "WL37_0",
+          "line": 12993,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL37_1",
+          "line": 12994,
+          "bits": 33244,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL37_2",
+          "line": 12995,
+          "bits": 33236,
+          "payload_characters": 5540
+        },
+        {
+          "name": "WL37_3",
+          "line": 12996,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL37_4",
+          "line": 12997,
+          "bits": 33243,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL37_5",
+          "line": 12998,
+          "bits": 13315,
+          "payload_characters": 2220
+        },
+        {
+          "name": "WL38_0",
+          "line": 13007,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL38_1",
+          "line": 13008,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL38_2",
+          "line": 13009,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL38_3",
+          "line": 13010,
+          "bits": 24139,
+          "payload_characters": 4024
+        },
+        {
+          "name": "WL39_0",
+          "line": 13017,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL39_1",
+          "line": 13018,
+          "bits": 12334,
+          "payload_characters": 2056
+        },
+        {
+          "name": "WL40_0",
+          "line": 13023,
+          "bits": 33245,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL40_1",
+          "line": 13024,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL40_2",
+          "line": 13025,
+          "bits": 25663,
+          "payload_characters": 4278
+        },
+        {
+          "name": "WL41_0",
+          "line": 13031,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL41_1",
+          "line": 13032,
+          "bits": 33242,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL41_2",
+          "line": 13033,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL41_3",
+          "line": 13034,
+          "bits": 9527,
+          "payload_characters": 1588
+        },
+        {
+          "name": "WL42_0",
+          "line": 13041,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL42_1",
+          "line": 13042,
+          "bits": 33246,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL42_2",
+          "line": 13043,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL42_3",
+          "line": 13044,
+          "bits": 23590,
+          "payload_characters": 3932
+        },
+        {
+          "name": "WL43_0",
+          "line": 13051,
+          "bits": 33247,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL43_1",
+          "line": 13052,
+          "bits": 33233,
+          "payload_characters": 5539
+        },
+        {
+          "name": "WL43_2",
+          "line": 13053,
+          "bits": 24758,
+          "payload_characters": 4127
+        },
+        {
+          "name": "WL44_0",
+          "line": 13059,
+          "bits": 33243,
+          "payload_characters": 5541
+        },
+        {
+          "name": "WL44_1",
+          "line": 13060,
+          "bits": 33248,
+          "payload_characters": 5542
+        },
+        {
+          "name": "WL44_2",
+          "line": 13061,
+          "bits": 3999,
+          "payload_characters": 667
+        },
+        {
+          "name": "WL45_0",
+          "line": 13067,
+          "bits": 33237,
+          "payload_characters": 5540
+        },
+        {
+          "name": "WL45_1",
+          "line": 13068,
+          "bits": 16770,
+          "payload_characters": 2795
+        },
+        {
+          "name": "WL46_0",
+          "line": 13073,
+          "bits": 29284,
+          "payload_characters": 4881
+        },
+        {
+          "name": "WL47_0",
+          "line": 13077,
+          "bits": 8190,
+          "payload_characters": 1365
+        }
+      ],
+      "fact": "The local zfNat64 macro executes decode64 and returns Syntax.mkNumLit(toString value), so these executable definitions have genuine elaboration-time consumers. The decoder is not present in the resulting kernel numeral. Each source payload is expanded at its declaration; it is not decoded by every later root's kernel check."
+    },
+    "macro_SDK_bridge": {
+      "KeyedDeclsAttribute.lean": [
+        125,
+        166
+      ],
+      "Elab/Util.lean": [
+        134,
+        165
+      ],
+      "Environment.lean": [
+        2518,
+        2539
+      ],
+      "fact": "Macro registration obtains the executable via evalConstCheck/evalConst, and macro expansion invokes the registered e.value stx. Interpreter/native fallback is relevant to this real meta path and to imported tactics, but the closed log does not identify which such function hit the limit."
+    },
+    "root_checks": [
+      {
+        "line": 12716,
+        "source": "theorem rc0 : Covered (RC 0 0 0 0 0 0 0 0) := rcOf WD0 20056 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12722,
+        "source": "theorem rc1 : Covered (RC 0 0 0 0 0 1 0 0) := rcOf WD1 54143 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12732,
+        "source": "theorem rc2 : Covered (RC 0 0 0 0 1 0 0 0) := rcOf WD2 116210 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12742,
+        "source": "theorem rc3 : Covered (RC 0 0 0 0 1 1 0 0) := rcOf WD3 119613 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12754,
+        "source": "theorem rc4 : Covered (RC 0 0 0 1 0 0 0 0) := rcOf WD4 151540 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12770,
+        "source": "theorem rc5 : Covered (RC 0 0 0 1 0 1 0 0) := rcOf WD5 206731 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12780,
+        "source": "theorem rc6 : Covered (RC 0 0 0 1 1 0 0 0) := rcOf WD6 101900 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12786,
+        "source": "theorem rc7 : Covered (RC 0 0 0 1 1 1 0 0) := rcOf WD7 62682 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12796,
+        "source": "theorem rc8 : Covered (RC 0 0 1 0 0 0 0 0) := rcOf WD8 123405 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12812,
+        "source": "theorem rc9 : Covered (RC 0 0 1 0 0 1 0 0) := rcOf WD9 205794 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12832,
+        "source": "theorem rc10 : Covered (RC 0 0 1 0 1 0 0 0) := rcOf WD10 270277 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12844,
+        "source": "theorem rc11 : Covered (RC 0 0 1 0 1 1 0 0) := rcOf WD11 135046 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12854,
+        "source": "theorem rc12 : Covered (RC 0 0 1 1 0 0 0 0) := rcOf WD12 119638 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12864,
+        "source": "theorem rc13 : Covered (RC 0 0 1 1 0 1 0 0) := rcOf WD13 114999 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12872,
+        "source": "theorem rc14 : Covered (RC 0 0 1 1 1 0 0 0) := rcOf WD14 74689 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12876,
+        "source": "theorem rc15 : Covered (RC 0 0 1 1 1 1 0 0) := rcOf WD15 23484 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12880,
+        "source": "theorem rc16 : Covered (RC 0 1 0 0 0 0 0 0) := rcOf WD16 504 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12884,
+        "source": "theorem rc17 : Covered (RC 0 1 0 0 0 1 0 0) := rcOf WD17 434 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12888,
+        "source": "theorem rc18 : Covered (RC 0 1 0 0 1 0 0 0) := rcOf WD18 403 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12892,
+        "source": "theorem rc19 : Covered (RC 0 1 0 0 1 1 0 0) := rcOf WD19 389 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12896,
+        "source": "theorem rc20 : Covered (RC 0 1 0 1 0 0 0 0) := rcOf WD20 403 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12900,
+        "source": "theorem rc21 : Covered (RC 0 1 0 1 0 1 0 0) := rcOf WD21 403 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12904,
+        "source": "theorem rc22 : Covered (RC 0 1 0 1 1 0 0 0) := rcOf WD22 403 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12908,
+        "source": "theorem rc23 : Covered (RC 0 1 0 1 1 1 0 0) := rcOf WD23 191 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12912,
+        "source": "theorem rc24 : Covered (RC 0 1 1 0 0 0 0 0) := rcOf WD24 875 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12916,
+        "source": "theorem rc25 : Covered (RC 0 1 1 0 0 1 0 0) := rcOf WD25 205 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12920,
+        "source": "theorem rc26 : Covered (RC 0 1 1 0 1 0 0 0) := rcOf WD26 1226 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12924,
+        "source": "theorem rc27 : Covered (RC 0 1 1 0 1 1 0 0) := rcOf WD27 191 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12928,
+        "source": "theorem rc28 : Covered (RC 0 1 1 1 0 0 0 0) := rcOf WD28 379 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12932,
+        "source": "theorem rc29 : Covered (RC 0 1 1 1 0 1 0 0) := rcOf WD29 191 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12936,
+        "source": "theorem rc30 : Covered (RC 0 1 1 1 1 0 0 0) := rcOf WD30 191 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12940,
+        "source": "theorem rc31 : Covered (RC 0 1 1 1 1 1 0 0) := rcOf WD31 157 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12946,
+        "source": "theorem rc32 : Covered (RC 0 2 0 0 0 0 0 0) := rcOf WD32 55949 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12956,
+        "source": "theorem rc33 : Covered (RC 0 2 0 0 0 1 0 0) := rcOf WD33 120735 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12972,
+        "source": "theorem rc34 : Covered (RC 0 2 0 0 1 0 0 0) := rcOf WD34 202081 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12980,
+        "source": "theorem rc35 : Covered (RC 0 2 0 0 1 1 0 0) := rcOf WD35 77522 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 12992,
+        "source": "theorem rc36 : Covered (RC 0 2 0 1 0 0 0 0) := rcOf WD36 161007 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13006,
+        "source": "theorem rc37 : Covered (RC 0 2 0 1 0 1 0 0) := rcOf WD37 177164 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13016,
+        "source": "theorem rc38 : Covered (RC 0 2 0 1 1 0 0 0) := rcOf WD38 122452 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13022,
+        "source": "theorem rc39 : Covered (RC 0 2 0 1 1 1 0 0) := rcOf WD39 45182 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13030,
+        "source": "theorem rc40 : Covered (RC 0 2 1 0 0 0 0 0) := rcOf WD40 91213 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13040,
+        "source": "theorem rc41 : Covered (RC 0 2 1 0 0 1 0 0) := rcOf WD41 107840 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13050,
+        "source": "theorem rc42 : Covered (RC 0 2 1 0 1 0 0 0) := rcOf WD42 121903 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13058,
+        "source": "theorem rc43 : Covered (RC 0 2 1 0 1 1 0 0) := rcOf WD43 90374 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13066,
+        "source": "theorem rc44 : Covered (RC 0 2 1 1 0 0 0 0) := rcOf WD44 69544 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13072,
+        "source": "theorem rc45 : Covered (RC 0 2 1 1 0 1 0 0) := rcOf WD45 49619 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13076,
+        "source": "theorem rc46 : Covered (RC 0 2 1 1 1 0 0 0) := rcOf WD46 29364 (by decide +kernel) (by decide)"
+      },
+      {
+        "line": 13080,
+        "source": "theorem rc47 : Covered (RC 0 2 1 1 1 1 0 0) := rcOf WD47 8270 (by decide +kernel) (by decide)"
+      }
+    ],
+    "decide_SDK": {
+      "source": "Lean/Elab/Tactic/Decide.lean",
+      "lines": [
+        75,
+        118
+      ],
+      "fact": "decide +kernel builds mkDecideProof and checks it via mkAuxLemma, caching the checked proposition. It does not call nativeEqTrue, which belongs to the separate +native branch. Ordinary decide uses meta weak-head reduction then kernel checking. The tactic elaborator itself is executable meta code; this does not convert certificate reduction into native evaluation."
+    },
+    "large_data": "v8 already explicitly suppresses codegen for eight checker functions and the complete10 PTT_0..7/PTT/PT caller closure. Their ordinary kernel definitions remain available. Existing static closure shows no candidate macro/#eval/native consumer of these ten data definitions. Other large data definitions can still incur elaboration/IR/codegen costs and kernel reduction costs; no evidence localizes the actual interpreter-limit trigger to them.",
+    "duplicate_walk_claim_rejected": "48 rc declarations each check their strengthened Covered goal once. Localization reuses the resulting Data.run; there is no second complete11794-leaf checker to remove."
+  },
+  "resource_reduction_verdict": "Evidence is insufficient for a justified new source-level resource-reduction patch from the component label. Do not disable or mark the macro decoder noncomputable, replace +kernel by +native, delete the48 root checks, or claim --setup fixes the failure. Additional noncomputable annotations only remove codegen where caller closure and no executable consumer have been independently established; the ten-data closure was already applied in v8. Parent's separate InfoTree/snapshot static study is the relevant remaining metadata-retention candidate, not established by this report.",
+  "not_proven": [
+    "Actual failing Lean declaration or source offset",
+    "Relative memory attribution between imports/environment/InfoTrees/IR/compiler/interpreter stacks",
+    "Actual package native symbols loaded on either platform",
+    "Compiler completion or official/fullchain/kernel acceptance",
+    "Any measured improvement from a proposed source change"
+  ],
+  "execution_count_this_review": {
+    "candidate_compile": 0,
+    "export": 0,
+    "kernel_or_solver": 0,
+    "Lean_or_native_probe": 0
+  },
+  "source_and_inputs_before": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\v8-resource-v2\\started.json",
+      "bytes": 10973,
+      "sha256": "429cb672b9044128b6a7efa21d46322b3bc94250b374148e899f79da8c4cc8cd"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\v8-resource-v2\\terminal.json",
+      "bytes": 12404,
+      "sha256": "ea2ce9874d86e26804a471fc1c59d28f07c1fb0fecf67a1b574d3e965217bd49"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\tmp\\w9a2-20261020\\v8-resource-v2\\stderr.log",
+      "bytes": 196,
+      "sha256": "48bc2200174632932b9ea98fd0a0c30e6dc353ce535531045f1c7efc7b79940a"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-failure-v2\\root-outer-observation.json",
+      "bytes": 1805,
+      "sha256": "82c7538d33548c471e37e391f14578b54c55961b6adcb9af146b3a46b1356402"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v8-resource-failure-v2\\files.json",
+      "bytes": 1822,
+      "sha256": "31913deddce2ab5ebd5d4efd27d80102c64a54423334095489f13f7589ab2942"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v7-official-failure-v1\\technical-log.dom.txt",
+      "bytes": 19003,
+      "sha256": "408e148be012895626a2a870f8d5fe462ad8a16c29aa1e28ece9f1b93f5f261f"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v7-resource-static-formal\\files.json",
+      "bytes": 717,
+      "sha256": "d0d2cbc52609572056faa4dd06cbff7053ba633e5c36482b9df293bb4fdfd913"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-v7-resource-static-formal\\PTT-caller-closure.json",
+      "bytes": 5844,
+      "sha256": "b280c78cbd20b9503f51a9c0ecae68d744d283a22b0a5507d5c08b652864a341"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\Frontend.lean",
+      "bytes": 19531,
+      "sha256": "e3e9037222c00308edc4fed589da83a80620bf5b35108779564fc485d8c17774"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Environment.lean",
+      "bytes": 137725,
+      "sha256": "ee364e4788ce0560c87f621eeb3c4c3dfec62e8db4e15e099fd80e6adc533b86"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\KeyedDeclsAttribute.lean",
+      "bytes": 7737,
+      "sha256": "945bbf33346b549166f2c922bdd4862884dcbd95e1d506de488d74ff6af3a04c"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\Util.lean",
+      "bytes": 11292,
+      "sha256": "3f78fb516b194a29c81f6962cf1302839d5550f71c7412f0596171872519dc16"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\Tactic\\Decide.lean",
+      "bytes": 9135,
+      "sha256": "99e84ce67778157e77d7261aa25b64ed72da16e9d1f60031cf2aa26f5ea6ee68"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\lake\\Lake\\Build\\Module.lean",
+      "bytes": 65428,
+      "sha256": "cd7b3e4802980fb9a9c1ed116650b2a95231917e4e024ca5b46b4f3821effa5c"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Shell.lean",
+      "bytes": 22984,
+      "sha256": "4f584ae4d4cc859f39cdbb550df8e09417d1fd8e95046829ef821c2c95e2f940"
+    }
+  ],
+  "all_inputs_after_equal_before": true
+}
