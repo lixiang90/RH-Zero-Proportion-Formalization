@@ -1,0 +1,431 @@
+{
+  "schema": "w9a2-whole-file-native-suppression-static-formal-v1",
+  "status": "STATIC_CONDITIONAL_PROPOSAL_ONLY_NOT_IMPLEMENTED_OR_EXECUTED",
+  "scope": "Read frozen1.8MB v8 and necessary same-pin SDK source only. No source edit, generated Lean variant, Lean/parser/import/AST/compiler/kernel/export/solver/API/probe/network/large-export/runtime-tree scan/state/counter/Git change.",
+  "source": {
+    "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\Solution.lean",
+    "bytes": 1829382,
+    "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+  },
+  "Lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "lexical_inventory": {
+    "all_explicit_declarations": 3521,
+    "kind_counts": {
+      "def": 2280,
+      "theorem": 1021,
+      "lemma": 195,
+      "structure": 14,
+      "instance": 5,
+      "abbrev": 5,
+      "inductive": 1
+    },
+    "existing_explicit_noncomputable_defs": 21,
+    "candidate_kind_counts": {
+      "def": 2257,
+      "abbrev": 5,
+      "instance": 5
+    },
+    "candidate_total": 2267,
+    "source_level_keyword_offsets": "candidate-keyword-offsets.json",
+    "hypothetical_bytes_if_only14B_insertions": 1861120
+  },
+  "real_runtime_entries": {
+    "macro_prefix_byte_interval": [
+      0,
+      5038
+    ],
+    "macro_prefix_bytes": 5038,
+    "macro_prefix_sha256": "cdb8263f07bcca45d897760097b77f3118bce0c63c0de83c135657817da2eba4",
+    "source_declared_runtime_functions": [
+      {
+        "name": "ZeroForgePackedNat.digit64",
+        "source_line": 73,
+        "private": true
+      },
+      {
+        "name": "ZeroForgePackedNat.decode64",
+        "source_line": 91,
+        "private": false
+      }
+    ],
+    "macro_command": {
+      "name": "zfNat64",
+      "source_line": 120
+    },
+    "source_runtime_edges": [
+      [
+        "zfNat64 macro expansion",
+        "ZeroForgePackedNat.decode64"
+      ],
+      [
+        "ZeroForgePackedNat.decode64",
+        "ZeroForgePackedNat.digit64"
+      ]
+    ],
+    "local_generated_runtime_to_preserve": "All syntax-parser, macro expander, match/lambda/loop/helper declarations generated from the unchanged prefix. Exact internal names/count require elaboration and are not claimed here.",
+    "imported_runtime": "Lean parser/MacroM/Syntax, Nat/String/ByteArray/Except/ForIn and their imported generic instances/native primitives. These are imported SDK code, not candidate declarations selected for annotation.",
+    "packing_calls": 135,
+    "other_classes_excluded_from_modification": {
+      "theorem": 1021,
+      "lemma": 195,
+      "structure": 14,
+      "inductive": 1,
+      "existing_noncomputable_def": 21
+    },
+    "no_generated_Lean_source_produced": true
+  },
+  "metadata_only_commands_and_attributes": {
+    "simp_attributes": 13,
+    "simp_owners": "All13 explicitly annotate theorem/lemma proof declarations, not Simproc/NormNum extension functions",
+    "irreducible_attribute": {
+      "line": 7704,
+      "names": [
+        "CellN.okC",
+        "CellN.NLOZ",
+        "CellN.DHIZ",
+        "CellN.WZ",
+        "CellN.okD",
+        "CellN.W1LO",
+        "CellN.W1HI",
+        "CellN.convOk"
+      ],
+      "role": "Changes Meta reducibility/unfolding status, not executable registration"
+    },
+    "export_alias_command": {
+      "line": 13533,
+      "source": "export Meshuggah (sincN phiC hat)",
+      "SDK": "Elab/BuiltinCommand.lean298–310 only resolves names and addAlias; no new definition or compile"
+    },
+    "hash_commands": [],
+    "additional_special_token_hits": {
+      "meta": [],
+      "partial": [],
+      "unsafe": [],
+      "nonrec": [],
+      "run_meta": [],
+      "run_elab": [],
+      "by_elab": [],
+      "declare_syntax_cat": [],
+      "notation": [],
+      "infix": [],
+      "infixl": [],
+      "infixr": [],
+      "prefix": [],
+      "postfix": [],
+      "simproc": [],
+      "simproc_decl": [],
+      "dsimproc": [],
+      "register_option": [],
+      "register_builtin_option": [],
+      "extern": [],
+      "implemented_by": [],
+      "csimp": [],
+      "compiler_simp": []
+    }
+  },
+  "instance_and_tactic_boundary": {
+    "anonymous_source_instances": [
+      {
+        "line": 9087,
+        "byte_offset": 492625,
+        "kind": "instance",
+        "name": null,
+        "modifiers": [],
+        "indent_bytes": 0,
+        "header_preview": "instance (Q : ℕ) (PR : List (ℕ × ℕ)) : Decidable (PRok Q PR) := by unfold PRok; infer_instance"
+      },
+      {
+        "line": 9367,
+        "byte_offset": 511213,
+        "kind": "instance",
+        "name": null,
+        "modifiers": [],
+        "indent_bytes": 0,
+        "header_preview": "instance (Q : ℕ) (PR : List (ℕ × ℕ)) (TS : List Term) : Decidable (TSok Q PR TS) := by unfold TSok; infer_instance"
+      },
+      {
+        "line": 9873,
+        "byte_offset": 543068,
+        "kind": "instance",
+        "name": null,
+        "modifiers": [],
+        "indent_bytes": 0,
+        "header_preview": "instance (Q : ℕ) (PR : List (ℕ × ℕ)) (SL : List ℕ) : Decidable (SLok Q PR SL) := by unfold SLok; infer_instance"
+      },
+      {
+        "line": 16188,
+        "byte_offset": 1781796,
+        "kind": "instance",
+        "name": null,
+        "modifiers": [],
+        "indent_bytes": 0,
+        "header_preview": "instance (u v : State) : Decidable (Edge u v) := by"
+      },
+      {
+        "line": 16274,
+        "byte_offset": 1786209,
+        "kind": "instance",
+        "name": null,
+        "modifiers": [],
+        "indent_bytes": 0,
+        "header_preview": "instance (u v : State) : Decidable (Conflict u v) := by unfold Conflict; infer_instance"
+      }
+    ],
+    "instance_types": [
+      "Decidable(PRok Q PR)",
+      "Decidable(TSok Q PR TS)",
+      "Decidable(SLok Q PR SL)",
+      "Decidable(Edge u v)",
+      "Decidable(Conflict u v)"
+    ],
+    "meaning": "These are data-level Decidable instances (Type), not propositions or user-defined meta callbacks. SDK synthesis constructs instance Expr terms; decide+kernel checks via mkAuxLemma/kernel. Explicit noncomputable is compatible with logical reduction/instance lookup, but prevents native use of their executable implementations.",
+    "imported_tactic_runtime": "simp/norm_num/ring/linarith and command elaborators still execute imported meta code. No candidate norm_num/simproc/extern/implemented_by/csimp attribute, initializer, elab, run_cmd/run_tac/#eval/native_decide is present. Absence of a local executable extension narrows the local callback closure; this static inventory is not an exhaustive proof about arbitrary imported meta implementations or all elaboration-generated declarations."
+  },
+  "SDK_semantics": [
+    {
+      "path": "Elab/PreDefinition/Basic.lean",
+      "lines": [
+        134,
+        140,
+        186,
+        223
+      ],
+      "fact": "shouldGenCodeFor requires non-theorem and no explicit noncomputable. Definition values/types/safety and ordinary/abbrev reducibility hints are constructed before tag/codegen selection. Instance kind chooses theorem if its type is Prop, otherwise definition. noncomputable section alone only changes compile diagnostic handling."
+    },
+    {
+      "path": "Elab/PreDefinition/Main.lean",
+      "lines": [
+        303,
+        310
+      ],
+      "fact": "A nonrecursive noncomputable predefinition uses addNonRec(cleanupValue:=true), while ordinary uses addAndCompileNonRec with the same cleanup argument; skipping codegen is deliberate, not replacing the logical value."
+    },
+    {
+      "path": "Elab/MutualDef.lean",
+      "lines": [
+        96,
+        99,
+        1092,
+        1101,
+        1214,
+        1233
+      ],
+      "fact": "Noncomputable theorem and noncomputable partial are rejected. let-rec helpers inherit a main declaration's noncomputable modifier; tags are added early. Non-Prop instances keep instanceReducible default. Source has no explicit partial/unsafe/meta declarations; generated recursion artifacts remain an implementation boundary."
+    },
+    {
+      "path": "Parser/Command.lean",
+      "lines": [
+        100,
+        121
+      ],
+      "fact": "Visibility/protected precede noncomputable; unsafe/partial follow. Insert before the keyword only when original modifiers match the inventory; do not prepend to arbitrary commands."
+    },
+    {
+      "path": "Compiler/LCNF/ToLCNF.lean",
+      "lines": [
+        440,
+        452
+      ],
+      "fact": "A compiled caller of a noncomputable declaration or its noncomputable unsafe_rec implementation is rejected unless exempt extern/implemented_by primitives. This is why preserving the whole executable decoder closure matters; annotating the decoder is not safe."
+    },
+    {
+      "path": "Meta/Structure.lean",
+      "lines": [
+        104,
+        123
+      ],
+      "fact": "Projections are generated defnDecl constants and registered as projection functions. Compiler has special support and they need not be compiled by this generator. This does not eliminate all other generated native artifacts."
+    },
+    {
+      "path": "KeyedDeclsAttribute.lean / Elab/Util.lean / Environment.lean",
+      "lines": [
+        166,
+        158,
+        165,
+        2518,
+        2539
+      ],
+      "fact": "Registration obtains executable callbacks via evalConstCheck/evalConst; macro expansion invokes e.value stx. The unchanged source prefix's macro/decoder and all its generated implementations must stay executable."
+    },
+    {
+      "path": "Meta/Tactic/Simp/Attr.lean",
+      "lines": [
+        42,
+        59
+      ],
+      "fact": "Simp checks if a declaration is a Simproc; otherwise proof types add a simp theorem or definitions add unfolding entries. These13 local simp attributes target proof declarations and do not register candidate-native procedures."
+    }
+  ],
+  "why_existing8_plus10_is_not_whole_native_boundary": "Only18 chosen definitions were newly annotated before v8, in addition to3 older explicit noncomputable definitions.2257 other explicit ordinary defs,5 abbrevs and5 Decidable instances remain eligible for codegen attempts under SDK rules, subject to type erasure/noncomputability/failures. This includes small helpers, balanced selectors, integer arithmetic and the many literal data definitions, not only the ten PTT nodes. Conversely source-level types/constructors/recursors/CtorIdx and macro-generated executable code have separate generators. Candidate counts are source opportunities, not a measurement that every one produced a native function or that it dominates memory.",
+  "candidate_assessment": "Semantically plausible, substantial fixed-scope native-compilation suppression proposal: annotate precisely the2267 listed ordinary def/abbrev/Decidable instance keywords, preserve the entire macro prefix and all other command/body/data bytes. Keep1216 theorem/lemma proofs and14structures/1inductive unchanged. Kernel definitions remain for ordinary reduction; this does not remove finite checks or replace proof bodies. It is not authorized or implemented by this report.",
+  "unproven_boundaries": [
+    "Exact internal generated declaration names/counts, implicit matcher/termination/unsafe_rec/projection/constructor/index helpers and their codegen behavior for this whole file without elaboration",
+    "No claim all generated native work becomes zero; structure/inductive types/constructors reject noncomputable modifiers and generators such as CtorIdx may compile independently",
+    "Imported tactics may inspect/reduce candidate expressions; no arbitrary imported-meta callback audit is performed. No local executable plugin beyond the preserved macro was identified",
+    "Early noncomputable tags can affect compiler validation/realization paths and generated auxiliary inventory; all generated kernel declarations are not claimed byte-identical",
+    "No guarantee that a full modified source compiles, retains every generated-name behavior, lowers peak memory or fits official resources",
+    "Kernel expression/data/InfoTree/import retention,48root reductions and official whole-pipeline obligations remain",
+    "Anonymous instance elaborated names, private name encodings and full namespace/name resolution are not certified by the lexical inventory"
+  ],
+  "generated_code_exclusion_rule": "Do not add modifiers to structure/inductive/type/constructor fields or theorem/lemma commands. Preserve generated artifacts of runtime macro prefix. Do not equate this source-keyword proposal with an automatically complete environment/codegen declaration inventory.",
+  "recursion_tokens": {
+    "let_rec_tokens": [],
+    "where_tokens": [
+      {
+        "line": 2156,
+        "UTF8_byte_offset": 109950
+      },
+      {
+        "line": 2598,
+        "UTF8_byte_offset": 136746
+      },
+      {
+        "line": 2617,
+        "UTF8_byte_offset": 137495
+      },
+      {
+        "line": 2771,
+        "UTF8_byte_offset": 146387
+      },
+      {
+        "line": 2997,
+        "UTF8_byte_offset": 161517
+      },
+      {
+        "line": 3153,
+        "UTF8_byte_offset": 170014
+      },
+      {
+        "line": 5065,
+        "UTF8_byte_offset": 269444
+      },
+      {
+        "line": 5077,
+        "UTF8_byte_offset": 269969
+      },
+      {
+        "line": 5402,
+        "UTF8_byte_offset": 285501
+      },
+      {
+        "line": 5490,
+        "UTF8_byte_offset": 290109
+      },
+      {
+        "line": 5715,
+        "UTF8_byte_offset": 303653
+      },
+      {
+        "line": 5745,
+        "UTF8_byte_offset": 305483
+      },
+      {
+        "line": 6310,
+        "UTF8_byte_offset": 338119
+      },
+      {
+        "line": 7624,
+        "UTF8_byte_offset": 412659
+      },
+      {
+        "line": 9076,
+        "UTF8_byte_offset": 491790
+      },
+      {
+        "line": 10654,
+        "UTF8_byte_offset": 591559
+      },
+      {
+        "line": 11061,
+        "UTF8_byte_offset": 658472
+      },
+      {
+        "line": 11332,
+        "UTF8_byte_offset": 726124
+      },
+      {
+        "line": 15145,
+        "UTF8_byte_offset": 1720971
+      }
+    ]
+  },
+  "stop_boundary": "No new source, generator execution, compile/import/AST/kernel or enabled gate. Root must separately review the fixed keyword proposal and decide any future implementation/validation; task completion does not authorize a new batch.",
+  "inputs": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-runtime-closure-formal\\source-inventory.json",
+      "bytes": 1678524,
+      "sha256": "da9b9258508f7d6f83facfc70b127231f480cecefe4e9a3b651760bce5aa88d0"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\PreDefinition\\Basic.lean",
+      "bytes": 15394,
+      "sha256": "46a2876ccbe1efc4cc491dc24658fea5e972544a64da888334fe2ffcc9c1a5c7"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\PreDefinition\\Main.lean",
+      "bytes": 17944,
+      "sha256": "b384fe2a3fd637f36194cab22821440871e9112d700a8dbb1c4c7392fe399647"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\MutualDef.lean",
+      "bytes": 77540,
+      "sha256": "73a278e79b6fa2a355c3076c40eec8f0cd607c8b68f21e1fa344b56d14e6c3b9"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Parser\\Command.lean",
+      "bytes": 45177,
+      "sha256": "7d1c101e92c14da4a57f8a0ff64e8df82e28c13ef891a484e93643c3a34b2cda"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Compiler\\LCNF\\ToLCNF.lean",
+      "bytes": 35884,
+      "sha256": "83bffaa6fddff8f743be0f3d0bc1112a1f09403003ac511c115e68a0d578210d"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\Util.lean",
+      "bytes": 11292,
+      "sha256": "3f78fb516b194a29c81f6962cf1302839d5550f71c7412f0596171872519dc16"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\KeyedDeclsAttribute.lean",
+      "bytes": 7737,
+      "sha256": "945bbf33346b549166f2c922bdd4862884dcbd95e1d506de488d74ff6af3a04c"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Environment.lean",
+      "bytes": 137725,
+      "sha256": "ee364e4788ce0560c87f621eeb3c4c3dfec62e8db4e15e099fd80e6adc533b86"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\Tactic\\Decide.lean",
+      "bytes": 9135,
+      "sha256": "99e84ce67778157e77d7261aa25b64ed72da16e9d1f60031cf2aa26f5ea6ee68"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Meta\\SynthInstance.lean",
+      "bytes": 50297,
+      "sha256": "1c4adf406c64523531b2af18073c2973cef5fe4eb80ac44bb9927d336559d004"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Meta\\Tactic\\Simp\\Attr.lean",
+      "bytes": 4494,
+      "sha256": "ce45e8a48edbab67408b197257e616091ab55c410254e3d303fe813f7fd42242"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Elab\\BuiltinCommand.lean",
+      "bytes": 36358,
+      "sha256": "8e609af80c82dda4e676a07563096a8787f2f37e02fd834bad2394eef1399829"
+    },
+    {
+      "path": "C:\\Users\\A\\.elan\\toolchains\\leanprover--lean4---v4.33.0-rc2\\src\\lean\\Lean\\Meta\\Structure.lean",
+      "bytes": 10581,
+      "sha256": "194a1e7dc694103bf64fc3c90f3297a7df04c0d2a99ddc0a5acc26e21e213a2d"
+    }
+  ],
+  "all_inputs_before_after_equal": true
+}

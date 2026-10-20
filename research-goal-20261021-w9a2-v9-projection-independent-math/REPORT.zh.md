@@ -1,0 +1,15 @@
+# v9 完整源码逆投影与数学边界独审
+
+结论：PASS_STATIC_BYTE_PROJECTION。新源1861120B/SHA7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99与指定身份一致，完整逆投影逐字节等于冻结v8（1829382B/SHA5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b）。未发现超出授权的body、proof、数据、许可注释或数学常量修改。
+
+只用PowerShell/.NET按已冻结d25c727a…候选keyword offsets独立读取两份原始byte array；没有运行v9派生器、Lean、decoder、数学/数值重放、AST或任何compiler。没有写新proof、改Git/state/counter。本报告不是v9可编译、数学重新验证、资源收益、双内核或官网通过。
+
+独立算法先核offset清单SHA及严格递增性，核每个旧位置确为记录的def/abbrev/instance keyword；在新位置old_offset+14*i逐byte核恰为ASCII `noncomputable `，只移除这14B再拼接其余全部原始区间。2267处共31738B，2257 def、5 abbrev、5 instance；逆投影SHA为5424…，并用bytewise SequenceEqual确认与实际冻结v8数组相等。这不是采信v9自带projection的成功字段；自带projection只作为manifest成员核size/SHA。
+
+v9 files.json SHA d5cb77b9915dc7437a66a5739acd57093f0ed6acc6f0643e995f415169f2a454的两个成员Solution.lean、projection.json大小及SHA均相符。源距2000000B上限余138880B。完整最前5222B（两个decoder、宏、imports及初始许可/归属内容）逐字节不变。所有后续许可/归属注释、分数、definitions的type/value和proof body亦由完整逆投影保持；此处只检查源码内许可内容，不新增或验收任何未来提交bundle的LICENSE文件。
+
+额外直接词法核对135条packed WL的名称/声明bit参数/完整payload字符串完全相同，没有解码；48条rc定理行、72条decide+kernel所在行及3个公开theorem声明行逐字相同。全体公开证明body不变的依据是完整bytewise投影，而非只比较首行。两源均221 CRLF、17218 LF，末尾LF保留；没有文本归一化。
+
+五个实例仍为Decidable PRok、TSok、SLok、Edge、Conflict，旧keyword行9087、9367、9873、16188、16274；仅在instance keyword前加合法modifier，原binders/type/body及infer_instance等内容保持。所有private/protected等旧modifier仍处于原位置；插入发生在真正keyword处，未把它们移到noncomputable之后。5个abbrev仍是abbrev，不改成def；结构/归纳、字段、theorem/lemma和宏没有被加入此2267处集合。
+
+数学语义边界沿用已封独审6e71afe4…：这些显式标记抑制指定ordinary声明的代码生成，保留透明kernel定义、类型类字典/注册和全部有限检查；它们不把定义替换为axiom、opaque或native oracle。宏runtime闭包仍保持原字节，未用本次投影关闭真实decoder consumer。静态源码投影不能保证所有生成辅助项/export字节相同，不能证明新源实际可编译或解决137/RSS；仍需root另行选择的实际执行门。本次到此停止。

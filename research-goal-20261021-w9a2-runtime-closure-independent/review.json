@@ -1,0 +1,148 @@
+{
+  "schema": "w9a2-whole-file-proof-only-codegen-independent-static-v1",
+  "conclusion": "CONDITIONAL_SOURCE_SEMANTIC_PROPOSAL_NOT_IMPLEMENTED",
+  "source_sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+  "source_bytes": 1829382,
+  "ordinary_candidate_counts": {
+    "def": 2257,
+    "abbrev": 5,
+    "Type_valued_Decidable_instance": 5,
+    "total": 2267
+  },
+  "inventory_sha256": "da9b9258508f7d6f83facfc70b127231f480cecefe4e9a3b651760bce5aa88d0",
+  "must_remain_runtime": [
+    "generated zfNat64 parser/macro implementation",
+    "ZeroForgePackedNat.decode64",
+    "private ZeroForgePackedNat.digit64",
+    "their existing imported runtime dependencies"
+  ],
+  "noncomputable_does_not_disable_kernel_checks": true,
+  "definition_bodies_and_reducibility_must_be_preserved": true,
+  "all_generated_native_work_eliminated_claimed": false,
+  "abbrev_kind_or_instance_registration_change_authorized": false,
+  "source_rewrite_or_compiler_authorized_by_review": false,
+  "plain_theorem_structure_constructor_field_mechanical_prefix_rejected": true,
+  "current_source_local_normnum_simproc_or_dynamic_eval_registration_found": false,
+  "imported_meta_runtime_eliminated_claimed": false,
+  "complete_dynamic_runtime_graph_proved": false,
+  "new_source_compilability_or_resource_benefit_proved": false,
+  "kernel_aux_or_export_exact_bytes_preserved_proved": false,
+  "proof_compiler_numeric_replay_network_Git_state_counter_actions": 0,
+  "inputs": [
+    {
+      "path": "research-goal-20261020-w9a2-delivery/draft-v8/Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    },
+    {
+      "path": "research-goal-20261021-w9a2-runtime-closure-formal/source-inventory.json",
+      "bytes": 1678524,
+      "sha256": "da9b9258508f7d6f83facfc70b127231f480cecefe4e9a3b651760bce5aa88d0"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v8-cost-static-independent/files.json",
+      "bytes": 780,
+      "sha256": "70f3a28bd78d9c5540473c81a0b6718c24b00a8f8a455e507cfda72978f63b4e"
+    },
+    {
+      "path": "research-goal-20261020-w9a2-v7-resource-static-formal/files.json",
+      "bytes": 717,
+      "sha256": "d0d2cbc52609572056faa4dd06cbff7053ba633e5c36482b9df293bb4fdfd913"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Tactic/NormNum/Core.lean",
+      "bytes": 16229,
+      "sha256": "60010da4c961753d1895171471f7816ca40dd71c1444462f9f66264213fb76da"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/PreDefinition/Basic.lean",
+      "bytes": 15394,
+      "sha256": "46a2876ccbe1efc4cc491dc24658fea5e972544a64da888334fe2ffcc9c1a5c7"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/PreDefinition/Main.lean",
+      "bytes": 17944,
+      "sha256": "b384fe2a3fd637f36194cab22821440871e9112d700a8dbb1c4c7392fe399647"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/MutualDef.lean",
+      "bytes": 77540,
+      "sha256": "73a278e79b6fa2a355c3076c40eec8f0cd607c8b68f21e1fa344b56d14e6c3b9"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Parser/Command.lean",
+      "bytes": 45177,
+      "sha256": "7d1c101e92c14da4a57f8a0ff64e8df82e28c13ef891a484e93643c3a34b2cda"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/MutualInductive.lean",
+      "bytes": 89852,
+      "sha256": "8a30233713df9a399c8a529511c6767668d9cfa82a46a8ae02b8c631231274d8"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/Structure.lean",
+      "bytes": 80193,
+      "sha256": "283064a7fd3fb6d650ea5670cf26108df06fe96aa6d03baf982a58164ea8e0ea"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Meta/Structure.lean",
+      "bytes": 10581,
+      "sha256": "194a1e7dc694103bf64fc3c90f3297a7df04c0d2a99ddc0a5acc26e21e213a2d"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Meta/Constructions/CtorIdx.lean",
+      "bytes": 4723,
+      "sha256": "0ee3af3884cf3a85325d06fde6eca551e29884def81124548297e1243f7ab019"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Environment.lean",
+      "bytes": 137725,
+      "sha256": "ee364e4788ce0560c87f621eeb3c4c3dfec62e8db4e15e099fd80e6adc533b86"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/KeyedDeclsAttribute.lean",
+      "bytes": 7737,
+      "sha256": "945bbf33346b549166f2c922bdd4862884dcbd95e1d506de488d74ff6af3a04c"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/Util.lean",
+      "bytes": 11292,
+      "sha256": "3f78fb516b194a29c81f6962cf1302839d5550f71c7412f0596171872519dc16"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Meta/Instances.lean",
+      "bytes": 18694,
+      "sha256": "45f04383778249a03aac8ab44b08ee15513a1e511c04f724a8ff71d29c93ffbf"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Meta/SynthInstance.lean",
+      "bytes": 50297,
+      "sha256": "1c4adf406c64523531b2af18073c2973cef5fe4eb80ac44bb9927d336559d004"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Meta/Tactic/Simp/Simproc.lean",
+      "bytes": 19966,
+      "sha256": "67742fdfa2334d588ecb9b8252c9ee26d3150f130945a0866420fecfc27e1e02"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/BuiltinCommand.lean",
+      "bytes": 36358,
+      "sha256": "8e609af80c82dda4e676a07563096a8787f2f37e02fd834bad2394eef1399829"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/ResolveName.lean",
+      "bytes": 30735,
+      "sha256": "29568f90bc8c5b713b7462096b94e898f30d0eca21119ae9abac695604615d13"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Compiler/LCNF/ToLCNF.lean",
+      "bytes": 35884,
+      "sha256": "83bffaa6fddff8f743be0f3d0bc1112a1f09403003ac511c115e68a0d578210d"
+    },
+    {
+      "path": "C:/Users/A/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/src/lean/Lean/Elab/Tactic/Decide.lean",
+      "bytes": 9135,
+      "sha256": "99e84ce67778157e77d7261aa25b64ed72da16e9d1f60031cf2aa26f5ea6ee68"
+    }
+  ]
+}

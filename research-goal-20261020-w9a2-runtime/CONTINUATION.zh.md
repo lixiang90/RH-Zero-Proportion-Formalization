@@ -1,3 +1,5 @@
+宏观013后第1实际主轮的新源码选择：三份完整runtime闭包/SDK独审已支持仅对2257 def+5 abbrev+5 Decidable instance插显式noncomputable，保留zf宏/decoder完整前缀、结构/归纳/全部证明和数据。root-preparation-gate只授权生成一次fresh draft-v9及字节投影独审，不授权Lean/内核/官网。预计1861120B；这是整组显式普通定义编译入口削减，不是零native或内存收益证明。旧export gate失败仍停止、不增cap不重扫；counter1/review13不重置，完整无条件/官网双核/公开/Git目标保持。新选择详见research-goal-20261021-w9a2-codegen-proposal/DECISION.zh.md；下方旧next_gate范围以此更新为准。
+
 宏观013唯一既有export结构scan已真实未完成终态：原session53230，terminal008e11实际outer1/child1，20.563秒、非timeout。ValueError Name-table budget exceeded，own peakRSS56147968B；触发的是32MiB展开名称表估算门，不是256MiB全进程RSS，也不是Lean或官方OOM。没有全输入SHA/bytes/完整排名，不可冒充成功或v8热点。按已定停止条件封存，不增cap、不自动重扫、不新编译/证明重验；review13/counter0保持同一轮内执行终态。官网v8失败、quota0/重置00:00UTC及完整无条件/双核/公开/Git目标均保持，goal active。
 
 当前权威已改为宏观013（research-goal-20261016/macro-reviews/013-20261021.zh.md，SHA9aff2177d918a912c24dd9ff0c1c4acc8159ed3db4be23d26a14751f72ccb5de），书面完成counter1→0/review13。官网v8第三投真实939秒/Lean137/bash1失败已封并push3635d31，今日观察quota0，完整无条件/官网双核/3200接受/公开/Git目标保持active。下一关只准独审corrected b781 outer及root gate后一次既有v6 export只读结构统计，非数学重验；不原样重投、不重放Lean或新compiler/InfoTree/modifier族。旧running和更早next actions均是历史，不覆盖DIRECTION当前选择。

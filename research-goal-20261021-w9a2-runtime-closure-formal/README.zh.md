@@ -1,0 +1,11 @@
+# 整个固定v8的普通声明noncomputable：有限静态提案
+
+除宏decoder运行闭包外，候选是2257 def+5abbrev+5Decidable instance，共2267处；UTF-8 byte keyword offsets及原modifiers逐项见candidate-keyword-offsets.json。若只插14B，预计1861120B。本报告没有生成这份修改源。
+
+唯一source层执行入口是zfNat64宏；必须保留整个macro前缀及ZeroForgePackedNat.decode64→private digit64，连同其生成的parser/expander/matcher/lambda/loop实现。135个WL调用运行该宏，随后kernel只得到普通Nat numeral。无其它显式elab/run_cmd/run_tac/#eval/初始化/deriving/native_decide或本地可执行属性入口。13个simp属性都标proof，另有irreducible和只addAlias的export。
+
+新增18modifier加旧3个只覆盖21个显式def；其余2257显式普通def、5abbrev、5数据instance仍会经过各自代码生成/擦除/失败处理。故18处不能代表全native工作边界。反过来，14structure和1inductive的构造器/递归器/自动helper另有生成路径，不能直接加noncomputable；投影有special compiler support，CtorIdx等仍可能独立compile。不能承诺零生成代码。
+
+SDK明确noncomp保留普通definition type/value/hints，并跳过该路径compile；abbrev仍abbrev hints，Decidable instance仍可合成和kernel归约。let rec传播主modifier，非递归采用同cleanup。theorem/lemma本来不生成代码，加noncomp会被拒绝；也不能注释runtime decoder或把noncomp section当成全禁编译。
+
+这是条件可行、尚未实施的整文件普通声明codegen削减提案；不是语义或资源验收。精确生成名字/数量、所有imported meta实现及逐生成kernel声明身份无Lean时不能证明；未测哪些声明真生成native，更未测memory收益。数据、48根逻辑归约、环境/InfoTree/import成本仍在。没有改proof、运行Lean/parser/AST/import/compiler/kernel/export、重扫大input/closure、改变state/counter或Git。

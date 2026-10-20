@@ -1,0 +1,45 @@
+{
+  "macro_prefix_byte_interval": [
+    0,
+    5038
+  ],
+  "macro_prefix_bytes": 5038,
+  "macro_prefix_sha256": "cdb8263f07bcca45d897760097b77f3118bce0c63c0de83c135657817da2eba4",
+  "source_declared_runtime_functions": [
+    {
+      "name": "ZeroForgePackedNat.digit64",
+      "source_line": 73,
+      "private": true
+    },
+    {
+      "name": "ZeroForgePackedNat.decode64",
+      "source_line": 91,
+      "private": false
+    }
+  ],
+  "macro_command": {
+    "name": "zfNat64",
+    "source_line": 120
+  },
+  "source_runtime_edges": [
+    [
+      "zfNat64 macro expansion",
+      "ZeroForgePackedNat.decode64"
+    ],
+    [
+      "ZeroForgePackedNat.decode64",
+      "ZeroForgePackedNat.digit64"
+    ]
+  ],
+  "local_generated_runtime_to_preserve": "All syntax-parser, macro expander, match/lambda/loop/helper declarations generated from the unchanged prefix. Exact internal names/count require elaboration and are not claimed here.",
+  "imported_runtime": "Lean parser/MacroM/Syntax, Nat/String/ByteArray/Except/ForIn and their imported generic instances/native primitives. These are imported SDK code, not candidate declarations selected for annotation.",
+  "packing_calls": 135,
+  "other_classes_excluded_from_modification": {
+    "theorem": 1021,
+    "lemma": 195,
+    "structure": 14,
+    "inductive": 1,
+    "existing_noncomputable_def": 21
+  },
+  "no_generated_Lean_source_produced": true
+}

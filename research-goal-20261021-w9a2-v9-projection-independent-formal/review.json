@@ -1,0 +1,133 @@
+{
+  "schema": "independent-v9-byte-projection-formal-v1",
+  "result": "PASS_STATIC_BYTE_PROJECTION",
+  "v9_manifest_members_verified": 2,
+  "v8": {
+    "bytes": 1829382,
+    "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+    "CRLF": 221,
+    "CR": 221,
+    "trailing_LF_bytes": 1,
+    "packed_WL_definitions": 135,
+    "rc_theorems": 48,
+    "decide_plus_kernel": 72,
+    "public_theorems": {
+      "candidate_strict_improvement": 1,
+      "candidate_critical_line_bound": 1,
+      "candidate_critical_line_bound_cumulative": 1
+    }
+  },
+  "v9": {
+    "bytes": 1861120,
+    "sha256": "7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99",
+    "CRLF": 221,
+    "CR": 221,
+    "trailing_LF_bytes": 1,
+    "packed_WL_definitions": 135,
+    "rc_theorems": 48,
+    "decide_plus_kernel": 72,
+    "public_theorems": {
+      "candidate_strict_improvement": 1,
+      "candidate_critical_line_bound": 1,
+      "candidate_critical_line_bound_cumulative": 1
+    }
+  },
+  "insertions": {
+    "count": 2267,
+    "bytes_each": 14,
+    "total_delta": 31738,
+    "exact_bytes": "noncomputable ",
+    "kind_counts": {
+      "def": 2257,
+      "instance": 5,
+      "abbrev": 5
+    },
+    "private_protected_modifier_order_checked": true
+  },
+  "forward_all_unmodified_segments_equal": true,
+  "reverse_projection_bytes": 1829382,
+  "reverse_projection_sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b",
+  "entire_macro_prefix_unchanged": {
+    "macro_prefix_byte_interval": [
+      0,
+      5038
+    ],
+    "macro_prefix_bytes": 5038,
+    "macro_prefix_sha256": "cdb8263f07bcca45d897760097b77f3118bce0c63c0de83c135657817da2eba4",
+    "source_declared_runtime_functions": [
+      {
+        "name": "ZeroForgePackedNat.digit64",
+        "source_line": 73,
+        "private": true
+      },
+      {
+        "name": "ZeroForgePackedNat.decode64",
+        "source_line": 91,
+        "private": false
+      }
+    ],
+    "macro_command": {
+      "name": "zfNat64",
+      "source_line": 120
+    },
+    "source_runtime_edges": [
+      [
+        "zfNat64 macro expansion",
+        "ZeroForgePackedNat.decode64"
+      ],
+      [
+        "ZeroForgePackedNat.decode64",
+        "ZeroForgePackedNat.digit64"
+      ]
+    ],
+    "local_generated_runtime_to_preserve": "All syntax-parser, macro expander, match/lambda/loop/helper declarations generated from the unchanged prefix. Exact internal names/count require elaboration and are not claimed here.",
+    "imported_runtime": "Lean parser/MacroM/Syntax, Nat/String/ByteArray/Except/ForIn and their imported generic instances/native primitives. These are imported SDK code, not candidate declarations selected for annotation.",
+    "packing_calls": 135,
+    "other_classes_excluded_from_modification": {
+      "theorem": 1021,
+      "lemma": 195,
+      "structure": 14,
+      "inductive": 1,
+      "existing_noncomputable_def": 21
+    },
+    "no_generated_Lean_source_produced": true
+  },
+  "proof_and_numeric_data_byte_scope": "Every original byte outside these2267 keyword insertion sites matched directly. Therefore all original proof bodies, data payloads, notices, macro/decoder bytes and structure/inductive declarations remain exact raw bytes. No decoder/math/proof execution performed.",
+  "other_source_changes": false,
+  "original_v8_inputs_unchanged": true,
+  "scope": "Static byte projection and lexical count checks only. No author generator, Lean/parser/AST/import/compiler/kernel/export/solver/decoder/API/process/network/Git or counter/source change. This does not certify compilability, kernel validity, resource reduction or official acceptance.",
+  "compiler_resource_PASS": false,
+  "mathematical_verification_performed": false,
+  "inputs_before_after_equal": [
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261020-w9a2-delivery\\draft-v8\\Solution.lean",
+      "bytes": 1829382,
+      "sha256": "5424212b6d2cf70b9eeaa632d6bf429dea4e1aadb13b0fedd948d38f94f8ac6b"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-delivery\\draft-v9\\Solution.lean",
+      "bytes": 1861120,
+      "sha256": "7552bbb829b86986798b58cf40caf998ea8c51ab19201998b533dae4b9518c99"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-delivery\\draft-v9\\files.json",
+      "bytes": 362,
+      "sha256": "d5cb77b9915dc7437a66a5739acd57093f0ed6acc6f0643e995f415169f2a454"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-runtime-closure-formal\\candidate-keyword-offsets.json",
+      "bytes": 1086494,
+      "sha256": "d25c727a385cdd758fa8027c0530cabbf870f6aee6039be72af4daabcd5464f2"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-runtime-closure-formal\\preserved-runtime-closure.json",
+      "bytes": 1396,
+      "sha256": "a06dec354cc921f76a8dad8f6fb3467dce06f2c7cecbf05eb2313324ee60aaeb"
+    },
+    {
+      "path": "E:\\codex-build\\RH-Zero-Proportion-Formalization\\research-goal-20261021-w9a2-delivery\\draft-v9\\projection.json",
+      "bytes": 365489,
+      "sha256": "45c9bb21876f96d6427688bf466c8b7128b535dbb9aa0d86e55feae7b2bb5a80"
+    }
+  ]
+}
