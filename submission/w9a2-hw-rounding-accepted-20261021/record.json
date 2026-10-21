@@ -1,0 +1,25 @@
+{
+  "id": "lixiang90-w9a2-hw-rounding-v12-20261021",
+  "track": "critical-line",
+  "date": "2026-10-21",
+  "author": "Li Xiang",
+  "github": "lixiang90",
+  "title": "Certified critical-line bound 0.673591770245738332299780842385",
+  "method": "Terminal H_W rational-floor rounding refinement of the attributed attempt-030 W9A2 certificate (10^32 to 10^33)",
+  "model": null,
+  "harness": "Codex",
+  "scoreDecimal": "0.673591770245738332299780842385",
+  "scorePercent": "67.3591770245738332299780842385",
+  "exactRational": {
+    "numerator": "10937570556368350644414459367124615168",
+    "denominator": "16237684365380724838807895177884765625"
+  },
+  "exactExpression": "(10937570556368350644414459367124615168 : ℝ) / 16237684365380724838807895177884765625",
+  "status": "kernel-verified",
+  "formalVerification": true,
+  "independentReview": null,
+  "sourceUrl": "https://github.com/josusanmartin/riemann/blob/9ab832ca9c2414b086c39dd9e5a4e4ee45bd5f61/submissions/lixiang90-w9a2-hw-rounding-v12-20261021/submission.json",
+  "proofUrl": "https://github.com/josusanmartin/riemann/blob/9ab832ca9c2414b086c39dd9e5a4e4ee45bd5f61/submissions/lixiang90-w9a2-hw-rounding-v12-20261021/proof/Solution.lean",
+  "pullRequestUrl": null,
+  "summary": "Uses Samuel Lavery's attributed attempt-030 W9A2 certificate, with the same nine-point window, weights, certificate data, c, B, and rational bounds for pi, sqrt(2)/2, sine and cosine. Only the terminal H_W floor is sharpened from 67212374687824171413662471723172/10^32 to 672123746878241714136624717231727/10^33. The sharper rational is propagated through the existing actual dyadic and cumulative zero-counting proofs to the stated exact p/q. All original attribution and license notices are retained; the file adds a notice identifying Li Xiang's change."
+}

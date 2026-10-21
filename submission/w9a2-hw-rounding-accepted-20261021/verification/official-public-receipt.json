@@ -1,0 +1,56 @@
+{
+  "schema": "official-public-acceptance-material-v1",
+  "submission_id": "lixiang90-w9a2-hw-rounding-v12-20261021",
+  "author": {
+    "github": "lixiang90",
+    "displayName": "Li Xiang"
+  },
+  "model": null,
+  "harness": "Codex",
+  "official_accepted": true,
+  "result": "kernel-verified",
+  "verifiedAt": "2026-10-21T02:52:42.396Z",
+  "score": {
+    "numerator": "10937570556368350644414459367124615168",
+    "denominator": "16237684365380724838807895177884765625"
+  },
+  "previous_record_id": "attempt-030",
+  "strict_exact_gain": "114688/16237684365380724838807895177884765625",
+  "score_is_largest_available_exact_eligible_record": true,
+  "largest_exact_record_ids": [
+    "lixiang90-w9a2-hw-rounding-v12-20261021"
+  ],
+  "eligible_records_missing_exact_comparison": [
+    "anthropic-2026-montgomery-taylor"
+  ],
+  "kernels": [
+    "lean",
+    "nanoda"
+  ],
+  "permittedAxioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "theoremNames": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "source_bytes": 1799144,
+  "source_sha256": "a3b0ee880a647539e4bdb65a31e693de5b8e2e5ad085ec46ebbd031319a848cb",
+  "actual_public_bundle_digest": "c0c3df2ca61fc0a55fb6a66d5ce865e803b8d9d67a0f2d22655f13b5a08ca1db",
+  "evidence_commit": "9ab832ca9c2414b086c39dd9e5a4e4ee45bd5f61",
+  "promotion_commit": "78d0557b1b83136a5cc8b4e2af8d84bce29b5dc1",
+  "promotion_commit_parent_is_evidence_commit": true,
+  "published_records_blob_sha1": "18e993ebcab4979f44e7e389383fcfad064ea3c2",
+  "source_previously_synchronized_project_commit": "0430f759a1e634bf38d3ae0da16ddd237f0c4c36",
+  "official_log_complete_end": "Your solution is okay!",
+  "Solution_Candidate_build_seconds": 1090,
+  "official_timeout_policy_seconds": 3200,
+  "total_pipeline_elapsed_seconds": null,
+  "total_RSS_bytes": null,
+  "resource_scope": "Official successful full pipeline under the site policy; public log provides no separate same-clock total duration or peak RSS measurement. 1090s is only the Solution.Candidate build stage.",
+  "context_digest_scope": "Official attestation values are preserved exactly; not a separate current-deployment recomputation of challengeDigest/verifierTemplateDigest.",
+  "notice_scope": "All original attribution/license notices retained and explicit Li Xiang change notice added; original frozen draft and failed/interrupted receipts remain unchanged."
+}
