@@ -1,0 +1,115 @@
+{
+  "schema": "official-public-v16-acceptance-addendum-v1",
+  "submission_id": "lixiang90-w9a2-point-center-v16-20261021",
+  "author": {
+    "github": "lixiang90",
+    "displayName": "Li Xiang"
+  },
+  "model": null,
+  "harness": "Codex",
+  "license": "Apache-2.0",
+  "official_accepted": true,
+  "result": "kernel-verified",
+  "verifiedAt": "2026-10-21T12:02:11.696Z",
+  "score": {
+    "numerator": "5468785278184175322207229683562307584",
+    "denominator": "8118842181460468609667905735697265625"
+  },
+  "score_percent_approx": "67.359177034777829440252362003200128376874724833088198471450452803202108173599331",
+  "previous_record_id": "lixiang90-w9a2-hw-rounding-v12-20261021",
+  "previous_score": {
+    "numerator": "10937570556368350644414459367124615168",
+    "denominator": "16237684365380724838807895177884765625"
+  },
+  "exact_improvement": {
+    "numerator": "6887449764264258397908527256287746776665594268963451871232",
+    "denominator": "67497572738505824711486012298267932129384395230672515605099861328125"
+  },
+  "improvement_percentage_points_approx": "1.0203996210274277764678252217213083858008936311585922923557640647819128440775978E-8",
+  "gain_scope": "A very small strict increase over H33, not a substantial numerical gain.",
+  "kernels": [
+    "lean",
+    "nanoda"
+  ],
+  "permittedAxioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "theoremNames": [
+    "candidate_strict_improvement",
+    "candidate_critical_line_bound",
+    "candidate_critical_line_bound_cumulative"
+  ],
+  "upstreamCommit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+  "challengeDigest": "ee4218846539589f08b8d1d2201ed13a1a9336578eea6b1df9443682a1329521",
+  "verifierTemplateDigest": "1aa63a7f5e906c9b358a906221773da2beb9f53b16077b945ced99bb83e1367a",
+  "source": {
+    "bytes": 1833816,
+    "sha256": "cc480ccf11ee3416410abc3d2af19afbeb76d49d00c636257bae88d02e4a72e6"
+  },
+  "submission": {
+    "bytes": 1341,
+    "sha256": "4f01cb3e2e02cf14a92f1c7b4cd67c5e3c740f849a0d9ef406795e14202abf8a"
+  },
+  "actual_public_bundle_digest": "0cef2c7a041cc705246184c904c0c5c53ca2286bfbd8d540ec957a65f82974a0",
+  "official_attestation_proofDigest": null,
+  "digest_scope": "Recomputed from exact public manifest and source using the binary-NUL wire algorithm; attestation has no proofDigest field.",
+  "evidence_commit_E": "aaff49408a7fd7561e5023f9c908604b5fda5b06",
+  "promotion_commit_P": "0423147a64f4b14cdf895c4d0574a0af60bfcc01",
+  "promotion_parents": [
+    "aaff49408a7fd7561e5023f9c908604b5fda5b06"
+  ],
+  "evidence_is_sole_direct_parent": true,
+  "official_record_url": "https://github.com/josusanmartin/riemann/blob/0423147a64f4b14cdf895c4d0574a0af60bfcc01/data/records.json",
+  "records_file": {
+    "bytes": 74707,
+    "sha256": "391436cd7f74922824ebe06244cd82bc8f8c14adb4bcec668e62fb1a4a286430",
+    "git_blob_sha1": "3347b08e3a4ace77fd0780de3a913508c92bbde8"
+  },
+  "ledger_comparison": {
+    "total": 43,
+    "eligible": 40,
+    "eligible_exact": 39,
+    "candidate_unique_exact_maximum": true,
+    "previous_is_other_exact_maximum": true,
+    "missing_exact_id": "anthropic-2026-montgomery-taylor",
+    "missing_published_decimal": "0.672500703679411645734379790803",
+    "missing_decimal_below_previous": true,
+    "no_missing_exact_fraction_invented": true,
+    "scope": "Immutable official ledger at promotion commit P, fetched 2026-10-21T12:05:03.7452655Z; no later live ranking asserted."
+  },
+  "public_files": [
+    {
+      "path": "submission.json",
+      "bytes": 1341,
+      "sha256": "4f01cb3e2e02cf14a92f1c7b4cd67c5e3c740f849a0d9ef406795e14202abf8a",
+      "url": "https://raw.githubusercontent.com/josusanmartin/riemann/aaff49408a7fd7561e5023f9c908604b5fda5b06/submissions/lixiang90-w9a2-point-center-v16-20261021/submission.json"
+    },
+    {
+      "path": "proof/Solution.lean",
+      "bytes": 1833816,
+      "sha256": "cc480ccf11ee3416410abc3d2af19afbeb76d49d00c636257bae88d02e4a72e6",
+      "url": "https://raw.githubusercontent.com/josusanmartin/riemann/aaff49408a7fd7561e5023f9c908604b5fda5b06/submissions/lixiang90-w9a2-point-center-v16-20261021/proof/Solution.lean"
+    },
+    {
+      "path": "verification/attestation.json",
+      "bytes": 1054,
+      "sha256": "532856d98b6c9cb7c13ebb56242bd536cb4553075f4b875f36bf2f114113a312",
+      "url": "https://raw.githubusercontent.com/josusanmartin/riemann/aaff49408a7fd7561e5023f9c908604b5fda5b06/submissions/lixiang90-w9a2-point-center-v16-20261021/verification/attestation.json"
+    },
+    {
+      "path": "verification/verifier.log",
+      "bytes": 19196,
+      "sha256": "0fbcba069d14a62a61dab074b427cf8f92410fed3d3df0ed4f8e3a0209cea5a5",
+      "url": "https://raw.githubusercontent.com/josusanmartin/riemann/aaff49408a7fd7561e5023f9c908604b5fda5b06/submissions/lixiang90-w9a2-point-center-v16-20261021/verification/verifier.log"
+    }
+  ],
+  "official_log_complete_success_end": true,
+  "official_solution_build_stage_seconds": 976,
+  "official_total_pipeline_elapsed_seconds": null,
+  "official_peak_RSS_bytes": null,
+  "resource_scope": "The official log reports a Solution build stage, not total pipeline time or peak RSS. Local verification used explicit finite -M7168, revised from -M6500 by +668 MiB, with the same 7 GiB observed-peak rejection threshold; this is not a claim of official resource equivalence.",
+  "frozen_generation_package": "../w9a2-point-center-v16-20261021",
+  "generation_snapshot_scope": "Original false/unknown/null official fields are preserved as generation-time history. This later addendum records actual acceptance."
+}

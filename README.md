@@ -2,6 +2,36 @@
 
 Author: **Li Xiang** ([lixiang90](https://github.com/lixiang90)).
 
+The website accepted **Li Xiang / lixiang90**'s unconditional critical-line bound
+**67.35917703477782944…%** on **21 October 2026**. Both Lean's default kernel
+and independent nanoda accepted the complete source. The official record is
+`kernel-verified` with `formalVerification: true`.
+
+The exact bound is **5468785278184175322207229683562307584 / 8118842181460468609667905735697265625**.
+It exceeds the preceding H33 record by approximately **1.020399621 × 10⁻⁸
+percentage points**: a very small strict improvement. It is the unique maximum
+among the 39 eligible exact fractions in the
+[pinned official ledger](https://github.com/josusanmartin/riemann/blob/0423147a64f4b14cdf895c4d0574a0af60bfcc01/data/records.json).
+One legacy entry lacks an exact fraction; its published decimal is below H33.
+
+The [complete source](submission/w9a2-point-center-v16-20261021/proof/Solution.lean)
+is 1,833,816 bytes and is byte-identical to the
+[officially accepted source](https://github.com/josusanmartin/riemann/blob/aaff49408a7fd7561e5023f9c908604b5fda5b06/submissions/lixiang90-w9a2-point-center-v16-20261021/proof/Solution.lean).
+Its final dyadic and cumulative zero-counting bounds are unconditional; the
+three public roots use only `propext`, `Classical.choice` and `Quot.sound`.
+[Acceptance evidence and exact hashes](submission/w9a2-point-center-v16-accepted-addendum-20261021/README.zh.md)
+preserve the official attestation, complete public verifier log, preceding
+record and publication linkage. The
+[submission package](submission/w9a2-point-center-v16-20261021/README.zh.md)
+retains its original pre-submission status fields as a historical snapshot;
+the later addendum records actual acceptance. Attribution and Apache-2.0
+license notices are retained in that package.
+
+## Historical context
+
+The following sections preserve earlier results and research statuses. Their
+bounds and statements of pending work refer to their original dates.
+
 The website has accepted **Li Xiang / lixiang90**'s unconditional bound
 **67.35871733129443…%**, improving the former **67.3587173310297…%** record.
 The [official record](https://github.com/josusanmartin/riemann/blob/6bc7f07fb939e066ac2923493d9a01cca553fe87/submissions/lixiang90-single-exception-overlap-20261018/submission.json)

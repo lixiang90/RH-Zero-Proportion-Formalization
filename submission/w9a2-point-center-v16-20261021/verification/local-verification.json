@@ -1,0 +1,65 @@
+{
+  "schema": "sanitized-rss-aligned-v16-local-verification-v1",
+  "scope": "Local Windows normal Lean/olean/ilean/C only; not fullchain or official equivalence",
+  "source": {
+    "bytes": 1833816,
+    "sha256": "cc480ccf11ee3416410abc3d2af19afbeb76d49d00c636257bae88d02e4a72e6"
+  },
+  "reused_current_Spec_source": {
+    "bytes": 454,
+    "sha256": "3ecb93ff28db2d90327c3c0d8e66d777820994e7c7907e3f64b1ee0b6485c4a2"
+  },
+  "actual_original_parent_exit_code": 0,
+  "actual_solution_child_exit_code": 0,
+  "prior_Spec_own_stage_child_exit_code": 0,
+  "Spec_recompiled_in_this_attempt": false,
+  "total_elapsed_seconds": 1158.75,
+  "peak_RSS_bytes": 7430213632,
+  "stages": [
+    {
+      "stage": "solution",
+      "actual_child_exit_code": 0,
+      "elapsed_seconds": 1158.1089999999967,
+      "peak_RSS_bytes": 7430213632,
+      "fresh_output_count": 3
+    }
+  ],
+  "three_fresh_Solution_outputs_checked_current": true,
+  "prior_Spec_three_outputs_checked_current_and_reused": true,
+  "runtime_postrun_immutable_pins_rechecked": 45,
+  "public_theorem_axiom_reports": [
+    {
+      "declaration": "candidate_strict_improvement",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "candidate_critical_line_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "candidate_critical_line_bound_cumulative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "budget_seconds": 3200,
+  "Lean_soft_memory_flag_MiB": 7168,
+  "prior_internal_memory_flag_MiB": 6500,
+  "internal_budget_increase_MiB": 668,
+  "old_6500_contract_passed": false,
+  "source_reordering_performed": false,
+  "observed_RSS_stop_bytes": 7516192768,
+  "commit_diagnostic_only": true,
+  "raw_local_logs_argv_parent_receipt_UI_or_private_history_copied": false
+}
